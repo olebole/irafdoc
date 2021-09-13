@@ -60,6 +60,8 @@ def process_package(task=None, shortdesc=None):
     
     with outfile.open('w') as fp:
         title = task.getName()
+        if title == 'clpackage':
+            title = "IRAF task help"
         if shortdesc:
             title += ' — ' + shortdesc
         fp.write(f'{title}\n{"="*len(title)}\n\n.. toctree:: :maxdepth: 2\n\n')

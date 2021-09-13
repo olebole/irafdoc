@@ -1,0 +1,587 @@
+ccstd — Transform to and from standard astrometric coordinates
+==============================================================
+
+**Package: imcoords**
+
+.. raw:: html
+
+  <BODY>
+  <TABLE WIDTH="100%" BORDER=0><TR>
+  <TD ALIGN=LEFT><FONT SIZE=4>
+  <B>ccstd (Oct00)</B></FONT></TD>
+  <TD ALIGN=CENTER><FONT SIZE=4>
+  <B>images.imcoords</B>
+  </FONT></TD>
+  <TD ALIGN=RIGHT><FONT SIZE=4>
+  <B>ccstd (Oct00)</B></FONT></TD>
+  </TR></TABLE><P>
+  <TITLE>ccstd</TITLE>
+  <UL>
+  </UL>
+  <H2><A NAME="s_name">NAME</A></H2>
+  <! BeginSection: 'NAME'>
+  <UL>
+  ccstd -- transform pixel and celestial coordinates to standard coordinates
+  and vice versa
+  </UL>
+  <! EndSection:   'NAME'>
+  <H2><A NAME="s_usage">USAGE</A></H2>
+  <! BeginSection: 'USAGE'>
+  <UL>
+  ccstd input output database solutions
+  </UL>
+  <! EndSection:   'USAGE'>
+  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <! BeginSection: 'PARAMETERS'>
+  <UL>
+  <DL>
+  <DT><B><A NAME="l_input">input</A></B></DT>
+  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
+  <DD>The input coordinate files. Coordinates may be entered by hand by setting input
+  to "<TT>STDIN</TT>".
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_output">output</A></B></DT>
+  <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
+  <DD>The output coordinate files. The number of output files must be one or equal
+  to the number of input files. Results may be printed on the terminal by
+  setting output to "<TT>STDOUT</TT>".
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_database">database</A></B></DT>
+  <! Sec='PARAMETERS' Level=0 Label='database' Line='database'>
+  <DD>The text database file written by the ccmap task which contains the
+  desired plate solutions. If database is undefined ccstd computes the
+  standard coordinates or pixel and celestial coordinates using the current
+  values of the xref, yref, xmag ymag, xrotation, yrotation, lngref, latref,
+  and projection parameters.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_solutions">solutions</A></B></DT>
+  <! Sec='PARAMETERS' Level=0 Label='solutions' Line='solutions'>
+  <DD>The database record containing the desired plate solution. 
+  The number of records must be one or equal to the number of input coordinate
+  files. Solutions is either the user name supplied to ccmap, the name of the
+  image input to ccmap for which the plate solution is valid, or the name of the
+  coordinate file that the ccmap task used to compute the plate solution.
+  The quantities stored in solutions always supersede the values of the
+  parameters xref, yref, xmag, ymag, xrotation, yrotation, lngref, latref,
+  and projection.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_geometry">geometry = "<TT>geometric</TT>"</A></B></DT>
+  <! Sec='PARAMETERS' Level=0 Label='geometry' Line='geometry = "geometric"'>
+  <DD>The type of geometric transformation. The geometry parameter is
+  only requested if database is defined. The options are:
+  <DL>
+  <DT><B><A NAME="l_linear">linear</A></B></DT>
+  <! Sec='PARAMETERS' Level=1 Label='linear' Line='linear'>
+  <DD>Transform the pixel coordinates to standard coordinates or vice versa
+  using the linear part of the plate solution.
+  only.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_geometric">geometric</A></B></DT>
+  <! Sec='PARAMETERS' Level=1 Label='geometric' Line='geometric'>
+  <DD>Transform the pixel coordinates to standard coordinates or vice versa
+  using the full plate solution.
+  </DD>
+  </DL>
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_forward">forward = yes</A></B></DT>
+  <! Sec='PARAMETERS' Level=0 Label='forward' Line='forward = yes'>
+  <DD>Transform from pixel and celestial coordinates to standard coordinates ? If
+  forward is "<TT>no</TT>" then the plate solution is inverted and standard coordinates
+  are transformed to pixel and celestial coordinates.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_polar">polar = no</A></B></DT>
+  <! Sec='PARAMETERS' Level=0 Label='polar' Line='polar = no'>
+  <DD>Convert to and from polar standard coordinates instead of Cartesian standard
+  coordinates?
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_xref">xref = INDEF, yref = INDEF</A></B></DT>
+  <! Sec='PARAMETERS' Level=0 Label='xref' Line='xref = INDEF, yref = INDEF'>
+  <DD>The pixel coordinates of the reference point. If database is undefined
+  then xref and yref default to 0.0 and 0.0, otherwise these parameters are
+  ignored.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_xmag">xmag = INDEF, ymag = INDEF</A></B></DT>
+  <! Sec='PARAMETERS' Level=0 Label='xmag' Line='xmag = INDEF, ymag = INDEF'>
+  <DD>The x and y scale factors in arcseconds per pixel. If database is undefined
+  xmag and ymag default to 1.0 and 1.0 arcseconds per pixel, otherwise these
+  parameters are ignored.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_xrotation">xrotation = INDEF, yrotation = INDEF</A></B></DT>
+  <! Sec='PARAMETERS' Level=0 Label='xrotation' Line='xrotation = INDEF, yrotation = INDEF'>
+  <DD>The x and y rotation angles in degrees measured counter-clockwise with
+  respect to the x and y axes. If database is undefined then xrotation and
+  yrotation are interpreted as the rotation of the coordinates with respect
+  to the x and y axes and default to 0.0 and 0.0 degrees. For example xrotation
+  and yrotation values of 30.0 and 30.0 degrees will rotate a point 30 degrees
+  counter-clockwise with respect to the x and y axes. To flip the x axis
+  coordinates in this case either set the angles to 210.0 and 30.0 degrees
+  or leave the angles at 30.0 and 30.0 and set the xmag parameter to a negative
+  value. If database is defined these parameters are ignored. The ccmap task
+  computes the x and y rotation angles of the x and y axes, not the rotation
+  angle of the coordinates. An celestial coordinate system rotated 30 degrees
+  counter-clockwise with respect to the pixel coordinate system will produce
+  xrotation and yrotation values o 330.0 and 330.0 or equivalently -30.0 and
+  -30.0 degrees in the database file not 30.0 and 30.0.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_lngref">lngref = INDEF, latref = INDEF</A></B></DT>
+  <! Sec='PARAMETERS' Level=0 Label='lngref' Line='lngref = INDEF, latref = INDEF'>
+  <DD>The celestial coordinates of the reference point, e.g. the ra and dec
+  of the reference point for equatorial systems, galactic longitude and
+  latitude of the reference for galactic systems. If database is undefined
+  lngref and latref default to 0.0 and 0.0, otherwise these parameters are
+  ignored.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_lngunits">lngunits = "<TT></TT>", latunits = "<TT></TT>"</A></B></DT>
+  <! Sec='PARAMETERS' Level=0 Label='lngunits' Line='lngunits = "", latunits = ""'>
+  <DD>The units of the input or output ra / longitude and dec / latitude coordinates.
+  The options are "<TT>hours</TT>", "<TT>degrees</TT>", "<TT>radians</TT>" for ra / longitude coordinates,
+  and "<TT>degrees</TT>" and "<TT>radians</TT>" for dec / latitude systems. If lngunits and
+  latunits are undefined they default to the values in the database records.
+  If database is undefined then lngunits and latunits default to "<TT>hours</TT>" and
+  "<TT>degrees</TT>" respectively.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_projection">projection = "<TT>tan</TT>"</A></B></DT>
+  <! Sec='PARAMETERS' Level=0 Label='projection' Line='projection = "tan"'>
+  <DD>The sky projection geometry. The options are "<TT>tan</TT>", "<TT>sin</TT>", "<TT>arc</TT>" and
+  "<TT>lin</TT>". If database is undefined then the value of the projection parameter
+  is used, otherwise this parameter is ignored.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_xcolumn">xcolumn = 1, ycolumn = 2</A></B></DT>
+  <! Sec='PARAMETERS' Level=0 Label='xcolumn' Line='xcolumn = 1, ycolumn = 2'>
+  <DD>The columns in the input coordinate file containing the x and y coordinates
+  if the <I>forward</I> parameter is "<TT>yes</TT>", or the corresponding standard
+  coordinates xi and eta if the forward parameter is "<TT>no</TT>".
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_lngcolumn">lngcolumn = 3, latcolumn = 4</A></B></DT>
+  <! Sec='PARAMETERS' Level=0 Label='lngcolumn' Line='lngcolumn = 3, latcolumn = 4'>
+  <DD>The columns in the input coordinate file containing the celestial coordinates
+  if the <I>forward</I> parameter is "<TT>yes</TT>", or the corresponding standard
+  coordinates xi and eta if the forward parameter is "<TT>no</TT>".
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_lngformat">lngformat = "<TT></TT>", latformat = "<TT></TT>"</A></B></DT>
+  <! Sec='PARAMETERS' Level=0 Label='lngformat' Line='lngformat = "", latformat = ""'>
+  <DD>The default output format of the transformed coordinates in lngcolumn and 
+  latcolumn. If forward = yes then the default output format is "<TT>%10.3f</TT>".
+  Otherwise the defaults are "<TT>%12.2h</TT>" for output coordinates in hours, "<TT>%11.1h</TT>"
+  for output coordinates in degrees, and "<TT>%13.7g</TT>" for output coordinates in
+  radians.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_xformat">xformat = "<TT></TT>", yformat = "<TT></TT>"</A></B></DT>
+  <! Sec='PARAMETERS' Level=0 Label='xformat' Line='xformat = "", yformat = ""'>
+  <DD>The default output format of the transformed coordinates in xcolumn and
+  ycolumn. The default is "<TT>%10.3f</TT>".
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_min_sigdigits">min_sigdigits = 7</A></B></DT>
+  <! Sec='PARAMETERS' Level=0 Label='min_sigdigits' Line='min_sigdigits = 7'>
+  <DD>The minimum precision of the output coordinates.
+  </DD>
+  </DL>
+  <P>
+  </UL>
+  <! EndSection:   'PARAMETERS'>
+  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <! BeginSection: 'DESCRIPTION'>
+  <UL>
+  <P>
+  CCSTD transforms the list of input coordinates in the
+  text file <I>input</I> and writes the transformed
+  coordinates to the text file <I>output</I>. The input coordinates
+  are read from and the output coordinates written to, the columns
+  <I>xcolumn</I>, <I>ycolumn</I>, <I>lngcolumn</I>, and <I>latcolumn</I>
+  in the input and output
+  files. The format of the output coordinates can be specified using the
+  <I>xformat</I>, <I>yformat</I>, <I>lngformat</I> and <I>latformat</I> parameters.
+  If the output formats are unspecified the coordinates are written  out with
+  reasonable default formats, e.g. "<TT>%10.3f</TT>" for standard coordinates,
+  "<TT>%12.2h</TT>" and "<TT>11.1h</TT>" for celestial coordinates in hours or degrees,
+  and "<TT>%13.7g</TT>" for celestial coordinates in radians. All the remaining
+  fields in the
+  input file are copied to the output file without modification. Blank lines
+  and comment lines are also passed to the output file unaltered.
+  <P>
+  The plate solution can either be read from record <I>solutions</I>
+  in the database file <I>database</I> written by CCMAP, or specified
+  by the user via the <I>xref</I>, <I>yref</I>, <I>xmag</I>, <I>ymag</I>,
+  <I>xrotation</I>, <I>yrotation</I>, <I>lngref</I>, <I>latref</I>, 
+  and <I>projection</I> parameters. <I>lngunits</I> and <I>latunits</I>
+  define the units of the input celestial coordinates. If 
+  undefined they default to the values in the database or to
+  the quantities "<TT>hours</TT>" and "<TT>degrees</TT>" respectively. The standard coordinates
+  are always written and read in units of arcseconds.
+  <P>
+  If the <I>forward</I>
+  parameter is "<TT>yes</TT>", the input coordinates are assumed to be pixel coordinates
+  and celestial coordinates. The pixel coordinates are transformed to standard
+  coordinates using the plate solution, and celestial coordinates are
+  transformed to standard coordinates using the position of the reference
+  point <I>lngref</I>, <I>latref</I>, and the projection specified by
+  <I>projection</I>. If <I>forward</I> is "<TT>no</TT>", then
+  the input coordinates are assumed to be standard coordinates and 
+  those in <I>xcolumn</I> and <I>ycolumn</I> are transformed to pixel
+  coordinates by inverting the plate solution, and those in <I>lngcolumn</I>
+  and <I>latcolumn</I> are transformed to celestial coordinates using the
+  position of the reference point and the specified projection.
+  <P>
+  The plate solution computed by CCMAP has the following form where x and y
+  are the pixel coordinates and xi and eta are the corresponding fitted standard
+  coordinates in arcseconds per pixel. The observed standard coordinates are
+  computed by applying the appropriate sky projection to the celestial
+  coordinates.
+  <P>
+  <P>
+  <PRE>
+  	 xi = f (x, y)
+  	eta = g (x, y)
+  </PRE>
+  <P>
+  The functions f and g are either power series, Legendre, or Chebyshev
+  polynomials whose order and region of validity were set by the user when
+  CCMAP was run. The plate solution is arbitrary and does not correspond to
+  any physically meaningful model. However the first order terms can be given
+  the simple geometrical interpretation shown below.
+  <P>
+  <PRE>
+  	  xi = a + b * x + c * y
+  	 eta = d + e * x + f * y
+  	   b = xmag * cos (xrotation)
+  	   c = ymag * sin (yrotation)
+  	   e = -xmag * sin (xrotation)
+  	   f = ymag * cos (yrotation)
+  	   a = xi0 - b * xref - c * yref = xshift
+  	   d = eta0 - e * xref - f * yref = yshift
+  	   xi0 = 0.0
+  	   eta0 = 0.0
+  </PRE>
+  <P>
+  xref, yref, xi0, and eta0 are the origins of the reference and output
+  coordinate systems respectively. xi0 and eta0 are both 0.0 by default.
+  xmag and ymag are the x and y scales in " / pixel, and xrotation and yrotation
+  are the x and y axes rotation angles measured counter-clockwise from original
+  x and y axes.
+  <P>
+  If the CCMAP database is undefined then CCSTD computes a linear plate
+  solution using the parameters <I>xref</I>, <I>yref</I>, <I>xmag</I>,
+  <I>ymag</I>, <I>xrotation</I>, <I>yrotation</I>, <I>lngref</I>, <I>latref</I>,
+  <I>lngunits</I>, <I>latunits</I> and <I>projection</I> as shown below. Note
+  that in this case xrotation and yrotation are interpreted as the rotation
+  of the coordinates not the rotation of the coordinate axes.
+  <P>
+  <PRE>
+  	  xi = a + b * x + c * y
+  	 eta = d + e * x + f * y
+  	   b = xmag * cos (xrotation)
+  	   c = -ymag * sin (yrotation)
+  	   e = xmag * sin (xrotation)
+  	   f = ymag * cos (yrotation)
+  	   a = xi0 - b * xref - c * yref = xshift
+  	   d = eta0 - e * xref - f * yref = yshift
+  	   xi0 = 0.0
+  	   eta0 = 0.0
+  </PRE>
+  <P>
+  Linear plate solutions are evaluated in the forward and reverse sense
+  using the appropriate IRAF mwcs system routines. Higher order plate
+  solutions are evaluated in the forward sense using straight-forward
+  evaluation of the polynomial terms, in the reverse sense by applying
+  Newton's method to the plate solution.
+  <P>
+  <P>
+  </UL>
+  <! EndSection:   'DESCRIPTION'>
+  <H2><A NAME="s_formats">FORMATS</A></H2>
+  <! BeginSection: 'FORMATS'>
+  <UL>
+  <P>
+  A  format  specification has the form "<TT>%w.dCn</TT>", where w is the field
+  width, d is the number of decimal places or the number of digits  of
+  precision,  C  is  the  format  code,  and  n is radix character for
+  format code "<TT>r</TT>" only.  The w and d fields are optional.  The  format
+  codes C are as follows:
+     
+  <PRE>
+  b       boolean (YES or NO)
+  c       single character (c or '\c' or '\0nnn')
+  d       decimal integer
+  e       exponential format (D specifies the precision)
+  f       fixed format (D specifies the number of decimal places)
+  g       general format (D specifies the precision)
+  h       hms format (hh:mm:ss.ss, D = no. decimal places)
+  m       minutes, seconds (or hours, minutes) (mm:ss.ss)
+  o       octal integer
+  rN      convert integer in any radix N
+  s       string (D field specifies max chars to print)
+  t       advance To column given as field W
+  u       unsigned decimal integer
+  w       output the number of spaces given by field W
+  x       hexadecimal integer
+  z       complex format (r,r) (D = precision)
+     
+     
+  Conventions for w (field width) specification:
+     
+      W =  n      right justify in field of N characters, blank fill
+          -n      left justify in field of N characters, blank fill
+          0n      zero fill at left (only if right justified)
+  absent, 0       use as much space as needed (D field sets precision)
+     
+  Escape sequences (e.g. "\n" for newline):
+     
+  \b      backspace   (not implemented)
+       formfeed
+  \n      newline (crlf)
+  \r      carriage return
+  \t      tab
+  \"      string delimiter character
+  \'      character constant delimiter character
+  \\      backslash character
+  \nnn    octal value of character
+     
+  Examples
+     
+  %s          format a string using as much space as required
+  %-10s       left justify a string in a field of 10 characters
+  %-10.10s    left justify and truncate a string in a field of 10 characters
+  %10s        right justify a string in a field of 10 characters
+  %10.10s     right justify and truncate a string in a field of 10 characters
+     
+  %7.3f       print a real number right justified in floating point format
+  %-7.3f      same as above but left justified
+  %15.7e      print a real number right justified in exponential format
+  %-15.7e     same as above but left justified
+  %12.5g      print a real number right justified in general format
+  %-12.5g     same as above but left justified
+  <P>
+  %h          format as nn:nn:nn.n
+  %15h        right justify nn:nn:nn.n in field of 15 characters
+  %-15h       left justify nn:nn:nn.n in a field of 15 characters
+  %12.2h      right justify nn:nn:nn.nn
+  %-12.2h     left justify nn:nn:nn.nn
+     
+  %H          / by 15 and format as nn:nn:nn.n
+  %15H        / by 15 and right justify nn:nn:nn.n in field of 15 characters
+  %-15H       / by 15 and left justify nn:nn:nn.n in field of 15 characters
+  %12.2H      / by 15 and right justify nn:nn:nn.nn
+  %-12.2H     / by 15 and left justify nn:nn:nn.nn
+  <P>
+  \n          insert a newline
+  </PRE>
+  <P>
+  </UL>
+  <! EndSection:   'FORMATS'>
+  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <! BeginSection: 'EXAMPLES'>
+  <UL>
+  <P>
+  <PRE>
+  1. Compute the standard coordinates in arcseconds per pixel given a list of
+  pixel and equatorial coordinates and the position of the reference point in
+  pixel and equatorial coordinates.
+  <P>
+  cl&gt; type coords
+  13:29:47.297  47:13:37.52  327.50  410.38
+  13:29:37.406  47:09:09.18  465.50   62.10
+  13:29:38.700  47:13:36.23  442.01  409.65
+  13:29:55.424  47:10:05.15  224.35  131.20
+  13:30:01.816  47:12:58.79  134.37  356.33
+  <P>
+  cl&gt; ccstd coords STDOUT "" xref=256.5 yref=256.5 lngref=13:29:48.1 \<BR>
+  latref = 47:11:53.4 xcol=3 ycol=4 lngcol=1 latcol=2
+    -8.180   104.120    71.000   153.880
+  -109.087  -164.189   209.000  -194.400
+   -95.753   102.854   185.510   153.150
+    74.688  -108.235   -32.150  -125.300
+   139.745    65.441  -122.130    99.830
+  <P>
+  2. Repeat the previous example but output the results in polar coordinates.
+  The first and third columns contain the radius coordinate in arcseconds,
+  the second and fourth columns contain the position angle in degrees measured
+  counter-clockwise with respect to the standard coordinates.
+  <P>
+  cl&gt; ccstd coords STDOUT "" xref=256.5 yref=256.5 lngref=13:29:48.1 \<BR>
+  latref = 47:11:53.4 xcol=3 ycol=4 lngcol=1 latcol=2 polar+
+  104.441    94.492   169.470    65.231
+  197.124   236.400   285.434   317.073
+  140.526   132.952   240.560    39.542
+  131.504   304.608   129.359   255.609
+  154.309    25.093   157.740   140.737
+  <P>
+  <P>
+  3. Compute the plate solution and use it to evaluate the Cartesian and
+  polar standard coordinates for the input coordinate list used in example 1.
+  <P>
+  cl&gt; ccmap coords coords.db xcol=3 ycol=4 lngcol=1 latcol=2 inter-
+  Coords File: coords  Image: 
+      Database: coords.db  Record: coords
+  Refsystem: j2000  Coordinates: equatorial FK5
+      Equinox: J2000.000 Epoch: J2000.00000000 MJD: 51544.50000
+  Insystem: j2000  Coordinates: equatorial FK5
+      Equinox: J2000.000 Epoch: J2000.00000000 MJD: 51544.50000
+  Coordinate mapping status
+      Ra/Dec or Long/Lat fit rms: 0.229  0.241   (arcsec  arcsec)
+  Coordinate mapping parameters
+      Sky projection geometry: tan
+      Reference point: 13:29:48.129  47:11:53.37  (hours  degrees)
+      Reference point: 318.735  273.900  (pixels  pixels)
+      X and Y scale: 0.764  0.767  (arcsec/pixel  arcsec/pixel)
+      X and Y axis rotation: 179.110  358.958  (degrees  degrees)
+  <P>
+  <P>
+  cl&gt; type coords.db
+  # Mon 10:29:13 24-Nov-97
+  begin   coords
+          xrefmean        318.7460000000001
+          yrefmean        273.9320000000001
+          lngmean         13.49670238888889
+          latmean         47.19815944444444
+          coosystem       j2000
+          projection      tan
+          lngref          13.49670238888889
+          latref          47.19815944444444
+          lngunits        hours
+          latunits        degrees
+          xpixref         318.7352667484295
+          ypixref         273.9002619912411
+          geometry        general
+          function        polynomial
+          xishift         247.3577084680361
+          etashift        -206.1795977453246
+          xmag            0.7641733802338992
+          ymag            0.7666917500560622
+          xrotation       179.1101291109185
+          yrotation       358.9582148846163
+          wcsxirms        0.2288984454992771
+          wcsetarms       0.2411034140453112
+          xirms           0.2288984454992771
+          etarms          0.2411034140453112
+          surface1        11
+                          3.      3.
+                          2.      2.
+                          2.      2.
+                          0.      0.
+                          134.3700000000001       134.3700000000001
+                          465.5000000000002       465.5000000000002
+                          62.1    62.1
+                          410.3800000000001       410.3800000000001
+                          247.3577084680361       -206.1795977453246
+                          -0.7640812161068504     -0.011868034832272
+                          -0.01393966623835092    0.7665650170136847
+          surface2        0
+  <P>
+  <P>
+  cl&gt; ccstd coords STDOUT coords.db coords xcol=3 ycol=4 lngcol=1 latcol=2
+    -8.471   104.146    -8.599   104.517
+  -109.378  -164.163  -109.188  -164.100
+   -96.044   102.880   -96.084   102.598
+    74.397  -108.210    74.107  -108.269
+   139.454    65.467   139.721    65.376
+  <P>
+  cl&gt; ccstd coords STDOUT coords.db coords xcol=3 ycol=4 lngcol=1 latcol=2 \<BR>
+  polar+
+  104.490    94.650   104.870    94.704
+  197.264   236.325   197.106   236.361
+  140.744   133.032   140.565   133.122
+  131.317   304.509   131.202   304.391
+  154.056    25.148   154.259    25.075
+  <P>
+  4. Use the previous plate solution to transform the pixel and equatorial
+  coordinates to standard coordinates but enter the plate solution by hand.
+  <P>
+  cl&gt; ccstd coords STDOUT "" xref=318.735 yref=273.900 lngref=13:29:48.129 \<BR>
+  latref=47:11:53.37 xmag=.764 ymag=.767 xrot=180.890 yrot=1.042 xcol=3    \<BR>
+  ycol=4 lngcol=1 latcol=2
+    -8.475   104.150    -8.599   104.559
+  -109.382  -164.159  -109.161  -164.165
+   -96.048   102.884   -96.064   102.640
+    74.393  -108.206    74.092  -108.313
+   139.450    65.471   139.688    65.401
+  <P>
+  cl&gt; ccstd coords STDOUT "" xref=318.735 yref=273.900 lngref=13:29:48.129 \<BR>
+  latref=47:11:53.37 xmag=.764 ymag=.767 xrot=180.890 yrot=1.042 xcol=3    \<BR>
+  ycol=4 lngcol=1 latcol=2 polar+
+  104.494    94.652   104.912    94.702
+  197.263   236.324   197.145   236.378
+  140.750   133.032   140.582   133.105
+  131.311   304.509   131.230   304.374
+  154.054    25.150   154.240    25.089
+  <P>
+  Note that there are minor differences between the results of examples 3 and
+  4 due to precision differences in the input, and that the angles input
+  to ccstd in example 4 are the coordinate rotation angles not the axes
+  rotation angles as printed by ccmap. The difference is exactly 180 degrees
+  in both cases.
+  <P>
+  5. Use the plate solution computed in example 3 to convert a list
+  of standard coordinates into the equivalent pixel and celestial coordinates.
+  <P>
+  cl&gt; type stdcoords
+    -8.471   104.146    -8.599   104.517
+  -109.378  -164.163  -109.188  -164.100
+   -96.044   102.880   -96.084   102.598
+    74.397  -108.210    74.107  -108.269
+   139.454    65.467   139.721    65.376
+  <P>
+  cl&gt; ccstd stdcoords STDOUT coords.db coords xcol=3 ycol=4 lngcol=1 latcol=2  \<BR>
+  forward-
+  <P>
+  13:29:47.30 47:13:37.5   327.499   410.381
+  13:29:37.41 47:09:09.2   465.500    62.101
+  13:29:38.70 47:13:36.2   442.010   409.650
+  13:29:55.42 47:10:05.1   224.350   131.200
+  13:30:01.82 47:12:58.8   134.370   356.330
+  </PRE>
+  <P>
+  </UL>
+  <! EndSection:   'EXAMPLES'>
+  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <! BeginSection: 'BUGS'>
+  <UL>
+  <P>
+  </UL>
+  <! EndSection:   'BUGS'>
+  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <! BeginSection: 'SEE ALSO'>
+  <UL>
+  ccmap, ccsetwcs, cctran, finder.tastrom, skyctran
+  </UL>
+  <! EndSection:    'SEE ALSO'>
+  
+  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'FORMATS' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
+  
+  </BODY>
+  </HTML>

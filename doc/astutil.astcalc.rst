@@ -1,0 +1,788 @@
+astcalc — Astronomical calculator
+=================================
+
+**Package: astutil**
+
+.. raw:: html
+
+  <BODY>
+  <TABLE WIDTH="100%" BORDER=0><TR>
+  <TD ALIGN=LEFT><FONT SIZE=4>
+  <B>astcalc (Jan96)</B></FONT></TD>
+  <TD ALIGN=CENTER><FONT SIZE=4>
+  <B>astutil</B>
+  </FONT></TD>
+  <TD ALIGN=RIGHT><FONT SIZE=4>
+  <B>astcalc (Jan96)</B></FONT></TD>
+  </TR></TABLE><P>
+  <TITLE>astcalc</TITLE>
+  <UL>
+  </UL>
+  <H2><A NAME="s_name">NAME</A></H2>
+  <! BeginSection: 'NAME'>
+  <UL>
+  astcalc -- astronomical calculator
+  </UL>
+  <! EndSection:   'NAME'>
+  <H2><A NAME="s_usage">USAGE</A></H2>
+  <! BeginSection: 'USAGE'>
+  <UL>
+  astcalc
+  </UL>
+  <! EndSection:   'USAGE'>
+  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <! BeginSection: 'PARAMETERS'>
+  <UL>
+  <DL>
+  <DT><B><A NAME="l_commands">commands</A></B></DT>
+  <! Sec='PARAMETERS' Level=0 Label='commands' Line='commands'>
+  <DD>A file of commands using the simple syntax given in the DESCRIPTION.  If no
+  file name is given then the commands are read interactively from the
+  standard input with a prompt given by the <I>prompt</I> parameter.  The
+  command input ends with either EOF or "<TT>quit</TT>".  If a list of images and/or a
+  table is specified the commands are repeated for each image or until the
+  end of the table is reached.  Comments beginning with <TT>'#'</TT>, blank lines, and
+  escaped newlines are allowed.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_images">images = "<TT></TT>"</A></B></DT>
+  <! Sec='PARAMETERS' Level=0 Label='images' Line='images = ""'>
+  <DD>Optional list of images.  The command input is repeated for each image.
+  Image header keyword values may be read and used as variables and
+  keywords may be created, modified, or deleted provided the image has
+  read-write permissions.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_table">table = "<TT></TT>"</A></B></DT>
+  <! Sec='PARAMETERS' Level=0 Label='table' Line='table = ""'>
+  <DD>Optional text file containing columns of values.  The table consists of
+  one or more lines of whitespace separated columns of values.  Note that a
+  string with whitespace needs to be quoted.  The lines may be scanned and
+  the values assigned to variables for use in expressions.  If the command
+  input includes reading from the table then the commands will be repeated
+  until all the lines in the table have been read.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_prompt">prompt = "<TT>astcalc&gt; </TT>"</A></B></DT>
+  <! Sec='PARAMETERS' Level=0 Label='prompt' Line='prompt = "astcalc&gt; "'>
+  <DD>When no command file is specified the input commands are read from the
+  standard input (the terminal) and the value of the <I>prompt</I> string is
+  printed as a prompt.  Note that if the input command file is specified as
+  "<TT>STDIN</TT>" there will be no prompt even though commands will also be read from
+  the standard input.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_verbose">verbose = no</A></B></DT>
+  <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
+  <DD>Print each variable assignment?  This is useful for debugging command
+  files.
+  </DD>
+  </DL>
+  </UL>
+  <! EndSection:   'PARAMETERS'>
+  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <! BeginSection: 'DESCRIPTION'>
+  <UL>
+  <B>Astcalc</B> evaluates statements using variables, constants, and
+  functions.  Of special interest are many astronomical functions and the
+  ability to read and write image header keywords (<I>images</I>), read
+  from a text file (<I>table</I>), and read and write CL parameters.
+  <P>
+  This task may be used interactively or with input from a command file
+  (<I>commands</I>).  If no command file is specified a prompt (<I>prompt</I>)
+  is printed and commands are entered interactively.  The input is terminated
+  with either the end-of-file character (EOF) or the command "<TT>quit</TT>".  Input
+  command files simply contain the same input in a file and end with the end
+  of the file or "<TT>quit</TT>".  The input commands, either those entered
+  interactively or from a file, are repeated for each image in the image list
+  and until the end of the input text table is reached, whichever comes
+  first.  The image list and the table are optional and if neither is
+  specified the commands are executed just once.
+  <P>
+  The command input consists of statements with each statement on a
+  line by itself.  However long statements may be broken up with
+  escaped newlines using the back-slash as the escape character;
+  i.e. \&lt;newline&gt;.  Comments beginning with <TT>'#'</TT>, blank lines,
+  and whitespace are ignored.
+  <P>
+  There are three types of statements: assignment, expressions, and
+  conditional.  Each statement is on a line by itself though long statements
+  may be broken up with escaped newlines (\&lt;newline&gt;).  Assignment statements
+  have a variable name, an equal sign, and an expression.  Expression
+  statements consist of only the expression with the value of the expression
+  being ignored.  Expression statements are generally used with certain
+  functions.  Conditional statements are blocks of if-endif and if-else-endif
+  with assignment and expression statements between the if-else-endif
+  statements.  These may not be nested.
+  <P>
+  A variable is an arbitrary identifier which must begin with an alphabetic
+  character or <TT>'$'</TT> followed by an alphabetic character and may use alphabetic
+  characters, digits, or the characters <TT>'_'</TT>, <TT>'$'</TT>, or <TT>'.'</TT>.  Other special
+  characters may be used but they must be set and referenced with the
+  special <TT>'@'</TT> operator described below.  Lower and upper
+  case characters may be used and are considered different characters; i.e.
+  identifiers are case sensitive (as are function names).
+  <P>
+  There are a few special predefined variables: "<TT>$D</TT>" contains the current
+  local date (in new FITS YYYY-MM-DD), "<TT>$T</TT>" contains the current local
+  time, "<TT>$GMD</TT>" contains the current Greenwich meridian date (in FITS
+  YYYY-MM-DD format), "<TT>$GMT</TT>" contains the current Greenwich meridian time,
+  and "<TT>$GMDT</TT>" contains the current date and time in FITS YYYY-MM-DDTHH:MM:SS
+  format.
+  <P>
+  The expression syntax is described below.  Expressions may use previously
+  define variable names, constants (both quoted strings and numeric values),
+  and functions.  The functions are given below.  Input from image headers,
+  and text files, and CL parameters, and output to image headers is performed
+  by I/O functions.
+  <P>
+  In <B>astcalc</B> variables are maintained internally and input and output
+  are performed explicitly by functions.  A related task is <B>asthedit</B>.
+  In that task variables are image header keywords and references to keywords
+  (assignments, use in expressions, and by themselves with no expression)
+  read and write to the image headers.  Updating of the image headers,
+  however, can be suppressed.  Also a line of a text table is read
+  automatically at the beginning of the command input so that column values
+  can be referenced directly.
+  <P>
+  STATEMENTS
+  <P>
+  The following gives a more formal description of the statement syntax
+  and the special words "<TT>if</TT>", "<TT>else</TT>", "<TT>endif</TT>", and "<TT>quit</TT>".
+  <P>
+  <PRE>
+          &lt;variable&gt; = &lt;expression&gt;
+          &lt;expression&gt;
+          if (&lt;expression&gt;)
+              &lt;statements&gt;
+          endif
+          if (&lt;expression&gt;)
+              &lt;statements&gt;
+          else
+              &lt;statements&gt;
+          endif
+          quit
+  </PRE>
+  <P>
+  The result of the expression in the "<TT>if</TT>" statement is normally a logical
+  value.  However, a numeric value of 0 is false while any other value is
+  true and any string beginning with either "<TT>y</TT>" or "<TT>Y</TT>" is true with
+  any other value being false; i.e. string values of yes and no may be used.
+  <P>
+  VARIABLES
+  <P>
+  Variables may formally be defined as:
+  <P>
+  <PRE>
+          [$]{a-zA-Z}[{a-zA-Z0-9._$}]*
+  </PRE>
+  <P>
+  where [] indicate optional, {} indicates a class, - indicates an
+  ASCII range of characters, and * indicates zero or more occurrences.
+  Stated in words, a variable must begin with an alphabetic character (ignoring
+  an option leading $) and may be followed by any combinations of
+  alphabetic, digit, or <TT>'.'</TT>, <TT>'_'</TT>, and <TT>'$'</TT> characters.
+  <P>
+  There are a few predefined variables which may be referenced in
+  expressions.
+  <P>
+  <PRE>
+          $I      The name of the current image (if used)
+          $D      The current date in the YYYY-MM-DD format
+          $T      The current (local) time as a sexagesimal string
+  </PRE>
+  <P>
+  The date and time are set once at the beginning of execution.
+  <P>
+  Though not recommended it is possible to use any set of characters
+  for a variable provided the variable is referenced as @"<TT>&lt;name&gt;</TT>".
+  For example one could use @"<TT>date-obs</TT>" to include the character <TT>'-'</TT>.
+  <P>
+  EXPRESSIONS
+  <P>
+  Expressions consist of operands and operators.  The operands may be any
+  PREVIOUSLY DEFINED variables, quoted string constants, numeric constants,
+  and functions.  Values given as sexagesimal strings are automatically
+  converted to decimal numbers.  The operators are arithmetic, logical, and
+  string.  The expression syntax is equivalent to that used in the CL and SPP
+  languages.
+  <P>
+  Additional information may be found in the help for <B>hedit</B> except that
+  all unquoted nonnumeric strings are considered to be variables and so the
+  <TT>'('</TT>, <TT>')'</TT> operators are not used.  The "<TT>field</TT>" references are not needed so
+  the references "<TT>.</TT>" and  "<TT>$</TT>" are not used and are not legal variable
+  names in this task.
+  <P>
+  operators:
+  <P>
+  The following operators are recognized in expressions.  With the exception
+  of the operators "<TT>?</TT>" and "<TT>?=</TT>", the operator set is equivalent to that
+  available in the CL and SPP languages.
+  <P>
+  <P>
+  <PRE>
+          +  -  *  /              arithmetic operators
+          **                      exponentiation
+          //                      string concatenation
+          !  -                    boolean not, unary negation
+          &lt;  &lt;= &gt;  &gt;=             order comparison (works for strings)
+          == != &amp;&amp; ||             equals, not equals, and, or
+          ?=                      string equals pattern
+          ? :                     conditional expression
+  	@			reference a variable
+  </PRE>
+  <P>
+  <P>
+  The operators "<TT>==</TT>", "<TT>&amp;&amp;</TT>", and "<TT>||</TT>" may be abbreviated as "<TT>=</TT>", "<TT>&amp;</TT>", and "<TT>|</TT>"
+  if desired.  The ?= operator performs pattern matching upon strings.
+  <P>
+  A point to be aware of is that in the ?: conditional expression both
+  possible result values are evaluated though the result of the expression
+  is only one of them.  This means that one should not use this to
+  call I/O functions that one wants to be executed only if a certain
+  condition holds.
+  <P>
+  intrinsic functions:
+  <P>
+  A number of standard intrinsic functions are recognized within expressions.
+  The set of functions currently supported is shown below.
+  <P>
+  <P>
+  <PRE>
+  	abs     atan2   deg     log     min     real    sqrt
+  	acos    bool    double  log10   mod     short   str
+  	asin    cos     exp     long    nint    sin     tan
+  	atan    cosh    int     max     rad     sinh    tanh
+  </PRE>
+  <P>
+  <P>
+  The trigonometric functions operate in units of radians.
+  The <I>min</I> and <I>max</I> functions may have any number of arguments up
+  to a maximum of sixteen or so (configurable).  The arguments need not all
+  be of the same datatype.
+  <P>
+  A function call may take either of the following forms:
+  <P>
+  <PRE>
+          &lt;identifier&gt; <TT>'('</TT> arglist <TT>')'</TT>
+  or
+          &lt;string_expr&gt; <TT>'('</TT> arglist <TT>')'</TT>
+  </PRE>
+  <P>
+  The first form is the conventional form found in all programming languages.
+  The second permits the generation of function names by string valued
+  expressions and might be useful on rare occasions.
+  <P>
+  astronomical functions:
+  <P>
+  In addition to the above intrinsic functions there are a number of
+  astronomical functions.  More will be added in time.  These are:
+  <P>
+  <PRE>
+       sexstr - convert a number to a sexagesimal string (xx:mm:ss.ss)
+        epoch - compute an epoch given a date and time
+       julday - compute a Julian day given a date and time
+          mst - compute a mean sidereal time w/ date, time, and longitude
+   ra_precess - precess ra from one epoch to another
+  dec_precess - precess dec from one epoch to another
+      airmass - compute airmass w/ ra, dec, sidereal time, and latitude
+     eairmass - compute effective airmass given
+                  ra, dec, sidereal time, exposure time, and latitude
+        obsdb - get parameters from the observatory database
+  </PRE>
+  <P>
+  <DL>
+  <DT><B><A NAME="l_sexstr">sexstr (number), sexstr (number, digits)</A></B></DT>
+  <! Sec='DESCRIPTION' Level=0 Label='sexstr' Line='sexstr (number), sexstr (number, digits)'>
+  <DD>Convert a number to a sexagesimal string in the format X:MM:SS.SS.  There
+  is an optional second argument (the default is 0) which is the number of
+  decimal digits in the seconds field.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_epoch">epoch (date[, ut])</A></B></DT>
+  <! Sec='DESCRIPTION' Level=0 Label='epoch' Line='epoch (date[, ut])'>
+  <DD>Compute an epoch given a date and time.  The date is a string in the
+  format DD/MM/YY, YYYY-MM-DD, or YYYY-MM-DDTHH:MM:SS.
+  Typically this argument will be the standard FITS
+  keyword DATE-OBS.  Because of possible confusion of the hyphen with
+  subtraction this keyword would be specified as @"<TT>date-obs</TT>".  The time
+  argument is optional.  If it is not given the time from the date
+  string will be used and if absent a time of 0h is used.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_julday">julday (date[, ut])</A></B></DT>
+  <! Sec='DESCRIPTION' Level=0 Label='julday' Line='julday (date[, ut])'>
+  <DD>Compute a Julian day given a date and time.  The date and time are
+  specified as described previously.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_mst">mst (date[, ut], longitude)</A></B></DT>
+  <! Sec='DESCRIPTION' Level=0 Label='mst' Line='mst (date[, ut], longitude)'>
+  <DD>Compute a mean sidereal time given a date, time, and longitude in degrees.  The
+  date and (optional) time are specified as described previously.  The longitude
+  may be given as a constant or using the observatory database function
+  as shown in the examples.  The returned value is a sexagesimal
+  string with two decimals in the seconds.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_precess">precess (ra, dec, epoch1, epoch2)</A></B></DT>
+  <! Sec='DESCRIPTION' Level=0 Label='precess' Line='precess (ra, dec, epoch1, epoch2)'>
+  <DD>Precess coordinates from one epoch to another.  The ra is the
+  right ascension in hours, the dec in the declination in degrees,
+  and the epochs are in years.  This function returns a formatted string with
+  the precessed right ascension, declination, and epoch.  Numerical
+  values for the right ascension and declination are obtained with the
+  functions ra_precess and dec_precess.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_ra_precess">ra_precess (ra, dec, epoch1, epoch2)</A></B></DT>
+  <! Sec='DESCRIPTION' Level=0 Label='ra_precess' Line='ra_precess (ra, dec, epoch1, epoch2)'>
+  <DD>Precess a right ascension from one epoch to another.  The ra is the
+  input right ascension in hours, the dec is the declination in degrees,
+  and the epochs are in years.  Because a function can return only one
+  value there is a second function to return the precessed declination.
+  The returned value is a sexagesimal string with two decimals in the seconds.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_dec_precess">dec_precess (ra1, dec1, epoch1, epoch2)</A></B></DT>
+  <! Sec='DESCRIPTION' Level=0 Label='dec_precess' Line='dec_precess (ra1, dec1, epoch1, epoch2)'>
+  <DD>Precess a declination from one epoch to another.  The ra is the
+  input right ascension in hours, the dec is the declination in degrees,
+  and the epochs are in years.  Because a function can return only one
+  value there is a second function to return the precessed right ascension.
+  The returned value is a sexagesimal string with two decimals in the seconds.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_arcsep">arcsep (ra1, dec1, ra2, dec2)</A></B></DT>
+  <! Sec='DESCRIPTION' Level=0 Label='arcsep' Line='arcsep (ra1, dec1, ra2, dec2)'>
+  <DD>Compute the separation between two spherical coordinates.  The parameters
+  ra1 and ra2 are coordinates in hours (right ascension, longitude, etc.)
+  and the dec1 and dec2 parameters are coordinates in degrees (declination,
+  latitude, etc.).  The computed value is returned in seconds of arc.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_airmass">airmass (ra, dec, st, latitude)</A></B></DT>
+  <! Sec='DESCRIPTION' Level=0 Label='airmass' Line='airmass (ra, dec, st, latitude)'>
+  <DD>Compute an airmass given right ascension in hours, declination in
+  degrees, sidereal time in hours, and latitude in degrees.  The latitude
+  is often specified using the observatory database function as shown
+  in the examples.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_eairmass">eairmass (ra, dec, st, exptime, latitude)</A></B></DT>
+  <! Sec='DESCRIPTION' Level=0 Label='eairmass' Line='eairmass (ra, dec, st, exptime, latitude)'>
+  <DD>Compute an "<TT>effective</TT>" airmass given right ascension in hours, declination
+  in degrees, beginning sidereal time in hours, exposure time in seconds, and
+  latitude in degrees.  The The latitude is often specified using the
+  observatory database function as shown in the examples.  The effective
+  airmass is based on a Simpson's rule weighting of the beginning, middle,
+  and ending airmass (with no provision for paused exposure).  The weights
+  are:
+  <P>
+  <PRE>
+      effective = beginning + 4 * middle + ending
+  </PRE>
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_obsdb">obsdb (observatory, parameter)</A></B></DT>
+  <! Sec='DESCRIPTION' Level=0 Label='obsdb' Line='obsdb (observatory, parameter)'>
+  <DD>Return a value from the observatory database.  The observatory parameter is
+  a observatory identification string as defined in the database.  Another
+  special value is "<TT>observatory</TT>" which then follows a name resolution
+  scheme.  The observatory database mechanism is described by the help topic
+  <B>observatory</B>.  The parameter is a string given the quantity desired.
+  Typically this would be "<TT>longitude</TT>" or "<TT>latitude</TT>" but there are other
+  possible parameters.
+  </DD>
+  </DL>
+  <P>
+  input/output functions:
+  <P>
+  There are special functions for formatting, printing, error aborts,
+  reading, writing, and deleting image header keywords, reading a text file,
+  and reading and writing CL parameters.
+  <P>
+  <PRE>
+       print  - print a set of arguments with default format
+       printf - print a set arguments with specified format
+       format - format a string
+       error  - print an error message and abort
+       clget  - get a value from a CL parameter
+       clput  - put a value to a CL parameter
+        scan  - scan a string and parse into variables
+       fscan  - scan a line of a text file
+       imget  - get the value of an image header keyword
+       imput  - put (add or modify) the value of an image header keyword
+       imdel  - delete an image header keyword
+  </PRE>
+  <P>
+  <DL>
+  <DT><B><A NAME="l_print">print ([argument, ...])</A></B></DT>
+  <! Sec='DESCRIPTION' Level=0 Label='print' Line='print ([argument, ...])'>
+  <DD>Print the arguments with default formats based on the type of value ending
+  with a newline.  There may be zero or more arguments.  With zero arguments
+  only a newline will be printed.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_printf">printf (fmt [, argument, ...])</A></B></DT>
+  <! Sec='DESCRIPTION' Level=0 Label='printf' Line='printf (fmt [, argument, ...])'>
+  <DD>Print a list of arguments using the formatting syntax described later.
+  Parameters to be formatted are given by the % fields and the values are
+  passed as further arguments in the order in which they are referenced.
+  There is no automatic newline so the format must include "<TT>\n</TT>" to
+  produce newlines.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_error">error (message)</A></B></DT>
+  <! Sec='DESCRIPTION' Level=0 Label='error' Line='error (message)'>
+  <DD>Print the "<TT>message</TT>", which can be any string variable such as might
+  be produced by "<TT>format</TT>", and abort the task.  This is useful in
+  conjunction with the conditional operator to abort if a variable
+  takes an inappropriate value.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_clget">clget (parameter)</A></B></DT>
+  <! Sec='DESCRIPTION' Level=0 Label='clget' Line='clget (parameter)'>
+  <DD>Get the value of a CL parameter.  The argument must be a string.  The
+  function value is the value of the parameter.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_clput">clput (parameter, value)</A></B></DT>
+  <! Sec='DESCRIPTION' Level=0 Label='clput' Line='clput (parameter, value)'>
+  <DD>Put a value into a CL parameter.  The parameter argument must be a
+  string and the value can be anything.  The function returns a string
+  of the form "<TT>clput: parameter = value</TT>" where parameter and value are
+  the actual values.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_scan">scan (string, var, ...)</A></B></DT>
+  <! Sec='DESCRIPTION' Level=0 Label='scan' Line='scan (string, var, ...)'>
+  <DD>Parse a string of whitespace separated words into a list of
+  variables.  The number of variables assigned is
+  the returned value of the function.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_fscan">fscan (var, ...)</A></B></DT>
+  <! Sec='DESCRIPTION' Level=0 Label='fscan' Line='fscan (var, ...)'>
+  <DD>Scan a line of a text file into a list of variables.  The arguments
+  are zero or more variable names to which to assign the values of
+  the whitespace separated fields.  The number of variables assigned
+  is the returned value of the function.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_imget">imget (parameter)</A></B></DT>
+  <! Sec='DESCRIPTION' Level=0 Label='imget' Line='imget (parameter)'>
+  <DD>Get the value of an image header keyword from the current image.  The
+  argument must be a string.  The function value is the value of the keyword.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_imput">imput (parameter, value)</A></B></DT>
+  <! Sec='DESCRIPTION' Level=0 Label='imput' Line='imput (parameter, value)'>
+  <DD>Put a value into an image header keyword for the current image.  The
+  parameter argument must be a string and the value can be anything.  If the
+  keyword exists it will be modified and if it does not exist it will be
+  added.  The function returns a string of the form "<TT>imput: parameter =
+  value</TT>" for new keywords or "<TT>imput: parameter = old_value -&gt; value</TT>" for
+  modified keywords where parameter and value are the actual values.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_imdel">imdel (parameter)</A></B></DT>
+  <! Sec='DESCRIPTION' Level=0 Label='imdel' Line='imdel (parameter)'>
+  <DD>Delete an image header keyword.  The parameter argument must be a string.
+  The returned values are the strings "<TT>imdel: parameter not found</TT>"
+  or "<TT>imdel: parameter = value (DELETED)</TT>" where parameter is the parameter
+  name and value is the old value.
+  </DD>
+  </DL>
+  <P>
+  </UL>
+  <! EndSection:   'DESCRIPTION'>
+  <H2><A NAME="s_formats">FORMATS</A></H2>
+  <! BeginSection: 'FORMATS'>
+  <UL>
+  A  format  specification has the form "<TT>%w.dCn</TT>", where w is the field
+  width, d is the number of decimal places or the number of digits  of
+  precision,  C  is  the  format  code,  and  n is radix character for
+  format code "<TT>r</TT>" only.  The w and d fields are optional.  The  format
+  codes C are as follows:
+      
+  <PRE>
+  b       boolean (YES or NO)
+  c       single character (c or '\c' or '\0nnn')
+  d       decimal integer
+  e       exponential format (D specifies the precision)
+  f       fixed format (D specifies the number of decimal places)
+  g       general format (D specifies the precision)
+  h       hms format (hh:mm:ss.ss, D = no. decimal places)
+  m       minutes, seconds (or hours, minutes) (mm:ss.ss)
+  o       octal integer
+  rN      convert integer in any radix N
+  s       string (D field specifies max chars to print)
+  t       advance To column given as field W
+  u       unsigned decimal integer 
+  w       output the number of spaces given by field W
+  x       hexadecimal integer
+  z       complex format (r,r) (D = precision)
+      
+      
+  Conventions for w (field width) specification:
+      
+      W =  n      right justify in field of N characters, blank fill
+          -n      left justify in field of N characters, blank fill
+          0n      zero fill at left (only if right justified)
+  absent, 0       use as much space as needed (D field sets precision)
+      
+      
+  Escape sequences (e.g. "\n" for newline):
+      
+  \b      backspace   (not implemented)
+       formfeed
+  \n      newline (crlf)
+  \r      carriage return
+  \t      tab
+  \"      string delimiter character
+  \'      character constant delimiter character
+  \\      backslash character
+  \nnn    octal value of character
+      
+  Examples
+      
+  %s          format a string using as much space as required
+  %-10s       left justify a string in a field of 10 characters
+  %-10.10s    left justify and truncate a string in a field of 10 characters
+  %10s        right justify a string in a field of 10 characters
+  %10.10s     right justify and truncate a string in a field of 10 characters
+      
+  %7.3f       print a real number right justified in floating point format
+  %-7.3f      same as above but left justified
+  %15.7e      print a real number right justified in exponential format
+  %-15.7e     same as above but left justified
+  %12.5g      print a real number right justified in general format
+  %-12.5g     same as above but left justified
+  <P>
+  %h          format as nn:nn:nn.n
+  %15h        right justify nn:nn:nn.n in field of 15 characters
+  %-15h       left justify nn:nn:nn.n in a field of 15 characters
+  %12.2h      right justify nn:nn:nn.nn
+  %-12.2h     left justify nn:nn:nn.nn
+      
+  %H          / by 15 and format as nn:nn:nn.n
+  %15H        / by 15 and right justify nn:nn:nn.n in field of 15 characters
+  %-15H       / by 15 and left justify nn:nn:nn.n in field of 15 characters
+  %12.2H      / by 15 and right justify nn:nn:nn.nn
+  %-12.2H     / by 15 and left justify nn:nn:nn.nn
+  <P>
+  \n          insert a newline
+  </PRE>
+  <P>
+  </UL>
+  <! EndSection:   'FORMATS'>
+  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <! BeginSection: 'EXAMPLES'>
+  <UL>
+  1.  This example shows interactive use.
+  <P>
+  <PRE>
+      cl&gt; astcalc
+      astcalc&gt; print ((1 + 2 + 3) / 2 - 2 * 2)
+      -1
+      astcalc&gt; observatory = "kpno"
+      astcalc&gt; date = "05/04/87"
+      astcalc&gt; ut = 9:27:27
+      astcalc&gt; ra = 13:29:24
+      astcalc&gt; dec = 47:15:34
+      astcalc&gt; epoch = epoch (date, ut)
+      astcalc&gt; mst = mst (date, ut, obsdb (observatory, "longitude"))
+      astcalc&gt; print (epoch)
+      1987.257752395672
+      astcalc&gt; print (mst)
+      14:53:39.81
+      astcalc&gt; print (julday (date, ut))
+      2446890.894062519
+      astcalc&gt; print (ra_precess (ra, dec, epoch, 1950))
+      13:27:49.84
+      astcalc&gt; print (dec_precess (ra, dec, epoch, 1950))
+      47:27:05.72
+      astcalc&gt; print (airmass (ra, dec, mst, obsdb (observatory, "latitude")))
+      1.07968417231416
+      astcalc&gt; printf ("Hello World: %s\n", precess (ra, dec, epoch, 1950))
+      Hello World: 13:27:49.84  47:27:05.7   1950.
+      astcalc&gt; quit
+  </PRE>
+  <P>
+  2.  This example shows the same commands as in the previous example
+  read from a file.
+  <P>
+  <PRE>
+      cl&gt; type example2.dat
+      # Define variables.
+      observatory = "kpno"
+      date = "05/04/87"
+      ut = 9:27:27
+      ra = 13:29:24
+      dec = 47:15:34
+      epoch = epoch (date, ut)
+      mst = mst (date, ut, obsdb (observatory, "longitude"))
+  <P>
+      # Print results of some expressions.
+      print ((1 + 2 + 3) / 2 - 2 * 2)       # Calculation with constants
+      print (epoch)                         # Print variable
+      print (mst)                           # Print variable
+      print (julday (date, ut))             # Print result of function
+      print (ra_precess (ra, dec, epoch, 1950))
+      print (dec_precess (ra, dec, epoch, 1950))
+      print (airmass (ra, dec, mst, obsdb (observatory, "latitude")))
+  <P>
+      # Formatted print with arguments.  Note newline.
+      printf ("Hello World: %s\n", precess (ra, dec, epoch, 1950))
+      cl&gt; astcalc commands=example2.dat
+      -1
+      1987.257752395672
+      14:53:39.81
+      2446890.894062519
+      13:27:49.84
+      47:27:05.72
+      1.07968417231416
+      Hello World: 13:27:49.84  47:27:05.7   1950.
+  </PRE>
+  <P>
+  3.  This example precesses coordinates given in a text file.
+  <P>
+  <PRE>
+      cl&gt; type example3.dat,table.dat
+      ===&gt; example3.dat &lt;===
+      # Read table of RA, DEC, and optional EPOCH and precess to 2000.
+  <P>
+      epoch = 1900            # Default input epoch
+      epoch1 = 2000           # Precession epoch
+  <P>
+      # Scan table and precess coordinates.
+      if (fscan ("ra", "dec", "epoch") &gt;= 2)
+  	ra1 = ra_precess (ra, dec, epoch, epoch1)
+  	dec1 = dec_precess (ra, dec, epoch, epoch1)
+  	printf ("%h %h %d -&gt; %h %h %d\n", ra, dec, epoch, ra1, dec1, epoch1)
+      else
+  	printf ("Missing coordinates\n")
+      endif
+  <P>
+      ===&gt; table.dat &lt;===
+      12:22:31        31:10:15        1950
+      13:52:44        10:21:32        1996.1
+      14:52:44        11:21:32
+      10:20:30
+  <P>
+      cl&gt; astcalc commands=example3.dat table=table.dat
+      12:22:31.0 31:10:15.0 1950 -&gt; 12:25:00.56 30:53:38.13 2000
+      13:52:44.0 10:21:32.0 1996 -&gt; 13:52:55.54 10:20:23.11 2000
+      14:52:44.0 11:21:32.0 1900 -&gt; 14:57:33.16 10:57:24.74 2000
+      Missing coordinates
+  </PRE>
+  <P>
+  4.  This complex example illustrates reading from CL parameters and
+  image header keywords.  It precesses coordinates to a standard epoch
+  and computes the arc separation between the coordinates and a center
+  coordinate.  If the separation is less than a specified amount it
+  prints the image name and additional information.  This is the
+  data file for the <B>astradius</B> script task.
+  <P>
+  <PRE>
+      cl&gt; type astutil$astradius.dat
+      # Print images which are within a given radius in the sky.
+  <P>
+      # Get parameters.
+      racenter = clget ("astradius.racenter")
+      deccenter = clget ("astradius.deccenter")
+      epcenter = clget ("astradius.epcenter")
+      radius = clget ("astradius.radius")
+      ra = imget(clget("keywpars.ra"))
+      dec = imget(clget("keywpars.dec"))
+  <P>
+      epoch = imget(clget("keywpars.epoch"))
+      if (str(epoch) == "" || real(epoch) == 0.)
+  	date = imget(clget("keywpars.date_obs"))
+  	ut = imget(clget("keywpars.ut"))
+  	epoch = epoch (date, ut)
+      endif
+  <P>
+      # Precess image coordinates to center epoch and compute separation.
+      radec = precess (ra, dec, epoch, epcenter)
+      ra1 = ra_precess (ra, dec, epoch, epcenter)
+      dec1 = dec_precess (ra, dec, epoch, epcenter)
+      sep = arcsep (racenter, deccenter, ra1, dec1)
+  <P>
+      # Print result if within radius.
+      if (sep &lt; real (radius))
+  	printf ("%-15s %s %4d %s\n", $I, radec, sep, imget ("title"))
+      endif
+      cl&gt; astcalc commands=astutil$astradius.dat images=dev$pix
+      RA center (hours) (13:31): 
+      DEC center (degrees) (47:00): 
+      Epoch of center (2000.): 
+      Radius in arc seconds (3600.): 
+      dev$pix         13:29:56.16  47:11:37.9   2000.  955 m51  B  600s
+  </PRE>
+  <P>
+  </UL>
+  <! EndSection:   'EXAMPLES'>
+  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <! BeginSection: 'REVISIONS'>
+  <UL>
+  <DL>
+  <DT><B><A NAME="l_ASTCALC">ASTCALC V2.15</A></B></DT>
+  <! Sec='REVISIONS' Level=0 Label='ASTCALC' Line='ASTCALC V2.15'>
+  <DD>The $D variable was changed from the old MM/DD/YY format to the post-Y2K
+  YYYY-MM-DD format.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_ASTCALC">ASTCALC V2.11.2</A></B></DT>
+  <! Sec='REVISIONS' Level=0 Label='ASTCALC' Line='ASTCALC V2.11.2'>
+  <DD>Y2K update:  The epoch, julday, and mst functions now take either the old
+  or new FITS style date strings.  The time argument is optional and if
+  it is not specified the time from the date string is used and if neither
+  time is present a value of 0h is used.  New internal variables $GMD,
+  $GMT, and $GMDT for the current time Greenwich time are defined.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_ASTCALC">ASTCALC V2.11</A></B></DT>
+  <! Sec='REVISIONS' Level=0 Label='ASTCALC' Line='ASTCALC V2.11'>
+  <DD>This task is new in this release.
+  </DD>
+  </DL>
+  </UL>
+  <! EndSection:   'REVISIONS'>
+  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <! BeginSection: 'SEE ALSO'>
+  <UL>
+  astradius, asthedit, setairmass, setjd, asttimes, precess, observatory, hedit
+  </UL>
+  <! EndSection:    'SEE ALSO'>
+  
+  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'FORMATS' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
+  
+  </BODY>
+  </HTML>

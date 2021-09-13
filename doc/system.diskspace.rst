@@ -1,0 +1,68 @@
+diskspace — Show how much diskspace is available
+================================================
+
+**Package: system**
+
+.. raw:: html
+
+  <BODY>
+  <TABLE WIDTH="100%" BORDER=0><TR>
+  <TD ALIGN=LEFT><FONT SIZE=4>
+  <B>diskspace (Feb85)</B></FONT></TD>
+  <TD ALIGN=CENTER><FONT SIZE=4>
+  <B>system</B>
+  </FONT></TD>
+  <TD ALIGN=RIGHT><FONT SIZE=4>
+  <B>diskspace (Feb85)</B></FONT></TD>
+  </TR></TABLE><P>
+  <TITLE>diskspace</TITLE>
+  <UL>
+  </UL>
+  <H2><A NAME="s_name">NAME</A></H2>
+  <! BeginSection: 'NAME'>
+  <UL>
+  diskspace -- summarize disk space utilization
+  </UL>
+  <! EndSection:   'NAME'>
+  <H2><A NAME="s_usage">USAGE</A></H2>
+  <! BeginSection: 'USAGE'>
+  <UL>
+  diskspace
+  </UL>
+  <! EndSection:   'USAGE'>
+  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <! BeginSection: 'DESCRIPTION'>
+  <UL>
+  <I>Diskspace</I> lists the disk devices available on the host system,
+  giving the name, capacity, and free space available on each device.
+  The format and contents of the output are host system dependent.
+  </UL>
+  <! EndSection:   'DESCRIPTION'>
+  <H2><A NAME="s_example">EXAMPLE</A></H2>
+  <! BeginSection: 'EXAMPLE'>
+  <UL>
+  <P>
+  1. Print the available diskspace (UNIX host).
+  <P>
+  <PRE>
+  	cl&gt; disk
+  	Filesystem    kbytes    used   avail capacity  Mounted on
+  	/dev/hp0a       7421    5312    1366    80%    /
+  	/dev/hp0g      38430    5340   29246    15%    /tmp
+  	/dev/hp0h      51598   38848    7590    84%    /usr
+  	/dev/ra0a       8007    5657    1549    79%    /mnt
+  	/dev/ra0d      88179   46043   33318    58%    /u1
+  	/dev/ra0e      54382   46694    2248    95%    /local
+  	/dev/ra0f     145435   93733   37158    72%    /u2
+  	/dev/ra0g      28720     350   25497     1%    /usr/spool
+  	/dev/ra0h      79798   41696   30122    58%    /iraf
+  	/dev/ra1h     397102  306688   50702    86%    /tmp2
+  	/dev/ra2h     397102  275010   82380    77%    /tmp3
+  </PRE>
+  </UL>
+  <! EndSection:    'EXAMPLE'>
+  
+  <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'EXAMPLE'  >
+  
+  </BODY>
+  </HTML>

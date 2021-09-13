@@ -1,0 +1,213 @@
+crnebula — Detect and replace cosmic rays in nebular data
+=========================================================
+
+**Package: crutil**
+
+.. raw:: html
+
+  <BODY>
+  <TABLE WIDTH="100%" BORDER=0><TR>
+  <TD ALIGN=LEFT><FONT SIZE=4>
+  <B>crnebula (Apr98)</B></FONT></TD>
+  <TD ALIGN=CENTER><FONT SIZE=4>
+  <B>noao.imred.crutil</B>
+  </FONT></TD>
+  <TD ALIGN=RIGHT><FONT SIZE=4>
+  <B>crnebula (Apr98)</B></FONT></TD>
+  </TR></TABLE><P>
+  <TITLE>crnebula</TITLE>
+  <UL>
+  </UL>
+  <H2><A NAME="s_name">NAME</A></H2>
+  <! BeginSection: 'NAME'>
+  <UL>
+  crnebula -- create a cosmic ray mask from nebular images
+  </UL>
+  <! EndSection:   'NAME'>
+  <H2><A NAME="s_usage_">USAGE	</A></H2>
+  <! BeginSection: 'USAGE	'>
+  <UL>
+  <PRE>
+  crnebula input output
+  </PRE>
+  </UL>
+  <! EndSection:   'USAGE	'>
+  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <! BeginSection: 'PARAMETERS'>
+  <UL>
+  <DL>
+  <DT><B><A NAME="l_input">input</A></B></DT>
+  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
+  <DD>Input image in which cosmic rays are to be detected.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_output">output</A></B></DT>
+  <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
+  <DD>Output image in which cosmic rays are to be replaced by the median.
+  If no output image is given (specified as "<TT></TT>") then no output image
+  is created.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_crmask">crmask = "<TT></TT>"</A></B></DT>
+  <! Sec='PARAMETERS' Level=0 Label='crmask' Line='crmask = ""'>
+  <DD>Output cosmic ray mask identifying the cosmic rays found.  The mask
+  will have values of one for cosmic rays and zero for non-cosmic rays.
+  If no output cosmic ray mask is given (specified as "<TT></TT>") then no mask
+  is created.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_residual">residual = "<TT></TT>"</A></B></DT>
+  <! Sec='PARAMETERS' Level=0 Label='residual' Line='residual = ""'>
+  <DD>Output residual image.  This is the input image minus the median filtered
+  image divided by the estimated sigma at each pixel.  Thresholds in this
+  image determine the cosmic rays detected.  If no image name is given then
+  no output will be created.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_rmedresid">rmedresid = "<TT></TT>"</A></B></DT>
+  <! Sec='PARAMETERS' Level=0 Label='rmedresid' Line='rmedresid = ""'>
+  <DD>Output image for the difference between the box median filter image and
+  the ring median filtered image divided by the estimated sigma at each
+  pixel.  If no image name is given then no output will be created.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_var0">var0 = 0., var1 = 0., var2 = 0.</A></B></DT>
+  <! Sec='PARAMETERS' Level=0 Label='var0' Line='var0 = 0., var1 = 0., var2 = 0.'>
+  <DD>Variance coefficients for the variance model.  The variance model is
+  <P>
+  <PRE>
+      variance = var0 + var1 * data + var2 * data^2
+  </PRE>
+  <P>
+  where data is the maximum of zero and median pixel value and the variance is in
+  data numbers.  All the coefficients must be positive or zero.  If they are
+  all zero then empirical data sigmas are estimated by a percentile method in
+  boxes of size given by <I>ncsig</I> and <I>nlsig</I>.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_sigmed">sigmed = 3.</A></B></DT>
+  <! Sec='PARAMETERS' Level=0 Label='sigmed' Line='sigmed = 3.'>
+  <DD>Sigma clipping factor for the residual image.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_sigdiff">sigdiff = 3.</A></B></DT>
+  <! Sec='PARAMETERS' Level=0 Label='sigdiff' Line='sigdiff = 3.'>
+  <DD>Sigma clipping factor for the residuals between the box median and ring median
+  filtered images.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_mbox">mbox = 5</A></B></DT>
+  <! Sec='PARAMETERS' Level=0 Label='mbox' Line='mbox = 5'>
+  <DD>Box size, in pixels, for the box median filtering.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_rin">rin = 1.5, rout = 6.</A></B></DT>
+  <! Sec='PARAMETERS' Level=0 Label='rin' Line='rin = 1.5, rout = 6.'>
+  <DD>Inner and outer radii, in pixels, for the ring median filtering.
+  </DD>
+  </DL>
+  <DL>
+  <DT><B><A NAME="l_verbose">verbose = no</A></B></DT>
+  <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
+  <DD>Print some progress information?
+  </DD>
+  </DL>
+  </UL>
+  <! EndSection:   'PARAMETERS'>
+  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <! BeginSection: 'DESCRIPTION'>
+  <UL>
+  This task uses a combination of box median filtering to detect cosmic rays
+  and the difference between box and ring median filtering to identify
+  regions of fine nebular structure which should not be treated as cosmic
+  rays.  The output consists of some set of the input image with cosmic rays
+  replaced by the median, a cosmic ray mask, the residual image used to
+  detect the cosmic rays, and the residual image used to exclude cosmic rays
+  in regions of nebular fine structure.  The cosmic ray mask may be used
+  later with <B>crgrow</B> and <B>crfix</B> to grow and remove the cosmic rays
+  from the data by interpolation rather than the median.
+  <P>
+  The algorithm is as follows.  The input image is median filtered using a
+  box of size given by <I>mbox</I>.  The residual image between the unfiltered
+  and filter data is computed.  The residuals are divided by the estimated
+  sigma of the pixel.  Cosmic rays are those which are more than <I>sigmed</I>
+  above zero in the residual image.  This residual image may be output if an
+  output name is specified.  This part of the algorithm is identical to that
+  of the task <I>crmedian</I> and, in fact, that task is used.
+  <P>
+  The median image not only enhances cosmic rays it also enhances narrow fine
+  structure in the input image.  To avoid identifying this structure as
+  cosmic rays a second filtered residual image is created which
+  preferentially identifies this structure over the cosmic rays.  The input
+  image is filtered using a ring median of specified inner and outer radius.
+  The inner radius is slightly larger than the scale of the cosmic rays and
+  the outer radius is comparable to the box size of the box median filter.  A
+  ring filter replaces the center of the ring by the median of the ring.  The
+  difference between the input and ring median filtered image divided by the
+  estimated sigma will then be very similar to the box median residual image both
+  where there are cosmic rays and where there is diffuse structure but will
+  be different where there are linear fine structure patterns.  The
+  difference between the median residual image and this ring median residual
+  image highlights the regions of fine structure. If a image name is specified
+  for the difference of the residual images it will be output.
+  <P>
+  The difference of the median residual images is used to exclude any cosmic
+  ray candidate pixels determined from sigma clipping the box median residual
+  image which lie where the difference of the median residual images is
+  greater than <I>sigdiff</I> different from zero (both positive or
+  negative).
+  <P>
+  To understand this algorithm it is recommended that the user save the
+  residual and residual difference images and display them and blink against
+  the original data.
+  </UL>
+  <! EndSection:   'DESCRIPTION'>
+  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <! BeginSection: 'EXAMPLES'>
+  <UL>
+  This example, the same as in <B>crmedian</B>, illustrates using the
+  <B>crnebual</B> task to give a cosmic ray removed image and examining the
+  results with an image display.  The image is a CCD image with a readout
+  noise of 5 electrons and a gain of 3 electrons per data number.  This
+  implies variance model coefficients of
+  <P>
+  <PRE>
+      var0 = (5/3)^2 = 2.78
+      var1 = 1/3 = 0.34
+  </PRE>
+  <P>
+  <PRE>
+      cl&gt; display obj001 1                  # Display in first frame
+      cl&gt; # Determine output image, cosmic ray mask, and residual images
+      cl&gt; crnebula obj001 crobj001 crmask=mask001 resid=res001\<BR>
+      &gt;&gt;&gt; rmedresid=rmed001 var0=2.78 var1=0.34
+      cl&gt; display crobj001 2                # Display final image
+      cl&gt; display res001 3 zs- zr- z1=-5 z2=5  # Display residuals
+      cl&gt; display rmed001 4 zs- zr- z1=-5 z2=5
+  </PRE>
+  <P>
+  By looking at the residual image the sigma clippig threshold can be
+  adjusted and the noise parameters can be tweaked to minimize clipping
+  of real extended structure.
+  </UL>
+  <! EndSection:   'EXAMPLES'>
+  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <! BeginSection: 'SEE ALSO'>
+  <UL>
+  cosmicrays, crmedian, median, rmedian, crfix, crgrow
+  </UL>
+  <! EndSection:    'SEE ALSO'>
+  
+  <! Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  
+  </BODY>
+  </HTML>

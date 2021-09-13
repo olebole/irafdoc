@@ -1,0 +1,12 @@
+ccdtest — CCD test and demonstration package
+============================================
+
+**Package: ccdred**
+
+.. raw:: html
+
+  ccdred.ccdtest:
+  	 artobs - Create an artificial CCD observation
+  	   demo - Run a demonstration of the CCD reduction package
+  	mkimage - Make or modify an image with simple values
+       subsection - Create an artificial subsection CCD observation

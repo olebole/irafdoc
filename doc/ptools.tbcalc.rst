@@ -1,3 +1,5 @@
+.. _tbcalc:
+
 tbcalc — Do arithmetic on a list of apphot/daophot tables databases
 ===================================================================
 
@@ -5,50 +7,37 @@ tbcalc — Do arithmetic on a list of apphot/daophot tables databases
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>tbcalc (May93)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.ptools</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>tbcalc (May93)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>tbcalc</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   tbcalc - perform an arithmetic operation on a column in a list of apphot/daophot
   	 ST tables databases
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   tbcalc textfiles column value
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_textfiles">textfiles</A></B></DT>
+  <DT><B>textfiles</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='textfiles' Line='textfiles'>
   <DD>The APPHOT/DAOPHOT ST tables database(s) containing the column to be recomputed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_column">column</A></B></DT>
+  <DT><B>column</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='column' Line='column'>
   <DD>The column to be recomputed. Column must be an integer or real column
   in the input file(s).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_value">value</A></B></DT>
+  <DT><B>value</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='value' Line='value'>
   <DD>The arithmetic expression used to recompute the specified column.
   Value may be an integer or real expression but must match the data
@@ -58,7 +47,7 @@ tbcalc — Do arithmetic on a list of apphot/daophot tables databases
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -92,7 +81,7 @@ tbcalc — Do arithmetic on a list of apphot/daophot tables databases
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -113,13 +102,13 @@ tbcalc — Do arithmetic on a list of apphot/daophot tables databases
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   <P>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   ptools.txcalc,tables.tcalc,ptools.pcalc
@@ -128,5 +117,3 @@ tbcalc — Do arithmetic on a list of apphot/daophot tables databases
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

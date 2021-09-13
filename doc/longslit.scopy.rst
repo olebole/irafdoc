@@ -1,3 +1,5 @@
+.. _scopy:
+
 scopy — Sum and extract spectra from long slit to 1D format
 ===========================================================
 
@@ -5,42 +7,29 @@ scopy — Sum and extract spectra from long slit to 1D format
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>scopy (Mar93)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.onedspec</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>scopy (Mar93)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>scopy</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   scopy -- Select and copy spectra
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   scopy input output
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of input images containing spectra to be copied.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>List of output image names or root names.  Image
   sections are ignored and if the output format is "<TT>onedspec</TT>" then any record
@@ -56,7 +45,7 @@ scopy — Sum and extract spectra from long slit to 1D format
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_w1">w1 = INDEF, w2 = INDEF</A></B></DT>
+  <DT><B>w1 = INDEF, w2 = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='w1' Line='w1 = INDEF, w2 = INDEF'>
   <DD>Starting and ending wavelengths to be copied.  If <I>w1</I> is not specified
   then the wavelength of the starting edge of the first pixel is used
@@ -72,7 +61,7 @@ scopy — Sum and extract spectra from long slit to 1D format
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apertures">apertures = "<TT></TT>", beams = "<TT></TT>"</A></B></DT>
+  <DT><B>apertures = "<TT></TT>", beams = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = "", beams = ""'>
   <DD>List of apertures and beams to be selected from the input spectra.  The
   logical intersection of the two lists is selected.  The null list
@@ -88,7 +77,7 @@ scopy — Sum and extract spectra from long slit to 1D format
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_bands">bands = "<TT></TT>"</A></B></DT>
+  <DT><B>bands = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='bands' Line='bands = ""'>
   <DD>List of bands in 3D multispec.
   For 3D spatial spectra the band parameter applies to the second
@@ -97,7 +86,7 @@ scopy — Sum and extract spectra from long slit to 1D format
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apmodulus">apmodulus = 0</A></B></DT>
+  <DT><B>apmodulus = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apmodulus' Line='apmodulus = 0'>
   <DD>Modulus to be applied to the input aperture numbers before matching against
   the aperture list.  If zero then no modulus is used.  This is allows
@@ -107,7 +96,7 @@ scopy — Sum and extract spectra from long slit to 1D format
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_format">format = "<TT>multispec</TT>" (multispec|onedspec)</A></B></DT>
+  <DT><B>format = "<TT>multispec</TT>" (multispec|onedspec)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='format' Line='format = "multispec" (multispec|onedspec)'>
   <DD>Output image format and name syntax.  The "<TT>multispec</TT>" format consists of
   one or more spectra in the same image file.  The "<TT>onedspec</TT>" format consists
@@ -119,7 +108,7 @@ scopy — Sum and extract spectra from long slit to 1D format
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_renumber">renumber = no</A></B></DT>
+  <DT><B>renumber = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='renumber' Line='renumber = no'>
   <DD>Renumber the output aperture numbers?  If set the output aperture
   numbers, including any preexisting spectra when merging, are renumbered
@@ -128,20 +117,20 @@ scopy — Sum and extract spectra from long slit to 1D format
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_offset">offset = 0</A></B></DT>
+  <DT><B>offset = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='offset' Line='offset = 0'>
   <DD>Offset to be added to the input or renumbered aperture number to form
   the final output aperture number.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_clobber">clobber = no</A></B></DT>
+  <DT><B>clobber = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='clobber' Line='clobber = no'>
   <DD>Modify an existing output image either by overwriting or merging?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_merge">merge = no</A></B></DT>
+  <DT><B>merge = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='merge' Line='merge = no'>
   <DD>Merge apertures into existing spectra?  This
   requires that the <I>clobber</I> parameter be set.  If not merging
@@ -151,7 +140,7 @@ scopy — Sum and extract spectra from long slit to 1D format
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rebin">rebin = yes</A></B></DT>
+  <DT><B>rebin = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rebin' Line='rebin = yes'>
   <DD>Rebin the spectrum to the exact wavelength range specified by the <I>w1</I>
   and <I>w2</I> parameters?  If the range is given as INDEF for both endpoints
@@ -168,14 +157,14 @@ scopy — Sum and extract spectra from long slit to 1D format
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = no</A></B></DT>
+  <DT><B>verbose = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
   <DD>Print a record of each aperture copied?
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <B>Scopy</B> selects regions of spectra from an input list of spectral
@@ -334,7 +323,7 @@ scopy — Sum and extract spectra from long slit to 1D format
   are the same.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   Because there are so many possiblities there are many examples.  To
@@ -592,11 +581,11 @@ scopy — Sum and extract spectra from long slit to 1D format
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_SCOPY">SCOPY V2.11</A></B></DT>
+  <DT><B>SCOPY V2.11</B></DT>
   <! Sec='REVISIONS' Level=0 Label='SCOPY' Line='SCOPY V2.11'>
   <DD>Previously both w1 and w2 had to be specified to select a range to
   copy.  Now if only one is specified the second endpoint defaults
@@ -604,7 +593,7 @@ scopy — Sum and extract spectra from long slit to 1D format
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_SCOPY">SCOPY V2.10.3</A></B></DT>
+  <DT><B>SCOPY V2.10.3</B></DT>
   <! Sec='REVISIONS' Level=0 Label='SCOPY' Line='SCOPY V2.10.3'>
   <DD>Additional support for 3D multispec/equispec or spatial spectra has been
   added.  The "<TT>bands</TT>" parameter allows selecting specific bands and
@@ -613,14 +602,14 @@ scopy — Sum and extract spectra from long slit to 1D format
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_SCOPY">SCOPY V2.10</A></B></DT>
+  <DT><B>SCOPY V2.10</B></DT>
   <! Sec='REVISIONS' Level=0 Label='SCOPY' Line='SCOPY V2.10'>
   <DD>This task is new.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   ranges, sarith, imcopy, dispcor, specshift
@@ -629,5 +618,3 @@ scopy — Sum and extract spectra from long slit to 1D format
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

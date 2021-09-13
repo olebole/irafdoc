@@ -1,3 +1,5 @@
+.. _ccfind:
+
 ccfind — Find catalog sources in an image
 =========================================
 
@@ -5,37 +7,24 @@ ccfind — Find catalog sources in an image
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>ccfind (Jun99)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imcoords</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>ccfind (Jun99)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>ccfind</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   ccfind -- locate objects in an image given a celestial coordinate list and
   the image wcs
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   ccfind input output image
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The list of input celestial coordinate files. Coordinates may be entered
   by hand by setting input to "<TT>STDIN</TT>". A STDIN coordinate list is terminated
@@ -43,7 +32,7 @@ ccfind — Find catalog sources in an image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>The list of output matched coordinate files. The computed pixel values
   are appended to the input coordinate file line and written to output. The number
@@ -52,21 +41,21 @@ ccfind — Find catalog sources in an image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_image">image</A></B></DT>
+  <DT><B>image</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='image' Line='image'>
   <DD>The list of input images associated with the input coordinate files. The number
   of input images must equal the number of input coordinate files.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lngcolumn">lngcolumn = 1, latcolumn = 2</A></B></DT>
+  <DT><B>lngcolumn = 1, latcolumn = 2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lngcolumn' Line='lngcolumn = 1, latcolumn = 2'>
   <DD>The input coordinate file columns containing the celestial ra / longitude and
   dec / latitude coordinates respectively.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lngunits">lngunits = "<TT></TT>", latunits = "<TT></TT>"</A></B></DT>
+  <DT><B>lngunits = "<TT></TT>", latunits = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lngunits' Line='lngunits = "", latunits = ""'>
   <DD>The units of the input ra / longitude and dec / latitude coordinates. The
   options are "<TT>hours</TT>", "<TT>degreees</TT>", and "<TT>radians</TT>" for ra / longitude and
@@ -78,7 +67,7 @@ ccfind — Find catalog sources in an image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_insystem">insystem = "<TT>j2000</TT>"</A></B></DT>
+  <DT><B>insystem = "<TT>j2000</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='insystem' Line='insystem = "j2000"'>
   <DD>The input celestial coordinate system. The <I>insystem</I> parameter
   sets the preferred units for the input celestial coordinates, and
@@ -88,7 +77,7 @@ ccfind — Find catalog sources in an image
   of options are the following:
   <P>
   <DL>
-  <DT><B><A NAME="l_equinox">equinox [epoch]</A></B></DT>
+  <DT><B>equinox [epoch]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='equinox' Line='equinox [epoch]'>
   <DD>The equatorial mean place post-IAU 1976 (FK5) system if equinox is a
   Julian epoch, e.g. J2000.0 or 2000.0, or the equatorial mean place
@@ -105,7 +94,7 @@ ccfind — Find catalog sources in an image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_icrs">icrs [equinox] [epoch]</A></B></DT>
+  <DT><B>icrs [equinox] [epoch]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='icrs' Line='icrs [equinox] [epoch]'>
   <DD>The International Celestial Reference System (ICRS) where equinox is
   a Julian or Besselian epoch e.g. J2000.0  or B1980.0.
@@ -119,7 +108,7 @@ ccfind — Find catalog sources in an image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fk5">fk5 [equinox] [epoch]</A></B></DT>
+  <DT><B>fk5 [equinox] [epoch]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='fk5' Line='fk5 [equinox] [epoch]'>
   <DD>The equatorial mean place post-IAU 1976 (FK5) system where equinox is
   a Julian or Besselian epoch e.g. J2000.0  or B1980.0.
@@ -133,7 +122,7 @@ ccfind — Find catalog sources in an image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fk4">fk4 [equinox] [epoch]</A></B></DT>
+  <DT><B>fk4 [equinox] [epoch]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='fk4' Line='fk4 [equinox] [epoch]'>
   <DD>The equatorial mean place pre-IAU 1976 (FK4) system where equinox is a
   Besselian or Julian epoch e.g. B1950.0  or J2000.0,
@@ -149,7 +138,7 @@ ccfind — Find catalog sources in an image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_noefk4">noefk4 [equinox] [epoch]</A></B></DT>
+  <DT><B>noefk4 [equinox] [epoch]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='noefk4' Line='noefk4 [equinox] [epoch]'>
   <DD>The equatorial mean place pre-IAU 1976 (FK4) system but without the E-terms
   where equinox is a Besselian or Julian epoch e.g. B1950.0 or J2000.0,
@@ -165,7 +154,7 @@ ccfind — Find catalog sources in an image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apparent">apparent epoch</A></B></DT>
+  <DT><B>apparent epoch</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='apparent' Line='apparent epoch'>
   <DD>The equatorial geocentric apparent place post-IAU 1976 system where
   epoch is the epoch of observation.
@@ -178,7 +167,7 @@ ccfind — Find catalog sources in an image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ecliptic">ecliptic epoch</A></B></DT>
+  <DT><B>ecliptic epoch</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='ecliptic' Line='ecliptic epoch'>
   <DD>The ecliptic coordinate system where epoch is the epoch of observation.
   Epoch is a Besselian epoch, a Julian epoch, or a Julian date.
@@ -190,7 +179,7 @@ ccfind — Find catalog sources in an image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_galactic">galactic [epoch]</A></B></DT>
+  <DT><B>galactic [epoch]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='galactic' Line='galactic [epoch]'>
   <DD>The IAU 1958 galactic coordinate system.
   Epoch is a Besselian epoch, a Julian epoch or a Julian date.
@@ -202,7 +191,7 @@ ccfind — Find catalog sources in an image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_supergalactic">supergalactic [epoch]</A></B></DT>
+  <DT><B>supergalactic [epoch]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='supergalactic' Line='supergalactic [epoch]'>
   <DD>The deVaucouleurs supergalactic coordinate system.
   Epoch is a Besselian epoch, a Julian epoch or a Julian date.
@@ -223,7 +212,7 @@ ccfind — Find catalog sources in an image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_usewcs">usewcs = no</A></B></DT>
+  <DT><B>usewcs = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='usewcs' Line='usewcs = no'>
   <DD>Use image header information to compute the input image celestial coordinate
   system ? If usewcs is "<TT>yes</TT>", the image coordinate system is read from the
@@ -235,21 +224,21 @@ ccfind — Find catalog sources in an image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xref">xref = INDEF, yref = INDEF</A></B></DT>
+  <DT><B>xref = INDEF, yref = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xref' Line='xref = INDEF, yref = INDEF'>
   <DD>The x and y pixel coordinates of the reference point.
   xref and yref default to the center of the image in pixel coordinates.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xmag">xmag = INDEF, ymag = INDEF</A></B></DT>
+  <DT><B>xmag = INDEF, ymag = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xmag' Line='xmag = INDEF, ymag = INDEF'>
   <DD>The x and y scale factors in arcseconds per pixel.  xmag and ymag default
   to 1.0 and 1.0 arcseconds per pixel.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xrotation">xrotation = INDEF, yrotation = INDEF</A></B></DT>
+  <DT><B>xrotation = INDEF, yrotation = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xrotation' Line='xrotation = INDEF, yrotation = INDEF'>
   <DD>The x and y rotation angles in degrees. xrotation and yrotation are
   interpreted as the rotation of the ra / longitude and dec / latitude
@@ -262,7 +251,7 @@ ccfind — Find catalog sources in an image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lngref">lngref = "<TT>INDEF</TT>", latref = "<TT>INDEF</TT>"</A></B></DT>
+  <DT><B>lngref = "<TT>INDEF</TT>", latref = "<TT>INDEF</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lngref' Line='lngref = "INDEF", latref = "INDEF"'>
   <DD>The ra / longitude and dec / latitude of the reference point. Lngref and latref
   may be numbers, e.g 13:20:42.3 and -33:41:26, or keywords for the
@@ -272,7 +261,7 @@ ccfind — Find catalog sources in an image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lngrefunits">lngrefunits = "<TT></TT>", latrefunits = "<TT></TT>"</A></B></DT>
+  <DT><B>lngrefunits = "<TT></TT>", latrefunits = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lngrefunits' Line='lngrefunits = "", latrefunits = ""'>
   <DD>The units of the reference point celestial  coordinates. The options
   are "<TT>hours</TT>", "<TT>degrees</TT>", and "<TT>radians</TT>" for the ra / longitude coordinates,
@@ -282,7 +271,7 @@ ccfind — Find catalog sources in an image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_refsystem">refsystem = "<TT>INDEF</TT>"</A></B></DT>
+  <DT><B>refsystem = "<TT>INDEF</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='refsystem' Line='refsystem = "INDEF"'>
   <DD>The celestial coordinate system of the reference point. Refsystem may
   be any one of the options listed under the <I>insystem</I> parameter, e.g.
@@ -293,7 +282,7 @@ ccfind — Find catalog sources in an image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_projection">projection = "<TT>tan</TT>"</A></B></DT>
+  <DT><B>projection = "<TT>tan</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='projection' Line='projection = "tan"'>
   <DD>The sky projection geometry. The most commonly used projections in
   astronomy are "<TT>tan</TT>", "<TT>arc</TT>", "<TT>sin</TT>", and "<TT>lin</TT>". Other supported projections
@@ -302,14 +291,14 @@ ccfind — Find catalog sources in an image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_center">center = yes</A></B></DT>
+  <DT><B>center = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='center' Line='center = yes'>
   <DD>Center the object pixel coordinates using an x and y marginal centroiding
   algorithm ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sbox">sbox = 21</A></B></DT>
+  <DT><B>sbox = 21</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sbox' Line='sbox = 21'>
   <DD>The search box width in pixels. Sbox defines the region of the input image
   searched and used to compute the initial x and y marginal centroids. Users
@@ -318,21 +307,21 @@ ccfind — Find catalog sources in an image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cbox">cbox = 9</A></B></DT>
+  <DT><B>cbox = 9</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cbox' Line='cbox = 9'>
   <DD>The centering box width in pixels. Cbox defines the region of the input
   image used to compute the final x and y marginal centroids.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_datamin">datamin = INDEF, datamax = INDEF</A></B></DT>
+  <DT><B>datamin = INDEF, datamax = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='datamin' Line='datamin = INDEF, datamax = INDEF'>
   <DD>The minimum and maximum good data values. Values outside this range
   are exclude from the x and y marginal centroid computation.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_background">background = INDEF</A></B></DT>
+  <DT><B>background = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='background' Line='background = INDEF'>
   <DD>The background value used by the centroiding algorithm. If background is
   INDEF, a value equal to the mean value of the good data pixels for
@@ -340,7 +329,7 @@ ccfind — Find catalog sources in an image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_maxiter">maxiter = 5</A></B></DT>
+  <DT><B>maxiter = 5</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='maxiter' Line='maxiter = 5'>
   <DD>The maximum number of centroiding iterations to perform. The centroiding
   algorithm will halt when this limit is reached or when the desired tolerance
@@ -348,7 +337,7 @@ ccfind — Find catalog sources in an image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_tolerance">tolerance = 0</A></B></DT>
+  <DT><B>tolerance = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='tolerance' Line='tolerance = 0'>
   <DD>The convergence tolerance of the centroiding algorithm. Tolerance is
   defined as the maximum permitted integer shift of the centering box in
@@ -356,7 +345,7 @@ ccfind — Find catalog sources in an image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose</A></B></DT>
+  <DT><B>verbose</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose'>
   <DD>Print messages about actions taken by the task?
   </DD>
@@ -364,7 +353,7 @@ ccfind — Find catalog sources in an image
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -474,7 +463,7 @@ ccfind — Find catalog sources in an image
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_formats">FORMATS</A></H2>
+  <H3>Formats</H3>
   <! BeginSection: 'FORMATS'>
   <UL>
   <P>
@@ -555,7 +544,7 @@ ccfind — Find catalog sources in an image
   <P>
   </UL>
   <! EndSection:   'FORMATS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -716,17 +705,17 @@ ccfind — Find catalog sources in an image
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   starfind, ccxymatch, ccmap, ccsetwcs, cctran
@@ -735,5 +724,3 @@ ccfind — Find catalog sources in an image
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'FORMATS' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

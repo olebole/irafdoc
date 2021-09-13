@@ -1,3 +1,5 @@
+.. _objmasks:
+
 objmasks — Detect objects in images and make masks
 ==================================================
 
@@ -5,47 +7,34 @@ objmasks — Detect objects in images and make masks
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>objmasks (Jan02)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>nproto</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>objmasks (Jan02)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>objmasks</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   objmasks -- detect objects in images and create masks and sky maps
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_synopsis">SYNOPSIS</A></H2>
+  <H3>Synopsis</H3>
   <! BeginSection: 'SYNOPSIS'>
   <UL>
   </UL>
   <! EndSection:   'SYNOPSIS'>
-  <H2><A NAME="s_usage_">USAGE	</A></H2>
+  <H3>Usage	</H3>
   <! BeginSection: 'USAGE	'>
   <UL>
   objmasks images objmasks skys
   </UL>
   <! EndSection:   'USAGE	'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>List of images or multiextension files for which object masks are desired.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_objmasks">objmasks</A></B></DT>
+  <DT><B>objmasks</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='objmasks' Line='objmasks'>
   <DD>List of object masks to be created.  This list must match the input list.
   Multiextension input files will produce multiextension mask files.  If the
@@ -57,7 +46,7 @@ objmasks — Detect objects in images and make masks
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_omtype">omtype = "<TT>numbers</TT>" (boolean|numbers|colors|all)</A></B></DT>
+  <DT><B>omtype = "<TT>numbers</TT>" (boolean|numbers|colors|all)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='omtype' Line='omtype = "numbers" (boolean|numbers|colors|all)'>
   <DD>The type of encoding for the object mask values.  In all cases non-object pixels
   (that is background) have mask values of zero.  The choices for the mask
@@ -66,7 +55,7 @@ objmasks — Detect objects in images and make masks
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_skys">skys = "<TT></TT>", sigmas = "<TT></TT>"</A></B></DT>
+  <DT><B>skys = "<TT></TT>", sigmas = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='skys' Line='skys = "", sigmas = ""'>
   <DD>Optional lists of input or output sky and sigma maps.  Maps are either
   constant values or images which are interpolated to the size of the input
@@ -80,7 +69,7 @@ objmasks — Detect objects in images and make masks
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_masks">masks = "<TT>!BPM</TT>"</A></B></DT>
+  <DT><B>masks = "<TT>!BPM</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='masks' Line='masks = "!BPM"'>
   <DD>List of bad pixel masks for the input images.  Non-zero masks values are
   ignored in the object detection and are passed on to the output object
@@ -96,7 +85,7 @@ objmasks — Detect objects in images and make masks
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_extnames">extnames = "<TT></TT>"</A></B></DT>
+  <DT><B>extnames = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='extnames' Line='extnames = ""'>
   <DD>Extensions to select from multiextension files.  A null string matches all
   extension names.  Otherwise the parameter is a comma separated list of
@@ -108,7 +97,7 @@ objmasks — Detect objects in images and make masks
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_logfiles">logfiles = "<TT>STDOUT</TT>"</A></B></DT>
+  <DT><B>logfiles = "<TT>STDOUT</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='logfiles' Line='logfiles = "STDOUT"'>
   <DD>List of output log files.  If no list is given then no output log information
   will be produced.  If only one file is specified it applies to all input
@@ -118,7 +107,7 @@ objmasks — Detect objects in images and make masks
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_blkstep">blkstep = 1</A></B></DT>
+  <DT><B>blkstep = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='blkstep' Line='blkstep = 1'>
   <DD>The mean and sigma of the background or sky pixels are determined in a
   first pass through the image.  If <I>blkstep</I> is one all lines are used.
@@ -128,7 +117,7 @@ objmasks — Detect objects in images and make masks
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_blksize">blksize = -10</A></B></DT>
+  <DT><B>blksize = -10</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='blksize' Line='blksize = -10'>
   <DD>The background mean sky and sky sigma are determined in a set of square
   blocks from which the values are linearly interpolated to each point in the
@@ -142,7 +131,7 @@ objmasks — Detect objects in images and make masks
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_convolve">convolve = "<TT>block 3 3</TT>"</A></B></DT>
+  <DT><B>convolve = "<TT>block 3 3</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='convolve' Line='convolve = "block 3 3"'>
   <DD>Convolution filter to be applied prior to threshold detection.  The
   convolution filter is defined by a set of weights in a 2D array.  These
@@ -151,7 +140,7 @@ objmasks — Detect objects in images and make masks
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_hsigma">hsigma = 3., lsigma = 10.</A></B></DT>
+  <DT><B>hsigma = 3., lsigma = 10.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='hsigma' Line='hsigma = 3., lsigma = 10.'>
   <DD>Object pixels are identified by sigma thresholds about the mean background
   based on the estimated background sigma at each point in the image.
@@ -163,7 +152,7 @@ objmasks — Detect objects in images and make masks
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_hdetect">hdetect = yes, ldetect = no</A></B></DT>
+  <DT><B>hdetect = yes, ldetect = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='hdetect' Line='hdetect = yes, ldetect = no'>
   <DD>Identify objects as pixels which are above the background (<I>hdetect</I>)
   and below the background (<I>ldetect</I>)?  If objects are detected but the
@@ -172,7 +161,7 @@ objmasks — Detect objects in images and make masks
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_neighbors">neighbors = "<TT>8</TT>" (8|4)</A></B></DT>
+  <DT><B>neighbors = "<TT>8</TT>" (8|4)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='neighbors' Line='neighbors = "8" (8|4)'>
   <DD>The threshold selected pixels are associated with other neighboring pixels to
   form an object.  The criterion for a neighbor being part of the
@@ -182,13 +171,13 @@ objmasks — Detect objects in images and make masks
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_minpix">minpix = 6</A></B></DT>
+  <DT><B>minpix = 6</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='minpix' Line='minpix = 6'>
   <DD>The minimum number of neighboring pixels which define an acceptable object.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ngrow">ngrow = 2, agrow = 2.</A></B></DT>
+  <DT><B>ngrow = 2, agrow = 2.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ngrow' Line='ngrow = 2, agrow = 2.'>
   <DD>After an object is identified as a set of threshold detected pixels,
   additional neighboring pixels may be added to the object.  This allows
@@ -203,7 +192,7 @@ objmasks — Detect objects in images and make masks
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <B>OBJMASKS</B> is a task for creating masks covering objects in images.
@@ -271,14 +260,14 @@ objmasks — Detect objects in images and make masks
   are:
   <P>
   <DL>
-  <DT><B><A NAME="l_">"<TT>boolean</TT>"</A></B></DT>
+  <DT><B>"<TT>boolean</TT>"</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='"boolean"'>
   <DD>All object and bad pixels have a mask value of one; i.e. the output masks
   consists only of the values 0 and 1.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">"<TT>numbers</TT>"</A></B></DT>
+  <DT><B>"<TT>numbers</TT>"</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='"numbers"'>
   <DD>Input bad pixels values between 1 and 10 preserve their value and all
   other input mask values are mapped to 10.  The object mask pixels have
@@ -288,7 +277,7 @@ objmasks — Detect objects in images and make masks
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">"<TT>colors</TT>"</A></B></DT>
+  <DT><B>"<TT>colors</TT>"</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='"colors"'>
   <DD>Input bad pixels are mapped to output values of one.  The object numbers
   are modulo 8 plus 2; i.e. values between 2 and 9.  The purpose of this
@@ -297,7 +286,7 @@ objmasks — Detect objects in images and make masks
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">"<TT>all</TT>"</A></B></DT>
+  <DT><B>"<TT>all</TT>"</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='"all"'>
   <DD>This is the same as "<TT>numbers</TT>" except that bits 24 to 27 in the mask values
   are used for various purposes.  In particular bit 24 is set for the boundary
@@ -499,13 +488,13 @@ objmasks — Detect objects in images and make masks
   The <I>convolve</I> parameter is a string with one of the following forms.
   <P>
   <DL>
-  <DT><B><A NAME="l_">"<TT></TT>"    </A></B></DT>
+  <DT><B>"<TT></TT>"    </B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='""    '>
   <DD>There is no convolution or, equivalently, NX=1, NY=1.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">@[filename]</A></B></DT>
+  <DT><B>@[filename]</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='@[filename]'>
   <DD>The weights are given in the specified file.  The format consists of lines
   of whitespace separated values.  The number of values on each line must be
@@ -513,7 +502,7 @@ objmasks — Detect objects in images and make masks
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_block">block [NX] [NY]</A></B></DT>
+  <DT><B>block [NX] [NY]</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='block' Line='block [NX] [NY]'>
   <DD>The weights are all the same and the convolution size is given by the
   two numbers following the word "<TT>block</TT>".  This is a moving block average
@@ -521,7 +510,7 @@ objmasks — Detect objects in images and make masks
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_bilinear">bilinear [NX] [NY]</A></B></DT>
+  <DT><B>bilinear [NX] [NY]</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='bilinear' Line='bilinear [NX] [NY]'>
   <DD>The weights are the bilinear matrix product of triangular one dimensional
   matrices of sizes given by the two numbers following the word "<TT>bilinear</TT>".
@@ -541,14 +530,14 @@ objmasks — Detect objects in images and make masks
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_gauss">gauss [NX] [NY] [SX] [SY]</A></B></DT>
+  <DT><B>gauss [NX] [NY] [SX] [SY]</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='gauss' Line='gauss [NX] [NY] [SX] [SY]'>
   <DD>The weights are bidimensional gaussian values on a grid of size NX by NY
   with sigma values SX and SY (real numbers) in units of pixel spacing.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">[W(1,1)] ... [W(NX,1)], ..., [W(1,NY)] ... [W(NX,NY)]</A></B></DT>
+  <DT><B>[W(1,1)] ... [W(NX,1)], ..., [W(1,NY)] ... [W(NX,NY)]</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='[W(1,1)] ... [W(NX,1)], ..., [W(1,NY)] ... [W(NX,NY)]'>
   <DD>The weights are specified as a string of real values.  The values are
   whitespace separated within each line and the lines are delimited by
@@ -615,7 +604,7 @@ objmasks — Detect objects in images and make masks
   when either maximum is exceedd at the end of a growing iteration.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  The following is a test example with default parameters that can be run
@@ -804,14 +793,14 @@ objmasks — Detect objects in images and make masks
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   </DD>
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   </UL>
@@ -819,5 +808,3 @@ objmasks — Detect objects in images and make masks
   
   <! Contents: 'NAME' 'SYNOPSIS' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

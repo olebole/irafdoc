@@ -1,3 +1,5 @@
+.. _rotate:
+
 rotate — Rotate and shift a list of 2-D images
 ==============================================
 
@@ -5,69 +7,56 @@ rotate — Rotate and shift a list of 2-D images
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>rotate (Dec98)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imgeom</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>rotate (Dec98)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>rotate</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   rotate -- rotate and shift a list of images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   rotate input output rotation
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of images to be rotated.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>List of output images.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rotation">rotation</A></B></DT>
+  <DT><B>rotation</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rotation' Line='rotation'>
   <DD>Angle of rotation of the image in degrees. Positive angles will rotate
   the image counter-clockwise from the x axis.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xin">xin = INDEF, yin = INDEF</A></B></DT>
+  <DT><B>xin = INDEF, yin = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xin' Line='xin = INDEF, yin = INDEF'>
   <DD>The origin of the rotation in pixels. Xin and yin default to the center of
   the input image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xout">xout = INDEF, yout = INDEF</A></B></DT>
+  <DT><B>xout = INDEF, yout = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xout' Line='xout = INDEF, yout = INDEF'>
   <DD>The origin of the output image. Xout and yout default to the center of the
   output image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ncols">ncols = INDEF, nlines = INDEF</A></B></DT>
+  <DT><B>ncols = INDEF, nlines = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ncols' Line='ncols = INDEF, nlines = INDEF'>
   <DD>The number of columns and rows in the output image. The default is to
   keep the dimensions the same as the input image. If ncols and nrows is
@@ -77,41 +66,41 @@ rotate — Rotate and shift a list of 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interpolant">interpolant = "<TT>linear</TT>"</A></B></DT>
+  <DT><B>interpolant = "<TT>linear</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interpolant' Line='interpolant = "linear"'>
   <DD>The interpolant. The options are the following:
   <DL>
-  <DT><B><A NAME="l_nearest">nearest</A></B></DT>
+  <DT><B>nearest</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest'>
   <DD>Nearest neighbor.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_linear">linear</A></B></DT>
+  <DT><B>linear</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='linear' Line='linear'>
   <DD>Bilinear interpolation in x and y.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_poly3">poly3</A></B></DT>
+  <DT><B>poly3</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='poly3' Line='poly3'>
   <DD>Third order polynomial in x and y.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_poly5">poly5</A></B></DT>
+  <DT><B>poly5</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='poly5' Line='poly5'>
   <DD>Fifth order polynomial in x and y.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_spline3">spline3</A></B></DT>
+  <DT><B>spline3</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='spline3' Line='spline3'>
   <DD>Bicubic spline.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sinc">sinc</A></B></DT>
+  <DT><B>sinc</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='sinc' Line='sinc'>
   <DD>2D sinc interpolation. Users can specify the sinc interpolant width by
   appending a width value to the interpolant string, e.g. sinc51 specifies
@@ -120,7 +109,7 @@ rotate — Rotate and shift a list of 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lsinc">lsinc</A></B></DT>
+  <DT><B>lsinc</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='lsinc' Line='lsinc'>
   <DD>Look-up table sinc interpolation. Users can specify the look-up table sinc
   interpolant width by appending a width value to the interpolant string, e.g.
@@ -135,7 +124,7 @@ rotate — Rotate and shift a list of 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_drizzle">drizzle</A></B></DT>
+  <DT><B>drizzle</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='drizzle' Line='drizzle'>
   <DD>2D drizzle resampling. Users can specify the drizzle pixel fraction in x and y
   by appending a value between 0.0 and 1.0 in square brackets to the
@@ -149,29 +138,29 @@ rotate — Rotate and shift a list of 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_boundary">boundary = "<TT>nearest</TT>"</A></B></DT>
+  <DT><B>boundary = "<TT>nearest</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"'>
   <DD>The choices are:
   <DL>
-  <DT><B><A NAME="l_nearest">nearest</A></B></DT>
+  <DT><B>nearest</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest'>
   <DD>Use the value of the nearest boundary pixel.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_constant">constant</A></B></DT>
+  <DT><B>constant</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='constant' Line='constant'>
   <DD>Use a constant value.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_reflect">reflect</A></B></DT>
+  <DT><B>reflect</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='reflect' Line='reflect'>
   <DD>Generate a value by reflecting around the boundary.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wrap">wrap</A></B></DT>
+  <DT><B>wrap</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='wrap' Line='wrap'>
   <DD>Generate a value by wrapping around to the opposite side of the image.
   </DD>
@@ -179,13 +168,13 @@ rotate — Rotate and shift a list of 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_constant">constant = 0.</A></B></DT>
+  <DT><B>constant = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.'>
   <DD>The value of the constant for constant boundary extension.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nxblock">nxblock = 512, nyblock = 512</A></B></DT>
+  <DT><B>nxblock = 512, nyblock = 512</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nxblock' Line='nxblock = 512, nyblock = 512'>
   <DD>If the dimensions of the output image are less than nxblock and nyblock
   then the entire image is rotated at once. Otherwise nxblock by nyblock
@@ -194,7 +183,7 @@ rotate — Rotate and shift a list of 2-D images
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -215,7 +204,7 @@ rotate — Rotate and shift a list of 2-D images
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -245,7 +234,7 @@ rotate — Rotate and shift a list of 2-D images
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_timings">TIMINGS</A></H2>
+  <H3>Timings</H3>
   <! BeginSection: 'TIMINGS'>
   <UL>
   It requires approximately 70 and 290 cpu seconds to rotate a 512 by 512
@@ -253,7 +242,7 @@ rotate — Rotate and shift a list of 2-D images
   (Vax 11/750 fpa).
   </UL>
   <! EndSection:   'TIMINGS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   The interpolation operation is done in real arithmetic. However the output
@@ -264,7 +253,7 @@ rotate — Rotate and shift a list of 2-D images
   imtranspose task and/or image section notation.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imtranspose, imshift, magnify, lintran, geotran, geomap
@@ -273,5 +262,3 @@ rotate — Rotate and shift a list of 2-D images
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIMINGS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

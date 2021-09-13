@@ -1,3 +1,5 @@
+.. _hdshift:
+
 hdshift — Align related HD curves
 =================================
 
@@ -5,43 +7,30 @@ hdshift — Align related HD curves
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>hdshift (Feb87)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>imred.dtoi</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>hdshift (Feb87)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>hdshift</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   hdshift - calculate and subtract zero point to align HD curves.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   hdshift database
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_database">database</A></B></DT>
+  <DT><B>database</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='database' Line='database'>
   <DD>Input list of databases containing density, exposure and fit information.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   For each file in <B>database</B>, procedure <B>hdshift</B> calculates and 
@@ -66,7 +55,7 @@ hdshift — Align related HD curves
   determine the common solution.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <PRE>
@@ -77,7 +66,7 @@ hdshift — Align related HD curves
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   hdfit, hdtoi
@@ -90,5 +79,3 @@ hdshift — Align related HD curves
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _netstatus:
+
 netstatus — Print the status of the local network
 =================================================
 
@@ -5,38 +7,25 @@ netstatus — Print the status of the local network
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>netstatus (Feb86)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>system</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>netstatus (Feb86)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>netstatus</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   netstatus -- print the status of the local network
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   netstatus
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   None.
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <I>Netstatus</I> prints the status of the local network as perceived by the
@@ -48,7 +37,7 @@ netstatus — Print the status of the local network
   and "<TT>dev$hostlogin</TT>".
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -73,7 +62,7 @@ netstatus — Print the status of the local network
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   </UL>
@@ -81,5 +70,3 @@ netstatus — Print the status of the local network
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

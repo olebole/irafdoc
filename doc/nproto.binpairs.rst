@@ -1,3 +1,5 @@
+.. _binpairs:
+
 binpairs — Bin pairs of (x,y) points in log separation
 ======================================================
 
@@ -5,74 +7,61 @@ binpairs — Bin pairs of (x,y) points in log separation
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>binpairs (Oct84)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.nproto</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>binpairs (Oct84)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>binpairs</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   binpairs -- Bin pairs of (x,y) points in log separation
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage_">USAGE	</A></H2>
+  <H3>Usage	</H3>
   <! BeginSection: 'USAGE	'>
   <UL>
   binpairs file1 file2 rmin rmax nbins
   </UL>
   <! EndSection:   'USAGE	'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_file1">file1</A></B></DT>
+  <DT><B>file1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='file1' Line='file1'>
   <DD>File containing (x,y) points to be paired.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_file2">file2</A></B></DT>
+  <DT><B>file2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='file2' Line='file2'>
   <DD>File containing (x,y) points to be paired.  This file may be the same
   as file1.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rmin">rmin</A></B></DT>
+  <DT><B>rmin</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rmin' Line='rmin'>
   <DD>The minimum separation to be binned.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rmax">rmax</A></B></DT>
+  <DT><B>rmax</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rmax' Line='rmax'>
   <DD>The maximum separation to be binned.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nbins">nbins</A></B></DT>
+  <DT><B>nbins</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nbins' Line='nbins'>
   <DD>The number of log separation bins to be computed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = no</A></B></DT>
+  <DT><B>verbose = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
   <DD>Print progress information?
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The (x,y) points in the specified files are paired and the number of pairs
@@ -88,7 +77,7 @@ binpairs — Bin pairs of (x,y) points in log separation
   This task is useful for computing two point correlation functions.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -101,7 +90,7 @@ binpairs — Bin pairs of (x,y) points in log separation
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   </UL>
@@ -109,5 +98,3 @@ binpairs — Bin pairs of (x,y) points in log separation
   
   <! Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

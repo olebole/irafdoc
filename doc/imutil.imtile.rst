@@ -1,3 +1,5 @@
+.. _imtile:
+
 imtile — Tile same sized 2D images into a 2D mosaic
 ===================================================
 
@@ -5,36 +7,23 @@ imtile — Tile same sized 2D images into a 2D mosaic
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>imtile (Jan97)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>imtile (Jan97)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>imtile</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   imtile -- mosaic a list of same size images into a tile pattern
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   imtile input output nctile nltile
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The list of input image tiles to be mosaiced. The image tile list is assumed
   to be ordered by row, column, or in a raster pattern. If the image tile list
@@ -44,25 +33,25 @@ imtile — Tile same sized 2D images into a 2D mosaic
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>The name of the output image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nctile">nctile</A></B></DT>
+  <DT><B>nctile</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nctile' Line='nctile'>
   <DD>The number of image tiles to be placed along a row of the output image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nltile">nltile</A></B></DT>
+  <DT><B>nltile</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nltile' Line='nltile'>
   <DD>The number of image tiles to be placed along a column of the output image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_trim_section">trim_section = "<TT>[*,*]</TT>"</A></B></DT>
+  <DT><B>trim_section = "<TT>[*,*]</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='trim_section' Line='trim_section = "[*,*]"'>
   <DD>The section of the input image tiles to be inserted into the output image.
   Trim_section can be used to flip and / or trim the individual image tiles
@@ -72,7 +61,7 @@ imtile — Tile same sized 2D images into a 2D mosaic
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_missing_input">missing_input = "<TT></TT>"</A></B></DT>
+  <DT><B>missing_input = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='missing_input' Line='missing_input = ""'>
   <DD>The list of missing image tiles. For example if image tiles 3 to 5 and
   10 from a sequence of image tiles are missing then <I>missing_input</I> =
@@ -82,7 +71,7 @@ imtile — Tile same sized 2D images into a 2D mosaic
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_start_tile">start_tile = "<TT>ll</TT>"</A></B></DT>
+  <DT><B>start_tile = "<TT>ll</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='start_tile' Line='start_tile = "ll"'>
   <DD>The position of the first input image tile placed in the output image mosaic.
   The four options are "<TT>ll</TT>" for lower left corner, "<TT>lr</TT>" for lower right corner,
@@ -90,21 +79,21 @@ imtile — Tile same sized 2D images into a 2D mosaic
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_row_order">row_order = yes</A></B></DT>
+  <DT><B>row_order = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='row_order' Line='row_order = yes'>
   <DD>Add the input image tiles to the output image in row order. If row_order is
   "<TT>no</TT>" then column order is used instead.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_raster_order">raster_order = no</A></B></DT>
+  <DT><B>raster_order = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='raster_order' Line='raster_order = no'>
   <DD>Add the input image tiles to the output image in a raster pattern or return
   to the start of a column or a row before adding a new image tile ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_median_section">median_section = "<TT></TT>"</A></B></DT>
+  <DT><B>median_section = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='median_section' Line='median_section = ""'>
   <DD>The section of each input image tile used to compute the median value. If
   <I>median_section</I> is the null string then the medians are not computed.
@@ -113,14 +102,14 @@ imtile — Tile same sized 2D images into a 2D mosaic
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_subtract">subtract = no</A></B></DT>
+  <DT><B>subtract = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='subtract' Line='subtract = no'>
   <DD>Subtract the median value from each input image tile before placing the
   tile in the output image?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ncols">ncols = INDEF</A></B></DT>
+  <DT><B>ncols = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ncols' Line='ncols = INDEF'>
   <DD>The number of columns in the output image. If <I>ncols</I> is INDEF then
   the program will compute the number of columns using the size of the input
@@ -128,7 +117,7 @@ imtile — Tile same sized 2D images into a 2D mosaic
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nlines">nlines = INDEF</A></B></DT>
+  <DT><B>nlines = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nlines' Line='nlines = INDEF'>
   <DD>The number of lines in the output image. If <I>nlines</I> is INDEF then
   the program will compute the number of lines using the size of the input
@@ -136,7 +125,7 @@ imtile — Tile same sized 2D images into a 2D mosaic
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ncoverlap">ncoverlap = -1</A></B></DT>
+  <DT><B>ncoverlap = -1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ncoverlap' Line='ncoverlap = -1'>
   <DD>The number of columns between adjacent tiles in the output image. A negative
   value specifies the amount of column space between adjacent tiles. A positive
@@ -144,7 +133,7 @@ imtile — Tile same sized 2D images into a 2D mosaic
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nloverlap">nloverlap = -1</A></B></DT>
+  <DT><B>nloverlap = -1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nloverlap' Line='nloverlap = -1'>
   <DD>The number of lines between adjacent tiles in the output image. A negative
   value specifies the amount of lines space between adjacent tiles. A positive
@@ -152,14 +141,14 @@ imtile — Tile same sized 2D images into a 2D mosaic
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ovalue">ovalue = 0.0</A></B></DT>
+  <DT><B>ovalue = 0.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ovalue' Line='ovalue = 0.0'>
   <DD>The output image pixel value in regions undefined by the list of input
   image tiles.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_opixtype">opixtype = "<TT>r</TT>"</A></B></DT>
+  <DT><B>opixtype = "<TT>r</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='opixtype' Line='opixtype = "r"'>
   <DD>The pixel type of the output image. The options are "<TT>s</TT>" (short integer),
   "<TT>i</TT>" (integer), "<TT>u</TT>" (ushort), "<TT>l</TT>" (long integer), "<TT>r</TT>" (real) and
@@ -167,7 +156,7 @@ imtile — Tile same sized 2D images into a 2D mosaic
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print messages about the progress of the task?
   </DD>
@@ -175,7 +164,7 @@ imtile — Tile same sized 2D images into a 2D mosaic
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -202,7 +191,7 @@ imtile — Tile same sized 2D images into a 2D mosaic
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -227,19 +216,19 @@ imtile — Tile same sized 2D images into a 2D mosaic
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   <P>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   <P>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imcombine
@@ -248,5 +237,3 @@ imtile — Tile same sized 2D images into a 2D mosaic
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

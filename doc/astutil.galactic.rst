@@ -1,3 +1,5 @@
+.. _galactic:
+
 galactic — Convert ra, dec to galactic coordinates
 ==================================================
 
@@ -5,50 +7,37 @@ galactic — Convert ra, dec to galactic coordinates
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>galactic (Oct87)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.astutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>galactic (Oct87)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>galactic</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   galactic -- convert between equatorial and galactic coordinates
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   galactic files
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_files">files</A></B></DT>
+  <DT><B>files</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='files' Line='files'>
   <DD>The name of a file (or a file list or template) containing the coordinates
   to be converted.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_in_coords">in_coords = "<TT>equatorial</TT>"</A></B></DT>
+  <DT><B>in_coords = "<TT>equatorial</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='in_coords' Line='in_coords = "equatorial"'>
   <DD>Type of input coordinates.  May be either "<TT>equatorial</TT>" (RA and DEC) or
   "<TT>galactic</TT>" (l and b).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_print_coords">print_coords = yes</A></B></DT>
+  <DT><B>print_coords = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='print_coords' Line='print_coords = yes'>
   <DD>If <B>print_coords</B> = yes, the RA, DEC and epoch (as well as lII and bII) 
   will be listed on the output file.
@@ -56,7 +45,7 @@ galactic — Convert ra, dec to galactic coordinates
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Program <B>galactic</B> is used to convert between equatorial and
@@ -71,7 +60,7 @@ galactic — Convert ra, dec to galactic coordinates
   decimal or sexagesimal notation.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Convert the given RA and DEC coordinates to galactic coordinates.  When
@@ -111,5 +100,3 @@ galactic — Convert ra, dec to galactic coordinates
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES'  >
   
-  </BODY>
-  </HTML>

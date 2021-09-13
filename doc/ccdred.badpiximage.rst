@@ -1,3 +1,5 @@
+.. _badpiximage:
+
 badpiximage — Create a bad pixel mask image from a bad pixel file
 =================================================================
 
@@ -5,67 +7,54 @@ badpiximage — Create a bad pixel mask image from a bad pixel file
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>badpiximage (Jun87)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.imred.ccdred</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>badpiximage (Jun87)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>badpiximage</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   badpiximage -- Create a bad pixel mask image from a bad pixel file
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   badpiximage fixfile template image
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_fixfile">fixfile</A></B></DT>
+  <DT><B>fixfile</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fixfile' Line='fixfile'>
   <DD>Bad pixel file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_template">template</A></B></DT>
+  <DT><B>template</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='template' Line='template'>
   <DD>Template image used to define the size of the bad pixel mask image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_image">image</A></B></DT>
+  <DT><B>image</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='image' Line='image'>
   <DD>Bad pixel mask image to be created.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_goodvalue">goodvalue = 1</A></B></DT>
+  <DT><B>goodvalue = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='goodvalue' Line='goodvalue = 1'>
   <DD>Integer value assigned to the good pixels.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_badvalue">badvalue = 0</A></B></DT>
+  <DT><B>badvalue = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='badvalue' Line='badvalue = 0'>
   <DD>Integer value assigned to the bad pixels.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   A bad pixel mask image is created from the specified bad pixel file.
@@ -81,7 +70,7 @@ badpiximage — Create a bad pixel mask image from a bad pixel file
   reductions.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. To make a bad pixel mask image from the bad pixel file "<TT>cryocambp.dat</TT>"
@@ -94,7 +83,7 @@ badpiximage — Create a bad pixel mask image from a bad pixel file
   	cl&gt; badpixim cryomapbp.dat ccd005 cryocambp good=0 bad=1
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   ccdproc, instruments
@@ -103,5 +92,3 @@ badpiximage — Create a bad pixel mask image from a bad pixel file
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

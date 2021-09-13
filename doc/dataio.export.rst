@@ -1,3 +1,5 @@
+.. _export:
+
 export — Convert IRAF images to some other format
 =================================================
 
@@ -5,39 +7,26 @@ export — Convert IRAF images to some other format
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>export (Oct94)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>dataio</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>export (Oct94)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>export</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   export -- create a binary image file from one or more IRAF images
   <P>
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   export images binfiles
   <P>
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <P>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>The list of input IRAF images to be converted.  The list may contain
   either 2-D images  or 3-D images.
@@ -49,7 +38,7 @@ export — Convert IRAF images to some other format
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_binfiles">binfiles</A></B></DT>
+  <DT><B>binfiles</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='binfiles' Line='binfiles'>
   <DD>The list of output binary files to create.  If any of the builtin formats
   is selected for conversion the filename will have an extension added
@@ -61,7 +50,7 @@ export — Convert IRAF images to some other format
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_format">format = "<TT>raw</TT>"</A></B></DT>
+  <DT><B>format = "<TT>raw</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='format' Line='format = "raw"'>
   <DD>The type of binary file to write.  If the value is "<TT>raw</TT>" then the input
   images are converted directly to a raw binary raster using the task 
@@ -88,7 +77,7 @@ export — Convert IRAF images to some other format
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_outbands">outbands = "<TT></TT>"</A></B></DT>
+  <DT><B>outbands = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='outbands' Line='outbands = ""'>
   <DD>Output image band expressions to write.  This is a comma-delimited list of 
   expressions or an @-file containing the expressions.  Evaluated expressions 
@@ -97,7 +86,7 @@ export — Convert IRAF images to some other format
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = no                    </A></B></DT>
+  <DT><B>verbose = no                    </B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no                    '>
   <DD>Print verbose output to the screen during conversion?
   </DD>
@@ -107,7 +96,7 @@ export — Convert IRAF images to some other format
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_header">header = yes</A></B></DT>
+  <DT><B>header = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='header' Line='header = yes'>
   <DD>For raw binary file output only, prepend a header describing how the data 
   are stored?  If set to "<TT>no</TT>" then no header will be written.  If set to "<TT>yes</TT>", 
@@ -121,7 +110,7 @@ export — Convert IRAF images to some other format
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_outtype">outtype = "<TT></TT>"</A></B></DT>
+  <DT><B>outtype = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='outtype' Line='outtype = ""'>
   <DD>Output pixel type if <I>format</I> is set to "<TT>raw</TT>" or "<TT>list</TT>".  This is a 
   string giving the type and size of each pixel, the syntax for the outtype 
@@ -147,7 +136,7 @@ export — Convert IRAF images to some other format
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interleave">interleave = 0</A></B></DT>
+  <DT><B>interleave = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interleave' Line='interleave = 0'>
   <DD>Pixel interleave type.  If the <I>outbands</I> parameter is composite 
   (i.e. a comma-delimited list of expressions) the output file is pixel 
@@ -160,7 +149,7 @@ export — Convert IRAF images to some other format
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_bswap">bswap = "<TT>no</TT>"</A></B></DT>
+  <DT><B>bswap = "<TT>no</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='bswap' Line='bswap = "no"'>
   <DD>Type of byte-swapping to perform on output. The default is bswap=no which
   may be abbreviated "<TT>bswap-</TT>" (similarly a value of 'yes' can be abbreviated
@@ -174,7 +163,7 @@ export — Convert IRAF images to some other format
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   	The <I>export</I> task will convert one or more images in an
@@ -230,7 +219,7 @@ export — Convert IRAF images to some other format
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_more_on_outbands_expressions">MORE ON OUTBANDS EXPRESSIONS</A></H2>
+  <H3>More on outbands expressions</H3>
   <! BeginSection: 'MORE ON OUTBANDS EXPRESSIONS'>
   <UL>
   	The simplest specification for <I>outbands</I> is a null string, 
@@ -392,7 +381,7 @@ export — Convert IRAF images to some other format
   be expressions or (perhaps output) functions themselves.
   <P>
   <DL>
-  <DT><B><A NAME="l_band">band (args)</A></B></DT>
+  <DT><B>band (args)</B></DT>
   <! Sec='MORE ON OUTBANDS EXPRESSIONS' Level=0 Label='band' Line='band (args)'>
   <DD>Force band storage in the output file regardless of the value of the
   <I>interleave</I> parameter.  This may be used to specify multiple
@@ -406,7 +395,7 @@ export — Convert IRAF images to some other format
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_line">line (args)</A></B></DT>
+  <DT><B>line (args)</B></DT>
   <! Sec='MORE ON OUTBANDS EXPRESSIONS' Level=0 Label='line' Line='line (args)'>
   <DD>Force line storage in the output file regardless of the value of the
   <I>interleave</I> parameter.  This may be used to specify multiple
@@ -416,7 +405,7 @@ export — Convert IRAF images to some other format
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_flipx">flipx (args)</A></B></DT>
+  <DT><B>flipx (args)</B></DT>
   <! Sec='MORE ON OUTBANDS EXPRESSIONS' Level=0 Label='flipx' Line='flipx (args)'>
   <DD>Flip the image left-to-right on output.  This function may be used as an
   argument to the <I>band()</I>, <I>setcmap()</I>, <I>psdpi()</I>, or 
@@ -424,7 +413,7 @@ export — Convert IRAF images to some other format
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_flipy">flipy (args)</A></B></DT>
+  <DT><B>flipy (args)</B></DT>
   <! Sec='MORE ON OUTBANDS EXPRESSIONS' Level=0 Label='flipy' Line='flipy (args)'>
   <DD>Flip the image top-to-bottom on output.  Certain builtin formats (such as
   GIF, PGM, PPM, RAS and XWD) have their normal orientation already flipped wrt 
@@ -436,7 +425,7 @@ export — Convert IRAF images to some other format
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_block">block (value, width, height)</A></B></DT>
+  <DT><B>block (value, width, height)</B></DT>
   <! Sec='MORE ON OUTBANDS EXPRESSIONS' Level=0 Label='block' Line='block (value, width, height)'>
   <DD>Fill an area with a constant value.  This function can be used to fill a
   vertical area between images to provide padding of a constant value.  It
@@ -465,7 +454,7 @@ export — Convert IRAF images to some other format
   or as operands within more complex expressions.
   <P>
   <DL>
-  <DT><B><A NAME="l_zscale">zscale (arg [,z1,z2 [,nbins]])</A></B></DT>
+  <DT><B>zscale (arg [,z1,z2 [,nbins]])</B></DT>
   <! Sec='MORE ON OUTBANDS EXPRESSIONS' Level=0 Label='zscale' Line='zscale (arg [,z1,z2 [,nbins]])'>
   <DD>Scale the pixels in a given range to a specified number of bins.  This
   function will map the input pixels within the range z1 to z2 to one of 
@@ -488,7 +477,7 @@ export — Convert IRAF images to some other format
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_zscalem">zscalem (arg1, arg2)</A></B></DT>
+  <DT><B>zscalem (arg1, arg2)</B></DT>
   <! Sec='MORE ON OUTBANDS EXPRESSIONS' Level=0 Label='zscalem' Line='zscalem (arg1, arg2)'>
   <DD>This is a variant of the zscale operand with automatic scale calculation;
   i.e.  zscale (arg).  The first argument is the same as for zscale to select
@@ -509,7 +498,7 @@ export — Convert IRAF images to some other format
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_grey">grey (arg1,arg2,arg3) or gray (arg1,arg2,arg3)</A></B></DT>
+  <DT><B>grey (arg1,arg2,arg3) or gray (arg1,arg2,arg3)</B></DT>
   <! Sec='MORE ON OUTBANDS EXPRESSIONS' Level=0 Label='grey' Line='grey (arg1,arg2,arg3) or gray (arg1,arg2,arg3)'>
   <DD>Convert three image operands or expressions to a single grayscale image
   using the standard NTSC equation:
@@ -520,7 +509,7 @@ export — Convert IRAF images to some other format
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_bscale">bscale (arg, zero, scale)</A></B></DT>
+  <DT><B>bscale (arg, zero, scale)</B></DT>
   <! Sec='MORE ON OUTBANDS EXPRESSIONS' Level=0 Label='bscale' Line='bscale (arg, zero, scale)'>
   <DD>Linearly transform the intensity scale of the image using the equation
   <PRE>
@@ -533,7 +522,7 @@ export — Convert IRAF images to some other format
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_gamma">gamma (arg, gamma [, scale])</A></B></DT>
+  <DT><B>gamma (arg, gamma [, scale])</B></DT>
   <! Sec='MORE ON OUTBANDS EXPRESSIONS' Level=0 Label='gamma' Line='gamma (arg, gamma [, scale])'>
   <DD>Apply a gamma correction to the pixels.  Pixel values are scaled according to
   the equation
@@ -568,7 +557,7 @@ export — Convert IRAF images to some other format
   </PRE>
   <P>
   <DL>
-  <DT><B><A NAME="l_cmap">cmap (arg1,arg2,arg3 [, ncolors])</A></B></DT>
+  <DT><B>cmap (arg1,arg2,arg3 [, ncolors])</B></DT>
   <! Sec='MORE ON OUTBANDS EXPRESSIONS' Level=0 Label='cmap' Line='cmap (arg1,arg2,arg3 [, ncolors])'>
   <DD>Compute an 8-bit colormap from three image operands or expressions using a
   Median-Cut Algorithm and Floyd-Steinberg dithering.  The computed colormap
@@ -581,7 +570,7 @@ export — Convert IRAF images to some other format
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_setcmap">setcmap (args, cmap [, brightness, contrast]) </A></B></DT>
+  <DT><B>setcmap (args, cmap [, brightness, contrast]) </B></DT>
   <! Sec='MORE ON OUTBANDS EXPRESSIONS' Level=0 Label='setcmap' Line='setcmap (args, cmap [, brightness, contrast]) '>
   <DD>Define the colormap to be used on output.  This function is only supported
   for formats that support colormaps, the <I>args</I> expressions are used to
@@ -613,7 +602,7 @@ export — Convert IRAF images to some other format
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_psdpi">psdpi (args, dpi)</A></B></DT>
+  <DT><B>psdpi (args, dpi)</B></DT>
   <! Sec='MORE ON OUTBANDS EXPRESSIONS' Level=0 Label='psdpi' Line='psdpi (args, dpi)'>
   <DD>Specify the dots-per-inch resolution of the output image.  The default 
   resolution is 300dpi, this may need to be reset for some printers or if
@@ -622,7 +611,7 @@ export — Convert IRAF images to some other format
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_psscale">psscale (args, scale)</A></B></DT>
+  <DT><B>psscale (args, scale)</B></DT>
   <! Sec='MORE ON OUTBANDS EXPRESSIONS' Level=0 Label='psscale' Line='psscale (args, scale)'>
   <DD>Specify the scale of the output image.  The default value is 1.0 which 
   means that image printed on a 300dpi device is roughly the same size 
@@ -637,7 +626,7 @@ export — Convert IRAF images to some other format
   <P>
   </UL>
   <! EndSection:   'MORE ON OUTBANDS EXPRESSIONS'>
-  <H2><A NAME="s_export_header_format">EXPORT HEADER FORMAT</A></H2>
+  <H3>Export header format</H3>
   <! BeginSection: 'EXPORT HEADER FORMAT'>
   <UL>
   	The header prepended to the binary data is ascii text consisting of
@@ -698,7 +687,7 @@ export — Convert IRAF images to some other format
   <P>
   </UL>
   <! EndSection:   'EXPORT HEADER FORMAT'>
-  <H2><A NAME="s_builtin_formats">BUILTIN FORMATS</A></H2>
+  <H3>Builtin formats</H3>
   <! BeginSection: 'BUILTIN FORMATS'>
   <UL>
   	While the task provides a way of writing general binary raster
@@ -742,7 +731,7 @@ export — Convert IRAF images to some other format
   	The currently supported builtin formats include:
   <P>
   <DL>
-  <DT><B><A NAME="l_EPS">EPS     - Encapsulated PostScript</A></B></DT>
+  <DT><B>EPS     - Encapsulated PostScript</B></DT>
   <! Sec='BUILTIN FORMATS' Level=0 Label='EPS' Line='EPS     - Encapsulated PostScript'>
   <DD><PRE>
   <P>
@@ -765,7 +754,7 @@ export — Convert IRAF images to some other format
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_GIF">GIF     - Compuserve's GIF format</A></B></DT>
+  <DT><B>GIF     - Compuserve's GIF format</B></DT>
   <! Sec='BUILTIN FORMATS' Level=0 Label='GIF' Line='GIF     - Compuserve's GIF format'>
   <DD><PRE>
   <P>
@@ -791,7 +780,7 @@ export — Convert IRAF images to some other format
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_IMH">IMH     - IRAF image file</A></B></DT>
+  <DT><B>IMH     - IRAF image file</B></DT>
   <! Sec='BUILTIN FORMATS' Level=0 Label='IMH' Line='IMH     - IRAF image file'>
   <DD>	The output file is an IRAF OIF format image of the specified datatype.
   Writing the image out as another IRAF image may be used to scale or composite
@@ -800,7 +789,7 @@ export — Convert IRAF images to some other format
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_MIFF">MIFF    - ImageMagick MIFF format image</A></B></DT>
+  <DT><B>MIFF    - ImageMagick MIFF format image</B></DT>
   <! Sec='BUILTIN FORMATS' Level=0 Label='MIFF' Line='MIFF    - ImageMagick MIFF format image'>
   <DD><PRE>
   <P>
@@ -822,7 +811,7 @@ export — Convert IRAF images to some other format
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_PGM">PGM     - PBMPlus PGM format image</A></B></DT>
+  <DT><B>PGM     - PBMPlus PGM format image</B></DT>
   <! Sec='BUILTIN FORMATS' Level=0 Label='PGM' Line='PGM     - PBMPlus PGM format image'>
   <DD><PRE>
   <P>
@@ -840,7 +829,7 @@ export — Convert IRAF images to some other format
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_PPM">PPM     - PBMPlus PPM format image</A></B></DT>
+  <DT><B>PPM     - PBMPlus PPM format image</B></DT>
   <! Sec='BUILTIN FORMATS' Level=0 Label='PPM' Line='PPM     - PBMPlus PPM format image'>
   <DD><PRE>
   <P>
@@ -854,7 +843,7 @@ export — Convert IRAF images to some other format
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_RAS">RAS     - Sun rasterfile format</A></B></DT>
+  <DT><B>RAS     - Sun rasterfile format</B></DT>
   <! Sec='BUILTIN FORMATS' Level=0 Label='RAS' Line='RAS     - Sun rasterfile format'>
   <DD><PRE>
   <P>
@@ -878,7 +867,7 @@ export — Convert IRAF images to some other format
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_RGB">RGB     - SGI RGB format image</A></B></DT>
+  <DT><B>RGB     - SGI RGB format image</B></DT>
   <! Sec='BUILTIN FORMATS' Level=0 Label='RGB' Line='RGB     - SGI RGB format image'>
   <DD><PRE>
   <P>
@@ -894,7 +883,7 @@ export — Convert IRAF images to some other format
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_XWD">XWD     - X11 Window dump file</A></B></DT>
+  <DT><B>XWD     - X11 Window dump file</B></DT>
   <! Sec='BUILTIN FORMATS' Level=0 Label='XWD' Line='XWD     - X11 Window dump file'>
   <DD><PRE>
   <P>
@@ -923,7 +912,7 @@ export — Convert IRAF images to some other format
   <P>
   </UL>
   <! EndSection:   'BUILTIN FORMATS'>
-  <H2><A NAME="s_color_output_images">COLOR OUTPUT IMAGES</A></H2>
+  <H3>Color output images</H3>
   <! BeginSection: 'COLOR OUTPUT IMAGES'>
   <UL>
   	In theory the colormaps generated by the <I>cmap()</I> and
@@ -1001,7 +990,7 @@ export — Convert IRAF images to some other format
   <P>
   </UL>
   <! EndSection:   'COLOR OUTPUT IMAGES'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   	The examples below are divided into several categories showing
@@ -1194,7 +1183,7 @@ export — Convert IRAF images to some other format
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_notes">NOTES</A></H2>
+  <H3>Notes</H3>
   <! BeginSection: 'NOTES'>
   <UL>
   	This task is new with V2.11.
@@ -1206,13 +1195,13 @@ export — Convert IRAF images to some other format
   <P>
   </UL>
   <! EndSection:   'NOTES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   	Output of bitmap images is currently not supported.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   import, tvmark, imexpr
@@ -1221,5 +1210,3 @@ export — Convert IRAF images to some other format
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'MORE ON OUTBANDS EXPRESSIONS' 'EXPORT HEADER FORMAT' 'BUILTIN FORMATS' 'COLOR OUTPUT IMAGES' 'EXAMPLES' 'NOTES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

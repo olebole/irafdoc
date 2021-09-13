@@ -1,3 +1,5 @@
+.. _skyctran:
+
 skyctran — Transform coordinates from one celestial wcs to another
 ==================================================================
 
@@ -5,40 +7,27 @@ skyctran — Transform coordinates from one celestial wcs to another
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>skyctran (Jun99)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imcoords</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>skyctran (Jun99)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>skyctran</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   skyctran -- convert astronomical coordinates from one system to another
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   skyctran input output insystem outsystem
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The source of the input coordinates. The options are:
   <DL>
-  <DT><B><A NAME="l_">&lt;filename&gt;</A></B></DT>
+  <DT><B>&lt;filename&gt;</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='&lt;filename&gt;'>
   <DD>The list of input coordinate files. Coordinates may be entered by hand by
   setting input to "<TT>STDIN</TT>". A STDIN coordinate list is terminated by typing
@@ -46,7 +35,7 @@ skyctran — Transform coordinates from one celestial wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_imcursor">imcursor</A></B></DT>
+  <DT><B>imcursor</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='imcursor' Line='imcursor'>
   <DD>If the input file name is equal to the reserved keyword "<TT>imcursor</TT>" the input
   coordinates are read from the image cursor and the input coordinate system
@@ -56,7 +45,7 @@ skyctran — Transform coordinates from one celestial wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_grid">grid</A></B></DT>
+  <DT><B>grid</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='grid' Line='grid'>
   <DD>If the input file name is equal to the reserved
   keyword "<TT>grid</TT>", an <I>nilng</I> by <I>nilat</I> grid of equally spaced
@@ -68,7 +57,7 @@ skyctran — Transform coordinates from one celestial wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>The list of output coordinate files. The number of output files must be
   equal to one or the number of input files. Results may be printed on the
@@ -76,12 +65,12 @@ skyctran — Transform coordinates from one celestial wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_insystem">insystem, outsystem</A></B></DT>
+  <DT><B>insystem, outsystem</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='insystem' Line='insystem, outsystem'>
   <DD>The input and output celestial coordinate systems. The options are
   the following:
   <DL>
-  <DT><B><A NAME="l_">&lt;imagename&gt; [wcs]</A></B></DT>
+  <DT><B>&lt;imagename&gt; [wcs]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='&lt;imagename&gt; [wcs]'>
   <DD>The celestial coordinate system is the world coordinate system of the image
   &lt;imagename&gt; and the input or output pixel coordinates may be in the
@@ -94,7 +83,7 @@ skyctran — Transform coordinates from one celestial wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_icrs">icrs [equinox] [epoch]</A></B></DT>
+  <DT><B>icrs [equinox] [epoch]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='icrs' Line='icrs [equinox] [epoch]'>
   <DD>The International Celestial Reverence System where equinox is
   a Julian or Besselian epoch e.g. J2000.0  or B1980.0.
@@ -108,7 +97,7 @@ skyctran — Transform coordinates from one celestial wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_equinox">equinox [epoch]</A></B></DT>
+  <DT><B>equinox [epoch]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='equinox' Line='equinox [epoch]'>
   <DD>The equatorial mean place post-IAU 1976 (FK5) system if equinox is a
   Julian epoch, e.g. J2000.0 or 2000.0, or the equatorial mean place
@@ -125,7 +114,7 @@ skyctran — Transform coordinates from one celestial wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fk5">fk5 [equinox] [epoch] </A></B></DT>
+  <DT><B>fk5 [equinox] [epoch] </B></DT>
   <! Sec='PARAMETERS' Level=1 Label='fk5' Line='fk5 [equinox] [epoch] '>
   <DD>The equatorial mean place post-IAU 1976 (FK5) system where equinox is
   a Julian or Besselian epoch e.g. J2000.0  or B1980.0.
@@ -139,7 +128,7 @@ skyctran — Transform coordinates from one celestial wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fk4">fk4 [equinox] [epoch]</A></B></DT>
+  <DT><B>fk4 [equinox] [epoch]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='fk4' Line='fk4 [equinox] [epoch]'>
   <DD>The equatorial mean place pre-IAU 1976 (FK4) system where equinox is a
   Besselian or Julian epoch e.g. B1950.0  or J2000.0,
@@ -155,7 +144,7 @@ skyctran — Transform coordinates from one celestial wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_noefk4">noefk4 [equinox] [epoch]</A></B></DT>
+  <DT><B>noefk4 [equinox] [epoch]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='noefk4' Line='noefk4 [equinox] [epoch]'>
   <DD>The equatorial mean place pre-IAU 1976 (FK4) system but without the E-terms
   where equinox is a Besselian or Julian epoch e.g. B1950.0 or J2000.0,
@@ -171,7 +160,7 @@ skyctran — Transform coordinates from one celestial wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apparent">apparent epoch </A></B></DT>
+  <DT><B>apparent epoch </B></DT>
   <! Sec='PARAMETERS' Level=1 Label='apparent' Line='apparent epoch '>
   <DD>The equatorial geocentric apparent place post-IAU 1976 system where
   epoch is the epoch of observation.
@@ -184,7 +173,7 @@ skyctran — Transform coordinates from one celestial wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ecliptic">ecliptic epoch</A></B></DT>
+  <DT><B>ecliptic epoch</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='ecliptic' Line='ecliptic epoch'>
   <DD>The ecliptic coordinate system where epoch is the epoch of observation.
   Epoch is a Besselian epoch, a Julian epoch, or a Julian date.
@@ -196,7 +185,7 @@ skyctran — Transform coordinates from one celestial wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_galactic">galactic [epoch]</A></B></DT>
+  <DT><B>galactic [epoch]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='galactic' Line='galactic [epoch]'>
   <DD>The IAU 1958 galactic coordinate system.
   Epoch is a Besselian epoch, a Julian epoch or a Julian date.
@@ -208,7 +197,7 @@ skyctran — Transform coordinates from one celestial wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_supergalactic">supergalactic [epoch]</A></B></DT>
+  <DT><B>supergalactic [epoch]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='supergalactic' Line='supergalactic [epoch]'>
   <DD>The deVaucouleurs supergalactic coordinate system.
   Epoch is a Besselian epoch, a Julian epoch or a Julian date.
@@ -227,7 +216,7 @@ skyctran — Transform coordinates from one celestial wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_transform">transform = no</A></B></DT>
+  <DT><B>transform = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='transform' Line='transform = no'>
   <DD>If transform = no the computed output coordinates are appended to the
   input line and the new extended line is written to the output file. If
@@ -238,7 +227,7 @@ skyctran — Transform coordinates from one celestial wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lngcolumn">lngcolumn = 1, latcolumn = 2</A></B></DT>
+  <DT><B>lngcolumn = 1, latcolumn = 2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lngcolumn' Line='lngcolumn = 1, latcolumn = 2'>
   <DD>The columns in the input file containing the x/ra/longitude and
   y/dec/latitude coordinates. Lngcolumn and latcolumn are always 1 and
@@ -246,7 +235,7 @@ skyctran — Transform coordinates from one celestial wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_plngcolumn">plngcolumn = INDEF, platcolumn = INDEF</A></B></DT>
+  <DT><B>plngcolumn = INDEF, platcolumn = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='plngcolumn' Line='plngcolumn = INDEF, platcolumn = INDEF'>
   <DD>The columns in the input file containing the ra and dec proper motions
   in " / year. If plngcolumn and platcolumn are INDEF the proper motions
@@ -257,7 +246,7 @@ skyctran — Transform coordinates from one celestial wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pxcolumn">pxcolumn = INDEF, rvcolumn = INDEF</A></B></DT>
+  <DT><B>pxcolumn = INDEF, rvcolumn = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pxcolumn' Line='pxcolumn = INDEF, rvcolumn = INDEF'>
   <DD>The columns in the input file containing the parallax and radial velocity in
   in "<TT> and km / sec respectively. If pxcolumn and rvcolumn are INDEF, the 
@@ -268,7 +257,7 @@ skyctran — Transform coordinates from one celestial wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ilngmin">ilngmin = INDEF, ilngmax = INDEF, ilatmin = INDEF, ilatmax = INDEF </A></B></DT>
+  <DT><B>ilngmin = INDEF, ilngmax = INDEF, ilatmin = INDEF, ilatmax = INDEF </B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ilngmin' Line='ilngmin = INDEF, ilngmax = INDEF, ilatmin = INDEF, ilatmax = INDEF '>
   <DD>The lower and upper limits of the coordinate grid if <I>input</I> =
   "<TT>grid</TT>".
@@ -280,30 +269,30 @@ skyctran — Transform coordinates from one celestial wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nilng">nilng = 10, nilat = 10</A></B></DT>
+  <DT><B>nilng = 10, nilat = 10</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nilng' Line='nilng = 10, nilat = 10'>
   <DD>The size of the computed coordinate grid if <I>input</I> = "<TT>grid</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ilngunits">ilngunits = "<TT></TT>", ilatunits = "<TT></TT>"</A></B></DT>
+  <DT><B>ilngunits = "<TT></TT>", ilatunits = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ilngunits' Line='ilngunits = "", ilatunits = ""'>
   <DD>The units of the input ra/longitude and dec/latitude coordinates.
   The options are:
   <DL>
-  <DT><B><A NAME="l_hours">hours</A></B></DT>
+  <DT><B>hours</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='hours' Line='hours'>
   <DD>Read the sky coordinates in hours.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_degrees">degrees</A></B></DT>
+  <DT><B>degrees</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='degrees' Line='degrees'>
   <DD>Read the sky coordinates in degrees.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_radians">radians</A></B></DT>
+  <DT><B>radians</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='radians' Line='radians'>
   <DD>Read the sky coordinates in radians.
   </DD>
@@ -318,7 +307,7 @@ skyctran — Transform coordinates from one celestial wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ilngformat">ilngformat = "<TT></TT>", ilatformat = "<TT></TT>"</A></B></DT>
+  <DT><B>ilngformat = "<TT></TT>", ilatformat = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ilngformat' Line='ilngformat = "", ilatformat = ""'>
   <DD>The output format of the input x/ra/longitude and y/dec/latitude coordinates
   if <I>input</I> = "<TT>grid</TT>".
@@ -333,24 +322,24 @@ skyctran — Transform coordinates from one celestial wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_olngunits">olngunits = "<TT></TT>", olatunits = "<TT></TT>"</A></B></DT>
+  <DT><B>olngunits = "<TT></TT>", olatunits = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='olngunits' Line='olngunits = "", olatunits = ""'>
   <DD>The units of the output ra/longitude and dec/latitude coordinates.
   The options are:
   <DL>
-  <DT><B><A NAME="l_hours">hours</A></B></DT>
+  <DT><B>hours</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='hours' Line='hours'>
   <DD>Output the sky coordinates in hours.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_degrees">degrees</A></B></DT>
+  <DT><B>degrees</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='degrees' Line='degrees'>
   <DD>Output the sky coordinates in degrees.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_radians">radians</A></B></DT>
+  <DT><B>radians</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='radians' Line='radians'>
   <DD>Output the sky coordinates in radians.
   </DD>
@@ -365,7 +354,7 @@ skyctran — Transform coordinates from one celestial wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_olngformat">olngformat = "<TT></TT>", olatformat = "<TT></TT>"</A></B></DT>
+  <DT><B>olngformat = "<TT></TT>", olatformat = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='olngformat' Line='olngformat = "", olatformat = ""'>
   <DD>The format of the computed x/ra/longitude and y/dec/latitude coordinates.
   The options are discussed in the formats section of the help page below.
@@ -377,13 +366,13 @@ skyctran — Transform coordinates from one celestial wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_icommands">icommands = "<TT></TT>"</A></B></DT>
+  <DT><B>icommands = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""'>
   <DD>The default image display cursor.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print messages about actions taken by the task on the standard output?
   </DD>
@@ -391,7 +380,7 @@ skyctran — Transform coordinates from one celestial wcs to another
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -576,7 +565,7 @@ skyctran — Transform coordinates from one celestial wcs to another
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_user_commands">USER COMMANDS</A></H2>
+  <H3>User commands</H3>
   <! BeginSection: 'USER COMMANDS'>
   <UL>
   <P>
@@ -635,7 +624,7 @@ skyctran — Transform coordinates from one celestial wcs to another
   <P>
   </UL>
   <! EndSection:   'USER COMMANDS'>
-  <H2><A NAME="s_image_cursor_commands">IMAGE CURSOR COMMANDS</A></H2>
+  <H3>Image cursor commands</H3>
   <! BeginSection: 'IMAGE CURSOR COMMANDS'>
   <UL>
   <P>
@@ -687,7 +676,7 @@ skyctran — Transform coordinates from one celestial wcs to another
   <P>
   </UL>
   <! EndSection:   'IMAGE CURSOR COMMANDS'>
-  <H2><A NAME="s_formats">FORMATS</A></H2>
+  <H3>Formats</H3>
   <! BeginSection: 'FORMATS'>
   <UL>
   <P>
@@ -768,7 +757,7 @@ skyctran — Transform coordinates from one celestial wcs to another
   <P>
   </UL>
   <! EndSection:   'FORMATS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   <P>
@@ -799,7 +788,7 @@ skyctran — Transform coordinates from one celestial wcs to another
   <P>
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -995,17 +984,17 @@ skyctran — Transform coordinates from one celestial wcs to another
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   setjd,precess,galactic,xray.xspatial.skypix,stsdas.toolbox.tools.tprecess
@@ -1014,5 +1003,3 @@ skyctran — Transform coordinates from one celestial wcs to another
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'USER COMMANDS' 'IMAGE CURSOR COMMANDS' 'FORMATS' 'REFERENCES' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _shutcor:
+
 shutcor — Shutter correction from images of varying exposure times
 ==================================================================
 
@@ -5,26 +7,13 @@ shutcor — Shutter correction from images of varying exposure times
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>shutcor (Nov01)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.obsutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>shutcor (Nov01)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>shutcor</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   shutcor -- shutter correction from images of varying exposure
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_synopsis">SYNOPSIS</A></H2>
+  <H3>Synopsis</H3>
   <! BeginSection: 'SYNOPSIS'>
   <UL>
   SHUTCOR calculate the shutter correction for a detector given a
@@ -33,24 +22,24 @@ shutcor — Shutter correction from images of varying exposure times
   intercept on a plot of exposure duration versus exposure level.
   </UL>
   <! EndSection:   'SYNOPSIS'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   shutcor images
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>List of overscan corrected images.  These would usually be flat
   field exposures.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_section">section = "<TT></TT>"</A></B></DT>
+  <DT><B>section = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='section' Line='section = ""'>
   <DD>The selected image section for the statistics.  This should be chosen
   to exclude bad columns or rows, cosmic rays, and other non-linear
@@ -58,7 +47,7 @@ shutcor — Shutter correction from images of varying exposure times
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_center">center = "<TT>mode</TT>"</A></B></DT>
+  <DT><B>center = "<TT>mode</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='center' Line='center = "mode"'>
   <DD>The statistical measure of central tendency that is used to estimate
   the data level of each image.  This can have the values:  <B>mean</B>,
@@ -67,14 +56,14 @@ shutcor — Shutter correction from images of varying exposure times
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nclip">nclip = 3</A></B></DT>
+  <DT><B>nclip = 3</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nclip' Line='nclip = 3'>
   <DD>Number of sigma clipping iterations.  If the value is zero then no clipping
   is performed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lsigma">lsigma = 4, usigma = 4</A></B></DT>
+  <DT><B>lsigma = 4, usigma = 4</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lsigma' Line='lsigma = 4, usigma = 4'>
   <DD>Lower and upper sigma clipping factors used with the mean value and
   standard deviation to eliminate cosmic rays.
@@ -84,20 +73,20 @@ shutcor — Shutter correction from images of varying exposure times
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_exposure">exposure = "<TT>exptime</TT>"</A></B></DT>
+  <DT><B>exposure = "<TT>exptime</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='exposure' Line='exposure = "exptime"'>
   <DD>Keyword giving the exposure time.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Verbose output?
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   SHUTCOR calculate the shutter correction for a detector given a
@@ -116,7 +105,7 @@ shutcor — Shutter correction from images of varying exposure times
   symmetric.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   A sequence of flat fields with varying exposure times are taken and
@@ -146,7 +135,7 @@ shutcor — Shutter correction from images of varying exposure times
   </DL>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imstatistics
@@ -155,5 +144,3 @@ shutcor — Shutter correction from images of varying exposure times
   
   <! Contents: 'NAME' 'SYNOPSIS' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _memchk:
+
 memchk — Process a memdbg mem.log file for errors
 =================================================
 
@@ -5,4 +7,3 @@ memchk — Process a memdbg mem.log file for errors
 
 .. raw:: html
 
-  

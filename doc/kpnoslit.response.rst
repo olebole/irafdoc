@@ -1,3 +1,5 @@
+.. _response:
+
 response — Determine response calibration
 =========================================
 
@@ -5,36 +7,23 @@ response — Determine response calibration
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>response (Aug86)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.twodspec.longslit</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>response (Aug86)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>response</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   response -- Determine response calibrations
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   response calibration normalization response
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_calibration">calibration</A></B></DT>
+  <DT><B>calibration</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='calibration' Line='calibration'>
   <DD>Images to use in determining response calibrations.  These are
   generally quartz continuum spectra.  An image section may be used to select
@@ -42,7 +31,7 @@ response — Determine response calibration
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_normalization">normalization</A></B></DT>
+  <DT><B>normalization</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='normalization' Line='normalization'>
   <DD>Images to use determining the normalization spectrum.  In almost all cases
   the normalization images are the same as the calibration images or a
@@ -50,7 +39,7 @@ response — Determine response calibration
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_responses">responses</A></B></DT>
+  <DT><B>responses</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='responses' Line='responses'>
   <DD>Response calibration images to be created.  Each response image is paired
   with a calibration image.  If the image exists then it will be modified
@@ -58,28 +47,28 @@ response — Determine response calibration
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = yes</A></B></DT>
+  <DT><B>interactive = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes'>
   <DD>Graph the average calibration spectrum and fit the normalization spectrum
   interactively?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_threshold">threshold = INDEF</A></B></DT>
+  <DT><B>threshold = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = INDEF'>
   <DD>Set the response to 1 when the normalization spectrum or input image data
   fall below this value.  If INDEF then no threshold is applied.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sample">sample = "<TT>*</TT>"</A></B></DT>
+  <DT><B>sample = "<TT>*</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"'>
   <DD>Sample of points to use in fitting the average calibration spectrum.
   The sample is selected with a range string.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_naverage">naverage = 1</A></B></DT>
+  <DT><B>naverage = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='naverage' Line='naverage = 1'>
   <DD>Number of sample points to average or median before fitting the function.
   If the number is positive the average of each set of naverage sample
@@ -89,32 +78,32 @@ response — Determine response calibration
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_function">function = "<TT>spline3</TT>"</A></B></DT>
+  <DT><B>function = "<TT>spline3</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='function' Line='function = "spline3"'>
   <DD>Function to fit to the average image spectrum to form the normalization
   spectrum.  The options are "<TT>spline1</TT>", "<TT>spline3</TT>", "<TT>legendre</TT>", and "<TT>chebyshev</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_order">order = 1</A></B></DT>
+  <DT><B>order = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='order' Line='order = 1'>
   <DD>Order of the fitting function or the number of spline pieces.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_low_reject">low_reject = 0., high_reject = 0.</A></B></DT>
+  <DT><B>low_reject = 0., high_reject = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='low_reject' Line='low_reject = 0., high_reject = 0.'>
   <DD>Rejection limits below and above the fit in units of the residual sigma.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_niterate">niterate = 1</A></B></DT>
+  <DT><B>niterate = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='niterate' Line='niterate = 1'>
   <DD>Number of rejection iterations.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_grow">grow = 0</A></B></DT>
+  <DT><B>grow = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='grow' Line='grow = 0'>
   <DD>Reject additional points within this distance of points exceeding the
   rejection threshold.
@@ -122,7 +111,7 @@ response — Determine response calibration
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_cursor_keys">CURSOR KEYS</A></H2>
+  <H3>Cursor keys</H3>
   <! BeginSection: 'CURSOR KEYS'>
   <UL>
   The interactive curve fitting package <B>icfit</B> is used to fit a function
@@ -130,7 +119,7 @@ response — Determine response calibration
   under the name "<TT>icfit</TT>".
   </UL>
   <! EndSection:   'CURSOR KEYS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   A response calibration, in the form of an image, is created for each input
@@ -214,7 +203,7 @@ response — Determine response calibration
   are updated in the parameter file.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. To create a response image non-interactively:
@@ -245,7 +234,7 @@ response — Determine response calibration
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   icfit, iillumination
@@ -254,5 +243,3 @@ response — Determine response calibration
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'CURSOR KEYS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

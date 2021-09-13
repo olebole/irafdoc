@@ -1,3 +1,5 @@
+.. _hdfit:
+
 hdfit — Fit a curve to density, log exposure values
 ===================================================
 
@@ -5,88 +7,75 @@ hdfit — Fit a curve to density, log exposure values
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>hdfit (Mar88)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>imred.dtoi</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>hdfit (Mar88)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>hdfit</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   hdfit -- fit characteristic curve to density, exposure data
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   hdfit database 
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_database">database</A></B></DT>
+  <DT><B>database</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='database' Line='database'>
   <DD>Database[s] containing the density, log exposure information.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_function">function = "<TT>power</TT>"</A></B></DT>
+  <DT><B>function = "<TT>power</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='function' Line='function = "power"'>
   <DD>Type of curve to fit; chosen from "<TT>power</TT>", "<TT>legendre</TT>", "<TT>chebyshev</TT>", 
   "<TT>spline1</TT>" or "<TT>spline3</TT>".  Abbreviations are permitted.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_transform">transform = "<TT>logopacitance</TT>"</A></B></DT>
+  <DT><B>transform = "<TT>logopacitance</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='transform' Line='transform = "logopacitance"'>
   <DD>Transformation performed on the density prior to fitting.  Chosen from
   "<TT>none</TT>", "<TT>logopacitance</TT>", "<TT>k50</TT>" or "<TT>k75</TT>". 
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_weighting">weighting = "<TT>none</TT>"</A></B></DT>
+  <DT><B>weighting = "<TT>none</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='weighting' Line='weighting = "none"'>
   <DD>Weights can be assigned to the independent variable for fitting a curve.
   Choices are "<TT>none</TT>", "<TT>user</TT>" and "<TT>calculated</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_order">order = 4</A></B></DT>
+  <DT><B>order = 4</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='order' Line='order = 4'>
   <DD>Order of the fit.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = yes</A></B></DT>
+  <DT><B>interactive = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes'>
   <DD>Fit the data interactively?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_device">device = "<TT>stdgraph</TT>"</A></B></DT>
+  <DT><B>device = "<TT>stdgraph</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdgraph"'>
   <DD>Interactive graphics device.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cursor">cursor = "<TT>stdgcur</TT>"</A></B></DT>
+  <DT><B>cursor = "<TT>stdgcur</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = "stdgcur"'>
   <DD>Source of cursor input.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Task <I>hdfit</I> is used to fit a curve to density and log exposure
@@ -116,7 +105,7 @@ hdfit — Fit a curve to density, log exposure values
   this is traditionally known as the Baker-Seidel function.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <PRE>
@@ -131,7 +120,7 @@ hdfit — Fit a curve to density, log exposure values
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   spotlist, dematch, hdtoi
@@ -140,5 +129,3 @@ hdfit — Fit a curve to density, log exposure values
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

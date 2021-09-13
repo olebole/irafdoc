@@ -1,3 +1,5 @@
+.. _mkms:
+
 mkms — Create multispec from 1D spectra including associated bands
 ==================================================================
 
@@ -5,62 +7,49 @@ mkms — Create multispec from 1D spectra including associated bands
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>mkms (Jan03)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.nproto</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>mkms (Jan03)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>mkms</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   mkms -- make multispec format from 1D arrays with associated bands
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   mkms output spectra raw background sigma
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>Name of output multispec image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_spectra">spectra</A></B></DT>
+  <DT><B>spectra</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='spectra' Line='spectra'>
   <DD>List of primary 1D spectra to be included in multispec image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_raw">raw</A></B></DT>
+  <DT><B>raw</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='raw' Line='raw'>
   <DD>List of 1D raw or secondary spectra.  If none specify "<TT></TT>" otherwise
   the list must match the list of primary spectra.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_background">background</A></B></DT>
+  <DT><B>background</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='background' Line='background'>
   <DD>List of 1D background spectra.  If none specify "<TT></TT>" otherwise
   the list must match the list of primary spectra.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sigma">sigma</A></B></DT>
+  <DT><B>sigma</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sigma' Line='sigma'>
   <DD>List of 1D sigma spectra.  If none specify "<TT></TT>" otherwise
   the list must match the list of primary spectra.
@@ -68,7 +57,7 @@ mkms — Create multispec from 1D spectra including associated bands
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   MKMS creates a multispec format from 1D spectra.  Unlike SCOPY it
@@ -84,7 +73,7 @@ mkms — Create multispec from 1D spectra including associated bands
   task will abort with an error leaving temporary files behind.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. To create an image with one spectrum and each of the associated types:
@@ -101,18 +90,18 @@ mkms — Create multispec from 1D spectra including associated bands
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_MKMS">MKMS V2.12.2</A></B></DT>
+  <DT><B>MKMS V2.12.2</B></DT>
   <! Sec='REVISIONS' Level=0 Label='MKMS' Line='MKMS V2.12.2'>
   <DD>This prototype task added for this release.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   scopy, imstack
@@ -121,5 +110,3 @@ mkms — Create multispec from 1D spectra including associated bands
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

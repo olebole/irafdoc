@@ -1,3 +1,5 @@
+.. _wcsedit:
+
 wcsedit — Edit an image wcs parameter
 =====================================
 
@@ -5,36 +7,23 @@ wcsedit — Edit an image wcs parameter
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>wcsedit (Apr92)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imcoords</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>wcsedit (Apr92)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>wcsedit</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   wcsedit -- edit an image world coordinate system parameter 
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   wcsedit image parameter value axes1
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_image">image</A></B></DT>
+  <DT><B>image</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='image' Line='image'>
   <DD>The list of images for which the WCS is to be edited.  Image sections are
   ignored.  If the image does not exist a data-less image header is first
@@ -43,7 +32,7 @@ wcsedit — Edit an image wcs parameter
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_parameter">parameter</A></B></DT>
+  <DT><B>parameter</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='parameter' Line='parameter'>
   <DD>The WCS parameter to be edited. The WCS parameters recognized by
   WCSEDIT are: 1) the FITS WCS
@@ -53,7 +42,7 @@ wcsedit — Edit an image wcs parameter
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_value">value</A></B></DT>
+  <DT><B>value</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='value' Line='value'>
   <DD>The new parameter value. The numerical parameters crpix, crval, cd, ltv, and
   ltm will not be updated if WCSEDIT is unable to decode the parameter value
@@ -61,7 +50,7 @@ wcsedit — Edit an image wcs parameter
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_axes1">axes1</A></B></DT>
+  <DT><B>axes1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='axes1' Line='axes1'>
   <DD>The list of principal axes for which <I>parameter</I> is to be edited.
   Axes1 can
@@ -70,7 +59,7 @@ wcsedit — Edit an image wcs parameter
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_axes2">axes2</A></B></DT>
+  <DT><B>axes2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='axes2' Line='axes2'>
   <DD>The list of dependent axes for which <I>parameter</I> is to be edited.
   Axes2 can
@@ -80,13 +69,13 @@ wcsedit — Edit an image wcs parameter
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wcs">wcs = "<TT>world</TT>"</A></B></DT>
+  <DT><B>wcs = "<TT>world</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wcs' Line='wcs = "world"'>
   <DD>The WCS to be edited.  The options are: the builtin systems "<TT>world</TT>" or
   "<TT>physical</TT>", or a named system, e.g. "<TT>image</TT>" or "<TT>multispec</TT>". The builtin system
   "<TT>logical</TT>" may not be edited.
   <DL>
-  <DT><B><A NAME="l_world">world</A></B></DT>
+  <DT><B>world</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='world' Line='world'>
   <DD>If <I>wcs</I> is "<TT>world</TT>" the default WCS is edited. The default WCS
   is either 1) the value of the environment variable "<TT>defwcs</TT>" if
@@ -98,7 +87,7 @@ wcsedit — Edit an image wcs parameter
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_physical">physical</A></B></DT>
+  <DT><B>physical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='physical' Line='physical'>
   <DD>If <I>wcs</I> is "<TT>physical</TT>", WCS is the pixel coordinate system of
   the original image, which may be different from the pixel coordinate system
@@ -110,7 +99,7 @@ wcsedit — Edit an image wcs parameter
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_name">name</A></B></DT>
+  <DT><B>name</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='name' Line='name'>
   <DD>A user supplied wcs name.
   If the named WCS does not exist in the image, a new one of that
@@ -122,31 +111,31 @@ wcsedit — Edit an image wcs parameter
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wcsdim">wcsdim = 2</A></B></DT>
+  <DT><B>wcsdim = 2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wcsdim' Line='wcsdim = 2'>
   <DD>WCS dimensionality when creating a new data-less image header.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = no</A></B></DT>
+  <DT><B>interactive = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = no'>
   <DD>Edit the WCS interactively?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_commands">commands = "<TT></TT>"</A></B></DT>
+  <DT><B>commands = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='commands' Line='commands = ""'>
   <DD>The interactive editing command prompt.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print messages about actions taken in interactive or non-interactive mode?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_update">update = yes</A></B></DT>
+  <DT><B>update = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='update' Line='update = yes'>
   <DD>Update the image header in non-interactive mode? A specific command  exists
   to do this in interactive mode.
@@ -155,7 +144,7 @@ wcsedit — Edit an image wcs parameter
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   WCSEDIT modifies the WCS of an existing image or creates a data-less image
@@ -217,7 +206,7 @@ wcsedit — Edit an image wcs parameter
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_the_wcs_parameters">THE WCS PARAMETERS</A></H2>
+  <H3>The wcs parameters</H3>
   <! BeginSection: 'THE WCS PARAMETERS'>
   <UL>
   <P>
@@ -291,7 +280,7 @@ wcsedit — Edit an image wcs parameter
   <P>
   </UL>
   <! EndSection:   'THE WCS PARAMETERS'>
-  <H2><A NAME="s_formats">FORMATS</A></H2>
+  <H3>Formats</H3>
   <! BeginSection: 'FORMATS'>
   <UL>
   A  format  specification has the form "<TT>%w.dCn</TT>", where w is the field
@@ -371,7 +360,7 @@ wcsedit — Edit an image wcs parameter
   <P>
   </UL>
   <! EndSection:   'FORMATS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   <P>
@@ -385,7 +374,7 @@ wcsedit — Edit an image wcs parameter
   <P>
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -492,12 +481,12 @@ wcsedit — Edit an image wcs parameter
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   The IRAF WCS code supports the dimensional reduction of images,
@@ -514,7 +503,7 @@ wcsedit — Edit an image wcs parameter
   be used to fix a serious problem should it arise.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   wcsreset,hedit,hfix
@@ -523,5 +512,3 @@ wcsedit — Edit an image wcs parameter
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'THE WCS PARAMETERS' 'FORMATS' 'REFERENCES' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

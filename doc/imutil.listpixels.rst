@@ -1,3 +1,5 @@
+.. _listpixels:
+
 listpixels — Convert an image section into a list of pixels
 ===========================================================
 
@@ -5,47 +7,34 @@ listpixels — Convert an image section into a list of pixels
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>listpixels (Apr92)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>listpixels (Apr92)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>listpixels</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   listpixels -- print the pixel values for a list of images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   listpixels images
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>Images or list of image sections whose pixels are to be printed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wcs">wcs = "<TT>logical</TT>"</A></B></DT>
+  <DT><B>wcs = "<TT>logical</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wcs' Line='wcs = "logical"'>
   <DD>The world coordinate system to be used for coordinate output. The following
   standard systems are defined.
   <DL>
-  <DT><B><A NAME="l_logical">logical</A></B></DT>
+  <DT><B>logical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='logical' Line='logical'>
   <DD>Logical coordinates are image pixel coordinates relative to the input
   image. For example the pixel coordinates of the lower left corner
@@ -54,7 +43,7 @@ listpixels — Convert an image section into a list of pixels
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_physical">physical</A></B></DT>
+  <DT><B>physical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='physical' Line='physical'>
   <DD>Physical coordinates are image pixel coordinates with respect to the original
   image. For example the pixel coordinates of the lower left corner
@@ -65,7 +54,7 @@ listpixels — Convert an image section into a list of pixels
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_world">world</A></B></DT>
+  <DT><B>world</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='world' Line='world'>
   <DD>World coordinates are image pixel coordinates with respect to the
   current default world coordinate system. For example in the case
@@ -83,7 +72,7 @@ listpixels — Convert an image section into a list of pixels
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_formats">formats = "<TT></TT>"</A></B></DT>
+  <DT><B>formats = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='formats' Line='formats = ""'>
   <DD>The default output formats for the pixel coordinates, one format
   per axis, with the individual formats separated by whitespace .
@@ -94,14 +83,14 @@ listpixels — Convert an image section into a list of pixels
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = no</A></B></DT>
+  <DT><B>verbose = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
   <DD>Print a title line for each image whose pixels are to be listed.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The pixel coordinates in the world coordinates system specified by
@@ -110,7 +99,7 @@ listpixels — Convert an image section into a list of pixels
   the pixel value.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_formats">FORMATS</A></H2>
+  <H3>Formats</H3>
   <! BeginSection: 'FORMATS'>
   <UL>
   A  format  specification has the form "<TT>%w.dCn</TT>", where w is the field
@@ -189,7 +178,7 @@ listpixels — Convert an image section into a list of pixels
   </PRE>
   </UL>
   <! EndSection:   'FORMATS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. List the pixels of an image on the standard output.
@@ -239,17 +228,17 @@ listpixels — Convert an image section into a list of pixels
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imheader, imgets, imhistogram
@@ -258,5 +247,3 @@ listpixels — Convert an image section into a list of pixels
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'FORMATS' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

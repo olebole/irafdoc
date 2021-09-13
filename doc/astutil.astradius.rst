@@ -1,3 +1,5 @@
+.. _astradius:
+
 astradius — Find images within a circle on the sky
 ==================================================
 
@@ -5,56 +7,43 @@ astradius — Find images within a circle on the sky
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>astradius (Jan96)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>astutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>astradius (Jan96)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>astradius</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   astradius -- find images within a circle on the sky
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   astradius images racenter deccenter epcenter radius
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>List of images for which the radius to a point on the sky is to be
   determined.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_racenter">racenter, deccenter, epcenter</A></B></DT>
+  <DT><B>racenter, deccenter, epcenter</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='racenter' Line='racenter, deccenter, epcenter'>
   <DD>Right ascension in hours, declination in degrees, and epoch of a position
   on the sky to use as the center of a circle.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_radius">radius</A></B></DT>
+  <DT><B>radius</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='radius' Line='radius'>
   <DD>Search radius in arc seconds about the center position.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_keywpars">keywpars = "<TT></TT>" (pset)</A></B></DT>
+  <DT><B>keywpars = "<TT></TT>" (pset)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='keywpars' Line='keywpars = "" (pset)'>
   <DD>Parameter set defining the image header keywords.  This task requires
   keywords for the right ascension, declination, and epoch.  If
@@ -64,7 +53,7 @@ astradius — Find images within a circle on the sky
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_commands">commands = "<TT>astutil$astradius.dat</TT>"</A></B></DT>
+  <DT><B>commands = "<TT>astutil$astradius.dat</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='commands' Line='commands = "astutil$astradius.dat"'>
   <DD>Command file used to compute the distance from the coordinate center
   and print a result if the distance is less than the specified radius.
@@ -74,7 +63,7 @@ astradius — Find images within a circle on the sky
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <B>Astradius</B> computes the spherical distance from a specified point on
@@ -108,7 +97,7 @@ astradius — Find images within a circle on the sky
   command syntax is described in the help for <B>astcalc</B>.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  Page the script task and the command file.
@@ -176,18 +165,18 @@ astradius — Find images within a circle on the sky
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_ASTRADIUS">ASTRADIUS V2.11</A></B></DT>
+  <DT><B>ASTRADIUS V2.11</B></DT>
   <! Sec='REVISIONS' Level=0 Label='ASTRADIUS' Line='ASTRADIUS V2.11'>
   <DD>This task is new in this release.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   astcalc, hselect
@@ -196,5 +185,3 @@ astradius — Find images within a circle on the sky
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

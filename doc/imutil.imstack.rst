@@ -1,3 +1,5 @@
+.. _imstack:
+
 imstack — Stack images into a single image of higher dimension
 ==============================================================
 
@@ -5,55 +7,42 @@ imstack — Stack images into a single image of higher dimension
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>imstack (Apr92)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>imstack (Apr92)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>imstack</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   imstack -- stack images into an image of higher dimension
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage_">USAGE	</A></H2>
+  <H3>Usage	</H3>
   <! BeginSection: 'USAGE	'>
   <UL>
   imstack images output
   </UL>
   <! EndSection:   'USAGE	'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>List of images to be stacked.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>Name of output image created.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_title">title = "<TT>*</TT>"</A></B></DT>
+  <DT><B>title = "<TT>*</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='title' Line='title = "*"'>
   <DD>Title of output image.  If "<TT>*</TT>" then the title defaults to that of
   the first input image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pixtype">pixtype = "<TT>*</TT>"</A></B></DT>
+  <DT><B>pixtype = "<TT>*</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pixtype' Line='pixtype = "*"'>
   <DD>Pixel datatype of output image.  If "<TT>*</TT>" then the pixel datatype defaults to
   that of the first input image.
@@ -61,7 +50,7 @@ imstack — Stack images into a single image of higher dimension
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -81,7 +70,7 @@ imstack — Stack images into a single image of higher dimension
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -94,12 +83,12 @@ imstack — Stack images into a single image of higher dimension
   	cl&gt; imstack image*[1:10,1:10] newimage
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imslice
@@ -108,5 +97,3 @@ imstack — Stack images into a single image of higher dimension
   
   <! Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

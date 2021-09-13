@@ -1,3 +1,5 @@
+.. _mkspec:
+
 mkspec — Generate an artificial spectrum (obsolete)
 ===================================================
 
@@ -5,60 +7,47 @@ mkspec — Generate an artificial spectrum (obsolete)
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>mkspec (Mar92)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.onedspec</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>mkspec (Mar92)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>mkspec</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   mkspec -- generate an artificial spectrum or image (obsolete)
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   mkspec image_name image_title ncols nlines function
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_image_name">image_name</A></B></DT>
+  <DT><B>image_name</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='image_name' Line='image_name'>
   <DD>The name to be given to the image file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_image_title">image_title</A></B></DT>
+  <DT><B>image_title</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='image_title' Line='image_title'>
   <DD>A character string to be used to describe the image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ncols">ncols</A></B></DT>
+  <DT><B>ncols</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ncols' Line='ncols'>
   <DD>The number of pixels in the spectrum (the length of the image).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nlines">nlines</A></B></DT>
+  <DT><B>nlines</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nlines' Line='nlines'>
   <DD>The number or lines (rows) in the image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_function">function</A></B></DT>
+  <DT><B>function</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='function' Line='function'>
   <DD>An indicator specifying the form of the spectrum: 1 - a constant,
   2 - a ramp running from start_level to end_level, 3 - a black body
@@ -67,38 +56,38 @@ mkspec — Generate an artificial spectrum (obsolete)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_constant">constant</A></B></DT>
+  <DT><B>constant</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='constant' Line='constant'>
   <DD>The value to be assigned to the spectrum if function=1 (constant).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_start_level">start_level</A></B></DT>
+  <DT><B>start_level</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='start_level' Line='start_level'>
   <DD>The starting value to be assigned to the spectrum at pixel 1 if
   function=2 (ramp).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_end_level">end_level</A></B></DT>
+  <DT><B>end_level</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='end_level' Line='end_level'>
   <DD>The ending value of the spectrum assigned at pixel=ncols if function=2.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_start_wave">start_wave</A></B></DT>
+  <DT><B>start_wave</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='start_wave' Line='start_wave'>
   <DD>The wavelength (Angstroms) assigned to pixel 1 if function=3 (Black Body).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_end_wave">end_wave</A></B></DT>
+  <DT><B>end_wave</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='end_wave' Line='end_wave'>
   <DD>The wavelength (Angstroms) assigned to the last pixel if function=3.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_temperature">temperature</A></B></DT>
+  <DT><B>temperature</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='temperature' Line='temperature'>
   <DD>The black body temperature (degrees K) for which the spectrum
   is to be created if function=3.
@@ -106,7 +95,7 @@ mkspec — Generate an artificial spectrum (obsolete)
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   An artificial image is created with the specified name and length.
@@ -129,7 +118,7 @@ mkspec — Generate an artificial spectrum (obsolete)
   system.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -142,18 +131,18 @@ mkspec — Generate an artificial spectrum (obsolete)
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_MKSPEC">MKSPEC V2.10</A></B></DT>
+  <DT><B>MKSPEC V2.10</B></DT>
   <! Sec='REVISIONS' Level=0 Label='MKSPEC' Line='MKSPEC V2.10'>
   <DD>This task is unchanged.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   artdata.mk1dspec, artdata.mk2dspec, artdata.mkechelle
@@ -162,5 +151,3 @@ mkspec — Generate an artificial spectrum (obsolete)
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

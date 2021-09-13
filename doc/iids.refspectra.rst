@@ -1,3 +1,5 @@
+.. _refspectra:
+
 refspectra — Assign reference spectra to object spectra
 =======================================================
 
@@ -5,36 +7,23 @@ refspectra — Assign reference spectra to object spectra
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>refspectra (Mar92)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.onedspec</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>refspectra (Mar92)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>refspectra</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   refspectra -- Assign reference spectra
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   refspectra input [records]
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of input spectra or root names to be assigned reference spectra.
   When using the record number extension format, record number extensions
@@ -42,7 +31,7 @@ refspectra — Assign reference spectra to object spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_records">records (imred.irs and imred.iids packages only)</A></B></DT>
+  <DT><B>records (imred.irs and imred.iids packages only)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='records' Line='records (imred.irs and imred.iids packages only)'>
   <DD>List of records or ranges of records to be appended to the input root
   names when using record number extension format.  The syntax of this
@@ -55,14 +44,14 @@ refspectra — Assign reference spectra to object spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_references">references = "<TT>*.imh</TT>"</A></B></DT>
+  <DT><B>references = "<TT>*.imh</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='references' Line='references = "*.imh"'>
   <DD>List of reference spectra to be assigned or a "<TT>reference spectra assignment
   table</TT>" (see DESCRIPTION section).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apertures">apertures = "<TT></TT>"</A></B></DT>
+  <DT><B>apertures = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""'>
   <DD>List of apertures to be SELECTED from the input list of spectra.  If no list
   is specified then all apertures are selected.  The syntax is the same as the
@@ -70,7 +59,7 @@ refspectra — Assign reference spectra to object spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_refaps">refaps = "<TT></TT>"</A></B></DT>
+  <DT><B>refaps = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='refaps' Line='refaps = ""'>
   <DD>List of reference spectra apertures to be SELECTED.  If no list is specified
   then all apertures are selected.  The syntax is the same as the record number
@@ -78,7 +67,7 @@ refspectra — Assign reference spectra to object spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ignoreaps">ignoreaps = yes</A></B></DT>
+  <DT><B>ignoreaps = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ignoreaps' Line='ignoreaps = yes'>
   <DD>Ignore the input and reference apertures when ASSIGNING reference spectra.
   If the aperture numbers are not ignored then only the reference spectra with
@@ -91,11 +80,11 @@ refspectra — Assign reference spectra to object spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_select">select = "<TT>interp</TT>"</A></B></DT>
+  <DT><B>select = "<TT>interp</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='select' Line='select = "interp"'>
   <DD>Selection method for assigning reference spectra.  The methods are:
   <DL>
-  <DT><B><A NAME="l_average">average</A></B></DT>
+  <DT><B>average</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='average' Line='average'>
   <DD>Average two reference spectra without regard to any aperture,
   sort, or group parameters.
@@ -106,7 +95,7 @@ refspectra — Assign reference spectra to object spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_following">following</A></B></DT>
+  <DT><B>following</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='following' Line='following'>
   <DD>Select the nearest following spectrum in the reference list based on the
   sort and group parameters.  If there is no following spectrum use the
@@ -114,7 +103,7 @@ refspectra — Assign reference spectra to object spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interp">interp</A></B></DT>
+  <DT><B>interp</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='interp' Line='interp'>
   <DD>Interpolate between the preceding and following spectra in the reference
   list based on the sort and group parameters.  If there is no preceding and
@@ -124,21 +113,21 @@ refspectra — Assign reference spectra to object spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_match">match</A></B></DT>
+  <DT><B>match</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='match' Line='match'>
   <DD>Match each input spectrum with the reference spectrum list in order.
   This overrides any aperture or group values.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nearest">nearest</A></B></DT>
+  <DT><B>nearest</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest'>
   <DD>Select the nearest spectrum in the reference list based on the sort and
   group parameters.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_preceding">preceding</A></B></DT>
+  <DT><B>preceding</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='preceding' Line='preceding'>
   <DD>Select the nearest preceding spectrum in the reference list based on the
   sort and group parameters.  If there is no preceding spectrum use the
@@ -148,7 +137,7 @@ refspectra — Assign reference spectra to object spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sort">sort = "<TT>jd</TT>"</A></B></DT>
+  <DT><B>sort = "<TT>jd</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sort' Line='sort = "jd"'>
   <DD>Image header keyword to be used as the sorting parameter for selection
   based on order.  The header parameter must be numeric but otherwise may
@@ -158,7 +147,7 @@ refspectra — Assign reference spectra to object spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_group">group = "<TT>ljd</TT>"</A></B></DT>
+  <DT><B>group = "<TT>ljd</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='group' Line='group = "ljd"'>
   <DD>Image header keyword to be used to group spectra.  For those selection
   methods which use the group parameter the reference and object spectra must
@@ -170,7 +159,7 @@ refspectra — Assign reference spectra to object spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_time">time = no, timewrap = 17.</A></B></DT>
+  <DT><B>time = no, timewrap = 17.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='time' Line='time = no, timewrap = 17.'>
   <DD>Is the sorting parameter a 24 hour time?  If so then the time orgin
   for the sorting is specified by the timewrap parameter.  This time
@@ -179,7 +168,7 @@ refspectra — Assign reference spectra to object spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_override">override = no</A></B></DT>
+  <DT><B>override = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='override' Line='override = no'>
   <DD>Override previous assignments?  If an input spectrum has reference
   spectra assigned previously the assignment will not be changed unless
@@ -187,7 +176,7 @@ refspectra — Assign reference spectra to object spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_confirm">confirm = yes</A></B></DT>
+  <DT><B>confirm = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='confirm' Line='confirm = yes'>
   <DD>Confirm reference spectrum assignments?  If <I>yes</I> then the reference
   spectra assignments for each input spectrum are printed and the user may
@@ -196,7 +185,7 @@ refspectra — Assign reference spectra to object spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_assign">assign = yes</A></B></DT>
+  <DT><B>assign = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='assign' Line='assign = yes'>
   <DD>Assign the reference spectrum by entering it in the image header?
   The input spectra are only modified if this parameter is <I>yes</I>.
@@ -205,7 +194,7 @@ refspectra — Assign reference spectra to object spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_logfiles">logfiles = "<TT>STDOUT,logfile</TT>"</A></B></DT>
+  <DT><B>logfiles = "<TT>STDOUT,logfile</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='logfiles' Line='logfiles = "STDOUT,logfile"'>
   <DD>List of log files for recording reference spectra assignments.
   The file STDOUT prints to the standard output.  If not specified ("<TT></TT>")
@@ -213,7 +202,7 @@ refspectra — Assign reference spectra to object spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Verbose log output?  This prints additional information about the input
   and reference spectra.  This is useful for diagnosing why certain spectra
@@ -222,7 +211,7 @@ refspectra — Assign reference spectra to object spectra
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task allows the user to define which reference spectra are to be 
@@ -374,7 +363,7 @@ refspectra — Assign reference spectra to object spectra
   task parameters. 
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_keywords">KEYWORDS</A></H2>
+  <H3>Keywords</H3>
   <! BeginSection: 'KEYWORDS'>
   <UL>
   This task uses the header keyword BEAM-NUM to sort the apertures.  It
@@ -396,7 +385,7 @@ refspectra — Assign reference spectra to object spectra
   <P>
   </UL>
   <! EndSection:   'KEYWORDS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  Compute a Julian date at the midpoint of the exposure for sorting
@@ -495,11 +484,11 @@ refspectra — Assign reference spectra to object spectra
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_REFSPECTRA">REFSPECTRA V2.10.3</A></B></DT>
+  <DT><B>REFSPECTRA V2.10.3</B></DT>
   <! Sec='REVISIONS' Level=0 Label='REFSPECTRA' Line='REFSPECTRA V2.10.3'>
   <DD>If no reference spectrum is found in the interp, nearest, following,
   preceding methods then a list of the reference spectra is given
@@ -507,7 +496,7 @@ refspectra — Assign reference spectra to object spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_REFSPECTRA">REFSPECTRA V2.10</A></B></DT>
+  <DT><B>REFSPECTRA V2.10</B></DT>
   <! Sec='REVISIONS' Level=0 Label='REFSPECTRA' Line='REFSPECTRA V2.10'>
   <DD>A group parameter was added to allow restricting assignments by observing
   period; for example by night.  The record format option was removed and
@@ -516,7 +505,7 @@ refspectra — Assign reference spectra to object spectra
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   identify, reidentify, dispcor, setjd, setairmass
@@ -525,5 +514,3 @@ refspectra — Assign reference spectra to object spectra
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'KEYWORDS' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

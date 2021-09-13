@@ -1,3 +1,5 @@
+.. _fceval:
+
 fceval — Evaluate coordinates using the FITSCOORDS solutions
 ============================================================
 
@@ -5,63 +7,50 @@ fceval — Evaluate coordinates using the FITSCOORDS solutions
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>fceval (Aug03)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.twodspec.longslit</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>fceval (Aug03)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>fceval</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   fceval -- Evaluate coordinates using the FITCOORDS solutions
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   fceval input output fitnames
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>Input text file of pixel coordinates.  This may be "<TT>STDIN</TT>" to read
   coordinates from the terminal or pipe.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>Output text file of pixel coordinates and fitted coordinates.  This may
   be "<TT>STDOUT</TT>" to write coordinates to the terminal or pipe.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fitnames">fitnames  </A></B></DT>
+  <DT><B>fitnames  </B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fitnames' Line='fitnames  '>
   <DD>Names of the user coordinate maps to evaluate.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_database">database = "<TT>database</TT>"</A></B></DT>
+  <DT><B>database = "<TT>database</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"'>
   <DD>Database containing the coordinate maps.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task transforms pixel coordinates to the world coordinates fit with
@@ -79,7 +68,7 @@ fceval — Evaluate coordinates using the FITSCOORDS solutions
   GEOMAP and GEOTRAN.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Evaluate a wavelength and slit position fit where the input pixel coordinates
@@ -127,7 +116,7 @@ fceval — Evaluate coordinates using the FITSCOORDS solutions
   not be automatically set.
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   fitcoords, transform, geomap, geotran
@@ -136,5 +125,3 @@ fceval — Evaluate coordinates using the FITSCOORDS solutions
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

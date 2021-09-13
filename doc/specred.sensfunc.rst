@@ -1,3 +1,5 @@
+.. _sensfunc:
+
 sensfunc — Compute instrumental sensitivity from standard stars
 ===============================================================
 
@@ -5,42 +7,29 @@ sensfunc — Compute instrumental sensitivity from standard stars
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>sensfunc (Mar93)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.onedspec</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>sensfunc (Mar93)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>sensfunc</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   sensfunc -- Determine sensitivity and extinction functions
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   sensfunc standards sensitivity
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_standards">standards = "<TT>std</TT>"</A></B></DT>
+  <DT><B>standards = "<TT>std</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='standards' Line='standards = "std"'>
   <DD>Input standard star data file created by the task <B>standard</B>.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sensitivity">sensitivity = "<TT>sens</TT>"</A></B></DT>
+  <DT><B>sensitivity = "<TT>sens</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sensitivity' Line='sensitivity = "sens"'>
   <DD>Output sensitivity function image name or rootname.  Generally each
   aperture results in an independent sensitivity function with the
@@ -51,7 +40,7 @@ sensfunc — Compute instrumental sensitivity from standard stars
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apertures">apertures = "<TT></TT>"</A></B></DT>
+  <DT><B>apertures = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""'>
   <DD>List of apertures to be selected from the input file.  All other apertures
   are ignored.  If no list is specified then all apertures are selected.
@@ -59,7 +48,7 @@ sensfunc — Compute instrumental sensitivity from standard stars
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ignoreaps">ignoreaps = no</A></B></DT>
+  <DT><B>ignoreaps = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ignoreaps' Line='ignoreaps = no'>
   <DD>Ignore aperture numbers and create a single sensitivity function?  Normally
   each aperture produces an independent sensitivity function.  If the
@@ -68,7 +57,7 @@ sensfunc — Compute instrumental sensitivity from standard stars
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_logfile">logfile = "<TT>logfile</TT>"</A></B></DT>
+  <DT><B>logfile = "<TT>logfile</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "logfile"'>
   <DD>Output log filename for statistical information about the stars used
   and the sensitivity function and extinction function.
@@ -76,7 +65,7 @@ sensfunc — Compute instrumental sensitivity from standard stars
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_extinction">extinction = &lt;no default&gt;</A></B></DT>
+  <DT><B>extinction = &lt;no default&gt;</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='extinction' Line='extinction = &lt;no default&gt;'>
   <DD>Input extinction file.  Any extinction determination made will be
   relative to this extinction.  If no file is given then no extinction
@@ -92,7 +81,7 @@ sensfunc — Compute instrumental sensitivity from standard stars
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_newextinction">newextinction = "<TT>extinct.dat</TT>"</A></B></DT>
+  <DT><B>newextinction = "<TT>extinct.dat</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='newextinction' Line='newextinction = "extinct.dat"'>
   <DD>Output revised extinction file.  If the extinction is revised and an
   output filename is given then a revised extinction file is written.  It
@@ -100,7 +89,7 @@ sensfunc — Compute instrumental sensitivity from standard stars
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_observatory">observatory = "<TT>)_.observatory</TT>"</A></B></DT>
+  <DT><B>observatory = "<TT>)_.observatory</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory = ")_.observatory"'>
   <DD>Observatory at which the spectra were obtained if not specified in the
   image header by the keyword OBSERVAT.  The default is a redirection to look
@@ -115,7 +104,7 @@ sensfunc — Compute instrumental sensitivity from standard stars
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_function">function = "<TT>spline3</TT>"</A></B></DT>
+  <DT><B>function = "<TT>spline3</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='function' Line='function = "spline3"'>
   <DD>Function used to fit the sensitivity data.  The function types are
   "<TT>chebyshev</TT>" polynomial, "<TT>legendre</TT>" polynomial, "<TT>spline3</TT>" cubic spline,
@@ -123,7 +112,7 @@ sensfunc — Compute instrumental sensitivity from standard stars
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_order">order = 6</A></B></DT>
+  <DT><B>order = 6</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='order' Line='order = 6'>
   <DD>Order of the sensitivity fitting function.  The value corresponds to the
   number of polynomial terms or the number of spline pieces.  The default
@@ -131,7 +120,7 @@ sensfunc — Compute instrumental sensitivity from standard stars
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = yes</A></B></DT>
+  <DT><B>interactive = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes'>
   <DD>Determine the sensitivity function interactively?  If yes the user
   graphically interacts with the data, modifies data and parameters
@@ -139,7 +128,7 @@ sensfunc — Compute instrumental sensitivity from standard stars
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_graphs">graphs = "<TT>sr</TT>"</A></B></DT>
+  <DT><B>graphs = "<TT>sr</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='graphs' Line='graphs = "sr"'>
   <DD>Graphs to be displayed per frame.  From one to four graphs may be displayed
   per frame.  The graph types are selected by single characters and are:
@@ -158,7 +147,7 @@ sensfunc — Compute instrumental sensitivity from standard stars
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_marks">marks = "<TT>plus cross box</TT>"</A></B></DT>
+  <DT><B>marks = "<TT>plus cross box</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='marks' Line='marks = "plus cross box"'>
   <DD>Symbols used to mark included, deleted, and added data respectively.
   The available mark types are point, box, plus, cross, diamond, hline
@@ -167,7 +156,7 @@ sensfunc — Compute instrumental sensitivity from standard stars
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_colors">colors = "<TT>2 1 3 4</TT>"</A></B></DT>
+  <DT><B>colors = "<TT>2 1 3 4</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='colors' Line='colors = "2 1 3 4"'>
   <DD>Colors to use for "<TT>lines</TT>", "<TT>marks</TT>", "<TT>deleted</TT>" data, and "<TT>added</TT>" data.
   The colors associated with the numbers is graphics device dependent.
@@ -176,27 +165,27 @@ sensfunc — Compute instrumental sensitivity from standard stars
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cursor">cursor = "<TT></TT>"</A></B></DT>
+  <DT><B>cursor = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""'>
   <DD>Graphics cursor input list.  If not specified as a file then standard
   graphics cursor is read.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_device">device = "<TT>stdgraph</TT>"</A></B></DT>
+  <DT><B>device = "<TT>stdgraph</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdgraph"'>
   <DD>Graphics output device.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_answer">answer</A></B></DT>
+  <DT><B>answer</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='answer' Line='answer'>
   <DD>Query parameter for selecting whether to fit apertures interactively.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_cursor_commands">CURSOR COMMANDS</A></H2>
+  <H3>Cursor commands</H3>
   <! BeginSection: 'CURSOR COMMANDS'>
   <UL>
   <P>
@@ -242,7 +231,7 @@ sensfunc — Compute instrumental sensitivity from standard stars
   </PRE>
   </UL>
   <! EndSection:   'CURSOR COMMANDS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Standard star calibration measurements are used to determine the system
@@ -448,7 +437,7 @@ sensfunc — Compute instrumental sensitivity from standard stars
   sensitivity.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  The following command generates sensitivity spectra
@@ -488,23 +477,23 @@ sensfunc — Compute instrumental sensitivity from standard stars
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_SENSFUNC">SENSFUNC V2.10.3+</A></B></DT>
+  <DT><B>SENSFUNC V2.10.3+</B></DT>
   <! Sec='REVISIONS' Level=0 Label='SENSFUNC' Line='SENSFUNC V2.10.3+'>
   <DD>Deleted points and stars are now ignored from the grey shift calculation.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_SENSFUNC">SENSFUNC V2.10.3</A></B></DT>
+  <DT><B>SENSFUNC V2.10.3</B></DT>
   <! Sec='REVISIONS' Level=0 Label='SENSFUNC' Line='SENSFUNC V2.10.3'>
   <DD>A color parameter was added for graphics terminals supporting color.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_SENSFUNC">SENSFUNC V2.10</A></B></DT>
+  <DT><B>SENSFUNC V2.10</B></DT>
   <! Sec='REVISIONS' Level=0 Label='SENSFUNC' Line='SENSFUNC V2.10'>
   <DD>The latitude parameter has been replaced by the observatory parameter.
   The <TT>'i'</TT> flux calibrated graph type now shows flux in linear scaling 
@@ -513,7 +502,7 @@ sensfunc — Compute instrumental sensitivity from standard stars
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_SENSFUNC">SENSFUNC V2.8</A></B></DT>
+  <DT><B>SENSFUNC V2.8</B></DT>
   <! Sec='REVISIONS' Level=0 Label='SENSFUNC' Line='SENSFUNC V2.8'>
   <DD>This task has been completely rewritten from that of versions 2.5 and
   earlier.
@@ -534,7 +523,7 @@ sensfunc — Compute instrumental sensitivity from standard stars
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   If the flux points do not span the wavelength range, set by the
@@ -547,7 +536,7 @@ sensfunc — Compute instrumental sensitivity from standard stars
   <B>scopy</B> or <B>dispcor</B>).
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   standard, lcalib, calibrate, observatory, icfit, ranges, scopy, dispcor
@@ -556,5 +545,3 @@ sensfunc — Compute instrumental sensitivity from standard stars
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'CURSOR COMMANDS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

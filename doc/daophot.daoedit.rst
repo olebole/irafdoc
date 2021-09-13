@@ -1,3 +1,5 @@
+.. _daoedit:
+
 daoedit — Review/edit algorithm parameters interactively
 ========================================================
 
@@ -5,53 +7,40 @@ daoedit — Review/edit algorithm parameters interactively
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>daoedit (May00)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.daophot</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>daoedit (May00)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>daoedit</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   daoedit -- edit the daophot package parameters interactively
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   daoedit image
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_image">image</A></B></DT>
+  <DT><B>image</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='image' Line='image'>
   <DD></DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_icommands">icommands = "<TT></TT>"</A></B></DT>
+  <DT><B>icommands = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""'>
   <DD>The image display cursor or image cursor commands file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_gcommands">gcommands = "<TT></TT>"</A></B></DT>
+  <DT><B>gcommands = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""'>
   <DD>The graphics cursor or graphics cursor commands file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cache">cache = "<TT>)_.cache</TT>"</A></B></DT>
+  <DT><B>cache = "<TT>)_.cache</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cache' Line='cache = ")_.cache"'>
   <DD>Cache the image pixels in memory. Cache may be set to the value of the apphot
   package parameter (the default), "<TT>yes</TT>", or "<TT>no</TT>". By default caching is
@@ -59,20 +48,20 @@ daoedit — Review/edit algorithm parameters interactively
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_graphics">graphics = "<TT>)_.graphics</TT>"</A></B></DT>
+  <DT><B>graphics = "<TT>)_.graphics</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = ")_.graphics"'>
   <DD>The standard graphics device.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_display">display = "<TT>)_.display</TT>"</A></B></DT>
+  <DT><B>display = "<TT>)_.display</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='display' Line='display = ")_.display"'>
   <DD>The standard display device.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -102,7 +91,7 @@ daoedit — Review/edit algorithm parameters interactively
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_cursor_commands">CURSOR COMMANDS</A></H2>
+  <H3>Cursor commands</H3>
   <! BeginSection: 'CURSOR COMMANDS'>
   <UL>
   <P>
@@ -166,7 +155,7 @@ daoedit — Review/edit algorithm parameters interactively
   <P>
   </UL>
   <! EndSection:   'CURSOR COMMANDS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -209,17 +198,17 @@ daoedit — Review/edit algorithm parameters interactively
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   datapars,findpars,centerpars,fitskypars,photpars,daopars,setimpars
@@ -228,5 +217,3 @@ daoedit — Review/edit algorithm parameters interactively
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'CURSOR COMMANDS' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

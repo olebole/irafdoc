@@ -1,3 +1,5 @@
+.. _urlget:
+
 urlget — Get a (http) URL to a named file
 =========================================
 
@@ -5,49 +7,36 @@ urlget — Get a (http) URL to a named file
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>urlget (Sep2011)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>system</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>urlget (Sep2011)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>urlget</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   urlget -- Get a (http) URL to the named file
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   urlget url fname
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_url">url</A></B></DT>
+  <DT><B>url</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='url' Line='url'>
   <DD>The URL to download.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fname">fname</A></B></DT>
+  <DT><B>fname</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fname' Line='fname'>
   <DD>The name of the file to create containing the URL contents.  If not
   specified, the trailing part of the URL is used as the filename.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_use_cache">use_cache = yes</A></B></DT>
+  <DT><B>use_cache = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='use_cache' Line='use_cache = yes'>
   <DD>Use the system file cache?  If 'yes' and the file already exists in the
   cache, the cached file will be copied to the output filename.
@@ -55,20 +44,20 @@ urlget — Get a (http) URL to a named file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_extn">extn = "<TT></TT>"</A></B></DT>
+  <DT><B>extn = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='extn' Line='extn = ""'>
   <DD>Optional filename extension to put on the cached filename.  This can be
   used to force files to be saved as a particular type in the cache.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = no</A></B></DT>
+  <DT><B>verbose = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
   <DD>Print verbose output?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cache">cache = "<TT>cache$</TT>"</A></B></DT>
+  <DT><B>cache = "<TT>cache$</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cache' Line='cache = "cache$"'>
   <DD>Logical cache directory name.
   </DD>
@@ -76,7 +65,7 @@ urlget — Get a (http) URL to a named file
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The <I>URLGET</I> task is used to download a URL (HTTP protocol only) to a 
@@ -95,7 +84,7 @@ urlget — Get a (http) URL to a named file
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -127,13 +116,13 @@ urlget — Get a (http) URL to a named file
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   <P>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   <P>
@@ -142,5 +131,3 @@ urlget — Get a (http) URL to a named file
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

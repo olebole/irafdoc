@@ -1,3 +1,5 @@
+.. _cv:
+
 cv — Control image device, display "snapshot"
 =============================================
 
@@ -5,111 +7,98 @@ cv — Control image device, display "snapshot"
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>cvl (Jul87)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.tv.iis</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>cvl (Jul87)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>cvl</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   cvl -- load images in image display
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   cvl image frame
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_image">image</A></B></DT>
+  <DT><B>image</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='image' Line='image'>
   <DD>Image to be loaded.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_frame">frame</A></B></DT>
+  <DT><B>frame</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='frame' Line='frame'>
   <DD>Display frame to be loaded.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_erase">erase = yes</A></B></DT>
+  <DT><B>erase = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='erase' Line='erase = yes'>
   <DD>Erase frame before loading image?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_border_erase">border_erase = no</A></B></DT>
+  <DT><B>border_erase = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='border_erase' Line='border_erase = no'>
   <DD>Erase unfilled area of window in display frame if the whole frame is not
   erased?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_select_frame">select_frame = yes</A></B></DT>
+  <DT><B>select_frame = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='select_frame' Line='select_frame = yes'>
   <DD>Display the frame to be loaded?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fill">fill = no</A></B></DT>
+  <DT><B>fill = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fill' Line='fill = no'>
   <DD>Interpolate or block average the image to fit the display window?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_zscale">zscale = yes</A></B></DT>
+  <DT><B>zscale = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='zscale' Line='zscale = yes'>
   <DD>Apply an automatic intensity mapping algorithm when loading the image?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_contrast">contrast = 0.25</A></B></DT>
+  <DT><B>contrast = 0.25</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='contrast' Line='contrast = 0.25'>
   <DD>Contrast factor for the automatic intensity mapping algorithm.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_zrange">zrange = yes</A></B></DT>
+  <DT><B>zrange = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='zrange' Line='zrange = yes'>
   <DD>If not using the automatic mapping algorithm (<I>zscale = no</I>) map the
   full range of the image intensity to the full range of the display?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nsample_lines">nsample_lines = 5</A></B></DT>
+  <DT><B>nsample_lines = 5</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nsample_lines' Line='nsample_lines = 5'>
   <DD>Number of sample lines to use in the automatic intensity mapping algorithm.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xcenter">xcenter = 0.5, ycenter = 0.5</A></B></DT>
+  <DT><B>xcenter = 0.5, ycenter = 0.5</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xcenter' Line='xcenter = 0.5, ycenter = 0.5'>
   <DD>Horizontal and vertical centers of the display window in normalized
   coordinates measured from the left and bottom respectively.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xsize">xsize = 1, ysize = 1</A></B></DT>
+  <DT><B>xsize = 1, ysize = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xsize' Line='xsize = 1, ysize = 1'>
   <DD>Horizontal and vertical sizes of the display window in normalized coordinates.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xmag">xmag = 1., ymag = 1.</A></B></DT>
+  <DT><B>xmag = 1., ymag = 1.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xmag' Line='xmag = 1., ymag = 1.'>
   <DD>Horizontal and vertical image magnifications when not filling the display
   window.  Magnifications greater than 1 map image pixels into more than 1
@@ -118,7 +107,7 @@ cv — Control image device, display "snapshot"
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_z1">z1, z2</A></B></DT>
+  <DT><B>z1, z2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='z1' Line='z1, z2'>
   <DD>Minimum and maximum image intensity to be mapped to the minimum and maximum
   display levels.  These values apply when not using the automatic or range
@@ -126,19 +115,19 @@ cv — Control image device, display "snapshot"
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ztrans">ztrans = "<TT>linear</TT>"</A></B></DT>
+  <DT><B>ztrans = "<TT>linear</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ztrans' Line='ztrans = "linear"'>
   <DD>Transformation of the image intensity levels to the display levels.  The
   choices are:
   <DL>
-  <DT><B><A NAME="l_">"<TT>linear</TT>"</A></B></DT>
+  <DT><B>"<TT>linear</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"linear"'>
   <DD>Map the minimum and maximum image intensities linearly to the minimum and
   maximum display levels.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">"<TT>log</TT>"</A></B></DT>
+  <DT><B>"<TT>log</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"log"'>
   <DD>Map the minimum and maximum image intensities linearly to the range 1 to 1000,
   take the logarithm (base 10), and then map the logarithms to the display
@@ -146,7 +135,7 @@ cv — Control image device, display "snapshot"
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">"<TT>none</TT>"</A></B></DT>
+  <DT><B>"<TT>none</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"none"'>
   <DD>Apply no mapping of the image intensities (regardless of the values of
   <I>zscale, zrange, z1, and z2</I>).  For most image displays, values exceeding
@@ -156,7 +145,7 @@ cv — Control image device, display "snapshot"
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">"<TT>user</TT>"</A></B></DT>
+  <DT><B>"<TT>user</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"user"'>
   <DD>User supplies a look up table of intensities and their corresponding
   greyscale values.  
@@ -165,7 +154,7 @@ cv — Control image device, display "snapshot"
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lutfile">lutfile = "<TT></TT>"</A></B></DT>
+  <DT><B>lutfile = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lutfile' Line='lutfile = ""'>
   <DD>Name of text file containing the look up table when <I>ztrans</I> = user.
   The table should contain two columns per line; column 1 contains the
@@ -174,7 +163,7 @@ cv — Control image device, display "snapshot"
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The specified image is loaded into the specified frame of the standard
@@ -270,7 +259,7 @@ cv — Control image device, display "snapshot"
   values of <I>z1</I> and <I>z2</I> directly.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_zscale_algorithm">ZSCALE ALGORITHM</A></H2>
+  <H3>Zscale algorithm</H3>
   <! BeginSection: 'ZSCALE ALGORITHM'>
   <UL>
   The zscale algorithm is designed to display the image values near the median
@@ -307,7 +296,7 @@ cv — Control image device, display "snapshot"
   produced by this algorithm.
   </UL>
   <! EndSection:   'ZSCALE ALGORITHM'>
-  <H2><A NAME="s_magnify_and_fill_algorithm">MAGNIFY AND FILL ALGORITHM</A></H2>
+  <H3>Magnify and fill algorithm</H3>
   <! BeginSection: 'MAGNIFY AND FILL ALGORITHM'>
   <UL>
   The spatial interpolation algorithm magnifies (or demagnifies) the
@@ -339,7 +328,7 @@ cv — Control image device, display "snapshot"
   and small scale features still contribute to the displayed image.
   </UL>
   <! EndSection:   'MAGNIFY AND FILL ALGORITHM'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   For the purpose of these examples we assume a display with four frames,
@@ -381,7 +370,7 @@ cv — Control image device, display "snapshot"
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   display, magnify
@@ -390,5 +379,3 @@ cv — Control image device, display "snapshot"
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'ZSCALE ALGORITHM' 'MAGNIFY AND FILL ALGORITHM' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

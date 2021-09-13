@@ -1,3 +1,5 @@
+.. _tainsert:
+
 tainsert — Copy a column of scalars to an array entry in another table.
 =======================================================================
 
@@ -5,33 +7,20 @@ tainsert — Copy a column of scalars to an array entry in another table.
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>tainsert (Jan98)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>tables</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>tainsert (Jan98)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>tainsert</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   tainsert -- Copy a column of scalars from one table
   to an array entry in another.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   tainsert intable outtable row column
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task reads an entire column from one table
@@ -58,24 +47,24 @@ tainsert — Copy a column of scalars to an array entry in another table.
   If that keyword exists, its value is used as the row number.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_intable">intable [file name]</A></B></DT>
+  <DT><B>intable [file name]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='intable' Line='intable [file name]'>
   <DD>Name of the input table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_outtable">outtable [file name]</A></B></DT>
+  <DT><B>outtable [file name]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable [file name]'>
   <DD>Name of the output table.
   If this table doesn't exist it will be created.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_row">row = -1 [integer]</A></B></DT>
+  <DT><B>row = -1 [integer]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='row' Line='row = -1 [integer]'>
   <DD>This is the row number in the output table.
   The default means that 'tainsert' should use
@@ -83,7 +72,7 @@ tainsert — Copy a column of scalars to an array entry in another table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_column">column [string]</A></B></DT>
+  <DT><B>column [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='column' Line='column [string]'>
   <DD>Column name in the input table and, by default, also in the output table.
   If this column does not exist in the output table, it will be created,
@@ -94,7 +83,7 @@ tainsert — Copy a column of scalars to an array entry in another table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_outcolumn">outcolumn = "<TT></TT>" [string]</A></B></DT>
+  <DT><B>outcolumn = "<TT></TT>" [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='outcolumn' Line='outcolumn = "" [string]'>
   <DD>If 'outcolumn' is specified,
   that name will be used for the output table;
@@ -109,7 +98,7 @@ tainsert — Copy a column of scalars to an array entry in another table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(size = INDEF) [int]</A></B></DT>
+  <DT><B>(size = INDEF) [int]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(size = INDEF) [int]'>
   <DD>When creating a new column in the output table,
   the default is for the array size of that column to be set to
@@ -120,7 +109,7 @@ tainsert — Copy a column of scalars to an array entry in another table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(datatype = "<TT></TT>") [string]</A></B></DT>
+  <DT><B>(datatype = "<TT></TT>") [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(datatype = "") [string]'>
   <DD>When creating a new column in the output table,
   the default is to use the same data type as the column in the input table.
@@ -134,7 +123,7 @@ tainsert — Copy a column of scalars to an array entry in another table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(colunits = "<TT></TT>") [string]</A></B></DT>
+  <DT><B>(colunits = "<TT></TT>") [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(colunits = "") [string]'>
   <DD>When creating a new column in the output table,
   the units will be set to 'colunits' if it has been specified;
@@ -142,7 +131,7 @@ tainsert — Copy a column of scalars to an array entry in another table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(colfmt = "<TT></TT>") [string]</A></B></DT>
+  <DT><B>(colfmt = "<TT></TT>") [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(colfmt = "") [string]'>
   <DD>When creating a new column in the output table,
   the print format will be set to 'colfmt' if it has been specified;
@@ -151,7 +140,7 @@ tainsert — Copy a column of scalars to an array entry in another table.
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Copy the entire column "<TT>polar</TT>" from table "<TT>scalar.tab</TT>",
@@ -178,18 +167,18 @@ tainsert — Copy a column of scalars to an array entry in another table.
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   This task was written by Phil Hodge.
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   taextract
@@ -201,5 +190,3 @@ tainsert — Copy a column of scalars to an array entry in another table.
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

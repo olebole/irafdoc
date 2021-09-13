@@ -1,3 +1,5 @@
+.. _crmedian:
+
 crmedian — Detect and replace cosmic rays with median filter
 ============================================================
 
@@ -5,26 +7,13 @@ crmedian — Detect and replace cosmic rays with median filter
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>crmedian (Apr98)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.imred.crutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>crmedian (Apr98)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>crmedian</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   crmedian -- detect, fix, and flag cosmic rays using median filtering
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage___">USAGE   </A></H2>
+  <H3>Usage   </H3>
   <! BeginSection: 'USAGE   '>
   <UL>
   <PRE>
@@ -32,24 +21,24 @@ crmedian — Detect and replace cosmic rays with median filter
   </PRE>
   </UL>
   <! EndSection:   'USAGE   '>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>Input image in which to detect cosmic rays.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>Output image in which cosmic rays are replaced by the median value.
   If no output image name is given then no output image will be created.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_crmask">crmask = "<TT></TT>"</A></B></DT>
+  <DT><B>crmask = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='crmask' Line='crmask = ""'>
   <DD>Output cosmic ray mask.  Detected cosmic rays (and other deviant pixels)
   are identified in the mask with values of one and good pixels with a values
@@ -58,21 +47,21 @@ crmedian — Detect and replace cosmic rays with median filter
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_median">median = "<TT></TT>"</A></B></DT>
+  <DT><B>median = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='median' Line='median = ""'>
   <DD>Output median filtered image.  If no image name is given then no output will be
   created.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sigma">sigma = "<TT></TT>"</A></B></DT>
+  <DT><B>sigma = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sigma' Line='sigma = ""'>
   <DD>Output sigma image.  If no image name is given then no output will be
   created.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_residual">residual = "<TT></TT>"</A></B></DT>
+  <DT><B>residual = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='residual' Line='residual = ""'>
   <DD>Output residual image.  This is the input image minus the median filtered
   image divided by the sigma image.  Thresholds in this image determine the
@@ -81,7 +70,7 @@ crmedian — Detect and replace cosmic rays with median filter
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_var0">var0 = 0., var1 = 0., var2 = 0.</A></B></DT>
+  <DT><B>var0 = 0., var1 = 0., var2 = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='var0' Line='var0 = 0., var1 = 0., var2 = 0.'>
   <DD>Variance coefficients for the variance model.  The variance model is
   <P>
@@ -96,7 +85,7 @@ crmedian — Detect and replace cosmic rays with median filter
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lsigma">lsigma = 10, hsigma = 3</A></B></DT>
+  <DT><B>lsigma = 10, hsigma = 3</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lsigma' Line='lsigma = 10, hsigma = 3'>
   <DD>Positive sigma factors to use for selecting pixels below and above
   the median level based on the local percentile sigma.  Cosmic rays will
@@ -104,14 +93,14 @@ crmedian — Detect and replace cosmic rays with median filter
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ncmed">ncmed = 5, nlmed = 5</A></B></DT>
+  <DT><B>ncmed = 5, nlmed = 5</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ncmed' Line='ncmed = 5, nlmed = 5'>
   <DD>The column and line size of a moving median rectangle used to estimate the
   uncontaminated local image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ncsig">ncsig = 25, nlsig = 25</A></B></DT>
+  <DT><B>ncsig = 25, nlsig = 25</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ncsig' Line='ncsig = 25, nlsig = 25'>
   <DD>The column and line size of regions used to estimate the uncontaminated
   local sigma using a percentile.  The size of the box should contain
@@ -120,7 +109,7 @@ crmedian — Detect and replace cosmic rays with median filter
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <B>Crmedian</B> detects cosmic rays from pixels deviating by a specified
@@ -186,7 +175,7 @@ crmedian — Detect and replace cosmic rays with median filter
   output to evaluate the various aspects of the algorithm.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   This example illustrates using the <B>crmedian</B> task to
@@ -215,7 +204,7 @@ crmedian — Detect and replace cosmic rays with median filter
   of real extended structure.
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   cosmicrays, craverage, crnebula, median, crfix, crgrow
@@ -224,5 +213,3 @@ crmedian — Detect and replace cosmic rays with median filter
   
   <! Contents: 'NAME' 'USAGE   ' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

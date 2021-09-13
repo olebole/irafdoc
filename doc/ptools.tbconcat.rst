@@ -1,3 +1,5 @@
+.. _tbconcat:
+
 tbconcat — Concatenate a list of apphot/daophot tables databases
 ================================================================
 
@@ -5,48 +7,35 @@ tbconcat — Concatenate a list of apphot/daophot tables databases
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>tbconcat (Dec92)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.ptools</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>tbconcat (Dec92)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>tbconcat</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   tbconcat -- concatenate a list of APPHOT/DAOPHOT STSDAS databases
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   tbconcat tables outtable
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_tables">tables</A></B></DT>
+  <DT><B>tables</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='tables' Line='tables'>
   <DD>The list of APPHOT/DAOPHOT STSDAS databases to be concatenated.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_outtable">outtable</A></B></DT>
+  <DT><B>outtable</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable'>
   <DD>The name of the output APPHOT/DAOPHOT STSDAS database.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_task">task = "<TT>TASK</TT>"</A></B></DT>
+  <DT><B>task = "<TT>TASK</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='task' Line='task = "TASK"'>
   <DD>The name of the keyword whose value is the name of the task which wrote
   the database.
@@ -54,7 +43,7 @@ tbconcat — Concatenate a list of apphot/daophot tables databases
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   TBCONCAT is a simple task which accepts a list of APPHOT/DAOPHOT STSDAS
@@ -69,7 +58,7 @@ tbconcat — Concatenate a list of apphot/daophot tables databases
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -82,17 +71,17 @@ tbconcat — Concatenate a list of apphot/daophot tables databases
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   ptools.txconcat,ptools.pconcat,tables.tmerge,concatenate
@@ -101,5 +90,3 @@ tbconcat — Concatenate a list of apphot/daophot tables databases
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

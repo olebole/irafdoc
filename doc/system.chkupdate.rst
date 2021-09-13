@@ -1,3 +1,5 @@
+.. _chkupdate:
+
 chkupdate — Check for an available IRAF update
 ==============================================
 
@@ -5,36 +7,23 @@ chkupdate — Check for an available IRAF update
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>chkupdate (Oct13)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>system</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>chkupdate (Oct13)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>chkupdate</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   chkupdate - Check for an available IRAF update
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   chkupdate
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_interval">interval = 0</A></B></DT>
+  <DT><B>interval = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interval' Line='interval = 0'>
   <DD>Number of days between updates checks.  A value less than zero will disable
   the checks entirely, a value of zero will cause a check to be made with 
@@ -42,32 +31,32 @@ chkupdate — Check for an available IRAF update
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ref_file">ref_file = "<TT>iraf$.release_date</TT>"</A></B></DT>
+  <DT><B>ref_file = "<TT>iraf$.release_date</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ref_file' Line='ref_file = "iraf$.release_date"'>
   <DD></DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_release">release = "<TT>)_.release</TT>"</A></B></DT>
+  <DT><B>release = "<TT>)_.release</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='release' Line='release = ")_.release"'>
   <DD>Current IRAF release version.  This value is inherited from the CL 'release'
   parameter by default.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_baseurl">baseurl = "<TT>http://iraf.noao.edu/ftp</TT>"</A></B></DT>
+  <DT><B>baseurl = "<TT>http://iraf.noao.edu/ftp</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='baseurl' Line='baseurl = "http://iraf.noao.edu/ftp"'>
   <DD>Base URL to the IRAF release timestamp directory.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print verbose output?
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task compares the currently installed IRAF version with what is
@@ -91,7 +80,7 @@ chkupdate — Check for an available IRAF update
   installed system is current.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -110,7 +99,7 @@ chkupdate — Check for an available IRAF update
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_notes">NOTES</A></H2>
+  <H3>Notes</H3>
   <! BeginSection: 'NOTES'>
   <UL>
   This task is called automatically from the login.cl file at startup.
@@ -119,7 +108,7 @@ chkupdate — Check for an available IRAF update
   by moving the IRAF tree, may invalidate the output.
   </UL>
   <! EndSection:   'NOTES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   </UL>
@@ -127,5 +116,3 @@ chkupdate — Check for an available IRAF update
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'NOTES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

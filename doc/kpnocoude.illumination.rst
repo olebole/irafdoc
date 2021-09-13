@@ -1,3 +1,5 @@
+.. _illumination:
+
 illumination — Determine illumination calibration
 =================================================
 
@@ -5,36 +7,23 @@ illumination — Determine illumination calibration
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>illumination (Jul86)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.twodspec.longslit</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>illumination (Jul86)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>illumination</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   illumination -- Determine illumination calibrations
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   illumination images illuminations
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>Images to use in determining illumination calibrations.  These are
   generally sky spectra.  An image section may be used to select only a
@@ -42,7 +31,7 @@ illumination — Determine illumination calibration
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_illuminations">illuminations</A></B></DT>
+  <DT><B>illuminations</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='illuminations' Line='illuminations'>
   <DD>Iillumination calibration images to be created.  Each illumination image is
   paired with a calibration image.  If the image exists then it will be modified
@@ -50,14 +39,14 @@ illumination — Determine illumination calibration
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = yes</A></B></DT>
+  <DT><B>interactive = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes'>
   <DD>Graph the average spectrum and select the dispersion bins
   and graph and fit the slit profile for each dispersion bin interactively?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_bins">bins = "<TT></TT>"</A></B></DT>
+  <DT><B>bins = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='bins' Line='bins = ""'>
   <DD>Range string defining the dispersions bins within which the slit profiles
   are determined.  If the range string is null then the dispersion
@@ -65,7 +54,7 @@ illumination — Determine illumination calibration
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nbins">nbins = 5</A></B></DT>
+  <DT><B>nbins = 5</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nbins' Line='nbins = 5'>
   <DD>If the dispersion bins are not specified explicitly by the parameter
   <I>bins</I> then the dispersion range is divided into this number of
@@ -73,14 +62,14 @@ illumination — Determine illumination calibration
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sample">sample = "<TT>*</TT>"</A></B></DT>
+  <DT><B>sample = "<TT>*</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"'>
   <DD>Sample of points to use in fitting each slit profile.
   The sample is selected with a range string.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_naverage">naverage = 1</A></B></DT>
+  <DT><B>naverage = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='naverage' Line='naverage = 1'>
   <DD>Number of sample points to average or median before fitting a function.
   If the number is positive the average of each set of naverage sample
@@ -90,53 +79,53 @@ illumination — Determine illumination calibration
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_function">function = "<TT>spline3</TT>"</A></B></DT>
+  <DT><B>function = "<TT>spline3</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='function' Line='function = "spline3"'>
   <DD>Function to fit to each dispersion bin to form the illumination function.
   The options are "<TT>spline1</TT>", "<TT>spline3</TT>", "<TT>legendre</TT>", and "<TT>chebyshev</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_order">order = 1</A></B></DT>
+  <DT><B>order = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='order' Line='order = 1'>
   <DD>Order of the fitting function or the number of spline pieces.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_low_reject">low_reject = 0., high_reject = 0.</A></B></DT>
+  <DT><B>low_reject = 0., high_reject = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='low_reject' Line='low_reject = 0., high_reject = 0.'>
   <DD>Rejection limits below and above the fit in units of the residual sigma.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_niterate">niterate = 1</A></B></DT>
+  <DT><B>niterate = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='niterate' Line='niterate = 1'>
   <DD>Number of rejection iterations.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_grow">grow = 0</A></B></DT>
+  <DT><B>grow = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='grow' Line='grow = 0'>
   <DD>Reject additional points within this distance of points exceeding the
   rejection threshold.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interpolator">interpolator = "<TT>poly3</TT>"</A></B></DT>
+  <DT><B>interpolator = "<TT>poly3</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interpolator' Line='interpolator = "poly3"'>
   <DD>Interpolation type.  One of "<TT>nearest</TT>", "<TT>linear</TT>", "<TT>poly3</TT>", "<TT>poly5</TT>", or
   "<TT>spline3</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_graphics">graphics = "<TT>stdgraph</TT>"</A></B></DT>
+  <DT><B>graphics = "<TT>stdgraph</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"'>
   <DD>Graphics output device.  May be one of the standard devices "<TT>stdgraph</TT>",
   "<TT>stdplot</TT>", or "<TT>stdvdm</TT>" or an explicit device.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cursor">cursor = "<TT></TT>"</A></B></DT>
+  <DT><B>cursor = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""'>
   <DD>Graphics input device.  May be either null for the standard graphics cursor
   or a file containing cursor commands.
@@ -144,7 +133,7 @@ illumination — Determine illumination calibration
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_cursor_keys">CURSOR KEYS</A></H2>
+  <H3>Cursor keys</H3>
   <! BeginSection: 'CURSOR KEYS'>
   <UL>
   The interactive curve fitting package <B>icfit</B> is used to fit a function
@@ -155,25 +144,25 @@ illumination — Determine illumination calibration
   defined.
   <P>
   <DL>
-  <DT><B><A NAME="l_">?</A></B></DT>
+  <DT><B>?</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='' Line='?'>
   <DD>Clear the screen and print a menu of the cursor options.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_i">i</A></B></DT>
+  <DT><B>i</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='i' Line='i'>
   <DD>Initialize the sample ranges.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_q">q</A></B></DT>
+  <DT><B>q</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='q' Line='q'>
   <DD>Exit interactive dispersion bin selection.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_s">s</A></B></DT>
+  <DT><B>s</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='s' Line='s'>
   <DD>Set a bin with the cursor.  This may be repeated any number of times.
   Two keystrokes are required to mark the two ends of the bin.
@@ -189,7 +178,7 @@ illumination — Determine illumination calibration
   </PRE>
   </UL>
   <! EndSection:   'CURSOR KEYS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   An illumination calibration, in the form of an image, is created for each
@@ -276,7 +265,7 @@ illumination — Determine illumination calibration
   calibration image is then created.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. To create an illumination image non-interactively:
@@ -308,7 +297,7 @@ illumination — Determine illumination calibration
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   icfit, response
@@ -317,5 +306,3 @@ illumination — Determine illumination calibration
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'CURSOR KEYS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

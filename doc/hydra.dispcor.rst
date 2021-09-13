@@ -1,3 +1,5 @@
+.. _dispcor:
+
 dispcor — Dispersion correct spectra
 ====================================
 
@@ -5,36 +7,23 @@ dispcor — Dispersion correct spectra
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>dispcor (Oct92)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.onedspec</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>dispcor (Oct92)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>dispcor</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   dispcor -- Dispersion correct and resample spectra
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   dispcor input output [records]
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of input spectra or root names to be dispersion corrected.  These may
   be echelle or non-echelle spectra, the task will determine which from the
@@ -44,7 +33,7 @@ dispcor — Dispersion correct spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>List of dispersion corrected output spectra or root names.  When using the
   record number extension format, record number extensions will be appended
@@ -54,7 +43,7 @@ dispcor — Dispersion correct spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_records">records (imred.irs and imred.iids only)</A></B></DT>
+  <DT><B>records (imred.irs and imred.iids only)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='records' Line='records (imred.irs and imred.iids only)'>
   <DD>List of records or ranges of records to be appended to the input and output
   root names when using record number extension format.  The syntax of this
@@ -65,7 +54,7 @@ dispcor — Dispersion correct spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_linearize">linearize = yes</A></B></DT>
+  <DT><B>linearize = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='linearize' Line='linearize = yes'>
   <DD>Interpolate the spectra to a linear dispersion sampling?  If yes, the
   spectra will be interpolated to a linear or log linear sampling using
@@ -76,7 +65,7 @@ dispcor — Dispersion correct spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_database">database = "<TT>database</TT>"</A></B></DT>
+  <DT><B>database = "<TT>database</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"'>
   <DD>Database containing dispersion solutions created by <B>identify</B> or
   <B>ecidentify</B>.  If the spectra have been previous dispersion corrected
@@ -84,7 +73,7 @@ dispcor — Dispersion correct spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_table">table = "<TT></TT>"</A></B></DT>
+  <DT><B>table = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='table' Line='table = ""'>
   <DD>Wavelength coordinate table or reference image.  Elements in this optional
   table or reference image override the wavelength coordinates given below
@@ -92,7 +81,7 @@ dispcor — Dispersion correct spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_w1">w1 = INDEF, w2 = INDEF, dw = INDEF, nw = INDEF</A></B></DT>
+  <DT><B>w1 = INDEF, w2 = INDEF, dw = INDEF, nw = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='w1' Line='w1 = INDEF, w2 = INDEF, dw = INDEF, nw = INDEF'>
   <DD>The starting wavelength, ending wavelength, wavelength interval per pixel,
   and the number of pixels in the output spectra.  Any combination of these
@@ -110,7 +99,7 @@ dispcor — Dispersion correct spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_log">log = no</A></B></DT>
+  <DT><B>log = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='log' Line='log = no'>
   <DD>Transform to linear logarithmic wavelength coordinates?  Linear logarithmic
   wavelength coordinates have wavelength intervals which are constant
@@ -122,7 +111,7 @@ dispcor — Dispersion correct spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_flux">flux = yes</A></B></DT>
+  <DT><B>flux = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='flux' Line='flux = yes'>
   <DD>Conserve the total flux during interpolation rather than the flux density?
   If "<TT>no</TT>", the output spectrum is average of the input spectrum across each
@@ -135,7 +124,7 @@ dispcor — Dispersion correct spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_blank">blank = 0.</A></B></DT>
+  <DT><B>blank = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='blank' Line='blank = 0.'>
   <DD>Output value corresponding to points outside the range of the input
   data.  In other words, the out of bounds value.  This only has an
@@ -144,7 +133,7 @@ dispcor — Dispersion correct spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_samedisp">samedisp = no</A></B></DT>
+  <DT><B>samedisp = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='samedisp' Line='samedisp = no'>
   <DD>Use the same dispersion parameters for all apertures?  If yes then all
   apertures in a single image will have the same dispersion parameters.
@@ -155,7 +144,7 @@ dispcor — Dispersion correct spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_global">global = no</A></B></DT>
+  <DT><B>global = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='global' Line='global = no'>
   <DD>Apply global wavelength defaults?  Defaults for the INDEF wavelength
   coordinate parameters are determined if two or less of the wavelength
@@ -174,7 +163,7 @@ dispcor — Dispersion correct spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ignoreaps">ignoreaps = no</A></B></DT>
+  <DT><B>ignoreaps = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ignoreaps' Line='ignoreaps = no'>
   <DD>If a reference dispersion solution is not found for an aperture
   use the first reference dispersion solution and ignore the aperture
@@ -194,7 +183,7 @@ dispcor — Dispersion correct spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_confirm">confirm = no</A></B></DT>
+  <DT><B>confirm = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='confirm' Line='confirm = no'>
   <DD>Confirm the wavelength parameters for each spectrum?  If <I>yes</I>
   the wavelength parameters will be printed and the user will be asked
@@ -206,7 +195,7 @@ dispcor — Dispersion correct spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_listonly">listonly = no</A></B></DT>
+  <DT><B>listonly = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='listonly' Line='listonly = no'>
   <DD>List the dispersion coordinates only?  If set then the dispersion coordinates
   are listed but the spectra are not dispersion corrected.  This may be used
@@ -215,13 +204,13 @@ dispcor — Dispersion correct spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print the dispersion function and coordinate assignments?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_logfile">logfile = "<TT></TT>"</A></B></DT>
+  <DT><B>logfile = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = ""'>
   <DD>Log file for recording the dispersion correction operations.  If no file
   name is given then no log information is recorded.
@@ -229,7 +218,7 @@ dispcor — Dispersion correct spectra
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The dispersion coordinate systems of the input spectra are set or changed
@@ -426,7 +415,7 @@ dispcor — Dispersion correct spectra
   are <B>scopy</B>, <B>specshift</B>, and <B>sapertures</B>.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   In the examples when the task is used in the IRS and IIDS packages,
@@ -512,17 +501,17 @@ dispcor — Dispersion correct spectra
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_DISPCOR">DISPCOR V2.12.3</A></B></DT>
+  <DT><B>DISPCOR V2.12.3</B></DT>
   <! Sec='REVISIONS' Level=0 Label='DISPCOR' Line='DISPCOR V2.12.3'>
   <DD>Added the blank parameter value.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_DISPCOR">DISPCOR V2.11.3</A></B></DT>
+  <DT><B>DISPCOR V2.11.3</B></DT>
   <! Sec='REVISIONS' Level=0 Label='DISPCOR' Line='DISPCOR V2.11.3'>
   <DD>Long slit and data cubes can be used with this task to either resample
   using the existing WCS or to use a single dispersion function from
@@ -530,7 +519,7 @@ dispcor — Dispersion correct spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_DISPCOR">DISPCOR V2.10.3</A></B></DT>
+  <DT><B>DISPCOR V2.10.3</B></DT>
   <! Sec='REVISIONS' Level=0 Label='DISPCOR' Line='DISPCOR V2.10.3'>
   <DD>Provision was added for IDENTIFY dispersion solutions consisting of
   only a shift (as produced by the <TT>'g'</TT> key in IDENTIFY or the refit=no
@@ -567,7 +556,7 @@ dispcor — Dispersion correct spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_DISPCOR">DISPCOR V2.10</A></B></DT>
+  <DT><B>DISPCOR V2.10</B></DT>
   <! Sec='REVISIONS' Level=0 Label='DISPCOR' Line='DISPCOR V2.10'>
   <DD>This is a new version with many differences.  It replaces the previous
   three tasks <B>dispcor, ecdispcor</B> and <B>msdispcor</B>.  It applies both
@@ -591,7 +580,7 @@ dispcor — Dispersion correct spectra
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   package, refspectra, scopy, specshift, sapertures
@@ -600,5 +589,3 @@ dispcor — Dispersion correct spectra
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

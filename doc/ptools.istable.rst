@@ -1,3 +1,5 @@
+.. _istable:
+
 istable — Is a file a table or text database file ?
 ===================================================
 
@@ -5,59 +7,46 @@ istable — Is a file a table or text database file ?
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>istable (Aug91)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.ptools.digiphot</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>istable (Aug91)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>istable</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   istable --  determine the status of a file
   <P>
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   istable infile
   <P>
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <P>
   <DL>
-  <DT><B><A NAME="l_infile">infile</A></B></DT>
+  <DT><B>infile</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='infile' Line='infile'>
   <DD>The name of the input file whose status is to be determined.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_table">table = no</A></B></DT>
+  <DT><B>table = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='table' Line='table = no'>
   <DD>An output variable which is "<TT>yes</TT>" if <I>infile</I> is an STSDAS table
   and "<TT>no</TT>" otherwise.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_text">text = no</A></B></DT>
+  <DT><B>text = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='text' Line='text = no'>
   <DD>An output variable which is "<TT>yes</TT>" if <I>infile</I> is an APPHOT/DAOPHOT
   text database and "<TT>no</TT>" otherwise.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_other">other = no</A></B></DT>
+  <DT><B>other = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='other' Line='other = no'>
   <DD>An output variable which is "<TT>yes</TT>" if <I>infile</I> is neither of the
   above and "<TT>no</TT>" otherwise.
@@ -66,7 +55,7 @@ istable — Is a file a table or text database file ?
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   ISTABLE is a very simple task which determines whether a specified
@@ -84,7 +73,7 @@ istable — Is a file a table or text database file ?
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -99,19 +88,19 @@ istable — Is a file a table or text database file ?
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   Users should be wary of running ISTABLE in background as the output
   CL parameters may not be properly updated. 
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   </UL>
@@ -119,5 +108,3 @@ istable — Is a file a table or text database file ?
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

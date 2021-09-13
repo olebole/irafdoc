@@ -1,3 +1,5 @@
+.. _entab:
+
 entab — Replace blanks with tabs and blanks
 ===========================================
 
@@ -5,42 +7,29 @@ entab — Replace blanks with tabs and blanks
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>entab (Mar84)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>utilities</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>entab (Mar84)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>entab</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   entab -- replaces blanks by tabs and blanks
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   entab files
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_files">files</A></B></DT>
+  <DT><B>files</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='files' Line='files'>
   <DD>Template specifying the files to be processed, e.g. "<TT>file</TT>" or "<TT>file*</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_tablist">tablist = "<TT>9 +8</TT>"</A></B></DT>
+  <DT><B>tablist = "<TT>9 +8</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='tablist' Line='tablist = "9 +8"'>
   <DD>String containing a list of tabstops separated by blanks or commas.
   A two element string of the form "<TT>m +n</TT>" will set
@@ -50,7 +39,7 @@ entab — Replace blanks with tabs and blanks
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_example">EXAMPLE</A></H2>
+  <H3>Example</H3>
   <! BeginSection: 'EXAMPLE'>
   <UL>
   Convert the file "<TT>prog.c</TT>", written using full tabstop indents, to
@@ -67,5 +56,3 @@ entab — Replace blanks with tabs and blanks
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'EXAMPLE'  >
   
-  </BODY>
-  </HTML>

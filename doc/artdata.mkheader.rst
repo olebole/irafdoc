@@ -1,3 +1,5 @@
+.. _mkheader:
+
 mkheader — Append/replace header parameters
 ===========================================
 
@@ -5,42 +7,29 @@ mkheader — Append/replace header parameters
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>mkheader (Aug90)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.artdata</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>mkheader (Aug90)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>mkheader</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   mkheader - Append/replace image header
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   mkheader images headers
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>List of images in which header information is to be added or modified.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_header">header = "<TT>artdata$stdheader.dat</TT>"</A></B></DT>
+  <DT><B>header = "<TT>artdata$stdheader.dat</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='header' Line='header = "artdata$stdheader.dat"'>
   <DD>List of images or header keyword data files.  If the list is shorter
   than the input image list then the last entry is repeated.
@@ -54,20 +43,20 @@ mkheader — Append/replace header parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_append">append = yes</A></B></DT>
+  <DT><B>append = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='append' Line='append = yes'>
   <DD>Append to existing keywords?  If no then the existing header is replaced.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = no</A></B></DT>
+  <DT><B>verbose = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
   <DD>Verbose output?
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The image headers in the list of input images may be replaced or appended
@@ -96,7 +85,7 @@ mkheader — Append/replace header parameters
   To edit image headers also see <B>hedit</B>.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Add some standard keywords from a file to an image.
@@ -124,7 +113,7 @@ mkheader — Append/replace header parameters
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   hedit, mkobjects, mknoise, mk1dspec, mk2dspec
@@ -133,5 +122,3 @@ mkheader — Append/replace header parameters
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

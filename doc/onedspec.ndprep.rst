@@ -1,3 +1,5 @@
+.. _ndprep:
+
 ndprep — Make neutral density filter calibration image
 ======================================================
 
@@ -5,36 +7,23 @@ ndprep — Make neutral density filter calibration image
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>ndprep (Mar92)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.onedspec</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>ndprep (Mar92)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>ndprep</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   ndprep -- Make a neutral density filter calibration image
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   ndprep filter_curve output
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_filter_curve">filter_curve</A></B></DT>
+  <DT><B>filter_curve</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='filter_curve' Line='filter_curve'>
   <DD>Neutral density filter curve.  The directory specified by the parameter
   <I>directory</I> is prepended to this name so if a directory is specified
@@ -43,39 +32,39 @@ ndprep — Make neutral density filter calibration image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>Output neutral density filter image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_w0">w0   </A></B></DT>
+  <DT><B>w0   </B></DT>
   <! Sec='PARAMETERS' Level=0 Label='w0' Line='w0   '>
   <DD>Starting wavelength for the output image in Angstroms.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dw">dw   </A></B></DT>
+  <DT><B>dw   </B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dw' Line='dw   '>
   <DD>Wavelength increment for the output image in Angstroms.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nw">nw   </A></B></DT>
+  <DT><B>nw   </B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nw' Line='nw   '>
   <DD>Number of wavelength points for the output image (i.e. the size of the
   output image).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nspace">nspace = 0</A></B></DT>
+  <DT><B>nspace = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nspace' Line='nspace = 0'>
   <DD>Number of spatial points for a two dimensional image.  If the value is
   zero then a one dimensional image is created.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_logarithm">logarithm = no</A></B></DT>
+  <DT><B>logarithm = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='logarithm' Line='logarithm = no'>
   <DD>Use logarithmic wavelengths and intervals?  If yes then the wavelengths
   will have the same starting and ending points and number of pixels but
@@ -83,20 +72,20 @@ ndprep — Make neutral density filter calibration image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_flux">flux = yes</A></B></DT>
+  <DT><B>flux = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='flux' Line='flux = yes'>
   <DD>Conserve flux when rebinning to logarithmic wavelength intervals?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dispaxis">dispaxis = 1</A></B></DT>
+  <DT><B>dispaxis = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dispaxis' Line='dispaxis = 1'>
   <DD>Dispersion axis for two dimensional images.  Dispersion along the lines
   is 1 and dispersion along the columns is 2.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_directory">directory = "<TT>onedstds$ctio/</TT>"</A></B></DT>
+  <DT><B>directory = "<TT>onedstds$ctio/</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='directory' Line='directory = "onedstds$ctio/"'>
   <DD>Directory containing neutral density filter curves.  This directory is
   prepended to the specified fiter curve file (and so must end with <TT>'/'</TT>
@@ -105,7 +94,7 @@ ndprep — Make neutral density filter calibration image
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   A neutral density (ND) filter curve is converted to a calibration image
@@ -135,7 +124,7 @@ ndprep — Make neutral density filter calibration image
   the columns).
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   To get a list of standard ND filter curves:
@@ -166,11 +155,11 @@ ndprep — Make neutral density filter calibration image
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_NDPREP">NDPREP V2.10</A></B></DT>
+  <DT><B>NDPREP V2.10</B></DT>
   <! Sec='REVISIONS' Level=0 Label='NDPREP' Line='NDPREP V2.10'>
   <DD>This task was moved from the <B>proto</B> package.  It was originally
   written at CTIO for CTIO data.  It's functionality is largely unchanged
@@ -179,7 +168,7 @@ ndprep — Make neutral density filter calibration image
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   sinterp, dispcor
@@ -188,5 +177,3 @@ ndprep — Make neutral density filter calibration image
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

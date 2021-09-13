@@ -1,3 +1,5 @@
+.. _doslit:
+
 doslit — Process CTIO slit spectra
 ==================================
 
@@ -5,32 +7,19 @@ doslit — Process CTIO slit spectra
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>doslit (Feb93)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.imred.specred</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>doslit (Feb93)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>doslit</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   doslit -- Slit spectra data reduction task
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   doslit objects
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_summary">SUMMARY</A></H2>
+  <H3>Summary</H3>
   <! BeginSection: 'SUMMARY'>
   <UL>
   <B>Doslit</B> extracts, sky subtracts, wavelength calibrates, and flux
@@ -46,11 +35,11 @@ doslit — Process CTIO slit spectra
   packages.
   </UL>
   <! EndSection:   'SUMMARY'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_objects">objects</A></B></DT>
+  <DT><B>objects</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='objects' Line='objects'>
   <DD>List of object images to be processed.  Previously processed spectra are
   ignored unless the <I>redo</I> flag is set or the <I>update</I> flag is set
@@ -61,7 +50,7 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_arcs">arcs = "<TT></TT>" (at least one if dispersion correcting)</A></B></DT>
+  <DT><B>arcs = "<TT></TT>" (at least one if dispersion correcting)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='arcs' Line='arcs = "" (at least one if dispersion correcting)'>
   <DD>List of arc calibration spectra.  These spectra are used to define
   the dispersion functions.  The first spectrum is used to mark lines
@@ -72,7 +61,7 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_arctable">arctable = "<TT></TT>" (optional) (refspectra)</A></B></DT>
+  <DT><B>arctable = "<TT></TT>" (optional) (refspectra)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='arctable' Line='arctable = "" (optional) (refspectra)'>
   <DD>Table defining which arc spectra are to be assigned to which object
   spectra (see <B>refspectra</B>).  If not specified an assignment based
@@ -81,7 +70,7 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_standards">standards = "<TT></TT>" (at least one if flux calibrating)</A></B></DT>
+  <DT><B>standards = "<TT></TT>" (at least one if flux calibrating)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='standards' Line='standards = "" (at least one if flux calibrating)'>
   <DD>List of standard star spectra.  The standard stars must have entries in
   the calibration database (package parameter <I>caldir</I>).
@@ -89,7 +78,7 @@ doslit — Process CTIO slit spectra
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_readnoise">readnoise = "<TT>rdnoise</TT>", gain = "<TT>gain</TT>" (apsum)</A></B></DT>
+  <DT><B>readnoise = "<TT>rdnoise</TT>", gain = "<TT>gain</TT>" (apsum)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='readnoise' Line='readnoise = "rdnoise", gain = "gain" (apsum)'>
   <DD>Read out noise in photons and detector gain in photons per data value.
   This parameter defines the minimum noise sigma and the conversion between
@@ -99,7 +88,7 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_datamax">datamax = INDEF (apsum.saturation)</A></B></DT>
+  <DT><B>datamax = INDEF (apsum.saturation)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='datamax' Line='datamax = INDEF (apsum.saturation)'>
   <DD>The maximum data value which is not a cosmic ray.
   When cleaning cosmic rays and/or using variance weighted extraction
@@ -114,14 +103,14 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_width">width = 5. (apedit)</A></B></DT>
+  <DT><B>width = 5. (apedit)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='width' Line='width = 5. (apedit)'>
   <DD>Approximate full width of the spectrum profiles.  This parameter is used
   to define a width and error radius for the profile centering algorithm.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_crval">crval = INDEF, cdelt = INDEF (autoidentify)</A></B></DT>
+  <DT><B>crval = INDEF, cdelt = INDEF (autoidentify)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='crval' Line='crval = INDEF, cdelt = INDEF (autoidentify)'>
   <DD>These parameters specify an approximate central wavelength and dispersion.
   They may be specified as numerical values, INDEF, or image header keyword
@@ -132,7 +121,7 @@ doslit — Process CTIO slit spectra
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_dispcor">dispcor = yes</A></B></DT>
+  <DT><B>dispcor = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dispcor' Line='dispcor = yes'>
   <DD>Dispersion correct spectra?  This may involve either defining a nonlinear
   dispersion coordinate system in the image header or resampling the
@@ -141,25 +130,25 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_extcor">extcor = no</A></B></DT>
+  <DT><B>extcor = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='extcor' Line='extcor = no'>
   <DD>Extinction correct the spectra?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fluxcal">fluxcal = no</A></B></DT>
+  <DT><B>fluxcal = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fluxcal' Line='fluxcal = no'>
   <DD>Flux calibrate the spectra using standard star observations?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_resize">resize = no (apresize)</A></B></DT>
+  <DT><B>resize = no (apresize)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='resize' Line='resize = no (apresize)'>
   <DD>Resize the default aperture for each object based on the spectrum profile?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_clean">clean = no (apsum)</A></B></DT>
+  <DT><B>clean = no (apsum)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='clean' Line='clean = no (apsum)'>
   <DD>Detect and correct for bad pixels during extraction?  This is the same
   as the clean option in the <B>apextract</B> package.  If yes this also
@@ -168,14 +157,14 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_splot">splot = no</A></B></DT>
+  <DT><B>splot = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='splot' Line='splot = no'>
   <DD>Plot the final spectra with the task <B>splot</B>?  In quicklook mode
   this is automatic and in non-quicklook mode it is queried.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_redo">redo = no</A></B></DT>
+  <DT><B>redo = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='redo' Line='redo = no'>
   <DD>Redo operations previously done?  If no then previously processed spectra
   in the object list will not be processed unless required by the
@@ -183,14 +172,14 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_update">update = no</A></B></DT>
+  <DT><B>update = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='update' Line='update = no'>
   <DD>Update processing of previously processed spectra if the
   dispersion reference image or standard star calibration data are changed?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_quicklook">quicklook = no</A></B></DT>
+  <DT><B>quicklook = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='quicklook' Line='quicklook = no'>
   <DD>Extract and calibrate spectra with minimal interaction?  In quicklook mode
   only the initial dispersion function solution and standard star setup are
@@ -200,21 +189,21 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_batch">batch = yes</A></B></DT>
+  <DT><B>batch = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='batch' Line='batch = yes'>
   <DD>Process spectra as a background or batch job provided there are no interactive
   steps remaining.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_listonly">listonly = no</A></B></DT>
+  <DT><B>listonly = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='listonly' Line='listonly = no'>
   <DD>List processing steps but don't process?
   </DD>
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_sparams">sparams = "<TT></TT>" (pset)</A></B></DT>
+  <DT><B>sparams = "<TT></TT>" (pset)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sparams' Line='sparams = "" (pset)'>
   <DD>Name of parameter set containing additional processing parameters.  This
   parameter is only for indicating the link to the parameter set
@@ -229,7 +218,7 @@ doslit — Process CTIO slit spectra
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_line">line = INDEF, nsum = 10</A></B></DT>
+  <DT><B>line = INDEF, nsum = 10</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='line' Line='line = INDEF, nsum = 10'>
   <DD>The dispersion line (line or column perpendicular to the dispersion
   axis) and number of adjacent lines (half before and half after unless
@@ -239,7 +228,7 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_extras">extras = no (apsum)</A></B></DT>
+  <DT><B>extras = no (apsum)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='extras' Line='extras = no (apsum)'>
   <DD>Include raw unweighted and uncleaned spectra, the background spectra, and
   the estimated sigmas in a three dimensional output image format.
@@ -251,7 +240,7 @@ doslit — Process CTIO slit spectra
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_lower">lower = -3., upper = 3. (apdefault)</A></B></DT>
+  <DT><B>lower = -3., upper = 3. (apdefault)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lower' Line='lower = -3., upper = 3. (apdefault)'>
   <DD>Default lower and upper aperture limits relative to the aperture center.
   These limits are used when the apertures are first defined.
@@ -262,7 +251,7 @@ doslit — Process CTIO slit spectra
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_ylevel">ylevel = 0.05 (apresize)</A></B></DT>
+  <DT><B>ylevel = 0.05 (apresize)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ylevel' Line='ylevel = 0.05 (apresize)'>
   <DD>Fraction of the peak to set aperture limits during automatic resizing.
   </DD>
@@ -272,7 +261,7 @@ doslit — Process CTIO slit spectra
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_t_step">t_step = 10 (aptrace)</A></B></DT>
+  <DT><B>t_step = 10 (aptrace)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='t_step' Line='t_step = 10 (aptrace)'>
   <DD>Step along the dispersion axis between determination of the spectrum
   positions.  Note the <I>nsum</I> parameter is also used to enhance the
@@ -280,7 +269,7 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_t_function">t_function = "<TT>spline3</TT>", t_order = 1 (aptrace)</A></B></DT>
+  <DT><B>t_function = "<TT>spline3</TT>", t_order = 1 (aptrace)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='t_function' Line='t_function = "spline3", t_order = 1 (aptrace)'>
   <DD>Default trace fitting function and order.  The fitting function types are
   "<TT>chebyshev</TT>" polynomial, "<TT>legendre</TT>" polynomial, "<TT>spline1</TT>" linear spline, and
@@ -290,7 +279,7 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_t_niterate">t_niterate = 1, t_low = 3., t_high = 3. (aptrace)</A></B></DT>
+  <DT><B>t_niterate = 1, t_low = 3., t_high = 3. (aptrace)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='t_niterate' Line='t_niterate = 1, t_low = 3., t_high = 3. (aptrace)'>
   <DD>Default number of rejection iterations and rejection sigma thresholds.
   </DD>
@@ -300,20 +289,20 @@ doslit — Process CTIO slit spectra
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_weights">weights = "<TT>none</TT>" (apsum) (none|variance)</A></B></DT>
+  <DT><B>weights = "<TT>none</TT>" (apsum) (none|variance)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='weights' Line='weights = "none" (apsum) (none|variance)'>
   <DD>Type of extraction weighting.  Note that if the <I>clean</I> parameter is
   set then the weights used are "<TT>variance</TT>" regardless of the weights
   specified by this parameter.  The choices are:
   <DL>
-  <DT><B><A NAME="l_">"<TT>none</TT>"</A></B></DT>
+  <DT><B>"<TT>none</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"none"'>
   <DD>The pixels are summed without weights except for partial pixels at the
   ends.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">"<TT>variance</TT>"</A></B></DT>
+  <DT><B>"<TT>variance</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"variance"'>
   <DD>The extraction is weighted by the variance based on the data values
   and a poisson/ccd model using the <I>gain</I> and <I>readnoise</I>
@@ -323,14 +312,14 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pfit">pfit = "<TT>fit1d</TT>" (apsum and approfile) (fit1d|fit2d)</A></B></DT>
+  <DT><B>pfit = "<TT>fit1d</TT>" (apsum and approfile) (fit1d|fit2d)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pfit' Line='pfit = "fit1d" (apsum and approfile) (fit1d|fit2d)'>
   <DD>Type of profile fitting algorithm to use.  The "<TT>fit1d</TT>" algorithm is
   preferred except in cases of extreme tilt.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lsigma">lsigma = 3., usigma = 3. (apsum)</A></B></DT>
+  <DT><B>lsigma = 3., usigma = 3. (apsum)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lsigma' Line='lsigma = 3., usigma = 3. (apsum)'>
   <DD>Lower and upper rejection thresholds, given as a number of times the
   estimated sigma of a pixel, for cleaning.
@@ -341,7 +330,7 @@ doslit — Process CTIO slit spectra
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_background">background = "<TT>fit</TT>" (apsum) (none|average|median|minimum|fit)</A></B></DT>
+  <DT><B>background = "<TT>fit</TT>" (apsum) (none|average|median|minimum|fit)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='background' Line='background = "fit" (apsum) (none|average|median|minimum|fit)'>
   <DD>Type of background subtraction.  The choices are "<TT>none</TT>" for no background
   subtraction, "<TT>average</TT>" to average the background within the background
@@ -354,7 +343,7 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_b_function">b_function = "<TT>legendre</TT>", b_order = 1 (apsum)</A></B></DT>
+  <DT><B>b_function = "<TT>legendre</TT>", b_order = 1 (apsum)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='b_function' Line='b_function = "legendre", b_order = 1 (apsum)'>
   <DD>Default background fitting function and order.  The fitting function types are
   "<TT>chebyshev</TT>" polynomial, "<TT>legendre</TT>" polynomial, "<TT>spline1</TT>" linear spline, and
@@ -364,7 +353,7 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_b_sample">b_sample = "<TT>-10:-6,6:10</TT>" (apsum)</A></B></DT>
+  <DT><B>b_sample = "<TT>-10:-6,6:10</TT>" (apsum)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='b_sample' Line='b_sample = "-10:-6,6:10" (apsum)'>
   <DD>Default background sample.  The sample is given by a set of colon separated
   ranges each separated by either whitespace or commas.  The string "<TT>*</TT>" refers
@@ -376,7 +365,7 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_b_naverage">b_naverage = -100 (apsum)</A></B></DT>
+  <DT><B>b_naverage = -100 (apsum)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='b_naverage' Line='b_naverage = -100 (apsum)'>
   <DD>Default number of points to average or median.  Positive numbers
   average that number of sequential points to form a fitting point.
@@ -386,7 +375,7 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_b_niterate">b_niterate = 1 (apsum)</A></B></DT>
+  <DT><B>b_niterate = 1 (apsum)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='b_niterate' Line='b_niterate = 1 (apsum)'>
   <DD>Default number of rejection iterations.  If greater than zero the fit is
   used to detect deviant fitting points and reject them before repeating the
@@ -394,7 +383,7 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_b_low_reject">b_low_reject = 3., b_high_reject = 3. (apsum)</A></B></DT>
+  <DT><B>b_low_reject = 3., b_high_reject = 3. (apsum)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='b_low_reject' Line='b_low_reject = 3., b_high_reject = 3. (apsum)'>
   <DD>Default background lower and upper rejection sigmas.  If greater than zero
   points deviating from the fit below and above the fit by more than this
@@ -406,40 +395,40 @@ doslit — Process CTIO slit spectra
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_threshold">threshold = 10. (autoidentify/identify/reidentify)</A></B></DT>
+  <DT><B>threshold = 10. (autoidentify/identify/reidentify)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 10. (autoidentify/identify/reidentify)'>
   <DD>In order for a feature center to be determined the range of pixel intensities
   around the feature must exceed this threshold.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_coordlist">coordlist = "<TT>linelists$idhenear.dat</TT>" (autoidentify/identify)</A></B></DT>
+  <DT><B>coordlist = "<TT>linelists$idhenear.dat</TT>" (autoidentify/identify)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='coordlist' Line='coordlist = "linelists$idhenear.dat" (autoidentify/identify)'>
   <DD>Arc line list consisting of an ordered list of wavelengths.
   Some standard line lists are available in the directory "<TT>linelists$</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_match">match = -3. (autoidentify/identify)</A></B></DT>
+  <DT><B>match = -3. (autoidentify/identify)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='match' Line='match = -3. (autoidentify/identify)'>
   <DD>The maximum difference for a match between the dispersion function computed
   value and a wavelength in the coordinate list.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fwidth">fwidth = 4. (autoidentify/identify)</A></B></DT>
+  <DT><B>fwidth = 4. (autoidentify/identify)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fwidth' Line='fwidth = 4. (autoidentify/identify)'>
   <DD>Approximate full base width (in pixels) of arc lines.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cradius">cradius = 10. (reidentify)</A></B></DT>
+  <DT><B>cradius = 10. (reidentify)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cradius' Line='cradius = 10. (reidentify)'>
   <DD>Radius from previous position to reidentify arc line.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_i_function">i_function = "<TT>spline3</TT>", i_order = 1 (autoidentify/identify)</A></B></DT>
+  <DT><B>i_function = "<TT>spline3</TT>", i_order = 1 (autoidentify/identify)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='i_function' Line='i_function = "spline3", i_order = 1 (autoidentify/identify)'>
   <DD>The default function and order to be fit to the arc wavelengths as a
   function of the pixel coordinate.  The functions choices are "<TT>chebyshev</TT>",
@@ -447,14 +436,14 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_i_niterate">i_niterate = 0, i_low = 3.0, i_high = 3.0 (autoidentify/identify)</A></B></DT>
+  <DT><B>i_niterate = 0, i_low = 3.0, i_high = 3.0 (autoidentify/identify)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='i_niterate' Line='i_niterate = 0, i_low = 3.0, i_high = 3.0 (autoidentify/identify)'>
   <DD>Number of rejection iterations and sigma thresholds for rejecting arc
   lines from the dispersion function fits.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_refit">refit = yes (reidentify)</A></B></DT>
+  <DT><B>refit = yes (reidentify)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='refit' Line='refit = yes (reidentify)'>
   <DD>Refit the dispersion function?  If yes and there is more than 1 line
   and a dispersion function was defined in the initial arc reference then a new
@@ -465,7 +454,7 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_addfeatures">addfeatures = no (reidentify)</A></B></DT>
+  <DT><B>addfeatures = no (reidentify)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='addfeatures' Line='addfeatures = no (reidentify)'>
   <DD>Add new features from a line list during each reidentification?
   This option can be used to compensate for lost features from the
@@ -478,14 +467,14 @@ doslit — Process CTIO slit spectra
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_select">select = "<TT>interp</TT>" (refspectra)</A></B></DT>
+  <DT><B>select = "<TT>interp</TT>" (refspectra)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='select' Line='select = "interp" (refspectra)'>
   <DD>Selection method for assigning wavelength calibration spectra.
   Note that an arc assignment table may be used to override the selection
   method and explicitly assign arc spectra to object spectra.
   The automatic selection methods are:
   <DL>
-  <DT><B><A NAME="l_average">average</A></B></DT>
+  <DT><B>average</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='average' Line='average'>
   <DD>Average two reference spectra without regard to any
   sort or group parameters.
@@ -496,7 +485,7 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_following">following</A></B></DT>
+  <DT><B>following</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='following' Line='following'>
   <DD>Select the nearest following spectrum in the reference list based on the
   sort and group parameters.  If there is no following spectrum use the
@@ -504,7 +493,7 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interp">interp</A></B></DT>
+  <DT><B>interp</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='interp' Line='interp'>
   <DD>Interpolate between the preceding and following spectra in the reference
   list based on the sort and group parameters.  If there is no preceding and
@@ -514,21 +503,21 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_match">match</A></B></DT>
+  <DT><B>match</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='match' Line='match'>
   <DD>Match each input spectrum with the reference spectrum list in order.
   This overrides any group values.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nearest">nearest</A></B></DT>
+  <DT><B>nearest</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest'>
   <DD>Select the nearest spectrum in the reference list based on the sort and
   group parameters.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_preceding">preceding</A></B></DT>
+  <DT><B>preceding</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='preceding' Line='preceding'>
   <DD>Select the nearest preceding spectrum in the reference list based on the
   sort and group parameters.  If there is no preceding spectrum use the
@@ -538,7 +527,7 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sort">sort = "<TT>jd</TT>" (setjd and refspectra)</A></B></DT>
+  <DT><B>sort = "<TT>jd</TT>" (setjd and refspectra)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sort' Line='sort = "jd" (setjd and refspectra)'>
   <DD>Image header keyword to be used as the sorting parameter for selection
   based on order.  The header parameter must be numeric but otherwise may
@@ -546,7 +535,7 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_group">group = "<TT>ljd</TT>" (setjd and refspectra)</A></B></DT>
+  <DT><B>group = "<TT>ljd</TT>" (setjd and refspectra)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='group' Line='group = "ljd" (setjd and refspectra)'>
   <DD>Image header keyword to be used to group spectra.  For those selection
   methods which use the group parameter the reference and object
@@ -557,7 +546,7 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_time">time = no, timewrap = 17. (refspectra)</A></B></DT>
+  <DT><B>time = no, timewrap = 17. (refspectra)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='time' Line='time = no, timewrap = 17. (refspectra)'>
   <DD>Is the sorting parameter a 24 hour time?  If so then the time origin
   for the sorting is specified by the timewrap parameter.  This time
@@ -570,7 +559,7 @@ doslit — Process CTIO slit spectra
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_linearize">linearize = yes (dispcor)</A></B></DT>
+  <DT><B>linearize = yes (dispcor)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='linearize' Line='linearize = yes (dispcor)'>
   <DD>Interpolate the spectra to a linear dispersion sampling?  If yes the
   spectra will be interpolated to a linear or log linear sampling using
@@ -582,7 +571,7 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_log">log = no (dispcor)</A></B></DT>
+  <DT><B>log = no (dispcor)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='log' Line='log = no (dispcor)'>
   <DD>Use linear logarithmic wavelength coordinates?  Linear logarithmic
   wavelength coordinates have wavelength intervals which are constant
@@ -590,7 +579,7 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_flux">flux = yes (dispcor)</A></B></DT>
+  <DT><B>flux = yes (dispcor)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='flux' Line='flux = yes (dispcor)'>
   <DD>Conserve the total flux during interpolation?  If <I>no</I> the output
   spectrum is interpolated from the input spectrum at each output
@@ -604,7 +593,7 @@ doslit — Process CTIO slit spectra
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_s_function">s_function = "<TT>spline3</TT>", s_order = 1 (sensfunc)</A></B></DT>
+  <DT><B>s_function = "<TT>spline3</TT>", s_order = 1 (sensfunc)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='s_function' Line='s_function = "spline3", s_order = 1 (sensfunc)'>
   <DD>Function and order used to fit the sensitivity data.  The function types
   are "<TT>chebyshev</TT>" polynomial, "<TT>legendre</TT>" polynomial, "<TT>spline3</TT>" cubic spline,
@@ -614,7 +603,7 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fnu">fnu = no (calibrate)</A></B></DT>
+  <DT><B>fnu = no (calibrate)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fnu' Line='fnu = no (calibrate)'>
   <DD>The default calibration is into units of F-lambda. If <I>fnu</I> = yes then
   the calibrated spectrum will be in units of F-nu.
@@ -628,7 +617,7 @@ doslit — Process CTIO slit spectra
   The following package parameters are used by this task.  The default values
   may vary depending on the package.
   <DL>
-  <DT><B><A NAME="l_dispaxis">dispaxis = 2</A></B></DT>
+  <DT><B>dispaxis = 2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dispaxis' Line='dispaxis = 2'>
   <DD>Default dispersion axis.  The dispersion axis is 1 for dispersion
   running along image lines and 2 for dispersion running along image
@@ -638,7 +627,7 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_extinction">extinction (standard, sensfunc, calibrate)</A></B></DT>
+  <DT><B>extinction (standard, sensfunc, calibrate)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='extinction' Line='extinction (standard, sensfunc, calibrate)'>
   <DD>Extinction file for a site.  There are two extinction files in the
   NOAO standards library, onedstds$, for KPNO and CTIO.  These extinction
@@ -646,7 +635,7 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_caldir">caldir (standard)</A></B></DT>
+  <DT><B>caldir (standard)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='caldir' Line='caldir (standard)'>
   <DD>Standard star calibration directory.  A directory containing standard
   star data files.  Note that the directory name must end with <TT>'/'</TT>.
@@ -655,7 +644,7 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_observatory">observatory = "<TT>observatory</TT>" (observatory)</A></B></DT>
+  <DT><B>observatory = "<TT>observatory</TT>" (observatory)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory = "observatory" (observatory)'>
   <DD>The default observatory to use for latitude dependent computations.
   If the OBSERVAT keyword in the image header it takes precedence over
@@ -663,7 +652,7 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interp">interp = "<TT>poly5</TT>" (nearest|linear|poly3|poly5|spline3|sinc) (dispcor)</A></B></DT>
+  <DT><B>interp = "<TT>poly5</TT>" (nearest|linear|poly3|poly5|spline3|sinc) (dispcor)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interp' Line='interp = "poly5" (nearest|linear|poly3|poly5|spline3|sinc) (dispcor)'>
   <DD>Spectrum interpolation type used when spectra are resampled.  The choices are:
   <P>
@@ -678,14 +667,14 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_database">database = "<TT>database</TT>"</A></B></DT>
+  <DT><B>database = "<TT>database</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"'>
   <DD>Database name used by various tasks.  This is a directory which is created
   if necessary.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = no</A></B></DT>
+  <DT><B>verbose = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
   <DD>Verbose output?  If set then almost all the information written to the
   logfile is also written to the terminal except when the task is a
@@ -693,13 +682,13 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_logfile">logfile = "<TT>logfile</TT>"</A></B></DT>
+  <DT><B>logfile = "<TT>logfile</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "logfile"'>
   <DD>If specified detailed text log information is written to this file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_plotfile">plotfile = "<TT></TT>"</A></B></DT>
+  <DT><B>plotfile = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='plotfile' Line='plotfile = ""'>
   <DD>If specified metacode plots are recorded in this file for later review.
   Since plot information can become large this should be used only if
@@ -708,7 +697,7 @@ doslit — Process CTIO slit spectra
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_environment_parameters">ENVIRONMENT PARAMETERS</A></H2>
+  <H3>Environment parameters</H3>
   <! BeginSection: 'ENVIRONMENT PARAMETERS'>
   <UL>
   The environment parameter <I>imtype</I> is used to determine the extension
@@ -717,7 +706,7 @@ doslit — Process CTIO slit spectra
   for example "<TT>d1h</TT>".
   </UL>
   <! EndSection:   'ENVIRONMENT PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <B>Doslit</B> extracts, sky subtracts, wavelength calibrates, and flux
@@ -760,14 +749,14 @@ doslit — Process CTIO slit spectra
   <B>Usage Outline</B>
   <P>
   <DL>
-  <DT><B><A NAME="l_">[1]</A></B></DT>
+  <DT><B>[1]</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='[1]'>
   <DD>The images are first processed with <B>ccdproc</B> for overscan,
   zero level, dark count, and flat field corrections.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">[2]</A></B></DT>
+  <DT><B>[2]</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='[2]'>
   <DD>Set the <B>doslit</B> parameters with <B>eparam</B>.  Specify the object
   images to be processed,
@@ -780,7 +769,7 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">[3]</A></B></DT>
+  <DT><B>[3]</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='[3]'>
   <DD>Run the task.  This may be repeated multiple times with different
   observations and the task will generally only do the setup steps
@@ -793,7 +782,7 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">[4]</A></B></DT>
+  <DT><B>[4]</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='[4]'>
   <DD>Apertures are defined for all the standard and object images.  This is only
   done if there are no previous aperture definitions for the image.
@@ -815,7 +804,7 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">[5]</A></B></DT>
+  <DT><B>[5]</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='[5]'>
   <DD>If dispersion correction is selected the first arc in the arc list is
   extracted.  The dispersion function is defined using the task
@@ -830,7 +819,7 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">[6]</A></B></DT>
+  <DT><B>[6]</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='[6]'>
   <DD>If the flux calibration option is selected the standard star spectra are
   processed (if not done previously).  The images are
@@ -847,14 +836,14 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">[7]</A></B></DT>
+  <DT><B>[7]</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='[7]'>
   <DD>The object spectra are now automatically
   extracted, wavelength calibrated, and flux calibrated.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">[8]</A></B></DT>
+  <DT><B>[8]</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='[8]'>
   <DD>The option to examine the final spectra with <B>splot</B> may be given.
   To exit type <TT>'q'</TT>.  In quicklook mode the spectra are plotted
@@ -862,7 +851,7 @@ doslit — Process CTIO slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">[9]</A></B></DT>
+  <DT><B>[9]</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='[9]'>
   <DD>The final spectra will have the same name as the original 2D images
   with a "<TT>.ms</TT>" extension added.
@@ -1318,7 +1307,7 @@ doslit — Process CTIO slit spectra
   will also cause reprocessing to occur if the <I>update</I> flag is set.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  The following example uses artificial data and may be executed
@@ -1467,18 +1456,18 @@ doslit — Process CTIO slit spectra
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_DOSLIT">DOSLIT V2.11</A></B></DT>
+  <DT><B>DOSLIT V2.11</B></DT>
   <! Sec='REVISIONS' Level=0 Label='DOSLIT' Line='DOSLIT V2.11'>
   <DD>The initial arc line identifications is done with the automatic line
   identification algorithm.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_DOSLIT">DOSLIT V2.10.3</A></B></DT>
+  <DT><B>DOSLIT V2.10.3</B></DT>
   <! Sec='REVISIONS' Level=0 Label='DOSLIT' Line='DOSLIT V2.10.3'>
   <DD>The usual output WCS format is "<TT>equispec</TT>".  The image format type to be
   processed is selected with the <I>imtype</I> environment parameter.  The
@@ -1491,7 +1480,7 @@ doslit — Process CTIO slit spectra
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   apbackground, apedit, apfind, approfiles, aprecenter, apresize, apsum,
@@ -1504,5 +1493,3 @@ doslit — Process CTIO slit spectra
   
   <! Contents: 'NAME' 'USAGE' 'SUMMARY' 'PARAMETERS' 'ENVIRONMENT PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

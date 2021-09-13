@@ -1,3 +1,5 @@
+.. _identify:
+
 identify — Identify features in spectrum for dispersion solution
 ================================================================
 
@@ -5,26 +7,13 @@ identify — Identify features in spectrum for dispersion solution
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>identify (Jan96)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.onedspec</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>identify (Jan96)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>identify</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   identify -- Identify features in one dimensional image vectors
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_summary">SUMMARY</A></H2>
+  <H3>Summary</H3>
   <! BeginSection: 'SUMMARY'>
   <UL>
   Features are interactively marked in one dimensional image vectors.
@@ -36,23 +25,23 @@ identify — Identify features in spectrum for dispersion solution
   are generally used for geometric calibrations.
   </UL>
   <! EndSection:   'SUMMARY'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   identify images
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>List of images in which to identify features and fit coordinate functions.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_section">section = "<TT>middle line</TT>"</A></B></DT>
+  <DT><B>section = "<TT>middle line</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='section' Line='section = "middle line"'>
   <DD>If an image is not one dimensional or specified as a one dimensional image
   section then the image section given by this parameter is used.  The
@@ -76,13 +65,13 @@ identify — Identify features in spectrum for dispersion solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_database">database = "<TT>database</TT>"</A></B></DT>
+  <DT><B>database = "<TT>database</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"'>
   <DD>Database in which the feature data and coordinate functions are recorded.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_coordlist">coordlist = "<TT>linelists$idhenear.dat</TT>"</A></B></DT>
+  <DT><B>coordlist = "<TT>linelists$idhenear.dat</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='coordlist' Line='coordlist = "linelists$idhenear.dat"'>
   <DD>User coordinate list consisting of an list of line coordinates.  A
   comment line of the form "<TT># units &lt;units&gt;</TT>", where &lt;units&gt; is one of the
@@ -93,7 +82,7 @@ identify — Identify features in spectrum for dispersion solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_units">units = "<TT></TT>"</A></B></DT>
+  <DT><B>units = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='units' Line='units = ""'>
   <DD>The units to use if no database entry exists.  The units are specified as
   described in
@@ -108,7 +97,7 @@ identify — Identify features in spectrum for dispersion solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nsum">nsum = "<TT>10</TT>"</A></B></DT>
+  <DT><B>nsum = "<TT>10</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nsum' Line='nsum = "10"'>
   <DD>Number of lines, columns, or bands across the designated vector axis to be
   summed when the image is a two or three dimensional spatial spectrum.
@@ -120,7 +109,7 @@ identify — Identify features in spectrum for dispersion solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_match">match = -3.</A></B></DT>
+  <DT><B>match = -3.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='match' Line='match = -3.'>
   <DD>The maximum difference for a match between the feature coordinate function
   value and a coordinate in the coordinate list.  Positive values
@@ -128,14 +117,14 @@ identify — Identify features in spectrum for dispersion solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_maxfeatures">maxfeatures = 50</A></B></DT>
+  <DT><B>maxfeatures = 50</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='maxfeatures' Line='maxfeatures = 50'>
   <DD>Maximum number of the strongest features to be selected automatically from
   the coordinate list (function <TT>'l'</TT>) or from the image data (function <TT>'y'</TT>).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_zwidth">zwidth = 100.</A></B></DT>
+  <DT><B>zwidth = 100.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='zwidth' Line='zwidth = 100.'>
   <DD>Width of graphs, in user coordinates, when in zoom mode (function <TT>'z'</TT>).
   </DD>
@@ -143,34 +132,34 @@ identify — Identify features in spectrum for dispersion solution
   <P>
   The following parameters are used in determining feature positions.
   <DL>
-  <DT><B><A NAME="l_ftype">ftype = "<TT>emission</TT>"</A></B></DT>
+  <DT><B>ftype = "<TT>emission</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ftype' Line='ftype = "emission"'>
   <DD>Type of features to be identified.  The possibly abbreviated choices are
   "<TT>emission</TT>" and "<TT>absorption</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fwidth">fwidth = 4.</A></B></DT>
+  <DT><B>fwidth = 4.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fwidth' Line='fwidth = 4.'>
   <DD>Full-width at the base (in pixels) of features to be identified.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cradius">cradius = 5.</A></B></DT>
+  <DT><B>cradius = 5.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cradius' Line='cradius = 5.'>
   <DD>The maximum distance, in pixels, allowed between a feature position
   and the initial estimate when defining a new feature.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_threshold">threshold = 0.</A></B></DT>
+  <DT><B>threshold = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 0.'>
   <DD>In order for a feature center to be determined the range of pixel intensities
   around the feature must exceed this threshold.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_minsep">minsep = 2.</A></B></DT>
+  <DT><B>minsep = 2.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='minsep' Line='minsep = 2.'>
   <DD>The minimum separation, in pixels, allowed between feature positions
   when defining a new feature.
@@ -181,40 +170,40 @@ identify — Identify features in spectrum for dispersion solution
   The <B>icfit</B> package is used and further descriptions about these parameters
   may be found under that package.
   <DL>
-  <DT><B><A NAME="l_function">function = "<TT>spline3</TT>"</A></B></DT>
+  <DT><B>function = "<TT>spline3</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='function' Line='function = "spline3"'>
   <DD>The function to be fit to the user coordinates as a function of the pixel
   coordinate.  The choices are "<TT>chebyshev</TT>", "<TT>legendre</TT>", "<TT>spline1</TT>", or "<TT>spline3</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_order">order = 1</A></B></DT>
+  <DT><B>order = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='order' Line='order = 1'>
   <DD>Order of the fitting function.  The order is the number of polynomial terms
   or number of spline pieces.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sample">sample = "<TT>*</TT>"</A></B></DT>
+  <DT><B>sample = "<TT>*</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"'>
   <DD>Sample regions for fitting. This is in pixel coordinates and not the user
   coordinates.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_niterate">niterate = 0</A></B></DT>
+  <DT><B>niterate = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='niterate' Line='niterate = 0'>
   <DD>Number of rejection iterations.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_low_reject">low_reject = 3.0, high_reject = 3.0</A></B></DT>
+  <DT><B>low_reject = 3.0, high_reject = 3.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='low_reject' Line='low_reject = 3.0, high_reject = 3.0'>
   <DD>Lower and upper residual rejection in terms of the RMS of the fit.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_grow">grow = 0</A></B></DT>
+  <DT><B>grow = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='grow' Line='grow = 0'>
   <DD>Distance from a rejected point in which additional points are automatically
   rejected regardless of their residuals.
@@ -223,7 +212,7 @@ identify — Identify features in spectrum for dispersion solution
   <P>
   The following parameters control the input and output.
   <DL>
-  <DT><B><A NAME="l_autowrite">autowrite = no</A></B></DT>
+  <DT><B>autowrite = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='autowrite' Line='autowrite = no'>
   <DD>Automatically write or update the database?  If "<TT>no</TT>" then when exiting the
   program a query is given if the feature data and fit have been modified.
@@ -233,14 +222,14 @@ identify — Identify features in spectrum for dispersion solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_graphics">graphics = "<TT>stdgraph</TT>"</A></B></DT>
+  <DT><B>graphics = "<TT>stdgraph</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"'>
   <DD>Graphics device.  The default is the standard graphics device which is
   generally a graphics terminal.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cursor">cursor = "<TT></TT>"</A></B></DT>
+  <DT><B>cursor = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""'>
   <DD>Cursor input file.  If a cursor file is not given then the standard graphics
   cursor is read.
@@ -249,7 +238,7 @@ identify — Identify features in spectrum for dispersion solution
   <P>
   The following parameters are queried when the <TT>'b'</TT> key is used.
   <DL>
-  <DT><B><A NAME="l_crval">crval, cdelt</A></B></DT>
+  <DT><B>crval, cdelt</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='crval' Line='crval, cdelt'>
   <DD>These parameters specify an approximate coordinate value and coordinate
   interval per pixel when the automatic line identification
@@ -264,7 +253,7 @@ identify — Identify features in spectrum for dispersion solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_aidpars">aidpars = "<TT></TT>" (parameter set)</A></B></DT>
+  <DT><B>aidpars = "<TT></TT>" (parameter set)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='aidpars' Line='aidpars = "" (parameter set)'>
   <DD>This parameter points to a parameter set for the automatic line
   identification algorithm.  See <I>aidpars</I> for further information.
@@ -272,58 +261,58 @@ identify — Identify features in spectrum for dispersion solution
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_cursor_keys">CURSOR KEYS</A></H2>
+  <H3>Cursor keys</H3>
   <! BeginSection: 'CURSOR KEYS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_">?</A></B></DT>
+  <DT><B>?</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='' Line='?'>
   <DD>Clear the screen and print a menu of options.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_a">a</A></B></DT>
+  <DT><B>a</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='a' Line='a'>
   <DD>Apply next (c)enter or (d)elete operation to (a)ll features
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_b">b</A></B></DT>
+  <DT><B>b</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='b' Line='b'>
   <DD>Identify features and find a dispersion function automatically using
   the coordinate line list and approximate values for the dispersion.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_c">c</A></B></DT>
+  <DT><B>c</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='c' Line='c'>
   <DD>(C)enter the feature nearest the cursor.  Used when changing the position
   finding parameters or when features are defined from a previous feature list.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_d">d</A></B></DT>
+  <DT><B>d</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='d' Line='d'>
   <DD>(D)elete the feature nearest the cursor.  (D)elete all features when preceded
   by the (a)ll key.  This does not affect the dispersion function.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_e">e</A></B></DT>
+  <DT><B>e</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='e' Line='e'>
   <DD>Find features from a coordinate list without doing any fitting.  This is
   like the <TT>'l'</TT> key without any fitting.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_f">f</A></B></DT>
+  <DT><B>f</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='f' Line='f'>
   <DD>(F)it a function of the pixel coordinates to the user coordinates.  This enters
   the interactive function fitting package.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_g">g</A></B></DT>
+  <DT><B>g</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='g' Line='g'>
   <DD>Fit a zero point shift to the user coordinates by minimizing the difference
   between the user and fitted coordinates.  The coordinate function is
@@ -331,25 +320,25 @@ identify — Identify features in spectrum for dispersion solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_i">i</A></B></DT>
+  <DT><B>i</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='i' Line='i'>
   <DD>(I)nitialize (delete features and coordinate fit).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_j">j</A></B></DT>
+  <DT><B>j</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='j' Line='j'>
   <DD>Go to the preceding line, column, or band in a 2D/3D or multispec image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_k">k</A></B></DT>
+  <DT><B>k</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='k' Line='k'>
   <DD>Go to the next line, column, or band in a 2D/3D or multispec image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_l">l</A></B></DT>
+  <DT><B>l</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='l' Line='l'>
   <DD>(L)ocate features in the coordinate list.  A coordinate function must be
   defined or at least two features must have user coordinates from which a
@@ -359,45 +348,45 @@ identify — Identify features in spectrum for dispersion solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_m">m</A></B></DT>
+  <DT><B>m</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='m' Line='m'>
   <DD>(M)ark a new feature using the cursor position as the initial position
   estimate.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_n">n</A></B></DT>
+  <DT><B>n</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='n' Line='n'>
   <DD>Move the cursor or zoom window to the (n)ext feature (same as +).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_o">o</A></B></DT>
+  <DT><B>o</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='o' Line='o'>
   <DD>Go to the specified line, column, or band in a 2D/3D or multispec image.
   For 3D images two numbers are specified.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_p">p</A></B></DT>
+  <DT><B>p</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='p' Line='p'>
   <DD>(P)an to the original window after (z)ooming on a feature.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_q">q</A></B></DT>
+  <DT><B>q</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='q' Line='q'>
   <DD>(Q)uit and continue with next image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_r">r</A></B></DT>
+  <DT><B>r</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='r' Line='r'>
   <DD>(R)edraw the graph.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_s">s</A></B></DT>
+  <DT><B>s</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='s' Line='s'>
   <DD>(S)hift the fit coordinates relative to the pixel coordinates.  The
   user specifies the desired fit coordinate at the position of the cursor
@@ -407,28 +396,28 @@ identify — Identify features in spectrum for dispersion solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_t">t</A></B></DT>
+  <DT><B>t</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='t' Line='t'>
   <DD>Reset the current feature to the position of the cursor.  The feature
   is <I>not</I> recentered.  This is used to mark an arbitrary position.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_u">u</A></B></DT>
+  <DT><B>u</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='u' Line='u'>
   <DD>Enter a new (u)ser coordinate for the current feature.
   When (m)arking a new feature the user coordinate is also requested.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_v">v</A></B></DT>
+  <DT><B>v</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='v' Line='v'>
   <DD>Modify the fitting weight of the current feature.  The weights are
   integers with the lowest weight being the default of 1.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_w">w</A></B></DT>
+  <DT><B>w</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='w' Line='w'>
   <DD>(W)indow the graph.  A window prompt is given and a number of windowing
   options may be given.  For more help type <TT>'?'</TT> to the window prompt or
@@ -436,7 +425,7 @@ identify — Identify features in spectrum for dispersion solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_x">x</A></B></DT>
+  <DT><B>x</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='x' Line='x'>
   <DD>Find a zero point shift for the current dispersion function.  This is used
   by starting with the dispersion solution and features from a different
@@ -445,7 +434,7 @@ identify — Identify features in spectrum for dispersion solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_y">y</A></B></DT>
+  <DT><B>y</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='y' Line='y'>
   <DD>Up to <I>maxfeatures</I> emission peaks are found automatically (in order of
   peak intensity) and, if a dispersion solution is defined, the peaks are
@@ -453,26 +442,26 @@ identify — Identify features in spectrum for dispersion solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_z">z</A></B></DT>
+  <DT><B>z</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='z' Line='z'>
   <DD>(Z)oom on the feature nearest the cursor.  The width of the zoom window
   is determined by the parameter <I>zwidth</I>.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">.</A></B></DT>
+  <DT><B>.</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='' Line='.'>
   <DD>Move the cursor or zoom window to the feature nearest the cursor.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">+</A></B></DT>
+  <DT><B>+</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='' Line='+'>
   <DD>Move the cursor or zoom window to the (n)ext feature.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-</A></B></DT>
+  <DT><B>-</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='' Line='-'>
   <DD>Move the cursor or zoom window to the previous feature.
   </DD>
@@ -482,7 +471,7 @@ identify — Identify features in spectrum for dispersion solution
   abbreviated.  To show the value of a parameter type the parameter name alone
   and to set a new value follow the parameter name by the value.
   <DL>
-  <DT><B><A NAME="l_">:show file</A></B></DT>
+  <DT><B>:show file</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='' Line=':show file'>
   <DD>Show the values of all the parameters.  If a file name is given then the
   output is appended to that file.  If no file is given then the terminal
@@ -490,7 +479,7 @@ identify — Identify features in spectrum for dispersion solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:features file</A></B></DT>
+  <DT><B>:features file</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='' Line=':features file'>
   <DD>Print the feature list and the fit rms.  If a file name is given then the
   output is appended to that file.  If no file is given then the terminal
@@ -498,49 +487,49 @@ identify — Identify features in spectrum for dispersion solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:coordlist file</A></B></DT>
+  <DT><B>:coordlist file</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='' Line=':coordlist file'>
   <DD>Set or show the coordinate list file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:cradius value</A></B></DT>
+  <DT><B>:cradius value</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='' Line=':cradius value'>
   <DD>Set or show the centering radius in pixels.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:threshold value</A></B></DT>
+  <DT><B>:threshold value</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='' Line=':threshold value'>
   <DD>Set or show the detection threshold for centering.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:database name</A></B></DT>
+  <DT><B>:database name</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='' Line=':database name'>
   <DD>Set or show the database for recording feature records.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:ftype value</A></B></DT>
+  <DT><B>:ftype value</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='' Line=':ftype value'>
   <DD>Set or show the feature type (emission or absorption).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:fwidth value</A></B></DT>
+  <DT><B>:fwidth value</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='' Line=':fwidth value'>
   <DD>Set or show the feature width in pixels.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:image imagename</A></B></DT>
+  <DT><B>:image imagename</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='' Line=':image imagename'>
   <DD>Set a new image or show the current image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:labels value</A></B></DT>
+  <DT><B>:labels value</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='' Line=':labels value'>
   <DD>Set or show the feature label type (none, index, pixel, coord, user, or both).
   None produces no labeling, index labels the features sequentially in order
@@ -551,25 +540,25 @@ identify — Identify features in spectrum for dispersion solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:match value</A></B></DT>
+  <DT><B>:match value</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='' Line=':match value'>
   <DD>Set or show the coordinate list matching distance.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:maxfeatures value</A></B></DT>
+  <DT><B>:maxfeatures value</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='' Line=':maxfeatures value'>
   <DD>Set or show the maximum number of features automatically found.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:minsep value</A></B></DT>
+  <DT><B>:minsep value</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='' Line=':minsep value'>
   <DD>Set or show the minimum separation allowed between features.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:read name ap</A></B></DT>
+  <DT><B>:read name ap</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='' Line=':read name ap'>
   <DD>Read a record from the database.  The record name defaults to the image name
   and, for 1D spectra, the aperture number defaults to aperture of
@@ -577,7 +566,7 @@ identify — Identify features in spectrum for dispersion solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:write name ap</A></B></DT>
+  <DT><B>:write name ap</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='' Line=':write name ap'>
   <DD>Write a record to the database.  The record name defaults to the image name
   and, for 1D spectra, the aperture number defaults to aperture of
@@ -585,7 +574,7 @@ identify — Identify features in spectrum for dispersion solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:add name ap</A></B></DT>
+  <DT><B>:add name ap</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='' Line=':add name ap'>
   <DD>Add features from a database record.  The record name defaults to the image name
   and, for 1D spectra, the aperture number defaults to aperture of
@@ -594,20 +583,20 @@ identify — Identify features in spectrum for dispersion solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:zwidth value</A></B></DT>
+  <DT><B>:zwidth value</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='' Line=':zwidth value'>
   <DD>Set or show the zoom width in user units.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:/help</A></B></DT>
+  <DT><B>:/help</B></DT>
   <! Sec='CURSOR KEYS' Level=0 Label='' Line=':/help'>
   <DD>Print additional help for formatting graphs.  See help under "<TT>gtools</TT>".
   </DD>
   </DL>
   </UL>
   <! EndSection:   'CURSOR KEYS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Features in the input images are identified interactively and assigned
@@ -809,7 +798,7 @@ identify — Identify features in spectrum for dispersion solution
   the feature information and may leave the graphics in a confused state.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_database_records">DATABASE RECORDS</A></H2>
+  <H3>Database records</H3>
   <! BeginSection: 'DATABASE RECORDS'>
   <UL>
   The database specified by the parameter <I>database</I> is a directory of
@@ -943,7 +932,7 @@ identify — Identify features in spectrum for dispersion solution
   </PRE>
   </UL>
   <! EndSection:   'DATABASE RECORDS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  Because this task is interactive and has many possible applications
@@ -951,7 +940,7 @@ identify — Identify features in spectrum for dispersion solution
   are described.
   <P>
   <DL>
-  <DT><B><A NAME="l_o">o</A></B></DT>
+  <DT><B>o</B></DT>
   <! Sec='EXAMPLES' Level=0 Label='o' Line='o'>
   <DD>For defining distortions in the slit dimension as a function of
   wavelength the positions of objects are marked at some wavelength.
@@ -960,7 +949,7 @@ identify — Identify features in spectrum for dispersion solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_o">o</A></B></DT>
+  <DT><B>o</B></DT>
   <! Sec='EXAMPLES' Level=0 Label='o' Line='o'>
   <DD>For determining dispersion solutions in a one dimensional
   spectrum an arc calibration is used.  Three emission features are marked
@@ -973,7 +962,7 @@ identify — Identify features in spectrum for dispersion solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_o">o</A></B></DT>
+  <DT><B>o</B></DT>
   <! Sec='EXAMPLES' Level=0 Label='o' Line='o'>
   <DD>For determining a two or three dimensional coordinate transformation a
   dispersion solution is determined at one slit position in a long slit arc
@@ -1033,11 +1022,11 @@ identify — Identify features in spectrum for dispersion solution
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_IDENTIFY">IDENTIFY V2.11</A></B></DT>
+  <DT><B>IDENTIFY V2.11</B></DT>
   <! Sec='REVISIONS' Level=0 Label='IDENTIFY' Line='IDENTIFY V2.11'>
   <DD>The dispersion units are now determined from a user parameter,
   the coordinate list, or the database entry.
@@ -1059,7 +1048,7 @@ identify — Identify features in spectrum for dispersion solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_IDENTIFY">IDENTIFY V2.10.3</A></B></DT>
+  <DT><B>IDENTIFY V2.10.3</B></DT>
   <! Sec='REVISIONS' Level=0 Label='IDENTIFY' Line='IDENTIFY V2.10.3'>
   <DD>The section and nsum parameter syntax was extended to apply to 3D
   images.  The previous values and defaults may still be used.
@@ -1068,7 +1057,7 @@ identify — Identify features in spectrum for dispersion solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_IDENTIFY">IDENTIFY V2.10</A></B></DT>
+  <DT><B>IDENTIFY V2.10</B></DT>
   <! Sec='REVISIONS' Level=0 Label='IDENTIFY' Line='IDENTIFY V2.10'>
   <DD>The principle revision is to allow multiple aperture images and long slit
   spectra to be treated as a unit.  New keystrokes allow jumping or scrolling
@@ -1083,7 +1072,7 @@ identify — Identify features in spectrum for dispersion solution
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   autoidentify, reidentify, aidpars, center1d, linelists, fitcoords, icfit,
@@ -1093,5 +1082,3 @@ identify — Identify features in spectrum for dispersion solution
   
   <! Contents: 'NAME' 'SUMMARY' 'USAGE' 'PARAMETERS' 'CURSOR KEYS' 'DESCRIPTION' 'DATABASE RECORDS' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

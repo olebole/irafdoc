@@ -1,3 +1,5 @@
+.. _extinction:
+
 extinction — Apply atmospheric extinction corrections to images (obsolete)
 ==========================================================================
 
@@ -5,49 +7,36 @@ extinction — Apply atmospheric extinction corrections to images (obsolete)
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>extinction (May87)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.twodspec.longslit</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>extinction (May87)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>extinction</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   extinction -- Apply atmospheric extinction corrections
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   extinction images
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of input images to be extinction corrected.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>List of output extinction corrected images.  Output images may be the
   same as the input images.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_extinction">extinction = "<TT>onedstds$kpnoextinct.dat</TT>"</A></B></DT>
+  <DT><B>extinction = "<TT>onedstds$kpnoextinct.dat</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='extinction' Line='extinction = "onedstds$kpnoextinct.dat"'>
   <DD>Extinction file to be used.  The standard extinction files:
   <P>
@@ -59,7 +48,7 @@ extinction — Apply atmospheric extinction corrections to images (obsolete)
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The specified images are corrected for atmospheric extinction according
@@ -103,7 +92,7 @@ extinction — Apply atmospheric extinction corrections to images (obsolete)
   without requiring this keyword to be changed.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. A set of dispersion corrected images is extinction corrected in-place as
@@ -130,5 +119,3 @@ extinction — Apply atmospheric extinction corrections to images (obsolete)
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES'  >
   
-  </BODY>
-  </HTML>

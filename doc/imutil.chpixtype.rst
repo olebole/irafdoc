@@ -1,3 +1,5 @@
+.. _chpixtype:
+
 chpixtype — Change the pixel type of a list of images
 =====================================================
 
@@ -5,56 +7,43 @@ chpixtype — Change the pixel type of a list of images
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>chpixtype (Jun88)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>chpixtype (Jun88)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>chpixtype</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   chpixtype -- change the pixel type of an image
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   chpixtype input output newpixtype
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The list of input images.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>The list of output images. If the output image list is the same as the input
   image list then the original images are overwritten.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_newpixtype">newpixtype</A></B></DT>
+  <DT><B>newpixtype</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='newpixtype' Line='newpixtype'>
   <DD>The pixel type of the output image. The options are: "<TT>ushort</TT>", "<TT>short</TT>",
   "<TT>int</TT>", "<TT>long</TT>", "<TT>real</TT>", "<TT>double</TT>" and "<TT>complex</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_oldpixtype">oldpixtype = "<TT>all</TT>"</A></B></DT>
+  <DT><B>oldpixtype = "<TT>all</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='oldpixtype' Line='oldpixtype = "all"'>
   <DD>The pixel type of the input images to be converted. By default all the
   images in the input list are converted to the pixel type specified by
@@ -64,7 +53,7 @@ chpixtype — Change the pixel type of a list of images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print messages about actions performed.
   </DD>
@@ -72,7 +61,7 @@ chpixtype — Change the pixel type of a list of images
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -88,7 +77,7 @@ chpixtype — Change the pixel type of a list of images
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -103,17 +92,17 @@ chpixtype — Change the pixel type of a list of images
           im&gt; chpixtype @imlist1 @imlist2 real old=short
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imarith
@@ -122,5 +111,3 @@ chpixtype — Change the pixel type of a list of images
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

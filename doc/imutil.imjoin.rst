@@ -1,3 +1,5 @@
+.. _imjoin:
+
 imjoin — Join images along a given dimension
 ============================================
 
@@ -5,36 +7,23 @@ imjoin — Join images along a given dimension
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>imjoin (Jan97)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>imjoin (Jan97)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>imjoin</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   imjoin -- join images along a specified axis
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   imjoin input output join_dimension 
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The list of input images to be joined. The input images must have the
   same dimensionality and the same size along all dimensions but the join
@@ -42,19 +31,19 @@ imjoin — Join images along a given dimension
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>The output combined image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_join_dimension">join_dimension</A></B></DT>
+  <DT><B>join_dimension</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='join_dimension' Line='join_dimension'>
   <DD>The image dimension along which the input images will be joined.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pixtype">pixtype = "<TT></TT>"</A></B></DT>
+  <DT><B>pixtype = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pixtype' Line='pixtype = ""'>
   <DD>The output image pixel type. The options are in order of increasing
   precedence "<TT>s</TT>" (short), "<TT>u</TT>" (unsigned short), "<TT>i</TT>" (integer),
@@ -64,7 +53,7 @@ imjoin — Join images along a given dimension
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print messages about actions taken by the task ?
   </DD>
@@ -72,7 +61,7 @@ imjoin — Join images along a given dimension
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -87,7 +76,7 @@ imjoin — Join images along a given dimension
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -104,13 +93,13 @@ imjoin — Join images along a given dimension
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_timings">TIMINGS</A></H2>
+  <H3>Timings</H3>
   <! BeginSection: 'TIMINGS'>
   <UL>
   <P>
   </UL>
   <! EndSection:   'TIMINGS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   <P>
@@ -119,7 +108,7 @@ imjoin — Join images along a given dimension
   <P>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imstack, imslice, imtile
@@ -128,5 +117,3 @@ imjoin — Join images along a given dimension
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIMINGS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _rtextimage:
+
 rtextimage — Convert text files to IRAF images
 ==============================================
 
@@ -5,43 +7,30 @@ rtextimage — Convert text files to IRAF images
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>rtextimage (Oct93)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>dataio</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>rtextimage (Oct93)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>rtextimage</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   rtextimage -- convert a text file to an IRAF image
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   rtextimage input output
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>A list of text files containing image pixels and optional header.  Most likely
   the output from <I>rcardimage</I>, see examples below.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>The output IRAF image name.  If more than one text file is being
   read, the ordinal of the text file in <B>input</B> 
@@ -49,7 +38,7 @@ rtextimage — Convert text files to IRAF images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_otype">otype = "<TT></TT>"</A></B></DT>
+  <DT><B>otype = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='otype' Line='otype = ""'>
   <DD>The data type of the output IRAF image pixels.  If left unset and the IRAFTYPE
   keyword is found in the FITS header, output pixels will be of type IRAFTYPE.
@@ -59,28 +48,28 @@ rtextimage — Convert text files to IRAF images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_header">header = yes</A></B></DT>
+  <DT><B>header = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='header' Line='header = yes'>
   <DD>If <B>header</B> = yes, <I>rtextimage</I> will attempt to read a FITS
   header at the beginning of each text file.  
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pixels">pixels = yes</A></B></DT>
+  <DT><B>pixels = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pixels' Line='pixels = yes'>
   <DD>Read the pixel values from the input text file.  If no then the
   output image is initialized to zero pixel values.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nskip">nskip = 0</A></B></DT>
+  <DT><B>nskip = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nskip' Line='nskip = 0'>
   <DD>The number of lines to skip before reading pixels.  This is used to
   skip over a non-standard header and is important only when <B>header</B> = no.  
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dim">dim = "<TT></TT>"</A></B></DT>
+  <DT><B>dim = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dim' Line='dim = ""'>
   <DD>A string listing the dimension of each axis.  The number of dimensions listed
   equals the number of image dimensions.  This information must be entered unless
@@ -89,7 +78,7 @@ rtextimage — Convert text files to IRAF images
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Text files are converted to IRAF images files with procedure
@@ -104,7 +93,7 @@ rtextimage — Convert text files to IRAF images
   are the same.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Read a file written by <I>wtextimage</I> from the magtape file "<TT>mta[1]</TT>" into
@@ -125,21 +114,21 @@ rtextimage — Convert text files to IRAF images
       cl&gt; rcard mta[5] | rtext out=spect.1 head- nskip=5 dim=1024
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   Task <I>rtextimage</I> requires about 145 cpu seconds to write a 512 square
   image (integer or real) from a text file.  
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   The text file being read cannot have lines longer than SZ_LINE characters
   (see hlib$iraf.h).
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   rcardimage, wtextimage
@@ -148,5 +137,3 @@ rtextimage — Convert text files to IRAF images
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

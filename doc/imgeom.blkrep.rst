@@ -1,3 +1,5 @@
+.. _blkrep:
+
 blkrep — Block replicate a list of N-D images
 =============================================
 
@@ -5,26 +7,13 @@ blkrep — Block replicate a list of N-D images
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>blkrep (Sep86)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imgeom</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>blkrep (Sep86)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>blkrep</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   blkrep -- block replicate n-dimensional images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage_">USAGE	</A></H2>
+  <H3>Usage	</H3>
   <! BeginSection: 'USAGE	'>
   <UL>
   <PRE>
@@ -32,24 +21,24 @@ blkrep — Block replicate a list of N-D images
   </PRE>
   </UL>
   <! EndSection:   'USAGE	'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of images to be block replicated.  Image sections are allowed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>List of output image names.  If the output image name is the same as the input
   image name then the block replicated image replaces the input image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_b1">b1, b2, b3, b4, b5, b6, b7</A></B></DT>
+  <DT><B>b1, b2, b3, b4, b5, b6, b7</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='b1' Line='b1, b2, b3, b4, b5, b6, b7'>
   <DD>Block replication factor for dimensions 1 - 7.  Only the block factors for
   the dimensions of the input image are required.  Dimension 1 is the column
@@ -58,7 +47,7 @@ blkrep — Block replicate a list of N-D images
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The list of input images are block replicated by the specified factors
@@ -77,7 +66,7 @@ blkrep — Block replicate a list of N-D images
   can be replicated to higher dimensions.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_timings">TIMINGS</A></H2>
+  <H3>Timings</H3>
   <! BeginSection: 'TIMINGS'>
   <UL>
   VAX 11/750 with FPA running UNIX 4.3BSD and IRAF V2.4:
@@ -92,11 +81,11 @@ blkrep — Block replicate a list of N-D images
   </PRE>
   </UL>
   <! EndSection:   'TIMINGS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_1">1.</A></B></DT>
+  <DT><B>1.</B></DT>
   <! Sec='EXAMPLES' Level=0 Label='1' Line='1.'>
   <DD>To block replicate a 1D image in blocks of 3:
   <P>
@@ -104,7 +93,7 @@ blkrep — Block replicate a list of N-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_2">2.</A></B></DT>
+  <DT><B>2.</B></DT>
   <! Sec='EXAMPLES' Level=0 Label='2' Line='2.'>
   <DD>To block replicate a 2D image in blocks of 2 by 3:
   <P>
@@ -112,7 +101,7 @@ blkrep — Block replicate a list of N-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_3">3.</A></B></DT>
+  <DT><B>3.</B></DT>
   <! Sec='EXAMPLES' Level=0 Label='3' Line='3.'>
   <DD>To block replicate two 2D images in blocks of 5 by 5:
   <P>
@@ -120,7 +109,7 @@ blkrep — Block replicate a list of N-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_4">4.</A></B></DT>
+  <DT><B>4.</B></DT>
   <! Sec='EXAMPLES' Level=0 Label='4' Line='4.'>
   <DD>To block replicate a 3D image in place by factors of 2:
   <P>
@@ -128,7 +117,7 @@ blkrep — Block replicate a list of N-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_5">5.</A></B></DT>
+  <DT><B>5.</B></DT>
   <! Sec='EXAMPLES' Level=0 Label='5' Line='5.'>
   <DD>To smooth an image by block averaging and expanding by a factor of 2:
   <P>
@@ -139,7 +128,7 @@ blkrep — Block replicate a list of N-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_6">6.</A></B></DT>
+  <DT><B>6.</B></DT>
   <! Sec='EXAMPLES' Level=0 Label='6' Line='6.'>
   <DD>To take a 1D image and create a 2D image in which each line is the same:
   <P>
@@ -150,7 +139,7 @@ blkrep — Block replicate a list of N-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_7">7.</A></B></DT>
+  <DT><B>7.</B></DT>
   <! Sec='EXAMPLES' Level=0 Label='7' Line='7.'>
   <DD>To take a 1D image and create a 2D image in which each column is the same:
   <P>
@@ -164,7 +153,7 @@ blkrep — Block replicate a list of N-D images
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   blkavg, imstack, magnify
@@ -173,5 +162,3 @@ blkrep — Block replicate a list of N-D images
   
   <! Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'TIMINGS' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

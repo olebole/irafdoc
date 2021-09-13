@@ -1,3 +1,5 @@
+.. _ccget:
+
 ccget — Extract objects from a text file catalog
 ================================================
 
@@ -5,50 +7,37 @@ ccget — Extract objects from a text file catalog
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>ccget (Oct00)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imcoords</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>ccget (Oct00)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>ccget</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   ccget -- extract objects in a user specified field from a text file catalog
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   ccget input output lngcenter latcenter lngwidth latwidth
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The input text file catalog(s). The text file columns must be
   delimited by whitespace and all the input catalogs must have the same format.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>The output catalogs containing the extracted objects. The number of
   output catalogs must be one or equal to the number of input catalogs.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lngcenter">lngcenter, latcenter</A></B></DT>
+  <DT><B>lngcenter, latcenter</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lngcenter' Line='lngcenter, latcenter'>
   <DD>The center of the field containing the objects to be extracted. Lngcenter and
   latcenter are assumed to be in the coordinate system specified by
@@ -58,13 +47,13 @@ ccget — Extract objects from a text file catalog
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lngwidth">lngwidth, latwidth</A></B></DT>
+  <DT><B>lngwidth, latwidth</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lngwidth' Line='lngwidth, latwidth'>
   <DD>The width of the user specified field in degrees.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fcsystem">fcsystem = "<TT></TT>"</A></B></DT>
+  <DT><B>fcsystem = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fcsystem' Line='fcsystem = ""'>
   <DD>The celestial coordinate system of the field center. If undefined fcsystem
   defaults to the catalog celestial coordinate system specified by
@@ -72,7 +61,7 @@ ccget — Extract objects from a text file catalog
   most interest to users are "<TT>j2000</TT>" and "<TT>b1950</TT>". The full set of options is:
   <P>
   <DL>
-  <DT><B><A NAME="l_equinox">equinox [epoch]</A></B></DT>
+  <DT><B>equinox [epoch]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='equinox' Line='equinox [epoch]'>
   <DD>The equatorial mean place post-IAU 1976 (FK5) system if equinox is a
   Julian epoch, e.g. J2000.0 or 2000.0, or the equatorial mean place
@@ -89,7 +78,7 @@ ccget — Extract objects from a text file catalog
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fk5">fk5 [equinox] [epoch]</A></B></DT>
+  <DT><B>fk5 [equinox] [epoch]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='fk5' Line='fk5 [equinox] [epoch]'>
   <DD>The equatorial mean place post-IAU 1976 (FK5) system where equinox is
   a Julian or Besselian epoch e.g. J2000.0  or B1980.0.
@@ -103,7 +92,7 @@ ccget — Extract objects from a text file catalog
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fk4">fk4 [equinox] [epoch]</A></B></DT>
+  <DT><B>fk4 [equinox] [epoch]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='fk4' Line='fk4 [equinox] [epoch]'>
   <DD>The equatorial mean place pre-IAU 1976 (FK4) system where equinox is a
   Besselian or Julian epoch e.g. B1950.0  or J2000.0,
@@ -119,7 +108,7 @@ ccget — Extract objects from a text file catalog
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_noefk4">noefk4 [equinox] [epoch]</A></B></DT>
+  <DT><B>noefk4 [equinox] [epoch]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='noefk4' Line='noefk4 [equinox] [epoch]'>
   <DD>The equatorial mean place pre-IAU 1976 (FK4) system but without the E-terms
   where equinox is a Besselian or Julian epoch e.g. B1950.0 or J2000.0,
@@ -135,7 +124,7 @@ ccget — Extract objects from a text file catalog
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apparent">apparent epoch</A></B></DT>
+  <DT><B>apparent epoch</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='apparent' Line='apparent epoch'>
   <DD>The equatorial geocentric apparent place post-IAU 1976 system where
   epoch is the epoch of observation.
@@ -148,7 +137,7 @@ ccget — Extract objects from a text file catalog
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ecliptic">ecliptic epoch</A></B></DT>
+  <DT><B>ecliptic epoch</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='ecliptic' Line='ecliptic epoch'>
   <DD>The ecliptic coordinate system where epoch is the epoch of observation.
   Epoch is a Besselian epoch, a Julian epoch, or a Julian date.
@@ -160,7 +149,7 @@ ccget — Extract objects from a text file catalog
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_galactic">galactic [epoch]</A></B></DT>
+  <DT><B>galactic [epoch]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='galactic' Line='galactic [epoch]'>
   <DD>The IAU 1958 galactic coordinate system.
   Epoch is a Besselian epoch, a Julian epoch or a Julian date.
@@ -172,7 +161,7 @@ ccget — Extract objects from a text file catalog
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_supergalactic">supergalactic [epoch]</A></B></DT>
+  <DT><B>supergalactic [epoch]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='supergalactic' Line='supergalactic [epoch]'>
   <DD>The deVaucouleurs supergalactic coordinate system.
   Epoch is a Besselian epoch, a Julian epoch or a Julian date.
@@ -194,7 +183,7 @@ ccget — Extract objects from a text file catalog
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_fclngunits">fclngunits = "<TT></TT>", fclatunits = "<TT></TT>"</A></B></DT>
+  <DT><B>fclngunits = "<TT></TT>", fclatunits = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fclngunits' Line='fclngunits = "", fclatunits = ""'>
   <DD>The units of the field center coordinates. The options are "<TT>hours</TT>", "<TT>degrees</TT>",
   and "<TT>radians</TT>" for the ra / longitude coordinate and "<TT>degrees</TT>" and "<TT>radians</TT>"
@@ -205,7 +194,7 @@ ccget — Extract objects from a text file catalog
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_colaliases">colaliases = </TT>""<TT></A></B></DT>
+  <DT><B>colaliases = </TT>""<TT></B></DT>
   <! Sec='PARAMETERS' Level=0 Label='colaliases' Line='colaliases = ""'>
   <DD>The list of input catalog column aliases separated by commas. By default the
   catalog columns are </TT>"c1"<TT>, </TT>"c2"<TT>, </TT>"c10"<TT>, etc. If colaliases is defined then
@@ -216,13 +205,13 @@ ccget — Extract objects from a text file catalog
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lngcolumn">lngcolumn = </TT>"c2"<TT>, latcolumn = </TT>"c3"<TT></A></B></DT>
+  <DT><B>lngcolumn = </TT>"c2"<TT>, latcolumn = </TT>"c3"<TT></B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lngcolumn' Line='lngcolumn = "c2", latcolumn = "c3"'>
   <DD>The input catalog columns containing the coordinates of catalog objects.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_catsystem">catsystem = </TT>"j2000"<TT></A></B></DT>
+  <DT><B>catsystem = </TT>"j2000"<TT></B></DT>
   <! Sec='PARAMETERS' Level=0 Label='catsystem' Line='catsystem = "j2000"'>
   <DD>The celestial coordinate system of the input catalog(s). The two systems of
   most interest to users are </TT>"j2000"<TT> and </TT>"b1950"<TT>. The full set of options is
@@ -230,7 +219,7 @@ ccget — Extract objects from a text file catalog
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_catlngunits">catlngunits = "<TT></TT>", catlatunits = "<TT></TT>"</A></B></DT>
+  <DT><B>catlngunits = "<TT></TT>", catlatunits = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='catlngunits' Line='catlngunits = "", catlatunits = ""'>
   <DD>The units of the catalog coordinates. The options are "<TT>hours</TT>", "<TT>degrees</TT>",
   and "<TT>radians</TT>" for the ra / longitude coordinate and "<TT>degrees</TT>" and "<TT>radians</TT>"
@@ -241,7 +230,7 @@ ccget — Extract objects from a text file catalog
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_outsystem">outsystem = </TT>""<TT></A></B></DT>
+  <DT><B>outsystem = </TT>""<TT></B></DT>
   <! Sec='PARAMETERS' Level=0 Label='outsystem' Line='outsystem = ""'>
   <DD>The celestial coordinate system of the output coordinates. If undefined
   outsystem defaults to the celestial coordinate system of the catalog.
@@ -251,7 +240,7 @@ ccget — Extract objects from a text file catalog
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_olngunits">olngunits = "<TT></TT>", olatunits = "<TT></TT>"</A></B></DT>
+  <DT><B>olngunits = "<TT></TT>", olatunits = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='olngunits' Line='olngunits = "", olatunits = ""'>
   <DD>The units of the output coordinates. The options are "<TT>hours</TT>", "<TT>degrees</TT>",
   and "<TT>radians</TT>" for the ra / longitude coordinate and "<TT>degrees</TT>" and "<TT>radians</TT>"
@@ -262,7 +251,7 @@ ccget — Extract objects from a text file catalog
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_olngformat">olngformat = </TT>""<TT>, olatformat=</TT>""<TT></A></B></DT>
+  <DT><B>olngformat = </TT>""<TT>, olatformat=</TT>""<TT></B></DT>
   <! Sec='PARAMETERS' Level=0 Label='olngformat' Line='olngformat = "", olatformat=""'>
   <DD>The output ra / longitude and dec / latitude formats if the output
   celestial coordinate system is different from the catalog celestial
@@ -271,7 +260,7 @@ ccget — Extract objects from a text file catalog
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_exprs">exprs = </TT>"c[*]"<TT></A></B></DT>
+  <DT><B>exprs = </TT>"c[*]"<TT></B></DT>
   <! Sec='PARAMETERS' Level=0 Label='exprs' Line='exprs = "c[*]"'>
   <DD>The list of output columns and column expressions separated by commas.
   By default the entire record for the extracted object is output exactly
@@ -282,7 +271,7 @@ ccget — Extract objects from a text file catalog
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_formats">formats = </TT>""<TT></A></B></DT>
+  <DT><B>formats = </TT>""<TT></B></DT>
   <! Sec='PARAMETERS' Level=0 Label='formats' Line='formats = ""'>
   <DD>An optional list of column formats separated by commas. Column formats must
   be placeholders, e.g. the letter f for existing columns which are not
@@ -293,7 +282,7 @@ ccget — Extract objects from a text file catalog
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print messages on the standard output about actions taken by the task.
   </DD>
@@ -301,7 +290,7 @@ ccget — Extract objects from a text file catalog
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -350,7 +339,7 @@ ccget — Extract objects from a text file catalog
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_column_names">COLUMN NAMES</A></H2>
+  <H3>Column names</H3>
   <! BeginSection: 'COLUMN NAMES'>
   <UL>
   <P>
@@ -370,7 +359,7 @@ ccget — Extract objects from a text file catalog
   <P>
   </UL>
   <! EndSection:   'COLUMN NAMES'>
-  <H2><A NAME="s_column_expressions">COLUMN EXPRESSIONS</A></H2>
+  <H3>Column expressions</H3>
   <! BeginSection: 'COLUMN EXPRESSIONS'>
   <UL>
   <P>
@@ -406,7 +395,7 @@ ccget — Extract objects from a text file catalog
       
   </UL>
   <! EndSection:   'COLUMN EXPRESSIONS'>
-  <H2><A NAME="s_column_formats">COLUMN FORMATS</A></H2>
+  <H3>Column formats</H3>
   <! BeginSection: 'COLUMN FORMATS'>
   <UL>
   <P>
@@ -487,7 +476,7 @@ ccget — Extract objects from a text file catalog
   <P>
   </UL>
   <! EndSection:   'COLUMN FORMATS'>
-  <H2><A NAME="s_some_builtin_catalog_formats">SOME BUILTIN CATALOG FORMATS</A></H2>
+  <H3>Some builtin catalog formats</H3>
   <! BeginSection: 'SOME BUILTIN CATALOG FORMATS'>
   <UL>
   <P>
@@ -521,7 +510,7 @@ ccget — Extract objects from a text file catalog
   <P>
   </UL>
   <! EndSection:   'SOME BUILTIN CATALOG FORMATS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   <P>
@@ -533,7 +522,7 @@ ccget — Extract objects from a text file catalog
   <P>
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -575,17 +564,17 @@ ccget — Extract objects from a text file catalog
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   </UL>
@@ -593,5 +582,3 @@ ccget — Extract objects from a text file catalog
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'COLUMN NAMES' 'COLUMN EXPRESSIONS' 'COLUMN FORMATS' 'SOME BUILTIN CATALOG FORMATS' 'REFERENCES' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

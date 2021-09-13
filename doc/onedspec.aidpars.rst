@@ -1,3 +1,5 @@
+.. _aidpars:
+
 aidpars — Automatic line identification parameters and algorithm
 ================================================================
 
@@ -5,43 +7,30 @@ aidpars — Automatic line identification parameters and algorithm
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>aidpars (Jan04)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.onedspec</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>aidpars (Jan04)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>aidpars</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   aidpars -- Automatic line identification parameters and algorithm
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_summary">SUMMARY</A></H2>
+  <H3>Summary</H3>
   <! BeginSection: 'SUMMARY'>
   <UL>
   The automatic line identification parameters and algorithm used in
   <B>autoidentify</B>, <B>identify</B>, and <B>reidentify</B> are described.
   </UL>
   <! EndSection:   'SUMMARY'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   aidpars
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_reflist">reflist = "<TT></TT>"</A></B></DT>
+  <DT><B>reflist = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='reflist' Line='reflist = ""'>
   <DD>Optional reference coordinate list to use in the pattern matching algorithm
   in place of the task coordinate list.  This file is a simple text list of
@@ -50,7 +39,7 @@ aidpars — Automatic line identification parameters and algorithm
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_refspec">refspec = "<TT></TT>"</A></B></DT>
+  <DT><B>refspec = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='refspec' Line='refspec = ""'>
   <DD>Optional reference dispersion calibrated spectrum.  This template spectrum
   is used to select the prominent lines for the pattern matching algorithm.
@@ -59,7 +48,7 @@ aidpars — Automatic line identification parameters and algorithm
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_crpix">crpix = "<TT>INDEF</TT>"</A></B></DT>
+  <DT><B>crpix = "<TT>INDEF</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='crpix' Line='crpix = "INDEF"'>
   <DD>Coordinate reference pixel for the coordinate reference value specified by
   the <I>crval</I> parameter.  This may be specified as a pixel coordinate
@@ -70,7 +59,7 @@ aidpars — Automatic line identification parameters and algorithm
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_crquad">crquad = INDEF</A></B></DT>
+  <DT><B>crquad = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='crquad' Line='crquad = INDEF'>
   <DD>Quadratic correction to the detected pixel positions to "<TT>linearize</TT>" the
   pattern of line spacings.  The corrected positions x' are derived from
@@ -88,7 +77,7 @@ aidpars — Automatic line identification parameters and algorithm
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cddir">cddir = "<TT>sign</TT>" (unknown|sign|increasing|decreasing)</A></B></DT>
+  <DT><B>cddir = "<TT>sign</TT>" (unknown|sign|increasing|decreasing)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cddir' Line='cddir = "sign" (unknown|sign|increasing|decreasing)'>
   <DD>The sense of the dispersion increment with respect to the pixel coordinates
   in the input spectrum.  The possible values are "<TT>increasing</TT>" or
@@ -99,7 +88,7 @@ aidpars — Automatic line identification parameters and algorithm
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_crsearch">crsearch = "<TT>INDEF</TT>"</A></B></DT>
+  <DT><B>crsearch = "<TT>INDEF</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='crsearch' Line='crsearch = "INDEF"'>
   <DD>Coordinate reference value search radius.  The value may be specified
   as a numerical value or as an image header keyword (with or without
@@ -115,7 +104,7 @@ aidpars — Automatic line identification parameters and algorithm
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cdsearch">cdsearch = "<TT>INDEF</TT>"</A></B></DT>
+  <DT><B>cdsearch = "<TT>INDEF</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cdsearch' Line='cdsearch = "INDEF"'>
   <DD>Dispersion coordinate increment search radius.  The value may be specified
   as a numerical value or as an image header keyword (with or without
@@ -129,14 +118,14 @@ aidpars — Automatic line identification parameters and algorithm
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ntarget">ntarget = 100</A></B></DT>
+  <DT><B>ntarget = 100</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ntarget' Line='ntarget = 100'>
   <DD>Number of spectral lines from the target spectrum to use in the pattern
   matching.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_npattern">npattern = 5</A></B></DT>
+  <DT><B>npattern = 5</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='npattern' Line='npattern = 5'>
   <DD>Initial number of spectral lines in patterns to be matched.  There is a
   minimum of 3 and a maximum of 10.  The algorithm starts with the specified
@@ -148,14 +137,14 @@ aidpars — Automatic line identification parameters and algorithm
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nneighbors">nneighbors = 10</A></B></DT>
+  <DT><B>nneighbors = 10</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nneighbors' Line='nneighbors = 10'>
   <DD>Number of neighbors to use in making patterns of lines.  This parameter
   restricts patterns to include lines which are near each other.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nbins">nbins = 6</A></B></DT>
+  <DT><B>nbins = 6</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nbins' Line='nbins = 6'>
   <DD>Maximum number of bins to divide the reference coordinate list or spectrum
   in searching for a solution.  When there are no weak dispersion constraints
@@ -165,7 +154,7 @@ aidpars — Automatic line identification parameters and algorithm
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ndmax">ndmax = 1000</A></B></DT>
+  <DT><B>ndmax = 1000</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ndmax' Line='ndmax = 1000'>
   <DD>Maximum number of candidate dispersions to examine.  The algorithm ranks
   candidate dispersions by how many candidate spectral lines are fit and the
@@ -176,7 +165,7 @@ aidpars — Automatic line identification parameters and algorithm
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_aidord">aidord = 3 (minimum of 2)</A></B></DT>
+  <DT><B>aidord = 3 (minimum of 2)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='aidord' Line='aidord = 3 (minimum of 2)'>
   <DD>The order of the dispersion function fit by the automatic identification
   algorithm.  This is the number of polynomial coefficients so
@@ -187,7 +176,7 @@ aidpars — Automatic line identification parameters and algorithm
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_maxnl">maxnl = 0.02</A></B></DT>
+  <DT><B>maxnl = 0.02</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='maxnl' Line='maxnl = 0.02'>
   <DD>Maximum non-linearity allowed in any trial dispersion function.
   The definition of the non-linearity test is
@@ -203,14 +192,14 @@ aidpars — Automatic line identification parameters and algorithm
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nfound">nfound = 6</A></B></DT>
+  <DT><B>nfound = 6</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nfound' Line='nfound = 6'>
   <DD>Minimum number of identified spectral lines required in the final solution.
   If a candidate solution has fewer identified lines it is rejected.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sigma">sigma = 0.05</A></B></DT>
+  <DT><B>sigma = 0.05</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sigma' Line='sigma = 0.05'>
   <DD>Sigma (uncertainty) in the line center estimates specified in pixels.
   This is used to propagate uncertainties in the line spacings in
@@ -218,14 +207,14 @@ aidpars — Automatic line identification parameters and algorithm
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_minratio">minratio = 0.1</A></B></DT>
+  <DT><B>minratio = 0.1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='minratio' Line='minratio = 0.1'>
   <DD>Minimum spacing ratio used.  Patterns of lines in which the ratio of
   spacings between consecutive lines is less than this amount are excluded.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rms">rms = 0.1</A></B></DT>
+  <DT><B>rms = 0.1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rms' Line='rms = 0.1'>
   <DD>RMS goal for a correct dispersion solution.  This is the RMS in the
   measured spectral lines relative to the expected positions from the
@@ -237,7 +226,7 @@ aidpars — Automatic line identification parameters and algorithm
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fmatch">fmatch = 0.2</A></B></DT>
+  <DT><B>fmatch = 0.2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fmatch' Line='fmatch = 0.2'>
   <DD>Goal for the fraction of unidentified lines in a correct dispersion
   solution.  This is the fraction of the strong lines seen in the spectrum
@@ -247,7 +236,7 @@ aidpars — Automatic line identification parameters and algorithm
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_debug">debug = "<TT></TT>"</A></B></DT>
+  <DT><B>debug = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='debug' Line='debug = ""'>
   <DD>Print or display debugging information.  This is intended for the developer
   and not the user.  The parameter is specified as a string of characters
@@ -273,7 +262,7 @@ aidpars — Automatic line identification parameters and algorithm
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The <B>aidpars</B> parameter set contains the parameters for the automatic
@@ -607,7 +596,7 @@ aidpars — Automatic line identification parameters and algorithm
   report this appropriately.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. List the parameters.
@@ -640,11 +629,11 @@ aidpars — Automatic line identification parameters and algorithm
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_AIDPARS">AIDPARS V2.12.2</A></B></DT>
+  <DT><B>AIDPARS V2.12.2</B></DT>
   <! Sec='REVISIONS' Level=0 Label='AIDPARS' Line='AIDPARS V2.12.2'>
   <DD>There were many changes made in the paramters and algorithm.  New parameters
   are "<TT>crquad</TT>" and "<TT>maxnl</TT>".  Changed definitions are for "<TT>rms</TT>".  Default
@@ -656,14 +645,14 @@ aidpars — Automatic line identification parameters and algorithm
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_AIDPARS">AIDPARS V2.11</A></B></DT>
+  <DT><B>AIDPARS V2.11</B></DT>
   <! Sec='REVISIONS' Level=0 Label='AIDPARS' Line='AIDPARS V2.11'>
   <DD>This parameter set is new in this version.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   autoidentify, identify, reidentify, center1d
@@ -672,5 +661,3 @@ aidpars — Automatic line identification parameters and algorithm
   
   <! Contents: 'NAME' 'SUMMARY' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

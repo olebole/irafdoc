@@ -1,3 +1,5 @@
+.. _irmatch1d:
+
 irmatch1d — Align and intensity match image produced by irmosaic (1D)
 =====================================================================
 
@@ -5,36 +7,23 @@ irmatch1d — Align and intensity match image produced by irmosaic (1D)
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>irmatch1d (Jan90)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.nproto</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>irmatch1d (Jan90)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>irmatch1d</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   irmatch1d -- align and match the elements of the mosaiced image
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   irmatch1d input output database coords
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The mosaiced image to be aligned. This image must have been produced by
   the IRMOSAIC task and have an accompanying database file specified by
@@ -42,19 +31,19 @@ irmatch1d — Align and intensity match image produced by irmosaic (1D)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>The aligned image produced by IRMATCH1D.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_database">database</A></B></DT>
+  <DT><B>database</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='database' Line='database'>
   <DD>The database file from the IRMOSAIC task.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_coords">coords</A></B></DT>
+  <DT><B>coords</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='coords' Line='coords'>
   <DD>If <I>alignment</I> = "<TT>coords</TT>", then <B>coords</B> is
   a text file listing the coordinates of objects in the input
@@ -72,37 +61,37 @@ irmatch1d — Align and intensity match image produced by irmosaic (1D)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xshift">xshift</A></B></DT>
+  <DT><B>xshift</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xshift' Line='xshift'>
   <DD>The x shift in pixel units if <I>alignment</I> = "<TT>shifts</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_yshift">yshift</A></B></DT>
+  <DT><B>yshift</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='yshift' Line='yshift'>
   <DD>The y shift in pixel units if <I>alignment</I> = "<TT>shifts</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_alignment">alignment = "<TT>coords</TT>"</A></B></DT>
+  <DT><B>alignment = "<TT>coords</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='alignment' Line='alignment = "coords"'>
   <DD>The method of aligning the subraster.
   <DL>
-  <DT><B><A NAME="l_coords">coords</A></B></DT>
+  <DT><B>coords</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='coords' Line='coords'>
   <DD>The x and y positions of the marker points are listed in a file in the
   format specified by the <I>coords</I> parameter.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_shifts">shifts</A></B></DT>
+  <DT><B>shifts</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='shifts' Line='shifts'>
   <DD>The x and y shifts of a subraster with respect to its neighbour are
   set to <I>xshift</I> and <I>yshift</I>.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_file">file</A></B></DT>
+  <DT><B>file</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='file' Line='file'>
   <DD>The x,  y  and intensity shifts of each input subraster with respect to the
   reference subraster image.
@@ -111,7 +100,7 @@ irmatch1d — Align and intensity match image produced by irmosaic (1D)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_match">match = "<TT>*</TT>"</A></B></DT>
+  <DT><B>match = "<TT>*</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='match' Line='match = "*"'>
   <DD>Match intensities using the overlap region between adjacent subrasters. The
   median intensity is computed in the overlap region
@@ -125,14 +114,14 @@ irmatch1d — Align and intensity match image produced by irmosaic (1D)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nxrsub">nxrsub = INDEF, ls nyrsub = INDEF</A></B></DT>
+  <DT><B>nxrsub = INDEF, ls nyrsub = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nxrsub' Line='nxrsub = INDEF, ls nyrsub = INDEF'>
   <DD>The column and line index of the reference subraster.
   This will default to the central subraster.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xref">xref = 0, yref = 0</A></B></DT>
+  <DT><B>xref = 0, yref = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xref' Line='xref = 0, yref = 0'>
   <DD>The x and y offset of the position of the reference subraster in the
   output image. The default action is to place the reference subraster
@@ -140,7 +129,7 @@ irmatch1d — Align and intensity match image produced by irmosaic (1D)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_trimlimits">trimlimits = "<TT>[1:1,1:1]</TT>"</A></B></DT>
+  <DT><B>trimlimits = "<TT>[1:1,1:1]</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='trimlimits' Line='trimlimits = "[1:1,1:1]"'>
   <DD>The number of columns and rows to be trimmed off each edge of the
   input subraster before it is inserted in the output image in section
@@ -148,49 +137,49 @@ irmatch1d — Align and intensity match image produced by irmosaic (1D)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nimcols">nimcols = INDEF, ls nimlines = INDEF</A></B></DT>
+  <DT><B>nimcols = INDEF, ls nimlines = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nimcols' Line='nimcols = INDEF, ls nimlines = INDEF'>
   <DD>The number of columns and rows in the output image. The default is the
   number of columns and rows in the input image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_oval">oval = INDEF</A></B></DT>
+  <DT><B>oval = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='oval' Line='oval = INDEF'>
   <DD>The value of undefined pixels in the output image. The default is the value
   in the database file from IRMOSAIC.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interpolant">interpolant = linear</A></B></DT>
+  <DT><B>interpolant = linear</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interpolant' Line='interpolant = linear'>
   <DD>The type of interpolant used to shift the subrasters. The options are:
   <DL>
-  <DT><B><A NAME="l_nearest">nearest</A></B></DT>
+  <DT><B>nearest</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest'>
   <DD>Nearest neighbour interpolation.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_linear">linear</A></B></DT>
+  <DT><B>linear</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='linear' Line='linear'>
   <DD>Bilinear interpolation.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_poly3">poly3</A></B></DT>
+  <DT><B>poly3</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='poly3' Line='poly3'>
   <DD>Bicubic polynomial interpolation.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_poly5">poly5</A></B></DT>
+  <DT><B>poly5</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='poly5' Line='poly5'>
   <DD>Biquintic polynomial interpolation.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_spline3">spline3</A></B></DT>
+  <DT><B>spline3</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='spline3' Line='spline3'>
   <DD>Bicubic spline interpolation.
   </DD>
@@ -198,14 +187,14 @@ irmatch1d — Align and intensity match image produced by irmosaic (1D)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = no</A></B></DT>
+  <DT><B>verbose = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
   <DD>Print messages on the terminal describing the progress of the task.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   IRMATCH1D takes the mosaiced image <I>input</I>, the database file <I>database</I>
@@ -255,7 +244,7 @@ irmatch1d — Align and intensity match image produced by irmosaic (1D)
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -304,17 +293,17 @@ irmatch1d — Align and intensity match image produced by irmosaic (1D)
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   irmosaic, iralign, irmatch2d, apphot.center, apphot.apselect
@@ -323,5 +312,3 @@ irmatch1d — Align and intensity match image produced by irmosaic (1D)
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

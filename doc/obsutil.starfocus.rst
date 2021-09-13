@@ -1,3 +1,5 @@
+.. _starfocus:
+
 starfocus — Determine direct focus variations from stellar images
 =================================================================
 
@@ -5,36 +7,23 @@ starfocus — Determine direct focus variations from stellar images
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>starfocus (Nov01)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.obsutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>starfocus (Nov01)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>starfocus</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   starfocus -- Measure focus variations using stellar images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   starfocus images
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>List of images.  The images may be either taken at a sequence
   of focus values or be multiple shifted exposures at a sequence of
@@ -42,7 +31,7 @@ starfocus — Determine direct focus variations from stellar images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_focus">focus = "<TT>1x1</TT>"</A></B></DT>
+  <DT><B>focus = "<TT>1x1</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='focus' Line='focus = "1x1"'>
   <DD>If the parameter <I>fstep</I> is not set (a "<TT></TT>" null string) then this
   parameter is interpreted as either a list of focus values or an
@@ -58,14 +47,14 @@ starfocus — Determine direct focus variations from stellar images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fstep">fstep = "<TT></TT>"</A></B></DT>
+  <DT><B>fstep = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fstep' Line='fstep = ""'>
   <DD>A focus increment value or an image header keyword to the focus increment.
   </DD>
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_nexposures">nexposures = "<TT>1</TT>"</A></B></DT>
+  <DT><B>nexposures = "<TT>1</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nexposures' Line='nexposures = "1"'>
   <DD>The number of exposures per image specified either as a value or as
   an image header keyword.  A double step gap in a multiple
@@ -73,14 +62,14 @@ starfocus — Determine direct focus variations from stellar images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_step">step = "<TT>30.</TT>"</A></B></DT>
+  <DT><B>step = "<TT>30.</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='step' Line='step = "30."'>
   <DD>The step in pixels between exposures specified either as a value or
   as an image header keyword.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_direction">direction = "<TT>-line</TT>" (-line|+line|-column|+column)</A></B></DT>
+  <DT><B>direction = "<TT>-line</TT>" (-line|+line|-column|+column)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='direction' Line='direction = "-line" (-line|+line|-column|+column)'>
   <DD>The direction of the exposure sequence in the image.  The values are
   "<TT>-line</TT>" for successive object images appearing at smaller line numbers,
@@ -90,7 +79,7 @@ starfocus — Determine direct focus variations from stellar images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_gap">gap = "<TT>end</TT>" (none|beginning|end)</A></B></DT>
+  <DT><B>gap = "<TT>end</TT>" (none|beginning|end)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='gap' Line='gap = "end" (none|beginning|end)'>
   <DD>Location of a double step gap in a sequence with the specified direction.
   The available cases are "<TT>none</TT>" for an even sequence with no gap,
@@ -102,7 +91,7 @@ starfocus — Determine direct focus variations from stellar images
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_coords">coords = "<TT>mark1</TT>" (center|mark1|markall)</A></B></DT>
+  <DT><B>coords = "<TT>mark1</TT>" (center|mark1|markall)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='coords' Line='coords = "mark1" (center|mark1|markall)'>
   <DD>Method by which the coordinates of objects to be measured are specified.
   If "<TT>center</TT>" then a single object at the center of each image is measured.
@@ -115,7 +104,7 @@ starfocus — Determine direct focus variations from stellar images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wcs">wcs = "<TT>logical</TT>" (logical|physical|world)</A></B></DT>
+  <DT><B>wcs = "<TT>logical</TT>" (logical|physical|world)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wcs' Line='wcs = "logical" (logical|physical|world)'>
   <DD>Coordinate system for input coordinates.  When using image cursor input
   this will always be "<TT>logical</TT>".  When using cursor input from a file this
@@ -123,7 +112,7 @@ starfocus — Determine direct focus variations from stellar images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_display">display = yes, frame = 1</A></B></DT>
+  <DT><B>display = yes, frame = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='display' Line='display = yes, frame = 1'>
   <DD>Display the image or images as needed?  If yes the image display is checked
   to see if the image is already in one of the display frames.  If it is not
@@ -137,7 +126,7 @@ starfocus — Determine direct focus variations from stellar images
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_level">level = 0.5</A></B></DT>
+  <DT><B>level = 0.5</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='level' Line='level = 0.5'>
   <DD>The parameter used to quantify an object image size is the radius from the
   image center enclosing the fraction of the total flux given by this
@@ -145,7 +134,7 @@ starfocus — Determine direct focus variations from stellar images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_size">size = "<TT>FWHM</TT>" (Radius|FWHM|GFWHM|MFWHM)</A></B></DT>
+  <DT><B>size = "<TT>FWHM</TT>" (Radius|FWHM|GFWHM|MFWHM)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='size' Line='size = "FWHM" (Radius|FWHM|GFWHM|MFWHM)'>
   <DD>There are four ways the PSF size may be shown in graphs and given in
   the output.  These are:
@@ -162,7 +151,7 @@ starfocus — Determine direct focus variations from stellar images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_beta">beta = INDEF</A></B></DT>
+  <DT><B>beta = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='beta' Line='beta = INDEF'>
   <DD>For the Moffat profile fit (size = MFWHM) the exponent parameter may
   be fixed at a specified value or left free to be determined from the
@@ -171,14 +160,14 @@ starfocus — Determine direct focus variations from stellar images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_scale">scale = 1.</A></B></DT>
+  <DT><B>scale = 1.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='scale' Line='scale = 1.'>
   <DD>Pixel scale in user units per pixel.  Usually the value is 1 to measure
   sizes in pixels or the image pixel scale in arc seconds per pixel.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_radius">radius = 5., iterations = 2</A></B></DT>
+  <DT><B>radius = 5., iterations = 2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='radius' Line='radius = 5., iterations = 2'>
   <DD>Measurement radius in pixels and number of iterations on the radius.  The
   enclosed flux profile is measured out to this radius.  This radius may be
@@ -191,7 +180,7 @@ starfocus — Determine direct focus variations from stellar images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sbuffer">sbuffer = 5, swidth = 5.</A></B></DT>
+  <DT><B>sbuffer = 5, swidth = 5.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sbuffer' Line='sbuffer = 5, swidth = 5.'>
   <DD>Sky buffer and sky width in pixels.  The buffer is added to the specified
   measurement <I>radius</I> to define the inner radius for a circular sky
@@ -199,7 +188,7 @@ starfocus — Determine direct focus variations from stellar images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_saturation">saturation=INDEF, ignore_sat=no</A></B></DT>
+  <DT><B>saturation=INDEF, ignore_sat=no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='saturation' Line='saturation=INDEF, ignore_sat=no'>
   <DD>Data values (prior to sky subtraction) to be considered saturated within
   measurement radius.  A value of INDEF treats all pixels as unsaturated.  If
@@ -212,7 +201,7 @@ starfocus — Determine direct focus variations from stellar images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xcenter">xcenter = INDEF, ycenter = INDEF</A></B></DT>
+  <DT><B>xcenter = INDEF, ycenter = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xcenter' Line='xcenter = INDEF, ycenter = INDEF'>
   <DD>The optical field center of the image given in image pixel coordinates.
   These values need not lie in the image.  If INDEF the center of the image
@@ -221,7 +210,7 @@ starfocus — Determine direct focus variations from stellar images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_logfile">logfile = "<TT>logfile</TT>"</A></B></DT>
+  <DT><B>logfile = "<TT>logfile</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "logfile"'>
   <DD>File in which to record the final results.  If no log file is desired a
   null string may be specified.
@@ -229,7 +218,7 @@ starfocus — Determine direct focus variations from stellar images
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_imagecur">imagecur = "<TT></TT>"</A></B></DT>
+  <DT><B>imagecur = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='imagecur' Line='imagecur = ""'>
   <DD>Image cursor input for the "<TT>mark1</TT>" and "<TT>markall</TT>" options.  If null then the
   image dispaly cursor is used interactively.  If a file name is specified
@@ -240,7 +229,7 @@ starfocus — Determine direct focus variations from stellar images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_graphcur">graphcur = "<TT></TT>"</A></B></DT>
+  <DT><B>graphcur = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='graphcur' Line='graphcur = ""'>
   <DD>Graphics cursor input.  If null then the standard graphics cursor
   is used otherwise a standard cursor format file may be specified.
@@ -248,7 +237,7 @@ starfocus — Determine direct focus variations from stellar images
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_cursor_commands">CURSOR COMMANDS</A></H2>
+  <H3>Cursor commands</H3>
   <! BeginSection: 'CURSOR COMMANDS'>
   <UL>
   When selecting objects with the image cursor the following commands are
@@ -305,7 +294,7 @@ starfocus — Determine direct focus variations from stellar images
   </PRE>
   </UL>
   <! EndSection:   'CURSOR COMMANDS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task measures the point-spread function (PSF) width of stars or other
@@ -452,7 +441,7 @@ starfocus — Determine direct focus variations from stellar images
   an indication of saturation.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_algorithms">ALGORITHMS</A></H2>
+  <H3>Algorithms</H3>
   <! BeginSection: 'ALGORITHMS'>
   <UL>
   The PSF of an object is characterized using a radially symmetric
@@ -675,7 +664,7 @@ starfocus — Determine direct focus variations from stellar images
   average flux of each star at that focus.
   </UL>
   <! EndSection:   'ALGORITHMS'>
-  <H2><A NAME="s_interactive_graphics_mode">INTERACTIVE GRAPHICS MODE</A></H2>
+  <H3>Interactive graphics mode</H3>
   <! BeginSection: 'INTERACTIVE GRAPHICS MODE'>
   <UL>
   The graphics part of <B>starfocus</B> consists of a number of different
@@ -877,7 +866,7 @@ starfocus — Determine direct focus variations from stellar images
   it may be decreased and then increased again.
   </UL>
   <! EndSection:   'INTERACTIVE GRAPHICS MODE'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  A multiple exposure frame is taken with 7 exposures of a bright
@@ -918,7 +907,7 @@ starfocus — Determine direct focus variations from stellar images
   one would use the more convenient <B>kpnofocus</B>.
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   <PRE>
@@ -929,5 +918,3 @@ starfocus — Determine direct focus variations from stellar images
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'CURSOR COMMANDS' 'DESCRIPTION' 'ALGORITHMS' 'INTERACTIVE GRAPHICS MODE' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

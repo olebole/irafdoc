@@ -1,3 +1,5 @@
+.. _rrcopy:
+
 rrcopy — Convert IPPS rasters from an RCOPY tape to IRAF images
 ===============================================================
 
@@ -5,49 +7,36 @@ rrcopy — Convert IPPS rasters from an RCOPY tape to IRAF images
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>rrcopy (Jun87)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.mtlocal</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>rrcopy (Jun87)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>rrcopy</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   rrcopy -- Convert IPPS rasters from RCOPY tapes to IRAF images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   rrcopy rcopy_file raster_list iraf_file
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_rcopy_file">rcopy_file</A></B></DT>
+  <DT><B>rcopy_file</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rcopy_file' Line='rcopy_file'>
   <DD>The RCOPY data source, i.e., the name of a magtape device or a RCOPY
   format disk file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_raster_list">raster_list</A></B></DT>
+  <DT><B>raster_list</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='raster_list' Line='raster_list'>
   <DD>A string listing the IPPS rasters to be read from the rcopy file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_iraf_file">iraf_file</A></B></DT>
+  <DT><B>iraf_file</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='iraf_file' Line='iraf_file'>
   <DD>The IRAF file which will receive the RCOPY data if the make_image parameter
   is set.  If more than one raster is being read, the output filenames
@@ -58,7 +47,7 @@ rrcopy — Convert IPPS rasters from an RCOPY tape to IRAF images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_make_image">make_image = yes</A></B></DT>
+  <DT><B>make_image = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='make_image' Line='make_image = yes'>
   <DD>This switch determines whether RCOPY image data is converted to an IRAF image
   file.  When this switch it set to no, only a listing is produced, no output
@@ -66,7 +55,7 @@ rrcopy — Convert IPPS rasters from an RCOPY tape to IRAF images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_print_header">print_header = yes</A></B></DT>
+  <DT><B>print_header = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='print_header' Line='print_header = yes'>
   <DD>This switch determines if the header information will be printed for those
   rasters in "<TT>raster_list</TT>".  (It might be appropriate to set print_header=no, or
@@ -74,7 +63,7 @@ rrcopy — Convert IPPS rasters from an RCOPY tape to IRAF images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_data_type">data_type = "<TT></TT>"</A></B></DT>
+  <DT><B>data_type = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='data_type' Line='data_type = ""'>
   <DD>The data type of the output IRAF image.  If an incorrect data_type or null 
   string is entered, the default data type used is
@@ -83,7 +72,7 @@ rrcopy — Convert IPPS rasters from an RCOPY tape to IRAF images
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   IPPS rasters stored on RCOPY tapes are read from the specified source.
@@ -93,7 +82,7 @@ rrcopy — Convert IPPS rasters from an RCOPY tape to IRAF images
   30-bit raster; 34 cpu seconds for a 320 x 512 20-bit raster.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -107,7 +96,7 @@ rrcopy — Convert IPPS rasters from an RCOPY tape to IRAF images
   	cl&gt; rrcopy mtb 1-5 ipps
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   The Cyber format readers, including <I>rrcopy</I>, have not been implemented
@@ -120,5 +109,3 @@ rrcopy — Convert IPPS rasters from an RCOPY tape to IRAF images
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _ridsmtn:
+
 ridsmtn — Convert mountain format IDS/IRS data to IRAF images
 =============================================================
 
@@ -5,42 +7,29 @@ ridsmtn — Convert mountain format IDS/IRS data to IRAF images
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>ridsmtn (Jun86)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.mtlocal</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>ridsmtn (Jun86)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>ridsmtn</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   ridsmtn -- convert mountain format IDS data to IRAF images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   ridsmtn ids_file iraf_file
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_ids_file">ids_file</A></B></DT>
+  <DT><B>ids_file</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ids_file' Line='ids_file'>
   <DD>The IDS data source.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_iraf_file">iraf_file</A></B></DT>
+  <DT><B>iraf_file</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='iraf_file' Line='iraf_file'>
   <DD>The IRAF file which will receive the data if the <I>make_image</I> parameter
   is set.  If multiple records are being read, the output
@@ -51,7 +40,7 @@ ridsmtn — Convert mountain format IDS/IRS data to IRAF images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_file_number">file_number = 1</A></B></DT>
+  <DT><B>file_number = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='file_number' Line='file_number = 1'>
   <DD>If <I>ids_file</I> is a tape device, this parameter tells which tape file
   will be read.  In almost all cases, the IDS data will occupy the first
@@ -59,20 +48,20 @@ ridsmtn — Convert mountain format IDS/IRS data to IRAF images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_record_numbers">record_numbers = "<TT>1-9999</TT>"</A></B></DT>
+  <DT><B>record_numbers = "<TT>1-9999</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='record_numbers' Line='record_numbers = "1-9999"'>
   <DD>A string listing the IDS records to be read.  
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_reduced_data">reduced_data = yes</A></B></DT>
+  <DT><B>reduced_data = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='reduced_data' Line='reduced_data = yes'>
   <DD>A boolean parameter which indicates the data is mountain reduced if set
   to yes, and that the data is raw (unreduced) if set to no.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_np1">np1 = 0</A></B></DT>
+  <DT><B>np1 = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='np1' Line='np1 = 0'>
   <DD>The starting pixel to extract in the image. If set to 0, the
   record header parameter NP1 will be used to determine the
@@ -83,7 +72,7 @@ ridsmtn — Convert mountain format IDS/IRS data to IRAF images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_np2">np2 = 0</A></B></DT>
+  <DT><B>np2 = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='np2' Line='np2 = 0'>
   <DD>The ending pixel to extract. If set to 0, the record
   header parameter NP2 will be used to determine the
@@ -91,7 +80,7 @@ ridsmtn — Convert mountain format IDS/IRS data to IRAF images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_make_image">make_image = yes</A></B></DT>
+  <DT><B>make_image = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='make_image' Line='make_image = yes'>
   <DD>This switch determines whether the IDS records are converted to IRAF images.
   When <I>make_image</I> = no, only a listing of the headers is produced, 
@@ -99,13 +88,13 @@ ridsmtn — Convert mountain format IDS/IRS data to IRAF images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_print_pixels">print_pixels = no</A></B></DT>
+  <DT><B>print_pixels = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='print_pixels' Line='print_pixels = no'>
   <DD>When this parameter is set to yes, the values of the ids pixels are printed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_long_header">long_header = no</A></B></DT>
+  <DT><B>long_header = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='long_header' Line='long_header = no'>
   <DD>This parameter determines whether a long or short header is printed.  The
   short header contains only the record number and ID string; the long header
@@ -115,14 +104,14 @@ ridsmtn — Convert mountain format IDS/IRS data to IRAF images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_data_type">data_type = "<TT>r</TT>"</A></B></DT>
+  <DT><B>data_type = "<TT>r</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='data_type' Line='data_type = "r"'>
   <DD>The data type of the output IRAF image.  If an incorrect data_type or null
   string is entered, the default data type <I>real</I> is used.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_offset">offset = 0</A></B></DT>
+  <DT><B>offset = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='offset' Line='offset = 0'>
   <DD>The integer value of this parameter is added to each IDS record number when
   generating output filenames.  Filenames are of the form 
@@ -136,7 +125,7 @@ ridsmtn — Convert mountain format IDS/IRS data to IRAF images
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The IDS records from either a raw or reduced IDS mountain tape are read and
@@ -156,7 +145,7 @@ ridsmtn — Convert mountain format IDS/IRS data to IRAF images
   IRAF image will be written.  In most cases, the dummy record number = 0.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   [1] Convert all records on the IDS tape to IRAF images, with the root image name
@@ -197,7 +186,7 @@ ridsmtn — Convert mountain format IDS/IRS data to IRAF images
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   ridsout, ridsfile
@@ -206,5 +195,3 @@ ridsmtn — Convert mountain format IDS/IRS data to IRAF images
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

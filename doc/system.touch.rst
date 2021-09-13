@@ -1,3 +1,5 @@
+.. _touch:
+
 touch — Change file access and modification times
 =================================================
 
@@ -5,63 +7,50 @@ touch — Change file access and modification times
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>touch (Jan04)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>system</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>touch (Jan04)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>touch</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   touch -- change file access and modification times
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   touch files
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_files">files</A></B></DT>
+  <DT><B>files</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='files' Line='files'>
   <DD>List of files to be created or touched.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_create">create = yes</A></B></DT>
+  <DT><B>create = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='create' Line='create = yes'>
   <DD>If enabled, the file will be created as a zero-length text file if it doesn't
   already exist.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_atime">atime = yes</A></B></DT>
+  <DT><B>atime = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='atime' Line='atime = yes'>
   <DD>Change the access time of the file.  Will not change the modification time
   unless <I>mtime</I> is also set.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_mtime">mtime = yes</A></B></DT>
+  <DT><B>mtime = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='mtime' Line='mtime = yes'>
   <DD>Change the modification time of the file.  Will not change the access time
   unless <I>atime</I> is also set.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_time">time = "<TT></TT>"</A></B></DT>
+  <DT><B>time = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='time' Line='time = ""'>
   <DD>Time and date to set for the file.  The format of this string may be any
   of DD/MM/YY or CCYY-MM-DD (in which case time is assumed to be midnight of
@@ -71,7 +60,7 @@ touch — Change file access and modification times
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ref_file">ref_file = "<TT></TT>"</A></B></DT>
+  <DT><B>ref_file = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ref_file' Line='ref_file = ""'>
   <DD>Use the corresponding times of the specified file for modifying the
   times of the <I>input_files</I>.  If not specified, the current time is
@@ -79,14 +68,14 @@ touch — Change file access and modification times
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = no</A></B></DT>
+  <DT><B>verbose = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
   <DD>Print verbose output of the files and times being reset.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The <I>touch</I> task sets the access and modification times of each file
@@ -99,7 +88,7 @@ touch — Change file access and modification times
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -121,7 +110,7 @@ touch — Change file access and modification times
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   </UL>
@@ -129,5 +118,3 @@ touch — Change file access and modification times
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

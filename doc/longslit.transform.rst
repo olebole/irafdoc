@@ -1,3 +1,5 @@
+.. _transform:
+
 transform — Transform longslit images to user coordinates
 =========================================================
 
@@ -5,49 +7,36 @@ transform — Transform longslit images to user coordinates
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>transform (Sep87)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.twodspec.longslit</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>transform (Sep87)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>transform</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   transform -- Transform longslit images to user coordinates
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   transform input output fitnames
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of input images to be transformed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>List of output images.  The number of output images in the list must
   match the number of input images.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_minput">minput = "<TT></TT>"</A></B></DT>
+  <DT><B>minput = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='minput' Line='minput = ""'>
   <DD>List of input masks or references.  This mask is used to create an output
   mask and is currently not used in the calculation of the output pixel
@@ -64,7 +53,7 @@ transform — Transform longslit images to user coordinates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_moutput">moutput = "<TT></TT>"</A></B></DT>
+  <DT><B>moutput = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='moutput' Line='moutput = ""'>
   <DD>List of output masks to be created.  The list may be empty or must match
   the input list.  Output masks may be specified even if no input mask is
@@ -75,7 +64,7 @@ transform — Transform longslit images to user coordinates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fitnames">fitnames  </A></B></DT>
+  <DT><B>fitnames  </B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fitnames' Line='fitnames  '>
   <DD>Names of the user coordinate maps in the database to be used in the transform.
   If no names are specified, using the null string "<TT></TT>", the world coordinate
@@ -85,13 +74,13 @@ transform — Transform longslit images to user coordinates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_database">database = "<TT>database</TT>"</A></B></DT>
+  <DT><B>database = "<TT>database</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"'>
   <DD>Database containing the coordinate map to be used in transforming the images.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interptype">interptype = "<TT>spline3</TT>"</A></B></DT>
+  <DT><B>interptype = "<TT>spline3</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interptype' Line='interptype = "spline3"'>
   <DD>Image interpolation type.  The allowed types are "<TT>nearest</TT>" (nearest neighbor),
   "<TT>linear</TT>" (bilinear), "<TT>poly3</TT>" (bicubic polynomial), "<TT>poly5</TT>" (biquintic
@@ -99,7 +88,7 @@ transform — Transform longslit images to user coordinates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_flux">flux = yes</A></B></DT>
+  <DT><B>flux = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='flux' Line='flux = yes'>
   <DD>Conserve flux per pixel?  If "<TT>no</TT>" then each output pixel is simply interpolated
   from the input image.  If "<TT>yes</TT>" the interpolated output pixel value is
@@ -108,7 +97,7 @@ transform — Transform longslit images to user coordinates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_x1">x1 = INDEF, y1 = INDEF</A></B></DT>
+  <DT><B>x1 = INDEF, y1 = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='x1' Line='x1 = INDEF, y1 = INDEF'>
   <DD>User coordinates of the first output column and line.  If INDEF then the
   smallest value corresponding to a pixel from the image used to create the
@@ -117,7 +106,7 @@ transform — Transform longslit images to user coordinates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_x2">x2 = INDEF, y2 = INDEF</A></B></DT>
+  <DT><B>x2 = INDEF, y2 = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='x2' Line='x2 = INDEF, y2 = INDEF'>
   <DD>User coordinates of the last output column and line.  If INDEF then the
   largest value corresponding to a pixel from the image used to create the
@@ -126,7 +115,7 @@ transform — Transform longslit images to user coordinates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dx">dx = INDEF, dy = INDEF</A></B></DT>
+  <DT><B>dx = INDEF, dy = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dx' Line='dx = INDEF, dy = INDEF'>
   <DD>Output pixel intervals.  If INDEF then the interval is set to yield the
   specified number of pixels.  Note that for logarithmic intervals the
@@ -135,21 +124,21 @@ transform — Transform longslit images to user coordinates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nx">nx = INDEF, ny = INDEF</A></B></DT>
+  <DT><B>nx = INDEF, ny = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nx' Line='nx = INDEF, ny = INDEF'>
   <DD>Number of output pixels.  If INDEF and if the pixel interval is also INDEF then
   the number of output pixels is equal to the number of input pixels.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xlog">xlog = no, ylog = no</A></B></DT>
+  <DT><B>xlog = no, ylog = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xlog' Line='xlog = no, ylog = no'>
   <DD>Convert to logarithmic intervals?  If "<TT>yes</TT>" the output pixel intervals
   are logarithmic.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_blank">blank = INDEF</A></B></DT>
+  <DT><B>blank = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='blank' Line='blank = INDEF'>
   <DD>Value to put in the output transformed image when it transforms to regions
   outside the input image.  The special value INDEF will use the nearest
@@ -160,14 +149,14 @@ transform — Transform longslit images to user coordinates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_logfiles">logfiles = "<TT>STDOUT,logfile</TT>"</A></B></DT>
+  <DT><B>logfiles = "<TT>STDOUT,logfile</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='logfiles' Line='logfiles = "STDOUT,logfile"'>
   <DD>List of files in which to keep a log.  If null, "<TT></TT>", then no log is kept.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The coordinate maps U(X,Y) and V(X,Y), created by the task <B>fitcoords</B>,
@@ -239,7 +228,7 @@ transform — Transform longslit images to user coordinates
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   Arc calibration images were used to determine a two dimensional dispersion
@@ -263,7 +252,7 @@ transform — Transform longslit images to user coordinates
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_timings">TIMINGS</A></H2>
+  <H3>Timings</H3>
   <! BeginSection: 'TIMINGS'>
   <UL>
   The following timings were obtained for transforming a 511x512 real
@@ -293,18 +282,18 @@ transform — Transform longslit images to user coordinates
   the transformation functions as indicated by the last three examples.
   </UL>
   <! EndSection:   'TIMINGS'>
-  <H2><A NAME="s_notes">NOTES</A></H2>
+  <H3>Notes</H3>
   <! BeginSection: 'NOTES'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_TRANSFORM">TRANSFORM: V2.12.2</A></B></DT>
+  <DT><B>TRANSFORM: V2.12.2</B></DT>
   <! Sec='NOTES' Level=0 Label='TRANSFORM' Line='TRANSFORM: V2.12.2'>
   <DD>The use of bad pixel masks, a specified "<TT>blank</TT>" value, and use of a WCS
   to resample a WCS calibrated image was added.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_TRANSFORM">TRANSFORM: V2.6</A></B></DT>
+  <DT><B>TRANSFORM: V2.6</B></DT>
   <! Sec='NOTES' Level=0 Label='TRANSFORM' Line='TRANSFORM: V2.6'>
   <DD>With Version 2.6 of IRAF the algorithm used to invert the user
   coordinate surfaces, U(X,Y) and V(X,Y) to X(U,V) and Y(U,V), has been
@@ -325,7 +314,7 @@ transform — Transform longslit images to user coordinates
   </DL>
   </UL>
   <! EndSection:   'NOTES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   fitcoords
@@ -334,5 +323,3 @@ transform — Transform longslit images to user coordinates
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIMINGS' 'NOTES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

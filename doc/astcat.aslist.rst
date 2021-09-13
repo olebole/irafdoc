@@ -1,3 +1,5 @@
+.. _aslist:
+
 aslist — List the supported image surveys
 =========================================
 
@@ -5,50 +7,37 @@ aslist — List the supported image surveys
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>aslist (Feb00)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>astcat</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>aslist (Feb00)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>aslist</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   aslist -- list the supported image surveys
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   aslist catalogs
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_imsurveys">imsurveys</A></B></DT>
+  <DT><B>imsurveys</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='imsurveys' Line='imsurveys'>
   <DD>The names of the image surveys to be listed. If surveys = "<TT>*</TT>" then
   all the image surveys in the image survey configuration file are listed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = no</A></B></DT>
+  <DT><B>verbose = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
   <DD>List the image survey wcs and keyword information  after the image survey
   name ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_imdb">imdb = "<TT>)_.imdb</TT>"</A></B></DT>
+  <DT><B>imdb = "<TT>)_.imdb</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='imdb' Line='imdb = ")_.imdb"'>
   <DD>The image survey configuration file. The value of imdb defaults to the value
   of the package parameter of the same name. The default image survey
@@ -57,7 +46,7 @@ aslist — List the supported image surveys
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Aslist lists the supported image surveys specified by the
@@ -75,7 +64,7 @@ aslist — List the supported image surveys
   to this file or create their own configuration file.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -93,17 +82,17 @@ aslist — List the supported image surveys
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   aclist
@@ -112,5 +101,3 @@ aslist — List the supported image surveys
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

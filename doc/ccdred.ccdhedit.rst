@@ -1,3 +1,5 @@
+.. _ccdhedit:
+
 ccdhedit — CCD image header editor
 ==================================
 
@@ -5,49 +7,36 @@ ccdhedit — CCD image header editor
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>ccdhedit (Jun87)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.imred.ccdred</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>ccdhedit (Jun87)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>ccdhedit</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   ccdhedit -- CCD image header editor
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   ccdhedit images parameter value
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>List of CCD images to be edited.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_parameter">parameter</A></B></DT>
+  <DT><B>parameter</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='parameter' Line='parameter'>
   <DD>Image header parameter.  The image header parameter will be translated by
   the header translation file for the images.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_value">value</A></B></DT>
+  <DT><B>value</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='value' Line='value'>
   <DD>The parameter value.  If the null string ("<TT></TT>") is specified then the
   parameter is deleted from the image header, otherwise it is added or
@@ -57,14 +46,14 @@ ccdhedit — CCD image header editor
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_type">type = "<TT>string</TT>"</A></B></DT>
+  <DT><B>type = "<TT>string</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='type' Line='type = "string"'>
   <DD>The parameter type.  The parameter types are "<TT>string</TT>", "<TT>real</TT>", or "<TT>integer</TT>".
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The image headers of the specified CCD images are edited to add, modify,
@@ -84,7 +73,7 @@ ccdhedit — CCD image header editor
   value string to a number.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   The <B>ccdred</B> package is usable even with little image header information.
@@ -148,7 +137,7 @@ ccdhedit — CCD image header editor
       cl&gt; ccdhedit obj042 flatcor "<TT></TT>"
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   hedit, instruments, ccdtypes, subsets
@@ -157,5 +146,3 @@ ccdhedit — CCD image header editor
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

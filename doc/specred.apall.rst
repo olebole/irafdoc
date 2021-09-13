@@ -1,3 +1,5 @@
+.. _apall:
+
 apall — Extract 1D spectra (all parameters in one task)
 =======================================================
 
@@ -5,42 +7,29 @@ apall — Extract 1D spectra (all parameters in one task)
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>apall (Sep96)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.twodspec.apextract</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>apall (Sep96)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>apall</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   apall -- Extract one dimensional sums across the apertures
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   apall input
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of input images.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output = "<TT></TT>"</A></B></DT>
+  <DT><B>output = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output = ""'>
   <DD>List of output root names for extracted spectra.  If the null
   string is given or the end of the output list is reached before the end
@@ -51,7 +40,7 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apertures">apertures = "<TT></TT>"</A></B></DT>
+  <DT><B>apertures = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""'>
   <DD>Apertures to recenter, resize, trace, and extract.  This only applies
   to apertures read from the input or reference database.  Any new
@@ -63,7 +52,7 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_format">format = "<TT>multispec</TT>" (onedspec|multispec|echelle|strip)</A></B></DT>
+  <DT><B>format = "<TT>multispec</TT>" (onedspec|multispec|echelle|strip)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='format' Line='format = "multispec" (onedspec|multispec|echelle|strip)'>
   <DD>Format for output extracted spectra.  "<TT>Onedspec</TT>" format extracts each
   aperture to a separate image while "<TT>multispec</TT>" and "<TT>echelle</TT>" extract
@@ -75,7 +64,7 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_references">references = "<TT></TT>"</A></B></DT>
+  <DT><B>references = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='references' Line='references = ""'>
   <DD>List of reference images to be used to define apertures for the input
   images.  When a reference image is given it supersedes apertures
@@ -89,7 +78,7 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_profiles">profiles = "<TT></TT>"</A></B></DT>
+  <DT><B>profiles = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='profiles' Line='profiles = ""'>
   <DD>List of profile images for variance weighting or cleanning.   If variance
   weighting or cleanning a profile of each aperture is computed from the
@@ -107,7 +96,7 @@ apall — Extract 1D spectra (all parameters in one task)
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = yes</A></B></DT>
+  <DT><B>interactive = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes'>
   <DD>Run this task interactively?  If the task is not run interactively then
   all user queries are suppressed and interactive aperture editing, trace
@@ -115,7 +104,7 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_find">find = yes</A></B></DT>
+  <DT><B>find = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='find' Line='find = yes'>
   <DD>Find the spectra and define apertures automatically?  In order for
   spectra to be found automatically there must be no apertures for the
@@ -123,44 +112,44 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_recenter">recenter = yes</A></B></DT>
+  <DT><B>recenter = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='recenter' Line='recenter = yes'>
   <DD>Recenter the apertures?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_resize">resize = yes</A></B></DT>
+  <DT><B>resize = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='resize' Line='resize = yes'>
   <DD>Resize the apertures?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_edit">edit = yes</A></B></DT>
+  <DT><B>edit = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='edit' Line='edit = yes'>
   <DD>Edit the apertures?  The <I>interactive</I> parameter must also be yes.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_trace">trace = yes</A></B></DT>
+  <DT><B>trace = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='trace' Line='trace = yes'>
   <DD>Trace the apertures?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fittrace">fittrace = yes</A></B></DT>
+  <DT><B>fittrace = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fittrace' Line='fittrace = yes'>
   <DD>Interactively fit the traced positions by a function?  The <I>interactive</I>
   parameter must also be yes.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_extract">extract = yes</A></B></DT>
+  <DT><B>extract = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='extract' Line='extract = yes'>
   <DD>Extract the one dimensional aperture sums?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_extras">extras = yes</A></B></DT>
+  <DT><B>extras = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='extras' Line='extras = yes'>
   <DD>Extract the raw spectrum (if variance weighting is used), the sky spectrum
   (if background subtraction is used), and sigma spectrum (if variance
@@ -169,7 +158,7 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_review">review = yes</A></B></DT>
+  <DT><B>review = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='review' Line='review = yes'>
   <DD>Review the extracted spectra?  The <I>interactive</I> parameter must also be
   yes.
@@ -177,7 +166,7 @@ apall — Extract 1D spectra (all parameters in one task)
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_line">line = INDEF, nsum = 10</A></B></DT>
+  <DT><B>line = INDEF, nsum = 10</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='line' Line='line = INDEF, nsum = 10'>
   <DD>The dispersion line (line or column perpendicular to the dispersion
   axis) and number of adjacent lines (half before and half after unless
@@ -192,7 +181,7 @@ apall — Extract 1D spectra (all parameters in one task)
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_lower">lower = -5., upper = 5.</A></B></DT>
+  <DT><B>lower = -5., upper = 5.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lower' Line='lower = -5., upper = 5.'>
   <DD>Default lower and upper aperture limits relative to the aperture center.
   These limits are used for apertures found with <B>apfind</B> and when
@@ -200,7 +189,7 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apidtable">apidtable = "<TT></TT>"</A></B></DT>
+  <DT><B>apidtable = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apidtable' Line='apidtable = ""'>
   <DD>Aperture identification table.  This may be either a text file or an
   image.  A text file consisting of lines with an aperture number, beam
@@ -216,7 +205,7 @@ apall — Extract 1D spectra (all parameters in one task)
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_b_function">b_function = "<TT>chebyshev</TT>"</A></B></DT>
+  <DT><B>b_function = "<TT>chebyshev</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='b_function' Line='b_function = "chebyshev"'>
   <DD>Default background fitting function.  The fitting function types are
   "<TT>chebyshev</TT>" polynomial, "<TT>legendre</TT>" polynomial, "<TT>spline1</TT>" linear spline, and
@@ -224,7 +213,7 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_b_order">b_order = 1</A></B></DT>
+  <DT><B>b_order = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='b_order' Line='b_order = 1'>
   <DD>Default background function order.  The order refers to the number of
   terms in the polynomial functions or the number of spline pieces in the spline
@@ -232,7 +221,7 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_b_sample">b_sample = "<TT>-10:-6,6:10</TT>"</A></B></DT>
+  <DT><B>b_sample = "<TT>-10:-6,6:10</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='b_sample' Line='b_sample = "-10:-6,6:10"'>
   <DD>Default background sample.  The sample is given by a set of colon separated
   ranges each separated by either whitespace or commas.  The string "<TT>*</TT>" refers
@@ -242,7 +231,7 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_b_naverage">b_naverage = -3</A></B></DT>
+  <DT><B>b_naverage = -3</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='b_naverage' Line='b_naverage = -3'>
   <DD>Default number of points to average or median.  Positive numbers
   average that number of sequential points to form a fitting point.
@@ -252,7 +241,7 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_b_niterate">b_niterate = 0</A></B></DT>
+  <DT><B>b_niterate = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='b_niterate' Line='b_niterate = 0'>
   <DD>Default number of rejection iterations.  If greater than zero the fit is
   used to detect deviant fitting points and reject them before repeating the
@@ -260,7 +249,7 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_b_low_reject">b_low_reject = 3., b_high_reject = 3.</A></B></DT>
+  <DT><B>b_low_reject = 3., b_high_reject = 3.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='b_low_reject' Line='b_low_reject = 3., b_high_reject = 3.'>
   <DD>Default background lower and upper rejection sigmas.  If greater than zero
   points deviating from the fit below and above the fit by more than this
@@ -268,7 +257,7 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_b_grow">b_grow = 0.</A></B></DT>
+  <DT><B>b_grow = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='b_grow' Line='b_grow = 0.'>
   <DD>Default reject growing radius.  Points within a distance given by this
   parameter of any rejected point are also rejected.
@@ -279,20 +268,20 @@ apall — Extract 1D spectra (all parameters in one task)
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_width">width = 5.</A></B></DT>
+  <DT><B>width = 5.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='width' Line='width = 5.'>
   <DD>Width of spectrum profiles.  This parameter is used for the profile
   centering algorithm in this and other tasks.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_radius">radius = 10.</A></B></DT>
+  <DT><B>radius = 10.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='radius' Line='radius = 10.'>
   <DD>The profile centering error radius for the centering algorithm.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_threshold">threshold = 0.</A></B></DT>
+  <DT><B>threshold = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 0.'>
   <DD>Centering threshold for the centering algorithm.  The range of pixel intensities
   near the initial centering position must exceed this threshold.
@@ -303,7 +292,7 @@ apall — Extract 1D spectra (all parameters in one task)
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_nfind">nfind</A></B></DT>
+  <DT><B>nfind</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nfind' Line='nfind'>
   <DD>Maximum number of apertures to be defined.  This is a query parameter
   so the user is queried for a value except when given explicitly on
@@ -311,14 +300,14 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_minsep">minsep = 5.</A></B></DT>
+  <DT><B>minsep = 5.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='minsep' Line='minsep = 5.'>
   <DD>Minimum separation between spectra.  Weaker spectra or noise within this
   distance of a stronger spectrum are rejected.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_maxsep">maxsep = 1000.</A></B></DT>
+  <DT><B>maxsep = 1000.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='maxsep' Line='maxsep = 1000.'>
   <DD>Maximum separation between adjacent spectra.  This parameter
   is used to identify missing spectra in uniformly spaced spectra produced
@@ -328,7 +317,7 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_order">order = "<TT>increasing</TT>"</A></B></DT>
+  <DT><B>order = "<TT>increasing</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='order' Line='order = "increasing"'>
   <DD>When assigning aperture identifications order the spectra "<TT>increasing</TT>"
   or "<TT>decreasing</TT>" with increasing pixel position (left-to-right or
@@ -340,13 +329,13 @@ apall — Extract 1D spectra (all parameters in one task)
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_aprecenter">aprecenter = "<TT></TT>"</A></B></DT>
+  <DT><B>aprecenter = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='aprecenter' Line='aprecenter = ""'>
   <DD>List of apertures to be used in shift calculation.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_npeaks">npeaks = INDEF</A></B></DT>
+  <DT><B>npeaks = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='npeaks' Line='npeaks = INDEF'>
   <DD>Select the specified number of apertures with the highest peak values
   to be recentered.  If the number is INDEF all apertures will be selected.
@@ -355,7 +344,7 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_shift">shift = yes</A></B></DT>
+  <DT><B>shift = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='shift' Line='shift = yes'>
   <DD>Use the average shift from recentering the apertures selected by the
   <I>aprecenter</I> parameter to apply to the apertures selected by the
@@ -368,7 +357,7 @@ apall — Extract 1D spectra (all parameters in one task)
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_llimit">llimit = INDEF, ulimit = INDEF</A></B></DT>
+  <DT><B>llimit = INDEF, ulimit = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='llimit' Line='llimit = INDEF, ulimit = INDEF'>
   <DD>Lower and upper aperture size limits.  If the parameter <I>ylevel</I> is
   INDEF then these limits are assigned to all apertures.  Otherwise
@@ -378,7 +367,7 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ylevel">ylevel = 0.1</A></B></DT>
+  <DT><B>ylevel = 0.1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ylevel' Line='ylevel = 0.1'>
   <DD>Data level at which to set aperture limits.  If it is INDEF then the
   aperture limits are set at the values given by the parameters
@@ -389,13 +378,13 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_peak">peak = yes</A></B></DT>
+  <DT><B>peak = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='peak' Line='peak = yes'>
   <DD>Is the data level specified by <I>ylevel</I> a fraction of the peak?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_bkg">bkg = yes</A></B></DT>
+  <DT><B>bkg = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='bkg' Line='bkg = yes'>
   <DD>Subtract a simple background when interpreting the <B>ylevel</B> parameter.
   The background is a slope connecting the first inflection points
@@ -403,14 +392,14 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_r_grow">r_grow = 0.</A></B></DT>
+  <DT><B>r_grow = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='r_grow' Line='r_grow = 0.'>
   <DD>Change the lower and upper aperture limits by this fractional amount.
   The factor is multiplied by each limit and the result added to limit.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_avglimits">avglimits = no</A></B></DT>
+  <DT><B>avglimits = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='avglimits' Line='avglimits = no'>
   <DD>Apply the average lower and upper aperture limits to all apertures.
   </DD>
@@ -420,20 +409,20 @@ apall — Extract 1D spectra (all parameters in one task)
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_t_nsum">t_nsum = 10</A></B></DT>
+  <DT><B>t_nsum = 10</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='t_nsum' Line='t_nsum = 10'>
   <DD>Number of dispersion lines to be summed at each step along the dispersion.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_t_step">t_step = 10</A></B></DT>
+  <DT><B>t_step = 10</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='t_step' Line='t_step = 10'>
   <DD>Step along the dispersion axis between determination of the spectrum
   positions.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_t_nlost">t_nlost = 3</A></B></DT>
+  <DT><B>t_nlost = 3</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='t_nlost' Line='t_nlost = 3'>
   <DD>Number of consecutive steps in which the profile is lost before quitting
   the tracing in one direction.  To force tracing to continue through
@@ -442,7 +431,7 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_t_function">t_function = "<TT>legendre</TT>"</A></B></DT>
+  <DT><B>t_function = "<TT>legendre</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='t_function' Line='t_function = "legendre"'>
   <DD>Default trace fitting function.  The fitting function types are
   "<TT>chebyshev</TT>" polynomial, "<TT>legendre</TT>" polynomial, "<TT>spline1</TT>" linear spline, and
@@ -450,7 +439,7 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_t_order">t_order = 2</A></B></DT>
+  <DT><B>t_order = 2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='t_order' Line='t_order = 2'>
   <DD>Default trace function order.  The order refers to the number of
   terms in the polynomial functions or the number of spline pieces in the spline
@@ -458,7 +447,7 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_t_sample">t_sample = "<TT>*</TT>"</A></B></DT>
+  <DT><B>t_sample = "<TT>*</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='t_sample' Line='t_sample = "*"'>
   <DD>Default fitting sample.  The sample is given by a set of colon separated
   ranges each separated by either whitespace or commas.  The string "<TT>*</TT>" refers
@@ -466,7 +455,7 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_t_naverage">t_naverage = 1</A></B></DT>
+  <DT><B>t_naverage = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='t_naverage' Line='t_naverage = 1'>
   <DD>Default number of points to average or median.  Positive numbers
   average that number of sequential points to form a fitting point.
@@ -475,7 +464,7 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_t_niterate">t_niterate = 0</A></B></DT>
+  <DT><B>t_niterate = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='t_niterate' Line='t_niterate = 0'>
   <DD>Default number of rejection iterations.  If greater than zero the fit is
   used to detect deviant traced positions and reject them before repeating the
@@ -483,7 +472,7 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_t_low_reject">t_low_reject = 3., t_high_reject = 3.</A></B></DT>
+  <DT><B>t_low_reject = 3., t_high_reject = 3.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='t_low_reject' Line='t_low_reject = 3., t_high_reject = 3.'>
   <DD>Default lower and upper rejection sigma.  If greater than zero traced
   points deviating from the fit below and above the fit by more than this
@@ -491,7 +480,7 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_t_grow">t_grow = 0.</A></B></DT>
+  <DT><B>t_grow = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='t_grow' Line='t_grow = 0.'>
   <DD>Default reject growing radius.  Traced points within a distance given by this
   parameter of any rejected point are also rejected.
@@ -502,7 +491,7 @@ apall — Extract 1D spectra (all parameters in one task)
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_background">background = "<TT>none</TT>" (none|average|median|minimum|fit)</A></B></DT>
+  <DT><B>background = "<TT>none</TT>" (none|average|median|minimum|fit)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='background' Line='background = "none" (none|average|median|minimum|fit)'>
   <DD>Type of background subtraction.  The choices are "<TT>none</TT>" for no background
   subtraction, "<TT>average</TT>" to average the background within the background
@@ -515,7 +504,7 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_skybox">skybox = 1</A></B></DT>
+  <DT><B>skybox = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='skybox' Line='skybox = 1'>
   <DD>Box car smoothing length for sky background when using background
   subtraction.  Since the background noise is often the limiting factor
@@ -526,20 +515,20 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_weights">weights = "<TT>none</TT>" (none|variance)</A></B></DT>
+  <DT><B>weights = "<TT>none</TT>" (none|variance)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='weights' Line='weights = "none" (none|variance)'>
   <DD>Type of extraction weighting.  Note that if the <I>clean</I> parameter is
   set then the weights used are "<TT>variance</TT>" regardless of the weights
   specified by this parameter.  The choices are:
   <DL>
-  <DT><B><A NAME="l_">"<TT>none</TT>"</A></B></DT>
+  <DT><B>"<TT>none</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"none"'>
   <DD>The pixels are summed without weights except for partial pixels at the
   ends.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">"<TT>variance</TT>"</A></B></DT>
+  <DT><B>"<TT>variance</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"variance"'>
   <DD>The extraction is weighted by the variance based on the data values
   and a poisson/ccd model using the <I>gain</I> and <I>readnoise</I>
@@ -549,7 +538,7 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pfit">pfit = "<TT>fit1d</TT>" (fit1d|fit2d)</A></B></DT>
+  <DT><B>pfit = "<TT>fit1d</TT>" (fit1d|fit2d)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pfit' Line='pfit = "fit1d" (fit1d|fit2d)'>
   <DD>Profile fitting algorithm to use with variance weighting or cleaning.
   When determining a profile the two dimensional spectrum is divided by
@@ -561,13 +550,13 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_clean">clean = no</A></B></DT>
+  <DT><B>clean = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='clean' Line='clean = no'>
   <DD>Detect and replace deviant pixels?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_saturation">saturation = INDEF</A></B></DT>
+  <DT><B>saturation = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='saturation' Line='saturation = INDEF'>
   <DD>Saturation or nonlinearity level in data units.  During variance weighted
   extractions wavelength points having any pixels above this value are
@@ -577,7 +566,7 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_readnoise">readnoise = 0.</A></B></DT>
+  <DT><B>readnoise = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='readnoise' Line='readnoise = 0.'>
   <DD>Read out noise in photons.  This parameter defines the minimum noise
   sigma.  It is defined in terms of photons (or electrons) and scales
@@ -586,7 +575,7 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_gain">gain = 1</A></B></DT>
+  <DT><B>gain = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='gain' Line='gain = 1'>
   <DD>Detector gain or conversion factor between photons/electrons and
   data values.  It is specified as the number of photons per data value.
@@ -595,14 +584,14 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lsigma">lsigma = 4., usigma = 4.</A></B></DT>
+  <DT><B>lsigma = 4., usigma = 4.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lsigma' Line='lsigma = 4., usigma = 4.'>
   <DD>Lower and upper rejection thresholds, given as a number of times the
   estimated sigma of a pixel, for cleaning.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nsubaps">nsubaps = 1</A></B></DT>
+  <DT><B>nsubaps = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nsubaps' Line='nsubaps = 1'>
   <DD>During extraction it is possible to equally divide the apertures into
   this number of subapertures.  For multispec format all subapertures will
@@ -617,13 +606,13 @@ apall — Extract 1D spectra (all parameters in one task)
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_additional_parameters">ADDITIONAL PARAMETERS</A></H2>
+  <H3>Additional parameters</H3>
   <! BeginSection: 'ADDITIONAL PARAMETERS'>
   <UL>
   Dispersion axis and I/O parameters are taken from the package parameters.
   </UL>
   <! EndSection:   'ADDITIONAL PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task provides functions for defining, modifying, tracing, and
@@ -635,7 +624,7 @@ apall — Extract 1D spectra (all parameters in one task)
   The functions, in the order in which they are generally performed, are
   summarized below.
   <DL>
-  <DT><B><A NAME="l_o">o</A></B></DT>
+  <DT><B>o</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='o' Line='o'>
   <DD>Automatically find a specified number of spectra and assign default
   apertures.  Apertures may also be inherited from another image or
@@ -644,19 +633,19 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_o">o</A></B></DT>
+  <DT><B>o</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='o' Line='o'>
   <DD>Recenter selected reference apertures on the image spectrum profiles.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_o">o</A></B></DT>
+  <DT><B>o</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='o' Line='o'>
   <DD>Resize the selected reference apertures based on spectrum profile width.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_o">o</A></B></DT>
+  <DT><B>o</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='o' Line='o'>
   <DD>Interactively define or adjust aperture definitions using a graphical
   interface called the <I>aperture editor</I>.  All function may also
@@ -665,7 +654,7 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_o">o</A></B></DT>
+  <DT><B>o</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='o' Line='o'>
   <DD>Trace the positions of the selected spectra profiles from a starting image line
   or column to other image lines or columns and fit a smooth function.
@@ -674,7 +663,7 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_o">o</A></B></DT>
+  <DT><B>o</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='o' Line='o'>
   <DD>Extract the flux in the selected apertures into one dimensional spectra in
   various formats.  This includes possible background subtraction, variance
@@ -699,7 +688,7 @@ apall — Extract 1D spectra (all parameters in one task)
   aptrace</B>, and <B>apsum</B>.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  This example may be executed if desired.  First we create an artificial
@@ -776,11 +765,11 @@ apall — Extract 1D spectra (all parameters in one task)
   (find only occurs if there are no initial apertures).
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_APALL">APALL V2.11</A></B></DT>
+  <DT><B>APALL V2.11</B></DT>
   <! Sec='REVISIONS' Level=0 Label='APALL' Line='APALL V2.11'>
   <DD>The "<TT>apertures</TT>" parameter can be used to select apertures for resizing,
   recentering, tracing, and extraction.  This parameter name was previously
@@ -796,7 +785,7 @@ apall — Extract 1D spectra (all parameters in one task)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_APALL">APALL V2.10.3</A></B></DT>
+  <DT><B>APALL V2.10.3</B></DT>
   <! Sec='REVISIONS' Level=0 Label='APALL' Line='APALL V2.10.3'>
   <DD>The dispersion axis parameter was moved to purely a package parameter.
   <P>
@@ -816,7 +805,7 @@ apall — Extract 1D spectra (all parameters in one task)
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   apdefault, apfind, aprecenter, apresize, apedit, aptrace, apsum
@@ -825,5 +814,3 @@ apall — Extract 1D spectra (all parameters in one task)
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'ADDITIONAL PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _tokens:
+
 tokens — Break a file up into a stream of tokens
 ================================================
 
@@ -5,68 +7,55 @@ tokens — Break a file up into a stream of tokens
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>tokens (Jan86)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>lists</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>tokens (Jan86)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>tokens</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   tokens -- break input into stream of tokens
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   tokens files
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_files">files</A></B></DT>
+  <DT><B>files</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='files' Line='files'>
   <DD>The list of files to be converted into a stream of tokens.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ignore_comments">ignore_comments = yes</A></B></DT>
+  <DT><B>ignore_comments = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ignore_comments' Line='ignore_comments = yes'>
   <DD>Ignore comments in the input string?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_begin_comment">begin_comment = "<TT>#</TT>"</A></B></DT>
+  <DT><B>begin_comment = "<TT>#</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='begin_comment' Line='begin_comment = "#"'>
   <DD>The string marking the start of a comment
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_end_comment">end_comment = "<TT>eol</TT>"</A></B></DT>
+  <DT><B>end_comment = "<TT>eol</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='end_comment' Line='end_comment = "eol"'>
   <DD>The string marking the end of a comment.  The value <B>end_comment</B> = "<TT>eol</TT>"
   means the end of a line terminates a comment.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_newlines">newlines = yes</A></B></DT>
+  <DT><B>newlines = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='newlines' Line='newlines = yes'>
   <DD>Is newline a legal token?
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Task <I>tokens</I> breaks the input up into a series of tokens.
@@ -90,7 +79,7 @@ tokens — Break a file up into a stream of tokens
   delimit tokens.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   Break up the source file for this task into tokens:
@@ -98,7 +87,7 @@ tokens — Break a file up into a stream of tokens
   	cl&gt; tokens tokens.x
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   words
@@ -107,5 +96,3 @@ tokens — Break a file up into a stream of tokens
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

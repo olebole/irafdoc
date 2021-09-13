@@ -1,3 +1,5 @@
+.. _tupar:
+
 tupar — Edit table header keywords.
 ===================================
 
@@ -5,32 +7,19 @@ tupar — Edit table header keywords.
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>tupar (Jun97)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>tables</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>tupar (Jun97)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>tupar</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   tupar -- Edit table header parameters.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   tupar table
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task is an interactive editor that allows the user to modify table
@@ -225,11 +214,11 @@ tupar — Edit table header keywords.
   </PRE>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_table">table [file name template]</A></B></DT>
+  <DT><B>table [file name template]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='table' Line='table [file name template]'>
   <DD>A table name or list of table names whose header parameters are to be edited.
   Unless 'inplace = yes',
@@ -241,7 +230,7 @@ tupar — Edit table header keywords.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(same = no) [boolean]</A></B></DT>
+  <DT><B>(same = no) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(same = no) [boolean]'>
   <DD>Apply the same set of instructions to all tables?  
   <P>
@@ -272,7 +261,7 @@ tupar — Edit table header keywords.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(verbose = yes) [boolean]</A></B></DT>
+  <DT><B>(verbose = yes) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(verbose = yes) [boolean]'>
   <DD>Display the name of each table when it is opened?  
   <P>
@@ -281,7 +270,7 @@ tupar — Edit table header keywords.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(readonly = no) [boolean]</A></B></DT>
+  <DT><B>(readonly = no) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(readonly = no) [boolean]'>
   <DD>Prevent changes from being made to the file?  
   <P>
@@ -293,7 +282,7 @@ tupar — Edit table header keywords.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(inplace = no) [boolean]</A></B></DT>
+  <DT><B>(inplace = no) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(inplace = no) [boolean]'>
   <DD>Edit the original table in-place?
   <P>
@@ -308,21 +297,21 @@ tupar — Edit table header keywords.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(quit_default = no) [boolean]</A></B></DT>
+  <DT><B>(quit_default = no) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(quit_default = no) [boolean]'>
   <DD>The value of this parameter is the default response to the prompt
   for confirmation if you give the quit command.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(delete_default = yes) [boolean]</A></B></DT>
+  <DT><B>(delete_default = yes) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(delete_default = yes) [boolean]'>
   <DD>The value of this parameter is the default response to the prompt
   for confirmation for the delete and replace commands.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_go_ahead">go_ahead [boolean]</A></B></DT>
+  <DT><B>go_ahead [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='go_ahead' Line='go_ahead [boolean]'>
   <DD>The user does not set this explicitly.
   It is the parameter which is actually gotten in response to a prompt.
@@ -330,7 +319,7 @@ tupar — Edit table header keywords.
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. This example reads all history records from all tables in the default
@@ -408,18 +397,18 @@ tupar — Edit table header keywords.
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   This task was written by Phil Hodge.
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   tprint, tdump, tedit
@@ -431,5 +420,3 @@ tupar — Edit table header keywords.
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

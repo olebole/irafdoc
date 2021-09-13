@@ -1,3 +1,5 @@
+.. _tlinear:
+
 tlinear — Use linear regression to fit one or two table columns.
 ================================================================
 
@@ -5,33 +7,20 @@ tlinear — Use linear regression to fit one or two table columns.
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>tlinear (Aug2000)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>tables</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>tlinear (Aug2000)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>tlinear</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   tlinear -- Fit a linear function to one or two table columns by linear
   regression.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   tlinear intable outtable xcol ycol
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task generates fitted Y values and their residuals in two columns.
@@ -56,11 +45,11 @@ tlinear — Use linear regression to fit one or two table columns.
   except that rows with exactly zero weight will not be included.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_intable">intable [file name template]</A></B></DT>
+  <DT><B>intable [file name template]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='intable' Line='intable [file name template]'>
   <DD>A list of input tables containing the columns to be fit.
   A fit will be made of the columns specified by the 'xcol' and 'ycol'
@@ -69,7 +58,7 @@ tlinear — Use linear regression to fit one or two table columns.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_outtable">outtable = STDOUT [file name template]</A></B></DT>
+  <DT><B>outtable = STDOUT [file name template]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable = STDOUT [file name template]'>
   <DD>File names for creating output files, or STDOUT to send output to the screen.
   If the value of this parameter is "<TT>STDOUT</TT>" then the parameters of the fit will
@@ -83,7 +72,7 @@ tlinear — Use linear regression to fit one or two table columns.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xcol">xcol [string]</A></B></DT>
+  <DT><B>xcol [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xcol' Line='xcol [string]'>
   <DD>Column name in the input tables to be fit.
   The values in this column will be fit for the X axis.
@@ -93,7 +82,7 @@ tlinear — Use linear regression to fit one or two table columns.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ycol">ycol [string]</A></B></DT>
+  <DT><B>ycol [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ycol' Line='ycol [string]'>
   <DD>Column name in the input tables containing value to be fit for the Y axis.
   (The same column name is used for each input table.)  Values in 'ycol' will
@@ -101,7 +90,7 @@ tlinear — Use linear regression to fit one or two table columns.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(wcol) [string]</A></B></DT>
+  <DT><B>(wcol) [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(wcol) [string]'>
   <DD>Column name in 'intable' that contains weight values for X and Y.
   (The same column name is used for each input table.)  If no column
@@ -111,7 +100,7 @@ tlinear — Use linear regression to fit one or two table columns.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(scol) [string]</A></B></DT>
+  <DT><B>(scol) [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(scol) [string]'>
   <DD>Column in 'intable' containing the standard deviation of X and Y.
   The X and Y values are weighted by the values in 'scol'
@@ -125,7 +114,7 @@ tlinear — Use linear regression to fit one or two table columns.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(rows = "<TT>-</TT>") [string]</A></B></DT>
+  <DT><B>(rows = "<TT>-</TT>") [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(rows = "-") [string]'>
   <DD>Range of rows to use for fitting the data.
   The default "<TT>-</TT>" means that all rows are used.
@@ -133,7 +122,7 @@ tlinear — Use linear regression to fit one or two table columns.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(outcoly = "<TT>yfit</TT>") [string]</A></B></DT>
+  <DT><B>(outcoly = "<TT>yfit</TT>") [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(outcoly = "yfit") [string]'>
   <DD>Column name for fitted Y values.
   This parameter is not used if 'outtable' = STDOUT.
@@ -141,7 +130,7 @@ tlinear — Use linear regression to fit one or two table columns.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(outcolr = "<TT>yres</TT>") [string]</A></B></DT>
+  <DT><B>(outcolr = "<TT>yres</TT>") [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(outcolr = "yres") [string]'>
   <DD>Name of the column to contain residuals.
   This parameter is ignored if 'outtable' = STDOUT.
@@ -150,7 +139,7 @@ tlinear — Use linear regression to fit one or two table columns.
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Fit the values in the "<TT>flux</TT>" column in every table whose name begins with
@@ -177,18 +166,18 @@ tlinear — Use linear regression to fit one or two table columns.
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   This task was written by Betty Stobie.
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   ranges
@@ -197,5 +186,3 @@ tlinear — Use linear regression to fit one or two table columns.
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

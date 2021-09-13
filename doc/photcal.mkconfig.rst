@@ -1,3 +1,5 @@
+.. _mkconfig:
+
 mkconfig — Prepare a configuration file
 =======================================
 
@@ -5,42 +7,29 @@ mkconfig — Prepare a configuration file
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>mkconfig (Aug91)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.photcal</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>mkconfig (Aug91)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>mkconfig</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   mkconfig -- create a new configuration file 
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   mkconfig config 
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_config">config</A></B></DT>
+  <DT><B>config</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='config' Line='config'>
   <DD>The name of the new configuration file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_catalog">catalog</A></B></DT>
+  <DT><B>catalog</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='catalog' Line='catalog'>
   <DD>The source of the standard star catalog format description.
   <I>Catalog</I> may be one of the supported standard star
@@ -53,7 +42,7 @@ mkconfig — Prepare a configuration file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_observations">observations</A></B></DT>
+  <DT><B>observations</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='observations' Line='observations'>
   <DD>The source of the observations file format description.
   <I>Observations</I> may be a catalog created by MKNOBSFILE,
@@ -63,7 +52,7 @@ mkconfig — Prepare a configuration file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_transform">transform </A></B></DT>
+  <DT><B>transform </B></DT>
   <! Sec='PARAMETERS' Level=0 Label='transform' Line='transform '>
   <DD>The source of the transformation equations definition.
   <I>Transform</I> may be the name of one of the supported standard star
@@ -74,7 +63,7 @@ mkconfig — Prepare a configuration file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_template">template = "<TT></TT>"</A></B></DT>
+  <DT><B>template = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='template' Line='template = ""'>
   <DD>The name of an existing configuration file that can be used as a template
   for the new configuration file.
@@ -89,7 +78,7 @@ mkconfig — Prepare a configuration file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_catdir">catdir = "<TT>)_.catdir</TT>"</A></B></DT>
+  <DT><B>catdir = "<TT>)_.catdir</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='catdir' Line='catdir = ")_.catdir"'>
   <DD>The directory containing the supported standard star catalogs.
   The default parameter value  redirects <I>catdir</I>
@@ -100,25 +89,25 @@ mkconfig — Prepare a configuration file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verify">verify = no</A></B></DT>
+  <DT><B>verify = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verify' Line='verify = no'>
   <DD>Verify each new entry in the configuration file as it is entered?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_edit">edit = yes</A></B></DT>
+  <DT><B>edit = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='edit' Line='edit = yes'>
   <DD>Enter the editor and review the new configuration file?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_check">check = yes</A></B></DT>
+  <DT><B>check = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='check' Line='check = yes'>
   <DD>Check the new configuration file for semantic and syntax errors?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = no</A></B></DT>
+  <DT><B>verbose = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
   <DD>Print detailed information about the results of the check step instead
   of only a short summary?
@@ -127,7 +116,7 @@ mkconfig — Prepare a configuration file
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -193,7 +182,7 @@ mkconfig — Prepare a configuration file
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_standard_catalog_format_and_transform_files">STANDARD CATALOG FORMAT AND TRANSFORM FILES</A></H2>
+  <H3>Standard catalog format and transform files</H3>
   <! BeginSection: 'STANDARD CATALOG FORMAT AND TRANSFORM FILES'>
   <UL>
   <P>
@@ -208,7 +197,7 @@ mkconfig — Prepare a configuration file
   <P>
   </UL>
   <! EndSection:   'STANDARD CATALOG FORMAT AND TRANSFORM FILES'>
-  <H2><A NAME="s_the_configuration_file">THE CONFIGURATION FILE</A></H2>
+  <H3>The configuration file</H3>
   <! BeginSection: 'THE CONFIGURATION FILE'>
   <UL>
   <P>
@@ -370,7 +359,7 @@ mkconfig — Prepare a configuration file
   <P>
   </UL>
   <! EndSection:   'THE CONFIGURATION FILE'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -511,17 +500,17 @@ mkconfig — Prepare a configuration file
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   edit,chkconfig,mknobsfile,mkobsfile
@@ -530,5 +519,3 @@ mkconfig — Prepare a configuration file
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'STANDARD CATALOG FORMAT AND TRANSFORM FILES' 'THE CONFIGURATION FILE' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

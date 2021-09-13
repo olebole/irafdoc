@@ -1,3 +1,5 @@
+.. _sections:
+
 sections — Expand an image template on the standard output
 ==========================================================
 
@@ -5,36 +7,23 @@ sections — Expand an image template on the standard output
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>sections (Dec85)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>sections (Dec85)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>sections</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   sections -- expand an image template
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   sections images
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>Image template or list of images.  There is no check that the names are
   images and any name may be used.  The thing which distinguishes an image
@@ -46,29 +35,29 @@ sections — Expand an image template on the standard output
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_option">option = "<TT>fullname</TT>"</A></B></DT>
+  <DT><B>option = "<TT>fullname</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='option' Line='option = "fullname"'>
   <DD>The options are:
   <DL>
-  <DT><B><A NAME="l_">"<TT>nolist</TT>"</A></B></DT>
+  <DT><B>"<TT>nolist</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"nolist"'>
   <DD>Do not print list.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">"<TT>fullname</TT>"</A></B></DT>
+  <DT><B>"<TT>fullname</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"fullname"'>
   <DD>Print the full image name for each image in the template.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">"<TT>root</TT>"</A></B></DT>
+  <DT><B>"<TT>root</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"root"'>
   <DD>Print the root name for each image in the template.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">"<TT>section</TT>"</A></B></DT>
+  <DT><B>"<TT>section</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"section"'>
   <DD>Print the section for each image in the template.
   </DD>
@@ -76,14 +65,14 @@ sections — Expand an image template on the standard output
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nimages">nimages</A></B></DT>
+  <DT><B>nimages</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nimages' Line='nimages'>
   <DD>The number of images in the image template.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The image template list <I>images</I> is expanded and the images are printed
@@ -93,26 +82,26 @@ sections — Expand an image template on the standard output
   <P>
   This task is used for several purposes:
   <DL>
-  <DT><B><A NAME="l_">(1)</A></B></DT>
+  <DT><B>(1)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='(1)'>
   <DD>To verify that an image template is expanded as the user desires.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(2)</A></B></DT>
+  <DT><B>(2)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='(2)'>
   <DD>To create a file of image names which include image sections.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(3)</A></B></DT>
+  <DT><B>(3)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='(3)'>
   <DD>To create a file of new image names using the concatenation feature of the
   image templates.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(4)</A></B></DT>
+  <DT><B>(4)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='(4)'>
   <DD>To determine the number of images specified by the user in a command language
   script.
@@ -127,7 +116,7 @@ sections — Expand an image template on the standard output
   template to images one should use an appropriate extension such as "<TT>.imh</TT>".
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Calculate and print the number of images in a template:
@@ -175,18 +164,18 @@ sections — Expand an image template on the standard output
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   The  image list is not sorted.           
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   files
@@ -195,5 +184,3 @@ sections — Expand an image template on the standard output
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _nhedit:
+
 nhedit — Edit image header using a command file
 ===============================================
 
@@ -5,26 +7,13 @@ nhedit — Edit image header using a command file
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>nhedit (Aug08)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>nhedit (Aug08)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>nhedit</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   nhedit - edit or view an image header interactively or using a command file
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   <PRE>
@@ -32,17 +21,17 @@ nhedit — Edit image header using a command file
   </PRE>
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>Template specifying the images to be edited.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fields">fields</A></B></DT>
+  <DT><B>fields</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fields' Line='fields'>
   <DD>Template specifying the fields to be edited in each image.  The template is
   expanded independently for each image against the set of all fields in the
@@ -53,7 +42,7 @@ nhedit — Edit image header using a command file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_value">value</A></B></DT>
+  <DT><B>value</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='value' Line='value'>
   <DD>Either a string constant or a general expression (if the first character is
   a left parenthesis) to be evaluated to compute the new value of each field.
@@ -63,7 +52,7 @@ nhedit — Edit image header using a command file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_comment">comment</A></B></DT>
+  <DT><B>comment</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='comment' Line='comment'>
   <DD>String constant for the comment section of the header card. This value will 
   replace the existing comment of a header or clear it if is empty ("<TT></TT>").
@@ -71,7 +60,7 @@ nhedit — Edit image header using a command file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_comfile">comfile = "<TT></TT>"</A></B></DT>
+  <DT><B>comfile = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='comfile' Line='comfile = ""'>
   <DD>Alternate command file. If specified, the <I>fields</I>, <I>value</I>, and 
   <I>comment</I> parameters are ignored and commands are taken from the named
@@ -79,7 +68,7 @@ nhedit — Edit image header using a command file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_after">after = "<TT></TT>"</A></B></DT>
+  <DT><B>after = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='after' Line='after = ""'>
   <DD>Insert the new field after the named "<TT>pivot keyword</TT>".   If this keyword
   does not exist in the header, the new keyword is added to the end of the 
@@ -87,7 +76,7 @@ nhedit — Edit image header using a command file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_before">before = "<TT></TT>"</A></B></DT>
+  <DT><B>before = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='before' Line='before = ""'>
   <DD>Insert the new field before the named "<TT>pivot keyword</TT>". If this keyword 
   does not exist in the header, the new keyword is added to the end of the 
@@ -95,7 +84,7 @@ nhedit — Edit image header using a command file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_add">add = no</A></B></DT>
+  <DT><B>add = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='add' Line='add = no'>
   <DD>Change the operation of the editor from update to add new field. If the
   field already exists it is edited.  If this option is selected the field
@@ -104,7 +93,7 @@ nhedit — Edit image header using a command file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_addonly">addonly = no</A></B></DT>
+  <DT><B>addonly = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='addonly' Line='addonly = no'>
   <DD>Change the operation of the editor from update to add a new field. If the
   field already exists it is not changed.  If this option is selected the field
@@ -113,7 +102,7 @@ nhedit — Edit image header using a command file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_delete">delete = no</A></B></DT>
+  <DT><B>delete = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='delete' Line='delete = no'>
   <DD>Change the operation of the editor from update to delete field.
   The listed fields are deleted from each image.  This takes precedence
@@ -121,7 +110,7 @@ nhedit — Edit image header using a command file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rename">rename = no</A></B></DT>
+  <DT><B>rename = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rename' Line='rename = no'>
   <DD>Change the operation of the editor from update field to rename field.
   The listed fields are renamed in each image if they exist.  The value
@@ -131,7 +120,7 @@ nhedit — Edit image header using a command file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verify">verify = yes</A></B></DT>
+  <DT><B>verify = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verify' Line='verify = yes'>
   <DD>Interactively verify all operations which modify the image database.
   The editor will describe the operation to be performed, prompting with the
@@ -142,7 +131,7 @@ nhedit — Edit image header using a command file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_show">show = yes</A></B></DT>
+  <DT><B>show = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='show' Line='show = yes'>
   <DD>Print a record of each operation which modifies the database upon the standard
   output.  Old values are given as well as new values, making it possible to
@@ -150,7 +139,7 @@ nhedit — Edit image header using a command file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_update">update = yes</A></B></DT>
+  <DT><B>update = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='update' Line='update = yes'>
   <DD>Enable updating of the image database.  If updating is disabled the edit
   operations are performed in memory but image headers will not be updated
@@ -159,7 +148,7 @@ nhedit — Edit image header using a command file
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -470,7 +459,7 @@ nhedit — Edit image header using a command file
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -569,7 +558,7 @@ nhedit — Edit image header using a command file
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   hselect, hedit, mkheader, imgets, imheader
@@ -578,5 +567,3 @@ nhedit — Edit image header using a command file
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

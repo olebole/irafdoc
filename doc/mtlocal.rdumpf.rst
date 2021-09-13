@@ -1,3 +1,5 @@
+.. _rdumpf:
+
 rdumpf — Convert IPPS rasters from a DUMPF tape to IRAF images
 ==============================================================
 
@@ -5,48 +7,35 @@ rdumpf — Convert IPPS rasters from a DUMPF tape to IRAF images
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>rdumpf (Jul87)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.mtlocal</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>rdumpf (Jul87)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>rdumpf</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   rdumpf -- convert IPPS rasters from DUMPF tapes to IRAF images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   rdumpf dumpf_file file_list iraf_file
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_dumpf_file">dumpf_file</A></B></DT>
+  <DT><B>dumpf_file</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dumpf_file' Line='dumpf_file'>
   <DD>The dumpf data source, i.e., the name of a magtape device.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_file_list">file_list</A></B></DT>
+  <DT><B>file_list</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='file_list' Line='file_list'>
   <DD>A string listing the permanent files to be read from the DUMPF tape.  
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_iraf_file">iraf_file</A></B></DT>
+  <DT><B>iraf_file</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='iraf_file' Line='iraf_file'>
   <DD>The IRAF file which will receive the image data if the <I>make_image</I>
   parameter
@@ -59,14 +48,14 @@ rdumpf — Convert IPPS rasters from a DUMPF tape to IRAF images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_raster_list">raster_list = "<TT>1-999</TT>"</A></B></DT>
+  <DT><B>raster_list = "<TT>1-999</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='raster_list' Line='raster_list = "1-999"'>
   <DD>A string listing the IPPS rasters to be read from each file specified by
   the <I>file_list</I> parameter.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_make_image">make_image = yes</A></B></DT>
+  <DT><B>make_image = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='make_image' Line='make_image = yes'>
   <DD>This switch determines whether the IPPS rasters are converted to IRAF images.
   When this switch is set to <I>no</I>, only a listing of the IPPS rasters is 
@@ -74,14 +63,14 @@ rdumpf — Convert IPPS rasters from a DUMPF tape to IRAF images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_print_header">print_header = yes</A></B></DT>
+  <DT><B>print_header = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='print_header' Line='print_header = yes'>
   <DD>This switch determines if the IPPS header information will be listed for those
   rasters being read.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_data_type">data_type = "<TT></TT>"</A></B></DT>
+  <DT><B>data_type = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='data_type' Line='data_type = ""'>
   <DD>The data type of the output IRAF image.  If an incorrect data_type or null
   string is entered, the default data type used is determined by the number
@@ -90,7 +79,7 @@ rdumpf — Convert IPPS rasters from a DUMPF tape to IRAF images
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   IPPS rasters stored in DUMPF format are read and optionally converted to
@@ -108,7 +97,7 @@ rdumpf — Convert IPPS rasters from a DUMPF tape to IRAF images
   on the second tape of a multi-volume-set is indicated by <B>file_list</B> = 2.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   [1] Convert all rasters in the 3rd permanent file on tape:
@@ -125,7 +114,7 @@ rdumpf — Convert IPPS rasters from a DUMPF tape to IRAF images
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   The Cyber format readers, including <I>rdumpf</I>, have not been implemented
@@ -141,7 +130,7 @@ rdumpf — Convert IPPS rasters from a DUMPF tape to IRAF images
   and so <B>rdumpf</B> may not be able to convert some DUMPF format disk files.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   ldumpf
@@ -150,5 +139,3 @@ rdumpf — Convert IPPS rasters from a DUMPF tape to IRAF images
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

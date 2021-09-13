@@ -1,3 +1,5 @@
+.. _powercor:
+
 powercor — Apply power law correction to mountain reduced spectra
 =================================================================
 
@@ -5,42 +7,29 @@ powercor — Apply power law correction to mountain reduced spectra
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>powercor (Oct86)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.imred.iids/noao.imred.irs</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>powercor (Oct86)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>powercor</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   powercor -- Apply power law correction to mountain reduced spectra
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   powercor input records
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The root file name of the input spectra.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_records">records</A></B></DT>
+  <DT><B>records</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='records' Line='records'>
   <DD>The range of spectra.
   The names of the spectra will be formed by appending the range
@@ -48,27 +37,27 @@ powercor — Apply power law correction to mountain reduced spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>This is the root file name for the corrected spectra.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_start_rec">start_rec = 1</A></B></DT>
+  <DT><B>start_rec = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='start_rec' Line='start_rec = 1'>
   <DD>The starting record number to be appended to the root name of the
   created spectra.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_power">power = )iids.power</A></B></DT>
+  <DT><B>power = )iids.power</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='power' Line='power = )iids.power'>
   <DD>The power law coefficient.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   A power law correction to the IIDS count rates is applied to the input
@@ -97,7 +86,7 @@ powercor — Apply power law correction to mountain reduced spectra
   This task is a script calling <B>coincor</B> with <I>ccmode</I> = "<TT>iids</TT>".
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   The following example corrects a series of IIDS spectra:
@@ -105,7 +94,7 @@ powercor — Apply power law correction to mountain reduced spectra
   	cl&gt; powercor nite1 1-250 output=nite1cc start_rec=1
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   coincor
@@ -114,5 +103,3 @@ powercor — Apply power law correction to mountain reduced spectra
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _txtable:
+
 txtable — Extract 2-D tables from rows of 3-D tables.
 =====================================================
 
@@ -5,32 +7,19 @@ txtable — Extract 2-D tables from rows of 3-D tables.
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>txtable (Jan97)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>tables</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>txtable (Jan97)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>txtable</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   txtable -- Extract rows from a 3-D table into separate 2-D tables.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   txtable intable outtable
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task extracts one or more rows from a 3-D table and writes each row
@@ -81,37 +70,37 @@ txtable — Extract 2-D tables from rows of 3-D tables.
   'txtable' got them from.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_intable">intable [file name list/template]</A></B></DT>
+  <DT><B>intable [file name list/template]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='intable' Line='intable [file name list/template]'>
   <DD>A list of one or more tables to be expanded. Row/column selectors are supported.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_outtable">outtable [file name template]</A></B></DT>
+  <DT><B>outtable [file name template]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable [file name template]'>
   <DD>Either a directory name or a list of output table names. The standard
   value "<TT>STDOUT</TT>" generates ASCII output that can be redirected to a file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(compact = yes) [boolean]</A></B></DT>
+  <DT><B>(compact = yes) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(compact = yes) [boolean]'>
   <DD>Write scalars as header keywords ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(verbose = yes) [boolean]</A></B></DT>
+  <DT><B>(verbose = yes) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(verbose = yes) [boolean]'>
   <DD>Display names of input and output tables as files are processed ?
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   Extract columns named FLUX and WAVELENGTH from rows 11 to 13 of a 3-D table:
@@ -124,18 +113,18 @@ txtable — Extract 2-D tables from rows of 3-D tables.
   and "<TT>tableout_r0013</TT>".
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   This task was written by I. Busko.
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   titable, selectors
@@ -144,5 +133,3 @@ txtable — Extract 2-D tables from rows of 3-D tables.
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

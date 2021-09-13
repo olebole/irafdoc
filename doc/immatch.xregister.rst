@@ -1,3 +1,5 @@
+.. _xregister:
+
 xregister — Register 1-D or 2-D images using x-correlation techniques
 =====================================================================
 
@@ -5,42 +7,29 @@ xregister — Register 1-D or 2-D images using x-correlation techniques
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>xregister (Dec98)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.immatch</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>xregister (Dec98)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>xregister</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   xregister -- register 1 and 2D images using X-correlation techniques
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   xregister input reference regions shifts
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The list of input images to be registered.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_reference">reference</A></B></DT>
+  <DT><B>reference</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='reference' Line='reference'>
   <DD>The list of reference images to which the input images are to be registered.
   The number of reference images must be one or equal to the number of input
@@ -48,7 +37,7 @@ xregister — Register 1-D or 2-D images using x-correlation techniques
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_regions">regions</A></B></DT>
+  <DT><B>regions</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='regions' Line='regions'>
   <DD>The list of reference image region(s) used to compute the 
   x and y shifts.
@@ -62,7 +51,7 @@ xregister — Register 1-D or 2-D images using x-correlation techniques
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_shifts">shifts</A></B></DT>
+  <DT><B>shifts</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='shifts' Line='shifts'>
   <DD>The name of the text file where the computed x and y shifts 
   are written. If <I>databasefmt</I> is "<TT>yes</TT>",  a single record containing the
@@ -74,7 +63,7 @@ xregister — Register 1-D or 2-D images using x-correlation techniques
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output = "<TT></TT>"</A></B></DT>
+  <DT><B>output = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output = ""'>
   <DD>The list of output shifted images. If <I>output</I> is the NULL string
   then x and y shifts are computed for each input image and written to
@@ -83,14 +72,14 @@ xregister — Register 1-D or 2-D images using x-correlation techniques
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_databasefmt">databasefmt = yes</A></B></DT>
+  <DT><B>databasefmt = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='databasefmt' Line='databasefmt = yes'>
   <DD>If <I>databasefmt</I> is "<TT>yes</TT>" the results are written to a text database
   file, otherwise they are written to a simple text file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_records">records = "<TT></TT>"</A></B></DT>
+  <DT><B>records = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='records' Line='records = ""'>
   <DD>The list of records to be written to or read from <I>shifts</I> for each
   input image. If <I>records</I> is NULL then the output or input record names
@@ -106,7 +95,7 @@ xregister — Register 1-D or 2-D images using x-correlation techniques
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_append">append = yes</A></B></DT>
+  <DT><B>append = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='append' Line='append = yes'>
   <DD>Append new records to an existing <I>shifts</I> file or start a new shifts
   file for each execution of XREGISTER? The append parameter is ignored
@@ -114,7 +103,7 @@ xregister — Register 1-D or 2-D images using x-correlation techniques
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_coords">coords = "<TT></TT>"</A></B></DT>
+  <DT><B>coords = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='coords' Line='coords = ""'>
   <DD>An optional list of coordinates files containing the x and y coordinates of
   an object in the reference image on the first line and the x and y coordinates
@@ -127,7 +116,7 @@ xregister — Register 1-D or 2-D images using x-correlation techniques
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xlag">xlag = 0, ylag = 0</A></B></DT>
+  <DT><B>xlag = 0, ylag = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xlag' Line='xlag = 0, ylag = 0'>
   <DD>The initial x and y lags of the input image with respect to the reference
   image. Positive values imply that the input image is shifted
@@ -137,7 +126,7 @@ xregister — Register 1-D or 2-D images using x-correlation techniques
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dxlag">dxlag = 0, dylag = 0</A></B></DT>
+  <DT><B>dxlag = 0, dylag = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dxlag' Line='dxlag = 0, dylag = 0'>
   <DD>The increment in <I>xlag</I> and <I>ylag</I> to be applied to successive input
   images. If <I>dxlag</I> and <I>dylag</I> are set to INDEF then the 
@@ -150,33 +139,33 @@ xregister — Register 1-D or 2-D images using x-correlation techniques
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_background">background = none</A></B></DT>
+  <DT><B>background = none</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='background' Line='background = none'>
   <DD>The default background function to be subtracted from the input
   and reference image data in each region before the
   cross-correlation function is computed. The options are:
   <DL>
-  <DT><B><A NAME="l_none">none</A></B></DT>
+  <DT><B>none</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='none' Line='none'>
   <DD>no background subtraction is done.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_mean">mean</A></B></DT>
+  <DT><B>mean</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='mean' Line='mean'>
   <DD>the mean of the reference and input image region is computed and subtracted
   from the image data.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_median">median</A></B></DT>
+  <DT><B>median</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='median' Line='median'>
   <DD>the median of the reference and input image region is computed and subtracted
   from the data.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_plane">plane</A></B></DT>
+  <DT><B>plane</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='plane' Line='plane'>
   <DD>a plane is fit to the reference and input image region and subtracted
   from the data.
@@ -192,7 +181,7 @@ xregister — Register 1-D or 2-D images using x-correlation techniques
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_border">border = INDEF</A></B></DT>
+  <DT><B>border = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='border' Line='border = INDEF'>
   <DD>The width of the border region around the input and reference image data
   regions used to compute the background function if <I>background</I>
@@ -200,14 +189,14 @@ xregister — Register 1-D or 2-D images using x-correlation techniques
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_loreject">loreject = INDEF, ls hireject = INDEF</A></B></DT>
+  <DT><B>loreject = INDEF, ls hireject = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='loreject' Line='loreject = INDEF, ls hireject = INDEF'>
   <DD>The k-sigma rejection limits for removing the effects of bad data from the
   background fit.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apodize">apodize = 0.0</A></B></DT>
+  <DT><B>apodize = 0.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apodize' Line='apodize = 0.0'>
   <DD>The fraction of the input and reference image data endpoints in x and y
   to apodize with a
@@ -215,18 +204,18 @@ xregister — Register 1-D or 2-D images using x-correlation techniques
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_filter">filter = none</A></B></DT>
+  <DT><B>filter = none</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='filter' Line='filter = none'>
   <DD>The spatial filter to be applied to the reference and input image
   data before the cross-correlation function is computed. The options are:
   <DL>
-  <DT><B><A NAME="l_none">none</A></B></DT>
+  <DT><B>none</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='none' Line='none'>
   <DD>no spatial filtering is performed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_laplace">laplace</A></B></DT>
+  <DT><B>laplace</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='laplace' Line='laplace'>
   <DD>a Laplacian filter is applied to the reference and input image data.
   </DD>
@@ -234,12 +223,12 @@ xregister — Register 1-D or 2-D images using x-correlation techniques
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_correlation">correlation = discrete</A></B></DT>
+  <DT><B>correlation = discrete</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='correlation' Line='correlation = discrete'>
   <DD>The algorithm used to compute the cross-correlation function. The options
   are:
   <DL>
-  <DT><B><A NAME="l_discrete">discrete</A></B></DT>
+  <DT><B>discrete</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='discrete' Line='discrete'>
   <DD>The cross-correlation function is calculated by computing the discrete
   convolution of the reference and input image regions over the x and y 
@@ -248,7 +237,7 @@ xregister — Register 1-D or 2-D images using x-correlation techniques
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fourier">fourier</A></B></DT>
+  <DT><B>fourier</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='fourier' Line='fourier'>
   <DD>The cross-correlation function is calculated by computing the convolution
   of the reference and input image regions  using Fourier techniques.
@@ -257,7 +246,7 @@ xregister — Register 1-D or 2-D images using x-correlation techniques
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_difference">difference</A></B></DT>
+  <DT><B>difference</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='difference' Line='difference'>
   <DD>The cross-correlation function is calculated by computing the error
   function of the reference and input images as a function of position
@@ -265,7 +254,7 @@ xregister — Register 1-D or 2-D images using x-correlation techniques
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_file">file</A></B></DT>
+  <DT><B>file</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='file' Line='file'>
   <DD>No cross-correlation function is computed. Instead the previously
   computed x and y shifts are read from record <I>record</I> in  the text
@@ -276,7 +265,7 @@ xregister — Register 1-D or 2-D images using x-correlation techniques
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xwindow">xwindow = 11, ywindow = 11</A></B></DT>
+  <DT><B>xwindow = 11, ywindow = 11</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xwindow' Line='xwindow = 11, ywindow = 11'>
   <DD>The x and y width of the cross-correlation function region
   to be computed and/or searched for peaks. The search window corresponds
@@ -286,19 +275,19 @@ xregister — Register 1-D or 2-D images using x-correlation techniques
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_function">function = centroid</A></B></DT>
+  <DT><B>function = centroid</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='function' Line='function = centroid'>
   <DD>The algorithm used to compute the x and y position of the cross-correlation
   function peak.  The options are:
   <DL>
-  <DT><B><A NAME="l_none">none</A></B></DT>
+  <DT><B>none</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='none' Line='none'>
   <DD>the position of the cross-correlation function peak is set to
   x and y position of the maximum pixel.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_centroid">centroid</A></B></DT>
+  <DT><B>centroid</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='centroid' Line='centroid'>
   <DD>the position of the cross-correlation function peak is calculated
   by computing the intensity-weighted mean of the marginal profiles of
@@ -306,7 +295,7 @@ xregister — Register 1-D or 2-D images using x-correlation techniques
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sawtooth">sawtooth</A></B></DT>
+  <DT><B>sawtooth</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='sawtooth' Line='sawtooth'>
   <DD>the position of the cross-correlation function peak is calculated
   by  convolving 1D slices in x and y through the cross-correlation function
@@ -316,7 +305,7 @@ xregister — Register 1-D or 2-D images using x-correlation techniques
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_parabolic">parabolic</A></B></DT>
+  <DT><B>parabolic</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='parabolic' Line='parabolic'>
   <DD>a 1D parabola is fit to 1D slices in x and y through the cross-correlation
   function and the fitted coefficients are used to compute the peak of
@@ -324,7 +313,7 @@ xregister — Register 1-D or 2-D images using x-correlation techniques
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_mark">mark</A></B></DT>
+  <DT><B>mark</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='mark' Line='mark'>
   <DD>mark the peak of the cross-correlation function with the graphics cursor.
   This option will only work if <I>interactive</I> = "<TT>yes</TT>".
@@ -333,49 +322,49 @@ xregister — Register 1-D or 2-D images using x-correlation techniques
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xcbox">xcbox = 5, ycbox = 5</A></B></DT>
+  <DT><B>xcbox = 5, ycbox = 5</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xcbox' Line='xcbox = 5, ycbox = 5'>
   <DD>The width of the box centered on the peak of the cross-correlation function
   used to compute the fractional pixel x and y center.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interp_type">interp_type = "<TT>linear</TT>"</A></B></DT>
+  <DT><B>interp_type = "<TT>linear</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interp_type' Line='interp_type = "linear"'>
   <DD>The interpolant type use to computed the output shifted image.
   The choices are the following:
   <DL>
-  <DT><B><A NAME="l_nearest">nearest</A></B></DT>
+  <DT><B>nearest</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest'>
   <DD>nearest neighbor.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_linear">linear</A></B></DT>
+  <DT><B>linear</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='linear' Line='linear'>
   <DD>bilinear interpolation in x and y.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_poly3">poly3</A></B></DT>
+  <DT><B>poly3</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='poly3' Line='poly3'>
   <DD>third order interior polynomial in x and y.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_poly5">poly5</A></B></DT>
+  <DT><B>poly5</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='poly5' Line='poly5'>
   <DD>fifth order interior polynomial in x and y.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_spline3">spline3</A></B></DT>
+  <DT><B>spline3</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='spline3' Line='spline3'>
   <DD>bicubic spline.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sinc">sinc</A></B></DT>
+  <DT><B>sinc</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='sinc' Line='sinc'>
   <DD>2D sinc interpolation. Users can specify the sinc interpolant width by
   appending a width value to the interpolant string, e.g. sinc51 specifies
@@ -385,7 +374,7 @@ xregister — Register 1-D or 2-D images using x-correlation techniques
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_drizzle">drizzle</A></B></DT>
+  <DT><B>drizzle</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='drizzle' Line='drizzle'>
   <DD>2D drizzle resampling. Users can specify the drizzle pixel fractions in x and y
   by appending values between 0.0 and 1.0 in square brackets to the
@@ -397,30 +386,30 @@ xregister — Register 1-D or 2-D images using x-correlation techniques
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_boundary_type">boundary_type = "<TT>nearest</TT>"</A></B></DT>
+  <DT><B>boundary_type = "<TT>nearest</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='boundary_type' Line='boundary_type = "nearest"'>
   <DD>The boundary extension algorithm used to compute the output shifted
   image.  The choices are:
   <DL>
-  <DT><B><A NAME="l_nearest">nearest</A></B></DT>
+  <DT><B>nearest</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest'>
   <DD>use the value of the nearest boundary pixel.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_constant">constant</A></B></DT>
+  <DT><B>constant</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='constant' Line='constant'>
   <DD>use a constant value.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_reflect">reflect</A></B></DT>
+  <DT><B>reflect</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='reflect' Line='reflect'>
   <DD>generate a value by reflecting about the boundary.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wrap">wrap</A></B></DT>
+  <DT><B>wrap</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='wrap' Line='wrap'>
   <DD>generate a value by wrapping around to the opposite side of the image.
   </DD>
@@ -428,45 +417,45 @@ xregister — Register 1-D or 2-D images using x-correlation techniques
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_constant">constant = 0</A></B></DT>
+  <DT><B>constant = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0'>
   <DD>The default constant for constant boundary extension.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = no</A></B></DT>
+  <DT><B>interactive = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = no'>
   <DD>Compute the cross-correlation function and the shifts for each image
   interactively using graphics cursor and optionally image cursor input.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose</A></B></DT>
+  <DT><B>verbose</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose'>
   <DD>Print messages about the progress of the task during task execution
   in non-interactive mode.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_graphics">graphics = "<TT>stdgraph</TT>"</A></B></DT>
+  <DT><B>graphics = "<TT>stdgraph</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"'>
   <DD>The default graphics device.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_display">display = "<TT>stdimage</TT>"</A></B></DT>
+  <DT><B>display = "<TT>stdimage</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='display' Line='display = "stdimage"'>
   <DD>The default image display device.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_gcommands">gcommands = "<TT></TT>"</A></B></DT>
+  <DT><B>gcommands = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""'>
   <DD>The default graphics cursor.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_icommands">icommands = "<TT></TT>"</A></B></DT>
+  <DT><B>icommands = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""'>
   <DD>The default image display cursor.
   </DD>
@@ -474,7 +463,7 @@ xregister — Register 1-D or 2-D images using x-correlation techniques
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -669,7 +658,7 @@ xregister — Register 1-D or 2-D images using x-correlation techniques
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_cursor_commands">CURSOR COMMANDS</A></H2>
+  <H3>Cursor commands</H3>
   <! BeginSection: 'CURSOR COMMANDS'>
   <UL>
   <P>
@@ -767,7 +756,7 @@ xregister — Register 1-D or 2-D images using x-correlation techniques
   <P>
   </UL>
   <! EndSection:   'CURSOR COMMANDS'>
-  <H2><A NAME="s_algorithms">ALGORITHMS</A></H2>
+  <H3>Algorithms</H3>
   <! BeginSection: 'ALGORITHMS'>
   <UL>
   <P>
@@ -810,7 +799,7 @@ xregister — Register 1-D or 2-D images using x-correlation techniques
   <P>
   </UL>
   <! EndSection:   'ALGORITHMS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -902,17 +891,17 @@ xregister — Register 1-D or 2-D images using x-correlation techniques
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   rv.fxcor,proto.imalign,images.imcombine,ctio.immatch,center1d,images.imshift
@@ -921,5 +910,3 @@ xregister — Register 1-D or 2-D images using x-correlation techniques
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'CURSOR COMMANDS' 'ALGORITHMS' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

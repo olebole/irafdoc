@@ -1,3 +1,5 @@
+.. _mtexamine:
+
 mtexamine — Examine the structure of a magnetic tape
 ====================================================
 
@@ -5,42 +7,29 @@ mtexamine — Examine the structure of a magnetic tape
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>mtexamine (Apr84)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>dataio</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>mtexamine (Apr84)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>mtexamine</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   mtexamine -- examine the structure of magtape or a single disk file
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   mtexamine tape_file
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_tape_file">tape_file</A></B></DT>
+  <DT><B>tape_file</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='tape_file' Line='tape_file'>
   <DD>Tape or disk file, e.g. "<TT>mta1600[2]</TT>", "<TT>mta1600</TT>" or "<TT>data</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_file_list">file_list = "<TT>1-999</TT>"</A></B></DT>
+  <DT><B>file_list = "<TT>1-999</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='file_list' Line='file_list = "1-999"'>
   <DD>List of tape file numbers or ranges delimited by commas, e.g. "<TT>1-3,5-8</TT>".
   File_list is used only if no file number is given in tape_file.
@@ -51,26 +40,26 @@ mtexamine — Examine the structure of a magnetic tape
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dump_records">dump_records = no</A></B></DT>
+  <DT><B>dump_records = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dump_records' Line='dump_records = no'>
   <DD>Dump selected records?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rec_list">rec_list = "<TT>1-999</TT>"</A></B></DT>
+  <DT><B>rec_list = "<TT>1-999</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rec_list' Line='rec_list = "1-999"'>
   <DD>List of tape record numbers or ranges to be dumped delimited by whitespace
   or commas e.g "<TT>1-3,4</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_swapbytes">swapbytes = no</A></B></DT>
+  <DT><B>swapbytes = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='swapbytes' Line='swapbytes = no'>
   <DD>Swap bytes?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_byte_chunk">byte_chunk = 1</A></B></DT>
+  <DT><B>byte_chunk = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='byte_chunk' Line='byte_chunk = 1'>
   <DD>The number of bytes which are considered as one output element.
   The maximum number of bytes permitted in byte_chunk is the number of
@@ -78,7 +67,7 @@ mtexamine — Examine the structure of a magnetic tape
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output_format">output_format = "<TT>o</TT>"</A></B></DT>
+  <DT><B>output_format = "<TT>o</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output_format' Line='output_format = "o"'>
   <DD>Permitted types are character(c), octal(o), hexadecimal (x), decimal (d)
   or unsigned decimal (u).  Character dumps are only permitted for byte_chunk = 1.
@@ -88,7 +77,7 @@ mtexamine — Examine the structure of a magnetic tape
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   By default mtexamine determines the record structure of all files
@@ -104,7 +93,7 @@ mtexamine — Examine the structure of a magnetic tape
   block size.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Determine the record structure of a magnetic tape and send the result to
@@ -128,7 +117,7 @@ mtexamine — Examine the structure of a magnetic tape
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   The IRAF magtape i/o routines do not permit data beyond a double EOF
@@ -136,7 +125,7 @@ mtexamine — Examine the structure of a magnetic tape
   embedded double EOFs.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   rewind, allocate
@@ -145,5 +134,3 @@ mtexamine — Examine the structure of a magnetic tape
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

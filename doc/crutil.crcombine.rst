@@ -1,3 +1,5 @@
+.. _crcombine:
+
 crcombine — Combine multiple exposures to eliminate cosmic rays
 ===============================================================
 
@@ -5,26 +7,13 @@ crcombine — Combine multiple exposures to eliminate cosmic rays
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>crcombine (Apr98)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.imred.crutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>crcombine (Apr98)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>crcombine</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   crcombine -- combine multiple exposures to eliminate cosmic rays
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage_">USAGE	</A></H2>
+  <H3>Usage	</H3>
   <! BeginSection: 'USAGE	'>
   <UL>
   <PRE>
@@ -32,13 +21,13 @@ crcombine — Combine multiple exposures to eliminate cosmic rays
   </PRE>
   </UL>
   <! EndSection:   'USAGE	'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   See parameters for <B>imcombine</B>.
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task is a version of <B>imcombine</B>.  See the help for that task
@@ -52,7 +41,7 @@ crcombine — Combine multiple exposures to eliminate cosmic rays
   algorithm.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  To combine two images using the gain and read noise parameters in
@@ -63,7 +52,7 @@ crcombine — Combine multiple exposures to eliminate cosmic rays
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imcombine
@@ -72,5 +61,3 @@ crcombine — Combine multiple exposures to eliminate cosmic rays
   
   <! Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

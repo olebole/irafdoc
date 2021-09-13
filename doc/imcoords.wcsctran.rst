@@ -1,3 +1,5 @@
+.. _wcsctran:
+
 wcsctran — Transform coordinates from one iraf image wcs to another
 ===================================================================
 
@@ -5,36 +7,23 @@ wcsctran — Transform coordinates from one iraf image wcs to another
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>wcsctran (May95)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imcoords</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>wcsctran (May95)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>wcsctran</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   wcsctran -- use the image WCS to transform between IRAF coordinate systems
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   wcsctran input output image inwcs outwcs
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The list of input coordinate files. The number of input coordinate
   files must be one or equal to the number of input images. Coordinates
@@ -42,7 +31,7 @@ wcsctran — Transform coordinates from one iraf image wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>The list of output coordinate files. The number of coordinate files
   must be one or equal to the number of input images. Results may be printed
@@ -50,19 +39,19 @@ wcsctran — Transform coordinates from one iraf image wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_image">image</A></B></DT>
+  <DT><B>image</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='image' Line='image'>
   <DD>The list of input images containing the WCS information.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_inwcs">inwcs, outwcs</A></B></DT>
+  <DT><B>inwcs, outwcs</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='inwcs' Line='inwcs, outwcs'>
   <DD>The input and output coordinate systems. Coordinates in the input
   file are assumed to be in the input system. Coordinates are written to
   the output file in the output system. The options are:
   <DL>
-  <DT><B><A NAME="l_logical">logical</A></B></DT>
+  <DT><B>logical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='logical' Line='logical'>
   <DD>Logical coordinates are pixel coordinates relative to the current
   image. The logical coordinate system is the coordinate system used by
@@ -70,7 +59,7 @@ wcsctran — Transform coordinates from one iraf image wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_tv">tv    </A></B></DT>
+  <DT><B>tv    </B></DT>
   <! Sec='PARAMETERS' Level=1 Label='tv' Line='tv    '>
   <DD>Tv coordinates are pixel coordinates used by the ximtool and saoimage
   display servers.
@@ -84,7 +73,7 @@ wcsctran — Transform coordinates from one iraf image wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_physical">physical</A></B></DT>
+  <DT><B>physical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='physical' Line='physical'>
   <DD>Physical coordinates are pixel coordinates invariant with respect to linear
   transformations of the physical image data.  For example, if the current
@@ -95,7 +84,7 @@ wcsctran — Transform coordinates from one iraf image wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_world">world</A></B></DT>
+  <DT><B>world</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='world' Line='world'>
   <DD>World coordinates are image coordinates in any units which are invariant with
   respect to linear transformations of the physical image data. For example, 
@@ -111,7 +100,7 @@ wcsctran — Transform coordinates from one iraf image wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_columns">columns = "<TT>1 2 3 4 5 6 7</TT>"</A></B></DT>
+  <DT><B>columns = "<TT>1 2 3 4 5 6 7</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='columns' Line='columns = "1 2 3 4 5 6 7"'>
   <DD>The list of columns separated by whitespace or commas in the input coordinate
   file containing the coordinate values.
@@ -121,21 +110,21 @@ wcsctran — Transform coordinates from one iraf image wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_units">units = "<TT></TT>"</A></B></DT>
+  <DT><B>units = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='units' Line='units = ""'>
   <DD>The units of the input coordinate values, normally degrees for the sky
   projection coordinate systems and angstroms for spectral coordinate
   systems. 
   The options are:
   <DL>
-  <DT><B><A NAME="l_hours">hours</A></B></DT>
+  <DT><B>hours</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='hours' Line='hours'>
   <DD>Input coordinates specified in hours are converted to decimal degrees by
   multiplying by 15.0.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_native">native</A></B></DT>
+  <DT><B>native</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='native' Line='native'>
   <DD>The internal units of the wcs. No conversions on the input coordinates
   are performed.
@@ -146,7 +135,7 @@ wcsctran — Transform coordinates from one iraf image wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_formats">formats = "<TT></TT>"</A></B></DT>
+  <DT><B>formats = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='formats' Line='formats = ""'>
   <DD>The format for the computed output coordinates. If the formats
   parameter is undefined then: 1) the value of the wcs format attribute
@@ -156,7 +145,7 @@ wcsctran — Transform coordinates from one iraf image wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_min_sigdigits">min_sigdigits = 7</A></B></DT>
+  <DT><B>min_sigdigits = 7</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='min_sigdigits' Line='min_sigdigits = 7'>
   <DD>The minimum precision of the output coordinates if, the formats parameter
   is undefined, and the output coordinate system is "<TT>world</TT>" but the wcs
@@ -164,7 +153,7 @@ wcsctran — Transform coordinates from one iraf image wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print comment lines to the output file as the task executes.
   </DD>
@@ -172,7 +161,7 @@ wcsctran — Transform coordinates from one iraf image wcs to another
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -263,7 +252,7 @@ wcsctran — Transform coordinates from one iraf image wcs to another
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_formats">FORMATS</A></H2>
+  <H3>Formats</H3>
   <! BeginSection: 'FORMATS'>
   <UL>
   <P>
@@ -344,7 +333,7 @@ wcsctran — Transform coordinates from one iraf image wcs to another
   <P>
   </UL>
   <! EndSection:   'FORMATS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   <P>
@@ -360,7 +349,7 @@ wcsctran — Transform coordinates from one iraf image wcs to another
   <P>
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -412,19 +401,19 @@ wcsctran — Transform coordinates from one iraf image wcs to another
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   <P>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   <P>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   wcsreset, wcsedit, rimcursor, listpixels, lintran
@@ -434,5 +423,3 @@ wcsctran — Transform coordinates from one iraf image wcs to another
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'FORMATS' 'REFERENCES' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

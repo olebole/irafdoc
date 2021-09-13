@@ -1,3 +1,5 @@
+.. _sflip:
+
 sflip — Flip data and/or dispersion coordinates in spectra
 ==========================================================
 
@@ -5,42 +7,29 @@ sflip — Flip data and/or dispersion coordinates in spectra
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>sflip (Jul94)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.onedspec</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>sflip (Jul94)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>sflip</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   sflip -- Flip data and/or dispersion coordinates in spectra
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   sflip input output
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of input images containing spectra to be flipped.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>Matching list of output image names for flipped spectra.
   If no list is specified then the flipped spectra will replace the input
@@ -49,7 +38,7 @@ sflip — Flip data and/or dispersion coordinates in spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_coord_flip">coord_flip = no</A></B></DT>
+  <DT><B>coord_flip = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='coord_flip' Line='coord_flip = no'>
   <DD>Flip the dispersion coordinates?  If yes then the relationship between the
   logical pixel coordinates and the dispersion coordinates will be reversed so
@@ -61,7 +50,7 @@ sflip — Flip data and/or dispersion coordinates in spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_data_flip">data_flip = yes</A></B></DT>
+  <DT><B>data_flip = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='data_flip' Line='data_flip = yes'>
   <DD>Flip the order of the data pixels as they are stored in the image along
   the dispersion axis?  If yes then the first pixel in the input spectrum
@@ -71,7 +60,7 @@ sflip — Flip data and/or dispersion coordinates in spectra
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The dispersion coordinate system and/or the data in the spectra specified
@@ -132,7 +121,7 @@ sflip — Flip data and/or dispersion coordinates in spectra
   appropriate dispersion axis itself.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   In the following the spectra can be one dimensional, multispec,
@@ -147,11 +136,11 @@ sflip — Flip data and/or dispersion coordinates in spectra
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_SFLIP">SFLIP V2.10.4</A></B></DT>
+  <DT><B>SFLIP V2.10.4</B></DT>
   <! Sec='REVISIONS' Level=0 Label='SFLIP' Line='SFLIP V2.10.4'>
   <DD>New in this release.  Note that the V2.9 SFLIP was different in that
   it was script which simply flipped the data.  Coordinate systems were
@@ -160,7 +149,7 @@ sflip — Flip data and/or dispersion coordinates in spectra
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imcopy, scopy, dispcor, sapertures
@@ -169,5 +158,3 @@ sflip — Flip data and/or dispersion coordinates in spectra
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

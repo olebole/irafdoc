@@ -1,3 +1,5 @@
+.. _tchcol:
+
 tchcol — Change column name, print format, or units.
 ====================================================
 
@@ -5,32 +7,19 @@ tchcol — Change column name, print format, or units.
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>tchcol (Jan92)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>tables</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>tchcol (Jan92)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>tchcol</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   tchcol -- Change column description.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   tchcol table oldname newname newfmt newunits
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task may be used to change the name of a column, the display
@@ -41,11 +30,11 @@ tchcol — Change column name, print format, or units.
   the print format or the units to their default values.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_table">table [file name template]</A></B></DT>
+  <DT><B>table [file name template]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='table' Line='table [file name template]'>
   <DD>Names of tables to be modified.
   The same change(s) will be made to all tables.
@@ -54,7 +43,7 @@ tchcol — Change column name, print format, or units.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_oldname">oldname = "<TT></TT>" [string]</A></B></DT>
+  <DT><B>oldname = "<TT></TT>" [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='oldname' Line='oldname = "" [string]'>
   <DD>Name of column to be changed.
   If the column is not found,
@@ -63,7 +52,7 @@ tchcol — Change column name, print format, or units.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_newname">newname = "<TT></TT>" [string]</A></B></DT>
+  <DT><B>newname = "<TT></TT>" [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='newname' Line='newname = "" [string]'>
   <DD>New column name or a null string ("<TT></TT>").
   <P>
@@ -71,7 +60,7 @@ tchcol — Change column name, print format, or units.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_newfmt">newfmt = "<TT></TT>" [string]</A></B></DT>
+  <DT><B>newfmt = "<TT></TT>" [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='newfmt' Line='newfmt = "" [string]'>
   <DD>New value for print format, or "<TT>default</TT>" or "<TT></TT>".
   <P>
@@ -82,7 +71,7 @@ tchcol — Change column name, print format, or units.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_newunits">newunits = "<TT></TT>" [string]</A></B></DT>
+  <DT><B>newunits = "<TT></TT>" [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='newunits' Line='newunits = "" [string]'>
   <DD>New value for units, or "<TT>default</TT>" or "<TT></TT>".
   <P>
@@ -92,7 +81,7 @@ tchcol — Change column name, print format, or units.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(verbose = yes) [boolean]</A></B></DT>
+  <DT><B>(verbose = yes) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(verbose = yes) [boolean]'>
   <DD>Print the names of tables as the task progresses?
   <P>
@@ -103,7 +92,7 @@ tchcol — Change column name, print format, or units.
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   In table 'm87pol.tab', change column name "<TT>chi</TT>" to "<TT>CHI</TT>" and set the units
@@ -121,18 +110,18 @@ tchcol — Change column name, print format, or units.
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   This task was written by J.C. Hsu and was modified by Phil Hodge.
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   </UL>
@@ -140,5 +129,3 @@ tchcol — Change column name, print format, or units.
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

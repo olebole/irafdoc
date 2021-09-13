@@ -1,3 +1,5 @@
+.. _imgets:
+
 imgets — Return the value of an image header parameter as a string
 ==================================================================
 
@@ -5,55 +7,42 @@ imgets — Return the value of an image header parameter as a string
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>imgets (Jan85)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>imgets (Jan85)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>imgets</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   imgets -- get the value of an image header parameter as a string
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   imgets image param
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_image">image</A></B></DT>
+  <DT><B>image</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='image' Line='image'>
   <DD>Name of the image to be accessed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_param">param</A></B></DT>
+  <DT><B>param</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='param' Line='param'>
   <DD>Name of the parameter whose value is to be returned.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_value">value = "<TT></TT>"</A></B></DT>
+  <DT><B>value = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='value' Line='value = ""'>
   <DD>The value of the parameter, returned as a string.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The value of the parameter <I>param</I> of the image <I>image</I> is returned
@@ -82,7 +71,7 @@ imgets — Return the value of an image header parameter as a string
   parameters.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Fetch the instrument parameter "<TT>HA</TT>" (hour angle) from the image header of
@@ -107,7 +96,7 @@ imgets — Return the value of an image header parameter as a string
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imheader, hedit, hselect
@@ -116,5 +105,3 @@ imgets — Return the value of an image header parameter as a string
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

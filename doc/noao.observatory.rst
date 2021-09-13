@@ -1,3 +1,5 @@
+.. _observatory:
+
 observatory — Examine and define observatory parameters
 =======================================================
 
@@ -5,36 +7,23 @@ observatory — Examine and define observatory parameters
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>observatory (Jan92)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>observatory (Jan92)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>observatory</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   observatory -- Examine and set observatory parameters
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   observatory command obsid [images]
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_command">command = "<TT>list</TT>" (set|list|images)</A></B></DT>
+  <DT><B>command = "<TT>list</TT>" (set|list|images)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='command' Line='command = "list" (set|list|images)'>
   <DD>Command option which is one of "<TT>set</TT>", "<TT>list</TT>", or "<TT>images</TT>".  The set command
   sets the default observatory task parameters for the specified
@@ -46,7 +35,7 @@ observatory — Examine and define observatory parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_obsid">obsid = "<TT>?</TT>"</A></B></DT>
+  <DT><B>obsid = "<TT>?</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='obsid' Line='obsid = "?"'>
   <DD>Observatory identification to be set, listed, or used as the default for
   images without the OBSERVAT keyword.  The observatory ID is one of those in
@@ -57,7 +46,7 @@ observatory — Examine and define observatory parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>List of images to be examined with the "<TT>images</TT>" command.  The images are
   checked for the OBSERVAT keyword to determine the observatory parameters
@@ -65,7 +54,7 @@ observatory — Examine and define observatory parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = no</A></B></DT>
+  <DT><B>verbose = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
   <DD>Verbose output?  Because there are a number of different ways in which
   observatory information is determine this option prints detailed
@@ -75,7 +64,7 @@ observatory — Examine and define observatory parameters
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_observatory">observatory</A></B></DT>
+  <DT><B>observatory</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory'>
   <DD>The default observatory used by tasks which use the special
   observatory identification "<TT>observatory</TT>".  The value is one of the
@@ -85,32 +74,32 @@ observatory — Examine and define observatory parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_name">name</A></B></DT>
+  <DT><B>name</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='name' Line='name'>
   <DD>Observatory name.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_longitude">longitude</A></B></DT>
+  <DT><B>longitude</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='longitude' Line='longitude'>
   <DD>Observatory longitude given in degrees west.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_latitude">latitude</A></B></DT>
+  <DT><B>latitude</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='latitude' Line='latitude'>
   <DD>Observatory latitude in degrees.  Positive latitudes are north and negative
   latitudes are south.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_altitude">altitude</A></B></DT>
+  <DT><B>altitude</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='altitude' Line='altitude'>
   <DD>Observatory altitude in meters above sea level.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_timezone">timezone</A></B></DT>
+  <DT><B>timezone</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='timezone' Line='timezone'>
   <DD>Observatory time zone.  The time zone is the number of hours west of
   Greenwich or the number of hours to be added to local time to obtain
@@ -119,18 +108,18 @@ observatory — Examine and define observatory parameters
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_environment_variables">ENVIRONMENT VARIABLES</A></H2>
+  <H3>Environment variables</H3>
   <! BeginSection: 'ENVIRONMENT VARIABLES'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_obsdb">obsdb</A></B></DT>
+  <DT><B>obsdb</B></DT>
   <! Sec='ENVIRONMENT VARIABLES' Level=0 Label='obsdb' Line='obsdb'>
   <DD>This variable selects the observatory database.  If not defined it defaults
   to noao$lib/obsdb.dat.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_observatory">observatory</A></B></DT>
+  <DT><B>observatory</B></DT>
   <! Sec='ENVIRONMENT VARIABLES' Level=0 Label='observatory' Line='observatory'>
   <DD>This variable selects the observatory entry whenever a task uses the
   observatory name "<TT>observatory</TT>".  If not defined the value of the task
@@ -139,7 +128,7 @@ observatory — Examine and define observatory parameters
   </DL>
   </UL>
   <! EndSection:   'ENVIRONMENT VARIABLES'>
-  <H2><A NAME="s_image_header_keywords">IMAGE HEADER KEYWORDS</A></H2>
+  <H3>Image header keywords</H3>
   <! BeginSection: 'IMAGE HEADER KEYWORDS'>
   <UL>
   The observatory identification for images is first sought under the
@@ -147,7 +136,7 @@ observatory — Examine and define observatory parameters
   other means of defining the observatory.
   </UL>
   <! EndSection:   'IMAGE HEADER KEYWORDS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -316,7 +305,7 @@ observatory — Examine and define observatory parameters
   IRAF group at NOAO for inclusion in the default database.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  List the observatory entries in the database:
@@ -460,7 +449,7 @@ observatory — Examine and define observatory parameters
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   Tasks in astutil, imred, onedspec, and twodspec.
@@ -469,5 +458,3 @@ observatory — Examine and define observatory parameters
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'ENVIRONMENT VARIABLES' 'IMAGE HEADER KEYWORDS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

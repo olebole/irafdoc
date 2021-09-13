@@ -1,3 +1,5 @@
+.. _coincor:
+
 coincor — Correct spectra for detector count rates
 ==================================================
 
@@ -5,42 +7,29 @@ coincor — Correct spectra for detector count rates
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>coincor (Feb87)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.imred.iids/noao.imred.irs</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>coincor (Feb87)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>coincor</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   coincor -- Correct detector count rates
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   coincor input records
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The root file name of the input spectra.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_records">records</A></B></DT>
+  <DT><B>records</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='records' Line='records'>
   <DD>The range of spectra.
   The names of the spectra will be formed by appending the range
@@ -48,7 +37,7 @@ coincor — Correct spectra for detector count rates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>This is the root file name for the corrected spectra.  If no root name
   is specified (specified with the null string "<TT></TT>") then the operation
@@ -56,20 +45,20 @@ coincor — Correct spectra for detector count rates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_start_rec">start_rec = 1</A></B></DT>
+  <DT><B>start_rec = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='start_rec' Line='start_rec = 1'>
   <DD>The starting record number to be appended to the root name of the
   created spectra.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ccmode">ccmode = )_.ccmode</A></B></DT>
+  <DT><B>ccmode = )_.ccmode</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ccmode' Line='ccmode = )_.ccmode'>
   <DD>The mode used to model the detector count rate corrections.
   In the following C(obs) is the observed count rate and C(cor) is the
   corrected count rate.
   <DL>
-  <DT><B><A NAME="l_">"<TT>photo</TT>"</A></B></DT>
+  <DT><B>"<TT>photo</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"photo"'>
   <DD>Photoelectric photometer with discriminator mode.  The count rate
   correction is
@@ -80,7 +69,7 @@ coincor — Correct spectra for detector count rates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">"<TT>iids</TT>"</A></B></DT>
+  <DT><B>"<TT>iids</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"iids"'>
   <DD>IIDS correction given by
   <P>
@@ -93,7 +82,7 @@ coincor — Correct spectra for detector count rates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_deadtime">deadtime = )_.deadtime</A></B></DT>
+  <DT><B>deadtime = )_.deadtime</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='deadtime' Line='deadtime = )_.deadtime'>
   <DD>For the "<TT>photo</TT>" mode this parameter is the period, in seconds, during
   which no counts can be registered by the detector.  Note that this is
@@ -105,14 +94,14 @@ coincor — Correct spectra for detector count rates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_power">power = )_.power</A></B></DT>
+  <DT><B>power = )_.power</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='power' Line='power = )_.power'>
   <DD>The IIDS power law coefficient.  The standard value is 0.975.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The input spectra are corrected for detector count rate errors.  If no
@@ -135,7 +124,7 @@ coincor — Correct spectra for detector count rates
   correction, and 2 for the photomuliplier mode correction.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   The following example corrects a series of IIDS spectra:
@@ -151,13 +140,13 @@ coincor — Correct spectra for detector count rates
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   <B>Coincor</B> requires approximately 1 second per spectrum of length 1024.
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   <PRE>
@@ -168,5 +157,3 @@ coincor — Correct spectra for detector count rates
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

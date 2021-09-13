@@ -1,3 +1,5 @@
+.. _apscatter:
+
 apscatter — Fit and remove scattered light
 ==========================================
 
@@ -5,42 +7,29 @@ apscatter — Fit and remove scattered light
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>apscatter (Sep96)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.twodspec.apextract</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>apscatter (Sep96)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>apscatter</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   apscatter -- Fit and subtract scattered light
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   apscatter input output
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of input images in which to determine and subtract scattered light.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>List of output scattered light subtracted images.  If no output images
   are specified or the end of the output list is reached before the end 
@@ -48,7 +37,7 @@ apscatter — Fit and remove scattered light
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apertures">apertures = "<TT></TT>"</A></B></DT>
+  <DT><B>apertures = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""'>
   <DD>Apertures to recenter, resize, trace, and extract.  All apertures are
   used to define the scattered light region.  This only applies
@@ -61,7 +50,7 @@ apscatter — Fit and remove scattered light
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_scatter">scatter = "<TT></TT>"</A></B></DT>
+  <DT><B>scatter = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='scatter' Line='scatter = ""'>
   <DD>List of scattered light images.  This is the scattered light subtracted
   from the input image.  If no list is given or the end of the list is
@@ -70,7 +59,7 @@ apscatter — Fit and remove scattered light
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_references">references = "<TT></TT>"</A></B></DT>
+  <DT><B>references = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='references' Line='references = ""'>
   <DD>List of reference images to be used to define apertures for the input
   images.  When a reference image is given it supersedes apertures
@@ -84,7 +73,7 @@ apscatter — Fit and remove scattered light
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = yes</A></B></DT>
+  <DT><B>interactive = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes'>
   <DD>Run this task interactively?  If the task is not run interactively then
   all user queries are suppressed and interactive aperture editing, trace
@@ -92,7 +81,7 @@ apscatter — Fit and remove scattered light
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_find">find = yes</A></B></DT>
+  <DT><B>find = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='find' Line='find = yes'>
   <DD>Find the spectra and define apertures automatically?  In order for
   spectra to be found automatically there must be no apertures for the
@@ -100,57 +89,57 @@ apscatter — Fit and remove scattered light
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_recenter">recenter = yes</A></B></DT>
+  <DT><B>recenter = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='recenter' Line='recenter = yes'>
   <DD>Recenter the apertures?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_resize">resize = yes</A></B></DT>
+  <DT><B>resize = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='resize' Line='resize = yes'>
   <DD>Resize the apertures?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_edit">edit = yes</A></B></DT>
+  <DT><B>edit = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='edit' Line='edit = yes'>
   <DD>Edit the apertures?  The <I>interactive</I> parameter must also be yes.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_trace">trace = yes</A></B></DT>
+  <DT><B>trace = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='trace' Line='trace = yes'>
   <DD>Trace the apertures?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fittrace">fittrace = yes</A></B></DT>
+  <DT><B>fittrace = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fittrace' Line='fittrace = yes'>
   <DD>Interactively fit the traced positions by a function?  The <I>interactive</I>
   parameter must also be yes.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_subtract">subtract = yes</A></B></DT>
+  <DT><B>subtract = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='subtract' Line='subtract = yes'>
   <DD>Subtract the scattered light from the input images?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_smooth">smooth = yes</A></B></DT>
+  <DT><B>smooth = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='smooth' Line='smooth = yes'>
   <DD>Smooth the cross-dispersion fits along the dispersion?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fitscatter">fitscatter = yes</A></B></DT>
+  <DT><B>fitscatter = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fitscatter' Line='fitscatter = yes'>
   <DD>Fit the scattered light across the dispersion interactively?
   The <I>interactive</I> parameter must also be yes.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fitsmooth">fitsmooth = yes</A></B></DT>
+  <DT><B>fitsmooth = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fitsmooth' Line='fitsmooth = yes'>
   <DD>Smooth the cross-dispersion fits along the dispersion?
   The <I>interactive</I> parameter must also be yes.
@@ -158,7 +147,7 @@ apscatter — Fit and remove scattered light
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_line">line = INDEF, nsum = 1</A></B></DT>
+  <DT><B>line = INDEF, nsum = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='line' Line='line = INDEF, nsum = 1'>
   <DD>The dispersion line (line or column perpendicular to the dispersion
   axis) and number of adjacent lines (half before and half after unless
@@ -173,14 +162,14 @@ apscatter — Fit and remove scattered light
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_buffer">buffer = 1.</A></B></DT>
+  <DT><B>buffer = 1.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='buffer' Line='buffer = 1.'>
   <DD>Buffer distance from the aperture edges to be excluded in selecting the
   scattered light pixels to be used.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apscat1">apscat1 = "<TT></TT>"</A></B></DT>
+  <DT><B>apscat1 = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apscat1' Line='apscat1 = ""'>
   <DD>Fitting parameters across the dispersion.  This references an additional
   set of parameters for the ICFIT package.  The default is the "<TT>apscat1</TT>"
@@ -188,7 +177,7 @@ apscatter — Fit and remove scattered light
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apscat2">apscat2 = "<TT></TT>"</A></B></DT>
+  <DT><B>apscat2 = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apscat2' Line='apscat2 = ""'>
   <DD>Fitting parameters along the dispersion.  This references an additional
   set of parameters for the ICFIT package.  The default is the "<TT>apscat2</TT>"
@@ -197,7 +186,7 @@ apscatter — Fit and remove scattered light
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_icfit_parameters_for_fitting_the_scattered_light">ICFIT PARAMETERS FOR FITTING THE SCATTERED LIGHT</A></H2>
+  <H3>Icfit parameters for fitting the scattered light</H3>
   <! BeginSection: 'ICFIT PARAMETERS FOR FITTING THE SCATTERED LIGHT'>
   <UL>
   There are two additional parameter sets which define the parameters used
@@ -210,7 +199,7 @@ apscatter — Fit and remove scattered light
   description may be found there.
   <P>
   <DL>
-  <DT><B><A NAME="l_function">function = "<TT>spline3</TT>" (apscat1 and apscat2)</A></B></DT>
+  <DT><B>function = "<TT>spline3</TT>" (apscat1 and apscat2)</B></DT>
   <! Sec='ICFIT PARAMETERS FOR FITTING THE SCATTERED LIGHT' Level=0 Label='function' Line='function = "spline3" (apscat1 and apscat2)'>
   <DD>Fitting function for the scattered light across and along the dispersion.
   The choices are "<TT>legendre</TT>" polynomial, "<TT>chebyshev</TT>" polynomial,
@@ -218,20 +207,20 @@ apscatter — Fit and remove scattered light
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_order">order = 1 (apscat1 and apscat2)</A></B></DT>
+  <DT><B>order = 1 (apscat1 and apscat2)</B></DT>
   <! Sec='ICFIT PARAMETERS FOR FITTING THE SCATTERED LIGHT' Level=0 Label='order' Line='order = 1 (apscat1 and apscat2)'>
   <DD>Number of polynomial terms or number of spline pieces for the fitting function.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sample">sample = "<TT>*</TT>" (apscat1 and apscat2)</A></B></DT>
+  <DT><B>sample = "<TT>*</TT>" (apscat1 and apscat2)</B></DT>
   <! Sec='ICFIT PARAMETERS FOR FITTING THE SCATTERED LIGHT' Level=0 Label='sample' Line='sample = "*" (apscat1 and apscat2)'>
   <DD>Sample regions for fitting points.  Intervals are separated by "<TT>,</TT>" and an
   interval may be one point or a range separated by "<TT>:</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_naverage">naverage = 1 (apscat1 and apscat2)</A></B></DT>
+  <DT><B>naverage = 1 (apscat1 and apscat2)</B></DT>
   <! Sec='ICFIT PARAMETERS FOR FITTING THE SCATTERED LIGHT' Level=0 Label='naverage' Line='naverage = 1 (apscat1 and apscat2)'>
   <DD>Number of points within a sample interval to be subaveraged or submedianed to
   form fitting points.  Positive values are for averages and negative points
@@ -239,27 +228,27 @@ apscatter — Fit and remove scattered light
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_niterate">niterate = 5 (apscat1), niterate = 0 (apscat2)</A></B></DT>
+  <DT><B>niterate = 5 (apscat1), niterate = 0 (apscat2)</B></DT>
   <! Sec='ICFIT PARAMETERS FOR FITTING THE SCATTERED LIGHT' Level=0 Label='niterate' Line='niterate = 5 (apscat1), niterate = 0 (apscat2)'>
   <DD>Number of sigma clipping rejection iterations.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_low_reject">low_reject = 5. (apscat1) , low_reject = 3. (apscat2)</A></B></DT>
+  <DT><B>low_reject = 5. (apscat1) , low_reject = 3. (apscat2)</B></DT>
   <! Sec='ICFIT PARAMETERS FOR FITTING THE SCATTERED LIGHT' Level=0 Label='low_reject' Line='low_reject = 5. (apscat1) , low_reject = 3. (apscat2)'>
   <DD>Lower sigma clipping rejection threshold in units of sigma determined
   from the RMS sigma of the data to the fit.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_high_reject">high_reject = 2. (apscat1) , high_reject = 3. (apscat2)</A></B></DT>
+  <DT><B>high_reject = 2. (apscat1) , high_reject = 3. (apscat2)</B></DT>
   <! Sec='ICFIT PARAMETERS FOR FITTING THE SCATTERED LIGHT' Level=0 Label='high_reject' Line='high_reject = 2. (apscat1) , high_reject = 3. (apscat2)'>
   <DD>High sigma clipping rejection threshold in units of sigma determined
   from the RMS sigma of the data to the fit.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_grow">grow = 0. (apscat1 and apscat2)</A></B></DT>
+  <DT><B>grow = 0. (apscat1 and apscat2)</B></DT>
   <! Sec='ICFIT PARAMETERS FOR FITTING THE SCATTERED LIGHT' Level=0 Label='grow' Line='grow = 0. (apscat1 and apscat2)'>
   <DD>Growing radius for rejected points (in pixels).  That is, any rejected point
   also rejects other points within this distance of the rejected point.
@@ -267,7 +256,7 @@ apscatter — Fit and remove scattered light
   </DL>
   </UL>
   <! EndSection:   'ICFIT PARAMETERS FOR FITTING THE SCATTERED LIGHT'>
-  <H2><A NAME="s_additional_parameters">ADDITIONAL PARAMETERS</A></H2>
+  <H3>Additional parameters</H3>
   <! BeginSection: 'ADDITIONAL PARAMETERS'>
   <UL>
   I/O parameters and the default dispersion axis are taken from the
@@ -279,7 +268,7 @@ apscatter — Fit and remove scattered light
   <B>aptrace</B>.
   </UL>
   <! EndSection:   'ADDITIONAL PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The scattered light outside the apertures defining the two dimensional
@@ -342,7 +331,7 @@ apscatter — Fit and remove scattered light
   function is all that is required.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  To subtract the scattered light from a set of images to form a
@@ -363,11 +352,11 @@ apscatter — Fit and remove scattered light
   to define the apertures.
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_APSCATTER">APSCATTER V2.11</A></B></DT>
+  <DT><B>APSCATTER V2.11</B></DT>
   <! Sec='REVISIONS' Level=0 Label='APSCATTER' Line='APSCATTER V2.11'>
   <DD>The </TT>"apertures"<TT> parameter can be used to select apertures for resizing,
   recentering, tracing, and extraction.  This parameter name was previously
@@ -377,7 +366,7 @@ apscatter — Fit and remove scattered light
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   apfind, aprecenter, apresize,  apedit, aptrace, apsum, apmask, icfit
@@ -386,5 +375,3 @@ apscatter — Fit and remove scattered light
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'ICFIT PARAMETERS FOR FITTING THE SCATTERED LIGHT' 'ADDITIONAL PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

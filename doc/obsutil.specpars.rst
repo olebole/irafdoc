@@ -1,3 +1,5 @@
+.. _specpars:
+
 specpars — Spectrograph instrument parameters for sptime
 ========================================================
 
@@ -5,4 +7,3 @@ specpars — Spectrograph instrument parameters for sptime
 
 .. raw:: html
 
-  

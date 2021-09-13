@@ -1,3 +1,5 @@
+.. _tbsort:
+
 tbsort — Sort a list of apphot/daophot tables databases
 =======================================================
 
@@ -5,43 +7,30 @@ tbsort — Sort a list of apphot/daophot tables databases
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>tbsort (Aug91)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.ptools</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>tbsort (Aug91)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>tbsort</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   tbsort -- sort an APPHOT/DAOPHOT STSDAS table database on one or more columns
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   tbsort table columns
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_table">table</A></B></DT>
+  <DT><B>table</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='table' Line='table'>
   <DD>The list of APPHOT/DAOPHOT table databases to be sorted in-place.
   All tables are sorted on the same column or columns.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_columns">columns</A></B></DT>
+  <DT><B>columns</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='columns' Line='columns'>
   <DD>The list of columns to sort on.  A column template consists of a list of
   either column names, or column patterns containing the usual pattern matching
@@ -51,7 +40,7 @@ tbsort — Sort a list of apphot/daophot tables databases
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ascend">ascend = yes</A></B></DT>
+  <DT><B>ascend = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ascend' Line='ascend = yes'>
   <DD>If <I>ascend</I> = yes, the table is sorted in ascending value order, with the
   first
@@ -60,7 +49,7 @@ tbsort — Sort a list of apphot/daophot tables databases
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_casesens">casesens = yes</A></B></DT>
+  <DT><B>casesens = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='casesens' Line='casesens = yes'>
   <DD>If <I>casesens</I> = yes, sorts on character columns are case sensitive,
   with upper case letters preceding lower case in the sort.
@@ -69,7 +58,7 @@ tbsort — Sort a list of apphot/daophot tables databases
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   TBSORT sorts an APPHOT/DAOPHOT STSDAS table database.
@@ -96,7 +85,7 @@ tbsort — Sort a list of apphot/daophot tables databases
   can modify the parameters independently of the TBSORT task in TABLES.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -116,12 +105,12 @@ tbsort — Sort a list of apphot/daophot tables databases
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   ptools.txsort,ptools.psort,tables.tbsort
@@ -130,5 +119,3 @@ tbsort — Sort a list of apphot/daophot tables databases
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

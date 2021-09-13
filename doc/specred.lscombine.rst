@@ -1,3 +1,5 @@
+.. _lscombine:
+
 lscombine — Combine longslit spectra
 ====================================
 
@@ -5,36 +7,23 @@ lscombine — Combine longslit spectra
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>lscombine (Jun04)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.twodspec.longslit</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>lscombine (Jun04)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>lscombine</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   lscombine -- Combine longslit images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   lscombine input output
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of input two-dimensional images to combine.  This task is typically
   used with dispersion calibrated longslit images though it will work with
@@ -42,20 +31,20 @@ lscombine — Combine longslit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>Output combined image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_headers">headers = "<TT></TT>" (optional)</A></B></DT>
+  <DT><B>headers = "<TT></TT>" (optional)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='headers' Line='headers = "" (optional)'>
   <DD>Optional output multiextension FITS file where each extension is a dataless
   headers from each input image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_bpmasks">bpmasks = "<TT></TT>" (optional)</A></B></DT>
+  <DT><B>bpmasks = "<TT></TT>" (optional)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='bpmasks' Line='bpmasks = "" (optional)'>
   <DD>Optional output bad pixel mask with good values of 0 and bad values of 1.
   Output pixels are marked as bad when no input pixels contributed to the
@@ -64,7 +53,7 @@ lscombine — Combine longslit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rejmask">rejmask = "<TT></TT>" (optional)</A></B></DT>
+  <DT><B>rejmask = "<TT></TT>" (optional)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rejmask' Line='rejmask = "" (optional)'>
   <DD>Optional output mask file identifying rejected or excluded pixels.  The
   pixel mask is the size of the output image but there is one extra dimension
@@ -78,14 +67,14 @@ lscombine — Combine longslit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nrejmasks">nrejmasks = "<TT></TT>" (optional)</A></B></DT>
+  <DT><B>nrejmasks = "<TT></TT>" (optional)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nrejmasks' Line='nrejmasks = "" (optional)'>
   <DD>Optional output pixel mask giving the number of input pixels rejected or
   excluded from the input images.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_expmasks">expmasks = "<TT></TT>" (optional)</A></B></DT>
+  <DT><B>expmasks = "<TT></TT>" (optional)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='expmasks' Line='expmasks = "" (optional)'>
   <DD>Optional output exposure mask giving the sum of the exposure values of
   the input images with non-zero weights that contributed to that pixel.
@@ -98,7 +87,7 @@ lscombine — Combine longslit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sigma">sigma = "<TT></TT>" (optional)</A></B></DT>
+  <DT><B>sigma = "<TT></TT>" (optional)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sigma' Line='sigma = "" (optional)'>
   <DD>Optional output sigma image.  The sigma is the standard deviation,
   corrected for a finite population, of the input pixel values (excluding
@@ -107,7 +96,7 @@ lscombine — Combine longslit spectra
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_logfile">logfile = "<TT>STDOUT</TT>" (optional)</A></B></DT>
+  <DT><B>logfile = "<TT>STDOUT</TT>" (optional)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "STDOUT" (optional)'>
   <DD>Optional output log file.  If no file is specified then no log information is
   produced.  The special filename "<TT>STDOUT</TT>" prints log information to the
@@ -116,7 +105,7 @@ lscombine — Combine longslit spectra
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_interptype">interptype = "<TT>spline3</TT>"</A></B></DT>
+  <DT><B>interptype = "<TT>spline3</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interptype' Line='interptype = "spline3"'>
   <DD>Image interpolation type for any resampling prior to combining.
   The allowed types are "<TT>nearest</TT>" (nearest neighbor), "<TT>linear</TT>" (bilinear),
@@ -125,28 +114,28 @@ lscombine — Combine longslit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_x1">x1 = INDEF, y1 = INDEF</A></B></DT>
+  <DT><B>x1 = INDEF, y1 = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='x1' Line='x1 = INDEF, y1 = INDEF'>
   <DD>User coordinates of the first output column and line.  If INDEF then it
   is based on the smallest value over all the images.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_x2">x2 = INDEF, y2 = INDEF</A></B></DT>
+  <DT><B>x2 = INDEF, y2 = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='x2' Line='x2 = INDEF, y2 = INDEF'>
   <DD>User coordinates of the last output column and line.  If INDEF then it
   is based on the largest value over all the images.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dx">dx = INDEF, dy = INDEF</A></B></DT>
+  <DT><B>dx = INDEF, dy = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dx' Line='dx = INDEF, dy = INDEF'>
   <DD>User coordinate pixel interval of the output.  If INDEF then the it
   is based on smallest interval (i.e. highest dispersion) over all the images.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nx">nx = INDEF, ny = INDEF</A></B></DT>
+  <DT><B>nx = INDEF, ny = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nx' Line='nx = INDEF, ny = INDEF'>
   <DD>Number of output pixels.  If INDEF then it is based on the values of the
   other coordinate parameters.
@@ -154,7 +143,7 @@ lscombine — Combine longslit spectra
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_combine">combine = "<TT>average</TT>" (average|median|sum)</A></B></DT>
+  <DT><B>combine = "<TT>average</TT>" (average|median|sum)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='combine' Line='combine = "average" (average|median|sum)'>
   <DD>Type of combining operation performed on the final set of pixels (after
   offsetting, masking, thresholding, and rejection).  The choices are
@@ -166,7 +155,7 @@ lscombine — Combine longslit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_reject">reject = "<TT>none</TT>" (none|minmax|ccdclip|crreject|sigclip|avsigclip|pclip)</A></B></DT>
+  <DT><B>reject = "<TT>none</TT>" (none|minmax|ccdclip|crreject|sigclip|avsigclip|pclip)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='reject' Line='reject = "none" (none|minmax|ccdclip|crreject|sigclip|avsigclip|pclip)'>
   <DD>Type of rejection operation performed on the pixels remaining after offsetting,
   masking and thresholding.  The algorithms are described in the
@@ -185,7 +174,7 @@ lscombine — Combine longslit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_outtype">outtype = "<TT>real</TT>" (none|short|ushort|integer|long|real|double)</A></B></DT>
+  <DT><B>outtype = "<TT>real</TT>" (none|short|ushort|integer|long|real|double)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='outtype' Line='outtype = "real" (none|short|ushort|integer|long|real|double)'>
   <DD>Output image pixel datatype.  The pixel datatypes are "<TT>double</TT>", "<TT>real</TT>",
   "<TT>long</TT>", "<TT>integer</TT>", unsigned short "<TT>ushort</TT>", and "<TT>short</TT>" with highest
@@ -196,7 +185,7 @@ lscombine — Combine longslit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_outlimits">outlimits = "<TT></TT>"</A></B></DT>
+  <DT><B>outlimits = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='outlimits' Line='outlimits = ""'>
   <DD>Output region limits in pixels specified as pairs of whitespace separated
   values.  The first two numbers are the limits along the first output image
@@ -209,7 +198,7 @@ lscombine — Combine longslit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_masktype">masktype = "<TT>none</TT>" (none|goodvalue)</A></B></DT>
+  <DT><B>masktype = "<TT>none</TT>" (none|goodvalue)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='masktype' Line='masktype = "none" (none|goodvalue)'>
   <DD>Type of pixel masking to use.  If "<TT>none</TT>" then no pixel masking is done
   even if an image has an associated  pixel mask.  Otherwise the
@@ -220,14 +209,14 @@ lscombine — Combine longslit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_blank">blank = 0.</A></B></DT>
+  <DT><B>blank = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='blank' Line='blank = 0.'>
   <DD>Output value to be used when there are no pixels.
   </DD>
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_scale">scale = "<TT>none</TT>" (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)</A></B></DT>
+  <DT><B>scale = "<TT>none</TT>" (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='scale' Line='scale = "none" (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)'>
   <DD>Multiplicative image scaling to be applied.  The choices are none, multiply
   by the reciprocal of the mode, median, or mean of the specified statistics
@@ -238,7 +227,7 @@ lscombine — Combine longslit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_zero">zero = "<TT>none</TT>" (none|mode|median|mean|@&lt;file&gt;|!&lt;keyword&gt;)</A></B></DT>
+  <DT><B>zero = "<TT>none</TT>" (none|mode|median|mean|@&lt;file&gt;|!&lt;keyword&gt;)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='zero' Line='zero = "none" (none|mode|median|mean|@&lt;file&gt;|!&lt;keyword&gt;)'>
   <DD>Additive zero level image shifts to be applied.  The choices are none, add
   the negative of the mode, median, or mean of the specified statistics
@@ -249,7 +238,7 @@ lscombine — Combine longslit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_weight">weight = "<TT>none</TT>" (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)</A></B></DT>
+  <DT><B>weight = "<TT>none</TT>" (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='weight' Line='weight = "none" (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)'>
   <DD>Weights to be applied during the final averaging.  The choices are none,
   the mode, median, or mean of the specified statistics section, the exposure
@@ -262,7 +251,7 @@ lscombine — Combine longslit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_statsec">statsec = "<TT></TT>"</A></B></DT>
+  <DT><B>statsec = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='statsec' Line='statsec = ""'>
   <DD>Section of images to use in computing image statistics for scaling and
   weighting.  If no section is given then the entire region of the input is
@@ -276,7 +265,7 @@ lscombine — Combine longslit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"> expname = "<TT></TT>"</A></B></DT>
+  <DT><B> expname = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line=' expname = ""'>
   <DD>Image header keyword to be used with the exposure scaling and weighting
   options.  Also if an exposure keyword is specified that keyword will be
@@ -289,7 +278,7 @@ lscombine — Combine longslit spectra
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_lthreshold">lthreshold = INDEF, hthreshold = INDEF</A></B></DT>
+  <DT><B>lthreshold = INDEF, hthreshold = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lthreshold' Line='lthreshold = INDEF, hthreshold = INDEF'>
   <DD>Low and high thresholds to be applied to the input pixels.  This is done
   before any scaling, rejection, and combining.  If INDEF the thresholds
@@ -297,7 +286,7 @@ lscombine — Combine longslit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nlow">nlow = 1,  nhigh = 1 (minmax)</A></B></DT>
+  <DT><B>nlow = 1,  nhigh = 1 (minmax)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nlow' Line='nlow = 1,  nhigh = 1 (minmax)'>
   <DD>The number of low and high pixels to be rejected by the "<TT>minmax</TT>" algorithm.
   These numbers are converted to fractions of the total number of input images
@@ -308,7 +297,7 @@ lscombine — Combine longslit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nkeep">nkeep = 1</A></B></DT>
+  <DT><B>nkeep = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nkeep' Line='nkeep = 1'>
   <DD>The minimum number of pixels to retain or the maximum number to reject
   when using the clipping algorithms (ccdclip, crreject, sigclip,
@@ -319,7 +308,7 @@ lscombine — Combine longslit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_mclip">mclip = yes (ccdclip, crreject, sigclip, avsigcliip)</A></B></DT>
+  <DT><B>mclip = yes (ccdclip, crreject, sigclip, avsigcliip)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='mclip' Line='mclip = yes (ccdclip, crreject, sigclip, avsigcliip)'>
   <DD>Use the median as the estimate for the true intensity rather than the
   average with high and low values excluded in the "<TT>ccdclip</TT>", "<TT>crreject</TT>",
@@ -329,7 +318,7 @@ lscombine — Combine longslit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lsigma">lsigma = 3., hsigma = 3. (ccdclip, crreject, sigclip, avsigclip, pclip)</A></B></DT>
+  <DT><B>lsigma = 3., hsigma = 3. (ccdclip, crreject, sigclip, avsigclip, pclip)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lsigma' Line='lsigma = 3., hsigma = 3. (ccdclip, crreject, sigclip, avsigclip, pclip)'>
   <DD>Low and high sigma clipping factors for the "<TT>ccdclip</TT>", "<TT>crreject</TT>", "<TT>sigclip</TT>",
   "<TT>avsigclip</TT>", and "<TT>pclip</TT>" algorithms.  They multiply a "<TT>sigma</TT>" factor
@@ -339,7 +328,7 @@ lscombine — Combine longslit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rdnoise">rdnoise = "<TT>0.</TT>", gain = "<TT>1.</TT>", snoise = "<TT>0.</TT>" (ccdclip, crreject)</A></B></DT>
+  <DT><B>rdnoise = "<TT>0.</TT>", gain = "<TT>1.</TT>", snoise = "<TT>0.</TT>" (ccdclip, crreject)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rdnoise' Line='rdnoise = "0.", gain = "1.", snoise = "0." (ccdclip, crreject)'>
   <DD>CCD readout noise in electrons, gain in electrons/DN, and sensitivity noise
   as a fraction.  These parameters are used with the "<TT>ccdclip</TT>" and "<TT>crreject</TT>"
@@ -357,7 +346,7 @@ lscombine — Combine longslit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sigscale">sigscale = 0.1 (ccdclip, crreject, sigclip, avsigclip)</A></B></DT>
+  <DT><B>sigscale = 0.1 (ccdclip, crreject, sigclip, avsigclip)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sigscale' Line='sigscale = 0.1 (ccdclip, crreject, sigclip, avsigclip)'>
   <DD>This parameter determines when poisson corrections are made to the
   computation of a sigma for images with different scale factors.  If all
@@ -372,7 +361,7 @@ lscombine — Combine longslit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pclip">pclip = -0.5 (pclip)</A></B></DT>
+  <DT><B>pclip = -0.5 (pclip)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pclip' Line='pclip = -0.5 (pclip)'>
   <DD>Percentile clipping algorithm parameter.  If greater than
   one in absolute value then it specifies a number of pixels above or
@@ -384,7 +373,7 @@ lscombine — Combine longslit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_grow">grow = 0.</A></B></DT>
+  <DT><B>grow = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='grow' Line='grow = 0.'>
   <DD>Radius in pixels for additional pixel to be rejected in an image with a
   rejected pixel from one of the rejection algorithms.  This applies only to
@@ -394,7 +383,7 @@ lscombine — Combine longslit spectra
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <B>LSCOMBINE</B> combines two-dimensional longslit images by first
@@ -414,7 +403,7 @@ lscombine — Combine longslit spectra
   not part of this task.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <PRE>
@@ -422,18 +411,18 @@ lscombine — Combine longslit spectra
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_notes">NOTES</A></H2>
+  <H3>Notes</H3>
   <! BeginSection: 'NOTES'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_LSCOMBINE">LSCOMBINE: V2.12.3</A></B></DT>
+  <DT><B>LSCOMBINE: V2.12.3</B></DT>
   <! Sec='NOTES' Level=0 Label='LSCOMBINE' Line='LSCOMBINE: V2.12.3'>
   <DD>This is a new task in this relese.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'NOTES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   transform, imcombine. odcombine 
@@ -442,5 +431,3 @@ lscombine — Combine longslit spectra
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'NOTES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

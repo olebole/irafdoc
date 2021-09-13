@@ -1,3 +1,5 @@
+.. _fields:
+
 fields — Extract specified fields from a list
 =============================================
 
@@ -5,55 +7,42 @@ fields — Extract specified fields from a list
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>fields (Jan86)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>proto</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>fields (Jan86)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>fields</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   fields -- extract selected fields from a list.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   fields files fields
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_files">files</A></B></DT>
+  <DT><B>files</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='files' Line='files'>
   <DD>File or files from which the fields are to be extracted.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fields">fields</A></B></DT>
+  <DT><B>fields</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fields' Line='fields'>
   <DD>The fields to be extracted.  
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lines">lines = "<TT>1-</TT>"</A></B></DT>
+  <DT><B>lines = "<TT>1-</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lines' Line='lines = "1-"'>
   <DD>The lines from which the fields are to be extracted.  If multiple files are 
   being extracted, the same lines apply to each file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_quit_if_missing">quit_if_missing = no</A></B></DT>
+  <DT><B>quit_if_missing = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='quit_if_missing' Line='quit_if_missing = no'>
   <DD>This flag determines the task behavior when a field is missing from the
   specified line.  If <B>quit_if_missing</B> = yes, the task exits and an error 
@@ -61,7 +50,7 @@ fields — Extract specified fields from a list
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_print_file_names">print_file_names = no</A></B></DT>
+  <DT><B>print_file_names = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='print_file_names' Line='print_file_names = no'>
   <DD>If <B>print_file_name</B> = yes, the first string of each output line of
   extracted fields is the file name.  
@@ -69,7 +58,7 @@ fields — Extract specified fields from a list
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The list processing tool <I>fields</I> is used to extract whitespace
@@ -85,7 +74,7 @@ fields — Extract specified fields from a list
   message, or call an error and exit.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Reverse the order of the 5 columns in list file "<TT>list</TT>".
@@ -102,11 +91,11 @@ fields — Extract specified fields from a list
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_FIELDS">FIELDS V2.11</A></B></DT>
+  <DT><B>FIELDS V2.11</B></DT>
   <! Sec='REVISIONS' Level=0 Label='FIELDS' Line='FIELDS V2.11'>
   <DD>The default value for the <I>lines</I> parameter was changed to an open
   upper limit.
@@ -114,7 +103,7 @@ fields — Extract specified fields from a list
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   joinlines, xtools.ranges
@@ -123,5 +112,3 @@ fields — Extract specified fields from a list
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

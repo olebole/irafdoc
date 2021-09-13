@@ -1,3 +1,5 @@
+.. _imexpr:
+
 imexpr — Evaluate a general image expression
 ============================================
 
@@ -5,36 +7,23 @@ imexpr — Evaluate a general image expression
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>imexpr (Dec01)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>imexpr (Dec01)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>imexpr</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   imexpr -- General image expression evaluator
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   imexpr expr output [a b c ...]
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_expr">expr</A></B></DT>
+  <DT><B>expr</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='expr' Line='expr'>
   <DD>The expression to be evaluated.  This may be the actual expression, or the
   string "<TT>@file</TT>" in which case the expression is taken from the named file.
@@ -44,14 +33,14 @@ imexpr — Evaluate a general image expression
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>The output image.  A section may be given to write into a section of an
   existing image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_a">a - z</A></B></DT>
+  <DT><B>a - z</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='a' Line='a - z'>
   <DD>The input operands referenced by the expression.  The value of an operand
   may be an image name or section, a numeric constant, or a reference to an
@@ -63,7 +52,7 @@ imexpr — Evaluate a general image expression
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dims">dims = "<TT>auto</TT>"</A></B></DT>
+  <DT><B>dims = "<TT>auto</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dims' Line='dims = "auto"'>
   <DD>The dimensions of the output image.  If the special value <I>auto</I> is
   given the output image dimensions are computed based on the input operands
@@ -72,7 +61,7 @@ imexpr — Evaluate a general image expression
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_intype">intype = "<TT>int</TT>"</A></B></DT>
+  <DT><B>intype = "<TT>int</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='intype' Line='intype = "int"'>
   <DD>The minimum datatype for an input image operand.  If the special value
   <I>auto</I> is given the operand type will be the same as the pixel type of
@@ -87,7 +76,7 @@ imexpr — Evaluate a general image expression
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_outtype">outtype = "<TT>auto</TT>"</A></B></DT>
+  <DT><B>outtype = "<TT>auto</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='outtype' Line='outtype = "auto"'>
   <DD>The pixel type of the output image.  If set to the special value <I>auto</I>
   the output image will be the same type as the expression being evaluated.
@@ -98,7 +87,7 @@ imexpr — Evaluate a general image expression
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_refim">refim = "<TT>auto</TT>"</A></B></DT>
+  <DT><B>refim = "<TT>auto</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='refim' Line='refim = "auto"'>
   <DD>The reference image to be used to pass the WCS and other image header
   attributes to the output image.  If set to <I>auto</I> the program will
@@ -109,7 +98,7 @@ imexpr — Evaluate a general image expression
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_bwidth">bwidth = 0</A></B></DT>
+  <DT><B>bwidth = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='bwidth' Line='bwidth = 0'>
   <DD>The boundary width in pixels for boundary extension.  Boundary extension
   is enabled by setting this value to a positive nonzero value.  Boundary
@@ -117,20 +106,20 @@ imexpr — Evaluate a general image expression
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_btype">btype = "<TT>nearest</TT>"</A></B></DT>
+  <DT><B>btype = "<TT>nearest</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='btype' Line='btype = "nearest"'>
   <DD>The type of boundary extension, chosen from the list "<TT>constant</TT>", "<TT>nearest</TT>",
   "<TT>reflect</TT>", "<TT>wrap</TT>", or "<TT>project</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_bpixval">bpixval = 0.</A></B></DT>
+  <DT><B>bpixval = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='bpixval' Line='bpixval = 0.'>
   <DD>The boundary pixel value if <I>btype</I>="<TT>constant</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rangecheck">rangecheck = yes</A></B></DT>
+  <DT><B>rangecheck = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rangecheck' Line='rangecheck = yes'>
   <DD>If range checking is enabled then the program will check for illegal
   operations such as divide by zero or the square root or logarithm of a
@@ -141,7 +130,7 @@ imexpr — Evaluate a general image expression
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Enable or disable informative messages.  If enabled, the program will echo
   the expression to be evaluated after all expansions have been performed,
@@ -149,7 +138,7 @@ imexpr — Evaluate a general image expression
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_exprdb">exprdb = "<TT></TT>"</A></B></DT>
+  <DT><B>exprdb = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='exprdb' Line='exprdb = ""'>
   <DD>The file name of an optional expression database.  An expression database
   may be used to define symbolic constants or a library of custom function
@@ -158,7 +147,7 @@ imexpr — Evaluate a general image expression
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <I>imexpr</I> evaluates an image expression and writes the result to the
@@ -462,7 +451,7 @@ imexpr — Evaluate a general image expression
   image, using the mask assigned to operand C to control the selection.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Copy an image, changing the datatype to real (there are better ways to
@@ -510,14 +499,14 @@ imexpr — Evaluate a general image expression
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   The input and output images cannot be the same.
   No support for type complex yet, or operations like the fourier transform.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imarith, imfunction, imcombine
@@ -526,5 +515,3 @@ imexpr — Evaluate a general image expression
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

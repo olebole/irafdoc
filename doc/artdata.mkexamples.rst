@@ -1,3 +1,5 @@
+.. _mkexamples:
+
 mkexamples — Make artificial data examples
 ==========================================
 
@@ -5,36 +7,23 @@ mkexamples — Make artificial data examples
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>mkexamples (Mar93)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.artdata</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>mkexamples (Mar93)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>mkexamples</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   mkexamples - Make artificial data example images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   mkexamples name image
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_name">name</A></B></DT>
+  <DT><B>name</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='name' Line='name'>
   <DD>Example name (abbreviations are not allowed):
   <P>
@@ -64,13 +53,13 @@ mkexamples — Make artificial data examples
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_image">image</A></B></DT>
+  <DT><B>image</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='image' Line='image'>
   <DD>Output image name.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_oseed">oseed = 1</A></B></DT>
+  <DT><B>oseed = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='oseed' Line='oseed = 1'>
   <DD>Random number seed affecting object generation.  Different object seeds
   will produces different examples of objects or spectral lines or number
@@ -80,7 +69,7 @@ mkexamples — Make artificial data examples
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nseed">nseed = 1</A></B></DT>
+  <DT><B>nseed = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nseed' Line='nseed = 1'>
   <DD>Random number noise seed.  Different noise seeds will produce examples
   with different noise, generally of the same level but simply having
@@ -89,34 +78,34 @@ mkexamples — Make artificial data examples
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_comments">comments = no</A></B></DT>
+  <DT><B>comments = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='comments' Line='comments = no'>
   <DD>Add comments to the image header describing various artificial data
   parameters?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print message indicating image being created?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_errors">errors = yes</A></B></DT>
+  <DT><B>errors = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='errors' Line='errors = yes'>
   <DD>Print messages if the image already exists, bad example name, or other
   errors?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_list">list = no</A></B></DT>
+  <DT><B>list = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='list' Line='list = no'>
   <DD>List script used to generate the example rather than create an image?
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The task is intended to generate a few artificial images of various types to
@@ -152,7 +141,7 @@ mkexamples — Make artificial data examples
   directory along with an entry in the menu file mkexamples$mkexamples.men.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Create a globular cluster example.
@@ -211,11 +200,11 @@ mkexamples — Make artificial data examples
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_MKEXAMPLES">MKEXAMPLES V2.10.3</A></B></DT>
+  <DT><B>MKEXAMPLES V2.10.3</B></DT>
   <! Sec='REVISIONS' Level=0 Label='MKEXAMPLES' Line='MKEXAMPLES V2.10.3'>
   <DD>The examples have been expanded to include submenus.  The submenus organize
   the various types of spectra.  Additional spectral examples have been
@@ -225,7 +214,7 @@ mkexamples — Make artificial data examples
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   mkobjects, mknoise, mk1dspec, mk2dspec, mkechelle
@@ -234,5 +223,3 @@ mkexamples — Make artificial data examples
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

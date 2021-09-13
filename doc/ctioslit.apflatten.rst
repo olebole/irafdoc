@@ -1,3 +1,5 @@
+.. _apflatten:
+
 apflatten — Remove overall spectral and profile shapes from flat fields
 =======================================================================
 
@@ -5,49 +7,36 @@ apflatten — Remove overall spectral and profile shapes from flat fields
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>apflatten (Sep96)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.twodspec.apextract</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>apflatten (Sep96)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>apflatten</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   apflatten -- Create flat fields for fiber or narrow aperture spectra
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   apflatten input output
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of input flat field observations.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output = "<TT></TT>"</A></B></DT>
+  <DT><B>output = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output = ""'>
   <DD>List of output flat field images.  If no output name is given then the
   input name is used as a root with the extension "<TT>.flat</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apertures">apertures = "<TT></TT>"</A></B></DT>
+  <DT><B>apertures = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""'>
   <DD>Apertures to recenter, resize, trace, and flatten.  This only applies
   to apertures read from the input or reference database.  Any new
@@ -59,7 +48,7 @@ apflatten — Remove overall spectral and profile shapes from flat fields
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_references">references = "<TT></TT>"</A></B></DT>
+  <DT><B>references = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='references' Line='references = ""'>
   <DD>List of reference images to be used to define apertures for the input
   images.  When a reference image is given it supersedes apertures
@@ -73,7 +62,7 @@ apflatten — Remove overall spectral and profile shapes from flat fields
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = yes</A></B></DT>
+  <DT><B>interactive = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes'>
   <DD>Run this task interactively?  If the task is not run interactively then
   all user queries are suppressed and interactive aperture editing and trace
@@ -81,7 +70,7 @@ apflatten — Remove overall spectral and profile shapes from flat fields
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_find">find = yes</A></B></DT>
+  <DT><B>find = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='find' Line='find = yes'>
   <DD>Find the spectra and define apertures automatically?  In order for
   spectra to be found automatically there must be no apertures for the
@@ -89,45 +78,45 @@ apflatten — Remove overall spectral and profile shapes from flat fields
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_recenter">recenter = yes</A></B></DT>
+  <DT><B>recenter = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='recenter' Line='recenter = yes'>
   <DD>Recenter the apertures?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_resize">resize = yes</A></B></DT>
+  <DT><B>resize = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='resize' Line='resize = yes'>
   <DD>Resize the apertures?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_edit">edit = yes</A></B></DT>
+  <DT><B>edit = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='edit' Line='edit = yes'>
   <DD>Edit the apertures?  The <I>interactive</I> parameter must also be yes.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_trace">trace = yes</A></B></DT>
+  <DT><B>trace = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='trace' Line='trace = yes'>
   <DD>Trace the apertures?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fittrace">fittrace = yes</A></B></DT>
+  <DT><B>fittrace = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fittrace' Line='fittrace = yes'>
   <DD>Interactively fit the traced positions by a function?  The <I>interactive</I>
   parameter must also be yes.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_flatten">flatten = yes</A></B></DT>
+  <DT><B>flatten = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='flatten' Line='flatten = yes'>
   <DD>Remove the profile shape and flat field spectrum leaving only
   sensitivity variations?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fitspec">fitspec = yes</A></B></DT>
+  <DT><B>fitspec = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fitspec' Line='fitspec = yes'>
   <DD>Fit normalization spectrum interactively?  The <I>interactive</I>
   parameter must also be yes.
@@ -135,7 +124,7 @@ apflatten — Remove overall spectral and profile shapes from flat fields
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_line">line = INDEF, nsum = 1</A></B></DT>
+  <DT><B>line = INDEF, nsum = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='line' Line='line = INDEF, nsum = 1'>
   <DD>The dispersion line (line or column perpendicular to the dispersion
   axis) and number of adjacent lines (half before and half after unless
@@ -149,7 +138,7 @@ apflatten — Remove overall spectral and profile shapes from flat fields
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_threshold">threshold = 10.</A></B></DT>
+  <DT><B>threshold = 10.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 10.'>
   <DD>Division threshold.  If a pixel in the two dimensional normalization spectrum
   is less than this value then a flat field value of 1 is output.
@@ -158,7 +147,7 @@ apflatten — Remove overall spectral and profile shapes from flat fields
   <P>
   The following parameters control the profile and spectrum fitting.
   <DL>
-  <DT><B><A NAME="l_pfit">pfit = "<TT>fit1d</TT>" (fit1d|fit2d)</A></B></DT>
+  <DT><B>pfit = "<TT>fit1d</TT>" (fit1d|fit2d)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pfit' Line='pfit = "fit1d" (fit1d|fit2d)'>
   <DD>Profile fitting algorithm to use with variance weighting or cleaning.
   When determining a profile the two dimensional spectrum is divided by
@@ -170,13 +159,13 @@ apflatten — Remove overall spectral and profile shapes from flat fields
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_clean">clean = no</A></B></DT>
+  <DT><B>clean = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='clean' Line='clean = no'>
   <DD>Detect and replace deviant pixels?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_saturation">saturation = INDEF</A></B></DT>
+  <DT><B>saturation = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='saturation' Line='saturation = INDEF'>
   <DD>Saturation or nonlinearity level.  During variance weighted extractions
   wavelength points having any pixels above this value are excluded from the
@@ -184,7 +173,7 @@ apflatten — Remove overall spectral and profile shapes from flat fields
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_readnoise">readnoise = 0.</A></B></DT>
+  <DT><B>readnoise = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='readnoise' Line='readnoise = 0.'>
   <DD>Read out noise in photons.  This parameter defines the minimum noise
   sigma.  It is defined in terms of photons (or electrons) and scales
@@ -193,7 +182,7 @@ apflatten — Remove overall spectral and profile shapes from flat fields
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_gain">gain = 1</A></B></DT>
+  <DT><B>gain = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='gain' Line='gain = 1'>
   <DD>Detector gain or conversion factor between photons/electrons and
   data values.  It is specified as the number of photons per data value.
@@ -202,7 +191,7 @@ apflatten — Remove overall spectral and profile shapes from flat fields
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lsigma">lsigma = 3., usigma = 3.</A></B></DT>
+  <DT><B>lsigma = 3., usigma = 3.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lsigma' Line='lsigma = 3., usigma = 3.'>
   <DD>Lower and upper rejection thresholds, given as a number of times the
   estimated sigma of a pixel, for cleaning.
@@ -212,7 +201,7 @@ apflatten — Remove overall spectral and profile shapes from flat fields
   The following parameters are used to fit the normalization spectrum using
   the ICFIT routine.
   <DL>
-  <DT><B><A NAME="l_function">function = "<TT>legendre</TT>"</A></B></DT>
+  <DT><B>function = "<TT>legendre</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='function' Line='function = "legendre"'>
   <DD>Fitting function for the normalization spectra.  The choices are "<TT>legendre</TT>"
   polynomial, "<TT>chebyshev</TT>" polynomial, linear spline ("<TT>spline1</TT>"), and
@@ -220,20 +209,20 @@ apflatten — Remove overall spectral and profile shapes from flat fields
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_order">order = 1</A></B></DT>
+  <DT><B>order = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='order' Line='order = 1'>
   <DD>Number of polynomial terms or number of spline pieces for the fitting function.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sample">sample = "<TT>*</TT>"</A></B></DT>
+  <DT><B>sample = "<TT>*</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"'>
   <DD>Sample regions for fitting points.  Intervals are separated by "<TT>,</TT>" and an
   interval may be one point or a range separated by "<TT>:</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_naverage">naverage = 1</A></B></DT>
+  <DT><B>naverage = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='naverage' Line='naverage = 1'>
   <DD>Number of points within a sample interval to be subaveraged or submedianed to
   form fitting points.  Positive values are for averages and negative points
@@ -241,20 +230,20 @@ apflatten — Remove overall spectral and profile shapes from flat fields
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_niterate">niterate = 0</A></B></DT>
+  <DT><B>niterate = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='niterate' Line='niterate = 0'>
   <DD>Number of sigma clipping rejection iterations.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_low_reject">low_reject = 3. , high_reject = 3.</A></B></DT>
+  <DT><B>low_reject = 3. , high_reject = 3.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='low_reject' Line='low_reject = 3. , high_reject = 3.'>
   <DD>Lower and upper sigma clipping rejection threshold in units of sigma determined
   from the RMS sigma of the data to the fit.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_grow">grow = 0.</A></B></DT>
+  <DT><B>grow = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='grow' Line='grow = 0.'>
   <DD>Growing radius for rejected points (in pixels).  That is, any rejected point
   also rejects other points within this distance of the rejected point.
@@ -262,7 +251,7 @@ apflatten — Remove overall spectral and profile shapes from flat fields
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_additional_parameters">ADDITIONAL PARAMETERS</A></H2>
+  <H3>Additional parameters</H3>
   <! BeginSection: 'ADDITIONAL PARAMETERS'>
   <UL>
   I/O parameters and the default dispersion axis are taken from the
@@ -274,7 +263,7 @@ apflatten — Remove overall spectral and profile shapes from flat fields
   <B>aptrace</B>.
   </UL>
   <! EndSection:   'ADDITIONAL PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   It is sometimes the case that it is undesirable to simply divide
@@ -392,11 +381,11 @@ apflatten — Remove overall spectral and profile shapes from flat fields
   interactive trace fitting, and interactive spectrum shape fitting are ignored.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_APFLATTEN">APFLATTEN V2.11</A></B></DT>
+  <DT><B>APFLATTEN V2.11</B></DT>
   <! Sec='REVISIONS' Level=0 Label='APFLATTEN' Line='APFLATTEN V2.11'>
   <DD>The "<TT>apertures</TT>" parameter can be used to select apertures for resizing,
   recentering, tracing, and extraction.  This parameter name was previously
@@ -406,7 +395,7 @@ apflatten — Remove overall spectral and profile shapes from flat fields
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  To make a two dimensional flat field from a lamp observation:
@@ -424,7 +413,7 @@ apflatten — Remove overall spectral and profile shapes from flat fields
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   apbackground, approfile, apvariance, apfit, icfit,
@@ -434,5 +423,3 @@ apflatten — Remove overall spectral and profile shapes from flat fields
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'ADDITIONAL PARAMETERS' 'DESCRIPTION' 'REVISIONS' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

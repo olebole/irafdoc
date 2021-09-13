@@ -1,3 +1,5 @@
+.. _xyacc:
+
 xyacc — Build an SPP language parser
 ====================================
 
@@ -5,4 +7,3 @@ xyacc — Build an SPP language parser
 
 .. raw:: html
 
-  

@@ -1,3 +1,5 @@
+.. _tstat:
+
 tstat — Get mean, standard deviation, min, and max for a column.
 ================================================================
 
@@ -5,32 +7,19 @@ tstat — Get mean, standard deviation, min, and max for a column.
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>tstat (Jan2001)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>tables</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>tstat (Jan2001)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>tstat</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   tstat -- Get statistics for a table column.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   tstat intable column
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task gets the mean, standard deviation, median, minimum and maximum
@@ -78,11 +67,11 @@ tstat — Get mean, standard deviation, min, and max for a column.
   See the examples for more information.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_intable">intable [file name template]</A></B></DT>
+  <DT><B>intable [file name template]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='intable' Line='intable [file name template]'>
   <DD>A list of input tables.
   Statistics will be obtained for one column, the same name in every table.
@@ -93,7 +82,7 @@ tstat — Get mean, standard deviation, min, and max for a column.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_column">column [string]</A></B></DT>
+  <DT><B>column [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='column' Line='column [string]'>
   <DD>Column in input tables.
   The statistics are gotten for the values in the column with this name.
@@ -109,7 +98,7 @@ tstat — Get mean, standard deviation, min, and max for a column.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(outtable = "<TT>STDOUT</TT>") [string]</A></B></DT>
+  <DT><B>(outtable = "<TT>STDOUT</TT>") [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(outtable = "STDOUT") [string]'>
   <DD>Output table, STDOUT, or null.
   If 'outtable' is null ("<TT></TT>") then the results will only be written to cl
@@ -127,19 +116,19 @@ tstat — Get mean, standard deviation, min, and max for a column.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(lowlim = INDEF) [real]</A></B></DT>
+  <DT><B>(lowlim = INDEF) [real]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(lowlim = INDEF) [real]'>
   <DD>Values below this are ignored.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(highlim = INDEF) [real]</A></B></DT>
+  <DT><B>(highlim = INDEF) [real]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(highlim = INDEF) [real]'>
   <DD>Values above this are ignored.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(rows = -) [string]</A></B></DT>
+  <DT><B>(rows = -) [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(rows = -) [string]'>
   <DD>Range of rows to use for statistics.
   The default "<TT>-</TT>" means that all rows are used.
@@ -147,7 +136,7 @@ tstat — Get mean, standard deviation, min, and max for a column.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(n_tab = table) [string]</A></B></DT>
+  <DT><B>(n_tab = table) [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(n_tab = table) [string]'>
   <DD>Column name for name of input table.
   This and other parameters that begin with "<TT>n_</TT>" are only used if the output values are
@@ -155,7 +144,7 @@ tstat — Get mean, standard deviation, min, and max for a column.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(n_nam = column) [string]</A></B></DT>
+  <DT><B>(n_nam = column) [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(n_nam = column) [string]'>
   <DD>Column name for name of input column.
   This and other parameters that begin with "<TT>n_</TT>" are only used if the output values are
@@ -163,43 +152,43 @@ tstat — Get mean, standard deviation, min, and max for a column.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(n_nrows = nrows) [string]</A></B></DT>
+  <DT><B>(n_nrows = nrows) [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(n_nrows = nrows) [string]'>
   <DD>Column name for number of good rows.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(n_mean = mean) [string]</A></B></DT>
+  <DT><B>(n_mean = mean) [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(n_mean = mean) [string]'>
   <DD>Column name for mean.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(n_stddev = stddev) [string]</A></B></DT>
+  <DT><B>(n_stddev = stddev) [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(n_stddev = stddev) [string]'>
   <DD>Column name for standard deviation.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(n_median = value) [string]</A></B></DT>
+  <DT><B>(n_median = value) [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(n_median = value) [string]'>
   <DD>Column name for median.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(n_min = min) [string]</A></B></DT>
+  <DT><B>(n_min = min) [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(n_min = min) [string]'>
   <DD>Column name for minimum.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(n_max = max) [string]</A></B></DT>
+  <DT><B>(n_max = max) [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(n_max = max) [string]'>
   <DD>Column name for maximum.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(nrows) [integer]</A></B></DT>
+  <DT><B>(nrows) [integer]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(nrows) [integer]'>
   <DD>The number of rows for which the column value was not INDEF and was
   within the range 'lowlim' to 'highlim'.
@@ -207,35 +196,35 @@ tstat — Get mean, standard deviation, min, and max for a column.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(mean) [real]</A></B></DT>
+  <DT><B>(mean) [real]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(mean) [real]'>
   <DD>Mean value (of the last table in the input list 'intable').
   This is a task output parameter.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(stddev) [real]</A></B></DT>
+  <DT><B>(stddev) [real]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(stddev) [real]'>
   <DD>Standard deviation of the values (not of the mean).
   This is a task output parameter.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(median) [real]</A></B></DT>
+  <DT><B>(median) [real]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(median) [real]'>
   <DD>Median value.
   This is a task output parameter.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(vmin) [real]</A></B></DT>
+  <DT><B>(vmin) [real]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(vmin) [real]'>
   <DD>Minimum.
   This is a task output parameter.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(vmax) [real]</A></B></DT>
+  <DT><B>(vmax) [real]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(vmax) [real]'>
   <DD>Maximum.
   This is a task output parameter.
@@ -243,7 +232,7 @@ tstat — Get mean, standard deviation, min, and max for a column.
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  Get statistics on column "<TT>flux</TT>" in all tables, putting the output
@@ -304,18 +293,18 @@ tstat — Get mean, standard deviation, min, and max for a column.
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   This task was written by Phil Hodge.
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   thistogram, ranges
@@ -327,5 +316,3 @@ tstat — Get mean, standard deviation, min, and max for a column.
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _tdump:
+
 tdump — Dump the contents of a table to an ASCII file.
 ======================================================
 
@@ -5,32 +7,19 @@ tdump — Dump the contents of a table to an ASCII file.
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>tdump (Nov2000)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>tables</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>tdump (Nov2000)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>tdump</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   tdump -- Convert an STSDAS table to ASCII format.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   tdump table
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task converts an STSDAS table to ASCII format.
@@ -72,17 +61,17 @@ tdump — Dump the contents of a table to an ASCII file.
   then prints all rows for the next set of columns.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_table">table [file name]</A></B></DT>
+  <DT><B>table [file name]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='table' Line='table [file name]'>
   <DD>The name of the STSDAS table to be dumped.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(cdfile = STDOUT) [file name]</A></B></DT>
+  <DT><B>(cdfile = STDOUT) [file name]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(cdfile = STDOUT) [file name]'>
   <DD>If 'cdfile' is not null (i.e., it is not passed a value of "<TT></TT>")
   then the column definitions will be written
@@ -96,7 +85,7 @@ tdump — Dump the contents of a table to an ASCII file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(pfile = STDOUT) [file name]</A></B></DT>
+  <DT><B>(pfile = STDOUT) [file name]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(pfile = STDOUT) [file name]'>
   <DD>If 'pfile' is not null (i.e., it is not passed a value of "<TT></TT>") 
   then the header parameters will be written
@@ -106,7 +95,7 @@ tdump — Dump the contents of a table to an ASCII file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(datafile = STDOUT) [file name]</A></B></DT>
+  <DT><B>(datafile = STDOUT) [file name]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(datafile = STDOUT) [file name]'>
   <DD>If 'datafile' is not null (i.e., it is not passed a value of "<TT></TT>") then 
   the table data will be written
@@ -115,7 +104,7 @@ tdump — Dump the contents of a table to an ASCII file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(columns = "<TT></TT>") [string]</A></B></DT>
+  <DT><B>(columns = "<TT></TT>") [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(columns = "") [string]'>
   <DD>The names of the columns to be printed.
   A null value causes all columns to be printed.
@@ -134,7 +123,7 @@ tdump — Dump the contents of a table to an ASCII file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(rows = "<TT>-</TT>") [string]</A></B></DT>
+  <DT><B>(rows = "<TT>-</TT>") [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(rows = "-") [string]'>
   <DD>The range of rows to be printed.
   The default of "<TT>-</TT>" means print all rows.
@@ -148,7 +137,7 @@ tdump — Dump the contents of a table to an ASCII file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(pwidth = -1) [integer, min=-1, max=INDEF]</A></B></DT>
+  <DT><B>(pwidth = -1) [integer, min=-1, max=INDEF]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(pwidth = -1) [integer, min=-1, max=INDEF]'>
   <DD>Width of the output for printing the table data.
   The default value of -1 means that
@@ -165,7 +154,7 @@ tdump — Dump the contents of a table to an ASCII file.
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  Dump the table "<TT>junk.tab</TT>" to STDOUT:
@@ -190,18 +179,18 @@ tdump — Dump the contents of a table to an ASCII file.
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   This task was written by Phil Hodge.
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   tprint, tlcol, tcreate, ranges
@@ -213,5 +202,3 @@ tdump — Dump the contents of a table to an ASCII file.
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

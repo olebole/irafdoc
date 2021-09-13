@@ -1,3 +1,5 @@
+.. _fitsky:
+
 fitsky — Compute sky values in a list of annular or circular regions
 ====================================================================
 
@@ -5,42 +7,29 @@ fitsky — Compute sky values in a list of annular or circular regions
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>fitsky (Dec92)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.apphot</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>fitsky (Dec92)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>fitsky</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   fitsky - determine the mode, sigma and skew of the sky pixels
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   fitsky image
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_image">image</A></B></DT>
+  <DT><B>image</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='image' Line='image'>
   <DD>The list of images containing the sky regions to be fit.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_coords">coords = "<TT></TT>"</A></B></DT>
+  <DT><B>coords = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='coords' Line='coords = ""'>
   <DD>The list of text files containing initial coordinates for the objects to
   be centered. Objects are listed in coords one object per line with the
@@ -54,7 +43,7 @@ fitsky — Compute sky values in a list of annular or circular regions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output = "<TT>default</TT>"</A></B></DT>
+  <DT><B>output = "<TT>default</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output = "default"'>
   <DD>The name of the results file or results directory. If output is
   "<TT>default</TT>", "<TT>dir$default</TT>", or a directory specification then an output file name
@@ -67,7 +56,7 @@ fitsky — Compute sky values in a list of annular or circular regions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_plotfile">plotfile = "<TT></TT>"</A></B></DT>
+  <DT><B>plotfile = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='plotfile' Line='plotfile = ""'>
   <DD>The name of the file containing radial profile plots of the stars written
   to the output file. If plotfile is defined then a radial profile plot
@@ -76,7 +65,7 @@ fitsky — Compute sky values in a list of annular or circular regions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_datapars">datapars = "<TT></TT>"</A></B></DT>
+  <DT><B>datapars = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='datapars' Line='datapars = ""'>
   <DD>The name of the file containing the data dependent parameters.
   The critical parameters <I>fwhmpsf</I> and <I>sigma</I> are located in
@@ -85,7 +74,7 @@ fitsky — Compute sky values in a list of annular or circular regions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fitskypars">fitskypars = "<TT></TT>"</A></B></DT>
+  <DT><B>fitskypars = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fitskypars' Line='fitskypars = ""'>
   <DD>The name of the text file containing the sky fitting parameters. The critical
   parameters <I>salgorithm</I>, <I>annulus</I>, and <I>dannulus</I> are located here.
@@ -94,32 +83,32 @@ fitsky — Compute sky values in a list of annular or circular regions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = yes</A></B></DT>
+  <DT><B>interactive = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes'>
   <DD>Run the task interactively ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_radplots">radplots = no</A></B></DT>
+  <DT><B>radplots = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='radplots' Line='radplots = no'>
   <DD>If <I>radplots</I> is "<TT>yes</TT>" and PHOT is run in interactive mode, a radial
   profile of each star is plotted on the screen after the star is measured.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_icommands">icommands = "<TT></TT>"</A></B></DT>
+  <DT><B>icommands = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""'>
   <DD>The image display cursor or image cursor command file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_gcommands">gcommands = "<TT></TT>"</A></B></DT>
+  <DT><B>gcommands = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""'>
   <DD>The graphics cursor or graphics cursor command file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wcsin">wcsin = "<TT>)_.wcsin</TT>", wcsout = "<TT>)_.wcsout</TT>"</A></B></DT>
+  <DT><B>wcsin = "<TT>)_.wcsin</TT>", wcsout = "<TT>)_.wcsout</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wcsin' Line='wcsin = ")_.wcsin", wcsout = ")_.wcsout"'>
   <DD>The coordinate system of the input coordinates read from <I>coords</I> and
   of the output coordinates written to <I>output</I> respectively. The image
@@ -131,7 +120,7 @@ fitsky — Compute sky values in a list of annular or circular regions
   </TT>"tv"<TT>, and </TT>"physical"<TT>. The image cursor coordinate system is assumed to
   be the </TT>"tv"<TT> system.
   <DL>
-  <DT><B><A NAME="l_logical">logical</A></B></DT>
+  <DT><B>logical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='logical' Line='logical'>
   <DD>Logical coordinates are pixel coordinates relative to the current image.
   The  logical coordinate system is the coordinate system used by the image
@@ -142,7 +131,7 @@ fitsky — Compute sky values in a list of annular or circular regions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_tv">tv</A></B></DT>
+  <DT><B>tv</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='tv' Line='tv'>
   <DD>Tv coordinates are the pixel coordinates used by the display servers. Tv
   coordinates  include  the effects of any input image section, but do not
@@ -157,7 +146,7 @@ fitsky — Compute sky values in a list of annular or circular regions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_physical">physical</A></B></DT>
+  <DT><B>physical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='physical' Line='physical'>
   <DD>Physical coordinates are pixel coordinates invariant  with respect to linear
   transformations of the physical image data.  For example, if the current image
@@ -171,7 +160,7 @@ fitsky — Compute sky values in a list of annular or circular regions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_world">world</A></B></DT>
+  <DT><B>world</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='world' Line='world'>
   <DD>World coordinates are image coordinates in any units which are invariant
   with respect to linear transformations of the physical image data. For
@@ -189,7 +178,7 @@ fitsky — Compute sky values in a list of annular or circular regions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cache">cache = </TT>")_.cache"<TT></A></B></DT>
+  <DT><B>cache = </TT>")_.cache"<TT></B></DT>
   <! Sec='PARAMETERS' Level=-1 Label='cache' Line='cache = ")_.cache"'>
   <DD>Cache the image pixels in memory. Cache may be set to the value of the apphot
   package parameter (the default), </TT>"yes"<TT>, or </TT>"no"<TT>. By default cacheing is 
@@ -197,14 +186,14 @@ fitsky — Compute sky values in a list of annular or circular regions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verify">verify = </TT>")._verify"<TT></A></B></DT>
+  <DT><B>verify = </TT>")._verify"<TT></B></DT>
   <! Sec='PARAMETERS' Level=-1 Label='verify' Line='verify = ")._verify"'>
   <DD>Verify the critical parameters in non-interactive mode ? Verify may be set to
    the apphot package parameter value (the default), </TT>"yes"<TT>, or </TT>"no.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_update">update = "<TT>)_.update</TT>"</A></B></DT>
+  <DT><B>update = "<TT>)_.update</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=-1 Label='update' Line='update = ")_.update"'>
   <DD>Update the critical parameters in non-interactive mode if verify is yes ?
   Update may be set to the apphot package parameter value (the default), "<TT>yes</TT>",
@@ -213,7 +202,7 @@ fitsky — Compute sky values in a list of annular or circular regions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = </TT>")_.verbose"<TT></A></B></DT>
+  <DT><B>verbose = </TT>")_.verbose"<TT></B></DT>
   <! Sec='PARAMETERS' Level=-1 Label='verbose' Line='verbose = ")_.verbose"'>
   <DD>Print messages on the terminal in non-interactive mode ? Verbose may be set to
   the apphot package parameter value (the default), </TT>"yes"<TT>, or </TT>"no.
@@ -221,14 +210,14 @@ fitsky — Compute sky values in a list of annular or circular regions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_graphics">graphics = "<TT>)_.graphics</TT>"</A></B></DT>
+  <DT><B>graphics = "<TT>)_.graphics</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=-1 Label='graphics' Line='graphics = ")_.graphics"'>
   <DD>The default graphics device.  Graphics may be set to the apphot package
   parameter value (the default), "<TT>yes</TT>", or "<TT>no.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_display">display = </TT>")_.display"<TT></A></B></DT>
+  <DT><B>display = </TT>")_.display"<TT></B></DT>
   <! Sec='PARAMETERS' Level=-1 Label='display' Line='display = ")_.display"'>
   <DD>The default display device. Display may be set to the apphot package parameter
   value (the default), </TT>"yes"<TT>, or </TT>"no. By default graphics overlay is disabled.
@@ -240,7 +229,7 @@ fitsky — Compute sky values in a list of annular or circular regions
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   FITSKY computes accurate sky values for a set of objects in the IRAF image
@@ -293,7 +282,7 @@ fitsky — Compute sky values in a list of annular or circular regions
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_cursor_commands">CURSOR COMMANDS</A></H2>
+  <H3>Cursor commands</H3>
   <! BeginSection: 'CURSOR COMMANDS'>
   <UL>
   <P>
@@ -401,7 +390,7 @@ fitsky — Compute sky values in a list of annular or circular regions
   <P>
   </UL>
   <! EndSection:   'CURSOR COMMANDS'>
-  <H2><A NAME="s_algorithms">ALGORITHMS</A></H2>
+  <H3>Algorithms</H3>
   <! BeginSection: 'ALGORITHMS'>
   <UL>
   A brief description of the data dependent parameters and the sky fitting
@@ -410,7 +399,7 @@ fitsky — Compute sky values in a list of annular or circular regions
   <P>
   </UL>
   <! EndSection:   'ALGORITHMS'>
-  <H2><A NAME="s_output">OUTPUT</A></H2>
+  <H3>Output</H3>
   <! BeginSection: 'OUTPUT'>
   <UL>
   In interactive mode the following quantities are printed on the standard
@@ -448,7 +437,7 @@ fitsky — Compute sky values in a list of annular or circular regions
   <P>
   </UL>
   <! EndSection:   'OUTPUT'>
-  <H2><A NAME="s_errors">ERRORS</A></H2>
+  <H3>Errors</H3>
   <! BeginSection: 'ERRORS'>
   <UL>
   If all goes well during the sky fitting process then the error code sier
@@ -472,7 +461,7 @@ fitsky — Compute sky values in a list of annular or circular regions
   <P>
   </UL>
   <! EndSection:   'ERRORS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -720,13 +709,13 @@ fitsky — Compute sky values in a list of annular or circular regions
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   <P>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   It is currently the responsibility of the user to make sure that the
@@ -742,7 +731,7 @@ fitsky — Compute sky values in a list of annular or circular regions
   <P>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   datapars, fitskypars, phot, polyphot, radprof
@@ -751,5 +740,3 @@ fitsky — Compute sky values in a list of annular or circular regions
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'CURSOR COMMANDS' 'ALGORITHMS' 'OUTPUT' 'ERRORS' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

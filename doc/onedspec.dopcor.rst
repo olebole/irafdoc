@@ -1,3 +1,5 @@
+.. _dopcor:
+
 dopcor — Apply doppler corrections
 ==================================
 
@@ -5,42 +7,29 @@ dopcor — Apply doppler corrections
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>dopcor (Jun94)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.onedspec</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>dopcor (Jun94)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>dopcor</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   dopcor -- Apply doppler correction
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   dopcor input output redshift
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of input spectra to be doppler corrected.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>List of doppler corrected spectra.  If no output list is specified then
   the input spectra are modified.  Also the output name may be
@@ -49,7 +38,7 @@ dopcor — Apply doppler corrections
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_redshift">redshift</A></B></DT>
+  <DT><B>redshift</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='redshift' Line='redshift'>
   <DD>Redshift or radial velocity (km/s) to be removed?  The spectra are corrected so
   that the specified redshift is removed; i.e. spectra with a positive
@@ -62,7 +51,7 @@ dopcor — Apply doppler corrections
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_isvelocity">isvelocity = no</A></B></DT>
+  <DT><B>isvelocity = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='isvelocity' Line='isvelocity = no'>
   <DD>Is the value specified by the <I>redshift</I> parameter a velocity?  If
   no then the value is interpreted as a redshift and if it is yes then
@@ -72,31 +61,31 @@ dopcor — Apply doppler corrections
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_add">add = no</A></B></DT>
+  <DT><B>add = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='add' Line='add = no'>
   <DD>Add doppler correction to existing correction in "<TT>multispec</TT>" spectra?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dispersion">dispersion = yes</A></B></DT>
+  <DT><B>dispersion = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dispersion' Line='dispersion = yes'>
   <DD>Apply a correction to the dispersion function?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_flux">flux = no</A></B></DT>
+  <DT><B>flux = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='flux' Line='flux = no'>
   <DD>Apply a flux correction?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_factor">factor = 3</A></B></DT>
+  <DT><B>factor = 3</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='factor' Line='factor = 3'>
   <DD>Flux correction factor as a power of 1+z when applying a flux correction.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apertures">apertures = "<TT></TT>"</A></B></DT>
+  <DT><B>apertures = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""'>
   <DD>List of apertures to be corrected.  If none are specified then all apertures
   are corrected.  An aperture list consists of comma separated aperture
@@ -107,7 +96,7 @@ dopcor — Apply doppler corrections
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = no</A></B></DT>
+  <DT><B>verbose = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
   <DD>Print corrections performed?  The information includes the output image
   name, the apertures, the redshift, and the flux correction factor.
@@ -115,7 +104,7 @@ dopcor — Apply doppler corrections
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The input spectra (as specified by the input image list and apertures) are
@@ -195,7 +184,7 @@ dopcor — Apply doppler corrections
   the apertures which were corrected.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  To dispersion and flux correct a quasar spectrum with redshift of
@@ -223,11 +212,11 @@ dopcor — Apply doppler corrections
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_DOPCOR">DOPCOR V2.10.3</A></B></DT>
+  <DT><B>DOPCOR V2.10.3</B></DT>
   <! Sec='REVISIONS' Level=0 Label='DOPCOR' Line='DOPCOR V2.10.3'>
   <DD>This task was extended to work on two and three dimensional spatial spectra
   such as long slit and Fabry-Perot spectra.
@@ -236,13 +225,13 @@ dopcor — Apply doppler corrections
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_DOPCOR">DOPCOR V2.10.3</A></B></DT>
+  <DT><B>DOPCOR V2.10.3</B></DT>
   <! Sec='REVISIONS' Level=0 Label='DOPCOR' Line='DOPCOR V2.10.3'>
   <DD>A keyword is added to log the correction applied.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_DOPCOR">DOPCOR V2.10.2</A></B></DT>
+  <DT><B>DOPCOR V2.10.2</B></DT>
   <! Sec='REVISIONS' Level=0 Label='DOPCOR' Line='DOPCOR V2.10.2'>
   <DD>A sign error in converting velocity to redshift was fixed.  A validity
   check on the velocities and redshifts was added.  The documentation
@@ -250,14 +239,14 @@ dopcor — Apply doppler corrections
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_DOPCOR">DOPCOR V2.10</A></B></DT>
+  <DT><B>DOPCOR V2.10</B></DT>
   <! Sec='REVISIONS' Level=0 Label='DOPCOR' Line='DOPCOR V2.10'>
   <DD>This task is new.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   ranges, rvcorrect
@@ -266,5 +255,3 @@ dopcor — Apply doppler corrections
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _tchsize:
+
 tchsize — Change allocated sizes of various sections of a table.
 ================================================================
 
@@ -5,32 +7,19 @@ tchsize — Change allocated sizes of various sections of a table.
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>tchsize (Oct95)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>tables</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>tchsize (Oct95)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>tchsize</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   tchsize -- Change the size of tables.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   tchsize intable outtable maxpar maxcols rowlen allrows
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task changes the allocated sizes of various portions of a table
@@ -65,23 +54,23 @@ tchsize — Change allocated sizes of various sections of a table.
   'table.lis' as a table.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_intable">intable [file name template]</A></B></DT>
+  <DT><B>intable [file name template]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='intable' Line='intable [file name template]'>
   <DD>A list of one or more tables whose sizes are to be changed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_outtable">outtable = "<TT></TT>" [file name template]</A></B></DT>
+  <DT><B>outtable = "<TT></TT>" [file name template]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable = "" [file name template]'>
   <DD>Either a null string, a directory name, or a list of output table names.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_maxpar">maxpar = -1 [integer]</A></B></DT>
+  <DT><B>maxpar = -1 [integer]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='maxpar' Line='maxpar = -1 [integer]'>
   <DD>The number of records to allocate for header (i.e., user) parameters.
   <P>
@@ -90,7 +79,7 @@ tchsize — Change allocated sizes of various sections of a table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_maxcols">maxcols = -1 [integer]</A></B></DT>
+  <DT><B>maxcols = -1 [integer]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='maxcols' Line='maxcols = -1 [integer]'>
   <DD>The amount of space to allocate for column descriptors.  There must be
   at least one for each column that is defined or is to be defined.
@@ -106,7 +95,7 @@ tchsize — Change allocated sizes of various sections of a table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rowlen">rowlen = -1 [integer]</A></B></DT>
+  <DT><B>rowlen = -1 [integer]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rowlen' Line='rowlen = -1 [integer]'>
   <DD>The row length; this is only relevant for a row-ordered table.
   The unit of length is the amount of memory used to store 
@@ -122,7 +111,7 @@ tchsize — Change allocated sizes of various sections of a table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_allrows">allrows = -1 [integer]</A></B></DT>
+  <DT><B>allrows = -1 [integer]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='allrows' Line='allrows = -1 [integer]'>
   <DD>The number of rows to allocate; this is only relevant for a column-ordered
   table.
@@ -132,7 +121,7 @@ tchsize — Change allocated sizes of various sections of a table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(verbose = yes) [boolean]</A></B></DT>
+  <DT><B>(verbose = yes) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(verbose = yes) [boolean]'>
   <DD>Display the names of the input and output tables for each table that is
   processed?
@@ -140,7 +129,7 @@ tchsize — Change allocated sizes of various sections of a table.
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Truncate (in-place) all unused space in a single table:
@@ -201,18 +190,18 @@ tchsize — Change allocated sizes of various sections of a table.
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   This task was written by Phil Hodge.
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   tinfo
@@ -221,5 +210,3 @@ tchsize — Change allocated sizes of various sections of a table.
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

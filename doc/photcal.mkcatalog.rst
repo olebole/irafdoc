@@ -1,3 +1,5 @@
+.. _mkcatalog:
+
 mkcatalog — Type in a standard star catalog or observations file
 ================================================================
 
@@ -5,63 +7,50 @@ mkcatalog — Type in a standard star catalog or observations file
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>mkcatalog (Aug91)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.photcal</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>mkcatalog (Aug91)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>mkcatalog</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   mkcatalog -- create or edit a catalog, usually but not necessarily
   a standard star catalog
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   mkcatalog catalog
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_catalog">catalog</A></B></DT>
+  <DT><B>catalog</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='catalog' Line='catalog'>
   <DD>The name of the new output catalog to be created or a previously existing
   catalog to be edited.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_review">review = no</A></B></DT>
+  <DT><B>review = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='review' Line='review = no'>
   <DD>Review any pre-existing entries?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verify">verify = no</A></B></DT>
+  <DT><B>verify = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verify' Line='verify = no'>
   <DD>Verify each new entry?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_edit">edit = yes</A></B></DT>
+  <DT><B>edit = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='edit' Line='edit = yes'>
   <DD>Enter edit mode after entering all the values?
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -169,7 +158,7 @@ mkcatalog — Type in a standard star catalog or observations file
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -240,13 +229,13 @@ mkcatalog — Type in a standard star catalog or observations file
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   <P>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   <P>
@@ -256,7 +245,7 @@ mkcatalog — Type in a standard star catalog or observations file
   <P>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   photcal$catalogs/README,mknobsfile,mkobsfile,mkconfig
@@ -265,5 +254,3 @@ mkcatalog — Type in a standard star catalog or observations file
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

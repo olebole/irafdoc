@@ -1,3 +1,5 @@
+.. _tximage:
+
 tximage — Extract images from rows of 3-D tables.
 =================================================
 
@@ -5,32 +7,19 @@ tximage — Extract images from rows of 3-D tables.
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>tximage (Jan97)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>tables</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>tximage (Jan97)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>tximage</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   tximage -- Extract 1-D images from cells of a 3-D table.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   tximage intable output
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task extracts one or more 1-D images from cells of a 3-D table.
@@ -79,31 +68,31 @@ tximage — Extract images from rows of 3-D tables.
   'tximage' got them from.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_intable">intable [file name list/template]</A></B></DT>
+  <DT><B>intable [file name list/template]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='intable' Line='intable [file name list/template]'>
   <DD>A list of one or more tables to be expanded. A column selector selecting
   a single column is mandatory. Row selectors are supported as well.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output [file name template]</A></B></DT>
+  <DT><B>output [file name template]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output [file name template]'>
   <DD>Either a directory name or a list of output image names.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(verbose = yes) [boolean]</A></B></DT>
+  <DT><B>(verbose = yes) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(verbose = yes) [boolean]'>
   <DD>Display names of input and output files ?
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   Extract 1-D images from a column named FLUX from rows 11 to 13 of a 3-D 
@@ -117,18 +106,18 @@ tximage — Extract images from rows of 3-D tables.
   and "<TT>image_r0013</TT>".
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   This task was written by I. Busko.
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   tiimage, selectors
@@ -137,5 +126,3 @@ tximage — Extract images from rows of 3-D tables.
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

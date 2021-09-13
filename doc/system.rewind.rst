@@ -1,3 +1,5 @@
+.. _rewind:
+
 rewind — Rewind a device (magtape)
 ==================================
 
@@ -5,42 +7,29 @@ rewind — Rewind a device (magtape)
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>rewind (Apr92)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>system</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>rewind (Apr92)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>rewind</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   rewind -- rewind a previously allocated device
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   rewind device
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_device">device</A></B></DT>
+  <DT><B>device</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='device' Line='device'>
   <DD>The device to be rewound.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_initcache">initcache = yes</A></B></DT>
+  <DT><B>initcache = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='initcache' Line='initcache = yes'>
   <DD>Initialize the magtape device position cache for the device.  This causes
   the magtape i/o system to "<TT>forget</TT>" what it thinks it knows about things
@@ -49,7 +38,7 @@ rewind — Rewind a device (magtape)
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <I>Rewind</I> rewinds the specified device, which is most likely
@@ -61,7 +50,7 @@ rewind — Rewind a device (magtape)
   on the tape and to ensure that the tape is left in a defined position.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -70,7 +59,7 @@ rewind — Rewind a device (magtape)
   	cl&gt; rewind mta
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   allocate, deallocate, devstatus
@@ -79,5 +68,3 @@ rewind — Rewind a device (magtape)
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _rskysub:
+
 rskysub — Sky subtract images using running mean or median
 ==========================================================
 
@@ -5,42 +7,29 @@ rskysub — Sky subtract images using running mean or median
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>rskysub (Sep01)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>proto</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>rskysub (Sep01)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>rskysub</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   rskysub -- sky subtract images using running mean or median
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   rskysub input output
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The list of input images to be sky subtracted in time of observation order.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>The list of output sky subtracted images. The number of output images must
   equal the number of input images.  If output is "<TT>default</TT>", "<TT>dir$default</TT>", or
@@ -50,7 +39,7 @@ rskysub — Sky subtract images using running mean or median
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_imasks">imasks = "<TT></TT>"</A></B></DT>
+  <DT><B>imasks = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='imasks' Line='imasks = ""'>
   <DD>The optional list of input image masks. The input image masks are assumed to
   consist of 0's in good pixel regions and &gt; 0 integer values elsewhere. The
@@ -62,7 +51,7 @@ rskysub — Sky subtract images using running mean or median
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_omasks">omasks = "<TT></TT>"</A></B></DT>
+  <DT><B>omasks = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='omasks' Line='omasks = ""'>
   <DD>The optional list of output masks. If output masks are defined they are
   used to created the sky image in place of the input masks. The output masks
@@ -77,7 +66,7 @@ rskysub — Sky subtract images using running mean or median
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_hmasks">hmasks = "<TT></TT>"</A></B></DT>
+  <DT><B>hmasks = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='hmasks' Line='hmasks = ""'>
   <DD>The list of output holes masks.  The holes masks defined bad pixels in the
   output images, i.e. those for which the underlying sky image was undefined.
@@ -92,32 +81,32 @@ rskysub — Sky subtract images using running mean or median
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_rescale">rescale = yes</A></B></DT>
+  <DT><B>rescale = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rescale' Line='rescale = yes'>
   <DD>Force recomputation of the individual input image scale factors  even though
   they have been previously computed and stored in the keyword <I>skyscale</I>?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_scale">scale = "<TT>median</TT>"</A></B></DT>
+  <DT><B>scale = "<TT>median</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='scale' Line='scale = "median"'>
   <DD>The method used to compute the individual image scale factors. The options
   are:
   <DL>
-  <DT><B><A NAME="l_none">none</A></B></DT>
+  <DT><B>none</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='none' Line='none'>
   <DD>The individual scale factors are all set to 1.0.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">!&lt;keyword&gt;</A></B></DT>
+  <DT><B>!&lt;keyword&gt;</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='!&lt;keyword&gt;'>
   <DD>The individual scale factors are all set to the value of the input image header
   keyword <I>keyword</I>.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_median">median</A></B></DT>
+  <DT><B>median</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='median' Line='median'>
   <DD>The individual scale factors are set to 1 / median. The medians are estimated
   using the input masks <I>imasks</I>, input image section <I>statsec</I>,
@@ -127,7 +116,7 @@ rskysub — Sky subtract images using running mean or median
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">@&lt;file&gt;</A></B></DT>
+  <DT><B>@&lt;file&gt;</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='@&lt;file&gt;'>
   <DD>The individual image scale factors are read from the file <I>file</I>. 
   </DD>
@@ -135,7 +124,7 @@ rskysub — Sky subtract images using running mean or median
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_skyscale">skyscale = "<TT>SKYSCALE</TT>"</A></B></DT>
+  <DT><B>skyscale = "<TT>SKYSCALE</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='skyscale' Line='skyscale = "SKYSCALE"'>
   <DD>The image header keyword containing the computed scaling factor.
   <I>Skyscale</I> is written to both the input and output images.
@@ -143,85 +132,85 @@ rskysub — Sky subtract images using running mean or median
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_statsec">statsec = "<TT></TT>"</A></B></DT>
+  <DT><B>statsec = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='statsec' Line='statsec = ""'>
   <DD>The input image section used to compute the individual image scaling factors.
   Statsec is independent of the input image section if any.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lower">lower = INDEF, upper = INDEF</A></B></DT>
+  <DT><B>lower = INDEF, upper = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lower' Line='lower = INDEF, upper = INDEF'>
   <DD>The minimum and maximum input image good data values.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_maxiter">maxiter = 20</A></B></DT>
+  <DT><B>maxiter = 20</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='maxiter' Line='maxiter = 20'>
   <DD>The maximum number of clipping iterations.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lnsigrej">lnsigrej = 3.0, unsigrej = 3.0</A></B></DT>
+  <DT><B>lnsigrej = 3.0, unsigrej = 3.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lnsigrej' Line='lnsigrej = 3.0, unsigrej = 3.0'>
   <DD>The lower and upper side sigma clipping factors.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_binwidth">binwidth = 0.1</A></B></DT>
+  <DT><B>binwidth = 0.1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='binwidth' Line='binwidth = 0.1'>
   <DD>The histogram bin width in sigma used in estimating the median value.
   </DD>
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_resubtract">resubtract = yes</A></B></DT>
+  <DT><B>resubtract = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='resubtract' Line='resubtract = yes'>
   <DD>Force recomputation and subtraction of the sky image even though it exists
   already ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_combine">combine = "<TT>average</TT>"</A></B></DT>
+  <DT><B>combine = "<TT>average</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='combine' Line='combine = "average"'>
   <DD>The method used to create the sky images. The options are "<TT>average</TT>" and
   "<TT>median</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ncombine">ncombine = 6</A></B></DT>
+  <DT><B>ncombine = 6</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ncombine' Line='ncombine = 6'>
   <DD>The default number of images used to create the sky images.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nmin">nmin = 3</A></B></DT>
+  <DT><B>nmin = 3</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nmin' Line='nmin = 3'>
   <DD>The minimum number of images used to create the sky images.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nlorej">nlorej = 0, nhirej = 0</A></B></DT>
+  <DT><B>nlorej = 0, nhirej = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nlorej' Line='nlorej = 0, nhirej = 0'>
   <DD>The number of high and low side pixels to reject if <I>combine</I> is "<TT>average</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_blank">blank = 0.0</A></B></DT>
+  <DT><B>blank = 0.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='blank' Line='blank = 0.0'>
   <DD>The value assigned to undefined output image pixels, i.e. those for
   which the corresponding sky image pixel is undefined.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_skysub">skysub = "<TT>SKYSUB</TT>"</A></B></DT>
+  <DT><B>skysub = "<TT>SKYSUB</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='skysub' Line='skysub = "SKYSUB"'>
   <DD>The sky subtraction processing keyword which is written to the output
   image when processing is complete.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_holes">holes = "<TT>HOLES</TT>"</A></B></DT>
+  <DT><B>holes = "<TT>HOLES</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='holes' Line='holes = "HOLES"'>
   <DD>The homes mask name keyword which is written to the output image if an output
   holes mask is created.
@@ -229,13 +218,13 @@ rskysub — Sky subtract images using running mean or median
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_cache">cache = yes</A></B></DT>
+  <DT><B>cache = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cache' Line='cache = yes'>
   <DD>Cache the input images in memory if possible ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print messages about the progress of the task ?
   </DD>
@@ -243,7 +232,7 @@ rskysub — Sky subtract images using running mean or median
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -316,7 +305,7 @@ rskysub — Sky subtract images using running mean or median
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -337,19 +326,19 @@ rskysub — Sky subtract images using running mean or median
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   <P>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   <P>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imcombine, imexpr
@@ -358,5 +347,3 @@ rskysub — Sky subtract images using running mean or median
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

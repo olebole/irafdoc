@@ -1,3 +1,5 @@
+.. _sptime:
+
 sptime — Spectroscopic exposure time calculator
 ===============================================
 
@@ -5,37 +7,24 @@ sptime — Spectroscopic exposure time calculator
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>sptime (Nov01)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.obsutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>sptime (Nov01)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>sptime</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   sptime -- spectroscopic exposure time calculator
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   sptime
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   The parameters in this task have certain common features.
   <DL>
-  <DT><B><A NAME="l_">(1)</A></B></DT>
+  <DT><B>(1)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(1)'>
   <DD>All parameters, except <I>spectrograph</I> and <I>search</I>, may be
   specified as spectrograph table parameters of the same name.  Some
@@ -50,7 +39,7 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(2)</A></B></DT>
+  <DT><B>(2)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(2)'>
   <DD>Parameters that specify a table take the value of a file or a numeric
   constant.  A constant is like a table with the same values for all value
@@ -58,7 +47,7 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(3)</A></B></DT>
+  <DT><B>(3)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(3)'>
   <DD>Tables which are specified as filenames are sought first in the current
   working directory, then in one of the directories given by the
@@ -69,7 +58,7 @@ sptime — Spectroscopic exposure time calculator
   <P>
   <P>
   <DL>
-  <DT><B><A NAME="l_time">time = INDEF (INDEF) [spectrograph]</A></B></DT>
+  <DT><B>time = INDEF (INDEF) [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='time' Line='time = INDEF (INDEF) [spectrograph]'>
   <DD>Total exposure time in seconds.  This time may be divided into shorter
   individual exposure times as defined by the <I>maxexp</I> parameter.  If
@@ -78,7 +67,7 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sn">sn = 25. (25.) [spectrograph]</A></B></DT>
+  <DT><B>sn = 25. (25.) [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sn' Line='sn = 25. (25.) [spectrograph]'>
   <DD>Desired signal-to-noise per pixel at the central wavelength if the
   exposure <I>time</I> parameter is not specified.
@@ -89,25 +78,25 @@ sptime — Spectroscopic exposure time calculator
   The following parameters define the source and sky/atmosphere background
   spectra.
   <DL>
-  <DT><B><A NAME="l_spectrum">spectrum = "<TT>blackbody</TT>"</A></B></DT>
+  <DT><B>spectrum = "<TT>blackbody</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='spectrum' Line='spectrum = "blackbody"'>
   <DD>Source spectrum.  This may be a table or one of the following  special words:
   <DL>
-  <DT><B><A NAME="l_blackbody">blackbody</A></B></DT>
+  <DT><B>blackbody</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='blackbody' Line='blackbody'>
   <DD>Blackbody spectrum with temperature given by the <I>temperature</I>
   parameter.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_flambda_power">flambda_power</A></B></DT>
+  <DT><B>flambda_power</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='flambda_power' Line='flambda_power'>
   <DD>Power law in f(lambda) with index given by the <I>index</I> parameter;
   f(lambda) proportional to lambda^(index).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fnu_power">fnu_power</A></B></DT>
+  <DT><B>fnu_power</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='fnu_power' Line='fnu_power'>
   <DD>Power law in f(nu) with index given by the <I>index</I> parameter;
   f(nu) proportional to nu^(index).
@@ -119,13 +108,13 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_spectitle">spectitle = "<TT></TT>" [spectrum|spectrograph]</A></B></DT>
+  <DT><B>spectitle = "<TT></TT>" [spectrum|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='spectitle' Line='spectitle = "" [spectrum|spectrograph]'>
   <DD>Spectrum title.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_E">E = 0. (0.) [spectrum|spectrograph]</A></B></DT>
+  <DT><B>E = 0. (0.) [spectrum|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='E' Line='E = 0. (0.) [spectrum|spectrograph]'>
   <DD>The E(B-V) color excess to apply a reddening to the source spectrum.  The
   reddening maintains the same table or reference flux at the reference
@@ -133,7 +122,7 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_R">R = 3.1 (3.1) [spectrum|spectrograph]</A></B></DT>
+  <DT><B>R = 3.1 (3.1) [spectrum|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='R' Line='R = 3.1 (3.1) [spectrum|spectrograph]'>
   <DD>The R(V) = A(V)/E(B-V) for the extinction law.  The extinction law is that
   of Cardelli, Clayton, and Mathis, <B>ApJ 345:245</B>, 1989.  The default
@@ -141,7 +130,7 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sky">sky = "<TT></TT>" ("<TT>none</TT>") [spectrograph]</A></B></DT>
+  <DT><B>sky = "<TT></TT>" ("<TT>none</TT>") [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sky' Line='sky = "" ("none") [spectrograph]'>
   <DD>Sky or background table.  The table is a two or three column text file
   consisting of wavelength in Angstroms, optional moon phase between 0 (new
@@ -149,20 +138,20 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_skytitle">skytitle = "<TT></TT>" [sky|spectrograph]</A></B></DT>
+  <DT><B>skytitle = "<TT></TT>" [sky|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='skytitle' Line='skytitle = "" [sky|spectrograph]'>
   <DD>Sky title.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_extinction">extinction = "<TT></TT>" ("<TT>none</TT>") [spectrograph]</A></B></DT>
+  <DT><B>extinction = "<TT></TT>" ("<TT>none</TT>") [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='extinction' Line='extinction = "" ("none") [spectrograph]'>
   <DD>Extinction table.  The table is a two column text file consisting of
   wavelength in Angstroms and extinction in magnitudes per airmass.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_exttitle">exttitle = "<TT></TT>" [spectrograph]</A></B></DT>
+  <DT><B>exttitle = "<TT></TT>" [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='exttitle' Line='exttitle = "" [spectrograph]'>
   <DD>Extinction title.
   </DD>
@@ -172,7 +161,7 @@ sptime — Spectroscopic exposure time calculator
   The following parameters are used with the source spectrum is specified
   by the special functions.
   <DL>
-  <DT><B><A NAME="l_refwave">refwave = INDEF (INDEF) [spectrum|spectrograph]</A></B></DT>
+  <DT><B>refwave = INDEF (INDEF) [spectrum|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='refwave' Line='refwave = INDEF (INDEF) [spectrum|spectrograph]'>
   <DD>Reference wavelength, in units given by the <I>units</I> parameter, defining
   the flux of the source.  This is also used as the wavelength where
@@ -181,14 +170,14 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_refflux">refflux = 10. (10.) [spectrograph]</A></B></DT>
+  <DT><B>refflux = 10. (10.) [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='refflux' Line='refflux = 10. (10.) [spectrograph]'>
   <DD>Reference source flux or magnitude at the reference wavelength for the
   model spectral distributions.  The units are specified by the funits parameter.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_funits">funits = "<TT>AB</TT>" ("<TT>AB</TT>") [spectrograph]</A></B></DT>
+  <DT><B>funits = "<TT>AB</TT>" ("<TT>AB</TT>") [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='funits' Line='funits = "AB" ("AB") [spectrograph]'>
   <DD>Flux units for the reference flux.  The values are "<TT>AB</TT>" for monochromatic
   magnitude, "<TT>F_lambda</TT>" for ergs/s/cm^2/A, "<TT>F_nu</TT>" for ergs/s/cm^2/Hz,
@@ -196,13 +185,13 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_temperature">temperature = 6000. (6000.) [spectrograph]</A></B></DT>
+  <DT><B>temperature = 6000. (6000.) [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='temperature' Line='temperature = 6000. (6000.) [spectrograph]'>
   <DD>Blackbody temperature for a blackbody source spectrum in degrees Kelvin.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_index">index = 0. (0.) [spectrograph]</A></B></DT>
+  <DT><B>index = 0. (0.) [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='index' Line='index = 0. (0.) [spectrograph]'>
   <DD>Power law index for the power law source spectrum.
   </DD>
@@ -212,27 +201,27 @@ sptime — Spectroscopic exposure time calculator
   The following parameters are observational parameters describing either
   the observing conditions or spectrograph setup.
   <DL>
-  <DT><B><A NAME="l_seeing">seeing = 1. (1.) [spectrograph]</A></B></DT>
+  <DT><B>seeing = 1. (1.) [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='seeing' Line='seeing = 1. (1.) [spectrograph]'>
   <DD>The full width at half maximum (FWHM) of a point source in arc seconds.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_airmass">airmass = 1. (1.) [spectrograph]</A></B></DT>
+  <DT><B>airmass = 1. (1.) [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='airmass' Line='airmass = 1. (1.) [spectrograph]'>
   <DD>The airmass of the observation.  This is only used if an extinction table
   is specified.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_phase">phase = 0. (0.) [spectrograph]</A></B></DT>
+  <DT><B>phase = 0. (0.) [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='phase' Line='phase = 0. (0.) [spectrograph]'>
   <DD>The moon phase running from 0 for new moon to 14 for full moon.  This is
   used if the sky spectrum is given as a function of the moon phase.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_thermal">thermal = 0. (0.) [telescope|spectrograph]</A></B></DT>
+  <DT><B>thermal = 0. (0.) [telescope|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='thermal' Line='thermal = 0. (0.) [telescope|spectrograph]'>
   <DD>Temperature in degress Kelvin for the thermal background of the telescope
   and spectrograph.  If greater than zero a blackbody surface brightness
@@ -241,7 +230,7 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wave">wave = INDEF (INDEF) [spectrograph]</A></B></DT>
+  <DT><B>wave = INDEF (INDEF) [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wave' Line='wave = INDEF (INDEF) [spectrograph]'>
   <DD>Central wavelength of observation in units given by the <I>units</I>
   parameter.  If the value is INDEF it is determined from the efficiency peak
@@ -249,7 +238,7 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_order">order = INDEF (INDEF) [spectrograph]</A></B></DT>
+  <DT><B>order = INDEF (INDEF) [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='order' Line='order = INDEF (INDEF) [spectrograph]'>
   <DD>Order for grating or grism dispersers.  If the value is INDEF it is
   determined from the order nearest the desired central wavelength.  If both
@@ -257,7 +246,7 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xorder">xorder = INDEF (INDEF) [spectrograph]</A></B></DT>
+  <DT><B>xorder = INDEF (INDEF) [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xorder' Line='xorder = INDEF (INDEF) [spectrograph]'>
   <DD>Order for grating or grism cross dispersers.  If the value is INDEF it
   is determined from the order nearest the desired central wavelength.  If
@@ -266,7 +255,7 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_width">width = INDEF (-2.) [aperture|spectrograph]</A></B></DT>
+  <DT><B>width = INDEF (-2.) [aperture|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='width' Line='width = INDEF (-2.) [aperture|spectrograph]'>
   <DD>The aperture width (dispersion direction) for rectangular apertures
   such as slits.  Values may be positive to specify in arc seconds or
@@ -274,7 +263,7 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_length">length = INDEF (-100.) [aperture|spectrograph]</A></B></DT>
+  <DT><B>length = INDEF (-100.) [aperture|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='length' Line='length = INDEF (-100.) [aperture|spectrograph]'>
   <DD>The aperture length (cross dispersion direction) for rectangular
   apertures such as slits.  Values may be positive to specify in arc seconds
@@ -282,7 +271,7 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_diameter">diameter = INDEF (-2.) [fiber|aperture|spectrograph]</A></B></DT>
+  <DT><B>diameter = INDEF (-2.) [fiber|aperture|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='diameter' Line='diameter = INDEF (-2.) [fiber|aperture|spectrograph]'>
   <DD>The aperture diameter for circular apertures.  Values
   may be positive to specify in arc seconds or negative to specify in
@@ -291,13 +280,13 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xbin">xbin = 1 (1) [detector|spectrograph]</A></B></DT>
+  <DT><B>xbin = 1 (1) [detector|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xbin' Line='xbin = 1 (1) [detector|spectrograph]'>
   <DD>Detector binning along the dispersion direction.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ybin">ybin = 1 (1) [detector|spectrograph]</A></B></DT>
+  <DT><B>ybin = 1 (1) [detector|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ybin' Line='ybin = 1 (1) [detector|spectrograph]'>
   <DD>Detector binning along the spatial direction.
   </DD>
@@ -306,7 +295,7 @@ sptime — Spectroscopic exposure time calculator
   <P>
   The following parameters a miscellaneous parameters for the task.
   <DL>
-  <DT><B><A NAME="l_search">search = "<TT>spectimedb$</TT>"</A></B></DT>
+  <DT><B>search = "<TT>spectimedb$</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='search' Line='search = "spectimedb$"'>
   <DD>List of directories to search for the various table files.  The current
   direction is always searched first and the directory sptimelib$ is searched
@@ -315,7 +304,7 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_minexp">minexp = 0.01 (0.01) [spectrograph]</A></B></DT>
+  <DT><B>minexp = 0.01 (0.01) [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='minexp' Line='minexp = 0.01 (0.01) [spectrograph]'>
   <DD>Minimumm time in seconds per individual exposure time.  This only applies
   when <I>time</I> is INDEF.  Adjustment of the exposure time for saturation
@@ -323,7 +312,7 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_maxexp">maxexp = 3600. (3600.) [spectrograph]</A></B></DT>
+  <DT><B>maxexp = 3600. (3600.) [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='maxexp' Line='maxexp = 3600. (3600.) [spectrograph]'>
   <DD>Maximum time in seconds per individual exposure.  The minimum exposure time
   has precedence over this value.  If the total exposure time exceeds this
@@ -334,7 +323,7 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_units">units = "<TT>Angstroms</TT>" ("<TT>Angstroms</TT>") [spectrograph]</A></B></DT>
+  <DT><B>units = "<TT>Angstroms</TT>" ("<TT>Angstroms</TT>") [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='units' Line='units = "Angstroms" ("Angstroms") [spectrograph]'>
   <DD>Dispersion units for input and output dispersion coordinates.  The
   units syntax is described in the UNITS section.  The most common units
@@ -343,7 +332,7 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_skysub">skysub = "<TT></TT>" (default based on context) [spectrograph]</A></B></DT>
+  <DT><B>skysub = "<TT></TT>" (default based on context) [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='skysub' Line='skysub = "" (default based on context) [spectrograph]'>
   <DD>Type of sky and background subtraction.  The values are "<TT>none</TT>" for no
   background subtraction, "<TT>longslit</TT>" for subtraction using pixels in the
@@ -357,13 +346,13 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nskyaps">nskyaps = 10  (10) [spectrograph]</A></B></DT>
+  <DT><B>nskyaps = 10  (10) [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nskyaps' Line='nskyaps = 10  (10) [spectrograph]'>
   <DD>Number of sky apertures when using "<TT>multiap</TT>" sky subtraction.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_subpixels">subpixels = 1 (1) [spectrograph]</A></B></DT>
+  <DT><B>subpixels = 1 (1) [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='subpixels' Line='subpixels = 1 (1) [spectrograph]'>
   <DD>Number of subpixels within each computed pixel.
   The dispersion pixel width is divided into this number of equal
@@ -375,7 +364,7 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sensfunc">sensfunc = "<TT></TT>" [spectrograph]</A></B></DT>
+  <DT><B>sensfunc = "<TT></TT>" [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sensfunc' Line='sensfunc = "" [spectrograph]'>
   <DD>Sensitivity function table.  This is a two column text file consisting
   of wavelength in Angstroms and sensitivity defined as
@@ -393,25 +382,25 @@ sptime — Spectroscopic exposure time calculator
   graphical and text output may be produced at a set of equally spaced
   points across the size of the detector.
   <DL>
-  <DT><B><A NAME="l_output">output = "<TT>object</TT>" ("<TT></TT>") [spectrograph]</A></B></DT>
+  <DT><B>output = "<TT>object</TT>" ("<TT></TT>") [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output = "object" ("") [spectrograph]'>
   <DD>List of quantities to output as graphs and/or in a text file.  These are
   given as a function of dispersion (as specified by units parameters)
   sampled across the dispersion coverage of the detector.  The choices are:
   <DL>
-  <DT><B><A NAME="l_counts">counts</A></B></DT>
+  <DT><B>counts</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='counts' Line='counts'>
   <DD>Object and background counts per individual exposure.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_snr">snr</A></B></DT>
+  <DT><B>snr</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='snr' Line='snr'>
   <DD>Signal-to-noise ratio per pixel per individual exposure.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_object">object</A></B></DT>
+  <DT><B>object</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='object' Line='object'>
   <DD>Object counts per individual exposure.  This includes contribution
   from other orders if there is no cross dispersion and the blocking
@@ -419,111 +408,111 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rate">rate</A></B></DT>
+  <DT><B>rate</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='rate' Line='rate'>
   <DD>Photons/second/A per individual exposure for the object and background.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_atmosphere">atmosphere</A></B></DT>
+  <DT><B>atmosphere</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='atmosphere' Line='atmosphere'>
   <DD>Percent transmission of the atmosphere.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_telescope">telescope</A></B></DT>
+  <DT><B>telescope</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='telescope' Line='telescope'>
   <DD>Percent transmission of the telescope.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_adc">adc</A></B></DT>
+  <DT><B>adc</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='adc' Line='adc'>
   <DD>Percent transmission of the ADC if one is used.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_aperture">aperture</A></B></DT>
+  <DT><B>aperture</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='aperture' Line='aperture'>
   <DD>Percent transmission of the aperture.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fiber">fiber</A></B></DT>
+  <DT><B>fiber</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='fiber' Line='fiber'>
   <DD>Percent transmission of the fiber if one is used.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_filter">filter</A></B></DT>
+  <DT><B>filter</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='filter' Line='filter'>
   <DD>Percent transmission of the first filter if one is used.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_filter2">filter2</A></B></DT>
+  <DT><B>filter2</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='filter2' Line='filter2'>
   <DD>Percent transmission of the second filter if one is used.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_collimator">collimator</A></B></DT>
+  <DT><B>collimator</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='collimator' Line='collimator'>
   <DD>Percent transmission of the collimator.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_disperser">disperser</A></B></DT>
+  <DT><B>disperser</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='disperser' Line='disperser'>
   <DD>Percent efficiency of the disperser.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xdisperser">xdisperser</A></B></DT>
+  <DT><B>xdisperser</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='xdisperser' Line='xdisperser'>
   <DD>Percent efficiency of the cross disperser if one is used.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_corrector">corrector</A></B></DT>
+  <DT><B>corrector</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='corrector' Line='corrector'>
   <DD>Percent transmission of the corrector if one is used.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_camera">camera</A></B></DT>
+  <DT><B>camera</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='camera' Line='camera'>
   <DD>Percent transmission of the camera.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_detector">detector</A></B></DT>
+  <DT><B>detector</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='detector' Line='detector'>
   <DD>Percent DQE of the detector.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_spectrograph">spectrograph</A></B></DT>
+  <DT><B>spectrograph</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='spectrograph' Line='spectrograph'>
   <DD>Percent transmission of the spectrograph if a transmission
   function is defined.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_emissivity">emissivity</A></B></DT>
+  <DT><B>emissivity</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='emissivity' Line='emissivity'>
   <DD>Emissivity of the telescope/spectrograph if an emissivity function
   is defined.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_thruput">thruput</A></B></DT>
+  <DT><B>thruput</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='thruput' Line='thruput'>
   <DD>Percent system thruput from telescope to detected photons.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sensfunc">sensfunc</A></B></DT>
+  <DT><B>sensfunc</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='sensfunc' Line='sensfunc'>
   <DD>Sensitivity function values given as 2.5*(log(countrate)-log(flambda)),
   where countrate is the count rate (without extinction) in counts/s/A
@@ -531,14 +520,14 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_correction">correction</A></B></DT>
+  <DT><B>correction</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='correction' Line='correction'>
   <DD>Multiplicative correction factor needed to convert the computed
   count rate to that given by an input sensitivity function.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ALL">ALL  </A></B></DT>
+  <DT><B>ALL  </B></DT>
   <! Sec='PARAMETERS' Level=1 Label='ALL' Line='ALL  '>
   <DD>All of the above.
   </DD>
@@ -546,7 +535,7 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nw">nw = 101 (101) [spectrograph]</A></B></DT>
+  <DT><B>nw = 101 (101) [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nw' Line='nw = 101 (101) [spectrograph]'>
   <DD>Number of dispersion points to use in the output graphs and text
   file.  Note that this is generally less than the number of pixels in
@@ -554,20 +543,20 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_list">list = "<TT></TT>" [spectrograph]</A></B></DT>
+  <DT><B>list = "<TT></TT>" [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='list' Line='list = "" [spectrograph]'>
   <DD>Filename for list output of the selected quantities.  The output
   will be appended if the file already exists.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_graphics">graphics = "<TT>stdgraph</TT>" ("<TT>stdgraph</TT>") [spectrograph]</A></B></DT>
+  <DT><B>graphics = "<TT>stdgraph</TT>" ("<TT>stdgraph</TT>") [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph" ("stdgraph") [spectrograph]'>
   <DD>Graphics output device for graphs of the output quantities.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = "<TT>yes</TT>" ("<TT>yes</TT>") [spectrograph]</A></B></DT>
+  <DT><B>interactive = "<TT>yes</TT>" ("<TT>yes</TT>") [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = "yes" ("yes") [spectrograph]'>
   <DD>Interactive pause after each graph?  If "<TT>yes</TT>" then cursor input is
   enabled after each graph otherwise all the graphs will be drawn without
@@ -581,7 +570,7 @@ sptime — Spectroscopic exposure time calculator
   The last parameter is a "<TT>parameter set</TT>" ("<TT>pset</TT>") containing all the
   spectrograph parameters.
   <DL>
-  <DT><B><A NAME="l_specpars">specpars = "<TT></TT>"</A></B></DT>
+  <DT><B>specpars = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='specpars' Line='specpars = ""'>
   <DD>Spectrograph parameter set.  If "<TT></TT>" then the default pset <B>specpars</B>
   is used otherwise the named pset is used.
@@ -592,7 +581,7 @@ sptime — Spectroscopic exposure time calculator
   <P>
   SPECPARS PARAMETERS
   <DL>
-  <DT><B><A NAME="l_spectrograph">spectrograph = "<TT></TT>"</A></B></DT>
+  <DT><B>spectrograph = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='spectrograph' Line='spectrograph = ""'>
   <DD>Spectrograph efficiency table.  This text file may contain parameters and an
   efficiency table.  The table consists of two columns containing
@@ -601,13 +590,13 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_title">title = "<TT></TT>" [spectrograph]</A></B></DT>
+  <DT><B>title = "<TT></TT>" [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='title' Line='title = "" [spectrograph]'>
   <DD>Title for the spectrograph.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apmagdisp">apmagdisp = INDEF (1.), apmagxdisp = INDEF (1.) [spectrograph]</A></B></DT>
+  <DT><B>apmagdisp = INDEF (1.), apmagxdisp = INDEF (1.) [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apmagdisp' Line='apmagdisp = INDEF (1.), apmagxdisp = INDEF (1.) [spectrograph]'>
   <DD>Magnification between the entrance aperture and the detector along and
   across the dispersion direction.  This describes any magnification (or
@@ -619,7 +608,7 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_inoutangle">inoutangle = INDEF (INDEF) [spectrograph]</A></B></DT>
+  <DT><B>inoutangle = INDEF (INDEF) [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='inoutangle' Line='inoutangle = INDEF (INDEF) [spectrograph]'>
   <DD>Incident to diffracted grating angle in degrees for grating dispersers.
   For typical spectrographs which are not cross dispersed this is the
@@ -628,7 +617,7 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xinoutangle">xinoutangle = INDEF (INDEF) [spectrograph]</A></B></DT>
+  <DT><B>xinoutangle = INDEF (INDEF) [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xinoutangle' Line='xinoutangle = INDEF (INDEF) [spectrograph]'>
   <DD>Incident to diffracted grating angle in degrees for grating cross
   dispersers.  If the value is INDEF it is derived from the grating
@@ -638,33 +627,33 @@ sptime — Spectroscopic exposure time calculator
   <P>
   <P>
   <DL>
-  <DT><B><A NAME="l_telescope">telescope = "<TT></TT>" [spectrograph]</A></B></DT>
+  <DT><B>telescope = "<TT></TT>" [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='telescope' Line='telescope = "" [spectrograph]'>
   <DD>Telescope efficiency table as a function of wavelength.  
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_teltitle">teltitle = "<TT></TT>" [telescope|spectrograph]</A></B></DT>
+  <DT><B>teltitle = "<TT></TT>" [telescope|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='teltitle' Line='teltitle = "" [telescope|spectrograph]'>
   <DD>Telescope title.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_area">area = INDEF (1.) [telescope|spectrograph]</A></B></DT>
+  <DT><B>area = INDEF (1.) [telescope|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='area' Line='area = INDEF (1.) [telescope|spectrograph]'>
   <DD>Effective collecting area of the telescope in m^2.  The effective area
   includes reductions in the primary area due to obstructions.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_scale">scale = INDEF (10.) [telescope|spectrograph]</A></B></DT>
+  <DT><B>scale = INDEF (10.) [telescope|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='scale' Line='scale = INDEF (10.) [telescope|spectrograph]'>
   <DD>Telescope plate scale, in arcsec/mm, at the entrance aperture of the
   spectrograph.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_emissivity">emissivity = "<TT></TT>" [telescope|spectrograph]</A></B></DT>
+  <DT><B>emissivity = "<TT></TT>" [telescope|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='emissivity' Line='emissivity = "" [telescope|spectrograph]'>
   <DD>Emissivity table.  The emissivity is for all elements in the telescope
   and spectrograph.  If an emissivity is specified and an the <I>thermal</I>
@@ -673,7 +662,7 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_emistitle">emistitle = "<TT></TT>" [emissivity|spectrograph]</A></B></DT>
+  <DT><B>emistitle = "<TT></TT>" [emissivity|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='emistitle' Line='emistitle = "" [emissivity|spectrograph]'>
   <DD>Title for the emissivity table used.
   </DD>
@@ -681,25 +670,25 @@ sptime — Spectroscopic exposure time calculator
   <P>
   <P>
   <DL>
-  <DT><B><A NAME="l_corrector">corrector = "<TT></TT>" [spectrograph]</A></B></DT>
+  <DT><B>corrector = "<TT></TT>" [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='corrector' Line='corrector = "" [spectrograph]'>
   <DD>Efficiency table for one or more correctors.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cortitle">cortitle = "<TT></TT>" [corrector|spectrograph]</A></B></DT>
+  <DT><B>cortitle = "<TT></TT>" [corrector|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cortitle' Line='cortitle = "" [corrector|spectrograph]'>
   <DD>Title for corrector table used.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_adc">adc = "<TT></TT>" [spectrograph]</A></B></DT>
+  <DT><B>adc = "<TT></TT>" [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='adc' Line='adc = "" [spectrograph]'>
   <DD>Efficiency table for atmospheric dispersion compensator.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_adctitle">adctitle = "<TT></TT>" [adc|spectrograph]</A></B></DT>
+  <DT><B>adctitle = "<TT></TT>" [adc|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='adctitle' Line='adctitle = "" [adc|spectrograph]'>
   <DD>Title for ADC table used.
   </DD>
@@ -707,7 +696,7 @@ sptime — Spectroscopic exposure time calculator
   <P>
   <P>
   <DL>
-  <DT><B><A NAME="l_disperser">disperser = "<TT></TT>" [spectrograph]</A></B></DT>
+  <DT><B>disperser = "<TT></TT>" [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='disperser' Line='disperser = "" [spectrograph]'>
   <DD>Disperser table.  If this file contains an efficiency table it applies
   only to first order.  An alternate first order table and tables for
@@ -715,13 +704,13 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_disptitle">disptitle = "<TT></TT>" [disperser|spectrograph]</A></B></DT>
+  <DT><B>disptitle = "<TT></TT>" [disperser|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='disptitle' Line='disptitle = "" [disperser|spectrograph]'>
   <DD>Title for disperser.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_disptype">disptype = "<TT></TT>" ("<TT>grating</TT>") [disperser|spectrograph]</A></B></DT>
+  <DT><B>disptype = "<TT></TT>" ("<TT>grating</TT>") [disperser|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='disptype' Line='disptype = "" ("grating") [disperser|spectrograph]'>
   <DD>Type of disperser element.  The chocies are "<TT>grating</TT>", "<TT>grism</TT>", or "<TT>generic</TT>".
   The generic setting will simply use the desired central wavelength and
@@ -731,7 +720,7 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_gmm">gmm = INDEF (300.) [disperser|spectrograph]</A></B></DT>
+  <DT><B>gmm = INDEF (300.) [disperser|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='gmm' Line='gmm = INDEF (300.) [disperser|spectrograph]'>
   <DD>Ruling in lines per mm.  If not specified it will be derived from the
   other disperser parameters.  If there is not enough information to
@@ -739,7 +728,7 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_blaze">blaze = INDEF (6.) [disperser|spectrograph]</A></B></DT>
+  <DT><B>blaze = INDEF (6.) [disperser|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='blaze' Line='blaze = INDEF (6.) [disperser|spectrograph]'>
   <DD>Blaze (grating) or prism (grism) angle in degrees.  If not specified it
   will be derived from the other disperser parameters.  If there is not
@@ -748,14 +737,14 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_oref">oref = INDEF (1) [disperser|spectrograph]</A></B></DT>
+  <DT><B>oref = INDEF (1) [disperser|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='oref' Line='oref = INDEF (1) [disperser|spectrograph]'>
   <DD>When a central (blaze) wavelength is specified this parameter indicates
   which order it is for.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wavelength">wavelength = INDEF (INDEF) [disperser|spectrograph]</A></B></DT>
+  <DT><B>wavelength = INDEF (INDEF) [disperser|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wavelength' Line='wavelength = INDEF (INDEF) [disperser|spectrograph]'>
   <DD>Central (blaze) wavelength in Angstroms for the reference order.  This
   parameter only applies to gratings.  If it is not specified it will
@@ -763,7 +752,7 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dispersion">dispersion = INDEF (INDEF) [disperser|spectrograph]</A></B></DT>
+  <DT><B>dispersion = INDEF (INDEF) [disperser|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dispersion' Line='dispersion = INDEF (INDEF) [disperser|spectrograph]'>
   <DD>Central dispersion in A/mm for the reference order.  This parameter only
   applies to gratings.  If it is not specified it will be derived from the
@@ -771,7 +760,7 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_indexref">indexref = INDEF (INDEF) [disperser|spectrograph]</A></B></DT>
+  <DT><B>indexref = INDEF (INDEF) [disperser|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='indexref' Line='indexref = INDEF (INDEF) [disperser|spectrograph]'>
   <DD>Grism index of refraction for the reference order.  This parameter only
   applies to grisms.  If it is not specified it will be derived from
@@ -779,7 +768,7 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_eff">eff = INDEF (1.) [disperser|spectrograph]</A></B></DT>
+  <DT><B>eff = INDEF (1.) [disperser|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='eff' Line='eff = INDEF (1.) [disperser|spectrograph]'>
   <DD>Peak efficiency for the theoretical disperser efficiency function.
   When an efficiency table is not specified then a theoretical efficiency
@@ -790,7 +779,7 @@ sptime — Spectroscopic exposure time calculator
   <P>
   <P>
   <DL>
-  <DT><B><A NAME="l_xdisperser">xdisperser = "<TT></TT>" [spectrograph]</A></B></DT>
+  <DT><B>xdisperser = "<TT></TT>" [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xdisperser' Line='xdisperser = "" [spectrograph]'>
   <DD>Crossdisperser table.  If this file contains an efficiency table it applies
   only to first order.  An alternate first order table and tables for
@@ -798,13 +787,13 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xdisptitle">xdisptitle = "<TT></TT>" [xdisperser|spectrograph]</A></B></DT>
+  <DT><B>xdisptitle = "<TT></TT>" [xdisperser|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xdisptitle' Line='xdisptitle = "" [xdisperser|spectrograph]'>
   <DD>Title for crossdisperser.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_disptype">disptype = "<TT></TT>" ("<TT>grating</TT>") [xdisperser|spectrograph]</A></B></DT>
+  <DT><B>disptype = "<TT></TT>" ("<TT>grating</TT>") [xdisperser|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='disptype' Line='disptype = "" ("grating") [xdisperser|spectrograph]'>
   <DD>Type of crossdisperser element.  The chocies are "<TT></TT>", "<TT>grating</TT>", "<TT>grism</TT>",
   or "<TT>generic</TT>".  The empty string eliminates use of a cross disperser.
@@ -815,28 +804,28 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_gmm">gmm = INDEF (INDEF) [xdisperser|spectrograph]</A></B></DT>
+  <DT><B>gmm = INDEF (INDEF) [xdisperser|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='gmm' Line='gmm = INDEF (INDEF) [xdisperser|spectrograph]'>
   <DD>Ruling in lines per mm.  If not specified it will be derived from the
   other crossdisperser parameters.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xblaze">xblaze = INDEF (6.) [xdisperser|spectrograph]</A></B></DT>
+  <DT><B>xblaze = INDEF (6.) [xdisperser|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xblaze' Line='xblaze = INDEF (6.) [xdisperser|spectrograph]'>
   <DD>Blaze (grating) or prism (grism) angle in degrees.  If not specified it
   will be derived from the other crossdisperser parameters.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xoref">xoref = INDEF (1) [xdisperser|spectrograph]</A></B></DT>
+  <DT><B>xoref = INDEF (1) [xdisperser|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xoref' Line='xoref = INDEF (1) [xdisperser|spectrograph]'>
   <DD>When a central (blaze) wavelength is specified this parameter indicates
   which order it is for.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xwavelength">xwavelength = INDEF (INDEF) [xdisperser|spectrograph]</A></B></DT>
+  <DT><B>xwavelength = INDEF (INDEF) [xdisperser|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xwavelength' Line='xwavelength = INDEF (INDEF) [xdisperser|spectrograph]'>
   <DD>Central (blaze) wavelength in Angstroms for the reference order.  This
   parameter only applies to gratings.  If it is not specified it will
@@ -844,7 +833,7 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xdispersion">xdispersion = INDEF (INDEF) [xdisperser|spectrograph]</A></B></DT>
+  <DT><B>xdispersion = INDEF (INDEF) [xdisperser|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xdispersion' Line='xdispersion = INDEF (INDEF) [xdisperser|spectrograph]'>
   <DD>Central dispersion in A/mm for the reference order.  This parameter only
   applies to gratings.  If it is not specified it will be derived from the
@@ -852,7 +841,7 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xindexref">xindexref = INDEF (INDEF) [xdisperser|spectrograph]</A></B></DT>
+  <DT><B>xindexref = INDEF (INDEF) [xdisperser|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xindexref' Line='xindexref = INDEF (INDEF) [xdisperser|spectrograph]'>
   <DD>Grism index of refraction for the reference order.  This parameter only
   applies to grisms.  If it is not specified it will be derived from
@@ -860,7 +849,7 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xeff">xeff = INDEF (1.) [xdisperser|spectrograph]</A></B></DT>
+  <DT><B>xeff = INDEF (1.) [xdisperser|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xeff' Line='xeff = INDEF (1.) [xdisperser|spectrograph]'>
   <DD>Peak efficiency for the theoretical crossdisperser efficiency function.
   When an efficiency table is not specified then a theoretical efficiency
@@ -871,7 +860,7 @@ sptime — Spectroscopic exposure time calculator
   <P>
   <P>
   <DL>
-  <DT><B><A NAME="l_aperture">aperture = "<TT></TT>" (default based on context) [spectrograph]</A></B></DT>
+  <DT><B>aperture = "<TT></TT>" (default based on context) [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='aperture' Line='aperture = "" (default based on context) [spectrograph]'>
   <DD>Aperture table.  The text file gives aperture thruput as a function of the
   aperture size in units of seeing FWHM.  For rectangular apertures there are
@@ -885,13 +874,13 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_aptitle">aptitle = "<TT></TT>" [aperture|spectrograph]</A></B></DT>
+  <DT><B>aptitle = "<TT></TT>" [aperture|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='aptitle' Line='aptitle = "" [aperture|spectrograph]'>
   <DD>Title for aperture used.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_aptype">aptype = "<TT></TT>" (default based on context) [aperture|spectrograph]</A></B></DT>
+  <DT><B>aptype = "<TT></TT>" (default based on context) [aperture|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='aptype' Line='aptype = "" (default based on context) [aperture|spectrograph]'>
   <DD>The aperture types are "<TT>rectangular</TT>" or "<TT>circular</TT>".  If the
   parameter is not specified then if the aperture table has two columns the
@@ -901,7 +890,7 @@ sptime — Spectroscopic exposure time calculator
   <P>
   <P>
   <DL>
-  <DT><B><A NAME="l_fiber">fiber = "<TT></TT>" [spectrograph]</A></B></DT>
+  <DT><B>fiber = "<TT></TT>" [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fiber' Line='fiber = "" [spectrograph]'>
   <DD>Fiber transmission table.  The transmission is a function of wavelength
   in Angstroms.  If no fiber transmission is specified then no fiber
@@ -909,7 +898,7 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fibtitle">fibtitle = "<TT></TT>" [fiber|spectrograph]</A></B></DT>
+  <DT><B>fibtitle = "<TT></TT>" [fiber|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fibtitle' Line='fibtitle = "" [fiber|spectrograph]'>
   <DD>Title for fiber transmission used.
   </DD>
@@ -917,7 +906,7 @@ sptime — Spectroscopic exposure time calculator
   <P>
   <P>
   <DL>
-  <DT><B><A NAME="l_filter">filter = "<TT></TT>" [spectrograph]</A></B></DT>
+  <DT><B>filter = "<TT></TT>" [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='filter' Line='filter = "" [spectrograph]'>
   <DD>Filter transmission table.  The transmission is a function of wavelength
   in Angstroms.  If no filter transmission is specified then no filter
@@ -925,13 +914,13 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ftitle">ftitle = "<TT></TT>" [filter|spectrograph]</A></B></DT>
+  <DT><B>ftitle = "<TT></TT>" [filter|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ftitle' Line='ftitle = "" [filter|spectrograph]'>
   <DD>Title for filter transmission used.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_filter2">filter2 = "<TT></TT>" [spectrograph]</A></B></DT>
+  <DT><B>filter2 = "<TT></TT>" [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='filter2' Line='filter2 = "" [spectrograph]'>
   <DD>Filter transmission table.  The transmission is a function of wavelength
   in Angstroms.  If no filter transmission is specified then no filter
@@ -939,13 +928,13 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_f2title">f2title = "<TT></TT>" [filter|spectrograph]</A></B></DT>
+  <DT><B>f2title = "<TT></TT>" [filter|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='f2title' Line='f2title = "" [filter|spectrograph]'>
   <DD>Title for filter transmission used.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_block">block = "<TT></TT>" ("<TT>no</TT>") [filter|spectrograph]</A></B></DT>
+  <DT><B>block = "<TT></TT>" ("<TT>no</TT>") [filter|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='block' Line='block = "" ("no") [filter|spectrograph]'>
   <DD>If "<TT>yes</TT>" then no check will be made for other orders.
   </DD>
@@ -953,7 +942,7 @@ sptime — Spectroscopic exposure time calculator
   <P>
   <P>
   <DL>
-  <DT><B><A NAME="l_collimator">collimator = "<TT></TT>" (1.) [spectrograph]</A></B></DT>
+  <DT><B>collimator = "<TT></TT>" (1.) [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='collimator' Line='collimator = "" (1.) [spectrograph]'>
   <DD>Collimator transmission table.  The transmission is a function of
   wavelength in Angstroms.  If no collimator is specified then a unit
@@ -961,13 +950,13 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_coltitle">coltitle = "<TT></TT>" [collimator|spectrograph]</A></B></DT>
+  <DT><B>coltitle = "<TT></TT>" [collimator|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='coltitle' Line='coltitle = "" [collimator|spectrograph]'>
   <DD>Title for collimator.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_colfl">colfl = INDEF (1.) [collimator|spectrograph]</A></B></DT>
+  <DT><B>colfl = INDEF (1.) [collimator|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='colfl' Line='colfl = INDEF (1.) [collimator|spectrograph]'>
   <DD>Collimator focal length in meters.  The ratio of the collimator to camera
   focal lengths determines the magnification between the aperture and the
@@ -976,7 +965,7 @@ sptime — Spectroscopic exposure time calculator
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_camera">camera = "<TT></TT>" (1.) [spectrograph]</A></B></DT>
+  <DT><B>camera = "<TT></TT>" (1.) [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='camera' Line='camera = "" (1.) [spectrograph]'>
   <DD>Camera transmission table.  The transmission is a function of wavelength
   in Angstroms.  If no camera is specified then a unit transmission
@@ -984,13 +973,13 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_camtitle">camtitle = "<TT></TT>" [camera|spectrograph]</A></B></DT>
+  <DT><B>camtitle = "<TT></TT>" [camera|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='camtitle' Line='camtitle = "" [camera|spectrograph]'>
   <DD>Title for camera.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_camfl">camfl = "<TT></TT>" (1.) [camera|spectrograph]</A></B></DT>
+  <DT><B>camfl = "<TT></TT>" (1.) [camera|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='camfl' Line='camfl = "" (1.) [camera|spectrograph]'>
   <DD>Camera focal length in meters.  The ratio of the collimator to
   camera focal lengths determines the magnification between the aperture
@@ -999,13 +988,13 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_resolution">resolution = "<TT></TT>" (2 pixels) [camera|spectrograph]</A></B></DT>
+  <DT><B>resolution = "<TT></TT>" (2 pixels) [camera|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='resolution' Line='resolution = "" (2 pixels) [camera|spectrograph]'>
   <DD>Camera resolution on the detector in mm.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_vignetting">vignetting = "<TT></TT>" (1.) [camera|spectrograph]</A></B></DT>
+  <DT><B>vignetting = "<TT></TT>" (1.) [camera|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='vignetting' Line='vignetting = "" (1.) [camera|spectrograph]'>
   <DD>Vignetting table.  The independent variable is distance from the center
   of the detector in mm.  The value is the fraction the light transmitted.
@@ -1015,50 +1004,50 @@ sptime — Spectroscopic exposure time calculator
   <P>
   <P>
   <DL>
-  <DT><B><A NAME="l_detector">detector = "<TT></TT>" (1.) [spectrograph]</A></B></DT>
+  <DT><B>detector = "<TT></TT>" (1.) [spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='detector' Line='detector = "" (1.) [spectrograph]'>
   <DD>Detector DQE table.  The DQE is a function of wavelength in Angstroms.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dettitle">dettitle = "<TT></TT>" [detector|spectrograph]</A></B></DT>
+  <DT><B>dettitle = "<TT></TT>" [detector|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dettitle' Line='dettitle = "" [detector|spectrograph]'>
   <DD>Title for detector.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ndisp">ndisp = INDEF (2048) [detector|spectrograph]</A></B></DT>
+  <DT><B>ndisp = INDEF (2048) [detector|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ndisp' Line='ndisp = INDEF (2048) [detector|spectrograph]'>
   <DD>Number of pixels along the dispersion.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pixsize">pixsize = INDEF (0.02) [detector|spectrograph]</A></B></DT>
+  <DT><B>pixsize = INDEF (0.02) [detector|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pixsize' Line='pixsize = INDEF (0.02) [detector|spectrograph]'>
   <DD>Pixel size (assumed square) in mm.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_gain">gain = INDEF (1.) [detector|spectrograph]</A></B></DT>
+  <DT><B>gain = INDEF (1.) [detector|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='gain' Line='gain = INDEF (1.) [detector|spectrograph]'>
   <DD>The conversion between photons and detector data numbers or counts.
   This is given as photons/ADU where ADU is analog-to-digital unit.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rdnoise">rdnoise = INDEF (0.) [detector|spectrograph]</A></B></DT>
+  <DT><B>rdnoise = INDEF (0.) [detector|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rdnoise' Line='rdnoise = INDEF (0.) [detector|spectrograph]'>
   <DD>Readout noise in photons.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dark">dark = INDEF (0.) [detector|spectrograph]</A></B></DT>
+  <DT><B>dark = INDEF (0.) [detector|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dark' Line='dark = INDEF (0.) [detector|spectrograph]'>
   <DD>Dark count rate in photons/s.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_saturation">saturation = INDEF [detector|spectrograph]</A></B></DT>
+  <DT><B>saturation = INDEF [detector|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='saturation' Line='saturation = INDEF [detector|spectrograph]'>
   <DD>Number of detected photons in a pixel resulting in saturation.
   The default is no saturation.  The time per exposure will be reduced,
@@ -1067,7 +1056,7 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dnmax">dnmax = INDEF [detector|spectrograph]</A></B></DT>
+  <DT><B>dnmax = INDEF [detector|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dnmax' Line='dnmax = INDEF [detector|spectrograph]'>
   <DD>Maximum data number or ADU allowed.  The default is no maximum.
   The time per exposure will be reduced,
@@ -1076,20 +1065,20 @@ sptime — Spectroscopic exposure time calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xbin">xbin = 1 (1) [detector|spectrograph]</A></B></DT>
+  <DT><B>xbin = 1 (1) [detector|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xbin' Line='xbin = 1 (1) [detector|spectrograph]'>
   <DD>Detector binning along the dispersion direction.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ybin">ybin = 1 (1) [detector|spectrograph]</A></B></DT>
+  <DT><B>ybin = 1 (1) [detector|spectrograph]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ybin' Line='ybin = 1 (1) [detector|spectrograph]'>
   <DD>Detector binning along the spatial direction.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_discussion">DISCUSSION</A></H2>
+  <H3>Discussion</H3>
   <! BeginSection: 'DISCUSSION'>
   <UL>
   <P>
@@ -1651,5 +1640,3 @@ sptime — Spectroscopic exposure time calculator
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DISCUSSION'  >
   
-  </BODY>
-  </HTML>

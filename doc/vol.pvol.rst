@@ -1,3 +1,5 @@
+.. _pvol:
+
 pvol — Project volume image (generates 'rotating' volume images)
 ================================================================
 
@@ -5,60 +7,47 @@ pvol — Project volume image (generates 'rotating' volume images)
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>pvol (Jan89)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>volumes</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>pvol (Jan89)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>pvol</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   pvol -- project rotations of a volume datacube onto series of 2d images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   pvol input output 
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>Input 3d or 4d image (datacube).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>Output datacube, one image band per rotation (type real only).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nframes">nframes = (360 / <B>degrees</B>)</A></B></DT>
+  <DT><B>nframes = (360 / <B>degrees</B>)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nframes' Line='nframes = (360 / \fBdegrees\fR)'>
   <DD>Number of frames to generate, 1 per rotation.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_degrees">degrees = 10</A></B></DT>
+  <DT><B>degrees = 10</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='degrees' Line='degrees = 10'>
   <DD>Number of degrees to rotate datacube for each successive projection.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_theta0">theta0 = 0.0</A></B></DT>
+  <DT><B>theta0 = 0.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='theta0' Line='theta0 = 0.0'>
   <DD>Initial projection angle for rotation sequence by <B>degrees</B> increments.
   Measured counterclockwise from +x axis when looking back toward the image
@@ -66,7 +55,7 @@ pvol — Project volume image (generates 'rotating' volume images)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ptype">ptype = 2</A></B></DT>
+  <DT><B>ptype = 2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ptype' Line='ptype = 2'>
   <DD>Projection type;
   1 = opacity:  attenuation along projection column by voxel opacity value.
@@ -81,28 +70,28 @@ pvol — Project volume image (generates 'rotating' volume images)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_imin">imin, imax = INDEF</A></B></DT>
+  <DT><B>imin, imax = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='imin' Line='imin, imax = INDEF'>
   <DD>Input voxel intensity ranges within which to apply intensity transformation.
   Defaults to input image min and max if not specified (see comments below).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_omin">omin, omax = INDEF</A></B></DT>
+  <DT><B>omin, omax = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='omin' Line='omin, omax = INDEF'>
   <DD>Input voxel opacity ranges within which to apply opacity transformation.
   Defaults to input image min and max if not specified (see comments below).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_amin">amin, amax = 0.0, 1.0</A></B></DT>
+  <DT><B>amin, amax = 0.0, 1.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='amin' Line='amin, amax = 0.0, 1.0'>
   <DD>Attenuation factor minimum and maximum for ptype=1 (opacity).  Voxel values
   &lt;= omin map to attenuation factor amin, &gt;= omax map to attenuation amax.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_izero">izero = 1.0</A></B></DT>
+  <DT><B>izero = 1.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='izero' Line='izero = 1.0'>
   <DD>Initial background iillumination intensity when <B>ptype</B> = 1 (opacity).
   This intensity will be attenuated consecutively by (transformed voxel_value *
@@ -111,14 +100,14 @@ pvol — Project volume image (generates 'rotating' volume images)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_oscale">oscale = 1.0</A></B></DT>
+  <DT><B>oscale = 1.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='oscale' Line='oscale = 1.0'>
   <DD>Voxel opacity scale factor.  Multiplied by voxel value before attenuating
   remaining light along projection column for <B>ptype</B> = 1.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_opacelem">opacelem = 1</A></B></DT>
+  <DT><B>opacelem = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='opacelem' Line='opacelem = 1'>
   <DD>Opacity element in 4th dimension of input image.  When input image is 4d,
   and there are two elements in the 4th dimension, the <B>opacelem</B> element
@@ -126,7 +115,7 @@ pvol — Project volume image (generates 'rotating' volume images)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dispower">dispower = 2.0</A></B></DT>
+  <DT><B>dispower = 2.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dispower' Line='dispower = 2.0'>
   <DD>Inverse distance weighting power for <B>ptype</B> = 4,5.  Voxel intensities will
   be multiplied by (voxel position in column / voxels in column) **
@@ -134,7 +123,7 @@ pvol — Project volume image (generates 'rotating' volume images)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_discutoff">discutoff = no</A></B></DT>
+  <DT><B>discutoff = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='discutoff' Line='discutoff = no'>
   <DD>When distance weighting, measure the distance within that set of projecting
   voxels that lies between the intensity cutoffs rather than from
@@ -144,7 +133,7 @@ pvol — Project volume image (generates 'rotating' volume images)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_modn">modn = 10</A></B></DT>
+  <DT><B>modn = 10</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='modn' Line='modn = 10'>
   <DD>For ptype=5, only voxel values satisfying mod (int (voxval * 100.0)) =
   <B>modn</B> will be proportional distance-weighted and summed into
@@ -153,7 +142,7 @@ pvol — Project volume image (generates 'rotating' volume images)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_vecx">vecx = 1.0</A></B></DT>
+  <DT><B>vecx = 1.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='vecx' Line='vecx = 1.0'>
   <DD>Rotation axis X vector.  Part of the specification of a three-dimensional
   orientation vector around which the datacube will appear to rotate when
@@ -161,19 +150,19 @@ pvol — Project volume image (generates 'rotating' volume images)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_vecy">vecy, vecz = 0.0</A></B></DT>
+  <DT><B>vecy, vecz = 0.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='vecy' Line='vecy, vecz = 0.0'>
   <DD>Rotation axis Y and Z vectors.  In prototype, must be zero.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_title">title = "<TT></TT>"</A></B></DT>
+  <DT><B>title = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='title' Line='title = ""'>
   <DD>Output datacube title for rotation sequence.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_maxws">maxws = 2000000</A></B></DT>
+  <DT><B>maxws = 2000000</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='maxws' Line='maxws = 2000000'>
   <DD>Maximum workingset size in chars (usually 2 bytes).  Decrease if machine
   performance degrades noticeably during a run.  Increase if the machine has
@@ -181,13 +170,13 @@ pvol — Project volume image (generates 'rotating' volume images)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_abs">abs = no</A></B></DT>
+  <DT><B>abs = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='abs' Line='abs = no'>
   <DD>If yes, take absolute value of voxel before applying any transformation.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Report memory usage, progress around the rotation, and more detail on
   errors if yes.
@@ -197,7 +186,7 @@ pvol — Project volume image (generates 'rotating' volume images)
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -375,7 +364,7 @@ pvol — Project volume image (generates 'rotating' volume images)
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_performance_and_size_constraints">PERFORMANCE AND SIZE CONSTRAINTS</A></H2>
+  <H3>Performance and size constraints</H3>
   <! BeginSection: 'PERFORMANCE AND SIZE CONSTRAINTS'>
   <UL>
   <P>
@@ -427,7 +416,7 @@ pvol — Project volume image (generates 'rotating' volume images)
   <P>
   </UL>
   <! EndSection:   'PERFORMANCE AND SIZE CONSTRAINTS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -463,7 +452,7 @@ pvol — Project volume image (generates 'rotating' volume images)
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_timings">TIMINGS</A></H2>
+  <H3>Timings</H3>
   <! BeginSection: 'TIMINGS'>
   <UL>
   <P>
@@ -481,7 +470,7 @@ pvol — Project volume image (generates 'rotating' volume images)
   <P>
   </UL>
   <! EndSection:   'TIMINGS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   <P>
@@ -497,7 +486,7 @@ pvol — Project volume image (generates 'rotating' volume images)
   <P>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   i2sun, im3dtran, im3dstack
@@ -506,5 +495,3 @@ pvol — Project volume image (generates 'rotating' volume images)
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'PERFORMANCE AND SIZE CONSTRAINTS' 'EXAMPLES' 'TIMINGS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

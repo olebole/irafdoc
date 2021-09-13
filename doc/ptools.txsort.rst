@@ -1,3 +1,5 @@
+.. _txsort:
+
 txsort — Sort a list of apphot/daophot text databases
 =====================================================
 
@@ -5,43 +7,30 @@ txsort — Sort a list of apphot/daophot text databases
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>txsort (Aug91)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.ptools</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>txsort (Aug91)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>txsort</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   txsort -- sort a list of APPHOT/DAOPHOT text database file(s)
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   txsort textfile field
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_textfiles">textfiles </A></B></DT>
+  <DT><B>textfiles </B></DT>
   <! Sec='PARAMETERS' Level=0 Label='textfiles' Line='textfiles '>
   <DD>The input APPHOT/DAOPHOT text database(s) to be sorted.
   The sort is performed in place.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_field">field</A></B></DT>
+  <DT><B>field</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='field' Line='field'>
   <DD>The field to be sorted on. <I>Field</I> may be any quantity defined by
   the APPHOT/DAOPHOT #K and #N keywords. The keywords may be
@@ -51,14 +40,14 @@ txsort — Sort a list of apphot/daophot text databases
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ascend">ascend = yes</A></B></DT>
+  <DT><B>ascend = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ascend' Line='ascend = yes'>
   <DD>Sort in increasing value order.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   TXSORT is a simple task which accepts a list of APPHOT/DAOPHOT text
@@ -74,7 +63,7 @@ txsort — Sort a list of apphot/daophot text databases
   character the sort is alphabetic.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -94,17 +83,17 @@ txsort — Sort a list of apphot/daophot text databases
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   ptools.tbsort,tables.tsort,ptools.psort,sort
@@ -113,5 +102,3 @@ txsort — Sort a list of apphot/daophot text databases
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

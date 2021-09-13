@@ -1,3 +1,5 @@
+.. _pexamine:
+
 pexamine — Interactively examine and edit a daophot database
 ============================================================
 
@@ -5,43 +7,30 @@ pexamine — Interactively examine and edit a daophot database
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>pexamine (May00)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.daophot</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>pexamine (May00)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>pexamine</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   pexamine -- interactively examine or edit a photometry catalog
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   pexamine input output image
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The name of the input photometry catalog. Input may be either an APPHOT/DAOPHOT
   text database file or an STSDAS binary table database.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>The name of the edited output catalog. Output is either an APPHOT/DAOPHOT text
   database or an STSDAS binary table database depending on the file type of
@@ -49,7 +38,7 @@ pexamine — Interactively examine and edit a daophot database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_image">image</A></B></DT>
+  <DT><B>image</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='image' Line='image'>
   <DD>The name of the input image corresponding to the input photometry catalog. If
   <I>image</I> is "<TT></TT>" no image will be attached to PEXAMINE and some interactive
@@ -58,7 +47,7 @@ pexamine — Interactively examine and edit a daophot database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_deletions">deletions = "<TT></TT>"</A></B></DT>
+  <DT><B>deletions = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='deletions' Line='deletions = ""'>
   <DD>The name of an optional output deletions photometry catalog. Deletions is either
   an APPHOT/DAOPHOT text database or an STSDAS binary table database depending on
@@ -66,12 +55,12 @@ pexamine — Interactively examine and edit a daophot database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_photcolumns">photcolumns = "<TT>daophot</TT>"</A></B></DT>
+  <DT><B>photcolumns = "<TT>daophot</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='photcolumns' Line='photcolumns = "daophot"'>
   <DD>The list of standard photometry columns that are loaded when pexamine is run.
   The options are listed below.
   <DL>
-  <DT><B><A NAME="l_">"<TT>daophot</TT>"</A></B></DT>
+  <DT><B>"<TT>daophot</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"daophot"'>
   <DD>The standard columns for the DAOPHOT package. The current list is GROUP, ID,
   XCENTER, YCENTER, MSKY, MAG, MERR, CHI, SHARP and NITER. If any of these columns
@@ -81,7 +70,7 @@ pexamine — Interactively examine and edit a daophot database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">"<TT>apphot</TT>"</A></B></DT>
+  <DT><B>"<TT>apphot</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"apphot"'>
   <DD>The standard columns for the APPHOT package. The current list is ID, XCENTER,
   YCENTER, MSKY, MAG, and MERR. If any of these columns are multi-valued, (as in
@@ -90,7 +79,7 @@ pexamine — Interactively examine and edit a daophot database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_user">user list</A></B></DT>
+  <DT><B>user list</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='user' Line='user list'>
   <DD>A user supplied list of standard columns. Column names are listed in full in
   either upper or lower case letters, separated by commas. If more than one value
@@ -104,7 +93,7 @@ pexamine — Interactively examine and edit a daophot database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xcolumn">xcolumn = "<TT>mag</TT>" (magnitude), ycolumn = "<TT>merr</TT>" (magnitude error)</A></B></DT>
+  <DT><B>xcolumn = "<TT>mag</TT>" (magnitude), ycolumn = "<TT>merr</TT>" (magnitude error)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xcolumn' Line='xcolumn = "mag" (magnitude), ycolumn = "merr" (magnitude error)'>
   <DD>The names of the two columns which define the default X-Y plot. Xcolumn and
   ycolumn must be listed in <I>photcolumns</I> or <I>usercolumns</I> but may be
@@ -115,7 +104,7 @@ pexamine — Interactively examine and edit a daophot database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_hcolumn">hcolumn = "<TT>mag</TT>" (magnitude)</A></B></DT>
+  <DT><B>hcolumn = "<TT>mag</TT>" (magnitude)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='hcolumn' Line='hcolumn = "mag" (magnitude)'>
   <DD>The name of the column which defines the default histogram plot.  Hcolumn
   must be listed in <I>photcolumns</I> or <I>usercolumns</I> but may be changed
@@ -125,7 +114,7 @@ pexamine — Interactively examine and edit a daophot database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xposcolumn">xposcolumn = "<TT>xcenter</TT>", yposcolumn = "<TT>ycenter</TT>"</A></B></DT>
+  <DT><B>xposcolumn = "<TT>xcenter</TT>", yposcolumn = "<TT>ycenter</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xposcolumn' Line='xposcolumn = "xcenter", yposcolumn = "ycenter"'>
   <DD>The names of the two columns which define the X and Y coordinates in <I>image</I>
   of the objects in the catalog. This information is required if the image
@@ -136,7 +125,7 @@ pexamine — Interactively examine and edit a daophot database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_usercolumns">usercolumns = "<TT></TT>"</A></B></DT>
+  <DT><B>usercolumns = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='usercolumns' Line='usercolumns = ""'>
   <DD>The list of columns loaded into memory in addition to the standard photometry
   columns <I>photcolumns</I>. The column names are listed in full in upper or
@@ -145,13 +134,13 @@ pexamine — Interactively examine and edit a daophot database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_first_star">first_star = 1</A></B></DT>
+  <DT><B>first_star = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='first_star' Line='first_star = 1'>
   <DD>The index of the first object to be read out of the catalog.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_max_nstars">max_nstars = 5000</A></B></DT>
+  <DT><B>max_nstars = 5000</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='max_nstars' Line='max_nstars = 5000'>
   <DD>The maximum number of objects that are loaded into memory at task startup time,
   beginning at object <I>first_star</I>. If there are more than max_nstars in the
@@ -159,21 +148,21 @@ pexamine — Interactively examine and edit a daophot database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_match_radius">match_radius = 2.0</A></B></DT>
+  <DT><B>match_radius = 2.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='match_radius' Line='match_radius = 2.0'>
   <DD>The tolerance in pixels to be used for matching objects in the catalog with
   objects marked on the display with the image cursor.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_use_display">use_display = yes</A></B></DT>
+  <DT><B>use_display = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='use_display' Line='use_display = yes'>
   <DD>Use the image display? Users without access to an image display should set
   use_display to "<TT>no</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_icommands">icommands = "<TT></TT>"</A></B></DT>
+  <DT><B>icommands = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""'>
   <DD>The image display cursor. If null the standard image cursor is used whenever
   image cursor input is requested. A cursor file in the appropriate format may be
@@ -181,7 +170,7 @@ pexamine — Interactively examine and edit a daophot database
   changed to query the graphics device or the terminal by setting the environment
   variable "<TT>stdimcur</TT>" to "<TT>stdgraph</TT>" or "<TT>text</TT>" respectively.
   <DL>
-  <DT><B><A NAME="l_gcommands">gcommands = "<TT></TT>"</A></B></DT>
+  <DT><B>gcommands = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='gcommands' Line='gcommands = ""'>
   <DD>The graphics cursor. If null the standard graphics cursor is used whenever
   graphics cursor input is requested. A cursor file in the appropriate format may
@@ -189,7 +178,7 @@ pexamine — Interactively examine and edit a daophot database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_graphics">graphics = "<TT>stdgraph</TT>"</A></B></DT>
+  <DT><B>graphics = "<TT>stdgraph</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='graphics' Line='graphics = "stdgraph"'>
   <DD>The default graphics device.
   </DD>
@@ -199,7 +188,7 @@ pexamine — Interactively examine and edit a daophot database
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_plotting_parameters">PLOTTING PARAMETERS</A></H2>
+  <H3>Plotting parameters</H3>
   <! BeginSection: 'PLOTTING PARAMETERS'>
   <UL>
   <P>
@@ -223,110 +212,110 @@ pexamine — Interactively examine and edit a daophot database
   parameter occurs.
   <P>
   <DL>
-  <DT><B><A NAME="l_angh">angh = -33., angv = 25.		(s)</A></B></DT>
+  <DT><B>angh = -33., angv = 25.		(s)</B></DT>
   <! Sec='PLOTTING PARAMETERS' Level=0 Label='angh' Line='angh = -33., angv = 25.		(s)'>
   <DD>Horizontal and vertical viewing angles in degrees for surface plots.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_axes">axes = yes				(s)</A></B></DT>
+  <DT><B>axes = yes				(s)</B></DT>
   <! Sec='PLOTTING PARAMETERS' Level=0 Label='axes' Line='axes = yes				(s)'>
   <DD>Draw axes along the edge of surface plots ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_banner">banner = yes 			 (chrsx)</A></B></DT>
+  <DT><B>banner = yes 			 (chrsx)</B></DT>
   <! Sec='PLOTTING PARAMETERS' Level=0 Label='banner' Line='banner = yes 			 (chrsx)'>
   <DD>Add a standard banner to a graph ?  The standard banner includes the IRAF user
   and host identification and the date and time.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_box">box = yes 				(chrx)</A></B></DT>
+  <DT><B>box = yes 				(chrx)</B></DT>
   <! Sec='PLOTTING PARAMETERS' Level=0 Label='box' Line='box = yes 				(chrx)'>
   <DD>Draw graph box and axes ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ceiling">ceiling = INDEF			(cs)</A></B></DT>
+  <DT><B>ceiling = INDEF			(cs)</B></DT>
   <! Sec='PLOTTING PARAMETERS' Level=0 Label='ceiling' Line='ceiling = INDEF			(cs)'>
   <DD>Ceiling data value for contour and surface plots. A value of INDEF does not
   apply a ceiling.  In contour plots a value of 0. also does not apply a ceiling.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dashpat">dashpat = 528			(c)</A></B></DT>
+  <DT><B>dashpat = 528			(c)</B></DT>
   <! Sec='PLOTTING PARAMETERS' Level=0 Label='dashpat' Line='dashpat = 528			(c)'>
   <DD>Dash pattern for negative contours.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fill">fill = no (yes)			(c) (hrx)</A></B></DT>
+  <DT><B>fill = no (yes)			(c) (hrx)</B></DT>
   <! Sec='PLOTTING PARAMETERS' Level=0 Label='fill' Line='fill = no (yes)			(c) (hrx)'>
   <DD>Fill the output viewport regardless of the device aspect ratio ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_floor">floor = INDEF			(cs)</A></B></DT>
+  <DT><B>floor = INDEF			(cs)</B></DT>
   <! Sec='PLOTTING PARAMETERS' Level=0 Label='floor' Line='floor = INDEF			(cs)'>
   <DD>Floor data value for contour and surface plots. A value of INDEF does not apply
   a floor. In contour plots a value of 0. also does not apply a floor.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_grid">grid = no				(rx)</A></B></DT>
+  <DT><B>grid = no				(rx)</B></DT>
   <! Sec='PLOTTING PARAMETERS' Level=0 Label='grid' Line='grid = no				(rx)'>
   <DD>Draw grid lines at major tick marks ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interval">interval = 0.0			(c)</A></B></DT>
+  <DT><B>interval = 0.0			(c)</B></DT>
   <! Sec='PLOTTING PARAMETERS' Level=0 Label='interval' Line='interval = 0.0			(c)'>
   <DD>Contour interval.  If 0.0, a contour interval is chosen which places 20 to 30
   contours spanning the intensity range of the image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_label">label= no				(c)</A></B></DT>
+  <DT><B>label= no				(c)</B></DT>
   <! Sec='PLOTTING PARAMETERS' Level=0 Label='label' Line='label= no				(c)'>
   <DD>Label the major contours in the contour plot ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_logx">logx = no, logy = no		(rx) (hrx)</A></B></DT>
+  <DT><B>logx = no, logy = no		(rx) (hrx)</B></DT>
   <! Sec='PLOTTING PARAMETERS' Level=0 Label='logx' Line='logx = no, logy = no		(rx) (hrx)'>
   <DD>Plot the x or y axis logarithmically ? The default for histogram plots is to
   plot the y axis logarithmically.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_majrx">majrx=5, minrx=5, majry=5, minry=5	(chrx)</A></B></DT>
+  <DT><B>majrx=5, minrx=5, majry=5, minry=5	(chrx)</B></DT>
   <! Sec='PLOTTING PARAMETERS' Level=0 Label='majrx' Line='majrx=5, minrx=5, majry=5, minry=5	(chrx)'>
   <DD>Maximum number of major tick marks on each axis and number of minor tick marks
   between major tick marks.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_marker">marker = "<TT>box</TT>"			(rx)</A></B></DT>
+  <DT><B>marker = "<TT>box</TT>"			(rx)</B></DT>
   <! Sec='PLOTTING PARAMETERS' Level=0 Label='marker' Line='marker = "box"			(rx)'>
   <DD>Marker to be drawn.  Markers are "<TT>point</TT>", "<TT>box</TT>", "<TT>cross</TT>", "<TT>plus</TT>", "<TT>circle</TT>",
   "<TT>hline</TT>", "<TT>vline</TT>" or "<TT>diamond</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nbins">nbins = 512				(h)</A></B></DT>
+  <DT><B>nbins = 512				(h)</B></DT>
   <! Sec='PLOTTING PARAMETERS' Level=0 Label='nbins' Line='nbins = 512				(h)'>
   <DD>The number of bins in, or resolution of, histogram plots.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ncolumns">ncolumns = 21, nlines = 21		(cs)</A></B></DT>
+  <DT><B>ncolumns = 21, nlines = 21		(cs)</B></DT>
   <! Sec='PLOTTING PARAMETERS' Level=0 Label='ncolumns' Line='ncolumns = 21, nlines = 21		(cs)'>
   <DD>Number of columns and lines used in contour and surface plots.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ncontours">ncontours = 5			(c)</A></B></DT>
+  <DT><B>ncontours = 5			(c)</B></DT>
   <! Sec='PLOTTING PARAMETERS' Level=0 Label='ncontours' Line='ncontours = 5			(c)'>
   <DD>Number of contours to be drawn. If 0, the contour interval may be specified,
   otherwise 20 to 30 nicely spaced contours are drawn. A maximum of 40 contours
@@ -334,26 +323,26 @@ pexamine — Interactively examine and edit a daophot database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nhi">nhi = -1				(c)</A></B></DT>
+  <DT><B>nhi = -1				(c)</B></DT>
   <! Sec='PLOTTING PARAMETERS' Level=0 Label='nhi' Line='nhi = -1				(c)'>
   <DD>If -1, highs and lows are not marked. If 0, highs and lows are marked on the
   plot. If 1, the intensity of each pixel is marked on the plot.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rinner">rinner = 0, router = 8</A></B></DT>
+  <DT><B>rinner = 0, router = 8</B></DT>
   <! Sec='PLOTTING PARAMETERS' Level=0 Label='rinner' Line='rinner = 0, router = 8'>
   <DD>The inner and outer radius of the region whose radial profile is to be plotted.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_round">round = no				(chrx)</A></B></DT>
+  <DT><B>round = no				(chrx)</B></DT>
   <! Sec='PLOTTING PARAMETERS' Level=0 Label='round' Line='round = no				(chrx)'>
   <DD>Extend the axes up to "<TT>nice</TT>" values ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_szmarker">szmarker = 1			(rx)</A></B></DT>
+  <DT><B>szmarker = 1			(rx)</B></DT>
   <! Sec='PLOTTING PARAMETERS' Level=0 Label='szmarker' Line='szmarker = 1			(rx)'>
   <DD>Size of mark except for points. A positive size less than 1 specifies a fraction
   of the device size. Values of 1, 2, 3, and 4 signify default sizes of increasing
@@ -361,13 +350,13 @@ pexamine — Interactively examine and edit a daophot database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ticklabels">ticklabels = yes			(chrx)</A></B></DT>
+  <DT><B>ticklabels = yes			(chrx)</B></DT>
   <! Sec='PLOTTING PARAMETERS' Level=0 Label='ticklabels' Line='ticklabels = yes			(chrx)'>
   <DD>Label the tick marks ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_top_closed">top_closed = no			(h)</A></B></DT>
+  <DT><B>top_closed = no			(h)</B></DT>
   <! Sec='PLOTTING PARAMETERS' Level=0 Label='top_closed' Line='top_closed = no			(h)'>
   <DD>Include z2 in the top histogram bin ? Each bin of the histogram is a subinterval
   that is half open at the top. Top_closed decides whether those pixels with
@@ -376,14 +365,14 @@ pexamine — Interactively examine and edit a daophot database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_x1">x1 = INDEF, x2 = INDEF, y1 = INDEF, y2 = INDEF	(hrx)</A></B></DT>
+  <DT><B>x1 = INDEF, x2 = INDEF, y1 = INDEF, y2 = INDEF	(hrx)</B></DT>
   <! Sec='PLOTTING PARAMETERS' Level=0 Label='x1' Line='x1 = INDEF, x2 = INDEF, y1 = INDEF, y2 = INDEF	(hrx)'>
   <DD>Range of graph along each axis.  If INDEF the range is determined from the data
   range. The default y1 for histogram plots is 0.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_zero">zero = 0.				(c)</A></B></DT>
+  <DT><B>zero = 0.				(c)</B></DT>
   <! Sec='PLOTTING PARAMETERS' Level=0 Label='zero' Line='zero = 0.				(c)'>
   <DD>Grayscale value of the zero contour, i.e., the value of a zero point shift
   to be applied to the image data before plotting. Does not affect the values
@@ -391,7 +380,7 @@ pexamine — Interactively examine and edit a daophot database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_z1">z1 = INDEF, z2 = INDEF		(h)</A></B></DT>
+  <DT><B>z1 = INDEF, z2 = INDEF		(h)</B></DT>
   <! Sec='PLOTTING PARAMETERS' Level=0 Label='z1' Line='z1 = INDEF, z2 = INDEF		(h)'>
   <DD>Range of pixel values to be used in histogram. INDEF values default to the
   range in the region being histogramed.
@@ -400,7 +389,7 @@ pexamine — Interactively examine and edit a daophot database
   <P>
   </UL>
   <! EndSection:   'PLOTTING PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -482,26 +471,26 @@ pexamine — Interactively examine and edit a daophot database
   graphics to image command mode and quit the task.
   <P>
   <DL>
-  <DT><B><A NAME="l_">?</A></B></DT>
+  <DT><B>?</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='?'>
   <DD>Page through the help for the PEXAMINE task
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:</A></B></DT>
+  <DT><B>:</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line=':'>
   <DD>Execute a PEXAMINE colon command.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_g">g</A></B></DT>
+  <DT><B>g</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='g' Line='g'>
   <DD>Change to graphics command mode. Throughout PEXAMINE graphics command mode is
   the default. All PEXAMINE commands are available in graphics command mode.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_i">i</A></B></DT>
+  <DT><B>i</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='i' Line='i'>
   <DD>Change to image command mode. All the PEXAMINE commands are available in image
   command mode. However if <I>use_display</I> is no and the image cursor has not
@@ -510,14 +499,14 @@ pexamine — Interactively examine and edit a daophot database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_q">q</A></B></DT>
+  <DT><B>q</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='q' Line='q'>
   <DD>Quit PEXAMINE without writing an output catalog. PEXAMINE queries the user for
   confirmation of this option.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_e">e</A></B></DT>
+  <DT><B>e</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='e' Line='e'>
   <DD>Quit PEXAMINE and write the output catalog.
   </DD>
@@ -533,7 +522,7 @@ pexamine — Interactively examine and edit a daophot database
   and <TT>'m'</TT> (pixel dumping). The latter group require that <I>image</I> be defined.
   A brief summary of each data examining command is given below.
   <DL>
-  <DT><B><A NAME="l_l">l</A></B></DT>
+  <DT><B>l</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='l' Line='l'>
   <DD>Print out the name, datatype, and units for all the columns in the input
   catalog. The list command can be used to check the contents of the input
@@ -541,7 +530,7 @@ pexamine — Interactively examine and edit a daophot database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_o">o</A></B></DT>
+  <DT><B>o</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='o' Line='o'>
   <DD>Print out the names and values of the stored columns of the object nearest the
   cursor. In graphics mode the current plot type must be X-Y. In image command
@@ -552,7 +541,7 @@ pexamine — Interactively examine and edit a daophot database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_x">x</A></B></DT>
+  <DT><B>x</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='x' Line='x'>
   <DD>Plot the data in <I>ycolumn</I> versus the data in <I>xcolumn</I> excluding any
   already deleted points and identifying objects marked for deletion with a
@@ -560,7 +549,7 @@ pexamine — Interactively examine and edit a daophot database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_h">h</A></B></DT>
+  <DT><B>h</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='h' Line='h'>
   <DD>Plot the histogram of the data in <I>hcolumn</I> excluding any already deleted
   points and those marked for deletion. Histogram plotting is disabled if
@@ -568,7 +557,7 @@ pexamine — Interactively examine and edit a daophot database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_r">r</A></B></DT>
+  <DT><B>r</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='r' Line='r'>
   <DD>Plot the radial profile of the object nearest the cursor including only pixels
   within a distance of <I>rinner</I> and <I>router</I> of the object center. Radial
@@ -577,7 +566,7 @@ pexamine — Interactively examine and edit a daophot database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_s">s</A></B></DT>
+  <DT><B>s</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='s' Line='s'>
   <DD>Plot the surface plot of the object nearest the cursor including only pixels
   within an image section <I>ncols</I> by <I>nlines</I> around the object center.
@@ -586,7 +575,7 @@ pexamine — Interactively examine and edit a daophot database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_c">c</A></B></DT>
+  <DT><B>c</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='c' Line='c'>
   <DD>Plot the contour plot of the object nearest the cursor including only pixels
   within an image section <I>ncols</I> by <I>nlines</I> around the object center.
@@ -595,7 +584,7 @@ pexamine — Interactively examine and edit a daophot database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_m">m</A></B></DT>
+  <DT><B>m</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='m' Line='m'>
   <DD>Dump the pixel values of a grid of 10 by 10 pixels around the object nearest
   the cursor. Pixel value dumping is disabled if <I>image</I> or <I>xposcolumn</I>
@@ -603,7 +592,7 @@ pexamine — Interactively examine and edit a daophot database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_p">p</A></B></DT>
+  <DT><B>p</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='p' Line='p'>
   <DD>Replot the current graph.
   </DD>
@@ -626,13 +615,13 @@ pexamine — Interactively examine and edit a daophot database
   given below.
   <P>
   <DL>
-  <DT><B><A NAME="l_z">z</A></B></DT>
+  <DT><B>z</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='z' Line='z'>
   <DD>Undelete not just unmark all the data points replot.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_f">f</A></B></DT>
+  <DT><B>f</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='f' Line='f'>
   <DD>Delete points marked for deletion and replot. Points marked for deletion but
   not actually deleted will be written to the output catalog and not written to
@@ -640,19 +629,19 @@ pexamine — Interactively examine and edit a daophot database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_d">d</A></B></DT>
+  <DT><B>d</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='d' Line='d'>
   <DD>Mark the point nearest the cursor for deletion.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_u">u</A></B></DT>
+  <DT><B>u</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='u' Line='u'>
   <DD>Undelete the marked point nearest the cursor.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(</A></B></DT>
+  <DT><B>(</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='('>
   <DD>Mark all points with x values less than the x value of the cursor for deletion.
   In graphics command mode points can only be marked for deletion if the current
@@ -661,7 +650,7 @@ pexamine — Interactively examine and edit a daophot database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">)</A></B></DT>
+  <DT><B>)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line=')'>
   <DD>Mark all points with x values greater than the x value of the cursor for
   deletion.  In graphics command mode points can only be marked for deletion if
@@ -671,7 +660,7 @@ pexamine — Interactively examine and edit a daophot database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_v">v</A></B></DT>
+  <DT><B>v</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='v' Line='v'>
   <DD>Mark all points with y values less than the y value of the cursor for deletion.
   In graphics command mode points can only be marked for deletion if the current
@@ -680,7 +669,7 @@ pexamine — Interactively examine and edit a daophot database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">^</A></B></DT>
+  <DT><B>^</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='^'>
   <DD>Mark all points with y values greater than the y value of the cursor for
   deletion.  In graphics command mode points can only be marked for deletion if
@@ -689,7 +678,7 @@ pexamine — Interactively examine and edit a daophot database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_b">b</A></B></DT>
+  <DT><B>b</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='b' Line='b'>
   <DD>Mark all points within a box whose lower left and upper right hand corners are
   marked by the cursor for deletion. In graphics mode points can only be marked
@@ -699,7 +688,7 @@ pexamine — Interactively examine and edit a daophot database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_t">t</A></B></DT>
+  <DT><B>t</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='t' Line='t'>
   <DD>Toggle between marking points for deletion or undeletion. The default is to
   mark points for deletion.
@@ -714,7 +703,7 @@ pexamine — Interactively examine and edit a daophot database
   given here. The full list is given in the following section.
   <P>
   <DL>
-  <DT><B><A NAME="l_">:photcolumns [col1,col2,...]</A></B></DT>
+  <DT><B>:photcolumns [col1,col2,...]</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line=':photcolumns [col1,col2,...]'>
   <DD>Show or set the list of requested standard photometry columns and the list
   of loaded photometry columns. If the user supplies a new list of columns the
@@ -722,7 +711,7 @@ pexamine — Interactively examine and edit a daophot database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:usercolumns [col1,col2,...]</A></B></DT>
+  <DT><B>:usercolumns [col1,col2,...]</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line=':usercolumns [col1,col2,...]'>
   <DD>Show or set the list of requested user columns and the list of loaded user
   columns. If the user supplies a new list of columns the data will be reread
@@ -730,40 +719,40 @@ pexamine — Interactively examine and edit a daophot database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:xcolumn [colname]</A></B></DT>
+  <DT><B>:xcolumn [colname]</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line=':xcolumn [colname]'>
   <DD>Show or set the name of the column to be plotted along the x axis of the X-Y
   plot.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:ycolumn [colname]</A></B></DT>
+  <DT><B>:ycolumn [colname]</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line=':ycolumn [colname]'>
   <DD>Show or set the name of the column to be plotted along the y axis of the X-Y
   plot.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:hcolumn [colname]</A></B></DT>
+  <DT><B>:hcolumn [colname]</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line=':hcolumn [colname]'>
   <DD>Show or set the name of the column to be whose histogram is to be plotted.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:eparam [cntrplot/histplot/radplot/surfplot/xyplot]</A></B></DT>
+  <DT><B>:eparam [cntrplot/histplot/radplot/surfplot/xyplot]</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line=':eparam [cntrplot/histplot/radplot/surfplot/xyplot]'>
   <DD>Review or edit the list of parameters for the various plot types.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:unlearn [cntrplot/histplot/radplot/surfplot/xyplot]</A></B></DT>
+  <DT><B>:unlearn [cntrplot/histplot/radplot/surfplot/xyplot]</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line=':unlearn [cntrplot/histplot/radplot/surfplot/xyplot]'>
   <DD>Return the list of parameters for the various plot types to their default
   values.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:x y key cmd</A></B></DT>
+  <DT><B>:x y key cmd</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line=':x y key cmd'>
   <DD>Execute any defined keystroke "<TT>key</TT>" supplying the appropriate x and y value in
   place of the cursor position. In graphics command mode the x and y position are
@@ -774,7 +763,7 @@ pexamine — Interactively examine and edit a daophot database
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_commands">COMMANDS</A></H2>
+  <H3>Commands</H3>
   <! BeginSection: 'COMMANDS'>
   <UL>
   <P>
@@ -929,7 +918,7 @@ pexamine — Interactively examine and edit a daophot database
   <P>
   </UL>
   <! EndSection:   'COMMANDS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -1039,13 +1028,13 @@ pexamine — Interactively examine and edit a daophot database
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   <P>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   <P>
@@ -1054,7 +1043,7 @@ pexamine — Interactively examine and edit a daophot database
   <P>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   ptools.pselect, ptools.txselect,ptools.tselect
@@ -1064,5 +1053,3 @@ pexamine — Interactively examine and edit a daophot database
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'PLOTTING PARAMETERS' 'DESCRIPTION' 'COMMANDS' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

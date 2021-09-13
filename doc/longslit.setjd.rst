@@ -1,3 +1,5 @@
+.. _setjd:
+
 setjd — Compute and set Julian dates in images
 ==============================================
 
@@ -5,36 +7,23 @@ setjd — Compute and set Julian dates in images
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>setjd (Jan92)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>astutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>setjd (Jan92)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>setjd</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   setjd -- set various Julian dates in image headers
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   setjd images
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>The list of images for which to compute Julian dates.  If the <I>listonly</I>
   parameter is not set the image headers will be modified to add or update
@@ -42,7 +31,7 @@ setjd — Compute and set Julian dates in images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_observatory">observatory = "<TT>)_.observatory</TT>"</A></B></DT>
+  <DT><B>observatory = "<TT>)_.observatory</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory = ")_.observatory"'>
   <DD>Observatory of observation, used to define the time zone relative to
   Greenwich, if not specified in the image header by the keyword OBSERVAT.
@@ -56,7 +45,7 @@ setjd — Compute and set Julian dates in images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_date">date = "<TT>date-obs</TT>"</A></B></DT>
+  <DT><B>date = "<TT>date-obs</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='date' Line='date = "date-obs"'>
   <DD>Date of observation keyword.  The value must be in FITS format.
   This is one of DD/MM/YY (old FITS format), YYYY-MM-DD (new FITS format),
@@ -67,7 +56,7 @@ setjd — Compute and set Julian dates in images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_time">time = "<TT>ut</TT>"</A></B></DT>
+  <DT><B>time = "<TT>ut</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='time' Line='time = "ut"'>
   <DD>Time of observation keyword with value given in decimal hours or HH:MM:SS.S
   format.  The date may be a local time or universal time as selected by the
@@ -79,7 +68,7 @@ setjd — Compute and set Julian dates in images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_exposure">exposure = "<TT>exptime</TT>"</A></B></DT>
+  <DT><B>exposure = "<TT>exptime</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='exposure' Line='exposure = "exptime"'>
   <DD>Exposure time keyword with value in seconds.  If specified the time
   is corrected to the midpoint of the exposure.  The time is assumed
@@ -89,7 +78,7 @@ setjd — Compute and set Julian dates in images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ra">ra = "<TT>ra</TT>", dec = "<TT>dec</TT>", epoch = "<TT>epoch</TT>"</A></B></DT>
+  <DT><B>ra = "<TT>ra</TT>", dec = "<TT>dec</TT>", epoch = "<TT>epoch</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ra' Line='ra = "ra", dec = "dec", epoch = "epoch"'>
   <DD>If the heliocentric Julian date is requested the right ascension (in hours)
   and declination (in degrees) of the observation is determined from these
@@ -104,7 +93,7 @@ setjd — Compute and set Julian dates in images
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_jd">jd = "<TT>jd</TT>"</A></B></DT>
+  <DT><B>jd = "<TT>jd</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='jd' Line='jd = "jd"'>
   <DD>If specified compute the geocentric Julian day (Greenwich) at the
   midpoint of the exposure and record the value in the specified
@@ -112,7 +101,7 @@ setjd — Compute and set Julian dates in images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_hjd">hjd = "<TT>hjd</TT>"</A></B></DT>
+  <DT><B>hjd = "<TT>hjd</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='hjd' Line='hjd = "hjd"'>
   <DD>If specified compute the heliocentric Julian day (Greenwich) at the
   midpoint of the exposure and record the value in the specified
@@ -120,7 +109,7 @@ setjd — Compute and set Julian dates in images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ljd">ljd = "<TT>ljd</TT>"</A></B></DT>
+  <DT><B>ljd = "<TT>ljd</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ljd' Line='ljd = "ljd"'>
   <DD>If specified compute the local Julian day number.  This is an integer
   number which is constant for all observations made during the same night.
@@ -130,14 +119,14 @@ setjd — Compute and set Julian dates in images
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_utdate">utdate = yes, uttime = yes</A></B></DT>
+  <DT><B>utdate = yes, uttime = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='utdate' Line='utdate = yes, uttime = yes'>
   <DD>Define whether the date and time of observation are in local standard
   time or in universal time.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_listonly">listonly = no</A></B></DT>
+  <DT><B>listonly = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='listonly' Line='listonly = no'>
   <DD>List the computed values only and do not modify the image headers.
   When simply listing the images need not have write permission.
@@ -145,7 +134,7 @@ setjd — Compute and set Julian dates in images
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <B>Setjd</B> computes the geocentric, heliocentric, and integer
@@ -203,7 +192,7 @@ setjd — Compute and set Julian dates in images
   good group parameter.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  Compute all the Julian date quantities for 4 arc exposures with
@@ -268,11 +257,11 @@ setjd — Compute and set Julian dates in images
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_SETJD">SETJD V2.11.2</A></B></DT>
+  <DT><B>SETJD V2.11.2</B></DT>
   <! Sec='REVISIONS' Level=0 Label='SETJD' Line='SETJD V2.11.2'>
   <DD>Y2K update:  Updated to use the new FITS format for the date.  If the
   time is given in the date keyword it is used in preference to the
@@ -280,7 +269,7 @@ setjd — Compute and set Julian dates in images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_SETJD">SETJD V2.11</A></B></DT>
+  <DT><B>SETJD V2.11</B></DT>
   <! Sec='REVISIONS' Level=0 Label='SETJD' Line='SETJD V2.11'>
   <DD>The checking of the epoch keyword value was improved.  Previously if
   there was a problem with the keyword value (missing or malformed) the
@@ -292,7 +281,7 @@ setjd — Compute and set Julian dates in images
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   setairmass, hedit, refspectra, observatory
@@ -301,5 +290,3 @@ setjd — Compute and set Julian dates in images
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

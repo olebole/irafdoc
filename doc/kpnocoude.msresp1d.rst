@@ -1,3 +1,5 @@
+.. _msresp1d:
+
 msresp1d — Create fiber response spectra from flat field and sky spectra
 ========================================================================
 
@@ -5,36 +7,23 @@ msresp1d — Create fiber response spectra from flat field and sky spectra
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>msresp1d (Feb92)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.imred.specred</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>msresp1d (Feb92)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>msresp1d</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   msresp1d -- Create 1D aperture response from flat and throughput data
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   msresp1d flat throughput apreference response
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_flat">flat</A></B></DT>
+  <DT><B>flat</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='flat' Line='flat'>
   <DD>Flat field image to extract and normalize to create a one dimensional
   aperture response image.  If no flat field is specified then a throughput
@@ -46,7 +35,7 @@ msresp1d — Create fiber response spectra from flat field and sky spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_throughput">throughput</A></B></DT>
+  <DT><B>throughput</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='throughput' Line='throughput'>
   <DD>Throughput file or image.  If an image is specified, typically a blank sky
   observation, the total flux through each aperture is used to correct for
@@ -61,7 +50,7 @@ msresp1d — Create fiber response spectra from flat field and sky spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apreference">apreference</A></B></DT>
+  <DT><B>apreference</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apreference' Line='apreference'>
   <DD>Aperture reference spectrum.  If not specified the apertures are defined
   using the flat field or throughput images.  If only a throughput file
@@ -70,50 +59,50 @@ msresp1d — Create fiber response spectra from flat field and sky spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_response">response</A></B></DT>
+  <DT><B>response</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='response' Line='response'>
   <DD>Response spectrum to be created.
   </DD>
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_recenter">recenter = no</A></B></DT>
+  <DT><B>recenter = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='recenter' Line='recenter = no'>
   <DD>Recenter throughput image apertures?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_edit">edit = yes</A></B></DT>
+  <DT><B>edit = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='edit' Line='edit = yes'>
   <DD>Edit and review apertures?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_trace">trace = no</A></B></DT>
+  <DT><B>trace = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='trace' Line='trace = no'>
   <DD>Trace spectra?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_clean">clean = no</A></B></DT>
+  <DT><B>clean = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='clean' Line='clean = no'>
   <DD>Detect and replace bad pixels?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fitflat">fitflat = yes</A></B></DT>
+  <DT><B>fitflat = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fitflat' Line='fitflat = yes'>
   <DD>Fit and ratio flat field spectrum?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = yes</A></B></DT>
+  <DT><B>interactive = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes'>
   <DD>Interactive flat field fit?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_function">function = "<TT>spline3</TT>", order = 20</A></B></DT>
+  <DT><B>function = "<TT>spline3</TT>", order = 20</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='function' Line='function = "spline3", order = 20'>
   <DD>Flat field fitting function and order.  The functions may be one of
   "<TT>chebyshev</TT>", "<TT>legendre</TT>", "<TT>spline1</TT>" (linear spline), or "<TT>spline3</TT>" (cubic spline).
@@ -123,7 +112,7 @@ msresp1d — Create fiber response spectra from flat field and sky spectra
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_other_parameters">OTHER PARAMETERS</A></H2>
+  <H3>Other parameters</H3>
   <! BeginSection: 'OTHER PARAMETERS'>
   <UL>
   The package parameters control logging of the operations performed and
@@ -136,7 +125,7 @@ msresp1d — Create fiber response spectra from flat field and sky spectra
   noise parameters.
   </UL>
   <! EndSection:   'OTHER PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   For multiaperture or multifiber spectra a throughput aperture correction 
@@ -208,7 +197,7 @@ msresp1d — Create fiber response spectra from flat field and sky spectra
   The aperture reference, if defined, is often the same as the flat field.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  To make a flat field response and apply it to an extracted object:
@@ -255,7 +244,7 @@ msresp1d — Create fiber response spectra from flat field and sky spectra
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   icfit, fit1d, apflatten, apnormalize, dofibers
@@ -264,5 +253,3 @@ msresp1d — Create fiber response spectra from flat field and sky spectra
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'OTHER PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

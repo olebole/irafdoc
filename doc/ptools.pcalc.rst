@@ -1,3 +1,5 @@
+.. _pcalc:
+
 pcalc — Do arithmetic on a list of apphot/daophot tables databases
 ==================================================================
 
@@ -5,50 +7,37 @@ pcalc — Do arithmetic on a list of apphot/daophot tables databases
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>pcalc (May93)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.ptools</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>pcalc (May93)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>pcalc</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   pcalc - perform an arithmetic operation on a field in a list of apphot/daophot
   databases
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   pcalc infiles field value
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_infiles">infiles</A></B></DT>
+  <DT><B>infiles</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='infiles' Line='infiles'>
   <DD>The APPHOT/DAOPHOT database(s) containing the field to be recomputed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_field">field </A></B></DT>
+  <DT><B>field </B></DT>
   <! Sec='PARAMETERS' Level=0 Label='field' Line='field '>
   <DD>The field to be recomputed. Field must be an integer or real field
   in the input file(s).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_value">value</A></B></DT>
+  <DT><B>value</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='value' Line='value'>
   <DD>The arithmetic expression used to recompute the specified field.
   Value may be an integer or real expression but must match the data
@@ -59,7 +48,7 @@ pcalc — Do arithmetic on a list of apphot/daophot tables databases
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -99,7 +88,7 @@ pcalc — Do arithmetic on a list of apphot/daophot tables databases
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -119,14 +108,14 @@ pcalc — Do arithmetic on a list of apphot/daophot tables databases
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   TXCALC does not allow arrays in the expression field.
   <P>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   ptools.tbcalc,tables.tcalc,ptools.pcalc
@@ -135,5 +124,3 @@ pcalc — Do arithmetic on a list of apphot/daophot tables databases
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

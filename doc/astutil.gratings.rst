@@ -1,3 +1,5 @@
+.. _gratings:
+
 gratings — Compute and print grating parameters
 ===============================================
 
@@ -5,36 +7,23 @@ gratings — Compute and print grating parameters
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>gratings (Mar91)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.astutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>gratings (Mar91)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>gratings</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   gratings -- Compute and print grating parameters
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   gratings
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_echelle">echelle = no</A></B></DT>
+  <DT><B>echelle = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='echelle' Line='echelle = no'>
   <DD>Is the grating an echelle grating?  This selects whether the angle of
   incidence is greater or less than blaze angle when the angle of incidence
@@ -43,7 +32,7 @@ gratings — Compute and print grating parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_f">f = 590.</A></B></DT>
+  <DT><B>f = 590.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='f' Line='f = 590.'>
   <DD>Focal length in millimeters.  Technically it is defined by the equation x =
   f * tan (theta) where x is distance from the optical axis on the detector
@@ -54,14 +43,14 @@ gratings — Compute and print grating parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_gmm">gmm = 226.</A></B></DT>
+  <DT><B>gmm = 226.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='gmm' Line='gmm = 226.'>
   <DD>Grating grooves per millimeter.  If specified as INDEF it is computed
   from the order, which is required in this case, and the other parameters.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_blaze">blaze = 4.5</A></B></DT>
+  <DT><B>blaze = 4.5</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='blaze' Line='blaze = 4.5'>
   <DD>Blaze angle in degrees.  It is always specified or printed as a positive
   angle relative to the grating normal.  If specified as INDEF it is
@@ -69,7 +58,7 @@ gratings — Compute and print grating parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_theta">theta = -10.5</A></B></DT>
+  <DT><B>theta = -10.5</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='theta' Line='theta = -10.5'>
   <DD>Angle of incidence in degrees.  The angle of incidence must be in the plane
   perpendicular to face of the grating.  The angle of incidence may be
@@ -81,7 +70,7 @@ gratings — Compute and print grating parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_order">order = 1</A></B></DT>
+  <DT><B>order = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='order' Line='order = 1'>
   <DD>Order for which the wavelength and dispersion are specified.  If specified
   as INDEF it will be computed from the grooves per mm, which is required in
@@ -89,14 +78,14 @@ gratings — Compute and print grating parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wavelength">wavelength = INDEF</A></B></DT>
+  <DT><B>wavelength = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wavelength' Line='wavelength = INDEF'>
   <DD>Blaze wavelength in Angstroms.  If specified as INDEF it will be computed
   from the other parameters.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dispersion">dispersion = INDEF</A></B></DT>
+  <DT><B>dispersion = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dispersion' Line='dispersion = INDEF'>
   <DD>Blaze dispersion in Angstroms per millimeter.  If specified as INDEF it
   will be computed from the focal length, which is required in this case,
@@ -105,7 +94,7 @@ gratings — Compute and print grating parameters
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task computes the grating parameters specified as INDEF from the other
@@ -202,7 +191,7 @@ gratings — Compute and print grating parameters
   determine blaze and theta with a fixed 6 degree angle.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  The default values are for a grating of 226 grooves per millimeter
@@ -304,7 +293,7 @@ gratings — Compute and print grating parameters
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   artdata.mkechelle
@@ -313,5 +302,3 @@ gratings — Compute and print grating parameters
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

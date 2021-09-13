@@ -1,3 +1,5 @@
+.. _doecslit:
+
 doecslit — Process Echelle slit spectra
 =======================================
 
@@ -5,32 +7,19 @@ doecslit — Process Echelle slit spectra
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>doecslit (Feb93)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.imred.echelle</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>doecslit (Feb93)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>doecslit</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   doecslit -- Echelle slit spectra reduction task
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   doecslit objects
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_summary">SUMMARY</A></H2>
+  <H3>Summary</H3>
   <! BeginSection: 'SUMMARY'>
   <UL>
   <B>Doecslit</B> subtracts background sky or scattered light, extracts,
@@ -43,11 +32,11 @@ doecslit — Process Echelle slit spectra
   observations should be reduced with <B>doslit</B>.
   </UL>
   <! EndSection:   'SUMMARY'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_objects">objects</A></B></DT>
+  <DT><B>objects</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='objects' Line='objects'>
   <DD>List of object images to be processed.  Previously processed spectra are
   ignored unless the <I>redo</I> flag is set or the <I>update</I> flag is set
@@ -58,14 +47,14 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apref">apref = "<TT></TT>"</A></B></DT>
+  <DT><B>apref = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apref' Line='apref = ""'>
   <DD>Aperture reference spectrum.  This spectrum is used to define the basic
   extraction apertures and is typically a bright star spectrum.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_arcs">arcs = "<TT></TT>" (at least one if dispersion correcting)</A></B></DT>
+  <DT><B>arcs = "<TT></TT>" (at least one if dispersion correcting)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='arcs' Line='arcs = "" (at least one if dispersion correcting)'>
   <DD>List of arc calibration spectra.  These spectra are used to define
   the dispersion functions.  The first spectrum is used to mark lines
@@ -76,7 +65,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_arctable">arctable = "<TT></TT>" (optional) (refspectra)</A></B></DT>
+  <DT><B>arctable = "<TT></TT>" (optional) (refspectra)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='arctable' Line='arctable = "" (optional) (refspectra)'>
   <DD>Table defining which arc spectra are to be assigned to which object
   spectra (see <B>refspectra</B>).  If not specified an assignment based
@@ -85,7 +74,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_standards">standards = "<TT></TT>" (at least one if flux calibrating)</A></B></DT>
+  <DT><B>standards = "<TT></TT>" (at least one if flux calibrating)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='standards' Line='standards = "" (at least one if flux calibrating)'>
   <DD>List of standard star spectra.  The standard stars must have entries in
   the calibration database (package parameter <I>echelle.caldir</I>).
@@ -93,7 +82,7 @@ doecslit — Process Echelle slit spectra
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_readnoise">readnoise = 0., gain = 1. (apsum)</A></B></DT>
+  <DT><B>readnoise = 0., gain = 1. (apsum)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='readnoise' Line='readnoise = 0., gain = 1. (apsum)'>
   <DD>Read out noise in photons and detector gain in photons per data value.
   This parameter defines the minimum noise sigma and the conversion between
@@ -103,7 +92,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_datamax">datamax = INDEF (apsum.saturation)</A></B></DT>
+  <DT><B>datamax = INDEF (apsum.saturation)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='datamax' Line='datamax = INDEF (apsum.saturation)'>
   <DD>The maximum data value which is not a cosmic ray.
   When cleaning cosmic rays and/or using variance weighted extraction
@@ -118,13 +107,13 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_norders">norders = 10 (apfind)</A></B></DT>
+  <DT><B>norders = 10 (apfind)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='norders' Line='norders = 10 (apfind)'>
   <DD>Number of orders to be found automatically.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_width">width = 5. (apedit)</A></B></DT>
+  <DT><B>width = 5. (apedit)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='width' Line='width = 5. (apedit)'>
   <DD>Approximate full width of the spectrum profiles.  This parameter is used
   to define a width and error radius for the profile centering algorithm,
@@ -133,7 +122,7 @@ doecslit — Process Echelle slit spectra
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_dispcor">dispcor = yes</A></B></DT>
+  <DT><B>dispcor = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dispcor' Line='dispcor = yes'>
   <DD>Dispersion correct spectra?  This may involve either defining a nonlinear
   dispersion coordinate system in the image header or resampling the
@@ -142,25 +131,25 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_extcor">extcor = no</A></B></DT>
+  <DT><B>extcor = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='extcor' Line='extcor = no'>
   <DD>Extinction correct the spectra?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fluxcal">fluxcal = no</A></B></DT>
+  <DT><B>fluxcal = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fluxcal' Line='fluxcal = no'>
   <DD>Flux calibrate the spectra using standard star observations?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_resize">resize = no (apresize)</A></B></DT>
+  <DT><B>resize = no (apresize)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='resize' Line='resize = no (apresize)'>
   <DD>Resize the defaults apertures for each object based on the spectrum profile?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_clean">clean = no (apsum)</A></B></DT>
+  <DT><B>clean = no (apsum)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='clean' Line='clean = no (apsum)'>
   <DD>Detect and correct for bad pixels during extraction?  This is the same
   as the clean option in the <B>apextract</B> package.  If yes this also
@@ -169,7 +158,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_trace">trace = yes (non-quicklook mode only) (aptrace)</A></B></DT>
+  <DT><B>trace = yes (non-quicklook mode only) (aptrace)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='trace' Line='trace = yes (non-quicklook mode only) (aptrace)'>
   <DD>Allow tracing each object spectrum separately?  If not set then the trace
   from the aperture reference is used, with recentering to allow for shifts
@@ -178,7 +167,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_background">background = "<TT>none</TT>" (apsum, apscatter)</A></B></DT>
+  <DT><B>background = "<TT>none</TT>" (apsum, apscatter)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='background' Line='background = "none" (apsum, apscatter)'>
   <DD>Type of background light subtraction.  The choices are "<TT>none</TT>" for no
   background subtraction, "<TT>scattered</TT>" for a global scattered light
@@ -194,7 +183,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_splot">splot = no</A></B></DT>
+  <DT><B>splot = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='splot' Line='splot = no'>
   <DD>Plot the final spectra?  In quicklook mode a noninteractive, stacked plot
   is automatically produced using the task <B>specplot</B> while in
@@ -203,7 +192,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_redo">redo = no</A></B></DT>
+  <DT><B>redo = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='redo' Line='redo = no'>
   <DD>Redo operations previously done?  If no then previously processed spectra
   in the objects list will not be processed unless required by the
@@ -211,7 +200,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_update">update = no</A></B></DT>
+  <DT><B>update = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='update' Line='update = no'>
   <DD>Update processing of previously processed spectra if the aperture
   reference image, the dispersion reference image, or standard star
@@ -219,7 +208,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_quicklook">quicklook = no</A></B></DT>
+  <DT><B>quicklook = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='quicklook' Line='quicklook = no'>
   <DD>Extract and calibrate spectra with minimal interaction?  In quicklook mode
   only aperture reference definitions, the initial dispersion function
@@ -231,21 +220,21 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_batch">batch = no</A></B></DT>
+  <DT><B>batch = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='batch' Line='batch = no'>
   <DD>Process spectra as a background or batch job provided there are no interactive
   steps remaining.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_listonly">listonly = no</A></B></DT>
+  <DT><B>listonly = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='listonly' Line='listonly = no'>
   <DD>List processing steps but don't process?
   </DD>
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_sparams">sparams = "<TT></TT>" (pset)</A></B></DT>
+  <DT><B>sparams = "<TT></TT>" (pset)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sparams' Line='sparams = "" (pset)'>
   <DD>Name of parameter set containing additional processing parameters.  This
   parameter is only for indicating the link to the parameter set
@@ -260,7 +249,7 @@ doecslit — Process Echelle slit spectra
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_line">line = INDEF, nsum = 10</A></B></DT>
+  <DT><B>line = INDEF, nsum = 10</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='line' Line='line = INDEF, nsum = 10'>
   <DD>The dispersion line (line or column perpendicular to the dispersion
   axis) and number of adjacent lines (half before and half after unless
@@ -270,7 +259,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_extras">extras = no (apsum)</A></B></DT>
+  <DT><B>extras = no (apsum)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='extras' Line='extras = no (apsum)'>
   <DD>Include raw unweighted and uncleaned spectra, the background spectra, and
   the estimated sigma spectra in a three dimensional output image format.
@@ -282,7 +271,7 @@ doecslit — Process Echelle slit spectra
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_ylevel">ylevel = 0.05 (apresize)</A></B></DT>
+  <DT><B>ylevel = 0.05 (apresize)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ylevel' Line='ylevel = 0.05 (apresize)'>
   <DD>Fraction of the peak to set aperture limits during automatic resizing.
   </DD>
@@ -292,7 +281,7 @@ doecslit — Process Echelle slit spectra
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_t_step">t_step = 10 (aptrace)</A></B></DT>
+  <DT><B>t_step = 10 (aptrace)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='t_step' Line='t_step = 10 (aptrace)'>
   <DD>Step along the dispersion axis between determination of the spectrum
   positions.  Note the <I>nsum</I> parameter is also used to enhance the
@@ -300,7 +289,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_t_function">t_function = "<TT>spline3</TT>", t_order = 2 (aptrace)</A></B></DT>
+  <DT><B>t_function = "<TT>spline3</TT>", t_order = 2 (aptrace)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='t_function' Line='t_function = "spline3", t_order = 2 (aptrace)'>
   <DD>Default trace fitting function and order.  The fitting function types are
   "<TT>chebyshev</TT>" polynomial, "<TT>legendre</TT>" polynomial, "<TT>spline1</TT>" linear spline, and
@@ -310,7 +299,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_t_niterate">t_niterate = 1, t_low = 3., t_high = 3. (aptrace)</A></B></DT>
+  <DT><B>t_niterate = 1, t_low = 3., t_high = 3. (aptrace)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='t_niterate' Line='t_niterate = 1, t_low = 3., t_high = 3. (aptrace)'>
   <DD>Default number of rejection iterations and rejection sigma thresholds.
   </DD>
@@ -320,7 +309,7 @@ doecslit — Process Echelle slit spectra
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_b_function">b_function = "<TT>legendre</TT>", b_order = 1 (apsum)</A></B></DT>
+  <DT><B>b_function = "<TT>legendre</TT>", b_order = 1 (apsum)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='b_function' Line='b_function = "legendre", b_order = 1 (apsum)'>
   <DD>Default background fitting function and order.  The fitting function types are
   "<TT>chebyshev</TT>" polynomial, "<TT>legendre</TT>" polynomial, "<TT>spline1</TT>" linear spline, and
@@ -330,7 +319,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_b_naverage">b_naverage = -100 (apsum)</A></B></DT>
+  <DT><B>b_naverage = -100 (apsum)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='b_naverage' Line='b_naverage = -100 (apsum)'>
   <DD>Default number of points to average or median.  Positive numbers
   average that number of sequential points to form a fitting point.
@@ -340,7 +329,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_b_niterate">b_niterate = 0 (apsum)</A></B></DT>
+  <DT><B>b_niterate = 0 (apsum)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='b_niterate' Line='b_niterate = 0 (apsum)'>
   <DD>Default number of rejection iterations.  If greater than zero the fit is
   used to detect deviant fitting points and reject them before repeating the
@@ -348,7 +337,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_b_low_reject">b_low_reject = 3., b_high_reject = 3. (apsum)</A></B></DT>
+  <DT><B>b_low_reject = 3., b_high_reject = 3. (apsum)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='b_low_reject' Line='b_low_reject = 3., b_high_reject = 3. (apsum)'>
   <DD>Default background lower and upper rejection sigmas.  If greater than zero
   points deviating from the fit below and above the fit by more than this
@@ -356,7 +345,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_buffer">buffer = 1. (apscatter)</A></B></DT>
+  <DT><B>buffer = 1. (apscatter)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='buffer' Line='buffer = 1. (apscatter)'>
   <DD>Buffer distance from the edge of any aperture for data to be included
   in the scattered light determination.  This parameter may be modified
@@ -364,7 +353,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apscat1">apscat1 = "<TT></TT>", apscat2 = "<TT></TT>" (apscatter)</A></B></DT>
+  <DT><B>apscat1 = "<TT></TT>", apscat2 = "<TT></TT>" (apscatter)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apscat1' Line='apscat1 = "", apscat2 = "" (apscatter)'>
   <DD>Parameter sets for the fitting functions across and along the dispersion.
   These parameters are those used by <B>icfit</B>.  These parameters are
@@ -376,20 +365,20 @@ doecslit — Process Echelle slit spectra
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_weights">weights = "<TT>none</TT>" (apsum) (none|variance)</A></B></DT>
+  <DT><B>weights = "<TT>none</TT>" (apsum) (none|variance)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='weights' Line='weights = "none" (apsum) (none|variance)'>
   <DD>Type of extraction weighting.  Note that if the <I>clean</I> parameter is
   set then the weights used are "<TT>variance</TT>" regardless of the weights
   specified by this parameter.  The choices are:
   <DL>
-  <DT><B><A NAME="l_">"<TT>none</TT>"</A></B></DT>
+  <DT><B>"<TT>none</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"none"'>
   <DD>The pixels are summed without weights except for partial pixels at the
   ends.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">"<TT>variance</TT>"</A></B></DT>
+  <DT><B>"<TT>variance</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"variance"'>
   <DD>The extraction is weighted by the variance based on the data values
   and a poisson/ccd model using the <I>gain</I> and <I>readnoise</I>
@@ -399,14 +388,14 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pfit">pfit = "<TT>fit1d</TT>" (apsum and approfile) (fit1d|fit2d)</A></B></DT>
+  <DT><B>pfit = "<TT>fit1d</TT>" (apsum and approfile) (fit1d|fit2d)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pfit' Line='pfit = "fit1d" (apsum and approfile) (fit1d|fit2d)'>
   <DD>Type of profile fitting algorithm to use.  The "<TT>fit1d</TT>" algorithm is
   preferred except in cases of extreme tilt.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lsigma">lsigma = 3., usigma = 3. (apsum)</A></B></DT>
+  <DT><B>lsigma = 3., usigma = 3. (apsum)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lsigma' Line='lsigma = 3., usigma = 3. (apsum)'>
   <DD>Lower and upper rejection thresholds, given as a number of times the
   estimated sigma of a pixel, for cleaning.
@@ -417,40 +406,40 @@ doecslit — Process Echelle slit spectra
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_threshold">threshold = 10. (identify/reidentify)</A></B></DT>
+  <DT><B>threshold = 10. (identify/reidentify)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 10. (identify/reidentify)'>
   <DD>In order for a feature center to be determined the range of pixel intensities
   around the feature must exceed this threshold.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_coordlist">coordlist = "<TT>linelist$thar.dat</TT>" (ecidentify)</A></B></DT>
+  <DT><B>coordlist = "<TT>linelist$thar.dat</TT>" (ecidentify)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='coordlist' Line='coordlist = "linelist$thar.dat" (ecidentify)'>
   <DD>Arc line list consisting of an ordered list of wavelengths.
   Some standard line lists are available in the directory "<TT>linelist$</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_match">match = 1. (ecidentify)</A></B></DT>
+  <DT><B>match = 1. (ecidentify)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='match' Line='match = 1. (ecidentify)'>
   <DD>The maximum difference for a match between the dispersion function computed
   value and a wavelength in the coordinate list.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fwidth">fwidth = 4. (ecidentify)</A></B></DT>
+  <DT><B>fwidth = 4. (ecidentify)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fwidth' Line='fwidth = 4. (ecidentify)'>
   <DD>Approximate full base width (in pixels) of arc lines.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cradius">cradius = 10. (reidentify)</A></B></DT>
+  <DT><B>cradius = 10. (reidentify)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cradius' Line='cradius = 10. (reidentify)'>
   <DD>Radius from previous position to reidentify arc line.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_i_function">i_function = "<TT>legendre</TT>", i_xorder = 3, i_yorder = 3 (ecidentify)</A></B></DT>
+  <DT><B>i_function = "<TT>legendre</TT>", i_xorder = 3, i_yorder = 3 (ecidentify)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='i_function' Line='i_function = "legendre", i_xorder = 3, i_yorder = 3 (ecidentify)'>
   <DD>The default function, function order for the pixel position dependence, and
   function order for the aperture number dependence to be fit to the arc
@@ -458,14 +447,14 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_i_niterate">i_niterate = 3, i_low = 3.0, i_high = 3.0 (ecidentify)</A></B></DT>
+  <DT><B>i_niterate = 3, i_low = 3.0, i_high = 3.0 (ecidentify)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='i_niterate' Line='i_niterate = 3, i_low = 3.0, i_high = 3.0 (ecidentify)'>
   <DD>Number of rejection iterations and sigma thresholds for rejecting arc
   lines from the dispersion function fits.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_refit">refit = yes (ecreidentify)</A></B></DT>
+  <DT><B>refit = yes (ecreidentify)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='refit' Line='refit = yes (ecreidentify)'>
   <DD>Refit the dispersion function?  If yes and there is more than 1 line
   and a dispersion function was defined in the arc reference then a new
@@ -480,14 +469,14 @@ doecslit — Process Echelle slit spectra
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_select">select = "<TT>interp</TT>" (refspectra)</A></B></DT>
+  <DT><B>select = "<TT>interp</TT>" (refspectra)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='select' Line='select = "interp" (refspectra)'>
   <DD>Selection method for assigning wavelength calibration spectra.
   Note that an arc assignment table may be used to override the selection
   method and explicitly assign arc spectra to object spectra.
   The automatic selection methods are:
   <DL>
-  <DT><B><A NAME="l_average">average</A></B></DT>
+  <DT><B>average</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='average' Line='average'>
   <DD>Average two reference spectra without regard to any sort parameter.
   If only one reference spectrum is specified then it is assigned with a
@@ -498,7 +487,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_following">following</A></B></DT>
+  <DT><B>following</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='following' Line='following'>
   <DD>Select the nearest following spectrum in the reference list based on the
   sorting parameter.  If there is no following spectrum use the nearest preceding
@@ -506,7 +495,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interp">interp</A></B></DT>
+  <DT><B>interp</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='interp' Line='interp'>
   <DD>Interpolate between the preceding and following spectra in the reference
   list based on the sorting parameter.  If there is no preceding and following
@@ -515,21 +504,21 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_match">match</A></B></DT>
+  <DT><B>match</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='match' Line='match'>
   <DD>Match each input spectrum with the reference spectrum list in order.
   This overrides the reference aperture check.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nearest">nearest</A></B></DT>
+  <DT><B>nearest</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest'>
   <DD>Select the nearest spectrum in the reference list based on the sorting
   parameter.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_preceding">preceding</A></B></DT>
+  <DT><B>preceding</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='preceding' Line='preceding'>
   <DD>Select the nearest preceding spectrum in the reference list based on the
   sorting parameter.  If there is no preceding spectrum use the nearest following
@@ -539,7 +528,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sort">sort = "<TT>jd</TT>" (setjd and refspectra)</A></B></DT>
+  <DT><B>sort = "<TT>jd</TT>" (setjd and refspectra)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sort' Line='sort = "jd" (setjd and refspectra)'>
   <DD>Image header keyword to be used as the sorting parameter for selection
   based on order.  The header parameter must be numeric but otherwise may
@@ -547,7 +536,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_group">group = "<TT>ljd</TT>" (setjd and refspectra)</A></B></DT>
+  <DT><B>group = "<TT>ljd</TT>" (setjd and refspectra)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='group' Line='group = "ljd" (setjd and refspectra)'>
   <DD>Image header keyword to be used to group spectra.  For those selection
   methods which use the group parameter the reference and object
@@ -558,7 +547,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_time">time = no, timewrap = 17. (refspectra)</A></B></DT>
+  <DT><B>time = no, timewrap = 17. (refspectra)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='time' Line='time = no, timewrap = 17. (refspectra)'>
   <DD>Is the sorting parameter a 24 hour time?  If so then the time origin
   for the sorting is specified by the timewrap parameter.  This time
@@ -571,7 +560,7 @@ doecslit — Process Echelle slit spectra
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_linearize">linearize = yes (dispcor)</A></B></DT>
+  <DT><B>linearize = yes (dispcor)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='linearize' Line='linearize = yes (dispcor)'>
   <DD>Interpolate the spectra to a linear dispersion sampling?  If yes the
   spectra will be interpolated to a linear or log linear sampling using
@@ -583,7 +572,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_log">log = no (ecdispcor)</A></B></DT>
+  <DT><B>log = no (ecdispcor)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='log' Line='log = no (ecdispcor)'>
   <DD>Use linear logarithmic wavelength coordinates?  Linear logarithmic
   wavelength coordinates have wavelength intervals which are constant
@@ -591,7 +580,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_flux">flux = yes (ecdispcor)</A></B></DT>
+  <DT><B>flux = yes (ecdispcor)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='flux' Line='flux = yes (ecdispcor)'>
   <DD>Conserve the total flux during interpolation?  If <I>no</I> the output
   spectrum is interpolated from the input spectrum at each output
@@ -605,7 +594,7 @@ doecslit — Process Echelle slit spectra
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_bandwidth">bandwidth = 10., bandsep = 10. (standard)</A></B></DT>
+  <DT><B>bandwidth = 10., bandsep = 10. (standard)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='bandwidth' Line='bandwidth = 10., bandsep = 10. (standard)'>
   <DD>Interpolated bandpass grid.  If INDEF then the same bandpasses as in the
   calibration files are used otherwise the calibration data is interpolated
@@ -613,14 +602,14 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_s_interact">s_interact = yes (standard)</A></B></DT>
+  <DT><B>s_interact = yes (standard)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='s_interact' Line='s_interact = yes (standard)'>
   <DD>Display the bandpasses on the standard star data and allow interactive
   addition and deletion of bandpasses.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_s_function">s_function = "<TT>spline3</TT>", s_order = 1 (sensfunc)</A></B></DT>
+  <DT><B>s_function = "<TT>spline3</TT>", s_order = 1 (sensfunc)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='s_function' Line='s_function = "spline3", s_order = 1 (sensfunc)'>
   <DD>Function and order used to fit the sensitivity data.  The function types are
   "<TT>chebyshev</TT>" polynomial, "<TT>legendre</TT>" polynomial, "<TT>spline3</TT>" cubic spline,
@@ -631,7 +620,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fnu">fnu = no (calibrate)</A></B></DT>
+  <DT><B>fnu = no (calibrate)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fnu' Line='fnu = no (calibrate)'>
   <DD>The default calibration is into units of F-lambda. If <I>fnu</I> = yes then
   the calibrated spectrum will be in units of F-nu.
@@ -642,7 +631,7 @@ doecslit — Process Echelle slit spectra
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_dispaxis">dispaxis = 2</A></B></DT>
+  <DT><B>dispaxis = 2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dispaxis' Line='dispaxis = 2'>
   <DD>Default dispersion axis.  The dispersion axis is 1 for dispersion
   running along image lines and 2 for dispersion running along image
@@ -652,7 +641,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_extinction">extinction = "<TT>onedstds$kpnoextinct.dat</TT>" (standard, sensfunc, calibrate)</A></B></DT>
+  <DT><B>extinction = "<TT>onedstds$kpnoextinct.dat</TT>" (standard, sensfunc, calibrate)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='extinction' Line='extinction = "onedstds$kpnoextinct.dat" (standard, sensfunc, calibrate)'>
   <DD>Extinction file for a site.  There are two extinction files in the
   NOAO standards library, onedstds$, for KPNO and CTIO.  These extinction
@@ -660,7 +649,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_caldir">caldir (standard)</A></B></DT>
+  <DT><B>caldir (standard)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='caldir' Line='caldir (standard)'>
   <DD>Standard star calibration directory.  A directory containing standard
   star data files.  Note that the directory name must end with <TT>'/'</TT>.
@@ -669,7 +658,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_observatory">observatory = "<TT>observatory</TT>" (observatory)</A></B></DT>
+  <DT><B>observatory = "<TT>observatory</TT>" (observatory)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory = "observatory" (observatory)'>
   <DD>The default observatory to use for latitude dependent computations.
   If the OBSERVAT keyword in the image header it takes precedence over
@@ -677,7 +666,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interp">interp = "<TT>poly5</TT>" (nearest|linear|poly3|poly5|spline3|sinc) (dispcor)</A></B></DT>
+  <DT><B>interp = "<TT>poly5</TT>" (nearest|linear|poly3|poly5|spline3|sinc) (dispcor)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interp' Line='interp = "poly5" (nearest|linear|poly3|poly5|spline3|sinc) (dispcor)'>
   <DD>Spectrum interpolation type used when spectra are resampled.  The choices are:
   <P>
@@ -692,14 +681,14 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_database">database = "<TT>database</TT>"</A></B></DT>
+  <DT><B>database = "<TT>database</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"'>
   <DD>Database name used by various tasks.  This is a directory which is created
   if necessary.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = no</A></B></DT>
+  <DT><B>verbose = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
   <DD>Verbose output?  If set then almost all the information written to the
   logfile is also written to the terminal except when the task is a
@@ -707,13 +696,13 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_logfile">logfile = "<TT>logfile</TT>"</A></B></DT>
+  <DT><B>logfile = "<TT>logfile</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "logfile"'>
   <DD>If specified detailed text log information is written to this file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_plotfile">plotfile = "<TT></TT>"</A></B></DT>
+  <DT><B>plotfile = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='plotfile' Line='plotfile = ""'>
   <DD>If specified metacode plots are recorded in this file for later review.
   Since plot information can become large this should be used only if
@@ -722,7 +711,7 @@ doecslit — Process Echelle slit spectra
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_environment_parameters">ENVIRONMENT PARAMETERS</A></H2>
+  <H3>Environment parameters</H3>
   <! BeginSection: 'ENVIRONMENT PARAMETERS'>
   <UL>
   The environment parameter <I>imtype</I> is used to determine the extension
@@ -731,7 +720,7 @@ doecslit — Process Echelle slit spectra
   for example "<TT>d1h</TT>".
   </UL>
   <! EndSection:   'ENVIRONMENT PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <B>Doecslit</B> subtracts background sky or scattered light, extracts,
@@ -771,14 +760,14 @@ doecslit — Process Echelle slit spectra
   <B>Usage Outline</B>
   <P>
   <DL>
-  <DT><B><A NAME="l_">[1]</A></B></DT>
+  <DT><B>[1]</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='[1]'>
   <DD>The images are first processed with <B>ccdproc</B> for overscan,
   zero level, dark count, and flat field corrections.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">[2]</A></B></DT>
+  <DT><B>[2]</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='[2]'>
   <DD>Set the <B>doecslit</B> parameters with <B>eparam</B>.  Specify the object
   images to be processed, an aperture reference image (usually a bright
@@ -792,7 +781,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">[3]</A></B></DT>
+  <DT><B>[3]</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='[3]'>
   <DD>Run the task.  This may be repeated multiple times with different
   observations and the task will generally only do the setup steps
@@ -805,7 +794,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">[4]</A></B></DT>
+  <DT><B>[4]</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='[4]'>
   <DD>The specified number of orders (ranked by peak strength) in the aperture
   reference image are located and default fixed width apertures are
@@ -823,7 +812,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">[5]</A></B></DT>
+  <DT><B>[5]</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='[5]'>
   <DD>The order positions at a series of points along the dispersion are measured
   and a function is fit to these positions.  This may be done interactively
@@ -834,7 +823,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">[6]</A></B></DT>
+  <DT><B>[6]</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='[6]'>
   <DD>Apertures are now defined for all standard and object images.  This is only
   done if there are no previous aperture definitions for the image.  The
@@ -846,7 +835,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">[7]</A></B></DT>
+  <DT><B>[7]</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='[7]'>
   <DD>If scattered light subtraction is selected the scattered light parameters
   are set using the aperture reference image and the task <B>apscatter</B>.
@@ -860,7 +849,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">[8]</A></B></DT>
+  <DT><B>[8]</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='[8]'>
   <DD>If dispersion correction is selected the first arc in the arc list is
   extracted.  The dispersion function is defined using the task
@@ -871,7 +860,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">[9]</A></B></DT>
+  <DT><B>[9]</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='[9]'>
   <DD>If the flux calibration option is selected the standard star spectra are
   processed (if not done previously).  The images are background subtracted,
@@ -891,7 +880,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">[10]</A></B></DT>
+  <DT><B>[10]</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='[10]'>
   <DD>The object spectra are now automatically background subtracted
   (an alternative to scattered light subtraction),
@@ -899,7 +888,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">[11]</A></B></DT>
+  <DT><B>[11]</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='[11]'>
   <DD>The option to examine the final spectra with <B>splot</B> may be given.
   To exit type <TT>'q'</TT>.  In quicklook mode the spectra are plotted
@@ -907,7 +896,7 @@ doecslit — Process Echelle slit spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">[12]</A></B></DT>
+  <DT><B>[12]</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='[12]'>
   <DD>The final spectra will have the same name as the original 2D images
   with a "<TT>.ec</TT>" extension added.
@@ -1440,7 +1429,7 @@ doecslit — Process Echelle slit spectra
   <I>update</I> flag is set.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  The following example uses artificial data and may be executed
@@ -1518,11 +1507,11 @@ doecslit — Process Echelle slit spectra
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_DOECSLIT">DOECSLIT V2.10.3</A></B></DT>
+  <DT><B>DOECSLIT V2.10.3</B></DT>
   <! Sec='REVISIONS' Level=0 Label='DOECSLIT' Line='DOECSLIT V2.10.3'>
   <DD>The image format type to be
   processed is selected with the <I>imtype</I> environment parameter.  The
@@ -1534,7 +1523,7 @@ doecslit — Process Echelle slit spectra
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   apbackground, apedit, apfind, approfiles, aprecenter, apresize, apsum, aptrace,
@@ -1547,5 +1536,3 @@ doecslit — Process Echelle slit spectra
   
   <! Contents: 'NAME' 'USAGE' 'SUMMARY' 'PARAMETERS' 'ENVIRONMENT PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

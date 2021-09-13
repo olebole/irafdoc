@@ -1,3 +1,5 @@
+.. _widstape:
+
 widstape — Convert ONEDSPEC spectra to IDSOUT text format
 =========================================================
 
@@ -5,56 +7,43 @@ widstape — Convert ONEDSPEC spectra to IDSOUT text format
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>widstape (Mar85)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.mtlocal</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>widstape (Mar85)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>widstape</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   widstape -- Write a Cyber style IDSOUT tape
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   widstape idsout input records
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_idsout">idsout</A></B></DT>
+  <DT><B>idsout</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='idsout' Line='idsout'>
   <DD>The output file name to receive the card-image data. This may be a
   magtape specification (e.g. mta, mtb) or disk file name.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The input root file name for the spectra to be written
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_records">records</A></B></DT>
+  <DT><B>records</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='records' Line='records'>
   <DD>The record string to be appended to the root name to create the image
   names of the spectra to be written.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_new_tape">new_tape = no</A></B></DT>
+  <DT><B>new_tape = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='new_tape' Line='new_tape = no'>
   <DD>If set to yes, the tape is rewound and output begins at BOT. If no,
   output begins at EOT unless an explicit file specification is given
@@ -64,13 +53,13 @@ widstape — Convert ONEDSPEC spectra to IDSOUT text format
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_block_size">block_size = 3200</A></B></DT>
+  <DT><B>block_size = 3200</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='block_size' Line='block_size = 3200'>
   <DD>The tape block size in bytes. This must be an integral factor of 80.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ebcdic">ebcdic = no</A></B></DT>
+  <DT><B>ebcdic = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ebcdic' Line='ebcdic = no'>
   <DD>The default character code is ASCII, but if this parameter is set to yes,
   the output character will be in EBCDIC.
@@ -78,7 +67,7 @@ widstape — Convert ONEDSPEC spectra to IDSOUT text format
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The specified spectra are copied to the output file in a card-image format
@@ -124,7 +113,7 @@ widstape — Convert ONEDSPEC spectra to IDSOUT text format
   length.  A double end-of-mark is written after the last spectrum.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   The following example writes an IDSOUT format tape starting at the
@@ -133,13 +122,13 @@ widstape — Convert ONEDSPEC spectra to IDSOUT text format
   	cl&gt; widstape mta nite1 1001-1200 new_tape+
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements__unix_vax_11_750">TIME REQUIREMENTS: UNIX/VAX 11/750</A></H2>
+  <H3>Time requirements: unix/vax 11/750</H3>
   <! BeginSection: 'TIME REQUIREMENTS: UNIX/VAX 11/750'>
   <UL>
   Each spectrum of 1024 points requires about 2 second.
   </UL>
   <! EndSection:   'TIME REQUIREMENTS: UNIX/VAX 11/750'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   rcardimage, ridsout
@@ -148,5 +137,3 @@ widstape — Convert ONEDSPEC spectra to IDSOUT text format
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS: UNIX/VAX 11/750' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

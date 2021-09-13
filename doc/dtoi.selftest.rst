@@ -1,3 +1,5 @@
+.. _selftest:
+
 selftest — Self test program to check DTOI transformation
 =========================================================
 
@@ -5,67 +7,54 @@ selftest — Self test program to check DTOI transformation
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>selftest (Feb87)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>imred.dtoi</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>selftest (Feb87)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>selftest</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   selftest -- test routine to verify <I>dtoi</I> transformation
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   selftest nbits
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_nbits">nbits = 12</A></B></DT>
+  <DT><B>nbits = 12</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nbits' Line='nbits = 12'>
   <DD>Dymanic range of data to test.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_device">device = "<TT>stdgraph</TT>" </A></B></DT>
+  <DT><B>device = "<TT>stdgraph</TT>" </B></DT>
   <! Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdgraph" '>
   <DD>Plotting device for graphical output.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = no</A></B></DT>
+  <DT><B>verbose = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
   <DD>A table of density, intensity values is printed if <B>verbose</B> = yes.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ceiling">ceiling = 30000.</A></B></DT>
+  <DT><B>ceiling = 30000.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ceiling' Line='ceiling = 30000.'>
   <DD>Maximum intensity to output.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_max_raw">max_raw = 0</A></B></DT>
+  <DT><B>max_raw = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='max_raw' Line='max_raw = 0'>
   <DD>The maximum raw data value.  Needed only if <I>nbits</I> equals something
   other than 12, 15 or 0.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_scale">scale = 0.0</A></B></DT>
+  <DT><B>scale = 0.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='scale' Line='scale = 0.0'>
   <DD>The raw data value to density scale value.  Needed only if <I>nbits</I>
   equals something other than 12, 15, or 0.
@@ -74,7 +63,7 @@ selftest — Self test program to check DTOI transformation
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Task <I>selftest</I> is a test program for the <I>dtoi</I> package.  Its 
@@ -110,7 +99,7 @@ selftest — Self test program to check DTOI transformation
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -133,5 +122,3 @@ selftest — Self test program to check DTOI transformation
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES'  >
   
-  </BODY>
-  </HTML>

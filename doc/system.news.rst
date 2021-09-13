@@ -1,3 +1,5 @@
+.. _news:
+
 news — Page through the system news file
 ========================================
 
@@ -5,32 +7,19 @@ news — Page through the system news file
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>news (Mar90)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>system</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>news (Mar90)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>news</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   news -- print the revisions summary for the current IRAF version
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   news
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The <I>news</I> task uses the standard IRAF file pager to review a formatted
@@ -53,7 +42,7 @@ news — Page through the system news file
   directory.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   The revisions summary is often lengthy and may be easier to read if a
@@ -63,7 +52,7 @@ news — Page through the system news file
   at present.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Page the revisions summary for the current IRAF release.
@@ -86,7 +75,7 @@ news — Page through the system news file
       cl&gt; phelp images.revisions op=sys
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   help, phelp, page
@@ -95,5 +84,3 @@ news — Page through the system news file
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'BUGS' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

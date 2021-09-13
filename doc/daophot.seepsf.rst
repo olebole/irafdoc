@@ -1,3 +1,5 @@
+.. _seepsf:
+
 seepsf — Compute an image from the point spread function
 ========================================================
 
@@ -5,36 +7,23 @@ seepsf — Compute an image from the point spread function
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>seepsf (May00)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.daophot</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>seepsf (May00)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>seepsf</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   seepsf -- convert a sampled PSF lookup table to a PSF image
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   seepsf psfimage image
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_psfimage">psfimage</A></B></DT>
+  <DT><B>psfimage</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='psfimage' Line='psfimage'>
   <DD>The list of input PSF images computed by the PSF task. Each PSF image consists
   of the parameters of a 2D analytic function stored in the image header and an
@@ -43,7 +32,7 @@ seepsf — Compute an image from the point spread function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_image">image</A></B></DT>
+  <DT><B>image</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='image' Line='image'>
   <DD>The list of output PSF images consisting of the sum of the analytic function
   and the residuals in the lookup table. There must be one output PSF image for
@@ -51,7 +40,7 @@ seepsf — Compute an image from the point spread function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dimension">dimension = INDEF</A></B></DT>
+  <DT><B>dimension = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dimension' Line='dimension = INDEF'>
   <DD>The dimensions of the output PSF image. By default <I>image</I> is a 2D image
   with dimensions of N by N where N = 2 * nint (psfrad / scale)  + 1 with the
@@ -62,7 +51,7 @@ seepsf — Compute an image from the point spread function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xpsf">xpsf = INDEF</A></B></DT>
+  <DT><B>xpsf = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xpsf' Line='xpsf = INDEF'>
   <DD>The x coordinate of the output PSF. <I>Xpsf</I> is only used if <I>psfimage</I>
   was computed with the variable PSF parameter <I>varorder</I> in the DAOPARS task
@@ -70,7 +59,7 @@ seepsf — Compute an image from the point spread function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ypsf">ypsf = INDEF</A></B></DT>
+  <DT><B>ypsf = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ypsf' Line='ypsf = INDEF'>
   <DD>The y coordinate of the output PSF. <I>Ypsf</I> is only used if <I>psfimage</I>
   was computed with the variable PSF parameter <I>varorder</I> in the DAOPARS task
@@ -78,7 +67,7 @@ seepsf — Compute an image from the point spread function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_magnitude">magnitude = INDEF</A></B></DT>
+  <DT><B>magnitude = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='magnitude' Line='magnitude = INDEF'>
   <DD>The intensity scale of the output PSF. By default the intensity scale is set by
   the magnitude of the first star used by the PSF task to compute <I>psfimage</I>.
@@ -87,7 +76,7 @@ seepsf — Compute an image from the point spread function
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   SEEPSF takes the input PSF <I>psfimage</I> computed by the PSF task, consisting
@@ -122,7 +111,7 @@ seepsf — Compute an image from the point spread function
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -143,17 +132,17 @@ seepsf — Compute an image from the point spread function
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   datapars,daopars,psf
@@ -162,5 +151,3 @@ seepsf — Compute an image from the point spread function
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

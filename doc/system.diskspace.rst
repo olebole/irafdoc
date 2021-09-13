@@ -1,3 +1,5 @@
+.. _diskspace:
+
 diskspace — Show how much diskspace is available
 ================================================
 
@@ -5,32 +7,19 @@ diskspace — Show how much diskspace is available
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>diskspace (Feb85)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>system</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>diskspace (Feb85)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>diskspace</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   diskspace -- summarize disk space utilization
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   diskspace
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <I>Diskspace</I> lists the disk devices available on the host system,
@@ -38,7 +27,7 @@ diskspace — Show how much diskspace is available
   The format and contents of the output are host system dependent.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_example">EXAMPLE</A></H2>
+  <H3>Example</H3>
   <! BeginSection: 'EXAMPLE'>
   <UL>
   <P>
@@ -64,5 +53,3 @@ diskspace — Show how much diskspace is available
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'EXAMPLE'  >
   
-  </BODY>
-  </HTML>

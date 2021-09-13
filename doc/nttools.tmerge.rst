@@ -1,3 +1,5 @@
+.. _tmerge:
+
 tmerge — Either merge or append tables.
 =======================================
 
@@ -5,32 +7,19 @@ tmerge — Either merge or append tables.
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>tmerge (Jun1999)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>tables</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>tmerge (Jun1999)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>tmerge</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   tmerge -- Merge two tables, or append one to the other.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   tmerge intable outtable option
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task is used to either merge or append tables,
@@ -101,11 +90,11 @@ tmerge — Either merge or append tables.
   for those data.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_intable">intable [file name template]</A></B></DT>
+  <DT><B>intable [file name template]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='intable' Line='intable [file name template]'>
   <DD>Names of the tables to be merged or appended.  This parameter will take
   either a file name template describing several input tables, and may include
@@ -119,13 +108,13 @@ tmerge — Either merge or append tables.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_outtable">outtable [file name]</A></B></DT>
+  <DT><B>outtable [file name]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable [file name]'>
   <DD>The name of the output table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_option">option = "<TT>merge</TT>" [string]</A></B></DT>
+  <DT><B>option = "<TT>merge</TT>" [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='option' Line='option = "merge" [string]'>
   <DD>allowed values:  merge | append
   <P>
@@ -136,7 +125,7 @@ tmerge — Either merge or append tables.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(allcols = yes) [boolean]</A></B></DT>
+  <DT><B>(allcols = yes) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(allcols = yes) [boolean]'>
   <DD>Define output table columns using columns from
   all input tables?
@@ -170,7 +159,7 @@ tmerge — Either merge or append tables.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(tbltype = "<TT>default</TT>") [string, allowed values:  default | row | </A></B></DT>
+  <DT><B>(tbltype = "<TT>default</TT>") [string, allowed values:  default | row | </B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(tbltype = "default") [string, allowed values:  default | row | '>
   <DD>column | text]
   <P>
@@ -188,7 +177,7 @@ tmerge — Either merge or append tables.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(allrows = 100) [integer, min=1, max=INDEF]</A></B></DT>
+  <DT><B>(allrows = 100) [integer, min=1, max=INDEF]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(allrows = 100) [integer, min=1, max=INDEF]'>
   <DD>The number of rows to allocate.
   This parameter is only used for column-ordered tables
@@ -205,7 +194,7 @@ tmerge — Either merge or append tables.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(extracol = 0) [integer, min=0, max=INDEF]</A></B></DT>
+  <DT><B>(extracol = 0) [integer, min=0, max=INDEF]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(extracol = 0) [integer, min=0, max=INDEF]'>
   <DD>Extra space to be reserved for columns in the output table.
   <P>
@@ -225,7 +214,7 @@ tmerge — Either merge or append tables.
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <PRE>
@@ -274,18 +263,18 @@ tmerge — Either merge or append tables.
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   This task was written by Phil Hodge.
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   tselect, tproject, and proto.joinlines for text files
@@ -294,5 +283,3 @@ tmerge — Either merge or append tables.
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

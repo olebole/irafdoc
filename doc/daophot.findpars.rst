@@ -1,3 +1,5 @@
+.. _findpars:
+
 findpars — Edit the star detection parameters
 =============================================
 
@@ -5,43 +7,30 @@ findpars — Edit the star detection parameters
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>findpars (May00)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.daophot</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>findpars (May00)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>findpars</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   findpars -- edit the object detection parameters
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   findpars
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_threshold">threshold = 4.0 (sigma)</A></B></DT>
+  <DT><B>threshold = 4.0 (sigma)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 4.0 (sigma)'>
   <DD>The object detection threshold above local background in units of
   <I>datapars.sigma</I>.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nsigma">nsigma = 1.5</A></B></DT>
+  <DT><B>nsigma = 1.5</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nsigma' Line='nsigma = 1.5'>
   <DD>The semi-major axis of the Gaussian convolution kernel used to computed the
   density enhancement and mean density images in Gaussian sigma. This semi-
@@ -50,7 +39,7 @@ findpars — Edit the star detection parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ratio">ratio = 1.0</A></B></DT>
+  <DT><B>ratio = 1.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ratio' Line='ratio = 1.0'>
   <DD>The ratio of the sigma of the Gaussian convolution kernel along the minor axis
   direction to the sigma along the major axis direction.  <I>Ratio</I> defaults
@@ -58,14 +47,14 @@ findpars — Edit the star detection parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_theta">theta = 0.0</A></B></DT>
+  <DT><B>theta = 0.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='theta' Line='theta = 0.0'>
   <DD>The position of the major axis of the elliptical Gaussian. <I>Theta</I> is
   measured counter-clockwise from the x axis.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sharplo">sharplo = .2, sharphi = 1.0</A></B></DT>
+  <DT><B>sharplo = .2, sharphi = 1.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sharplo' Line='sharplo = .2, sharphi = 1.0'>
   <DD><I>Sharplo</I> and <I>sharphi</I> are numerical cutoffs on the image sharpness
   statistic chosen to eliminate brightness maxima which are due to bad pixels
@@ -73,7 +62,7 @@ findpars — Edit the star detection parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_roundlo">roundlo = -1.0 roundhi = 1.0</A></B></DT>
+  <DT><B>roundlo = -1.0 roundhi = 1.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='roundlo' Line='roundlo = -1.0 roundhi = 1.0'>
   <DD><I>Roundlo</I> and <I>roundhi</I> are numerical cutoffs on the image roundness
   statistic chosen to eliminate brightness maxima which are due to bad rows or
@@ -81,7 +70,7 @@ findpars — Edit the star detection parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_mkdetections">mkdetections = no</A></B></DT>
+  <DT><B>mkdetections = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='mkdetections' Line='mkdetections = no'>
   <DD>Mark the positions of the detected objects on the displayed image ?
   </DD>
@@ -89,7 +78,7 @@ findpars — Edit the star detection parameters
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -136,7 +125,7 @@ findpars — Edit the star detection parameters
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -180,14 +169,14 @@ findpars — Edit the star detection parameters
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   daofind
   <P>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   epar,lpar,daofind,datapars
@@ -196,5 +185,3 @@ findpars — Edit the star detection parameters
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

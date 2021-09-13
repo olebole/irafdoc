@@ -1,3 +1,5 @@
+.. _texpand:
+
 texpand — Expand tables according to a set of rules.
 ====================================================
 
@@ -5,32 +7,19 @@ texpand — Expand tables according to a set of rules.
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>texpand (Dec90)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>tables</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>texpand (Dec90)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>texpand</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   texpand -- Expand table rows according to a set of rules.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   texpand input output rbase
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task uses a set of rules to convert each row in the input table
@@ -139,30 +128,30 @@ texpand — Expand tables according to a set of rules.
   will be displayed when it is processed.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input [file name template]</A></B></DT>
+  <DT><B>input [file name template]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input [file name template]'>
   <DD>Name of a table, or list of tables, used as input to the task
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output [file name template]</A></B></DT>
+  <DT><B>output [file name template]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output [file name template]'>
   <DD>Name of a table, or list of tables, to be produced as output to the task. The
   number of input and output tables must be equal.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rbase">rbase [file name]</A></B></DT>
+  <DT><B>rbase [file name]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rbase' Line='rbase [file name]'>
   <DD>The file containing the rules used to expand the tables.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(debug = "<TT></TT>") [file name]</A></B></DT>
+  <DT><B>(debug = "<TT></TT>") [file name]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(debug = "") [file name]'>
   <DD>The file containing the debugging output. If the file name is blank or null,
   no debugging output is produced. When creating a set of rules, the output
@@ -172,7 +161,7 @@ texpand — Expand tables according to a set of rules.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(verbose = no) [boolean]</A></B></DT>
+  <DT><B>(verbose = no) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(verbose = no) [boolean]'>
   <DD>Display the names of the input and output tables on the terminal screen (i.e.,
   STDOUT) after each file is processed?
@@ -180,7 +169,7 @@ texpand — Expand tables according to a set of rules.
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Expand the table 'example' into 'example_2' using the rules in
@@ -197,19 +186,19 @@ texpand — Expand tables according to a set of rules.
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   The task cannot expand tables with boolean columns.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   This task was written by Bernie Simon.
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   </UL>
@@ -217,5 +206,3 @@ texpand — Expand tables according to a set of rules.
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

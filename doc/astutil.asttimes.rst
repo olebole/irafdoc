@@ -1,3 +1,5 @@
+.. _asttimes:
+
 asttimes — Compute UT, Julian day, epoch, and sidereal time
 ===========================================================
 
@@ -5,36 +7,23 @@ asttimes — Compute UT, Julian day, epoch, and sidereal time
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>asttimes (May93)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>astutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>asttimes (May93)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>asttimes</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   asttimes -- Compute UT, Julian day, epoch, and sidereal time
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   asttimes
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_files">files = "<TT></TT>"</A></B></DT>
+  <DT><B>files = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='files' Line='files = ""'>
   <DD>List of files containing local dates and times for which the astronomical
   dates and times are desired.  If no input files are specified then task
@@ -42,13 +31,13 @@ asttimes — Compute UT, Julian day, epoch, and sidereal time
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_header">header = yes</A></B></DT>
+  <DT><B>header = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='header' Line='header = yes'>
   <DD>Print header and observatory information to output?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_observatory">observatory = "<TT>)_.observatory</TT>"</A></B></DT>
+  <DT><B>observatory = "<TT>)_.observatory</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory = ")_.observatory"'>
   <DD>Observatory for  which times are to be computed.  The default is a
   redirection to look in the parameters for the parent package for a value.
@@ -61,7 +50,7 @@ asttimes — Compute UT, Julian day, epoch, and sidereal time
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_year">year, month, day, time</A></B></DT>
+  <DT><B>year, month, day, time</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='year' Line='year, month, day, time'>
   <DD>If no input files are specified then the date and time for which the
   astronomical date and time is computed are given by these parameters.
@@ -72,7 +61,7 @@ asttimes — Compute UT, Julian day, epoch, and sidereal time
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ut">ut, epoch, jd, lmst</A></B></DT>
+  <DT><B>ut, epoch, jd, lmst</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ut' Line='ut, epoch, jd, lmst'>
   <DD>If no input files are specified then the universal time, J2000 Julian epoch,
   Julian day, and local mean sidereal time (at the specified longitude)
@@ -82,7 +71,7 @@ asttimes — Compute UT, Julian day, epoch, and sidereal time
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The astronomical quantities of universal time, J2000 Julian epoch, Julian day,
@@ -102,7 +91,7 @@ asttimes — Compute UT, Julian day, epoch, and sidereal time
   parameters.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. For use directly without data files set the date and time using
@@ -157,11 +146,11 @@ asttimes — Compute UT, Julian day, epoch, and sidereal time
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_ASTTIMES">ASTTIMES V2.10.3</A></B></DT>
+  <DT><B>ASTTIMES V2.10.3</B></DT>
   <! Sec='REVISIONS' Level=0 Label='ASTTIMES' Line='ASTTIMES V2.10.3'>
   <DD>The epoch was changed from day of the year divided by 365.25 to the
   precise J2000 Julian epoch definition.  In addition to changing
@@ -177,7 +166,7 @@ asttimes — Compute UT, Julian day, epoch, and sidereal time
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   observatory
@@ -186,5 +175,3 @@ asttimes — Compute UT, Julian day, epoch, and sidereal time
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

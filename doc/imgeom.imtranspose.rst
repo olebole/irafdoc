@@ -1,3 +1,5 @@
+.. _imtranspose:
+
 imtranspose — Transpose a list of 2-D images
 ============================================
 
@@ -5,26 +7,13 @@ imtranspose — Transpose a list of 2-D images
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>imtranspose (Aug84)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imgeom</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>imtranspose (Aug84)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>imtranspose</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   imtranspose -- transpose two dimensional images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage_">USAGE	</A></H2>
+  <H3>Usage	</H3>
   <! BeginSection: 'USAGE	'>
   <UL>
   <PRE>
@@ -32,17 +21,17 @@ imtranspose — Transpose a list of 2-D images
   </PRE>
   </UL>
   <! EndSection:   'USAGE	'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of images to be transposed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>List of output transposed images. If the output image name is the same as
   the input image name then the output image will replace the input image.
@@ -50,14 +39,14 @@ imtranspose — Transpose a list of 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_len_blk">len_blk = 512</A></B></DT>
+  <DT><B>len_blk = 512</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='len_blk' Line='len_blk = 512'>
   <DD>The one dimensional length of the transpose blocks.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Imtranspose transposes the list of images in input by interchanging
@@ -72,7 +61,7 @@ imtranspose — Transpose a list of 2-D images
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. To transpose an image:
@@ -103,14 +92,14 @@ imtranspose — Transpose a list of 2-D images
   	cl&gt; imtranspose image[*,-*] image
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   <P>
   It is currently not legal to transpose images with a wcs type of MULTISPEC.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   </UL>
@@ -118,5 +107,3 @@ imtranspose — Transpose a list of 2-D images
   
   <! Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

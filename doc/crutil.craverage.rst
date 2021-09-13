@@ -1,3 +1,5 @@
+.. _craverage:
+
 craverage — Detect CRs against average and avoid objects
 ========================================================
 
@@ -5,26 +7,13 @@ craverage — Detect CRs against average and avoid objects
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>craverage (Apr98)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.imred.crutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>craverage (Apr98)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>craverage</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   craverage -- detect CRs and objects using average filter
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_synopsis">SYNOPSIS</A></H2>
+  <H3>Synopsis</H3>
   <! BeginSection: 'SYNOPSIS'>
   <UL>
   <B>Craverage</B> detects cosmic rays and objects using a moving block
@@ -34,7 +23,7 @@ craverage — Detect CRs against average and avoid objects
   excluding pixels within the detected objects as cosmic ray candidates.
   </UL>
   <! EndSection:   'SYNOPSIS'>
-  <H2><A NAME="s_usage___">USAGE   </A></H2>
+  <H3>Usage   </H3>
   <! BeginSection: 'USAGE   '>
   <UL>
   <PRE>
@@ -42,17 +31,17 @@ craverage — Detect CRs against average and avoid objects
   </PRE>
   </UL>
   <! EndSection:   'USAGE   '>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of input images in which to detect cosmic rays and objects.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>List of output images in which cosmic rays are replaced by the block average
   value excluding the cosmic ray.  If no output image name is given then
@@ -60,7 +49,7 @@ craverage — Detect CRs against average and avoid objects
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_crmask">crmask = "<TT></TT>"</A></B></DT>
+  <DT><B>crmask = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='crmask' Line='crmask = ""'>
   <DD>List of input and output cosmic ray and object masks.  If the mask exists
   then the mask values are used to exclude data pixels from the calculations
@@ -71,14 +60,14 @@ craverage — Detect CRs against average and avoid objects
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_average">average = "<TT></TT>"</A></B></DT>
+  <DT><B>average = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='average' Line='average = ""'>
   <DD>List of output block average filtered images.  If no image name is given
   then no image will be created.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sigma">sigma = "<TT></TT>"</A></B></DT>
+  <DT><B>sigma = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sigma' Line='sigma = ""'>
   <DD>List of output sigma images.  If no image name is given then no image
   will be created.
@@ -86,7 +75,7 @@ craverage — Detect CRs against average and avoid objects
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_navg">navg = 5 (minimum of 3)</A></B></DT>
+  <DT><B>navg = 5 (minimum of 3)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='navg' Line='navg = 5 (minimum of 3)'>
   <DD>Square block average filter size given as the number of pixels along an
   edge.  The value will be rounded up to an odd value to be symmetrical
@@ -94,7 +83,7 @@ craverage — Detect CRs against average and avoid objects
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nrej">nrej = 0 (minimum of 0)</A></B></DT>
+  <DT><B>nrej = 0 (minimum of 0)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nrej' Line='nrej = 0 (minimum of 0)'>
   <DD>Number of additional highest pixels to exclude, in addition to the
   central pixel, in the block average.  The value should be small but it
@@ -102,14 +91,14 @@ craverage — Detect CRs against average and avoid objects
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nbkg">nbkg = 5 (minimum of 1)</A></B></DT>
+  <DT><B>nbkg = 5 (minimum of 1)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nbkg' Line='nbkg = 5 (minimum of 1)'>
   <DD>Background annulus width around the box average filter in pixels.  The
   median of the pixels in this annulus is used to estimate the background.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nsig">nsig = 25 (minimum of 10)</A></B></DT>
+  <DT><B>nsig = 25 (minimum of 10)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nsig' Line='nsig = 25 (minimum of 10)'>
   <DD>Square box size for empirical sigma estimates given as the number of
   pixels along an edge.  The sigma is estimated using percentile points
@@ -118,7 +107,7 @@ craverage — Detect CRs against average and avoid objects
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_var0">var0 = 0., var1 = 0., var2 = 0.</A></B></DT>
+  <DT><B>var0 = 0., var1 = 0., var2 = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='var0' Line='var0 = 0., var1 = 0., var2 = 0.'>
   <DD>Variance coefficients for the variance model.  The variance model is
   <P>
@@ -134,14 +123,14 @@ craverage — Detect CRs against average and avoid objects
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_crval">crval = 1</A></B></DT>
+  <DT><B>crval = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='crval' Line='crval = 1'>
   <DD>Mask value for detected cosmic rays.  It is legal for the value to be
   zero to not mark the cosmic rays in the output mask.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lcrsig">lcrsig = 10., hcrsig = 5.</A></B></DT>
+  <DT><B>lcrsig = 10., hcrsig = 5.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lcrsig' Line='lcrsig = 10., hcrsig = 5.'>
   <DD>Low and high sigma factors for detecting cosmic rays.  These factors
   multiply the computed or estimated sigma at each pixel and these threshold
@@ -153,7 +142,7 @@ craverage — Detect CRs against average and avoid objects
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_crgrow">crgrow = 0.</A></B></DT>
+  <DT><B>crgrow = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='crgrow' Line='crgrow = 0.'>
   <DD>Cosmic ray growing radius.  Pixels detected and marked in the output cosmic
   ray mask by the <I>crval</I> value are increased in size in the mask (but
@@ -166,14 +155,14 @@ craverage — Detect CRs against average and avoid objects
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_objval">objval = 0</A></B></DT>
+  <DT><B>objval = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='objval' Line='objval = 0'>
   <DD>Mask value for detected objects.  It is legal for the value to be
   zero to not mark the objects in the output mask.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lobjsig">lobjsig = 10., hobjsig = 5.</A></B></DT>
+  <DT><B>lobjsig = 10., hobjsig = 5.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lobjsig' Line='lobjsig = 10., hobjsig = 5.'>
   <DD>Low and high sigma factors for detecting objects.  These factors multiply
   the computed or estimated sigma at each pixel and these threshold values
@@ -184,7 +173,7 @@ craverage — Detect CRs against average and avoid objects
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_objgrow">objgrow = 0.</A></B></DT>
+  <DT><B>objgrow = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='objgrow' Line='objgrow = 0.'>
   <DD>Object detection growing radius.  Pixels detected and marked in the output
   mask by the <I>objval</I> value are increased in size in the mask by also
@@ -198,7 +187,7 @@ craverage — Detect CRs against average and avoid objects
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <B>Craverage</B> detects cosmic rays and objects using a moving block
@@ -289,7 +278,7 @@ craverage — Detect CRs against average and avoid objects
   image.  See <I>crgrow</I> for a further discussion.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   This example illustrates using the <B>craverage</B> task to
@@ -311,7 +300,7 @@ craverage — Detect CRs against average and avoid objects
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   cosmicrays, crnebula, median, crfix, crgrow, crmedian
@@ -320,5 +309,3 @@ craverage — Detect CRs against average and avoid objects
   
   <! Contents: 'NAME' 'SYNOPSIS' 'USAGE   ' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _flatcombine:
+
 flatcombine — Combine and process flat field images
 ===================================================
 
@@ -5,36 +7,23 @@ flatcombine — Combine and process flat field images
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>flatcombine (Aug91)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.imred.ccdred</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>flatcombine (Aug91)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>flatcombine</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   flatcombine -- Combine and process flat field images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   flatcombine input
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of flat field images to combine.  The <I>ccdtype</I> parameter
   may be used to select the flat field images from a list containing all
@@ -42,13 +31,13 @@ flatcombine — Combine and process flat field images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output = "<TT>Flat</TT>"</A></B></DT>
+  <DT><B>output = "<TT>Flat</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output = "Flat"'>
   <DD>Output flat field root image name.  The subset ID is appended.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_combine">combine = "<TT>average</TT>" (average|median)</A></B></DT>
+  <DT><B>combine = "<TT>average</TT>" (average|median)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='combine' Line='combine = "average" (average|median)'>
   <DD>Type of combining operation performed on the final set of pixels (after
   rejection).  The choices are
@@ -57,26 +46,26 @@ flatcombine — Combine and process flat field images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_reject">reject = "<TT>avsigclip</TT>" (none|minmax|ccdclip|crreject|sigclip|avsigclip|pclip)</A></B></DT>
+  <DT><B>reject = "<TT>avsigclip</TT>" (none|minmax|ccdclip|crreject|sigclip|avsigclip|pclip)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='reject' Line='reject = "avsigclip" (none|minmax|ccdclip|crreject|sigclip|avsigclip|pclip)'>
   <DD>Type of rejection operation.  See <B>combine</B> for details.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ccdtype">ccdtype = "<TT>flat</TT>"</A></B></DT>
+  <DT><B>ccdtype = "<TT>flat</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ccdtype' Line='ccdtype = "flat"'>
   <DD>CCD image type to combine.  If no image type is given then all input images
   are combined.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_process">process = yes</A></B></DT>
+  <DT><B>process = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='process' Line='process = yes'>
   <DD>Process the input images before combining?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_subsets">subsets = yes</A></B></DT>
+  <DT><B>subsets = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='subsets' Line='subsets = yes'>
   <DD>Combine images by subset parameter?  If yes then the input images are
   grouped by subset parameter and each group combined into a separate output
@@ -86,19 +75,19 @@ flatcombine — Combine and process flat field images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_delete">delete = no</A></B></DT>
+  <DT><B>delete = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='delete' Line='delete = no'>
   <DD>Delete input images after combining?  Only those images combined are deleted.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_clobber">clobber = no</A></B></DT>
+  <DT><B>clobber = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='clobber' Line='clobber = no'>
   <DD>Clobber existing output images?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_scale">scale = "<TT>mode</TT>" (none|mode|median|mean|exposure)</A></B></DT>
+  <DT><B>scale = "<TT>mode</TT>" (none|mode|median|mean|exposure)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='scale' Line='scale = "mode" (none|mode|median|mean|exposure)'>
   <DD>Multiplicative image scaling to be applied.  The choices are none, scale
   by the mode, median, or mean of the specified statistics section, or scale
@@ -106,7 +95,7 @@ flatcombine — Combine and process flat field images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_statsec">statsec = "<TT></TT>"</A></B></DT>
+  <DT><B>statsec = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='statsec' Line='statsec = ""'>
   <DD>Section of images to use in computing image statistics for scaling.
   If no section is given then the entire region of the image is
@@ -118,13 +107,13 @@ flatcombine — Combine and process flat field images
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_nlow">nlow = 1,  nhigh = 1 (minmax)</A></B></DT>
+  <DT><B>nlow = 1,  nhigh = 1 (minmax)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nlow' Line='nlow = 1,  nhigh = 1 (minmax)'>
   <DD>The number of low and high pixels to be rejected by the "<TT>minmax</TT>" algorithm.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nkeep">nkeep = 1</A></B></DT>
+  <DT><B>nkeep = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nkeep' Line='nkeep = 1'>
   <DD>The minimum number of pixels to retain or the maximum number to reject
   when using the clipping algorithms (ccdclip, crreject, sigclip,
@@ -135,7 +124,7 @@ flatcombine — Combine and process flat field images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_mclip">mclip = yes (ccdclip, crreject, sigclip, avsigcliip)</A></B></DT>
+  <DT><B>mclip = yes (ccdclip, crreject, sigclip, avsigcliip)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='mclip' Line='mclip = yes (ccdclip, crreject, sigclip, avsigcliip)'>
   <DD>Use the median as the estimate for the true intensity rather than the
   average with high and low values excluded in the "<TT>ccdclip</TT>", "<TT>crreject</TT>",
@@ -145,7 +134,7 @@ flatcombine — Combine and process flat field images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lsigma">lsigma = 3., hsigma = 3. (ccdclip, crreject, sigclip, avsigclip, pclip)</A></B></DT>
+  <DT><B>lsigma = 3., hsigma = 3. (ccdclip, crreject, sigclip, avsigclip, pclip)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lsigma' Line='lsigma = 3., hsigma = 3. (ccdclip, crreject, sigclip, avsigclip, pclip)'>
   <DD>Low and high sigma clipping factors for the "<TT>ccdclip</TT>", "<TT>crreject</TT>", "<TT>sigclip</TT>",
   "<TT>avsigclip</TT>", and "<TT>pclip</TT>" algorithms.  They multiply a "<TT>sigma</TT>" factor
@@ -155,7 +144,7 @@ flatcombine — Combine and process flat field images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rdnoise">rdnoise = "<TT>0.</TT>", gain = "<TT>1.</TT>", snoise = "<TT>0.</TT>" (ccdclip, crreject)</A></B></DT>
+  <DT><B>rdnoise = "<TT>0.</TT>", gain = "<TT>1.</TT>", snoise = "<TT>0.</TT>" (ccdclip, crreject)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rdnoise' Line='rdnoise = "0.", gain = "1.", snoise = "0." (ccdclip, crreject)'>
   <DD>CCD readout noise in electrons, gain in electrons/DN, and sensitivity noise
   as a fraction.  These parameters are used with the "<TT>ccdclip</TT>" and "<TT>crreject</TT>"
@@ -164,7 +153,7 @@ flatcombine — Combine and process flat field images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pclip">pclip = -0.5 (pclip)</A></B></DT>
+  <DT><B>pclip = -0.5 (pclip)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pclip' Line='pclip = -0.5 (pclip)'>
   <DD>Percentile clipping algorithm parameter.  If greater than
   one in absolute value then it specifies a number of pixels above or
@@ -177,14 +166,14 @@ flatcombine — Combine and process flat field images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_blank">blank = 1.</A></B></DT>
+  <DT><B>blank = 1.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='blank' Line='blank = 1.'>
   <DD>Output value to be used when there are no pixels.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The flat field images in the input image list are combined.  If there
@@ -204,7 +193,7 @@ flatcombine — Combine and process flat field images
   <B>combine</B>.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. The image data contains four flat field images for three filters.
@@ -216,7 +205,7 @@ flatcombine — Combine and process flat field images
   The final images are "<TT>FlatV</TT>", "<TT>FlatB</TT>", and "<TT>FlatR</TT>".
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   ccdproc, combine, subsets
@@ -225,5 +214,3 @@ flatcombine — Combine and process flat field images
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

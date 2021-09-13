@@ -1,3 +1,5 @@
+.. _tdelete:
+
 tdelete — Delete tables.
 ========================
 
@@ -5,32 +7,19 @@ tdelete — Delete tables.
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>tdelete (Aug93)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>tables</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>tdelete (Aug93)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>tdelete</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   tdelete -- Delete a table.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   tdelete table
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task deletes tables.
@@ -44,24 +33,24 @@ tdelete — Delete tables.
   text tables may be deleted using 'tdelete' only if 'verify = yes'.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_table">table [file name template]</A></B></DT>
+  <DT><B>table [file name template]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='table' Line='table [file name template]'>
   <DD>A list of one or more tables to be deleted.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(verify = no) [boolean]</A></B></DT>
+  <DT><B>(verify = no) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(verify = no) [boolean]'>
   <DD>Prompt for confirmation before deleting?  It is possible to delete
   text tables using 'tdelete' if 'verify' is set to "<TT>yes</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(default_action = yes) [boolean]</A></B></DT>
+  <DT><B>(default_action = yes) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(default_action = yes) [boolean]'>
   <DD>Default action for the verify query.  If 'default_action = yes', then the
   prompt will come back with "<TT>yes?</TT>" and striking return will proceed with
@@ -69,7 +58,7 @@ tdelete — Delete tables.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_go_ahead">go_ahead = yes [boolean]</A></B></DT>
+  <DT><B>go_ahead = yes [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='go_ahead' Line='go_ahead = yes [boolean]'>
   <DD>This is a copy of 'default_action' used for prompting if 'verify = yes'.
   This parameter is set by the task, it copies the value of 'default_action',
@@ -78,7 +67,7 @@ tdelete — Delete tables.
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Delete a single table.
@@ -107,19 +96,19 @@ tdelete — Delete tables.
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   Text tables cannot be deleted by 'tdelete' unless 'verify' is set to yes.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   This task was written by Phil Hodge.
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   delete, tcopy, trename
@@ -128,5 +117,3 @@ tdelete — Delete tables.
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

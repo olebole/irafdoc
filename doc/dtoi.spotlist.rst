@@ -1,3 +1,5 @@
+.. _spotlist:
+
 spotlist — Generate a list of calibration spot values
 =====================================================
 
@@ -5,4 +7,3 @@ spotlist — Generate a list of calibration spot values
 
 .. raw:: html
 
-  

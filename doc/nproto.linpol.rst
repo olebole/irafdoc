@@ -1,3 +1,5 @@
+.. _linpol:
+
 linpol — Calculate polarization frames and Stoke's parameters
 =============================================================
 
@@ -5,36 +7,23 @@ linpol — Calculate polarization frames and Stoke's parameters
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>linpol (Apr92)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.nproto</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>linpol (Apr92)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>linpol</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   linpol -- Calculate linear polarization, angle, and Stokes images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   linpol input output
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>A list of input images.  There must be either three or four input
   images taken with the polarizer at even multiples of a 45 degree
@@ -42,7 +31,7 @@ linpol — Calculate polarization frames and Stoke's parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>The output data cube which will contain as separate bands the
   fractional linear polarization and angle frames, and optionally the
@@ -50,14 +39,14 @@ linpol — Calculate polarization frames and Stoke's parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_degrees">degrees = yes</A></B></DT>
+  <DT><B>degrees = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='degrees' Line='degrees = yes'>
   <DD>Report the polarization angle in degrees?  If <B>degrees</B> = no, the
   polarization angle will be reported in radians.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_stokes">stokes = yes</A></B></DT>
+  <DT><B>stokes = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='stokes' Line='stokes = yes'>
   <DD>Output the Stokes parameter images?  If <B>stokes</B> = yes, the three
   linear Stokes parameters, I, Q, and U, will be included in the
@@ -67,7 +56,7 @@ linpol — Calculate polarization frames and Stoke's parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_normalize">normalize = no</A></B></DT>
+  <DT><B>normalize = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='normalize' Line='normalize = no'>
   <DD>Normalize the Q and U frames?  This is appropriate when using a tool
   such as VELVECT to plot the polarization vectors.  If <B>normalize</B> =
@@ -77,7 +66,7 @@ linpol — Calculate polarization frames and Stoke's parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_keyword">keyword = "<TT>polangle</TT>"</A></B></DT>
+  <DT><B>keyword = "<TT>polangle</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='keyword' Line='keyword = "polangle"'>
   <DD>This must be set to the name of a header keyword that contains the
   polarizer angle for each of the <B>input</B> images.  LINPOL will only
@@ -88,7 +77,7 @@ linpol — Calculate polarization frames and Stoke's parameters
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   LINPOL calculates the pixel-by-pixel fractional linear polarization and
@@ -124,7 +113,7 @@ linpol — Calculate polarization frames and Stoke's parameters
   each band of the output.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   An observer obtained four exposures of a particular field through a
@@ -210,7 +199,7 @@ linpol — Calculate polarization frames and Stoke's parameters
   adjusted.
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   velvect, imalign, hedit
@@ -219,5 +208,3 @@ linpol — Calculate polarization frames and Stoke's parameters
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

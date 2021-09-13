@@ -1,3 +1,5 @@
+.. _polyfit:
+
 polyfit — Fit polynomial to list of X,Y data
 ============================================
 
@@ -5,36 +7,23 @@ polyfit — Fit polynomial to list of X,Y data
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>polyfit (Nov87)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>utilities</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>polyfit (Nov87)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>polyfit</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   polyfit -- fit a polynomial to sets of data
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   polyfit filelist order
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_"><B>filelist</B></A></B></DT>
+  <DT><B><B>filelist</B></B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='\fBfilelist\fR'>
   <DD>File containing X,Y, SIGMAY triples to be fit. May be STDIN, or a list
   of file names. Note that the third list quantity is only required if
@@ -42,29 +31,29 @@ polyfit — Fit polynomial to list of X,Y data
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"><B>order</B></A></B></DT>
+  <DT><B><B>order</B></B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='\fBorder\fR'>
   <DD>The order of the polynomial fit. (e.g. a parabolic fit has order 2)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_weighting">weighting = uniform</A></B></DT>
+  <DT><B>weighting = uniform</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='weighting' Line='weighting = uniform'>
   <DD>The type of weighting for the fit. The choices are:
   <DL>
-  <DT><B><A NAME="l_uniform">uniform</A></B></DT>
+  <DT><B>uniform</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='uniform' Line='uniform'>
   <DD>No weighting.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_instrumental">instrumental</A></B></DT>
+  <DT><B>instrumental</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='instrumental' Line='instrumental'>
   <DD>The weight of each point is equal to 1. / SIGMAY ** 2.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_statistical">statistical</A></B></DT>
+  <DT><B>statistical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='statistical' Line='statistical'>
   <DD>The weight of each point is equal to 1. / Y.
   </DD>
@@ -72,14 +61,14 @@ polyfit — Fit polynomial to list of X,Y data
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"><B>verbose</B> = no</A></B></DT>
+  <DT><B><B>verbose</B> = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='\fBverbose\fR = no'>
   <DD>If <B>verbose</B> = yes, additional information about the fit is printed on
   the standard output.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"><B>listdata</B> = no</A></B></DT>
+  <DT><B><B>listdata</B> = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='\fBlistdata\fR = no'>
   <DD>If <B>listdata</B> = yes, the only output will be the calculated values for the
   X,Y pairs. This is useful as input to <I>graph</I>.
@@ -87,7 +76,7 @@ polyfit — Fit polynomial to list of X,Y data
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   A polynomial weighted fit of specified order is fit to the X,Y, SIGMAY data
@@ -126,7 +115,7 @@ polyfit — Fit polynomial to list of X,Y data
   for the fit; see <B>Data Reduction and Error Analysis</B>, by Bevington.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   	cl&gt; polyfit STDIN 2
@@ -134,7 +123,7 @@ polyfit — Fit polynomial to list of X,Y data
   	cl&gt; polyfit datafile 4 verbose+
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   The maximum number of data elements is currently limited to 1000
@@ -146,7 +135,7 @@ polyfit — Fit polynomial to list of X,Y data
   arithmetic exceptions.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   curfit
@@ -155,5 +144,3 @@ polyfit — Fit polynomial to list of X,Y data
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _cgiparse:
+
 cgiparse — Parse STRING_QUERY environment variable into task parameters
 =======================================================================
 
@@ -5,26 +7,13 @@ cgiparse — Parse STRING_QUERY environment variable into task parameters
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>cgiparse (Mar03)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.obsutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>cgiparse (Mar03)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>cgiparse</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   cgiparse -- parse STRING_QUERY environment var. into parameters
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_synopsis">SYNOPSIS</A></H2>
+  <H3>Synopsis</H3>
   <! BeginSection: 'SYNOPSIS'>
   <UL>
   CGIPARSE parses the STRING_QUERY environment varabile and sets parameters.
@@ -33,20 +22,20 @@ cgiparse — Parse STRING_QUERY environment variable into task parameters
   intended to parse a query from a CGI script.
   </UL>
   <! EndSection:   'SYNOPSIS'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   cgiparse
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   There are no parameters.  The input is the value of the QUERY_STRING
   environment variable.
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   CGIPARSE parses the STRING_QUERY environment varabile and sets parameters.
@@ -62,7 +51,7 @@ cgiparse — Parse STRING_QUERY environment variable into task parameters
   undefined tasks or parameters.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  A CGI script calls a CL script with the STRING_QUERY string set.
@@ -198,7 +187,7 @@ cgiparse — Parse STRING_QUERY environment variable into task parameters
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   </UL>
@@ -206,5 +195,3 @@ cgiparse — Parse STRING_QUERY environment variable into task parameters
   
   <! Contents: 'NAME' 'SYNOPSIS' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _mkskycor:
+
 mkskycor — Make sky illumination correction images
 ==================================================
 
@@ -5,42 +7,29 @@ mkskycor — Make sky illumination correction images
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>mkskycor (Feb88)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.imred.ccdred</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>mkskycor (Feb88)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>mkskycor</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   mkskycor -- Make sky iillumination correction images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   mkskycor input output
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of input images for making sky iillumination correction images.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>List of output flat field iillumination correction images.  If none is
   specified or if the name is the same as the input image then the output
@@ -48,14 +37,14 @@ mkskycor — Make sky illumination correction images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ccdtype">ccdtype = "<TT></TT>"</A></B></DT>
+  <DT><B>ccdtype = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ccdtype' Line='ccdtype = ""'>
   <DD>CCD image type to select from the input images.  If none is specified
   then all types are used.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xboxmin">xboxmin = 5, xboxmax = 0.25, yboxmin = 5, yboxmax = 0.25</A></B></DT>
+  <DT><B>xboxmin = 5, xboxmax = 0.25, yboxmin = 5, yboxmax = 0.25</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xboxmin' Line='xboxmin = 5, xboxmax = 0.25, yboxmin = 5, yboxmax = 0.25'>
   <DD>Minimum and maximum smoothing box size along the x and y axes.  The
   minimum box size is used at the edges and grows to the maximum size in
@@ -68,27 +57,27 @@ mkskycor — Make sky illumination correction images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_clip">clip = yes</A></B></DT>
+  <DT><B>clip = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='clip' Line='clip = yes'>
   <DD>Clean the input images of objects?  If yes then a clipping algorithm is
   used to detect and exclude objects from the smoothing.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lowsigma">lowsigma = 2.5, highsigma = 2.5</A></B></DT>
+  <DT><B>lowsigma = 2.5, highsigma = 2.5</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lowsigma' Line='lowsigma = 2.5, highsigma = 2.5'>
   <DD>Sigma clipping thresholds above and below the smoothed iillumination.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ccdproc">ccdproc (parameter set)</A></B></DT>
+  <DT><B>ccdproc (parameter set)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ccdproc' Line='ccdproc (parameter set)'>
   <DD>CCD processing parameters.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The large scale iillumination pattern of the input images, generally
@@ -139,7 +128,7 @@ mkskycor — Make sky illumination correction images
   first few lines where an iterative process is used.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. The two examples below make an iillumination image from a blank sky image,
@@ -152,7 +141,7 @@ mkskycor — Make sky illumination correction images
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   ccdproc, flatfields, mkillumcor, mkillumflat, mkskyflat
@@ -161,5 +150,3 @@ mkskycor — Make sky illumination correction images
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

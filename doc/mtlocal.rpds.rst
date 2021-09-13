@@ -1,3 +1,5 @@
+.. _rpds:
+
 rpds — Convert a PDS image into an IRAF image
 =============================================
 
@@ -5,36 +7,23 @@ rpds — Convert a PDS image into an IRAF image
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>rpds (Jan87)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.mtlocal</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>rpds (Jan87)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>rpds</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   rpds -- Convert Kitt Peak PDS image files to IRAF image files
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   rpds pds_file file_list iraf_file
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_pds_file">pds_file</A></B></DT>
+  <DT><B>pds_file</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pds_file' Line='pds_file'>
   <DD>The PDS data source. The data source may be a template specifying
   a list of disk files, e.g. pds* or a mag tape file specification of
@@ -45,7 +34,7 @@ rpds — Convert a PDS image into an IRAF image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_file_list">file_list</A></B></DT>
+  <DT><B>file_list</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='file_list' Line='file_list'>
   <DD>A string parameter containing the list of tape files to be processed.
   File_list is only requested if no tape file number is specified in pds_file.
@@ -57,7 +46,7 @@ rpds — Convert a PDS image into an IRAF image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_iraf_file">iraf_file</A></B></DT>
+  <DT><B>iraf_file</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='iraf_file' Line='iraf_file'>
   <DD>The IRAF file which will receive the PDS data if the make_image
   switch is set. If multiple files are input from tape or disk, the tape file
@@ -65,20 +54,20 @@ rpds — Convert a PDS image into an IRAF image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_make_image">make_image = yes</A></B></DT>
+  <DT><B>make_image = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='make_image' Line='make_image = yes'>
   <DD>If make_image is not set, the PDS image headers are listed on the standard
   output and no image file is created.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_long_header">long_header = no</A></B></DT>
+  <DT><B>long_header = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='long_header' Line='long_header = no'>
   <DD>If this switch is set the full PDS header is printed on the standard output.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_short_header">short_header = yes</A></B></DT>
+  <DT><B>short_header = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='short_header' Line='short_header = yes'>
   <DD>If this switch is set only the output filename,
   the title string, and the image dimensions for each image are printed
@@ -86,26 +75,26 @@ rpds — Convert a PDS image into an IRAF image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_datatype">datatype = "<TT>s</TT>"</A></B></DT>
+  <DT><B>datatype = "<TT>s</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='datatype' Line='datatype = "s"'>
   <DD>The IRAF image data type, s (short integer), i (integer), l (long integer),
    r (real) or d (double).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_tenbit">tenbit = no</A></B></DT>
+  <DT><B>tenbit = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='tenbit' Line='tenbit = no'>
   <DD>Old ten bit format?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ninetrack">ninetrack = yes</A></B></DT>
+  <DT><B>ninetrack = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ninetrack' Line='ninetrack = yes'>
   <DD>Ninetrack or old seven track tapes?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_offset">offset = 0</A></B></DT>
+  <DT><B>offset = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='offset' Line='offset = 0'>
   <DD>Offset is an integer parameter which is added to the tape file number
   or disk sequence number and
@@ -117,7 +106,7 @@ rpds — Convert a PDS image into an IRAF image
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -127,7 +116,7 @@ rpds — Convert a PDS image into an IRAF image
   full listing or a short description.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -151,7 +140,7 @@ rpds — Convert a PDS image into an IRAF image
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   <P>
@@ -160,5 +149,3 @@ rpds — Convert a PDS image into an IRAF image
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS'  >
   
-  </BODY>
-  </HTML>

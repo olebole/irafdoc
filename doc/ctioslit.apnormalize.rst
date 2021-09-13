@@ -1,3 +1,5 @@
+.. _apnormalize:
+
 apnormalize — Normalize 2D apertures by 1D functions
 ====================================================
 
@@ -5,42 +7,29 @@ apnormalize — Normalize 2D apertures by 1D functions
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>apnormalize (Sep96)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.twodspec.apextract</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>apnormalize (Sep96)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>apnormalize</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   apnormalize -- Normalize 2D apertures by 1D functions
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   apnormalize input output
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of input images to be normalized.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>List of output image names for the normalized input images.  If no output
   name is given then the input name is used as a root with the extension
@@ -48,7 +37,7 @@ apnormalize — Normalize 2D apertures by 1D functions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apertures">apertures = "<TT></TT>"</A></B></DT>
+  <DT><B>apertures = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""'>
   <DD>Apertures to recenter, resize, trace, and normalize.  This only applies
   to apertures read from the input or reference database.  Any new
@@ -60,7 +49,7 @@ apnormalize — Normalize 2D apertures by 1D functions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_references">references = "<TT></TT>"</A></B></DT>
+  <DT><B>references = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='references' Line='references = ""'>
   <DD>List of reference images to be used to define apertures for the input
   images.  When a reference image is given it supersedes apertures
@@ -74,7 +63,7 @@ apnormalize — Normalize 2D apertures by 1D functions
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = yes</A></B></DT>
+  <DT><B>interactive = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes'>
   <DD>Run this task interactively?  If the task is not run interactively then
   all user queries are suppressed and interactive aperture editing and trace
@@ -82,7 +71,7 @@ apnormalize — Normalize 2D apertures by 1D functions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_find">find = yes</A></B></DT>
+  <DT><B>find = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='find' Line='find = yes'>
   <DD>Find the spectra and define apertures automatically?  In order for
   spectra to be found automatically there must be no apertures for the
@@ -90,44 +79,44 @@ apnormalize — Normalize 2D apertures by 1D functions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_recenter">recenter = yes</A></B></DT>
+  <DT><B>recenter = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='recenter' Line='recenter = yes'>
   <DD>Recenter the apertures?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_resize">resize = yes</A></B></DT>
+  <DT><B>resize = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='resize' Line='resize = yes'>
   <DD>Resize the apertures?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_edit">edit = yes</A></B></DT>
+  <DT><B>edit = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='edit' Line='edit = yes'>
   <DD>Edit the apertures?  The <I>interactive</I> parameter must also be yes.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_trace">trace = yes</A></B></DT>
+  <DT><B>trace = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='trace' Line='trace = yes'>
   <DD>Trace the apertures?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fittrace">fittrace = yes</A></B></DT>
+  <DT><B>fittrace = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fittrace' Line='fittrace = yes'>
   <DD>Interactively fit the traced positions by a function?  The <I>interactive</I>
   parameter must also be yes.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_normalize">normalize = yes</A></B></DT>
+  <DT><B>normalize = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='normalize' Line='normalize = yes'>
   <DD>Normalize the aperture spectra by a one dimensional function?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fitspec">fitspec = yes</A></B></DT>
+  <DT><B>fitspec = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fitspec' Line='fitspec = yes'>
   <DD>Fit normalization spectrum interactively?  The <I>interactive</I>
   parameter must also be yes.
@@ -135,7 +124,7 @@ apnormalize — Normalize 2D apertures by 1D functions
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_line">line = INDEF, nsum = 1</A></B></DT>
+  <DT><B>line = INDEF, nsum = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='line' Line='line = INDEF, nsum = 1'>
   <DD>The dispersion line (line or column perpendicular to the dispersion
   axis) and number of adjacent lines (half before and half after unless
@@ -148,13 +137,13 @@ apnormalize — Normalize 2D apertures by 1D functions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cennorm">cennorm = no</A></B></DT>
+  <DT><B>cennorm = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cennorm' Line='cennorm = no'>
   <DD>Normalize to the aperture center rather than the mean?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_threshold">threshold = 10.</A></B></DT>
+  <DT><B>threshold = 10.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 10.'>
   <DD>All pixels in the normalization spectrum less than this value are replaced
   by this value.
@@ -163,7 +152,7 @@ apnormalize — Normalize 2D apertures by 1D functions
   <P>
   The following parameters control the normalization spectrum extraction.
   <DL>
-  <DT><B><A NAME="l_background">background = "<TT>none</TT>"</A></B></DT>
+  <DT><B>background = "<TT>none</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='background' Line='background = "none"'>
   <DD>Type of background subtraction.  The choices are "<TT>none</TT>" for no
   background subtraction, "<TT>average</TT>" to average the background within the
@@ -176,20 +165,20 @@ apnormalize — Normalize 2D apertures by 1D functions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_weights">weights = "<TT>none</TT>"</A></B></DT>
+  <DT><B>weights = "<TT>none</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='weights' Line='weights = "none"'>
   <DD>Type of extraction weighting.  Note that if the <I>clean</I> parameter is
   set then the weights used are "<TT>variance</TT>" regardless of the weights
   specified by this parameter.  The choices are:
   <DL>
-  <DT><B><A NAME="l_">"<TT>none</TT>"</A></B></DT>
+  <DT><B>"<TT>none</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"none"'>
   <DD>The pixels are summed without weights except for partial pixels at the
   ends.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">"<TT>variance</TT>"</A></B></DT>
+  <DT><B>"<TT>variance</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"variance"'>
   <DD>The extraction is weighted by estimated variances of the pixels using
   a poisson noise model.
@@ -198,7 +187,7 @@ apnormalize — Normalize 2D apertures by 1D functions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pfit">pfit = "<TT>fit1d</TT>" (fit1d|fit2d)</A></B></DT>
+  <DT><B>pfit = "<TT>fit1d</TT>" (fit1d|fit2d)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pfit' Line='pfit = "fit1d" (fit1d|fit2d)'>
   <DD>Profile fitting algorithm to use with variance weighting or cleaning.
   When determining a profile the two dimensional spectrum is divided by
@@ -210,13 +199,13 @@ apnormalize — Normalize 2D apertures by 1D functions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_clean">clean = no</A></B></DT>
+  <DT><B>clean = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='clean' Line='clean = no'>
   <DD>Detect and replace deviant pixels?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_skybox">skybox = 1</A></B></DT>
+  <DT><B>skybox = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='skybox' Line='skybox = 1'>
   <DD>Box car smoothing length for sky background when using background
   subtraction.  Since the background noise is often the limiting factor
@@ -227,7 +216,7 @@ apnormalize — Normalize 2D apertures by 1D functions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_saturation">saturation = INDEF</A></B></DT>
+  <DT><B>saturation = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='saturation' Line='saturation = INDEF'>
   <DD>Saturation or nonlinearity level.  During variance weighted extractions
   wavelength points having any pixels above this value are excluded from the
@@ -235,7 +224,7 @@ apnormalize — Normalize 2D apertures by 1D functions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_readnoise">readnoise = 0.</A></B></DT>
+  <DT><B>readnoise = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='readnoise' Line='readnoise = 0.'>
   <DD>Read out noise in photons.  This parameter defines the minimum noise
   sigma.  It is defined in terms of photons (or electrons) and scales
@@ -244,7 +233,7 @@ apnormalize — Normalize 2D apertures by 1D functions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_gain">gain = 1</A></B></DT>
+  <DT><B>gain = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='gain' Line='gain = 1'>
   <DD>Detector gain or conversion factor between photons/electrons and
   data values.  It is specified as the number of photons per data value.
@@ -253,7 +242,7 @@ apnormalize — Normalize 2D apertures by 1D functions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lsigma">lsigma = 3., usigma = 3.</A></B></DT>
+  <DT><B>lsigma = 3., usigma = 3.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lsigma' Line='lsigma = 3., usigma = 3.'>
   <DD>Lower and upper rejection thresholds, given as a number of times the
   estimated sigma of a pixel, for cleaning.
@@ -263,7 +252,7 @@ apnormalize — Normalize 2D apertures by 1D functions
   The following parameters are used to fit the normalization spectrum using
   the ICFIT routine.
   <DL>
-  <DT><B><A NAME="l_function">function = "<TT>legendre</TT>"</A></B></DT>
+  <DT><B>function = "<TT>legendre</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='function' Line='function = "legendre"'>
   <DD>Fitting function for the normalization spectra.  The choices are "<TT>legendre</TT>"
   polynomial, "<TT>chebyshev</TT>" polynomial, linear spline ("<TT>spline1</TT>"), and
@@ -271,20 +260,20 @@ apnormalize — Normalize 2D apertures by 1D functions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_order">order = 1</A></B></DT>
+  <DT><B>order = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='order' Line='order = 1'>
   <DD>Number of polynomial terms or number of spline pieces for the fitting function.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sample">sample = "<TT>*</TT>"</A></B></DT>
+  <DT><B>sample = "<TT>*</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"'>
   <DD>Sample regions for fitting points.  Intervals are separated by "<TT>,</TT>" and an
   interval may be one point or a range separated by "<TT>:</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_naverage">naverage = 1</A></B></DT>
+  <DT><B>naverage = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='naverage' Line='naverage = 1'>
   <DD>Number of points within a sample interval to be subaveraged or submedianed to
   form fitting points.  Positive values are for averages and negative points
@@ -292,20 +281,20 @@ apnormalize — Normalize 2D apertures by 1D functions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_niterate">niterate = 0</A></B></DT>
+  <DT><B>niterate = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='niterate' Line='niterate = 0'>
   <DD>Number of sigma clipping rejection iterations.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_low_reject">low_reject = 3. , high_reject = 3.</A></B></DT>
+  <DT><B>low_reject = 3. , high_reject = 3.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='low_reject' Line='low_reject = 3. , high_reject = 3.'>
   <DD>Lower and upper sigma clipping rejection threshold in units of sigma determined
   from the RMS sigma of the data to the fit.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_grow">grow = 0.</A></B></DT>
+  <DT><B>grow = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='grow' Line='grow = 0.'>
   <DD>Growing radius for rejected points (in pixels).  That is, any rejected point
   also rejects other points within this distance of the rejected point.
@@ -313,7 +302,7 @@ apnormalize — Normalize 2D apertures by 1D functions
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_additional_parameters">ADDITIONAL PARAMETERS</A></H2>
+  <H3>Additional parameters</H3>
   <! BeginSection: 'ADDITIONAL PARAMETERS'>
   <UL>
   I/O parameters and the default dispersion axis are taken from the
@@ -325,7 +314,7 @@ apnormalize — Normalize 2D apertures by 1D functions
   <B>aptrace</B>.
   </UL>
   <! EndSection:   'ADDITIONAL PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   For each image in the input image list the two dimensional spectra
@@ -429,7 +418,7 @@ apnormalize — Normalize 2D apertures by 1D functions
   interactive trace fitting, and interactive spectrum shape fitting are ignored.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   To make a flat field image which leaves the total counts of the object
@@ -448,11 +437,11 @@ apnormalize — Normalize 2D apertures by 1D functions
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_APNORMALIZE">APNORMALIZE V2.11</A></B></DT>
+  <DT><B>APNORMALIZE V2.11</B></DT>
   <! Sec='REVISIONS' Level=0 Label='APNORMALIZE' Line='APNORMALIZE V2.11'>
   <DD>The "<TT>apertures</TT>" parameter can be used to select apertures for resizing,
   recentering, tracing, and extraction.  This parameter name was previously
@@ -462,7 +451,7 @@ apnormalize — Normalize 2D apertures by 1D functions
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   apbackground, approfile, apvariance, apfit, icfit,
@@ -472,5 +461,3 @@ apnormalize — Normalize 2D apertures by 1D functions
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'ADDITIONAL PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

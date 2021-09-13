@@ -1,3 +1,5 @@
+.. _aclist:
+
 aclist — List the supported astrometric catalogs
 ================================================
 
@@ -5,49 +7,36 @@ aclist — List the supported astrometric catalogs
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>aclist (Feb00)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>astcat</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>aclist (Feb00)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>aclist</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   aclist -- list the supported astrometric catalogs
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   aclist catalogs
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_catalogs">catalogs</A></B></DT>
+  <DT><B>catalogs</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='catalogs' Line='catalogs'>
   <DD>The names of the astrometric catalogs to be listed. If catalogs = "<TT>*</TT>" then
   all the astrometric catalogs in the catalog configuration file are listed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = no</A></B></DT>
+  <DT><B>verbose = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
   <DD>List the catalog query and output formats after the catalog name ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_catdb">catdb = "<TT>)_.catdb</TT>"</A></B></DT>
+  <DT><B>catdb = "<TT>)_.catdb</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='catdb' Line='catdb = ")_.catdb"'>
   <DD>The catalog configuration file. The value of catdb defaults to the value
   of the package parameter of the same name. The default catalog configuration
@@ -56,7 +45,7 @@ aclist — List the supported astrometric catalogs
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Aclist lists the supported astrometric catalogs specified by the
@@ -74,7 +63,7 @@ aclist — List the supported astrometric catalogs
   file using catdb as a model.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -92,17 +81,17 @@ aclist — List the supported astrometric catalogs
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   aslist
@@ -111,5 +100,3 @@ aclist — List the supported astrometric catalogs
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

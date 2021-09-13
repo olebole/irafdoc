@@ -1,3 +1,5 @@
+.. _implot:
+
 implot — Plot lines and columns of images using cursors
 =======================================================
 
@@ -5,62 +7,49 @@ implot — Plot lines and columns of images using cursors
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>implot (Feb94)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>plot</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>implot (Feb94)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>implot</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   implot -- plot lines and columns of images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   implot image [line]
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_image">image</A></B></DT>
+  <DT><B>image</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='image' Line='image'>
   <DD>List of images to be plotted.  If more than one image is in the list then
   the <TT>'m'</TT> and <TT>'n'</TT> keys are used proceed to the previous and next image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_line">line</A></B></DT>
+  <DT><B>line</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='line' Line='line'>
   <DD>If given, the number of the image line to be plotted, otherwise the central
   line is plotted.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wcs">wcs = "<TT>logical</TT>"</A></B></DT>
+  <DT><B>wcs = "<TT>logical</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wcs' Line='wcs = "logical"'>
   <DD>The world coordinate system (<I>wcs</I>) to be used for axis labeling.
   The following standard world systems are predefined.
   <DL>
-  <DT><B><A NAME="l_logical">logical</A></B></DT>
+  <DT><B>logical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='logical' Line='logical'>
   <DD>Logical coordinates are image pixel coordinates relative to the image currently
   being displayed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_physical">physical</A></B></DT>
+  <DT><B>physical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='physical' Line='physical'>
   <DD>The physical coordinate system is invariant with respect to linear
   transformations of the physical image matrix.  For example, if the reference
@@ -73,7 +62,7 @@ implot — Plot lines and columns of images using cursors
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_world">world</A></B></DT>
+  <DT><B>world</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='world' Line='world'>
   <DD>The "<TT>world</TT>" coordinate system is the <I>current default WCS</I>.
   The default world system is the system named by the environment variable
@@ -89,7 +78,7 @@ implot — Plot lines and columns of images using cursors
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_step">step = 0</A></B></DT>
+  <DT><B>step = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='step' Line='step = 0'>
   <DD>Step size for stepping through lines or columns in an image with the
   <TT>'j'</TT> and <TT>'k'</TT> keys.  If zero or INDEF the step defaults to ~10% of the
@@ -99,7 +88,7 @@ implot — Plot lines and columns of images using cursors
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Implot is an interactive, cursor driven task for examining images by plotting
@@ -256,7 +245,7 @@ implot — Plot lines and columns of images using cursors
   override the image attribute.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Enter cursor mode, plotting line 240 of the 300x480 image 'crab':
@@ -275,7 +264,7 @@ implot — Plot lines and columns of images using cursors
   restore the original plot.
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   It should be possible to use the image display cursor to mark the lines or
@@ -283,7 +272,7 @@ implot — Plot lines and columns of images using cursors
   is interfaced to GIO (the IRAF graphics subsystem).
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imexamine, cursor
@@ -292,5 +281,3 @@ implot — Plot lines and columns of images using cursors
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

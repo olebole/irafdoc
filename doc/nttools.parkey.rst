@@ -1,3 +1,5 @@
+.. _parkey:
+
 parkey — Put an IRAF parameter into an image or table header keyword.
 =====================================================================
 
@@ -5,32 +7,19 @@ parkey — Put an IRAF parameter into an image or table header keyword.
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>parkey (Dec90)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>tables</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>parkey (Dec90)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>parkey</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   parkey -- Write an IRAF parameter to a header keyword.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   parkey value output keyword
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task changes the value of a header keyword in either a table or an
@@ -45,29 +34,29 @@ parkey — Put an IRAF parameter into an image or table header keyword.
   upper or lower case, are interpreted as boolean values.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_value">value [string]</A></B></DT>
+  <DT><B>value [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='value' Line='value [string]'>
   <DD>Input value to be written to the header keyword. (Strings are case sensitive.)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output [file name]</A></B></DT>
+  <DT><B>output [file name]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output [file name]'>
   <DD>Name of the file whose header keyword is to be changed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_keyword">keyword [string]</A></B></DT>
+  <DT><B>keyword [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='keyword' Line='keyword [string]'>
   <DD>Name of the header keyword to be changed. (The name is not case sensitive.)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(add = no) [boolean]</A></B></DT>
+  <DT><B>(add = no) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(add = no) [boolean]'>
   <DD>Allow new header keywords to be added?  
   <P>
@@ -77,7 +66,7 @@ parkey — Put an IRAF parameter into an image or table header keyword.
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Set the header keyword 'OVERSCAN' in the file 'image.hhh' to 5:
@@ -108,18 +97,18 @@ parkey — Put an IRAF parameter into an image or table header keyword.
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   This task was written by Bernie Simon.
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   keypar, keytab, partab, tabkey, tabpar
@@ -128,5 +117,3 @@ parkey — Put an IRAF parameter into an image or table header keyword.
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

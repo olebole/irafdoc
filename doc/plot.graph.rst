@@ -1,3 +1,5 @@
+.. _graph:
+
 graph — Graph one or more image sections or lists
 =================================================
 
@@ -5,43 +7,30 @@ graph — Graph one or more image sections or lists
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>graph (Aug91)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>plot</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>graph (Aug91)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>graph</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   graph -- graph one or more lists or image sections
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   graph input
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of operands to be graphed.  May be STDIN, or one or more image sections 
   or lists.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wx1">wx1=0., wx2=0., wy1=0., wy2=0.</A></B></DT>
+  <DT><B>wx1=0., wx2=0., wy1=0., wy2=0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wx1' Line='wx1=0., wx2=0., wy1=0., wy2=0.'>
   <DD>The range of user coordinates spanned by the plot.  If the range of values
   in x or y = 0, the plot is automatically scaled from the minimum to
@@ -49,20 +38,20 @@ graph — Graph one or more image sections or lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wcs">wcs = "<TT>logical</TT>"</A></B></DT>
+  <DT><B>wcs = "<TT>logical</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wcs' Line='wcs = "logical"'>
   <DD>The world coordinate system (<I>wcs</I>) to be used for axis labeling when
   input is f rom images.
   The following standard world systems are predefined.
   <DL>
-  <DT><B><A NAME="l_logical">logical</A></B></DT>
+  <DT><B>logical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='logical' Line='logical'>
   <DD>Logical coordinates are image pixel coordinates relative to the image currently
   being displayed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_physical">physical</A></B></DT>
+  <DT><B>physical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='physical' Line='physical'>
   <DD>The physical coordinate system is invariant with respect to linear
   transformations of the physical image matrix.  For example, if the reference
@@ -75,7 +64,7 @@ graph — Graph one or more image sections or lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_world">world</A></B></DT>
+  <DT><B>world</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='world' Line='world'>
   <DD>The "<TT>world</TT>" coordinate system is the <I>current default WCS</I>.
   The default world system is the system named by the environment variable
@@ -91,7 +80,7 @@ graph — Graph one or more image sections or lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_vx1">vx1=0., vx2=0., vy1=0., vy2=0.</A></B></DT>
+  <DT><B>vx1=0., vx2=0., vy1=0., vy2=0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='vx1' Line='vx1=0., vx2=0., vy1=0., vy2=0.'>
   <DD>NDC coordinates (0-1) of the device plotting viewport.  If not set by 
   the user, a suitable viewport which allows sufficient room for all labels 
@@ -99,14 +88,14 @@ graph — Graph one or more image sections or lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pointmode">pointmode = no</A></B></DT>
+  <DT><B>pointmode = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pointmode' Line='pointmode = no'>
   <DD>If <B>pointmode</B> = yes, plot points or markers at data values, rather than 
   connected lines.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_marker">marker = "<TT>box</TT>"</A></B></DT>
+  <DT><B>marker = "<TT>box</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='marker' Line='marker = "box"'>
   <DD>Marker or line type to be drawn.  If <B>pointmode</B> = yes the markers are
   "<TT>point</TT>", "<TT>box</TT>", "<TT>cross</TT>", "<TT>plus</TT>", "<TT>circle</TT>", "<TT>hebar</TT>", "<TT>vebar</TT>", "<TT>hline</TT>",
@@ -119,7 +108,7 @@ graph — Graph one or more image sections or lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_szmarker">szmarker = 0.005</A></B></DT>
+  <DT><B>szmarker = 0.005</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='szmarker' Line='szmarker = 0.005'>
   <DD>The size of a marker in NDC coordinates (0 to 1 spans the screen).
   If zero and the input operand is a list, marker sizes are taken individually
@@ -130,7 +119,7 @@ graph — Graph one or more image sections or lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ltypes">ltypes = "<TT></TT>", colors = "<TT></TT>"</A></B></DT>
+  <DT><B>ltypes = "<TT></TT>", colors = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ltypes' Line='ltypes = "", colors = ""'>
   <DD>List of line types and colors to use when graphing multiple data sets.
   The lists are comma or space separate integer numbers.  If no list is
@@ -154,7 +143,7 @@ graph — Graph one or more image sections or lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xlabel">xlabel = "<TT>wcslabel</TT>", ylabel = "<TT></TT>"</A></B></DT>
+  <DT><B>xlabel = "<TT>wcslabel</TT>", ylabel = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xlabel' Line='xlabel = "wcslabel", ylabel = ""'>
   <DD>Label for the X-axis or Y-axis.  if <B>xlabel</B> = "<TT>wcslabel</TT>" and the first
   operand in the <B>input</B> is an image, the world coordinate system label
@@ -162,7 +151,7 @@ graph — Graph one or more image sections or lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_title">title = "<TT>imtitle</TT>"</A></B></DT>
+  <DT><B>title = "<TT>imtitle</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='title' Line='title = "imtitle"'>
   <DD>Plot title.  If <B>title</B>  = "<TT>imtitle</TT>"
   and the first operand in <B>input</B> is an image, the image title is used
@@ -170,7 +159,7 @@ graph — Graph one or more image sections or lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xformat">xformat = "<TT>wcsformat</TT>", yformat = "<TT></TT>"</A></B></DT>
+  <DT><B>xformat = "<TT>wcsformat</TT>", yformat = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xformat' Line='xformat = "wcsformat", yformat = ""'>
   <DD>The numerical format for the coordinate labels.  The values may be "<TT></TT>"
   (an empty string), %f for decimal format, %h and %H for xx:xx:xx format, and
@@ -181,19 +170,19 @@ graph — Graph one or more image sections or lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_box">box = yes</A></B></DT>
+  <DT><B>box = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='box' Line='box = yes'>
   <DD>Draw axes at the perimeter of the plotting window.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fill">fill = yes</A></B></DT>
+  <DT><B>fill = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fill' Line='fill = yes'>
   <DD>Fill the output viewport regardless of the device aspect ratio?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_axis">axis = 1</A></B></DT>
+  <DT><B>axis = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='axis' Line='axis = 1'>
   <DD>Axis along which the projection is to be computed, if an input operand is
   an image section of dimension 2 or higher.  Axis 1 is X (line average),
@@ -201,41 +190,41 @@ graph — Graph one or more image sections or lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_transpose">transpose = no</A></B></DT>
+  <DT><B>transpose = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='transpose' Line='transpose = no'>
   <DD>Swap the X and Y axes of the plot.  If enabled, the axes are transposed 
   after the optional linear transformation of the X-axis.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_logx">logx = no, logy = no</A></B></DT>
+  <DT><B>logx = no, logy = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='logx' Line='logx = no, logy = no'>
   <DD>Log scale the X or Y axis.  Zero or negative values are indefinite and
   will not be plotted, but are tolerated.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ticklabels">ticklabels = yes</A></B></DT>
+  <DT><B>ticklabels = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ticklabels' Line='ticklabels = yes'>
   <DD>Label the tick marks.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_majrx">majrx=5, minrx=5, majry=5, minry=5</A></B></DT>
+  <DT><B>majrx=5, minrx=5, majry=5, minry=5</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='majrx' Line='majrx=5, minrx=5, majry=5, minry=5'>
   <DD>Number of major tick marks on each axis; number of minor tick marks between
   major tick marks.  Ignored if log scaling is in effect for an axis.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lintran">lintran = no</A></B></DT>
+  <DT><B>lintran = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lintran' Line='lintran = no'>
   <DD>Perform a linear transformation of the X-axis upon input.  Used to assign
   logical coordinates to the indices of pixel data arrays (image sections).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_p1">p1=0, p2=0, q1=0, q2=1</A></B></DT>
+  <DT><B>p1=0, p2=0, q1=0, q2=1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='p1' Line='p1=0, p2=0, q1=0, q2=1'>
   <DD>If <B>lintran</B> is enabled, pixel index P1 is mapped to Q1, and P2 to Q2.
   If P1 and P2 are zero, P1 is set to 1 and P2 to the number of pixels in
@@ -243,34 +232,34 @@ graph — Graph one or more image sections or lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_round">round = no</A></B></DT>
+  <DT><B>round = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='round' Line='round = no'>
   <DD>Extend the axes up to "<TT>nice</TT>" values.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_overplot">overplot = no</A></B></DT>
+  <DT><B>overplot = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='overplot' Line='overplot = no'>
   <DD>Overplot on an existing plot.  All axis scaling and labeling parameters
   apply.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_append">append = no</A></B></DT>
+  <DT><B>append = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='append' Line='append = no'>
   <DD>Append to an existing plot.  The previous axis is used and the axis
   scaling and labeling parameters are ignored.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_device">device = "<TT>stdgraph</TT>"</A></B></DT>
+  <DT><B>device = "<TT>stdgraph</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdgraph"'>
   <DD>The output device.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <B>Graph</B> graphs one or more lists or image sections; lists and image
@@ -314,7 +303,7 @@ graph — Graph one or more image sections or lists
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Plot the output of a list processing filter:
@@ -353,13 +342,13 @@ graph — Graph one or more image sections or lists
       cl&gt; graph list device=stdplot
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   Indefinites are not recognized when computing image projections.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   pcol, pcols, prow, prows
@@ -368,5 +357,3 @@ graph — Graph one or more image sections or lists
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

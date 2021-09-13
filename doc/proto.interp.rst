@@ -1,3 +1,5 @@
+.. _interp:
+
 interp — Interpolate for a value in a table of X,Y pairs
 ========================================================
 
@@ -5,43 +7,30 @@ interp — Interpolate for a value in a table of X,Y pairs
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>interp (Jan85)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>proto</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>interp (Jan85)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>interp</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   interp -- compute an interpolated value from a table of x,y pairs
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   interp tbl_file
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_tbl_file">tbl_file</A></B></DT>
+  <DT><B>tbl_file</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='tbl_file' Line='tbl_file'>
   <DD>Text file containing X,Y pairs comprising the table.
   The pairs must be in either ascending or descending order.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_curve_gen">curve_gen = no</A></B></DT>
+  <DT><B>curve_gen = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='curve_gen' Line='curve_gen = no'>
   <DD>If set to no, x-values are read from the file(s) specified by the parameter
   "<TT>input</TT>". If set to yes, the parameters x1, x2, and dx are used to create
@@ -49,31 +38,31 @@ interp — Interpolate for a value in a table of X,Y pairs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_input">input = STDIN</A></B></DT>
+  <DT><B>input = STDIN</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input = STDIN'>
   <DD>File(s) containing x-values for the interpolation
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_int_mode">int_mode = 'linear'</A></B></DT>
+  <DT><B>int_mode = 'linear'</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='int_mode' Line='int_mode = 'linear''>
   <DD>The interpolation mode may be either 'linear' or 'spline'.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_x1">x1</A></B></DT>
+  <DT><B>x1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='x1' Line='x1'>
   <DD>The starting x-value for generating a series of new x,y pairs.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_x2">x2</A></B></DT>
+  <DT><B>x2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='x2' Line='x2'>
   <DD>The ending x-value of the generated series of pairs.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dx">dx</A></B></DT>
+  <DT><B>dx</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dx' Line='dx'>
   <DD>The difference by which the x-values are incremented during the
   series generation.
@@ -81,7 +70,7 @@ interp — Interpolate for a value in a table of X,Y pairs
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The pairs of X,Y values are read from the tbl_file. There must be
@@ -103,7 +92,7 @@ interp — Interpolate for a value in a table of X,Y pairs
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -131,7 +120,7 @@ interp — Interpolate for a value in a table of X,Y pairs
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   If a blank (null) table filename is entered, a floating divide error
@@ -142,5 +131,3 @@ interp — Interpolate for a value in a table of X,Y pairs
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS'  >
   
-  </BODY>
-  </HTML>

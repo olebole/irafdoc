@@ -1,3 +1,5 @@
+.. _keypar:
+
 keypar — Copy an image or table header keyword to an IRAF parameter.
 ====================================================================
 
@@ -5,32 +7,19 @@ keypar — Copy an image or table header keyword to an IRAF parameter.
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>keypar (Dec94)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>tables</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>keypar (Dec94)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>keypar</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   keypar -- Copy a header keyword to an IRAF parameter.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   keypar input keyword
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task reads a header keyword from an image or table file. The
@@ -42,24 +31,24 @@ keypar — Copy an image or table header keyword to an IRAF parameter.
   and int().
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input [file name]</A></B></DT>
+  <DT><B>input [file name]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input [file name]'>
   <DD>Name of the file containing the header keyword.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_keyword">keyword [string]</A></B></DT>
+  <DT><B>keyword [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='keyword' Line='keyword [string]'>
   <DD>Name of the header keyword to be retrieved. (The keyword 
   name is not case sensitive.)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(silent = no) [bool]</A></B></DT>
+  <DT><B>(silent = no) [bool]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(silent = no) [bool]'>
   <DD>If this parameter is set to no (the default) a warning message will be
   printed if the keyword is not found in the header. If it is set to
@@ -67,14 +56,14 @@ keypar — Copy an image or table header keyword to an IRAF parameter.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(value) [string]</A></B></DT>
+  <DT><B>(value) [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(value) [string]'>
   <DD>An output  parameter that will contain the value passed from the header
   keyword.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(found) [bool]</A></B></DT>
+  <DT><B>(found) [bool]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(found) [bool]'>
   <DD>An output parameter that will be set to yes if the keyword is found in
   the header and no if it is not.
@@ -82,7 +71,7 @@ keypar — Copy an image or table header keyword to an IRAF parameter.
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Print the number of groups (i.e., the 'GCOUNT' keyword)
@@ -124,7 +113,7 @@ keypar — Copy an image or table header keyword to an IRAF parameter.
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   This task was written by Bernie Simon.
@@ -135,5 +124,3 @@ keypar — Copy an image or table header keyword to an IRAF parameter.
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'REFERENCES'  >
   
-  </BODY>
-  </HTML>

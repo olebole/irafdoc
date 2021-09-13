@@ -1,3 +1,5 @@
+.. _lineclean:
+
 lineclean — Replace deviant pixels in image lines
 =================================================
 
@@ -5,26 +7,13 @@ lineclean — Replace deviant pixels in image lines
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>lineclean (May85)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imfit</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>lineclean (May85)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>lineclean</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   lineclean -- replace deviant pixels in image lines
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage_">USAGE	</A></H2>
+  <H3>Usage	</H3>
   <! BeginSection: 'USAGE	'>
   <UL>
   <PRE>
@@ -32,30 +21,30 @@ lineclean — Replace deviant pixels in image lines
   </PRE>
   </UL>
   <! EndSection:   'USAGE	'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>Input images to be cleaned.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>Output cleaned images.  The number of output images must be the same as the
   number of input images.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sample">sample = "<TT>*</TT>"</A></B></DT>
+  <DT><B>sample = "<TT>*</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"'>
   <DD>Columns to be used in fitting the cleaning function.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_naverage">naverage = 1</A></B></DT>
+  <DT><B>naverage = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='naverage' Line='naverage = 1'>
   <DD>Number of sample points to combined to create a fitting point.
   A positive value specifies an average and a negative value specifies
@@ -63,29 +52,29 @@ lineclean — Replace deviant pixels in image lines
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_function">function = spline3</A></B></DT>
+  <DT><B>function = spline3</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='function' Line='function = spline3'>
   <DD>Cleaning function to be fit to the image lines.  The functions are:
   <DL>
-  <DT><B><A NAME="l_legendre">legendre</A></B></DT>
+  <DT><B>legendre</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='legendre' Line='legendre'>
   <DD>Legendre polynomial of the specified order.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_chebyshev">chebyshev</A></B></DT>
+  <DT><B>chebyshev</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='chebyshev' Line='chebyshev'>
   <DD>Chebyshev polynomial of the specified order.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_spline1">spline1</A></B></DT>
+  <DT><B>spline1</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='spline1' Line='spline1'>
   <DD>Linear spline of the specified number of pieces.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_spline3">spline3</A></B></DT>
+  <DT><B>spline3</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='spline3' Line='spline3'>
   <DD>Cubic spline of the specified number of pieces.
   </DD>
@@ -93,45 +82,45 @@ lineclean — Replace deviant pixels in image lines
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_order">order = 1</A></B></DT>
+  <DT><B>order = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='order' Line='order = 1'>
   <DD>The order of the polynomials or the number of spline pieces.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_low_reject">low_reject = 2.5, high_reject = 2.5</A></B></DT>
+  <DT><B>low_reject = 2.5, high_reject = 2.5</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='low_reject' Line='low_reject = 2.5, high_reject = 2.5'>
   <DD>Rejection limits below and above the fit in units of the residual sigma.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_niterate">niterate = 1</A></B></DT>
+  <DT><B>niterate = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='niterate' Line='niterate = 1'>
   <DD>Number of rejection iterations.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_grow">grow = 1.</A></B></DT>
+  <DT><B>grow = 1.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='grow' Line='grow = 1.'>
   <DD>When a pixel is rejected, pixels within this distance of the rejected pixel
   are also rejected.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_graphics">graphics = "<TT>stdgraph</TT>"</A></B></DT>
+  <DT><B>graphics = "<TT>stdgraph</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"'>
   <DD>Graphics output device for interactive graphics.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cursor">cursor = "<TT>stdgcur</TT>"</A></B></DT>
+  <DT><B>cursor = "<TT>stdgcur</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = "stdgcur"'>
   <DD>Graphics cursor input.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   A one dimensional function is fit to each line of the input images.
@@ -174,7 +163,7 @@ lineclean — Replace deviant pixels in image lines
   in the help information <B>icfit</B>.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. To clean pixels deviating by more than 2.5 sigma:
@@ -202,7 +191,7 @@ lineclean — Replace deviant pixels in image lines
   and create the output image.
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   fit1d, xtools.icfit, imsurfit
@@ -211,5 +200,3 @@ lineclean — Replace deviant pixels in image lines
   
   <! Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

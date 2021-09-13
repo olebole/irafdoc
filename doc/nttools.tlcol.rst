@@ -1,3 +1,5 @@
+.. _tlcol:
+
 tlcol — List column information for a table.
 ============================================
 
@@ -5,32 +7,19 @@ tlcol — List column information for a table.
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>tlcol (May2000)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>tables</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>tlcol (May2000)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>tlcol</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   tlcol -- Display column information.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   tlcol table
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task is used to list column information for a table.  The output is
@@ -44,17 +33,17 @@ tlcol — List column information for a table.
   as 'tcreate', 'tprint', and 'tproject'.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_table">table [file name template]</A></B></DT>
+  <DT><B>table [file name template]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='table' Line='table [file name template]'>
   <DD>A list of tables for which column info is to be printed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(nlist = 4) [integer, min=1, max=4]</A></B></DT>
+  <DT><B>(nlist = 4) [integer, min=1, max=4]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(nlist = 4) [integer, min=1, max=4]'>
   <DD>The number of items to list.
   The output will consist of 'nlist' columns,
@@ -76,7 +65,7 @@ tlcol — List column information for a table.
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  Display the names, data types, print formats, and units of all the
@@ -103,18 +92,18 @@ tlcol — List column information for a table.
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   This task was written by Phil Hodge.
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   tinfo, tcreate, tdump
@@ -123,5 +112,3 @@ tlcol — List column information for a table.
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _findgain:
+
 findgain — Estimate the gain and readnoise of a CCD
 ===================================================
 
@@ -5,26 +7,13 @@ findgain — Estimate the gain and readnoise of a CCD
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>findgain (Nov01)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.obsutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>findgain (Nov01)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>findgain</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   findgain -- calculate the gain and readout noise of a CCD
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_synopsis">SYNOPSIS</A></H2>
+  <H3>Synopsis</H3>
   <! BeginSection: 'SYNOPSIS'>
   <UL>
   FINDGAIN uses Janesick's method for determining the gain and read noise
@@ -32,29 +21,29 @@ findgain — Estimate the gain and readnoise of a CCD
   exposures (zero length dark exposures).
   </UL>
   <! EndSection:   'SYNOPSIS'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   findgain flat1 flat2 zero1 zero2
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_flat1">flat1, flat2</A></B></DT>
+  <DT><B>flat1, flat2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='flat1' Line='flat1, flat2'>
   <DD>First and second dome flats.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_zero1">zero1, zero2</A></B></DT>
+  <DT><B>zero1, zero2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='zero1' Line='zero1, zero2'>
   <DD>First and second zero frames (zero length dark exposures).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_section">section = "<TT></TT>"</A></B></DT>
+  <DT><B>section = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='section' Line='section = ""'>
   <DD>The selected image section for the statistics.  This should be chosen
   to exclude bad columns or rows, cosmic rays and other blemishes, and
@@ -63,7 +52,7 @@ findgain — Estimate the gain and readnoise of a CCD
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_center">center = "<TT>mean</TT>"</A></B></DT>
+  <DT><B>center = "<TT>mean</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='center' Line='center = "mean"'>
   <DD>The statistical measure of central tendency that is used to estimate
   the data level of each image.  This can have the values:  <B>mean</B>,
@@ -72,14 +61,14 @@ findgain — Estimate the gain and readnoise of a CCD
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nclip">nclip = 3</A></B></DT>
+  <DT><B>nclip = 3</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nclip' Line='nclip = 3'>
   <DD>Number of sigma clipping iterations.  If the value is zero then no clipping
   is performed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lsigma">lsigma = 4, usigma = 4</A></B></DT>
+  <DT><B>lsigma = 4, usigma = 4</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lsigma' Line='lsigma = 4, usigma = 4'>
   <DD>Lower and upper sigma clipping factors used with the mean value and
   standard deviation to eliminate cosmic rays.
@@ -91,7 +80,7 @@ findgain — Estimate the gain and readnoise of a CCD
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_binwidth">binwidth = 0.1</A></B></DT>
+  <DT><B>binwidth = 0.1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='binwidth' Line='binwidth = 0.1'>
   <DD>The bin width of the histogram (in sigma) that is used to estimate the
   <B>midpt</B> or <B>mode</B> of the data section in each image.
@@ -99,14 +88,14 @@ findgain — Estimate the gain and readnoise of a CCD
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Verbose output?
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   FINDGAIN uses Janesick's method for determining the gain and read noise
@@ -126,7 +115,7 @@ findgain — Estimate the gain and readnoise of a CCD
   symmetric and should have values four or more sigma from the mean.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_algorithm">ALGORITHM</A></H2>
+  <H3>Algorithm</H3>
   <! BeginSection: 'ALGORITHM'>
   <UL>
   The formulae used by the task are:
@@ -166,7 +155,7 @@ findgain — Estimate the gain and readnoise of a CCD
   <B>imstatistics</B> task to compute the statistics.
   </UL>
   <! EndSection:   'ALGORITHM'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   To calculate the gain and readnoise within a 100x100 section:
@@ -213,7 +202,7 @@ findgain — Estimate the gain and readnoise of a CCD
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   The image headers are not checked to see if the frames have been
@@ -223,11 +212,11 @@ findgain — Estimate the gain and readnoise of a CCD
   from several flats and zeros.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_FINDGAIN">FINDGAIN - V2.12</A></B></DT>
+  <DT><B>FINDGAIN - V2.12</B></DT>
   <! Sec='REVISIONS' Level=0 Label='FINDGAIN' Line='FINDGAIN - V2.12'>
   <DD>New task derived from MSCFINDGAIN.  This makes use of the new clipping
   feature in IMSTATISTICS.
@@ -235,7 +224,7 @@ findgain — Estimate the gain and readnoise of a CCD
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imstatistics
@@ -244,5 +233,3 @@ findgain — Estimate the gain and readnoise of a CCD
   
   <! Contents: 'NAME' 'SYNOPSIS' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'ALGORITHM' 'EXAMPLES' 'BUGS' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

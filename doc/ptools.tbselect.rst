@@ -1,3 +1,5 @@
+.. _tbselect:
+
 tbselect — Select records from a list of apphot/daophot tables databases
 ========================================================================
 
@@ -5,51 +7,38 @@ tbselect — Select records from a list of apphot/daophot tables databases
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>tbselect (Aug91)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.ptools</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>tbselect (Aug91)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>tbselect</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   tbselect -- create a new APPHOT/DAOPHOT table database from selected rows
   of an old APPHOT/DAOPHOT table database
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   tbselect intable outtable expr
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_intable">intable </A></B></DT>
+  <DT><B>intable </B></DT>
   <! Sec='PARAMETERS' Level=0 Label='intable' Line='intable '>
   <DD>The list of APPHOT/DAOPHOT STSDAS table databases from which rows are
   copied.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_outtable">outtable </A></B></DT>
+  <DT><B>outtable </B></DT>
   <! Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable '>
   <DD>The list of output APPHOT/DAOPHOT table databases to contain the copied rows.
   The number of output tables must equal the number of input tables.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_expr">expr</A></B></DT>
+  <DT><B>expr</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='expr' Line='expr'>
   <DD>The boolean expression which determines which rows are copied to the new
   table. <I>Expr</I> is evaluated once for each input row of data.
@@ -58,7 +47,7 @@ tbselect — Select records from a list of apphot/daophot tables databases
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   TSELECT creates a new APPHOT/DAOPHOT table database containing a subset of
@@ -120,7 +109,7 @@ tbselect — Select records from a list of apphot/daophot tables databases
   </PRE>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -140,14 +129,14 @@ tbselect — Select records from a list of apphot/daophot tables databases
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   Column names must be set off from operators by blanks in the expression so
   that they can be correctly parsed by the expression evaluator.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   ptools.txselect,tables.tselect,ptools.tbselect
@@ -156,5 +145,3 @@ tbselect — Select records from a list of apphot/daophot tables databases
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

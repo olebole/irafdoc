@@ -1,3 +1,5 @@
+.. _geotran:
+
 geotran — Transform 1-D or 2-D images using various mapping transforms
 ======================================================================
 
@@ -5,42 +7,29 @@ geotran — Transform 1-D or 2-D images using various mapping transforms
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>geotran (Dec98)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.immatch</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>geotran (Dec98)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>geotran</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   geotran -- geometrically transform a list of images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   geotran input output database transforms
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of images to be transformed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>List of output images. If the output image name is the same as the input
   image name the input image is overwritten. The output image may be a section
@@ -49,7 +38,7 @@ geotran — Transform 1-D or 2-D images using various mapping transforms
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_database">database</A></B></DT>
+  <DT><B>database</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='database' Line='database'>
   <DD>The name of the text file containing the coordinate transformation (generally
   the database file produced by GEOMAP).
@@ -63,7 +52,7 @@ geotran — Transform 1-D or 2-D images using various mapping transforms
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_transforms">transforms</A></B></DT>
+  <DT><B>transforms</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='transforms' Line='transforms'>
   <DD>The list of record name(s) in the file <I>database</I> containing the
   desired transformations.
@@ -76,18 +65,18 @@ geotran — Transform 1-D or 2-D images using various mapping transforms
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_geometry">geometry = "<TT>geometric</TT>"</A></B></DT>
+  <DT><B>geometry = "<TT>geometric</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='geometry' Line='geometry = "geometric"'>
   <DD>The type of geometric transformation. The geometry parameter is
   only requested if database is not equal to the null string. The options are:
   <DL>
-  <DT><B><A NAME="l_linear">linear</A></B></DT>
+  <DT><B>linear</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='linear' Line='linear'>
   <DD>Perform only the linear part of the geometric transformation.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_geometric">geometric</A></B></DT>
+  <DT><B>geometric</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='geometric' Line='geometric'>
   <DD>Compute both the linear and distortion portions of the geometric correction.
   </DD>
@@ -95,7 +84,7 @@ geotran — Transform 1-D or 2-D images using various mapping transforms
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xmin">xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF</A></B></DT>
+  <DT><B>xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xmin' Line='xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF'>
   <DD>The minimum and maximum x and y reference values of the output image.
   If a database file has been defined xmin, xmax, ymin and ymax
@@ -104,7 +93,7 @@ geotran — Transform 1-D or 2-D images using various mapping transforms
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xscale">xscale = 1.0, yscale = 1.0</A></B></DT>
+  <DT><B>xscale = 1.0, yscale = 1.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xscale' Line='xscale = 1.0, yscale = 1.0'>
   <DD>The output picture x and y scales in units of
   x and y reference units per output pixel,
@@ -118,7 +107,7 @@ geotran — Transform 1-D or 2-D images using various mapping transforms
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ncols">ncols = INDEF, nlines = INDEF</A></B></DT>
+  <DT><B>ncols = INDEF, nlines = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ncols' Line='ncols = INDEF, nlines = INDEF'>
   <DD>The number of columns and lines in the output image. Ncols and nlines default
   to the size of the input image. If xscale or yscale are defined ncols or nlines
@@ -126,7 +115,7 @@ geotran — Transform 1-D or 2-D images using various mapping transforms
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xsample">xsample = 1.0, ysample = 1.0</A></B></DT>
+  <DT><B>xsample = 1.0, ysample = 1.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xsample' Line='xsample = 1.0, ysample = 1.0'>
   <DD>The coordinate surface subsampling factor. The coordinate surfaces are
   evaluated at every xsample-th pixel in x and every ysample-th pixel in y.
@@ -137,42 +126,42 @@ geotran — Transform 1-D or 2-D images using various mapping transforms
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interpolant">interpolant = "<TT>linear</TT>"</A></B></DT>
+  <DT><B>interpolant = "<TT>linear</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interpolant' Line='interpolant = "linear"'>
   <DD>The interpolant used for rebinning the image.
   The choices are the following.
   <DL>
-  <DT><B><A NAME="l_nearest">nearest</A></B></DT>
+  <DT><B>nearest</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest'>
   <DD>Nearest neighbor.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_linear">linear</A></B></DT>
+  <DT><B>linear</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='linear' Line='linear'>
   <DD>Bilinear interpolation in x and y.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_poly3">poly3</A></B></DT>
+  <DT><B>poly3</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='poly3' Line='poly3'>
   <DD>Third order polynomial in x and y.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_poly5">poly5</A></B></DT>
+  <DT><B>poly5</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='poly5' Line='poly5'>
   <DD>Fifth order polynomial in x and y.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_spline3">spline3</A></B></DT>
+  <DT><B>spline3</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='spline3' Line='spline3'>
   <DD>Bicubic spline.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sinc">sinc</A></B></DT>
+  <DT><B>sinc</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='sinc' Line='sinc'>
   <DD>2D sinc interpolation. Users can specify the sinc interpolant width by
   appending a width value to the interpolant string, e.g. sinc51 specifies
@@ -181,7 +170,7 @@ geotran — Transform 1-D or 2-D images using various mapping transforms
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lsinc">lsinc</A></B></DT>
+  <DT><B>lsinc</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='lsinc' Line='lsinc'>
   <DD>Look-up table sinc interpolation. Users can specify the look-up table sinc
   interpolant width by appending a width value to the interpolant string, e.g.
@@ -196,7 +185,7 @@ geotran — Transform 1-D or 2-D images using various mapping transforms
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_drizzle">drizzle</A></B></DT>
+  <DT><B>drizzle</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='drizzle' Line='drizzle'>
   <DD>2D drizzle resampling. Users can specify the drizzle pixel fraction in x and y
   by appending a value between 0.0 and 1.0 in square brackets to the
@@ -210,29 +199,29 @@ geotran — Transform 1-D or 2-D images using various mapping transforms
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_boundary">boundary = "<TT>nearest</TT>"</A></B></DT>
+  <DT><B>boundary = "<TT>nearest</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"'>
   <DD>The choices are:
   <DL>
-  <DT><B><A NAME="l_nearest">nearest</A></B></DT>
+  <DT><B>nearest</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest'>
   <DD>Use the value of the nearest boundary pixel.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_constant">constant</A></B></DT>
+  <DT><B>constant</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='constant' Line='constant'>
   <DD>Use a user supplied constant value.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_reflect">reflect</A></B></DT>
+  <DT><B>reflect</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='reflect' Line='reflect'>
   <DD>Generate a value by reflecting about the boundary of the image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wrap">wrap</A></B></DT>
+  <DT><B>wrap</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='wrap' Line='wrap'>
   <DD>Generate a value by wrapping around to the opposite side of the image.
   </DD>
@@ -240,20 +229,20 @@ geotran — Transform 1-D or 2-D images using various mapping transforms
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_constant">constant = 0.0</A></B></DT>
+  <DT><B>constant = 0.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.0'>
   <DD>The value of the constant for boundary extension.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fluxconserve">fluxconserve = yes</A></B></DT>
+  <DT><B>fluxconserve = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fluxconserve' Line='fluxconserve = yes'>
   <DD>Preserve the total image flux. The output pixel values are multiplied by
   the Jacobian of the coordinate transformation.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xin">xin = INDEF, yin = INDEF</A></B></DT>
+  <DT><B>xin = INDEF, yin = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xin' Line='xin = INDEF, yin = INDEF'>
   <DD>The x and y coordinates in pixel units in the input image which will map to
   xout, yout in the output image. If the database file is undefined these
@@ -261,7 +250,7 @@ geotran — Transform 1-D or 2-D images using various mapping transforms
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xout">xout = INDEF, yout = INDEF</A></B></DT>
+  <DT><B>xout = INDEF, yout = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xout' Line='xout = INDEF, yout = INDEF'>
   <DD>The x and y reference coordinates in the output image which correspond
   to xin, yin in the input image. If the database file is undefined, xout and
@@ -269,14 +258,14 @@ geotran — Transform 1-D or 2-D images using various mapping transforms
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xshift">xshift = INDEF, yshift = INDEF</A></B></DT>
+  <DT><B>xshift = INDEF, yshift = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xshift' Line='xshift = INDEF, yshift = INDEF'>
   <DD>The shift of the input origin in pixels. If the database file is undefined
   then xshift and yshift determine the shift of xin, yin.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xmag">xmag = INDEF, ymag = INDEF</A></B></DT>
+  <DT><B>xmag = INDEF, ymag = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xmag' Line='xmag = INDEF, ymag = INDEF'>
   <DD>The scale factors of the coordinate transformation in units of input pixels
   per reference coordinate unit. If database is undefined xmag and ymag
@@ -286,7 +275,7 @@ geotran — Transform 1-D or 2-D images using various mapping transforms
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xrotation">xrotation = INDEF, yrotation = INDEF</A></B></DT>
+  <DT><B>xrotation = INDEF, yrotation = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xrotation' Line='xrotation = INDEF, yrotation = INDEF'>
   <DD>The rotation angles in degrees of the coordinate transformation.
   Positive angles are measured counter-clockwise with respect to the x axis.
@@ -298,7 +287,7 @@ geotran — Transform 1-D or 2-D images using various mapping transforms
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nxblock">nxblock = 512, nyblock = 512</A></B></DT>
+  <DT><B>nxblock = 512, nyblock = 512</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nxblock' Line='nxblock = 512, nyblock = 512'>
   <DD>If the size of the output image is less than nxblock by nyblock then
   the entire image is transformed at once. Otherwise the output image
@@ -306,14 +295,14 @@ geotran — Transform 1-D or 2-D images using various mapping transforms
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print messages about the progress of the task ?
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -382,7 +371,7 @@ geotran — Transform 1-D or 2-D images using various mapping transforms
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_timings">TIMINGS</A></H2>
+  <H3>Timings</H3>
   <! BeginSection: 'TIMINGS'>
   <UL>
   It requires approximately 70 and 290 cpu seconds to correct a 512 by 512
@@ -391,7 +380,7 @@ geotran — Transform 1-D or 2-D images using various mapping transforms
   <P>
   </UL>
   <! EndSection:   'TIMINGS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -447,7 +436,7 @@ geotran — Transform 1-D or 2-D images using various mapping transforms
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   Support does not yet exist in the IRAF world coordinate system interface
@@ -456,7 +445,7 @@ geotran — Transform 1-D or 2-D images using various mapping transforms
   <P>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imshift, magnify, rotate, imlintran, geomap, geoxytran, gregister
@@ -465,5 +454,3 @@ geotran — Transform 1-D or 2-D images using various mapping transforms
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'TIMINGS' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

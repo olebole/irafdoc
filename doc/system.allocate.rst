@@ -1,3 +1,5 @@
+.. _allocate:
+
 allocate — Allocate a device, i.e., magtape drive mta, mtb, ...
 ===============================================================
 
@@ -5,43 +7,30 @@ allocate — Allocate a device, i.e., magtape drive mta, mtb, ...
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>allocate (Jan86)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>system</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>allocate (Jan86)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>allocate</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   allocate -- allocate a device
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   allocate device
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_device">device</A></B></DT>
+  <DT><B>device</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='device' Line='device'>
   <DD>The device to be allocated.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <B>Allocate</B> allocates a device for exclusive access by one user, and
@@ -51,7 +40,7 @@ allocate — Allocate a device, i.e., magtape drive mta, mtb, ...
   The status of given device may be obtained by calling <I>devstatus</I>.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -83,7 +72,7 @@ allocate — Allocate a device, i.e., magtape drive mta, mtb, ...
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   deallocate, devstatus
@@ -92,5 +81,3 @@ allocate — Allocate a device, i.e., magtape drive mta, mtb, ...
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

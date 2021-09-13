@@ -1,3 +1,5 @@
+.. _rgbdither:
+
 rgbdither — Create an 8-bit RGB dithered image
 ==============================================
 
@@ -5,49 +7,36 @@ rgbdither — Create an 8-bit RGB dithered image
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>rgbdither (Oct92)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>color</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>rgbdither (Oct92)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>rgbdither</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   rgbdither -- make an RGB composite image using 8-bit pixel dithering
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   rgbdither red green blue rgb
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_red">red, green, blue</A></B></DT>
+  <DT><B>red, green, blue</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='red' Line='red, green, blue'>
   <DD>Input image names for the red, green, and blue components.  The images
   must all be two dimensional and of the same size.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rgb">rgb</A></B></DT>
+  <DT><B>rgb</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rgb' Line='rgb'>
   <DD>Output image name for the RGB dithered composite image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rz1">rz1, rz2, gz1, gz2, bz1, bz2</A></B></DT>
+  <DT><B>rz1, rz2, gz1, gz2, bz1, bz2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rz1' Line='rz1, rz2, gz1, gz2, bz1, bz2'>
   <DD>Range of values in the input images to be mapped to the minimum and maximum
   intensity in each color.  Image pixel values outside the range are mapped
@@ -56,7 +45,7 @@ rgbdither — Create an 8-bit RGB dithered image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_blkavg">blkavg = 3</A></B></DT>
+  <DT><B>blkavg = 3</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='blkavg' Line='blkavg = 3'>
   <DD>Block average factor for the input images.  The input images may first be
   block averaged before creating the output dithered composite image.  Note
@@ -67,7 +56,7 @@ rgbdither — Create an 8-bit RGB dithered image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_logmap">logmap = no</A></B></DT>
+  <DT><B>logmap = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='logmap' Line='logmap = no'>
   <DD>Use logarithmic intensity mapping?  The logarithm of the input pixel
   values, in the range given by the z1 and z2 parameters, is taken before
@@ -76,7 +65,7 @@ rgbdither — Create an 8-bit RGB dithered image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pattern">pattern = "<TT>rgbgbrbrg</TT>"</A></B></DT>
+  <DT><B>pattern = "<TT>rgbgbrbrg</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pattern' Line='pattern = "rgbgbrbrg"'>
   <DD>Dither pattern given as a list of characters specifying a 3x3 array
   with the column element incrementing fastest.  A character of r is
@@ -86,7 +75,7 @@ rgbdither — Create an 8-bit RGB dithered image
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <B>Rgbdither</B> takes three input IRAF images and produces a special
@@ -118,7 +107,7 @@ rgbdither — Create an 8-bit RGB dithered image
   <B>rgbto8</B>.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  Three 2048x2048 images of the Trifid nebula are obtained in the B, V,
@@ -134,13 +123,13 @@ rgbdither — Create an 8-bit RGB dithered image
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   Example 1 takes 2:20 minutes (33 seconds CPU) on a SparcStation 2.
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   rgbdisplay, rgbto8, rgbsun, color.package
@@ -149,5 +138,3 @@ rgbdither — Create an 8-bit RGB dithered image
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

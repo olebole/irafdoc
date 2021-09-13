@@ -1,3 +1,5 @@
+.. _rmfiles:
+
 rmfiles — Find/delete files in subdirectories
 =============================================
 
@@ -5,42 +7,29 @@ rmfiles — Find/delete files in subdirectories
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>rmfiles (Jul86)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>softools</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>rmfiles (Jul86)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>rmfiles</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   rmfiles -- find/remove files in subdirectories
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   rmfiles [-dnv] [-f progfile] rootdir action extns
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_">-d</A></B></DT>
+  <DT><B>-d</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='-d'>
   <DD>Print debug messages.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-n</A></B></DT>
+  <DT><B>-n</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='-n'>
   <DD>No execute; do not delete files.  This option may be used to generate
   a list of binary files for some purpose other than deletion, or to verify
@@ -48,46 +37,46 @@ rmfiles — Find/delete files in subdirectories
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-v</A></B></DT>
+  <DT><B>-v</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='-v'>
   <DD>Print names of files as they are deleted.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-f progfile</A></B></DT>
+  <DT><B>-f progfile</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='-f progfile'>
   <DD>Take delete commands from the named file.  If this option is specified
   the remaining arguments are normally omitted.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rootdir">rootdir</A></B></DT>
+  <DT><B>rootdir</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rootdir' Line='rootdir'>
   <DD>The root directory of the directory tree to be pruned.  This must be a
   path from the current directory or from a logical directory.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_action">action</A></B></DT>
+  <DT><B>action</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='action' Line='action'>
   <DD>The possible actions are listed below.  This is a required parameter.
   <DL>
-  <DT><B><A NAME="l_"></A></B></DT>
+  <DT><B></B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line=' '>
   <DD><DL>
-  <DT><B><A NAME="l_">-all</A></B></DT>
+  <DT><B>-all</B></DT>
   <! Sec='PARAMETERS' Level=2 Label='' Line='-all'>
   <DD>Delete all files.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-allbut</A></B></DT>
+  <DT><B>-allbut</B></DT>
   <! Sec='PARAMETERS' Level=2 Label='' Line='-allbut'>
   <DD>Delete all files except those with the listed extensions.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-only</A></B></DT>
+  <DT><B>-only</B></DT>
   <! Sec='PARAMETERS' Level=2 Label='' Line='-only'>
   <DD>Delete only those files with the listed extensions.
   </DD>
@@ -97,14 +86,14 @@ rmfiles — Find/delete files in subdirectories
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_extns">extns</A></B></DT>
+  <DT><B>extns</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='extns' Line='extns'>
   <DD>A list of filename extensions delimited by spaces, e.g., "<TT>.a .o .e .hlp</TT>".
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The <I>rmfiles</I> utility is used to delete (or list) files in one or more
@@ -134,7 +123,7 @@ rmfiles — Find/delete files in subdirectories
   it may be called either from within IRAF or from the host system.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Delete all .o, .e, .a, and .hd files in the directory "<TT>iraf$pkg</TT>".
@@ -157,7 +146,7 @@ rmfiles — Find/delete files in subdirectories
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   rmbin, rtar, wtar
@@ -166,5 +155,3 @@ rmfiles — Find/delete files in subdirectories
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

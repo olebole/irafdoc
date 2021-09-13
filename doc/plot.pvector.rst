@@ -1,3 +1,5 @@
+.. _pvector:
+
 pvector — Plot an arbitrary vector in a 2D image
 ================================================
 
@@ -5,67 +7,54 @@ pvector — Plot an arbitrary vector in a 2D image
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>pvector (Oct91)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>plot</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>pvector (Oct91)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>pvector</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   pvector -- plot an arbitrary vector in a 2D image
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   pvector image x1 y1 x2 y2
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_image">image</A></B></DT>
+  <DT><B>image</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='image' Line='image'>
   <DD>Input image containing data to be plotted.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_x1">x1, y1</A></B></DT>
+  <DT><B>x1, y1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='x1' Line='x1, y1'>
   <DD>Starting coordinates of the vector to be plotted.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_x2">x2, y2</A></B></DT>
+  <DT><B>x2, y2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='x2' Line='x2, y2'>
   <DD>Ending coordinates of the vector to be plotted.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xc">xc, yc</A></B></DT>
+  <DT><B>xc, yc</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xc' Line='xc, yc'>
   <DD>The center coordinates of the vector to be plotted if the position
   angle <I>theta</I> is defined.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_width">width = 1</A></B></DT>
+  <DT><B>width = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='width' Line='width = 1'>
   <DD>Number of pixels perpendicular to the vector to average.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_theta">theta = INDEF</A></B></DT>
+  <DT><B>theta = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='theta' Line='theta = INDEF'>
   <DD>The postion angle of the vector to be plotted measured counter-clockwise
   from the positive x axis. Theta must be between 0.0 and 360.0 degrees.
@@ -75,36 +64,36 @@ pvector — Plot an arbitrary vector in a 2D image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_length">length = INDEF</A></B></DT>
+  <DT><B>length = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='length' Line='length = INDEF'>
   <DD>The length of the vector to be plotted if <I>theta</I> is defined. The
   default is to plot the vector from one edge of the frame to another.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_boundary">boundary = constant</A></B></DT>
+  <DT><B>boundary = constant</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = constant'>
   <DD>The type of boundary extension. The boundary extension options are:
   <DL>
-  <DT><B><A NAME="l_nearest">nearest</A></B></DT>
+  <DT><B>nearest</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest'>
   <DD>Use the value of the nearest boundary pixel.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_constant">constant</A></B></DT>
+  <DT><B>constant</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='constant' Line='constant'>
   <DD>Use a constant value.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_reflect">reflect</A></B></DT>
+  <DT><B>reflect</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='reflect' Line='reflect'>
   <DD>Generate a value by reflecting around the boundary.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wrap">wrap</A></B></DT>
+  <DT><B>wrap</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='wrap' Line='wrap'>
   <DD>Generate a value by wrapping around to the opposite side of the image.
   </DD>
@@ -112,13 +101,13 @@ pvector — Plot an arbitrary vector in a 2D image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_constant">constant = 0.</A></B></DT>
+  <DT><B>constant = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.'>
   <DD>The constant for constant valued boundary extension.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_vec_output">vec_output = "<TT></TT>"</A></B></DT>
+  <DT><B>vec_output = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='vec_output' Line='vec_output = ""'>
   <DD>File or image name if output vector is desired.  If this parameter is
   non-null, then the computed vector will be output to the named file of
@@ -128,7 +117,7 @@ pvector — Plot an arbitrary vector in a 2D image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_out_type">out_type = "<TT>text</TT>"</A></B></DT>
+  <DT><B>out_type = "<TT>text</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='out_type' Line='out_type = "text"'>
   <DD>Type of output format (image|text). If an image is created, then a new
   header keyword, "<TT>VSLICE</TT>", will be appended to the new image describing
@@ -137,7 +126,7 @@ pvector — Plot an arbitrary vector in a 2D image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wx1">wx1 = 0., wx2 = 0., wy1 = 0., wy2 = 0.</A></B></DT>
+  <DT><B>wx1 = 0., wx2 = 0., wy1 = 0., wy2 = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wx1' Line='wx1 = 0., wx2 = 0., wy1 = 0., wy2 = 0.'>
   <DD>The range of world coordinates to be included in the plot.  If the
   range of values in x or y is zero, the plot is automatically scaled from the
@@ -145,20 +134,20 @@ pvector — Plot an arbitrary vector in a 2D image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_vx1">vx1 = 0., vx2 = 0., vy1 = 0., vy2 = 0.</A></B></DT>
+  <DT><B>vx1 = 0., vx2 = 0., vy1 = 0., vy2 = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='vx1' Line='vx1 = 0., vx2 = 0., vy1 = 0., vy2 = 0.'>
   <DD>NDC coordinates (0-1) of the device plotting window.  If not set by user,
   a suitable viewport which allows sufficient room for all labels is used.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pointmode">pointmode = no</A></B></DT>
+  <DT><B>pointmode = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pointmode' Line='pointmode = no'>
   <DD>Plot individual points instead of a continuous line?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_marker">marker = "<TT>box</TT>"</A></B></DT>
+  <DT><B>marker = "<TT>box</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='marker' Line='marker = "box"'>
   <DD>Marker or line type to be drawn.  If <B>pointmode</B> = yes the markers are
   "<TT>point</TT>", "<TT>box</TT>", "<TT>cross</TT>", "<TT>plus</TT>", "<TT>circle</TT>", "<TT>hebar</TT>", "<TT>vebar</TT>", "<TT>hline</TT>",
@@ -171,63 +160,63 @@ pvector — Plot an arbitrary vector in a 2D image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_szmarker">szmarker = 0.005</A></B></DT>
+  <DT><B>szmarker = 0.005</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='szmarker' Line='szmarker = 0.005'>
   <DD>The size of the marker drawn when <B>pointmode</B> = yes.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_logx">logx = no, logy = no</A></B></DT>
+  <DT><B>logx = no, logy = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='logx' Line='logx = no, logy = no'>
   <DD>Draw the x or y axis in log units, versus linear?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xlabel">xlabel = "<TT></TT>", ylabel = "<TT></TT>"</A></B></DT>
+  <DT><B>xlabel = "<TT></TT>", ylabel = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xlabel' Line='xlabel = "", ylabel = ""'>
   <DD>The x-axis and y-axis labels.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_title">title = "<TT>imtitle</TT>"</A></B></DT>
+  <DT><B>title = "<TT>imtitle</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='title' Line='title = "imtitle"'>
   <DD>Title for plot.  If not changed from the default, the title string from the
   image header, appended with the vector endpoints, is used.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_majrx">majrx = 5, minrx = 5, majry = 5, minry = 5</A></B></DT>
+  <DT><B>majrx = 5, minrx = 5, majry = 5, minry = 5</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='majrx' Line='majrx = 5, minrx = 5, majry = 5, minry = 5'>
   <DD>The number of major and minor divisions along the x or y axis.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_round">round = no</A></B></DT>
+  <DT><B>round = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='round' Line='round = no'>
   <DD>Round axes up to nice values?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fill">fill = yes</A></B></DT>
+  <DT><B>fill = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fill' Line='fill = yes'>
   <DD>Fill the output viewport regardless of the device aspect ratio?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_append">append = no</A></B></DT>
+  <DT><B>append = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='append' Line='append = no'>
   <DD>Append to an existing plot?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_device">device = "<TT>stdgraph</TT>"</A></B></DT>
+  <DT><B>device = "<TT>stdgraph</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdgraph"'>
   <DD>Output device.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Plot an arbitrary vector of data from an image.  The vector can be
@@ -271,7 +260,7 @@ pvector — Plot an arbitrary vector in a 2D image
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Plot from the lower left to upper right of 512 square image crab.5009.
@@ -297,19 +286,19 @@ pvector — Plot an arbitrary vector in a 2D image
       cl&gt; pvector crab.5009 xc=256. xc=256. theta=45. length=100.
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   It takes approximately 6.7 cpu seconds to compute and plot the twenty
   pixel wide diagonal of a 512 square real image. (VAX/VMS 750 with fpa).
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   prow, pcol, prow, pcols
@@ -318,5 +307,3 @@ pvector — Plot an arbitrary vector in a 2D image
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

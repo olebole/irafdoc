@@ -1,3 +1,5 @@
+.. _t2d:
+
 t2d — Fast tape to disk copy
 ============================
 
@@ -5,42 +7,29 @@ t2d — Fast tape to disk copy
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>t2d (May89)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>dataio</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>t2d (May89)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>t2d</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   t2d -- copy files from tape to disk quickly
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   t2d input ofroot
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>Tape file or device name, e.g. "<TT>mta1600[1]</TT>" or "<TT>mta</TT>"
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_files">files</A></B></DT>
+  <DT><B>files</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='files' Line='files'>
   <DD>List of tape file numbers or ranges delimited by commas, e.g. "<TT>1-3,5-8</TT>".
   `Files' is requested only if no file number is given in `input'.
@@ -50,7 +39,7 @@ t2d — Fast tape to disk copy
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ofroot">ofroot</A></B></DT>
+  <DT><B>ofroot</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ofroot' Line='ofroot'>
   <DD>Root name to give output files.  A three digit sequence number will be appended
   to this root name for each file written if a file list is used.  If the file
@@ -59,14 +48,14 @@ t2d — Fast tape to disk copy
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Flag to signal program that it should produce verbose output.  This means
   progress reports.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_errignore">errignore = yes</A></B></DT>
+  <DT><B>errignore = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='errignore' Line='errignore = yes'>
   <DD>Flag to signal program that tape records that give read errors should be
   considered to have zero length.  If set to 'no', error records are considered
@@ -75,7 +64,7 @@ t2d — Fast tape to disk copy
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   T2d reads files from tape and puts them into disk files.  No formatting is
@@ -91,7 +80,7 @@ t2d — Fast tape to disk copy
   found, the input buffer is disposed of for that record.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. To read the second image from mta at 1600 bpi, store the image into
@@ -113,7 +102,7 @@ t2d — Fast tape to disk copy
   to which the response would be "<TT>1-999</TT>".
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   reblock
@@ -122,5 +111,3 @@ t2d — Fast tape to disk copy
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _suntoiraf:
+
 suntoiraf — Convert Sun rasters into IRAF images
 ================================================
 
@@ -5,36 +7,23 @@ suntoiraf — Convert Sun rasters into IRAF images
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>suntoiraf (Apr92)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>proto</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>suntoiraf (Apr92)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>suntoiraf</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   suntoiraf -- convert Sun raster files into IRAF images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   suntoiraf input
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_names">names</A></B></DT>
+  <DT><B>names</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='names' Line='names'>
   <DD>List of raster files to be converted.  The output image names will be
   the same as the individual input file names with a "<TT>.imh</TT>" appended
@@ -45,7 +34,7 @@ suntoiraf — Convert Sun rasters into IRAF images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apply_lut">apply_lut = yes</A></B></DT>
+  <DT><B>apply_lut = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apply_lut' Line='apply_lut = yes'>
   <DD>Apply the lookup table translation to each pixel?  If <B>apply_lut</B> =
   no, the pixel values will be taken directly from the raster file.  If
@@ -54,26 +43,26 @@ suntoiraf — Convert Sun rasters into IRAF images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_delete">delete = no</A></B></DT>
+  <DT><B>delete = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='delete' Line='delete = no'>
   <DD>Delete the rasterfile after making the image?  This is useful for making
   automated (Unix or IRAF) scripts for producing photographic or other hardcopy.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print informative information while the transformation is occurring?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_listonly">listonly = no</A></B></DT>
+  <DT><B>listonly = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='listonly' Line='listonly = no'>
   <DD>List the rasterfile header information instead?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_yflip">yflip = yes</A></B></DT>
+  <DT><B>yflip = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='yflip' Line='yflip = yes'>
   <DD>Flip the output image top to bottom?  Rasterfiles are stored in reverse
   vertical order from IRAF images.
@@ -81,7 +70,7 @@ suntoiraf — Convert Sun rasters into IRAF images
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <B>Suntoiraf</B> will convert Sun raster files into IRAF images.  This is
@@ -116,7 +105,7 @@ suntoiraf — Convert Sun rasters into IRAF images
   expense of the output orientation appearing inverted.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_imtool_hints">IMTOOL HINTS</A></H2>
+  <H3>Imtool hints</H3>
   <! BeginSection: 'IMTOOL HINTS'>
   <UL>
   One possible first step in making a hardcopy is to create the raster files
@@ -172,7 +161,7 @@ suntoiraf — Convert Sun rasters into IRAF images
   files will end up in this directory.
   </UL>
   <! EndSection:   'IMTOOL HINTS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   These are rather specific to NOAO/Tucson, but may suggest ways that the
@@ -275,7 +264,7 @@ suntoiraf — Convert Sun rasters into IRAF images
   main computer lab.
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   irafil, binfil, and the UNIX man page for imtool
@@ -284,5 +273,3 @@ suntoiraf — Convert Sun rasters into IRAF images
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'IMTOOL HINTS' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

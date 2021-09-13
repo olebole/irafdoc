@@ -1,3 +1,5 @@
+.. _imsurfit:
+
 imsurfit — Fit a surface to a 2-D image
 =======================================
 
@@ -5,62 +7,49 @@ imsurfit — Fit a surface to a 2-D image
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>imsurfit (Feb88)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imfit</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>imsurfit (Feb88)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>imsurfit</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   imsurfit -- fit a surface function to an image
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage_">USAGE	</A></H2>
+  <H3>Usage	</H3>
   <! BeginSection: 'USAGE	'>
   <UL>
   imsurfit input, output, xorder, yorder
   </UL>
   <! EndSection:   'USAGE	'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of images to be fit.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>Output image(s) of <I>type_output</I>.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xorder">xorder</A></B></DT>
+  <DT><B>xorder</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xorder' Line='xorder'>
   <DD>The order in x of the polynomials (1 = constant) or the number of polynomial
   pieces for the bicubic spline.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_yorder">yorder</A></B></DT>
+  <DT><B>yorder</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='yorder' Line='yorder'>
   <DD>The order in y of the polynomials (1 = constant) or the number of polynomial
   pieces for the bicubic spline.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cross_terms">cross_terms = yes</A></B></DT>
+  <DT><B>cross_terms = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cross_terms' Line='cross_terms = yes'>
   <DD>Cross terms for the polynomials. For example, if <I>xorder</I> = 2 and
   <I>yorder</I> = 2
@@ -68,58 +57,58 @@ imsurfit — Fit a surface to a 2-D image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_function">function = "<TT>leg</TT>"</A></B></DT>
+  <DT><B>function = "<TT>leg</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='function' Line='function = "leg"'>
   <DD>Functional for of surface to be fit to the image. The available functions
   (with minimum match abbreviation) are:
   <DL>
-  <DT><B><A NAME="l_legendre">legendre</A></B></DT>
+  <DT><B>legendre</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='legendre' Line='legendre'>
   <DD></DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_chebyshev">chebyshev</A></B></DT>
+  <DT><B>chebyshev</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='chebyshev' Line='chebyshev'>
   <DD></DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_spline3">spline3</A></B></DT>
+  <DT><B>spline3</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='spline3' Line='spline3'>
   <DD></DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_spline1">spline1</A></B></DT>
+  <DT><B>spline1</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='spline1' Line='spline1'>
   <DD></DD>
   </DL>
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_type_output">type_output = "<TT>fit</TT>"</A></B></DT>
+  <DT><B>type_output = "<TT>fit</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='type_output' Line='type_output = "fit"'>
   <DD>The type of output image.  The allowed types (with minimum match abbreviation)
   are:
   <DL>
-  <DT><B><A NAME="l_clean">clean</A></B></DT>
+  <DT><B>clean</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='clean' Line='clean'>
   <DD>The input image with deviant pixels in the good regions replaced by the
   fitted value.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fit">fit  </A></B></DT>
+  <DT><B>fit  </B></DT>
   <! Sec='PARAMETERS' Level=1 Label='fit' Line='fit  '>
   <DD>An image created from the surface fits to the image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_residual">residual</A></B></DT>
+  <DT><B>residual</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='residual' Line='residual'>
   <DD>The difference of the input image and the fitted image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_response">response</A></B></DT>
+  <DT><B>response</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='response' Line='response'>
   <DD>The ratio of the input image to the fitted image.
   All fitted (denominator) pixels below <I>div_min</I> are given a value of 1.
@@ -128,7 +117,7 @@ imsurfit — Fit a surface to a 2-D image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xmedian">xmedian = 1, ymedian = 1</A></B></DT>
+  <DT><B>xmedian = 1, ymedian = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xmedian' Line='xmedian = 1, ymedian = 1'>
   <DD>The x and y dimensions of the box used for median processing.
   If <I>xmedian</I> &gt; 1 or <I>ymedian</I> is &gt; 1,
@@ -137,14 +126,14 @@ imsurfit — Fit a surface to a 2-D image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_median_percent">median_percent = 50.</A></B></DT>
+  <DT><B>median_percent = 50.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='median_percent' Line='median_percent = 50.'>
   <DD>If the number of pixels in the median box is less than <I>median_percent</I> *
   <I>xmedian</I> * <I>ymedian</I> the box will be omitted from the fit.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_upper">upper = 0., lower = 0.</A></B></DT>
+  <DT><B>upper = 0., lower = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='upper' Line='upper = 0., lower = 0.'>
   <DD>The number of sigma  limits for pixel rejection. If <I>upper</I> &gt; 0. or
   <I>lower</I> &gt; 0. and median processing is turned off,
@@ -152,7 +141,7 @@ imsurfit — Fit a surface to a 2-D image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ngrow">ngrow = 0</A></B></DT>
+  <DT><B>ngrow = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ngrow' Line='ngrow = 0'>
   <DD>The radius in pixels for region growing.
   Pixels within a distance of <I>ngrow</I> pixels of
@@ -160,7 +149,7 @@ imsurfit — Fit a surface to a 2-D image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_niter">niter = 0</A></B></DT>
+  <DT><B>niter = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='niter' Line='niter = 0'>
   <DD>The maximum number of iterations in the rejection cycle.
   Rejection will be terminated if the number of rejected pixels is zero
@@ -168,50 +157,50 @@ imsurfit — Fit a surface to a 2-D image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_regions">regions = "<TT>all</TT>"</A></B></DT>
+  <DT><B>regions = "<TT>all</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='regions' Line='regions = "all"'>
   <DD>The available options (with minimum match abbreviation) are:
   <DL>
-  <DT><B><A NAME="l_all">all</A></B></DT>
+  <DT><B>all</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='all' Line='all'>
   <DD>All points in the image are fit.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rows">rows</A></B></DT>
+  <DT><B>rows</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='rows' Line='rows'>
   <DD>The fit is performed on the image rows specified by <I>rows</I>.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_columns">columns</A></B></DT>
+  <DT><B>columns</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='columns' Line='columns'>
   <DD>The fit is performed on the image columns specified by <I>columns</I>.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_border">border</A></B></DT>
+  <DT><B>border</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='border' Line='border'>
   <DD>The fit is performed on a border around the image whose width is specified
   by <I>border</I>.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sections">sections</A></B></DT>
+  <DT><B>sections</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='sections' Line='sections'>
   <DD>The fit is performed on image sections listed in the file specified
   by <I>sections</I>.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_circle">circle</A></B></DT>
+  <DT><B>circle</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='circle' Line='circle'>
   <DD>The fit is performed on a circular region whose parameters are specified by
   <I>circle</I>.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_invcircle">invcircle</A></B></DT>
+  <DT><B>invcircle</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='invcircle' Line='invcircle'>
   <DD>The fit is performed on a region exterior to the circular region whose
   parameters are specified by <I>circle</I>.
@@ -220,28 +209,28 @@ imsurfit — Fit a surface to a 2-D image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rows">rows = "<TT>*</TT>"</A></B></DT>
+  <DT><B>rows = "<TT>*</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rows' Line='rows = "*"'>
   <DD>When <I>region_type</I> = 'rows', the string parameter <I>rows</I> specifies
   the rows to be fit.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_columns">columns = "<TT>*</TT>"</A></B></DT>
+  <DT><B>columns = "<TT>*</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='columns' Line='columns = "*"'>
   <DD>When <I>region_type</I> = 'columns', the string parameter <I>columns</I>
   specifies the columns to be fit.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_border">border = "<TT>50</TT>"</A></B></DT>
+  <DT><B>border = "<TT>50</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='border' Line='border = "50"'>
   <DD>When <I>region_type</I> = 'border', the
   string parameter <I>border</I> specifies the width of the border to be fit.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sections">sections = "<TT></TT>"</A></B></DT>
+  <DT><B>sections = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sections' Line='sections = ""'>
   <DD>When <I>region_type</I> = 'sections', the
   string parameter <I>sections</I> is the name of the  file containing the list of
@@ -251,7 +240,7 @@ imsurfit — Fit a surface to a 2-D image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_circle">circle = "<TT></TT>"</A></B></DT>
+  <DT><B>circle = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='circle' Line='circle = ""'>
   <DD>The string parameter <I>circle</I> lists the parameter needed to specify
   the circle in the following format: xcenter ycenter radius. The three
@@ -259,7 +248,7 @@ imsurfit — Fit a surface to a 2-D image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_div_min">div_min = INDEF</A></B></DT>
+  <DT><B>div_min = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='div_min' Line='div_min = INDEF'>
   <DD>When <I>type_output</I> = 'response' all divisions in which the fitted value
   is below <I>div_min</I> are set to the value 1.
@@ -267,7 +256,7 @@ imsurfit — Fit a surface to a 2-D image
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   A surface is fit to selected portions of the input image.
@@ -308,7 +297,7 @@ imsurfit — Fit a surface to a 2-D image
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. To create a smoothed version of an image:
@@ -340,7 +329,7 @@ imsurfit — Fit a surface to a 2-D image
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_timings">TIMINGS</A></H2>
+  <H3>Timings</H3>
   <! BeginSection: 'TIMINGS'>
   <UL>
   Fitting and subtracting a constant from a 512 by 512 IRAF image requires
@@ -353,7 +342,7 @@ imsurfit — Fit a surface to a 2-D image
   <P>
   </UL>
   <! EndSection:   'TIMINGS'>
-  <H2><A NAME="s_notes">NOTES</A></H2>
+  <H3>Notes</H3>
   <! BeginSection: 'NOTES'>
   <UL>
   The surface fitting code uses the IRAF SURFIT math routines,
@@ -368,5 +357,3 @@ imsurfit — Fit a surface to a 2-D image
   
   <! Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIMINGS' 'NOTES'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _xyxymatch:
+
 xyxymatch — Match pixel coordinate lists
 ========================================
 
@@ -5,36 +7,23 @@ xyxymatch — Match pixel coordinate lists
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>xyxymatch (Jul95)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.immatch</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>xyxymatch (Jul95)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>xyxymatch</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   xyxymatch -- Match pixel coordinate lists using various methods
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   xyxymatch input reference output tolerance
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The list of input coordinate files.  The input file is a whitespace-delimited
   text table containing the coordinates.  The <I>xcolumn</I> and <I>ycolumn</I> 
@@ -42,7 +31,7 @@ xyxymatch — Match pixel coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_reference">reference</A></B></DT>
+  <DT><B>reference</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='reference' Line='reference'>
   <DD>The list of reference coordinate files. The number of reference coordinate
   files must be one or equal to the number of input coordinate files.
@@ -52,7 +41,7 @@ xyxymatch — Match pixel coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>The output matched x-y lists containing three pairs of numbers: the coordinates
   of the object in the reference list in columns 1 and 2, the
@@ -62,13 +51,13 @@ xyxymatch — Match pixel coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_tolerance">tolerance</A></B></DT>
+  <DT><B>tolerance</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='tolerance' Line='tolerance'>
   <DD>The matching tolerance in pixels.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_refpoints">refpoints = "<TT></TT>"</A></B></DT>
+  <DT><B>refpoints = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='refpoints' Line='refpoints = ""'>
   <DD>The list of tie points used to compute the linear transformation
   from the input coordinate system to the reference coordinate system. Refpoints
@@ -82,21 +71,21 @@ xyxymatch — Match pixel coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xin">xin = INDEF, yin = INDEF</A></B></DT>
+  <DT><B>xin = INDEF, yin = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xin' Line='xin = INDEF, yin = INDEF'>
   <DD>The x and y origin of the input coordinate system. Xin and yin default to 
   0.0 and 0.0 respectively.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xmag">xmag = INDEF, ymag = INDEF</A></B></DT>
+  <DT><B>xmag = INDEF, ymag = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xmag' Line='xmag = INDEF, ymag = INDEF'>
   <DD>The x and y scale factors in reference pixels per input pixels. Xmag and
   ymag default to 1.0 and 1.0 respectively.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xrotation">xrotation = INDEF, yrotation = INDEF</A></B></DT>
+  <DT><B>xrotation = INDEF, yrotation = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xrotation' Line='xrotation = INDEF, yrotation = INDEF'>
   <DD>The x and y rotation angles measured in degrees counter-clockwise with
   respect to the x axis. Xrotation and yrotation default to 0.0 and 0.0
@@ -104,28 +93,28 @@ xyxymatch — Match pixel coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xref">xref = INDEF, yref = INDEF</A></B></DT>
+  <DT><B>xref = INDEF, yref = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xref' Line='xref = INDEF, yref = INDEF'>
   <DD>The x and y origin of the reference coordinate system. Xref and yref default
   to 0.0 and 0.0 respectively.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xcolumn">xcolumn = 1, ycolumn = 2</A></B></DT>
+  <DT><B>xcolumn = 1, ycolumn = 2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xcolumn' Line='xcolumn = 1, ycolumn = 2'>
   <DD>The columns in the input coordinate list containing the x and y coordinate
   values respectively.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xrcolumn">xrcolumn = 1, yrcolumn = 2</A></B></DT>
+  <DT><B>xrcolumn = 1, yrcolumn = 2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xrcolumn' Line='xrcolumn = 1, yrcolumn = 2'>
   <DD>The columns in the reference coordinate list containing the x and y coordinate
   values respectively.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_separation">separation = 9.0</A></B></DT>
+  <DT><B>separation = 9.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='separation' Line='separation = 9.0'>
   <DD>The minimum separation for objects in the input and reference coordinate
   lists. Objects closer together than separation pixels
@@ -133,11 +122,11 @@ xyxymatch — Match pixel coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_matching">matching = "<TT>triangles</TT>"</A></B></DT>
+  <DT><B>matching = "<TT>triangles</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='matching' Line='matching = "triangles"'>
   <DD>The matching algorithm. The choices are:
   <DL>
-  <DT><B><A NAME="l_tolerance">tolerance</A></B></DT>
+  <DT><B>tolerance</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='tolerance' Line='tolerance'>
   <DD>A linear transformation is applied to the input coordinate list,
   the transformed input list and the reference list are sorted, 
@@ -158,7 +147,7 @@ xyxymatch — Match pixel coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_triangles">triangles</A></B></DT>
+  <DT><B>triangles</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='triangles' Line='triangles'>
   <DD>A linear transformation is applied to the input coordinate list,
   the transformed input list and the reference list are sorted, points
@@ -180,7 +169,7 @@ xyxymatch — Match pixel coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nmatch">nmatch = 30</A></B></DT>
+  <DT><B>nmatch = 30</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nmatch' Line='nmatch = 30'>
   <DD>The maximum number of reference and input coordinates used
   by the "<TT>triangles</TT>" pattern matching algorithm. If either list contains
@@ -190,7 +179,7 @@ xyxymatch — Match pixel coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ratio">ratio = 10.0</A></B></DT>
+  <DT><B>ratio = 10.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ratio' Line='ratio = 10.0'>
   <DD>The maximum ratio of the longest to shortest side of the 
   triangles generated by the "<TT>triangles</TT>" pattern matching algorithm.
@@ -200,14 +189,14 @@ xyxymatch — Match pixel coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nreject">nreject = 10</A></B></DT>
+  <DT><B>nreject = 10</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nreject' Line='nreject = 10'>
   <DD>The maximum number of rejection iterations for the "<TT>triangles</TT>" pattern
   matching algorithm.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xformat">xformat = "<TT>%13.3f</TT>", yformat = "<TT>%13.3f</TT>"</A></B></DT>
+  <DT><B>xformat = "<TT>%13.3f</TT>", yformat = "<TT>%13.3f</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xformat' Line='xformat = "%13.3f", yformat = "%13.3f"'>
   <DD>The format of the output reference and input x and y coordinates.
   By default the coordinates are output right justified in a field of
@@ -215,7 +204,7 @@ xyxymatch — Match pixel coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = no</A></B></DT>
+  <DT><B>interactive = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = no'>
   <DD>Compute the initial linear transformation required to transform the
   input coordinate coordinates to the reference coordinate system, by defining
@@ -223,13 +212,13 @@ xyxymatch — Match pixel coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print messages about the progress of the task ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_icommands">icommands = "<TT></TT>"</A></B></DT>
+  <DT><B>icommands = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""'>
   <DD>The image display cursor.
   </DD>
@@ -237,7 +226,7 @@ xyxymatch — Match pixel coordinate lists
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -353,7 +342,7 @@ xyxymatch — Match pixel coordinate lists
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_algorithms">ALGORITHMS</A></H2>
+  <H3>Algorithms</H3>
   <! BeginSection: 'ALGORITHMS'>
   <UL>
   <P>
@@ -399,7 +388,7 @@ xyxymatch — Match pixel coordinate lists
   <P>
   </UL>
   <! EndSection:   'ALGORITHMS'>
-  <H2><A NAME="s_formats">FORMATS</A></H2>
+  <H3>Formats</H3>
   <! BeginSection: 'FORMATS'>
   <UL>
   <P>
@@ -480,7 +469,7 @@ xyxymatch — Match pixel coordinate lists
   <P>
   </UL>
   <! EndSection:   'FORMATS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   <P>
@@ -490,7 +479,7 @@ xyxymatch — Match pixel coordinate lists
   <P>
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -565,17 +554,17 @@ xyxymatch — Match pixel coordinate lists
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   daophot.daofind,lintran,imlintran,geomap,register,geotran
@@ -584,5 +573,3 @@ xyxymatch — Match pixel coordinate lists
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'ALGORITHMS' 'FORMATS' 'REFERENCES' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

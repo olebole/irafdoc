@@ -1,3 +1,5 @@
+.. _raverage:
+
 raverage — Running average, standard deviation, and envelope
 ============================================================
 
@@ -5,36 +7,23 @@ raverage — Running average, standard deviation, and envelope
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>raverage (May07)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>lists</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>raverage (May07)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>raverage</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   raverage -- running average, standard deviation, and envelope
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   raverage input nwin
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>Input one or two column list of numbers.  Any line that can't be read
   as one or two numbers is ignored which means comments are allowed.  The
@@ -43,13 +32,13 @@ raverage — Running average, standard deviation, and envelope
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nwin">nwin</A></B></DT>
+  <DT><B>nwin</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nwin' Line='nwin'>
   <DD>The number of values in the running average window.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sort">sort = no</A></B></DT>
+  <DT><B>sort = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sort' Line='sort = no'>
   <DD>Numerically sort the first column of the input list by increasing value?
   This is done in an temporary file and the
@@ -57,7 +46,7 @@ raverage — Running average, standard deviation, and envelope
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nsig">nsig = 0</A></B></DT>
+  <DT><B>nsig = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nsig' Line='nsig = 0'>
   <DD>The number of standard deviations below and above the average for the
   envelope columns.  If the value is greater than zero two extra columns
@@ -67,14 +56,14 @@ raverage — Running average, standard deviation, and envelope
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fd1">fd1, fd2</A></B></DT>
+  <DT><B>fd1, fd2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fd1' Line='fd1, fd2'>
   <DD>Internal parameters.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task computes the running average and standard deviation of a
@@ -125,7 +114,7 @@ raverage — Running average, standard deviation, and envelope
   This is where the sorting and envelope options are useful.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  Compute the running average with a window of 100 values on the list of
@@ -153,7 +142,7 @@ raverage — Running average, standard deviation, and envelope
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   average, boxcar
@@ -162,5 +151,3 @@ raverage — Running average, standard deviation, and envelope
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

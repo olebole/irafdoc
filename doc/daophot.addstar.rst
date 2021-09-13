@@ -1,3 +1,5 @@
+.. _addstar:
+
 addstar — Add artificial stars to an image using the computed psf
 =================================================================
 
@@ -5,42 +7,29 @@ addstar — Add artificial stars to an image using the computed psf
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>addstar (May00)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.daophot</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>addstar (May00)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>addstar</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   addstar -- add artificial stars to images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   addstar image photfile psfimage addimage
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_image">image</A></B></DT>
+  <DT><B>image</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='image' Line='image'>
   <DD>The list of images to which artificial stars are to be added.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_photfile">photfile</A></B></DT>
+  <DT><B>photfile</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='photfile' Line='photfile'>
   <DD>The list of photometry files containing the x and y coordinates and magnitudes
   of the artificial stars to be added to <I>image</I>. If photfile is undefined,
@@ -53,7 +42,7 @@ addstar — Add artificial stars to an image using the computed psf
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_psfimage">psfimage</A></B></DT>
+  <DT><B>psfimage</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='psfimage' Line='psfimage'>
   <DD>The list of images containing the PSF models computed by the DAOPHOT PSF task.
   The number of PSF images must be equal to the number of input images. If
@@ -63,7 +52,7 @@ addstar — Add artificial stars to an image using the computed psf
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_addimage">addimage</A></B></DT>
+  <DT><B>addimage</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='addimage' Line='addimage'>
   <DD>The root name of the output images. There must be one output root image name
    for every input image. If addimage is "<TT>default</TT>", "<TT>dir$default</TT>" or a directory
@@ -75,7 +64,7 @@ addstar — Add artificial stars to an image using the computed psf
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_minmag">minmag</A></B></DT>
+  <DT><B>minmag</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='minmag' Line='minmag'>
   <DD>The minimum magnitude of the computer generated artificial stars to be
   added to the image. The actual intensities of the pixels in the artificial
@@ -84,7 +73,7 @@ addstar — Add artificial stars to an image using the computed psf
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_maxmag">maxmag</A></B></DT>
+  <DT><B>maxmag</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='maxmag' Line='maxmag'>
   <DD>The maximum magnitude of the computer generated artificial stars to be
   added to the image. The actual intensities of the pixels in the artificial
@@ -93,14 +82,14 @@ addstar — Add artificial stars to an image using the computed psf
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nstar">nstar</A></B></DT>
+  <DT><B>nstar</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nstar' Line='nstar'>
   <DD>The number of computer generated artificial stars to be added to the input
   image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_datapars">datapars = "<TT></TT>"</A></B></DT>
+  <DT><B>datapars = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='datapars' Line='datapars = ""'>
   <DD>The text file in which the data dependent parameters are stored. The gain
   parameter <I>epadu</I> in electrons per ADU is stored here.  If datapars is
@@ -108,7 +97,7 @@ addstar — Add artificial stars to an image using the computed psf
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_daopars">daopars = "<TT></TT>"</A></B></DT>
+  <DT><B>daopars = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='daopars' Line='daopars = ""'>
   <DD>The text file in which the daophot fitting parameters are stored. The PSF
   radius parameter <I>psfrad</I> in scale units is stored here. If daopars is
@@ -116,7 +105,7 @@ addstar — Add artificial stars to an image using the computed psf
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_simple_text">simple_text = no</A></B></DT>
+  <DT><B>simple_text = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='simple_text' Line='simple_text = no'>
   <DD>If <I>photfile</I> is a text file and <I>simple_text</I> = "<TT>no</TT>", then ADDSTAR
   expects an APPHOT/DAOPHOT database. Otherwise ADDSTAR expects a simple list
@@ -124,20 +113,20 @@ addstar — Add artificial stars to an image using the computed psf
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_seed">seed = 0</A></B></DT>
+  <DT><B>seed = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='seed' Line='seed = 0'>
   <DD>The seed for the random number generator used to generate the positions
   and magnitudes of the artificial stars.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nimage">nimage = 1</A></B></DT>
+  <DT><B>nimage = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nimage' Line='nimage = 1'>
   <DD>The number of output images to be created per input image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_idoffset">idoffset = 0</A></B></DT>
+  <DT><B>idoffset = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='idoffset' Line='idoffset = 0'>
   <DD>The integer offset to be added to the id numbers of stars in the output
   artificial photometry file. By default the artificial stars are numbered from 1
@@ -145,7 +134,7 @@ addstar — Add artificial stars to an image using the computed psf
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wcsin">wcsin = "<TT>)_.wcsin</TT>", wcsout = "<TT>)_.wcsout</TT>", wcspsf = "<TT>)_.wcspsf</TT>"</A></B></DT>
+  <DT><B>wcsin = "<TT>)_.wcsin</TT>", wcsout = "<TT>)_.wcsout</TT>", wcspsf = "<TT>)_.wcspsf</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wcsin' Line='wcsin = ")_.wcsin", wcsout = ")_.wcsout", wcspsf = ")_.wcspsf"'>
   <DD>The coordinate system of the input coordinates read from <I>photfile</I>, of the
   psf model <I>psfimage</I>, and of the output coordinates written to
@@ -158,7 +147,7 @@ addstar — Add artificial stars to an image using the computed psf
   are "<TT>logical</TT>", "<TT>tv</TT>", and "<TT>physical</TT>". The image cursor coordinate system is
   assumed to be the "<TT>tv</TT>" system.
   <DL>
-  <DT><B><A NAME="l_logical">logical</A></B></DT>
+  <DT><B>logical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='logical' Line='logical'>
   <DD>Logical coordinates are pixel coordinates relative to the current image.
   The  logical coordinate system is the coordinate system used by the image
@@ -169,7 +158,7 @@ addstar — Add artificial stars to an image using the computed psf
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_tv">tv</A></B></DT>
+  <DT><B>tv</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='tv' Line='tv'>
   <DD>Tv coordinates are the pixel coordinates used by the display servers. Tv
   coordinates  include  the effects of any input image section, but do not
@@ -184,7 +173,7 @@ addstar — Add artificial stars to an image using the computed psf
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_physical">physical</A></B></DT>
+  <DT><B>physical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='physical' Line='physical'>
   <DD>Physical coordinates are pixel coordinates invariant  with respect to linear
   transformations of the physical image data.  For example, if the current image
@@ -198,7 +187,7 @@ addstar — Add artificial stars to an image using the computed psf
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_world">world</A></B></DT>
+  <DT><B>world</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='world' Line='world'>
   <DD>World coordinates are image coordinates in any units which are invariant
   with respect to linear transformations of the physical image data. For
@@ -214,7 +203,7 @@ addstar — Add artificial stars to an image using the computed psf
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cache">cache = "<TT>)_.cache</TT>"</A></B></DT>
+  <DT><B>cache = "<TT>)_.cache</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cache' Line='cache = ")_.cache"'>
   <DD>Cache the image pixels in memory. Cache may be set to the value of the apphot
   package parameter (the default), "<TT>yes</TT>", or "<TT>no</TT>". By default caching is
@@ -222,14 +211,14 @@ addstar — Add artificial stars to an image using the computed psf
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verify">verify = "<TT>)_.verify</TT>"</A></B></DT>
+  <DT><B>verify = "<TT>)_.verify</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verify' Line='verify = ")_.verify"'>
   <DD>Verify the critical ADDSTAR task parameters? Verify may be set to the
   daophot package parameter value (the default), "<TT>yes</TT>", or "<TT>no</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_update">update = "<TT>)_.update</TT>"</A></B></DT>
+  <DT><B>update = "<TT>)_.update</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='update' Line='update = ")_.update"'>
   <DD>Update the critical ADDSTAR task parameters if <I>verify</I> = "<TT>yes</TT>"?
   Update may be set to the daophot package parameter value (the default),
@@ -237,7 +226,7 @@ addstar — Add artificial stars to an image using the computed psf
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = "<TT>)_.verbose</TT>"</A></B></DT>
+  <DT><B>verbose = "<TT>)_.verbose</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = ")_.verbose"'>
   <DD>Print messages about the progress of ADDSTAR? Verbose may be set to the
   daophot package parameter value (the default), "<TT>yes</TT>", or "<TT>no</TT>".
@@ -246,7 +235,7 @@ addstar — Add artificial stars to an image using the computed psf
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -313,7 +302,7 @@ addstar — Add artificial stars to an image using the computed psf
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_output">OUTPUT</A></H2>
+  <H3>Output</H3>
   <! BeginSection: 'OUTPUT'>
   <UL>
   <P>
@@ -334,7 +323,7 @@ addstar — Add artificial stars to an image using the computed psf
   <P>
   </UL>
   <! EndSection:   'OUTPUT'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -458,17 +447,17 @@ addstar — Add artificial stars to an image using the computed psf
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   datapars,daopars
@@ -477,5 +466,3 @@ addstar — Add artificial stars to an image using the computed psf
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'OUTPUT' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

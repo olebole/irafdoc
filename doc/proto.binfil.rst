@@ -1,3 +1,5 @@
+.. _binfil:
+
 binfil — Create a binary file from an IRAF image
 ================================================
 
@@ -5,42 +7,29 @@ binfil — Create a binary file from an IRAF image
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>binfil (Jul86)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>proto</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>binfil (Jul86)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>binfil</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   binfil -- create a 16 bit binary raster file from an IRAF image 
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   binfil input
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The list of input images to be converted.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_scale_fact">scale_fact = 1.0</A></B></DT>
+  <DT><B>scale_fact = 1.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='scale_fact' Line='scale_fact = 1.0'>
   <DD>A multiplicative scale factor to be applied to each pixel during the
   conversion process.  This parameter provides the means to minimize loss
@@ -50,14 +39,14 @@ binfil — Create a binary file from an IRAF image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_header">header = no</A></B></DT>
+  <DT><B>header = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='header' Line='header = no'>
   <DD>Prepend a short descriptive header to the output binary raster file?
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   BINFIL generates a simple signed 16-bit binary raster file
@@ -84,7 +73,7 @@ binfil — Create a binary file from an IRAF image
   "<TT>.b</TT>" to indicate binary.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -96,12 +85,12 @@ binfil — Create a binary file from an IRAF image
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   Only the first 64 characters of the image title are placed in the binary file
@@ -110,7 +99,7 @@ binfil — Create a binary file from an IRAF image
   There is no way to specify the output binary file names.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   irafil
@@ -119,5 +108,3 @@ binfil — Create a binary file from an IRAF image
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _tabim:
+
 tabim — Copy a table column to an image.
 ========================================
 
@@ -5,32 +7,19 @@ tabim — Copy a table column to an image.
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>tabim (Mar2000)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>tables</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>tabim (Mar2000)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>tabim</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   tabim -- Copy a table column to an image.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   tabim intable output colname ndim n1 n2 n3 n4 n5 n6
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task writes values from a column of a table to an image.
@@ -42,17 +31,17 @@ tabim — Copy a table column to an image.
   The number of rows in the table must equal the number of pixels in the image.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_intable">intable = "<TT></TT>" [file name template]</A></B></DT>
+  <DT><B>intable = "<TT></TT>" [file name template]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='intable' Line='intable = "" [file name template]'>
   <DD>The names of the input tables.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output = "<TT></TT>" [file name template]</A></B></DT>
+  <DT><B>output = "<TT></TT>" [file name template]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output = "" [file name template]'>
   <DD>The names of the output images.
   If an output image does not exist it will be created.
@@ -62,14 +51,14 @@ tabim — Copy a table column to an image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_colname">colname = "<TT></TT>" [string]</A></B></DT>
+  <DT><B>colname = "<TT></TT>" [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='colname' Line='colname = "" [string]'>
   <DD>The name of the column in 'intable' that is to be written to the image.
   The same column name is used for all input tables.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ndim">ndim = 0 [integer, min=0, max=7]</A></B></DT>
+  <DT><B>ndim = 0 [integer, min=0, max=7]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ndim' Line='ndim = 0 [integer, min=0, max=7]'>
   <DD>If the output image does not exist,
   'ndim' can be used to specify
@@ -89,46 +78,46 @@ tabim — Copy a table column to an image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_n1">n1 = 1 [integer, min=1, max=INDEF]</A></B></DT>
+  <DT><B>n1 = 1 [integer, min=1, max=INDEF]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='n1' Line='n1 = 1 [integer, min=1, max=INDEF]'>
   <DD>Length of first axis.
   'n1', 'n2', etc., are ignored if ndim = 0 or 1.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_n2">n2 = 1 [integer, min=1, max=INDEF]</A></B></DT>
+  <DT><B>n2 = 1 [integer, min=1, max=INDEF]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='n2' Line='n2 = 1 [integer, min=1, max=INDEF]'>
   <DD>Length of second axis.
   This and the subsequent axis length parameters will be ignored if ndim &lt; 3.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_n3">n3 = 1 [integer, min=1, max=INDEF]</A></B></DT>
+  <DT><B>n3 = 1 [integer, min=1, max=INDEF]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='n3' Line='n3 = 1 [integer, min=1, max=INDEF]'>
   <DD>Length of third axis.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_n4">n4 = 1 [integer, min=1, max=INDEF]</A></B></DT>
+  <DT><B>n4 = 1 [integer, min=1, max=INDEF]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='n4' Line='n4 = 1 [integer, min=1, max=INDEF]'>
   <DD>Length of fourth axis.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_n5">n5 = 1 [integer, min=1, max=INDEF]</A></B></DT>
+  <DT><B>n5 = 1 [integer, min=1, max=INDEF]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='n5' Line='n5 = 1 [integer, min=1, max=INDEF]'>
   <DD>Length of fifth axis.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_n6">n6 = 1 [integer, min=1, max=INDEF]</A></B></DT>
+  <DT><B>n6 = 1 [integer, min=1, max=INDEF]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='n6' Line='n6 = 1 [integer, min=1, max=INDEF]'>
   <DD>Length of sixth axis.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  Copy column "<TT>flux</TT>" from table "<TT>hr465.tab</TT>" to
@@ -147,18 +136,18 @@ tabim — Copy a table column to an image.
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   This task was written by Phil Hodge.
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   The 'imtab' task copies an image to a column of a table.
@@ -170,5 +159,3 @@ tabim — Copy a table column to an image.
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

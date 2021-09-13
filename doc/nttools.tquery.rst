@@ -1,3 +1,5 @@
+.. _tquery:
+
 tquery — Create a new table from selected rows and columns in a table.
 ======================================================================
 
@@ -5,32 +7,19 @@ tquery — Create a new table from selected rows and columns in a table.
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>tquery (Jan1999)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>tables</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>tquery (Jan1999)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>tquery</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   tquery -- Create a new table from selected rows and columns of an old table.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   tquery intable outtable expr columns sort
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task combines the functions of the tasks 'tselect', 'tproject', and
@@ -53,25 +42,25 @@ tquery — Create a new table from selected rows and columns in a table.
   specifies whether sort conditions are to be case sensitive.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_intable">intable [file name template]</A></B></DT>
+  <DT><B>intable [file name template]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='intable' Line='intable [file name template]'>
   <DD>Table(s) from which rows are copied. If input is redirected, this
   parameter will ignored and input will be read from STDIN instead.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_outtable">outtable [file name template]</A></B></DT>
+  <DT><B>outtable [file name template]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable [file name template]'>
   <DD>The new table(s) containing the copied rows.
   The number of output tables must equal the number of input tables.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_expr">expr [string]</A></B></DT>
+  <DT><B>expr [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='expr' Line='expr [string]'>
   <DD>The boolean expression which determines which rows are copied to the new
   table.  The expression may be placed in a file and the name of the file
@@ -82,7 +71,7 @@ tquery — Create a new table from selected rows and columns in a table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_columns">columns [string]</A></B></DT>
+  <DT><B>columns [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='columns' Line='columns [string]'>
   <DD>Column template describing the columns that are to be selected
   from the old table. A column template consists of a list
@@ -98,7 +87,7 @@ tquery — Create a new table from selected rows and columns in a table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sort">sort [string]</A></B></DT>
+  <DT><B>sort [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sort' Line='sort [string]'>
   <DD>Column template describing the columns to be sorted.  The
   first column name is the primary sort key with subsequent columns
@@ -107,7 +96,7 @@ tquery — Create a new table from selected rows and columns in a table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(uniq = no) [boolean]</A></B></DT>
+  <DT><B>(uniq = no) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(uniq = no) [boolean]'>
   <DD>Make sure all rows are unique in a table?
   <P>
@@ -119,7 +108,7 @@ tquery — Create a new table from selected rows and columns in a table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(ascend = yes) [boolean]</A></B></DT>
+  <DT><B>(ascend = yes) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(ascend = yes) [boolean]'>
   <DD>Should sorts be performed in ascending order?
   <P>
@@ -129,7 +118,7 @@ tquery — Create a new table from selected rows and columns in a table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(casesens = yes) [boolean]</A></B></DT>
+  <DT><B>(casesens = yes) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(casesens = yes) [boolean]'>
   <DD>Are sort operations case sensitive?
   <P>
@@ -140,7 +129,7 @@ tquery — Create a new table from selected rows and columns in a table.
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Extract all binary stars from a catalog; write their names, magnitudes,
@@ -160,20 +149,20 @@ tquery — Create a new table from selected rows and columns in a table.
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   Column names must be set off from operators by blanks in the expression so
   that they can be correctly parsed by the expression evaluator.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   This task was written by Bernie Simon.
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   tsort, tselect, tproject
@@ -182,5 +171,3 @@ tquery — Create a new table from selected rows and columns in a table.
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

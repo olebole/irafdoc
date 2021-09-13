@@ -1,3 +1,5 @@
+.. _laplace:
+
 laplace — Laplacian filter a list of 1 or 2-D images
 ====================================================
 
@@ -5,42 +7,29 @@ laplace — Laplacian filter a list of 1 or 2-D images
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>laplace (Dec85)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imfilter</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>laplace (Dec85)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>laplace</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   laplace -- convolve a list of images with a Laplacian filter
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   laplace input output
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of images to be convolved.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>List of output images. The number of output images must equal the number of
   input images. If the input image name equals the output image name the
@@ -48,35 +37,35 @@ laplace — Laplacian filter a list of 1 or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_laplace">laplace = "<TT>xycentral</TT>"</A></B></DT>
+  <DT><B>laplace = "<TT>xycentral</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='laplace' Line='laplace = "xycentral"'>
   <DD>The Laplacian filters are a set of four three by three kernels which
   approximate the Laplacian operator, where a Laplacian operator is defined
   as the sum of the partial second derivatives in x and y.
   The elements of the four Laplacian kernels are shown in detail below.
   <DL>
-  <DT><B><A NAME="l_xycentral">xycentral</A></B></DT>
+  <DT><B>xycentral</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='xycentral' Line='xycentral'>
   <DD>The elements of the central column and row of a 3 by 3 image subraster are
   combined to estimate the Laplacian at the position of the central pixel.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_diagonals">diagonals</A></B></DT>
+  <DT><B>diagonals</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='diagonals' Line='diagonals'>
   <DD>The elements of the two diagonals of a 3 by 3 image subraster are combined
   to estimate the Laplacian at the position of the central pixel.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xyall">xyall</A></B></DT>
+  <DT><B>xyall</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='xyall' Line='xyall'>
   <DD>The three columns and rows of a three by three image subraster are averaged
   to estimate the Laplacian at the position of the central pixel.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xydiagonals">xydiagonals</A></B></DT>
+  <DT><B>xydiagonals</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='xydiagonals' Line='xydiagonals'>
   <DD>The central row and column and the two diagonals of a three by three image
   subraster are combined to estimate the Laplacian at the position of the
@@ -86,30 +75,30 @@ laplace — Laplacian filter a list of 1 or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_boundary">boundary = "<TT>nearest</TT>"</A></B></DT>
+  <DT><B>boundary = "<TT>nearest</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"'>
   <DD>The algorithm used to compute the values of the out of bounds pixels.
   The options are:
   <DL>
-  <DT><B><A NAME="l_nearest">nearest</A></B></DT>
+  <DT><B>nearest</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest'>
   <DD>Use the value of the nearest boundary pixel.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_constant">constant</A></B></DT>
+  <DT><B>constant</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='constant' Line='constant'>
   <DD>Use a constant value.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_reflect">reflect</A></B></DT>
+  <DT><B>reflect</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='reflect' Line='reflect'>
   <DD>Generate a value by reflecting around the boundary.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wrap">wrap</A></B></DT>
+  <DT><B>wrap</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='wrap' Line='wrap'>
   <DD>Generate a value by wrapping around to the opposite side of the image.
   </DD>
@@ -117,7 +106,7 @@ laplace — Laplacian filter a list of 1 or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_constant">constant = 0.</A></B></DT>
+  <DT><B>constant = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.'>
   <DD>The constant for constant-valued boundary extension.
   </DD>
@@ -125,7 +114,7 @@ laplace — Laplacian filter a list of 1 or 2-D images
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -178,7 +167,7 @@ laplace — Laplacian filter a list of 1 or 2-D images
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -189,7 +178,7 @@ laplace — Laplacian filter a list of 1 or 2-D images
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   <P>
@@ -199,13 +188,13 @@ laplace — Laplacian filter a list of 1 or 2-D images
   <P>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   <P>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   convolve, gauss, gradient, boxcar
@@ -214,5 +203,3 @@ laplace — Laplacian filter a list of 1 or 2-D images
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

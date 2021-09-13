@@ -1,3 +1,5 @@
+.. _tcheck:
+
 tcheck — Check STSDAS table element values.
 ===========================================
 
@@ -5,32 +7,19 @@ tcheck — Check STSDAS table element values.
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>tcheck (Aug91)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>tables</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>tcheck (Aug91)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>tcheck</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   tcheck -- Check STSDAS table values.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   tcheck input chkfile
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task allows the user to check the correctness of an STSDAS table by
@@ -112,24 +101,24 @@ tcheck — Check STSDAS table element values.
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input [file name template]</A></B></DT>
+  <DT><B>input [file name template]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input [file name template]'>
   <DD>List of tables that will be checked.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_chkfile">chkfile [file name]</A></B></DT>
+  <DT><B>chkfile [file name]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='chkfile' Line='chkfile [file name]'>
   <DD>Text file containing consistency checks.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. The simplest check is when a table element has one legal
@@ -164,18 +153,18 @@ tcheck — Check STSDAS table element values.
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   This task was written by Bernie Simon.
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   hcheck
@@ -186,5 +175,3 @@ tcheck — Check STSDAS table element values.
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

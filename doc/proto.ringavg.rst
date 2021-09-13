@@ -1,3 +1,5 @@
+.. _ringavg:
+
 ringavg — Compute pixel averages in concentric rings about given center
 =======================================================================
 
@@ -5,48 +7,35 @@ ringavg — Compute pixel averages in concentric rings about given center
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>ringavg (Nov02)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>proto</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>ringavg (Nov02)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>ringavg</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   ringavg -- compute pixel averages in concentric rings about given center
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   ringavg image xc yc
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_image">image</A></B></DT>
+  <DT><B>image</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='image' Line='image'>
   <DD>Image to be used.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xc">xc, yc</A></B></DT>
+  <DT><B>xc, yc</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xc' Line='xc, yc'>
   <DD>Pixel coordinate for center of rings.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_r1">r1 = 0, r2 = 10, dr = 1</A></B></DT>
+  <DT><B>r1 = 0, r2 = 10, dr = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='r1' Line='r1 = 0, r2 = 10, dr = 1'>
   <DD>Rings to be measured.  <I>r1</I> is the inner radius of the first ring,
   <I>r2</I> is the outer radius of the last bin, and <I>dr</I> is the widths
@@ -54,13 +43,13 @@ ringavg — Compute pixel averages in concentric rings about given center
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_labels">labels = yes</A></B></DT>
+  <DT><B>labels = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='labels' Line='labels = yes'>
   <DD>Print column labels for the output?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_vebar">vebar = no</A></B></DT>
+  <DT><B>vebar = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='vebar' Line='vebar = no'>
   <DD>If <I>vebar</I> is yes then the standard deviation and standard error will
   be printed as negative values for use with <B>graph</B>.
@@ -68,7 +57,7 @@ ringavg — Compute pixel averages in concentric rings about given center
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Pixels are binned into a series of concentric rings centered on a given
@@ -90,7 +79,7 @@ ringavg — Compute pixel averages in concentric rings about given center
   Because it is a script it will be very slow if r2 becomes large.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Compute the ring averages with labels and output to the terminal.
@@ -126,7 +115,7 @@ ringavg — Compute pixel averages in concentric rings about given center
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   pradprof, psfmeasure, radprof
@@ -135,5 +124,3 @@ ringavg — Compute pixel averages in concentric rings about given center
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

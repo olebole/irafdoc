@@ -1,3 +1,5 @@
+.. _cosmicrays:
+
 cosmicrays — Remove cosmic rays using flux ratio algorithm
 ==========================================================
 
@@ -5,42 +7,29 @@ cosmicrays — Remove cosmic rays using flux ratio algorithm
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>cosmicrays (Apr98)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.imred.crutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>cosmicrays (Apr98)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>cosmicrays</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   cosmicrays -- detect and replace cosmic rays
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   cosmicrays input output
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of input images in which to detect cosmic rays.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>List of output images in which the detected cosmic rays will be replaced
   by an average of neighboring pixels.  If the output image name differs
@@ -52,7 +41,7 @@ cosmicrays — Remove cosmic rays using flux ratio algorithm
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_crmasks">crmasks = "<TT></TT>"</A></B></DT>
+  <DT><B>crmasks = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='crmasks' Line='crmasks = ""'>
   <DD>List of cosmic ray mask files to be created; one for each input image.  If no
   file names are given then no cosmic ray mask is created.  If an existing
@@ -61,7 +50,7 @@ cosmicrays — Remove cosmic rays using flux ratio algorithm
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_threshold">threshold = 25.</A></B></DT>
+  <DT><B>threshold = 25.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 25.'>
   <DD>Detection threshold above the mean of the surrounding pixels for cosmic
   rays.  The threshold will depend on the noise characteristics of the
@@ -70,7 +59,7 @@ cosmicrays — Remove cosmic rays using flux ratio algorithm
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fluxratio">fluxratio = 2.</A></B></DT>
+  <DT><B>fluxratio = 2.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fluxratio' Line='fluxratio = 2.'>
   <DD>The ratio (as a percent) of the mean neighboring pixel flux to the candidate
   cosmic ray pixel for rejection.  The value depends on the seeing and the
@@ -80,7 +69,7 @@ cosmicrays — Remove cosmic rays using flux ratio algorithm
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_npasses">npasses = 5</A></B></DT>
+  <DT><B>npasses = 5</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='npasses' Line='npasses = 5'>
   <DD>Number of cosmic ray detection passes.  Since only the locally strongest
   pixel is considered a cosmic ray, multiple detection passes are needed to
@@ -88,7 +77,7 @@ cosmicrays — Remove cosmic rays using flux ratio algorithm
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_window">window = 5</A></B></DT>
+  <DT><B>window = 5</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='window' Line='window = 5'>
   <DD>Size of cosmic ray detection window.  A square window of either 5 by 5 or
   7 by 7 is used to detect cosmic rays.  The smaller window allows detection
@@ -98,7 +87,7 @@ cosmicrays — Remove cosmic rays using flux ratio algorithm
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = yes</A></B></DT>
+  <DT><B>interactive = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes'>
   <DD>Examine parameters interactively?  A plot of the mean flux within the
   detection window (x100) vs the flux ratio (x100) is plotted and the user may
@@ -109,14 +98,14 @@ cosmicrays — Remove cosmic rays using flux ratio algorithm
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_train">train = no</A></B></DT>
+  <DT><B>train = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='train' Line='train = no'>
   <DD>Define the flux ratio threshold by using a set of objects identified
   as stars (or other astronomical objects) or cosmic rays?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_objects">objects = "<TT></TT>"</A></B></DT>
+  <DT><B>objects = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='objects' Line='objects = ""'>
   <DD>Cursor list of coordinates of training objects.  If null (the null string "<TT></TT>")
   then the image display cursor will be read.  The user is responsible for first
@@ -127,7 +116,7 @@ cosmicrays — Remove cosmic rays using flux ratio algorithm
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_savefile">savefile = "<TT></TT>"</A></B></DT>
+  <DT><B>savefile = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='savefile' Line='savefile = ""'>
   <DD>File to save (by appending) the training object coordinates.  This is of
   use when the objects are identified using the image display cursor.  The
@@ -136,7 +125,7 @@ cosmicrays — Remove cosmic rays using flux ratio algorithm
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_plotfile">plotfile</A></B></DT>
+  <DT><B>plotfile</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='plotfile' Line='plotfile'>
   <DD>If a plot file is specified then the graph of the flux ratio (x100) vs
   the mean flux (x100) is recorded as metacode.  This may be spooled or examined
@@ -144,21 +133,21 @@ cosmicrays — Remove cosmic rays using flux ratio algorithm
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_graphics">graphics = "<TT>stdgraph</TT>"</A></B></DT>
+  <DT><B>graphics = "<TT>stdgraph</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"'>
   <DD>Interactive graphic output device for interactive examination of the
   detection parameters.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cursor">cursor = "<TT></TT>"</A></B></DT>
+  <DT><B>cursor = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""'>
   <DD>Interactive graphics cursor input.  If null the graphics display cursor
   is used, otherwise a file containing cursor input may be specified.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_answer">answer</A></B></DT>
+  <DT><B>answer</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='answer' Line='answer'>
   <DD>This parameter is used for interactive queries when processing a list of
   images.  The responses may be "<TT>no</TT>", "<TT>yes</TT>", "<TT>NO</TT>", or "<TT>YES</TT>".  The upper case
@@ -172,7 +161,7 @@ cosmicrays — Remove cosmic rays using flux ratio algorithm
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_image_cursor_commands">IMAGE CURSOR COMMANDS</A></H2>
+  <H3>Image cursor commands</H3>
   <! BeginSection: 'IMAGE CURSOR COMMANDS'>
   <UL>
   <P>
@@ -205,7 +194,7 @@ cosmicrays — Remove cosmic rays using flux ratio algorithm
   :\help or see <B>gtools</B>).
   </UL>
   <! EndSection:   'IMAGE CURSOR COMMANDS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Cosmic ray events in each input image are detected and replaced by the
@@ -337,7 +326,7 @@ cosmicrays — Remove cosmic rays using flux ratio algorithm
   commands (see <B>gtools</B>).
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. To replace cosmic rays in a set of images ccd* without training:
@@ -382,7 +371,7 @@ cosmicrays — Remove cosmic rays using flux ratio algorithm
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   crmedian, crnebula, crgrow, crfix, credit, gtools, imedit, rimcursor
@@ -391,5 +380,3 @@ cosmicrays — Remove cosmic rays using flux ratio algorithm
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'IMAGE CURSOR COMMANDS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

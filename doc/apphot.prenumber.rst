@@ -1,3 +1,5 @@
+.. _prenumber:
+
 prenumber — Renumber stars in an apphot database
 ================================================
 
@@ -5,48 +7,35 @@ prenumber — Renumber stars in an apphot database
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>prenumber (May93)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.ptools</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>prenumber (May93)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>prenumber</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   prenumber -- renumber an APPHOT/DAOPHOT database
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   renumber infile
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_infile">infile</A></B></DT>
+  <DT><B>infile</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='infile' Line='infile'>
   <DD>The APPHOT/DAOPHOT database to be renumbered.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_id">id = "<TT>ID</TT>"</A></B></DT>
+  <DT><B>id = "<TT>ID</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='id' Line='id = "ID"'>
   <DD>The name of the keyword whose value is the sequence number of the object
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_idoffset">idoffset = 0</A></B></DT>
+  <DT><B>idoffset = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='idoffset' Line='idoffset = 0'>
   <DD>An integer offset  to be added to the id numbers of the stars in
   the output renumbered photometry file. If idoffset is &gt; 0, the output
@@ -57,7 +46,7 @@ prenumber — Renumber stars in an apphot database
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   PRENUMBER is a simple task which accepts an APPHOT/DAOPHOT
@@ -73,7 +62,7 @@ prenumber — Renumber stars in an apphot database
   database.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -92,17 +81,17 @@ prenumber — Renumber stars in an apphot database
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   ptools.txrenumber,ptools.tbrenumber,tables.tcalc
@@ -111,5 +100,3 @@ prenumber — Renumber stars in an apphot database
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

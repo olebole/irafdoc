@@ -1,3 +1,5 @@
+.. _columns:
+
 columns — Convert multicolumn file to separate files
 ====================================================
 
@@ -5,55 +7,42 @@ columns — Convert multicolumn file to separate files
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>columns (Nov88)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>lists</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>columns (Nov88)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>columns</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   columns -- break a multicolumn list into multiple single column lists
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   columns filename numcols 
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_filename">filename</A></B></DT>
+  <DT><B>filename</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='filename' Line='filename'>
   <DD>Name of the input table file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_numcols">numcols</A></B></DT>
+  <DT><B>numcols</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='numcols' Line='numcols'>
   <DD>The number of columns in the input file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_outroot">outroot = "<TT>col.</TT>"</A></B></DT>
+  <DT><B>outroot = "<TT>col.</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='outroot' Line='outroot = "col."'>
   <DD>Root name of the output column files.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Task <I>columns</I> is used to reformat a multicolumn list file into separate
@@ -64,7 +53,7 @@ columns — Convert multicolumn file to separate files
   column in the input table.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   Make 3 files named datacol.1, datacol.2 and datacol.3 from the 3 column
@@ -75,7 +64,7 @@ columns — Convert multicolumn file to separate files
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   fields
@@ -84,5 +73,3 @@ columns — Convert multicolumn file to separate files
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

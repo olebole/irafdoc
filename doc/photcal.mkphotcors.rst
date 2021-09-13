@@ -1,3 +1,5 @@
+.. _mkphotcors:
+
 mkphotcors — Prepare the photometric corrections files
 ======================================================
 
@@ -5,37 +7,24 @@ mkphotcors — Prepare the photometric corrections files
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>mkphotcors (Apr94)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.photcal</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>mkphotcors (Apr94)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>mkphotcors</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   mkphotcors -- type in and/or check the observing parameters, shifts
   or aperture corrections files for a given image set file.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   mkphotcors imsets idfilters obsparams shifts apercors
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_imsets">imsets</A></B></DT>
+  <DT><B>imsets</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='imsets' Line='imsets'>
   <DD>The name of the input/output text file of observations, where  a complete
   observation consists of an observation name usually the name of
@@ -51,7 +40,7 @@ mkphotcors — Prepare the photometric corrections files
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_idfilters">idfilters</A></B></DT>
+  <DT><B>idfilters</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='idfilters' Line='idfilters'>
   <DD>The list of filters separated by whitespace or commas which define a complete
   observation. If <I>imsets</I> is entered interactively by the user,
@@ -62,7 +51,7 @@ mkphotcors — Prepare the photometric corrections files
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_obsparams">obsparams</A></B></DT>
+  <DT><B>obsparams</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='obsparams' Line='obsparams'>
   <DD>The name of the input/output text file containing the quantities filter id,
   exposure time, airmass, and time of observation, for each image in <I>imsets</I>.
@@ -76,7 +65,7 @@ mkphotcors — Prepare the photometric corrections files
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_shifts">shifts</A></B></DT>
+  <DT><B>shifts</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='shifts' Line='shifts'>
   <DD>The name of the input/output text file containing the x-y shifts to be applied
   to the measured x-y coordinates of each object in each image in <I>imsets</I>.
@@ -89,7 +78,7 @@ mkphotcors — Prepare the photometric corrections files
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apercors">apercors</A></B></DT>
+  <DT><B>apercors</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apercors' Line='apercors'>
   <DD>The name of the input/output text file containing the aperture corrections
   to be applied
@@ -103,7 +92,7 @@ mkphotcors — Prepare the photometric corrections files
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_obscolumns">obscolumns = "<TT>2 3 4 5</TT>"</A></B></DT>
+  <DT><B>obscolumns = "<TT>2 3 4 5</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='obscolumns' Line='obscolumns = "2 3 4 5"'>
   <DD>The list of numbers separated by commas or whitespace specifying which 
   columns in <I>obsparams</I> contain the filter ids, exposure times,
@@ -115,13 +104,13 @@ mkphotcors — Prepare the photometric corrections files
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verify">verify = no</A></B></DT>
+  <DT><B>verify = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verify' Line='verify = no'>
   <DD>Verify all data entered interactively ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print messages about actions taken by MKPHOTCORS, and any warning or error
   messages generated.
@@ -130,7 +119,7 @@ mkphotcors — Prepare the photometric corrections files
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   MKPHOTCORS takes an image set file <I>imsets</I> and a list of filter ids
@@ -236,7 +225,7 @@ mkphotcors — Prepare the photometric corrections files
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_output">OUTPUT</A></H2>
+  <H3>Output</H3>
   <! BeginSection: 'OUTPUT'>
   <UL>
   <P>
@@ -301,7 +290,7 @@ mkphotcors — Prepare the photometric corrections files
   <P>
   </UL>
   <! EndSection:   'OUTPUT'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -325,17 +314,17 @@ mkphotcors — Prepare the photometric corrections files
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   mkimsets,mknobsfile,mkobsfile
@@ -344,5 +333,3 @@ mkphotcors — Prepare the photometric corrections files
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'OUTPUT' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

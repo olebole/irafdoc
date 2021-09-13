@@ -1,3 +1,5 @@
+.. _mkechelle:
+
 mkechelle — Make artificial 1D and 2D echelle spectra
 =====================================================
 
@@ -5,42 +7,29 @@ mkechelle — Make artificial 1D and 2D echelle spectra
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>mkechelle (Mar93)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.artdata</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>mkechelle (Mar93)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>mkechelle</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   mkechelle -- Make artificial echelle spectra
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   mkechelle images [clobber]
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>List of echelle spectra to create or modify.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_clobber">clobber (query)</A></B></DT>
+  <DT><B>clobber (query)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='clobber' Line='clobber (query)'>
   <DD>If an existing image is specified the clobber query parameter is used.
   Normally the parameter is not specified on the command line so that
@@ -50,7 +39,7 @@ mkechelle — Make artificial 1D and 2D echelle spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ncols">ncols = 512, nlines = 512, norders = 23</A></B></DT>
+  <DT><B>ncols = 512, nlines = 512, norders = 23</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ncols' Line='ncols = 512, nlines = 512, norders = 23'>
   <DD>For two dimensional spectra these parameters define the number of columns
   and lines in the final image and the maximum number of orders (there may be
@@ -71,13 +60,13 @@ mkechelle — Make artificial 1D and 2D echelle spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_title">title = "<TT>Artificial Echelle Spectrum</TT>"</A></B></DT>
+  <DT><B>title = "<TT>Artificial Echelle Spectrum</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='title' Line='title = "Artificial Echelle Spectrum"'>
   <DD>Image title to be given to the spectra.  Maximum of 79 characters.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_header">header = "<TT>artdata$stdheader.dat</TT>"</A></B></DT>
+  <DT><B>header = "<TT>artdata$stdheader.dat</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='header' Line='header = "artdata$stdheader.dat"'>
   <DD>Image or header keyword data file.  If an image is given then the image
   header is copied.  If a file is given then the FITS format cards are
@@ -89,20 +78,20 @@ mkechelle — Make artificial 1D and 2D echelle spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_list">list = no</A></B></DT>
+  <DT><B>list = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='list' Line='list = no'>
   <DD>List the grating/instrument parameters?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_make">make = yes</A></B></DT>
+  <DT><B>make = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='make' Line='make = yes'>
   <DD>Make the artificial spectra?  This is set to no if only the grating
   parameter listing is desired.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_comments">comments = yes</A></B></DT>
+  <DT><B>comments = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='comments' Line='comments = yes'>
   <DD>Include comments recording task parameters in the image header?
   </DD>
@@ -112,7 +101,7 @@ mkechelle — Make artificial 1D and 2D echelle spectra
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_xc">xc = INDEF, yc = INDEF</A></B></DT>
+  <DT><B>xc = INDEF, yc = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xc' Line='xc = INDEF, yc = INDEF'>
   <DD>The column and line position of the blaze peak in the reference order (see
   <I>order</I> parameter.  If INDEF then the middle of the dimension is used.
@@ -123,7 +112,7 @@ mkechelle — Make artificial 1D and 2D echelle spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pixsize">pixsize = 0.027</A></B></DT>
+  <DT><B>pixsize = 0.027</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pixsize' Line='pixsize = 0.027'>
   <DD>Pixel size in millimeters.  This is used to convert the focal length
   and dispersion to pixels.  If INDEF then these parameters are
@@ -131,7 +120,7 @@ mkechelle — Make artificial 1D and 2D echelle spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_profile">profile = "<TT>gaussian</TT>" (extracted|gaussian|slit)</A></B></DT>
+  <DT><B>profile = "<TT>gaussian</TT>" (extracted|gaussian|slit)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='profile' Line='profile = "gaussian" (extracted|gaussian|slit)'>
   <DD>The order profile across the dispersion.  If the value is "<TT>extracted</TT>"
   then an extracted echelle format spectrum is produced.  Otherwise a
@@ -140,7 +129,7 @@ mkechelle — Make artificial 1D and 2D echelle spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_width">width = 5.</A></B></DT>
+  <DT><B>width = 5.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='width' Line='width = 5.'>
   <DD>If two dimensional echelle images are selected this parameter specifies
   the order profile full width at half maximum in pixels.  See <B>mk2dspec</B>
@@ -148,7 +137,7 @@ mkechelle — Make artificial 1D and 2D echelle spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_scattered">scattered = 0.</A></B></DT>
+  <DT><B>scattered = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='scattered' Line='scattered = 0.'>
   <DD>Scattered light peak flux per pixel.  A simple scattered light component
   may be included in the two dimensional format.  The scattered light has the
@@ -170,7 +159,7 @@ mkechelle — Make artificial 1D and 2D echelle spectra
   then a linear dispersion function is used.  Also in this case the
   extracted format will include dispersion information.
   <DL>
-  <DT><B><A NAME="l_f">f = 590., cf = 590.</A></B></DT>
+  <DT><B>f = 590., cf = 590.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='f' Line='f = 590., cf = 590.'>
   <DD>Echelle and crossdisperser focal lengths in millimeters (if <I>pixsize</I>
   is given) or pixels.  Technically it is defined by the equation x = f * tan
@@ -182,7 +171,7 @@ mkechelle — Make artificial 1D and 2D echelle spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_gmm">gmm = 31.6, cgmm = 226.</A></B></DT>
+  <DT><B>gmm = 31.6, cgmm = 226.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='gmm' Line='gmm = 31.6, cgmm = 226.'>
   <DD>Echelle and crossdisperser grating grooves per millimeter.  If specified as
   INDEF it may be computed from the order, which is required in this case,
@@ -190,7 +179,7 @@ mkechelle — Make artificial 1D and 2D echelle spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_blaze">blaze = 63., cblaze = 4.53</A></B></DT>
+  <DT><B>blaze = 63., cblaze = 4.53</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='blaze' Line='blaze = 63., cblaze = 4.53'>
   <DD>Echelle and crossdisperser blaze angles in degrees.  It is always specified or printed as a positive
   angle relative to the grating normal.  If specified as INDEF it is
@@ -198,7 +187,7 @@ mkechelle — Make artificial 1D and 2D echelle spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_theta">theta = 69., ctheta = -11.97</A></B></DT>
+  <DT><B>theta = 69., ctheta = -11.97</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='theta' Line='theta = 69., ctheta = -11.97'>
   <DD>Echelle and crossdisperser angles of incidence in degrees.  The angle of
   incidence must be in the plane perpendicular to face of the grating.  The
@@ -211,7 +200,7 @@ mkechelle — Make artificial 1D and 2D echelle spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_order">order = 112</A></B></DT>
+  <DT><B>order = 112</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='order' Line='order = 112'>
   <DD>The central or reference echelle order for which the wavelength and
   dispersion are specified.  If specified as INDEF it will be computed from
@@ -224,7 +213,7 @@ mkechelle — Make artificial 1D and 2D echelle spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_corder">corder = 1</A></B></DT>
+  <DT><B>corder = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='corder' Line='corder = 1'>
   <DD>The crossdisperser order for which the crossdisperser blaze wavelength and
   dispersion are specified.  If specified as INDEF it will be computed from
@@ -239,14 +228,14 @@ mkechelle — Make artificial 1D and 2D echelle spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wavelength">wavelength = 5007.49 cwavelength = 6700.</A></B></DT>
+  <DT><B>wavelength = 5007.49 cwavelength = 6700.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wavelength' Line='wavelength = 5007.49 cwavelength = 6700.'>
   <DD>Echelle and crossdisperser blaze wavelengths in Angstroms at the reference
   orders.  If specified as INDEF it will be computed from the other parameters.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dispersion">dispersion = 2.61 cdispersion = 70.</A></B></DT>
+  <DT><B>dispersion = 2.61 cdispersion = 70.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dispersion' Line='dispersion = 2.61 cdispersion = 70.'>
   <DD>Echelle and crossdisperser blaze dispersions in Angstroms per millimeter
   (if <I>pixsize</I> is specified) or pixels.
@@ -259,7 +248,7 @@ mkechelle — Make artificial 1D and 2D echelle spectra
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_rv">rv = 0.</A></B></DT>
+  <DT><B>rv = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rv' Line='rv = 0.'>
   <DD>Radial velocity (km/s) or redshift, as selected by the parameter <I>z</I>,
   applied to line positions and continuum.  Velocities are converted to
@@ -269,19 +258,19 @@ mkechelle — Make artificial 1D and 2D echelle spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_z">z = no</A></B></DT>
+  <DT><B>z = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='z' Line='z = no'>
   <DD>Is the velocity parameter a radial velocity or a redshift?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_continuum">continuum = 1000.</A></B></DT>
+  <DT><B>continuum = 1000.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='continuum' Line='continuum = 1000.'>
   <DD>Continuum at the echelle blaze peak in the reference order.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_temperature">temperature = 5700.</A></B></DT>
+  <DT><B>temperature = 5700.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='temperature' Line='temperature = 5700.'>
   <DD>Blackbody continuum temperature in Kelvin.  A value of 0 is used if
   no blackbody continuum is desired.  The intensity level is set by
@@ -290,7 +279,7 @@ mkechelle — Make artificial 1D and 2D echelle spectra
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_lines">lines = "<TT></TT>"</A></B></DT>
+  <DT><B>lines = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lines' Line='lines = ""'>
   <DD>List of spectral line files.  Spectral line files contain lines of rest
   wavelength, peak, and widths (see the DESCRIPTION section).
@@ -304,7 +293,7 @@ mkechelle — Make artificial 1D and 2D echelle spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nlines">nlines = 0</A></B></DT>
+  <DT><B>nlines = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nlines' Line='nlines = 0'>
   <DD>If no spectral line file or a new file is specified then the task will
   generate this number of random spectral lines.  The rest wavelengths are
@@ -316,7 +305,7 @@ mkechelle — Make artificial 1D and 2D echelle spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_peak">peak = -0.5</A></B></DT>
+  <DT><B>peak = -0.5</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='peak' Line='peak = -0.5'>
   <DD>The maximum spectral line peak value when generating random lines or
   when the peak is missing from the spectral line file.
@@ -325,14 +314,14 @@ mkechelle — Make artificial 1D and 2D echelle spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sigma">sigma = 1.</A></B></DT>
+  <DT><B>sigma = 1.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sigma' Line='sigma = 1.'>
   <DD>The default line width as a gaussian sigma in Angstroms when generating
   random lines or when the width is missing from the spectral line file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_seed">seed = 1</A></B></DT>
+  <DT><B>seed = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='seed' Line='seed = 1'>
   <DD>Random number seed.
   </DD>
@@ -340,14 +329,14 @@ mkechelle — Make artificial 1D and 2D echelle spectra
   <P>
   PACKAGE PARAMETERS
   <DL>
-  <DT><B><A NAME="l_nxsub">nxsub = 10</A></B></DT>
+  <DT><B>nxsub = 10</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nxsub' Line='nxsub = 10'>
   <DD>Number of pixel subsamples used in computing the gaussian spectral line
   profiles.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dynrange">dynrange = 100000.</A></B></DT>
+  <DT><B>dynrange = 100000.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dynrange' Line='dynrange = 100000.'>
   <DD>The gaussian line profiles extend to infinity so a dynamic range, the ratio
   of the peak intensity to the cutoff intensity, is imposed to cutoff the
@@ -356,7 +345,7 @@ mkechelle — Make artificial 1D and 2D echelle spectra
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task creates or adds to artificial extracted (one dimensional
@@ -656,7 +645,7 @@ mkechelle — Make artificial 1D and 2D echelle spectra
   image lines.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Create an absorption spectrum with blackbody continuum and scattered
@@ -708,18 +697,18 @@ mkechelle — Make artificial 1D and 2D echelle spectra
   after extraction and dispersion correction.
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_MKECHELLE">MKECHELLE V2.10.3</A></B></DT>
+  <DT><B>MKECHELLE V2.10.3</B></DT>
   <! Sec='REVISIONS' Level=0 Label='MKECHELLE' Line='MKECHELLE V2.10.3'>
   <DD>The task was updated to produce the current coordinate system format.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also_mknoise__mk1dspec__mk2dspec__mkheader__astutil_gratings">SEE ALSO mknoise, mk1dspec, mk2dspec, mkheader, astutil.gratings</A></H2>
+  <H3>See also mknoise, mk1dspec, mk2dspec, mkheader, astutil.gratings</H3>
   <! BeginSection: 'SEE ALSO mknoise, mk1dspec, mk2dspec, mkheader, astutil.gratings'>
   <UL>
   </UL>
@@ -727,5 +716,3 @@ mkechelle — Make artificial 1D and 2D echelle spectra
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO mknoise, mk1dspec, mk2dspec, mkheader, astutil.gratings'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _wcsxymatch:
+
 wcsxymatch — Generate matched pixel lists using the image wcs
 =============================================================
 
@@ -5,49 +7,36 @@ wcsxymatch — Generate matched pixel lists using the image wcs
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>wcsxymatch (Jun95)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.immatch</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>wcsxymatch (Jun95)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>wcsxymatch</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   wcsxymatch -- match input and reference image x-y coordinates using the WCS
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   wcsxymatch input reference output
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The list of input images containing the input wcs.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_reference">reference</A></B></DT>
+  <DT><B>reference</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='reference' Line='reference'>
   <DD>The list of reference images containing the reference wcs. The number of
   reference images must be one or equal to the number of input images.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>The output matched coordinate lists containing:
   1) the logical x-y pixel coordinates of a point
@@ -60,11 +49,11 @@ wcsxymatch — Generate matched pixel lists using the image wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_coords">coords = "<TT>grid</TT>"</A></B></DT>
+  <DT><B>coords = "<TT>grid</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='coords' Line='coords = "grid"'>
   <DD>The source of the coordinate list. The options are:
   <DL>
-  <DT><B><A NAME="l_grid">grid    </A></B></DT>
+  <DT><B>grid    </B></DT>
   <! Sec='PARAMETERS' Level=1 Label='grid' Line='grid    '>
   <DD>Generate a list of <I>nx * ny</I> coordinates, evenly spaced over
   the reference image, and beginning and ending at logical coordinates
@@ -72,7 +61,7 @@ wcsxymatch — Generate matched pixel lists using the image wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">&lt;filename&gt;</A></B></DT>
+  <DT><B>&lt;filename&gt;</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='&lt;filename&gt;'>
   <DD>The name of the text file containing the world coordinates of a set of
   points in the reference image.
@@ -81,7 +70,7 @@ wcsxymatch — Generate matched pixel lists using the image wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xmin">xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF</A></B></DT>
+  <DT><B>xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xmin' Line='xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF'>
   <DD>The minimum and maximum logical x and logical y coordinates used to generate
   the grid of control points if <I>coords</I> = "<TT>grid</TT>". Xmin, xmax, ymin, and
@@ -90,18 +79,18 @@ wcsxymatch — Generate matched pixel lists using the image wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nx">nx = 10, ny = 10</A></B></DT>
+  <DT><B>nx = 10, ny = 10</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nx' Line='nx = 10, ny = 10'>
   <DD>The number of points in x and y used to generate the coordinate grid
   if <I>coords</I> = "<TT>grid</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wcs">wcs = "<TT>world</TT>"</A></B></DT>
+  <DT><B>wcs = "<TT>world</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wcs' Line='wcs = "world"'>
   <DD>The world coordinate system of the coordinates.  The options are:
   <DL>
-  <DT><B><A NAME="l_physical">physical</A></B></DT>
+  <DT><B>physical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='physical' Line='physical'>
   <DD>Physical coordinates are pixel coordinates which are invariant with
   respect to linear transformations of the physical image data.  For example,
@@ -113,7 +102,7 @@ wcsxymatch — Generate matched pixel lists using the image wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_world">world</A></B></DT>
+  <DT><B>world</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='world' Line='world'>
   <DD>World coordinates are image coordinates which are invariant with
   respect to linear transformations of the physical image data and which
@@ -135,7 +124,7 @@ wcsxymatch — Generate matched pixel lists using the image wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_transpose">transpose = no</A></B></DT>
+  <DT><B>transpose = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='transpose' Line='transpose = no'>
   <DD>Force a transpose of the reference image world coordinates before evaluating
   the world to logical coordinate transformation for the input image ? This
@@ -145,28 +134,28 @@ wcsxymatch — Generate matched pixel lists using the image wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xcolumn">xcolumn = 1, ycolumn = 2</A></B></DT>
+  <DT><B>xcolumn = 1, ycolumn = 2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xcolumn' Line='xcolumn = 1, ycolumn = 2'>
   <DD>The columns in the input coordinate list containing the x and y coordinate
   values if <I>coords</I> = &lt;filename&gt;.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xunits">xunits = "<TT></TT>", ls yunits = "<TT></TT>"</A></B></DT>
+  <DT><B>xunits = "<TT></TT>", ls yunits = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xunits' Line='xunits = "", ls yunits = ""'>
   <DD>The units of the x and y coordinates in the input coordinate list 
   if <I>coords</I> = &lt;filename&gt;, by default decimal degrees for sky projection 
   coordinate systems, otherwise any units.
   The options are:
   <DL>
-  <DT><B><A NAME="l_hours">hours</A></B></DT>
+  <DT><B>hours</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='hours' Line='hours'>
   <DD>Input coordinates specified in hours are converted to decimal degrees by
   multiplying by 15.0.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_native">native</A></B></DT>
+  <DT><B>native</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='native' Line='native'>
   <DD>The internal units of the wcs. No conversions on the input coordinates
   are performed.
@@ -177,7 +166,7 @@ wcsxymatch — Generate matched pixel lists using the image wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xformat">xformat = "<TT>%10.3f</TT>", yformat = "<TT>%10.3f</TT>"</A></B></DT>
+  <DT><B>xformat = "<TT>%10.3f</TT>", yformat = "<TT>%10.3f</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xformat' Line='xformat = "%10.3f", yformat = "%10.3f"'>
   <DD>The format of the output logical x and y reference and input pixel
   coordinates in columns 1 and 2 and 3 and 4 respectively. By default the
@@ -186,7 +175,7 @@ wcsxymatch — Generate matched pixel lists using the image wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wxformat">wxformat = "<TT></TT>", wyformat = "<TT></TT>"</A></B></DT>
+  <DT><B>wxformat = "<TT></TT>", wyformat = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wxformat' Line='wxformat = "", wyformat = ""'>
   <DD>The format of the output world x and y reference and input image coordinates
   in columns 5 and 6 respectively. The internal default formats will give
@@ -195,7 +184,7 @@ wcsxymatch — Generate matched pixel lists using the image wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_min_sigdigits">min_sigdigits = 7</A></B></DT>
+  <DT><B>min_sigdigits = 7</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='min_sigdigits' Line='min_sigdigits = 7'>
   <DD>The minimum precision of the output coordinates if, the formatting parameters
   are undefined, or the output world coordinate system is "<TT>world</TT>" and the wcs
@@ -203,7 +192,7 @@ wcsxymatch — Generate matched pixel lists using the image wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print messages about the progress of the task.
   </DD>
@@ -211,7 +200,7 @@ wcsxymatch — Generate matched pixel lists using the image wcs
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -273,7 +262,7 @@ wcsxymatch — Generate matched pixel lists using the image wcs
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_formats">FORMATS</A></H2>
+  <H3>Formats</H3>
   <! BeginSection: 'FORMATS'>
   <UL>
   <P>
@@ -354,7 +343,7 @@ wcsxymatch — Generate matched pixel lists using the image wcs
   <P>
   </UL>
   <! EndSection:   'FORMATS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   <P>
@@ -375,7 +364,7 @@ wcsxymatch — Generate matched pixel lists using the image wcs
       
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -404,17 +393,17 @@ wcsxymatch — Generate matched pixel lists using the image wcs
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   tprecess,wcstran,geomap,register,geotran,wcsmap,wregister
@@ -423,5 +412,3 @@ wcsxymatch — Generate matched pixel lists using the image wcs
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'FORMATS' 'REFERENCES' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

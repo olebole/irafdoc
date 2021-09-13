@@ -1,3 +1,5 @@
+.. _tedit:
+
 tedit — Edit a table.
 =====================
 
@@ -5,32 +7,19 @@ tedit — Edit a table.
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>tedit (Oct94)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>tables</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>tedit (Oct94)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>tedit</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   tedit -- Edit a table.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   tedit table
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task is a screen editor for STSDAS tables. You edit a table by
@@ -85,13 +74,13 @@ tedit — Edit a table.
   The following is a list of the available commands:
   <P>
   <DL>
-  <DT><B><A NAME="l_add">add column &lt;name&gt; &lt;type&gt; &lt;format&gt; &lt;units&gt;</A></B></DT>
+  <DT><B>add column &lt;name&gt; &lt;type&gt; &lt;format&gt; &lt;units&gt;</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='add' Line='add column &lt;name&gt; &lt;type&gt; &lt;format&gt; &lt;units&gt;'>
   <DD>Add a new column to the table with the specified name and data type.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_add">add row &lt;row&gt; &lt;number&gt;</A></B></DT>
+  <DT><B>add row &lt;row&gt; &lt;number&gt;</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='add' Line='add row &lt;row&gt; &lt;number&gt;'>
   <DD>Add new, blank rows after row number &lt;row&gt;. The legal range of &lt;row&gt; is
   0 to the number of rows in the table. The number of blank rows to add is 
@@ -99,7 +88,7 @@ tedit — Edit a table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_copy">copy &lt;first&gt; &lt;last&gt;</A></B></DT>
+  <DT><B>copy &lt;first&gt; &lt;last&gt;</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='copy' Line='copy &lt;first&gt; &lt;last&gt;'>
   <DD>Copy the rows between &lt;first&gt; and &lt;last&gt; into the paste buffer. The 
   current contents of the paste buffer are destroyed before the copy.
@@ -108,7 +97,7 @@ tedit — Edit a table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_copy">copy append &lt;first&gt; &lt;last&gt;</A></B></DT>
+  <DT><B>copy append &lt;first&gt; &lt;last&gt;</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='copy' Line='copy append &lt;first&gt; &lt;last&gt;'>
   <DD>Copy the rows between &lt;first&gt; and &lt;last&gt; into the paste buffer. The 
   current contents of the paste buffer are preserved and the new rows
@@ -116,7 +105,7 @@ tedit — Edit a table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_delete">delete &lt;first&gt; &lt;last&gt;</A></B></DT>
+  <DT><B>delete &lt;first&gt; &lt;last&gt;</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='delete' Line='delete &lt;first&gt; &lt;last&gt;'>
   <DD>Delete the rows between &lt;first&gt; and &lt;last&gt;. The deleted rows are placed
   into the paste buffer and the current contents of the paste buffer are
@@ -124,20 +113,20 @@ tedit — Edit a table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_delete">delete append &lt;first&gt; &lt;last&gt;</A></B></DT>
+  <DT><B>delete append &lt;first&gt; &lt;last&gt;</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='delete' Line='delete append &lt;first&gt; &lt;last&gt;'>
   <DD>Delete the rows between &lt;first&gt; and &lt;last&gt;. The deleted rows are appended 
   to the paste buffer.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_exit">exit</A></B></DT>
+  <DT><B>exit</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='exit' Line='exit'>
   <DD>Exit the table editor, saving any changes made to the table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_find">find &lt;expression&gt;</A></B></DT>
+  <DT><B>find &lt;expression&gt;</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='find' Line='find &lt;expression&gt;'>
   <DD>Find the next row in the table which makes &lt;expression&gt; true and move
   the cursor to that row. The expression has the same syntax as an
@@ -151,27 +140,27 @@ tedit — Edit a table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_find">find forward &lt;expression&gt;</A></B></DT>
+  <DT><B>find forward &lt;expression&gt;</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='find' Line='find forward &lt;expression&gt;'>
   <DD>Find the next row in the table which makes &lt;expression&gt; true and move the
   cursor to that row. The search is done in the forwards direction.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_find">find backwards &lt;expression&gt;</A></B></DT>
+  <DT><B>find backwards &lt;expression&gt;</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='find' Line='find backwards &lt;expression&gt;'>
   <DD>Find the next row in the table which makes &lt;expression&gt; true and move the
   cursor to that row. The search is done in the backwards direction.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_goto">goto &lt;row&gt; &lt;column&gt;</A></B></DT>
+  <DT><B>goto &lt;row&gt; &lt;column&gt;</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='goto' Line='goto &lt;row&gt; &lt;column&gt;'>
   <DD>Move the cursor to &lt;row&gt; and &lt;column&gt;.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_help">help</A></B></DT>
+  <DT><B>help</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='help' Line='help'>
   <DD>Display online help information for the table editor. The help includes 
   a brief description of each command line command and the key bindings 
@@ -179,48 +168,48 @@ tedit — Edit a table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_insert">insert &lt;row&gt;</A></B></DT>
+  <DT><B>insert &lt;row&gt;</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='insert' Line='insert &lt;row&gt;'>
   <DD>Insert the contents of the paste buffer after row number &lt;row&gt;. The 
   contents of the paste buffer are not changed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lower">lower &lt;column&gt;</A></B></DT>
+  <DT><B>lower &lt;column&gt;</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='lower' Line='lower &lt;column&gt;'>
   <DD>Convert &lt;column&gt; to lower case. Only string columns can be converted.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_next">next</A></B></DT>
+  <DT><B>next</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='next' Line='next'>
   <DD>Repeat the previous find command, using the same expression and search 
   direction that was used with it.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_next">next forward</A></B></DT>
+  <DT><B>next forward</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='next' Line='next forward'>
   <DD>Repeat the previous find command, changing the search direction to 
   forwards.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_next">next backwards</A></B></DT>
+  <DT><B>next backwards</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='next' Line='next backwards'>
   <DD>Repeat the previous find command, changing the search direction to 
   backwards.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_quit">quit</A></B></DT>
+  <DT><B>quit</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='quit' Line='quit'>
   <DD>Exit the table editor. If the table has been changed, the table editor 
   will ask you whether to save it before exiting.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_set">set &lt;column&gt; &lt;expression&gt;</A></B></DT>
+  <DT><B>set &lt;column&gt; &lt;expression&gt;</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='set' Line='set &lt;column&gt; &lt;expression&gt;'>
   <DD>Set a column equal to an expression. If the column is a string column,
   the expression must be a constant. If the column is numeric, the
@@ -229,7 +218,7 @@ tedit — Edit a table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_substitute">substitute &lt;column&gt; &lt;target&gt; &lt;replacement&gt;</A></B></DT>
+  <DT><B>substitute &lt;column&gt; &lt;target&gt; &lt;replacement&gt;</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='substitute' Line='substitute &lt;column&gt; &lt;target&gt; &lt;replacement&gt;'>
   <DD>Search for and replace text patterns in a column.  The syntax for the
   target and replacement pattern strings largely follows that used in
@@ -282,7 +271,7 @@ tedit — Edit a table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_upper">upper &lt;column&gt;</A></B></DT>
+  <DT><B>upper &lt;column&gt;</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='upper' Line='upper &lt;column&gt;'>
   <DD>Convert &lt;column&gt; to upper case. Only string columns can be converted.
   </DD>
@@ -312,11 +301,11 @@ tedit — Edit a table.
   The 'tread' task can also be used to view a file in readonly mode.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_table">table [string]</A></B></DT>
+  <DT><B>table [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='table' Line='table [string]'>
   <DD>The name of the table to be edited. The editor checks for the
   existence of the table and its access mode before editing. If the 
@@ -326,7 +315,7 @@ tedit — Edit a table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(columns = "<TT></TT>") [string]</A></B></DT>
+  <DT><B>(columns = "<TT></TT>") [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(columns = "") [string]'>
   <DD>The names of the columns to be edited.
   A null or blank string means edit all columns.
@@ -350,13 +339,13 @@ tedit — Edit a table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(silent = no) [boolean]</A></B></DT>
+  <DT><B>(silent = no) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(silent = no) [boolean]'>
   <DD>Turn off the bell indicating warning messages? 
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(rdonly = no) [boolean]</A></B></DT>
+  <DT><B>(rdonly = no) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(rdonly = no) [boolean]'>
   <DD>View a table without modifying it?  This parameter prevents you from 
   executing
@@ -364,7 +353,7 @@ tedit — Edit a table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(inplace = no) [boolean]</A></B></DT>
+  <DT><B>(inplace = no) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(inplace = no) [boolean]'>
   <DD>Replace existing table?  If 'rdonly' is
   set to "<TT>yes</TT>" the table is always edited in place.
@@ -372,7 +361,7 @@ tedit — Edit a table.
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Make a copy of the table 'm12b.tab' (if it exists) and edit the copy. 
@@ -394,18 +383,18 @@ tedit — Edit a table.
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   This task was written by Bernie Simon.
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_see_also_">SEE ALSO </A></H2>
+  <H3>See also </H3>
   <! BeginSection: 'SEE ALSO '>
   <UL>
   tread, tprint, tselect, stty
@@ -416,5 +405,3 @@ tedit — Edit a table.
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO '  >
   
-  </BODY>
-  </HTML>

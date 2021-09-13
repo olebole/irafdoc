@@ -1,3 +1,5 @@
+.. _rtar:
+
 rtar — Read a TAR format archive file
 =====================================
 
@@ -5,36 +7,23 @@ rtar — Read a TAR format archive file
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>rtar (Oct92)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>softools</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>rtar (Oct92)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>rtar</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   rtar -- read TAR format archive file
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   rtar [ flags ] [ archive ] [ after ] [ files ]
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_">-a</A></B></DT>
+  <DT><B>-a</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='-a'>
   <DD>Advance to the archive file named by the <I>after</I> argument before
   performing the main operation.  The extract or list operation will begin with
@@ -42,7 +31,7 @@ rtar — Read a TAR format archive file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-b</A></B></DT>
+  <DT><B>-b</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='-b'>
   <DD>Output only binary byte stream files.  By default, <I>rtar</I> outputs text
   files in the host system textfile format.  The conversion from the byte stream
@@ -52,20 +41,20 @@ rtar — Read a TAR format archive file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-d</A></B></DT>
+  <DT><B>-d</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='-d'>
   <DD>Print detailed information about what <I>rtar</I> is doing.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-e</A></B></DT>
+  <DT><B>-e</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='-e'>
   <DD>Extract the entire contents of the tape <I>excluding</I> the files or directories
   listed in <I>files</I>.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-f filename</A></B></DT>
+  <DT><B>-f filename</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='-f filename'>
   <DD><I>Rtar</I> uses the first filename argument as the host filename of the
   archive instead of reading from <I>stdin</I>.   Magtape devices should be
@@ -75,7 +64,7 @@ rtar — Read a TAR format archive file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-l</A></B></DT>
+  <DT><B>-l</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='-l'>
   <DD>Do not try to resolve file links by a disk to disk file copy.  By default,
   if file A appears in the archive as a link to file B,
@@ -86,13 +75,13 @@ rtar — Read a TAR format archive file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-m</A></B></DT>
+  <DT><B>-m</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='-m'>
   <DD>Do not restore the file modify time.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-n</A></B></DT>
+  <DT><B>-n</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='-n'>
   <DD>Do not strip trailing blank lines from text files read from the tape.
   The default is to strip any blank lines at the ends of files.
@@ -104,7 +93,7 @@ rtar — Read a TAR format archive file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-o</A></B></DT>
+  <DT><B>-o</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='-o'>
   <DD>Omit binary files when performing the extraction.  A binary file is any
   file containing ASCII values other than 040 through 0176 (the printable
@@ -112,7 +101,7 @@ rtar — Read a TAR format archive file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-p pathprefix</A></B></DT>
+  <DT><B>-p pathprefix</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='-p pathprefix'>
   <DD>When creating directories and files from the pathnames recorded in the archive,
   omit the given path prefix if it matches the pathname given in the archive.
@@ -122,14 +111,14 @@ rtar — Read a TAR format archive file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-r</A></B></DT>
+  <DT><B>-r</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='-r'>
   <DD>The extracted file replaces any existing file of the same name, i.e.,
   <I>rtar</I> performs a delete before creating the extracted file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-t</A></B></DT>
+  <DT><B>-t</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='-t'>
   <DD>The names of the specified files are listed each time they occur on
   the tape.  If no <I>files</I> argument is given, all of the names on the tape
@@ -137,13 +126,13 @@ rtar — Read a TAR format archive file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-u</A></B></DT>
+  <DT><B>-u</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='-u'>
   <DD>Do not attempt to restore the owner and group identification of each file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-v</A></B></DT>
+  <DT><B>-v</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='-v'>
   <DD>Print more information about the tape entries than just their names.
   The verbose file list format gives the file permissions, the link flag
@@ -153,7 +142,7 @@ rtar — Read a TAR format archive file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-x</A></B></DT>
+  <DT><B>-x</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='-x'>
   <DD>The named files are extracted from the tape.  If the named file
   matches a directory whose contents had been written onto the tape, this
@@ -165,7 +154,7 @@ rtar — Read a TAR format archive file
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <I>Rtar</I> reads multiple files from a UNIX <I>tar</I> format file,
@@ -199,7 +188,7 @@ rtar — Read a TAR format archive file
   a <B>$</B> then an exact match is required (excluding the $ meta-character).
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_diagnostics">DIAGNOSTICS</A></H2>
+  <H3>Diagnostics</H3>
   <! BeginSection: 'DIAGNOSTICS'>
   <UL>
   A file read error occurring while reading the archive file is fatal unless
@@ -211,7 +200,7 @@ rtar — Read a TAR format archive file
   termination of <I>rtar</I>.  The output file being written will be corrupted.
   </UL>
   <! EndSection:   'DIAGNOSTICS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   Since <I>rtar</I> is a bootstrap utility implemented as a foreign task in
@@ -237,7 +226,7 @@ rtar — Read a TAR format archive file
   confusing.
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   The current limit on file name length is 100 characters (this restriction
@@ -245,7 +234,7 @@ rtar — Read a TAR format archive file
   File links are not recreated.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   wtar, rmbin
@@ -254,5 +243,3 @@ rtar — Read a TAR format archive file
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'DIAGNOSTICS' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

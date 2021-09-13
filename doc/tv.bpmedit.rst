@@ -1,3 +1,5 @@
+.. _bpmedit:
+
 bpmedit — examine and edit bad pixel masks associated with images
 =================================================================
 
@@ -5,36 +7,23 @@ bpmedit — examine and edit bad pixel masks associated with images
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>bpmedit (Aug07)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.tv</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>bpmedit (Aug07)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>bpmedit</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   bpmedit -- examine and edit bad pixel masks associated with images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   bpmedit images
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>List of images whose bad pixel masks are to be edit.  The images must
   contain the keyword BPM whose value is an existing bad pixel mask to
@@ -43,25 +32,25 @@ bpmedit — examine and edit bad pixel masks associated with images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_bpmkey">bpmkey = "<TT>BPM</TT>"</A></B></DT>
+  <DT><B>bpmkey = "<TT>BPM</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='bpmkey' Line='bpmkey = "BPM"'>
   <DD>The mask to be edited is defined by the value of this keyword.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_frame">frame = 1</A></B></DT>
+  <DT><B>frame = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='frame' Line='frame = 1'>
   <DD>The display frame where the image with the mask overlay is shown.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_refframe">refframe = 2</A></B></DT>
+  <DT><B>refframe = 2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='refframe' Line='refframe = 2'>
   <DD>The display frame with the image without the mask is shown.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_command">command = "<TT>display ...</TT>"</A></B></DT>
+  <DT><B>command = "<TT>display ...</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='command' Line='command = "display ..."'>
   <DD>Command for displaying and updating the mask overlay.  This is the
   command used with <B>imedit</B>.  This should be changed with care.
@@ -77,14 +66,14 @@ bpmedit — examine and edit bad pixel masks associated with images
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_display">display = yes</A></B></DT>
+  <DT><B>display = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='display' Line='display = yes'>
   <DD>Use the task interactively with the display?  This sets the behavior
   of <B>imedit</B> as described for the parameter of the same name.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cursor">cursor = "<TT></TT>"</A></B></DT>
+  <DT><B>cursor = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""'>
   <DD>Image cursor input.  This is normally either a null string for interactive
   display editing or the value of a file with cursor commands to edit
@@ -94,7 +83,7 @@ bpmedit — examine and edit bad pixel masks associated with images
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_additional_parameters">ADDITIONAL PARAMETERS</A></H2>
+  <H3>Additional parameters</H3>
   <! BeginSection: 'ADDITIONAL PARAMETERS'>
   <UL>
   <P>
@@ -108,7 +97,7 @@ bpmedit — examine and edit bad pixel masks associated with images
   be set initially.  This value may be changed interactively in <B>imedit</B>.
   </UL>
   <! EndSection:   'ADDITIONAL PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <B>Bpmedit</B> is a variant of <B>imedit</B>.  It displays the input images
@@ -196,7 +185,7 @@ bpmedit — examine and edit bad pixel masks associated with images
   </PRE>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  Interactively edit a mask.
@@ -207,7 +196,7 @@ bpmedit — examine and edit bad pixel masks associated with images
    
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imedit, display, badpiximage, text2mask, mskexpr, mskregions, imexpr
@@ -216,5 +205,3 @@ bpmedit — examine and edit bad pixel masks associated with images
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'ADDITIONAL PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _mk2dspec:
+
 mk2dspec — Make/add artificial 2D spectra using 1D spectra templates
 ====================================================================
 
@@ -5,42 +7,29 @@ mk2dspec — Make/add artificial 2D spectra using 1D spectra templates
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>mk2dspec (Aug90)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.artdata</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>mk2dspec (Aug90)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>mk2dspec</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   mk2dspec -- Make/add 2D spectra using 1D spectra templates
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   mk2dspec input
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>Spectra to create or modify.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output = "<TT></TT>"</A></B></DT>
+  <DT><B>output = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output = ""'>
   <DD>Output spectra when modifying input spectra.  If no output spectra are
   given then existing spectra in the input list are modified directly.
@@ -48,7 +37,7 @@ mk2dspec — Make/add artificial 2D spectra using 1D spectra templates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_models">models = "<TT></TT>"</A></B></DT>
+  <DT><B>models = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='models' Line='models = ""'>
   <DD>List of model parameter files.  If the list of model files is shorter than the
   list of input images then the last model file is reused.  The model
@@ -60,7 +49,7 @@ mk2dspec — Make/add artificial 2D spectra using 1D spectra templates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_comments">comments = yes</A></B></DT>
+  <DT><B>comments = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='comments' Line='comments = yes'>
   <DD>Include comments recording task parameters in the image header?
   </DD>
@@ -68,19 +57,19 @@ mk2dspec — Make/add artificial 2D spectra using 1D spectra templates
   <P>
   WHEN CREATING NEW SPECTRA
   <DL>
-  <DT><B><A NAME="l_title">title = "<TT></TT>"</A></B></DT>
+  <DT><B>title = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='title' Line='title = ""'>
   <DD>Image title to be given to the spectra.  Maximum of 79 characters.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ncols">ncols = 100, nlines = 512</A></B></DT>
+  <DT><B>ncols = 100, nlines = 512</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ncols' Line='ncols = 100, nlines = 512'>
   <DD>Number of columns and lines.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_header">header = "<TT>artdata$stdheader.dat</TT>"</A></B></DT>
+  <DT><B>header = "<TT>artdata$stdheader.dat</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='header' Line='header = "artdata$stdheader.dat"'>
   <DD>Image or header keyword data file.  If an image is given then the image header
   is copied.  If a file is given then the FITS format cards are copied.
@@ -94,7 +83,7 @@ mk2dspec — Make/add artificial 2D spectra using 1D spectra templates
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task creates or modifies two dimensional spectra by taking one
@@ -123,7 +112,7 @@ mk2dspec — Make/add artificial 2D spectra using 1D spectra templates
   in the center line, and change of position per line.  More specifically:
   <P>
   <DL>
-  <DT><B><A NAME="l_">&lt;template name&gt;</A></B></DT>
+  <DT><B>&lt;template name&gt;</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='&lt;template name&gt;'>
   <DD>The one dimensional spectrum template is any one dimensional IRAF image.
   If the spectrum template length is less than the two dimensional spectrum,
@@ -132,14 +121,14 @@ mk2dspec — Make/add artificial 2D spectra using 1D spectra templates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_scale">scale</A></B></DT>
+  <DT><B>scale</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='scale' Line='scale'>
   <DD>The template spectrum is scaled by this parameter to define the
   total flux for the two dimensional profile.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">&lt;profile type&gt;</A></B></DT>
+  <DT><B>&lt;profile type&gt;</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='&lt;profile type&gt;'>
   <DD>The spatial profiles are identified by two keywords, "<TT>gaussian</TT>"
   or "<TT>slit</TT>".  The profiles are defined by the following formulae,
@@ -159,7 +148,7 @@ mk2dspec — Make/add artificial 2D spectra using 1D spectra templates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fwhm">fwhm, dfwhm</A></B></DT>
+  <DT><B>fwhm, dfwhm</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='fwhm' Line='fwhm, dfwhm'>
   <DD>The full width at half maximum and derivative with line number.  The fwhm is
   defined for the middle of the image.  The FWHM as a function
@@ -169,7 +158,7 @@ mk2dspec — Make/add artificial 2D spectra using 1D spectra templates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_center">center, dcenter</A></B></DT>
+  <DT><B>center, dcenter</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='center' Line='center, dcenter'>
   <DD>The profile center and derivative with line number.  The center is
   defined for the middle of the image.  The center as a function
@@ -185,7 +174,7 @@ mk2dspec — Make/add artificial 2D spectra using 1D spectra templates
   aligned with the image lines.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Create an artificial multifiber spectrum:
@@ -271,7 +260,7 @@ mk2dspec — Make/add artificial 2D spectra using 1D spectra templates
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   mk1dspec, mknoise, mkheader
@@ -280,5 +269,3 @@ mk2dspec — Make/add artificial 2D spectra using 1D spectra templates
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

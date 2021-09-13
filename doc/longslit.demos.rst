@@ -1,3 +1,5 @@
+.. _demos:
+
 demos — Demonstration and test playbacks
 ========================================
 
@@ -5,23 +7,10 @@ demos — Demonstration and test playbacks
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>demos (Sep90)</B></FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>demos (Sep90)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>demos</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
-  <! BeginSection: 'NAME'>
-  <UL>
   demos -- Demonstration and Test Procedures
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_packages">PACKAGES</A></H2>
+  <H3>Packages</H3>
   <! BeginSection: 'PACKAGES'>
   <UL>
   noao.imred.argus, noao.imred.goldcams, noao.imred.kpcoude.fiber
@@ -29,17 +18,17 @@ demos — Demonstration and test playbacks
   noao.twodspec.longslit
   </UL>
   <! EndSection:   'PACKAGES'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   demos demoname
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_demoname">demoname</A></B></DT>
+  <DT><B>demoname</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='demoname' Line='demoname'>
   <DD>Demonstration or test procedure name.  Each package may have a different
   set of demonstrations.  If the demo name is not specified on the command
@@ -48,7 +37,7 @@ demos — Demonstration and test playbacks
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Many packages have demonstration and test procedures.  These are generally
@@ -74,7 +63,7 @@ demos — Demonstration and test playbacks
   are sometimes changed.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  From the <B>goldcam</B> package list the menu and execute the
@@ -108,7 +97,7 @@ demos — Demonstration and test playbacks
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   artdata.mkexamples, ccdred.ccdtest.demo
@@ -117,5 +106,3 @@ demos — Demonstration and test playbacks
   
   <! Contents: 'NAME' 'PACKAGES' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

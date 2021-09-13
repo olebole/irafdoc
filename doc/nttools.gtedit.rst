@@ -1,3 +1,5 @@
+.. _gtedit:
+
 gtedit — Graphically edit a table.
 ==================================
 
@@ -5,32 +7,19 @@ gtedit — Graphically edit a table.
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>gtedit (Aug93)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>tables</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>gtedit (Aug93)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>gtedit</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   gtedit -- Graphically edit an STSDAS table.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   gtedit input xcolumn ycolumn
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The 'gtedit' task lets you graphically edit 
@@ -63,7 +52,7 @@ gtedit — Graphically edit a table.
   task and edit the table in the usual manner.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_cursor_commands">CURSOR COMMANDS</A></H2>
+  <H3>Cursor commands</H3>
   <! BeginSection: 'CURSOR COMMANDS'>
   <UL>
   <P>
@@ -96,62 +85,62 @@ gtedit — Graphically edit a table.
   </PRE>
   </UL>
   <! EndSection:   'CURSOR COMMANDS'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input [file name]</A></B></DT>
+  <DT><B>input [file name]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input [file name]'>
   <DD>The input table to be edited.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xcolumn">xcolumn</A></B></DT>
+  <DT><B>xcolumn</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xcolumn' Line='xcolumn'>
   <DD>The name of the column in the input table to use for the X-axis of the plot.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ycolumn">ycolumn</A></B></DT>
+  <DT><B>ycolumn</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ycolumn' Line='ycolumn'>
   <DD>The name of the column in the input table to use for the Y-axis of the plot.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(device = "<TT>stdgraph</TT>")</A></B></DT>
+  <DT><B>(device = "<TT>stdgraph</TT>")</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(device = "stdgraph")'>
   <DD>The standard graphics device.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(commands = "<TT></TT>")</A></B></DT>
+  <DT><B>(commands = "<TT></TT>")</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(commands = "")'>
   <DD>The graphics cursor.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(inplace = no)</A></B></DT>
+  <DT><B>(inplace = no)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(inplace = no)'>
   <DD>Edit the table inplace. No new output table is created and the original
   table is overwritten.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(output = "<TT></TT>")</A></B></DT>
+  <DT><B>(output = "<TT></TT>")</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(output = "")'>
   <DD>The name of the output table if the input table is not edited inplace. If
   inplace = no then output should be a valid filename.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(reject = "<TT></TT>")</A></B></DT>
+  <DT><B>(reject = "<TT></TT>")</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(reject = "")'>
   <DD>If this parameter contains a valid filename then this table will contain
   the points which were deleted using this task.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(gtpar = "<TT></TT>") [pset]</A></B></DT>
+  <DT><B>(gtpar = "<TT></TT>") [pset]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(gtpar = "") [pset]'>
   <DD>The name of the pset containing the parameters which describe the plot
   attributes.
@@ -159,7 +148,7 @@ gtedit — Graphically edit a table.
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Edit a table containing the output photometry from DAOPHOT. 
@@ -171,18 +160,18 @@ gtedit — Graphically edit a table.
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   This task was written by Dennis Crabtree.
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   </UL>
@@ -190,5 +179,3 @@ gtedit — Graphically edit a table.
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'CURSOR COMMANDS' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

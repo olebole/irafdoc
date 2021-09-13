@@ -1,3 +1,5 @@
+.. _txdump:
+
 txdump — Print selected columns of a list of apphot/daophot text databases
 ==========================================================================
 
@@ -5,43 +7,30 @@ txdump — Print selected columns of a list of apphot/daophot text databases
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>txdump (Aug91)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.ptools</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>txdump (Aug91)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>txdump</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   txdump - print fields from selected records in an APPHOT/DAOPHOT text database
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   txdump textfiles fields expr
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_textfiles">textfiles</A></B></DT>
+  <DT><B>textfiles</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='textfiles' Line='textfiles'>
   <DD>The APPHOT/DAOPHOT text database whose fields from selected records are to
   be printed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fields">fields</A></B></DT>
+  <DT><B>fields</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fields' Line='fields'>
   <DD>A template defining the fields to be printed from each selected record.
   The fields are specified by keywords defined in the text database output
@@ -54,7 +43,7 @@ txdump — Print selected columns of a list of apphot/daophot text databases
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_expr">expr</A></B></DT>
+  <DT><B>expr</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='expr' Line='expr'>
   <DD>The boolean expression to be evaluated once per record.
   Only the fields in those records for which the boolean expression
@@ -64,7 +53,7 @@ txdump — Print selected columns of a list of apphot/daophot text databases
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_headers">headers = no</A></B></DT>
+  <DT><B>headers = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='headers' Line='headers = no'>
   <DD>Preserve the APPHOT/DAOPHOT text database output format. The selected
   fields are printed on the standard output, preceded by parameters list,
@@ -73,7 +62,7 @@ txdump — Print selected columns of a list of apphot/daophot text databases
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_parameters">parameters = yes</A></B></DT>
+  <DT><B>parameters = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='parameters' Line='parameters = yes'>
   <DD>Print the keyword parameters records in APPHOT/DAOPHOT format on the
   standard output if <I>headers</I> = yes.
@@ -82,7 +71,7 @@ txdump — Print selected columns of a list of apphot/daophot text databases
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <I>TXDUMP</I> selects a subset of fields specified by the <I>fields</I>
@@ -160,7 +149,7 @@ txdump — Print selected columns of a list of apphot/daophot text databases
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -204,7 +193,7 @@ txdump — Print selected columns of a list of apphot/daophot text databases
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   TXDUMP does not allow arrays in the expression field.
@@ -213,7 +202,7 @@ txdump — Print selected columns of a list of apphot/daophot text databases
   as IRAF does not currently fully support longer text lines.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   images.hedit,ptools.tbdump,tables.tdump,ptools.pdump
@@ -222,5 +211,3 @@ txdump — Print selected columns of a list of apphot/daophot text databases
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

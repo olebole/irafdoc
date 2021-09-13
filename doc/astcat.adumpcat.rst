@@ -1,3 +1,5 @@
+.. _adumpcat:
+
 adumpcat — Catalog access debugging task
 ========================================
 
@@ -5,36 +7,23 @@ adumpcat — Catalog access debugging task
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>adumpcat (Mar00)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>astcat</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>adumpcat (Mar00)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>adumpcat</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   adumpcat -- query a catalog and capture the results
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   adumpcat catalog output ra dec size
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_catalog">catalog</A></B></DT>
+  <DT><B>catalog</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='catalog' Line='catalog'>
   <DD>The name of the catalog to be queried. Catalog names have the form
   catalog@site, e.g. "<TT>usno2@noao</TT>". The catalog address and query format are
@@ -42,7 +31,7 @@ adumpcat — Catalog access debugging task
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>The name of the output query results file. The query results are written
   to the output file without modification, i.e. they may contain comments,
@@ -50,14 +39,14 @@ adumpcat — Catalog access debugging task
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ra">ra  </A></B></DT>
+  <DT><B>ra  </B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ra' Line='ra  '>
   <DD>The right ascension of the field center in the units expected by the catalog
   query. The value of ra replaces the default value of the ra query parameter.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dec">dec  </A></B></DT>
+  <DT><B>dec  </B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dec' Line='dec  '>
   <DD>The declination of the field center in the units expected by the catalog query.
   The value of dec replaces the default value of the dec query parameters.
@@ -66,7 +55,7 @@ adumpcat — Catalog access debugging task
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_size">size</A></B></DT>
+  <DT><B>size</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='size' Line='size'>
   <DD>The field size in units expected by the catalog query. The value of size
   replaces the default value of the width, ra/xwidth, dec/ywidth,
@@ -74,7 +63,7 @@ adumpcat — Catalog access debugging task
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_catdb">catdb = "<TT>)_.catdb</TT>"</A></B></DT>
+  <DT><B>catdb = "<TT>)_.catdb</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='catdb' Line='catdb = ")_.catdb"'>
   <DD>The catalog configuration file. The name of the catalog configuration file
   defaults to the value of the package parameter of the same name.  The
@@ -83,7 +72,7 @@ adumpcat — Catalog access debugging task
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Adumpcat is a simple catalog access debugging task which queries the
@@ -108,7 +97,7 @@ adumpcat — Catalog access debugging task
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -190,17 +179,17 @@ adumpcat — Catalog access debugging task
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   aclist, agetcat
@@ -209,5 +198,3 @@ adumpcat — Catalog access debugging task
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

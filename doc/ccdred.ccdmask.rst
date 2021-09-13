@@ -1,3 +1,5 @@
+.. _ccdmask:
+
 ccdmask — Create bad pixel mask from CCD flat field images
 ==========================================================
 
@@ -5,26 +7,13 @@ ccdmask — Create bad pixel mask from CCD flat field images
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>ccdmask (Jun96)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.imred.ccdred</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>ccdmask (Jun96)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>ccdmask</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   ccdmask -- create a pixel mask from a CCD image
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage_">USAGE	</A></H2>
+  <H3>Usage	</H3>
   <! BeginSection: 'USAGE	'>
   <UL>
   <PRE>
@@ -32,11 +21,11 @@ ccdmask — Create bad pixel mask from CCD flat field images
   </PRE>
   </UL>
   <! EndSection:   'USAGE	'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_image">image</A></B></DT>
+  <DT><B>image</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='image' Line='image'>
   <DD>CCD image to use in defining bad pixels.  Typically this is
   a flat field image or, even better, the ratio of two flat field
@@ -44,14 +33,14 @@ ccdmask — Create bad pixel mask from CCD flat field images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_mask">mask</A></B></DT>
+  <DT><B>mask</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='mask' Line='mask'>
   <DD>Pixel mask name to be created.  A pixel list image, .pl extension,
   is created so no extension is necessary.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ncmed">ncmed = 7, nlmed = 7</A></B></DT>
+  <DT><B>ncmed = 7, nlmed = 7</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ncmed' Line='ncmed = 7, nlmed = 7'>
   <DD>The column and line size of a moving median rectangle used to estimate the
   uncontaminated local signal.  The column median size should be at least 3
@@ -59,7 +48,7 @@ ccdmask — Create bad pixel mask from CCD flat field images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ncsig">ncsig = 15, nlsig = 15</A></B></DT>
+  <DT><B>ncsig = 15, nlsig = 15</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ncsig' Line='ncsig = 15, nlsig = 15'>
   <DD>The column and line size of regions used to estimate the uncontaminated
   local sigma using a percentile.  The size of the box should contain
@@ -67,21 +56,21 @@ ccdmask — Create bad pixel mask from CCD flat field images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lsigma">lsigma = 6, hsigma = 6</A></B></DT>
+  <DT><B>lsigma = 6, hsigma = 6</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lsigma' Line='lsigma = 6, hsigma = 6'>
   <DD>Positive sigma factors to use for selecting pixels below and above
   the median level based on the local percentile sigma.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ngood">ngood = 5</A></B></DT>
+  <DT><B>ngood = 5</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ngood' Line='ngood = 5'>
   <DD>Gaps of undetected pixels along the column direction of length less
   than this amount are also flagged as bad pixels.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_linterp">linterp = 2</A></B></DT>
+  <DT><B>linterp = 2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='linterp' Line='linterp = 2'>
   <DD>Mask code for pixels having a bounding good pixel separation which is
   smaller along lines; i.e.  to use line interpolation along the narrower
@@ -89,7 +78,7 @@ ccdmask — Create bad pixel mask from CCD flat field images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cinterp">cinterp = 3</A></B></DT>
+  <DT><B>cinterp = 3</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cinterp' Line='cinterp = 3'>
   <DD>Mask code for pixels having a bounding good pixel separation which is
   smaller along columns; i.e.  to use columns interpolation along the narrower
@@ -97,7 +86,7 @@ ccdmask — Create bad pixel mask from CCD flat field images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_eqinterp">eqinterp = 2</A></B></DT>
+  <DT><B>eqinterp = 2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='eqinterp' Line='eqinterp = 2'>
   <DD>Mask code for pixels having a bounding good pixel separation which is
   equal along lines and columns.
@@ -105,7 +94,7 @@ ccdmask — Create bad pixel mask from CCD flat field images
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <B>Ccdmask</B> makes a pixel mask from pixels deviating by a specified
@@ -175,7 +164,7 @@ ccdmask — Create bad pixel mask from CCD flat field images
   extension then the pixel mask format is produced.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  Two flat fields of exposures 1 second and 3 seconds are taken,
@@ -188,18 +177,18 @@ ccdmask — Create bad pixel mask from CCD flat field images
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_CCDMASK">CCDMASK V2.11</A></B></DT>
+  <DT><B>CCDMASK V2.11</B></DT>
   <! Sec='REVISIONS' Level=0 Label='CCDMASK' Line='CCDMASK V2.11'>
   <DD>This task is new.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imreplace, imexpr, imcopy, imedit, fixpix, text2mask
@@ -208,5 +197,3 @@ ccdmask — Create bad pixel mask from CCD flat field images
   
   <! Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

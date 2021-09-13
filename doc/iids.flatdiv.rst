@@ -1,3 +1,5 @@
+.. _flatdiv:
+
 flatdiv — Divide spectra by flat field
 ======================================
 
@@ -5,42 +7,29 @@ flatdiv — Divide spectra by flat field
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>flatdiv (Dec86)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.imred.iids/noao.imred.irs</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>flatdiv (Dec86)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>flatdiv</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   flatdiv -- Divide spectra by flat field spectra
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   flatdiv input records
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The root file name for the input records to be divided.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_records">records</A></B></DT>
+  <DT><B>records</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='records' Line='records'>
   <DD>The range of spectra to be included in the divide operation.
   Each range item will be appended to the root name to form an
@@ -48,14 +37,14 @@ flatdiv — Divide spectra by flat field
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>New spectra are created by the flatdiv operation. This parameter
   specifies the root name to be used for the created spectra.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_start_rec">start_rec</A></B></DT>
+  <DT><B>start_rec</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='start_rec' Line='start_rec'>
   <DD>Each new spectrum created as "<TT>output</TT>" has its root name and a 
   trailing number appended starting with "<TT>start_rec</TT>". Subsequent
@@ -66,7 +55,7 @@ flatdiv — Divide spectra by flat field
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_flat_file">flat_file</A></B></DT>
+  <DT><B>flat_file</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='flat_file' Line='flat_file'>
   <DD>The root name for the sensitivity spectra as produced by FLATFIT.
   Normally with multi-aperture instruments, FLATFIT will produce a
@@ -75,26 +64,26 @@ flatdiv — Divide spectra by flat field
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_coincor">coincor = )_.coincor</A></B></DT>
+  <DT><B>coincor = )_.coincor</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='coincor' Line='coincor = )_.coincor'>
   <DD>If set to yes, coincidence correction is applied to the data during
   the division, and the following three parameters are required.
   For more about this correction see <B>coincor</B>.
   <DL>
-  <DT><B><A NAME="l_ccmode">ccmode = )_.ccmode</A></B></DT>
+  <DT><B>ccmode = )_.ccmode</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='ccmode' Line='ccmode = )_.ccmode'>
   <DD>The mode by which the coincidence correction is to be performed.
   This may be "<TT>iids</TT>" or "<TT>photo</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_deadtime">deadtime = )_.deadtime</A></B></DT>
+  <DT><B>deadtime = )_.deadtime</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='deadtime' Line='deadtime = )_.deadtime'>
   <DD>The detector deadtime in seconds.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_power">power = )_.power</A></B></DT>
+  <DT><B>power = )_.power</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='power' Line='power = )_.power'>
   <DD>Power law IIDS non-linear correction exponent.
   </DD>
@@ -103,7 +92,7 @@ flatdiv — Divide spectra by flat field
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The input spectra are divided by the flat fields which are
@@ -124,7 +113,7 @@ flatdiv — Divide spectra by flat field
   matched.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   The following example divides a series of spectra to produce 20 new
@@ -145,14 +134,14 @@ flatdiv — Divide spectra by flat field
   output record number must be the same as the first input record number.
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   Approximately 1 second is required to correct a spectrum of length
   1024 points.
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   coincor, flatfit
@@ -161,5 +150,3 @@ flatdiv — Divide spectra by flat field
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

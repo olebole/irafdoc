@@ -1,3 +1,5 @@
+.. _imdkern:
+
 imdkern — Image display device (IMD) graphics kernel
 ====================================================
 
@@ -5,62 +7,49 @@ imdkern — Image display device (IMD) graphics kernel
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>imdkern (Mar90)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>plot</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>imdkern (Mar90)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>imdkern</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   imdkern -- image display device graphics kernel
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   imdkern input
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The list of input metacode files.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_device">device = "<TT>stdimage</TT>"</A></B></DT>
+  <DT><B>device = "<TT>stdimage</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdimage"'>
   <DD>The output device.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_generic">generic = no</A></B></DT>
+  <DT><B>generic = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='generic' Line='generic = no'>
   <DD>The remaining parameters are ignored when <B>generic</B> = yes (as when
   the kernel is called automatically by the system during plotting).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_frame">frame = 0</A></B></DT>
+  <DT><B>frame = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='frame' Line='frame = 0'>
   <DD>The display frame to be drawn into.  If the value given is less than or
   equal to zero, the plot is drawn into the frame currently being displayed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_color">color = 205</A></B></DT>
+  <DT><B>color = 205</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='color' Line='color = 205'>
   <DD>The pixel value to be used for graphics.  The value required to generate
   a given color is device dependent.  For IMTOOL and compatible display servers
@@ -70,28 +59,28 @@ imdkern — Image display device (IMD) graphics kernel
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_debug">debug = no</A></B></DT>
+  <DT><B>debug = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='debug' Line='debug = no'>
   <DD>If <B>debug</B> = yes, the graphics instructions are decoded and printed
   during processing.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = no</A></B></DT>
+  <DT><B>verbose = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
   <DD>If <B>verbose</B> = yes, the elements of polylines, cell arrays, etc. will
   be printed in debug mode.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_gkiunits">gkiunits = no</A></B></DT>
+  <DT><B>gkiunits = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='gkiunits' Line='gkiunits = no'>
   <DD>By default, coordinates are printed in NDC rather than GKI units.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The <I>imdkern</I> graphics kernel is used to draw graphics into the image
@@ -121,7 +110,7 @@ imdkern — Image display device (IMD) graphics kernel
   currently displayed image display frame.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Capture the output of the <I>prow</I> task in a metacode file and
@@ -147,7 +136,7 @@ imdkern — Image display device (IMD) graphics kernel
   around objects such as stars appear to not be centered on the object).
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   The IMD interface, used by this task to draw the graphics, requires that the
@@ -160,7 +149,7 @@ imdkern — Image display device (IMD) graphics kernel
   generation is used.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   tvmark, display
@@ -169,5 +158,3 @@ imdkern — Image display device (IMD) graphics kernel
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _thistogram:
+
 thistogram — Make a histogram of a column in a table.
 =====================================================
 
@@ -5,32 +7,19 @@ thistogram — Make a histogram of a column in a table.
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>thistogram (Mar94)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>tables</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>thistogram (Mar94)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>thistogram</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   thistogram -- Make a histogram of a table column.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   thistogram intable outtable column
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task generates a histogram of the values in a column.
@@ -67,11 +56,11 @@ thistogram — Make a histogram of a column in a table.
   </PRE>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_intable">intable [file name template]</A></B></DT>
+  <DT><B>intable [file name template]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='intable' Line='intable [file name template]'>
   <DD>A list of input tables.
   A histogram will be generated for one column in the table;
@@ -80,7 +69,7 @@ thistogram — Make a histogram of a column in a table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_outtable">outtable = STDOUT [file name template]</A></B></DT>
+  <DT><B>outtable = STDOUT [file name template]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable = STDOUT [file name template]'>
   <DD>Output tables or STDOUT.
   If the value of this parameter is "<TT>STDOUT</TT>"
@@ -95,7 +84,7 @@ thistogram — Make a histogram of a column in a table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_column">column [string]</A></B></DT>
+  <DT><B>column [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='column' Line='column [string]'>
   <DD>Column name in input tables that will be used to generate the histogram.
   Only the values in the column with this name will be used.
@@ -103,7 +92,7 @@ thistogram — Make a histogram of a column in a table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(nbins = 100) [integer, min=1]</A></B></DT>
+  <DT><B>(nbins = 100) [integer, min=1]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(nbins = 100) [integer, min=1]'>
   <DD>Number of bins in the histogram.
   Normally either 'nbins' or 'dx' (or both) must be given.
@@ -113,7 +102,7 @@ thistogram — Make a histogram of a column in a table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(lowval = INDEF) [real]</A></B></DT>
+  <DT><B>(lowval = INDEF) [real]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(lowval = INDEF) [real]'>
   <DD>Lower limit for histogram.
   Values below 'lowval' will not be used in generating the histogram.
@@ -121,7 +110,7 @@ thistogram — Make a histogram of a column in a table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(highval = INDEF) [real]</A></B></DT>
+  <DT><B>(highval = INDEF) [real]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(highval = INDEF) [real]'>
   <DD>Upper limit for histogram.
   Values equal to or greater than 'highval' will not be used in generating
@@ -130,25 +119,25 @@ thistogram — Make a histogram of a column in a table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(dx = INDEF) [real]</A></B></DT>
+  <DT><B>(dx = INDEF) [real]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(dx = INDEF) [real]'>
   <DD>Bin width.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(clow = INDEF) [real]</A></B></DT>
+  <DT><B>(clow = INDEF) [real]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(clow = INDEF) [real]'>
   <DD>Value at the center of the first bin.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(chigh = INDEF) [real]</A></B></DT>
+  <DT><B>(chigh = INDEF) [real]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(chigh = INDEF) [real]'>
   <DD>Value at the center of the last bin.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(rows = -) [string]</A></B></DT>
+  <DT><B>(rows = -) [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(rows = -) [string]'>
   <DD>Range of rows to use for generating the histogram.
   The default "<TT>-</TT>" means that all rows are used.
@@ -156,7 +145,7 @@ thistogram — Make a histogram of a column in a table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(outcolx = value) [string]</A></B></DT>
+  <DT><B>(outcolx = value) [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(outcolx = value) [string]'>
   <DD>Column name for bin centers.
   If the output is written to a table rather than to STDOUT, then 'outcolx'
@@ -165,7 +154,7 @@ thistogram — Make a histogram of a column in a table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(outcoly = counts) [string]</A></B></DT>
+  <DT><B>(outcoly = counts) [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(outcoly = counts) [string]'>
   <DD>Column name for histogram values.
   If the output is written to a table then 'outcoly' is the column name
@@ -175,7 +164,7 @@ thistogram — Make a histogram of a column in a table.
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  Generate a histogram of the values in the 'flux' column in every table
@@ -210,18 +199,18 @@ thistogram — Make a histogram of a column in a table.
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   This task was written by Phil Hodge.
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   ranges
@@ -230,5 +219,3 @@ thistogram — Make a histogram of a column in a table.
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _thedit:
+
 thedit — Edit or print table header keywords.
 =============================================
 
@@ -5,32 +7,19 @@ thedit — Edit or print table header keywords.
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>thedit (Feb2002)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>ttools</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>thedit (Feb2002)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>thedit</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   thedit -- Edit or view keyword values in tables.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   thedit table keywords value
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This table header editor can be used to add, delete, edit,
@@ -74,11 +63,11 @@ thedit — Edit or print table header keywords.
   "<TT>$I</TT>" can be used as a keyword or as part of an expression.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_table">table [file name template]</A></B></DT>
+  <DT><B>table [file name template]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='table' Line='table [file name template]'>
   <DD>A list of tables for which keywords are to be edited or printed.
   If 'value' is "<TT>.</TT>", each table will be opened read-only;
@@ -86,7 +75,7 @@ thedit — Edit or print table header keywords.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_keywords">keywords [string]</A></B></DT>
+  <DT><B>keywords [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='keywords' Line='keywords [string]'>
   <DD>One or more keywords, separated by commas and/or blanks,
   which are to be added, modified, or printed.
@@ -101,7 +90,7 @@ thedit — Edit or print table header keywords.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_value">value = "<TT>.</TT>" [string]</A></B></DT>
+  <DT><B>value = "<TT>.</TT>" [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='value' Line='value = "." [string]'>
   <DD>This is the value to be assigned to each keyword in 'keywords'.
   The special value "<TT>.</TT>" means that
@@ -127,7 +116,7 @@ thedit — Edit or print table header keywords.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(delete = no) [bool]</A></B></DT>
+  <DT><B>(delete = no) [bool]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(delete = no) [bool]'>
   <DD>If delete = yes, the specified keywords will be deleted.
   All the keywords listed in 'keywords' will be deleted,
@@ -135,14 +124,14 @@ thedit — Edit or print table header keywords.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(show = yes) [bool]</A></B></DT>
+  <DT><B>(show = yes) [bool]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(show = yes) [bool]'>
   <DD>Print a record of each edit operation?
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  Display all the header keywords (except blank) in "<TT>example.tab</TT>".
@@ -228,7 +217,7 @@ thedit — Edit or print table header keywords.
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   Expressions are evaluated using EVEXPR,
@@ -249,14 +238,14 @@ thedit — Edit or print table header keywords.
   use the "<TT>pt</TT>" instruction, meaning put a keyword of type text.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   This task was written by Phil Hodge,
   based on the 'hedit' task.
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   hedit, tupar
@@ -265,5 +254,3 @@ thedit — Edit or print table header keywords.
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

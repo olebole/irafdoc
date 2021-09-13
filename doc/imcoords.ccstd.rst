@@ -1,3 +1,5 @@
+.. _ccstd:
+
 ccstd — Transform to and from standard astrometric coordinates
 ==============================================================
 
@@ -5,44 +7,31 @@ ccstd — Transform to and from standard astrometric coordinates
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>ccstd (Oct00)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imcoords</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>ccstd (Oct00)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>ccstd</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   ccstd -- transform pixel and celestial coordinates to standard coordinates
   and vice versa
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   ccstd input output database solutions
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The input coordinate files. Coordinates may be entered by hand by setting input
   to "<TT>STDIN</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>The output coordinate files. The number of output files must be one or equal
   to the number of input files. Results may be printed on the terminal by
@@ -50,7 +39,7 @@ ccstd — Transform to and from standard astrometric coordinates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_database">database</A></B></DT>
+  <DT><B>database</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='database' Line='database'>
   <DD>The text database file written by the ccmap task which contains the
   desired plate solutions. If database is undefined ccstd computes the
@@ -60,7 +49,7 @@ ccstd — Transform to and from standard astrometric coordinates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_solutions">solutions</A></B></DT>
+  <DT><B>solutions</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='solutions' Line='solutions'>
   <DD>The database record containing the desired plate solution. 
   The number of records must be one or equal to the number of input coordinate
@@ -73,12 +62,12 @@ ccstd — Transform to and from standard astrometric coordinates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_geometry">geometry = "<TT>geometric</TT>"</A></B></DT>
+  <DT><B>geometry = "<TT>geometric</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='geometry' Line='geometry = "geometric"'>
   <DD>The type of geometric transformation. The geometry parameter is
   only requested if database is defined. The options are:
   <DL>
-  <DT><B><A NAME="l_linear">linear</A></B></DT>
+  <DT><B>linear</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='linear' Line='linear'>
   <DD>Transform the pixel coordinates to standard coordinates or vice versa
   using the linear part of the plate solution.
@@ -86,7 +75,7 @@ ccstd — Transform to and from standard astrometric coordinates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_geometric">geometric</A></B></DT>
+  <DT><B>geometric</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='geometric' Line='geometric'>
   <DD>Transform the pixel coordinates to standard coordinates or vice versa
   using the full plate solution.
@@ -95,7 +84,7 @@ ccstd — Transform to and from standard astrometric coordinates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_forward">forward = yes</A></B></DT>
+  <DT><B>forward = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='forward' Line='forward = yes'>
   <DD>Transform from pixel and celestial coordinates to standard coordinates ? If
   forward is "<TT>no</TT>" then the plate solution is inverted and standard coordinates
@@ -103,14 +92,14 @@ ccstd — Transform to and from standard astrometric coordinates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_polar">polar = no</A></B></DT>
+  <DT><B>polar = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='polar' Line='polar = no'>
   <DD>Convert to and from polar standard coordinates instead of Cartesian standard
   coordinates?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xref">xref = INDEF, yref = INDEF</A></B></DT>
+  <DT><B>xref = INDEF, yref = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xref' Line='xref = INDEF, yref = INDEF'>
   <DD>The pixel coordinates of the reference point. If database is undefined
   then xref and yref default to 0.0 and 0.0, otherwise these parameters are
@@ -118,7 +107,7 @@ ccstd — Transform to and from standard astrometric coordinates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xmag">xmag = INDEF, ymag = INDEF</A></B></DT>
+  <DT><B>xmag = INDEF, ymag = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xmag' Line='xmag = INDEF, ymag = INDEF'>
   <DD>The x and y scale factors in arcseconds per pixel. If database is undefined
   xmag and ymag default to 1.0 and 1.0 arcseconds per pixel, otherwise these
@@ -126,7 +115,7 @@ ccstd — Transform to and from standard astrometric coordinates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xrotation">xrotation = INDEF, yrotation = INDEF</A></B></DT>
+  <DT><B>xrotation = INDEF, yrotation = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xrotation' Line='xrotation = INDEF, yrotation = INDEF'>
   <DD>The x and y rotation angles in degrees measured counter-clockwise with
   respect to the x and y axes. If database is undefined then xrotation and
@@ -145,7 +134,7 @@ ccstd — Transform to and from standard astrometric coordinates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lngref">lngref = INDEF, latref = INDEF</A></B></DT>
+  <DT><B>lngref = INDEF, latref = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lngref' Line='lngref = INDEF, latref = INDEF'>
   <DD>The celestial coordinates of the reference point, e.g. the ra and dec
   of the reference point for equatorial systems, galactic longitude and
@@ -155,7 +144,7 @@ ccstd — Transform to and from standard astrometric coordinates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lngunits">lngunits = "<TT></TT>", latunits = "<TT></TT>"</A></B></DT>
+  <DT><B>lngunits = "<TT></TT>", latunits = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lngunits' Line='lngunits = "", latunits = ""'>
   <DD>The units of the input or output ra / longitude and dec / latitude coordinates.
   The options are "<TT>hours</TT>", "<TT>degrees</TT>", "<TT>radians</TT>" for ra / longitude coordinates,
@@ -166,7 +155,7 @@ ccstd — Transform to and from standard astrometric coordinates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_projection">projection = "<TT>tan</TT>"</A></B></DT>
+  <DT><B>projection = "<TT>tan</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='projection' Line='projection = "tan"'>
   <DD>The sky projection geometry. The options are "<TT>tan</TT>", "<TT>sin</TT>", "<TT>arc</TT>" and
   "<TT>lin</TT>". If database is undefined then the value of the projection parameter
@@ -174,7 +163,7 @@ ccstd — Transform to and from standard astrometric coordinates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xcolumn">xcolumn = 1, ycolumn = 2</A></B></DT>
+  <DT><B>xcolumn = 1, ycolumn = 2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xcolumn' Line='xcolumn = 1, ycolumn = 2'>
   <DD>The columns in the input coordinate file containing the x and y coordinates
   if the <I>forward</I> parameter is "<TT>yes</TT>", or the corresponding standard
@@ -182,7 +171,7 @@ ccstd — Transform to and from standard astrometric coordinates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lngcolumn">lngcolumn = 3, latcolumn = 4</A></B></DT>
+  <DT><B>lngcolumn = 3, latcolumn = 4</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lngcolumn' Line='lngcolumn = 3, latcolumn = 4'>
   <DD>The columns in the input coordinate file containing the celestial coordinates
   if the <I>forward</I> parameter is "<TT>yes</TT>", or the corresponding standard
@@ -190,7 +179,7 @@ ccstd — Transform to and from standard astrometric coordinates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lngformat">lngformat = "<TT></TT>", latformat = "<TT></TT>"</A></B></DT>
+  <DT><B>lngformat = "<TT></TT>", latformat = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lngformat' Line='lngformat = "", latformat = ""'>
   <DD>The default output format of the transformed coordinates in lngcolumn and 
   latcolumn. If forward = yes then the default output format is "<TT>%10.3f</TT>".
@@ -200,14 +189,14 @@ ccstd — Transform to and from standard astrometric coordinates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xformat">xformat = "<TT></TT>", yformat = "<TT></TT>"</A></B></DT>
+  <DT><B>xformat = "<TT></TT>", yformat = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xformat' Line='xformat = "", yformat = ""'>
   <DD>The default output format of the transformed coordinates in xcolumn and
   ycolumn. The default is "<TT>%10.3f</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_min_sigdigits">min_sigdigits = 7</A></B></DT>
+  <DT><B>min_sigdigits = 7</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='min_sigdigits' Line='min_sigdigits = 7'>
   <DD>The minimum precision of the output coordinates.
   </DD>
@@ -215,7 +204,7 @@ ccstd — Transform to and from standard astrometric coordinates
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -324,7 +313,7 @@ ccstd — Transform to and from standard astrometric coordinates
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_formats">FORMATS</A></H2>
+  <H3>Formats</H3>
   <! BeginSection: 'FORMATS'>
   <UL>
   <P>
@@ -404,7 +393,7 @@ ccstd — Transform to and from standard astrometric coordinates
   <P>
   </UL>
   <! EndSection:   'FORMATS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -568,13 +557,13 @@ ccstd — Transform to and from standard astrometric coordinates
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   <P>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   ccmap, ccsetwcs, cctran, finder.tastrom, skyctran
@@ -583,5 +572,3 @@ ccstd — Transform to and from standard astrometric coordinates
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'FORMATS' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

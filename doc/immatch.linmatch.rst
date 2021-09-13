@@ -1,3 +1,5 @@
+.. _linmatch:
+
 linmatch — Match the linear intensity scales of 1-D or 2-D images
 =================================================================
 
@@ -5,42 +7,29 @@ linmatch — Match the linear intensity scales of 1-D or 2-D images
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>linmatch (Apr95)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.immatch</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>linmatch (Apr95)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>linmatch</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   linmatch -- linearly match the intensity scales of 1 and 2D images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   linmatch input reference regions lintransform
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The list of input images to be matched.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_reference">reference</A></B></DT>
+  <DT><B>reference</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='reference' Line='reference'>
   <DD>The list of reference images to which the input images are to be matched
   if <I>scaling</I>  is one of the "<TT>mean</TT>", "<TT>median</TT>", "<TT>mode</TT>", or "<TT>fit</TT>"
@@ -51,7 +40,7 @@ linmatch — Match the linear intensity scales of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_regions">regions</A></B></DT>
+  <DT><B>regions</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='regions' Line='regions'>
   <DD>The list of image regions used to compute the intensity 
   matching function if <I>scaling</I> is one of the "<TT>mean</TT>", "<TT>median</TT>", "<TT>mode</TT>",
@@ -68,7 +57,7 @@ linmatch — Match the linear intensity scales of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lintransform">lintransform</A></B></DT>
+  <DT><B>lintransform</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lintransform' Line='lintransform'>
   <DD>The name of the text file where the computed scaling factors are written.
   If <I>databasefmt</I> is "<TT>yes</TT>", a single record containing the computed
@@ -81,7 +70,7 @@ linmatch — Match the linear intensity scales of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output = "<TT></TT>"</A></B></DT>
+  <DT><B>output = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output = ""'>
   <DD>The list of output matched images. If <I>output</I> is the NULL string
   then bscale  and bzero are computed for each input image and written to
@@ -91,7 +80,7 @@ linmatch — Match the linear intensity scales of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_databasefmt">databasefmt = yes</A></B></DT>
+  <DT><B>databasefmt = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='databasefmt' Line='databasefmt = yes'>
   <DD>If <I>databasefmt</I> is "<TT>yes</TT>" the computed bscale and bzero factors
   are written to a text database file, otherwise they are written to a
@@ -99,7 +88,7 @@ linmatch — Match the linear intensity scales of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_records">records = "<TT></TT>"</A></B></DT>
+  <DT><B>records = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='records' Line='records = ""'>
   <DD>The list of records to be written to or read from <I>lintransform</I> one
   input image. If <I>records</I> is NULL then the output or input record names
@@ -116,7 +105,7 @@ linmatch — Match the linear intensity scales of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_append">append = yes</A></B></DT>
+  <DT><B>append = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='append' Line='append = yes'>
   <DD>Append new records to an existing <I>lintransform</I> file or start a new 
   file for each execution of LINMATCH? The append parameter is
@@ -124,7 +113,7 @@ linmatch — Match the linear intensity scales of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_shifts">shifts = "<TT></TT>"</A></B></DT>
+  <DT><B>shifts = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='shifts' Line='shifts = ""'>
   <DD>An optional list of shifts files containing the x and y shifts to be applied
   to the reference regions to determine their positions in
@@ -139,7 +128,7 @@ linmatch — Match the linear intensity scales of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xshift">xshift = 0.0 yshift = 0.0</A></B></DT>
+  <DT><B>xshift = 0.0 yshift = 0.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xshift' Line='xshift = 0.0 yshift = 0.0'>
   <DD>The default x and y shifts to be applied to the reference image regions
   or objects to compute their positions in the input image.
@@ -149,7 +138,7 @@ linmatch — Match the linear intensity scales of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dnx">dnx = 31 dny = 31</A></B></DT>
+  <DT><B>dnx = 31 dny = 31</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dnx' Line='dnx = 31 dny = 31'>
   <DD>The default size of a single image region used to compute the bscale
   and bzero factors if <I>scaling</I> is one of the "<TT>mean</TT>", "<TT>median</TT>", "<TT>mode</TT>",
@@ -159,19 +148,19 @@ linmatch — Match the linear intensity scales of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_maxnregions">maxnregions = 100</A></B></DT>
+  <DT><B>maxnregions = 100</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='maxnregions' Line='maxnregions = 100'>
   <DD>The maximum number of image regions or objects with measured photometry
   that can be used to compute the bscale and bzero factors.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_scaling">scaling = "<TT>mean mean</TT>"</A></B></DT>
+  <DT><B>scaling = "<TT>mean mean</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='scaling' Line='scaling = "mean mean"'>
   <DD>The algorithms used to compute the bscale and bzero factors respectively.
   The options are:
   <DL>
-  <DT><B><A NAME="l_mean">mean median mode</A></B></DT>
+  <DT><B>mean median mode</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='mean' Line='mean median mode'>
   <DD>Bscale or bzero are computed using the "<TT>mean</TT>", "<TT>median</TT>", or "<TT>mode</TT>" statistic
   for each input and reference region individually. If one of the bscale or
@@ -187,7 +176,7 @@ linmatch — Match the linear intensity scales of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fit">fit    </A></B></DT>
+  <DT><B>fit    </B></DT>
   <! Sec='PARAMETERS' Level=1 Label='fit' Line='fit    '>
   <DD>Bscale and bzero are computed for each input image region individually
   by performing a least squares fit of the reference image pixels to
@@ -201,7 +190,7 @@ linmatch — Match the linear intensity scales of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_photometry">photometry</A></B></DT>
+  <DT><B>photometry</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='photometry' Line='photometry'>
   <DD>Bscale and/or bzero are computed for each input object individually
   using photometry computed for a set of objects common to the reference
@@ -216,7 +205,7 @@ linmatch — Match the linear intensity scales of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_number">number</A></B></DT>
+  <DT><B>number</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='number' Line='number'>
   <DD>Bscale and/or bzero are set to user defined numerical constants,
   e.g. "<TT>2.62 -55.0</TT>" or  "<TT>2.62 median</TT>". If both bscale and bzero are numerical
@@ -226,7 +215,7 @@ linmatch — Match the linear intensity scales of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_file">file</A></B></DT>
+  <DT><B>file</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='file' Line='file'>
   <DD>Bscale and bzero are not computed but instead read from record <I>record</I> in
   the text database file <I>lintransform</I> if <I>databasefmt</I> is "<TT>yes</TT>",
@@ -239,7 +228,7 @@ linmatch — Match the linear intensity scales of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_datamin">datamin = INDEF datamax = INDEF</A></B></DT>
+  <DT><B>datamin = INDEF datamax = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='datamin' Line='datamin = INDEF datamax = INDEF'>
   <DD>The minimum and maximum good data values. Datamin and datamax are used by
   the "<TT>mean</TT>", "<TT>median</TT>", and "<TT>mode</TT>" scaling algorithms to reject entire
@@ -249,14 +238,14 @@ linmatch — Match the linear intensity scales of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_maxiter">maxiter = 10</A></B></DT>
+  <DT><B>maxiter = 10</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='maxiter' Line='maxiter = 10'>
   <DD>The maximum number of iterations performed by the least squares fitting
   algorithm.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nreject">nreject = 0</A></B></DT>
+  <DT><B>nreject = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nreject' Line='nreject = 0'>
   <DD>The maximum number of rejection cycles used to detect and reject bad pixels
   from the fit if the scaling algorithm is "<TT>fit</TT>" or bad regions / objects
@@ -265,7 +254,7 @@ linmatch — Match the linear intensity scales of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_loreject">loreject = INDEF hireject = INDEF</A></B></DT>
+  <DT><B>loreject = INDEF hireject = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='loreject' Line='loreject = INDEF hireject = INDEF'>
   <DD>The high- and low-side bad data rejection limits used to detect and reject
   deviant pixels from the fit if the scaling algorithm is "<TT>fit</TT>" or bad
@@ -274,7 +263,7 @@ linmatch — Match the linear intensity scales of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_gain">gain = "<TT>1.0 1.0</TT>" readnoise = "<TT>0.0 0.0</TT>"</A></B></DT>
+  <DT><B>gain = "<TT>1.0 1.0</TT>" readnoise = "<TT>0.0 0.0</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='gain' Line='gain = "1.0 1.0" readnoise = "0.0 0.0"'>
   <DD>The reference and input image gain and readout noise in e-/ADU and
   e- respectively. Gain and readout may be numerical constants or the
@@ -286,39 +275,39 @@ linmatch — Match the linear intensity scales of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = no</A></B></DT>
+  <DT><B>interactive = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = no'>
   <DD>Compute the bscale and bzero scaling factors for each image interactively
   using graphics cursor and optionally image cursor input.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print messages about the progress of the task during task execution in
   non-interactive mode.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_graphics">graphics = "<TT>stdgraph</TT>"</A></B></DT>
+  <DT><B>graphics = "<TT>stdgraph</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"'>
   <DD>The default graphics device.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_display">display = "<TT>stdimage</TT>"</A></B></DT>
+  <DT><B>display = "<TT>stdimage</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='display' Line='display = "stdimage"'>
   <DD>The default image display device.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_gcommands">gcommands = "<TT></TT>"</A></B></DT>
+  <DT><B>gcommands = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""'>
   <DD>The default graphics cursor.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_icommands">icommands = "<TT></TT>"</A></B></DT>
+  <DT><B>icommands = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""'>
   <DD>The default image cursor.
   </DD>
@@ -326,7 +315,7 @@ linmatch — Match the linear intensity scales of 1-D or 2-D images
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -443,7 +432,7 @@ linmatch — Match the linear intensity scales of 1-D or 2-D images
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_cursor_commands">CURSOR COMMANDS</A></H2>
+  <H3>Cursor commands</H3>
   <! BeginSection: 'CURSOR COMMANDS'>
   <UL>
   <P>
@@ -504,7 +493,7 @@ linmatch — Match the linear intensity scales of 1-D or 2-D images
   <P>
   </UL>
   <! EndSection:   'CURSOR COMMANDS'>
-  <H2><A NAME="s_algorithms">ALGORITHMS</A></H2>
+  <H3>Algorithms</H3>
   <! BeginSection: 'ALGORITHMS'>
   <UL>
   <P>
@@ -672,7 +661,7 @@ linmatch — Match the linear intensity scales of 1-D or 2-D images
   <P>
   </UL>
   <! EndSection:   'ALGORITHMS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   <P>
@@ -686,7 +675,7 @@ linmatch — Match the linear intensity scales of 1-D or 2-D images
   <P>
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -819,17 +808,17 @@ linmatch — Match the linear intensity scales of 1-D or 2-D images
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imexpr, imcombine, ctio.filecalc, apphot.qphot, apphot.phot
@@ -838,5 +827,3 @@ linmatch — Match the linear intensity scales of 1-D or 2-D images
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'CURSOR COMMANDS' 'ALGORITHMS' 'REFERENCES' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

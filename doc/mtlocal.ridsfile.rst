@@ -1,3 +1,5 @@
+.. _ridsfile:
+
 ridsfile — Convert IDSFILES from a DUMPF tape to IRAF images
 ============================================================
 
@@ -5,42 +7,29 @@ ridsfile — Convert IDSFILES from a DUMPF tape to IRAF images
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>ridsfile (Jun87)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.mtlocal</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>ridsfile (Jun87)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>ridsfile</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   ridsfile -- convert DUMPF format IDSFILE to IRAF images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   ridsfile dumpf_file file_number iraf_file
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_dumpf_file">dumpf_file</A></B></DT>
+  <DT><B>dumpf_file</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dumpf_file' Line='dumpf_file'>
   <DD>The dumpf data source, i.e., the name of a magtape device.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_file_number">file_number</A></B></DT>
+  <DT><B>file_number</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='file_number' Line='file_number'>
   <DD>The ordinal of the DUMPF permanent file containing the IDSFILE to
   be read.  A listing of permanent files on the DUMPF tape can be
@@ -48,7 +37,7 @@ ridsfile — Convert IDSFILES from a DUMPF tape to IRAF images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_iraf_file">iraf_file</A></B></DT>
+  <DT><B>iraf_file</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='iraf_file' Line='iraf_file'>
   <DD>The IRAF file which will receive the data if the <I>make_image</I> parameter
   is set.  If multiple records are being read, the output
@@ -58,13 +47,13 @@ ridsfile — Convert IDSFILES from a DUMPF tape to IRAF images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_record_numbers">record_numbers = "<TT>1001-9999</TT>"</A></B></DT>
+  <DT><B>record_numbers = "<TT>1001-9999</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='record_numbers' Line='record_numbers = "1001-9999"'>
   <DD>A string listing the IDS records to be read from the IDSFILE.  
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_make_image">make_image = yes</A></B></DT>
+  <DT><B>make_image = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='make_image' Line='make_image = yes'>
   <DD>This switch determines whether the IDS records are converted to IRAF images.
   When <I>make_image</I> = no, only a listing of the headers is produced, 
@@ -72,13 +61,13 @@ ridsfile — Convert IDSFILES from a DUMPF tape to IRAF images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_print_pixels">print_pixels = no</A></B></DT>
+  <DT><B>print_pixels = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='print_pixels' Line='print_pixels = no'>
   <DD>When this parameter is set to yes, the values of the ids pixels are printed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_long_header">long_header = no</A></B></DT>
+  <DT><B>long_header = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='long_header' Line='long_header = no'>
   <DD>This parameter determines whether a long or short header is printed.  When
   <I>long_header</I> = no, a short header is printed.  The
@@ -89,7 +78,7 @@ ridsfile — Convert IDSFILES from a DUMPF tape to IRAF images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_data_type">data_type = "<TT>r</TT>"</A></B></DT>
+  <DT><B>data_type = "<TT>r</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='data_type' Line='data_type = "r"'>
   <DD>The data type of the output IRAF image.  If an incorrect data_type or null
   string is entered, the default data type <I>real</I> is used.
@@ -97,7 +86,7 @@ ridsfile — Convert IDSFILES from a DUMPF tape to IRAF images
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The IDS records in an IDSFILE are read from a Cyber DUMPF tape and optionally
@@ -107,7 +96,7 @@ ridsfile — Convert IDSFILES from a DUMPF tape to IRAF images
   form.  The pixels values can be listed as well.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   [1] Convert all records in the IDSFILE to IRAF images, with the root image name
@@ -137,7 +126,7 @@ ridsfile — Convert IDSFILES from a DUMPF tape to IRAF images
   	cl&gt; ridsfile mtb 4 make_im- rec=5086,5087 print+
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   The current version of IRAF magtape I/O does not read beyond the first
@@ -153,14 +142,14 @@ ridsfile — Convert IDSFILES from a DUMPF tape to IRAF images
   from a DUMPF tape, <B>ridsfile</B> must be executed more than once.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   The Cyber format readers, including <I>ridsfile</I>, have not been implemented
   on SUN/IRAF and AOS/IRAF.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   ldumpf, ridsout, ridsmtn
@@ -169,5 +158,3 @@ ridsfile — Convert IDSFILES from a DUMPF tape to IRAF images
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

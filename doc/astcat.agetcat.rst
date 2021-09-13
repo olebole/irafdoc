@@ -1,3 +1,5 @@
+.. _agetcat:
+
 agetcat — Extract astrometry files from astrometric catalogs
 ============================================================
 
@@ -5,40 +7,27 @@ agetcat — Extract astrometry files from astrometric catalogs
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>agetcat (Mar00)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>astcat</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>agetcat (Mar00)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>agetcat</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   agetcat -- Extract objects from astrometric catalogs
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   agetcat regions output
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_regions">regions</A></B></DT>
+  <DT><B>regions</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='regions' Line='regions'>
   <DD>The source  of the extraction region definitions. The options are:
   <DL>
-  <DT><B><A NAME="l_">&lt;filename&gt;</A></B></DT>
+  <DT><B>&lt;filename&gt;</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='&lt;filename&gt;'>
   <DD>The name of a text file containing a list of region definitions, one
   region definition per line. The format of the regions file is described
@@ -46,7 +35,7 @@ agetcat — Extract astrometry files from astrometric catalogs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">&lt;image list&gt;</A></B></DT>
+  <DT><B>&lt;image list&gt;</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='&lt;image list&gt;'>
   <DD>The list of images containing the region definition. The input images
   must have a valid FITS world coordinate system in order to be used
@@ -54,7 +43,7 @@ agetcat — Extract astrometry files from astrometric catalogs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pars">pars</A></B></DT>
+  <DT><B>pars</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='pars' Line='pars'>
   <DD>If regions is set to the reserved keyword "<TT>pars</TT>" then a single region
   definition is read from the <I>aregpars</I> parameter set. By default a region
@@ -65,7 +54,7 @@ agetcat — Extract astrometry files from astrometric catalogs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output </A></B></DT>
+  <DT><B>output </B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output '>
   <DD>The list of output astrometry files. The number of output files must be equal
   to the number regions in the regions list times the number of astrometry
@@ -77,7 +66,7 @@ agetcat — Extract astrometry files from astrometric catalogs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_aregpars">aregpars = "<TT></TT>"</A></B></DT>
+  <DT><B>aregpars = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='aregpars' Line='aregpars = ""'>
   <DD>The region definition parameter set. The aregpars parameters define the
   extraction region center, region width, region center units, and the region
@@ -86,14 +75,14 @@ agetcat — Extract astrometry files from astrometric catalogs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_catalogs">catalogs = "<TT>)_.catalogs</TT>"</A></B></DT>
+  <DT><B>catalogs = "<TT>)_.catalogs</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='catalogs' Line='catalogs = ")_.catalogs"'>
   <DD>The list of input astrometry catalogs. By default the catalog name is set to the
   value of the package parameter catalogs. 
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_standard">standard = yes</A></B></DT>
+  <DT><B>standard = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='standard' Line='standard = yes'>
   <DD>Output a standard astrometry file ? If standard = yes then a header describing
   the format of the astrometry file is written to the output file. The
@@ -104,14 +93,14 @@ agetcat — Extract astrometry files from astrometric catalogs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_filter">filter = no</A></B></DT>
+  <DT><B>filter = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='filter' Line='filter = no'>
   <DD>Filter the results of the catalog query before writing the final results
   to the output astrometry file ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_afiltpars">afiltpars = "<TT></TT>"</A></B></DT>
+  <DT><B>afiltpars = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='afiltpars' Line='afiltpars = ""'>
   <DD>The astrometry file filtering parameter set. These parameters permit the user
   to sort the output on a field or field expression, select or reject
@@ -121,20 +110,20 @@ agetcat — Extract astrometry files from astrometric catalogs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_update">update = no</A></B></DT>
+  <DT><B>update = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='update' Line='update = no'>
   <DD>Update the default values of the algorithm parameters, e.g. aregpars and
   afiltpars, at task termination ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print status messages on the terminal as the task proceeds ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_catdb">catdb = "<TT>)_.catdb</TT>"</A></B></DT>
+  <DT><B>catdb = "<TT>)_.catdb</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='catdb' Line='catdb = ")_.catdb"'>
   <DD>The catalog configuration file. Catdb defaults to the value of the
   package parameter catdb. The default catalog configuration file is
@@ -144,7 +133,7 @@ agetcat — Extract astrometry files from astrometric catalogs
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -227,7 +216,7 @@ agetcat — Extract astrometry files from astrometric catalogs
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -315,17 +304,17 @@ agetcat — Extract astrometry files from astrometric catalogs
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   aclist, adumpcat, aregpars, afiltpars
@@ -334,5 +323,3 @@ agetcat — Extract astrometry files from astrometric catalogs
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

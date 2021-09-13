@@ -1,3 +1,5 @@
+.. _subsets:
+
 subsets — Subtract pairs in strings of spectra
 ==============================================
 
@@ -5,26 +7,13 @@ subsets — Subtract pairs in strings of spectra
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>subsets (Jun87)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.imred.ccdred</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>subsets (Jun87)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>subsets</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   subsets -- Description of CCD subsets
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The <B>ccdred</B> package groups observation into subsets.
@@ -65,14 +54,14 @@ subsets — Subtract pairs in strings of spectra
   following steps define the subset identifier:
   <P>
   <DL>
-  <DT><B><A NAME="l_">(1)</A></B></DT>
+  <DT><B>(1)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='(1)'>
   <DD>Search the subset file, if present, for a matching subset string and
   use the defined subset identifier.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(2)</A></B></DT>
+  <DT><B>(2)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='(2)'>
   <DD>If there is no matching subset string use the first word of the
   image header subset string and, if it is not unique,
@@ -80,7 +69,7 @@ subsets — Subtract pairs in strings of spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(3)</A></B></DT>
+  <DT><B>(3)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='(3)'>
   <DD>If the identifier is not in the subset file create the file and add an
   entry if necessary.
@@ -88,7 +77,7 @@ subsets — Subtract pairs in strings of spectra
   </DL>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. The subset file is "<TT>subsets</TT>" (the default).  The subset parameter is
@@ -130,7 +119,7 @@ subsets — Subtract pairs in strings of spectra
   word will be used by <B>ccdred</B>; it should be short and unique.
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   instruments
@@ -139,5 +128,3 @@ subsets — Subtract pairs in strings of spectra
   
   <! Contents: 'NAME' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

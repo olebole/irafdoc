@@ -1,3 +1,5 @@
+.. _tintegrate:
+
 tintegrate — Numerically integrate one column with respect to another.
 ======================================================================
 
@@ -5,33 +7,20 @@ tintegrate — Numerically integrate one column with respect to another.
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>tintegrate (Jan96)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>tables</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>tintegrate (Jan96)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>tintegrate</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   tintegrate -- Calculate the integral of one table column with
   respect to another.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   tintegrate table integrand independent
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The program evaluates the integral of the column name passed to
@@ -55,23 +44,23 @@ tintegrate — Numerically integrate one column with respect to another.
   the first and last are included with a weight of one half.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_table">table [file name]</A></B></DT>
+  <DT><B>table [file name]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='table' Line='table [file name]'>
   <DD>The input table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_integrand">integrand [string]</A></B></DT>
+  <DT><B>integrand [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='integrand' Line='integrand [string]'>
   <DD>Column name whose contents will be the integrand.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_independent">independent [string]</A></B></DT>
+  <DT><B>independent [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='independent' Line='independent [string]'>
   <DD>Column name whose contents will be the independent variable;
   the values in this column must be increasing with row number.
@@ -80,14 +69,14 @@ tintegrate — Numerically integrate one column with respect to another.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(integral) [real]</A></B></DT>
+  <DT><B>(integral) [real]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(integral) [real]'>
   <DD>The result returned by the task.
   This is an output parameter; it is not directly changed by the user.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(ptsused) [integer]</A></B></DT>
+  <DT><B>(ptsused) [integer]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(ptsused) [integer]'>
   <DD>The number of points used in calculating the integral.
   This is also an output parameter and is not specified by the user.
@@ -95,7 +84,7 @@ tintegrate — Numerically integrate one column with respect to another.
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  Calculate the integral of flux over wavelength,
@@ -134,18 +123,18 @@ tintegrate — Numerically integrate one column with respect to another.
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   This task was written by David Giaretta.
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   tcalc
@@ -155,5 +144,3 @@ tintegrate — Numerically integrate one column with respect to another.
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

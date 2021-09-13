@@ -1,3 +1,5 @@
+.. _phistogram:
+
 phistogram — Plot or print the histogram of an image or list
 ============================================================
 
@@ -5,36 +7,23 @@ phistogram — Plot or print the histogram of an image or list
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>phistogram (Nov89)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>plot</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>phistogram (Nov89)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>phistogram</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   phistogram -- print or plot the histogram of an image or stream of values
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   phistogram input
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The name of the image, image subsection, or the text file containing the
   stream of values whose histogram is to be computed. <I>Input</I> may be
@@ -42,14 +31,14 @@ phistogram — Plot or print the histogram of an image or list
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_z1">z1 = INDEF, z2 = INDEF</A></B></DT>
+  <DT><B>z1 = INDEF, z2 = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='z1' Line='z1 = INDEF, z2 = INDEF'>
   <DD>The minimum and maximum values included in the histogram. The image or data
   minimum and maximum values are used by default.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_binwidth">binwidth = INDEF</A></B></DT>
+  <DT><B>binwidth = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='binwidth' Line='binwidth = INDEF'>
   <DD>The resolution of the histogram in data units. If <I>binwidth</I> is not defined,
   the parameters <I>nbins</I>, <I>z1</I>, and <I>z2</I> determine the resolution of
@@ -57,21 +46,21 @@ phistogram — Plot or print the histogram of an image or list
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nbins">nbins = 512</A></B></DT>
+  <DT><B>nbins = 512</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nbins' Line='nbins = 512'>
   <DD>The number of bins in, or resolution of, the histogram. 
   The <I>nbins</I> parameter is overridden if <I>binwidth</I> is defined.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_autoscale">autoscale = yes</A></B></DT>
+  <DT><B>autoscale = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='autoscale' Line='autoscale = yes'>
   <DD>In the case of integer image data, automatically adjust <I>nbins</I> and
   <I>z2</I> to avoid aliasing effects. Data in text files is not autoscaled.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_top_closed">top_closed = no</A></B></DT>
+  <DT><B>top_closed = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='top_closed' Line='top_closed = no'>
   <DD>Include z2 in the top bin?  Each bin of the histogram is a subinterval
   that is half open at the top.  <I>Top_closed</I> decides whether those
@@ -80,7 +69,7 @@ phistogram — Plot or print the histogram of an image or list
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_hist_type">hist_type = "<TT>normal</TT>"</A></B></DT>
+  <DT><B>hist_type = "<TT>normal</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='hist_type' Line='hist_type = "normal"'>
   <DD>The type of histogram to plot or list.  The choices are "<TT>normal</TT>",
   "<TT>cumulative</TT>", "<TT>difference</TT>", or "<TT>second_difference</TT>".  The two
@@ -89,13 +78,13 @@ phistogram — Plot or print the histogram of an image or list
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_listout">listout = no</A></B></DT>
+  <DT><B>listout = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='listout' Line='listout = no'>
   <DD>List instead of plot the histogram?  The list is never log scaled.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_title">title = "<TT>imtitle</TT>"</A></B></DT>
+  <DT><B>title = "<TT>imtitle</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='title' Line='title = "imtitle"'>
   <DD>The plot title. If title = "<TT>imtitle</TT>", the image name and title or the
   text file name, and the 
@@ -103,13 +92,13 @@ phistogram — Plot or print the histogram of an image or list
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xlabel">xlabel = "<TT>Data values</TT>", ylabel = "<TT>Counts</TT>"</A></B></DT>
+  <DT><B>xlabel = "<TT>Data values</TT>", ylabel = "<TT>Counts</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xlabel' Line='xlabel = "Data values", ylabel = "Counts"'>
   <DD>The labels for the X and Y axes.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wx1">wx1 = INDEF, wx2 = INDEF, wy1 = 0.0, wy2 = INDEF</A></B></DT>
+  <DT><B>wx1 = INDEF, wx2 = INDEF, wy1 = 0.0, wy2 = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wx1' Line='wx1 = INDEF, wx2 = INDEF, wy1 = 0.0, wy2 = INDEF'>
   <DD>The range of user coordinates spanned by the plot. If either of the x axis
   limits is INDEF the histogram minimum or maximum data values
@@ -118,19 +107,19 @@ phistogram — Plot or print the histogram of an image or list
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_logx">logx = no, logy = yes</A></B></DT>
+  <DT><B>logx = no, logy = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='logx' Line='logx = no, logy = yes'>
   <DD>Use log scaling on the x or y axes of the plot?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_round">round = no</A></B></DT>
+  <DT><B>round = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='round' Line='round = no'>
   <DD>Round the axes minimum and maximum values up to "<TT>nice</TT>" values?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_plot_type">plot_type = "<TT>line</TT>"</A></B></DT>
+  <DT><B>plot_type = "<TT>line</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='plot_type' Line='plot_type = "line"'>
   <DD>The style of histogram to plot. The options are "<TT>line</TT>", "<TT>box</TT>" and "<TT>fullbox</TT>".
   If <I>plot_type</I> is "<TT>line</TT>" the histogram data points are connected by
@@ -139,19 +128,19 @@ phistogram — Plot or print the histogram of an image or list
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_box">box = yes</A></B></DT>
+  <DT><B>box = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='box' Line='box = yes'>
   <DD>Draw axes at the perimeter of the plotting window?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ticklabels">ticklabels = yes</A></B></DT>
+  <DT><B>ticklabels = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ticklabels' Line='ticklabels = yes'>
   <DD>Label the tick marks?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_majrx">majrx = 5, minrx = 5, majry = 5, minry = 5</A></B></DT>
+  <DT><B>majrx = 5, minrx = 5, majry = 5, minry = 5</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='majrx' Line='majrx = 5, minrx = 5, majry = 5, minry = 5'>
   <DD>Number of major tick marks on each axis and number of minor tick marks between
   major tick marks. These quantities are ignored if log scaling is in effect
@@ -159,25 +148,25 @@ phistogram — Plot or print the histogram of an image or list
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fill">fill = yes</A></B></DT>
+  <DT><B>fill = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fill' Line='fill = yes'>
   <DD>Fill the output viewport regardless of the device aspect ratio?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_vx1">vx1 = 0.0, vx2 = 1.0, vy1 = 0.0, vy2 = 1.0</A></B></DT>
+  <DT><B>vx1 = 0.0, vx2 = 1.0, vy1 = 0.0, vy2 = 1.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='vx1' Line='vx1 = 0.0, vx2 = 1.0, vy1 = 0.0, vy2 = 1.0'>
   <DD>The NDC coordinates (0.0:1.0) of the device plotting viewport.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_append">append = no</A></B></DT>
+  <DT><B>append = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='append' Line='append = no'>
   <DD>Append to an existing plot?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pattern">pattern = "<TT>solid</TT>"</A></B></DT>
+  <DT><B>pattern = "<TT>solid</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pattern' Line='pattern = "solid"'>
   <DD>The type of line used to draw the histogram. The options are "<TT>solid</TT>",
   "<TT>dashed</TT>" "<TT>dotted</TT>", and "<TT>dotdash</TT>". <I>Pattern</I> can be changed when
@@ -185,14 +174,14 @@ phistogram — Plot or print the histogram of an image or list
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_device">device = "<TT>stdgraph</TT>"</A></B></DT>
+  <DT><B>device = "<TT>stdgraph</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdgraph"'>
   <DD>The output graphics device.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <I>Phistogram</I> computes the histogram of the IRAF image or stream
@@ -236,7 +225,7 @@ phistogram — Plot or print the histogram of an image or list
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Output the histogram of an image to a file.
@@ -262,7 +251,7 @@ phistogram — Plot or print the histogram of an image or list
       cl&gt; phist list
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   If the resolution of the histogram (number of bins) is a non-integral multiple
@@ -278,7 +267,7 @@ phistogram — Plot or print the histogram of an image or list
   resolution.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   listpixels, plot.graph, proto.mkhistogram
@@ -287,5 +276,3 @@ phistogram — Plot or print the histogram of an image or list
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

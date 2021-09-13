@@ -1,3 +1,5 @@
+.. _fitskypars:
+
 fitskypars — Edit the sky fitting algorithm parameters
 ======================================================
 
@@ -5,40 +7,27 @@ fitskypars — Edit the sky fitting algorithm parameters
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>fitskypars (May00)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.daophot</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>fitskypars (May00)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>fitskypars</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   fitskypars - edit the sky fitting algorithm parameters
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   fitskypars
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_salgorithm">salgorithm = "<TT>mode</TT>"</A></B></DT>
+  <DT><B>salgorithm = "<TT>mode</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='salgorithm' Line='salgorithm = "mode"'>
   <DD>The sky fitting algorithm.  The sky fitting options are:
   <DL>
-  <DT><B><A NAME="l_constant">constant</A></B></DT>
+  <DT><B>constant</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='constant' Line='constant'>
   <DD>Use a user supplied constant sky value.
   This algorithm is useful for measuring large resolved objects on flat
@@ -46,21 +35,21 @@ fitskypars — Edit the sky fitting algorithm parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_file">file</A></B></DT>
+  <DT><B>file</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='file' Line='file'>
   <DD>Read sky values from a text file. This option is useful for importing
   user determined sky values into DAOPHOT.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_mean">mean</A></B></DT>
+  <DT><B>mean</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='mean' Line='mean'>
   <DD>Compute the mean of the sky pixel distribution. This algorithm is useful
   for computing sky values in regions with few background counts.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_median">median</A></B></DT>
+  <DT><B>median</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='median' Line='median'>
   <DD>Compute the median of the sky pixel distribution. This algorithm is a useful
   for computing sky values in regions with rapidly varying sky backgrounds
@@ -68,7 +57,7 @@ fitskypars — Edit the sky fitting algorithm parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_mode">mode</A></B></DT>
+  <DT><B>mode</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='mode' Line='mode'>
   <DD>Compute the mode of the sky pixel distribution using the mean and median.
   This is the recommended algorithm for DAOPHOT users measuring stellar objects in
@@ -77,7 +66,7 @@ fitskypars — Edit the sky fitting algorithm parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_centroid">centroid</A></B></DT>
+  <DT><B>centroid</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='centroid' Line='centroid'>
   <DD>Compute the intensity weighted mean of the sky pixel histogram. This algorithm
   is reasonably robust in regions with rapidly varying or crowded sky backgrounds
@@ -85,28 +74,28 @@ fitskypars — Edit the sky fitting algorithm parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_gauss">gauss</A></B></DT>
+  <DT><B>gauss</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='gauss' Line='gauss'>
   <DD>Fit a Gaussian function to the sky pixel histogram using non-linear least-
   squares techniques to determine the peak. 
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ofilter">ofilter</A></B></DT>
+  <DT><B>ofilter</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='ofilter' Line='ofilter'>
   <DD>Optimally filter the sky pixel histogram using a triangular weighting
   function to determine the peak.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_crosscor">crosscor</A></B></DT>
+  <DT><B>crosscor</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='crosscor' Line='crosscor'>
   <DD>Compute the peak of the cross-correlation function of the pixel distribution
   and a Gaussian noise function to determine the peak.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_histplot">histplot</A></B></DT>
+  <DT><B>histplot</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='histplot' Line='histplot'>
   <DD>Mark the peak of the sky pixel histogram with the graphics cursor.
   This algorithm is useful for making careful interactive sky measurements
@@ -115,7 +104,7 @@ fitskypars — Edit the sky fitting algorithm parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_radplot">radplot</A></B></DT>
+  <DT><B>radplot</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='radplot' Line='radplot'>
   <DD>Mark the sky level on a radial profile plot with the graphics cursor.
   This algorithm is useful for making careful interactive sky measurements
@@ -126,34 +115,34 @@ fitskypars — Edit the sky fitting algorithm parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_annulus">annulus = 10.0  (scale units)</A></B></DT>
+  <DT><B>annulus = 10.0  (scale units)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='annulus' Line='annulus = 10.0  (scale units)'>
   <DD>The inner radius of the annular sky fitting region in units of the DATAPARS
   scale parameter.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dannulus">dannulus = 10.0  (scale units)</A></B></DT>
+  <DT><B>dannulus = 10.0  (scale units)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dannulus' Line='dannulus = 10.0  (scale units)'>
   <DD>The width of the annular sky fitting region in units of the DATAPARS scale
   parameter.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_skyvalue">skyvalue = 0.0</A></B></DT>
+  <DT><B>skyvalue = 0.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='skyvalue' Line='skyvalue = 0.0'>
   <DD>The constant for constant sky subtraction.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_smaxiter">smaxiter = 10</A></B></DT>
+  <DT><B>smaxiter = 10</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='smaxiter' Line='smaxiter = 10'>
   <DD>The maximum number of iterations performed by the sky fitting algorithm.
   Smaxiter is required by the "<TT>gauss</TT>" and "<TT>ofilter</TT>" sky fitting algorithms.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sloclip">sloclip = 0.0, shiclip = 0.0 (percent)</A></B></DT>
+  <DT><B>sloclip = 0.0, shiclip = 0.0 (percent)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sloclip' Line='sloclip = 0.0, shiclip = 0.0 (percent)'>
   <DD>The high and low side clipping parameters in percent of the total number
   of pixels. If either of these parameters &gt; 0.0 then the specified
@@ -162,13 +151,13 @@ fitskypars — Edit the sky fitting algorithm parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_snreject">snreject = 50</A></B></DT>
+  <DT><B>snreject = 50</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='snreject' Line='snreject = 50'>
   <DD>The maximum number of sky pixel rejection cycles.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sloreject">sloreject = 3.0, shireject = 3.0</A></B></DT>
+  <DT><B>sloreject = 3.0, shireject = 3.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sloreject' Line='sloreject = 3.0, shireject = 3.0'>
   <DD>The k-sigma clipping factors for the pixel rejection  phase of the
   sky fitting algorithm. Sloreject and shireject are in units of the
@@ -176,7 +165,7 @@ fitskypars — Edit the sky fitting algorithm parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_khist">khist = 3.0</A></B></DT>
+  <DT><B>khist = 3.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='khist' Line='khist = 3.0'>
   <DD>The k-sigma clipping factor for computing the sky pixels histogram. Khist is in
   units of sigma of the local sky pixel distribution.  The histogram will be
@@ -185,7 +174,7 @@ fitskypars — Edit the sky fitting algorithm parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_binsize">binsize = 0.10</A></B></DT>
+  <DT><B>binsize = 0.10</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='binsize' Line='binsize = 0.10'>
   <DD>The width of a single bin of the sky pixel histogram.  Binsize is in units of
   the sigma of the local sky pixel distribution. Binsize is used by the
@@ -194,7 +183,7 @@ fitskypars — Edit the sky fitting algorithm parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_smooth">smooth = no</A></B></DT>
+  <DT><B>smooth = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='smooth' Line='smooth = no'>
   <DD>Boxcar smooth the sky pixel histogram before computing a sky value.
   Smooth is used by the "<TT>centroid</TT>", "<TT>gauss</TT>", "<TT>crosscor</TT>", "<TT>ofilter</TT>", and
@@ -202,7 +191,7 @@ fitskypars — Edit the sky fitting algorithm parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rgrow">rgrow = 0.0  (scale units)</A></B></DT>
+  <DT><B>rgrow = 0.0  (scale units)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rgrow' Line='rgrow = 0.0  (scale units)'>
   <DD>The region growing radius for pixel rejection in the sky region in units
   of the DATAPARS scale parameter. When a bad sky_pixel is detected, all pixels
@@ -211,14 +200,14 @@ fitskypars — Edit the sky fitting algorithm parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_mksky">mksky = no</A></B></DT>
+  <DT><B>mksky = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='mksky' Line='mksky = no'>
   <DD>Mark the sky annuli on the displayed image ?
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The sky fitting algorithm parameters control the action of the sky fitting
@@ -267,7 +256,7 @@ fitskypars — Edit the sky fitting algorithm parameters
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -308,17 +297,17 @@ fitskypars — Edit the sky fitting algorithm parameters
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   epar,lpar,datapars,phot
@@ -327,5 +316,3 @@ fitskypars — Edit the sky fitting algorithm parameters
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

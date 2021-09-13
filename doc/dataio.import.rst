@@ -1,3 +1,5 @@
+.. _import:
+
 import — Convert some other format to an IRAF image
 ===================================================
 
@@ -5,42 +7,29 @@ import — Convert some other format to an IRAF image
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>import (Oct94)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>dataio</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>import (Oct94)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>import</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   import -- create an IRAF image from an arbitrary binary file
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   import binfiles images
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_binfiles">binfiles</A></B></DT>
+  <DT><B>binfiles</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='binfiles' Line='binfiles'>
   <DD>The list of input binary files to be read.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>The list of output IRAF images to be written. This parameter only needs to
   be specified when generating an output image (see the <I>output</I> parameter
@@ -48,7 +37,7 @@ import — Convert some other format to an IRAF image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_format">format = "<TT>sense</TT>"</A></B></DT>
+  <DT><B>format = "<TT>sense</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='format' Line='format = "sense"'>
   <DD>The type of format to be processed. In default mode, i.e. <I>sense</I>,
   the format database is searched for a format identifier that evaluates 
@@ -64,20 +53,20 @@ import — Convert some other format to an IRAF image
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_dims">dims = "<TT></TT>"</A></B></DT>
+  <DT><B>dims = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dims' Line='dims = ""'>
   <DD>The input file dimension string.  This is a space or comma delimited string
   containing the length of the file in each dimension, e.g. "<TT>512,512,3</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pixtype">pixtype = "<TT></TT>"</A></B></DT>
+  <DT><B>pixtype = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pixtype' Line='pixtype = ""'>
   <DD>Input pixel type. This is a comma delimited string giving the type and size
   of each pixel, and an optional tag name to be used in the <I>outbands</I>
   expressions.  The syntax for the pixtype entry is
   <DL>
-  <DT><B><A NAME="l_"> &lt;type&gt;&lt;nbytes&gt;[:tag],&lt;type&gt;&lt;nbytes&gt;[:tag],[....]</A></B></DT>
+  <DT><B> &lt;type&gt;&lt;nbytes&gt;[:tag],&lt;type&gt;&lt;nbytes&gt;[:tag],[....]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line=' &lt;type&gt;&lt;nbytes&gt;[:tag],&lt;type&gt;&lt;nbytes&gt;[:tag],[....]'>
   <DD><P>
   where
@@ -101,7 +90,7 @@ import — Convert some other format to an IRAF image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interleave">interleave = 0</A></B></DT>
+  <DT><B>interleave = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interleave' Line='interleave = 0'>
   <DD>Pixel interleave type. If the <I>pixtype</I> parameter is a composite then
   the input pixel are pixel-interleaved (i.e. each pixel in a band is stored
@@ -114,7 +103,7 @@ import — Convert some other format to an IRAF image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_bswap">bswap = "<TT>no</TT>"</A></B></DT>
+  <DT><B>bswap = "<TT>no</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='bswap' Line='bswap = "no"'>
   <DD>Type of byte-swapping to perform.  By default no byte swapping is done, 
   if <I>bswap</I> is "<TT>yes</TT>" then all input values are byte swapped, if <I>bswap</I>
@@ -124,31 +113,31 @@ import — Convert some other format to an IRAF image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_hskip">hskip = 0</A></B></DT>
+  <DT><B>hskip = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='hskip' Line='hskip = 0'>
   <DD>Number of bytes preceding pixel data to skip.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_tskip">tskip = 0</A></B></DT>
+  <DT><B>tskip = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='tskip' Line='tskip = 0'>
   <DD>Number of bytes to skip at end of file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_bskip">bskip = 0</A></B></DT>
+  <DT><B>bskip = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='bskip' Line='bskip = 0'>
   <DD>Number of bytes between image bands to skip.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lskip">lskip = 0</A></B></DT>
+  <DT><B>lskip = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lskip' Line='lskip = 0'>
   <DD>Number of bytes to skip at font of each line.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lpad">lpad = 0</A></B></DT>
+  <DT><B>lpad = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lpad' Line='lpad = 0'>
   <DD>Number of bytes to skip at end of each line.
   </DD>
@@ -158,7 +147,7 @@ import — Convert some other format to an IRAF image
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_output">output = "<TT>image</TT>"</A></B></DT>
+  <DT><B>output = "<TT>image</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output = "image"'>
   <DD>Type of output to generate.  Possible values include "<TT>none</TT>" process the files
   but not generate an output image (e.g. to check the parameter values for
@@ -170,7 +159,7 @@ import — Convert some other format to an IRAF image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_outtype">outtype = "<TT></TT>"</A></B></DT>
+  <DT><B>outtype = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='outtype' Line='outtype = ""'>
   <DD>The data type of the output image.  May be one of <TT>'s'</TT> for a short image, <TT>'i'</TT>
   for an integer image, <TT>'l'</TT> for a long image, <TT>'r'</TT> for a real image, and <TT>'d'</TT>
@@ -180,7 +169,7 @@ import — Convert some other format to an IRAF image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_outbands">outbands = "<TT></TT>"</A></B></DT>
+  <DT><B>outbands = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='outbands' Line='outbands = ""'>
   <DD>Output image band expressions.  If no expressions are given then all of the
   input pixels will be converted.  The number of output bands may be more or
@@ -189,7 +178,7 @@ import — Convert some other format to an IRAF image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_imheader">imheader = "<TT></TT>"</A></B></DT>
+  <DT><B>imheader = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='imheader' Line='imheader = ""'>
   <DD>Image or header keyword data file.  If an image is given then the image header
   is copied.  If a file is given then the FITS format cards are copied.
@@ -203,7 +192,7 @@ import — Convert some other format to an IRAF image
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_database">database = "<TT>imcnv$lib/images.dat</TT>"</A></B></DT>
+  <DT><B>database = "<TT>imcnv$lib/images.dat</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='database' Line='database = "imcnv$lib/images.dat"'>
   <DD>The format database. This may also be a list of files to be searched (e.g.
   so that user-defined databases may be included), which will be treated as 
@@ -211,13 +200,13 @@ import — Convert some other format to an IRAF image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print verbose output during the conversion?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_buffer_size">buffer_size = 64</A></B></DT>
+  <DT><B>buffer_size = 64</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='buffer_size' Line='buffer_size = 64'>
   <DD>Number of image lines <I>per band</I> to buffer in memory before writing to
   disk.  Image buffering can increase task performance by as much as a factor
@@ -227,7 +216,7 @@ import — Convert some other format to an IRAF image
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -244,7 +233,7 @@ import — Convert some other format to an IRAF image
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_input_file_specification">Input File Specification</A></H2>
+  <H3>Input file specification</H3>
   <! BeginSection: 'Input File Specification'>
   <UL>
   	The input raster is assumed to be at most three dimensional, with
@@ -276,7 +265,7 @@ import — Convert some other format to an IRAF image
   specifying the full format.
   </UL>
   <! EndSection:   'Input File Specification'>
-  <H2><A NAME="s_output_parameters">Output Parameters</A></H2>
+  <H3>Output parameters</H3>
   <! BeginSection: 'Output Parameters'>
   <UL>
   	Once a format has been found, the task may output an IRAF image
@@ -316,7 +305,7 @@ import — Convert some other format to an IRAF image
   <P>
   </UL>
   <! EndSection:   'Output Parameters'>
-  <H2><A NAME="s_outbands_expressions">OUTBANDS EXPRESSIONS</A></H2>
+  <H3>Outbands expressions</H3>
   <! BeginSection: 'OUTBANDS EXPRESSIONS'>
   <UL>
   <P>
@@ -395,7 +384,7 @@ import — Convert some other format to an IRAF image
   <P>
   </UL>
   <! EndSection:   'OUTBANDS EXPRESSIONS'>
-  <H2><A NAME="s_format_database">FORMAT DATABASE</A></H2>
+  <H3>Format database</H3>
   <! BeginSection: 'FORMAT DATABASE'>
   <UL>
   <P>
@@ -459,7 +448,7 @@ import — Convert some other format to an IRAF image
   keywords, constants (numeric or strings), and the special operands 
   <P>
   <DL>
-  <DT><B><A NAME="l_">$FSIZE </A></B></DT>
+  <DT><B>$FSIZE </B></DT>
   <! Sec='FORMAT DATABASE' Level=0 Label='' Line='$FSIZE '>
   <DD>The size of the binary file in bytes.   In expressions this operand has an
   integer datatype.  For formats with variable header sizes this can be used
@@ -469,7 +458,7 @@ import — Convert some other format to an IRAF image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">$FNAME</A></B></DT>
+  <DT><B>$FNAME</B></DT>
   <! Sec='FORMAT DATABASE' Level=0 Label='' Line='$FNAME'>
   <DD>The name of the binary file.  In expressions this operand has a character
   datatype.  As a last resort for images without any identifying features the
@@ -481,7 +470,7 @@ import — Convert some other format to an IRAF image
   <P>
   </UL>
   <! EndSection:   'FORMAT DATABASE'>
-  <H2><A NAME="s_special_functions_">Special Functions:</A></H2>
+  <H3>Special functions:</H3>
   <! BeginSection: 'Special Functions:'>
   <UL>
   <P>
@@ -522,14 +511,14 @@ import — Convert some other format to an IRAF image
   </PRE>
   <P>
   <DL>
-  <DT><B><A NAME="l_ctocc">ctocc ([offset])			[string]</A></B></DT>
+  <DT><B>ctocc ([offset])			[string]</B></DT>
   <! Sec='Special Functions:' Level=0 Label='ctocc' Line='ctocc ([offset])			[string]'>
   <DD>Convert byte at the given offset to printable char constant.
   If no offset argument is given the current offset is used.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ctod">ctod ([offset])			[double]</A></B></DT>
+  <DT><B>ctod ([offset])			[double]</B></DT>
   <! Sec='Special Functions:' Level=0 Label='ctod' Line='ctod ([offset])			[double]'>
   <DD>Convert string to double precision real.
   The function reads a string from
@@ -538,7 +527,7 @@ import — Convert some other format to an IRAF image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ctoi">ctoi ([offset])			[int]</A></B></DT>
+  <DT><B>ctoi ([offset])			[int]</B></DT>
   <! Sec='Special Functions:' Level=0 Label='ctoi' Line='ctoi ([offset])			[int]'>
   <DD>Convert string to integer.
   The function reads a string from
@@ -547,7 +536,7 @@ import — Convert some other format to an IRAF image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ctol">ctol ([offset])			[long]</A></B></DT>
+  <DT><B>ctol ([offset])			[long]</B></DT>
   <! Sec='Special Functions:' Level=0 Label='ctol' Line='ctol ([offset])			[long]'>
   <DD>Convert string to long.
   The function reads a string from
@@ -556,7 +545,7 @@ import — Convert some other format to an IRAF image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ctor">ctor ([offset])			[real]</A></B></DT>
+  <DT><B>ctor ([offset])			[real]</B></DT>
   <! Sec='Special Functions:' Level=0 Label='ctor' Line='ctor ([offset])			[real]'>
   <DD>Convert string to single precision real.  
   The function reads a string from
@@ -565,14 +554,14 @@ import — Convert some other format to an IRAF image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ctowrd">ctowrd ([offset])			[string]</A></B></DT>
+  <DT><B>ctowrd ([offset])			[string]</B></DT>
   <! Sec='Special Functions:' Level=0 Label='ctowrd' Line='ctowrd ([offset])			[string]'>
   <DD>Get 1st white-space delimited word from str, leading whitespace is skipped.
   If no offset argument is given the current offset is used.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_getstr">getstr ([offset,] len)		[string]</A></B></DT>
+  <DT><B>getstr ([offset,] len)		[string]</B></DT>
   <! Sec='Special Functions:' Level=0 Label='getstr' Line='getstr ([offset,] len)		[string]'>
   <DD>Get a string at offset.
   If no offset argument is given the current offset is used, the length of
@@ -580,21 +569,21 @@ import — Convert some other format to an IRAF image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_getb">getb ([offset])			[int]</A></B></DT>
+  <DT><B>getb ([offset])			[int]</B></DT>
   <! Sec='Special Functions:' Level=0 Label='getb' Line='getb ([offset])			[int]'>
   <DD>Get a byte at offset.
   If no offset argument is given the current offset is used.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_getu">getu ([offset])			[int]</A></B></DT>
+  <DT><B>getu ([offset])			[int]</B></DT>
   <! Sec='Special Functions:' Level=0 Label='getu' Line='getu ([offset])			[int]'>
   <DD>Get an unsigned short integer at offset.
   If no offset argument is given the current offset is used.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_geti">geti[24] ([offset])			[int]</A></B></DT>
+  <DT><B>geti[24] ([offset])			[int]</B></DT>
   <! Sec='Special Functions:' Level=0 Label='geti' Line='geti[24] ([offset])			[int]'>
   <DD>Get a signed int at offset.
   If no offset argument is given the current offset is used.
@@ -603,7 +592,7 @@ import — Convert some other format to an IRAF image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_getr">getr[48] ([offset])			[real/double]</A></B></DT>
+  <DT><B>getr[48] ([offset])			[real/double]</B></DT>
   <! Sec='Special Functions:' Level=0 Label='getr' Line='getr[48] ([offset])			[real/double]'>
   <DD>Get an IEEE floating point number at an optional offset.
   If no offset argument is given the current offset is used.
@@ -612,7 +601,7 @@ import — Convert some other format to an IRAF image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_getn">getn[48] ([offset])			[real/double]</A></B></DT>
+  <DT><B>getn[48] ([offset])			[real/double]</B></DT>
   <! Sec='Special Functions:' Level=0 Label='getn' Line='getn[48] ([offset])			[real/double]'>
   <DD>Get a native floating point number at an optional offset.
   If no offset argument is given the current offset is used.
@@ -621,48 +610,48 @@ import — Convert some other format to an IRAF image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_locate">locate ([offset,] pat)		[int]</A></B></DT>
+  <DT><B>locate ([offset,] pat)		[int]</B></DT>
   <! Sec='Special Functions:' Level=0 Label='locate' Line='locate ([offset,] pat)		[int]'>
   <DD>Compute an offset.
   If no offset argument is given the current offset is used.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_line">line (N)				[int]</A></B></DT>
+  <DT><B>line (N)				[int]</B></DT>
   <! Sec='Special Functions:' Level=0 Label='line' Line='line (N)				[int]'>
   <DD>Offset of line N in bytes.  The database is rewound and the offset of the
   requested line number is returned, line are delimited by the '\n' character.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_skip">skip (nbytes)			[int]</A></B></DT>
+  <DT><B>skip (nbytes)			[int]</B></DT>
   <! Sec='Special Functions:' Level=0 Label='skip' Line='skip (nbytes)			[int]'>
   <DD>Move current offset by N-bytes. The number of bytes skipped is returned as
   the function value.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_bswap">bswap (arg)				[type of arg]</A></B></DT>
+  <DT><B>bswap (arg)				[type of arg]</B></DT>
   <! Sec='Special Functions:' Level=0 Label='bswap' Line='bswap (arg)				[type of arg]'>
   <DD>Byte swap the argument.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_substr">substr (str, first, last)		[string]</A></B></DT>
+  <DT><B>substr (str, first, last)		[string]</B></DT>
   <! Sec='Special Functions:' Level=0 Label='substr' Line='substr (str, first, last)		[string]'>
   <DD>Extracts a substring from string <I>str</I>.  The  first  character  in
   the string is at index 1.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_stridx">stridx (test, str)			[int]</A></B></DT>
+  <DT><B>stridx (test, str)			[int]</B></DT>
   <! Sec='Special Functions:' Level=0 Label='stridx' Line='stridx (test, str)			[int]'>
   <DD>Finds the position of the first occurrence of any character found
   in <I>test</I> in the string <I>str</I>, returning 0 if the match fails.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_parameter">parameter (param)			[param type]</A></B></DT>
+  <DT><B>parameter (param)			[param type]</B></DT>
   <! Sec='Special Functions:' Level=0 Label='parameter' Line='parameter (param)			[param type]'>
   <DD>Return the current task parameter. The parameter is specified as a string
   containing the name of a task parameter, the type of the returned value is
@@ -670,7 +659,7 @@ import — Convert some other format to an IRAF image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_default">default (param)			[param type]</A></B></DT>
+  <DT><B>default (param)			[param type]</B></DT>
   <! Sec='Special Functions:' Level=0 Label='default' Line='default (param)			[param type]'>
   <DD>Return the default task parameter.  The parameter is specified as a string
   containing the name of a task parameter, the type of the returned value is
@@ -678,7 +667,7 @@ import — Convert some other format to an IRAF image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lsb_host">lsb_host ()				[bool]</A></B></DT>
+  <DT><B>lsb_host ()				[bool]</B></DT>
   <! Sec='Special Functions:' Level=0 Label='lsb_host' Line='lsb_host ()				[bool]'>
   <DD>Returns true if host is little-endian.
   This function can be used as the <I>bswap</I> keyword expression for formats
@@ -686,7 +675,7 @@ import — Convert some other format to an IRAF image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_msb_host">msb_host ()				[bool]</A></B></DT>
+  <DT><B>msb_host ()				[bool]</B></DT>
   <! Sec='Special Functions:' Level=0 Label='msb_host' Line='msb_host ()				[bool]'>
   <DD>Returns true if host is big-endian.
   This function can be used as the <I>bswap</I> keyword expression for formats
@@ -696,7 +685,7 @@ import — Convert some other format to an IRAF image
   <P>
   </UL>
   <! EndSection:   'Special Functions:'>
-  <H2><A NAME="s_byte_swapping">BYTE SWAPPING</A></H2>
+  <H3>Byte swapping</H3>
   <! BeginSection: 'BYTE SWAPPING'>
   <UL>
   <P>
@@ -725,7 +714,7 @@ import — Convert some other format to an IRAF image
   <P>
   </UL>
   <! EndSection:   'BYTE SWAPPING'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <PRE>
@@ -801,7 +790,7 @@ import — Convert some other format to an IRAF image
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   Bitmap images are not yet supported.  Their most logical use would be as
@@ -809,18 +798,18 @@ import — Convert some other format to an IRAF image
   be implemented at a later time.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_IMPORT">IMPORT V2.11</A></B></DT>
+  <DT><B>IMPORT V2.11</B></DT>
   <! Sec='REVISIONS' Level=0 Label='IMPORT' Line='IMPORT V2.11'>
   <DD>This is a new task in this version.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   export. imexpr, hedit, default image database imcnv$lib/images.dat
@@ -829,5 +818,3 @@ import — Convert some other format to an IRAF image
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'Input File Specification' 'Output Parameters' 'OUTBANDS EXPRESSIONS' 'FORMAT DATABASE' 'Special Functions:' 'BYTE SWAPPING' 'EXAMPLES' 'BUGS' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

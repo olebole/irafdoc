@@ -1,3 +1,5 @@
+.. _imextensions:
+
 imextensions — Make a list of image extensions
 ==============================================
 
@@ -5,26 +7,13 @@ imextensions — Make a list of image extensions
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>imextensions (Jul97)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>proto</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>imextensions (Jul97)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>imextensions</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   imextensions -- make a list of image extensions
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage___">USAGE   </A></H2>
+  <H3>Usage   </H3>
   <! BeginSection: 'USAGE   '>
   <UL>
   <PRE>
@@ -32,11 +21,11 @@ imextensions — Make a list of image extensions
   </PRE>
   </UL>
   <! EndSection:   'USAGE   '>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of input files containing image extensions to be listed.  This list
   may not contain any image kernel but it can contain an image section.  The
@@ -45,7 +34,7 @@ imextensions — Make a list of image extensions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output = "<TT>file</TT>" (none|list|file)</A></B></DT>
+  <DT><B>output = "<TT>file</TT>" (none|list|file)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output = "file" (none|list|file)'>
   <DD>Output type for the list of image extensions.  The choices are:
   <P>
@@ -64,7 +53,7 @@ imextensions — Make a list of image extensions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_index">index = "<TT>1-</TT>"</A></B></DT>
+  <DT><B>index = "<TT>1-</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='index' Line='index = "1-"'>
   <DD>Extension index range list.  The range list syntax is specified under the
   help topic <B>ranges</B>.  Note that the range list may be specified that
@@ -72,7 +61,7 @@ imextensions — Make a list of image extensions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_extname">extname = "<TT></TT>"</A></B></DT>
+  <DT><B>extname = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='extname' Line='extname = ""'>
   <DD>Extension name pattern.  If a null string is specified then there is
   no check on the extension name.  If a pattern is specified then only
@@ -81,7 +70,7 @@ imextensions — Make a list of image extensions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_extver">extver = "<TT></TT>"</A></B></DT>
+  <DT><B>extver = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='extver' Line='extver = ""'>
   <DD>Extension version range list.  If a null list is specified then there is
   no check on the extension version.  If a list is given then only image
@@ -90,7 +79,7 @@ imextensions — Make a list of image extensions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lindex">lindex = yes</A></B></DT>
+  <DT><B>lindex = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lindex' Line='lindex = yes'>
   <DD>List the image extensions with the extension index?  If the value is
   "<TT>no</TT>" then the extension index will not be listed if the extension
@@ -100,19 +89,19 @@ imextensions — Make a list of image extensions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lname">lname = no</A></B></DT>
+  <DT><B>lname = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lname' Line='lname = no'>
   <DD>List the image extensions with the extension name if there is one?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lver">lver = no</A></B></DT>
+  <DT><B>lver = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lver' Line='lver = no'>
   <DD>List the image extensions with the extension version if there is one?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ikparams">ikparams = "<TT></TT>"</A></B></DT>
+  <DT><B>ikparams = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ikparams' Line='ikparams = ""'>
   <DD>Include the specified image kernel parameters in the image extension
   names.  The image kernel parameters are specific to the various
@@ -121,7 +110,7 @@ imextensions — Make a list of image extensions
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_nimages">nimages</A></B></DT>
+  <DT><B>nimages</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nimages' Line='nimages'>
   <DD>This is an output parameter which is set to the number of image extensions
   selected in the last execution of the task.  Note that if the task
@@ -133,7 +122,7 @@ imextensions — Make a list of image extensions
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <B>Imextensions</B> selects and lists image extensions in files.  Image
@@ -165,7 +154,7 @@ imextensions — Make a list of image extensions
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  Get a list of image extensions in a CL string and use it to select
@@ -283,24 +272,24 @@ imextensions — Make a list of image extensions
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_IMEXTENSIONS">IMEXTENSIONS V2.11.?</A></B></DT>
+  <DT><B>IMEXTENSIONS V2.11.?</B></DT>
   <! Sec='REVISIONS' Level=0 Label='IMEXTENSIONS' Line='IMEXTENSIONS V2.11.?'>
   <DD>Image sections are now allowed in the input names.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_IMEXTENSIONS">IMEXTENSIONS V2.11</A></B></DT>
+  <DT><B>IMEXTENSIONS V2.11</B></DT>
   <! Sec='REVISIONS' Level=0 Label='IMEXTENSIONS' Line='IMEXTENSIONS V2.11'>
   <DD>This task is new in this release.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   <PRE>
@@ -311,5 +300,3 @@ imextensions — Make a list of image extensions
   
   <! Contents: 'NAME' 'USAGE   ' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

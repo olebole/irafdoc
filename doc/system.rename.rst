@@ -1,3 +1,5 @@
+.. _rename:
+
 rename — Rename a file
 ======================
 
@@ -5,42 +7,29 @@ rename — Rename a file
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>rename (Aug97)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>system</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>rename (Aug97)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>rename</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   rename -- rename a file or set of files
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   rename file newname
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_file">file</A></B></DT>
+  <DT><B>file</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='file' Line='file'>
   <DD>A template specifying the file or files to be renamed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_newname">newname</A></B></DT>
+  <DT><B>newname</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='newname' Line='newname'>
   <DD>If a single file is being renamed, the new filename, else the new name of
   the field being renamed in a set of filenames.  If <I>newname</I> is a
@@ -49,7 +38,7 @@ rename — Rename a file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_field">field = all</A></B></DT>
+  <DT><B>field = all</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='field' Line='field = all'>
   <DD>If set to "<TT>all</TT>" the file name remains unchanged and the <I>newname</I> is
   assumed to be a destination directory in the case of multiple input files,
@@ -63,7 +52,7 @@ rename — Rename a file
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <I>Rename</I> renames either a single file to "<TT>newname</TT>", or a set of files,
@@ -78,7 +67,7 @@ rename — Rename a file
   otherwise an error is generated to prevent overwriting files.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -104,12 +93,12 @@ rename — Rename a file
       cl&gt; rename im00* fits field=extn
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   movefiles, copy
@@ -118,5 +107,3 @@ rename — Rename a file
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

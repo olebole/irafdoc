@@ -1,3 +1,5 @@
+.. _polyphot:
+
 polyphot — Measure magnitudes inside a list of polygonal regions
 ================================================================
 
@@ -5,42 +7,29 @@ polyphot — Measure magnitudes inside a list of polygonal regions
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>polyphot (May00)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.apphot</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>polyphot (May00)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>polyphot</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   polyphot -- compute magnitudes inside polygonal apertures
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   polyphot image
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_image">image</A></B></DT>
+  <DT><B>image</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='image' Line='image'>
   <DD>The list of images containing the objects to be measured.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_coords">coords = "<TT></TT>"</A></B></DT>
+  <DT><B>coords = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='coords' Line='coords = ""'>
   <DD>The list of text files containing the center coordinates of the polygons
   to be measured. Polygon centers are listed one per line with the x and y
@@ -56,7 +45,7 @@ polyphot — Measure magnitudes inside a list of polygonal regions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_polygons">polygons = "<TT></TT>"</A></B></DT>
+  <DT><B>polygons = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='polygons' Line='polygons = ""'>
   <DD>The list of text files containing the vertices of the polygons to be
   measured.  The polygon vertices are listed 1 vertext per line with the x and y
@@ -70,7 +59,7 @@ polyphot — Measure magnitudes inside a list of polygonal regions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output = "<TT>default</TT>"</A></B></DT>
+  <DT><B>output = "<TT>default</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output = "default"'>
   <DD>The name of the results file or results directory. If output is
   "<TT>default</TT>", "<TT>dir$default</TT>", or a directory specification then an output file name
@@ -83,7 +72,7 @@ polyphot — Measure magnitudes inside a list of polygonal regions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_datapars">datapars = "<TT></TT>"</A></B></DT>
+  <DT><B>datapars = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='datapars' Line='datapars = ""'>
   <DD>The name of the file containing the data dependent parameters. The critical
   parameters <I>fwhmpsf</I> and <I>sigma</I> are located here. If <I>datapars</I>
@@ -91,7 +80,7 @@ polyphot — Measure magnitudes inside a list of polygonal regions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_centerpars">centerpars = "<TT></TT>"</A></B></DT>
+  <DT><B>centerpars = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='centerpars' Line='centerpars = ""'>
   <DD>The name of the file containing the centering parameters. The critical
   parameters <I>calgorithm</I> and <I>cbox</I> are located here.
@@ -100,7 +89,7 @@ polyphot — Measure magnitudes inside a list of polygonal regions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fitskypars">fitskypars = "<TT></TT>"</A></B></DT>
+  <DT><B>fitskypars = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fitskypars' Line='fitskypars = ""'>
   <DD>The name of the text file containing the sky fitting parameters. The critical
   parameters <I>salgorithm</I>, <I>annulus</I>, and <I>dannulus</I> are located here.
@@ -109,7 +98,7 @@ polyphot — Measure magnitudes inside a list of polygonal regions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_polypars">polypars = "<TT></TT>"</A></B></DT>
+  <DT><B>polypars = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='polypars' Line='polypars = ""'>
   <DD>The name of the text file containing the polygon photometry parameters,
   If <I>polypars</I> is undefined then the default parameter set in 
@@ -117,25 +106,25 @@ polyphot — Measure magnitudes inside a list of polygonal regions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = yes</A></B></DT>
+  <DT><B>interactive = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes'>
   <DD>Run the task interactively ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_icommands">icommands = "<TT></TT>"</A></B></DT>
+  <DT><B>icommands = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""'>
   <DD>The image cursor or image cursor command file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_gcommands">gcommands = "<TT></TT>"</A></B></DT>
+  <DT><B>gcommands = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""'>
   <DD>The graphics cursor or graphics cursor command file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wcsin">wcsin = "<TT>)_.wcsin</TT>", wcsout = "<TT>)_.wcsout</TT>"</A></B></DT>
+  <DT><B>wcsin = "<TT>)_.wcsin</TT>", wcsout = "<TT>)_.wcsout</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wcsin' Line='wcsin = ")_.wcsin", wcsout = ")_.wcsout"'>
   <DD>The coordinate system of the input coordinates read from <I>coords</I> and
   of the output coordinates written to <I>output</I> respectively. The image
@@ -147,7 +136,7 @@ polyphot — Measure magnitudes inside a list of polygonal regions
   </TT>"tv"<TT>, and </TT>"physical"<TT>. The image cursor coordinate system is assumed to
   be the </TT>"tv"<TT> system.
   <DL>
-  <DT><B><A NAME="l_logical">logical</A></B></DT>
+  <DT><B>logical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='logical' Line='logical'>
   <DD>Logical coordinates are pixel coordinates relative to the current image.
   The  logical coordinate system is the coordinate system used by the image
@@ -158,7 +147,7 @@ polyphot — Measure magnitudes inside a list of polygonal regions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_tv">tv</A></B></DT>
+  <DT><B>tv</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='tv' Line='tv'>
   <DD>Tv coordinates are the pixel coordinates used by the display servers. Tv
   coordinates  include  the effects of any input image section, but do not
@@ -173,7 +162,7 @@ polyphot — Measure magnitudes inside a list of polygonal regions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_physical">physical</A></B></DT>
+  <DT><B>physical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='physical' Line='physical'>
   <DD>Physical coordinates are pixel coordinates invariant  with respect to linear
   transformations of the physical image data.  For example, if the current image
@@ -187,7 +176,7 @@ polyphot — Measure magnitudes inside a list of polygonal regions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_world">world</A></B></DT>
+  <DT><B>world</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='world' Line='world'>
   <DD>World coordinates are image coordinates in any units which are invariant
   with respect to linear transformations of the physical image data. For
@@ -205,7 +194,7 @@ polyphot — Measure magnitudes inside a list of polygonal regions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cache">cache = </TT>")_.cache"<TT></A></B></DT>
+  <DT><B>cache = </TT>")_.cache"<TT></B></DT>
   <! Sec='PARAMETERS' Level=-1 Label='cache' Line='cache = ")_.cache"'>
   <DD>Cache the image pixels in memory. Cache may be set to the value of the apphot
   package parameter (the default), </TT>"yes"<TT>, or </TT>"no"<TT>. By default cacheing is 
@@ -213,14 +202,14 @@ polyphot — Measure magnitudes inside a list of polygonal regions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verify">verify = </TT>")_.verify"<TT></A></B></DT>
+  <DT><B>verify = </TT>")_.verify"<TT></B></DT>
   <! Sec='PARAMETERS' Level=-1 Label='verify' Line='verify = ")_.verify"'>
   <DD>Verify the critical parameters in non-interactive mode ? Verify may be set to
   the apphot package parameter value (the default), </TT>"yes"<TT>, or </TT>"no.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_update">update = "<TT>)_.update</TT>"</A></B></DT>
+  <DT><B>update = "<TT>)_.update</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=-1 Label='update' Line='update = ")_.update"'>
   <DD>Update the critical parameters in non-interactive mode if verify is yes ?
   Update may be set to the apphot package parameter value (the default), "<TT>yes</TT>",
@@ -228,14 +217,14 @@ polyphot — Measure magnitudes inside a list of polygonal regions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = </TT>")_.verbose"<TT></A></B></DT>
+  <DT><B>verbose = </TT>")_.verbose"<TT></B></DT>
   <! Sec='PARAMETERS' Level=-1 Label='verbose' Line='verbose = ")_.verbose"'>
   <DD>Print messages in non-interactive mode? Verbose may be set to the apphot
   package parameter value (the default), </TT>"yes"<TT>, or </TT>"no.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_graphics">graphics = "<TT>)_.graphics</TT>"</A></B></DT>
+  <DT><B>graphics = "<TT>)_.graphics</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=-1 Label='graphics' Line='graphics = ")_.graphics"'>
   <DD>The default graphics device. Graphics may be set to the apphot package
   parameter value (the default), "<TT>yes</TT>",
@@ -243,7 +232,7 @@ polyphot — Measure magnitudes inside a list of polygonal regions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_display">display = </TT>")_.display"<TT></A></B></DT>
+  <DT><B>display = </TT>")_.display"<TT></B></DT>
   <! Sec='PARAMETERS' Level=-1 Label='display' Line='display = ")_.display"'>
   <DD>The default display device. By default graphics overlay is disabled. Display
   may be set to the apphot package parameter value (the default), </TT>"yes"<TT>, or </TT>"no. 
@@ -255,7 +244,7 @@ polyphot — Measure magnitudes inside a list of polygonal regions
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -312,7 +301,7 @@ polyphot — Measure magnitudes inside a list of polygonal regions
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_the_polygon_and_polygon_centers_files">THE POLYGON and POLYGON CENTERS FILES</A></H2>
+  <H3>The polygon and polygon centers files</H3>
   <! BeginSection: 'THE POLYGON and POLYGON CENTERS FILES'>
   <UL>
   <P>
@@ -349,7 +338,7 @@ polyphot — Measure magnitudes inside a list of polygonal regions
   <P>
   </UL>
   <! EndSection:   'THE POLYGON and POLYGON CENTERS FILES'>
-  <H2><A NAME="s_cursor_commands">CURSOR COMMANDS</A></H2>
+  <H3>Cursor commands</H3>
   <! BeginSection: 'CURSOR COMMANDS'>
   <UL>
   <P>
@@ -492,7 +481,7 @@ polyphot — Measure magnitudes inside a list of polygonal regions
   <P>
   </UL>
   <! EndSection:   'CURSOR COMMANDS'>
-  <H2><A NAME="s_algorithms">ALGORITHMS</A></H2>
+  <H3>Algorithms</H3>
   <! BeginSection: 'ALGORITHMS'>
   <UL>
   <P>
@@ -513,7 +502,7 @@ polyphot — Measure magnitudes inside a list of polygonal regions
   <P>
   </UL>
   <! EndSection:   'ALGORITHMS'>
-  <H2><A NAME="s_output">OUTPUT</A></H2>
+  <H3>Output</H3>
   <! BeginSection: 'OUTPUT'>
   <UL>
   <P>
@@ -596,7 +585,7 @@ polyphot — Measure magnitudes inside a list of polygonal regions
   <P>
   </UL>
   <! EndSection:   'OUTPUT'>
-  <H2><A NAME="s_errors">ERRORS</A></H2>
+  <H3>Errors</H3>
   <! BeginSection: 'ERRORS'>
   <UL>
   <P>
@@ -648,7 +637,7 @@ polyphot — Measure magnitudes inside a list of polygonal regions
   <P>
   </UL>
   <! EndSection:   'ERRORS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -878,12 +867,12 @@ polyphot — Measure magnitudes inside a list of polygonal regions
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_timings">TIMINGS</A></H2>
+  <H3>Timings</H3>
   <! BeginSection: 'TIMINGS'>
   <UL>
   </UL>
   <! EndSection:   'TIMINGS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   There are no restrictions on the shape of the polygon but the vertices
@@ -907,7 +896,7 @@ polyphot — Measure magnitudes inside a list of polygonal regions
   <P>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   datapars,centerpars,fitskypars,polypars,qphot,phot,wphot
@@ -916,5 +905,3 @@ polyphot — Measure magnitudes inside a list of polygonal regions
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'THE POLYGON and POLYGON CENTERS FILES' 'CURSOR COMMANDS' 'ALGORITHMS' 'OUTPUT' 'ERRORS' 'EXAMPLES' 'TIMINGS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

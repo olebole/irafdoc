@@ -1,3 +1,5 @@
+.. _tvmark:
+
 tvmark — Mark objects on the image display
 ==========================================
 
@@ -5,42 +7,29 @@ tvmark — Mark objects on the image display
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>tvmark (Dec89)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.tv</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>tvmark (Dec89)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>tvmark</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   tvmark -- mark objects on the image display 
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   tvmark frame coords
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_frame">frame</A></B></DT>
+  <DT><B>frame</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='frame' Line='frame'>
   <DD>The frame or image plane number of the display to be marked. 
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_coords">coords </A></B></DT>
+  <DT><B>coords </B></DT>
   <! Sec='PARAMETERS' Level=0 Label='coords' Line='coords '>
   <DD>The text file containing the coordinates of objects to be
   marked, one object per line with x and y in columns 1 and 2 respectively.
@@ -49,7 +38,7 @@ tvmark — Mark objects on the image display
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_logfile">logfile = "<TT></TT>"</A></B></DT>
+  <DT><B>logfile = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = ""'>
   <DD>The text file in which image cursor commands typed in interactive mode
   are logged. If <I>logfile</I> = "<TT></TT>" no commands are logged.
@@ -60,13 +49,13 @@ tvmark — Mark objects on the image display
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_autolog">autolog = no</A></B></DT>
+  <DT><B>autolog = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='autolog' Line='autolog = no'>
   <DD>Automatically log all cursor commands in interactive mode.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_outimage">outimage = "<TT></TT>"</A></B></DT>
+  <DT><B>outimage = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='outimage' Line='outimage = ""'>
   <DD>The name of the output snapshot image.
   If tvmark is run in non-interactive mode and no command file is specified,
@@ -83,7 +72,7 @@ tvmark — Mark objects on the image display
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_deletions">deletions = "<TT></TT>"</A></B></DT>
+  <DT><B>deletions = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='deletions' Line='deletions = ""'>
   <DD>The extension of the output file containing objects which were deleted
   from the coordinate file in interactive or command file mode.
@@ -95,7 +84,7 @@ tvmark — Mark objects on the image display
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_commands">commands = "<TT></TT>"</A></B></DT>
+  <DT><B>commands = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='commands' Line='commands = ""'>
   <DD>The text file containing the marking commands.
   In interactive mode if <I>commands</I> = "<TT></TT>", 
@@ -108,32 +97,32 @@ tvmark — Mark objects on the image display
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_mark">mark = "<TT>point</TT>"</A></B></DT>
+  <DT><B>mark = "<TT>point</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='mark' Line='mark = "point"'>
   <DD>The default mark type.  The options are:
   <DL>
-  <DT><B><A NAME="l_point">point</A></B></DT>
+  <DT><B>point</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='point' Line='point'>
   <DD>A point.  To ensure legibility <I>point</I> is actually a square dot whose
   size is specified by <I>pointsize</I>.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_plus">plus</A></B></DT>
+  <DT><B>plus</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='plus' Line='plus'>
   <DD>A plus sign.  The shape of the plus sign is determined by the raster font
   and its size is specified by <I>txsize</I>.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cross">cross</A></B></DT>
+  <DT><B>cross</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='cross' Line='cross'>
   <DD>An x.  The shape of the x is determined by the raster font and its size is
   is specified by <I>txsize</I>.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_circle">circle</A></B></DT>
+  <DT><B>circle</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='circle' Line='circle'>
   <DD>A set of concentric circles whose radii are specified by the <I>radii</I>
   parameter.  The radii are in image pixel units.  If the magnifications
@@ -142,7 +131,7 @@ tvmark — Mark objects on the image display
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rectangle">rectangle</A></B></DT>
+  <DT><B>rectangle</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='rectangle' Line='rectangle'>
   <DD>A set of concentric rectangles whose lengths and width/length ratio are
   specified by the <I>lengths</I> parameter.  The lengths are specified in
@@ -153,14 +142,14 @@ tvmark — Mark objects on the image display
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_radii">radii = "<TT>0</TT>"</A></B></DT>
+  <DT><B>radii = "<TT>0</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='radii' Line='radii = "0"'>
   <DD>If the default mark type is "<TT>circle</TT>" than concentric circles of radii
   "<TT>r1,r2,...rN</TT>" are drawn around each selected point.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lengths">lengths = "<TT>0</TT>"</A></B></DT>
+  <DT><B>lengths = "<TT>0</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lengths' Line='lengths = "0"'>
   <DD>if the default mark type is "<TT>rectangle</TT>" then concentric rectangles of
   length and width / length ratio "<TT>l1,l2,...lN ratio</TT>" are drawn around
@@ -169,13 +158,13 @@ tvmark — Mark objects on the image display
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_font">font = "<TT>raster</TT>"</A></B></DT>
+  <DT><B>font = "<TT>raster</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='font' Line='font = "raster"'>
   <DD>The name of the font.  At present only a simple raster font is supported.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_color">color = 255</A></B></DT>
+  <DT><B>color = 255</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='color' Line='color = 255'>
   <DD>The numerical value or  color of the marks drawn.
   Any number between 0 and 255 may be specified.
@@ -186,21 +175,21 @@ tvmark — Mark objects on the image display
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_label">label = no</A></B></DT>
+  <DT><B>label = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='label' Line='label = no'>
   <DD>Label the marked coordinates with the string in the third column of
   the text file <I>coords</I>.  <I>label</I> overrides <I>number</I>.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_number">number = no</A></B></DT>
+  <DT><B>number = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='number' Line='number = no'>
   <DD>Label the marked objects with their sequence number in the coordinate
   list <I>coords</I>.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nxoffset">nxoffset = 0, nyoffset = 0</A></B></DT>
+  <DT><B>nxoffset = 0, nyoffset = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nxoffset' Line='nxoffset = 0, nyoffset = 0'>
   <DD>The x and y offset in display pixels of the numbers to be drawn.
   Numbers are drawn by default with the lower left corner of the first
@@ -208,14 +197,14 @@ tvmark — Mark objects on the image display
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pointsize">pointsize = 3</A></B></DT>
+  <DT><B>pointsize = 3</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pointsize' Line='pointsize = 3'>
   <DD>The size of the default mark type "<TT>point</TT>". Point size will be rounded up
   to the nearest odd number.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_txsize">txsize = 1</A></B></DT>
+  <DT><B>txsize = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='txsize' Line='txsize = 1'>
   <DD>The size of text, numbers and the plus and cross marks to be written.
   The size is in font units which are 6 display pixels wide and 7 display 
@@ -223,7 +212,7 @@ tvmark — Mark objects on the image display
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_tolerance">tolerance = 1.5</A></B></DT>
+  <DT><B>tolerance = 1.5</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='tolerance' Line='tolerance = 1.5'>
   <DD>Objects marked by the cursor for deletion from the coordinate list
   <I>coords</I> must be less than or equal to <I>tolerance</I> pixels
@@ -232,14 +221,14 @@ tvmark — Mark objects on the image display
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = no</A></B></DT>
+  <DT><B>interactive = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = no'>
   <DD>Interactive mode.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   TVMARK marks objects on the display by writing directly into
@@ -297,7 +286,7 @@ tvmark — Mark objects on the image display
   by setting the display task parameter <I>ztrans</I> = "<TT>none</TT>".
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_cursor_commands">CURSOR COMMANDS</A></H2>
+  <H3>Cursor commands</H3>
   <! BeginSection: 'CURSOR COMMANDS'>
   <UL>
   <P>
@@ -361,7 +350,7 @@ tvmark — Mark objects on the image display
   <P>
   </UL>
   <! EndSection:   'CURSOR COMMANDS'>
-  <H2><A NAME="s_current_imtool_colors">CURRENT IMTOOL COLORS</A></H2>
+  <H3>Current imtool colors</H3>
   <! BeginSection: 'CURRENT IMTOOL COLORS'>
   <UL>
   <P>
@@ -393,7 +382,7 @@ tvmark — Mark objects on the image display
   <P>
   </UL>
   <! EndSection:   'CURRENT IMTOOL COLORS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Display an image,  mark all the objects in the coordinate file 
@@ -493,7 +482,7 @@ tvmark — Mark objects on the image display
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   Tvmark is a prototype task which can be expected to undergo considerable
@@ -514,7 +503,7 @@ tvmark — Mark objects on the image display
   before running tvmark.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   display, imedit, imexamine
@@ -523,5 +512,3 @@ tvmark — Mark objects on the image display
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'CURSOR COMMANDS' 'CURRENT IMTOOL COLORS' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

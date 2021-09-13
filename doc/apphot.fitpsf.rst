@@ -1,3 +1,5 @@
+.. _fitpsf:
+
 fitpsf — Model the stellar psf with an analytic function
 ========================================================
 
@@ -5,48 +7,35 @@ fitpsf — Model the stellar psf with an analytic function
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>fitpsf (May00)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.apphot</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>fitpsf (May00)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>fitpsf</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   fitpsf -- model the point spread function with an analytic function
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   fitpsf image box
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_image">image</A></B></DT>
+  <DT><B>image</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='image' Line='image'>
   <DD>The list of images containing the objects to be measured.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_box">box    </A></B></DT>
+  <DT><B>box    </B></DT>
   <! Sec='PARAMETERS' Level=0 Label='box' Line='box    '>
   <DD>The width of the fitting box in scale units.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_coords">coords = "<TT></TT>"</A></B></DT>
+  <DT><B>coords = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='coords' Line='coords = ""'>
   <DD>The list of text files containing initial coordinates for the objects to
   be centered. Objects are listed in coords one object per line with the
@@ -60,7 +49,7 @@ fitpsf — Model the stellar psf with an analytic function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output = "<TT>default</TT>"</A></B></DT>
+  <DT><B>output = "<TT>default</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output = "default"'>
   <DD>The name of the results file or results directory. If output is
   "<TT>default</TT>", "<TT>dir$default</TT>", or a directory specification then an output file name
@@ -73,7 +62,7 @@ fitpsf — Model the stellar psf with an analytic function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_datapars">datapars = "<TT></TT>"</A></B></DT>
+  <DT><B>datapars = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='datapars' Line='datapars = ""'>
   <DD>The name of the file containing the data dependent parameters.
   The critical parameters <I>fwhmpsf</I> and <I>sigma</I> are located in
@@ -82,11 +71,11 @@ fitpsf — Model the stellar psf with an analytic function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_function">function = "<TT>radgauss</TT>"</A></B></DT>
+  <DT><B>function = "<TT>radgauss</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='function' Line='function = "radgauss"'>
   <DD>The function to be fit. The options are:
   <DL>
-  <DT><B><A NAME="l_radgauss">radgauss</A></B></DT>
+  <DT><B>radgauss</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='radgauss' Line='radgauss'>
   <DD>A 2D radial Gaussian function is fit. The parameters of the fitting function
   are: x and y center, sigma of the Gaussian, amplitude of the Gaussian and
@@ -94,7 +83,7 @@ fitpsf — Model the stellar psf with an analytic function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_elgauss">elgauss</A></B></DT>
+  <DT><B>elgauss</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='elgauss' Line='elgauss'>
   <DD>A 2D elliptical Gaussian function is fit. The parameters of the fitting
   function are: x and y center, x and y sigma of the Gaussian, amplitude of
@@ -102,7 +91,7 @@ fitpsf — Model the stellar psf with an analytic function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_moments">moments</A></B></DT>
+  <DT><B>moments</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='moments' Line='moments'>
   <DD>The 0th, 1st and 2nd order moments are computed and used to derive
   estimates of the
@@ -113,51 +102,51 @@ fitpsf — Model the stellar psf with an analytic function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_maxiter">maxiter = 50</A></B></DT>
+  <DT><B>maxiter = 50</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='maxiter' Line='maxiter = 50'>
   <DD>The maximum number of iterations that the non-linear fitting routines will
   perform in an attempt to find a satisfactory fit.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nreject">nreject = 0</A></B></DT>
+  <DT><B>nreject = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nreject' Line='nreject = 0'>
   <DD>The maximum number of rejection cycles performed after the fit.
   The default is no rejection.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_kreject">kreject = 3.0</A></B></DT>
+  <DT><B>kreject = 3.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='kreject' Line='kreject = 3.0'>
   <DD>The k-sigma rejection limit in units of sigma.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_mkbox">mkbox = no</A></B></DT>
+  <DT><B>mkbox = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='mkbox' Line='mkbox = no'>
   <DD>Draw the fitting box on the image display?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = yes</A></B></DT>
+  <DT><B>interactive = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes'>
   <DD>Run the task interactively ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_icommands">icommands = "<TT></TT>"</A></B></DT>
+  <DT><B>icommands = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""'>
   <DD>The image cursor or image cursor command file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_gcommands">gcommands = "<TT></TT>"</A></B></DT>
+  <DT><B>gcommands = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""'>
   <DD>The graphics cursor or graphics cursor command file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wcsin">wcsin = "<TT>)_.wcsin</TT>", wcsout = "<TT>)_.wcsout</TT>"</A></B></DT>
+  <DT><B>wcsin = "<TT>)_.wcsin</TT>", wcsout = "<TT>)_.wcsout</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wcsin' Line='wcsin = ")_.wcsin", wcsout = ")_.wcsout"'>
   <DD>The coordinate system of the input coordinates read from <I>coords</I> and
   of the output coordinates written to <I>output</I> respectively. The image
@@ -169,7 +158,7 @@ fitpsf — Model the stellar psf with an analytic function
   </TT>"tv"<TT>, and </TT>"physical"<TT>. The image cursor coordinate system is assumed to
   be the </TT>"tv"<TT> system.
   <DL>
-  <DT><B><A NAME="l_logical">logical</A></B></DT>
+  <DT><B>logical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='logical' Line='logical'>
   <DD>Logical coordinates are pixel coordinates relative to the current image.
   The  logical coordinate system is the coordinate system used by the image
@@ -180,7 +169,7 @@ fitpsf — Model the stellar psf with an analytic function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_tv">tv</A></B></DT>
+  <DT><B>tv</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='tv' Line='tv'>
   <DD>Tv coordinates are the pixel coordinates used by the display servers. Tv
   coordinates  include  the effects of any input image section, but do not
@@ -195,7 +184,7 @@ fitpsf — Model the stellar psf with an analytic function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_physical">physical</A></B></DT>
+  <DT><B>physical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='physical' Line='physical'>
   <DD>Physical coordinates are pixel coordinates invariant  with respect to linear
   transformations of the physical image data.  For example, if the current image
@@ -209,7 +198,7 @@ fitpsf — Model the stellar psf with an analytic function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_world">world</A></B></DT>
+  <DT><B>world</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='world' Line='world'>
   <DD>World coordinates are image coordinates in any units which are invariant
   with respect to linear transformations of the physical image data. For
@@ -227,7 +216,7 @@ fitpsf — Model the stellar psf with an analytic function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cache">cache = </TT>")_.cache"<TT></A></B></DT>
+  <DT><B>cache = </TT>")_.cache"<TT></B></DT>
   <! Sec='PARAMETERS' Level=-1 Label='cache' Line='cache = ")_.cache"'>
   <DD>Cache the image pixels in memory. Cache may be set to the value of the apphot
   package parameter (the default), </TT>"yes"<TT>, or </TT>"no"<TT>. By default cacheing is 
@@ -235,14 +224,14 @@ fitpsf — Model the stellar psf with an analytic function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verify">verify = </TT>")_.verify"<TT></A></B></DT>
+  <DT><B>verify = </TT>")_.verify"<TT></B></DT>
   <! Sec='PARAMETERS' Level=-1 Label='verify' Line='verify = ")_.verify"'>
   <DD>Verify the critical parameters in non-interactive mode ? Verify may be set to
   the apphot package parameter value (the default), </TT>"yes"<TT>, or </TT>"no.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_update">update = "<TT>)_.update</TT>"</A></B></DT>
+  <DT><B>update = "<TT>)_.update</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=-1 Label='update' Line='update = ")_.update"'>
   <DD>Update the critical parameters in non-interactive mode if verify is set of
   "<TT>yes</TT>" ? Update may be set to the apphot package parameter value (the default),
@@ -251,7 +240,7 @@ fitpsf — Model the stellar psf with an analytic function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = </TT>")_.verbose"<TT></A></B></DT>
+  <DT><B>verbose = </TT>")_.verbose"<TT></B></DT>
   <! Sec='PARAMETERS' Level=-1 Label='verbose' Line='verbose = ")_.verbose"'>
   <DD>Print messages on the terminal in non-interactive mode ? Verbose may be set
   to the apphot package parameter value (the default), </TT>"yes"<TT>, or </TT>"no.
@@ -259,14 +248,14 @@ fitpsf — Model the stellar psf with an analytic function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_graphics">graphics = "<TT>)_.graphics</TT>"</A></B></DT>
+  <DT><B>graphics = "<TT>)_.graphics</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=-1 Label='graphics' Line='graphics = ")_.graphics"'>
   <DD>The default graphics device.  Graphics may be set to the apphot package
   parameter value (the default), "<TT>yes</TT>", or "<TT>no.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_display">display = </TT>")_.display"<TT></A></B></DT>
+  <DT><B>display = </TT>")_.display"<TT></B></DT>
   <! Sec='PARAMETERS' Level=-1 Label='display' Line='display = ")_.display"'>
   <DD>The default display device.  Display may be set to the apphot package
   parameter value (the default), </TT>"yes"<TT>, or </TT>"no.  By default graphics overlay
@@ -278,7 +267,7 @@ fitpsf — Model the stellar psf with an analytic function
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -333,7 +322,7 @@ fitpsf — Model the stellar psf with an analytic function
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_cursor_commands">CURSOR COMMANDS</A></H2>
+  <H3>Cursor commands</H3>
   <! BeginSection: 'CURSOR COMMANDS'>
   <UL>
   <P>
@@ -432,7 +421,7 @@ fitpsf — Model the stellar psf with an analytic function
   <P>
   </UL>
   <! EndSection:   'CURSOR COMMANDS'>
-  <H2><A NAME="s_algorithms">ALGORITHMS</A></H2>
+  <H3>Algorithms</H3>
   <! BeginSection: 'ALGORITHMS'>
   <UL>
   <P>
@@ -456,7 +445,7 @@ fitpsf — Model the stellar psf with an analytic function
   <P>
   </UL>
   <! EndSection:   'ALGORITHMS'>
-  <H2><A NAME="s_output">OUTPUT</A></H2>
+  <H3>Output</H3>
   <! BeginSection: 'OUTPUT'>
   <UL>
   <P>
@@ -516,7 +505,7 @@ fitpsf — Model the stellar psf with an analytic function
   <P>
   </UL>
   <! EndSection:   'OUTPUT'>
-  <H2><A NAME="s_errors">ERRORS</A></H2>
+  <H3>Errors</H3>
   <! BeginSection: 'ERRORS'>
   <UL>
   <P>
@@ -535,7 +524,7 @@ fitpsf — Model the stellar psf with an analytic function
   <P>
   </UL>
   <! EndSection:   'ERRORS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -783,7 +772,7 @@ fitpsf — Model the stellar psf with an analytic function
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   <P>
@@ -804,7 +793,7 @@ fitpsf — Model the stellar psf with an analytic function
   <P>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   <P>
@@ -814,5 +803,3 @@ fitpsf — Model the stellar psf with an analytic function
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'CURSOR COMMANDS' 'ALGORITHMS' 'OUTPUT' 'ERRORS' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

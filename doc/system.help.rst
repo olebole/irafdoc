@@ -1,3 +1,5 @@
+.. _help:
+
 help — Print online documentation
 =================================
 
@@ -5,36 +7,23 @@ help — Print online documentation
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>help (Oct01)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>system</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>help (Oct01)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>help</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   help -- print online documentation for the named modules or packages
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   help [template]
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_template">template</A></B></DT>
+  <DT><B>template</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='template' Line='template'>
   <DD>A string listing the modules or packages for which help is desired.
   Each list element may be a simple name or a pattern matching template.
@@ -44,7 +33,7 @@ help — Print online documentation
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_file_template">file_template = no</A></B></DT>
+  <DT><B>file_template = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='file_template' Line='file_template = no'>
   <DD>If this switch is set the template is interpreted as a filename matching
   template, and all help blocks found in the named files are output.  The help
@@ -55,72 +44,72 @@ help — Print online documentation
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_all">all = no</A></B></DT>
+  <DT><B>all = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='all' Line='all = no'>
   <DD>Print help for all help modules matching <I>template</I>, rather than only the
   first one found.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_parameter">parameter = "<TT>all</TT>"</A></B></DT>
+  <DT><B>parameter = "<TT>all</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='parameter' Line='parameter = "all"'>
   <DD>If the value of this parameter is not "<TT>all</TT>", only the help text
   for the given parameter will be printed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_section">section = "<TT>all</TT>"</A></B></DT>
+  <DT><B>section = "<TT>all</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='section' Line='section = "all"'>
   <DD>If the value of this parameter is not "<TT>all</TT>", only the help text for the
   given section (e.g. "<TT>usage</TT>", "<TT>description</TT>", "<TT>examples</TT>") will be printed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_option">option = help</A></B></DT>
+  <DT><B>option = help</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='option' Line='option = help'>
   <DD>The option parameter specifies the type of help desired, chosen from
   the following:
   <DL>
-  <DT><B><A NAME="l_help">help</A></B></DT>
+  <DT><B>help</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='help' Line='help'>
   <DD>Print the full help block for the named module.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_source">source</A></B></DT>
+  <DT><B>source</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='source' Line='source'>
   <DD>Print the source code for the module (which often contains additional
   detailed comments).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sysdoc">sysdoc</A></B></DT>
+  <DT><B>sysdoc</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='sysdoc' Line='sysdoc'>
   <DD>Print the technical system documentation for the named module.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_directory">directory</A></B></DT>
+  <DT><B>directory</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='directory' Line='directory'>
   <DD>Print a directory of all help blocks available for the named package.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_alldoc">alldoc</A></B></DT>
+  <DT><B>alldoc</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='alldoc' Line='alldoc'>
   <DD>Print all help blocks in the file containing the help block for
   the named procedure (i.e., both the user and system documentation).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_files">files</A></B></DT>
+  <DT><B>files</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='files' Line='files'>
   <DD>Print the names of all help files associated with the named modules or
   packages.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_summary">summary</A></B></DT>
+  <DT><B>summary</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='summary' Line='summary'>
   <DD>Print only the titles and sizes of help blocks in referenced help files.
   The contents of the blocks are skipped.  Titles are printed for <I>all</I>
@@ -130,32 +119,32 @@ help — Print online documentation
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_page">page = yes</A></B></DT>
+  <DT><B>page = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='page' Line='page = yes'>
   <DD>Pause after every page of output text.  Turning this off for large documents
   speeds up output considerably.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nlpp">nlpp = 59</A></B></DT>
+  <DT><B>nlpp = 59</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nlpp' Line='nlpp = 59'>
   <DD>The number of lines per page if output is redirected, e.g., to <I>lprint</I>.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lmargin">lmargin = 1</A></B></DT>
+  <DT><B>lmargin = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lmargin' Line='lmargin = 1'>
   <DD>Left margin on output.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rmargin">rmargin = 72</A></B></DT>
+  <DT><B>rmargin = 72</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rmargin' Line='rmargin = 72'>
   <DD>Right margin on output.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_search">search = no</A></B></DT>
+  <DT><B>search = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='search' Line='search = no'>
   <DD>If enabled the 
   <A HREF="#l_template">template</A>
@@ -166,7 +155,7 @@ help — Print online documentation
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_home">home = "<TT></TT>"</A></B></DT>
+  <DT><B>home = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='home' Line='home = ""'>
   <DD>The home page for the task.  If not set and no 
   <A HREF="#l_template">template</A>
@@ -179,7 +168,7 @@ help — Print online documentation
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_printer">printer = "<TT>printer</TT>"</A></B></DT>
+  <DT><B>printer = "<TT>printer</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='printer' Line='printer = "printer"'>
   <DD>Default hardcopy printer name. If the <I>value</I> of the parameter is the
   reserved string "<TT>printer</TT>", the actual device is the value of the CL
@@ -187,13 +176,13 @@ help — Print online documentation
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_showtype">showtype = no</A></B></DT>
+  <DT><B>showtype = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='showtype' Line='showtype = no'>
   <DD>Add task-type suffix in package menus?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_quickref">quickref = "<TT>uparm$quick.ref</TT>"</A></B></DT>
+  <DT><B>quickref = "<TT>uparm$quick.ref</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='quickref' Line='quickref = "uparm$quick.ref"'>
   <DD>Name of the quick-reference file used for searching.  This file is created
   the first time the task is run in GUI mode or whenever it doesn't exist, 
@@ -201,7 +190,7 @@ help — Print online documentation
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_uifname">uifname = "<TT>lib$scr/help.gui</TT>"</A></B></DT>
+  <DT><B>uifname = "<TT>lib$scr/help.gui</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='uifname' Line='uifname = "lib$scr/help.gui"'>
   <DD>The user interface file.   This file is what defines the look and behavior
   of all the graphical user interface elements.   Experts may create variants
@@ -209,7 +198,7 @@ help — Print online documentation
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_helpdb">helpdb = "<TT>helpdb</TT>"</A></B></DT>
+  <DT><B>helpdb = "<TT>helpdb</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='helpdb' Line='helpdb = "helpdb"'>
   <DD>The filename of the help database to be searched.  If the <I>value</I> of the
   parameter is the reserved string "<TT>helpdb</TT>", the actual filename is the value
@@ -217,12 +206,12 @@ help — Print online documentation
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_device">device = "<TT>terminal</TT>"</A></B></DT>
+  <DT><B>device = "<TT>terminal</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='device' Line='device = "terminal"'>
   <DD>Output device if the standard output is not redirected.  Allowable values
   include:
   <DL>
-  <DT><B><A NAME="l_terminal">terminal</A></B></DT>
+  <DT><B>terminal</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='terminal' Line='terminal'>
   <DD>If the <I>value</I> of
   the parameter is the reserved string "<TT>terminal</TT>",  the actual device name is
@@ -230,13 +219,13 @@ help — Print online documentation
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_text">text</A></B></DT>
+  <DT><B>text</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='text' Line='text'>
   <DD>Output the formatted help page as plain text.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_gui">gui</A></B></DT>
+  <DT><B>gui</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='gui' Line='gui'>
   <DD>Invoke the GUI for browsing the help system.  This option will only work if
   the <I>stdgraph</I> environment variable is set the <I>xgterm</I>, and the
@@ -244,13 +233,13 @@ help — Print online documentation
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_html">html</A></B></DT>
+  <DT><B>html</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='html' Line='html'>
   <DD>Output the formatted help page as HTML text.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ps">ps (or postscript)</A></B></DT>
+  <DT><B>ps (or postscript)</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='ps' Line='ps (or postscript)'>
   <DD>Output the formatted help page as postscript.
   </DD>
@@ -259,7 +248,7 @@ help — Print online documentation
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_basic_usage">BASIC USAGE</A></H2>
+  <H3>Basic usage</H3>
   <! BeginSection: 'BASIC USAGE'>
   <UL>
   Despite the complex appearing hidden parameters, <B>help</B> is easy to use
@@ -292,7 +281,7 @@ help — Print online documentation
   	pl&gt; help graph | lprint
   </UL>
   <! EndSection:   'BASIC USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The function of the <B>help</B> program is to perform a depth first search
@@ -319,7 +308,7 @@ help — Print online documentation
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_gui_operation">GUI OPERATION</A></H2>
+  <H3>Gui operation</H3>
   <! BeginSection: 'GUI OPERATION'>
   <UL>
   <P>
@@ -373,7 +362,7 @@ help — Print online documentation
   <P>
   </UL>
   <! EndSection:   'GUI OPERATION'>
-  <H2><A NAME="s_navigating_the_help_system">NAVIGATING THE HELP SYSTEM</A></H2>
+  <H3>Navigating the help system</H3>
   <! BeginSection: 'NAVIGATING THE HELP SYSTEM'>
   <UL>
   When run as a GUI browser <I>HELP</I> works very much like any WWW browser.
@@ -432,7 +421,7 @@ help — Print online documentation
   <P>
   </UL>
   <! EndSection:   'NAVIGATING THE HELP SYSTEM'>
-  <H2><A NAME="s_browsing_a_help_document">BROWSING A HELP DOCUMENT</A></H2>
+  <H3>Browsing a help document</H3>
   <! BeginSection: 'BROWSING A HELP DOCUMENT'>
   <UL>
   Once a help page is loaded the middle menubar above the display panel
@@ -466,7 +455,7 @@ help — Print online documentation
   <P>
   </UL>
   <! EndSection:   'BROWSING A HELP DOCUMENT'>
-  <H2><A NAME="s_searching">SEARCHING</A></H2>
+  <H3>Searching</H3>
   <! BeginSection: 'SEARCHING'>
   <UL>
   Searching the help database is done by selecting the <B>Search</B> button
@@ -499,7 +488,7 @@ help — Print online documentation
   <P>
   </UL>
   <! EndSection:   'SEARCHING'>
-  <H2><A NAME="s_user_defined_home_pages">USER_DEFINED HOME PAGES</A></H2>
+  <H3>User_defined home pages</H3>
   <! BeginSection: 'USER_DEFINED HOME PAGES'>
   <UL>
   By default the <I>help</I> GUI will start with the online help page displayed
@@ -527,7 +516,7 @@ help — Print online documentation
   <P>
   </UL>
   <! EndSection:   'USER_DEFINED HOME PAGES'>
-  <H2><A NAME="s_loading_files">LOADING FILES</A></H2>
+  <H3>Loading files</H3>
   <! BeginSection: 'LOADING FILES'>
   <UL>
   Text files may be loaded on the command line when starting the task by
@@ -553,7 +542,7 @@ help — Print online documentation
   <P>
   </UL>
   <! EndSection:   'LOADING FILES'>
-  <H2><A NAME="s_saving_files">SAVING FILES</A></H2>
+  <H3>Saving files</H3>
   <! BeginSection: 'SAVING FILES'>
   <UL>
   Once a file has been loaded in the browser it may be saved to disk as 
@@ -576,7 +565,7 @@ help — Print online documentation
   <P>
   </UL>
   <! EndSection:   'SAVING FILES'>
-  <H2><A NAME="s_hardcopy_output_and_saving_disk_files_">HARDCOPY OUTPUT AND SAVING DISK FILES.</A></H2>
+  <H3>Hardcopy output and saving disk files.</H3>
   <! BeginSection: 'HARDCOPY OUTPUT AND SAVING DISK FILES.'>
   <UL>
   Help pages may be output to any configured IRAF printer by selecting the
@@ -599,7 +588,7 @@ help — Print online documentation
   <P>
   </UL>
   <! EndSection:   'HARDCOPY OUTPUT AND SAVING DISK FILES.'>
-  <H2><A NAME="s_lroff_directive_extensions_for_html">LROFF DIRECTIVE EXTENSIONS FOR HTML</A></H2>
+  <H3>Lroff directive extensions for html</H3>
   <! BeginSection: 'LROFF DIRECTIVE EXTENSIONS FOR HTML'>
   <UL>
   To better support HTML links within documents and to other help pages two
@@ -624,10 +613,10 @@ help — Print online documentation
   These directives are ignored when converting the LROFF to either formatted
   plain text or PostScript.
   <P>
-  <A NAME="examples_target"></A>
+  
   </UL>
   <! EndSection:   'LROFF DIRECTIVE EXTENSIONS FOR HTML'>
-  <H2><A NAME="s_gui_examples">GUI EXAMPLES</A></H2>
+  <H3>Gui examples</H3>
   <! BeginSection: 'GUI EXAMPLES'>
   <UL>
   1) Start <I>help</I> as a GUI browser:
@@ -651,7 +640,7 @@ help — Print online documentation
   <P>
   </UL>
   <! EndSection:   'GUI EXAMPLES'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -733,7 +722,7 @@ help — Print online documentation
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   On some systems, typing the next command keystroke before the end-of-page
@@ -742,7 +731,7 @@ help — Print online documentation
   <P>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   <A HREF="system.references">references</A>
@@ -762,5 +751,3 @@ help — Print online documentation
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'BASIC USAGE' 'DESCRIPTION' 'GUI OPERATION' 'NAVIGATING THE HELP SYSTEM' 'BROWSING A HELP DOCUMENT' 'SEARCHING' 'USER_DEFINED HOME PAGES' 'LOADING FILES' 'SAVING FILES' 'HARDCOPY OUTPUT AND SAVING DISK FILES.' 'LROFF DIRECTIVE EXTENSIONS FOR HTML' 'GUI EXAMPLES' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

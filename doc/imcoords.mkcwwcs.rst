@@ -1,3 +1,5 @@
+.. _mkcwwcs:
+
 mkcwwcs — Make or update a simple celestial/wavelength 3D wcs
 =============================================================
 
@@ -5,57 +7,44 @@ mkcwwcs — Make or update a simple celestial/wavelength 3D wcs
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>mkcwwcs (Jun05)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imcoords</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>mkcwwcs (Jun05)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>mkcwwcs</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   mkcwwcs -- make or update a simple celestial/wavelength wcs
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   mkcwwcs wcsname
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_wcsname">wcsname</A></B></DT>
+  <DT><B>wcsname</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wcsname' Line='wcsname'>
   <DD>Image to be created or modified.  If a new (non-existent) image is specified
   then a data-less image (NDIM=0) is created.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wcsref">wcsref = "<TT></TT>"</A></B></DT>
+  <DT><B>wcsref = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wcsref' Line='wcsref = ""'>
   <DD>Image whose WCS is first inherited and then updated.
   </DD>
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_equinox">equinox = INDEF</A></B></DT>
+  <DT><B>equinox = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='equinox' Line='equinox = INDEF'>
   <DD>Equinox of the coordinates specified in decimal years.  If INDEF then the
   current value is not modified.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ra">ra = INDEF</A></B></DT>
+  <DT><B>ra = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ra' Line='ra = INDEF'>
   <DD>Right ascension in hours.  This may be typed in standard sexagesimal
   notation though it will be converted to decimal hours in EPARAM and
@@ -64,7 +53,7 @@ mkcwwcs — Make or update a simple celestial/wavelength 3D wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dec">dec = INDEF</A></B></DT>
+  <DT><B>dec = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dec' Line='dec = INDEF'>
   <DD>Declination in degrees.  This may be typed in standard sexagesimal
   notation though it will be converted to decimal degrees in EPARAM.
@@ -72,7 +61,7 @@ mkcwwcs — Make or update a simple celestial/wavelength 3D wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_scale">scale = INDEF, pa = 0., lefthanded = yes</A></B></DT>
+  <DT><B>scale = INDEF, pa = 0., lefthanded = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='scale' Line='scale = INDEF, pa = 0., lefthanded = yes'>
   <DD>Celestial pixel scale in arc seconds per pixel, the position angle in
   degrees, and the handedness of the axes.  These are all represented by
@@ -87,7 +76,7 @@ mkcwwcs — Make or update a simple celestial/wavelength 3D wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_projection">projection = "<TT>tan</TT>" (tan|sin|linear)</A></B></DT>
+  <DT><B>projection = "<TT>tan</TT>" (tan|sin|linear)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='projection' Line='projection = "tan" (tan|sin|linear)'>
   <DD>WCS projection function for the celestial axes which may be
   "<TT>tan</TT>", "<TT>sin</TT>", or "<TT>linear</TT>".
@@ -95,14 +84,14 @@ mkcwwcs — Make or update a simple celestial/wavelength 3D wcs
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_wave">wave = INDEF</A></B></DT>
+  <DT><B>wave = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wave' Line='wave = INDEF'>
   <DD>Reference wavelength in arbitrary units.  If INDEF then the current
   value is not modified.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wscale">wscale = INDEF</A></B></DT>
+  <DT><B>wscale = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wscale' Line='wscale = INDEF'>
   <DD>Wavelength scale in arbitrary units per pixel.  If INDEF then the current
   value is not modified.
@@ -110,7 +99,7 @@ mkcwwcs — Make or update a simple celestial/wavelength 3D wcs
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_rapix">rapix = INDEF, decpix = INDEF, wpix = INDEF</A></B></DT>
+  <DT><B>rapix = INDEF, decpix = INDEF, wpix = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rapix' Line='rapix = INDEF, decpix = INDEF, wpix = INDEF'>
   <DD>The reference pixel for the right ascension (first image axis), for
   the declination (second image axes), and for the wavelength
@@ -120,7 +109,7 @@ mkcwwcs — Make or update a simple celestial/wavelength 3D wcs
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   MKCWWCS creates or modifies a celestial (RA/DEC) plus wavelength
@@ -145,7 +134,7 @@ mkcwwcs — Make or update a simple celestial/wavelength 3D wcs
   function).
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Create a data-less header by specifying a new wcs name.
@@ -168,7 +157,7 @@ mkcwwcs — Make or update a simple celestial/wavelength 3D wcs
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   wcsedit,wcscopy,mkcwcs
@@ -177,5 +166,3 @@ mkcwwcs — Make or update a simple celestial/wavelength 3D wcs
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

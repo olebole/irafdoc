@@ -1,3 +1,5 @@
+.. _imsum:
+
 imsum — Compute the sum, average, or median of a set of images
 ==============================================================
 
@@ -5,55 +7,42 @@ imsum — Compute the sum, average, or median of a set of images
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>imsum (Sep87)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>imsum (Sep87)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>imsum</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   imsum -- sum, average, or median images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage_">USAGE	</A></H2>
+  <H3>Usage	</H3>
   <! BeginSection: 'USAGE	'>
   <UL>
   imsum input output
   </UL>
   <! EndSection:   'USAGE	'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>Input images.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>Output image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_title">title = "<TT></TT>"</A></B></DT>
+  <DT><B>title = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='title' Line='title = ""'>
   <DD>Image title for the output image.  If null ("<TT></TT>") then the title of the
   first image is used.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_hparams">hparams = "<TT></TT>"</A></B></DT>
+  <DT><B>hparams = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='hparams' Line='hparams = ""'>
   <DD>List of image header parameters to be summed or averaged.  This feature
   is only used when summing or averaging and no correction is made for
@@ -61,7 +50,7 @@ imsum — Compute the sum, average, or median of a set of images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pixtype">pixtype = "<TT></TT>"</A></B></DT>
+  <DT><B>pixtype = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pixtype' Line='pixtype = ""'>
   <DD>Pixel datatype for the output image.  The pixel datatypes are "<TT>double</TT>",
   "<TT>real</TT>", "<TT>long</TT>", "<TT>integer</TT>", "<TT>ushort</TT>", and "<TT>short</TT>" in order of precedence.
@@ -70,7 +59,7 @@ imsum — Compute the sum, average, or median of a set of images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_calctype">calctype = "<TT></TT>"</A></B></DT>
+  <DT><B>calctype = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='calctype' Line='calctype = ""'>
   <DD>Calculation type.  The calculation types are "<TT>double</TT>", "<TT>real</TT>", "<TT>long</TT>",
   "<TT>integer</TT>", and "<TT>short</TT>" in order of precedence.  If null ("<TT></TT>") then the
@@ -81,7 +70,7 @@ imsum — Compute the sum, average, or median of a set of images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_option">option = "<TT>sum</TT>"</A></B></DT>
+  <DT><B>option = "<TT>sum</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='option' Line='option = "sum"'>
   <DD>Output options are "<TT>sum</TT>", "<TT>average</TT>", or "<TT>median</TT>".  The "<TT>median</TT>" of an
   even number of images takes pixel nimages/2 + 1, where nimages is the
@@ -89,7 +78,7 @@ imsum — Compute the sum, average, or median of a set of images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_low_reject">low_reject = 0</A></B></DT>
+  <DT><B>low_reject = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='low_reject' Line='low_reject = 0'>
   <DD>If the option is sum or average then when this parameter
   is less than 1 reject this fraction of low pixels from the sum or average
@@ -97,7 +86,7 @@ imsum — Compute the sum, average, or median of a set of images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_high_reject">high_reject = 0</A></B></DT>
+  <DT><B>high_reject = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='high_reject' Line='high_reject = 0'>
   <DD>If the option is sum or average then when this parameter
   is less than 1 reject this fraction of high pixels from the sum or average
@@ -105,14 +94,14 @@ imsum — Compute the sum, average, or median of a set of images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = no</A></B></DT>
+  <DT><B>verbose = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
   <DD>Print a log of the operation?
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The input images are summed, averaged, or medianed pixel by pixel and the
@@ -136,7 +125,7 @@ imsum — Compute the sum, average, or median of a set of images
   times.  No correction is made for rejected pixels.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. To sum three images:
@@ -154,18 +143,18 @@ imsum — Compute the sum, average, or median of a set of images
   	im&gt; imsum obs* avg option=average low=2 high=2
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_IMSUM">IMSUM V2.11</A></B></DT>
+  <DT><B>IMSUM V2.11</B></DT>
   <! Sec='REVISIONS' Level=0 Label='IMSUM' Line='IMSUM V2.11'>
   <DD>Now allows "<TT>ushort</TT>" data types.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   The following timings are for 512 x 512 short images in which the output
@@ -183,7 +172,7 @@ imsum — Compute the sum, average, or median of a set of images
   </PRE>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_notes">NOTES</A></H2>
+  <H3>Notes</H3>
   <! BeginSection: 'NOTES'>
   <UL>
   Any number of images may be used.  However, there is a maximum number of
@@ -198,14 +187,14 @@ imsum — Compute the sum, average, or median of a set of images
   specially designed to deal with the case of large numbers of images.
   </UL>
   <! EndSection:   'NOTES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   It is an error for the output image to have the same name as an
   existing image.  Beware of integer overflows when summing short images.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imcombine
@@ -214,5 +203,3 @@ imsum — Compute the sum, average, or median of a set of images
   
   <! Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'TIME REQUIREMENTS' 'NOTES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _apfind:
+
 apfind — Automatically find spectra and define apertures
 ========================================================
 
@@ -5,43 +7,30 @@ apfind — Automatically find spectra and define apertures
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>apfind (Sep96)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.twodspec.apextract</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>apfind (Sep96)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>apfind</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   apfind -- Find spectra and define apertures automatically
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   apfind input
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of input images in which spectra are to be identified and
   apertures defined automatically.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apertures">apertures = "<TT></TT>"</A></B></DT>
+  <DT><B>apertures = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""'>
   <DD>Apertures to recenter, resize, trace, and extract.  This only applies
   to apertures read from the input or reference database.  Any new
@@ -53,7 +42,7 @@ apfind — Automatically find spectra and define apertures
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_references">references = "<TT></TT>"</A></B></DT>
+  <DT><B>references = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='references' Line='references = ""'>
   <DD>List of reference images to be used to define apertures for the input
   images.  When a reference image is given it supersedes apertures
@@ -67,7 +56,7 @@ apfind — Automatically find spectra and define apertures
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = no</A></B></DT>
+  <DT><B>interactive = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = no'>
   <DD>Run this task interactively?  If the task is not run interactively then
   all user queries are suppressed and interactive aperture editing is
@@ -75,7 +64,7 @@ apfind — Automatically find spectra and define apertures
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_find">find = yes</A></B></DT>
+  <DT><B>find = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='find' Line='find = yes'>
   <DD>Find the spectra and define apertures automatically?  In order for
   spectra to be found automatically there must be no apertures for the
@@ -84,26 +73,26 @@ apfind — Automatically find spectra and define apertures
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_recenter">recenter = no</A></B></DT>
+  <DT><B>recenter = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='recenter' Line='recenter = no'>
   <DD>Recenter the apertures?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_resize">resize = no</A></B></DT>
+  <DT><B>resize = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='resize' Line='resize = no'>
   <DD>Resize the apertures?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_edit">edit = yes</A></B></DT>
+  <DT><B>edit = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='edit' Line='edit = yes'>
   <DD>Edit the apertures?  The <I>interactive</I> parameter must also be yes.
   </DD>
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_line">line = INDEF</A></B></DT>
+  <DT><B>line = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='line' Line='line = INDEF'>
   <DD>The dispersion line (line or column perpendicular to the dispersion axis) to
   be used in finding the spectra.  A value of INDEF selects the middle of the
@@ -111,7 +100,7 @@ apfind — Automatically find spectra and define apertures
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nsum">nsum = 1</A></B></DT>
+  <DT><B>nsum = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nsum' Line='nsum = 1'>
   <DD>Number of dispersion lines to be summed or medianed.  The lines are taken
   around the specified dispersion line.  A positive value sums lines and
@@ -119,7 +108,7 @@ apfind — Automatically find spectra and define apertures
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nfind">nfind = 1</A></B></DT>
+  <DT><B>nfind = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nfind' Line='nfind = 1'>
   <DD>Maximum number of apertures to be defined.  This is a query parameter
   so the user is queried for a value except when given explicitly on
@@ -127,14 +116,14 @@ apfind — Automatically find spectra and define apertures
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_minsep">minsep = 5.</A></B></DT>
+  <DT><B>minsep = 5.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='minsep' Line='minsep = 5.'>
   <DD>Minimum separation between spectra.  Weaker spectra or noise within this
   distance of a stronger spectrum are rejected.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_maxsep">maxsep = 1000.</A></B></DT>
+  <DT><B>maxsep = 1000.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='maxsep' Line='maxsep = 1000.'>
   <DD>Maximum separation between adjacent spectra.  This parameter
   is used to identify missing spectra in uniformly spaced spectra produced
@@ -144,7 +133,7 @@ apfind — Automatically find spectra and define apertures
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_order">order = "<TT>increasing</TT>"</A></B></DT>
+  <DT><B>order = "<TT>increasing</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='order' Line='order = "increasing"'>
   <DD>When assigning aperture identifications order the spectra "<TT>increasing</TT>"
   or "<TT>decreasing</TT>" with increasing pixel position (left-to-right or
@@ -153,7 +142,7 @@ apfind — Automatically find spectra and define apertures
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_additional_parameters">ADDITIONAL PARAMETERS</A></H2>
+  <H3>Additional parameters</H3>
   <! BeginSection: 'ADDITIONAL PARAMETERS'>
   <UL>
   I/O parameters and the default dispersion axis are taken from the
@@ -165,7 +154,7 @@ apfind — Automatically find spectra and define apertures
   except the package parameters are included in that task.
   </UL>
   <! EndSection:   'ADDITIONAL PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   For each image in the input image list spectra are identified and
@@ -236,17 +225,17 @@ apfind — Automatically find spectra and define apertures
   in the package.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   	cl&gt; apfind image nfind=10
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_APFIND">APFIND V2.11</A></B></DT>
+  <DT><B>APFIND V2.11</B></DT>
   <! Sec='REVISIONS' Level=0 Label='APFIND' Line='APFIND V2.11'>
   <DD>The "<TT>apertures</TT>" parameter can be used to select apertures for resizing,
   recentering, tracing, and extraction.  This parameter name was previously
@@ -264,5 +253,3 @@ apfind — Automatically find spectra and define apertures
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'ADDITIONAL PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _magnify:
+
 magnify — Magnify a list of 1-D or 2-D images
 =============================================
 
@@ -5,26 +7,13 @@ magnify — Magnify a list of 1-D or 2-D images
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>magnify (Dec98)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imgeom</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>magnify (Dec98)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>magnify</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   magnify -- interpolate two dimensional images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage_">USAGE	</A></H2>
+  <H3>Usage	</H3>
   <! BeginSection: 'USAGE	'>
   <UL>
   <PRE>
@@ -32,25 +21,25 @@ magnify — Magnify a list of 1-D or 2-D images
   </PRE>
   </UL>
   <! EndSection:   'USAGE	'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of one or two dimensional images to be magnified.  Image sections are
   allowed.  Images with an axis containing only one pixel are not magnified.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>List of output image names.  If the output image name is the same as the input
   image name then the magnified image replaces the input image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xmag">xmag, ymag</A></B></DT>
+  <DT><B>xmag, ymag</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xmag' Line='xmag, ymag'>
   <DD>The magnification factors for the first and second image dimensions
   respectively.  The magnifications need not be integers.  Magnifications
@@ -60,7 +49,7 @@ magnify — Magnify a list of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_x1">x1 = INDEF, x2 = INDEF</A></B></DT>
+  <DT><B>x1 = INDEF, x2 = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='x1' Line='x1 = INDEF, x2 = INDEF'>
   <DD>The starting and ending coordinates in x in the input image which become
   the first and last pixel in x in the magnified image.  The values need not
@@ -69,7 +58,7 @@ magnify — Magnify a list of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_y1">y1 = INDEF, y2 = INDEF</A></B></DT>
+  <DT><B>y1 = INDEF, y2 = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='y1' Line='y1 = INDEF, y2 = INDEF'>
   <DD>The starting and ending coordinates in y in the input image which become
   the first and last pixel in y in the magnified image.  The values need not
@@ -78,7 +67,7 @@ magnify — Magnify a list of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dx">dx = INDEF, dy = INDEF</A></B></DT>
+  <DT><B>dx = INDEF, dy = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dx' Line='dx = INDEF, dy = INDEF'>
   <DD>The intervals between the output pixels in terms of the input image.
   The values need not be integers.  If these values are specified they
@@ -86,42 +75,42 @@ magnify — Magnify a list of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interpolant">interpolant = "<TT>linear</TT>"</A></B></DT>
+  <DT><B>interpolant = "<TT>linear</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interpolant' Line='interpolant = "linear"'>
   <DD>The interpolant used for rebinning the image.
   The choices are the following.
   <DL>
-  <DT><B><A NAME="l_nearest">nearest</A></B></DT>
+  <DT><B>nearest</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest'>
   <DD>Nearest neighbor.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_linear">linear</A></B></DT>
+  <DT><B>linear</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='linear' Line='linear'>
   <DD>Bilinear interpolation in x and y.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_poly3">poly3</A></B></DT>
+  <DT><B>poly3</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='poly3' Line='poly3'>
   <DD>Third order polynomial in x and y.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_poly5">poly5</A></B></DT>
+  <DT><B>poly5</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='poly5' Line='poly5'>
   <DD>Fifth order polynomial in x and y.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_spline3">spline3</A></B></DT>
+  <DT><B>spline3</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='spline3' Line='spline3'>
   <DD>Bicubic spline.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sinc">sinc</A></B></DT>
+  <DT><B>sinc</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='sinc' Line='sinc'>
   <DD>2D sinc interpolation. Users can specify the sinc interpolant width by
   appending a width value to the interpolant string, e.g. sinc51 specifies
@@ -130,7 +119,7 @@ magnify — Magnify a list of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lsinc">lsinc</A></B></DT>
+  <DT><B>lsinc</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='lsinc' Line='lsinc'>
   <DD>Look-up table sinc interpolation. Users can specify the look-up table sinc
   interpolant width by appending a width value to the interpolant string, e.g.
@@ -145,7 +134,7 @@ magnify — Magnify a list of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_drizzle">drizzle</A></B></DT>
+  <DT><B>drizzle</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='drizzle' Line='drizzle'>
   <DD>2D drizzle resampling. Users can specify the drizzle pixel fraction in x and y
   by appending a value between 0.0 and 1.0 in square brackets to the
@@ -159,30 +148,30 @@ magnify — Magnify a list of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_boundary">boundary = "<TT>nearest</TT>"</A></B></DT>
+  <DT><B>boundary = "<TT>nearest</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"'>
   <DD>Boundary extension type for references to pixels outside the bounds of the
   input image. The choices are:
   <DL>
-  <DT><B><A NAME="l_nearest">nearest</A></B></DT>
+  <DT><B>nearest</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest'>
   <DD>Use the value of the nearest boundary pixel.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_constant">constant</A></B></DT>
+  <DT><B>constant</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='constant' Line='constant'>
   <DD>Use a constant value.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_reflect">reflect</A></B></DT>
+  <DT><B>reflect</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='reflect' Line='reflect'>
   <DD>Generate value by reflecting about the boundary.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wrap">wrap</A></B></DT>
+  <DT><B>wrap</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='wrap' Line='wrap'>
   <DD>Generate a value by wrapping around to the opposite side of the image.
   </DD>
@@ -190,19 +179,19 @@ magnify — Magnify a list of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_constant">constant = 0.</A></B></DT>
+  <DT><B>constant = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.'>
   <DD>Constant value for constant boundary extension.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fluxconserve">fluxconserve = yes</A></B></DT>
+  <DT><B>fluxconserve = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fluxconserve' Line='fluxconserve = yes'>
   <DD>Preserve the total image flux.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_logfile">logfile = STDOUT</A></B></DT>
+  <DT><B>logfile = STDOUT</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = STDOUT'>
   <DD>Log file for recording information about the magnification.  A null
   logfile may be used to turn off log information.
@@ -210,7 +199,7 @@ magnify — Magnify a list of 1-D or 2-D images
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The list of input images are expanded or contracted by interpolation
@@ -250,7 +239,7 @@ magnify — Magnify a list of 1-D or 2-D images
   discontinuous (constant and wrap) may introduce interpolation errors.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. To expand an image by a factor of 2.5:
@@ -299,7 +288,7 @@ magnify — Magnify a list of 1-D or 2-D images
   what the pixel coordinates are in terms of the input pixel coordinates.
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imshift, blkavg, rotate, imlintran, register, geotran, geomap
@@ -308,5 +297,3 @@ magnify — Magnify a list of 1-D or 2-D images
   
   <! Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

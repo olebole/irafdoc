@@ -1,3 +1,5 @@
+.. _apedit:
+
 apedit — Edit apertures interactively
 =====================================
 
@@ -5,42 +7,29 @@ apedit — Edit apertures interactively
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>apedit (Sep96)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.twodspec.apextract</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>apedit (Sep96)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>apedit</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   apedit -- Edit apertures
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   apedit input
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of input images for which apertures are to be edited.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apertures">apertures = "<TT></TT>"</A></B></DT>
+  <DT><B>apertures = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""'>
   <DD>Apertures to recenter, resize, trace, and extract.  This only applies
   to apertures read from the input or reference database.  Any new
@@ -52,7 +41,7 @@ apedit — Edit apertures interactively
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_references">references = "<TT></TT>"</A></B></DT>
+  <DT><B>references = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='references' Line='references = ""'>
   <DD>List of reference images to be used to define apertures for the input
   images.  When a reference image is given it supersedes apertures
@@ -68,7 +57,7 @@ apedit — Edit apertures interactively
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = no</A></B></DT>
+  <DT><B>interactive = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = no'>
   <DD>Run this task interactively?  If the task is not run interactively then
   all user queries are suppressed and interactive aperture editing is
@@ -76,7 +65,7 @@ apedit — Edit apertures interactively
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_find">find = no</A></B></DT>
+  <DT><B>find = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='find' Line='find = no'>
   <DD>Find the spectra and define apertures automatically?  In order for
   spectra to be found automatically there must be no apertures for the
@@ -84,33 +73,33 @@ apedit — Edit apertures interactively
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_recenter">recenter = no</A></B></DT>
+  <DT><B>recenter = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='recenter' Line='recenter = no'>
   <DD>Recenter the apertures?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_resize">resize = no</A></B></DT>
+  <DT><B>resize = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='resize' Line='resize = no'>
   <DD>Resize the apertures?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_edit">edit = yes</A></B></DT>
+  <DT><B>edit = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='edit' Line='edit = yes'>
   <DD>Edit the apertures?  The <I>interactive</I> parameter must also be yes.
   </DD>
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_line">line = INDEF</A></B></DT>
+  <DT><B>line = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='line' Line='line = INDEF'>
   <DD>The dispersion line (line or column perpendicular to the dispersion axis) to
   be graphed.  A value of INDEF uses the middle of the image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nsum">nsum = 10</A></B></DT>
+  <DT><B>nsum = 10</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nsum' Line='nsum = 10'>
   <DD>Number of dispersion lines to be summed or medianed.  The lines are taken
   around the specified dispersion line.  A positive nsum selects a sum of
@@ -118,20 +107,20 @@ apedit — Edit apertures interactively
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_width">width = 5.</A></B></DT>
+  <DT><B>width = 5.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='width' Line='width = 5.'>
   <DD>Width of spectrum profiles.  This parameter is used for the profile
   centering algorithm in this and other tasks.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_radius">radius = 5.</A></B></DT>
+  <DT><B>radius = 5.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='radius' Line='radius = 5.'>
   <DD>The profile centering error radius for the centering algorithm.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_threshold">threshold = 0.</A></B></DT>
+  <DT><B>threshold = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 0.'>
   <DD>Centering threshold for the centering algorithm.  The range of pixel intensities
   near the initial centering position must exceed this threshold.
@@ -139,7 +128,7 @@ apedit — Edit apertures interactively
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_additional_parameters">ADDITIONAL PARAMETERS</A></H2>
+  <H3>Additional parameters</H3>
   <! BeginSection: 'ADDITIONAL PARAMETERS'>
   <UL>
   I/O parameters and the default dispersion axis are taken from the
@@ -152,7 +141,7 @@ apedit — Edit apertures interactively
   except the package parameters are included in that task.
   </UL>
   <! EndSection:   'ADDITIONAL PARAMETERS'>
-  <H2><A NAME="s_cursor_keys">CURSOR KEYS</A></H2>
+  <H3>Cursor keys</H3>
   <! BeginSection: 'CURSOR KEYS'>
   <UL>
   When editing the apertures interactively the following cursor keys are
@@ -196,7 +185,7 @@ apedit — Edit apertures interactively
   aperture whose center is nearest the cursor.
   </UL>
   <! EndSection:   'CURSOR KEYS'>
-  <H2><A NAME="s_colon_commands">COLON COMMANDS</A></H2>
+  <H3>Colon commands</H3>
   <! BeginSection: 'COLON COMMANDS'>
   <UL>
   <P>
@@ -231,7 +220,7 @@ apedit — Edit apertures interactively
   </PRE>
   </UL>
   <! EndSection:   'COLON COMMANDS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   For each image in the input image list, apertures are defined and edited
@@ -402,7 +391,7 @@ apedit — Edit apertures interactively
   <B>edit</B> parameter.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   The aperture editor is a very flexible and interactive tool
@@ -435,11 +424,11 @@ apedit — Edit apertures interactively
   single image.
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_APEDIT">APEDIT V2.11</A></B></DT>
+  <DT><B>APEDIT V2.11</B></DT>
   <! Sec='REVISIONS' Level=0 Label='APEDIT' Line='APEDIT V2.11'>
   <DD>The "<TT>apertures</TT>" parameter can be used to select apertures for resizing,
   recentering, tracing, and extraction.  This parameter name was previously
@@ -460,5 +449,3 @@ apedit — Edit apertures interactively
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'ADDITIONAL PARAMETERS' 'CURSOR KEYS' 'COLON COMMANDS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS'  >
   
-  </BODY>
-  </HTML>

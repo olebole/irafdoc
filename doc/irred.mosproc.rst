@@ -1,3 +1,5 @@
+.. _mosproc:
+
 mosproc — Prepare images for quick look mosaicing
 =================================================
 
@@ -5,36 +7,23 @@ mosproc — Prepare images for quick look mosaicing
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>mosproc (May89)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>irred</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>mosproc (May89)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>mosproc</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   mosproc -- Prepare images for quick look mosaicing
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   mosproc input output nxsub nysub
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The list of input images to be mosaiced. The images are assumed
   to be ordered either by row, column, or in a raster pattern. If
@@ -44,25 +33,25 @@ mosproc — Prepare images for quick look mosaicing
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>The name of the output mosaiced image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nxsub">nxsub</A></B></DT>
+  <DT><B>nxsub</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nxsub' Line='nxsub'>
   <DD>The number of subrasters along a row of the output image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nysub">nysub</A></B></DT>
+  <DT><B>nysub</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nysub' Line='nysub'>
   <DD>The number of subrasters along a column of the output image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_skysubtract">skysubtract = yes</A></B></DT>
+  <DT><B>skysubtract = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='skysubtract' Line='skysubtract = yes'>
   <DD>Subtract a sky image from all the input images. The sky image
   to be subtracted is either <I>sky</I> or a sky image computed
@@ -71,13 +60,13 @@ mosproc — Prepare images for quick look mosaicing
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sky">sky = "<TT></TT>"</A></B></DT>
+  <DT><B>sky = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sky' Line='sky = ""'>
   <DD>The name of the sky image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_exclude">exclude = "<TT></TT>"</A></B></DT>
+  <DT><B>exclude = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='exclude' Line='exclude = ""'>
   <DD>The input images to be excluded from the computation of the sky image.
   For example if <I>exclude</I>="<TT>1,3-5</TT>" then input images 1, 3, 4, 5 are
@@ -85,7 +74,7 @@ mosproc — Prepare images for quick look mosaicing
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_expname">expname = "<TT>exptime</TT>"</A></B></DT>
+  <DT><B>expname = "<TT>exptime</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='expname' Line='expname = "exptime"'>
   <DD>The image header exposure time keyword. If the sky frame is computed
   internally by median filtering the input images, the individual images
@@ -95,7 +84,7 @@ mosproc — Prepare images for quick look mosaicing
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_flatten">flatten = yes</A></B></DT>
+  <DT><B>flatten = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='flatten' Line='flatten = yes'>
   <DD>Divide all the images by a flat field image. Flat fielding is done
   after sky subtraction. If the name of a flat field image <I>flat</I>
@@ -105,19 +94,19 @@ mosproc — Prepare images for quick look mosaicing
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_flat">flat = "<TT></TT>"</A></B></DT>
+  <DT><B>flat = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='flat' Line='flat = ""'>
   <DD>The name of the flat field image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_transpose">transpose = no</A></B></DT>
+  <DT><B>transpose = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='transpose' Line='transpose = no'>
   <DD>Transpose the input images before inserting them into the mosaic.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_trim_section">trim_section = "<TT>[*,*]</TT>"</A></B></DT>
+  <DT><B>trim_section = "<TT>[*,*]</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='trim_section' Line='trim_section = "[*,*]"'>
   <DD>The section of the input images to be mosaiced into the output
   image. Section can be used to flip and/or trim the individual
@@ -127,7 +116,7 @@ mosproc — Prepare images for quick look mosaicing
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_corner">corner = "<TT>lr</TT>"</A></B></DT>
+  <DT><B>corner = "<TT>lr</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='corner' Line='corner = "lr"'>
   <DD>The starting position in the output image. The four options are "<TT>ll</TT>" for
   lower left corner, "<TT>lr</TT>" for lower right corner, "<TT>ul</TT>" for upper left
@@ -135,7 +124,7 @@ mosproc — Prepare images for quick look mosaicing
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_direction">direction = "<TT>row</TT>"</A></B></DT>
+  <DT><B>direction = "<TT>row</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='direction' Line='direction = "row"'>
   <DD>Add input images to the output image in row or column order. The options
   are "<TT>row</TT>" for row order and "<TT>column</TT>" for column order. The direction
@@ -143,41 +132,41 @@ mosproc — Prepare images for quick look mosaicing
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_raster">raster = no</A></B></DT>
+  <DT><B>raster = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='raster' Line='raster = no'>
   <DD>Add the columns or rows to the output image in a raster pattern or return
   to the start of a column or a row.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_median_section">median_section = "<TT></TT>"</A></B></DT>
+  <DT><B>median_section = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='median_section' Line='median_section = ""'>
   <DD>Compute the median of each input image inserted into the mosaic using the
   specified section.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_subtract">subtract = no</A></B></DT>
+  <DT><B>subtract = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='subtract' Line='subtract = no'>
   <DD>Subtract the computed median from each input image before inserting it
   into the mosaic.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_oval">oval = -1.0</A></B></DT>
+  <DT><B>oval = -1.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='oval' Line='oval = -1.0'>
   <DD>The value of border pixels.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_delete">delete = yes</A></B></DT>
+  <DT><B>delete = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='delete' Line='delete = yes'>
   <DD>Delete sky subtracted, flat fielded and transposed images upon exit from
   the script.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_logfile">logfile = STDOUT</A></B></DT>
+  <DT><B>logfile = STDOUT</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = STDOUT'>
   <DD>The name of the log file.
   </DD>
@@ -185,7 +174,7 @@ mosproc — Prepare images for quick look mosaicing
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -233,7 +222,7 @@ mosproc — Prepare images for quick look mosaicing
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -252,19 +241,19 @@ mosproc — Prepare images for quick look mosaicing
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   <P>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   <P>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   images.imcombine, images.imarith, proto.bscale, images.imtrans, proto.irmosaic
@@ -273,5 +262,3 @@ mosproc — Prepare images for quick look mosaicing
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

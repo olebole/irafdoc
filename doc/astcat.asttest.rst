@@ -1,3 +1,5 @@
+.. _asttest:
+
 asttest — Run basic tests on the astcat package
 ===============================================
 
@@ -5,4 +7,3 @@ asttest — Run basic tests on the astcat package
 
 .. raw:: html
 
-  

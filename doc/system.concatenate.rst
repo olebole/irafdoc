@@ -1,3 +1,5 @@
+.. _concatenate:
+
 concatenate — Concatenate a list of files
 =========================================
 
@@ -5,36 +7,23 @@ concatenate — Concatenate a list of files
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>concatenate (Nov84)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>system</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>concatenate (Nov84)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>concatenate</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   concatenate -- connect files together into one big file
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   concatenate files [output_file]
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_files">files</A></B></DT>
+  <DT><B>files</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='files' Line='files'>
   <DD>The list of input files.  The standard input, STDIN, may be specified to
   interactively enter a few lines of text rather than read from a disk file.
@@ -42,14 +31,14 @@ concatenate — Concatenate a list of files
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output_file">output_file</A></B></DT>
+  <DT><B>output_file</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output_file' Line='output_file'>
   <DD>The name of the output file.  If no file is explicitly specified the
   standard output (STDOUT) is used.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_out_type">out_type = in_type</A></B></DT>
+  <DT><B>out_type = in_type</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='out_type' Line='out_type = in_type'>
   <DD>The output file type is forced if this parameter is defined as "<TT>binary</TT>"
   or "<TT>text</TT>".  If "<TT>out_type</TT>" does not begin with a "<TT>b</TT>" (or "<TT>B</TT>"), or a
@@ -58,14 +47,14 @@ concatenate — Concatenate a list of files
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_append">append = no</A></B></DT>
+  <DT><B>append = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='append' Line='append = no'>
   <DD>If set to "<TT>yes</TT>", "<TT>files</TT>" are appended to "<TT>output_file</TT>".
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Each file in the input file list is appended to the output file.
@@ -77,7 +66,7 @@ concatenate — Concatenate a list of files
   e.g., &lt;ctrl/z&gt;, to terminate the input sequence.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -118,14 +107,14 @@ concatenate — Concatenate a list of files
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_notes">NOTES</A></H2>
+  <H3>Notes</H3>
   <! BeginSection: 'NOTES'>
   <UL>
   All input files should be of the same type, either all "<TT>text</TT>" or all
   "<TT>binary</TT>".
   </UL>
   <! EndSection:   'NOTES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   copy, type
@@ -134,5 +123,3 @@ concatenate — Concatenate a list of files
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'NOTES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

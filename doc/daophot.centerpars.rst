@@ -1,3 +1,5 @@
+.. _centerpars:
+
 centerpars — Edit the centering algorithm parameters
 ====================================================
 
@@ -5,42 +7,29 @@ centerpars — Edit the centering algorithm parameters
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>centerpars (May00)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.daophot</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>centerpars (May00)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>centerpars</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   centerpars -- edit the centering algorithm parameters
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   centerpars
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_calgorithm">calgorithm = "<TT>none</TT>"</A></B></DT>
+  <DT><B>calgorithm = "<TT>none</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='calgorithm' Line='calgorithm = "none"'>
   <DD>The centering algorithm. The "<TT>gauss</TT>" and "<TT>ofilter</TT>" centering algorithms
   depend critically on the value of the fwhmpsf parameter in the DATAPARS task. 
   The centering options are:
   <DL>
-  <DT><B><A NAME="l_none">none</A></B></DT>
+  <DT><B>none</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='none' Line='none'>
   <DD>The initial positions are assumed to be the true centers. Users should
   select this option if the initial centers are known to be accurate,
@@ -48,7 +37,7 @@ centerpars — Edit the centering algorithm parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_centroid">centroid</A></B></DT>
+  <DT><B>centroid</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='centroid' Line='centroid'>
   <DD>The object centers are determined by computing the intensity weighted means
   of the marginal profiles in x and y.  Centroid is the recommended centering
@@ -57,7 +46,7 @@ centerpars — Edit the centering algorithm parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_gauss">gauss</A></B></DT>
+  <DT><B>gauss</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='gauss' Line='gauss'>
   <DD>The object centers are computed by fitting a Gaussian of fixed fwhmpsf,
   specified by the DATAPARS fwhmpsf parameter, to the marginal profiles in
@@ -65,7 +54,7 @@ centerpars — Edit the centering algorithm parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ofilter">ofilter</A></B></DT>
+  <DT><B>ofilter</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='ofilter' Line='ofilter'>
   <DD>The object centers are computed using optimal filtering techniques,
   a triangular weighting function of half width equal to fwhmpsf as
@@ -76,7 +65,7 @@ centerpars — Edit the centering algorithm parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cbox">cbox = 5.0  (scale units)</A></B></DT>
+  <DT><B>cbox = 5.0  (scale units)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cbox' Line='cbox = 5.0  (scale units)'>
   <DD>The width of the subraster used for object centering in units of the
   scale parameter. Cbox needs to be big enough to include sufficient
@@ -85,7 +74,7 @@ centerpars — Edit the centering algorithm parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cthreshold">cthreshold = 0.0 (sigma units)</A></B></DT>
+  <DT><B>cthreshold = 0.0 (sigma units)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cthreshold' Line='cthreshold = 0.0 (sigma units)'>
   <DD>xels cthreshold * sigma above (emission features) or below (absorption
   features) the data minimum or maximum respectively are used by the centering
@@ -98,7 +87,7 @@ centerpars — Edit the centering algorithm parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_minsnratio">minsnratio = 1.0</A></B></DT>
+  <DT><B>minsnratio = 1.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='minsnratio' Line='minsnratio = 1.0'>
   <DD>The minimum signal to noise ratio for object centering. If the estimated signal
   to noise ratio is less than minsnratio the computed center will be returned
@@ -106,14 +95,14 @@ centerpars — Edit the centering algorithm parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cmaxiter">cmaxiter = 10</A></B></DT>
+  <DT><B>cmaxiter = 10</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cmaxiter' Line='cmaxiter = 10'>
   <DD>The maximum number of iterations performed by the centering algorithm.
   All the centering algorithms use this parameter.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_maxshift">maxshift = 1.0  (scale units)</A></B></DT>
+  <DT><B>maxshift = 1.0  (scale units)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='maxshift' Line='maxshift = 1.0  (scale units)'>
   <DD>The maximum permissible shift of the center with respect to the initial
   coordinates in units of the scale parameter. If the shift produced by the
@@ -122,41 +111,41 @@ centerpars — Edit the centering algorithm parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_clean">clean = no</A></B></DT>
+  <DT><B>clean = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='clean' Line='clean = no'>
   <DD>Symmetry-clean the centering subraster before centering? DAOPHOT users should
   leave clean set to "<TT>no</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rclean">rclean = 1.0  (scale units)</A></B></DT>
+  <DT><B>rclean = 1.0  (scale units)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rclean' Line='rclean = 1.0  (scale units)'>
   <DD>The cleaning radius for the symmetry-clean algorithm in units of
   the scale parameter.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rclip">rclip = 2.0  (scale units)</A></B></DT>
+  <DT><B>rclip = 2.0  (scale units)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rclip' Line='rclip = 2.0  (scale units)'>
   <DD>The clipping radius for the symmetry-clean algorithm in units of
   the scale parameter.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_kclean">kclean = 3.0  (sigma)</A></B></DT>
+  <DT><B>kclean = 3.0  (sigma)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='kclean' Line='kclean = 3.0  (sigma)'>
   <DD>The number of standard sky deviations for the symmetry-clean algorithm.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_mkcenter">mkcenter = no</A></B></DT>
+  <DT><B>mkcenter = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='mkcenter' Line='mkcenter = no'>
   <DD>Mark the fitted centers on the displayed image ?
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -274,13 +263,13 @@ centerpars — Edit the centering algorithm parameters
   </PRE>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   <P>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   epar,lpar,datapars,phot
@@ -289,5 +278,3 @@ centerpars — Edit the centering algorithm parameters
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _crnebula:
+
 crnebula — Detect and replace cosmic rays in nebular data
 =========================================================
 
@@ -5,26 +7,13 @@ crnebula — Detect and replace cosmic rays in nebular data
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>crnebula (Apr98)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.imred.crutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>crnebula (Apr98)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>crnebula</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   crnebula -- create a cosmic ray mask from nebular images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage_">USAGE	</A></H2>
+  <H3>Usage	</H3>
   <! BeginSection: 'USAGE	'>
   <UL>
   <PRE>
@@ -32,17 +21,17 @@ crnebula — Detect and replace cosmic rays in nebular data
   </PRE>
   </UL>
   <! EndSection:   'USAGE	'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>Input image in which cosmic rays are to be detected.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>Output image in which cosmic rays are to be replaced by the median.
   If no output image is given (specified as "<TT></TT>") then no output image
@@ -50,7 +39,7 @@ crnebula — Detect and replace cosmic rays in nebular data
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_crmask">crmask = "<TT></TT>"</A></B></DT>
+  <DT><B>crmask = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='crmask' Line='crmask = ""'>
   <DD>Output cosmic ray mask identifying the cosmic rays found.  The mask
   will have values of one for cosmic rays and zero for non-cosmic rays.
@@ -59,7 +48,7 @@ crnebula — Detect and replace cosmic rays in nebular data
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_residual">residual = "<TT></TT>"</A></B></DT>
+  <DT><B>residual = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='residual' Line='residual = ""'>
   <DD>Output residual image.  This is the input image minus the median filtered
   image divided by the estimated sigma at each pixel.  Thresholds in this
@@ -68,7 +57,7 @@ crnebula — Detect and replace cosmic rays in nebular data
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rmedresid">rmedresid = "<TT></TT>"</A></B></DT>
+  <DT><B>rmedresid = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rmedresid' Line='rmedresid = ""'>
   <DD>Output image for the difference between the box median filter image and
   the ring median filtered image divided by the estimated sigma at each
@@ -76,7 +65,7 @@ crnebula — Detect and replace cosmic rays in nebular data
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_var0">var0 = 0., var1 = 0., var2 = 0.</A></B></DT>
+  <DT><B>var0 = 0., var1 = 0., var2 = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='var0' Line='var0 = 0., var1 = 0., var2 = 0.'>
   <DD>Variance coefficients for the variance model.  The variance model is
   <P>
@@ -91,39 +80,39 @@ crnebula — Detect and replace cosmic rays in nebular data
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sigmed">sigmed = 3.</A></B></DT>
+  <DT><B>sigmed = 3.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sigmed' Line='sigmed = 3.'>
   <DD>Sigma clipping factor for the residual image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sigdiff">sigdiff = 3.</A></B></DT>
+  <DT><B>sigdiff = 3.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sigdiff' Line='sigdiff = 3.'>
   <DD>Sigma clipping factor for the residuals between the box median and ring median
   filtered images.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_mbox">mbox = 5</A></B></DT>
+  <DT><B>mbox = 5</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='mbox' Line='mbox = 5'>
   <DD>Box size, in pixels, for the box median filtering.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rin">rin = 1.5, rout = 6.</A></B></DT>
+  <DT><B>rin = 1.5, rout = 6.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rin' Line='rin = 1.5, rout = 6.'>
   <DD>Inner and outer radii, in pixels, for the ring median filtering.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = no</A></B></DT>
+  <DT><B>verbose = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
   <DD>Print some progress information?
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task uses a combination of box median filtering to detect cosmic rays
@@ -171,7 +160,7 @@ crnebula — Detect and replace cosmic rays in nebular data
   the original data.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   This example, the same as in <B>crmedian</B>, illustrates using the
@@ -200,7 +189,7 @@ crnebula — Detect and replace cosmic rays in nebular data
   of real extended structure.
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   cosmicrays, crmedian, median, rmedian, crfix, crgrow
@@ -209,5 +198,3 @@ crnebula — Detect and replace cosmic rays in nebular data
   
   <! Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

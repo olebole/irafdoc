@@ -1,3 +1,5 @@
+.. _pcol:
+
 pcol — Plot a column of an image
 ================================
 
@@ -5,61 +7,48 @@ pcol — Plot a column of an image
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>pcol (Sep91)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>plot</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>pcol (Sep91)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>pcol</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   pcol -- plot an image column
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   pcol image col
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_image">image</A></B></DT>
+  <DT><B>image</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='image' Line='image'>
   <DD>Input image containing column to be plotted.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_col">col      </A></B></DT>
+  <DT><B>col      </B></DT>
   <! Sec='PARAMETERS' Level=0 Label='col' Line='col      '>
   <DD>The column to be plotted.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wcs">wcs = "<TT>logical</TT>"</A></B></DT>
+  <DT><B>wcs = "<TT>logical</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wcs' Line='wcs = "logical"'>
   <DD>The world coordinate system (<I>wcs</I>) to be used for axis labeling when
   input is f rom images.
   The following standard world systems are predefined.
   <DL>
-  <DT><B><A NAME="l_logical">logical</A></B></DT>
+  <DT><B>logical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='logical' Line='logical'>
   <DD>Logical coordinates are image pixel coordinates relative to the image currently
   being displayed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_physical">physical</A></B></DT>
+  <DT><B>physical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='physical' Line='physical'>
   <DD>The physical coordinate system is invariant with respect to linear
   transformations of the physical image matrix.  For example, if the reference
@@ -72,7 +61,7 @@ pcol — Plot a column of an image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_world">world</A></B></DT>
+  <DT><B>world</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='world' Line='world'>
   <DD>The "<TT>world</TT>" coordinate system is the <I>current default WCS</I>.
   The default world system is the system named by the environment variable
@@ -84,7 +73,7 @@ pcol — Plot a column of an image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wx1">wx1=0., wx2=0., wy1=0., wy2=0.</A></B></DT>
+  <DT><B>wx1=0., wx2=0., wy1=0., wy2=0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wx1' Line='wx1=0., wx2=0., wy1=0., wy2=0.'>
   <DD>The range of window (user) coordinates to be included in the plot.  If
   the range of values in x or y = 0, the plot is automatically scaled
@@ -92,7 +81,7 @@ pcol — Plot a column of an image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_vx1">vx1=0., vx2=0., vy1=0., vy2=0.</A></B></DT>
+  <DT><B>vx1=0., vx2=0., vy1=0., vy2=0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='vx1' Line='vx1=0., vx2=0., vy1=0., vy2=0.'>
   <DD>NDC coordinates (0-1) of the device plotting viewport.  If not set by
   user, a suitable viewport which allows sufficient room for all labels
@@ -100,13 +89,13 @@ pcol — Plot a column of an image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pointmode">pointmode = no</A></B></DT>
+  <DT><B>pointmode = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pointmode' Line='pointmode = no'>
   <DD>Plot individual points instead of a line?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_marker">marker = "<TT>box</TT>"</A></B></DT>
+  <DT><B>marker = "<TT>box</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='marker' Line='marker = "box"'>
   <DD>Marker or line type to be drawn.  If <B>pointmode</B> = yes the markers are
   "<TT>point</TT>", "<TT>box</TT>", "<TT>cross</TT>", "<TT>plus</TT>", "<TT>circle</TT>", "<TT>hebar</TT>", "<TT>vebar</TT>", "<TT>hline</TT>",
@@ -119,26 +108,26 @@ pcol — Plot a column of an image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_szmarker">szmarker = 0.005</A></B></DT>
+  <DT><B>szmarker = 0.005</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='szmarker' Line='szmarker = 0.005'>
   <DD>The size of the marker drawn when <B>pointmode</B> = yes.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_logx">logx = no, logy = no</A></B></DT>
+  <DT><B>logx = no, logy = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='logx' Line='logx = no, logy = no'>
   <DD>Draw the x or y axis in log units, versus linear?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xlabel">xlabel = "<TT>wcslabel</TT>", ylabel = "<TT></TT>"</A></B></DT>
+  <DT><B>xlabel = "<TT>wcslabel</TT>", ylabel = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xlabel' Line='xlabel = "wcslabel", ylabel = ""'>
   <DD>Label for the X-axis or Y-axis.  if <B>xlabel</B> = "<TT>wcslabel</TT>"
   the world coordinate system label in the image, if defined, is used.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xformat">xformat = "<TT>wcsformat</TT>"</A></B></DT>
+  <DT><B>xformat = "<TT>wcsformat</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xformat' Line='xformat = "wcsformat"'>
   <DD>The numerical format for the coordinate labels.  The values may be "<TT></TT>"
   (an empty string), %f for decimal format, %h and %H for xx:xx:xx format, and
@@ -149,45 +138,45 @@ pcol — Plot a column of an image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_title">title = "<TT>imtitle</TT>"</A></B></DT>
+  <DT><B>title = "<TT>imtitle</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='title' Line='title = "imtitle"'>
   <DD>Title for plot.  If not changed from the default, the title string from the
   image header, appended with the columns being plotted, is used.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_majrx">majrx=5, minrx=5, majry=5, minry=5</A></B></DT>
+  <DT><B>majrx=5, minrx=5, majry=5, minry=5</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='majrx' Line='majrx=5, minrx=5, majry=5, minry=5'>
   <DD>The number of major and minor divisions along the x or y axis.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_round">round = no</A></B></DT>
+  <DT><B>round = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='round' Line='round = no'>
   <DD>Round axes up to nice values?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fill">fill = yes</A></B></DT>
+  <DT><B>fill = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fill' Line='fill = yes'>
   <DD>Fill plotting viewport regardless of device aspect ratio?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_append">append = no</A></B></DT>
+  <DT><B>append = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='append' Line='append = no'>
   <DD>Append to an existing plot?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_device">device="<TT>stdgraph</TT>"</A></B></DT>
+  <DT><B>device="<TT>stdgraph</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='device' Line='device="stdgraph"'>
   <DD>Output device.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Plot a specified column of an image.  The user can control the
@@ -212,7 +201,7 @@ pcol — Plot a column of an image
   appears extended in the x direction unless <B>fill</B> = no.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Plot column 128 of image crab.5009 with default parameters:
@@ -229,19 +218,19 @@ pcol — Plot a column of an image
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   <B>pcol</B> requires about 1.6 cp seconds to plot a column of a 512 square
   image.
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   prow, prows, pcols
@@ -250,5 +239,3 @@ pcol — Plot a column of an image
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

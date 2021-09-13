@@ -1,3 +1,5 @@
+.. _psf:
+
 psf — Compute the point spread function
 =======================================
 
@@ -5,42 +7,29 @@ psf — Compute the point spread function
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>psf (May00)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.daophot</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>psf (May00)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>psf</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   psf -- build the point spread function for an image
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   psf image photfile pstfile psfimage opstfile groupfile
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_image">image</A></B></DT>
+  <DT><B>image</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='image' Line='image'>
   <DD>The images for which the PSF model is to be built.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_photfile">photfile</A></B></DT>
+  <DT><B>photfile</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='photfile' Line='photfile'>
   <DD>The list of input photometry files. The number of photometry files must
   be equal to the number of input images. If photfile is "<TT>default</TT>", "<TT>dir$default</TT>",
@@ -52,7 +41,7 @@ psf — Compute the point spread function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pstfile">pstfile</A></B></DT>
+  <DT><B>pstfile</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pstfile' Line='pstfile'>
   <DD>The list of input psf star photometry files. The ids of the psf stars in these
   files must be the same as their ids in <I>photfile</I>. The number of psf
@@ -66,7 +55,7 @@ psf — Compute the point spread function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_psfimage">psfimage</A></B></DT>
+  <DT><B>psfimage</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='psfimage' Line='psfimage'>
   <DD>The output PSF model image names or directory. The must be one PSF image name
   for every input image. If psfimage is "<TT>default</TT>", "<TT>dir$default</TT>", or a directory
@@ -75,7 +64,7 @@ psf — Compute the point spread function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_opstfile">opstfile</A></B></DT>
+  <DT><B>opstfile</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='opstfile' Line='opstfile'>
   <DD>The output psf star files containing lists of the stars actually used to
   compute the PSF model. There must be one output psf star file for every input
@@ -87,7 +76,7 @@ psf — Compute the point spread function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_groupfile">groupfile</A></B></DT>
+  <DT><B>groupfile</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='groupfile' Line='groupfile'>
   <DD>The output psf star group files listing the PSF stars and their neighbors that
   were used to create the PSF models. There must be one output group file for
@@ -99,7 +88,7 @@ psf — Compute the point spread function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_plotfile">plotfile = "<TT></TT>"</A></B></DT>
+  <DT><B>plotfile = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='plotfile' Line='plotfile = ""'>
   <DD>The name of the output file containing mesh, contour, or profile plots of the
   selected PSF stars. If plotfile is undefined no plot file is created,
@@ -108,7 +97,7 @@ psf — Compute the point spread function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_datapars">datapars = "<TT></TT>"</A></B></DT>
+  <DT><B>datapars = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='datapars' Line='datapars = ""'>
   <DD>The name of the file containing the data dependent parameters. The parameters
   <I>scale</I>, <I>datamin</I>, and <I>datamax</I> are located here. If datapars
@@ -116,7 +105,7 @@ psf — Compute the point spread function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_daopars">daopars = "<TT></TT>"</A></B></DT>
+  <DT><B>daopars = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='daopars' Line='daopars = ""'>
   <DD>The name of the file containing the daophot fitting parameters. The parameters
   <I>psfrad</I> and <I>fitrad</I> are located here. If <I>daopars</I> is undefined
@@ -124,7 +113,7 @@ psf — Compute the point spread function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_matchbyid">matchbyid = yes</A></B></DT>
+  <DT><B>matchbyid = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='matchbyid' Line='matchbyid = yes'>
   <DD>Match the stars in the psf star list(s) if any to the stars in the input
   photometry files using id numbers (matchbyid = yes) or x and y positions
@@ -132,7 +121,7 @@ psf — Compute the point spread function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = yes</A></B></DT>
+  <DT><B>interactive = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes'>
   <DD>Fit the PSF interactively ? If interactive = yes and <I>icommands</I> is
   undefined, PSF reads selects the initial list of PSF stars from <I>pstfile</I>
@@ -144,13 +133,13 @@ psf — Compute the point spread function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_mkstars">mkstars = no</A></B></DT>
+  <DT><B>mkstars = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='mkstars' Line='mkstars = no'>
   <DD>Mark the selected or deleted psf stars on the image display ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_showplots">showplots = yes</A></B></DT>
+  <DT><B>showplots = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='showplots' Line='showplots = yes'>
   <DD>Show plots of the selected PSF stars? After each star is selected
   interactively by the user, a mesh, contour, or profile plot of the data
@@ -160,26 +149,26 @@ psf — Compute the point spread function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_plottype">plottype = "<TT>mesh</TT>"</A></B></DT>
+  <DT><B>plottype = "<TT>mesh</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='plottype' Line='plottype = "mesh"'>
   <DD>The default type of plot displayed when selecting PSF stars. The choices
   are "<TT>mesh</TT>", "<TT>contour</TT>", or "<TT>radial</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_icommands">icommands = "<TT></TT>"</A></B></DT>
+  <DT><B>icommands = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""'>
   <DD>The image display cursor or the name of the image cursor command file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_gcommands">gcommands = "<TT></TT>"</A></B></DT>
+  <DT><B>gcommands = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""'>
   <DD>The graphics cursor or the name of the graphics cursor command file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wcsin">wcsin = "<TT>)_.wcsin</TT>", wcsout = "<TT>)_.wcsout</TT>"</A></B></DT>
+  <DT><B>wcsin = "<TT>)_.wcsin</TT>", wcsout = "<TT>)_.wcsout</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wcsin' Line='wcsin = ")_.wcsin", wcsout = ")_.wcsout"'>
   <DD>The coordinate system of the input coordinates read from <I>photfile</I> and
   <I>pstfile</I>, and of the output coordinates written to <I>psfimage</I>,
@@ -191,7 +180,7 @@ psf — Compute the point spread function
   system options are </TT>"logical"<TT>, </TT>"tv"<TT>, and </TT>"physical"<TT>. The image cursor coordinate
   system is assumed to be the </TT>"tv"<TT> system.
   <DL>
-  <DT><B><A NAME="l_logical">logical</A></B></DT>
+  <DT><B>logical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='logical' Line='logical'>
   <DD>Logical coordinates are pixel coordinates relative to the current image.
   The  logical coordinate system is the coordinate system used by the image
@@ -202,7 +191,7 @@ psf — Compute the point spread function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_tv">tv</A></B></DT>
+  <DT><B>tv</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='tv' Line='tv'>
   <DD>Tv coordinates are the pixel coordinates used by the display servers. Tv
   coordinates  include  the effects of any input image section, but do not
@@ -217,7 +206,7 @@ psf — Compute the point spread function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_physical">physical</A></B></DT>
+  <DT><B>physical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='physical' Line='physical'>
   <DD>Physical coordinates are pixel coordinates invariant  with respect to linear
   transformations of the physical image data.  For example, if the current image
@@ -231,7 +220,7 @@ psf — Compute the point spread function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_world">world</A></B></DT>
+  <DT><B>world</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='world' Line='world'>
   <DD>World coordinates are image coordinates in any units which are invariant
   with respect to linear transformations of the physical image data. For
@@ -247,7 +236,7 @@ psf — Compute the point spread function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cache">cache = </TT>")_.cache"<TT></A></B></DT>
+  <DT><B>cache = </TT>")_.cache"<TT></B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cache' Line='cache = ")_.cache"'>
   <DD>Cache the image pixels in memory. Cache may be set to the value of the apphot
   package parameter (the default), </TT>"yes"<TT>, or </TT>"no"<TT>. By default caching is
@@ -255,35 +244,35 @@ psf — Compute the point spread function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verify">verify = </TT>")_.verify"<TT></A></B></DT>
+  <DT><B>verify = </TT>")_.verify"<TT></B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verify' Line='verify = ")_.verify"'>
   <DD>Verify the critical PSF task parameters? Verify can be set to the DAOPHOT
   package parameter value (the default), </TT>"yes"<TT>, or </TT>"no"<TT>.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_update">update = </TT>")_.update"<TT></A></B></DT>
+  <DT><B>update = </TT>")_.update"<TT></B></DT>
   <! Sec='PARAMETERS' Level=0 Label='update' Line='update = ")_.update"'>
   <DD>Update the PSF task parameters if <I>verify</I> is "<TT>yes</TT>"? Update can be
   set to the default daophot package parameter value, "<TT>yes</TT>", or "<TT>no</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = "<TT>)_.verbose</TT>"</A></B></DT>
+  <DT><B>verbose = "<TT>)_.verbose</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = ")_.verbose"'>
   <DD>Print messages about the progress of the task ? Verbose can be set to the
   DAOPHOT package parameter value (the default), "<TT>yes</TT>", or "<TT>no</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_graphics">graphics = "<TT>)_.graphics</TT>"</A></B></DT>
+  <DT><B>graphics = "<TT>)_.graphics</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = ")_.graphics"'>
   <DD>The default graphics device. Graphics can be set to the default DAOPHOT package
   parameter value, "<TT>yes</TT>", or "<TT>no</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_display">display = "<TT>)_.display</TT>"</A></B></DT>
+  <DT><B>display = "<TT>)_.display</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='display' Line='display = ")_.display"'>
   <DD>The  default  image  display  device.  Display can be set to the DAOPHOT
   package parameter value (the default), "<TT>yes</TT>", or "<TT>no</TT>". By default graphics
@@ -294,7 +283,7 @@ psf — Compute the point spread function
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -405,7 +394,7 @@ psf — Compute the point spread function
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_cursor_commands">CURSOR COMMANDS</A></H2>
+  <H3>Cursor commands</H3>
   <! BeginSection: 'CURSOR COMMANDS'>
   <UL>
   <P>
@@ -486,7 +475,7 @@ psf — Compute the point spread function
   <P>
   </UL>
   <! EndSection:   'CURSOR COMMANDS'>
-  <H2><A NAME="s_algorithms">ALGORITHMS</A></H2>
+  <H3>Algorithms</H3>
   <! BeginSection: 'ALGORITHMS'>
   <UL>
   The PSF is determined from the actual observed brightness values as a function
@@ -546,7 +535,7 @@ psf — Compute the point spread function
   <P>
   </UL>
   <! EndSection:   'ALGORITHMS'>
-  <H2><A NAME="s_guide_to_computing_a_psf_in_a_crowded_field">GUIDE TO COMPUTING A PSF IN A CROWDED FIELD</A></H2>
+  <H3>Guide to computing a psf in a crowded field</H3>
   <! BeginSection: 'GUIDE TO COMPUTING A PSF IN A CROWDED FIELD'>
   <UL>
   <P>
@@ -562,13 +551,13 @@ psf — Compute the point spread function
   in the appropriate manual pages.
   <P>
   <DL>
-  <DT><B><A NAME="l_">[1]</A></B></DT>
+  <DT><B>[1]</B></DT>
   <! Sec='GUIDE TO COMPUTING A PSF IN A CROWDED FIELD' Level=0 Label='' Line='[1]'>
   <DD>RUN THE DAOFIND and PHOT TASKS ON THE IMAGE OF INTEREST.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">[2]</A></B></DT>
+  <DT><B>[2]</B></DT>
   <! Sec='GUIDE TO COMPUTING A PSF IN A CROWDED FIELD' Level=0 Label='' Line='[2]'>
   <DD>EXAMINE THE IMAGE. Load the image on the display with the IRAF display task.
   Using the display itself, the DAOEDIT task, or the IRAF IMEXAMINE task, estimate the radius
@@ -582,7 +571,7 @@ psf — Compute the point spread function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">[3]</A></B></DT>
+  <DT><B>[3]</B></DT>
   <! Sec='GUIDE TO COMPUTING A PSF IN A CROWDED FIELD' Level=0 Label='' Line='[3]'>
   <DD>SELECT CANDIDATE PSF STARS.
   Good PSF stars should have no neighbors
@@ -605,7 +594,7 @@ psf — Compute the point spread function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">[4]</A></B></DT>
+  <DT><B>[4]</B></DT>
   <! Sec='GUIDE TO COMPUTING A PSF IN A CROWDED FIELD' Level=0 Label='' Line='[4]'>
   <DD>EXAMINE THE PSF STARS FOR NEIGHBORS MISSED BY DAOFIND AND ADD THESE TO
   THE PHOT FILE.
@@ -627,7 +616,7 @@ psf — Compute the point spread function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">[5]</A></B></DT>
+  <DT><B>[5]</B></DT>
   <! Sec='GUIDE TO COMPUTING A PSF IN A CROWDED FIELD' Level=0 Label='' Line='[5]'>
   <DD>ESTIMATE OF THE PSF.
   Run PSF using the combined PHOT output from [4] and
@@ -637,7 +626,7 @@ psf — Compute the point spread function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">[6]</A></B></DT>
+  <DT><B>[6]</B></DT>
   <! Sec='GUIDE TO COMPUTING A PSF IN A CROWDED FIELD' Level=0 Label='' Line='[6]'>
   <DD>FIT ALL THE STARS IN EACH PSF STAR GROUP IN THE ORIGINAL IMAGE.
   Run NSTAR on the image using the output group file (extension .psg.#)
@@ -654,7 +643,7 @@ psf — Compute the point spread function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">[7]</A></B></DT>
+  <DT><B>[7]</B></DT>
   <! Sec='GUIDE TO COMPUTING A PSF IN A CROWDED FIELD' Level=0 Label='' Line='[7]'>
   <DD>SUBTRACT ALL THE FITTED STARS FROM THE ORIGINAL IMAGE.
   Run SUBSTAR to subtract the NSTAR results from the original image.
@@ -664,7 +653,7 @@ psf — Compute the point spread function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">[8]</A></B></DT>
+  <DT><B>[8]</B></DT>
   <! Sec='GUIDE TO COMPUTING A PSF IN A CROWDED FIELD' Level=0 Label='' Line='[8]'>
   <DD>CHECK FOR PREVIOUSLY INVISIBLE FAINT COMPANIONS.
   Check to see whether the PSF stars and neighbors subtracted
@@ -673,7 +662,7 @@ psf — Compute the point spread function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">[9]</A></B></DT>
+  <DT><B>[9]</B></DT>
   <! Sec='GUIDE TO COMPUTING A PSF IN A CROWDED FIELD' Level=0 Label='' Line='[9]'>
   <DD>APPEND THESE COMPANIONS TO THE PHOT FILE.
   Run PHOT on the faint companions in the subtracted image
@@ -682,7 +671,7 @@ psf — Compute the point spread function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">[10]</A></B></DT>
+  <DT><B>[10]</B></DT>
   <! Sec='GUIDE TO COMPUTING A PSF IN A CROWDED FIELD' Level=0 Label='' Line='[10]'>
   <DD>SUBTRACT ALL THE PSF NEIGHBOR STARS FROM THE ORIGINAL IMAGE.
   Edit the nstar output file (extension .nst.#) removing all the PSF stars
@@ -695,7 +684,7 @@ psf — Compute the point spread function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">[11]</A></B></DT>
+  <DT><B>[11]</B></DT>
   <! Sec='GUIDE TO COMPUTING A PSF IN A CROWDED FIELD' Level=0 Label='' Line='[11]'>
   <DD>RECOMPUTE THE PSF.
   Run PSF on the subtracted image from [10] using the PHOT file from [9]
@@ -710,7 +699,7 @@ psf — Compute the point spread function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">[12]</A></B></DT>
+  <DT><B>[12]</B></DT>
   <! Sec='GUIDE TO COMPUTING A PSF IN A CROWDED FIELD' Level=0 Label='' Line='[12]'>
   <DD>RERUN NSTAR.
   Rerun NSTAR on the original image with the newly created group file
@@ -721,7 +710,7 @@ psf — Compute the point spread function
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">[13]</A></B></DT>
+  <DT><B>[13]</B></DT>
   <! Sec='GUIDE TO COMPUTING A PSF IN A CROWDED FIELD' Level=0 Label='' Line='[13]'>
   <DD>REPEAT STEPS [7-12] UNTIL THE PSF FIT IS ACCEPTABLE.
   If any neighbors are still visible iterate on this process by repeating
@@ -735,7 +724,7 @@ psf — Compute the point spread function
   <P>
   </UL>
   <! EndSection:   'GUIDE TO COMPUTING A PSF IN A CROWDED FIELD'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -905,17 +894,17 @@ psf — Compute the point spread function
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   datapars,daopars,pstselect,seepsf
@@ -924,5 +913,3 @@ psf — Compute the point spread function
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'CURSOR COMMANDS' 'ALGORITHMS' 'GUIDE TO COMPUTING A PSF IN A CROWDED FIELD' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

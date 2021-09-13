@@ -1,3 +1,5 @@
+.. _mkttydata:
+
 mkttydata — Build cache for termcap/graphcap device entries
 ===========================================================
 
@@ -5,50 +7,37 @@ mkttydata — Build cache for termcap/graphcap device entries
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>mkttydata (Jun90)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>softools</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>mkttydata (Jun90)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>mkttydata</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   mkttydata -- build a cache for graphcap/termcap device entries
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   mkttydata devices termcap_file output_file
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_devlist">devlist</A></B></DT>
+  <DT><B>devlist</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='devlist' Line='devlist'>
   <DD>A comma delimited list of the devices whose termcap or graphcap entries
   are to be compiled.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_termcap_file">termcap_file</A></B></DT>
+  <DT><B>termcap_file</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='termcap_file' Line='termcap_file'>
   <DD>The name of the termcap or graphcap file be searched, e.g., "<TT>dev$termcap</TT>",
   or "<TT>dev$graphcap</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output_file">output_file</A></B></DT>
+  <DT><B>output_file</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output_file' Line='output_file'>
   <DD>The name of the output file to be written, an SPP include file containing
   a number of declarations and data initialization statements.
@@ -57,14 +46,14 @@ mkttydata — Build cache for termcap/graphcap device entries
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Causes a message to be printed for each device entry compiled.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The <I>mkttydata</I> task is used by the IRAF system manager to precompile
@@ -138,7 +127,7 @@ mkttydata — Build cache for termcap/graphcap device entries
   Guide: Reference Manual</TT>", section 5.  IRAF uses a standard UNIX termcap.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Update the graphcap cache.
@@ -146,14 +135,14 @@ mkttydata — Build cache for termcap/graphcap device entries
       cl&gt; mktty vt640,vt240,4012,cit414a dev$graphcap dev$cacheg.dat
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   There is a fixed limit on the amount of data that can be cached.
   If the limit is exceedd the affected TTY modules will fail to compile.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   showcap, IRAF Site Manager's Guide
@@ -162,5 +151,3 @@ mkttydata — Build cache for termcap/graphcap device entries
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

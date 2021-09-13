@@ -1,3 +1,5 @@
+.. _aprecenter:
+
 aprecenter — Recenter apertures
 ===============================
 
@@ -5,42 +7,29 @@ aprecenter — Recenter apertures
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>aprecenter (Sep96)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.twodspec.apextract</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>aprecenter (Sep96)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>aprecenter</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   aprecenter -- Recenter apertures automatically
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   aprecenter input
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of input images in which apertures are to be recentered.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apertures">apertures = "<TT></TT>"</A></B></DT>
+  <DT><B>apertures = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""'>
   <DD>Apertures to recenter, resize, trace, and extract.  This only applies
   to apertures read from the input or reference database.  Any new
@@ -52,7 +41,7 @@ aprecenter — Recenter apertures
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_references">references = "<TT></TT>"</A></B></DT>
+  <DT><B>references = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='references' Line='references = ""'>
   <DD>List of reference images to be used to define apertures for the input
   images.  When a reference image is given it supersedes apertures
@@ -65,7 +54,7 @@ aprecenter — Recenter apertures
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = no</A></B></DT>
+  <DT><B>interactive = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = no'>
   <DD>Run this task interactively?  If the task is not run interactively then
   all user queries are suppressed and interactive aperture editing is
@@ -73,7 +62,7 @@ aprecenter — Recenter apertures
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_find">find = yes</A></B></DT>
+  <DT><B>find = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='find' Line='find = yes'>
   <DD>Find the spectra and define apertures automatically?  In order for
   spectra to be found automatically there must be no apertures for the
@@ -81,26 +70,26 @@ aprecenter — Recenter apertures
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_recenter">recenter = yes</A></B></DT>
+  <DT><B>recenter = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='recenter' Line='recenter = yes'>
   <DD>Recenter the apertures?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_resize">resize = no</A></B></DT>
+  <DT><B>resize = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='resize' Line='resize = no'>
   <DD>Resize the apertures?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_edit">edit = yes</A></B></DT>
+  <DT><B>edit = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='edit' Line='edit = yes'>
   <DD>Edit the apertures?  The <I>interactive</I> parameter must also be yes.
   </DD>
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_line">line = INDEF</A></B></DT>
+  <DT><B>line = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='line' Line='line = INDEF'>
   <DD>The dispersion line (line or column perpendicular to the dispersion axis) to
   be used in recentering the spectra.  A value of INDEF selects the middle of the
@@ -108,7 +97,7 @@ aprecenter — Recenter apertures
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nsum">nsum = 1</A></B></DT>
+  <DT><B>nsum = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nsum' Line='nsum = 1'>
   <DD>Number of dispersion lines to be summed or medianed.  The lines are taken
   around the specified dispersion line.  A positive value takes a sum
@@ -116,13 +105,13 @@ aprecenter — Recenter apertures
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_aprecenter">aprecenter = "<TT></TT>"</A></B></DT>
+  <DT><B>aprecenter = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='aprecenter' Line='aprecenter = ""'>
   <DD>List of apertures to be used in shift calculation.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_npeaks">npeaks = INDEF</A></B></DT>
+  <DT><B>npeaks = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='npeaks' Line='npeaks = INDEF'>
   <DD>Select the specified number of apertures with the highest peak values
   to be recentered.  If the number is INDEF all apertures will be selected.
@@ -131,7 +120,7 @@ aprecenter — Recenter apertures
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_shift">shift = yes</A></B></DT>
+  <DT><B>shift = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='shift' Line='shift = yes'>
   <DD>Use the median shift from recentering the selected apertures to apply to
   all apertures.  The recentering is then a constant shift for all apertures.
@@ -141,7 +130,7 @@ aprecenter — Recenter apertures
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_additional_parameters">ADDITIONAL PARAMETERS</A></H2>
+  <H3>Additional parameters</H3>
   <! BeginSection: 'ADDITIONAL PARAMETERS'>
   <UL>
   I/O parameters and the default dispersion axis are taken from the
@@ -154,7 +143,7 @@ aprecenter — Recenter apertures
   except the package parameters are included in that task.
   </UL>
   <! EndSection:   'ADDITIONAL PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   For each image in the input image list, the aperture center positions
@@ -204,17 +193,17 @@ aprecenter — Recenter apertures
   in the package.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   	cl&gt; aprecenter newimage reference=flat
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_APRECENTER">APRECENTER V2.11</A></B></DT>
+  <DT><B>APRECENTER V2.11</B></DT>
   <! Sec='REVISIONS' Level=0 Label='APRECENTER' Line='APRECENTER V2.11'>
   <DD>The "<TT>apertures</TT>" parameter can be used to select apertures for resizing,
   recentering, tracing, and extraction.  This parameter name was previously
@@ -224,7 +213,7 @@ aprecenter — Recenter apertures
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   center1d, ranges, apfind, apresize, apedit, apall
@@ -233,5 +222,3 @@ aprecenter — Recenter apertures
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'ADDITIONAL PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

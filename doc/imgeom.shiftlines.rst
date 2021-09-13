@@ -1,3 +1,5 @@
+.. _shiftlines:
+
 shiftlines — Shift the lines of a list of N-D images
 ====================================================
 
@@ -5,26 +7,13 @@ shiftlines — Shift the lines of a list of N-D images
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>shiftlines (Dec98)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imgeom</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>shiftlines (Dec98)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>shiftlines</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   shiftlines -- shift lines in a list of images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage_">USAGE	</A></H2>
+  <H3>Usage	</H3>
   <! BeginSection: 'USAGE	'>
   <UL>
   <PRE>
@@ -32,65 +21,65 @@ shiftlines — Shift the lines of a list of N-D images
   </PRE>
   </UL>
   <! EndSection:   'USAGE	'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of images to be shifted.  Image sections are allowed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>List of output image names.  If the output image name is the same as the input
   image name then the shifted image replaces the input image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_shift">shift</A></B></DT>
+  <DT><B>shift</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='shift' Line='shift'>
   <DD>Shift in pixels.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interp_type">interp_type = "<TT>linear</TT>"</A></B></DT>
+  <DT><B>interp_type = "<TT>linear</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interp_type' Line='interp_type = "linear"'>
   <DD>The interpolant type use to computed the output shifted image.
   The choices are the following:
   <DL>
-  <DT><B><A NAME="l_nearest">nearest</A></B></DT>
+  <DT><B>nearest</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest'>
   <DD>nearest neighbor interpolation.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_linear">linear</A></B></DT>
+  <DT><B>linear</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='linear' Line='linear'>
   <DD>linear interpolation in x.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_poly3">poly3</A></B></DT>
+  <DT><B>poly3</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='poly3' Line='poly3'>
   <DD>third order interior polynomial in x.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_poly5">poly5</A></B></DT>
+  <DT><B>poly5</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='poly5' Line='poly5'>
   <DD>fifth order interior polynomial in x.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_spline3">spline3</A></B></DT>
+  <DT><B>spline3</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='spline3' Line='spline3'>
   <DD>cubic spline in x.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sinc">sinc</A></B></DT>
+  <DT><B>sinc</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='sinc' Line='sinc'>
   <DD>sinc interpolation in x. Users can specify the sinc interpolant width by
   appending a width value to the interpolant string, e.g. sinc51 specifies
@@ -100,7 +89,7 @@ shiftlines — Shift the lines of a list of N-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_drizzle">drizzle</A></B></DT>
+  <DT><B>drizzle</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='drizzle' Line='drizzle'>
   <DD>1D drizzle resampling. Users can specify the drizzle pixel fraction
   by appending a value between 0.0 and 1.0 in square brackets to the
@@ -112,30 +101,30 @@ shiftlines — Shift the lines of a list of N-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_boundary_type">boundary_type = "<TT>nearest</TT>"</A></B></DT>
+  <DT><B>boundary_type = "<TT>nearest</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='boundary_type' Line='boundary_type = "nearest"'>
   <DD>Boundary condition for shifts outside the input image.
   The minimum match abbreviated choices are:
   <DL>
-  <DT><B><A NAME="l_">"<TT>nearest</TT>"</A></B></DT>
+  <DT><B>"<TT>nearest</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"nearest"'>
   <DD>Use the values of the nearest boundary pixel.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">"<TT>wrap</TT>"</A></B></DT>
+  <DT><B>"<TT>wrap</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"wrap"'>
   <DD>Generate a value by wrapping around to the opposite boundary.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">"<TT>reflect</TT>"</A></B></DT>
+  <DT><B>"<TT>reflect</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"reflect"'>
   <DD>Generate a value by reflecting around the boundary
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">"<TT>constant</TT>"</A></B></DT>
+  <DT><B>"<TT>constant</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"constant"'>
   <DD>Use a user supplied constant pixel value.
   </DD>
@@ -143,14 +132,14 @@ shiftlines — Shift the lines of a list of N-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_constant">constant = "<TT>0.0</TT>"</A></B></DT>
+  <DT><B>constant = "<TT>0.0</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='constant' Line='constant = "0.0"'>
   <DD>The constant for constant boundary extension.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The list of images in <I>input</I> is shifted by the amount <I>shift</I>
@@ -176,7 +165,7 @@ shiftlines — Shift the lines of a list of N-D images
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -191,7 +180,7 @@ shiftlines — Shift the lines of a list of N-D images
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_timings">TIMINGS</A></H2>
+  <H3>Timings</H3>
   <! BeginSection: 'TIMINGS'>
   <UL>
   It requires approximately 28 and 59 seconds to shift a 512 square image
@@ -199,12 +188,12 @@ shiftlines — Shift the lines of a list of N-D images
   (Vax 11/750 with fpa).
   </UL>
   <! EndSection:   'TIMINGS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imshift, magnify, rotate, imlintran, blkrep, blkav, geotran
@@ -213,5 +202,3 @@ shiftlines — Shift the lines of a list of N-D images
   
   <! Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIMINGS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

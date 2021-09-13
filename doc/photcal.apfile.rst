@@ -1,3 +1,5 @@
+.. _apfile:
+
 apfile — Prepare an aperture corrections file from a text file
 ==============================================================
 
@@ -5,37 +7,24 @@ apfile — Prepare an aperture corrections file from a text file
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>apfile (Apr93)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>photcal</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>apfile (Apr93)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>apfile</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   apfile -- prepare an aperture corrections file from a list of photometry
   files using the daogrow algorithm
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   apfile photfiles incolumns naperts apercors
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_photfiles">photfiles</A></B></DT>
+  <DT><B>photfiles</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='photfiles' Line='photfiles'>
   <DD>A list of text files containing the images names or image ids, x and y
   coordinates, filter ids, exposure times, airmasses, aperture radii,
@@ -47,7 +36,7 @@ apfile — Prepare an aperture corrections file from a text file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_incolumns">incolumns</A></B></DT>
+  <DT><B>incolumns</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='incolumns' Line='incolumns'>
   <DD>A list of ten numbers separated by commas or whitespace specifying
   which columns in <I>photfiles</I> contain the following quantities: the
@@ -58,14 +47,14 @@ apfile — Prepare an aperture corrections file from a text file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_naperts">naperts</A></B></DT>
+  <DT><B>naperts</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='naperts' Line='naperts'>
   <DD>The number of aperture radii for which aperture radii, magnitudes, and
   magnitude errors are to be extracted from <I>photfiles</I>. 
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apercors">apercors</A></B></DT>
+  <DT><B>apercors</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apercors' Line='apercors'>
   <DD>The name of the output text file containing the aperture
   corrections computed between <I>smallap</I> and <I>largeap</I>
@@ -73,14 +62,14 @@ apfile — Prepare an aperture corrections file from a text file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_smallap">smallap = 1</A></B></DT>
+  <DT><B>smallap = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='smallap' Line='smallap = 1'>
   <DD>The index of the smallest extracted aperture for which the aperture 
   correction is to be computed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_largeap">largeap = 0</A></B></DT>
+  <DT><B>largeap = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='largeap' Line='largeap = 0'>
   <DD>The index of the largest extracted aperture for which the aperture 
   correction is to be computed. If <I>largeap</I> is 0, then
@@ -88,7 +77,7 @@ apfile — Prepare an aperture corrections file from a text file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_magfile">magfile = "<TT></TT>"</A></B></DT>
+  <DT><B>magfile = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='magfile' Line='magfile = ""'>
   <DD>The name of an optional output text file containing the magnitudes
   of all the stars in <I>photfiles</I>, corrected to the aperture <I>largeap</I>
@@ -97,7 +86,7 @@ apfile — Prepare an aperture corrections file from a text file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_logfile">logfile = "<TT></TT>"</A></B></DT>
+  <DT><B>logfile = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = ""'>
   <DD>The name of an optional output text file containing details of the curve
   of growth model fit for each image in <I>photfiles</I>. If <I>logfile</I> is
@@ -106,7 +95,7 @@ apfile — Prepare an aperture corrections file from a text file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_plotfile">plotfile = "<TT></TT>"</A></B></DT>
+  <DT><B>plotfile = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='plotfile' Line='plotfile = ""'>
   <DD>The name of an optional output plot file containing plots of the
   curve of growth model fit, the fit residuals versus aperture radius,
@@ -118,13 +107,13 @@ apfile — Prepare an aperture corrections file from a text file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_append">append = no</A></B></DT>
+  <DT><B>append = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='append' Line='append = no'>
   <DD>Open <I>logfile</I> and/or <I>plotfile</I> in append mode ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_obsparams">obsparams = "<TT></TT>"</A></B></DT>
+  <DT><B>obsparams = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='obsparams' Line='obsparams = ""'>
   <DD>The name of an optional input text file containing the correct filter ids,
   exposure times, airmasses, and times of observation for each image
@@ -137,7 +126,7 @@ apfile — Prepare an aperture corrections file from a text file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_obscolumns">obscolumns = "<TT>2 3 4 5</TT>"</A></B></DT>
+  <DT><B>obscolumns = "<TT>2 3 4 5</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='obscolumns' Line='obscolumns = "2 3 4 5"'>
   <DD>The list of numbers separated by commas or whitespace specifying which
   columns in the text file <I>obsparams</I> contain the correct filter ids,
@@ -149,7 +138,7 @@ apfile — Prepare an aperture corrections file from a text file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_maglim">maglim = 0.10</A></B></DT>
+  <DT><B>maglim = 0.10</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='maglim' Line='maglim = 0.10'>
   <DD>The maximum magnitude error permitted in the input magnitude measurements.
   Data at and following the first aperture radius whose associated magnitude
@@ -157,7 +146,7 @@ apfile — Prepare an aperture corrections file from a text file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nparams">nparams = 3</A></B></DT>
+  <DT><B>nparams = 3</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nparams' Line='nparams = 3'>
   <DD>The of number parameters in the five parameter curve of growth model to be fit.
   The remaining parameters 5 - nparams parameters are held constant.
@@ -168,7 +157,7 @@ apfile — Prepare an aperture corrections file from a text file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_swings">swings = 1.2</A></B></DT>
+  <DT><B>swings = 1.2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='swings' Line='swings = 1.2'>
   <DD>The slope of the power law component of the analytic curve of growth model
   describing the seeing independent part of the stellar profile. For a
@@ -176,14 +165,14 @@ apfile — Prepare an aperture corrections file from a text file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pwings">pwings = 0.1</A></B></DT>
+  <DT><B>pwings = 0.1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pwings' Line='pwings = 0.1'>
   <DD>The fraction of the total power in the seeing independent
   part of the stellar profile, if <I>xwings</I> is 0.0.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pgauss">pgauss = 0.5</A></B></DT>
+  <DT><B>pgauss = 0.5</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pgauss' Line='pgauss = 0.5'>
   <DD>The fraction of the total power in the seeing dependent part of the
   profile contained in the gaussian rather than the exponential component
@@ -191,7 +180,7 @@ apfile — Prepare an aperture corrections file from a text file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rgescale">rgescale = 0.9</A></B></DT>
+  <DT><B>rgescale = 0.9</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rgescale' Line='rgescale = 0.9'>
   <DD>The ratio of the exponential to the gaussian radial scale
   lengths in the seeing dependent part of the profile.
@@ -200,7 +189,7 @@ apfile — Prepare an aperture corrections file from a text file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xwings">xwings = 0.0</A></B></DT>
+  <DT><B>xwings = 0.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xwings' Line='xwings = 0.0'>
   <DD>A parameter describing the effect of airmass on the total power 
   in the seeing independent part of the stellar profile, where this quantity
@@ -208,26 +197,26 @@ apfile — Prepare an aperture corrections file from a text file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = yes</A></B></DT>
+  <DT><B>interactive = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes'>
   <DD>Fit the curve of growth interactively ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verify">verify = no</A></B></DT>
+  <DT><B>verify = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verify' Line='verify = no'>
   <DD>Verify interactive user input ? This option is used only if <I>obsparams</I>
   is set to the standard input STDIN.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_gcommands">gcommands = "<TT></TT>"</A></B></DT>
+  <DT><B>gcommands = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""'>
   <DD>The interactive graphics cursor.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_graphics">graphics = "<TT>stdgraph</TT>"</A></B></DT>
+  <DT><B>graphics = "<TT>stdgraph</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"'>
   <DD>The default graphics device.
   </DD>
@@ -235,7 +224,7 @@ apfile — Prepare an aperture corrections file from a text file
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -373,7 +362,7 @@ apfile — Prepare an aperture corrections file from a text file
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_cursor_commands">CURSOR COMMANDS</A></H2>
+  <H3>Cursor commands</H3>
   <! BeginSection: 'CURSOR COMMANDS'>
   <UL>
   <P>
@@ -420,7 +409,7 @@ apfile — Prepare an aperture corrections file from a text file
   <P>
   </UL>
   <! EndSection:   'CURSOR COMMANDS'>
-  <H2><A NAME="s_algorithms">ALGORITHMS</A></H2>
+  <H3>Algorithms</H3>
   <! BeginSection: 'ALGORITHMS'>
   <UL>
   <P>
@@ -519,7 +508,7 @@ apfile — Prepare an aperture corrections file from a text file
   <P>
   </UL>
   <! EndSection:   'ALGORITHMS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   <P>
@@ -530,7 +519,7 @@ apfile — Prepare an aperture corrections file from a text file
   <P>
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -604,17 +593,17 @@ apfile — Prepare an aperture corrections file from a text file
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   mkapfile, mknobsfile,mkobsfile,obsfile
@@ -623,5 +612,3 @@ apfile — Prepare an aperture corrections file from a text file
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'CURSOR COMMANDS' 'ALGORITHMS' 'REFERENCES' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

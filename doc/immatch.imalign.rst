@@ -1,3 +1,5 @@
+.. _imalign:
+
 imalign — Align and register 2-D images using a reference pixel list
 ====================================================================
 
@@ -5,36 +7,23 @@ imalign — Align and register 2-D images using a reference pixel list
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>imalign (Feb90)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.immatch</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>imalign (Feb90)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>imalign</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   imalign -- register a list of images by computing relative object shifts
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   imalign input reference coords output
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The input images to be shifted and trimmed.  The input image list should
   contain the reference image so that its borders are
@@ -42,13 +31,13 @@ imalign — Align and register 2-D images using a reference pixel list
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_reference">reference</A></B></DT>
+  <DT><B>reference</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='reference' Line='reference'>
   <DD>The reference image to which the input images will be aligned. 
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_coords">coords</A></B></DT>
+  <DT><B>coords</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='coords' Line='coords'>
   <DD>A text file containing the reference image coordinates of the registration
   objects to be centered in each image, one object per line with the x and y
@@ -56,13 +45,13 @@ imalign — Align and register 2-D images using a reference pixel list
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>The output images. 
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_shifts">shifts = "<TT></TT>"</A></B></DT>
+  <DT><B>shifts = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='shifts' Line='shifts = ""'>
   <DD>A text file containing the initial estimate for each image of the
   shift in each axis relative to the reference image.  These
@@ -75,7 +64,7 @@ imalign — Align and register 2-D images using a reference pixel list
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_boxsize">boxsize = 7</A></B></DT>
+  <DT><B>boxsize = 7</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='boxsize' Line='boxsize = 7'>
   <DD>The size in pixels of the box to use for the final centering, during
   which all the sources in <I>coords</I> are recentered in each image
@@ -85,7 +74,7 @@ imalign — Align and register 2-D images using a reference pixel list
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_bigbox">bigbox = 11</A></B></DT>
+  <DT><B>bigbox = 11</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='bigbox' Line='bigbox = 11'>
   <DD>The size in pixels of the box to use for coarse centering.  The coarse
   pass through the centering algorithm is made with the box centered at
@@ -100,13 +89,13 @@ imalign — Align and register 2-D images using a reference pixel list
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_negative">negative = no</A></B></DT>
+  <DT><B>negative = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='negative' Line='negative = no'>
   <DD>Are the features negative ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_background">background = INDEF</A></B></DT>
+  <DT><B>background = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='background' Line='background = INDEF'>
   <DD>The absolute reference level for the marginal centroid calculation.
   If background is INDEF, this is set to the mean value (between the
@@ -114,21 +103,21 @@ imalign — Align and register 2-D images using a reference pixel list
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lower">lower = INDEF</A></B></DT>
+  <DT><B>lower = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lower' Line='lower = INDEF'>
   <DD>The lower threshold for the data.  Individual pixels less than this
   value will be given zero weight in the centroids.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_upper">upper = INDEF</A></B></DT>
+  <DT><B>upper = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='upper' Line='upper = INDEF'>
   <DD>The upper threshold for the data.  Individual pixels greater than this
   value will be given zero weight in the centroids.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_niterate">niterate = 3</A></B></DT>
+  <DT><B>niterate = 3</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='niterate' Line='niterate = 3'>
   <DD>The maximum number of centering iterations to perform.  The centering
   will halt when this limit is reached or when the desired Itolerance
@@ -136,14 +125,14 @@ imalign — Align and register 2-D images using a reference pixel list
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_tolerance">tolerance = 0</A></B></DT>
+  <DT><B>tolerance = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='tolerance' Line='tolerance = 0'>
   <DD>The tolerance for convergence of the centering algorithm.  This is the
   integral shift of the centering box from one iteration to the next.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_maxshift">maxshift = INDEFR</A></B></DT>
+  <DT><B>maxshift = INDEFR</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='maxshift' Line='maxshift = INDEFR'>
   <DD>The maximum permitted difference between the predicted shift and the
   the computed shift for each object. Objects with shifts greater than
@@ -151,7 +140,7 @@ imalign — Align and register 2-D images using a reference pixel list
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_shiftimages">shiftimages = yes</A></B></DT>
+  <DT><B>shiftimages = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='shiftimages' Line='shiftimages = yes'>
   <DD>If shiftimages is yes, the IMSHIFT task will be used to align the
   images.  If shiftimages is no, the images will not be aligned, but
@@ -159,25 +148,25 @@ imalign — Align and register 2-D images using a reference pixel list
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interp_type">interp_type = "<TT>spline3</TT>"</A></B></DT>
+  <DT><B>interp_type = "<TT>spline3</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interp_type' Line='interp_type = "spline3"'>
   <DD>The interpolation function used by the IMSHIFT task.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_boundary_type">boundary_type = "<TT>constant</TT>"</A></B></DT>
+  <DT><B>boundary_type = "<TT>constant</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='boundary_type' Line='boundary_type = "constant"'>
   <DD>The boundary extension type used by the IMSHIFT task.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_constant">constant = 0.</A></B></DT>
+  <DT><B>constant = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.'>
   <DD>The constant used by the IMSHIFT task if <I>boundary_type</I> is "<TT>constant</TT>". 
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_trimimages">trimimages = yes</A></B></DT>
+  <DT><B>trimimages = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='trimimages' Line='trimimages = yes'>
   <DD>If trimimages is yes, the output images will be trimmed to
   include only the region over which they all overlap.  The
@@ -187,14 +176,14 @@ imalign — Align and register 2-D images using a reference pixel list
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print the centers, shifts, and trim section?
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   IMALIGN measures the X and Y axis shifts between a list of input images
@@ -314,7 +303,7 @@ imalign — Align and register 2-D images using a reference pixel list
   </PRE>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_centering_algorithm">CENTERING ALGORITHM</A></H2>
+  <H3>Centering algorithm</H3>
   <! BeginSection: 'CENTERING ALGORITHM'>
   <UL>
   The algorithm is a "<TT>marginal</TT>" centroid in which the fit for each axis
@@ -345,7 +334,7 @@ imalign — Align and register 2-D images using a reference pixel list
   <P>
   </UL>
   <! EndSection:   'CENTERING ALGORITHM'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Align three images to the first using the list of registration star
@@ -384,7 +373,7 @@ imalign — Align and register 2-D images using a reference pixel list
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   The images being shifted must be in the current directory.
@@ -410,7 +399,7 @@ imalign — Align and register 2-D images using a reference pixel list
   This is also discussed above.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imcentroid, center, imshift, geomap, geotran
@@ -419,5 +408,3 @@ imalign — Align and register 2-D images using a reference pixel list
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'CENTERING ALGORITHM' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

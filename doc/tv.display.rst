@@ -1,3 +1,5 @@
+.. _display:
+
 display — Load an image or image section into the display
 =========================================================
 
@@ -5,49 +7,36 @@ display — Load an image or image section into the display
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>display (Mar97)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.tv</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>display (Mar97)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>display</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   display -- Load and display images in an image display
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   display image frame
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_image">image</A></B></DT>
+  <DT><B>image</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='image' Line='image'>
   <DD>Image to be loaded.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_frame">frame</A></B></DT>
+  <DT><B>frame</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='frame' Line='frame'>
   <DD>Display frame to be loaded.
   </DD>
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_bpmask">bpmask = "<TT>BPM</TT>"</A></B></DT>
+  <DT><B>bpmask = "<TT>BPM</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='bpmask' Line='bpmask = "BPM"'>
   <DD>Bad pixel mask.  The bad pixel mask is used to exclude bad pixels from the
   automatic intensity mapping algorithm.  It may also be displayed as an
@@ -61,7 +50,7 @@ display — Load an image or image section into the display
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_bpdisplay">bpdisplay = "<TT>none</TT>" (none|overlay|interpolate)</A></B></DT>
+  <DT><B>bpdisplay = "<TT>none</TT>" (none|overlay|interpolate)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='bpdisplay' Line='bpdisplay = "none" (none|overlay|interpolate)'>
   <DD>Type of display for the bad pixel mask.  The options are "<TT>none</TT>" to not
   display the mask, "<TT>overlay</TT>" to display as an overlay with the colors given
@@ -72,7 +61,7 @@ display — Load an image or image section into the display
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_bpcolors">bpcolors = "<TT>red</TT>"</A></B></DT>
+  <DT><B>bpcolors = "<TT>red</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='bpcolors' Line='bpcolors = "red"'>
   <DD>The mapping between bad pixel values and display colors or intensity values
   when the bad pixels are displayed as an overlay.  There are two forms,
@@ -82,7 +71,7 @@ display — Load an image or image section into the display
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_overlay">overlay = "<TT></TT>"</A></B></DT>
+  <DT><B>overlay = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='overlay' Line='overlay = ""'>
   <DD>Overlay mask to be displayed.  The overlay mask may be a pixel list image
   (.pl extension) or a regular image.  Overlay pixels are identified by
@@ -92,7 +81,7 @@ display — Load an image or image section into the display
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ocolors">ocolors = "<TT>green</TT>"</A></B></DT>
+  <DT><B>ocolors = "<TT>green</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ocolors' Line='ocolors = "green"'>
   <DD>The mapping between bad pixel values and display colors or intensity values
   when the bad pixels are displayed as an overlay.  There are two forms,
@@ -102,44 +91,44 @@ display — Load an image or image section into the display
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_erase">erase = yes</A></B></DT>
+  <DT><B>erase = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='erase' Line='erase = yes'>
   <DD>Erase frame before loading image?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_border_erase">border_erase = no</A></B></DT>
+  <DT><B>border_erase = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='border_erase' Line='border_erase = no'>
   <DD>Erase unfilled area of window in display frame if the whole frame is not
   erased?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_select_frame">select_frame = yes</A></B></DT>
+  <DT><B>select_frame = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='select_frame' Line='select_frame = yes'>
   <DD>Select the display frame to be the same as the frame being loaded?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_repeat">repeat = no</A></B></DT>
+  <DT><B>repeat = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='repeat' Line='repeat = no'>
   <DD>Repeat the previous spatial and intensity transformations?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fill">fill = no</A></B></DT>
+  <DT><B>fill = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fill' Line='fill = no'>
   <DD>Interpolate the image to fit the display window?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_zscale">zscale = yes</A></B></DT>
+  <DT><B>zscale = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='zscale' Line='zscale = yes'>
   <DD>Apply an automatic intensity mapping algorithm when loading the image?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_contrast">contrast = 0.25</A></B></DT>
+  <DT><B>contrast = 0.25</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='contrast' Line='contrast = 0.25'>
   <DD>Contrast factor for the automatic intensity mapping algorithm.
   If a value of zero is given then the minimum and maximum of the
@@ -147,7 +136,7 @@ display — Load an image or image section into the display
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_zrange">zrange = yes</A></B></DT>
+  <DT><B>zrange = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='zrange' Line='zrange = yes'>
   <DD>If not using the automatic mapping algorithm (<I>zscale = no</I>) map the
   full range of the image intensity to the full range of the display?  If the
@@ -158,7 +147,7 @@ display — Load an image or image section into the display
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_zmask">zmask = "<TT></TT>"</A></B></DT>
+  <DT><B>zmask = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='zmask' Line='zmask = ""'>
   <DD>Pixel mask selecting the sample pixels for the automatic or range intensity
   mapping algorithm.  The pixel mask may be a pixel list image (.pl
@@ -171,7 +160,7 @@ display — Load an image or image section into the display
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nsample">nsample = 1000 (minimum of 100)</A></B></DT>
+  <DT><B>nsample = 1000 (minimum of 100)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nsample' Line='nsample = 1000 (minimum of 100)'>
   <DD>The number of pixels from the image sampled for computing the automatic
   intensity scaling.  This number will be uniformly sampled from the image
@@ -180,20 +169,20 @@ display — Load an image or image section into the display
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xcenter">xcenter = 0.5, ycenter = 0.5</A></B></DT>
+  <DT><B>xcenter = 0.5, ycenter = 0.5</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xcenter' Line='xcenter = 0.5, ycenter = 0.5'>
   <DD>Horizontal and vertical centers of the display window in normalized
   coordinates measured from the left and bottom respectively.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xsize">xsize = 1, ysize = 1</A></B></DT>
+  <DT><B>xsize = 1, ysize = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xsize' Line='xsize = 1, ysize = 1'>
   <DD>Horizontal and vertical sizes of the display window in normalized coordinates.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xmag">xmag = 1., ymag = 1.</A></B></DT>
+  <DT><B>xmag = 1., ymag = 1.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xmag' Line='xmag = 1., ymag = 1.'>
   <DD>Horizontal and vertical image magnifications when not filling the display
   window.  Magnifications greater than 1 map image pixels into more than 1
@@ -202,7 +191,7 @@ display — Load an image or image section into the display
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_order">order = 0</A></B></DT>
+  <DT><B>order = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='order' Line='order = 0'>
   <DD>Order of the interpolator to be used for spatially interpolating the image.
   The current choices are 0 for pixel replication, and 1 for bilinear
@@ -210,7 +199,7 @@ display — Load an image or image section into the display
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_z1">z1, z2</A></B></DT>
+  <DT><B>z1, z2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='z1' Line='z1, z2'>
   <DD>Minimum and maximum image intensity to be mapped to the minimum and maximum
   display levels.  These values apply when not using the automatic or range
@@ -218,19 +207,19 @@ display — Load an image or image section into the display
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ztrans">ztrans = "<TT>linear</TT>"</A></B></DT>
+  <DT><B>ztrans = "<TT>linear</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ztrans' Line='ztrans = "linear"'>
   <DD>Transformation of the image intensity levels to the display levels.  The
   choices are:
   <DL>
-  <DT><B><A NAME="l_">"<TT>linear</TT>"</A></B></DT>
+  <DT><B>"<TT>linear</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"linear"'>
   <DD>Map the minimum and maximum image intensities linearly to the minimum and
   maximum display levels.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">"<TT>log</TT>"</A></B></DT>
+  <DT><B>"<TT>log</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"log"'>
   <DD>Map the minimum and maximum image intensities linearly to the range 1 to 1000,
   take the logarithm (base 10), and then map the logarithms to the display
@@ -238,7 +227,7 @@ display — Load an image or image section into the display
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">"<TT>none</TT>"</A></B></DT>
+  <DT><B>"<TT>none</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"none"'>
   <DD>Apply no mapping of the image intensities (regardless of the values of
   <I>zcale, zrange, z1, and z2</I>).  For most image displays, values exceeding
@@ -248,7 +237,7 @@ display — Load an image or image section into the display
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">"<TT>user</TT>"</A></B></DT>
+  <DT><B>"<TT>user</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"user"'>
   <DD>User supplies a look up table of intensities and their corresponding
   greyscale values.  
@@ -257,7 +246,7 @@ display — Load an image or image section into the display
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lutfile">lutfile = "<TT></TT>"</A></B></DT>
+  <DT><B>lutfile = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lutfile' Line='lutfile = ""'>
   <DD>Name of text file containing the look up table when <I>ztrans</I> = user.
   The table should contain two columns per line; column 1 contains the
@@ -266,7 +255,7 @@ display — Load an image or image section into the display
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The specified image and overlay mask are loaded into the specified frame of
@@ -390,7 +379,7 @@ display — Load an image or image section into the display
   the previous image loaded.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_zscale_algorithm">ZSCALE ALGORITHM</A></H2>
+  <H3>Zscale algorithm</H3>
   <! BeginSection: 'ZSCALE ALGORITHM'>
   <UL>
   The zscale algorithm is designed to display the image values near the median
@@ -439,7 +428,7 @@ display — Load an image or image section into the display
   produced by this algorithm.
   </UL>
   <! EndSection:   'ZSCALE ALGORITHM'>
-  <H2><A NAME="s_magnify_and_fill_algorithm">MAGNIFY AND FILL ALGORITHM</A></H2>
+  <H3>Magnify and fill algorithm</H3>
   <! BeginSection: 'MAGNIFY AND FILL ALGORITHM'>
   <UL>
   The spatial interpolation algorithm magnifies (or demagnifies) the image
@@ -470,7 +459,7 @@ display — Load an image or image section into the display
   and small scale features still contribute to the displayed image.
   </UL>
   <! EndSection:   'MAGNIFY AND FILL ALGORITHM'>
-  <H2><A NAME="s_overlay_colors">OVERLAY COLORS</A></H2>
+  <H3>Overlay colors</H3>
   <! BeginSection: 'OVERLAY COLORS'>
   <UL>
   The masks specified by the <I>bpmask</I> and <I>overlay</I> parameters may be
@@ -621,7 +610,7 @@ display — Load an image or image section into the display
   colors may be different than intended.
   </UL>
   <! EndSection:   'OVERLAY COLORS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   For the purpose of these examples we assume a display with four frames,
@@ -663,11 +652,11 @@ display — Load an image or image section into the display
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_DISPLAY">DISPLAY V2.11</A></B></DT>
+  <DT><B>DISPLAY V2.11</B></DT>
   <! Sec='REVISIONS' Level=0 Label='DISPLAY' Line='DISPLAY V2.11'>
   <DD>The bad pixel mask, overlay mask, sample mask, and overlay colors
   parameters and functionality have been added.  The "<TT>nsample_lines</TT>"
@@ -679,13 +668,13 @@ display — Load an image or image section into the display
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   The "<TT>repeat</TT>" option is not implemented.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   cvl, magnify, implot, minmax, fixpix
@@ -694,5 +683,3 @@ display — Load an image or image section into the display
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'ZSCALE ALGORITHM' 'MAGNIFY AND FILL ALGORITHM' 'OVERLAY COLORS' 'EXAMPLES' 'REVISIONS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

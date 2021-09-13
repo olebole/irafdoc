@@ -1,3 +1,5 @@
+.. _text2mask:
+
 text2mask — Convert text description to pixel mask
 ==================================================
 
@@ -5,26 +7,13 @@ text2mask — Convert text description to pixel mask
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>text2mask (Jun96)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>proto</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>text2mask (Jun96)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>text2mask</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   text2mask -- convert text description to pixel mask
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage_">USAGE	</A></H2>
+  <H3>Usage	</H3>
   <! BeginSection: 'USAGE	'>
   <UL>
   <PRE>
@@ -32,11 +21,11 @@ text2mask — Convert text description to pixel mask
   </PRE>
   </UL>
   <! EndSection:   'USAGE	'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_text">text</A></B></DT>
+  <DT><B>text</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='text' Line='text'>
   <DD>Text file of pixel regions.  The format of this file consists of lines of
   individual pixels (whitespace separated column and line) or rectangular
@@ -45,47 +34,47 @@ text2mask — Convert text description to pixel mask
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_mask">mask</A></B></DT>
+  <DT><B>mask</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='mask' Line='mask'>
   <DD>Pixel mask name to be created.  A pixel list image, .pl extension,
   is created so no extension is necessary.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ncols">ncols, nlines</A></B></DT>
+  <DT><B>ncols, nlines</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ncols' Line='ncols, nlines'>
   <DD>Dimensions for pixel mask image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_linterp">linterp = 1</A></B></DT>
+  <DT><B>linterp = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='linterp' Line='linterp = 1'>
   <DD>Mask code for rectangular regions which are narrower in the line direction
   than the column direction.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cinterp">cinterp = 2</A></B></DT>
+  <DT><B>cinterp = 2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cinterp' Line='cinterp = 2'>
   <DD>Mask code for rectangular regions which are narrower in the column direction
   than the line direction.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_square">square = 3</A></B></DT>
+  <DT><B>square = 3</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='square' Line='square = 3'>
   <DD>Mask code for square regions which are larger than a single pixel.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pixel">pixel = 4</A></B></DT>
+  <DT><B>pixel = 4</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pixel' Line='pixel = 4'>
   <DD>Mask code for single pixels.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   A text file describing individual pixels or rectangular regions is
@@ -121,7 +110,7 @@ text2mask — Convert text description to pixel mask
   two flat fields of different exposure levels.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  Convert a text region description into a mask and then use it to
@@ -133,11 +122,11 @@ text2mask — Convert text description to pixel mask
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_TEXT2MASK">TEXT2MASK V2.11</A></B></DT>
+  <DT><B>TEXT2MASK V2.11</B></DT>
   <! Sec='REVISIONS' Level=0 Label='TEXT2MASK' Line='TEXT2MASK V2.11'>
   <DD>This task is new and appears in conjunction with a new pixel mask
   based version of <B>fixpix</B>.
@@ -145,7 +134,7 @@ text2mask — Convert text description to pixel mask
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imreplace, imexpr, imcopy, imedit, fixpix
@@ -154,5 +143,3 @@ text2mask — Convert text description to pixel mask
   
   <! Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

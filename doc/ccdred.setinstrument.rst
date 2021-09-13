@@ -1,3 +1,5 @@
+.. _setinstrument:
+
 setinstrument — Set instrument parameters
 =========================================
 
@@ -5,70 +7,57 @@ setinstrument — Set instrument parameters
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>setinstrument (Oct87)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.imred.ccdred</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>setinstrument (Oct87)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>setinstrument</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   setinstrument -- Set instrument parameters
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage_">USAGE	</A></H2>
+  <H3>Usage	</H3>
   <! BeginSection: 'USAGE	'>
   <UL>
   setinstrument instrument
   </UL>
   <! EndSection:   'USAGE	'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_instrument">instrument</A></B></DT>
+  <DT><B>instrument</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='instrument' Line='instrument'>
   <DD>Instrument identification for instrument parameters to be set.  If <TT>'?'</TT>
   then a list of the instrument identifiers is printed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_site">site = "<TT>kpno</TT>"</A></B></DT>
+  <DT><B>site = "<TT>kpno</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='site' Line='site = "kpno"'>
   <DD>Site ID.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_directory">directory = "<TT>ccddb$</TT>"</A></B></DT>
+  <DT><B>directory = "<TT>ccddb$</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='directory' Line='directory = "ccddb$"'>
   <DD>Instrument directory containing instrument files.  The instrument files
   are found in the subdirectory given by the site ID. 
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_review">review = yes</A></B></DT>
+  <DT><B>review = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='review' Line='review = yes'>
   <DD>Review the instrument parameters?  If yes then <B>eparam</B> is run for
   the parameters of <B>ccdred</B> and <B>ccdproc</B>.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_query">query</A></B></DT>
+  <DT><B>query</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='query' Line='query'>
   <DD>Parameter query if initial instrument is not found.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The purpose of the task is to allow the user to easily set default
@@ -88,7 +77,7 @@ setinstrument — Set instrument parameters
   in the instrument directory is produced by paging the file "<TT>instruments.men</TT>".
   The task then performs the following operations:
   <DL>
-  <DT><B><A NAME="l_">(1)</A></B></DT>
+  <DT><B>(1)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='(1)'>
   <DD>If an instrument translation file with the name given by the instrument
   ID and the extension "<TT>.dat</TT>" is found then the instrument translation
@@ -98,7 +87,7 @@ setinstrument — Set instrument parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(2)</A></B></DT>
+  <DT><B>(2)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='(2)'>
   <DD>If an instrument setup script with the name given by the instrument ID
   and the extension "<TT>.cl</TT>" is found then the commands in the file are
@@ -107,7 +96,7 @@ setinstrument — Set instrument parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(3)</A></B></DT>
+  <DT><B>(3)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line='(3)'>
   <DD>If the review flag is set the task <B>eparam</B> is run to allow the user
   to examine and modify the parameters for the package <B>ccdred</B> and task
@@ -116,7 +105,7 @@ setinstrument — Set instrument parameters
   </DL>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. To get a list of the instruments;
@@ -149,7 +138,7 @@ setinstrument — Set instrument parameters
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   instruments, ccdred, ccdproc
@@ -158,5 +147,3 @@ setinstrument — Set instrument parameters
   
   <! Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

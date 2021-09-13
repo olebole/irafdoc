@@ -1,3 +1,5 @@
+.. _fitcoords:
+
 fitcoords — Fit user coordinates to image coordinates
 =====================================================
 
@@ -5,36 +7,23 @@ fitcoords — Fit user coordinates to image coordinates
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>fitcoords (Apr00)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.twodspec.longslit</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>fitcoords (Apr00)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>fitcoords</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   fitcoords -- Fit user coordinates to the image coordinates
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   fitcoords images fitname
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>List of images containing the feature coordinates to be fit.  If the
   parameter <I>combine</I> is yes then feature coordinates from all the images
@@ -43,7 +32,7 @@ fitcoords — Fit user coordinates to image coordinates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fitname">fitname = "<TT></TT>" </A></B></DT>
+  <DT><B>fitname = "<TT></TT>" </B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fitname' Line='fitname = "" '>
   <DD>If the input images are combined and fit by a single function then the fit
   is stored under this name.  If the images are not combined then the
@@ -53,27 +42,27 @@ fitcoords — Fit user coordinates to image coordinates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = yes</A></B></DT>
+  <DT><B>interactive = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes'>
   <DD>Determine coordinate fits interactively?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_combine">combine = no</A></B></DT>
+  <DT><B>combine = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='combine' Line='combine = no'>
   <DD>Combine the coordinates from all the input images and fit them by a single
   function?  If 'no' then fit the coordinates from each image separately.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_database">database = "<TT>database</TT>"</A></B></DT>
+  <DT><B>database = "<TT>database</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"'>
   <DD>Database containing the feature coordinate information used in fitting the
   coordinates and in which the coordinate fit is recorded.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_deletions">deletions = "<TT>deletions.db</TT>"</A></B></DT>
+  <DT><B>deletions = "<TT>deletions.db</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='deletions' Line='deletions = "deletions.db"'>
   <DD>Deletion list file.  If not null then points whose coordinates match those in
   this file (if it exists) are initially deleted from the fit.
@@ -83,7 +72,7 @@ fitcoords — Fit user coordinates to image coordinates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_function">function = "<TT>chebyshev</TT>"</A></B></DT>
+  <DT><B>function = "<TT>chebyshev</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='function' Line='function = "chebyshev"'>
   <DD>Type of two dimensional function to use in fitting the user coordinates.
   The choices are "<TT>chebyshev</TT>" polynomial and "<TT>legendre</TT>" polynomial.
@@ -92,7 +81,7 @@ fitcoords — Fit user coordinates to image coordinates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xorder">xorder = 6</A></B></DT>
+  <DT><B>xorder = 6</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xorder' Line='xorder = 6'>
   <DD>Order of the mapping function along the first image axis.
   The order is the number of polynomial terms.  If the task is interactive
@@ -100,7 +89,7 @@ fitcoords — Fit user coordinates to image coordinates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_yorder">yorder = 6</A></B></DT>
+  <DT><B>yorder = 6</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='yorder' Line='yorder = 6'>
   <DD>Order of the mapping function along the second image axis.
   The order is the number of polynomial terms.  If the task is interactive
@@ -108,14 +97,14 @@ fitcoords — Fit user coordinates to image coordinates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_logfiles">logfiles = "<TT>STDOUT,logfile</TT>"</A></B></DT>
+  <DT><B>logfiles = "<TT>STDOUT,logfile</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='logfiles' Line='logfiles = "STDOUT,logfile"'>
   <DD>List of files in which to keep logs containing information about
   the coordinate fit.  If null then no log is kept.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_plotfile">plotfile = "<TT>plotfile</TT>"</A></B></DT>
+  <DT><B>plotfile = "<TT>plotfile</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='plotfile' Line='plotfile = "plotfile"'>
   <DD>Name of file to contain metacode for log plots.  If null then no log plots
   are kept.  When the fitting is interactive the last graph is recorded in
@@ -123,20 +112,20 @@ fitcoords — Fit user coordinates to image coordinates
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_graphics">graphics = "<TT>stdgraph</TT>"</A></B></DT>
+  <DT><B>graphics = "<TT>stdgraph</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"'>
   <DD>Graphics output device.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cursor">cursor = "<TT></TT>"</A></B></DT>
+  <DT><B>cursor = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""'>
   <DD>Graphics cursor input.  If null the standard graphics cursor is used.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_cursor_commands">CURSOR COMMANDS</A></H2>
+  <H3>Cursor commands</H3>
   <! BeginSection: 'CURSOR COMMANDS'>
   <UL>
   <P>
@@ -168,7 +157,7 @@ fitcoords — Fit user coordinates to image coordinates
   </PRE>
   </UL>
   <! EndSection:   'CURSOR COMMANDS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   A two dimensional function of the image coordinates is fitted to the user
@@ -323,7 +312,7 @@ fitcoords — Fit user coordinates to image coordinates
   elements of the database description.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   A number of strong arc lines are identified along one column of an arc
@@ -356,7 +345,7 @@ fitcoords — Fit user coordinates to image coordinates
   <B>Gkimosaic</B> is in the <B>plot</B> package.
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   transform
@@ -365,5 +354,3 @@ fitcoords — Fit user coordinates to image coordinates
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'CURSOR COMMANDS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

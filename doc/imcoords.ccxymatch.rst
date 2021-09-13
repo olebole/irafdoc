@@ -1,3 +1,5 @@
+.. _ccxymatch:
+
 ccxymatch — Match celestial and pixel coordinate lists
 ======================================================
 
@@ -5,49 +7,36 @@ ccxymatch — Match celestial and pixel coordinate lists
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>ccxymatch (Oct96)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imcoords</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>ccxymatch (Oct96)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>ccxymatch</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   ccxymatch -- Match celestial and pixel coordinate lists using various methods
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   ccxymatch input reference output tolerance [ptolerance]
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The list of input pixel coordinate files.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_reference">reference</A></B></DT>
+  <DT><B>reference</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='reference' Line='reference'>
   <DD>The list of input celestial coordinate files. The number of celestial coordinate
   files must be one or equal to the number of pixel coordinate files.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>The output matched coordinate files containing: 1) the celestial coordinates
   of the matched objects in columns 1 and 2, 2) the pixel coordinates of the
@@ -56,13 +45,13 @@ ccxymatch — Match celestial and pixel coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_tolerance">tolerance</A></B></DT>
+  <DT><B>tolerance</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='tolerance' Line='tolerance'>
   <DD>The matching tolerance in arcseconds. 
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ptolerance">ptolerance</A></B></DT>
+  <DT><B>ptolerance</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ptolerance' Line='ptolerance'>
   <DD>The matching tolerance in pixels. The ptolerance parameter is required 
   by the "<TT>triangles</TT>" matching algorithm but not by the "<TT>tolerance</TT>" matching
@@ -70,7 +59,7 @@ ccxymatch — Match celestial and pixel coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_refpoints">refpoints = "<TT></TT>"</A></B></DT>
+  <DT><B>refpoints = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='refpoints' Line='refpoints = ""'>
   <DD>A file of tie points used to compute the linear transformation
   from the pixel coordinate system to the celestial coordinate system. Refpoints
@@ -84,21 +73,21 @@ ccxymatch — Match celestial and pixel coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xin">xin = INDEF, yin = INDEF</A></B></DT>
+  <DT><B>xin = INDEF, yin = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xin' Line='xin = INDEF, yin = INDEF'>
   <DD>The x and y origin of the pixel coordinate system. Xin and yin default to 
   0.0 and 0.0 respectively.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xmag">xmag = INDEF, ymag = INDEF</A></B></DT>
+  <DT><B>xmag = INDEF, ymag = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xmag' Line='xmag = INDEF, ymag = INDEF'>
   <DD>The x and y scale factors in arcseconds per pixel. Xmag and
   ymag default to 1.0 and 1.0 respectively.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xrotation">xrotation = INDEF, yrotation = INDEF</A></B></DT>
+  <DT><B>xrotation = INDEF, yrotation = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xrotation' Line='xrotation = INDEF, yrotation = INDEF'>
   <DD>The x and y rotation angles measured in degrees counter-clockwise. Xrotation
   and yrotation default to 0.0 and 0.0 degrees respectively. To set east to the
@@ -109,7 +98,7 @@ ccxymatch — Match celestial and pixel coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_projection">projection = "<TT>tan</TT>"</A></B></DT>
+  <DT><B>projection = "<TT>tan</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='projection' Line='projection = "tan"'>
   <DD>The sky projection geometry. The most commonly used projections in
   astronomy are "<TT>tan</TT>", "<TT>arc</TT>", "<TT>sin</TT>", and "<TT>lin</TT>". Other supported projections
@@ -118,7 +107,7 @@ ccxymatch — Match celestial and pixel coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lngref">lngref = INDEF, latref = INDEF</A></B></DT>
+  <DT><B>lngref = INDEF, latref = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lngref' Line='lngref = INDEF, latref = INDEF'>
   <DD>The origin of the celestial coordinate system. Lngref and latref define the
   reference point of the sky projection <I>projection</I>, and default to the
@@ -127,28 +116,28 @@ ccxymatch — Match celestial and pixel coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lngcolumn">lngcolumn = 1, latcolumn = 2</A></B></DT>
+  <DT><B>lngcolumn = 1, latcolumn = 2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lngcolumn' Line='lngcolumn = 1, latcolumn = 2'>
   <DD>The columns in the celestial coordinate list containing the ra / longitude
   and dec / latitude coordinate values.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xcolumn">xcolumn = 1, ycolumn = 2</A></B></DT>
+  <DT><B>xcolumn = 1, ycolumn = 2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xcolumn' Line='xcolumn = 1, ycolumn = 2'>
   <DD>The columns in the pixel coordinate list containing the x and y coordinate
   values.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lngunits">lngunits = "<TT>hours</TT>", latunits = "<TT>degrees</TT>"</A></B></DT>
+  <DT><B>lngunits = "<TT>hours</TT>", latunits = "<TT>degrees</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lngunits' Line='lngunits = "hours", latunits = "degrees"'>
   <DD>The units of the celestial coordinates. The options are "<TT>hours</TT>", "<TT>degrees</TT>",
   and "<TT>radians</TT>" for lngunits, and "<TT>degrees</TT>" and "<TT>radians</TT>" for latunits.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_separation">separation = 3.0</A></B></DT>
+  <DT><B>separation = 3.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='separation' Line='separation = 3.0'>
   <DD>The minimum separation in arcseconds for objects in the celestial coordinate
   lists. Objects closer together than separation arcseconds
@@ -156,7 +145,7 @@ ccxymatch — Match celestial and pixel coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pseparation">pseparation = 9.0</A></B></DT>
+  <DT><B>pseparation = 9.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pseparation' Line='pseparation = 9.0'>
   <DD>The minimum separation in pixels  for objects in the pixel coordinate
   lists. Objects closer together than pseparation pixels
@@ -164,11 +153,11 @@ ccxymatch — Match celestial and pixel coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_matching">matching = "<TT>triangles</TT>"</A></B></DT>
+  <DT><B>matching = "<TT>triangles</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='matching' Line='matching = "triangles"'>
   <DD>The matching algorithm. The choices are:
   <DL>
-  <DT><B><A NAME="l_tolerance">tolerance</A></B></DT>
+  <DT><B>tolerance</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='tolerance' Line='tolerance'>
   <DD>A linear transformation is applied to the pixel coordinates,
   the appropriate projection is applied to the celestial coordinates,
@@ -189,7 +178,7 @@ ccxymatch — Match celestial and pixel coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_triangles">triangles</A></B></DT>
+  <DT><B>triangles</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='triangles' Line='triangles'>
   <DD>A linear transformation is applied to the pixel coordinates,
   the appropriate projection is applied to the celestial coordinates,
@@ -212,7 +201,7 @@ ccxymatch — Match celestial and pixel coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nmatch">nmatch = 30</A></B></DT>
+  <DT><B>nmatch = 30</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nmatch' Line='nmatch = 30'>
   <DD>The maximum number of celestial and pixel coordinates used
   by the "<TT>triangles</TT>" pattern matching algorithm. If either list contains
@@ -222,7 +211,7 @@ ccxymatch — Match celestial and pixel coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ratio">ratio = 10.0</A></B></DT>
+  <DT><B>ratio = 10.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ratio' Line='ratio = 10.0'>
   <DD>The maximum ratio of the longest to shortest side of the 
   triangles generated by the "<TT>triangles</TT>" pattern matching algorithm.
@@ -232,14 +221,14 @@ ccxymatch — Match celestial and pixel coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nreject">nreject = 10</A></B></DT>
+  <DT><B>nreject = 10</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nreject' Line='nreject = 10'>
   <DD>The maximum number of rejection iterations for the "<TT>triangles</TT>" pattern
   matching algorithm.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lngformat">lngformat = "<TT></TT>", latformat = "<TT></TT>"</A></B></DT>
+  <DT><B>lngformat = "<TT></TT>", latformat = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lngformat' Line='lngformat = "", latformat = ""'>
   <DD>The format of the output celestial coordinates. The default formats are
   "<TT>%13.3h</TT>", "<TT>%13.3h</TT>", and "<TT>%13.7g</TT>" for units of "<TT>hours</TT>", "<TT>degrees</TT>", and
@@ -247,7 +236,7 @@ ccxymatch — Match celestial and pixel coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xformat">xformat = "<TT>%13.3f</TT>", yformat = "<TT>%13.3f</TT>"</A></B></DT>
+  <DT><B>xformat = "<TT>%13.3f</TT>", yformat = "<TT>%13.3f</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xformat' Line='xformat = "%13.3f", yformat = "%13.3f"'>
   <DD>The format of the output pixel coordinates.
   By default the coordinates are output right justified in a field of
@@ -255,7 +244,7 @@ ccxymatch — Match celestial and pixel coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print messages about the progress of the task ?
   </DD>
@@ -263,7 +252,7 @@ ccxymatch — Match celestial and pixel coordinate lists
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -388,7 +377,7 @@ ccxymatch — Match celestial and pixel coordinate lists
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_algorithms">ALGORITHMS</A></H2>
+  <H3>Algorithms</H3>
   <! BeginSection: 'ALGORITHMS'>
   <UL>
   <P>
@@ -436,7 +425,7 @@ ccxymatch — Match celestial and pixel coordinate lists
   <P>
   </UL>
   <! EndSection:   'ALGORITHMS'>
-  <H2><A NAME="s_formats">FORMATS</A></H2>
+  <H3>Formats</H3>
   <! BeginSection: 'FORMATS'>
   <UL>
   <P>
@@ -517,7 +506,7 @@ ccxymatch — Match celestial and pixel coordinate lists
   <P>
   </UL>
   <! EndSection:   'FORMATS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   <P>
@@ -527,7 +516,7 @@ ccxymatch — Match celestial and pixel coordinate lists
   <P>
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -851,17 +840,17 @@ ccxymatch — Match celestial and pixel coordinate lists
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   stsdas.gasp.regions,stsdas.gasp.skymap,tables.ttools.tprint,daophot.daofind,ccmap
@@ -870,5 +859,3 @@ ccxymatch — Match celestial and pixel coordinate lists
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'ALGORITHMS' 'FORMATS' 'REFERENCES' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

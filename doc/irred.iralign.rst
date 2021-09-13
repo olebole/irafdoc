@@ -1,3 +1,5 @@
+.. _iralign:
+
 iralign — Align the image produced by irmosaic
 ==============================================
 
@@ -5,54 +7,41 @@ iralign — Align the image produced by irmosaic
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>iralign (Sep93)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.nproto</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>iralign (Sep93)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>iralign</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   iralign -- align the elements of the mosaiced image
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   iralign input output database coords
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The mosaiced image written by IRMOSAIC.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>The output aligned image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_database">database</A></B></DT>
+  <DT><B>database</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='database' Line='database'>
   <DD>The database file written by IRMOSAIC.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_coords">coords</A></B></DT>
+  <DT><B>coords</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='coords' Line='coords'>
   <DD>If <I>alignment</I> = "<TT>coords</TT>", then <B>coords</B> is
   a text file containing the x and y coordinates, measured in the input
@@ -74,23 +63,23 @@ iralign — Align the image produced by irmosaic
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xshift">xshift</A></B></DT>
+  <DT><B>xshift</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xshift' Line='xshift'>
   <DD>The x shift in pixels used if <I>alignment</I> = "<TT>shifts</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_yshift">yshift</A></B></DT>
+  <DT><B>yshift</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='yshift' Line='yshift'>
   <DD>The y shift in pixels used if <I>alignment</I> = "<TT>shifts</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_alignment">alignment = "<TT>coords</TT>"</A></B></DT>
+  <DT><B>alignment = "<TT>coords</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='alignment' Line='alignment = "coords"'>
   <DD>The method of aligning the subraster.
   <DL>
-  <DT><B><A NAME="l_coords">coords</A></B></DT>
+  <DT><B>coords</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='coords' Line='coords'>
   <DD>The x and y positions of the reference points common to adjacent subrasters
   in the input mosaiced image are listed in a text file as described
@@ -98,14 +87,14 @@ iralign — Align the image produced by irmosaic
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_shifts">shifts</A></B></DT>
+  <DT><B>shifts</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='shifts' Line='shifts'>
   <DD>The x and y shifts of each subraster with respect to its neighbour are
   set to <I>xshift</I> and <I>yshift</I>.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_file">file</A></B></DT>
+  <DT><B>file</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='file' Line='file'>
   <DD>The x and y  shifts of each input subraster with respect to the
   reference subraster image are listed in a text file as described
@@ -115,14 +104,14 @@ iralign — Align the image produced by irmosaic
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nxrsub">nxrsub = INDEF, ls nyrsub = INDEF</A></B></DT>
+  <DT><B>nxrsub = INDEF, ls nyrsub = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nxrsub' Line='nxrsub = INDEF, ls nyrsub = INDEF'>
   <DD>The column and row index of the reference subraster.
   The default reference subraster is the central subraster.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xref">xref = 0, yref = 0</A></B></DT>
+  <DT><B>xref = 0, yref = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xref' Line='xref = 0, yref = 0'>
   <DD>The x and y offset of the reference
   subraster in the output aligned image.
@@ -131,7 +120,7 @@ iralign — Align the image produced by irmosaic
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_trimlimits">trimlimits = "<TT>[1:1,1:1]</TT>"</A></B></DT>
+  <DT><B>trimlimits = "<TT>[1:1,1:1]</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='trimlimits' Line='trimlimits = "[1:1,1:1]"'>
   <DD>The number of columns or rows to trim off each edge of each input subraster
   before inserting it in the output image, specified in image section notation.
@@ -139,49 +128,49 @@ iralign — Align the image produced by irmosaic
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nimcols">nimcols = INDEF, nimlines = INDEF</A></B></DT>
+  <DT><B>nimcols = INDEF, nimlines = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nimcols' Line='nimcols = INDEF, nimlines = INDEF'>
   <DD>The number of columns and lines in the output image. The defaults are  the
   number of columns and lines in the input image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_oval">oval = INDEF</A></B></DT>
+  <DT><B>oval = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='oval' Line='oval = INDEF'>
   <DD>The value of undefined pixels in the output image. The default is the value
   stored in the database file written by IRMOSAIC.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interpolant">interpolant = linear</A></B></DT>
+  <DT><B>interpolant = linear</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interpolant' Line='interpolant = linear'>
   <DD>The type of interpolant used to shift the subrasters. The options are:
   <DL>
-  <DT><B><A NAME="l_nearest">nearest</A></B></DT>
+  <DT><B>nearest</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest'>
   <DD>Nearest neighbour interpolation.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_linear">linear</A></B></DT>
+  <DT><B>linear</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='linear' Line='linear'>
   <DD>Bilinear interpolation.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_poly3">poly3</A></B></DT>
+  <DT><B>poly3</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='poly3' Line='poly3'>
   <DD>Bicubic polynomial interpolation.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_poly5">poly5</A></B></DT>
+  <DT><B>poly5</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='poly5' Line='poly5'>
   <DD>Biquintic polynomial interpolation.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_spline3">spline3</A></B></DT>
+  <DT><B>spline3</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='spline3' Line='spline3'>
   <DD>Bicubic spline interpolation.
   </DD>
@@ -189,14 +178,14 @@ iralign — Align the image produced by irmosaic
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print messages on the terminal describing the progress of the task?
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   IRALIGN takes the mosaiced image <I>input</I> and database
@@ -261,7 +250,7 @@ iralign — Align the image produced by irmosaic
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -310,17 +299,17 @@ iralign — Align the image produced by irmosaic
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   irmosaic, apphot.center, apphot.apselect, irmatch1d, irmatch2d
@@ -329,5 +318,3 @@ iralign — Align the image produced by irmosaic
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

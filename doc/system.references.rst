@@ -1,3 +1,5 @@
+.. _references:
+
 references — Find all help database references for a given topic
 ================================================================
 
@@ -5,49 +7,36 @@ references — Find all help database references for a given topic
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>references (Jun89)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>system</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>references (Jun89)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>references</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   references -- find all help database references to a given topic
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   references topic
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_topic">topic</A></B></DT>
+  <DT><B>topic</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='topic' Line='topic'>
   <DD>The topic for which help is desired, i.e., a keyword, phrase, or pattern
   which the help database or quick-reference file is to be searched for.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_quickref">quickref = "<TT>uparm$quick.ref</TT>"</A></B></DT>
+  <DT><B>quickref = "<TT>uparm$quick.ref</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='quickref' Line='quickref = "uparm$quick.ref"'>
   <DD>The name of the optional quick-reference file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_updquick">updquick = no</A></B></DT>
+  <DT><B>updquick = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='updquick' Line='updquick = no'>
   <DD>Create or update the quick-reference file, e.g., because new packages
   have been added to the global help database.  Updating the quick-reference
@@ -55,7 +44,7 @@ references — Find all help database references for a given topic
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_usequick">usequick = no</A></B></DT>
+  <DT><B>usequick = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='usequick' Line='usequick = no'>
   <DD>Use the quick-reference file.  By default, a runtime search of all the package
   menus in the full help database is performed, which ensures that all packages
@@ -64,7 +53,7 @@ references — Find all help database references for a given topic
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The <I>references</I> task is used to search the help database for all tasks
@@ -91,7 +80,7 @@ references — Find all help database references for a given topic
   a "<TT>help &lt;keyword&gt; <I>all+</I>"<TT> may be required to locate a particular one.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Find all help on CCDs.
@@ -108,7 +97,7 @@ references — Find all help database references for a given topic
   	cl&gt; page (ref.quickref)
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   If a quick-reference file is used searching takes seconds, otherwise it
@@ -116,7 +105,7 @@ references — Find all help database references for a given topic
   all help modules for the core system and several external, layered packages.
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   Only the one-liner (NAME) field describing each help module is used for
@@ -124,7 +113,7 @@ references — Find all help database references for a given topic
   comprehensive as well as faster.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   help, match
@@ -133,5 +122,3 @@ references — Find all help database references for a given topic
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

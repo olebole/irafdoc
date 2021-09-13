@@ -1,3 +1,5 @@
+.. _imtab:
+
 imtab — Copy an image to a table column.
 ========================================
 
@@ -5,32 +7,19 @@ imtab — Copy an image to a table column.
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>imtab (Mar2000)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>tables</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>imtab (Mar2000)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>imtab</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   imtab -- Create a table from an image.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   imtab input outtable colname
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task copies data from an image to a table.
@@ -60,17 +49,17 @@ imtab — Copy an image to a table column.
   and gives the column names for the pixel coordinates.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input = "<TT></TT>" [file name template]</A></B></DT>
+  <DT><B>input = "<TT></TT>" [file name template]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input = "" [file name template]'>
   <DD>The names of the images to be written to the tables.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_outtable">outtable = "<TT></TT>" [file name template]</A></B></DT>
+  <DT><B>outtable = "<TT></TT>" [file name template]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable = "" [file name template]'>
   <DD>The names of the output tables.
   If outtable = "<TT>STDOUT</TT>" or if the output has been redirected,
@@ -83,7 +72,7 @@ imtab — Copy an image to a table column.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_colname">colname = "<TT></TT>" [string]</A></B></DT>
+  <DT><B>colname = "<TT></TT>" [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='colname' Line='colname = "" [string]'>
   <DD>A column of this name will be created in the output table,
   and the values of the image will be written to this column.
@@ -91,7 +80,7 @@ imtab — Copy an image to a table column.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(pname = "<TT></TT>") [string]</A></B></DT>
+  <DT><B>(pname = "<TT></TT>") [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(pname = "") [string]'>
   <DD>If 'pname' is not null,
   the pixel coordinates will also be written to columns of the table.
@@ -107,7 +96,7 @@ imtab — Copy an image to a table column.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(wcs = "<TT>logical</TT>") [string, allowed values:  logical | physical | world]</A></B></DT>
+  <DT><B>(wcs = "<TT>logical</TT>") [string, allowed values:  logical | physical | world]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(wcs = "logical") [string, allowed values:  logical | physical | world]'>
   <DD>This parameter is only gotten if 'pname' is not null.
   In this case, the user has the option of which coordinate system
@@ -134,7 +123,7 @@ imtab — Copy an image to a table column.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(formats) [string]</A></B></DT>
+  <DT><B>(formats) [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(formats) [string]'>
   <DD>The print formats to use for the pixel coordinates, one format
   per axis, with the individual formats separated by whitespace.
@@ -148,7 +137,7 @@ imtab — Copy an image to a table column.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(tbltype = "<TT>default</TT>") [string, allowed values: default | row |</A></B></DT>
+  <DT><B>(tbltype = "<TT>default</TT>") [string, allowed values: default | row |</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(tbltype = "default") [string, allowed values: default | row |'>
   <DD>column | text ]
   <P>
@@ -161,7 +150,7 @@ imtab — Copy an image to a table column.
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  Copy image "<TT>hr465_flux.imh</TT>" to table "<TT>hr465.tab</TT>", column "<TT>flux</TT>":
@@ -204,18 +193,18 @@ imtab — Copy an image to a table column.
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   This task was written by Phil Hodge.
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   The 'tabim' task copies a column of a table to an image.
@@ -232,5 +221,3 @@ imtab — Copy an image to a table column.
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

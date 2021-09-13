@@ -1,3 +1,5 @@
+.. _pconvert:
+
 pconvert — Convert from an apphot/daophot text to tables database
 =================================================================
 
@@ -5,49 +7,36 @@ pconvert — Convert from an apphot/daophot text to tables database
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>pconvert (Aug91)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.ptools</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>pconvert (Aug91)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>pconvert</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   pconvert -- convert an APPHOT/DAOPHOT text database into an STSDAS table
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   pconvert textfile table fields
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_textfile">textfile</A></B></DT>
+  <DT><B>textfile</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='textfile' Line='textfile'>
   <DD>The APPHOT/DAOPHOT text database which is to be converted into an
   APPHOT/DAOPHOT STSDAS table database.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_table">table</A></B></DT>
+  <DT><B>table</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='table' Line='table'>
   <DD>The name of the output STSDAS table database.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fields">fields = "<TT>*</TT>"</A></B></DT>
+  <DT><B>fields = "<TT>*</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fields' Line='fields = "*"'>
   <DD>Template defining the fields to be selected from each record. By default
   all the fields are output. Fields
@@ -61,14 +50,14 @@ pconvert — Convert from an apphot/daophot text to tables database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_expr">expr = yes</A></B></DT>
+  <DT><B>expr = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='expr' Line='expr = yes'>
   <DD>The boolean expression, evaluated independently for each record,
   which serves as a selection criterion. By default all records are selected.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_append">append = no</A></B></DT>
+  <DT><B>append = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='append' Line='append = no'>
   <DD>If append is yes then the converted APPHOT/DAOPHOT text file is appended to an 
   existing output STSDAS table database.
@@ -76,7 +65,7 @@ pconvert — Convert from an apphot/daophot text to tables database
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   PCONVERT selects a subset of the fields from each record of an
@@ -151,7 +140,7 @@ pconvert — Convert from an apphot/daophot text to tables database
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -185,12 +174,12 @@ pconvert — Convert from an apphot/daophot text to tables database
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   Changes in the values of the #K keyword quantities which are permitted by
@@ -202,7 +191,7 @@ pconvert — Convert from an apphot/daophot text to tables database
   values of the #K keywords in the STSDAS table headers after conversion.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   images.hedit
@@ -211,5 +200,3 @@ pconvert — Convert from an apphot/daophot text to tables database
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

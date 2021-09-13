@@ -1,3 +1,5 @@
+.. _sregister:
+
 sregister — Register 1-D or 2-D images using the image celestial wcs
 ====================================================================
 
@@ -5,43 +7,30 @@ sregister — Register 1-D or 2-D images using the image celestial wcs
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>sregister (Dec98)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.immatch</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>sregister (Dec98)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>sregister</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   sregister -- register a list of images to a reference image using celestial
   coordinate WCS information
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   sregister input reference output
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The list of input images containing the input celestial coordinate wcs.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_reference">reference</A></B></DT>
+  <DT><B>reference</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='reference' Line='reference'>
   <DD>The list of reference images containing the reference celestial coordinate wcs.
   The number of reference images must be one or equal to the number of
@@ -49,14 +38,14 @@ sregister — Register 1-D or 2-D images using the image celestial wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>The list of output registered images. The number of output images must
   be equal to the number of input images.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xmin">xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF</A></B></DT>
+  <DT><B>xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xmin' Line='xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF'>
   <DD>The minimum and maximum logical x and logical y coordinates used to, generate
   the grid of reference image control points, define the region of validity of
@@ -67,17 +56,17 @@ sregister — Register 1-D or 2-D images using the image celestial wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nx">nx = 10, ny = 10</A></B></DT>
+  <DT><B>nx = 10, ny = 10</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nx' Line='nx = 10, ny = 10'>
   <DD>The number of points in x and y used to generate the coordinate grid.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wcs">wcs = "<TT>world</TT>"</A></B></DT>
+  <DT><B>wcs = "<TT>world</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wcs' Line='wcs = "world"'>
   <DD>The world coordinate system of the coordinates.  The options are:
   <DL>
-  <DT><B><A NAME="l_physical">physical</A></B></DT>
+  <DT><B>physical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='physical' Line='physical'>
   <DD>Physical coordinates are pixel coordinates which are invariant with
   respect to linear transformations of the physical image data.  For example,
@@ -89,7 +78,7 @@ sregister — Register 1-D or 2-D images using the image celestial wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_world">world</A></B></DT>
+  <DT><B>world</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='world' Line='world'>
   <DD>World coordinates are image coordinates which are invariant with
   respect to linear transformations of the physical image data and which
@@ -110,7 +99,7 @@ sregister — Register 1-D or 2-D images using the image celestial wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xformat">xformat = "<TT>%10.3f</TT>", yformat = "<TT>%10.3f</TT>"</A></B></DT>
+  <DT><B>xformat = "<TT>%10.3f</TT>", yformat = "<TT>%10.3f</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xformat' Line='xformat = "%10.3f", yformat = "%10.3f"'>
   <DD>The format of the output logical x and y reference and input pixel
   coordinates in columns 1 and 2 and 3 and 4 respectively. By default the
@@ -119,7 +108,7 @@ sregister — Register 1-D or 2-D images using the image celestial wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rwxformat">rwxformat = "<TT></TT>", rwyformat = "<TT></TT>"</A></B></DT>
+  <DT><B>rwxformat = "<TT></TT>", rwyformat = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rwxformat' Line='rwxformat = "", rwyformat = ""'>
   <DD>The format of the output world x and y reference image coordinates
   in columns 5 and 6 respectively. The internal default formats will give
@@ -128,7 +117,7 @@ sregister — Register 1-D or 2-D images using the image celestial wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wxformat">wxformat = "<TT></TT>", wyformat = "<TT></TT>"</A></B></DT>
+  <DT><B>wxformat = "<TT></TT>", wyformat = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wxformat' Line='wxformat = "", wyformat = ""'>
   <DD>The format of the output world x and y input image coordinates
   in columns 7 and 8 respectively. The internal default formats will give
@@ -137,44 +126,44 @@ sregister — Register 1-D or 2-D images using the image celestial wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fitgeometry">fitgeometry = "<TT>general</TT>"</A></B></DT>
+  <DT><B>fitgeometry = "<TT>general</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fitgeometry' Line='fitgeometry = "general"'>
   <DD>The fitting geometry to be used. The options are the following.
   <DL>
-  <DT><B><A NAME="l_shift">shift</A></B></DT>
+  <DT><B>shift</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='shift' Line='shift'>
   <DD>X and y shifts only are fit.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xyscale">xyscale</A></B></DT>
+  <DT><B>xyscale</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='xyscale' Line='xyscale'>
   <DD>X and y shifts and x and y magnification factors are fit. Axis flips are
   allowed for.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rotate">rotate</A></B></DT>
+  <DT><B>rotate</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='rotate' Line='rotate'>
   <DD>X and y shifts and a rotation angle are fit. Axis flips are allowed for.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rscale">rscale</A></B></DT>
+  <DT><B>rscale</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='rscale' Line='rscale'>
   <DD>X and y shifts, a magnification factor assumed to be the same in x and y, and a
   rotation angle are fit. Axis flips are allowed for.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rxyscale">rxyscale</A></B></DT>
+  <DT><B>rxyscale</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='rxyscale' Line='rxyscale'>
   <DD>X and y shifts, x and y magnifications factors, and a rotation angle are fit.
   Axis flips are allowed for.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_general">general</A></B></DT>
+  <DT><B>general</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='general' Line='general'>
   <DD>A polynomial of arbitrary order in x and y is fit. A linear term and a
   distortion term are computed separately. The linear term includes an x and y
@@ -193,24 +182,24 @@ sregister — Register 1-D or 2-D images using the image celestial wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_function">function = "<TT>polynomial</TT>"</A></B></DT>
+  <DT><B>function = "<TT>polynomial</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='function' Line='function = "polynomial"'>
   <DD>The type of analytic coordinate surfaces to be fit. The options are the
   following:
   <DL>
-  <DT><B><A NAME="l_legendre">legendre</A></B></DT>
+  <DT><B>legendre</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='legendre' Line='legendre'>
   <DD>Legendre polynomials in x and y.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_chebyshev">chebyshev</A></B></DT>
+  <DT><B>chebyshev</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='chebyshev' Line='chebyshev'>
   <DD>Chebyshev polynomials in x and y.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_polynomial">polynomial</A></B></DT>
+  <DT><B>polynomial</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='polynomial' Line='polynomial'>
   <DD>Power series polynomials in x and y.
   </DD>
@@ -218,7 +207,7 @@ sregister — Register 1-D or 2-D images using the image celestial wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xxorder">xxorder = 2, xyorder = 2, yxorder = 2, yyorder = 2</A></B></DT>
+  <DT><B>xxorder = 2, xyorder = 2, yxorder = 2, yyorder = 2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xxorder' Line='xxorder = 2, xyorder = 2, yxorder = 2, yyorder = 2'>
   <DD>The order of the polynomials in x and y for the x and y fits respectively.
   The default order and cross term settings define the linear term in x
@@ -232,18 +221,18 @@ sregister — Register 1-D or 2-D images using the image celestial wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xxterms">xxterms = "<TT>half</TT>", yxterms = "<TT>half</TT>"</A></B></DT>
+  <DT><B>xxterms = "<TT>half</TT>", yxterms = "<TT>half</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xxterms' Line='xxterms = "half", yxterms = "half"'>
   <DD>The options are:
   <DL>
-  <DT><B><A NAME="l_none">none</A></B></DT>
+  <DT><B>none</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='none' Line='none'>
   <DD>The individual polynomial terms contain powers of x or powers of y but not
   powers of both.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_half">half</A></B></DT>
+  <DT><B>half</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='half' Line='half'>
   <DD>The individual polynomial terms contain powers of x and powers of y, whose
   maximum combined power is MAX (xxorder - 1, xyorder - 1) for the x fit and
@@ -251,7 +240,7 @@ sregister — Register 1-D or 2-D images using the image celestial wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_full">full</A></B></DT>
+  <DT><B>full</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='full' Line='full'>
   <DD>The individual polynomial terms contain powers of x and powers of y, whose
   maximum combined power is MAX (xxorder - 1 + xyorder - 1) for the x fit and
@@ -268,30 +257,30 @@ sregister — Register 1-D or 2-D images using the image celestial wcs
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_reject">reject = INDEF</A></B></DT>
+  <DT><B>reject = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='reject' Line='reject = INDEF'>
   <DD>The rejection limit in units of sigma. The default is no rejection.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_calctype">calctype = "<TT>real</TT>"</A></B></DT>
+  <DT><B>calctype = "<TT>real</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='calctype' Line='calctype = "real"'>
   <DD>The precision of coordinate transformation calculations. The options are "<TT>real</TT>"
   and "<TT>double</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_geometry">geometry = "<TT>geometric</TT>"</A></B></DT>
+  <DT><B>geometry = "<TT>geometric</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='geometry' Line='geometry = "geometric"'>
   <DD>The type of geometric transformation.  The options are:
   <DL>
-  <DT><B><A NAME="l_linear">linear</A></B></DT>
+  <DT><B>linear</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='linear' Line='linear'>
   <DD>Perform only the linear part of the geometric transformation.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_geometric">geometric</A></B></DT>
+  <DT><B>geometric</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='geometric' Line='geometric'>
   <DD>Compute both the linear and distortion portions of the geometric correction.
   </DD>
@@ -299,7 +288,7 @@ sregister — Register 1-D or 2-D images using the image celestial wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xsample">xsample = 1.0, ysample = 1.0</A></B></DT>
+  <DT><B>xsample = 1.0, ysample = 1.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xsample' Line='xsample = 1.0, ysample = 1.0'>
   <DD>The coordinate surface subsampling factor. The coordinate surfaces are
   evaluated at every xsample-th pixel in x and every ysample-th pixel in y.
@@ -310,41 +299,41 @@ sregister — Register 1-D or 2-D images using the image celestial wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interpolant">interpolant = "<TT>linear</TT>"</A></B></DT>
+  <DT><B>interpolant = "<TT>linear</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interpolant' Line='interpolant = "linear"'>
   <DD>The interpolant used for rebinning the image.  The choices are the following.
   <DL>
-  <DT><B><A NAME="l_nearest">nearest</A></B></DT>
+  <DT><B>nearest</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest'>
   <DD>Nearest neighbor.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_linear">linear</A></B></DT>
+  <DT><B>linear</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='linear' Line='linear'>
   <DD>Bilinear interpolation in x and y.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_poly3">poly3</A></B></DT>
+  <DT><B>poly3</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='poly3' Line='poly3'>
   <DD>Third order polynomial in x and y.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_poly5">poly5</A></B></DT>
+  <DT><B>poly5</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='poly5' Line='poly5'>
   <DD>Fifth order polynomial in x and y.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_spline3">spline3</A></B></DT>
+  <DT><B>spline3</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='spline3' Line='spline3'>
   <DD>Bicubic spline.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sinc">sinc</A></B></DT>
+  <DT><B>sinc</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='sinc' Line='sinc'>
   <DD>2D sinc interpolation. Users can specify the sinc interpolant width by
   appending a width value to the interpolant string, e.g. sinc51 specifies
@@ -353,7 +342,7 @@ sregister — Register 1-D or 2-D images using the image celestial wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lsinc">lsinc</A></B></DT>
+  <DT><B>lsinc</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='lsinc' Line='lsinc'>
   <DD>Look-up table sinc interpolation. Users can specify the look-up table sinc
   interpolant width by appending a width value to the interpolant string, e.g.
@@ -368,7 +357,7 @@ sregister — Register 1-D or 2-D images using the image celestial wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_drizzle">drizzle</A></B></DT>
+  <DT><B>drizzle</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='drizzle' Line='drizzle'>
   <DD>2D drizzle resampling. Users can specify the drizzle pixel fraction in x and y
   by appending a value between 0.0 and 1.0 in square brackets to the
@@ -382,29 +371,29 @@ sregister — Register 1-D or 2-D images using the image celestial wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_boundary">boundary = "<TT>nearest</TT>"</A></B></DT>
+  <DT><B>boundary = "<TT>nearest</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"'>
   <DD>The choices are:
   <DL>
-  <DT><B><A NAME="l_nearest">nearest</A></B></DT>
+  <DT><B>nearest</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest'>
   <DD>Use the value of the nearest boundary pixel.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_constant">constant</A></B></DT>
+  <DT><B>constant</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='constant' Line='constant'>
   <DD>Use a user supplied constant value.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_reflect">reflect</A></B></DT>
+  <DT><B>reflect</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='reflect' Line='reflect'>
   <DD>Generate a value by reflecting about the boundary of the image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wrap">wrap</A></B></DT>
+  <DT><B>wrap</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='wrap' Line='wrap'>
   <DD>Generate a value by wrapping around to the opposite side of the image.
   </DD>
@@ -412,20 +401,20 @@ sregister — Register 1-D or 2-D images using the image celestial wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_constant">constant = 0.0</A></B></DT>
+  <DT><B>constant = 0.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.0'>
   <DD>The value of the constant for boundary extension.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fluxconserve">fluxconserve = yes</A></B></DT>
+  <DT><B>fluxconserve = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fluxconserve' Line='fluxconserve = yes'>
   <DD>Preserve the total image flux? If flux conservation is turned on, the output
   pixel values are multiplied by the Jacobian of the coordinate transformation.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nxblock">nxblock = 512, nyblock = 512</A></B></DT>
+  <DT><B>nxblock = 512, nyblock = 512</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nxblock' Line='nxblock = 512, nyblock = 512'>
   <DD>If the size of the output image is less than nxblock by nyblock then
   the entire image is transformed at once. Otherwise the output image
@@ -433,19 +422,19 @@ sregister — Register 1-D or 2-D images using the image celestial wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wcsinherit">wcsinherit = yes</A></B></DT>
+  <DT><B>wcsinherit = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wcsinherit' Line='wcsinherit = yes'>
   <DD>Inherit the wcs of the reference image?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print messages about the progress of the task?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = no</A></B></DT>
+  <DT><B>interactive = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = no'>
   <DD>Run the task interactively ?
   In interactive mode the user may interact with the fitting process, e.g.
@@ -453,13 +442,13 @@ sregister — Register 1-D or 2-D images using the image celestial wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_graphics">graphics = "<TT>stdgraph</TT>"</A></B></DT>
+  <DT><B>graphics = "<TT>stdgraph</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"'>
   <DD>The graphics device.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_gcommands">gcommands = "<TT></TT>"</A></B></DT>
+  <DT><B>gcommands = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""'>
   <DD>The graphics cursor.
   </DD>
@@ -467,7 +456,7 @@ sregister — Register 1-D or 2-D images using the image celestial wcs
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -746,7 +735,7 @@ sregister — Register 1-D or 2-D images using the image celestial wcs
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_cursor_commands">CURSOR COMMANDS</A></H2>
+  <H3>Cursor commands</H3>
   <! BeginSection: 'CURSOR COMMANDS'>
   <UL>
   <P>
@@ -788,7 +777,7 @@ sregister — Register 1-D or 2-D images using the image celestial wcs
   <P>
   </UL>
   <! EndSection:   'CURSOR COMMANDS'>
-  <H2><A NAME="s_formats">FORMATS</A></H2>
+  <H3>Formats</H3>
   <! BeginSection: 'FORMATS'>
   <UL>
   <P>
@@ -869,7 +858,7 @@ sregister — Register 1-D or 2-D images using the image celestial wcs
   <P>
   </UL>
   <! EndSection:   'FORMATS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   <P>
@@ -901,7 +890,7 @@ sregister — Register 1-D or 2-D images using the image celestial wcs
   <P>
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -977,17 +966,17 @@ sregister — Register 1-D or 2-D images using the image celestial wcs
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imalign,xregister,register,geotran,wregister
@@ -996,5 +985,3 @@ sregister — Register 1-D or 2-D images using the image celestial wcs
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'CURSOR COMMANDS' 'FORMATS' 'REFERENCES' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

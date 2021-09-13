@@ -1,3 +1,5 @@
+.. _i2sun:
+
 i2sun — Convert IRAF images to Sun rasterfiles
 ==============================================
 
@@ -5,48 +7,35 @@ i2sun — Convert IRAF images to Sun rasterfiles
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>i2sun (Oct88)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>local</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>i2sun (Oct88)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>i2sun</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   i2sun -- convert IRAF images to Sun rasterfiles
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   i2sun input output z1 z2
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>Input image template, @file, n-dimensional image, or combination.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>Root template for output images, e.g. "<TT>home$ras/frame.%d</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_clutfile">clutfile</A></B></DT>
+  <DT><B>clutfile</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='clutfile' Line='clutfile'>
   <DD>Previously saved Sun rasterfile (e.g. output from IMTOOL), containing the
   color/greyscale lookup table information to be passed along to each output
@@ -55,7 +44,7 @@ i2sun — Convert IRAF images to Sun rasterfiles
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_z1">z1 = INDEF, z2 = INDEF</A></B></DT>
+  <DT><B>z1 = INDEF, z2 = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='z1' Line='z1 = INDEF, z2 = INDEF'>
   <DD>Minimum and maximum pixel/voxel intensities to scale to full output
   color/greyscale range.  Both are required parameters, and will apply to all
@@ -63,14 +52,14 @@ i2sun — Convert IRAF images to Sun rasterfiles
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ztrans">ztrans = "<TT>linear</TT>"</A></B></DT>
+  <DT><B>ztrans = "<TT>linear</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ztrans' Line='ztrans = "linear"'>
   <DD>Intensity transformation on input data (linear|log|none|user).
   If "<TT>user</TT>", you must also specify <I>ulutfile</I>.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ulutfile">ulutfile</A></B></DT>
+  <DT><B>ulutfile</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ulutfile' Line='ulutfile'>
   <DD>Name of text file containing the look up table when <I>ztrans</I> = user.
   The table should contain two columns per line; column 1 contains the
@@ -78,7 +67,7 @@ i2sun — Convert IRAF images to Sun rasterfiles
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xsize">xsize = INDEF, ysize = INDEF</A></B></DT>
+  <DT><B>xsize = INDEF, ysize = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xsize' Line='xsize = INDEF, ysize = INDEF'>
   <DD>If specified, these will be the dimensions of all output Sun rasterfiles
   in pixels.  The default will be the same size as the input images (which
@@ -86,14 +75,14 @@ i2sun — Convert IRAF images to Sun rasterfiles
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xmag">xmag = 1.0, ymag = 1.0</A></B></DT>
+  <DT><B>xmag = 1.0, ymag = 1.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xmag' Line='xmag = 1.0, ymag = 1.0'>
   <DD>Another way to specify output rasterfile dimensions.  These are the 
   magnification factors to apply to the input image dimensions.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_order">order = 1</A></B></DT>
+  <DT><B>order = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='order' Line='order = 1'>
   <DD>Order of the interpolator to be used for spatially interpolating the image.
   The current choices are 0 for pixel replication, and 1 for bilinear
@@ -101,7 +90,7 @@ i2sun — Convert IRAF images to Sun rasterfiles
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sliceaxis">sliceaxis = 3</A></B></DT>
+  <DT><B>sliceaxis = 3</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sliceaxis' Line='sliceaxis = 3'>
   <DD>Image axis from which to cut multiple slices when input image dimension is
   greater than 2.  Only x-y sections are allowed, so <I>sliceaxis</I> must
@@ -109,7 +98,7 @@ i2sun — Convert IRAF images to Sun rasterfiles
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_swap">swap = no</A></B></DT>
+  <DT><B>swap = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='swap' Line='swap = no'>
   <DD>Swap rasterfile bytes on output?  Used when rasterfiles are being written
   to a computer with opposite byte-swapping from that of the home computer
@@ -120,7 +109,7 @@ i2sun — Convert IRAF images to Sun rasterfiles
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -172,7 +161,7 @@ i2sun — Convert IRAF images to Sun rasterfiles
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -202,7 +191,7 @@ i2sun — Convert IRAF images to Sun rasterfiles
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_timings">TIMINGS</A></H2>
+  <H3>Timings</H3>
   <! BeginSection: 'TIMINGS'>
   <UL>
   49 seconds (1 sec/frame) to produce 50 100*100 rasterfiles from a
@@ -214,12 +203,12 @@ i2sun — Convert IRAF images to Sun rasterfiles
   20 minutes for the same with a magnification factor of 5 in both x and y.
   </UL>
   <! EndSection:   'TIMINGS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   display, imtool, volumes.pvol
@@ -228,5 +217,3 @@ i2sun — Convert IRAF images to Sun rasterfiles
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIMINGS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

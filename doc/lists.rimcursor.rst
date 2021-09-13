@@ -1,3 +1,5 @@
+.. _rimcursor:
+
 rimcursor — Read the image display cursor (makes a list)
 ========================================================
 
@@ -5,36 +7,23 @@ rimcursor — Read the image display cursor (makes a list)
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>rimcursor (Mar92)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>lists</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>rimcursor (Mar92)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>rimcursor</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   rimcursor -- repeatedly read and return image cursor values
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   rimcursor [image]
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_image">image</A></B></DT>
+  <DT><B>image</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='image' Line='image'>
   <DD>The name of the reference image to which coordinates should refer.
   This parameter will be queried only if <B>rimcursor</B> cannot obtain
@@ -44,12 +33,12 @@ rimcursor — Read the image display cursor (makes a list)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wcs">wcs = "<TT>logical</TT>"</A></B></DT>
+  <DT><B>wcs = "<TT>logical</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wcs' Line='wcs = "logical"'>
   <DD>The world coordinate system (<I>wcs</I>) to be used for coordinate output.
   The following standard world systems are predefined.
   <DL>
-  <DT><B><A NAME="l_logical">logical</A></B></DT>
+  <DT><B>logical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='logical' Line='logical'>
   <DD>Logical coordinates are image pixel coordinates relative to the image currently
   being displayed.  This is what the raw cursor read returns, so by default,
@@ -58,7 +47,7 @@ rimcursor — Read the image display cursor (makes a list)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_physical">physical</A></B></DT>
+  <DT><B>physical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='physical' Line='physical'>
   <DD>The physical coordinate system is invariant with respect to linear
   transformations of the physical image matrix.  For example, if the reference
@@ -71,7 +60,7 @@ rimcursor — Read the image display cursor (makes a list)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_world">world</A></B></DT>
+  <DT><B>world</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='world' Line='world'>
   <DD>The "<TT>world</TT>" coordinate system is the <I>current default WCS</I>.
   The default world system is the system named by the environment variable
@@ -87,7 +76,7 @@ rimcursor — Read the image display cursor (makes a list)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wxformat">wxformat = "<TT></TT>", wyformat = "<TT></TT>"</A></B></DT>
+  <DT><B>wxformat = "<TT></TT>", wyformat = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wxformat' Line='wxformat = "", wyformat = ""'>
   <DD>The default output format for the x and y coordinates. If wxformat or wyformat
   are undefined, rimcursor uses formatting options stored with the WCS in the  
@@ -96,7 +85,7 @@ rimcursor — Read the image display cursor (makes a list)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cursor">cursor = "<TT></TT>"</A></B></DT>
+  <DT><B>cursor = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""'>
   <DD>The source for image cursor input.  By default, the hardware image cursor
   is read.
@@ -104,7 +93,7 @@ rimcursor — Read the image display cursor (makes a list)
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The task <B>rimcursor</B> iteratively reads the image display cursor,
@@ -171,7 +160,7 @@ rimcursor — Read the image display cursor (makes a list)
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_formats">FORMATS</A></H2>
+  <H3>Formats</H3>
   <! BeginSection: 'FORMATS'>
   <UL>
   A  format  specification has the form "<TT>%w.dCn</TT>", where w is the field
@@ -251,7 +240,7 @@ rimcursor — Read the image display cursor (makes a list)
   <P>
   </UL>
   <! EndSection:   'FORMATS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Interactively generate a starlist (file "<TT>starlist</TT>") to be used as input
@@ -318,14 +307,14 @@ rimcursor — Read the image display cursor (makes a list)
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_notes">NOTES</A></H2>
+  <H3>Notes</H3>
   <! BeginSection: 'NOTES'>
   <UL>
   Future plans call for implementation of cursor mode commands for image
   display cursors similar to those available for graphics cursors.
   </UL>
   <! EndSection:   'NOTES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   rgcursor, cursors
@@ -334,5 +323,3 @@ rimcursor — Read the image display cursor (makes a list)
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'FORMATS' 'EXAMPLES' 'NOTES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

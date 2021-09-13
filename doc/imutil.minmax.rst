@@ -1,3 +1,5 @@
+.. _minmax:
+
 minmax — Compute the minimum and maximum pixel values in an image
 =================================================================
 
@@ -5,62 +7,49 @@ minmax — Compute the minimum and maximum pixel values in an image
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>minmax (May91)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>minmax (May91)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>minmax</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   minmax -- compute the minimum and maximum pixel values of an image
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   minmax images
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>Image template specifying the images to be examined.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_force">force = no</A></B></DT>
+  <DT><B>force = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='force' Line='force = no'>
   <DD>Force recomputation of the minimum and maximum pixel and pixel values even if
   they are noted as up to date in the image header.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_update">update = yes</A></B></DT>
+  <DT><B>update = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='update' Line='update = yes'>
   <DD>Update the image header with the new values (requires write permission).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print the image name, minimum value, and maximum value of each image
   processed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_minval">minval = INDEF</A></B></DT>
+  <DT><B>minval = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='minval' Line='minval = INDEF'>
   <DD>Set to the minimum pixel value of the last image processed.
   If the pixel type of the last input image was complex, this is the real
@@ -68,7 +57,7 @@ minmax — Compute the minimum and maximum pixel values in an image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_maxval">maxval = INDEF</A></B></DT>
+  <DT><B>maxval = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='maxval' Line='maxval = INDEF'>
   <DD>Set to the maximum pixel value of the last image processed.
   If the pixel type of the last input image was complex, this is the real
@@ -76,34 +65,34 @@ minmax — Compute the minimum and maximum pixel values in an image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_iminval">iminval = INDEF</A></B></DT>
+  <DT><B>iminval = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='iminval' Line='iminval = INDEF'>
   <DD>Set to the minimum imaginary part of the pixel value of the last image
   processed. Only used if the pixel type of the last input image was complex.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_imaxval">imaxval = INDEF</A></B></DT>
+  <DT><B>imaxval = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='imaxval' Line='imaxval = INDEF'>
   <DD>Set to the maximum imaginary part of the pixel value of the last image
   processed. Only used if the pixel type of the last input image was complex.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_minpix">minpix = "<TT></TT>"</A></B></DT>
+  <DT><B>minpix = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='minpix' Line='minpix = ""'>
   <DD>Set to the minimum pixel specification of the last image processed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_maxpix">maxpix = "<TT></TT>"</A></B></DT>
+  <DT><B>maxpix = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='maxpix' Line='maxpix = ""'>
   <DD>Set to the maximum pixel specification of the last image processed.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -120,7 +109,7 @@ minmax — Compute the minimum and maximum pixel values in an image
   compute the new values.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Compute and print the minimum and maximum values of the images <I>image1</I>
@@ -137,7 +126,7 @@ minmax — Compute the minimum and maximum pixel values in an image
   	cl&gt; minmax nite1.* force+ verbose- &amp;
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   The minimum and maximum pixel values are stored in the image header as values
@@ -145,7 +134,7 @@ minmax — Compute the minimum and maximum pixel values in an image
   or double precision floating.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imheader, hedit
@@ -154,5 +143,3 @@ minmax — Compute the minimum and maximum pixel values in an image
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

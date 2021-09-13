@@ -1,3 +1,5 @@
+.. _grpselect:
+
 grpselect — Select groups of a specified size from a daophot database
 =====================================================================
 
@@ -5,36 +7,23 @@ grpselect — Select groups of a specified size from a daophot database
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>grpselect (May00)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.daophot</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>grpselect (May00)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>grpselect</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   grpselect -- select groups from a group file by group size
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   grpselect ingroupfile outgroupfile min_group max_group
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_ingroupfile">ingroupfile</A></B></DT>
+  <DT><B>ingroupfile</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ingroupfile' Line='ingroupfile'>
   <DD>The list of input group files. Ingroupfile must have been written by the
   DAOPHOT PSF, GROUP, or NSTAR tasks. Ingroupfile may be an APPHOT/DAOPHOT text
@@ -42,26 +31,26 @@ grpselect — Select groups of a specified size from a daophot database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_outgroupfile">outgroupfile</A></B></DT>
+  <DT><B>outgroupfile</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='outgroupfile' Line='outgroupfile'>
   <DD>The list of output group files. There must be one output group file for every
   input group file. Outgroupfile has the same file type as <I>ingroupfile</I>.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_min_group">min_group</A></B></DT>
+  <DT><B>min_group</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='min_group' Line='min_group'>
   <DD>The minimum group size to select from the input group file(s).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_max_group">max_group</A></B></DT>
+  <DT><B>max_group</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='max_group' Line='max_group'>
   <DD>The maximum group size to select from the input group file(s).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = "<TT>)_.verbose</TT>"</A></B></DT>
+  <DT><B>verbose = "<TT>)_.verbose</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = ")_.verbose"'>
   <DD>Print messages about the progress of the task? Verbose may be set to the value
   of the daophot package parameter (the default), "<TT>yes</TT>", or "<TT>no</TT>".
@@ -69,7 +58,7 @@ grpselect — Select groups of a specified size from a daophot database
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   GRPSELECT creates a new GROUP file <I>outgroupfile</I> by selecting groups from
@@ -89,7 +78,7 @@ grpselect — Select groups of a specified size from a daophot database
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -112,17 +101,17 @@ grpselect — Select groups of a specified size from a daophot database
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   group
@@ -131,5 +120,3 @@ grpselect — Select groups of a specified size from a daophot database
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

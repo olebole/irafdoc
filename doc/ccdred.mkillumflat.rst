@@ -1,3 +1,5 @@
+.. _mkillumflat:
+
 mkillumflat — Make illumination corrected flat fields
 =====================================================
 
@@ -5,42 +7,29 @@ mkillumflat — Make illumination corrected flat fields
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>mkillumflat (Oct88)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.imred.ccdred</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>mkillumflat (Oct88)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>mkillumflat</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   mkillumflat -- Make illumination corrected flat fields
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   mkillumflat input output
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of input flat field images to be illumination corrected.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>List of output illumination corrected flat field images.
   If none is specified or if the name is the same as the
@@ -48,13 +37,13 @@ mkillumflat — Make illumination corrected flat fields
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ccdtype">ccdtype = "<TT>flat</TT>"</A></B></DT>
+  <DT><B>ccdtype = "<TT>flat</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ccdtype' Line='ccdtype = "flat"'>
   <DD>CCD image type to select from the input images.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xboxmin">xboxmin = 5, xboxmax = 0.25, yboxmin = 5, yboxmax = 0.25</A></B></DT>
+  <DT><B>xboxmin = 5, xboxmax = 0.25, yboxmin = 5, yboxmax = 0.25</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xboxmin' Line='xboxmin = 5, xboxmax = 0.25, yboxmin = 5, yboxmax = 0.25'>
   <DD>Minimum and maximum smoothing box size along the x and y axes.  The
   minimum box size is used at the edges and grows to the maximum size in
@@ -67,20 +56,20 @@ mkillumflat — Make illumination corrected flat fields
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_clip">clip = yes</A></B></DT>
+  <DT><B>clip = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='clip' Line='clip = yes'>
   <DD>Clean the input images of objects?  If yes then a clipping algorithm is
   used to detect and exclude objects from the smoothing.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lowsigma">lowsigma = 2.5, highsigma = 2.5</A></B></DT>
+  <DT><B>lowsigma = 2.5, highsigma = 2.5</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lowsigma' Line='lowsigma = 2.5, highsigma = 2.5'>
   <DD>Sigma clipping thresholds above and below the smoothed illumination.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_divbyzero">divbyzero = 1.</A></B></DT>
+  <DT><B>divbyzero = 1.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='divbyzero' Line='divbyzero = 1.'>
   <DD>The illumination flat field is the ratio of the flat field to a
   smoothed flat field.  This may produce division by zero.  A warning is
@@ -90,14 +79,14 @@ mkillumflat — Make illumination corrected flat fields
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ccdproc">ccdproc (parameter set)</A></B></DT>
+  <DT><B>ccdproc (parameter set)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ccdproc' Line='ccdproc (parameter set)'>
   <DD>CCD processing parameters.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   First, the input flat field images are processed as needed.  Then the
@@ -141,7 +130,7 @@ mkillumflat — Make illumination corrected flat fields
   process is used.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Two examples in which a new image is created and in which the
@@ -153,7 +142,7 @@ mkillumflat — Make illumination corrected flat fields
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   ccdproc, flatfields, mkfringecor, mkillumcor, mkskycor, mkskyflat
@@ -162,5 +151,3 @@ mkillumflat — Make illumination corrected flat fields
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

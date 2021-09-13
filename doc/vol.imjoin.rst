@@ -1,3 +1,5 @@
+.. _imjoin:
+
 imjoin — N-dimensional image join along arbitrary axis
 ======================================================
 
@@ -5,54 +7,41 @@ imjoin — N-dimensional image join along arbitrary axis
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>imjoin (Jan89)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>imjoin (Jan89)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>imjoin</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   imjoin -- join input images into output image along specified axis
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   imjoin input output 
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>Input images or @file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>Output joined image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_joindim">joindim = 1</A></B></DT>
+  <DT><B>joindim = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='joindim' Line='joindim = 1'>
   <DD>Image dimension along which the input images will be joined.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_outtype">outtype = "<TT></TT>"</A></B></DT>
+  <DT><B>outtype = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='outtype' Line='outtype = ""'>
   <DD>Output image datatype.  If not specified, defaults to highest precedence
   input image datatype.
@@ -61,7 +50,7 @@ imjoin — N-dimensional image join along arbitrary axis
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -84,7 +73,7 @@ imjoin — N-dimensional image join along arbitrary axis
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -101,7 +90,7 @@ imjoin — N-dimensional image join along arbitrary axis
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_timings">TIMINGS</A></H2>
+  <H3>Timings</H3>
   <! BeginSection: 'TIMINGS'>
   <UL>
   <P>
@@ -113,7 +102,7 @@ imjoin — N-dimensional image join along arbitrary axis
   <P>
   </UL>
   <! EndSection:   'TIMINGS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   <P>
@@ -122,7 +111,7 @@ imjoin — N-dimensional image join along arbitrary axis
   <P>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   immosaic, imstack, imslice
@@ -131,5 +120,3 @@ imjoin — N-dimensional image join along arbitrary axis
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIMINGS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

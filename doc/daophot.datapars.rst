@@ -1,3 +1,5 @@
+.. _datapars:
+
 datapars — Edit the image data dependent parameters
 ===================================================
 
@@ -5,36 +7,23 @@ datapars — Edit the image data dependent parameters
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>datapars (May00)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.daophot</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>datapars (May00)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>datapars</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   datapars -- edit the data dependent parameters
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   datapars
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_scale">scale = 1.0</A></B></DT>
+  <DT><B>scale = 1.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='scale' Line='scale = 1.0'>
   <DD>The scale of the image in user units, e.g. arcseconds per pixel.  All DAOPHOT
   distance dependent parameters are assumed to be in units of scale. If
@@ -44,7 +33,7 @@ datapars — Edit the image data dependent parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fwhmpsf">fwhmpsf = 2.5 (scale units)</A></B></DT>
+  <DT><B>fwhmpsf = 2.5 (scale units)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fwhmpsf' Line='fwhmpsf = 2.5 (scale units)'>
   <DD>The full-width half-maximum of the point spread function in scale units.
   The DAOFIND task and the PHOT task  "<TT>gauss</TT>" and "<TT>ofilter</TT>" centering algorithms
@@ -54,7 +43,7 @@ datapars — Edit the image data dependent parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_emission">emission = yes</A></B></DT>
+  <DT><B>emission = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='emission' Line='emission = yes'>
   <DD>The features to be measured are above sky. By default the DAOPHOT package
   considers all features to be emission features. DAOPHOT users should
@@ -62,7 +51,7 @@ datapars — Edit the image data dependent parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sigma">sigma = 0.0</A></B></DT>
+  <DT><B>sigma = 0.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sigma' Line='sigma = 0.0'>
   <DD>The standard deviation of the sky pixels.  The DAOFIND task and the PHOT task
   "<TT>constant</TT>" sky fitting algorithm error estimate depend on the value of sigma. 
@@ -71,7 +60,7 @@ datapars — Edit the image data dependent parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_datamin">datamin = INDEF</A></B></DT>
+  <DT><B>datamin = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='datamin' Line='datamin = INDEF'>
   <DD>The minimum good pixel value. Datamin defaults to -MAX_REAL the minimum
   floating point number supported by the host computer. Datamin is used
@@ -83,7 +72,7 @@ datapars — Edit the image data dependent parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_datamax">datamax = INDEF</A></B></DT>
+  <DT><B>datamax = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='datamax' Line='datamax = INDEF'>
   <DD>The maximum good pixel value. Datamax defaults to MAX_REAL the maximum
   floating point number supported by the host computer.  Datamax is used
@@ -95,28 +84,28 @@ datapars — Edit the image data dependent parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_noise">noise = "<TT>poisson</TT>"</A></B></DT>
+  <DT><B>noise = "<TT>poisson</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='noise' Line='noise = "poisson"'>
   <DD>The noise model used to estimate the uncertainties in the computed
   magnitudes. DAOPHOT users must leave noise set to "<TT>poisson</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ccdread">ccdread = "<TT></TT>"</A></B></DT>
+  <DT><B>ccdread = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ccdread' Line='ccdread = ""'>
   <DD>The image header keyword defining the readout noise parameter whose units
   are assumed to be electrons.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_gain">gain = "<TT></TT>"</A></B></DT>
+  <DT><B>gain = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='gain' Line='gain = ""'>
   <DD>The image header keyword defining the gain parameter whose units are assumed to
   be electrons per adu.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_readnoise">readnoise = 0.0</A></B></DT>
+  <DT><B>readnoise = 0.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='readnoise' Line='readnoise = 0.0'>
   <DD>The readout noise of the detector in electrons. DAOPHOT users should set
   readnoise or ccdread to its correct value before running any of the DAOPHOT
@@ -125,7 +114,7 @@ datapars — Edit the image data dependent parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_epadu">epadu = 1.0</A></B></DT>
+  <DT><B>epadu = 1.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='epadu' Line='epadu = 1.0'>
   <DD>The gain of the detector in electrons per adu. DAOPHOT users should set this
   epadu or gain to its correct value before running any of the DAOPHOT package
@@ -134,7 +123,7 @@ datapars — Edit the image data dependent parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_exposure">exposure = "<TT></TT>"</A></B></DT>
+  <DT><B>exposure = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='exposure' Line='exposure = ""'>
   <DD>The image header exposure time keyword. The time units are arbitrary but
   must be consistent for any list of images whose magnitudes are to be compared.
@@ -145,7 +134,7 @@ datapars — Edit the image data dependent parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_airmass">airmass = "<TT></TT>"</A></B></DT>
+  <DT><B>airmass = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='airmass' Line='airmass = ""'>
   <DD>The image header airmass keyword.  The airmass parameter is not used
   directly by DAOPHOT but the airmass value is stored in the output file
@@ -153,7 +142,7 @@ datapars — Edit the image data dependent parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_filter">filter = "<TT></TT>"</A></B></DT>
+  <DT><B>filter = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='filter' Line='filter = ""'>
   <DD>The image header filter id keyword.  The filter parameter is not used
   directly by DAOPHOT but the filter id is stored in the output file
@@ -161,7 +150,7 @@ datapars — Edit the image data dependent parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_obstime">obstime = "<TT></TT>"</A></B></DT>
+  <DT><B>obstime = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='obstime' Line='obstime = ""'>
   <DD>The image header time of observation keyword. The obstime parameter is not used
   directly by DAOPHOT but the obstime value is stored in the output file
@@ -169,7 +158,7 @@ datapars — Edit the image data dependent parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_itime">itime = 1.0</A></B></DT>
+  <DT><B>itime = 1.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='itime' Line='itime = 1.0'>
   <DD>The exposure time for the image in arbitrary units. The DAOPHOT magnitudes are
   normalized to 1 timeunit by the PHOT task using the value of exposure in the
@@ -177,7 +166,7 @@ datapars — Edit the image data dependent parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xairmass">xairmass = INDEF</A></B></DT>
+  <DT><B>xairmass = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xairmass' Line='xairmass = INDEF'>
   <DD>The airmass value.  The airmass is read from the image header if airmass
   is defined  or from xairmass. The airmass value is stored in the DAOPHOT
@@ -185,7 +174,7 @@ datapars — Edit the image data dependent parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ifilter">ifilter = "<TT>INDEF</TT>"</A></B></DT>
+  <DT><B>ifilter = "<TT>INDEF</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ifilter' Line='ifilter = "INDEF"'>
   <DD>The filter id string. The filter id is read from the image header if filter
   is defined otherwise from ifilter. The filter id is stored in the DAOPHOT
@@ -193,7 +182,7 @@ datapars — Edit the image data dependent parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_otime">otime = "<TT>INDEF</TT>"</A></B></DT>
+  <DT><B>otime = "<TT>INDEF</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='otime' Line='otime = "INDEF"'>
   <DD>The value of the time of observation. The time of observation is read from
   the image header if obstime is defined otherwise from otime. The time of
@@ -203,7 +192,7 @@ datapars — Edit the image data dependent parameters
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -326,7 +315,7 @@ datapars — Edit the image data dependent parameters
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -369,18 +358,18 @@ datapars — Edit the image data dependent parameters
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   <P>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   epar,lpar,daofind,phot,pstselect,psf,group,peak,nstar,allstar,substar,addstar
@@ -389,5 +378,3 @@ datapars — Edit the image data dependent parameters
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

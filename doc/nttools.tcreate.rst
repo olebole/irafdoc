@@ -1,3 +1,5 @@
+.. _tcreate:
+
 tcreate — Create a STSDAS table from an ASCII descriptor table.
 ===============================================================
 
@@ -5,32 +7,19 @@ tcreate — Create a STSDAS table from an ASCII descriptor table.
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>tcreate (Dec2003)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>tables</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>tcreate (Dec2003)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>tcreate</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   tcreate -- Create a table from ASCII files describing a table format.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   tcreate table cdfile datafile
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task reads an ASCII file containing column descriptions for a new table.
@@ -61,11 +50,11 @@ tcreate — Create a STSDAS table from an ASCII descriptor table.
   the execution continues, and the table entry is marked as undefined.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_table">table [file name]</A></B></DT>
+  <DT><B>table [file name]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='table' Line='table [file name]'>
   <DD>Output file name for the table created by this task.
   <P>
@@ -75,7 +64,7 @@ tcreate — Create a STSDAS table from an ASCII descriptor table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cdfile">cdfile = STDIN [file name]</A></B></DT>
+  <DT><B>cdfile = STDIN [file name]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cdfile' Line='cdfile = STDIN [file name]'>
   <DD>The name of the column definition file.
   <P>
@@ -145,7 +134,7 @@ tcreate — Create a STSDAS table from an ASCII descriptor table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_datafile">datafile = "<TT>STDIN</TT>" [file name]</A></B></DT>
+  <DT><B>datafile = "<TT>STDIN</TT>" [file name]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='datafile' Line='datafile = "STDIN" [file name]'>
   <DD>The name of the input ASCII data file.
   <P>
@@ -175,7 +164,7 @@ tcreate — Create a STSDAS table from an ASCII descriptor table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(uparfile) [file name]</A></B></DT>
+  <DT><B>(uparfile) [file name]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(uparfile) [file name]'>
   <DD>The name of the input ASCII file of header parameters.
   This file is optional.
@@ -206,7 +195,7 @@ tcreate — Create a STSDAS table from an ASCII descriptor table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(nskip = 0) [integer, min=0, max=INDEF]</A></B></DT>
+  <DT><B>(nskip = 0) [integer, min=0, max=INDEF]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(nskip = 0) [integer, min=0, max=INDEF]'>
   <DD>Number of lines to skip at the beginning of the data file.
   <P>
@@ -218,7 +207,7 @@ tcreate — Create a STSDAS table from an ASCII descriptor table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(nlines = 0) [integer, min=0, max=INDEF]</A></B></DT>
+  <DT><B>(nlines = 0) [integer, min=0, max=INDEF]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(nlines = 0) [integer, min=0, max=INDEF]'>
   <DD>The number of lines in the input data file
   corresponding to one row in the output table.
@@ -231,7 +220,7 @@ tcreate — Create a STSDAS table from an ASCII descriptor table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(nrows = 0) [integer, min=0, max=INDEF]</A></B></DT>
+  <DT><B>(nrows = 0) [integer, min=0, max=INDEF]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(nrows = 0) [integer, min=0, max=INDEF]'>
   <DD>The number of rows to write into the table.
   <P>
@@ -246,7 +235,7 @@ tcreate — Create a STSDAS table from an ASCII descriptor table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(hist = yes) [boolean]</A></B></DT>
+  <DT><B>(hist = yes) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(hist = yes) [boolean]'>
   <DD>Add a history record containing a creation date?
   <P>
@@ -256,7 +245,7 @@ tcreate — Create a STSDAS table from an ASCII descriptor table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(extrapar = 5) [integer, min=0, max=INDEF]</A></B></DT>
+  <DT><B>(extrapar = 5) [integer, min=0, max=INDEF]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(extrapar = 5) [integer, min=0, max=INDEF]'>
   <DD>Extra space to be reserved for header-parameter records.
   This is the number of records for header parameters that will be allocated,
@@ -270,7 +259,7 @@ tcreate — Create a STSDAS table from an ASCII descriptor table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(tbltype = "<TT>default</TT>") [string, allowed values:  default | row | </A></B></DT>
+  <DT><B>(tbltype = "<TT>default</TT>") [string, allowed values:  default | row | </B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(tbltype = "default") [string, allowed values:  default | row | '>
   <DD>column | text]
   Type of table to create.
@@ -283,7 +272,7 @@ tcreate — Create a STSDAS table from an ASCII descriptor table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(extracol = 0) [integer, min=0, max=INDEF]</A></B></DT>
+  <DT><B>(extracol = 0) [integer, min=0, max=INDEF]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(extracol = 0) [integer, min=0, max=INDEF]'>
   <DD>Extra space to be reserved for columns in the output table.
   This parameter is relevant only for a row-ordered stsdas format table.
@@ -299,7 +288,7 @@ tcreate — Create a STSDAS table from an ASCII descriptor table.
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  Wait for the user to type in column definitions and data,
@@ -431,18 +420,18 @@ tcreate — Create a STSDAS table from an ASCII descriptor table.
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   This task was written by Phil Hodge.
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   Type "<TT>help ttools opt=sysdoc</TT>" for a higher-level description of the 'ttools'
@@ -453,5 +442,3 @@ tcreate — Create a STSDAS table from an ASCII descriptor table.
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _ccdtime:
+
 ccdtime — Compute time, magnitude, and signal-to-noise for CCDs
 ===============================================================
 
@@ -5,36 +7,23 @@ ccdtime — Compute time, magnitude, and signal-to-noise for CCDs
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>ccdtime (Aug98)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.astutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>ccdtime (Aug98)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>ccdtime</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   ccdtime -- compute time, magnitude, and signal-to-noise for CCDs
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   ccdtime
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_time">time = INDEF</A></B></DT>
+  <DT><B>time = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='time' Line='time = INDEF'>
   <DD>Time in seconds for output of magnitude at the specified signal-to-noise and
   signal-to-noise at the specified magnitude.  This time applies to all
@@ -44,7 +33,7 @@ ccdtime — Compute time, magnitude, and signal-to-noise for CCDs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_magnitude">magnitude = 20.</A></B></DT>
+  <DT><B>magnitude = 20.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='magnitude' Line='magnitude = 20.'>
   <DD>Magnitude for output of time at the specified signal-to-noise and
   signal-to-noise at the specified time.  This magnitude applies to all
@@ -54,7 +43,7 @@ ccdtime — Compute time, magnitude, and signal-to-noise for CCDs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_snr">snr = 20.</A></B></DT>
+  <DT><B>snr = 20.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='snr' Line='snr = 20.'>
   <DD>Signal-to-noise ratio for output of time at the specified magnitude and
   magnitude at the specified time.  This signal-to-noise ratio applies to all
@@ -65,7 +54,7 @@ ccdtime — Compute time, magnitude, and signal-to-noise for CCDs
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_database">database = "<TT>ccdtime$kpno.dat</TT>"</A></B></DT>
+  <DT><B>database = "<TT>ccdtime$kpno.dat</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='database' Line='database = "ccdtime$kpno.dat"'>
   <DD>Database file for telescope, filter, and detector information.  The format
   of this file is described elsewhere.  This file is typically a standard
@@ -74,7 +63,7 @@ ccdtime — Compute time, magnitude, and signal-to-noise for CCDs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_telescope">telescope = "<TT>?</TT>"</A></B></DT>
+  <DT><B>telescope = "<TT>?</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='telescope' Line='telescope = "?"'>
   <DD>Telescope entry from the database.  If "<TT>?</TT>" a list of telescopes in the
   database is produced.  The name must match the entry name in the database
@@ -83,7 +72,7 @@ ccdtime — Compute time, magnitude, and signal-to-noise for CCDs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_detector">detector = "<TT></TT>"</A></B></DT>
+  <DT><B>detector = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='detector' Line='detector = ""'>
   <DD>Detector entry from the database.  If "<TT>?</TT>" a list of detectors in the
   database is produced.  The name must match the entry name in the database
@@ -91,13 +80,13 @@ ccdtime — Compute time, magnitude, and signal-to-noise for CCDs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sum">sum = 1</A></B></DT>
+  <DT><B>sum = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sum' Line='sum = 1'>
   <DD>CCD on-chip summing or binning factor.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_seeing">seeing = 1.5</A></B></DT>
+  <DT><B>seeing = 1.5</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='seeing' Line='seeing = 1.5'>
   <DD>Expected seeing (FWHM) in arc seconds.  The number of pixels used for computing
   the total star counts and the signal-to-noise is given by 1.4 times the square
@@ -105,13 +94,13 @@ ccdtime — Compute time, magnitude, and signal-to-noise for CCDs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_airmass">airmass = 1.2</A></B></DT>
+  <DT><B>airmass = 1.2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='airmass' Line='airmass = 1.2'>
   <DD>Airmass for observation.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_phase">phase = 0.</A></B></DT>
+  <DT><B>phase = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='phase' Line='phase = 0.'>
   <DD>Moon phase in days (0-28) for the estimation of sky brightness.  A
   phase of zero is new moon or dark sky conditions and a phase of 14
@@ -120,7 +109,7 @@ ccdtime — Compute time, magnitude, and signal-to-noise for CCDs
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_f1">f1 = "<TT>U</TT>", f2 = "<TT>B</TT>", f3 = "<TT>V</TT>", f4 = "<TT>R</TT>", f5 = "<TT>I</TT>"</A></B></DT>
+  <DT><B>f1 = "<TT>U</TT>", f2 = "<TT>B</TT>", f3 = "<TT>V</TT>", f4 = "<TT>R</TT>", f5 = "<TT>I</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='f1' Line='f1 = "U", f2 = "B", f3 = "V", f4 = "R", f5 = "I"'>
   <DD>Filters for which to compute the CCD information.  If given as "<TT>?</TT>"
   a list of filters in the database is produced.  If the name (ignoring
@@ -132,7 +121,7 @@ ccdtime — Compute time, magnitude, and signal-to-noise for CCDs
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   A telescope, CCD detector, and list of filters is selected from a database
@@ -303,7 +292,7 @@ ccdtime — Compute time, magnitude, and signal-to-noise for CCDs
   </PRE>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  To get a list of the telescopes, filters, and detectors in a database:
@@ -398,11 +387,11 @@ ccdtime — Compute time, magnitude, and signal-to-noise for CCDs
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_CCDTIME">CCDTIME V2.11.4</A></B></DT>
+  <DT><B>CCDTIME V2.11.4</B></DT>
   <! Sec='REVISIONS' Level=0 Label='CCDTIME' Line='CCDTIME V2.11.4'>
   <DD>A error will be reported if the requested time or SNR is not greater
   than zero and less than 100000., or if the absolute value
@@ -410,7 +399,7 @@ ccdtime — Compute time, magnitude, and signal-to-noise for CCDs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_CCDTIME">CCDTIME V2.11.2</A></B></DT>
+  <DT><B>CCDTIME V2.11.2</B></DT>
   <! Sec='REVISIONS' Level=0 Label='CCDTIME' Line='CCDTIME V2.11.2'>
   <DD>The incorrect usage of a 1 mag/airmass extinction was fixed by adding an
   expected "<TT>extinction</TT>" entry in the filter entries.  Note that old files
@@ -425,7 +414,7 @@ ccdtime — Compute time, magnitude, and signal-to-noise for CCDs
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   </UL>
@@ -433,5 +422,3 @@ ccdtime — Compute time, magnitude, and signal-to-noise for CCDs
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

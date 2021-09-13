@@ -1,3 +1,5 @@
+.. _asthedit:
+
 asthedit — Astronomical header editor
 =====================================
 
@@ -5,36 +7,23 @@ asthedit — Astronomical header editor
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>asthedit (Jan96)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>astutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>asthedit (Jan96)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>asthedit</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   asthedit -- astronomical header editor
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   asthedit images commands
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>List of images to be used.  The image header keywords are used in this task
   as variables which are read, modified, created, or deleted.  If the images
@@ -44,7 +33,7 @@ asthedit — Astronomical header editor
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_commands">commands</A></B></DT>
+  <DT><B>commands</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='commands' Line='commands'>
   <DD>A file of commands using the simple syntax given in the DESCRIPTION.  If no
   file name is given then the commands are read interactively from the
@@ -56,7 +45,7 @@ asthedit — Astronomical header editor
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_table">table = "<TT></TT>"</A></B></DT>
+  <DT><B>table = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='table' Line='table = ""'>
   <DD>Optional text file containing columns of values.  The table consists of
   one or more lines of whitespace separated columns of values.  Note that a
@@ -66,7 +55,7 @@ asthedit — Astronomical header editor
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_colnames">colnames = "<TT></TT>"</A></B></DT>
+  <DT><B>colnames = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='colnames' Line='colnames = ""'>
   <DD>List of whitespace separated column names.  These are the names referenced
   in the command file by $&lt;name&gt;.  The leading <TT>'$'</TT> is not included in the
@@ -76,7 +65,7 @@ asthedit — Astronomical header editor
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_prompt">prompt = "<TT>asthedit&gt; </TT>"</A></B></DT>
+  <DT><B>prompt = "<TT>asthedit&gt; </TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='prompt' Line='prompt = "asthedit&gt; "'>
   <DD>When no command file is specified the input commands are read from the
   standard input (the terminal) and the value of the <I>prompt</I> string is
@@ -86,7 +75,7 @@ asthedit — Astronomical header editor
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_update">update = yes</A></B></DT>
+  <DT><B>update = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='update' Line='update = yes'>
   <DD>Update the image headers?  If no then any new, modified, or deleted
   keywords will not be recorded in the image headers.  This allows using the
@@ -95,13 +84,13 @@ asthedit — Astronomical header editor
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = no</A></B></DT>
+  <DT><B>verbose = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
   <DD>Print each keyword added or modified?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_oldstyle">oldstyle = no</A></B></DT>
+  <DT><B>oldstyle = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='oldstyle' Line='oldstyle = no'>
   <DD>Use the old style syntax of this task from versions prior to V2.11.  This
   parameter allows backward compatibility for command files previously
@@ -110,7 +99,7 @@ asthedit — Astronomical header editor
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <B>Asthedit</B> evaluates expressions using image header keywords, column
@@ -377,7 +366,7 @@ asthedit — Astronomical header editor
   </PRE>
   <P>
   <DL>
-  <DT><B><A NAME="l_sexstr">sexstr (number), sexstr (number, digits)</A></B></DT>
+  <DT><B>sexstr (number), sexstr (number, digits)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='sexstr' Line='sexstr (number), sexstr (number, digits)'>
   <DD>Convert a number to a sexagesimal string in the format X:MM:SS.SS.  There
   is an optional second argument (the default is 0) which is the number of
@@ -385,7 +374,7 @@ asthedit — Astronomical header editor
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_epoch">epoch (date[, ut])</A></B></DT>
+  <DT><B>epoch (date[, ut])</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='epoch' Line='epoch (date[, ut])'>
   <DD>Compute an epoch given a date and time.  The date is a string in the
   format DD/MM/YY, YYYY-MM-DD, or YYYY-MM-DDTHH:MM:SS.
@@ -397,14 +386,14 @@ asthedit — Astronomical header editor
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_julday">julday (date[, ut])</A></B></DT>
+  <DT><B>julday (date[, ut])</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='julday' Line='julday (date[, ut])'>
   <DD>Compute a Julian day given a date and time.  The date and time are
   specified as described previously.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_mst">mst (date[, ut], longitude)</A></B></DT>
+  <DT><B>mst (date[, ut], longitude)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='mst' Line='mst (date[, ut], longitude)'>
   <DD>Compute a mean sidereal time given a date, time, and longitude in degrees.  The
   date and (optional) time are specified as described previously.  The longitude
@@ -414,7 +403,7 @@ asthedit — Astronomical header editor
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_precess">precess (ra, dec, epoch1, epoch2)</A></B></DT>
+  <DT><B>precess (ra, dec, epoch1, epoch2)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='precess' Line='precess (ra, dec, epoch1, epoch2)'>
   <DD>Precess coordinates from one epoch to another.  The ra is the
   right ascension in hours, the dec in the declination in degrees,
@@ -425,7 +414,7 @@ asthedit — Astronomical header editor
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ra_precess">ra_precess (ra, dec, epoch1, epoch2)</A></B></DT>
+  <DT><B>ra_precess (ra, dec, epoch1, epoch2)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='ra_precess' Line='ra_precess (ra, dec, epoch1, epoch2)'>
   <DD>Precess a right ascension from one epoch to another.  The ra is the
   input right ascension in hours, the dec is the declination in degrees,
@@ -435,7 +424,7 @@ asthedit — Astronomical header editor
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dec_precess">dec_precess (ra1, dec1, epoch1, epoch2)</A></B></DT>
+  <DT><B>dec_precess (ra1, dec1, epoch1, epoch2)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='dec_precess' Line='dec_precess (ra1, dec1, epoch1, epoch2)'>
   <DD>Precess a declination from one epoch to another.  The ra is the
   input right ascension in hours, the dec is the declination in degrees,
@@ -445,7 +434,7 @@ asthedit — Astronomical header editor
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_arcsep">arcsep (ra1, dec1, ra2, dec2)</A></B></DT>
+  <DT><B>arcsep (ra1, dec1, ra2, dec2)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='arcsep' Line='arcsep (ra1, dec1, ra2, dec2)'>
   <DD>Compute the separation between two spherical coordinates.  The parameters
   ra1 and ra2 are coordinates in hours (right ascension, longitude, etc.)
@@ -454,7 +443,7 @@ asthedit — Astronomical header editor
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_airmass">airmass (ra, dec, st, latitude)</A></B></DT>
+  <DT><B>airmass (ra, dec, st, latitude)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='airmass' Line='airmass (ra, dec, st, latitude)'>
   <DD>Compute an airmass given right ascension in hours, declination in
   degrees, sidereal time in hours, and latitude in degrees.  The latitude
@@ -463,7 +452,7 @@ asthedit — Astronomical header editor
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_eairmass">eairmass (ra, dec, st, exptime, latitude)</A></B></DT>
+  <DT><B>eairmass (ra, dec, st, exptime, latitude)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='eairmass' Line='eairmass (ra, dec, st, exptime, latitude)'>
   <DD>Compute an "<TT>effective</TT>" airmass given right ascension in hours, declination
   in degrees, beginning sidereal time in hours, exposure time in seconds, and
@@ -479,7 +468,7 @@ asthedit — Astronomical header editor
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_obsdb">obsdb (observatory, parameter)</A></B></DT>
+  <DT><B>obsdb (observatory, parameter)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='obsdb' Line='obsdb (observatory, parameter)'>
   <DD>Return a value from the observatory database.  The observatory parameter is
   a observatory identification string as defined in the database.  Often this
@@ -516,7 +505,7 @@ asthedit — Astronomical header editor
   </PRE>
   <P>
   <DL>
-  <DT><B><A NAME="l_print">print ([argument, ...])</A></B></DT>
+  <DT><B>print ([argument, ...])</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='print' Line='print ([argument, ...])'>
   <DD>Print the arguments with default formats based on the type of value ending
   with a newline.  There may be zero or more arguments.  With zero arguments
@@ -524,7 +513,7 @@ asthedit — Astronomical header editor
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_printf">printf (fmt [, argument, ...])</A></B></DT>
+  <DT><B>printf (fmt [, argument, ...])</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='printf' Line='printf (fmt [, argument, ...])'>
   <DD>Print a list of arguments using the formatting syntax described later.
   Parameters to be formatted are given by the % fields and the values are
@@ -534,7 +523,7 @@ asthedit — Astronomical header editor
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_error">error (message)</A></B></DT>
+  <DT><B>error (message)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='error' Line='error (message)'>
   <DD>Print the "<TT>message</TT>", which can be any string variable such as might
   be produced by "<TT>format</TT>", and abort the task.  This is useful in
@@ -543,14 +532,14 @@ asthedit — Astronomical header editor
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_clget">clget (parameter)</A></B></DT>
+  <DT><B>clget (parameter)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='clget' Line='clget (parameter)'>
   <DD>Get the value of a CL parameter.  The argument must be a string.  The
   function value is the value of the parameter.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_clput">clput (parameter, value)</A></B></DT>
+  <DT><B>clput (parameter, value)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='clput' Line='clput (parameter, value)'>
   <DD>Put a value into a CL parameter.  The parameter argument must be a
   string and the value can be anything.  The function returns a string
@@ -559,7 +548,7 @@ asthedit — Astronomical header editor
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_scan">scan (string, var, ...)</A></B></DT>
+  <DT><B>scan (string, var, ...)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='scan' Line='scan (string, var, ...)'>
   <DD>Parse a string of whitespace separated words into a list of
   keywords or variables.  The number of variables assigned is
@@ -567,7 +556,7 @@ asthedit — Astronomical header editor
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fscan">fscan (var, ...)</A></B></DT>
+  <DT><B>fscan (var, ...)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='fscan' Line='fscan (var, ...)'>
   <DD>Scan a line of a text file into a list of keywords or variables.  The arguments
   are zero or more variable names to which to assign the values of
@@ -576,14 +565,14 @@ asthedit — Astronomical header editor
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_imget">imget (parameter)</A></B></DT>
+  <DT><B>imget (parameter)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='imget' Line='imget (parameter)'>
   <DD>Get the value of an image header keyword from the current image.  The
   argument must be a string.  The function value is the value of the keyword.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_imput">imput (parameter, value)</A></B></DT>
+  <DT><B>imput (parameter, value)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='imput' Line='imput (parameter, value)'>
   <DD>Put a value into an image header keyword for the current image.  The
   parameter argument must be a string and the value can be anything.  If the
@@ -594,7 +583,7 @@ asthedit — Astronomical header editor
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_imdel">imdel (parameter)</A></B></DT>
+  <DT><B>imdel (parameter)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='imdel' Line='imdel (parameter)'>
   <DD>Delete an image header keyword.  The parameter argument must be a string.
   The returned values are the strings "<TT>imdel: parameter not found</TT>"
@@ -605,7 +594,7 @@ asthedit — Astronomical header editor
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_formats">FORMATS</A></H2>
+  <H3>Formats</H3>
   <! BeginSection: 'FORMATS'>
   <UL>
   A  format  specification has the form "<TT>%w.dCn</TT>", where w is the field
@@ -685,7 +674,7 @@ asthedit — Astronomical header editor
   <P>
   </UL>
   <! EndSection:   'FORMATS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  The following command file exercises the astronomical functions:
@@ -883,11 +872,11 @@ asthedit — Astronomical header editor
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_ASTHEDIT">ASTHEDIT V2.11.2</A></B></DT>
+  <DT><B>ASTHEDIT V2.11.2</B></DT>
   <! Sec='REVISIONS' Level=0 Label='ASTHEDIT' Line='ASTHEDIT V2.11.2'>
   <DD>Y2K update:  The epoch, julday, and mst functions now take either the old
   or new FITS style date strings.  The time argument is optional and if
@@ -897,7 +886,7 @@ asthedit — Astronomical header editor
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ASTHEDIT">ASTHEDIT V2.11</A></B></DT>
+  <DT><B>ASTHEDIT V2.11</B></DT>
   <! Sec='REVISIONS' Level=0 Label='ASTHEDIT' Line='ASTHEDIT V2.11'>
   <DD>There are new astronomical functions and input/output functions.
   <P>
@@ -915,7 +904,7 @@ asthedit — Astronomical header editor
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   astcalc, hedit, hfix, mkheader, setairmass, setjd, asttimes, precess,
@@ -925,5 +914,3 @@ asthedit — Astronomical header editor
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'FORMATS' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

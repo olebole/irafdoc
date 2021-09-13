@@ -1,3 +1,5 @@
+.. _phelp:
+
 phelp — Paged HELP: collects and pages the output of HELP
 =========================================================
 
@@ -5,39 +7,26 @@ phelp — Paged HELP: collects and pages the output of HELP
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>phelp (Mar90)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>system</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>phelp (Mar90)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>phelp</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   phelp -- page the output of the HELP task
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   phelp template
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   The <I>phelp</I> parameters are the same as for <I>help</I> except that
   the <I>page</I> and <I>nlpp</I> parameters are omitted.
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The <I>phelp</I> task is a front end to <I>help</I> which spools the output
@@ -51,7 +40,7 @@ phelp — Paged HELP: collects and pages the output of HELP
   all at once.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Page the help page for the <I>mkpkg</I> task.
@@ -81,7 +70,7 @@ phelp — Paged HELP: collects and pages the output of HELP
   Any .hlp file may be viewed in this way.
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   <I>phelp</I> is not quite as fast as <I>help</I> since it must fully format
@@ -90,12 +79,12 @@ phelp — Paged HELP: collects and pages the output of HELP
   the <I>help</I> task will be faster.
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   page, help, references
@@ -104,5 +93,3 @@ phelp — Paged HELP: collects and pages the output of HELP
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

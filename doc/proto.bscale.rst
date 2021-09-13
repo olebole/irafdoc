@@ -1,3 +1,5 @@
+.. _bscale:
+
 bscale — Linearly transform the intensities of a list of images
 ===============================================================
 
@@ -5,63 +7,50 @@ bscale — Linearly transform the intensities of a list of images
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>bscale (Aug91)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>proto</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>bscale (Aug91)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>bscale</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   bscale -- linearly transform the intensity scales of a list of images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage_">USAGE	</A></H2>
+  <H3>Usage	</H3>
   <! BeginSection: 'USAGE	'>
   <UL>
   bscale input output 
   </UL>
   <! EndSection:   'USAGE	'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input </A></B></DT>
+  <DT><B>input </B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input '>
   <DD>List of images to be transformed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>List of output transformed images. If the output list is the same as the input
   list the input images are overwritten.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_bzero">bzero = "<TT>0.</TT>"</A></B></DT>
+  <DT><B>bzero = "<TT>0.</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='bzero' Line='bzero = "0."'>
   <DD>The zero point to be subtracted before applying the scale factor.
   The options are a numerical value, "<TT>mean</TT>", "<TT>median</TT>", or "<TT>mode</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_bscale">bscale = "<TT>1.</TT>"</A></B></DT>
+  <DT><B>bscale = "<TT>1.</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='bscale' Line='bscale = "1."'>
   <DD>The scale factor to be applied.  The options are a numerical value,
   "<TT>mean</TT>", "<TT>median</TT>", or "<TT>mode</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_section">section = "<TT></TT>"</A></B></DT>
+  <DT><B>section = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='section' Line='section = ""'>
   <DD>The image section to be used for computing the image statistics.  If section
   is "<TT></TT>", <I>step</I> is used to define the default image section. <I>Section</I>
@@ -70,7 +59,7 @@ bscale — Linearly transform the intensities of a list of images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_step">step = 10</A></B></DT>
+  <DT><B>step = 10</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='step' Line='step = 10'>
   <DD>The step size in pixels which defines the default image section to be used
   for computing the mean, median, and mode.
@@ -82,19 +71,19 @@ bscale — Linearly transform the intensities of a list of images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_upper">upper = "<TT>INDEF</TT>"</A></B></DT>
+  <DT><B>upper = "<TT>INDEF</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='upper' Line='upper = "INDEF"'>
   <DD>Upper intensity limit to be used for computing the mean, median, and mode.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lower">lower = "<TT>INDEF</TT>"</A></B></DT>
+  <DT><B>lower = "<TT>INDEF</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lower' Line='lower = "INDEF"'>
   <DD>Lower intensity limit to be used for computing the mean, median, and mode.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print messages about actions taken by the task?
   </DD>
@@ -102,7 +91,7 @@ bscale — Linearly transform the intensities of a list of images
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -156,7 +145,7 @@ bscale — Linearly transform the intensities of a list of images
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -206,7 +195,7 @@ bscale — Linearly transform the intensities of a list of images
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imarith,imcombine
@@ -215,5 +204,3 @@ bscale — Linearly transform the intensities of a list of images
   
   <! Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

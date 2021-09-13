@@ -1,3 +1,5 @@
+.. _imarith:
+
 imarith — Simple image arithmetic
 =================================
 
@@ -5,82 +7,69 @@ imarith — Simple image arithmetic
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>imarith (Sep86)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>imarith (Sep86)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>imarith</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   imarith -- binary image arithmetic
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage_">USAGE	</A></H2>
+  <H3>Usage	</H3>
   <! BeginSection: 'USAGE	'>
   <UL>
   imarith operand1 op operand2 result
   </UL>
   <! EndSection:   'USAGE	'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_operand1">operand1, operand2</A></B></DT>
+  <DT><B>operand1, operand2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='operand1' Line='operand1, operand2'>
   <DD>Lists of images and constants to be used as operands.
   Image templates and image sections are allowed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_op">op    </A></B></DT>
+  <DT><B>op    </B></DT>
   <! Sec='PARAMETERS' Level=0 Label='op' Line='op    '>
   <DD>Operator to be applied to the operands.  The allowed operators
   are "<TT>+</TT>", "<TT>-</TT>", "<TT>*</TT>", "/"<TT>, </TT>"min"<TT>, and </TT>"max"<TT>.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_result">result</A></B></DT>
+  <DT><B>result</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='result' Line='result'>
   <DD>List of resultant images.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_title">title = </TT>""<TT></A></B></DT>
+  <DT><B>title = </TT>""<TT></B></DT>
   <! Sec='PARAMETERS' Level=0 Label='title' Line='title = ""'>
   <DD>Title for the resultant images.  If null (</TT>""<TT>) then the title is taken
   from operand1 if operand1 is an image or from operand2 otherwise.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_divzero">divzero = 0.</A></B></DT>
+  <DT><B>divzero = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='divzero' Line='divzero = 0.'>
   <DD>Replacement value for division by zero.  When the denominator is zero
   or nearly zero the result is replaced by this value.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_hparams">hparams = </TT>""<TT></A></B></DT>
+  <DT><B>hparams = </TT>""<TT></B></DT>
   <! Sec='PARAMETERS' Level=0 Label='hparams' Line='hparams = ""'>
   <DD>List of header parameters to be operated upon.  This is primarily
   used for adding exposure times when adding images.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pixtype">pixtype = </TT>""<TT>, calctype = </TT>""<TT></A></B></DT>
+  <DT><B>pixtype = </TT>""<TT>, calctype = </TT>""<TT></B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pixtype' Line='pixtype = "", calctype = ""'>
   <DD>Pixel datatype for the resultant image and the internal calculation datatype.
   The choices are given below.  They may be abbreviated to one character.
   <DL>
-  <DT><B><A NAME="l_"></TT>""<TT>    </A></B></DT>
+  <DT><B></TT>""<TT>    </B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='""    '>
   <DD><I>Calctype</I> defaults to the highest precedence operand datatype.  If the
   highest precedence datatype is an integer type and the operation is
@@ -92,13 +81,13 @@ imarith — Simple image arithmetic
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">"<TT>1</TT>", "<TT>2</TT>"</A></B></DT>
+  <DT><B>"<TT>1</TT>", "<TT>2</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"1", "2"'>
   <DD>The pixel datatype of the first or second operand.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">"<TT>short</TT>", "<TT>ushort</TT>", "<TT>integer</TT>", "<TT>long</TT>", "<TT>real</TT>", "<TT>double</TT>"</A></B></DT>
+  <DT><B>"<TT>short</TT>", "<TT>ushort</TT>", "<TT>integer</TT>", "<TT>long</TT>", "<TT>real</TT>", "<TT>double</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"short", "ushort", "integer", "long", "real", "double"'>
   <DD>Allowed IRAF pixel datatypes.
   </DD>
@@ -106,21 +95,21 @@ imarith — Simple image arithmetic
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = no</A></B></DT>
+  <DT><B>verbose = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
   <DD>Print the operator, operands, calculation datatype, and the resultant image
   name, title, and pixel datatype.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_noact">noact = no</A></B></DT>
+  <DT><B>noact = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='noact' Line='noact = no'>
   <DD>Like the verbose option but the operations are not actually performed.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Binary image arithmetic is performed of the form:
@@ -192,7 +181,7 @@ imarith — Simple image arithmetic
   name and pixel datatype, and the calculation datatype.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. To add two images and the exposure times:
@@ -282,7 +271,7 @@ imarith — Simple image arithmetic
   of a two dimensional image.
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   blkrep, imdivide, imfunction, imstack, imtranspose
@@ -291,5 +280,3 @@ imarith — Simple image arithmetic
   
   <! Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

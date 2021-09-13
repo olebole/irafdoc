@@ -1,3 +1,5 @@
+.. _mkimsets:
+
 mkimsets — Prepare an image set file for input to (mk)(n)obsfile
 ================================================================
 
@@ -5,37 +7,24 @@ mkimsets — Prepare an image set file for input to (mk)(n)obsfile
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>mkimsets (Apr94)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.photcal</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>mkimsets (Apr94)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>mkimsets</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   mkimsets -- create an image set file from the observations for input
   to MKNOBSFILE OR OBSFILE
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   mkimsets imlist idfilters imsets 
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_imlist">imlist</A></B></DT>
+  <DT><B>imlist</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='imlist' Line='imlist'>
   <DD>The file(s) containing all the image names and filter ids associated with
   the observations.
@@ -46,7 +35,7 @@ mkimsets — Prepare an image set file for input to (mk)(n)obsfile
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_idfilters">idfilters</A></B></DT>
+  <DT><B>idfilters</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='idfilters' Line='idfilters'>
   <DD>The ids of the filters, separated by whitespace or
   commas, which define a complete observation.
@@ -56,7 +45,7 @@ mkimsets — Prepare an image set file for input to (mk)(n)obsfile
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_imsets">imsets</A></B></DT>
+  <DT><B>imsets</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='imsets' Line='imsets'>
   <DD>The name of the output image set file which lists each observation of
   each star field, assigns a name
@@ -65,7 +54,7 @@ mkimsets — Prepare an image set file for input to (mk)(n)obsfile
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_imobsparams">imobsparams = "<TT></TT>"</A></B></DT>
+  <DT><B>imobsparams = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='imobsparams' Line='imobsparams = ""'>
   <DD>The name of the output image list file containing the image name,
   the filter id,
@@ -77,12 +66,12 @@ mkimsets — Prepare an image set file for input to (mk)(n)obsfile
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_input">input = photfiles</A></B></DT>
+  <DT><B>input = photfiles</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input = photfiles'>
   <DD>The source of the information used to create the image set file.
   The options are:
   <DL>
-  <DT><B><A NAME="l_photfiles">photfiles</A></B></DT>
+  <DT><B>photfiles</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='photfiles' Line='photfiles'>
   <DD>Extract the image list from the APPHOT/DAOPHOT 
   databases containing
@@ -93,7 +82,7 @@ mkimsets — Prepare an image set file for input to (mk)(n)obsfile
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='images' Line='images'>
   <DD>Extract the image list from the headers of the images containing
   the objects measured
@@ -104,7 +93,7 @@ mkimsets — Prepare an image set file for input to (mk)(n)obsfile
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_user">user</A></B></DT>
+  <DT><B>user</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='user' Line='user'>
   <DD>Extract the image list from a user created file which has the
   image name in the first column, the filter id in the column
@@ -115,7 +104,7 @@ mkimsets — Prepare an image set file for input to (mk)(n)obsfile
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_filter">filter</A></B></DT>
+  <DT><B>filter</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='filter' Line='filter'>
   <DD>The filter id keyword.
   <I>Filter</I> is always the APPHOT/DAOPHOT database keyword "<TT>IFILTER</TT>"
@@ -126,7 +115,7 @@ mkimsets — Prepare an image set file for input to (mk)(n)obsfile
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fields">fields = "<TT></TT>"</A></B></DT>
+  <DT><B>fields = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fields' Line='fields = ""'>
   <DD>The list of additional fields, besides the image name and filter id,
   to be extracted from <I>imlist</I>, separated by whitespace or commas.
@@ -141,7 +130,7 @@ mkimsets — Prepare an image set file for input to (mk)(n)obsfile
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sort">sort = "<TT></TT>"</A></B></DT>
+  <DT><B>sort = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sort' Line='sort = ""'>
   <DD>Sort the extracted image list in order of the value of the quantity <I>sort</I>.
   <I>Sort</I> must be one of the fields
@@ -153,7 +142,7 @@ mkimsets — Prepare an image set file for input to (mk)(n)obsfile
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_edit">edit = yes</A></B></DT>
+  <DT><B>edit = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='edit' Line='edit = yes'>
   <DD>Edit the extracted image name list interactively, checking that the images
   belonging to a single observation are adjacent to one another in the list,
@@ -165,7 +154,7 @@ mkimsets — Prepare an image set file for input to (mk)(n)obsfile
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rename">rename = yes</A></B></DT>
+  <DT><B>rename = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rename' Line='rename = yes'>
   <DD>Enter new names for each observation of each field interactively.
   If <I>rename</I> is "<TT>no</TT>", default names
@@ -177,7 +166,7 @@ mkimsets — Prepare an image set file for input to (mk)(n)obsfile
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_review">review = yes</A></B></DT>
+  <DT><B>review = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='review' Line='review = yes'>
   <DD>Review and edit <I>imsets</I> to check that the image set names are correct
   and that the images names have been properly grouped into sets.
@@ -185,7 +174,7 @@ mkimsets — Prepare an image set file for input to (mk)(n)obsfile
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   MKIMSETS is a script task which takes as input a list of
@@ -264,7 +253,7 @@ mkimsets — Prepare an image set file for input to (mk)(n)obsfile
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -422,17 +411,17 @@ mkimsets — Prepare an image set file for input to (mk)(n)obsfile
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   images.hselect,ptools.dump,mknobsfile,mkobsfile
@@ -441,5 +430,3 @@ mkimsets — Prepare an image set file for input to (mk)(n)obsfile
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

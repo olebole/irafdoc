@@ -1,3 +1,5 @@
+.. _afiltcat:
+
 afiltcat — Filter astrometry files derived from astrometric catalogs
 ====================================================================
 
@@ -5,36 +7,23 @@ afiltcat — Filter astrometry files derived from astrometric catalogs
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>afiltcat (Mar00)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>astcat</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>afiltcat (Mar00)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>afiltcat</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   afiltcat -- filter astrometry files
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   afiltcat input output
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The list of input astrometry files. Astrometry files may be created by
   other astcat tasks, e.g. agetcat, in which case they are preceded by a
@@ -44,7 +33,7 @@ afiltcat — Filter astrometry files derived from astrometric catalogs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output </A></B></DT>
+  <DT><B>output </B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output '>
   <DD>The list of output astrometry files. The number of output astrometry files
   must be equal to the number of input astrometry files. If the output file
@@ -53,7 +42,7 @@ afiltcat — Filter astrometry files derived from astrometric catalogs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_acatpars">acatpars = "<TT></TT>"</A></B></DT>
+  <DT><B>acatpars = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='acatpars' Line='acatpars = ""'>
   <DD>The default input astrometry file format parameters. The acatpars parameters
   are used only if the input astrometry file does not have a header. Type
@@ -61,14 +50,14 @@ afiltcat — Filter astrometry files derived from astrometric catalogs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_catalogs">catalogs = "<TT>filename@noao</TT>"</A></B></DT>
+  <DT><B>catalogs = "<TT>filename@noao</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='catalogs' Line='catalogs = "filename@noao"'>
   <DD>The dummy input catalog name. Afiltcat task users should leave this
   parameter at its default setting.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_standard">standard = yes</A></B></DT>
+  <DT><B>standard = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='standard' Line='standard = yes'>
   <DD>Output a standard astrometry file ? If standard = yes then a header describing
   the format of the output astrometry file is written to the output file.
@@ -78,14 +67,14 @@ afiltcat — Filter astrometry files derived from astrometric catalogs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_filter">filter = yes</A></B></DT>
+  <DT><B>filter = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='filter' Line='filter = yes'>
   <DD>Filter rather than copy the input astrometry file to the output astrometry
   file ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_afiltpars">afiltpars = "<TT></TT>"</A></B></DT>
+  <DT><B>afiltpars = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='afiltpars' Line='afiltpars = ""'>
   <DD>The astrometry file filtering parameter set. Afiltpars parameters permit the
   user to sort the output on a field or field expression, select or reject
@@ -95,20 +84,20 @@ afiltcat — Filter astrometry files derived from astrometric catalogs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_update">update = no</A></B></DT>
+  <DT><B>update = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='update' Line='update = no'>
   <DD>Update the default values of the algorithm parameter sets, e.g. acatpars and
   afiltpars, on task termination ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print status messages on the terminal as the task proceeds ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_catdb">catdb = "<TT>)_.catdb</TT>"</A></B></DT>
+  <DT><B>catdb = "<TT>)_.catdb</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='catdb' Line='catdb = ")_.catdb"'>
   <DD>The catalog configuration file. Catdb defaults to the value of the
   package parameters catdb. The default catalog configuration file is
@@ -118,7 +107,7 @@ afiltcat — Filter astrometry files derived from astrometric catalogs
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -168,7 +157,7 @@ afiltcat — Filter astrometry files derived from astrometric catalogs
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -219,17 +208,17 @@ afiltcat — Filter astrometry files derived from astrometric catalogs
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   aclist, agetcat, acatpars, afiltpars
@@ -238,5 +227,3 @@ afiltcat — Filter astrometry files derived from astrometric catalogs
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

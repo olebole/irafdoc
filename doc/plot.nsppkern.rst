@@ -1,3 +1,5 @@
+.. _nsppkern:
+
 nsppkern — Plot metacode on a NSPP (NCAR) plotter device
 ========================================================
 
@@ -5,75 +7,62 @@ nsppkern — Plot metacode on a NSPP (NCAR) plotter device
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>nsppkern (Apr89)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>plot</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>nsppkern (Apr89)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>nsppkern</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   nsppkern -- draw metacode on an NSPP interfaced plotter device
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   nsppkern input
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The list of input metacode files.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_device">device = "<TT>nsppdefault</TT>"</A></B></DT>
+  <DT><B>device = "<TT>nsppdefault</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='device' Line='device = "nsppdefault"'>
   <DD>The NSPP interfaced plotting device output is to be directed to.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_generic">generic = no</A></B></DT>
+  <DT><B>generic = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='generic' Line='generic = no'>
   <DD>The remaining parameters are ignored when <B>generic</B> = yes.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_debug">debug = no</A></B></DT>
+  <DT><B>debug = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='debug' Line='debug = no'>
   <DD>If <B>debug</B> = yes, the graphics instructions are decoded and printed
   during processing.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = no</A></B></DT>
+  <DT><B>verbose = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
   <DD>If <B>verbose</B> = yes, the elements of polylines, cell arrays, etc. will
   be printed in debug mode.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_gkiunits">gkiunits = no</A></B></DT>
+  <DT><B>gkiunits = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='gkiunits' Line='gkiunits = no'>
   <DD>By default, coordinates are printed in NDC rather than GKI units.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Task <I>nsppkern</I> translates metacode and draws it on a plotting
@@ -89,7 +78,7 @@ nsppkern — Plot metacode on a NSPP (NCAR) plotter device
   units.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Extract the fourth frame from metacode file "<TT>oned.mc</TT>" and plot it.
@@ -102,7 +91,7 @@ nsppkern — Plot metacode on a NSPP (NCAR) plotter device
       cl&gt; nsppkern contour.demo debug+
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   stdgraph, sgikern, calcomp
@@ -111,5 +100,3 @@ nsppkern — Plot metacode on a NSPP (NCAR) plotter device
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

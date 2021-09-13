@@ -1,3 +1,5 @@
+.. _tmatch:
+
 tmatch — Find closest match between rows in two tables
 ======================================================
 
@@ -5,32 +7,19 @@ tmatch — Find closest match between rows in two tables
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>tmatch (Jan1999)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>tables</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>tmatch (Jan1999)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>tmatch</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   tmatch -- Find closest match between rows in two tables
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   tmatch (input1, input2, output, match1, match2, maxnorm)
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task combines rows from two tables into one. Rows are combined by
@@ -89,29 +78,29 @@ tmatch — Find closest match between rows in two tables
   table, while this task only puts the closest match in the output table.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input1">input1 [string]</A></B></DT>
+  <DT><B>input1 [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input1' Line='input1 [string]'>
   <DD>First input table name.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_input2">input2 [string]</A></B></DT>
+  <DT><B>input2 [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input2' Line='input2 [string]'>
   <DD>Second input table name.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output [string]</A></B></DT>
+  <DT><B>output [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output [string]'>
   <DD>Output table name.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_match1">match1 [string]</A></B></DT>
+  <DT><B>match1 [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='match1' Line='match1 [string]'>
   <DD>A column template describing columns from the first table used to
   match the two tables. A column name template is a comma or whitespace
@@ -125,7 +114,7 @@ tmatch — Find closest match between rows in two tables
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_match2">match2 [string]</A></B></DT>
+  <DT><B>match2 [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='match2' Line='match2 [string]'>
   <DD>A column name template describing columns from the second table used
   to match the two tables. This parameter follows the same format rules
@@ -133,7 +122,7 @@ tmatch — Find closest match between rows in two tables
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_maxnorm">maxnorm min= 0.0, max=INDEF [real]</A></B></DT>
+  <DT><B>maxnorm min= 0.0, max=INDEF [real]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='maxnorm' Line='maxnorm min= 0.0, max=INDEF [real]'>
   <DD>The distance between two rows must be less than 'maxnorm' in order for
   them to match. Recognized angular units are converted to degrees
@@ -142,7 +131,7 @@ tmatch — Find closest match between rows in two tables
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(incol1 = "<TT> </TT>") [string]</A></B></DT>
+  <DT><B>(incol1 = "<TT> </TT>") [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(incol1 = " ") [string]'>
   <DD>A column name template describing the columns to be copied from the
   first input table to the output table. If this parameter is left blank
@@ -151,7 +140,7 @@ tmatch — Find closest match between rows in two tables
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(incol2 = "<TT> </TT>") [string]</A></B></DT>
+  <DT><B>(incol2 = "<TT> </TT>") [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(incol2 = " ") [string]'>
   <DD>A column name template describing the columns to be copied from the
   second input table to the output table. If this parameter is left
@@ -160,7 +149,7 @@ tmatch — Find closest match between rows in two tables
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(factor = "<TT> </TT>") [string]</A></B></DT>
+  <DT><B>(factor = "<TT> </TT>") [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(factor = " ") [string]'>
   <DD>A comma or white space separated list of numeric factors multiplied by
   the individual column differences when computing the distance between
@@ -172,7 +161,7 @@ tmatch — Find closest match between rows in two tables
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(diagfile = "<TT> </TT>") [string]</A></B></DT>
+  <DT><B>(diagfile = "<TT> </TT>") [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(diagfile = " ") [string]'>
   <DD>The name of the diagnostic output file. If the name is left blank (the
   default) no diagnostic output is produced. Diagnostic output can be
@@ -184,7 +173,7 @@ tmatch — Find closest match between rows in two tables
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(nmcol1 = "<TT> </TT>") [string]</A></B></DT>
+  <DT><B>(nmcol1 = "<TT> </TT>") [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(nmcol1 = " ") [string]'>
   <DD>A column template describing the columns from the first table that are
   printed in the diagnostic output. The table and row number are always
@@ -193,14 +182,14 @@ tmatch — Find closest match between rows in two tables
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(nmcol2 = "<TT> </TT>") [string]</A></B></DT>
+  <DT><B>(nmcol2 = "<TT> </TT>") [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(nmcol2 = " ") [string]'>
   <DD>A column template describing the columns from the second table that are
   printed in the diagnostic output.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(sphere = no) [bool]</A></B></DT>
+  <DT><B>(sphere = no) [bool]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(sphere = no) [bool]'>
   <DD>If this parameter is set to yes, a correction appropriate for
   spherical coordinates will be applied to the first column
@@ -213,7 +202,7 @@ tmatch — Find closest match between rows in two tables
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Two star catalogs are being matched. They both have the following
@@ -289,13 +278,13 @@ tmatch — Find closest match between rows in two tables
   column.
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   Written by Bernie Simon
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   tjoin
@@ -304,5 +293,3 @@ tmatch — Find closest match between rows in two tables
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'REFERENCES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

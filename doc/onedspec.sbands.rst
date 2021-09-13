@@ -1,3 +1,5 @@
+.. _sbands:
+
 sbands — Bandpass spectrophotometry of spectra
 ==============================================
 
@@ -5,36 +7,23 @@ sbands — Bandpass spectrophotometry of spectra
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>sbands (Nov93)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>onedspec</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>sbands (Nov93)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>sbands</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   sbands -- bandpass spectrophotometry of spectra
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   sbands input output bands
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>Input list of spectra to be measured.  These may be one dimensional
   spectra in individual or "<TT>multispec</TT>" format or calibrated spatial spectra such
@@ -43,14 +32,14 @@ sbands — Bandpass spectrophotometry of spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>Output file for the results.  This may be a filename or "<TT>STDOUT</TT>" to
   write to the terminal.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_bands">bands</A></B></DT>
+  <DT><B>bands</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='bands' Line='bands'>
   <DD>Bandpass file consisting of lines with one, two, or three bandpasses per
   line.  A bandpass is specified by an identification string (quoted if it is
@@ -61,7 +50,7 @@ sbands — Bandpass spectrophotometry of spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apertures">apertures = "<TT></TT>"</A></B></DT>
+  <DT><B>apertures = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""'>
   <DD>List of apertures to select from the input spectra.  For one dimensional
   spectra this is the aperture number and for spatial spectra it is
@@ -71,7 +60,7 @@ sbands — Bandpass spectrophotometry of spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_normalize">normalize = yes</A></B></DT>
+  <DT><B>normalize = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='normalize' Line='normalize = yes'>
   <DD>Normalize the bandpass fluxes by the bandpass response?  If no then
   the results will depend on the bandpass widths and filter function
@@ -82,14 +71,14 @@ sbands — Bandpass spectrophotometry of spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_mag">mag = no, magzero = 0.</A></B></DT>
+  <DT><B>mag = no, magzero = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='mag' Line='mag = no, magzero = 0.'>
   <DD>Output the bandpass fluxes as magnitudes with specified magnitude
   zero point?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Include a verbose header giving a banner, the parameters used,
   the bandpasses, and column headings?
@@ -97,7 +86,7 @@ sbands — Bandpass spectrophotometry of spectra
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <B>Sbands</B> performs bandpass spectrophotometry with one or more bandpasses
@@ -177,7 +166,7 @@ sbands — Bandpass spectrophotometry of spectra
   The examples below show the form of the output.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   The following examples use artificial data and arbitrary bands.
@@ -249,25 +238,25 @@ sbands — Bandpass spectrophotometry of spectra
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_SBANDS">SBANDS V2.10.4</A></B></DT>
+  <DT><B>SBANDS V2.10.4</B></DT>
   <! Sec='REVISIONS' Level=0 Label='SBANDS' Line='SBANDS V2.10.4'>
   <DD>The flux column is now printed to 6 digits of precision with possible
   exponential format to permit flux calibrated spectra to print properly.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_SBANDS">SBANDS V2.10.3</A></B></DT>
+  <DT><B>SBANDS V2.10.3</B></DT>
   <! Sec='REVISIONS' Level=0 Label='SBANDS' Line='SBANDS V2.10.3'>
   <DD>The task is new in this release
   </DD>
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   splot
@@ -276,5 +265,3 @@ sbands — Bandpass spectrophotometry of spectra
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

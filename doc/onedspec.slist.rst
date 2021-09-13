@@ -1,3 +1,5 @@
+.. _slist:
+
 slist — List spectrum header parameters
 =======================================
 
@@ -5,42 +7,29 @@ slist — List spectrum header parameters
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>slist (Mar92)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.onedspec</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>slist (Mar92)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>slist</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   slist -- List spectral header information
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   slist images
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>List of images to be listed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apertures">apertures = "<TT></TT>"</A></B></DT>
+  <DT><B>apertures = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""'>
   <DD>List of apertures to be selected from the images for listing.  A null
   list selects all apertures.  See <B>ranges</B> for the syntax of
@@ -48,7 +37,7 @@ slist — List spectrum header parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_long_header">long_header = no</A></B></DT>
+  <DT><B>long_header = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='long_header' Line='long_header = no'>
   <DD>If set to yes, then a multiline listing of the header elements is given.
   If set to no, then a single line per spectrum is given.  The contents
@@ -57,7 +46,7 @@ slist — List spectrum header parameters
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task lists header information from apertures in a list of input
@@ -98,7 +87,7 @@ slist — List spectrum header parameters
   	RA = 1:34:02.00   DEC = 30:37:03.0  HA = INDEF    AIRMASS = 2.3
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  List short header for an object and arc from a Hydra multifiber reduction
@@ -173,11 +162,11 @@ slist — List spectrum header parameters
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_SLIST">SLIST V2.10</A></B></DT>
+  <DT><B>SLIST V2.10</B></DT>
   <! Sec='REVISIONS' Level=0 Label='SLIST' Line='SLIST V2.10'>
   <DD>This task was revised to be relevant for the current spectral image
   formats.  The old version is still available in the IRS/IIDS package.
@@ -185,7 +174,7 @@ slist — List spectrum header parameters
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imheader, hselect
@@ -194,5 +183,3 @@ slist — List spectrum header parameters
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _rgbsun:
+
 rgbsun — Create a Sun 24-bit RGB rasterfile
 ===========================================
 
@@ -5,49 +7,36 @@ rgbsun — Create a Sun 24-bit RGB rasterfile
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>rgbsun (Oct92)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>color</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>rgbsun (Oct92)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>rgbsun</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   rgbsun -- make a Sun 24-bit RGB rasterfile from three IRAF images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   rgbsun red green blue rgb
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_red">red, green, blue</A></B></DT>
+  <DT><B>red, green, blue</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='red' Line='red, green, blue'>
   <DD>Input image names for the red, green, and blue components.  The images
   must all be two dimensional and of the same size.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rgb">rgb</A></B></DT>
+  <DT><B>rgb</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rgb' Line='rgb'>
   <DD>Output file name for the Sun 24-bit RGB rasterfile.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rz1">rz1, rz2, gz1, gz2, bz1, bz2</A></B></DT>
+  <DT><B>rz1, rz2, gz1, gz2, bz1, bz2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rz1' Line='rz1, rz2, gz1, gz2, bz1, bz2'>
   <DD>Range of values in the input images to be mapped to the minimum and maximum
   intensity in each color.  Image pixel values outside the range are mapped
@@ -56,7 +45,7 @@ rgbsun — Create a Sun 24-bit RGB rasterfile
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_logmap">logmap = no</A></B></DT>
+  <DT><B>logmap = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='logmap' Line='logmap = no'>
   <DD>Use logarithmic intensity mapping?  The logarithm of the input pixel
   values, in the range given by the z1 and z2 parameters, is taken before
@@ -65,7 +54,7 @@ rgbsun — Create a Sun 24-bit RGB rasterfile
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_swap">swap = no</A></B></DT>
+  <DT><B>swap = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='swap' Line='swap = no'>
   <DD>Swap rasterfile bytes on output?  Used when rasterfiles are being written
   to a computer with opposite byte-swapping from that of the home computer
@@ -74,7 +63,7 @@ rgbsun — Create a Sun 24-bit RGB rasterfile
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <B>Rgbsun</B> takes three input IRAF images and produces a 24-bit Sun
@@ -114,7 +103,7 @@ rgbsun — Create a Sun 24-bit RGB rasterfile
   number of columns will have an extra zero byte).
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  Three 2048x2048 images of the Trifid nebula are obtained in the B, V,
@@ -132,13 +121,13 @@ rgbsun — Create a Sun 24-bit RGB rasterfile
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   Example 1 takes 2:20 minutes (33 seconds CPU) on a SparcStation 2.
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   rgbdither, rgbto8, color.package
@@ -147,5 +136,3 @@ rgbsun — Create a Sun 24-bit RGB rasterfile
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

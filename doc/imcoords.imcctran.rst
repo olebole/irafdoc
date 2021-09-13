@@ -1,3 +1,5 @@
+.. _imcctran:
+
 imcctran — Transform image header from one celestial wcs to another
 ===================================================================
 
@@ -5,36 +7,23 @@ imcctran — Transform image header from one celestial wcs to another
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>imcctran (Oct00)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imcoords</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>imcctran (Oct00)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>imcctran</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   imcctran -- convert between image celestial coordinate systems 
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   imcctran image outsystem
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_image">image</A></B></DT>
+  <DT><B>image</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='image' Line='image'>
   <DD>The list of images whose celestial coordinate systems are to be converted. The
   image celestial coordinate system must be one of the standard FITS celestial
@@ -43,12 +32,12 @@ imcctran — Transform image header from one celestial wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_outsystem">outsystem</A></B></DT>
+  <DT><B>outsystem</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='outsystem' Line='outsystem'>
   <DD>The input and output celestial coordinate systems. The options are
   the following:
   <DL>
-  <DT><B><A NAME="l_">&lt;imagename&gt; [wcs]</A></B></DT>
+  <DT><B>&lt;imagename&gt; [wcs]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='&lt;imagename&gt; [wcs]'>
   <DD>The celestial coordinate system is the world coordinate system of the image
   &lt;imagename&gt; and the input or output pixel coordinates may be in the
@@ -61,7 +50,7 @@ imcctran — Transform image header from one celestial wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_equinox">equinox [epoch]</A></B></DT>
+  <DT><B>equinox [epoch]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='equinox' Line='equinox [epoch]'>
   <DD>The equatorial mean place post-IAU 1976 (FK5) system if equinox is a
   Julian epoch, e.g. J2000.0 or 2000.0, or the equatorial mean place
@@ -78,7 +67,7 @@ imcctran — Transform image header from one celestial wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_icrs">icrs [equinox] [epoch]</A></B></DT>
+  <DT><B>icrs [equinox] [epoch]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='icrs' Line='icrs [equinox] [epoch]'>
   <DD>The International Celestial Reference System where equinox is
   a Julian or Besselian epoch e.g. J2000.0  or B1980.0.
@@ -92,7 +81,7 @@ imcctran — Transform image header from one celestial wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fk5">fk5 [equinox] [epoch] </A></B></DT>
+  <DT><B>fk5 [equinox] [epoch] </B></DT>
   <! Sec='PARAMETERS' Level=1 Label='fk5' Line='fk5 [equinox] [epoch] '>
   <DD>The equatorial mean place post-IAU 1976 (FK5) system where equinox is
   a Julian or Besselian epoch e.g. J2000.0  or B1980.0.
@@ -106,7 +95,7 @@ imcctran — Transform image header from one celestial wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fk4">fk4 [equinox] [epoch]</A></B></DT>
+  <DT><B>fk4 [equinox] [epoch]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='fk4' Line='fk4 [equinox] [epoch]'>
   <DD>The equatorial mean place pre-IAU 1976 (FK4) system where equinox is a
   Besselian or Julian epoch e.g. B1950.0  or J2000.0,
@@ -122,7 +111,7 @@ imcctran — Transform image header from one celestial wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_noefk4">noefk4 [equinox] [epoch]</A></B></DT>
+  <DT><B>noefk4 [equinox] [epoch]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='noefk4' Line='noefk4 [equinox] [epoch]'>
   <DD>The equatorial mean place pre-IAU 1976 (FK4) system but without the E-terms
   where equinox is a Besselian or Julian epoch e.g. B1950.0 or J2000.0,
@@ -138,7 +127,7 @@ imcctran — Transform image header from one celestial wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apparent">apparent epoch </A></B></DT>
+  <DT><B>apparent epoch </B></DT>
   <! Sec='PARAMETERS' Level=1 Label='apparent' Line='apparent epoch '>
   <DD>The equatorial geocentric apparent place post-IAU 1976 system where
   epoch is the epoch of observation.
@@ -151,7 +140,7 @@ imcctran — Transform image header from one celestial wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ecliptic">ecliptic epoch</A></B></DT>
+  <DT><B>ecliptic epoch</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='ecliptic' Line='ecliptic epoch'>
   <DD>The ecliptic coordinate system where epoch is the epoch of observation.
   Epoch is a Besselian epoch, a Julian epoch, or a Julian date.
@@ -163,7 +152,7 @@ imcctran — Transform image header from one celestial wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_galactic">galactic [epoch]</A></B></DT>
+  <DT><B>galactic [epoch]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='galactic' Line='galactic [epoch]'>
   <DD>The IAU 1958 galactic coordinate system.
   Epoch is a Besselian epoch, a Julian epoch or a Julian date.
@@ -175,7 +164,7 @@ imcctran — Transform image header from one celestial wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_supergalactic">supergalactic [epoch]</A></B></DT>
+  <DT><B>supergalactic [epoch]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='supergalactic' Line='supergalactic [epoch]'>
   <DD>The deVaucouleurs supergalactic coordinate system.
   Epoch is a Besselian epoch, a Julian epoch or a Julian date.
@@ -194,7 +183,7 @@ imcctran — Transform image header from one celestial wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nx">nx = 10, ny = 10</A></B></DT>
+  <DT><B>nx = 10, ny = 10</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nx' Line='nx = 10, ny = 10'>
   <DD>The dimensions of the coordinate grid used to compute the rotation angle and,
   optionally, the x and y magnification factors required to transform the input
@@ -202,7 +191,7 @@ imcctran — Transform image header from one celestial wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_longpole">longpole = no</A></B></DT>
+  <DT><B>longpole = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='longpole' Line='longpole = no'>
   <DD>If longpole = yes the zenithal projections ARC, SIN, STG, TAN, and ZEA
   will be transformed by updating the longpole and latpole parameters instead
@@ -210,13 +199,13 @@ imcctran — Transform image header from one celestial wcs to another
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print messages about actions taken by the task on the standard output ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_update">update = yes</A></B></DT>
+  <DT><B>update = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='update' Line='update = yes'>
   <DD>Update the image celestial coordinate system ?
   </DD>
@@ -224,7 +213,7 @@ imcctran — Transform image header from one celestial wcs to another
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -389,7 +378,7 @@ imcctran — Transform image header from one celestial wcs to another
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   <P>
@@ -420,7 +409,7 @@ imcctran — Transform image header from one celestial wcs to another
   <P>
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -662,13 +651,13 @@ imcctran — Transform image header from one celestial wcs to another
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   <P>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   <P>
@@ -683,7 +672,7 @@ imcctran — Transform image header from one celestial wcs to another
   <P>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   setjd,precess,galactic,xray.xspatial.skypix,stsdas.toolbox.tools.tprecess
@@ -692,5 +681,3 @@ imcctran — Transform image header from one celestial wcs to another
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'REFERENCES' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

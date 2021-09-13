@@ -1,46 +1,35 @@
-gauss — Convolve a list of 1 or 2-D images with an elliptical Gaussian
-======================================================================
+.. _gauss:
+
+gauss — Convolve a list of 1 or 2-D images with an elliptical Gaussian       gradient - Convolve a list of 1 or 2-D images with a gradient operator
+===================================================================================================================================================
 
 **Package: imfilter**
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>gauss (Jan91)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imfilter</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>gauss (Jan91)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>gauss</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   gauss -- convolve a list of images with an elliptical Gaussian function
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   gauss input output sigma
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of images to be convolved with the elliptical Gaussian function.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>List of output images. The number of output images must equal the number of
   input images. If the input image name equals the output image name, the
@@ -48,14 +37,14 @@ gauss — Convolve a list of 1 or 2-D images with an elliptical Gaussian
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sigma">sigma</A></B></DT>
+  <DT><B>sigma</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sigma' Line='sigma'>
   <DD>The sigma of the Gaussian function in pixels along the direction <I>theta</I>
   of the major axis of the Gaussian function.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ratio">ratio = 1.</A></B></DT>
+  <DT><B>ratio = 1.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ratio' Line='ratio = 1.'>
   <DD>The ratio of the sigma in the minor axis direction to the sigma in the major
   axis direction of the Gaussian function.
@@ -63,7 +52,7 @@ gauss — Convolve a list of 1 or 2-D images with an elliptical Gaussian
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_theta">theta = 0.</A></B></DT>
+  <DT><B>theta = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='theta' Line='theta = 0.'>
   <DD>The position of the major axis of the elliptical Gaussian function.
   <I>Theta</I> is measured counter-clockwise from the x axis and must be between
@@ -71,14 +60,14 @@ gauss — Convolve a list of 1 or 2-D images with an elliptical Gaussian
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nsigma">nsigma = 4.0</A></B></DT>
+  <DT><B>nsigma = 4.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nsigma' Line='nsigma = 4.0'>
   <DD>The distance along the major axis of the Gaussian function at which
   the kernel is truncated in <I>sigma</I> pixels.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_bilinear">bilinear = yes</A></B></DT>
+  <DT><B>bilinear = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='bilinear' Line='bilinear = yes'>
   <DD>Use the fact that the Gaussian function is separable (bilinear) in x and y if
   <I>theta</I> = 0, 90, or 180, to compute the 2D convolution more efficiently?
@@ -87,30 +76,30 @@ gauss — Convolve a list of 1 or 2-D images with an elliptical Gaussian
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_boundary">boundary = "<TT>nearest</TT>"</A></B></DT>
+  <DT><B>boundary = "<TT>nearest</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"'>
   <DD>The algorithm used to compute the values of the out of bounds pixels. The
   options are:
   <DL>
-  <DT><B><A NAME="l_nearest">nearest</A></B></DT>
+  <DT><B>nearest</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest'>
   <DD>Use the value of the nearest boundary pixel.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_constant">constant</A></B></DT>
+  <DT><B>constant</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='constant' Line='constant'>
   <DD>Use a constant value.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_reflect">reflect</A></B></DT>
+  <DT><B>reflect</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='reflect' Line='reflect'>
   <DD>Generate a value by reflecting around the boundary.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wrap">wrap</A></B></DT>
+  <DT><B>wrap</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='wrap' Line='wrap'>
   <DD>Generate a value by wrapping around to the opposite side of the image.
   </DD>
@@ -118,7 +107,7 @@ gauss — Convolve a list of 1 or 2-D images with an elliptical Gaussian
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_constant">constant = 0.</A></B></DT>
+  <DT><B>constant = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.'>
   <DD>The constant for constant-valued boundary extension.
   </DD>
@@ -126,7 +115,7 @@ gauss — Convolve a list of 1 or 2-D images with an elliptical Gaussian
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -198,7 +187,7 @@ gauss — Convolve a list of 1 or 2-D images with an elliptical Gaussian
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -221,7 +210,7 @@ gauss — Convolve a list of 1 or 2-D images with an elliptical Gaussian
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   GAUSS requires approximately 30 and 8 cpu seconds to
@@ -230,12 +219,12 @@ gauss — Convolve a list of 1 or 2-D images with an elliptical Gaussian
   kernel respectively, on a Sparc Station 1.
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   convolve, gradient, laplace, boxcar
@@ -244,5 +233,3 @@ gauss — Convolve a list of 1 or 2-D images with an elliptical Gaussian
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

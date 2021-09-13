@@ -1,3 +1,5 @@
+.. _mkapropos:
+
 mkapropos — Make the apropos database (from STSDAS).
 ====================================================
 
@@ -5,32 +7,19 @@ mkapropos — Make the apropos database (from STSDAS).
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>mkapropos (Aug16)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>softools</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>mkapropos (Aug16)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>mkapropos</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   mkapropos -- Make the apropos database.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   mkapropos pkglist aproposdb
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The 'mkapropos' task descends a tree of help directory ('.hd') files
@@ -53,11 +42,11 @@ mkapropos — Make the apropos database (from STSDAS).
   IRAF's softools to facilitate building IRAF packages before stsdas is installed.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_pkglist">pkglist = "<TT>iraf, noao</TT>" [string]</A></B></DT>
+  <DT><B>pkglist = "<TT>iraf, noao</TT>" [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pkglist' Line='pkglist = "iraf, noao" [string]'>
   <DD>The names of the packages to examine when building the apropos database.
   By default, the
@@ -66,7 +55,7 @@ mkapropos — Make the apropos database (from STSDAS).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_helpdir">helpdir = "<TT>lib/root.hd</TT>" [string]</A></B></DT>
+  <DT><B>helpdir = "<TT>lib/root.hd</TT>" [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='helpdir' Line='helpdir = "lib/root.hd" [string]'>
   <DD>The filename of the root help directory file ('.hd' file)
   defining the help tree to be updated. This string is appended to each of the
@@ -74,13 +63,13 @@ mkapropos — Make the apropos database (from STSDAS).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_aproposdb">aproposdb = "<TT>lib$apropos.db</TT>" [string]</A></B></DT>
+  <DT><B>aproposdb = "<TT>lib$apropos.db</TT>" [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='aproposdb' Line='aproposdb = "lib$apropos.db" [string]'>
   <DD>The filename of the apropos database to be written. 
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = no [boolean]</A></B></DT>
+  <DT><B>verbose = no [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no [boolean]'>
   <DD>Print a detailed description of the help database as it is compiled?
   <P>
@@ -90,7 +79,7 @@ mkapropos — Make the apropos database (from STSDAS).
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Update the stsdas package apropos database.
@@ -106,7 +95,7 @@ mkapropos — Make the apropos database (from STSDAS).
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   apropos, mkhelpdb
@@ -115,5 +104,3 @@ mkapropos — Make the apropos database (from STSDAS).
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _daotest:
+
 daotest — Run basic tests on the daophot package tasks
 ======================================================
 
@@ -5,36 +7,23 @@ daotest — Run basic tests on the daophot package tasks
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>daotest (Dec92)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.daophot</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>daotest (Dec92)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>daotest</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   daotest -- run basic tests on the daophot package tasks
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   daotest imname
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_imname">imname</A></B></DT>
+  <DT><B>imname</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='imname' Line='imname'>
   <DD>The root name of the output test images. The input test image is stored in
   fits format in the DAOPHOT package test directory. If the image already exists
@@ -42,7 +31,7 @@ daotest — Run basic tests on the daophot package tasks
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_daologfile">daologfile = "<TT></TT>"</A></B></DT>
+  <DT><B>daologfile = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='daologfile' Line='daologfile = ""'>
   <DD>The name of the output log file. By default all the output image header
   listings and photometry file output is logged in a file
@@ -51,7 +40,7 @@ daotest — Run basic tests on the daophot package tasks
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_daoplotfile">daoplotfile = "<TT></TT>"</A></B></DT>
+  <DT><B>daoplotfile = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='daoplotfile' Line='daoplotfile = ""'>
   <DD>The name of the output plot file. By default all the graphics output is
   logged in a file called <I>"imname.plot"</I>. If the plot file already exists
@@ -60,7 +49,7 @@ daotest — Run basic tests on the daophot package tasks
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   DAOTEST is a simple script which exercises each of the major tasks in the
@@ -76,7 +65,7 @@ daotest — Run basic tests on the daophot package tasks
   respectively.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -123,17 +112,17 @@ daotest — Run basic tests on the daophot package tasks
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   </UL>
@@ -141,5 +130,3 @@ daotest — Run basic tests on the daophot package tasks
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

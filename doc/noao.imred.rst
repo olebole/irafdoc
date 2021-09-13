@@ -17,5 +17,4 @@ imred — Image reductions package
    imred.irs
    imred.kpnocoude
    imred.kpnoslit
-   imred.quadred
    imred.specred

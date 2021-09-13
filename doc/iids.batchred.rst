@@ -1,3 +1,5 @@
+.. _batchred:
+
 batchred — Batch processing of IIDS/IRS spectra
 ===============================================
 
@@ -5,32 +7,19 @@ batchred — Batch processing of IIDS/IRS spectra
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>batchred (Feb85)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.imred.iids/noao.imred.irs</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>batchred (Feb85)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>batchred</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   batchred - Automated processing of IIDS/IRS spectra
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   batchred
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   This script task has many parameters, but most are used as
@@ -42,57 +31,57 @@ batchred — Batch processing of IIDS/IRS spectra
   parameter is set to yes (the default in all cases).
   <P>
   <DL>
-  <DT><B><A NAME="l_standard">standard = yes</A></B></DT>
+  <DT><B>standard = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='standard' Line='standard = yes'>
   <DD></DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sensfunc">sensfunc = yes</A></B></DT>
+  <DT><B>sensfunc = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sensfunc' Line='sensfunc = yes'>
   <DD></DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_bswitch">bswitch = yes</A></B></DT>
+  <DT><B>bswitch = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='bswitch' Line='bswitch = yes'>
   <DD></DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_calibrate">calibrate = yes</A></B></DT>
+  <DT><B>calibrate = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='calibrate' Line='calibrate = yes'>
   <DD></DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_addsets">addsets = yes</A></B></DT>
+  <DT><B>addsets = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='addsets' Line='addsets = yes'>
   <DD></DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fnu">fnu = no</A></B></DT>
+  <DT><B>fnu = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fnu' Line='fnu = no'>
   <DD>This parameter is identical to the fnu parameter for CALIBRATE.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wave1">wave1 = 0.0</A></B></DT>
+  <DT><B>wave1 = 0.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wave1' Line='wave1 = 0.0'>
   <DD>This parameter is identical to the wave1 parameter for BSWITCH.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wave2">wave2 = 0.0</A></B></DT>
+  <DT><B>wave2 = 0.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wave2' Line='wave2 = 0.0'>
   <DD>This parameter is identical to the wave2 parameter for BSWITCH.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_subset">subset = 32767</A></B></DT>
+  <DT><B>subset = 32767</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='subset' Line='subset = 32767'>
   <DD>This parameter is identical to the subset parameter for BSWITCH.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Through a question and answer session, a series of commands to
@@ -178,7 +167,7 @@ batchred — Batch processing of IIDS/IRS spectra
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -192,7 +181,7 @@ batchred — Batch processing of IIDS/IRS spectra
   	cl&gt; batchred standard- sensfunc-
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   If you make an error while entering the requested information, there
@@ -203,7 +192,7 @@ batchred — Batch processing of IIDS/IRS spectra
   hangs until you kill it using "<TT>kill N</TT>" where N is the job number.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   mkscript, standard, sensfunc, bswitch, calibrate, addsets
@@ -212,5 +201,3 @@ batchred — Batch processing of IIDS/IRS spectra
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

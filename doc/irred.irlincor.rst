@@ -1,3 +1,5 @@
+.. _irlincor:
+
 irlincor — Correct IR imager frames for non-linearity
 =====================================================
 
@@ -5,63 +7,50 @@ irlincor — Correct IR imager frames for non-linearity
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>irlincor (Nov94)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>irred</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>irlincor (Nov94)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>irlincor</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   irlincor -- Correct IR imager frames for non-linearity.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   irlincor input output
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The list of images to be corrected for non-linearity
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>The list of corrected output images
   </DD>
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_coeff1">coeff1 = 1.0</A></B></DT>
+  <DT><B>coeff1 = 1.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='coeff1' Line='coeff1 = 1.0'>
   <DD>The first coefficient of the correction function
   </DD>
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_coeff2">coeff2 = 0.0</A></B></DT>
+  <DT><B>coeff2 = 0.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='coeff2' Line='coeff2 = 0.0'>
   <DD>The second coefficient of the correction function
   </DD>
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_coeff3">coeff3 = 0.0</A></B></DT>
+  <DT><B>coeff3 = 0.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='coeff3' Line='coeff3 = 0.0'>
   <DD>The third coefficient of the correction function
   </DD>
@@ -69,7 +58,7 @@ irlincor — Correct IR imager frames for non-linearity
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The IR imager frames specified by <I>input</I>, which may be a general image
@@ -94,7 +83,7 @@ irlincor — Correct IR imager frames for non-linearity
   more easily.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Correct input to output using the default values for the coefficients (not a very rewarding operation!)
@@ -112,19 +101,19 @@ irlincor — Correct IR imager frames for non-linearity
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_authors">AUTHORS</A></H2>
+  <H3>Authors</H3>
   <! BeginSection: 'AUTHORS'>
   <UL>
   The IRLINCOR task was originally written by Steve Heathcote as part of the
   CTIO package. 
   </UL>
   <! EndSection:   'AUTHORS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   The form of the correction equation is currently experimental;
@@ -133,7 +122,7 @@ irlincor — Correct IR imager frames for non-linearity
   It may be advisable to carry out the calculations in double precision.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   onedspec.coincor, proto.imfunction
@@ -142,5 +131,3 @@ irlincor — Correct IR imager frames for non-linearity
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'AUTHORS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

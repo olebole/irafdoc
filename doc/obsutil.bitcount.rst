@@ -1,3 +1,5 @@
+.. _bitcount:
+
 bitcount — Accumulate the bit statistics for a list of images
 =============================================================
 
@@ -5,36 +7,23 @@ bitcount — Accumulate the bit statistics for a list of images
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>bitcount (Mar93)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.obsutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>bitcount (Mar93)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>bitcount</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   bitcount - accumulate the bit statistics for a list of images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   bitcount images
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>A list of image names whose bit statistics will be counted.  The
   statistics can either be reported for each individual image (the
@@ -42,7 +31,7 @@ bitcount — Accumulate the bit statistics for a list of images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_grandtotal">grandtotal = no</A></B></DT>
+  <DT><B>grandtotal = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='grandtotal' Line='grandtotal = no'>
   <DD>If <I>grandtotal</I> = yes, accumulate a grand total over all the
   images.  If <I>grandtotal</I> = no (the default), report the statistics
@@ -50,7 +39,7 @@ bitcount — Accumulate the bit statistics for a list of images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_leftzeroes">leftzeroes = yes</A></B></DT>
+  <DT><B>leftzeroes = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='leftzeroes' Line='leftzeroes = yes'>
   <DD>If <I>leftzeroes</I> = yes, leftmost zeroes are counted into the
   statistics (the default).  If <I>leftzeroes</I> = no, leftmost zeroes
@@ -59,14 +48,14 @@ bitcount — Accumulate the bit statistics for a list of images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>If <I>verbose</I> = no, only the raw bit counts will be reported.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <I>Bitcount</I> will report the absolute and relative proportions
@@ -95,7 +84,7 @@ bitcount — Accumulate the bit statistics for a list of images
   the raw bit counts on to some other task.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   To report the bit statistics for a test exposure ramp:
@@ -111,7 +100,7 @@ bitcount — Accumulate the bit statistics for a list of images
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   A warning will be issued when accumulating a grand total over a list
@@ -123,7 +112,7 @@ bitcount — Accumulate the bit statistics for a list of images
   datatype of this final image.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imstatistics, ctio.bitstat
@@ -132,5 +121,3 @@ bitcount — Accumulate the bit statistics for a list of images
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

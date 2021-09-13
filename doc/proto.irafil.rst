@@ -1,3 +1,5 @@
+.. _irafil:
+
 irafil — Create an IRAF image from a binary data file
 =====================================================
 
@@ -5,60 +7,47 @@ irafil — Create an IRAF image from a binary data file
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>irafil (mar86)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>proto</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>irafil (mar86)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>irafil</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   irafil -- converts a binary file containing pixel values to an IRAF image
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   irafil input nrows ncols
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>the input file names to be converted
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nrows">nrows</A></B></DT>
+  <DT><B>nrows</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nrows' Line='nrows'>
   <DD>the number of rows of data in the image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ncols">ncols</A></B></DT>
+  <DT><B>ncols</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ncols' Line='ncols'>
   <DD>the number of columns of data in the image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_bits">bits = 16</A></B></DT>
+  <DT><B>bits = 16</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='bits' Line='bits = 16'>
   <DD>the number of data bits per pixel. This must be either 8 or 16
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_signed">signed = yes</A></B></DT>
+  <DT><B>signed = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='signed' Line='signed = yes'>
   <DD>the pixels are assumed to be signed integers if the bits parameter is 16,
   and unsigned if the bits parameter is 8. If signed is set to no, then
@@ -67,14 +56,14 @@ irafil — Create an IRAF image from a binary data file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_tb_flip">tb_flip = no</A></B></DT>
+  <DT><B>tb_flip = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='tb_flip' Line='tb_flip = no'>
   <DD>This parameter allows the image to be "<TT>top-to-bottom</TT>" flipped during
   conversion.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_skip">skip = 0</A></B></DT>
+  <DT><B>skip = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='skip' Line='skip = 0'>
   <DD>the number of bytes to skip prior to reading pixel data. This allows
   skipping of header data which is otherwise not translatable and would
@@ -83,7 +72,7 @@ irafil — Create an IRAF image from a binary data file
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The specified files are read as integers and converted to IRAF images.
@@ -117,7 +106,7 @@ irafil — Create an IRAF image from a binary data file
   dataio package.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -146,18 +135,18 @@ irafil — Create an IRAF image from a binary data file
   through CRTPICT to make a Dicomed hardcopy.
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   There is no way to explicitly specify the output image name.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   binfil,imcopy,reblock
@@ -166,5 +155,3 @@ irafil — Create an IRAF image from a binary data file
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

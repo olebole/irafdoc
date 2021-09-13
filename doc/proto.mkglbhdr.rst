@@ -1,3 +1,5 @@
+.. _mkglbhdr:
+
 mkglbhdr — Make global header from keywords in images and reference
 ===================================================================
 
@@ -5,48 +7,35 @@ mkglbhdr — Make global header from keywords in images and reference
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>mkglbhdr (Feb09)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>proto</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>mkglbhdr (Feb09)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>mkglbhdr</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   mkgblhdr -- make a global header
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   mkgblhdr input output
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of input images.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>Output global dataless image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_reference">reference = "<TT></TT>"</A></B></DT>
+  <DT><B>reference = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='reference' Line='reference = ""'>
   <DD>Optional reference image defining the allowed keywords, order, and
   blank cards.  If no reference image is specified the first image in
@@ -54,7 +43,7 @@ mkglbhdr — Make global header from keywords in images and reference
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_exclude">exclude = "<TT></TT>"</A></B></DT>
+  <DT><B>exclude = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='exclude' Line='exclude = ""'>
   <DD>List of keywords to be excluded from the global header even if present
   in the reference header and with common values in all the input images.
@@ -67,7 +56,7 @@ mkglbhdr — Make global header from keywords in images and reference
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <B>Mkgblhdr</B> makes a global (dataless) header with keywords common to a
@@ -93,7 +82,7 @@ mkglbhdr — Make global header from keywords in images and reference
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -154,7 +143,7 @@ mkglbhdr — Make global header from keywords in images and reference
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   mscsplit, mscjoin
@@ -163,5 +152,3 @@ mkglbhdr — Make global header from keywords in images and reference
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

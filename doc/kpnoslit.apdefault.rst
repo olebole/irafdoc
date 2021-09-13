@@ -1,3 +1,5 @@
+.. _apdefault:
+
 apdefault — Set the default aperture parameters
 ===============================================
 
@@ -5,36 +7,23 @@ apdefault — Set the default aperture parameters
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>apdefault (Jul95)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.twodspec.apextract</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>apdefault (Jul95)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>apdefault</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   apdefault -- Set default aperture parameters for the package
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   apdefault
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_lower">lower = -5., upper = 5.</A></B></DT>
+  <DT><B>lower = -5., upper = 5.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lower' Line='lower = -5., upper = 5.'>
   <DD>Default lower and upper aperture limits relative to the aperture center.
   These limits are used for apertures found with <B>apfind</B> and when
@@ -42,7 +31,7 @@ apdefault — Set the default aperture parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apidtable">apidtable = "<TT></TT>"</A></B></DT>
+  <DT><B>apidtable = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apidtable' Line='apidtable = ""'>
   <DD>Aperture identification table.  This may be either a text file or an
   image.  A text file consisting of lines with an aperture number, beam
@@ -58,7 +47,7 @@ apdefault — Set the default aperture parameters
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_b_function">b_function = "<TT>chebyshev</TT>"</A></B></DT>
+  <DT><B>b_function = "<TT>chebyshev</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='b_function' Line='b_function = "chebyshev"'>
   <DD>Default background fitting function.  The fitting function types are
   "<TT>chebyshev</TT>" polynomial, "<TT>legendre</TT>" polynomial, "<TT>spline1</TT>" linear spline, and
@@ -66,7 +55,7 @@ apdefault — Set the default aperture parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_b_order">b_order = 1</A></B></DT>
+  <DT><B>b_order = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='b_order' Line='b_order = 1'>
   <DD>Default background function order.  The order refers to the number of
   terms in the polynomial functions or the number of spline pieces in the spline
@@ -74,7 +63,7 @@ apdefault — Set the default aperture parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_b_sample">b_sample = "<TT>-10:-6,6:10</TT>"</A></B></DT>
+  <DT><B>b_sample = "<TT>-10:-6,6:10</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='b_sample' Line='b_sample = "-10:-6,6:10"'>
   <DD>Default background sample.  The sample is given by a set of colon separated
   ranges each separated by either whitespace or commas.  The string "<TT>*</TT>" refers
@@ -84,7 +73,7 @@ apdefault — Set the default aperture parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_b_naverage">b_naverage = -3</A></B></DT>
+  <DT><B>b_naverage = -3</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='b_naverage' Line='b_naverage = -3'>
   <DD>Default number of points to average or median.  Positive numbers
   average that number of sequential points to form a fitting point.
@@ -94,7 +83,7 @@ apdefault — Set the default aperture parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_b_niterate">b_niterate = 0</A></B></DT>
+  <DT><B>b_niterate = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='b_niterate' Line='b_niterate = 0'>
   <DD>Default number of rejection iterations.  If greater than zero the fit is
   used to detect deviant fitting points and reject them before repeating the
@@ -102,7 +91,7 @@ apdefault — Set the default aperture parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_b_low_reject">b_low_reject = 3., b_high_reject = 3.</A></B></DT>
+  <DT><B>b_low_reject = 3., b_high_reject = 3.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='b_low_reject' Line='b_low_reject = 3., b_high_reject = 3.'>
   <DD>Default background lower and upper rejection sigmas.  If greater than zero
   points deviating from the fit below and above the fit by more than this
@@ -110,7 +99,7 @@ apdefault — Set the default aperture parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_b_grow">b_grow = 0.</A></B></DT>
+  <DT><B>b_grow = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='b_grow' Line='b_grow = 0.'>
   <DD>Default reject growing radius.  Points within a distance given by this
   parameter of any rejected point are also rejected.
@@ -118,7 +107,7 @@ apdefault — Set the default aperture parameters
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task sets the values of the default aperture parameters for the
@@ -137,7 +126,7 @@ apdefault — Set the default aperture parameters
   and subtracting see <B>apbackground</B>.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   To review and modify the default aperture parameters:
@@ -145,11 +134,11 @@ apdefault — Set the default aperture parameters
   	cl&gt; apdefault
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_APDEFAULT">APDEFAULT V2.11</A></B></DT>
+  <DT><B>APDEFAULT V2.11</B></DT>
   <! Sec='REVISIONS' Level=0 Label='APDEFAULT' Line='APDEFAULT V2.11'>
   <DD>The aperture ID table information may now be contained in the
   image header under the keywords SLFIBnnn.
@@ -162,5 +151,3 @@ apdefault — Set the default aperture parameters
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS'  >
   
-  </BODY>
-  </HTML>

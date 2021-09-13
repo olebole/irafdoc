@@ -1,3 +1,5 @@
+.. _ccsetwcs:
+
 ccsetwcs — Create an image celestial wcs from the ccmap plate solution
 ======================================================================
 
@@ -5,42 +7,29 @@ ccsetwcs — Create an image celestial wcs from the ccmap plate solution
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>ccsetwcs (Jun99)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imcoords</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>ccsetwcs (Jun99)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>ccsetwcs</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   ccsetwcs -- create an image wcs from a plate solution 
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   ccsetwcs image database solutions
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>The input images for which the wcs is to be created.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_database">database</A></B></DT>
+  <DT><B>database</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='database' Line='database'>
   <DD>The text database file written by the ccmap task containing the
   plate solutions. If database is undefined ccsetwcs computes
@@ -49,7 +38,7 @@ ccsetwcs — Create an image celestial wcs from the ccmap plate solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_solutions">solutions</A></B></DT>
+  <DT><B>solutions</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='solutions' Line='solutions'>
   <DD>The list of plate solutions. The number of plate solutions must be one
   or equal to the number of input images.  Solutions is either a user name
@@ -62,7 +51,7 @@ ccsetwcs — Create an image celestial wcs from the ccmap plate solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xref">xref = INDEF, yref = INDEF</A></B></DT>
+  <DT><B>xref = INDEF, yref = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xref' Line='xref = INDEF, yref = INDEF'>
   <DD>The x and y pixel coordinates of the sky projection reference point.
   If database is undefined then xref and yref default to the center of the
@@ -70,7 +59,7 @@ ccsetwcs — Create an image celestial wcs from the ccmap plate solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xmag">xmag = INDEF, ymag = INDEF</A></B></DT>
+  <DT><B>xmag = INDEF, ymag = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xmag' Line='xmag = INDEF, ymag = INDEF'>
   <DD>The x and y scale factors in arcseconds per pixel. If database is undefined
   xmag and ymag default to 1.0 and 1.0 arcsec / pixel, otherwise these parameters
@@ -78,7 +67,7 @@ ccsetwcs — Create an image celestial wcs from the ccmap plate solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xrotation">xrotation = INDEF, yrotation = INDEF</A></B></DT>
+  <DT><B>xrotation = INDEF, yrotation = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xrotation' Line='xrotation = INDEF, yrotation = INDEF'>
   <DD>The x and y rotation angles in degrees measured counter-clockwise with
   respect to the x and y axes. Xrotation and yrotation are interpreted as the
@@ -95,7 +84,7 @@ ccsetwcs — Create an image celestial wcs from the ccmap plate solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lngref">lngref = INDEF, latref = INDEF</A></B></DT>
+  <DT><B>lngref = INDEF, latref = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lngref' Line='lngref = INDEF, latref = INDEF'>
   <DD>The celestial coordinates of the sky projection reference point, e.g.
   the ra and dec of the reference point for equatorial systems. If database is
@@ -104,7 +93,7 @@ ccsetwcs — Create an image celestial wcs from the ccmap plate solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lngunits">lngunits = "<TT></TT>", latunits = "<TT></TT>"</A></B></DT>
+  <DT><B>lngunits = "<TT></TT>", latunits = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lngunits' Line='lngunits = "", latunits = ""'>
   <DD>The units of the lngref and latref parameters.
   The options are "<TT>hours</TT>", "<TT>degrees</TT>", "<TT>radians</TT>" for the ra / longitude
@@ -115,13 +104,13 @@ ccsetwcs — Create an image celestial wcs from the ccmap plate solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_transpose">transpose = no</A></B></DT>
+  <DT><B>transpose = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='transpose' Line='transpose = no'>
   <DD>Transpose the newly created image wcs ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_projection">projection = "<TT>tan</TT>"</A></B></DT>
+  <DT><B>projection = "<TT>tan</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='projection' Line='projection = "tan"'>
   <DD>The sky projection geometry. The most commonly used projections in
   astronomy are "<TT>tan</TT>", "<TT>arc</TT>", "<TT>sin</TT>", and "<TT>lin</TT>". Other supported projections
@@ -130,7 +119,7 @@ ccsetwcs — Create an image celestial wcs from the ccmap plate solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_coosystem">coosystem = "<TT>j2000</TT>"</A></B></DT>
+  <DT><B>coosystem = "<TT>j2000</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='coosystem' Line='coosystem = "j2000"'>
   <DD>The celestial coordinate system. The systems of most interest to users
   are "<TT>icrs</TT>", "<TT>j2000</TT>" and "<TT>b1950</TT>" which stand for the ICRS J2000.0, FK5 J2000.0,
@@ -142,7 +131,7 @@ ccsetwcs — Create an image celestial wcs from the ccmap plate solution
   otherwise this parameter is ignored.
   <P>
   <DL>
-  <DT><B><A NAME="l_equinox">equinox [epoch]</A></B></DT>
+  <DT><B>equinox [epoch]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='equinox' Line='equinox [epoch]'>
   <DD>The equatorial mean place post-IAU 1976 (FK5) system if equinox is a
   Julian epoch, e.g. J2000.0 or 2000.0, or the equatorial mean place
@@ -159,7 +148,7 @@ ccsetwcs — Create an image celestial wcs from the ccmap plate solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_icrs">icrs [equinox] [epoch]</A></B></DT>
+  <DT><B>icrs [equinox] [epoch]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='icrs' Line='icrs [equinox] [epoch]'>
   <DD>The International Celestial Reference System where equinox is
   a Julian or Besselian epoch e.g. J2000.0  or B1980.0.
@@ -173,7 +162,7 @@ ccsetwcs — Create an image celestial wcs from the ccmap plate solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fk5">fk5 [equinox] [epoch] </A></B></DT>
+  <DT><B>fk5 [equinox] [epoch] </B></DT>
   <! Sec='PARAMETERS' Level=1 Label='fk5' Line='fk5 [equinox] [epoch] '>
   <DD>The equatorial mean place post-IAU 1976 (FK5) system where equinox is
   a Julian or Besselian epoch e.g. J2000.0  or B1980.0.
@@ -187,7 +176,7 @@ ccsetwcs — Create an image celestial wcs from the ccmap plate solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fk4">fk4 [equinox] [epoch]</A></B></DT>
+  <DT><B>fk4 [equinox] [epoch]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='fk4' Line='fk4 [equinox] [epoch]'>
   <DD>The equatorial mean place pre-IAU 1976 (FK4) system where equinox is a
   Besselian or Julian epoch e.g. B1950.0  or J2000.0,
@@ -203,7 +192,7 @@ ccsetwcs — Create an image celestial wcs from the ccmap plate solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_noefk4">noefk4 [equinox] [epoch]</A></B></DT>
+  <DT><B>noefk4 [equinox] [epoch]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='noefk4' Line='noefk4 [equinox] [epoch]'>
   <DD>The equatorial mean place pre-IAU 1976 (FK4) system but without the E-terms
   where equinox is a Besselian or Julian epoch e.g. B1950.0 or J2000.0,
@@ -219,7 +208,7 @@ ccsetwcs — Create an image celestial wcs from the ccmap plate solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apparent">apparent epoch </A></B></DT>
+  <DT><B>apparent epoch </B></DT>
   <! Sec='PARAMETERS' Level=1 Label='apparent' Line='apparent epoch '>
   <DD>The equatorial geocentric apparent place post-IAU 1976 system where
   epoch is the epoch of observation.
@@ -232,7 +221,7 @@ ccsetwcs — Create an image celestial wcs from the ccmap plate solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ecliptic">ecliptic epoch</A></B></DT>
+  <DT><B>ecliptic epoch</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='ecliptic' Line='ecliptic epoch'>
   <DD>The ecliptic coordinate system where epoch is the epoch of observation.
   Epoch is a Besselian epoch, a Julian epoch, or a Julian date.
@@ -244,7 +233,7 @@ ccsetwcs — Create an image celestial wcs from the ccmap plate solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_galactic">galactic [epoch]</A></B></DT>
+  <DT><B>galactic [epoch]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='galactic' Line='galactic [epoch]'>
   <DD>The IAU 1958 galactic coordinate system.
   Epoch is a Besselian epoch, a Julian epoch or a Julian date.
@@ -256,7 +245,7 @@ ccsetwcs — Create an image celestial wcs from the ccmap plate solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_supergalactic">supergalactic [epoch]</A></B></DT>
+  <DT><B>supergalactic [epoch]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='supergalactic' Line='supergalactic [epoch]'>
   <DD>The deVaucouleurs supergalactic coordinate system.
   Epoch is a Besselian epoch, a Julian epoch or a Julian date.
@@ -275,7 +264,7 @@ ccsetwcs — Create an image celestial wcs from the ccmap plate solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_update">update = yes</A></B></DT>
+  <DT><B>update = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='update' Line='update = yes'>
   <DD>Update the world coordinate system in the input image headers ?
   The numerical quantities represented by the keywords CRPIX,
@@ -290,11 +279,11 @@ ccsetwcs — Create an image celestial wcs from the ccmap plate solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pixsystem">pixsystem = "<TT>logical</TT>"</A></B></DT>
+  <DT><B>pixsystem = "<TT>logical</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pixsystem' Line='pixsystem = "logical"'>
   <DD>The pixel coordinate system. The options are:
   <DL>
-  <DT><B><A NAME="l_logical">logical</A></B></DT>
+  <DT><B>logical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='logical' Line='logical'>
   <DD>The logical pixel coordinate system is the coordinate system of the image
   pixels on disk. Since most users measure the pixel coordinates of objects
@@ -302,7 +291,7 @@ ccsetwcs — Create an image celestial wcs from the ccmap plate solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_physical">physical</A></B></DT>
+  <DT><B>physical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='physical' Line='physical'>
   <DD>The physical coordinate system is the pixel coordinate system of the
   parent image. This option is useful for users working on images that are
@@ -315,7 +304,7 @@ ccsetwcs — Create an image celestial wcs from the ccmap plate solution
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print detailed messages about the progress of the task on the standard output ?
   </DD>
@@ -323,7 +312,7 @@ ccsetwcs — Create an image celestial wcs from the ccmap plate solution
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -439,7 +428,7 @@ ccsetwcs — Create an image celestial wcs from the ccmap plate solution
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   <P>
@@ -472,7 +461,7 @@ ccsetwcs — Create an image celestial wcs from the ccmap plate solution
   <P>
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -661,13 +650,13 @@ ccsetwcs — Create an image celestial wcs from the ccmap plate solution
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   <P>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   ccmap, cctran, skyctran, imctran
@@ -676,5 +665,3 @@ ccsetwcs — Create an image celestial wcs from the ccmap plate solution
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'REFERENCES' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

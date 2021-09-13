@@ -1,3 +1,5 @@
+.. _sapertures:
+
 sapertures — Set or change aperture header information
 ======================================================
 
@@ -5,42 +7,29 @@ sapertures — Set or change aperture header information
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>sapertures (Jul95)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.onedspec</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>sapertures (Jul95)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>sapertures</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   sapertures -- Set or change aperture header information
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   sapertures input
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of spectral images to be modified.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apertures">apertures = "<TT></TT>"</A></B></DT>
+  <DT><B>apertures = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""'>
   <DD>List of apertures to be modified.  The null list
   selects all apertures.  A list consists of comma separated
@@ -50,7 +39,7 @@ sapertures — Set or change aperture header information
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apidtable">apidtable = "<TT></TT>"</A></B></DT>
+  <DT><B>apidtable = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apidtable' Line='apidtable = ""'>
   <DD>Aperture table.  This may be either a text file or an image.
   A text file consisting of lines with an aperture number,
@@ -71,7 +60,7 @@ sapertures — Set or change aperture header information
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wcsreset">wcsreset = no</A></B></DT>
+  <DT><B>wcsreset = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wcsreset' Line='wcsreset = no'>
   <DD>Reset the world coordinate system (WCS) of the selected apertures to
   uncorrected pixels.  If this parameter is set the <I>apidtable</I> and task
@@ -83,7 +72,7 @@ sapertures — Set or change aperture header information
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = no</A></B></DT>
+  <DT><B>verbose = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
   <DD>Print a record of each aperture modified?  Only those apertures 
   in which the beam number or label are changed are printed.
@@ -95,13 +84,13 @@ sapertures — Set or change aperture header information
   values are used.  A value of INDEF will leave the corresponding
   parameter unchanged.
   <DL>
-  <DT><B><A NAME="l_beam">beam = INDEF</A></B></DT>
+  <DT><B>beam = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='beam' Line='beam = INDEF'>
   <DD>Beam number.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dtype">dtype = INDEF</A></B></DT>
+  <DT><B>dtype = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dtype' Line='dtype = INDEF'>
   <DD>Dispersion type.  The dispersion types are:
   <P>
@@ -114,7 +103,7 @@ sapertures — Set or change aperture header information
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_w1">w1 = INDEF</A></B></DT>
+  <DT><B>w1 = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='w1' Line='w1 = INDEF'>
   <DD>Coordinate of the first physical pixel.  Note that it is possible
   that the physical pixels are not the same as the logical pixels if
@@ -122,7 +111,7 @@ sapertures — Set or change aperture header information
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dw">dw = INDEF</A></B></DT>
+  <DT><B>dw = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dw' Line='dw = INDEF'>
   <DD>Coordinate interval per physical pixel.  Note that it is possible
   that the physical pixels intervals are not the same as the logical pixels
@@ -130,14 +119,14 @@ sapertures — Set or change aperture header information
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_z">z = INDEF</A></B></DT>
+  <DT><B>z = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='z' Line='z = INDEF'>
   <DD>Redshift factor.  This is usually set with the task <B>dopcor</B>.
   Coordinates are divided by one plus the redshift factor (1+z).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_aplow">aplow = INDEF, aphigh = INDEF</A></B></DT>
+  <DT><B>aplow = INDEF, aphigh = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='aplow' Line='aplow = INDEF, aphigh = INDEF'>
   <DD>The aperture extraction limits.  These are set when the <B>apextract</B>
   package is used and it is unlikely that one would use this task to
@@ -145,14 +134,14 @@ sapertures — Set or change aperture header information
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_title">title = INDEF</A></B></DT>
+  <DT><B>title = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='title' Line='title = INDEF'>
   <DD>Aperture title or identification string.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task sets or changes any of the aperture specific parameters except
@@ -193,7 +182,7 @@ sapertures — Set or change aperture header information
   a change.  If there are no changes there will be no output.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  To add titles to a multifiber extraction and change one of the
@@ -268,32 +257,32 @@ sapertures — Set or change aperture header information
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_SAPERTURES">SAPERTURES V2.11</A></B></DT>
+  <DT><B>SAPERTURES V2.11</B></DT>
   <! Sec='REVISIONS' Level=0 Label='SAPERTURES' Line='SAPERTURES V2.11'>
   <DD>This task has been modified to allow use of image header keywords
   as done in the APEXTRACT package.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_SAPERTURES">SAPERTURES V2.10.3</A></B></DT>
+  <DT><B>SAPERTURES V2.10.3</B></DT>
   <! Sec='REVISIONS' Level=0 Label='SAPERTURES' Line='SAPERTURES V2.10.3'>
   <DD>This task has been greatly expanded to allow changing any of the WCS
   parameters as well as the beam number and aperture title.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_SAPERTURES">SAPERTURES V2.10</A></B></DT>
+  <DT><B>SAPERTURES V2.10</B></DT>
   <! Sec='REVISIONS' Level=0 Label='SAPERTURES' Line='SAPERTURES V2.10'>
   <DD>This task is new.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   specshift, imcoords.wcsreset, hedit, ranges, onedspec.package
@@ -302,5 +291,3 @@ sapertures — Set or change aperture header information
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

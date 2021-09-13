@@ -1,3 +1,5 @@
+.. _pdump:
+
 pdump — Print selected fields from a list of apphot databases
 =============================================================
 
@@ -5,42 +7,29 @@ pdump — Print selected fields from a list of apphot databases
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>pdump (Feb93)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.ptools</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>pdump (Feb93)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>pdump</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   pdump - print fields from an APPHOT/DAOPHOT database
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   pdump infiles fields expr
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_infiles">infiles</A></B></DT>
+  <DT><B>infiles</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='infiles' Line='infiles'>
   <DD>The APPHOT/DAOPHOT databases containing the fields to be dumped.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fields">fields</A></B></DT>
+  <DT><B>fields</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fields' Line='fields'>
   <DD>A template defining the fields to be dumped from each record.
   In the case of APPHOT/DAOPHOT text databases, the fields are specified by
@@ -59,7 +48,7 @@ pdump — Print selected fields from a list of apphot databases
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_expr">expr</A></B></DT>
+  <DT><B>expr</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='expr' Line='expr'>
   <DD>The boolean expression to be evaluated once per record.
   Only the fields in those records for which the boolean expression
@@ -69,7 +58,7 @@ pdump — Print selected fields from a list of apphot databases
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_headers">headers = no</A></B></DT>
+  <DT><B>headers = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='headers' Line='headers = no'>
   <DD>Dump the APPHOT/DAOPHOT database field headers. The selected
   fields are printed on the standard output, preceded by the parameters list,
@@ -78,7 +67,7 @@ pdump — Print selected fields from a list of apphot databases
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_parameters">parameters = yes</A></B></DT>
+  <DT><B>parameters = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='parameters' Line='parameters = yes'>
   <DD>Print the keyword parameters records on the
   standard output if <I>headers</I> = yes.
@@ -87,7 +76,7 @@ pdump — Print selected fields from a list of apphot databases
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   PDUMP selects a subset of fields specified by the <I>fields</I>
@@ -176,7 +165,7 @@ pdump — Print selected fields from a list of apphot databases
   </PRE>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -217,14 +206,14 @@ pdump — Print selected fields from a list of apphot databases
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   Users should not dump more fields than fill a 161 character textline
   as IRAF does not currently fully support longer text lines.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   ptools.txdump,ptools.tbdump,tables.tdump
@@ -233,5 +222,3 @@ pdump — Print selected fields from a list of apphot databases
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

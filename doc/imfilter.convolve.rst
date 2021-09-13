@@ -1,3 +1,5 @@
+.. _convolve:
+
 convolve — Convolve a list of 1 or 2-D images with a rectangular filter
 =======================================================================
 
@@ -5,42 +7,29 @@ convolve — Convolve a list of 1 or 2-D images with a rectangular filter
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>convolve (Jan91)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imfilter</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>convolve (Jan91)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>convolve</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   convolve -- convolve an image with an arbitrary rectangular kernel
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   convolve input output kernel
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of images to be convolved with the rectangular kernel.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>List of output images. The number of output images must equal the number of
   input images. If the input image name equals the output image name the
@@ -48,7 +37,7 @@ convolve — Convolve a list of 1 or 2-D images with a rectangular filter
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_kernel">kernel</A></B></DT>
+  <DT><B>kernel</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='kernel' Line='kernel'>
   <DD>A text file name or a string listing the 2D kernel elements.
   The kernel elements are separated by whitespace or commas and the kernel rows
@@ -60,7 +49,7 @@ convolve — Convolve a list of 1 or 2-D images with a rectangular filter
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xkernel">xkernel</A></B></DT>
+  <DT><B>xkernel</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xkernel' Line='xkernel'>
   <DD>A text file or string containing the 1D x dimension component of the bilinear
   convolution kernel. The kernel elements are separated by whitespace
@@ -68,7 +57,7 @@ convolve — Convolve a list of 1 or 2-D images with a rectangular filter
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ykernel">ykernel</A></B></DT>
+  <DT><B>ykernel</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ykernel' Line='ykernel'>
   <DD>A text file or string containing the 1D y dimension component of the bilinear
   convolution kernel. The kernel elements are separated by whitespace
@@ -76,7 +65,7 @@ convolve — Convolve a list of 1 or 2-D images with a rectangular filter
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_bilinear">bilinear</A></B></DT>
+  <DT><B>bilinear</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='bilinear' Line='bilinear'>
   <DD>Is the convolution kernel bilinear? If <I>bilinear</I> is yes, then the full 2D
   convolution kernel <I>kernel</I> can be expressed as two independent 1D
@@ -85,37 +74,37 @@ convolve — Convolve a list of 1 or 2-D images with a rectangular filter
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_radsym">radsym = no</A></B></DT>
+  <DT><B>radsym = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='radsym' Line='radsym = no'>
   <DD>Is the convolution kernel radially symmetric? If radsym "<TT>yes</TT>", a more efficient
   convolution algorithm is used.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_boundary">boundary = "<TT>nearest</TT>"</A></B></DT>
+  <DT><B>boundary = "<TT>nearest</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"'>
   <DD>The algorithm used to compute the values of the out of bounds pixels. The
   options are:
   <DL>
-  <DT><B><A NAME="l_nearest">nearest</A></B></DT>
+  <DT><B>nearest</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest'>
   <DD>Use the value of the nearest boundary pixel.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_constant">constant</A></B></DT>
+  <DT><B>constant</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='constant' Line='constant'>
   <DD>Use a constant value.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_reflect">reflect</A></B></DT>
+  <DT><B>reflect</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='reflect' Line='reflect'>
   <DD>Generate a value by reflecting around the boundary.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wrap">wrap</A></B></DT>
+  <DT><B>wrap</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='wrap' Line='wrap'>
   <DD>Generate a value by wrapping around to the opposite side of the image.
   </DD>
@@ -123,13 +112,13 @@ convolve — Convolve a list of 1 or 2-D images with a rectangular filter
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_constant">constant = 0.</A></B></DT>
+  <DT><B>constant = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.'>
   <DD>The constant for constant-valued boundary extension.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_row_delimiter">row_delimiter = "<TT>;</TT>"</A></B></DT>
+  <DT><B>row_delimiter = "<TT>;</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='row_delimiter' Line='row_delimiter = ";"'>
   <DD>The row delimiter character for multi-row kernels.
   </DD>
@@ -137,7 +126,7 @@ convolve — Convolve a list of 1 or 2-D images with a rectangular filter
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -169,7 +158,7 @@ convolve — Convolve a list of 1 or 2-D images with a rectangular filter
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   Examples 1 and 2 use the following kernel where -1 is element 1 of row 1.
@@ -227,7 +216,7 @@ convolve — Convolve a list of 1 or 2-D images with a rectangular filter
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   CONVOLVE requires approximately 30 and 8 cpu seconds to convolve a
@@ -237,13 +226,13 @@ convolve — Convolve a list of 1 or 2-D images with a rectangular filter
   <P>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   <P>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   gauss, laplace, gradient, boxcar
@@ -252,5 +241,3 @@ convolve — Convolve a list of 1 or 2-D images with a rectangular filter
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

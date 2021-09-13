@@ -1,3 +1,5 @@
+.. _wspectext:
+
 wspectext — Convert 1D image spectra to ascii text spectra
 ==========================================================
 
@@ -5,50 +7,37 @@ wspectext — Convert 1D image spectra to ascii text spectra
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>wspectext (Oct93)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>onedspec</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>wspectext (Oct93)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>wspectext</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   wspectext -- convert 1D image spectra to an ascii text spectra
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   wspectext input output
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>Input list of 1D image spectra to be converted.  If the image is
   not one dimensional an warning will be given and the image will be skipped.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>Output list of ascii text spectra filenames.  The list must match the
   input list.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_header">header = yes</A></B></DT>
+  <DT><B>header = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='header' Line='header = yes'>
   <DD>This parameter determines whether or not a descriptive header precedes the
   wavelength and flux values written to the text file.  When <I>header =
@@ -56,7 +45,7 @@ wspectext — Convert 1D image spectra to ascii text spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wformat">wformat = "<TT></TT>"</A></B></DT>
+  <DT><B>wformat = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wformat' Line='wformat = ""'>
   <DD>The wavelength coordinate output format.  If it is undefined the formatting
   option stored with the WCS in the image header is used.  If the WCS
@@ -66,7 +55,7 @@ wspectext — Convert 1D image spectra to ascii text spectra
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   IRAF one dimensional spectra are converted to ascii text files.  The
@@ -81,7 +70,7 @@ wspectext — Convert 1D image spectra to ascii text spectra
   may first be converted to 1D images using <B>scopy</B> with format="<TT>onedspec</TT>".
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  Write a text file with a header.
@@ -131,18 +120,18 @@ wspectext — Convert 1D image spectra to ascii text spectra
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_WSPECTEXT">WSPECTEXT V2.10.3</A></B></DT>
+  <DT><B>WSPECTEXT V2.10.3</B></DT>
   <! Sec='REVISIONS' Level=0 Label='WSPECTEXT' Line='WSPECTEXT V2.10.3'>
   <DD>This is a new task with this version.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   rspectext, wtextimage, listpixels, scopy, imspec
@@ -151,5 +140,3 @@ wspectext — Convert 1D image spectra to ascii text spectra
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

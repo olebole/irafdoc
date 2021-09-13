@@ -1,3 +1,5 @@
+.. _specshift:
+
 specshift — Shift spectral dispersion coordinate systems
 ========================================================
 
@@ -5,49 +7,36 @@ specshift — Shift spectral dispersion coordinate systems
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>specshift (Oct92)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.onedspec</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>specshift (Oct92)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>specshift</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   specshift -- Shift dispersion coordinate systems
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   specshift spectra shift
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_spectra">spectra</A></B></DT>
+  <DT><B>spectra</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='spectra' Line='spectra'>
   <DD>List of spectra to be modified.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_shift">shift</A></B></DT>
+  <DT><B>shift</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='shift' Line='shift'>
   <DD>Dispersion coordinate shift to be added to the current dispersion coordinate
   system.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apertures">apertures = "<TT></TT>"</A></B></DT>
+  <DT><B>apertures = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""'>
   <DD>List of apertures to be modified.  The null list
   selects all apertures.  A list consists of comma separated
@@ -58,14 +47,14 @@ specshift — Shift spectral dispersion coordinate systems
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = no</A></B></DT>
+  <DT><B>verbose = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
   <DD>Print a record of each aperture modified?
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task applies a shift to the dispersion coordinate system of selected
@@ -91,7 +80,7 @@ specshift — Shift spectral dispersion coordinate systems
   the old and new values for the first physical pixel are printed.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  To add 1.23 Angstroms to the coordinates of all apertures in the
@@ -102,18 +91,18 @@ specshift — Shift spectral dispersion coordinate systems
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_SPECSHIFT">SPECSHIFT V2.10.3</A></B></DT>
+  <DT><B>SPECSHIFT V2.10.3</B></DT>
   <! Sec='REVISIONS' Level=0 Label='SPECSHIFT' Line='SPECSHIFT V2.10.3'>
   <DD>First version.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   sapertures, dopcor, imcoords.wcsreset, hedit, ranges, onedspec.package
@@ -122,5 +111,3 @@ specshift — Shift spectral dispersion coordinate systems
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

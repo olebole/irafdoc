@@ -1,3 +1,5 @@
+.. _ccmap:
+
 ccmap — Compute image plate solutions using matched coordinate lists
 ====================================================================
 
@@ -5,37 +7,24 @@ ccmap — Compute image plate solutions using matched coordinate lists
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>ccmap (Jan01)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imcoords</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>ccmap (Jan01)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>ccmap</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   ccmap -- compute plate solutions using matched pixel and celestial coordinate
   lists
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   ccmap input database
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The input text files containing the pixel and celestial coordinates of
   points in the input images. The coordinates are listed one per line with x, y,
@@ -47,13 +36,13 @@ ccmap — Compute image plate solutions using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_database">database</A></B></DT>
+  <DT><B>database</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='database' Line='database'>
   <DD>The text database file where the computed plate solutions are stored.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_solutions">solutions = "<TT></TT>"</A></B></DT>
+  <DT><B>solutions = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='solutions' Line='solutions = ""'>
   <DD>An optional list of plate solution names. If there are multiple input
   coordinate files and no name or a single name is specified then the
@@ -65,7 +54,7 @@ ccmap — Compute image plate solutions using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_images">images = "<TT></TT>"</A></B></DT>
+  <DT><B>images = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images = ""'>
   <DD>The images associated with the input coordinate files. The number of images
   must be zero or equal to the number of input coordinate files. If an input
@@ -75,7 +64,7 @@ ccmap — Compute image plate solutions using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_results">results = "<TT></TT>"</A></B></DT>
+  <DT><B>results = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='results' Line='results = ""'>
   <DD>Optional output files containing a summary of the results including a
   description of the plate geometry and a listing of the input coordinates,
@@ -87,14 +76,14 @@ ccmap — Compute image plate solutions using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xcolumn">xcolumn = 1, ycolumn = 2, lngcolumn = 3, latcolumn = 4</A></B></DT>
+  <DT><B>xcolumn = 1, ycolumn = 2, lngcolumn = 3, latcolumn = 4</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xcolumn' Line='xcolumn = 1, ycolumn = 2, lngcolumn = 3, latcolumn = 4'>
   <DD>The input coordinate file columns containing the x, y, ra / longitude and
   dec / latitude values.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xmin">xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF</A></B></DT>
+  <DT><B>xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xmin' Line='xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF'>
   <DD>The range of x and y pixel coordinates over which the computed coordinate
   transformation is valid. These limits should be left at INDEF or set to
@@ -105,7 +94,7 @@ ccmap — Compute image plate solutions using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lngunits">lngunits = "<TT></TT>", latunits = "<TT></TT>"</A></B></DT>
+  <DT><B>lngunits = "<TT></TT>", latunits = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lngunits' Line='lngunits = "", latunits = ""'>
   <DD>The units of the input ra / longitude and dec / latitude coordinates. The
   options are "<TT>hours</TT>", "<TT>degrees</TT>", and "<TT>radians</TT>" for ra / longitude, and
@@ -117,7 +106,7 @@ ccmap — Compute image plate solutions using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_insystem">insystem = "<TT>j2000</TT>"</A></B></DT>
+  <DT><B>insystem = "<TT>j2000</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='insystem' Line='insystem = "j2000"'>
   <DD>The input celestial coordinate system. The <I>insystem</I> parameter
   sets the preferred units for the input celestial coordinates,
@@ -130,7 +119,7 @@ ccmap — Compute image plate solutions using matched coordinate lists
   systems respectively.  The full set of options are the following:
   <P>
   <DL>
-  <DT><B><A NAME="l_equinox">equinox [epoch]</A></B></DT>
+  <DT><B>equinox [epoch]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='equinox' Line='equinox [epoch]'>
   <DD>The equatorial mean place post-IAU 1976 (FK5) system if equinox is a
   Julian epoch, e.g. J2000.0 or 2000.0, or the equatorial mean place
@@ -147,7 +136,7 @@ ccmap — Compute image plate solutions using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_icrs">icrs [equinox] [epoch]</A></B></DT>
+  <DT><B>icrs [equinox] [epoch]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='icrs' Line='icrs [equinox] [epoch]'>
   <DD>The International Celestial Reference System where equinox is
   a Julian or Besselian epoch e.g. J2000.0  or B1980.0.
@@ -161,7 +150,7 @@ ccmap — Compute image plate solutions using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fk5">fk5 [equinox] [epoch] </A></B></DT>
+  <DT><B>fk5 [equinox] [epoch] </B></DT>
   <! Sec='PARAMETERS' Level=1 Label='fk5' Line='fk5 [equinox] [epoch] '>
   <DD>The equatorial mean place post-IAU 1976 (FK5) system where equinox is
   a Julian or Besselian epoch e.g. J2000.0  or B1980.0.
@@ -175,7 +164,7 @@ ccmap — Compute image plate solutions using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fk4">fk4 [equinox] [epoch]</A></B></DT>
+  <DT><B>fk4 [equinox] [epoch]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='fk4' Line='fk4 [equinox] [epoch]'>
   <DD>The equatorial mean place pre-IAU 1976 (FK4) system where equinox is a
   Besselian or Julian epoch e.g. B1950.0  or J2000.0,
@@ -191,7 +180,7 @@ ccmap — Compute image plate solutions using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_noefk4">noefk4 [equinox] [epoch]</A></B></DT>
+  <DT><B>noefk4 [equinox] [epoch]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='noefk4' Line='noefk4 [equinox] [epoch]'>
   <DD>The equatorial mean place pre-IAU 1976 (FK4) system but without the E-terms
   where equinox is a Besselian or Julian epoch e.g. B1950.0 or J2000.0,
@@ -207,7 +196,7 @@ ccmap — Compute image plate solutions using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apparent">apparent epoch </A></B></DT>
+  <DT><B>apparent epoch </B></DT>
   <! Sec='PARAMETERS' Level=1 Label='apparent' Line='apparent epoch '>
   <DD>The equatorial geocentric apparent place post-IAU 1976 system where
   epoch is the epoch of observation.
@@ -220,7 +209,7 @@ ccmap — Compute image plate solutions using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ecliptic">ecliptic epoch</A></B></DT>
+  <DT><B>ecliptic epoch</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='ecliptic' Line='ecliptic epoch'>
   <DD>The ecliptic coordinate system where epoch is the epoch of observation.
   Epoch is a Besselian epoch, a Julian epoch, or a Julian date.
@@ -232,7 +221,7 @@ ccmap — Compute image plate solutions using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_galactic">galactic [epoch]</A></B></DT>
+  <DT><B>galactic [epoch]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='galactic' Line='galactic [epoch]'>
   <DD>The IAU 1958 galactic coordinate system.
   Epoch is a Besselian epoch, a Julian epoch or a Julian date.
@@ -244,7 +233,7 @@ ccmap — Compute image plate solutions using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_supergalactic">supergalactic [epoch]</A></B></DT>
+  <DT><B>supergalactic [epoch]</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='supergalactic' Line='supergalactic [epoch]'>
   <DD>The deVaucouleurs supergalactic coordinate system.
   Epoch is a Besselian epoch, a Julian epoch or a Julian date.
@@ -266,13 +255,13 @@ ccmap — Compute image plate solutions using matched coordinate lists
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_refpoint">refpoint = "<TT>coords</TT>"</A></B></DT>
+  <DT><B>refpoint = "<TT>coords</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='refpoint' Line='refpoint = "coords"'>
   <DD>The definition of the sky projection reference point in celestial coordinates,
   e.g. the tangent point in the case of the usual tangent plane projection.
   The options are:
   <DL>
-  <DT><B><A NAME="l_coords">coords</A></B></DT>
+  <DT><B>coords</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='coords' Line='coords'>
   <DD>The celestial coordinates of the reference point are set to the mean of the 
   input celestial coordinates, e.g. the mean of ra / longitude and dec /
@@ -282,7 +271,7 @@ ccmap — Compute image plate solutions using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_user">user</A></B></DT>
+  <DT><B>user</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='user' Line='user'>
   <DD>The values of the keywords <I>lngref</I>, <I>latref</I>, <I>refsystem</I>,
   <I>lngrefunits</I>, and <I>latrefunits</I> are used to determine the celestial
@@ -292,7 +281,7 @@ ccmap — Compute image plate solutions using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xref">xref = "<TT>INDEF</TT>", yref = "<TT>INDEF</TT>"</A></B></DT>
+  <DT><B>xref = "<TT>INDEF</TT>", yref = "<TT>INDEF</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xref' Line='xref = "INDEF", yref = "INDEF"'>
   <DD>The reference pixel may be specified as a value or image header keyword.
   In the latter case a reference image must be specified.  By specifying
@@ -301,7 +290,7 @@ ccmap — Compute image plate solutions using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lngref">lngref = "<TT>INDEF</TT>", latref = "<TT>INDEF</TT>"</A></B></DT>
+  <DT><B>lngref = "<TT>INDEF</TT>", latref = "<TT>INDEF</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lngref' Line='lngref = "INDEF", latref = "INDEF"'>
   <DD>The ra / longitude and dec / latitude of the reference point(s).  Lngref
   and latref may be numbers, e.g 13:20:42.3 and -33:41:26 or keywords for the
@@ -313,7 +302,7 @@ ccmap — Compute image plate solutions using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_refsystem">refsystem = "<TT>INDEF</TT>"</A></B></DT>
+  <DT><B>refsystem = "<TT>INDEF</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='refsystem' Line='refsystem = "INDEF"'>
   <DD>The celestial coordinate system of the reference point. Refsystem may
   be any one of the options listed under the <I>insystem</I> parameter, e.g.
@@ -325,7 +314,7 @@ ccmap — Compute image plate solutions using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lngrefunits">lngrefunits = "<TT></TT>", latrefunits = "<TT></TT>"</A></B></DT>
+  <DT><B>lngrefunits = "<TT></TT>", latrefunits = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lngrefunits' Line='lngrefunits = "", latrefunits = ""'>
   <DD>The units of the reference point celestial  coordinates. The options
   are "<TT>hours</TT>", "<TT>degrees</TT>", and "<TT>radians</TT>" for the ra / longitude coordinates,
@@ -335,7 +324,7 @@ ccmap — Compute image plate solutions using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_projection">projection = "<TT>tan</TT>"</A></B></DT>
+  <DT><B>projection = "<TT>tan</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='projection' Line='projection = "tan"'>
   <DD>The sky projection geometry. The most commonly used projections in astronomy
   are "<TT>tan</TT>", "<TT>arc</TT>", "<TT>sin</TT>", and "<TT>lin</TT>". Other supported  standard projections
@@ -345,45 +334,45 @@ ccmap — Compute image plate solutions using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fitgeometry">fitgeometry = "<TT>general</TT>"</A></B></DT>
+  <DT><B>fitgeometry = "<TT>general</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fitgeometry' Line='fitgeometry = "general"'>
   <DD>The plate solution geometry to be used. The options are the following, where
   xi and eta refer to the usual standard coordinates used in astrometry.
   <DL>
-  <DT><B><A NAME="l_shift">shift</A></B></DT>
+  <DT><B>shift</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='shift' Line='shift'>
   <DD>Xi and eta shifts only are fit.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xyscale">xyscale</A></B></DT>
+  <DT><B>xyscale</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='xyscale' Line='xyscale'>
   <DD>Xi and eta shifts and x and y magnification factors in " / pixel are fit.
   Axis flips are allowed for.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rotate">rotate</A></B></DT>
+  <DT><B>rotate</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='rotate' Line='rotate'>
   <DD>Xi and eta shifts and a rotation angle are fit. Axis flips are allowed for.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rscale">rscale</A></B></DT>
+  <DT><B>rscale</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='rscale' Line='rscale'>
   <DD>Xi and eta shifts, a magnification factor in " / pixel assumed to be the same
   in x and y, and a rotation angle are fit. Axis flips are allowed for.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rxyscale">rxyscale</A></B></DT>
+  <DT><B>rxyscale</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='rxyscale' Line='rxyscale'>
   <DD>Xi and eta shifts, x and y magnifications factors in " / pixel, and a rotation
   angle are fit.  Axis flips are allowed for.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_general">general</A></B></DT>
+  <DT><B>general</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='general' Line='general'>
   <DD>A polynomial of arbitrary order in x and y is fit. A linear term and a
   distortion term are computed separately. The linear term includes a xi and eta
@@ -402,24 +391,24 @@ ccmap — Compute image plate solutions using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_function">function = "<TT>polynomial</TT>"</A></B></DT>
+  <DT><B>function = "<TT>polynomial</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='function' Line='function = "polynomial"'>
   <DD>The type of analytic coordinate surface to be fit. The options are the
   following.
   <DL>
-  <DT><B><A NAME="l_legendre">legendre</A></B></DT>
+  <DT><B>legendre</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='legendre' Line='legendre'>
   <DD>Legendre polynomials in x and y.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_chebyshev">chebyshev</A></B></DT>
+  <DT><B>chebyshev</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='chebyshev' Line='chebyshev'>
   <DD>Chebyshev polynomials in x and y.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_polynomial">polynomial</A></B></DT>
+  <DT><B>polynomial</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='polynomial' Line='polynomial'>
   <DD>Power series polynomials in x and y.
   </DD>
@@ -427,7 +416,7 @@ ccmap — Compute image plate solutions using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xxorder">xxorder = 2, xyorder = 2,  yxorder = 2, yyorder = 2</A></B></DT>
+  <DT><B>xxorder = 2, xyorder = 2,  yxorder = 2, yyorder = 2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xxorder' Line='xxorder = 2, xyorder = 2,  yxorder = 2, yyorder = 2'>
   <DD>The order of the polynomials in x and y for the xi and eta fits respectively.
   The default order and cross term settings define the linear term in x
@@ -441,18 +430,18 @@ ccmap — Compute image plate solutions using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xxterms">xxterms = "<TT>half</TT>", yxterms = "<TT>half</TT>"</A></B></DT>
+  <DT><B>xxterms = "<TT>half</TT>", yxterms = "<TT>half</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xxterms' Line='xxterms = "half", yxterms = "half"'>
   <DD>The options are:
   <DL>
-  <DT><B><A NAME="l_none">none</A></B></DT>
+  <DT><B>none</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='none' Line='none'>
   <DD>The individual polynomial terms contain powers of x or powers of y but not
   powers of both.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_half">half</A></B></DT>
+  <DT><B>half</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='half' Line='half'>
   <DD>The individual polynomial terms contain powers of x and powers of y, whose
   maximum combined power is MAX (xxorder - 1, xyorder - 1) for the xi fit and
@@ -461,7 +450,7 @@ ccmap — Compute image plate solutions using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_full">full</A></B></DT>
+  <DT><B>full</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='full' Line='full'>
   <DD>The individual polynomial terms contain powers of x and powers of y, whose
   maximum combined power is MAX (xxorder - 1 + xyorder - 1) for the xi fit and
@@ -478,19 +467,19 @@ ccmap — Compute image plate solutions using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_maxiter">maxiter = 0</A></B></DT>
+  <DT><B>maxiter = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='maxiter' Line='maxiter = 0'>
   <DD>The maximum number of rejection iterations. The default is no rejection.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_reject">reject = INDEF</A></B></DT>
+  <DT><B>reject = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='reject' Line='reject = INDEF'>
   <DD>The rejection limit in units of sigma.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_update">update = no</A></B></DT>
+  <DT><B>update = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='update' Line='update = no'>
   <DD>Update the world coordinate system in the input image headers ?
   The required numerical quantities represented by the keywords CRPIX,
@@ -505,11 +494,11 @@ ccmap — Compute image plate solutions using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pixsystem">pixsystem = "<TT>logical</TT>"</A></B></DT>
+  <DT><B>pixsystem = "<TT>logical</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pixsystem' Line='pixsystem = "logical"'>
   <DD>The input pixel coordinate system. The options are:
   <DL>
-  <DT><B><A NAME="l_logical">logical</A></B></DT>
+  <DT><B>logical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='logical' Line='logical'>
   <DD>The logical pixel coordinate system is the coordinate system of the image
   pixels on disk. Since most users measure the pixel coordinates of objects
@@ -517,7 +506,7 @@ ccmap — Compute image plate solutions using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_physical">physical</A></B></DT>
+  <DT><B>physical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='physical' Line='physical'>
   <DD>The physical coordinate system is the pixel coordinate system of the
   parent image if any. This option may be useful for users working on images
@@ -530,13 +519,13 @@ ccmap — Compute image plate solutions using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print detailed messages about the progress of the task on the standard output ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = yes</A></B></DT>
+  <DT><B>interactive = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes'>
   <DD>Compute the plate solution interactively ?
   In interactive mode the user may interact with the fitting process, e.g.
@@ -544,20 +533,20 @@ ccmap — Compute image plate solutions using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_graphics">graphics = "<TT>stdgraph</TT>"</A></B></DT>
+  <DT><B>graphics = "<TT>stdgraph</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"'>
   <DD>The graphics device.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cursor">cursor = "<TT></TT>"</A></B></DT>
+  <DT><B>cursor = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""'>
   <DD>The graphics cursor.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -914,7 +903,7 @@ ccmap — Compute image plate solutions using matched coordinate lists
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   <P>
@@ -948,7 +937,7 @@ ccmap — Compute image plate solutions using matched coordinate lists
   <P>
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -1205,13 +1194,13 @@ ccmap — Compute image plate solutions using matched coordinate lists
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   <P>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   cctran,ccsetwcs,skyctran,imctran,finder.tfinder,finder.tastrom
@@ -1220,5 +1209,3 @@ ccmap — Compute image plate solutions using matched coordinate lists
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'REFERENCES' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

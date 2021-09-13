@@ -1,3 +1,5 @@
+.. _calibrate:
+
 calibrate — Extinction and flux calibrate spectra
 =================================================
 
@@ -5,36 +7,23 @@ calibrate — Extinction and flux calibrate spectra
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>calibrate (Mar93)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.onedspec</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>calibrate (Mar93)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>calibrate</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   calibrate -- Apply extinction corrections and flux calibrations
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   calibrate input output [records]
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of input spectra to be calibrated.  When using record format
   extensions the root names are specified, otherwise full image names
@@ -42,7 +31,7 @@ calibrate — Extinction and flux calibrate spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>List of calibrated spectra.  If no output list is specified or if the
   output name is the same as the input name then the calibrated spectra
@@ -54,7 +43,7 @@ calibrate — Extinction and flux calibrate spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_records">records (imred.irs and imred.iids only)</A></B></DT>
+  <DT><B>records (imred.irs and imred.iids only)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='records' Line='records (imred.irs and imred.iids only)'>
   <DD>The set of record number extensions to be applied to each input and output
   root name when using record number extension format.  The syntax consists
@@ -64,7 +53,7 @@ calibrate — Extinction and flux calibrate spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_extinct">extinct = yes</A></B></DT>
+  <DT><B>extinct = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='extinct' Line='extinct = yes'>
   <DD>Apply extinction correction if a spectrum has not been previously
   corrected?  When applying an extinction correction, an extinction file
@@ -72,21 +61,21 @@ calibrate — Extinction and flux calibrate spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_flux">flux = yes</A></B></DT>
+  <DT><B>flux = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='flux' Line='flux = yes'>
   <DD>Apply a flux calibration if a spectrum has not been previously calibrated?
   When applying a flux calibration, sensitivity spectra are required.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_extinction">extinction = &lt;no default&gt;</A></B></DT>
+  <DT><B>extinction = &lt;no default&gt;</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='extinction' Line='extinction = &lt;no default&gt;'>
   <DD>Extinction file for the observation.  Standard extinction files
   are available in the "<TT>onedstds$</TT>" directory.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_observatory">observatory = "<TT>)_.observatory</TT>"</A></B></DT>
+  <DT><B>observatory = "<TT>)_.observatory</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory = ")_.observatory"'>
   <DD>Observatory at which the spectra were obtained if not specified in the
   image header by the keyword OBSERVAT.  The default is a redirection to the
@@ -99,7 +88,7 @@ calibrate — Extinction and flux calibrate spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ignoreaps">ignoreaps = no</A></B></DT>
+  <DT><B>ignoreaps = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ignoreaps' Line='ignoreaps = no'>
   <DD>Ignore aperture numbers and apply a single flux calibration to all
   apertures?  Normally multiaperture instruments have separate sensitivity
@@ -112,7 +101,7 @@ calibrate — Extinction and flux calibrate spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sensitivity">sensitivity = "<TT>sens</TT>"</A></B></DT>
+  <DT><B>sensitivity = "<TT>sens</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sensitivity' Line='sensitivity = "sens"'>
   <DD>The root name for the sensitivity spectra produced by <B>sensfunc</B>.
   Normally with multiaperture instruments, <B>sensfunc</B> will produce a
@@ -123,7 +112,7 @@ calibrate — Extinction and flux calibrate spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fnu">fnu = no</A></B></DT>
+  <DT><B>fnu = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fnu' Line='fnu = no'>
   <DD>The default calibration is into units of flux per unit wavelength (F-lambda).
   If <I>fnu</I> = yes then the calibrated spectrum will be in units of
@@ -131,7 +120,7 @@ calibrate — Extinction and flux calibrate spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_airmass">airmass, exptime</A></B></DT>
+  <DT><B>airmass, exptime</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='airmass' Line='airmass, exptime'>
   <DD>If the airmass and exposure time are not in the header nor can they be
   determined from other keywords in the header then these query parameters
@@ -141,7 +130,7 @@ calibrate — Extinction and flux calibrate spectra
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The input spectra are corrected for extinction and calibrated to a flux
@@ -215,7 +204,7 @@ calibrate — Extinction and flux calibrate spectra
   extension) is applied.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  To flux calibrates a series of spectra replacing the input spectra by
@@ -235,11 +224,11 @@ calibrate — Extinction and flux calibrate spectra
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_CALIBRATE">CALIBRATE V2.10.3</A></B></DT>
+  <DT><B>CALIBRATE V2.10.3</B></DT>
   <! Sec='REVISIONS' Level=0 Label='CALIBRATE' Line='CALIBRATE V2.10.3'>
   <DD>This task was revised to operate on 2D and 3D spatial spectra; i.e. long
   slit and Fabry-Perot data cubes.  This task now includes the functionality
@@ -250,7 +239,7 @@ calibrate — Extinction and flux calibrate spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_CALIBRATE">CALIBRATE V2.10</A></B></DT>
+  <DT><B>CALIBRATE V2.10</B></DT>
   <! Sec='REVISIONS' Level=0 Label='CALIBRATE' Line='CALIBRATE V2.10'>
   <DD>This task was revised to operate on nonlinear dispersion corrected spectra
   and 3D images (the <B>apextract</B> "<TT>extras</TT>").  The aperture selection
@@ -265,7 +254,7 @@ calibrate — Extinction and flux calibrate spectra
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   setairmass, standard, sensfunc, observatory, continuum
@@ -274,5 +263,3 @@ calibrate — Extinction and flux calibrate spectra
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _skygroup:
+
 skygroup — Group a list containing RA and Dec into spatial sublists
 ===================================================================
 
@@ -5,26 +7,13 @@ skygroup — Group a list containing RA and Dec into spatial sublists
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>skygroup (Feb06)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.nproto</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>skygroup (Feb06)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>skygroup</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   skygroup -- Group a list containing RA and Dec into spatial sublists
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_synopsis">SYNOPSIS</A></H2>
+  <H3>Synopsis</H3>
   <! BeginSection: 'SYNOPSIS'>
   <UL>
   A list with RA and Dec in the first two columns followed by user data
@@ -35,17 +24,17 @@ skygroup — Group a list containing RA and Dec into spatial sublists
   image names.
   </UL>
   <! EndSection:   'SYNOPSIS'>
-  <H2><A NAME="s_usage_">USAGE	</A></H2>
+  <H3>Usage	</H3>
   <! BeginSection: 'USAGE	'>
   <UL>
   skygroup input output
   </UL>
   <! EndSection:   'USAGE	'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>Input tabular text file containing RA and Dec in the first two whitespace
   separated columns and user data in the remaining columns.  The RA may
@@ -55,7 +44,7 @@ skygroup — Group a list containing RA and Dec into spatial sublists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>Output root filename.  The root filename itself will contain a list of
   the sublists.  The sublists will have _NNN appended to the root name
@@ -66,7 +55,7 @@ skygroup — Group a list containing RA and Dec into spatial sublists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_extn">extn = "<TT></TT>"</A></B></DT>
+  <DT><B>extn = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='extn' Line='extn = ""'>
   <DD>Optional output extension.  This string is appended to the output files
   noted previously.  Note that an period must be given explicitly if a
@@ -74,20 +63,20 @@ skygroup — Group a list containing RA and Dec into spatial sublists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sep">sep = 60 (arcsec)</A></B></DT>
+  <DT><B>sep = 60 (arcsec)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sep' Line='sep = 60 (arcsec)'>
   <DD>The maximum separation in arcseconds in RA and Dec, applied separately, which
   defines the start of a new group.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_raunit">raunit = "<TT>hr</TT>" (hr|deg)</A></B></DT>
+  <DT><B>raunit = "<TT>hr</TT>" (hr|deg)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='raunit' Line='raunit = "hr" (hr|deg)'>
   <DD>The input RA unit where "<TT>hr</TT>" is hours and "<TT>deg</TT>" is degrees.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_keepcoords">keepcoords = yes</A></B></DT>
+  <DT><B>keepcoords = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='keepcoords' Line='keepcoords = yes'>
   <DD>Keep the input coordinate columns in the output lists?  If no then only
   the user data will be placed in the output lists.  This option allows
@@ -96,7 +85,7 @@ skygroup — Group a list containing RA and Dec into spatial sublists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_raformat">raformat = "<TT>%.2h</TT>", decformat = "<TT>%.1h</TT>"</A></B></DT>
+  <DT><B>raformat = "<TT>%.2h</TT>", decformat = "<TT>%.1h</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='raformat' Line='raformat = "%.2h", decformat = "%.1h"'>
   <DD>The format for printing the RA and Dec in the output lists if
   <I>keepcoords</I> is yes.  See the help for <B>printf</B> for the formats.
@@ -107,7 +96,7 @@ skygroup — Group a list containing RA and Dec into spatial sublists
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task groups a list of user data with RA and Dec coordinates
@@ -142,7 +131,7 @@ skygroup — Group a list containing RA and Dec into spatial sublists
   A merging step handles this situation.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. A set of images is to be grouped based on their FITS tangent point
@@ -183,7 +172,7 @@ skygroup — Group a list containing RA and Dec into spatial sublists
   The output lists will be group_001.lis, group_002.lis, etc.
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   skysep, astradius, astcalc
@@ -192,5 +181,3 @@ skygroup — Group a list containing RA and Dec into spatial sublists
   
   <! Contents: 'NAME' 'SYNOPSIS' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

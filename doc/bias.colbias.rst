@@ -1,3 +1,5 @@
+.. _colbias:
+
 colbias — Fit and subtract an average column bias
 =================================================
 
@@ -5,26 +7,13 @@ colbias — Fit and subtract an average column bias
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>colbias (Mar93)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.imred.bias</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>colbias (Mar93)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>colbias</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   colbias -- Fit and subtract an average column bias
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage_">USAGE	</A></H2>
+  <H3>Usage	</H3>
   <! BeginSection: 'USAGE	'>
   <UL>
   <PRE>
@@ -32,17 +21,17 @@ colbias — Fit and subtract an average column bias
   </PRE>
   </UL>
   <! EndSection:   'USAGE	'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>Images to be bias subtracted.  The images may not contain image sections.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>Output bias subtracted images.  An output images may be the same as its
   matching input image.  The output pixel type will be real regardless
@@ -50,14 +39,14 @@ colbias — Fit and subtract an average column bias
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_bias">bias = "<TT>[]</TT>"</A></B></DT>
+  <DT><B>bias = "<TT>[]</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='bias' Line='bias = "[]"'>
   <DD>Bias section appended to the input image to define the bias region.
   The default section or an empty string will use the full image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_trim">trim = "<TT>[]</TT>"</A></B></DT>
+  <DT><B>trim = "<TT>[]</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='trim' Line='trim = "[]"'>
   <DD>Trim section appended to the input image to define the region to be
   bias subtracted and output.  The default section or an empty string
@@ -65,70 +54,70 @@ colbias — Fit and subtract an average column bias
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_median">median = no</A></B></DT>
+  <DT><B>median = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='median' Line='median = no'>
   <DD>Take the median of the bias columns?  If no then the bias
   columns are averaged.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_function">function = "<TT>spline3</TT>"</A></B></DT>
+  <DT><B>function = "<TT>spline3</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='function' Line='function = "spline3"'>
   <DD>The function fit to the average bias line.  The functions are "<TT>legendre</TT>",
   "<TT>chebyshev</TT>", "<TT>spline1</TT>", or "<TT>spline3</TT>".  Abbreviations are allowed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_order">order</A></B></DT>
+  <DT><B>order</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='order' Line='order'>
   <DD>The order (number of terms or number of spline pieces) in the function.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_low_reject">low_reject = 3.0</A></B></DT>
+  <DT><B>low_reject = 3.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='low_reject' Line='low_reject = 3.0'>
   <DD>The low sigma rejection factor.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_high_reject">high_reject = 3.0</A></B></DT>
+  <DT><B>high_reject = 3.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='high_reject' Line='high_reject = 3.0'>
   <DD>The high sigma rejection factor.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_niterate">niterate = 1</A></B></DT>
+  <DT><B>niterate = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='niterate' Line='niterate = 1'>
   <DD>The maximum number of rejection iterations.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = yes</A></B></DT>
+  <DT><B>interactive = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes'>
   <DD>Fit the average bias line interactively?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_logfiles">logfiles = "<TT></TT>"</A></B></DT>
+  <DT><B>logfiles = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='logfiles' Line='logfiles = ""'>
   <DD>List of log files.  If no file name is given then no log file is kept.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_graphics">graphics = "<TT>stdgraph</TT>"</A></B></DT>
+  <DT><B>graphics = "<TT>stdgraph</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"'>
   <DD>Graphics output device for interactive graphics.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cursor">cursor = "<TT></TT>"</A></B></DT>
+  <DT><B>cursor = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""'>
   <DD>Graphics cursor input
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   For each input image in the input image list an average or median bias
@@ -154,7 +143,7 @@ colbias — Fit and subtract an average column bias
   the remaining image interactively without prompting.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   The bias region for a set of images occupies columns 801 to 832 and lines
@@ -177,11 +166,11 @@ colbias — Fit and subtract an average column bias
   image are then fit non-interactively using the same fitting parameters.
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_COLBIAS">COLBIAS V2.10.3</A></B></DT>
+  <DT><B>COLBIAS V2.10.3</B></DT>
   <! Sec='REVISIONS' Level=0 Label='COLBIAS' Line='COLBIAS V2.10.3'>
   <DD>The output pixel type is now real instead of preserving the pixel type
   of the input image.
@@ -189,7 +178,7 @@ colbias — Fit and subtract an average column bias
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   icfit
@@ -198,5 +187,3 @@ colbias — Fit and subtract an average column bias
   
   <! Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _wfits:
+
 wfits — Convert a list of IRAF images into FITS image data
 ==========================================================
 
@@ -5,42 +7,29 @@ wfits — Convert a list of IRAF images into FITS image data
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>wfits (May97)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>dataio</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>wfits (May97)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>wfits</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   wfits -- convert individual IRAF image files to FITS image data
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   wfits iraf_files fits_files
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_iraf_files">iraf_files</A></B></DT>
+  <DT><B>iraf_files</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='iraf_files' Line='iraf_files'>
   <DD>The input IRAF image file(s), e.g.  "<TT>image.imh</TT>" or "<TT>*.imh</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fits_files">fits_files</A></B></DT>
+  <DT><B>fits_files</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fits_files' Line='fits_files'>
   <DD>The output FITS files.
   Magnetic tape output is assumed if the first two characters of fits_files
@@ -59,7 +48,7 @@ wfits — Convert a list of IRAF images into FITS image data
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_newtape">newtape</A></B></DT>
+  <DT><B>newtape</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='newtape' Line='newtape'>
   <DD>Boolean parameter specifying whether an output tape is blank or already
   contains data. Newtape is requested only if no tape file number is specified in
@@ -67,7 +56,7 @@ wfits — Convert a list of IRAF images into FITS image data
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_bscale">bscale</A></B></DT>
+  <DT><B>bscale</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='bscale' Line='bscale'>
   <DD>The FITS bscale parameter, defined as p = i * bscale + bzero, where
   p and i are the physical and tape data values respectively.
@@ -76,7 +65,7 @@ wfits — Convert a list of IRAF images into FITS image data
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_bzero">bzero</A></B></DT>
+  <DT><B>bzero</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='bzero' Line='bzero'>
   <DD>The FITS bzero parameter (see bscale for a definition).
   Bzero is only requested if the scale switch is on and the autoscale
@@ -84,7 +73,7 @@ wfits — Convert a list of IRAF images into FITS image data
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fextn">fextn = "<TT>fits</TT>"</A></B></DT>
+  <DT><B>fextn = "<TT>fits</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fextn' Line='fextn = "fits"'>
   <DD>The output fits file extension. If fextn is defined, an extension of
   the form "<TT>.fextn</TT>", e.g. "<TT>.fits</TT>" is added to the output fits file name.
@@ -93,7 +82,7 @@ wfits — Convert a list of IRAF images into FITS image data
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_extensions">extensions = no</A></B></DT>
+  <DT><B>extensions = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='extensions' Line='extensions = no'>
   <DD>By default wfits writes each input image to a separate disk or tape FITS
   file.  If <I>extensions</I> is "<TT>yes</TT>", then wfits will write all the images in
@@ -104,14 +93,14 @@ wfits — Convert a list of IRAF images into FITS image data
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_global_hdr">global_hdr = yes</A></B></DT>
+  <DT><B>global_hdr = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='global_hdr' Line='global_hdr = yes'>
   <DD>Write a short global header to the 0th extension of the output FITS file
   if <I>extensions</I> is "<TT>yes</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_make_image">make_image = yes</A></B></DT>
+  <DT><B>make_image = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='make_image' Line='make_image = yes'>
   <DD>By default wfits writes the FITS image(s) to the output destination.
   If the make_image switch is turned off, wfits prints the FITS headers
@@ -120,14 +109,14 @@ wfits — Convert a list of IRAF images into FITS image data
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_long_header">long_header = no</A></B></DT>
+  <DT><B>long_header = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='long_header' Line='long_header = no'>
   <DD>If this switch is set the full FITS header will be printed on the standard
   output for each IRAF image converted.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_short_header">short_header = yes</A></B></DT>
+  <DT><B>short_header = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='short_header' Line='short_header = yes'>
   <DD>If this switch is set only a short header, listing the files processed and
   their dimensions will be printed on the standard output.
@@ -135,7 +124,7 @@ wfits — Convert a list of IRAF images into FITS image data
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_bitpix">bitpix = 0</A></B></DT>
+  <DT><B>bitpix = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='bitpix' Line='bitpix = 0'>
   <DD>A bitpix of 8, 16, or 32 will produce either an unsigned byte,
   twos-complement 16 bit integer, or twos-complement 32 bit integer FITS
@@ -152,7 +141,7 @@ wfits — Convert a list of IRAF images into FITS image data
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_blocking_factor">blocking_factor = 0</A></B></DT>
+  <DT><B>blocking_factor = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='blocking_factor' Line='blocking_factor = 0'>
   <DD>The tape blocking factor for FITS.
   Wfits normally writes <I>blocking_factor</I> * 2880 byte records,
@@ -170,7 +159,7 @@ wfits — Convert a list of IRAF images into FITS image data
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_scale">scale = yes</A></B></DT>
+  <DT><B>scale = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='scale' Line='scale = yes'>
   <DD>If the scale switch is set, the IRAF image will be scaled before output.
   Two types of scaling are available. The scaling parameters bscale and
@@ -182,7 +171,7 @@ wfits — Convert a list of IRAF images into FITS image data
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_autoscale">autoscale = yes</A></B></DT>
+  <DT><B>autoscale = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='autoscale' Line='autoscale = yes'>
   <DD>If the autoscale switch is set, wfits calculates the appropriate bscale and
   bzero  factors based on the IRAF image data type, and the maximum and minimum
@@ -191,7 +180,7 @@ wfits — Convert a list of IRAF images into FITS image data
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   IRAF data is read from disk and written to the specified destination,
@@ -209,7 +198,7 @@ wfits — Convert a list of IRAF images into FITS image data
   with possible loss of precision.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Convert a list of IRAF image files to a list of FITS image files on a blank
@@ -292,7 +281,7 @@ wfits — Convert a list of IRAF images into FITS image data
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   WFITS does not attempt to recover from write errors. When an error is
@@ -313,7 +302,7 @@ wfits — Convert a list of IRAF images into FITS image data
   on the driver.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   rfits, reblock, fits kernel
@@ -322,5 +311,3 @@ wfits — Convert a list of IRAF images into FITS image data
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

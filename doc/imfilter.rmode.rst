@@ -1,3 +1,5 @@
+.. _rmode:
+
 rmode — Ring modal filter a list of 1D or 2D images
 ===================================================
 
@@ -5,42 +7,29 @@ rmode — Ring modal filter a list of 1D or 2D images
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>rmode (May95)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imfilter</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>rmode (May95)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>rmode</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   rmode -- ring modal filter a list of images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   rmode input output rinner router
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of input images.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>List of filtered images. The number of input images must be the same as the
   number of output images. If the input image name equals the output image name
@@ -48,21 +37,21 @@ rmode — Ring modal filter a list of 1D or 2D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rinner">rinner, router</A></B></DT>
+  <DT><B>rinner, router</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rinner' Line='rinner, router'>
   <DD>The inner and outer semi-major axes of the ring filter in pixels. If rinner
   is set to 0.0 then the ring filter becomes a circular filter.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ratio">ratio = 1.0</A></B></DT>
+  <DT><B>ratio = 1.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ratio' Line='ratio = 1.0'>
   <DD>The ratio of the semi-minor axis to the semi-major axis of the ring filter.
   If ratio is 1.0 the ring filter is circularly symmetric.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_theta">theta = 0.0</A></B></DT>
+  <DT><B>theta = 0.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='theta' Line='theta = 0.0'>
   <DD>The position angle of the major axis of the ring filter. Theta is measured
   counter-clockwise in degrees from the x axis and must be between 0 and
@@ -70,36 +59,36 @@ rmode — Ring modal filter a list of 1D or 2D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_zloreject">zloreject = INDEF, zhireject = INDEF</A></B></DT>
+  <DT><B>zloreject = INDEF, zhireject = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='zloreject' Line='zloreject = INDEF, zhireject = INDEF'>
   <DD>The minimum and maximum good pixel values. Zloreject and zhireject default
   to  -MAX_REAL and MAX_REAL respectively.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_boundary">boundary = "<TT>nearest</TT>"</A></B></DT>
+  <DT><B>boundary = "<TT>nearest</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"'>
   <DD>The type of boundary extension. The options are:
   <DL>
-  <DT><B><A NAME="l_nearest">nearest</A></B></DT>
+  <DT><B>nearest</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest'>
   <DD>Use the value of the nearest pixel.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_constant">constant</A></B></DT>
+  <DT><B>constant</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='constant' Line='constant'>
   <DD>Use a constant value.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_reflect">reflect</A></B></DT>
+  <DT><B>reflect</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='reflect' Line='reflect'>
   <DD>Reflect pixel values around the boundary.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wrap">wrap</A></B></DT>
+  <DT><B>wrap</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='wrap' Line='wrap'>
   <DD>Wrap pixel values around the boundary.
   </DD>
@@ -107,7 +96,7 @@ rmode — Ring modal filter a list of 1D or 2D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_constant">constant = 0.</A></B></DT>
+  <DT><B>constant = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.'>
   <DD>The value for constant valued boundary extension.
   </DD>
@@ -115,7 +104,7 @@ rmode — Ring modal filter a list of 1D or 2D images
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -148,7 +137,7 @@ rmode — Ring modal filter a list of 1D or 2D images
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   <P>
@@ -163,7 +152,7 @@ rmode — Ring modal filter a list of 1D or 2D images
   <P>
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -190,7 +179,7 @@ rmode — Ring modal filter a list of 1D or 2D images
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   It requires approximately 59 and 35 CPU seconds to modal filter a
@@ -200,13 +189,13 @@ rmode — Ring modal filter a list of 1D or 2D images
   <P>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   <P>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   mode,fmode,rmode
@@ -215,5 +204,3 @@ rmode — Ring modal filter a list of 1D or 2D images
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'REFERENCES' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

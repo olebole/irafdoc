@@ -1,3 +1,5 @@
+.. _addsets:
+
 addsets — Add subsets of strings of spectra
 ===========================================
 
@@ -5,42 +7,29 @@ addsets — Add subsets of strings of spectra
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>addsets (Feb85)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.imred.iids/noao.imred.irs</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>addsets (Feb85)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>addsets</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   addsets - Add subsets of a string of spectra
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   addsets input records
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The root file name for the input spectra in the string.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_records">records</A></B></DT>
+  <DT><B>records</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='records' Line='records'>
   <DD>The range of spectra indicating the elements of the string.
   The names of the spectra will be formed by appending the range
@@ -48,21 +37,21 @@ addsets — Add subsets of strings of spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>This is the root file name for the names of the spectra which will
   be created by the addset operation.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_start_rec">start_rec = 1</A></B></DT>
+  <DT><B>start_rec = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='start_rec' Line='start_rec = 1'>
   <DD>The starting record number to be appended to the root name of the
   created spectra.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_subset">subset = 2</A></B></DT>
+  <DT><B>subset = 2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='subset' Line='subset = 2'>
   <DD>The length of the substring of spectra which will be added together.
   For IIDS/IRS data which has been processed through BSWITCH, this
@@ -71,7 +60,7 @@ addsets — Add subsets of strings of spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_weighting">weighting = yes</A></B></DT>
+  <DT><B>weighting = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='weighting' Line='weighting = yes'>
   <DD>If set to yes, an average of the substring of spectra is generated
   (if flux calibrated) weighted by the integration times of the
@@ -82,7 +71,7 @@ addsets — Add subsets of strings of spectra
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Every "<TT>subset</TT>" group of spectra will be accumulated and the sum will be
@@ -99,7 +88,7 @@ addsets — Add subsets of strings of spectra
   a very efficient way to do so.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   The following three examples are those described above.
@@ -112,7 +101,7 @@ addsets — Add subsets of strings of spectra
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   bswitch
@@ -121,5 +110,3 @@ addsets — Add subsets of strings of spectra
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

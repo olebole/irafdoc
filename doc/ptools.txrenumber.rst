@@ -1,3 +1,5 @@
+.. _txrenumber:
+
 txrenumber — Renumber a list of apphot/daophot text databases
 =============================================================
 
@@ -5,42 +7,29 @@ txrenumber — Renumber a list of apphot/daophot text databases
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>txrenumber (May93)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.ptools</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>txrenumber (May93)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>txrenumber</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   txrenumber -- renumber a list of APPHOT/DAOPHOT text database
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   txrenumber textfiles
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_textfiles">textfiles</A></B></DT>
+  <DT><B>textfiles</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='textfiles' Line='textfiles'>
   <DD>The APPHOT/DAOPHOT text database to be renumbered.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_idoffset">idoffset = 0</A></B></DT>
+  <DT><B>idoffset = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='idoffset' Line='idoffset = 0'>
   <DD>An integer offset  to be added to the id numbers of the stars in
   the output renumbered photometry file. If idoffset is &gt; 0, the output
@@ -48,7 +37,7 @@ txrenumber — Renumber a list of apphot/daophot text databases
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_id">id = "<TT>ID</TT>"</A></B></DT>
+  <DT><B>id = "<TT>ID</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='id' Line='id = "ID"'>
   <DD>The name of the keyword whose value is the sequence number of the object in
   the list. After renumbering the original values of the <I>id</I> are replaced
@@ -58,7 +47,7 @@ txrenumber — Renumber a list of apphot/daophot text databases
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   TXRENUMBER is a simple task which accepts an APPHOT/DAOPHOT text
@@ -73,7 +62,7 @@ txrenumber — Renumber a list of apphot/daophot text databases
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -92,17 +81,17 @@ txrenumber — Renumber a list of apphot/daophot text databases
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   ptools.tbrenumber,ptools.prenumber,tables.tcalc
@@ -111,5 +100,3 @@ txrenumber — Renumber a list of apphot/daophot text databases
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

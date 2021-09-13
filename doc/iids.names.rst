@@ -1,3 +1,5 @@
+.. _names:
+
 names — Generate a list of image names from a string
 ====================================================
 
@@ -5,42 +7,29 @@ names — Generate a list of image names from a string
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>names (Mar92)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.onedspec</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>names (Mar92)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>names</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   names -- Generate image names from a root and a range descriptor
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   names input records
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The root file name for the input records to be calibrated.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_records">records</A></B></DT>
+  <DT><B>records</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='records' Line='records'>
   <DD>The range of spectra to be included in the calibration operation.
   Each range item will be appended to the root name to form an
@@ -48,7 +37,7 @@ names — Generate a list of image names from a string
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_append">append = "<TT></TT>"</A></B></DT>
+  <DT><B>append = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='append' Line='append = ""'>
   <DD>If not a null string, this character string will be appended to
   all the generated image names. This allows for a specification of
@@ -56,7 +45,7 @@ names — Generate a list of image names from a string
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_check">check = no</A></B></DT>
+  <DT><B>check = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='check' Line='check = no'>
   <DD>If set to yes, a check is made that each name implied by the range
   specification has at least an image header. The pixel file is not
@@ -66,7 +55,7 @@ names — Generate a list of image names from a string
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   A sequence of image names is generated from the input root file name
@@ -80,7 +69,7 @@ names — Generate a list of image names from a string
   to a file for further use.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   The following will generate names of the form nite1.0001, nite1.0002 ...
@@ -98,18 +87,18 @@ names — Generate a list of image names from a string
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_NAMES">NAMES V2.10</A></B></DT>
+  <DT><B>NAMES V2.10</B></DT>
   <! Sec='REVISIONS' Level=0 Label='NAMES' Line='NAMES V2.10'>
   <DD>This task is unchanged.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   The append option is only useful for adding image sections since it is
@@ -121,5 +110,3 @@ names — Generate a list of image names from a string
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'BUGS'  >
   
-  </BODY>
-  </HTML>

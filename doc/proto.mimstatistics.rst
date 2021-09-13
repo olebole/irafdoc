@@ -1,3 +1,5 @@
+.. _mimstatistics:
+
 mimstatistics — Do image statistics through a mask
 ==================================================
 
@@ -5,37 +7,24 @@ mimstatistics — Do image statistics through a mask
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>mimstatistics (Sep01)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>proto</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>mimstatistics (Sep01)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>mimstatistics</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   mimstatistics -- compute and print image pixel statistics using iterative
   rejection and masks
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage_">USAGE	</A></H2>
+  <H3>Usage	</H3>
   <! BeginSection: 'USAGE	'>
   <UL>
   imstatistics images
   </UL>
   <! EndSection:   'USAGE	'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>The input images or image sections for which pixel statistics are to be
   computed. Image sections are automatically applied to the input masks
@@ -43,7 +32,7 @@ mimstatistics — Do image statistics through a mask
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_imasks">imasks = "<TT></TT>"</A></B></DT>
+  <DT><B>imasks = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='imasks' Line='imasks = ""'>
   <DD>The list of input masks or input mask sections associated with <I>images</I>.
   Good and bad data values are assumed to be presented by mask values of 0 and
@@ -53,7 +42,7 @@ mimstatistics — Do image statistics through a mask
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_omasks">omasks = "<TT></TT>" </A></B></DT>
+  <DT><B>omasks = "<TT></TT>" </B></DT>
   <! Sec='PARAMETERS' Level=0 Label='omasks' Line='omasks = "" '>
   <DD>The list of output masks which are a combination of the input mask if any
   and pixels rejected using the good data limits and / or iterative clipping.
@@ -63,58 +52,58 @@ mimstatistics — Do image statistics through a mask
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fields">fields = "<TT>image,npix,mean,stddev,min,max</TT>"</A></B></DT>
+  <DT><B>fields = "<TT>image,npix,mean,stddev,min,max</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fields' Line='fields = "image,npix,mean,stddev,min,max"'>
   <DD>The statistical quantities to be computed and printed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lower">lower = INDEF</A></B></DT>
+  <DT><B>lower = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lower' Line='lower = INDEF'>
   <DD>The minimum good data limit.  All pixels are above the default value of INDEF.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_upper">upper = INDEF</A></B></DT>
+  <DT><B>upper = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='upper' Line='upper = INDEF'>
   <DD>The maximum good data limit.  All pixels are above the default value of INDEF.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nclip">nclip = 0</A></B></DT>
+  <DT><B>nclip = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nclip' Line='nclip = 0'>
   <DD>The maximum number of iterative clipping cycles. By default no clipping is
   performed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lsigma">lsigma = 3.0</A></B></DT>
+  <DT><B>lsigma = 3.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lsigma' Line='lsigma = 3.0'>
   <DD>The low side clipping factor in sigma.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_usigma">usigma = 3.0</A></B></DT>
+  <DT><B>usigma = 3.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='usigma' Line='usigma = 3.0'>
   <DD>The high side clipping factor in sigma.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_binwidth">binwidth = 0.1</A></B></DT>
+  <DT><B>binwidth = 0.1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='binwidth' Line='binwidth = 0.1'>
   <DD>The width of the histogram bins in sigma used for computing the midpoint
   (estimate of the median) and the mode.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_format">format = yes</A></B></DT>
+  <DT><B>format = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='format' Line='format = yes'>
   <DD>Label the output columns and print the results in fixed format ? If format
   is "<TT>no</TT>" no column labels are printed and the output is in free format.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cache">cache = no</A></B></DT>
+  <DT><B>cache = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cache' Line='cache = no'>
   <DD>Cache the image data in memory ? This can increase the efficiency of the
   task if nclip &gt; 0 or if either of the midpt or mode statistics is computed.
@@ -122,7 +111,7 @@ mimstatistics — Do image statistics through a mask
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The statistical quantities specified by the parameter <I>fields</I> are
@@ -191,7 +180,7 @@ mimstatistics — Do image statistics through a mask
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Find the number of pixels, mean, standard deviation and the minimum
@@ -238,7 +227,7 @@ mimstatistics — Do image statistics through a mask
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   When using a very large number of pixels the accumulation of the sums
@@ -247,7 +236,7 @@ mimstatistics — Do image statistics through a mask
   to the mean.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   </UL>
@@ -255,5 +244,3 @@ mimstatistics — Do image statistics through a mask
   
   <! Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

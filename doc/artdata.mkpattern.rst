@@ -1,3 +1,5 @@
+.. _mkpattern:
+
 mkpattern — Make/add patterns to images
 =======================================
 
@@ -5,43 +7,30 @@ mkpattern — Make/add patterns to images
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>mkpattern (Jan90)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.artdata</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>mkpattern (Jan90)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>mkpattern</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   mkpattern - Make/add patterns in images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   mkpattern input
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>Images to create or modify.  Image sections are allowed to apply a pattern
   to a portion of an image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output = "<TT></TT>"</A></B></DT>
+  <DT><B>output = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output = ""'>
   <DD>Output images when modifying input images.  If no output images are
   given then existing images in the input list are modified directly.
@@ -50,17 +39,17 @@ mkpattern — Make/add patterns to images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pattern">pattern = "<TT>constant</TT>"</A></B></DT>
+  <DT><B>pattern = "<TT>constant</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pattern' Line='pattern = "constant"'>
   <DD>Pattern to be used.  The patterns are:
   <DL>
-  <DT><B><A NAME="l_constant">constant</A></B></DT>
+  <DT><B>constant</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='constant' Line='constant'>
   <DD>Constant value v1.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_grid">grid</A></B></DT>
+  <DT><B>grid</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='grid' Line='grid'>
   <DD>A grid starting with the first pixel and going in steps of the
   pattern size with value v2.  Pixels between the grid have value v1.
@@ -68,28 +57,28 @@ mkpattern — Make/add patterns to images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_checker">checker</A></B></DT>
+  <DT><B>checker</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='checker' Line='checker'>
   <DD>A checkerboard with squares of the pattern size alternating between values v1
   and v2 starting with v1.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_coordinates">coordinates</A></B></DT>
+  <DT><B>coordinates</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='coordinates' Line='coordinates'>
   <DD>Each pixel is numbered sequentially starting with 1 with the column
   dimension varying fastest.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_slope">slope</A></B></DT>
+  <DT><B>slope</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='slope' Line='slope'>
   <DD>A sloped plane starting with value v1 for the first pixel and value v2 for
   the last pixel in one or two dimensions.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_square">square</A></B></DT>
+  <DT><B>square</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='square' Line='square'>
   <DD>A checkerboard pattern in which the size of the squares begin with
   the pattern size and grow as the square of the coordinate.
@@ -98,7 +87,7 @@ mkpattern — Make/add patterns to images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_option">option = "<TT>replace</TT>"</A></B></DT>
+  <DT><B>option = "<TT>replace</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='option' Line='option = "replace"'>
   <DD>Editing option when modifying existing images.  Often this is used
   in conjunction with image sections to modify a part of an image.
@@ -112,13 +101,13 @@ mkpattern — Make/add patterns to images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_v1">v1 = 0., v2 = 1.</A></B></DT>
+  <DT><B>v1 = 0., v2 = 1.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='v1' Line='v1 = 0., v2 = 1.'>
   <DD>Pattern values used as described for each pattern.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_size">size = 1</A></B></DT>
+  <DT><B>size = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='size' Line='size = 1'>
   <DD>Pattern size used as described for each pattern.
   </DD>
@@ -126,38 +115,38 @@ mkpattern — Make/add patterns to images
   <P>
   WHEN CREATING NEW IMAGES
   <DL>
-  <DT><B><A NAME="l_title">title = "<TT></TT>"</A></B></DT>
+  <DT><B>title = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='title' Line='title = ""'>
   <DD>Image title to be given to the images.  Maximum of 79 characters.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pixtype">pixtype = "<TT>real</TT>"</A></B></DT>
+  <DT><B>pixtype = "<TT>real</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pixtype' Line='pixtype = "real"'>
   <DD>Pixel datatype of new images; one of ushort, short, integer, real, double,
   or complex.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ndim">ndim = 2</A></B></DT>
+  <DT><B>ndim = 2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ndim' Line='ndim = 2'>
   <DD>Number of dimensions between 0 and 7.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ncols">ncols = 512, nlines = 512</A></B></DT>
+  <DT><B>ncols = 512, nlines = 512</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ncols' Line='ncols = 512, nlines = 512'>
   <DD>Number of columns (first dimension) and lines (second dimension).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_n3">n3 = 1, n4 = 1, n5 = 1, n6 = 1, n7 = 1</A></B></DT>
+  <DT><B>n3 = 1, n4 = 1, n5 = 1, n6 = 1, n7 = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='n3' Line='n3 = 1, n4 = 1, n5 = 1, n6 = 1, n7 = 1'>
   <DD>Number of pixels in 3rd-7th  dimensions
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_header">header = "<TT>artdata$stdheader.dat</TT>"</A></B></DT>
+  <DT><B>header = "<TT>artdata$stdheader.dat</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='header' Line='header = "artdata$stdheader.dat"'>
   <DD>Image or header keyword data file.  If an image is given then the image header
   is copied.  If a file is given then the FITS format cards are copied.
@@ -171,7 +160,7 @@ mkpattern — Make/add patterns to images
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task creates or modifies images with a choice of patterns.  New images
@@ -233,7 +222,7 @@ mkpattern — Make/add patterns to images
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Create an empty (constant value of zero) three dimensional image.
@@ -255,11 +244,11 @@ mkpattern — Make/add patterns to images
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_MKPATTERN">MKPATTERN V2.11</A></B></DT>
+  <DT><B>MKPATTERN V2.11</B></DT>
   <! Sec='REVISIONS' Level=0 Label='MKPATTERN' Line='MKPATTERN V2.11'>
   <DD>Now allows ndim=0 to create dataless header.
   <P>
@@ -268,7 +257,7 @@ mkpattern — Make/add patterns to images
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imcopy, imreplace
@@ -277,5 +266,3 @@ mkpattern — Make/add patterns to images
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

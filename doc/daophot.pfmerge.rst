@@ -1,3 +1,5 @@
+.. _pfmerge:
+
 pfmerge — Merge a list of photometry databases
 ==============================================
 
@@ -5,36 +7,23 @@ pfmerge — Merge a list of photometry databases
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>pfmerge (May00)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.daophot</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>pfmerge (May00)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>pfmerge</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   pfmerge -- merge a list of photometry files
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   pfmerge inphotfiles outphotfile
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_inphotfiles">inphotfiles</A></B></DT>
+  <DT><B>inphotfiles</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='inphotfiles' Line='inphotfiles'>
   <DD>The list of photometry files to be merged. Inphotfiles may be the output of the
   DAOPHOT tasks PHOT, PSTSELECT, PSF, PEAK, GROUP, GRPSELECT, NSTAR, or ALLSTAR.
@@ -43,7 +32,7 @@ pfmerge — Merge a list of photometry databases
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_outphotfile">outphotfile</A></B></DT>
+  <DT><B>outphotfile</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='outphotfile' Line='outphotfile'>
   <DD>The output photometry file. Outphotfile consists of the header of the first
   input photometry file, followed by a list of records, one per input file
@@ -54,14 +43,14 @@ pfmerge — Merge a list of photometry databases
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose</A></B></DT>
+  <DT><B>verbose</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose'>
   <DD>Print messages about the progress of the task ?
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   PFMERGE creates a new photometry file suitable for input to PSF, PEAK, GROUP,
@@ -85,7 +74,7 @@ pfmerge — Merge a list of photometry databases
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -98,17 +87,17 @@ pfmerge — Merge a list of photometry databases
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   pconcat
@@ -117,5 +106,3 @@ pfmerge — Merge a list of photometry databases
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

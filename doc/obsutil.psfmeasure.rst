@@ -1,3 +1,5 @@
+.. _psfmeasure:
+
 psfmeasure — Measure PSF sizes from stellar images
 ==================================================
 
@@ -5,42 +7,29 @@ psfmeasure — Measure PSF sizes from stellar images
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>psfmeasure (Nov01)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.obsutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>psfmeasure (Nov01)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>psfmeasure</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   psfmeasure -- Measure PSF widths in stellar images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   psfmeasure images
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>List of images.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_coords">coords = "<TT>mark1</TT>" (center|mark1|markall)</A></B></DT>
+  <DT><B>coords = "<TT>mark1</TT>" (center|mark1|markall)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='coords' Line='coords = "mark1" (center|mark1|markall)'>
   <DD>Method by which the coordinates of objects to be measured are specified.
   If "<TT>center</TT>" then a single object at the center of each image is measured.
@@ -53,7 +42,7 @@ psfmeasure — Measure PSF sizes from stellar images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wcs">wcs = "<TT>logical</TT>" (logical|physical|world)</A></B></DT>
+  <DT><B>wcs = "<TT>logical</TT>" (logical|physical|world)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wcs' Line='wcs = "logical" (logical|physical|world)'>
   <DD>Coordinate system for input coordinates.  When using image cursor input
   this will always be "<TT>logical</TT>".  When using cursor input from a file this
@@ -61,7 +50,7 @@ psfmeasure — Measure PSF sizes from stellar images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_display">display = yes, frame = 1</A></B></DT>
+  <DT><B>display = yes, frame = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='display' Line='display = yes, frame = 1'>
   <DD>Display the image or images as needed?  If yes the image display is checked
   to see if the image is already in one of the display frames.  If it is not
@@ -75,7 +64,7 @@ psfmeasure — Measure PSF sizes from stellar images
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_level">level = 0.5</A></B></DT>
+  <DT><B>level = 0.5</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='level' Line='level = 0.5'>
   <DD>The parameter used to quantify an object image size is the radius from the
   image center enclosing the fraction of the total flux given by this
@@ -83,7 +72,7 @@ psfmeasure — Measure PSF sizes from stellar images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_size">size = "<TT>FWHM</TT>" (Radius|FWHM|GFWHM|MFWHM)</A></B></DT>
+  <DT><B>size = "<TT>FWHM</TT>" (Radius|FWHM|GFWHM|MFWHM)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='size' Line='size = "FWHM" (Radius|FWHM|GFWHM|MFWHM)'>
   <DD>There are four ways the PSF size may be shown in graphs and given in
   the output.  These are:
@@ -100,7 +89,7 @@ psfmeasure — Measure PSF sizes from stellar images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_beta">beta = INDEF</A></B></DT>
+  <DT><B>beta = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='beta' Line='beta = INDEF'>
   <DD>For the Moffat profile fit (size = MFWHM) the exponent parameter may
   be fixed at a specified value or left free to be determined from the
@@ -109,14 +98,14 @@ psfmeasure — Measure PSF sizes from stellar images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_scale">scale = 1.</A></B></DT>
+  <DT><B>scale = 1.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='scale' Line='scale = 1.'>
   <DD>Pixel scale in user units per pixel.  Usually the value is 1 to measure
   sizes in pixels or the image pixel scale in arc seconds per pixel.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_radius">radius = 5., iterations = 3</A></B></DT>
+  <DT><B>radius = 5., iterations = 3</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='radius' Line='radius = 5., iterations = 3'>
   <DD>Measurement radius in pixels and number of iterations on the radius.  The
   enclosed flux profile is measured out to this radius.  This radius may be
@@ -130,7 +119,7 @@ psfmeasure — Measure PSF sizes from stellar images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sbuffer">sbuffer = 5, swidth = 5.</A></B></DT>
+  <DT><B>sbuffer = 5, swidth = 5.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sbuffer' Line='sbuffer = 5, swidth = 5.'>
   <DD>Sky buffer and sky width in pixels.  The buffer is added to the specified
   measurement <I>radius</I> to define the inner radius for a circular sky
@@ -138,7 +127,7 @@ psfmeasure — Measure PSF sizes from stellar images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_saturation">saturation=INDEF, ignore_sat=no</A></B></DT>
+  <DT><B>saturation=INDEF, ignore_sat=no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='saturation' Line='saturation=INDEF, ignore_sat=no'>
   <DD>Data values (prior to sky subtraction) to be considered saturated within
   measurement radius.  A value of INDEF treats all pixels as unsaturated.  If
@@ -150,7 +139,7 @@ psfmeasure — Measure PSF sizes from stellar images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xcenter">xcenter = INDEF, ycenter = INDEF</A></B></DT>
+  <DT><B>xcenter = INDEF, ycenter = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xcenter' Line='xcenter = INDEF, ycenter = INDEF'>
   <DD>The optical field center of the image given in image pixel coordinates.
   These values need not lie in the image.  If INDEF the center of the image
@@ -159,7 +148,7 @@ psfmeasure — Measure PSF sizes from stellar images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_logfile">logfile = "<TT>logfile</TT>"</A></B></DT>
+  <DT><B>logfile = "<TT>logfile</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "logfile"'>
   <DD>File in which to record the final results.  If no log file is desired a
   null string may be specified.
@@ -167,7 +156,7 @@ psfmeasure — Measure PSF sizes from stellar images
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_imagecur">imagecur = "<TT></TT>"</A></B></DT>
+  <DT><B>imagecur = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='imagecur' Line='imagecur = ""'>
   <DD>Image cursor input for the "<TT>mark1</TT>" and "<TT>markall</TT>" options.  If null then the
   image dispaly cursor is used interactively.  If a file name is specified
@@ -178,7 +167,7 @@ psfmeasure — Measure PSF sizes from stellar images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_graphcur">graphcur = "<TT></TT>"</A></B></DT>
+  <DT><B>graphcur = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='graphcur' Line='graphcur = ""'>
   <DD>Graphics cursor input.  If null then the standard graphics cursor
   is used otherwise a standard cursor format file may be specified.
@@ -186,7 +175,7 @@ psfmeasure — Measure PSF sizes from stellar images
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_cursor_commands">CURSOR COMMANDS</A></H2>
+  <H3>Cursor commands</H3>
   <! BeginSection: 'CURSOR COMMANDS'>
   <UL>
   When selecting objects with the image cursor the following commands are
@@ -236,7 +225,7 @@ psfmeasure — Measure PSF sizes from stellar images
   </PRE>
   </UL>
   <! EndSection:   'CURSOR COMMANDS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task measures the point-spread function (PSF) width of stars or other
@@ -315,7 +304,7 @@ psfmeasure — Measure PSF sizes from stellar images
   ellipticity, and the position angle.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_algorithms">ALGORITHMS</A></H2>
+  <H3>Algorithms</H3>
   <! BeginSection: 'ALGORITHMS'>
   <UL>
   The PSF of an object is characterized using a radially symmetric
@@ -517,7 +506,7 @@ psfmeasure — Measure PSF sizes from stellar images
   the graphs except for the case where the <I>size</I> is GFWHM.
   </UL>
   <! EndSection:   'ALGORITHMS'>
-  <H2><A NAME="s_interactive_graphics_mode">INTERACTIVE GRAPHICS MODE</A></H2>
+  <H3>Interactive graphics mode</H3>
   <! BeginSection: 'INTERACTIVE GRAPHICS MODE'>
   <UL>
   The graphics part of <B>psfmeasure</B> consists of a number of different
@@ -681,7 +670,7 @@ psfmeasure — Measure PSF sizes from stellar images
   it may be decreased and then increased again.
   </UL>
   <! EndSection:   'INTERACTIVE GRAPHICS MODE'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  An image of a star field is studied with default values.
@@ -713,7 +702,7 @@ psfmeasure — Measure PSF sizes from stellar images
   in this artificial image having a radial variation in PSF.
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   <PRE>
@@ -724,5 +713,3 @@ psfmeasure — Measure PSF sizes from stellar images
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'CURSOR COMMANDS' 'DESCRIPTION' 'ALGORITHMS' 'INTERACTIVE GRAPHICS MODE' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

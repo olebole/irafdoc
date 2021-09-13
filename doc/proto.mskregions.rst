@@ -1,3 +1,5 @@
+.. _mskregions:
+
 mskregions — Create or modify masks using regions lists
 =======================================================
 
@@ -5,36 +7,23 @@ mskregions — Create or modify masks using regions lists
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>mskregions (Dec01)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>proto</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>mskregions (Dec01)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>mskregions</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   mskregions -- Create mask from a list of region specifications
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   mskregions regions masks refimages
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_regions">regions</A></B></DT>
+  <DT><B>regions</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='regions' Line='regions'>
   <DD>The list of input regions files. The number of regions files must be one or
   equal to the number of output mask images. Regions files contain a list of
@@ -44,7 +33,7 @@ mskregions — Create or modify masks using regions lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_masks">masks</A></B></DT>
+  <DT><B>masks</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='masks' Line='masks'>
   <DD>The output masks. The size of the output masks defaults to the size of
   the reference image or the value of the dims parameter in that order of
@@ -52,37 +41,37 @@ mskregions — Create or modify masks using regions lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_refimages">refimages</A></B></DT>
+  <DT><B>refimages</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='refimages' Line='refimages'>
   <DD>The optional list of reference images. If the reference image list is defined
   there must be one reference image for every output mask.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dims">dims = "<TT>512,512</TT>"</A></B></DT>
+  <DT><B>dims = "<TT>512,512</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dims' Line='dims = "512,512"'>
   <DD>The default output mask dimensions. The value of dims is a comma delimited
   list of dimensions.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_depth">depth = 0</A></B></DT>
+  <DT><B>depth = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='depth' Line='depth = 0'>
   <DD>The default output mask depth in bits currently 27.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_regnumber">regnumber = "<TT>constant</TT>"</A></B></DT>
+  <DT><B>regnumber = "<TT>constant</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='regnumber' Line='regnumber = "constant"'>
   <DD>The region definition scheme. The options are:
   <DL>
-  <DT><B><A NAME="l_constant">constant</A></B></DT>
+  <DT><B>constant</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='constant' Line='constant'>
   <DD>Assign all the mask regions the value of <I>regval</I>.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_number">number</A></B></DT>
+  <DT><B>number</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='number' Line='number'>
   <DD>Assign each region a sequential value beginning with <I>regval</I>.
   </DD>
@@ -90,13 +79,13 @@ mskregions — Create or modify masks using regions lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_regval">regval = 1</A></B></DT>
+  <DT><B>regval = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='regval' Line='regval = 1'>
   <DD>The starting mask region value.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_exprdb">exprdb = "<TT>none</TT>"</A></B></DT>
+  <DT><B>exprdb = "<TT>none</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='exprdb' Line='exprdb = "none"'>
   <DD>The file name of an optional expression database. An expression database
   may be used to define symbolic constants or a library of custom function
@@ -104,13 +93,13 @@ mskregions — Create or modify masks using regions lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_append">append = no</A></B></DT>
+  <DT><B>append = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='append' Line='append = no'>
   <DD>Add the region list to an existing mask ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print task status messages ?
   </DD>
@@ -118,7 +107,7 @@ mskregions — Create or modify masks using regions lists
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -277,7 +266,7 @@ mskregions — Create or modify masks using regions lists
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -337,19 +326,19 @@ mskregions — Create or modify masks using regions lists
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   <P>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   <P>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imexpr, mskexpr
@@ -358,5 +347,3 @@ mskregions — Create or modify masks using regions lists
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

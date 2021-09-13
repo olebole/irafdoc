@@ -1,3 +1,5 @@
+.. _ecreidentify:
+
 ecreidentify — Automatically identify features in spectra
 =========================================================
 
@@ -5,50 +7,37 @@ ecreidentify — Automatically identify features in spectra
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>ecreidentify (Jun88)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.imred.echelle</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>ecreidentify (Jun88)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>ecreidentify</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   ecreidentify -- Reidentify features in echelle spectra
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   ecreidentify images reference
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>Echelle images in which the features in the reference image are to be
   reidentified and a new dispersion function fit.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_reference">reference</A></B></DT>
+  <DT><B>reference</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='reference' Line='reference'>
   <DD>Echelle image with previously identified features and dispersion
   function.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_shift">shift = 0.</A></B></DT>
+  <DT><B>shift = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='shift' Line='shift = 0.'>
   <DD>Shift in user coordinates to be added to the reference features before
   centering.  If INDEF then a shift is determined by correlating the
@@ -57,7 +46,7 @@ ecreidentify — Automatically identify features in spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cradius">cradius = 5.</A></B></DT>
+  <DT><B>cradius = 5.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cradius' Line='cradius = 5.'>
   <DD>Centering radius in pixels.  If a reidentified feature falls further
   than this distance from the reference position (after shifting) it is
@@ -65,14 +54,14 @@ ecreidentify — Automatically identify features in spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_threshold">threshold = 10.</A></B></DT>
+  <DT><B>threshold = 10.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 10.'>
   <DD>In order for a feature center to be determined the range of pixel
   intensities around the feature must exceed this threshold.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_refit">refit = yes</A></B></DT>
+  <DT><B>refit = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='refit' Line='refit = yes'>
   <DD>Refit the dispersion function?  If yes and there are more than 4
   features in more than one order and a dispersion function was defined
@@ -84,14 +73,14 @@ ecreidentify — Automatically identify features in spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_database">database = "<TT>database</TT>"</A></B></DT>
+  <DT><B>database = "<TT>database</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"'>
   <DD>Database containing the feature data for the reference image and in
   which the features for the reidentified images are recorded.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_logfiles">logfiles = "<TT>STDOUT,logfile</TT>"</A></B></DT>
+  <DT><B>logfiles = "<TT>STDOUT,logfile</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='logfiles' Line='logfiles = "STDOUT,logfile"'>
   <DD>List of file in which to keep a processing log.  If a null file, "<TT></TT>", is
   given then no log is kept.  If the log file is "<TT>STDOUT</TT>" then the log is
@@ -100,7 +89,7 @@ ecreidentify — Automatically identify features in spectra
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Emission or absorption features in a reference echelle spectrum are
@@ -143,7 +132,7 @@ ecreidentify — Automatically identify features in spectra
   wavelengths.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   The features in the spectrum f033.ec were identified previously
@@ -169,7 +158,7 @@ ecreidentify — Automatically identify features in spectra
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   center1d, ecidentify
@@ -178,5 +167,3 @@ ecreidentify — Automatically identify features in spectra
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

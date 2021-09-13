@@ -1,3 +1,5 @@
+.. _crtpict:
+
 crtpict — Generate greyscale plots of IRAF images
 =================================================
 
@@ -5,62 +7,49 @@ crtpict — Generate greyscale plots of IRAF images
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>crtpict (Aug87)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>plot</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>crtpict (Aug87)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>crtpict</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   crtpict -- make a hardcopy of an IRAF image
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   crtpict input 
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>Input images to be processed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_device">device = "<TT>dicomed</TT>"</A></B></DT>
+  <DT><B>device = "<TT>dicomed</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='device' Line='device = "dicomed"'>
   <DD>The output device.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_auto_fill">auto_fill = yes</A></B></DT>
+  <DT><B>auto_fill = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='auto_fill' Line='auto_fill = yes'>
   <DD>If set to yes, the image will be scaled to fit the device viewport.
   The aspect ratio is always preserved when <I>auto_fill</I> = yes.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xmag">xmag = 1.0, ymag = 1.0</A></B></DT>
+  <DT><B>xmag = 1.0, ymag = 1.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xmag' Line='xmag = 1.0, ymag = 1.0'>
   <DD>When <I>auto_fill</I> = no, the x and y magnification ratios are specified
   by these parameters.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_replicate">replicate = yes</A></B></DT>
+  <DT><B>replicate = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='replicate' Line='replicate = yes'>
   <DD>The image pixels are block replicated to fit the device viewport when
   <I>replicate</I> = yes.  Otherwise, the pixels are linearly interpolated
@@ -68,7 +57,7 @@ crtpict — Generate greyscale plots of IRAF images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_x_block_avg">x_block_avg = 1, y_block_avg = 1</A></B></DT>
+  <DT><B>x_block_avg = 1, y_block_avg = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='x_block_avg' Line='x_block_avg = 1, y_block_avg = 1'>
   <DD>These parameters are used when <I>replicate</I> = no to decrease the
   effective output device resolution, and speed up the interpolation.  The
@@ -77,7 +66,7 @@ crtpict — Generate greyscale plots of IRAF images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ztrans">ztrans = "<TT>auto</TT>"</A></B></DT>
+  <DT><B>ztrans = "<TT>auto</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ztrans' Line='ztrans = "auto"'>
   <DD>This parameter specifies how the image intensities are mapped into the 
   greyscale values of the output device.  Intensity z1 maps to black, z2 to white.
@@ -92,7 +81,7 @@ crtpict — Generate greyscale plots of IRAF images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lutfile">lutfile = "<TT></TT>"</A></B></DT>
+  <DT><B>lutfile = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lutfile' Line='lutfile = ""'>
   <DD>Name of text file containing the look up table when <I>ztrans</I> = user. 
   The table should contain two columns per line; column 1 contains the 
@@ -100,7 +89,7 @@ crtpict — Generate greyscale plots of IRAF images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_contrast">contrast = 0.25</A></B></DT>
+  <DT><B>contrast = 0.25</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='contrast' Line='contrast = 0.25'>
   <DD>Used when automatically determining z1 and z2.  The slope of the transfer
   function is divided by <I>contrast</I>, so negative values of <I>contrast</I>
@@ -108,47 +97,47 @@ crtpict — Generate greyscale plots of IRAF images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nsample_lines">nsample_lines = 25</A></B></DT>
+  <DT><B>nsample_lines = 25</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nsample_lines' Line='nsample_lines = 25'>
   <DD>Used when automatically determining z1 and z2, this parameter sets the number 
   of image lines to be sampled when determining the median.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_z1">z1 = 0.0, z2 = 0.0</A></B></DT>
+  <DT><B>z1 = 0.0, z2 = 0.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='z1' Line='z1 = 0.0, z2 = 0.0'>
   <DD>These parameters are used when <I>ztrans</I> = "<TT>min_max</TT>", to specify which
   pixel values map to black and white.  
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_perimeter">perimeter = yes</A></B></DT>
+  <DT><B>perimeter = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='perimeter' Line='perimeter = yes'>
   <DD>Draw annotated axes around the plot perimeter?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_image_fraction">image_fraction = 0.70</A></B></DT>
+  <DT><B>image_fraction = 0.70</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='image_fraction' Line='image_fraction = 0.70'>
   <DD>The fraction of the vertical device viewport reserved for the image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_graphics_fraction">graphics_fraction = 0.20</A></B></DT>
+  <DT><B>graphics_fraction = 0.20</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='graphics_fraction' Line='graphics_fraction = 0.20'>
   <DD>The fraction of the vertical device viewport reserved for histogram
   plots and id information. 
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_greyscale_fraction">greyscale_fraction = 0.05</A></B></DT>
+  <DT><B>greyscale_fraction = 0.05</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='greyscale_fraction' Line='greyscale_fraction = 0.05'>
   <DD>The fraction of the vertical device viewport reserved for the greyscale
   step wedge.  
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output = "<TT></TT>"</A></B></DT>
+  <DT><B>output = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output = ""'>
   <DD>Output metacode is appended to this file.
   By naming an output file, the metacode can be "<TT>trapped</TT>", and the normal
@@ -157,7 +146,7 @@ crtpict — Generate greyscale plots of IRAF images
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Procedure <B>crtpict</B> makes a photographic hardcopy plot of IRAF images.
@@ -209,7 +198,7 @@ crtpict — Generate greyscale plots of IRAF images
   of acceptable greyscale levels.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  To subsample every 4th pixel of a large image, fill the output area and use
@@ -242,7 +231,7 @@ crtpict — Generate greyscale plots of IRAF images
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_timing">TIMING</A></H2>
+  <H3>Timing</H3>
   <! BeginSection: 'TIMING'>
   <UL>
   For a 512 x 512 real image, <B>crtpict</B> takes about 40 cpu seconds with
@@ -250,7 +239,7 @@ crtpict — Generate greyscale plots of IRAF images
   but <B>replicate</B> = no, <B>crtpict</B> requires almost 400 cpu seconds.
   </UL>
   <! EndSection:   'TIMING'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   display, showcap
@@ -259,5 +248,3 @@ crtpict — Generate greyscale plots of IRAF images
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIMING' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

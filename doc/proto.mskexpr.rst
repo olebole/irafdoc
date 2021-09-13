@@ -1,3 +1,5 @@
+.. _mskexpr:
+
 mskexpr — Create masks using an expression and reference images
 ===============================================================
 
@@ -5,43 +7,30 @@ mskexpr — Create masks using an expression and reference images
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>mskexpr (Dec01)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>proto</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>mskexpr (Dec01)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>mskexpr</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   mskexpr -- General mask expression evaluator
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   mskexpr expr masks refimages
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_expr">expr</A></B></DT>
+  <DT><B>expr</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='expr' Line='expr'>
   <DD>The expression to be evaluated.  This may be the actual expression, or the
   string "<TT>@file</TT>" in which case the expression is taken from the named file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_masks">masks</A></B></DT>
+  <DT><B>masks</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='masks' Line='masks'>
   <DD>The output masks. The size of the output masks defaults to the size of
   the reference image if any, the size of the reference mask if any, or the
@@ -49,7 +38,7 @@ mskexpr — Create masks using an expression and reference images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_refimages">refimages</A></B></DT>
+  <DT><B>refimages</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='refimages' Line='refimages'>
   <DD>The optional list of reference images. If the reference image list is defined
   there must be one reference image for every output mask. The reference image
@@ -58,7 +47,7 @@ mskexpr — Create masks using an expression and reference images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_refmasks">refmasks</A></B></DT>
+  <DT><B>refmasks</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='refmasks' Line='refmasks'>
   <DD>The optional list of reference masks. If the reference mask list is defined
   there must be one reference mask for every output mask. The reference mask
@@ -75,21 +64,21 @@ mskexpr — Create masks using an expression and reference images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dims">dims = "<TT>512,512</TT>"</A></B></DT>
+  <DT><B>dims = "<TT>512,512</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dims' Line='dims = "512,512"'>
   <DD>The default output mask dimensions. The value of dims is a comma delimited
   list of dimensions.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_depth">depth = 0</A></B></DT>
+  <DT><B>depth = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='depth' Line='depth = 0'>
   <DD>The output mask depth in bits. The maximum depth and current default is
   27.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_exprdb">exprdb = "<TT>none</TT>"</A></B></DT>
+  <DT><B>exprdb = "<TT>none</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='exprdb' Line='exprdb = "none"'>
   <DD>The file name of an optional expression database. An expression database
   may be used to define symbolic constants or a library of custom function
@@ -97,7 +86,7 @@ mskexpr — Create masks using an expression and reference images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print task status messages ?
   </DD>
@@ -105,7 +94,7 @@ mskexpr — Create masks using an expression and reference images
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -421,7 +410,7 @@ mskexpr — Create masks using an expression and reference images
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -500,19 +489,19 @@ mskexpr — Create masks using an expression and reference images
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   <P>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   <P>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imexpr, mskregions, pmmatch
@@ -521,5 +510,3 @@ mskexpr — Create masks using an expression and reference images
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

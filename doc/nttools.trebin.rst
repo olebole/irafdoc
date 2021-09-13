@@ -1,3 +1,5 @@
+.. _trebin:
+
 trebin — Resample a table to uniform spacing.
 =============================================
 
@@ -5,32 +7,19 @@ trebin — Resample a table to uniform spacing.
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>trebin (Jul2000)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>tables</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>trebin (Jul2000)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>trebin</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   trebin -- Resample tables.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   trebin intable outtable column start end step
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task resamples tables.
@@ -93,17 +82,17 @@ trebin — Resample a table to uniform spacing.
   or for count rate spectra.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_intable">intable [file name template]</A></B></DT>
+  <DT><B>intable [file name template]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='intable' Line='intable [file name template]'>
   <DD>List of input tables to be resampled.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_outtable">outtable [file name template]</A></B></DT>
+  <DT><B>outtable [file name template]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable [file name template]'>
   <DD>Output tables or directory.
   The number of output tables must match the number of input tables unless
@@ -111,7 +100,7 @@ trebin — Resample a table to uniform spacing.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_column">column [string]</A></B></DT>
+  <DT><B>column [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='column' Line='column [string]'>
   <DD>Name of the independent variable column in the input table,
   i.e., the column on which the data are being resampled.
@@ -124,7 +113,7 @@ trebin — Resample a table to uniform spacing.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_start">start [real]</A></B></DT>
+  <DT><B>start [real]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='start' Line='start [real]'>
   <DD>If the independent variable values at which to interpolate the input values
   are to be uniformly spaced,
@@ -136,7 +125,7 @@ trebin — Resample a table to uniform spacing.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_end">end [real]</A></B></DT>
+  <DT><B>end [real]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='end' Line='end [real]'>
   <DD>Last value of the independent variable.
   This may be rounded up by a fraction of 'step' to ensure that the entire
@@ -144,7 +133,7 @@ trebin — Resample a table to uniform spacing.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_step">step [real]</A></B></DT>
+  <DT><B>step [real]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='step' Line='step [real]'>
   <DD>Increment in independent variable.
   The sign of 'step' is ignored;
@@ -160,7 +149,7 @@ trebin — Resample a table to uniform spacing.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(xtable) [file name template]</A></B></DT>
+  <DT><B>(xtable) [file name template]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(xtable) [file name template]'>
   <DD>The independent variable values at which to interpolate the input values
   can either be specified explicitly with 'xtable'
@@ -187,7 +176,7 @@ trebin — Resample a table to uniform spacing.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(function = "<TT>linear</TT>") [string, allowed values: nearest | linear | </A></B></DT>
+  <DT><B>(function = "<TT>linear</TT>") [string, allowed values: nearest | linear | </B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(function = "linear") [string, allowed values: nearest | linear | '>
   <DD>poly3 | spline]
   <P>
@@ -210,13 +199,13 @@ trebin — Resample a table to uniform spacing.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(extrapolate = no) [boolean]</A></B></DT>
+  <DT><B>(extrapolate = no) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(extrapolate = no) [boolean]'>
   <DD>Extrapolate if out of bounds?  See 'value' below.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(value = INDEF) [real]</A></B></DT>
+  <DT><B>(value = INDEF) [real]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(value = INDEF) [real]'>
   <DD>Value to use if out of bounds.
   The independent variable values
@@ -239,7 +228,7 @@ trebin — Resample a table to uniform spacing.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(padvalue = INDEF) [real]</A></B></DT>
+  <DT><B>(padvalue = INDEF) [real]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(padvalue = INDEF) [real]'>
   <DD>Trailing INDEF values in the independent variable column
   (either in 'intable' or in 'xtable')
@@ -253,7 +242,7 @@ trebin — Resample a table to uniform spacing.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(verbose = yes) [boolean]</A></B></DT>
+  <DT><B>(verbose = yes) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(verbose = yes) [boolean]'>
   <DD>If verbose = yes,
   the input and output table names will be printed as they are processed,
@@ -262,14 +251,14 @@ trebin — Resample a table to uniform spacing.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(Version) [string]</A></B></DT>
+  <DT><B>(Version) [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(Version) [string]'>
   <DD>This gives the date of installation of the current version.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Resample all the columns in all tables beginning with "<TT>hr</TT>" so the values
@@ -300,7 +289,7 @@ trebin — Resample a table to uniform spacing.
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   A column which contains an integer bit mask
@@ -318,13 +307,13 @@ trebin — Resample a table to uniform spacing.
   but it will not modify any scalar column that gives the effective array size.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   This task was written by Phil Hodge.
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   Type "<TT>help tables opt=sys</TT>" for a higher-level description of the 'tables'
@@ -334,5 +323,3 @@ trebin — Resample a table to uniform spacing.
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

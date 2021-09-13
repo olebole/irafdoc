@@ -1,3 +1,5 @@
+.. _hedit:
+
 hedit — Header editor
 =====================
 
@@ -5,42 +7,29 @@ hedit — Header editor
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>hedit (Apr01)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>hedit (Apr01)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>hedit</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   hedit - edit or view an image header or headers
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   hedit images fields value
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>Template specifying the images to be edited.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fields">fields</A></B></DT>
+  <DT><B>fields</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fields' Line='fields'>
   <DD>Template specifying the fields to be edited in each image.  The template is
   expanded independently for each image against the set of all fields in the
@@ -48,7 +37,7 @@ hedit — Header editor
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_value">value</A></B></DT>
+  <DT><B>value</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='value' Line='value'>
   <DD>Either a string constant or a general expression (if the first character is
   a left parenthesis) to be evaluated to compute the new value of each field.
@@ -57,7 +46,7 @@ hedit — Header editor
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_add">add = no</A></B></DT>
+  <DT><B>add = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='add' Line='add = no'>
   <DD>Change the operation of the editor from update to add new field. If the
   field already exists it is edited.  If this option is selected the field
@@ -66,7 +55,7 @@ hedit — Header editor
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_addonly">addonly = no</A></B></DT>
+  <DT><B>addonly = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='addonly' Line='addonly = no'>
   <DD>Change the operation of the editor from update to add a new field. If the
   field already exists it is not changed.  If this option is selected the field
@@ -75,14 +64,14 @@ hedit — Header editor
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_delete">delete = no</A></B></DT>
+  <DT><B>delete = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='delete' Line='delete = no'>
   <DD>Change the operation of the editor from update to delete field.
   The listed fields are deleted from each image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verify">verify = yes</A></B></DT>
+  <DT><B>verify = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verify' Line='verify = yes'>
   <DD>Interactively verify all operations which modify the image database.
   The editor will describe the operation to be performed, prompting with the
@@ -93,7 +82,7 @@ hedit — Header editor
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_show">show = yes</A></B></DT>
+  <DT><B>show = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='show' Line='show = yes'>
   <DD>Print a record of each operation which modifies the database upon the standard
   output.  Old values are given as well as new values, making it possible to
@@ -101,7 +90,7 @@ hedit — Header editor
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_update">update = yes</A></B></DT>
+  <DT><B>update = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='update' Line='update = yes'>
   <DD>Enable updating of the image database.  If updating is disabled the edit
   operations are performed in memory but image headers will not be updated
@@ -110,7 +99,7 @@ hedit — Header editor
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -399,7 +388,7 @@ hedit — Header editor
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Globally edit the database "<TT>n1</TT>", setting the value of the string parameter
@@ -419,7 +408,7 @@ hedit — Header editor
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   The internal storage format is currently FITS card image, hence field names
@@ -433,7 +422,7 @@ hedit — Header editor
   option and use it to undo an edit.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   hselect, imgets, imheader
@@ -442,5 +431,3 @@ hedit — Header editor
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

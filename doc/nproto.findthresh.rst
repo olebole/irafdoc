@@ -1,3 +1,5 @@
+.. _findthresh:
+
 findthresh — Estimate a CCD's sky noise from the gain and readnoise
 ===================================================================
 
@@ -5,36 +7,23 @@ findthresh — Estimate a CCD's sky noise from the gain and readnoise
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>findthresh (Apr92)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.nproto</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>findthresh (Apr92)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>findthresh</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   findthresh -- Estimate the background noise level of a CCD
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   findthresh data
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_data">data</A></B></DT>
+  <DT><B>data</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='data' Line='data'>
   <DD>The level of the sky (or any other data level, for that matter) in A/D
   units, for which the random error is to be estimated.  If this is not
@@ -43,35 +32,35 @@ findthresh — Estimate a CCD's sky noise from the gain and readnoise
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_images">images = "<TT></TT>"</A></B></DT>
+  <DT><B>images = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images = ""'>
   <DD>If not NULL ("<TT></TT>") and if <B>data</B> is not specified, this is a list of
   images whose random background error per pixel is to be estimated.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_section">section = "<TT>[*,*]</TT>"</A></B></DT>
+  <DT><B>section = "<TT>[*,*]</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='section' Line='section = "[*,*]"'>
   <DD>The selected image section for the statistics.  This should be chosen
   to exclude bad columns or rows, cosmic rays, and other blemishes.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_gain">gain</A></B></DT>
+  <DT><B>gain</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='gain' Line='gain'>
   <DD>The CCD gain in electrons/ADU.
   This may be estimated using the FINDGAIN task.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_readnoise">readnoise</A></B></DT>
+  <DT><B>readnoise</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='readnoise' Line='readnoise'>
   <DD>The CCD read noise in electrons.
   This may be estimated using the FINDGAIN task.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nframes">nframes = 1</A></B></DT>
+  <DT><B>nframes = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nframes' Line='nframes = 1'>
   <DD>The number of raw data frames that were coadded or averaged
   to produce the <B>images</B>.  If this is not set to 1, the
@@ -79,14 +68,14 @@ findthresh — Estimate a CCD's sky noise from the gain and readnoise
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_coaddtype">coaddtype = "<TT>average</TT>"</A></B></DT>
+  <DT><B>coaddtype = "<TT>average</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='coaddtype' Line='coaddtype = "average"'>
   <DD>For coadded frames (<B>nframes</B> &gt; 1) the type of combination
   that was done, either "<TT>average</TT>" or "<TT>sum</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_center">center = "<TT>mean</TT>"</A></B></DT>
+  <DT><B>center = "<TT>mean</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='center' Line='center = "mean"'>
   <DD>The statistical measure of central tendency that is used to estimate
   the data level of each image.  This can have the values:  <B>mean</B>,
@@ -95,7 +84,7 @@ findthresh — Estimate a CCD's sky noise from the gain and readnoise
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_binwidth">binwidth = 0.1</A></B></DT>
+  <DT><B>binwidth = 0.1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='binwidth' Line='binwidth = 0.1'>
   <DD>The bin width of the histogram (in sigma) that is used to estimate the
   <B>midpt</B> or <B>mode</B> of the data section in each image.
@@ -103,7 +92,7 @@ findthresh — Estimate a CCD's sky noise from the gain and readnoise
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Label the computed and measured background noise on output,
   rather than print them two per line?
@@ -111,7 +100,7 @@ findthresh — Estimate a CCD's sky noise from the gain and readnoise
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   FINDTHRESH can be used to estimate the expected random error per pixel
@@ -133,7 +122,7 @@ findthresh — Estimate a CCD's sky noise from the gain and readnoise
   used to compare the statistics of various sections of the images directly.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_algorithm">ALGORITHM</A></H2>
+  <H3>Algorithm</H3>
   <! BeginSection: 'ALGORITHM'>
   <UL>
   The formula used by the task is:
@@ -161,7 +150,7 @@ findthresh — Estimate a CCD's sky noise from the gain and readnoise
   statistics.
   </UL>
   <! EndSection:   'ALGORITHM'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   To estimate the CCD background noise at a specified data level, gain and
@@ -189,7 +178,7 @@ findthresh — Estimate a CCD's sky noise from the gain and readnoise
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   findgain, imstatistics, imhistogram
@@ -198,5 +187,3 @@ findthresh — Estimate a CCD's sky noise from the gain and readnoise
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'ALGORITHM' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

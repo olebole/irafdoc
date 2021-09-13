@@ -1,3 +1,5 @@
+.. _awcspars:
+
 awcspars — Default image wcs parameters
 =======================================
 
@@ -5,36 +7,23 @@ awcspars — Default image wcs parameters
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>awcspars (Mar00)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>astcat</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>awcspars (Mar00)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>awcspars</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   awcspars -- edit the default world coordinate system parameters
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   awcspars 
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_wxref">wxref = "<TT>INDEF</TT>", wyref = "<TT>INDEF</TT>"</A></B></DT>
+  <DT><B>wxref = "<TT>INDEF</TT>", wyref = "<TT>INDEF</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wxref' Line='wxref = "INDEF", wyref = "INDEF"'>
   <DD>The image header keyword names or the numerical values of the x and y reference
   point in pixels. If wxref = "<TT>INDEF</TT>" and wyref = "<TT>INDEF</TT>" the reference
@@ -42,7 +31,7 @@ awcspars — Default image wcs parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wxmag">wxmag = "<TT>INDEF</TT>", wymag = "<TT>INDEF</TT>"</A></B></DT>
+  <DT><B>wxmag = "<TT>INDEF</TT>", wymag = "<TT>INDEF</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wxmag' Line='wxmag = "INDEF", wymag = "INDEF"'>
   <DD>The image header keyword names or the numerical values of the x and y scale
   factors in arcseconds per pixel. If wxmag  or wymag = are undefined a new
@@ -50,7 +39,7 @@ awcspars — Default image wcs parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wxrot">wxrot = "<TT>180.0</TT>", wyrot = "<TT>0.0</TT>"</A></B></DT>
+  <DT><B>wxrot = "<TT>180.0</TT>", wyrot = "<TT>0.0</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wxrot' Line='wxrot = "180.0", wyrot = "0.0"'>
   <DD>The image header keyword names or the numerical values of the x and y rotation
   angles in degrees measured counter-clockwise to the positive x and y image
@@ -61,7 +50,7 @@ awcspars — Default image wcs parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wraref">wraref = "<TT>RA</TT>", wdecref = "<TT>DEC</TT>"</A></B></DT>
+  <DT><B>wraref = "<TT>RA</TT>", wdecref = "<TT>DEC</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wraref' Line='wraref = "RA", wdecref = "DEC"'>
   <DD>The image header keyword names or the numerical values of the reference
   point in celestial coordinates. If wraref and wdecref are undefined
@@ -69,7 +58,7 @@ awcspars — Default image wcs parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wraunits">wraunits = "<TT></TT>", wdecunits = "<TT></TT>"</A></B></DT>
+  <DT><B>wraunits = "<TT></TT>", wdecunits = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wraunits' Line='wraunits = "", wdecunits = ""'>
   <DD>The units of the reference point celestial coordinates. The options are
   "<TT>hours</TT>", "<TT>degrees</TT>", and "<TT>radians</TT>" for the ra coordinate and "<TT>degrees</TT>"
@@ -78,7 +67,7 @@ awcspars — Default image wcs parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wproj">wproj = "<TT>tan</TT>"</A></B></DT>
+  <DT><B>wproj = "<TT>tan</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wproj' Line='wproj = "tan"'>
   <DD>The sky projection geometry. The most commonly used projections are "<TT>tan</TT>",
   "<TT>arc</TT>", "<TT>sin</TT>", and "<TT>lin</TT>". Other supported projections are "<TT>ait</TT>","<TT>car</TT>", "<TT>csc</TT>",
@@ -86,7 +75,7 @@ awcspars — Default image wcs parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wsystem">wsystem = "<TT>EQUINOX</TT>"</A></B></DT>
+  <DT><B>wsystem = "<TT>EQUINOX</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wsystem' Line='wsystem = "EQUINOX"'>
   <DD>The image header keyword name or string defining the celestial coordinate
   system of the reference point. The most common values for wsystem are
@@ -96,7 +85,7 @@ awcspars — Default image wcs parameters
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The default wcs parameters are used to create an approximate  FITS wcs for
@@ -115,7 +104,7 @@ awcspars — Default image wcs parameters
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. List the default wcs parameters.
@@ -147,17 +136,17 @@ awcspars — Default image wcs parameters
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   agetim, ahedit
@@ -166,5 +155,3 @@ awcspars — Default image wcs parameters
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

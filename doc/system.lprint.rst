@@ -1,3 +1,5 @@
+.. _lprint:
+
 lprint — Print a file on the line printer device
 ================================================
 
@@ -5,42 +7,29 @@ lprint — Print a file on the line printer device
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>lprint (Nov84)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>system</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>lprint (Nov84)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>lprint</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   lprint -- print a file or files
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   lprint files
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_files">files</A></B></DT>
+  <DT><B>files</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='files' Line='files'>
   <DD>A filename template specifying the files to be printed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_device">device = "<TT>printer</TT>"</A></B></DT>
+  <DT><B>device = "<TT>printer</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='device' Line='device = "printer"'>
   <DD>The output device.  If the value of <I>device</I> is the reserved string
   "<TT>printer</TT>", the name of the actual printer device is taken from the value
@@ -48,14 +37,14 @@ lprint — Print a file on the line printer device
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_map_cc">map_cc = yes</A></B></DT>
+  <DT><B>map_cc = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='map_cc' Line='map_cc = yes'>
   <DD>If set to "<TT>yes</TT>", any unprintable characters embedded in the text are printed
   in the form "<TT>^X</TT>", where ^A is &lt;ctrl/A&gt; (ASCII 1), and so on.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_paginate">paginate = "<TT>auto</TT>"</A></B></DT>
+  <DT><B>paginate = "<TT>auto</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='paginate' Line='paginate = "auto"'>
   <DD>If <I>paginate</I> is set to "<TT>auto</TT>" and the standard input is not redirected,
   pages are broken and a header is printed at the top of each page.
@@ -67,7 +56,7 @@ lprint — Print a file on the line printer device
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_label">label = "<TT>STDIN</TT>"</A></B></DT>
+  <DT><B>label = "<TT>STDIN</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='label' Line='label = "STDIN"'>
   <DD>If displaying a header with input from the standard input, use the
   "<TT>label</TT>" string where the filename would appear in a normal header.
@@ -75,7 +64,7 @@ lprint — Print a file on the line printer device
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The named files, or the standard input, are printed on the standard
@@ -85,7 +74,7 @@ lprint — Print a file on the line printer device
   input from the standard input, but may be enabled if desired.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -108,7 +97,7 @@ lprint — Print a file on the line printer device
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   type
@@ -117,5 +106,3 @@ lprint — Print a file on the line printer device
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

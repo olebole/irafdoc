@@ -1,3 +1,5 @@
+.. _ahedit:
+
 ahedit — Initialize the image wcs and set standard keywords
 ===========================================================
 
@@ -5,42 +7,29 @@ ahedit — Initialize the image wcs and set standard keywords
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>ahedit (Mar00)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>astcat</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>ahedit (Mar00)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>ahedit</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   ahedit -- Add wcs and / or standard keywords to the image header
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   ahedit images imsurveys
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>The list of input images to be edited.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_imsurveys">imsurveys </A></B></DT>
+  <DT><B>imsurveys </B></DT>
   <! Sec='PARAMETERS' Level=0 Label='imsurveys' Line='imsurveys '>
   <DD>The input image survey that is the source of the input images. If imsurveys
   is defined then the wcs status and the wcs and standard keyword parameter names
@@ -50,14 +39,14 @@ ahedit — Initialize the image wcs and set standard keywords
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_hupdate">hupdate = yes</A></B></DT>
+  <DT><B>hupdate = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='hupdate' Line='hupdate = yes'>
   <DD>Update the image headers ? If hupdate = no the image header edits are
   listed but the headers are not updated.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wcsedit">wcsedit = no</A></B></DT>
+  <DT><B>wcsedit = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wcsedit' Line='wcsedit = no'>
   <DD>Convert a DSS WCS to a FITS WCS or add an approximate FITS style WCS to the
   input image headers ?  If <I>imsurveys</I> is defined the WCS status of the
@@ -68,25 +57,25 @@ ahedit — Initialize the image wcs and set standard keywords
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wcs">wcs = "<TT>none</TT>"</A></B></DT>
+  <DT><B>wcs = "<TT>none</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wcs' Line='wcs = "none"'>
   <DD>The default wcs status of the input images if <I>imsurveys</I> is undefined.
   The options are:
   <DL>
-  <DT><B><A NAME="l_fits">fits</A></B></DT>
+  <DT><B>fits</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='fits' Line='fits'>
   <DD>The input image is assumed to have a FITS WCS. No new FITS WCS is written.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dss">dss</A></B></DT>
+  <DT><B>dss</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='dss' Line='dss'>
   <DD>The input image is assumed to have a DSS WCS. The equivalent FITS WCS
   is added, but the DSS WCS is left unchanged.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_none">none</A></B></DT>
+  <DT><B>none</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='none' Line='none'>
   <DD>The input image is assumed to have no WCS. The parameters in <I>awcspars</I>
   are used to create an approximate FITS WCS.
@@ -95,7 +84,7 @@ ahedit — Initialize the image wcs and set standard keywords
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_awcspars">awcspars = "<TT></TT>"</A></B></DT>
+  <DT><B>awcspars = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='awcspars' Line='awcspars = ""'>
   <DD>The default WCS parameter set. If <I>wcsedit</I> = yes and <I>imsurveys</I>
   is undefined then the awcspars parameters are used to create an approximate
@@ -104,7 +93,7 @@ ahedit — Initialize the image wcs and set standard keywords
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_hdredit">hdredit = no</A></B></DT>
+  <DT><B>hdredit = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='hdredit' Line='hdredit = no'>
   <DD>Add a set of standard keywords to the image header which may be required or
   useful in the later astrometric analysis steps ?  These parameters divide
@@ -116,7 +105,7 @@ ahedit — Initialize the image wcs and set standard keywords
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_aimpars">aimpars = "<TT></TT>"</A></B></DT>
+  <DT><B>aimpars = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='aimpars' Line='aimpars = ""'>
   <DD>The default standard image header keywords parameter set. If <I>hdredit</I> =
   yes and <I>imsurveys</I> is undefined the parameter names and values
@@ -125,20 +114,20 @@ ahedit — Initialize the image wcs and set standard keywords
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_update">update = no</A></B></DT>
+  <DT><B>update = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='update' Line='update = no'>
   <DD>Update the default values of the algorithm parameter sets, e.g. aregpars,
   <I>awcspars</I>, and <I>aimpars</I> on task termination ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print status messages on the terminal as the task proceeds ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_imdb">imdb = "<TT>)_.imdb)</A></B></DT>
+  <DT><B>imdb = "<TT>)_.imdb)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='imdb' Line='imdb = ")_.imdb)'>
   <DD>The image surveys configuration file. Imdb defaults to the value of the
   package parameter imdb. The default image surveys configuration file is
@@ -148,7 +137,7 @@ ahedit — Initialize the image wcs and set standard keywords
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -195,7 +184,7 @@ ahedit — Initialize the image wcs and set standard keywords
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -247,17 +236,17 @@ ahedit — Initialize the image wcs and set standard keywords
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   aslist, adumpim, aregpars, awcspars, aimpars
@@ -266,5 +255,3 @@ ahedit — Initialize the image wcs and set standard keywords
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

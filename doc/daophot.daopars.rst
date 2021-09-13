@@ -1,3 +1,5 @@
+.. _daopars:
+
 daopars — Edit the daophot algorithms parameter set
 ===================================================
 
@@ -5,36 +7,23 @@ daopars — Edit the daophot algorithms parameter set
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>daopars (May00)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.daophot</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>daopars (May00)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>daopars</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   daopars -- edit the daophot fitting parameters
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   daopars
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_function">function = "<TT>gauss</TT>"</A></B></DT>
+  <DT><B>function = "<TT>gauss</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='function' Line='function = "gauss"'>
   <DD>The functional form of the analytic component of the PSF model computed by the
   DAOPHOT PSF task. The better this function matches the true PSF, especially in
@@ -42,32 +31,32 @@ daopars — Edit the daophot algorithms parameter set
   choices are the following.
   <P>
   <DL>
-  <DT><B><A NAME="l_gauss">gauss</A></B></DT>
+  <DT><B>gauss</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='gauss' Line='gauss'>
   <DD>An elliptical Gaussian function aligned along the x and y axes of the
   input image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_moffat15">moffat15</A></B></DT>
+  <DT><B>moffat15</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='moffat15' Line='moffat15'>
   <DD>An elliptical Moffat function with a beta parameter of 1.5.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_moffat25">moffat25</A></B></DT>
+  <DT><B>moffat25</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='moffat25' Line='moffat25'>
   <DD>An elliptical Moffat function with a beta parameter of 2.5.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lorentz">lorentz</A></B></DT>
+  <DT><B>lorentz</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='lorentz' Line='lorentz'>
   <DD>An elliptical Lorentzian function with beta parameter of 1.0.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_penny1">penny1</A></B></DT>
+  <DT><B>penny1</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='penny1' Line='penny1'>
   <DD>A Gaussian core with Lorentzian wings function, where the Gaussian core may be
   tilted, but the Lorentzian wings are elongated along the x or y axes.  The
@@ -75,7 +64,7 @@ daopars — Edit the daophot algorithms parameter set
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_penny2">penny2</A></B></DT>
+  <DT><B>penny2</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='penny2' Line='penny2'>
   <DD>A Gaussian core with Lorentzian wings function, where the Gaussian core and
   Lorentzian wings may be tilted in different directions.  The Lorentzian wings
@@ -83,7 +72,7 @@ daopars — Edit the daophot algorithms parameter set
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_auto">auto</A></B></DT>
+  <DT><B>auto</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='auto' Line='auto'>
   <DD>The PSF task computes the analytic PSF model for each of the six analytic model
   PSFs in turn and selects the one that produces the smallest standard deviation
@@ -91,7 +80,7 @@ daopars — Edit the daophot algorithms parameter set
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_func1">func1,func2,...</A></B></DT>
+  <DT><B>func1,func2,...</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='func1' Line='func1,func2,...'>
   <DD>The PSF task computes the analytic PSF model for each of a subset of the six
   defined functions in turn, and selects the one that produces the smallest
@@ -105,27 +94,27 @@ daopars — Edit the daophot algorithms parameter set
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_varorder">varorder = 0</A></B></DT>
+  <DT><B>varorder = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='varorder' Line='varorder = 0'>
   <DD>The order of variability of the PSF model computed by the DAOPHOT PSF task.
   Varorder sets the number of look-up tables containing the deviations of the
   true PSF from the analytic model PSF that are computed by the model.
   <DL>
-  <DT><B><A NAME="l_">"<TT>-1</TT>"    </A></B></DT>
+  <DT><B>"<TT>-1</TT>"    </B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"-1"    '>
   <DD>Only the analytic function specified by <I>function</I> is used to compute
   the PSF model. The PSF model is constant over the image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">"<TT>0</TT>"   </A></B></DT>
+  <DT><B>"<TT>0</TT>"   </B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"0"   '>
   <DD>The analytic function and one look-up table are used to compute the
   PSF model. The  PSF model is constant over the image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">"<TT>1</TT>"    </A></B></DT>
+  <DT><B>"<TT>1</TT>"    </B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"1"    '>
   <DD>The analytic function and three look-up tables are used to compute the PSF
   model. The PSF model is linearly variable over the image, with terms
@@ -133,7 +122,7 @@ daopars — Edit the daophot algorithms parameter set
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">"<TT>2</TT>"    </A></B></DT>
+  <DT><B>"<TT>2</TT>"    </B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"2"    '>
   <DD>The analytic function and six look-up tables are used to compute the
   PSF model. The PSF model is quadratically variable over the image, with terms
@@ -143,7 +132,7 @@ daopars — Edit the daophot algorithms parameter set
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nclean">nclean = 0</A></B></DT>
+  <DT><B>nclean = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nclean' Line='nclean = 0'>
   <DD>The number of additional iterations the PSF task performs to compute the PSF
   look-up tables. If <I>nclean</I> is &gt; 0, stars which contribute deviant
@@ -152,7 +141,7 @@ daopars — Edit the daophot algorithms parameter set
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_saturated">saturated = no</A></B></DT>
+  <DT><B>saturated = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='saturated' Line='saturated = no'>
   <DD>Use saturated stars to improve the signal-to-noise in the wings of the PSF
   model computed by the PSF task? This parameter should only be set to
@@ -161,7 +150,7 @@ daopars — Edit the daophot algorithms parameter set
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_matchrad">matchrad = 3.0 (scale units)</A></B></DT>
+  <DT><B>matchrad = 3.0 (scale units)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='matchrad' Line='matchrad = 3.0 (scale units)'>
   <DD>The tolerance in scale units for matching the stellar x and y centroids in the
   input photometry file with the image cursor position. Matchrad is currently
@@ -170,7 +159,7 @@ daopars — Edit the daophot algorithms parameter set
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_psfrad">psfrad = 11.0 (scale units)</A></B></DT>
+  <DT><B>psfrad = 11.0 (scale units)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='psfrad' Line='psfrad = 11.0 (scale units)'>
   <DD>The radius of the circle in scale units within which the PSF model is defined.
   Psfrad should be a pixel or two larger than the radius at which the intensity
@@ -180,7 +169,7 @@ daopars — Edit the daophot algorithms parameter set
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fitrad">fitrad = 3.0 (scale units)</A></B></DT>
+  <DT><B>fitrad = 3.0 (scale units)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fitrad' Line='fitrad = 3.0 (scale units)'>
   <DD>The fitting radius in scale units. Only pixels within the fitting radius of
   the center of a star will contribute to the fits computed by the PEAK, NSTAR
@@ -193,14 +182,14 @@ daopars — Edit the daophot algorithms parameter set
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_recenter">recenter = yes (peak, nstar, and allstar)</A></B></DT>
+  <DT><B>recenter = yes (peak, nstar, and allstar)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='recenter' Line='recenter = yes (peak, nstar, and allstar)'>
   <DD>Compute new positions as well as magnitudes for all the stars in the input
   photometry list?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fitsky">fitsky = no (peak, nstar, and allstar)</A></B></DT>
+  <DT><B>fitsky = no (peak, nstar, and allstar)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fitsky' Line='fitsky = no (peak, nstar, and allstar)'>
   <DD>Compute new sky values for the stars in the input list (peak, nstar, allstar).
   If fitsky = "<TT>no</TT>", the PEAK, NSTAR, and ALLSTAR tasks compute a group sky value
@@ -214,7 +203,7 @@ daopars — Edit the daophot algorithms parameter set
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_groupsky">groupsky = yes (nstar and allstar)</A></B></DT>
+  <DT><B>groupsky = yes (nstar and allstar)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='groupsky' Line='groupsky = yes (nstar and allstar)'>
   <DD>If groupsky is "<TT>yes</TT>",  then the sky value for every pixel which contributes to
   the fit is identical and equal to the mean of the sky values of all the stars
@@ -224,41 +213,41 @@ daopars — Edit the daophot algorithms parameter set
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sannulus">sannulus = 0.0 (scale units, allstar)</A></B></DT>
+  <DT><B>sannulus = 0.0 (scale units, allstar)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sannulus' Line='sannulus = 0.0 (scale units, allstar)'>
   <DD>The inner radius of the sky annulus used by ALLSTAR to recompute the sky 
   values.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wsannulus">wsannulus = 11 (scale units, allstar)</A></B></DT>
+  <DT><B>wsannulus = 11 (scale units, allstar)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wsannulus' Line='wsannulus = 11 (scale units, allstar)'>
   <DD>The width of the sky annulus used by ALLSTAR to recompute the sky values.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_flaterr">flaterr=0.75 (percent, peak, nstar, allstar)</A></B></DT>
+  <DT><B>flaterr=0.75 (percent, peak, nstar, allstar)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='flaterr' Line='flaterr=0.75 (percent, peak, nstar, allstar)'>
   <DD>The image flat-fielding error in percent used to compute the predicted
   errors of the fit.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_proferr">proferr = 5.0 (percent, peak, nstar, allstar)</A></B></DT>
+  <DT><B>proferr = 5.0 (percent, peak, nstar, allstar)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='proferr' Line='proferr = 5.0 (percent, peak, nstar, allstar)'>
   <DD>The profile or interpolation fitting error in percent used to compute
   the predicted errors of the fit.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_maxiter">maxiter = 50 (peak, nstar, allstar)</A></B></DT>
+  <DT><B>maxiter = 50 (peak, nstar, allstar)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='maxiter' Line='maxiter = 50 (peak, nstar, allstar)'>
   <DD>The maximum number of times that the PSF fitting tasks PEAK, NSTAR, and ALLSTAR
   will iterate on the PSF fit before giving up.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cliprange">cliprange = 2.5, clipexp = 6.0 (peak, nstar, allstar)</A></B></DT>
+  <DT><B>cliprange = 2.5, clipexp = 6.0 (peak, nstar, allstar)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cliprange' Line='cliprange = 2.5, clipexp = 6.0 (peak, nstar, allstar)'>
   <DD>The parameters of the down-weighting scheme in the fitting code used to resist
   bad data. For values of clipexp greater than 1 a residual small compared to
@@ -270,7 +259,7 @@ daopars — Edit the daophot algorithms parameter set
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_critsnratio">critsnratio = 1.0 (group)</A></B></DT>
+  <DT><B>critsnratio = 1.0 (group)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='critsnratio' Line='critsnratio = 1.0 (group)'>
   <DD>The ratio of the model intensity of the brighter star computed at a distance of
   one fitting radius from the center of the fainter star, to the expected random
@@ -285,7 +274,7 @@ daopars — Edit the daophot algorithms parameter set
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_mergerad">mergerad = INDEF (scale units, nstar, allstar)</A></B></DT>
+  <DT><B>mergerad = INDEF (scale units, nstar, allstar)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='mergerad' Line='mergerad = INDEF (scale units, nstar, allstar)'>
   <DD>The critical separation in scale units between two objects for an object merger
   to be considered. Objects with separations &gt; mergerad will not be merged; faint
@@ -296,7 +285,7 @@ daopars — Edit the daophot algorithms parameter set
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_maxnstar">maxnstar = 10000 (pstselect, psf, group, allstar, substar)</A></B></DT>
+  <DT><B>maxnstar = 10000 (pstselect, psf, group, allstar, substar)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='maxnstar' Line='maxnstar = 10000 (pstselect, psf, group, allstar, substar)'>
   <DD>The initial star list buffer size. If there are more than maxnstar stars in the
   input photometry file buffer, DAOPHOT will resize the buffers as needed.
@@ -304,7 +293,7 @@ daopars — Edit the daophot algorithms parameter set
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_maxgroup">maxgroup = 60 (nstar, allstar)</A></B></DT>
+  <DT><B>maxgroup = 60 (nstar, allstar)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='maxgroup' Line='maxgroup = 60 (nstar, allstar)'>
   <DD>The maximum numbers of stars that the multiple star fitting tasks NSTAR and
   ALLSTAR will fit simultaneously. NSTAR will not to fit groups large than
@@ -317,7 +306,7 @@ daopars — Edit the daophot algorithms parameter set
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -339,7 +328,7 @@ daopars — Edit the daophot algorithms parameter set
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_algorithms">ALGORITHMS</A></H2>
+  <H3>Algorithms</H3>
   <! BeginSection: 'ALGORITHMS'>
   <UL>
   <P>
@@ -412,7 +401,7 @@ daopars — Edit the daophot algorithms parameter set
   <P>
   </UL>
   <! EndSection:   'ALGORITHMS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -454,17 +443,17 @@ daopars — Edit the daophot algorithms parameter set
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   pstselect,psf,peak,group,nstar,allstar,substar,addstar,setimpars
@@ -473,5 +462,3 @@ daopars — Edit the daophot algorithms parameter set
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'ALGORITHMS' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

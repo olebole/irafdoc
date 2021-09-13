@@ -1,3 +1,5 @@
+.. _bswitch:
+
 bswitch — Beam-switch strings of spectra to make obj-sky pairs
 ==============================================================
 
@@ -5,42 +7,29 @@ bswitch — Beam-switch strings of spectra to make obj-sky pairs
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>bswitch (Sep87)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.imred.iids/noao.imred.irs</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>bswitch (Sep87)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>bswitch</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   bswitch - generate sky-subtracted accumulated spectra
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   bswitch input records
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The root name for the input spectra to be beam-switched.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_records">records</A></B></DT>
+  <DT><B>records</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='records' Line='records'>
   <DD>The range of spectra to be included in the beam-switch operation.
   Each range item will be appended to the root name to form an image
@@ -49,14 +38,14 @@ bswitch — Beam-switch strings of spectra to make obj-sky pairs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>New spectra are created by the beam-switch operation. This parameter
   specifies the root name to be used for the created spectra.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_start_rec">start_rec = 1</A></B></DT>
+  <DT><B>start_rec = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='start_rec' Line='start_rec = 1'>
   <DD>Each new spectrum created has "<TT>output</TT>" as its root name and a trailing
   number appended. The number begins with start_rec and is incremented
@@ -66,7 +55,7 @@ bswitch — Beam-switch strings of spectra to make obj-sky pairs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_stats">stats = "<TT>stats</TT>"</A></B></DT>
+  <DT><B>stats = "<TT>stats</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='stats' Line='stats = "stats"'>
   <DD>A file by this name will have statistical data appended to it, or created
   if necessary. If a null file name is given ("<TT></TT>"), no statistical output
@@ -75,7 +64,7 @@ bswitch — Beam-switch strings of spectra to make obj-sky pairs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ids_mode">ids_mode = yes</A></B></DT>
+  <DT><B>ids_mode = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ids_mode' Line='ids_mode = yes'>
   <DD>If the data are taken under the usual IIDS "<TT>beam-switch</TT>" mode, this
   parameter should be set to yes so that accumulations will be performed
@@ -88,7 +77,7 @@ bswitch — Beam-switch strings of spectra to make obj-sky pairs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_extinct">extinct = yes</A></B></DT>
+  <DT><B>extinct = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='extinct' Line='extinct = yes'>
   <DD>If set to yes, a correction for atmospheric extinction is applied.
   The image header must have either a valid entry for AIRMASS or
@@ -96,7 +85,7 @@ bswitch — Beam-switch strings of spectra to make obj-sky pairs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_weighting">weighting = no</A></B></DT>
+  <DT><B>weighting = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='weighting' Line='weighting = no'>
   <DD>If set to yes, the entire spectrum or a specified region will be used
   to obtain a countrate indicative of the statistical weight to be
@@ -104,7 +93,7 @@ bswitch — Beam-switch strings of spectra to make obj-sky pairs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_subset">subset = 32767</A></B></DT>
+  <DT><B>subset = 32767</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='subset' Line='subset = 32767'>
   <DD>A subset value larger than the number of independent spectra to be
   added indicates that the operation is to produce a single spectrum
@@ -115,7 +104,7 @@ bswitch — Beam-switch strings of spectra to make obj-sky pairs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wave1">wave1 = 0.0</A></B></DT>
+  <DT><B>wave1 = 0.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wave1' Line='wave1 = 0.0'>
   <DD>If weighting=yes, this parameter indicates the starting point in the
   spectrum for the countrate to be assessed. For emission-line objects,
@@ -125,14 +114,14 @@ bswitch — Beam-switch strings of spectra to make obj-sky pairs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wave2">wave2 = 0.0</A></B></DT>
+  <DT><B>wave2 = 0.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wave2' Line='wave2 = 0.0'>
   <DD>This provides the ending wavelength for the countrate determination.
   Defaults to the endpoint of the spectrum.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_observatory">observatory = "<TT>observatory</TT>"</A></B></DT>
+  <DT><B>observatory = "<TT>observatory</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory = "observatory"'>
   <DD>Observatory at which the spectra were obtained if
   not specified in the image header by the keyword OBSERVAT.  The
@@ -144,7 +133,7 @@ bswitch — Beam-switch strings of spectra to make obj-sky pairs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_extinction">extinction = "<TT>)_.extinction</TT>"</A></B></DT>
+  <DT><B>extinction = "<TT>)_.extinction</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='extinction' Line='extinction = ")_.extinction"'>
   <DD>The the name of the file containing extinction values.
   Required if extinct=yes.
@@ -152,7 +141,7 @@ bswitch — Beam-switch strings of spectra to make obj-sky pairs
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Data from multiaperture spectrographs are summed according to
@@ -233,7 +222,7 @@ bswitch — Beam-switch strings of spectra to make obj-sky pairs
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   The following example will accumulate a series of 16 spectra obtained
@@ -273,7 +262,7 @@ bswitch — Beam-switch strings of spectra to make obj-sky pairs
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   The principle time expenditure goes toward extinction correcting the
@@ -281,7 +270,7 @@ bswitch — Beam-switch strings of spectra to make obj-sky pairs
   seconds are required to beam-switch a series of 16 spectra.
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   The number of apertures is restricted to 50 and must be labeled
@@ -301,7 +290,7 @@ bswitch — Beam-switch strings of spectra to make obj-sky pairs
   must be set to 0.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   observatory, sensfunc, imheader, lcalib, ridsmtn, ridsfile, rfits
@@ -310,5 +299,3 @@ bswitch — Beam-switch strings of spectra to make obj-sky pairs
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

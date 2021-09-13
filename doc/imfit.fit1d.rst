@@ -1,3 +1,5 @@
+.. _fit1d:
+
 fit1d — Fit a function to image lines or columns
 ================================================
 
@@ -5,26 +7,13 @@ fit1d — Fit a function to image lines or columns
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>fit1d (Jul85)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imfit</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>fit1d (Jul85)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>fit1d</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   fit1d -- fit a function to image lines
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage_">USAGE	</A></H2>
+  <H3>Usage	</H3>
   <! BeginSection: 'USAGE	'>
   <UL>
   <PRE>
@@ -32,18 +21,18 @@ fit1d — Fit a function to image lines or columns
   </PRE>
   </UL>
   <! EndSection:   'USAGE	'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>Images to be fit.  The images may contain image sections.  Only the region
   covered by the section will be modified in the output image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>Output images to be created or modified.  The number of output images
   must match the number of input images.  If an output image does not exist
@@ -52,23 +41,23 @@ fit1d — Fit a function to image lines or columns
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_type">type</A></B></DT>
+  <DT><B>type</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='type' Line='type'>
   <DD>Type of output.  The choices are:
   <DL>
-  <DT><B><A NAME="l_fit">fit      </A></B></DT>
+  <DT><B>fit      </B></DT>
   <! Sec='PARAMETERS' Level=1 Label='fit' Line='fit      '>
   <DD>An image created from the function fits to the image lines.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_difference">difference</A></B></DT>
+  <DT><B>difference</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='difference' Line='difference'>
   <DD>The difference between the image and the fit (i.e. residuals).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ratio">ratio</A></B></DT>
+  <DT><B>ratio</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='ratio' Line='ratio'>
   <DD>The ratio of the image and fit.
   </DD>
@@ -76,7 +65,7 @@ fit1d — Fit a function to image lines or columns
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_bpm">bpm = "<TT></TT>"</A></B></DT>
+  <DT><B>bpm = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='bpm' Line='bpm = ""'>
   <DD>List of bad pixel masks.  This may be a null string to not use a
   bad pixel mask, a single mask that applies to all input images, or
@@ -85,27 +74,27 @@ fit1d — Fit a function to image lines or columns
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_axis">axis = 1</A></B></DT>
+  <DT><B>axis = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='axis' Line='axis = 1'>
   <DD>Axis along which the one dimensional fitting is done.  Axis 1 corresponds
   to fitting the image lines and axis 2 corresponds to fitting the columns.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = yes</A></B></DT>
+  <DT><B>interactive = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes'>
   <DD>If <B>interactive</B> is set to yes, a plot of the fit is drawn and the
   cursor is available for interactively examining and adjusting the fit.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sample">sample = "<TT>*</TT>"</A></B></DT>
+  <DT><B>sample = "<TT>*</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"'>
   <DD>Lines or columns to be used in the fits.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_naverage">naverage = 1</A></B></DT>
+  <DT><B>naverage = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='naverage' Line='naverage = 1'>
   <DD>Number of sample points to combined to create a fitting point.
   A positive value specifies an average and a negative value specifies
@@ -113,7 +102,7 @@ fit1d — Fit a function to image lines or columns
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_function">function = spline3</A></B></DT>
+  <DT><B>function = spline3</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='function' Line='function = spline3'>
   <DD>Function to be fit to the image lines or columns.  The functions are
   "<TT>legendre</TT>" (legendre polynomial), "<TT>chebyshev</TT>" (chebyshev polynomial),
@@ -122,45 +111,45 @@ fit1d — Fit a function to image lines or columns
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_order">order = 1</A></B></DT>
+  <DT><B>order = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='order' Line='order = 1'>
   <DD>The order of the polynomials or the number of spline pieces.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_low_reject">low_reject = 0., high_reject = 0.</A></B></DT>
+  <DT><B>low_reject = 0., high_reject = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='low_reject' Line='low_reject = 0., high_reject = 0.'>
   <DD>Rejection limits below and above the fit in units of the residual sigma.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_niterate">niterate = 1</A></B></DT>
+  <DT><B>niterate = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='niterate' Line='niterate = 1'>
   <DD>Number of rejection iterations.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_grow">grow = 0.</A></B></DT>
+  <DT><B>grow = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='grow' Line='grow = 0.'>
   <DD>When a pixel is rejected, pixels within this distance of the rejected pixel
   are also rejected.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_graphics">graphics = "<TT>stdgraph</TT>"</A></B></DT>
+  <DT><B>graphics = "<TT>stdgraph</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"'>
   <DD>Graphics output device for interactive graphics.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cursor">cursor = "<TT>stdgcur</TT>"</A></B></DT>
+  <DT><B>cursor = "<TT>stdgcur</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = "stdgcur"'>
   <DD>Graphics cursor input.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   A one dimensional function is fit to each line or column of the input images.
@@ -217,7 +206,7 @@ fit1d — Fit a function to image lines or columns
   each image in the input list.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  To create a smoothed version of an image by fitting the image lines:
@@ -258,7 +247,7 @@ fit1d — Fit a function to image lines or columns
   for which the ratio is computed.
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imred.generic.background, imred.generic.flat1d
@@ -268,5 +257,3 @@ fit1d — Fit a function to image lines or columns
   
   <! Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

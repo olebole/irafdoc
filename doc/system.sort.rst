@@ -1,3 +1,5 @@
+.. _sort:
+
 sort — Sort a text file
 =======================
 
@@ -5,43 +7,30 @@ sort — Sort a text file
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>sort (Mar87)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>system</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>sort (Mar87)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>sort</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   sort -- sort a file or the standard input
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   sort input_file
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input_file">input_file</A></B></DT>
+  <DT><B>input_file</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input_file' Line='input_file'>
   <DD>The text file to be sorted.  If the standard input is redirected the standard
   input is sorted.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_column">column = 0</A></B></DT>
+  <DT><B>column = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='column' Line='column = 0'>
   <DD>If 0, sort entire text lines, else sort based on data/text starting
   in the specified column.  Columns are delimited by whitespace.  Thus,
@@ -52,27 +41,27 @@ sort — Sort a text file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ignore_whitespace">ignore_whitespace = no</A></B></DT>
+  <DT><B>ignore_whitespace = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ignore_whitespace' Line='ignore_whitespace = no'>
   <DD>Ignore leading whitespace.  Useful only when column = 0 and the sort is
   non-numeric.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_numeric_sort">numeric_sort = no</A></B></DT>
+  <DT><B>numeric_sort = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='numeric_sort' Line='numeric_sort = no'>
   <DD>If set, make numerical (rather than ASCII text) comparisons.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_reverse_sort">reverse_sort = no</A></B></DT>
+  <DT><B>reverse_sort = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='reverse_sort' Line='reverse_sort = no'>
   <DD>If set, sort in reverse text/numeric order.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <I>Sort</I> sorts the contents of the given text file, or the
@@ -82,7 +71,7 @@ sort — Sort a text file
   comparison will be made instead.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -102,7 +91,7 @@ sort — Sort a text file
   	cl&gt; dir | sort num+ rev+ col=3
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   Only one file can be sorted per call, and only one column or all columns can
@@ -114,5 +103,3 @@ sort — Sort a text file
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS'  >
   
-  </BODY>
-  </HTML>

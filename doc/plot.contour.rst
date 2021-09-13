@@ -1,3 +1,5 @@
+.. _contour:
+
 contour — Make a contour plot of an image
 =========================================
 
@@ -5,56 +7,43 @@ contour — Make a contour plot of an image
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>contour (Aug91)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>plot</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>contour (Aug91)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>contour</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   contour -- draw a contour plot of an image
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   contour image
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_image">image</A></B></DT>
+  <DT><B>image</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='image' Line='image'>
   <DD>Two dimensional image or image section to be contoured.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_floor">floor = INDEF</A></B></DT>
+  <DT><B>floor = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='floor' Line='floor = INDEF'>
   <DD>Minimum value to be contoured.  If <B>floor = INDEF</B>, the data minimum is
   used for the floor.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ceiling">ceiling = INDEF</A></B></DT>
+  <DT><B>ceiling = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ceiling' Line='ceiling = INDEF'>
   <DD>Maximum value to be contoured.  If <B>ceiling = INDEF</B>, the data maximum
   is used for the ceiling.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_zero">zero = 0</A></B></DT>
+  <DT><B>zero = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='zero' Line='zero = 0'>
   <DD>Greyscale value of the zero contour, i.e., the value of a zero point shift
   to be applied to the image data before plotting.  Does not affect the values
@@ -62,7 +51,7 @@ contour — Make a contour plot of an image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ncontours">ncontours = 0</A></B></DT>
+  <DT><B>ncontours = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ncontours' Line='ncontours = 0'>
   <DD>Number of contours to be drawn.  If 0, the contour interval may be specified,
   otherwise 20-30 nicely spaced contours are drawn.  A maximum of 40 contours
@@ -70,68 +59,68 @@ contour — Make a contour plot of an image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interval">interval = 0</A></B></DT>
+  <DT><B>interval = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interval' Line='interval = 0'>
   <DD>Contour interval.  If 0, a contour interval is chosen which places 20 to 30
   contours spanning the intensity range of the image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nhi">nhi = -1</A></B></DT>
+  <DT><B>nhi = -1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nhi' Line='nhi = -1'>
   <DD>If -1, highs and lows are not marked.  If 0, highs and lows are marked
   on the plot.  If 1, the intensity of each pixel is marked on the plot.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dashpat">dashpat = 528</A></B></DT>
+  <DT><B>dashpat = 528</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dashpat' Line='dashpat = 528'>
   <DD>Dash pattern for negative contours.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_device">device = "<TT>stdgraph</TT>"</A></B></DT>
+  <DT><B>device = "<TT>stdgraph</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdgraph"'>
   <DD>Output device (<B>stdgraph</B>, <B>stdplot</B>, or the name of a physical
   device).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xres">xres = 64, yres = 64</A></B></DT>
+  <DT><B>xres = 64, yres = 64</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xres' Line='xres = 64, yres = 64'>
   <DD>The input image is block averaged or subsampled to this resolution.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_preserve">preserve = yes</A></B></DT>
+  <DT><B>preserve = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='preserve' Line='preserve = yes'>
   <DD>If <B>preserve</B> = yes, the aspect ratio of the image is preserved when 
   achieving the resolution specified by <B>xres</B> and <B>yres</B>.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_subsample">subsample = no</A></B></DT>
+  <DT><B>subsample = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='subsample' Line='subsample = no'>
   <DD>The resolution specified by <B>xres</B>, <B>yres</B> is achieved by block 
   averaging unless <B>subsample = yes</B>.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_perimeter">perimeter = yes</A></B></DT>
+  <DT><B>perimeter = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='perimeter' Line='perimeter = yes'>
   <DD>A <I>crtpict</I> perimeter is drawn around the contour plot with labeled
   tickmarks.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_label">label= yes</A></B></DT>
+  <DT><B>label= yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='label' Line='label= yes'>
   <DD>By default, the value of each major contour is embedded in the contour
   line.  This can be disabled by setting <B>label=no</B>.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_vx1">vx1 = 0.0, vx2 = 0.0, vy1 = 0.0, vy2 = 0.0</A></B></DT>
+  <DT><B>vx1 = 0.0, vx2 = 0.0, vy1 = 0.0, vy2 = 0.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='vx1' Line='vx1 = 0.0, vx2 = 0.0, vy1 = 0.0, vy2 = 0.0'>
   <DD>The device viewport, in normalized device coordinates (from 0.0 to 1.0
   inclusive).  If not specified by the user,
@@ -139,27 +128,27 @@ contour — Make a contour plot of an image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fill">fill = no</A></B></DT>
+  <DT><B>fill = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fill' Line='fill = no'>
   <DD>Fill the output viewport regardless of the device aspect ratio?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_title">title = "<TT>imtitle</TT>"</A></B></DT>
+  <DT><B>title = "<TT>imtitle</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='title' Line='title = "imtitle"'>
   <DD>A title to be centered above the plot.  The user can specify a title string;
   the default string is the image title.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_append">append = no</A></B></DT>
+  <DT><B>append = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='append' Line='append = no'>
   <DD>Append to an existing plot?
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Contours are traced, smoothed with splines under tension, and optionally printed
@@ -199,7 +188,7 @@ contour — Make a contour plot of an image
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Draw a contour plot of a 512 square image on the graphics terminal.
@@ -229,7 +218,7 @@ contour — Make a contour plot of an image
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   The time required for <I>contour</I> depends on the number of contours
@@ -241,7 +230,7 @@ contour — Make a contour plot of an image
   subsampled.
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   If block averaging is used the precision with which a contour is drawn
@@ -254,7 +243,7 @@ contour — Make a contour plot of an image
   It should be possible to have list input as well as image section input.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   surface, display, imdkern, imexamine
@@ -263,5 +252,3 @@ contour — Make a contour plot of an image
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

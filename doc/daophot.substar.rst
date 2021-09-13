@@ -1,3 +1,5 @@
+.. _substar:
+
 substar — Subtract the fitted stars from the original image
 ===========================================================
 
@@ -5,42 +7,29 @@ substar — Subtract the fitted stars from the original image
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>substar (May00)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.daophot</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>substar (May00)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>substar</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   substar -- subtract photometry results from an image 
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   substar image photfile exfile psfimage subimage
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_image">image</A></B></DT>
+  <DT><B>image</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='image' Line='image'>
   <DD>The list of images from which to subtract the scaled and shifted PSF.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_photfile">photfile</A></B></DT>
+  <DT><B>photfile</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='photfile' Line='photfile'>
   <DD>The list of PSF fitted photometry files. There must be one photometry file
   for every input image. If photfile is "<TT>default</TT>", "<TT>dir$default</TT>", or a directory
@@ -52,7 +41,7 @@ substar — Subtract the fitted stars from the original image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_exfile">exfile</A></B></DT>
+  <DT><B>exfile</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='exfile' Line='exfile'>
   <DD>The list of photometry files containing the ids of stars to be excluded
   from the subtraction. Exfile must be undefined or contain one exclude file
@@ -65,7 +54,7 @@ substar — Subtract the fitted stars from the original image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_psfimage">psfimage</A></B></DT>
+  <DT><B>psfimage</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='psfimage' Line='psfimage'>
   <DD>The list of images containing the PSF models computed by the DAOPHOT PSF task.
   The number of PSF images must be equal to the number of input images.  If
@@ -75,7 +64,7 @@ substar — Subtract the fitted stars from the original image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_subimage">subimage</A></B></DT>
+  <DT><B>subimage</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='subimage' Line='subimage'>
   <DD>The list of output subtracted images. There must be one output subtracted
   image for every input image.  If subimage is "<TT>default</TT>", "<TT>dir$default</TT>", or a
@@ -84,7 +73,7 @@ substar — Subtract the fitted stars from the original image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_datapars">datapars = "<TT></TT>"</A></B></DT>
+  <DT><B>datapars = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='datapars' Line='datapars = ""'>
   <DD>The name of the file containing the data dependent parameters. The parameters
   <I>scale</I>, <I>datamin</I>, and <I>datamax</I> are located here. If datapars
@@ -92,7 +81,7 @@ substar — Subtract the fitted stars from the original image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_daopars">daopars = "<TT></TT>"</A></B></DT>
+  <DT><B>daopars = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='daopars' Line='daopars = ""'>
   <DD>The name of the file containing the daophot fitting parameters. The parameters
   <I>psfrad</I> and <I>fitrad</I> are located here. If <I>daopars</I> is undefined
@@ -100,7 +89,7 @@ substar — Subtract the fitted stars from the original image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wcsin">wcsin = "<TT>)_.wcsin</TT>", wcsout = "<TT>)_.wcsout</TT>", wcspsf = "<TT>)_.wcspsf</TT>"</A></B></DT>
+  <DT><B>wcsin = "<TT>)_.wcsin</TT>", wcsout = "<TT>)_.wcsout</TT>", wcspsf = "<TT>)_.wcspsf</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wcsin' Line='wcsin = ")_.wcsin", wcsout = ")_.wcsout", wcspsf = ")_.wcspsf"'>
   <DD>The coordinate system of the input coordinates read from <I>photfile</I>, of the
   psf model <I>psfimage</I>, and of the output coordinates written to
@@ -113,7 +102,7 @@ substar — Subtract the fitted stars from the original image
   system options are "<TT>logical</TT>", "<TT>tv</TT>", and "<TT>physical</TT>". The image cursor coordinate
   system is assumed to be the "<TT>tv</TT>" system.
   <DL>
-  <DT><B><A NAME="l_logical">logical</A></B></DT>
+  <DT><B>logical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='logical' Line='logical'>
   <DD>Logical coordinates are pixel coordinates relative to the current image.
   The  logical coordinate system is the coordinate system used by the image
@@ -124,7 +113,7 @@ substar — Subtract the fitted stars from the original image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_tv">tv</A></B></DT>
+  <DT><B>tv</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='tv' Line='tv'>
   <DD>Tv coordinates are the pixel coordinates used by the display servers. Tv
   coordinates  include  the effects of any input image section, but do not
@@ -139,7 +128,7 @@ substar — Subtract the fitted stars from the original image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_physical">physical</A></B></DT>
+  <DT><B>physical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='physical' Line='physical'>
   <DD>Physical coordinates are pixel coordinates invariant  with respect to linear
   transformations of the physical image data.  For example, if the current image
@@ -153,7 +142,7 @@ substar — Subtract the fitted stars from the original image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_world">world</A></B></DT>
+  <DT><B>world</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='world' Line='world'>
   <DD>World coordinates are image coordinates in any units which are invariant
   with respect to linear transformations of the physical image data. For
@@ -169,7 +158,7 @@ substar — Subtract the fitted stars from the original image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cache">cache = "<TT>)_.cache</TT>"</A></B></DT>
+  <DT><B>cache = "<TT>)_.cache</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cache' Line='cache = ")_.cache"'>
   <DD>Cache the image pixels in memory. Cache may be set to the value of the apphot
   package parameter (the default), "<TT>yes</TT>", or "<TT>no</TT>". By default caching is
@@ -177,21 +166,21 @@ substar — Subtract the fitted stars from the original image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verify">verify = "<TT>)_.verify</TT>"</A></B></DT>
+  <DT><B>verify = "<TT>)_.verify</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verify' Line='verify = ")_.verify"'>
   <DD>Verify the critical SUBSTAR task parameters? Verify can be set to the DAOPHOT
   package parameter value (the default), "<TT>yes</TT>", or "<TT>no</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_update">update = "<TT>)_update</TT>"</A></B></DT>
+  <DT><B>update = "<TT>)_update</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='update' Line='update = ")_update"'>
   <DD>Update the SUBSTAR task parameters if <I>verify</I> is "<TT>yes</TT>"? Update can be
   set to the default daophot package parameter value, "<TT>yes</TT>", or "<TT>no</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = "<TT>)_.verbose</TT>"</A></B></DT>
+  <DT><B>verbose = "<TT>)_.verbose</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = ")_.verbose"'>
   <DD>Print messages about the progress of the task ? Verbose can be set to the
   DAOPHOT package parameter value (the default), "<TT>yes</TT>", or "<TT>no</TT>".
@@ -200,7 +189,7 @@ substar — Subtract the fitted stars from the original image
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   SUBSTAR task takes an input photometry list <I>photfile</I> containing
@@ -265,7 +254,7 @@ substar — Subtract the fitted stars from the original image
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -395,17 +384,17 @@ substar — Subtract the fitted stars from the original image
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   datapars,daopars,nstar,peak
@@ -414,5 +403,3 @@ substar — Subtract the fitted stars from the original image
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

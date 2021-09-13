@@ -1,3 +1,5 @@
+.. _lroff:
+
 lroff — Lroff (line-roff) text formatter
 ========================================
 
@@ -5,26 +7,13 @@ lroff — Lroff (line-roff) text formatter
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>lroff (Nov83)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>Online Help Utilities</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>lroff (Nov83)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>lroff</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   <B>lroff</B> -- line oriented text formatter
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_purpose">PURPOSE</A></H2>
+  <H3>Purpose</H3>
   <! BeginSection: 'PURPOSE'>
   <UL>
   <B>Lroff</B> is a simple text formatter used by the IRAF on-line Help command,
@@ -34,17 +23,17 @@ lroff — Lroff (line-roff) text formatter
   and is implemented as a library procedure rather than as a task.
   </UL>
   <! EndSection:   'PURPOSE'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   status = lroff (input, output, left_margin, right_margin)
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>An integer procedure, called by <B>lroff</B> to get lines of input,
   which takes the <B>lroff</B> input buffer as an argument,
@@ -54,26 +43,26 @@ lroff — Lroff (line-roff) text formatter
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>A procedure, called by <B>lroff</B> to output formatted lines of text,
   which takes the <B>lroff</B> output buffer as an argument ("<TT>output (buffer)</TT>").
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_left_margin">left_margin</A></B></DT>
+  <DT><B>left_margin</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='left_margin' Line='left_margin'>
   <DD>The first column to be filled (&gt;= 1).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_right_margin">right_margin</A></B></DT>
+  <DT><B>right_margin</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='right_margin' Line='right_margin'>
   <DD>The last column to be filled.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_status">status</A></B></DT>
+  <DT><B>status</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='status' Line='status'>
   <DD>ERR is returned if meaningless margins are specified, or if an unrecoverable
   error occurs during processing.
@@ -81,7 +70,7 @@ lroff — Lroff (line-roff) text formatter
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <B>Lroff</B> input may be bracketed by "<TT>.help</TT>" and "<TT>.endhelp</TT>" directives in
@@ -173,7 +162,7 @@ lroff — Lroff (line-roff) text formatter
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_example">EXAMPLE</A></H2>
+  <H3>Example</H3>
   <! BeginSection: 'EXAMPLE'>
   <UL>
   <BR>
@@ -195,50 +184,50 @@ lroff — Lroff (line-roff) text formatter
   The <B>lroff</B>-format help text fragment
   <BR>
   <DL>
-  <DT><B><A NAME="l_"></A></B></DT>
+  <DT><B></B></DT>
   <! Sec='EXAMPLE' Level=0 Label='' Line=' '>
   <DD><PRE>
   </DD>
   </DL>
   </UL>
   <! EndSection:   'EXAMPLE'>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   stcopy -- copy a string.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_purpose">PURPOSE</A></H2>
+  <H3>Purpose</H3>
   <! BeginSection: 'PURPOSE'>
   <UL>
   Stcopy is used to copy an EOS delimited character
   string.  The EOS delimiter MUST be present.
   </UL>
   <! EndSection:   'PURPOSE'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   stcopy (from, to, maxchar)
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_from">from</A></B></DT>
+  <DT><B>from</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='from' Line='from'>
   <DD>The input string.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_to">to</A></B></DT>
+  <DT><B>to</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='to' Line='to'>
   <DD>The output string, of length no less than "maxchar"
   characters (excluding the EOS).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_maxchar">maxchar</A></B></DT>
+  <DT><B>maxchar</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='maxchar' Line='maxchar'>
   <DD>The maximum number of characters to be copied.
   Note that "maxchar" does not include the EOS.
@@ -248,7 +237,7 @@ lroff — Lroff (line-roff) text formatter
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   </PRE>
@@ -276,20 +265,20 @@ lroff — Lroff (line-roff) text formatter
   <BR>
   PARAMETERS
   <DL>
-  <DT><B><A NAME="l_from">from</A></B></DT>
+  <DT><B>from</B></DT>
   <! Sec='DESCRIPTION' Level=-1 Label='from' Line='from'>
   <DD>The input string.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_to">to</A></B></DT>
+  <DT><B>to</B></DT>
   <! Sec='DESCRIPTION' Level=-1 Label='to' Line='to'>
   <DD>The output string, of length no less than "<TT>maxchar</TT>"
   characters (excluding the EOS).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_maxchar">maxchar</A></B></DT>
+  <DT><B>maxchar</B></DT>
   <! Sec='DESCRIPTION' Level=-1 Label='maxchar' Line='maxchar'>
   <DD>The maximum number of characters to be copied.
   Note that "<TT>maxchar</TT>" does not include the EOS.
@@ -303,7 +292,7 @@ lroff — Lroff (line-roff) text formatter
   <BR>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   help
@@ -317,7 +306,7 @@ lroff — Lroff (line-roff) text formatter
   <P>
   </UL>
   <! EndSection:   'SEE ALSO'>
-  <H2><A NAME="s_request_summary">REQUEST SUMMARY</A></H2>
+  <H3>Request summary</H3>
   <! BeginSection: 'REQUEST SUMMARY'>
   <UL>
   <BR>
@@ -350,5 +339,3 @@ lroff — Lroff (line-roff) text formatter
   
   <! Contents: 'NAME' 'PURPOSE' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLE' 'NAME' 'PURPOSE' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'SEE ALSO' 'REQUEST SUMMARY'  >
   
-  </BODY>
-  </HTML>

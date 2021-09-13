@@ -1,3 +1,5 @@
+.. _wcslab:
+
 wcslab — Overlay a displayed image with a world coordinate grid
 ===============================================================
 
@@ -5,52 +7,39 @@ wcslab — Overlay a displayed image with a world coordinate grid
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>wcslab (Dec91)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.tv</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>wcslab (Dec91)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>wcslab</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   wcslab -- overlay a labeled world coordinate grid on an image
   <P>
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   wcslab image
   <P>
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <P>
   <DL>
-  <DT><B><A NAME="l_image">image </A></B></DT>
+  <DT><B>image </B></DT>
   <! Sec='PARAMETERS' Level=0 Label='image' Line='image '>
   <DD>The name of the image to be labeled. If image is "<TT></TT>", the parameters
   in wcspars will be used to draw a labeled coordinate grid.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_frame">frame</A></B></DT>
+  <DT><B>frame</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='frame' Line='frame'>
   <DD>The display frame buffer displaying the image to be labeled.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_usewcs">usewcs = no</A></B></DT>
+  <DT><B>usewcs = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='usewcs' Line='usewcs = no'>
   <DD>Use the world coordinate system specified by the parameters in the wcspars
   parameter set in place of the image world coordinate system  or if
@@ -58,7 +47,7 @@ wcslab — Overlay a displayed image with a world coordinate grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wcspars">wcspars = "<TT></TT>"</A></B></DT>
+  <DT><B>wcspars = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wcspars' Line='wcspars = ""'>
   <DD>The name of the parameter set defining the world coordinate system
   to be used if image is "<TT></TT>" or if usewcs = "<TT>yes</TT>".  The wcspars parameters
@@ -66,7 +55,7 @@ wcslab — Overlay a displayed image with a world coordinate grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wlpars">wlpars = "<TT></TT>" </A></B></DT>
+  <DT><B>wlpars = "<TT></TT>" </B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wlpars' Line='wlpars = "" '>
   <DD>The name of the parameter set which controls the
   detailed appearance of the plot. The wlpars parameters are described
@@ -74,7 +63,7 @@ wcslab — Overlay a displayed image with a world coordinate grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fill">fill = yes</A></B></DT>
+  <DT><B>fill = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fill' Line='fill = yes'>
   <DD>If fill is no, wcslab tries to
   create a square viewport with a maximum size dictated by the viewport
@@ -83,7 +72,7 @@ wcslab — Overlay a displayed image with a world coordinate grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_vl">vl = INDEF, vr = INDEF, vb = INDEF, vt = INDEF</A></B></DT>
+  <DT><B>vl = INDEF, vr = INDEF, vb = INDEF, vt = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='vl' Line='vl = INDEF, vr = INDEF, vb = INDEF, vt = INDEF'>
   <DD>The left, right, bottom, and top edges of the viewport in NDC (0-1)
   coordinates. If any of vl, vr, vb, or vt are  INDEF,
@@ -93,7 +82,7 @@ wcslab — Overlay a displayed image with a world coordinate grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_overplot">overplot = no</A></B></DT>
+  <DT><B>overplot = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='overplot' Line='overplot = no'>
   <DD>Overplot to an existing plot?  If yes, wcslab will not erase the
   current plot.  This differs from append in that a new viewport
@@ -102,7 +91,7 @@ wcslab — Overlay a displayed image with a world coordinate grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_append">append = no</A></B></DT>
+  <DT><B>append = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='append' Line='append = no'>
   <DD>Append to an existing plot?  If no, wcslab resets the
   graphics to a new viewport/wcs for each new plot.  Otherwise, it uses
@@ -113,7 +102,7 @@ wcslab — Overlay a displayed image with a world coordinate grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_device">device = "<TT>imd</TT>"</A></B></DT>
+  <DT><B>device = "<TT>imd</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='device' Line='device = "imd"'>
   <DD>The graphics device. To create an overlay plot, device must be set
   to one of the imdkern devices listed in dev$graphcap. To create a 
@@ -124,12 +113,12 @@ wcslab — Overlay a displayed image with a world coordinate grid
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_wcspars_parameters">WCSPARS PARAMETERS</A></H2>
+  <H3>Wcspars parameters</H3>
   <! BeginSection: 'WCSPARS PARAMETERS'>
   <UL>
   <P>
   <DL>
-  <DT><B><A NAME="l_ctype1">ctype1 = "<TT>linear</TT>", ctype2 = "<TT>linear</TT>"</A></B></DT>
+  <DT><B>ctype1 = "<TT>linear</TT>", ctype2 = "<TT>linear</TT>"</B></DT>
   <! Sec='WCSPARS PARAMETERS' Level=0 Label='ctype1' Line='ctype1 = "linear", ctype2 = "linear"'>
   <DD>The coordinate system type of the first and second axes.
   Valid coordinate system types are:
@@ -138,21 +127,21 @@ wcslab — Overlay a displayed image with a world coordinate grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_crpix1">crpix1 = 0.0, crpix2 = 0.0</A></B></DT>
+  <DT><B>crpix1 = 0.0, crpix2 = 0.0</B></DT>
   <! Sec='WCSPARS PARAMETERS' Level=0 Label='crpix1' Line='crpix1 = 0.0, crpix2 = 0.0'>
   <DD>The X and Y coordinates of the reference point in pixel space that
   correspond to the reference point in world space.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_crval1">crval1 = 0.0, crval2 = 0.0</A></B></DT>
+  <DT><B>crval1 = 0.0, crval2 = 0.0</B></DT>
   <! Sec='WCSPARS PARAMETERS' Level=0 Label='crval1' Line='crval1 = 0.0, crval2 = 0.0'>
   <DD>The X and Y coordinate of the reference point in world space that
   corresponds to the reference point in pixel space.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cd1_1">cd1_1 = 1.0, cd1_2 = 0.0</A></B></DT>
+  <DT><B>cd1_1 = 1.0, cd1_2 = 0.0</B></DT>
   <! Sec='WCSPARS PARAMETERS' Level=0 Label='cd1_1' Line='cd1_1 = 1.0, cd1_2 = 0.0'>
   <DD>The FITS CD matrix elements [1,1] and [1,2] which describe the x-axis
   coordinate transformation.  These elements usually have the values
@@ -161,7 +150,7 @@ wcslab — Overlay a displayed image with a world coordinate grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cd2_1">cd2_1 = 0.0, cd2_2 = 1.0</A></B></DT>
+  <DT><B>cd2_1 = 0.0, cd2_2 = 1.0</B></DT>
   <! Sec='WCSPARS PARAMETERS' Level=0 Label='cd2_1' Line='cd2_1 = 0.0, cd2_2 = 1.0'>
   <DD>The FITS CD matrix elements [2,1] and [2,2] which describe the y-axis
   coordinate transformation. These elements usually have the values
@@ -169,7 +158,7 @@ wcslab — Overlay a displayed image with a world coordinate grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_log_x1">log_x1 = 0.0, log_x2 = 1.0, log_y1 = 0.0, log_y2 = 1.0</A></B></DT>
+  <DT><B>log_x1 = 0.0, log_x2 = 1.0, log_y1 = 0.0, log_y2 = 1.0</B></DT>
   <! Sec='WCSPARS PARAMETERS' Level=0 Label='log_x1' Line='log_x1 = 0.0, log_x2 = 1.0, log_y1 = 0.0, log_y2 = 1.0'>
   <DD>The extent in pixel space over which the transformation is valid.
   </DD>
@@ -178,12 +167,12 @@ wcslab — Overlay a displayed image with a world coordinate grid
   <P>
   </UL>
   <! EndSection:   'WCSPARS PARAMETERS'>
-  <H2><A NAME="s_wlpars_parameters">WLPARS PARAMETERS</A></H2>
+  <H3>Wlpars parameters</H3>
   <! BeginSection: 'WLPARS PARAMETERS'>
   <UL>
   <P>
   <DL>
-  <DT><B><A NAME="l_major_grid">major_grid = yes</A></B></DT>
+  <DT><B>major_grid = yes</B></DT>
   <! Sec='WLPARS PARAMETERS' Level=0 Label='major_grid' Line='major_grid = yes'>
   <DD>Draw a grid instead of tick marks at the position of the major
   axes intervals?  If yes, lines of constant axis 1 and axis 2 values
@@ -192,7 +181,7 @@ wcslab — Overlay a displayed image with a world coordinate grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_minor_grid">minor_grid = no</A></B></DT>
+  <DT><B>minor_grid = no</B></DT>
   <! Sec='WLPARS PARAMETERS' Level=0 Label='minor_grid' Line='minor_grid = no'>
   <DD>Draw a grid instead of tick marks at the position of the
   minor axes intervals?  If yes, lines of constant axis 1 and axis 2 values
@@ -202,13 +191,13 @@ wcslab — Overlay a displayed image with a world coordinate grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dolabel">dolabel = yes</A></B></DT>
+  <DT><B>dolabel = yes</B></DT>
   <! Sec='WLPARS PARAMETERS' Level=0 Label='dolabel' Line='dolabel = yes'>
   <DD>Label the major grid lines or tick marks?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_remember">remember = no</A></B></DT>
+  <DT><B>remember = no</B></DT>
   <! Sec='WLPARS PARAMETERS' Level=0 Label='remember' Line='remember = no'>
   <DD>Modify the wlpars parameter file when done?  If yes, parameters that have
   been calculated by the task are written back to the parameter file.
@@ -217,7 +206,7 @@ wcslab — Overlay a displayed image with a world coordinate grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_axis1_beg">axis1_beg = "<TT></TT>"</A></B></DT>
+  <DT><B>axis1_beg = "<TT></TT>"</B></DT>
   <! Sec='WLPARS PARAMETERS' Level=0 Label='axis1_beg' Line='axis1_beg = ""'>
   <DD>The lowest value of axis 1 in world coordinates units
   at which a major grid line / tick mark will be drawn.
@@ -226,7 +215,7 @@ wcslab — Overlay a displayed image with a world coordinate grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_axis1_end">axis1_end = "<TT></TT>"</A></B></DT>
+  <DT><B>axis1_end = "<TT></TT>"</B></DT>
   <! Sec='WLPARS PARAMETERS' Level=0 Label='axis1_end' Line='axis1_end = ""'>
   <DD>The highest value of axis 1 in world coordinate
   units at which a major grid line / tick mark will be drawn.
@@ -235,7 +224,7 @@ wcslab — Overlay a displayed image with a world coordinate grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_axis1_int">axis1_int = "<TT></TT>"</A></B></DT>
+  <DT><B>axis1_int = "<TT></TT>"</B></DT>
   <! Sec='WLPARS PARAMETERS' Level=0 Label='axis1_int' Line='axis1_int = ""'>
   <DD>The interval in world coordinate units at which
   major grid lines / tick marks will be drawn along axis 1.
@@ -244,7 +233,7 @@ wcslab — Overlay a displayed image with a world coordinate grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_axis2_beg">axis2_beg = "<TT></TT>"</A></B></DT>
+  <DT><B>axis2_beg = "<TT></TT>"</B></DT>
   <! Sec='WLPARS PARAMETERS' Level=0 Label='axis2_beg' Line='axis2_beg = ""'>
   <DD>The lowest value of axis 2 in world coordinates units
   at which a major grid line / tick mark will be drawn.
@@ -253,7 +242,7 @@ wcslab — Overlay a displayed image with a world coordinate grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_axis2_end">axis2_end = "<TT></TT>"</A></B></DT>
+  <DT><B>axis2_end = "<TT></TT>"</B></DT>
   <! Sec='WLPARS PARAMETERS' Level=0 Label='axis2_end' Line='axis2_end = ""'>
   <DD>The highest value of axis 2 in world coordinate
   units at which a major grid line / tick mark will be drawn.
@@ -262,7 +251,7 @@ wcslab — Overlay a displayed image with a world coordinate grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_axis2_int">axis2_int = "<TT></TT>"</A></B></DT>
+  <DT><B>axis2_int = "<TT></TT>"</B></DT>
   <! Sec='WLPARS PARAMETERS' Level=0 Label='axis2_int' Line='axis2_int = ""'>
   <DD>The interval in world coordinate units at which
   major grid lines / tick marks will be drawn along axis 2.
@@ -271,14 +260,14 @@ wcslab — Overlay a displayed image with a world coordinate grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_major_line">major_line = "<TT>solid</TT>"</A></B></DT>
+  <DT><B>major_line = "<TT>solid</TT>"</B></DT>
   <! Sec='WLPARS PARAMETERS' Level=0 Label='major_line' Line='major_line = "solid"'>
   <DD>The type of major grid lines to be plotted.
   The permitted values are "<TT>solid</TT>", "<TT>dotted</TT>", "<TT>dashed</TT>", and "<TT>dotdash</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_major_tick">major_tick = .03</A></B></DT>
+  <DT><B>major_tick = .03</B></DT>
   <! Sec='WLPARS PARAMETERS' Level=0 Label='major_tick' Line='major_tick = .03'>
   <DD>Size of major tick marks relative to the size of the viewport.
   By default the major tick marks are .03 times the size of the
@@ -286,28 +275,28 @@ wcslab — Overlay a displayed image with a world coordinate grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_axis1_minor">axis1_minor = 5</A></B></DT>
+  <DT><B>axis1_minor = 5</B></DT>
   <! Sec='WLPARS PARAMETERS' Level=0 Label='axis1_minor' Line='axis1_minor = 5'>
   <DD>The number of minor grid lines / tick marks that will appear between major 
   grid lines / tick marks for axis 1.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_axis2_minor">axis2_minor = 5</A></B></DT>
+  <DT><B>axis2_minor = 5</B></DT>
   <! Sec='WLPARS PARAMETERS' Level=0 Label='axis2_minor' Line='axis2_minor = 5'>
   <DD>The number of minor grid lines / tick marks that will appear between major
   grid lines / tick marks for axis 2.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_minor_line">minor_line = "<TT>dotted</TT>"</A></B></DT>
+  <DT><B>minor_line = "<TT>dotted</TT>"</B></DT>
   <! Sec='WLPARS PARAMETERS' Level=0 Label='minor_line' Line='minor_line = "dotted"'>
   <DD>The type of minor grid lines to be plotted.
   The permitted values are "<TT>solid</TT>", "<TT>dotted</TT>", "<TT>dashed</TT>", and "<TT>dotdash</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_minor_tick">minor_tick = .01</A></B></DT>
+  <DT><B>minor_tick = .01</B></DT>
   <! Sec='WLPARS PARAMETERS' Level=0 Label='minor_tick' Line='minor_tick = .01'>
   <DD>Size of minor tick marks relative to the size of the viewport.
   BY default the minor tick marks are .01 times the size of the
@@ -315,13 +304,13 @@ wcslab — Overlay a displayed image with a world coordinate grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_tick_in">tick_in = yes</A></B></DT>
+  <DT><B>tick_in = yes</B></DT>
   <! Sec='WLPARS PARAMETERS' Level=0 Label='tick_in' Line='tick_in = yes'>
   <DD>Do tick marks point into instead of away from the graph ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_axis1_side">axis1_side = "<TT>default</TT>"</A></B></DT>
+  <DT><B>axis1_side = "<TT>default</TT>"</B></DT>
   <! Sec='WLPARS PARAMETERS' Level=0 Label='axis1_side' Line='axis1_side = "default"'>
   <DD>The list of viewport edges, separated by commas, on which to place the axis
   1 labels.  If axis1_side is "<TT>default</TT>", wcslab will choose a side.
@@ -330,7 +319,7 @@ wcslab — Overlay a displayed image with a world coordinate grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_axis2_side">axis2_side = "<TT>default</TT>"</A></B></DT>
+  <DT><B>axis2_side = "<TT>default</TT>"</B></DT>
   <! Sec='WLPARS PARAMETERS' Level=0 Label='axis2_side' Line='axis2_side = "default"'>
   <DD>The list of viewport edges, separated by commas, on which to place the axis
   2 labels.  If axis2_side is "<TT>default</TT>", wcslab will choose a side.
@@ -339,14 +328,14 @@ wcslab — Overlay a displayed image with a world coordinate grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_axis2_dir">axis2_dir = "<TT></TT>"</A></B></DT>
+  <DT><B>axis2_dir = "<TT></TT>"</B></DT>
   <! Sec='WLPARS PARAMETERS' Level=0 Label='axis2_dir' Line='axis2_dir = ""'>
   <DD>The axis 1 value at which the axis 2 labels will be written for polar graphs. 
   If axis2_dir is "<TT></TT>", wcslab will compute this number.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_justify">justify = "<TT>default</TT>"</A></B></DT>
+  <DT><B>justify = "<TT>default</TT>"</B></DT>
   <! Sec='WLPARS PARAMETERS' Level=0 Label='justify' Line='justify = "default"'>
   <DD>The direction with respect to axis 2 along which the axis 2
   labels will be drawn from the point they are labeling on polar graphs.
@@ -355,7 +344,7 @@ wcslab — Overlay a displayed image with a world coordinate grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_labout">labout = yes</A></B></DT>
+  <DT><B>labout = yes</B></DT>
   <! Sec='WLPARS PARAMETERS' Level=0 Label='labout' Line='labout = yes'>
   <DD>Draw the labels outside the axes ?  If yes, the labels will be drawn
   outside the image viewport.  Otherwise, the axes labels will be drawn inside
@@ -364,7 +353,7 @@ wcslab — Overlay a displayed image with a world coordinate grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_full_label">full_label = no</A></B></DT>
+  <DT><B>full_label = no</B></DT>
   <! Sec='WLPARS PARAMETERS' Level=0 Label='full_label' Line='full_label = no'>
   <DD>Always draw all the labels in full format (h:m:s or d:m:s) if the world
   coordinate system of the image is in RA and DEC ?  If full_label = no, then
@@ -373,7 +362,7 @@ wcslab — Overlay a displayed image with a world coordinate grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rotate">rotate = yes</A></B></DT>
+  <DT><B>rotate = yes</B></DT>
   <! Sec='WLPARS PARAMETERS' Level=0 Label='rotate' Line='rotate = yes'>
   <DD>Permit the labels to rotate ?
   If rotate = yes, then labels will be written
@@ -384,39 +373,39 @@ wcslab — Overlay a displayed image with a world coordinate grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_label_size">label_size = 1.0</A></B></DT>
+  <DT><B>label_size = 1.0</B></DT>
   <! Sec='WLPARS PARAMETERS' Level=0 Label='label_size' Line='label_size = 1.0'>
   <DD>The size of the characters used to draw the major grid line labels.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_title">title = "<TT>imtitle</TT>"</A></B></DT>
+  <DT><B>title = "<TT>imtitle</TT>"</B></DT>
   <! Sec='WLPARS PARAMETERS' Level=0 Label='title' Line='title = "imtitle"'>
   <DD>The graph title. If title = "<TT>imtitle</TT>", then a default title containing
   the image name and title is created.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_axis1_title">axis1_title = "<TT></TT>"</A></B></DT>
+  <DT><B>axis1_title = "<TT></TT>"</B></DT>
   <! Sec='WLPARS PARAMETERS' Level=0 Label='axis1_title' Line='axis1_title = ""'>
   <DD>The title for axis 1. By default no axis title is drawn.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_axis2_title">axis2_title = "<TT></TT>"</A></B></DT>
+  <DT><B>axis2_title = "<TT></TT>"</B></DT>
   <! Sec='WLPARS PARAMETERS' Level=0 Label='axis2_title' Line='axis2_title = ""'>
   <DD>The title for axis 2. By default no axis title is drawn.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_title_side">title_side = "<TT>top</TT>"</A></B></DT>
+  <DT><B>title_side = "<TT>top</TT>"</B></DT>
   <! Sec='WLPARS PARAMETERS' Level=0 Label='title_side' Line='title_side = "top"'>
   <DD>The side of the plot on which to place the title.
   The options are "<TT>left</TT>", "<TT>right</TT>", "<TT>bottom</TT>", and "<TT>top</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_axis1_title_side">axis1_title_side = "<TT>default</TT>"</A></B></DT>
+  <DT><B>axis1_title_side = "<TT>default</TT>"</B></DT>
   <! Sec='WLPARS PARAMETERS' Level=0 Label='axis1_title_side' Line='axis1_title_side = "default"'>
   <DD>The side of the plot on which to place the axis 1 title.
   If axis1_title_side = "<TT>default</TT>", wcslab will choose a side for the title.
@@ -425,7 +414,7 @@ wcslab — Overlay a displayed image with a world coordinate grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_axis2_title_side">axis2_title_side = "<TT>default</TT>"</A></B></DT>
+  <DT><B>axis2_title_side = "<TT>default</TT>"</B></DT>
   <! Sec='WLPARS PARAMETERS' Level=0 Label='axis2_title_side' Line='axis2_title_side = "default"'>
   <DD>The side of the plot on which to place the axis 2 title.
   If axis2_title_side = "<TT>default</TT>", wcslab will choose a side for the title.
@@ -434,19 +423,19 @@ wcslab — Overlay a displayed image with a world coordinate grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_title_size">title_size = 1.0</A></B></DT>
+  <DT><B>title_size = 1.0</B></DT>
   <! Sec='WLPARS PARAMETERS' Level=0 Label='title_size' Line='title_size = 1.0'>
   <DD>The size of characters used to draw the title.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_axis_title_size">axis_title_size = 1.0</A></B></DT>
+  <DT><B>axis_title_size = 1.0</B></DT>
   <! Sec='WLPARS PARAMETERS' Level=0 Label='axis_title_size' Line='axis_title_size = 1.0'>
   <DD>The size of the characters used to draw the axis titles.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_graph_type">graph_type = "<TT>default</TT>"</A></B></DT>
+  <DT><B>graph_type = "<TT>default</TT>"</B></DT>
   <! Sec='WLPARS PARAMETERS' Level=0 Label='graph_type' Line='graph_type = "default"'>
   <DD>The type of graph to be drawn.  If graph_type = "<TT>default</TT>", wcslab will
   choose an appropriate graph type.  The permitted values are "<TT>normal</TT>", "<TT>polar</TT>",
@@ -456,7 +445,7 @@ wcslab — Overlay a displayed image with a world coordinate grid
   <P>
   </UL>
   <! EndSection:   'WLPARS PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -508,7 +497,7 @@ wcslab — Overlay a displayed image with a world coordinate grid
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_the_user_defined_wcs">THE USER-DEFINED WCS</A></H2>
+  <H3>The user-defined wcs</H3>
   <! BeginSection: 'THE USER-DEFINED WCS'>
   <UL>
   <P>
@@ -591,7 +580,7 @@ wcslab — Overlay a displayed image with a world coordinate grid
   <P>
   </UL>
   <! EndSection:   'THE USER-DEFINED WCS'>
-  <H2><A NAME="s_axis_specification">AXIS SPECIFICATION</A></H2>
+  <H3>Axis specification</H3>
   <! BeginSection: 'AXIS SPECIFICATION'>
   <UL>
   <P>
@@ -614,7 +603,7 @@ wcslab — Overlay a displayed image with a world coordinate grid
   <P>
   </UL>
   <! EndSection:   'AXIS SPECIFICATION'>
-  <H2><A NAME="s_grid_drawing_">GRID DRAWING </A></H2>
+  <H3>Grid drawing </H3>
   <! BeginSection: 'GRID DRAWING '>
   <UL>
   <P>
@@ -644,7 +633,7 @@ wcslab — Overlay a displayed image with a world coordinate grid
   <P>
   </UL>
   <! EndSection:   'GRID DRAWING '>
-  <H2><A NAME="s_graph_appearance">GRAPH APPEARANCE</A></H2>
+  <H3>Graph appearance</H3>
   <! BeginSection: 'GRAPH APPEARANCE'>
   <UL>
   <P>
@@ -684,7 +673,7 @@ wcslab — Overlay a displayed image with a world coordinate grid
   <P>
   </UL>
   <! EndSection:   'GRAPH APPEARANCE'>
-  <H2><A NAME="s_graph_labeling">GRAPH LABELING</A></H2>
+  <H3>Graph labeling</H3>
   <! BeginSection: 'GRAPH LABELING'>
   <UL>
   <P>
@@ -708,7 +697,7 @@ wcslab — Overlay a displayed image with a world coordinate grid
   <P>
   </UL>
   <! EndSection:   'GRAPH LABELING'>
-  <H2><A NAME="s_label_appearance">LABEL APPEARANCE</A></H2>
+  <H3>Label appearance</H3>
   <! BeginSection: 'LABEL APPEARANCE'>
   <UL>
   <P>
@@ -737,7 +726,7 @@ wcslab — Overlay a displayed image with a world coordinate grid
   <P>
   </UL>
   <! EndSection:   'LABEL APPEARANCE'>
-  <H2><A NAME="s_titles">TITLES</A></H2>
+  <H3>Titles</H3>
   <! BeginSection: 'TITLES'>
   <UL>
   <P>
@@ -752,7 +741,7 @@ wcslab — Overlay a displayed image with a world coordinate grid
   <P>
   </UL>
   <! EndSection:   'TITLES'>
-  <H2><A NAME="s_output_formats">OUTPUT FORMATS</A></H2>
+  <H3>Output formats</H3>
   <! BeginSection: 'OUTPUT FORMATS'>
   <UL>
   <P>
@@ -768,7 +757,7 @@ wcslab — Overlay a displayed image with a world coordinate grid
   <P>
   </UL>
   <! EndSection:   'OUTPUT FORMATS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -900,7 +889,7 @@ wcslab — Overlay a displayed image with a world coordinate grid
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_authors">AUTHORS</A></H2>
+  <H3>Authors</H3>
   <! BeginSection: 'AUTHORS'>
   <UL>
   The WCSLAB task was written by members of the STScI SDAS programming group
@@ -908,7 +897,7 @@ wcslab — Overlay a displayed image with a world coordinate grid
   programming group for version 2.10 IRAF.
   </UL>
   <! EndSection:   'AUTHORS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   display, gcur, imdkern
@@ -917,5 +906,3 @@ wcslab — Overlay a displayed image with a world coordinate grid
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'WCSPARS PARAMETERS' 'WLPARS PARAMETERS' 'DESCRIPTION' 'THE USER-DEFINED WCS' 'AXIS SPECIFICATION' 'GRID DRAWING ' 'GRAPH APPEARANCE' 'GRAPH LABELING' 'LABEL APPEARANCE' 'TITLES' 'OUTPUT FORMATS' 'EXAMPLES' 'AUTHORS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

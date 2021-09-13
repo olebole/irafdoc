@@ -1,3 +1,5 @@
+.. _hpctran:
+
 hpctran — Convert between HEALPix row and spherical coordinate
 ==============================================================
 
@@ -5,26 +7,13 @@ hpctran — Convert between HEALPix row and spherical coordinate
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>hpctran (Jul09)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>imcoords</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>hpctran (Jul09)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>hpctran</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   hpctran -- Convert between HEALPix row and spherical coordinate
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   hpctran lng=xxx lat=xxx
@@ -32,11 +21,11 @@ hpctran — Convert between HEALPix row and spherical coordinate
   hpctran row=xxx
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_row">row     </A></B></DT>
+  <DT><B>row     </B></DT>
   <! Sec='PARAMETERS' Level=0 Label='row' Line='row     '>
   <DD>HEALPix table row (1 indexed).
   This is used as input if the direction
@@ -45,7 +34,7 @@ hpctran — Convert between HEALPix row and spherical coordinate
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lng">lng, lat</A></B></DT>
+  <DT><B>lng, lat</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lng' Line='lng, lat'>
   <DD>Spherical coordinate consisting of a longitude and latitude.
   These are used as input if the direction
@@ -56,26 +45,26 @@ hpctran — Convert between HEALPix row and spherical coordinate
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nside">nside = 512</A></B></DT>
+  <DT><B>nside = 512</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nside' Line='nside = 512'>
   <DD>The number of pixels per face side.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cunits">cunits = "<TT>degrees</TT>" (degrees|hourdegree|radians)</A></B></DT>
+  <DT><B>cunits = "<TT>degrees</TT>" (degrees|hourdegree|radians)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cunits' Line='cunits = "degrees" (degrees|hourdegree|radians)'>
   <DD>The units of the longitude and latitude.  The "<TT>hourdegree</TT>" is for
   longitude in hours and latitude in degrees.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_maptype">maptype = "<TT>nest</TT>" (nest|ring)</A></B></DT>
+  <DT><B>maptype = "<TT>nest</TT>" (nest|ring)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='maptype' Line='maptype = "nest" (nest|ring)'>
   <DD>The map pixelization type which may be "<TT>nest</TT>" or "<TT>ring</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_direction">direction = "<TT>ang2row</TT>" (ang2row|row2ang)</A></B></DT>
+  <DT><B>direction = "<TT>ang2row</TT>" (ang2row|row2ang)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='direction' Line='direction = "ang2row" (ang2row|row2ang)'>
   <DD>The conversion direction.  "<TT>ang2row</TT>" converts a spherical coordinate
   to a map row or pixel number.  "<TT>row2ang</TT>" converts a map row or pixel
@@ -84,7 +73,7 @@ hpctran — Convert between HEALPix row and spherical coordinate
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   HEALPix is an acronym for Hierarchical Equal Area isoLatitude Pixelization
@@ -126,7 +115,7 @@ hpctran — Convert between HEALPix row and spherical coordinate
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   A CMB WMAP file is obtained and one wants the temperature at a particular
@@ -145,7 +134,7 @@ hpctran — Convert between HEALPix row and spherical coordinate
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_reference">REFERENCE</A></H2>
+  <H3>Reference</H3>
   <! BeginSection: 'REFERENCE'>
   <UL>
   <I>HEALPIX - a Framework for High Resolution Discretization, and Fast
@@ -154,14 +143,14 @@ hpctran — Convert between HEALPix row and spherical coordinate
   Reinecke, M. Bartelmann, 2005, ApJ 622, 759.
   </UL>
   <! EndSection:   'REFERENCE'>
-  <H2><A NAME="s_credit">CREDIT</A></H2>
+  <H3>Credit</H3>
   <! BeginSection: 'CREDIT'>
   <UL>
   Some code from the HEALPix distribution at http://healpix.jpl.nasa.gov
   was translated to SPP for use in this routine.
   </UL>
   <! EndSection:   'CREDIT'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   ttools
@@ -170,5 +159,3 @@ hpctran — Convert between HEALPix row and spherical coordinate
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REFERENCE' 'CREDIT' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _hfix:
+
 hfix — Fix image headers with a user specified command
 ======================================================
 
@@ -5,43 +7,30 @@ hfix — Fix image headers with a user specified command
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>hfix (Nov91)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>proto</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>hfix (Nov91)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>hfix</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   hfix -- fix image headers with a user specified command
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   hfix images
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>List of images whose headers are to be fixed.  If <I>update</I> is yes then
   the user must have write permission on the image headers.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_command">command = "<TT>edit $fname</TT>"</A></B></DT>
+  <DT><B>command = "<TT>edit $fname</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='command' Line='command = "edit $fname"'>
   <DD>Command to be applied to a file containing the image header.  The command
   may be any CL command which includes escapes to host commands.  The file
@@ -53,14 +42,14 @@ hfix — Fix image headers with a user specified command
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_update">update = yes</A></B></DT>
+  <DT><B>update = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='update' Line='update = yes'>
   <DD>Update the image header with the modified header.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task allows you to extract the image headers into a text file,
@@ -88,7 +77,7 @@ hfix — Fix image headers with a user specified command
   the proper columns.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Edit the header of the image test.imh:
@@ -116,7 +105,7 @@ hfix — Fix image headers with a user specified command
   equal sign is in column 9.
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   images.hedit noao.artdata.mkheader
@@ -125,5 +114,3 @@ hfix — Fix image headers with a user specified command
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

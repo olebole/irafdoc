@@ -1,3 +1,5 @@
+.. _xc:
+
 xc — Compile and/or link a program
 ==================================
 
@@ -5,36 +7,23 @@ xc — Compile and/or link a program
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>xc (Oct89)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>softools</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>xc (Oct89)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>xc</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   xc -- portable IRAF compile/link utility
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   xc [flags] files
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_flags">FLAGS</A></H2>
+  <H3>Flags</H3>
   <! BeginSection: 'FLAGS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_">-a</A></B></DT>
+  <DT><B>-a</B></DT>
   <! Sec='FLAGS' Level=0 Label='' Line='-a'>
   <DD>To support VMS link options file.  Next file is taken to be the VMS name
   of a link options file.  This is primarily for using long lists of files
@@ -43,7 +32,7 @@ xc — Compile and/or link a program
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-C</A></B></DT>
+  <DT><B>-C</B></DT>
   <! Sec='FLAGS' Level=0 Label='' Line='-C'>
   <DD>Tells fortran to do array bound and other checking.
   By default no checking is done.  From DCL fortran usually
@@ -51,31 +40,31 @@ xc — Compile and/or link a program
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-c</A></B></DT>
+  <DT><B>-c</B></DT>
   <! Sec='FLAGS' Level=0 Label='' Line='-c'>
   <DD>Tells <I>xc</I> not to link, i.e., not to create an executable.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-d</A></B></DT>
+  <DT><B>-d</B></DT>
   <! Sec='FLAGS' Level=0 Label='' Line='-d'>
   <DD>Causes debug messages to be printed during execution.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-F, -f</A></B></DT>
+  <DT><B>-F, -f</B></DT>
   <! Sec='FLAGS' Level=0 Label='' Line='-F, -f'>
   <DD>Do not delete the Fortran translation of an SPP source file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-g</A></B></DT>
+  <DT><B>-g</B></DT>
   <! Sec='FLAGS' Level=0 Label='' Line='-g'>
   <DD>Generates debugging information and (for VMS), links in the debugger.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-h</A></B></DT>
+  <DT><B>-h</B></DT>
   <! Sec='FLAGS' Level=0 Label='' Line='-h'>
   <DD>Causes the executable to be linked as a host program, i.e., without the
   IRAF main and without searching the IRAF libraries, unless explicitly
@@ -84,19 +73,19 @@ xc — Compile and/or link a program
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-i2</A></B></DT>
+  <DT><B>-i2</B></DT>
   <! Sec='FLAGS' Level=0 Label='' Line='-i2'>
   <DD>Tells fortran to use I*2 by default.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-i4</A></B></DT>
+  <DT><B>-i4</B></DT>
   <! Sec='FLAGS' Level=0 Label='' Line='-i4'>
   <DD>Tells fortran to use I*4 by default.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-l<I>lib</I></A></B></DT>
+  <DT><B>-l<I>lib</I></B></DT>
   <! Sec='FLAGS' Level=0 Label='' Line='-l\fIlib\fR'>
   <DD>This tells the linker which libraries besides the standard
   ones to include.  These must be either on the current
@@ -107,19 +96,19 @@ xc — Compile and/or link a program
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-L</A></B></DT>
+  <DT><B>-L</B></DT>
   <! Sec='FLAGS' Level=0 Label='' Line='-L'>
   <DD>Creates a list file. VMS specific.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-M, -m</A></B></DT>
+  <DT><B>-M, -m</B></DT>
   <! Sec='FLAGS' Level=0 Label='' Line='-M, -m'>
   <DD>Tells the linker to create a link map.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-n</A></B></DT>
+  <DT><B>-n</B></DT>
   <! Sec='FLAGS' Level=0 Label='' Line='-n'>
   <DD>Not really supported under VMS since "<TT>normal</TT>" users
   cannot install images.  In Unix this is just a link
@@ -127,13 +116,13 @@ xc — Compile and/or link a program
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-N</A></B></DT>
+  <DT><B>-N</B></DT>
   <! Sec='FLAGS' Level=0 Label='' Line='-N'>
   <DD>Same as -z for VMS.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-Nh [filename]</A></B></DT>
+  <DT><B>-Nh [filename]</B></DT>
   <! Sec='FLAGS' Level=0 Label='' Line='-Nh [filename]'>
   <DD>This tells xpp that the foreign definitions in the
   file specified should be used in preference to
@@ -141,7 +130,7 @@ xc — Compile and/or link a program
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-o</A></B></DT>
+  <DT><B>-o</B></DT>
   <! Sec='FLAGS' Level=0 Label='' Line='-o'>
   <DD>This flag redirects the output of the compile if used in
   conjunction with -c option or specifies where the executable
@@ -151,14 +140,14 @@ xc — Compile and/or link a program
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-O</A></B></DT>
+  <DT><B>-O</B></DT>
   <! Sec='FLAGS' Level=0 Label='' Line='-O'>
   <DD>Optimize object code produced; this is now the default, but this switch
   is still provided for backwards compatibility.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-p pkgname</A></B></DT>
+  <DT><B>-p pkgname</B></DT>
   <! Sec='FLAGS' Level=0 Label='' Line='-p pkgname'>
   <DD>Load the package environment for the named external package, e.g.,
   "<TT>xc -c -p noao file.x</TT>".  If the same package is always specified
@@ -169,7 +158,7 @@ xc — Compile and/or link a program
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-P</A></B></DT>
+  <DT><B>-P</B></DT>
   <! Sec='FLAGS' Level=0 Label='' Line='-P'>
   <DD>Check portability.  This should be used all of the time in IRAF,
   but the VMS C compiler forces the use of non-standard
@@ -180,53 +169,53 @@ xc — Compile and/or link a program
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-q</A></B></DT>
+  <DT><B>-q</B></DT>
   <! Sec='FLAGS' Level=0 Label='' Line='-q'>
   <DD>Disable optimization.  Opposite of -O.  Object code will be optimized
   by default.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-s</A></B></DT>
+  <DT><B>-s</B></DT>
   <! Sec='FLAGS' Level=0 Label='' Line='-s'>
   <DD>Strips all symbols and debugging information.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-S</A></B></DT>
+  <DT><B>-S</B></DT>
   <! Sec='FLAGS' Level=0 Label='' Line='-S'>
   <DD>Same as -s for VMS.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-v</A></B></DT>
+  <DT><B>-v</B></DT>
   <! Sec='FLAGS' Level=0 Label='' Line='-v'>
   <DD>Verbose mode.  Causes messages to be printed during execution telling
   what the <I>xc</I> program is doing.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-w</A></B></DT>
+  <DT><B>-w</B></DT>
   <! Sec='FLAGS' Level=0 Label='' Line='-w'>
   <DD>Suppress warnings.				
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-X, -x</A></B></DT>
+  <DT><B>-X, -x</B></DT>
   <! Sec='FLAGS' Level=0 Label='' Line='-X, -x'>
   <DD>Compile and link for debugging.  In VMS/IRAF, links in the VMS debugger
   and symbols.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-z</A></B></DT>
+  <DT><B>-z</B></DT>
   <! Sec='FLAGS' Level=0 Label='' Line='-z'>
   <DD>Create a non-shareable image (default).
   </DD>
   </DL>
   </UL>
   <! EndSection:   'FLAGS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   XC is a machine independent utility for compiling and linking IRAF
@@ -263,7 +252,7 @@ xc — Compile and/or link a program
   done away with at some point).
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   Any upper case flags in the following examples must be doubly quoted in
@@ -296,7 +285,7 @@ xc — Compile and/or link a program
   or libraries.
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   The -S flag should generate assembler
@@ -305,7 +294,7 @@ xc — Compile and/or link a program
   utility.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   mkpkg, generic
@@ -314,5 +303,3 @@ xc — Compile and/or link a program
   
   <! Contents: 'NAME' 'USAGE' 'FLAGS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

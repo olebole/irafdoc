@@ -1,3 +1,5 @@
+.. _polymark:
+
 polymark — Create polygon lists for polyphot
 ============================================
 
@@ -5,43 +7,30 @@ polymark — Create polygon lists for polyphot
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>polymark (May00)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.apphot</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>polymark (May00)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>polymark</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   polymark -- create or review polygon and coordinate lists for input to the
   polyphot task
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   polymark image
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>The list of input images used to define the polygons.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_coords">coords = "<TT>default</TT>"</A></B></DT>
+  <DT><B>coords = "<TT>default</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='coords' Line='coords = "default"'>
   <DD>The input / output center positions file. The center positions for each
   polygonal aperture are read from or written to coords. There may more than one
@@ -55,7 +44,7 @@ polymark — Create polygon lists for polyphot
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_polygons">polygons = "<TT>default</TT>"</A></B></DT>
+  <DT><B>polygons = "<TT>default</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='polygons' Line='polygons = "default"'>
   <DD>The name of the polygons file. The vertices of each polygon  are read from or
   written to the polygons file. The polygons file contains a list of the
@@ -68,19 +57,19 @@ polymark — Create polygon lists for polyphot
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_icommands">icommands = "<TT></TT>"</A></B></DT>
+  <DT><B>icommands = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""'>
   <DD>The image cursor or image cursor command file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_gcommands">gcommands = "<TT></TT>"</A></B></DT>
+  <DT><B>gcommands = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""'>
   <DD>The graphics cursor or graphics cursor command file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wcsin">wcsin = "<TT>)_.wcsin</TT>", wcsout = "<TT>)_.wcsout</TT>"</A></B></DT>
+  <DT><B>wcsin = "<TT>)_.wcsin</TT>", wcsout = "<TT>)_.wcsout</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wcsin' Line='wcsin = ")_.wcsin", wcsout = ")_.wcsout"'>
   <DD>The coordinate system of the input coordinates read from or written
   to <I>coords</I> and <I>polygons</I>. The image header coordinate system is
@@ -91,7 +80,7 @@ polymark — Create polygon lists for polyphot
   coordinate system options are </TT>"logical"<TT>, </TT>"tv"<TT>, and </TT>"physical"<TT>. The image
   cursor coordinate system is assumed to be the </TT>"tv"<TT> system.
   <DL>
-  <DT><B><A NAME="l_logical">logical</A></B></DT>
+  <DT><B>logical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='logical' Line='logical'>
   <DD>Logical coordinates are pixel coordinates relative to the current image.
   The  logical coordinate system is the coordinate system used by the image
@@ -102,7 +91,7 @@ polymark — Create polygon lists for polyphot
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_tv">tv</A></B></DT>
+  <DT><B>tv</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='tv' Line='tv'>
   <DD>Tv coordinates are the pixel coordinates used by the display servers. Tv
   coordinates  include  the effects of any input image section, but do not
@@ -117,7 +106,7 @@ polymark — Create polygon lists for polyphot
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_physical">physical</A></B></DT>
+  <DT><B>physical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='physical' Line='physical'>
   <DD>Physical coordinates are pixel coordinates invariant  with respect to linear
   transformations of the physical image data.  For example, if the current image
@@ -131,7 +120,7 @@ polymark — Create polygon lists for polyphot
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_world">world</A></B></DT>
+  <DT><B>world</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='world' Line='world'>
   <DD>World coordinates are image coordinates in any units which are invariant
   with respect to linear transformations of the physical image data. For
@@ -147,7 +136,7 @@ polymark — Create polygon lists for polyphot
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cache">cache = </TT>")_.cache"<TT></A></B></DT>
+  <DT><B>cache = </TT>")_.cache"<TT></B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cache' Line='cache = ")_.cache"'>
   <DD>Cache the image pixels in memory. Cache may be set to the value of the apphot
   package parameter (the default), </TT>"yes"<TT>, or </TT>"no"<TT>. By default cacheing is 
@@ -155,13 +144,13 @@ polymark — Create polygon lists for polyphot
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_graphics">graphics = </TT>")_.graphics"<TT></A></B></DT>
+  <DT><B>graphics = </TT>")_.graphics"<TT></B></DT>
   <! Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = ")_.graphics"'>
   <DD>The standard graphics device.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_display">display = </TT>")_.display"<TT></A></B></DT>
+  <DT><B>display = </TT>")_.display"<TT></B></DT>
   <! Sec='PARAMETERS' Level=0 Label='display' Line='display = ")_.display"'>
   <DD>The default display device.  Display may be set to the apphot package
   parameter value (the default), </TT>"yes"<TT>, or </TT>"no.  By default graphics overlay is
@@ -173,7 +162,7 @@ polymark — Create polygon lists for polyphot
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -224,7 +213,7 @@ polymark — Create polygon lists for polyphot
   of objects in the top and bottom halfs of the image are alternated.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_cursor_commands">CURSOR COMMANDS</A></H2>
+  <H3>Cursor commands</H3>
   <! BeginSection: 'CURSOR COMMANDS'>
   <UL>
   <P>
@@ -251,7 +240,7 @@ polymark — Create polygon lists for polyphot
   <P>
   </UL>
   <! EndSection:   'CURSOR COMMANDS'>
-  <H2><A NAME="s_output">OUTPUT</A></H2>
+  <H3>Output</H3>
   <! BeginSection: 'OUTPUT'>
   <UL>
   <P>
@@ -287,7 +276,7 @@ polymark — Create polygon lists for polyphot
   <P>
   </UL>
   <! EndSection:   'OUTPUT'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -484,7 +473,7 @@ polymark — Create polygon lists for polyphot
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   <P>
@@ -506,7 +495,7 @@ polymark — Create polygon lists for polyphot
   <P>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   polyphot
@@ -515,5 +504,3 @@ polymark — Create polygon lists for polyphot
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'CURSOR COMMANDS' 'OUTPUT' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

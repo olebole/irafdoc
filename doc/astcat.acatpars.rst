@@ -1,3 +1,5 @@
+.. _acatpars:
+
 acatpars — Default astrometry file format parameter set
 =======================================================
 
@@ -5,46 +7,33 @@ acatpars — Default astrometry file format parameter set
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>acatpars (Mar00)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>astcat</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>acatpars (Mar00)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>acatpars</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   acatpars -- edit the default astrometry file format parameters
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   acatpars 
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_ftype">ftype = "<TT>stext</TT>"</A></B></DT>
+  <DT><B>ftype = "<TT>stext</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ftype' Line='ftype = "stext"'>
   <DD>The astrometry file format. The current options are:
   <DL>
-  <DT><B><A NAME="l_stext">stext</A></B></DT>
+  <DT><B>stext</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='stext' Line='stext'>
   <DD>Simple text. Records are newline delimited and fields are whitespace delimited.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_btext">btext</A></B></DT>
+  <DT><B>btext</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='btext' Line='btext'>
   <DD>Blocked text. Records are newline delimited and fields are offset and
   size delimited.
@@ -53,7 +42,7 @@ acatpars — Default astrometry file format parameter set
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ccsystem">ccsystem = "<TT>j2000</TT>"</A></B></DT>
+  <DT><B>ccsystem = "<TT>j2000</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ccsystem' Line='ccsystem = "j2000"'>
   <DD>The default celestial coordinate system. The coordinate systems of most
   interest to users are "<TT>icrs</TT>", "<TT>j2000</TT>", and "<TT>b1950</TT>". For more detailed
@@ -62,7 +51,7 @@ acatpars — Default astrometry file format parameter set
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_standard">standard astrometry file fields</A></B></DT>
+  <DT><B>standard astrometry file fields</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='standard' Line='standard astrometry file fields'>
   <DD>The following parameters define the standard astrometry file fields. The
   parameter names are the same as the standard field names. The parameter
@@ -80,70 +69,70 @@ acatpars — Default astrometry file format parameter set
   field descriptions are assumed to be undefined.
   <BR>
   <DL>
-  <DT><B><A NAME="l_id">id = "<TT></TT>"</A></B></DT>
+  <DT><B>id = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='id' Line='id = ""'>
   <DD>The standard id field. The data type is character. The default units and
   format values are "<TT>INDEF</TT>" and "<TT>%20s</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"> ra = "<TT>1 hours</TT>"</A></B></DT>
+  <DT><B> ra = "<TT>1 hours</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line=' ra = "1 hours"'>
   <DD>The standard right ascension / longitude field. The data type is double. The
   default units and format values are "<TT>hours</TT>"and "<TT>%11.2h</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"> dec = "<TT>2 degrees</TT>"</A></B></DT>
+  <DT><B> dec = "<TT>2 degrees</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line=' dec = "2 degrees"'>
   <DD>The standard declination / latitude field. The data type is double. The default
   units and format values are "<TT>degrees</TT>"and "<TT>%11.1h</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"> era = "<TT></TT>"</A></B></DT>
+  <DT><B> era = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line=' era = ""'>
   <DD>The standard right ascension / longitude error field. The data type is double.
   The default units and format values are "<TT>asecs</TT>" and "<TT>%6.3f</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"> edec = "<TT></TT>"</A></B></DT>
+  <DT><B> edec = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line=' edec = ""'>
   <DD>The standard declination / latitude error field. The data type is double.
   The default units and format values are "<TT>asecs</TT>" and "<TT>%6.3f</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"> pmra = "<TT></TT>"</A></B></DT>
+  <DT><B> pmra = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line=' pmra = ""'>
   <DD>The standard right ascension / longitude proper motion field. The data type
   is double. The default units and format values are "<TT>masecs/yr</TT>" and "<TT>%7.3f</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"> pmdec = "<TT></TT>"</A></B></DT>
+  <DT><B> pmdec = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line=' pmdec = ""'>
   <DD>The standard declination / latitude proper motion field. The data type
   is double. The default units and format values are "<TT>masecs/yr</TT>" and "<TT>%7.3f</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"> epmra = "<TT></TT>"</A></B></DT>
+  <DT><B> epmra = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line=' epmra = ""'>
   <DD>The standard right ascension / longitude proper motion error field. The data
   type is double. The default units and format values are "<TT>masecs/yr</TT>" and "<TT>%7.3f</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"> epmdec = "<TT></TT>"</A></B></DT>
+  <DT><B> epmdec = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line=' epmdec = ""'>
   <DD>The standard declination / latitude proper motion error field. The data
   type is double. The default units and format values are "<TT>masecs/yr</TT>" and "<TT>%7.3f</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_catsystem">catsystem = "<TT></TT>"</A></B></DT>
+  <DT><B>catsystem = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='catsystem' Line='catsystem = ""'>
   <DD>The standard celestial coordinate system field. The data type is character.
   The default units and format field values are "<TT>INDEF</TT>" and "<TT>%15s</TT>". If defined
@@ -153,7 +142,7 @@ acatpars — Default astrometry file format parameter set
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_equinox">equinox = "<TT></TT>"</A></B></DT>
+  <DT><B>equinox = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='equinox' Line='equinox = ""'>
   <DD>The standard celestial coordinate system equinox field. The data type is
   character. The default units and format field values are "<TT>INDEF</TT>" and
@@ -162,7 +151,7 @@ acatpars — Default astrometry file format parameter set
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_epoch">epoch = "<TT></TT>"</A></B></DT>
+  <DT><B>epoch = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='epoch' Line='epoch = ""'>
   <DD>The standard celestial coordinate system epoch field. The data type is
   character. The default units and format field values are "<TT>INDEF</TT>" and
@@ -172,112 +161,112 @@ acatpars — Default astrometry file format parameter set
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_px">px = "<TT></TT>"</A></B></DT>
+  <DT><B>px = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='px' Line='px = ""'>
   <DD>The standard parallax field. The data type is double. The default units
   and format values are "<TT>msecs</TT>" and "<TT>%6.3f</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rv">rv = "<TT></TT>"</A></B></DT>
+  <DT><B>rv = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='rv' Line='rv = ""'>
   <DD>The standard radial velocity field. The data type is double. The default units
   and format values are "<TT>km/sec</TT>" and "<TT>%6.3f</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_epx">epx = "<TT></TT>"</A></B></DT>
+  <DT><B>epx = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='epx' Line='epx = ""'>
   <DD>The standard parallax error field. The data type is double. The default units
   and format values are "<TT>msecs</TT>" and "<TT>%6.3f</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_erv">erv = "<TT></TT>"</A></B></DT>
+  <DT><B>erv = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='erv' Line='erv = ""'>
   <DD>The standard radial velocity error field. The data type is double. The default
   units and format values are "<TT>km/sec</TT>" and "<TT>%6.3f</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_mag">mag = "<TT></TT>"</A></B></DT>
+  <DT><B>mag = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='mag' Line='mag = ""'>
   <DD>The standard magnitude field. The  data type is real. The default units
   and format field values are "<TT>mags</TT>" and "<TT>%8.3f</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_color">color = "<TT></TT>"</A></B></DT>
+  <DT><B>color = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='color' Line='color = ""'>
   <DD>The standard color field. The  data type is real. The default units
   and format field values are "<TT>mags</TT>" and "<TT>%8.3f</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_emag">emag = "<TT></TT>"</A></B></DT>
+  <DT><B>emag = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='emag' Line='emag = ""'>
   <DD>The standard magnitude error field. The  data type is real. The default units
   and format field values are "<TT>mags</TT>" and "<TT>%8.3f</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ecolor">ecolor = "<TT></TT>"</A></B></DT>
+  <DT><B>ecolor = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='ecolor' Line='ecolor = ""'>
   <DD>The standard color error field. The  data type is real. The default units
   and format field values are "<TT>mags</TT>" and "<TT>%8.3f</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xp">xp = "<TT></TT>"</A></B></DT>
+  <DT><B>xp = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='xp' Line='xp = ""'>
   <DD>The predicted x coordinate field. The data type is double. The default units
   and format field values are "<TT>pixels</TT>" and "<TT>%9.3f</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_yp">yp = "<TT></TT>"</A></B></DT>
+  <DT><B>yp = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='yp' Line='yp = ""'>
   <DD>The predicted y coordinate field. The data type is double. The default units
   and format field values are "<TT>pixels</TT>" and "<TT>%9.3f</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xc">xc = "<TT></TT>"</A></B></DT>
+  <DT><B>xc = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='xc' Line='xc = ""'>
   <DD>The centered x coordinate field. The data type is double. The default units
   and format field values are "<TT>pixels</TT>" and "<TT>%9.3f</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_yc">yc = "<TT></TT>"</A></B></DT>
+  <DT><B>yc = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='yc' Line='yc = ""'>
   <DD>The centered y coordinate field. The data type is double. The default units
   and format field values are "<TT>pixels</TT>" and "<TT>%9.3f</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_exc">exc = "<TT></TT>"</A></B></DT>
+  <DT><B>exc = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='exc' Line='exc = ""'>
   <DD>The centered x coordinate error field. The data type is double. The default
   units and format field values are "<TT>pixels</TT>" and "<TT>%9.3f</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_eyc">eyc = "<TT></TT>"</A></B></DT>
+  <DT><B>eyc = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='eyc' Line='eyc = ""'>
   <DD>The centered y coordinate error field. The data type is double. The default
   units and format field values are "<TT>pixels</TT>" and "<TT>%9.3f</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_imag">imag = "<TT></TT>"</A></B></DT>
+  <DT><B>imag = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='imag' Line='imag = ""'>
   <DD>The standard instrumental magnitude field. The data type is real. The default
   units and format values are "<TT>mags</TT>" and "<TT>8.3f</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_eimag">eimag = "<TT></TT>"</A></B></DT>
+  <DT><B>eimag = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='eimag' Line='eimag = ""'>
   <DD>The standard instrumental magnitude error field. The data type is real. The
   default units and format values are "<TT>mags</TT>" and "<TT>8.3f</TT>".
@@ -288,7 +277,7 @@ acatpars — Default astrometry file format parameter set
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -344,7 +333,7 @@ acatpars — Default astrometry file format parameter set
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. List the astrometry file format parameters.
@@ -376,17 +365,17 @@ acatpars — Default astrometry file format parameter set
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   afiltcat
@@ -395,5 +384,3 @@ acatpars — Default astrometry file format parameter set
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

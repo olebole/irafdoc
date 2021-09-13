@@ -1,3 +1,5 @@
+.. _setimpars:
+
 setimpars — Save/restore parameter sets for a particular image
 ==============================================================
 
@@ -5,42 +7,29 @@ setimpars — Save/restore parameter sets for a particular image
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>setimpars (May00)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.daophot</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>setimpars (May00)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>setimpars</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   setimpars -- save / restore the daophot parameters for a particular image
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   setimpars image restore update
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_image">image</A></B></DT>
+  <DT><B>image</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='image' Line='image'>
   <DD>The image for which the daophot parameters are to be saved or restored.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_restore">restore</A></B></DT>
+  <DT><B>restore</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='restore' Line='restore'>
   <DD>If restore = yes, parfile is "<TT></TT>", and the file "<TT>image.pars</TT>" exists, SETIMPARS
   sets the current algorithm parameters by reading in the file "<TT>image.pars</TT>". If
@@ -48,14 +37,14 @@ setimpars — Save/restore parameter sets for a particular image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_update">update</A></B></DT>
+  <DT><B>update</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='update' Line='update'>
   <DD>If update = yes, SETIMPARS saves the new current values of the DAOPHOT algorithm
   parameters in the file <I>image.pars</I> and any previously existing file of the same name is overwritten.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_review">review = no</A></B></DT>
+  <DT><B>review = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='review' Line='review = no'>
   <DD>Review and/or edit the values of the parameters in the parameter sets DATAPARS,
   FINDPARS, CENTERPARS, FITSKYPARS, PHOTPARS, and DAOPARS by calling up the EPAR
@@ -63,7 +52,7 @@ setimpars — Save/restore parameter sets for a particular image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_parfile">parfile</A></B></DT>
+  <DT><B>parfile</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='parfile' Line='parfile'>
   <DD>The name of the input file containing the values of the DAOPHOT algorithm
   parameters to be restored. If defined <I>parfile</I> must have been written
@@ -75,7 +64,7 @@ setimpars — Save/restore parameter sets for a particular image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_datapars">datapars = "<TT></TT>"</A></B></DT>
+  <DT><B>datapars = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='datapars' Line='datapars = ""'>
   <DD>The name of the file containing the DATAPARS parameter values. Datapars must be
   a named DATAPARS parameter set file written by the EPAR task, or "<TT></TT>" in which
@@ -85,7 +74,7 @@ setimpars — Save/restore parameter sets for a particular image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_findpars">findpars = "<TT></TT>"</A></B></DT>
+  <DT><B>findpars = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='findpars' Line='findpars = ""'>
   <DD>The name of the file containing the FINDPARS parameter values. Findpars
   must be a named FINDPARS parameter set file written by the EPAR task, or "<TT></TT>"
@@ -95,7 +84,7 @@ setimpars — Save/restore parameter sets for a particular image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_centerpars">centerpars = "<TT></TT>"</A></B></DT>
+  <DT><B>centerpars = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='centerpars' Line='centerpars = ""'>
   <DD>The name of the file containing the CENTERPARS parameter values.  Centerpars
   must be a named CENTERPARS parameter set file written by the EPAR task, or "<TT></TT>"
@@ -105,7 +94,7 @@ setimpars — Save/restore parameter sets for a particular image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fitskypars">fitskypars = "<TT></TT>"</A></B></DT>
+  <DT><B>fitskypars = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fitskypars' Line='fitskypars = ""'>
   <DD>The name of the file containing the FITSKYPARS parameter values. Fitskypars
   must be a named FITSKYPARS parameter set file written by the EPAR task, or "<TT></TT>"
@@ -115,7 +104,7 @@ setimpars — Save/restore parameter sets for a particular image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_photpars">photpars = "<TT></TT>"</A></B></DT>
+  <DT><B>photpars = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='photpars' Line='photpars = ""'>
   <DD>The name of the file containing the PHOTPARS parameter values. Photpars must be
   a named PHOTPARS parameter set file written by the EPAR task, or "<TT></TT>" in which
@@ -125,7 +114,7 @@ setimpars — Save/restore parameter sets for a particular image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_daopars">daopars = "<TT></TT>"</A></B></DT>
+  <DT><B>daopars = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='daopars' Line='daopars = ""'>
   <DD>The name of the file containing the DAOPARS parameter values. Daopars must be a
   named DAOPARS parameter set file written by the EPAR task, or "<TT></TT>" in which case
@@ -134,7 +123,7 @@ setimpars — Save/restore parameter sets for a particular image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_unlearn">unlearn = no</A></B></DT>
+  <DT><B>unlearn = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='unlearn' Line='unlearn = no'>
   <DD>Return the values of the parameters in the parameter sets DATAPARS, FINDPARS,
   CENTERPARS, FITSKYPARS, PHOTPARS, and DAOPARS to their default values?
@@ -142,7 +131,7 @@ setimpars — Save/restore parameter sets for a particular image
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -169,7 +158,7 @@ setimpars — Save/restore parameter sets for a particular image
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -225,17 +214,17 @@ setimpars — Save/restore parameter sets for a particular image
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   daoedit,datapars,findpars,centerpars,fitskypars,photpars,daopars
@@ -244,5 +233,3 @@ setimpars — Save/restore parameter sets for a particular image
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

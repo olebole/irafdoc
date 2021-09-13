@@ -1,3 +1,5 @@
+.. _fcache:
+
 fcache — List, clean or manipulate the file cache
 =================================================
 
@@ -5,68 +7,55 @@ fcache — List, clean or manipulate the file cache
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>fcache (Jun2011)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>system</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>fcache (Jun2011)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>fcache</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   fcache -- list, clean or manipulate the file cache
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   fcache cmd
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_cmd">cmd</A></B></DT>
+  <DT><B>cmd</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cmd' Line='cmd'>
   <DD>Cache command to execute.  A description of each command is given below.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pattern">pattern = "<TT>*</TT>"</A></B></DT>
+  <DT><B>pattern = "<TT>*</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pattern' Line='pattern = "*"'>
   <DD>Filename substring pattern to match when initializing the cache with
   the <I>init</I> command.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_src">src = "<TT></TT>"</A></B></DT>
+  <DT><B>src = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='src' Line='src = ""'>
   <DD>Source string used to generate the cache filename.  This is typically
   the full path to a local file being cached or a URL.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fname">fname = "<TT></TT>"</A></B></DT>
+  <DT><B>fname = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fname' Line='fname = ""'>
   <DD>Name of the file in the cache.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_extn">extn = "<TT></TT>"</A></B></DT>
+  <DT><B>extn = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='extn' Line='extn = ""'>
   <DD>Cache filename extension.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_age">age = -1</A></B></DT>
+  <DT><B>age = -1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='age' Line='age = -1'>
   <DD>Age of the file (in days) to be purged with the <I>purge</I> command.  A value
   less than zero means that the <I>cache_age</I> environment variable should 
@@ -76,20 +65,20 @@ fcache — List, clean or manipulate the file cache
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = no</A></B></DT>
+  <DT><B>verbose = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
   <DD>Print status information as the task processes the command.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wait">wait = yes</A></B></DT>
+  <DT><B>wait = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wait' Line='wait = yes'>
   <DD>Block on operation?  If 'yes' then the task will block until the requested
   file becomes available in the cache.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cache">cache = "<TT>cache$</TT>"</A></B></DT>
+  <DT><B>cache = "<TT>cache$</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cache' Line='cache = "cache$"'>
   <DD>Cache directory to be used.
   </DD>
@@ -97,7 +86,7 @@ fcache — List, clean or manipulate the file cache
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The <I>FCACHE</I> command is used to list or manage the system file cache
@@ -137,7 +126,7 @@ fcache — List, clean or manipulate the file cache
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -192,13 +181,13 @@ fcache — List, clean or manipulate the file cache
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   <P>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   head
@@ -207,5 +196,3 @@ fcache — List, clean or manipulate the file cache
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _directory:
+
 directory — List the files in a directory
 =========================================
 
@@ -5,36 +7,23 @@ directory — List the files in a directory
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>directory (Mar87)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>system</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>directory (Mar87)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>directory</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   directory -- list the contents of a file directory
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   directory [files]
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_files">files</A></B></DT>
+  <DT><B>files</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='files' Line='files'>
   <DD>A file template specifying the files to be listed, or the name of the directory
   whose contents are to be listed.  If omitted entirely, the contents of the
@@ -42,7 +31,7 @@ directory — List the files in a directory
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_long">long = no</A></B></DT>
+  <DT><B>long = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='long' Line='long = no'>
   <DD>Long format listing.  The long format listing lists each file on a separate
   line, noting the file permissions, file type, file size, modify date, owner,
@@ -50,13 +39,13 @@ directory — List the files in a directory
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ncols">ncols = 0</A></B></DT>
+  <DT><B>ncols = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ncols' Line='ncols = 0'>
   <DD>If nonzero, the number of columns of output in multicolumn format.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_maxch">maxch = 18</A></B></DT>
+  <DT><B>maxch = 18</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='maxch' Line='maxch = 18'>
   <DD>The maximum number of characters to be displayed in each filename.
   Truncation may be desirable when listing a directory containing one or two
@@ -64,7 +53,7 @@ directory — List the files in a directory
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sort">sort = yes</A></B></DT>
+  <DT><B>sort = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sort' Line='sort = yes'>
   <DD>Sort the file list alphabetically.  If sorting is disabled the directory
   program lists the files in the order in which they are read from the
@@ -76,7 +65,7 @@ directory — List the files in a directory
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_all">all = no</A></B></DT>
+  <DT><B>all = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='all' Line='all = no'>
   <DD>List all files, including the hidden ("<TT>.</TT>" prefixed) files, and files with
   reserved filename extensions used internally by the VOS.
@@ -84,7 +73,7 @@ directory — List the files in a directory
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The <B>directory</B> task lists or prints information describing some subset
@@ -130,7 +119,7 @@ directory — List the files in a directory
   immediately.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -187,7 +176,7 @@ directory — List the files in a directory
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   There is no provision for wildcarding directories, e.g., "<TT>dir */*.x</TT>".
@@ -197,7 +186,7 @@ directory — List the files in a directory
   a filename template.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   files, pathnames
@@ -206,5 +195,3 @@ directory — List the files in a directory
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

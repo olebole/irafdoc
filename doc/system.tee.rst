@@ -1,3 +1,5 @@
+.. _tee:
+
 tee — Tee the standard output into a file
 =========================================
 
@@ -5,62 +7,49 @@ tee — Tee the standard output into a file
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>tee (Nov84)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>system</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>tee (Nov84)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>tee</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   tee -- tee the standard output to a file
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   tee file
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_file">file</A></B></DT>
+  <DT><B>file</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='file' Line='file'>
   <DD>The name of the output file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_out_type">out_type = "<TT>text</TT>"</A></B></DT>
+  <DT><B>out_type = "<TT>text</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='out_type' Line='out_type = "text"'>
   <DD>The type of output file to be created, either "<TT>text</TT>" or "<TT>binary</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_append">append = no</A></B></DT>
+  <DT><B>append = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='append' Line='append = no'>
   <DD>If set, append to an existing file, otherwise create a new file.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <I>Tee</I> copies its input to both the standard output and the named file.
   Its primary use is in pipes where one wants to capture some intermediate output.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -72,7 +61,7 @@ tee — Tee the standard output into a file
   	cl&gt; set | tee temp | match tty
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   Since the processes in an IRAF pipe execute serially rather than concurrently,
@@ -82,5 +71,3 @@ tee — Tee the standard output into a file
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS'  >
   
-  </BODY>
-  </HTML>

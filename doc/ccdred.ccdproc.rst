@@ -1,3 +1,5 @@
+.. _ccdproc:
+
 ccdproc — Process CCD images
 ============================
 
@@ -5,43 +7,30 @@ ccdproc — Process CCD images
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>ccdproc (Dec93)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.imred.ccdred</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>ccdproc (Dec93)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>ccdproc</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   ccdproc -- Process CCD images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage_">USAGE	</A></H2>
+  <H3>Usage	</H3>
   <! BeginSection: 'USAGE	'>
   <UL>
   ccdproc images
   </UL>
   <! EndSection:   'USAGE	'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>List of input CCD images to process.  The list may include processed
   images and calibration images.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output = "<TT></TT>"</A></B></DT>
+  <DT><B>output = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output = ""'>
   <DD>List of output images.  If no list is given then the processing will replace
   the input images with the processed images.  If a list is given it must
@@ -50,7 +39,7 @@ ccdproc — Process CCD images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ccdtype">ccdtype = "<TT></TT>"</A></B></DT>
+  <DT><B>ccdtype = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ccdtype' Line='ccdtype = ""'>
   <DD>CCD image type to select from the input image list.  If no type is given
   then all input images will be selected.  The recognized types are described
@@ -58,7 +47,7 @@ ccdproc — Process CCD images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_max_cache">max_cache = 0</A></B></DT>
+  <DT><B>max_cache = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='max_cache' Line='max_cache = 0'>
   <DD>Maximum image caching memory (in Mbytes).  If there is sufficient memory
   the calibration images, such as zero level, dark count, and flat fields,
@@ -68,7 +57,7 @@ ccdproc — Process CCD images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_noproc">noproc = no</A></B></DT>
+  <DT><B>noproc = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='noproc' Line='noproc = no'>
   <DD>List processing steps only?
   </DD>
@@ -78,7 +67,7 @@ ccdproc — Process CCD images
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_fixpix">fixpix = yes</A></B></DT>
+  <DT><B>fixpix = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fixpix' Line='fixpix = yes'>
   <DD>Fix bad CCD lines and columns by linear interpolation from neighboring
   lines and columns?  If yes then a bad pixel mask, image, or file must be
@@ -86,51 +75,51 @@ ccdproc — Process CCD images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_overscan">overscan = yes</A></B></DT>
+  <DT><B>overscan = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='overscan' Line='overscan = yes'>
   <DD>Apply overscan or prescan bias correction?  If yes then the overscan
   image section and the readout axis must be specified.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_trim">trim = yes</A></B></DT>
+  <DT><B>trim = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='trim' Line='trim = yes'>
   <DD>Trim the image of the overscan region and bad edge lines and columns?
   If yes then the data section must be specified.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_zerocor">zerocor = yes</A></B></DT>
+  <DT><B>zerocor = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='zerocor' Line='zerocor = yes'>
   <DD>Apply zero level correction?  If yes a zero level image must be specified.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_darkcor">darkcor = yes</A></B></DT>
+  <DT><B>darkcor = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='darkcor' Line='darkcor = yes'>
   <DD>Apply dark count correction?  If yes a dark count image must be specified.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_flatcor">flatcor = yes</A></B></DT>
+  <DT><B>flatcor = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='flatcor' Line='flatcor = yes'>
   <DD>Apply flat field correction?  If yes flat field images must be specified.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_illumcor">illumcor = no</A></B></DT>
+  <DT><B>illumcor = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='illumcor' Line='illumcor = no'>
   <DD>Apply iillumination correction?  If yes iillumination images must be specified.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fringecor">fringecor = no</A></B></DT>
+  <DT><B>fringecor = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fringecor' Line='fringecor = no'>
   <DD>Apply fringe correction?  If yes fringe images must be specified.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_readcor">readcor = no</A></B></DT>
+  <DT><B>readcor = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='readcor' Line='readcor = no'>
   <DD>Convert zero level images to readout correction images?  If yes then
   zero level images are averaged across the readout axis to form one
@@ -138,7 +127,7 @@ ccdproc — Process CCD images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_scancor">scancor = no</A></B></DT>
+  <DT><B>scancor = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='scancor' Line='scancor = no'>
   <DD>Convert zero level, dark count and flat field images to scan mode flat
   field images?  If yes then the form of scan mode correction is specified by
@@ -150,13 +139,13 @@ ccdproc — Process CCD images
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_readaxis">readaxis = "<TT>line</TT>"</A></B></DT>
+  <DT><B>readaxis = "<TT>line</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='readaxis' Line='readaxis = "line"'>
   <DD>Read out axis specified as "<TT>line</TT>" or "<TT>column</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fixfile">fixfile</A></B></DT>
+  <DT><B>fixfile</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fixfile' Line='fixfile'>
   <DD>Bad pixel mask, image, or file.  If "<TT>image</TT>" is specified then the name is
   specified in the image header or instrument translation file.  If "<TT>BPM</TT>" is
@@ -172,7 +161,7 @@ ccdproc — Process CCD images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_biassec">biassec</A></B></DT>
+  <DT><B>biassec</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='biassec' Line='biassec'>
   <DD>Overscan bias strip image section.  If "<TT>image</TT>" is specified then the overscan
   bias section is specified in the image header or instrument translation file.
@@ -185,14 +174,14 @@ ccdproc — Process CCD images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_trimsec">trimsec</A></B></DT>
+  <DT><B>trimsec</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='trimsec' Line='trimsec'>
   <DD>image section for trimming.  If "<TT>image</TT>" is specified then the trim
   image section is specified in the image header or instrument translation file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_zero">zero = "<TT></TT>"</A></B></DT>
+  <DT><B>zero = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='zero' Line='zero = ""'>
   <DD>Zero level calibration image.  The zero level image may be one or two
   dimensional.  The CCD image type and subset are not checked for these
@@ -201,7 +190,7 @@ ccdproc — Process CCD images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dark">dark = "<TT></TT>"</A></B></DT>
+  <DT><B>dark = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dark' Line='dark = ""'>
   <DD>Dark count calibration image.  The CCD image type and subset are not checked
   for these images and they take precedence over any dark count calibration
@@ -209,7 +198,7 @@ ccdproc — Process CCD images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_flat">flat = "<TT></TT>"</A></B></DT>
+  <DT><B>flat = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='flat' Line='flat = ""'>
   <DD>Flat field calibration images.  The flat field images may be one or
   two dimensional.  The CCD image type is not checked for these
@@ -219,7 +208,7 @@ ccdproc — Process CCD images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_illum">illum = "<TT></TT>"</A></B></DT>
+  <DT><B>illum = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='illum' Line='illum = ""'>
   <DD>Iillumination correction images.  The CCD image type is not checked for these
   images and they take precedence over any iillumination correction images given
@@ -228,7 +217,7 @@ ccdproc — Process CCD images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fringe">fringe = "<TT></TT>"</A></B></DT>
+  <DT><B>fringe = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fringe' Line='fringe = ""'>
   <DD>Fringe correction images.  The CCD image type is not checked for these
   images and they take precedence over any fringe correction images given
@@ -237,7 +226,7 @@ ccdproc — Process CCD images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_minreplace">minreplace = 1.</A></B></DT>
+  <DT><B>minreplace = 1.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='minreplace' Line='minreplace = 1.'>
   <DD>When processing flat fields, pixel values below this value (after
   all other processing such as overscan, zero, and dark corrections) are
@@ -247,11 +236,11 @@ ccdproc — Process CCD images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_scantype">scantype = "<TT>shortscan</TT>"</A></B></DT>
+  <DT><B>scantype = "<TT>shortscan</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='scantype' Line='scantype = "shortscan"'>
   <DD>Type of scan format used in creating the CCD images.  The modes are:
   <DL>
-  <DT><B><A NAME="l_">"<TT>shortscan</TT>"</A></B></DT>
+  <DT><B>"<TT>shortscan</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"shortscan"'>
   <DD>The CCD is scanned over a number of lines and then read out as a regular
   two dimensional image.  In this mode unscanned zero level, dark count and
@@ -260,7 +249,7 @@ ccdproc — Process CCD images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">"<TT>longscan</TT>"</A></B></DT>
+  <DT><B>"<TT>longscan</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"longscan"'>
   <DD>In this mode the CCD is clocked and read out continuously to form a long
   strip.  Flat fields are averaged across the readout axis to
@@ -272,7 +261,7 @@ ccdproc — Process CCD images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nscan">nscan</A></B></DT>
+  <DT><B>nscan</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nscan' Line='nscan'>
   <DD>Number of object scan readout lines used in short scan mode.  This parameter
   is used when the scan type is "<TT>shortscan</TT>" and the number of scan lines
@@ -296,7 +285,7 @@ ccdproc — Process CCD images
   the following parameters.
   <P>
   <DL>
-  <DT><B><A NAME="l_function">function = "<TT>legendre</TT>"</A></B></DT>
+  <DT><B>function = "<TT>legendre</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='function' Line='function = "legendre"'>
   <DD>Line-by-line determination of the overscan is specified by:
   <P>
@@ -317,47 +306,47 @@ ccdproc — Process CCD images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_order">order = 1</A></B></DT>
+  <DT><B>order = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='order' Line='order = 1'>
   <DD>Number of polynomial terms or spline pieces in the overscan fit.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sample">sample = "<TT>*</TT>"</A></B></DT>
+  <DT><B>sample = "<TT>*</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"'>
   <DD>Sample points to use in the overscan fit.  The string "<TT>*</TT>" specified all
   points otherwise an <B>icfit</B> range string is used.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_naverage">naverage = 1</A></B></DT>
+  <DT><B>naverage = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='naverage' Line='naverage = 1'>
   <DD>Number of points to average or median to form fitting points.  Positive
   numbers specify averages and negative numbers specify medians.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_niterate">niterate = 1</A></B></DT>
+  <DT><B>niterate = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='niterate' Line='niterate = 1'>
   <DD>Number of rejection iterations to remove deviant points from the overscan fit.
   If 0 then no points are rejected.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_low_reject">low_reject = 3., high_reject = 3.</A></B></DT>
+  <DT><B>low_reject = 3., high_reject = 3.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='low_reject' Line='low_reject = 3., high_reject = 3.'>
   <DD>Low and high sigma rejection factors for rejecting deviant points from the
   overscan fit.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_grow">grow = 0.</A></B></DT>
+  <DT><B>grow = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='grow' Line='grow = 0.'>
   <DD>One dimensional growing radius for rejection of neighbors to deviant points.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = no</A></B></DT>
+  <DT><B>interactive = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = no'>
   <DD>Fit the overscan vector interactively?  If yes and the overscan function type
   is one of the <B>icfit</B> types then the average overscan vector is fit
@@ -367,7 +356,7 @@ ccdproc — Process CCD images
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <B>Ccdproc</B> processes CCD images to correct and calibrate for
@@ -471,7 +460,7 @@ ccdproc — Process CCD images
   the record keeping and the need to generate new image names.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_1__fixpix">1. Fixpix</A></H2>
+  <H3>1. fixpix</H3>
   <! BeginSection: '1. Fixpix'>
   <UL>
   Regions of bad lines and columns may be replaced by linear
@@ -502,7 +491,7 @@ ccdproc — Process CCD images
   latter case the instrument file must contain the name of the file.
   </UL>
   <! EndSection:   '1. Fixpix'>
-  <H2><A NAME="s_2__overscan">2. Overscan</A></H2>
+  <H3>2. overscan</H3>
   <! BeginSection: '2. Overscan'>
   <UL>
   If an overscan or prescan correction is specified (<I>overscan</I>
@@ -533,7 +522,7 @@ ccdproc — Process CCD images
   the bias function is also recorded in the image header and log file.
   </UL>
   <! EndSection:   '2. Overscan'>
-  <H2><A NAME="s_3__trim">3. Trim</A></H2>
+  <H3>3. trim</H3>
   <! BeginSection: '3. Trim'>
   <UL>
   When the parameter <I>trim</I> is set the input image will be trimmed to
@@ -541,7 +530,7 @@ ccdproc — Process CCD images
   should, of course, be the same as that used for the calibration images.
   </UL>
   <! EndSection:   '3. Trim'>
-  <H2><A NAME="s_4__zerocor">4. Zerocor</A></H2>
+  <H3>4. zerocor</H3>
   <! BeginSection: '4. Zerocor'>
   <UL>
   After the readout bias is subtracted, as defined by the overscan or prescan
@@ -562,7 +551,7 @@ ccdproc — Process CCD images
   readout correction is specified.
   </UL>
   <! EndSection:   '4. Zerocor'>
-  <H2><A NAME="s_5__darkcor">5. Darkcor</A></H2>
+  <H3>5. darkcor</H3>
   <! BeginSection: '5. Darkcor'>
   <UL>
   Dark counts are subtracted by scaling a dark count calibration image to
@@ -579,7 +568,7 @@ ccdproc — Process CCD images
   and trimming.
   </UL>
   <! EndSection:   '5. Darkcor'>
-  <H2><A NAME="s_6__flatcor">6. Flatcor</A></H2>
+  <H3>6. flatcor</H3>
   <! BeginSection: '6. Flatcor'>
   <UL>
   The relative detector pixel response is calibrated by dividing by a
@@ -616,7 +605,7 @@ ccdproc — Process CCD images
   <B>ccdproc</B>.
   </UL>
   <! EndSection:   '6. Flatcor'>
-  <H2><A NAME="s_7__illumcor">7. Illumcor</A></H2>
+  <H3>7. illumcor</H3>
   <! BeginSection: '7. Illumcor'>
   <UL>
   CCD images processed through the flat field calibration may not be
@@ -645,7 +634,7 @@ ccdproc — Process CCD images
   tasks which create them; <B>mkillumcor</B> and <B>mkskycor</B>.
   </UL>
   <! EndSection:   '7. Illumcor'>
-  <H2><A NAME="s_8__fringecor">8. Fringecor</A></H2>
+  <H3>8. fringecor</H3>
   <! BeginSection: '8. Fringecor'>
   <UL>
   There may be a fringe pattern in the images due to the night sky lines.
@@ -660,7 +649,7 @@ ccdproc — Process CCD images
   The task <B>mkfringecor</B> is used to create the fringe correction images.
   </UL>
   <! EndSection:   '8. Fringecor'>
-  <H2><A NAME="s_9__readcor">9. Readcor</A></H2>
+  <H3>9. readcor</H3>
   <! BeginSection: '9. Readcor'>
   <UL>
   If a zero level correction is desired (<I>zerocor</I> parameter)
@@ -676,7 +665,7 @@ ccdproc — Process CCD images
   level calibration image.
   </UL>
   <! EndSection:   '9. Readcor'>
-  <H2><A NAME="s_10__scancor">10. Scancor</A></H2>
+  <H3>10. scancor</H3>
   <! BeginSection: '10. Scancor'>
   <UL>
   CCD detectors may be operated in several modes in astronomical
@@ -723,21 +712,21 @@ ccdproc — Process CCD images
   flat field correction will be applied.
   </UL>
   <! EndSection:   '10. Scancor'>
-  <H2><A NAME="s_11__processing_steps">11. Processing Steps</A></H2>
+  <H3>11. processing steps</H3>
   <! BeginSection: '11. Processing Steps'>
   <UL>
   The following describes the steps taken by the task.  This detailed
   outline provides the most detailed specification of the task.
   <P>
   <DL>
-  <DT><B><A NAME="l_">(1)</A></B></DT>
+  <DT><B>(1)</B></DT>
   <! Sec='11. Processing Steps' Level=0 Label='' Line='(1)'>
   <DD>An image to be processed is first checked that it is of the specified
   CCD image type.  If it is not the desired type then go on to the next image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(2)</A></B></DT>
+  <DT><B>(2)</B></DT>
   <! Sec='11. Processing Steps' Level=0 Label='' Line='(2)'>
   <DD>A temporary output image is created of the specified pixel data type
   (<B>ccdred.pixeltype</B>).  The header parameters are copied from the
@@ -745,14 +734,14 @@ ccdproc — Process CCD images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(3)</A></B></DT>
+  <DT><B>(3)</B></DT>
   <! Sec='11. Processing Steps' Level=0 Label='' Line='(3)'>
   <DD>If trimming is specified and the image has not been trimmed previously,
   the trim section is determined.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(4)</A></B></DT>
+  <DT><B>(4)</B></DT>
   <! Sec='11. Processing Steps' Level=0 Label='' Line='(4)'>
   <DD>If bad pixel replacement is specified and this has not been done
   previously, the bad pixel file is determined either from the task
@@ -763,7 +752,7 @@ ccdproc — Process CCD images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(5)</A></B></DT>
+  <DT><B>(5)</B></DT>
   <! Sec='11. Processing Steps' Level=0 Label='' Line='(5)'>
   <DD>If an overscan correction is specified and this correction has not been
   applied, the overscan section is averaged along the readout axis.  If
@@ -775,7 +764,7 @@ ccdproc — Process CCD images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(6)</A></B></DT>
+  <DT><B>(6)</B></DT>
   <! Sec='11. Processing Steps' Level=0 Label='' Line='(6)'>
   <DD>If the image is a zero level image go to processing step 12.
   If a zero level correction is desired and this correction has not been
@@ -789,7 +778,7 @@ ccdproc — Process CCD images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(7)</A></B></DT>
+  <DT><B>(7)</B></DT>
   <! Sec='11. Processing Steps' Level=0 Label='' Line='(7)'>
   <DD>If the image is a dark count image go to processing step 12.
   If a dark count correction is desired and this correction has not been
@@ -806,7 +795,7 @@ ccdproc — Process CCD images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(8)</A></B></DT>
+  <DT><B>(8)</B></DT>
   <! Sec='11. Processing Steps' Level=0 Label='' Line='(8)'>
   <DD>If the image is a flat field image go to processing step 12.  If a flat
   field correction is desired and this correction has not been performed,
@@ -822,7 +811,7 @@ ccdproc — Process CCD images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(9)</A></B></DT>
+  <DT><B>(9)</B></DT>
   <! Sec='11. Processing Steps' Level=0 Label='' Line='(9)'>
   <DD>If the image is an iillumination image go to processing step 12.  If an
   iillumination correction is desired and this correction has not been performed,
@@ -836,7 +825,7 @@ ccdproc — Process CCD images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(10)</A></B></DT>
+  <DT><B>(10)</B></DT>
   <! Sec='11. Processing Steps' Level=0 Label='' Line='(10)'>
   <DD>If the image is a fringe image go to processing step 12.  If a fringe
   correction is desired and this correction has not been performed,
@@ -851,14 +840,14 @@ ccdproc — Process CCD images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(11)</A></B></DT>
+  <DT><B>(11)</B></DT>
   <! Sec='11. Processing Steps' Level=0 Label='' Line='(11)'>
   <DD>If there are no processing operations flagged, delete the temporary output
   image, which has been opened but not used, and go to 14.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(12)</A></B></DT>
+  <DT><B>(12)</B></DT>
   <! Sec='11. Processing Steps' Level=0 Label='' Line='(12)'>
   <DD>The input image is processed line by line with trimmed lines ignored.
   A line of the input image is read.  Bad pixel replacement and trimming
@@ -881,21 +870,21 @@ ccdproc — Process CCD images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(13)</A></B></DT>
+  <DT><B>(13)</B></DT>
   <! Sec='11. Processing Steps' Level=0 Label='' Line='(13)'>
   <DD>The input image is deleted or renamed to a backup image.  The temporary
   output image is renamed to the input image name.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(14)</A></B></DT>
+  <DT><B>(14)</B></DT>
   <! Sec='11. Processing Steps' Level=0 Label='' Line='(14)'>
   <DD>If the image is a zero level image and the readout correction is specified
   then it is averaged to a one dimensional readout correction.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(15)</A></B></DT>
+  <DT><B>(15)</B></DT>
   <! Sec='11. Processing Steps' Level=0 Label='' Line='(15)'>
   <DD>If the image is a zero level, dark count, or flat field image and the scan
   mode correction is specified then the correction is applied.  For shortscan
@@ -904,7 +893,7 @@ ccdproc — Process CCD images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(16)</A></B></DT>
+  <DT><B>(16)</B></DT>
   <! Sec='11. Processing Steps' Level=0 Label='' Line='(16)'>
   <DD>The processing is completed and either the next input image is processed
   beginning at step 1 or, if it is a calibration image which is being
@@ -914,7 +903,7 @@ ccdproc — Process CCD images
   </DL>
   </UL>
   <! EndSection:   '11. Processing Steps'>
-  <H2><A NAME="s_12__processing_arithmetic">12. Processing Arithmetic</A></H2>
+  <H3>12. processing arithmetic</H3>
   <! BeginSection: '12. Processing Arithmetic'>
   <UL>
   The <B>ccdproc</B> task has two data paths, one for real image pixel datatypes
@@ -924,7 +913,7 @@ ccdproc — Process CCD images
   The following rules describe the processing arithmetic and data paths.
   <P>
   <DL>
-  <DT><B><A NAME="l_">(1)</A></B></DT>
+  <DT><B>(1)</B></DT>
   <! Sec='12. Processing Arithmetic' Level=0 Label='' Line='(1)'>
   <DD>If the input, output, or any calibration image is of type real the
   real data path is used.  This means all image data is converted to
@@ -935,7 +924,7 @@ ccdproc — Process CCD images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(2)</A></B></DT>
+  <DT><B>(2)</B></DT>
   <! Sec='12. Processing Arithmetic' Level=0 Label='' Line='(2)'>
   <DD>In the real data path the processing arithmetic is always real and,
   if the output image is of short pixel datatype, the result
@@ -943,7 +932,7 @@ ccdproc — Process CCD images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(3)</A></B></DT>
+  <DT><B>(3)</B></DT>
   <! Sec='12. Processing Arithmetic' Level=0 Label='' Line='(3)'>
   <DD>The overscan vector and the scale factors for dark count, flat field,
   iillumination, and fringe calibrations are always of type real.  Therefore,
@@ -954,7 +943,7 @@ ccdproc — Process CCD images
   </DL>
   </UL>
   <! EndSection:   '12. Processing Arithmetic'>
-  <H2><A NAME="s_13__in_the_absence_of_image_header_information">13. In the Absence of Image Header Information</A></H2>
+  <H3>13. in the absence of image header information</H3>
   <! BeginSection: '13. In the Absence of Image Header Information'>
   <UL>
   The tasks in the <B>ccdred</B> package are most convenient to use when
@@ -979,7 +968,7 @@ ccdproc — Process CCD images
   the image header.
   </UL>
   <! EndSection:   '13. In the Absence of Image Header Information'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   The user's <B>guide</B> presents a tutorial in the use of this task.
@@ -993,7 +982,7 @@ ccdproc — Process CCD images
   been processed previously.
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   <PRE>
@@ -1025,11 +1014,11 @@ ccdproc — Process CCD images
   </PRE>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_CCDPROC">CCDPROC V2.11.2</A></B></DT>
+  <DT><B>CCDPROC V2.11.2</B></DT>
   <! Sec='REVISIONS' Level=0 Label='CCDPROC' Line='CCDPROC V2.11.2'>
   <DD>A new "<TT>output</TT>" parameter is available to specify an output image leaving
   the input image unchanged.  If this parameter is not specified then
@@ -1038,7 +1027,7 @@ ccdproc — Process CCD images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_CCDPROC">CCDPROC V2.11</A></B></DT>
+  <DT><B>CCDPROC V2.11</B></DT>
   <! Sec='REVISIONS' Level=0 Label='CCDPROC' Line='CCDPROC V2.11'>
   <DD>The bad pixel fixing was modified to allow use of pixel masks,
   images, or the text file description.  Bad pixel masks are the
@@ -1051,7 +1040,7 @@ ccdproc — Process CCD images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_CCDPROC">CCDPROC: V2.10.3</A></B></DT>
+  <DT><B>CCDPROC: V2.10.3</B></DT>
   <! Sec='REVISIONS' Level=0 Label='CCDPROC' Line='CCDPROC: V2.10.3'>
   <DD>The output pixel datatypes (specified by the package parameter
   <I>pixeltype</I> have been extended to include unsigned short
@@ -1075,7 +1064,7 @@ ccdproc — Process CCD images
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   <PRE>
@@ -1087,5 +1076,3 @@ ccdproc — Process CCD images
   
   <! Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' '1. Fixpix' '2. Overscan' '3. Trim' '4. Zerocor' '5. Darkcor' '6. Flatcor' '7. Illumcor' '8. Fringecor' '9. Readcor' '10. Scancor' '11. Processing Steps' '12. Processing Arithmetic' '13. In the Absence of Image Header Information' 'EXAMPLES' 'TIME REQUIREMENTS' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

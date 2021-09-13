@@ -1,3 +1,5 @@
+.. _mk1dspec:
+
 mk1dspec — Make/add artificial 1D spectra
 =========================================
 
@@ -5,42 +7,29 @@ mk1dspec — Make/add artificial 1D spectra
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>mk1dspec (Jul95)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.artdata</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>mk1dspec (Jul95)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>mk1dspec</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   mk1dspec -- Make/add artificial 1D spectra
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   mk1dspec input
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>Spectra to create or modify.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output = "<TT></TT>"</A></B></DT>
+  <DT><B>output = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output = ""'>
   <DD>Output spectra when modifying input spectra.  If no output spectra are
   given then existing spectra in the input list are modified directly.
@@ -48,13 +37,13 @@ mk1dspec — Make/add artificial 1D spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ap">ap = 1</A></B></DT>
+  <DT><B>ap = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ap' Line='ap = 1'>
   <DD>Image line to be created or modified in images of dimension greater than 1.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rv">rv = 0.</A></B></DT>
+  <DT><B>rv = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rv' Line='rv = 0.'>
   <DD>Radial velocity (km/s) or redshift, as selected by the parameter <I>z</I>,
   applied to line positions and continuum.  Velocities are converted to
@@ -64,7 +53,7 @@ mk1dspec — Make/add artificial 1D spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_z">z = no</A></B></DT>
+  <DT><B>z = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='z' Line='z = no'>
   <DD>Is the velocity parameter a radial velocity or a redshift?
   </DD>
@@ -72,25 +61,25 @@ mk1dspec — Make/add artificial 1D spectra
   <P>
   WHEN CREATING NEW SPECTRA
   <DL>
-  <DT><B><A NAME="l_title">title = "<TT></TT>"</A></B></DT>
+  <DT><B>title = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='title' Line='title = ""'>
   <DD>Image title to be given to the spectra.  Maximum of 79 characters.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ncols">ncols = 512</A></B></DT>
+  <DT><B>ncols = 512</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ncols' Line='ncols = 512'>
   <DD>Number of columns.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_naps">naps = 1</A></B></DT>
+  <DT><B>naps = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='naps' Line='naps = 1'>
   <DD>Number of lines or apertures.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_header">header = "<TT>artdata$stdheader.dat</TT>"</A></B></DT>
+  <DT><B>header = "<TT>artdata$stdheader.dat</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='header' Line='header = "artdata$stdheader.dat"'>
   <DD>Image or header keyword data file.  If an image is given then the image header
   is copied.  If a file is given then the FITS format cards are copied.
@@ -103,7 +92,7 @@ mk1dspec — Make/add artificial 1D spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wstart">wstart = 4000., wend = 8000.</A></B></DT>
+  <DT><B>wstart = 4000., wend = 8000.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wstart' Line='wstart = 4000., wend = 8000.'>
   <DD>Starting and ending wavelengths in Angstroms.  The dispersion is
   determined by these values and the number of columns.
@@ -112,13 +101,13 @@ mk1dspec — Make/add artificial 1D spectra
   <P>
   CONTINUUM PARAMETERS
   <DL>
-  <DT><B><A NAME="l_continuum">continuum = 1000., slope = 0.</A></B></DT>
+  <DT><B>continuum = 1000., slope = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='continuum' Line='continuum = 1000., slope = 0.'>
   <DD>Continuum of the starting wavelength at rest and the slope of the continuum.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_temperature">temperature = 5700.</A></B></DT>
+  <DT><B>temperature = 5700.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='temperature' Line='temperature = 5700.'>
   <DD>Blackbody continuum temperature in Kelvin.  A value of 0 is used if
   no blackbody continuum is desired.  The intensity level is set by
@@ -126,7 +115,7 @@ mk1dspec — Make/add artificial 1D spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fnu">fnu = no</A></B></DT>
+  <DT><B>fnu = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fnu' Line='fnu = no'>
   <DD>Compute the continuum as flux per unit frequency (F-nu) if yes or flux per
   unit wavelength (F-lambda) if no.
@@ -136,7 +125,7 @@ mk1dspec — Make/add artificial 1D spectra
   <P>
   LINE PARAMETERS
   <DL>
-  <DT><B><A NAME="l_lines">lines = "<TT></TT>"</A></B></DT>
+  <DT><B>lines = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lines' Line='lines = ""'>
   <DD>List of spectral line files.  Spectral line files contain lines of rest
   wavelength, peak, profile type, and widths (see the DESCRIPTION
@@ -151,7 +140,7 @@ mk1dspec — Make/add artificial 1D spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nlines">nlines = 0</A></B></DT>
+  <DT><B>nlines = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nlines' Line='nlines = 0'>
   <DD>If no spectral line file or a new file is specified then the task will
   generate this number of random spectral lines.  The rest wavelengths are
@@ -163,7 +152,7 @@ mk1dspec — Make/add artificial 1D spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_profile">profile = "<TT>gaussian</TT>" (gaussian|lorentzian|voigt)</A></B></DT>
+  <DT><B>profile = "<TT>gaussian</TT>" (gaussian|lorentzian|voigt)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='profile' Line='profile = "gaussian" (gaussian|lorentzian|voigt)'>
   <DD>The default profile type for random lines or when not specified in the
   spectral line file.  The profile types are:
@@ -176,7 +165,7 @@ mk1dspec — Make/add artificial 1D spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_peak">peak = -0.5</A></B></DT>
+  <DT><B>peak = -0.5</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='peak' Line='peak = -0.5'>
   <DD>The maximum spectral line peak value when generating random lines or
   when the peak is missing from the spectral line file.
@@ -185,7 +174,7 @@ mk1dspec — Make/add artificial 1D spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_gfwhm">gfwhm = 20., lfwhm = 20.</A></B></DT>
+  <DT><B>gfwhm = 20., lfwhm = 20.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='gfwhm' Line='gfwhm = 20., lfwhm = 20.'>
   <DD>The default gaussian and lorentzian full widths at half maximum (FWHM), in
   Angstroms, used when generating random lines or when the widths are missing
@@ -193,7 +182,7 @@ mk1dspec — Make/add artificial 1D spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_seed">seed = 1</A></B></DT>
+  <DT><B>seed = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='seed' Line='seed = 1'>
   <DD>Random number seed.  If a value of "<TT>INDEF</TT>" is given then the clock
   time (integer seconds since 1980) is used as the seed yielding
@@ -202,7 +191,7 @@ mk1dspec — Make/add artificial 1D spectra
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_comments">comments = yes</A></B></DT>
+  <DT><B>comments = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='comments' Line='comments = yes'>
   <DD>Include comments recording task parameters in the image header?
   </DD>
@@ -210,14 +199,14 @@ mk1dspec — Make/add artificial 1D spectra
   <P>
   PACKAGE PARAMETERS
   <DL>
-  <DT><B><A NAME="l_nxsub">nxsub = 10</A></B></DT>
+  <DT><B>nxsub = 10</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nxsub' Line='nxsub = 10'>
   <DD>Number of pixel subsamples used in computing the gaussian spectral line
   profiles.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dynrange">dynrange = 100000.</A></B></DT>
+  <DT><B>dynrange = 100000.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dynrange' Line='dynrange = 100000.'>
   <DD>The gaussian line profiles extend to infinity so a dynamic range, the ratio
   of the peak intensity to the cutoff intensity, is imposed to cutoff
@@ -226,7 +215,7 @@ mk1dspec — Make/add artificial 1D spectra
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task creates or modifies one dimensional spectra.  with a combination
@@ -348,7 +337,7 @@ mk1dspec — Make/add artificial 1D spectra
   wavelength at rest.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Create a simple blackbody continuum between the default wavelengths.
@@ -434,18 +423,18 @@ mk1dspec — Make/add artificial 1D spectra
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_MK1DSPEC">MK1DSPEC V2.11+</A></B></DT>
+  <DT><B>MK1DSPEC V2.11+</B></DT>
   <! Sec='REVISIONS' Level=0 Label='MK1DSPEC' Line='MK1DSPEC V2.11+'>
   <DD>The random number seed can be set from the clock time by using the value
   "<TT>INDEF</TT>" to yield different random numbers for each execution.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_MK1DSPEC">MK1DSPEC V2.11</A></B></DT>
+  <DT><B>MK1DSPEC V2.11</B></DT>
   <! Sec='REVISIONS' Level=0 Label='MK1DSPEC' Line='MK1DSPEC V2.11'>
   <DD>Lorentzian and Voigt profiles were added and the parameters and input
   line list format were changed.  The widths are now FWHM instead of
@@ -453,7 +442,7 @@ mk1dspec — Make/add artificial 1D spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_MK1DSPEC">MK1DSPEC V2.10.3</A></B></DT>
+  <DT><B>MK1DSPEC V2.10.3</B></DT>
   <! Sec='REVISIONS' Level=0 Label='MK1DSPEC' Line='MK1DSPEC V2.10.3'>
   <DD>The format parameter was eliminated and the task updated to produce the
   current coordinate system format.
@@ -461,7 +450,7 @@ mk1dspec — Make/add artificial 1D spectra
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   mknoise, mk2dspec, mkheader, onedspec.sinterp
@@ -470,5 +459,3 @@ mk1dspec — Make/add artificial 1D spectra
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

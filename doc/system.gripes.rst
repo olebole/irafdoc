@@ -1,3 +1,5 @@
+.. _gripes:
+
 gripes — Send suggestions, complaints, etc. to the system
 =========================================================
 
@@ -5,50 +7,37 @@ gripes — Send suggestions, complaints, etc. to the system
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>gripes (Mar86)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>system</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>gripes (Mar86)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>gripes</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   gripes -- send gripes or suggestions to the system
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   gripes subject
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_subject">subject</A></B></DT>
+  <DT><B>subject</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='subject' Line='subject'>
   <DD>The subject of the gripe; any string, usually the name of package or task
   to which the gripe refers.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print instructions on how to enter text whenever <I>gripes</I> is run.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The <B>gripes</B> task is used to post complaints, suggestions, or any other
@@ -75,7 +64,7 @@ gripes — Send suggestions, complaints, etc. to the system
   than sufficient reason for a gripe.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -96,7 +85,7 @@ gripes — Send suggestions, complaints, etc. to the system
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   There is currently no provision for communicating gripes from a remote site
@@ -104,7 +93,7 @@ gripes — Send suggestions, complaints, etc. to the system
   a gripe (or the accumulated gripesfile).
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   news
@@ -113,5 +102,3 @@ gripes — Send suggestions, complaints, etc. to the system
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

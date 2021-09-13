@@ -1,3 +1,5 @@
+.. _imcentroid:
+
 imcentroid — Compute and print relative shifts for a list of 2-D images
 =======================================================================
 
@@ -5,39 +7,26 @@ imcentroid — Compute and print relative shifts for a list of 2-D images
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>imcentroid (Jan97)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.immatch</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>imcentroid (Jan97)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>imcentroid</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   imcentroid -- center sources in images, optionally find shifts
   <P>
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   imcentroid input reference coords
   <P>
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <P>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The list of images within which sources are to be centered.  If a
   <I>reference</I> image is specified, imcentroid will calculate the mean
@@ -48,7 +37,7 @@ imcentroid — Compute and print relative shifts for a list of 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_reference">reference = "<TT></TT>"</A></B></DT>
+  <DT><B>reference = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='reference' Line='reference = ""'>
   <DD>The reference image to which the input images will be aligned.  If
   a reference image is specified the mean X and Y shifts between each of
@@ -57,7 +46,7 @@ imcentroid — Compute and print relative shifts for a list of 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_coords">coords</A></B></DT>
+  <DT><B>coords</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='coords' Line='coords'>
   <DD>A text file containing the coordinates of the registration objects to
   be centered in each image, one object per line with the x and y
@@ -66,7 +55,7 @@ imcentroid — Compute and print relative shifts for a list of 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_shifts">shifts = "<TT></TT>"</A></B></DT>
+  <DT><B>shifts = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='shifts' Line='shifts = ""'>
   <DD>A text file containing the initial estimate for each image of the
   shift in each axis relative to the reference image.  These
@@ -80,7 +69,7 @@ imcentroid — Compute and print relative shifts for a list of 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_boxsize">boxsize = 7</A></B></DT>
+  <DT><B>boxsize = 7</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='boxsize' Line='boxsize = 7'>
   <DD>The size in pixels of the box to use for the final centering, during
   which all the sources in the coords file are recentered in each image
@@ -90,7 +79,7 @@ imcentroid — Compute and print relative shifts for a list of 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_bigbox">bigbox = 11</A></B></DT>
+  <DT><B>bigbox = 11</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='bigbox' Line='bigbox = 11'>
   <DD>The size in pixels of the box to use for coarse centering.  The coarse
   pass through the centering algorithm is made with the box centered at
@@ -105,13 +94,13 @@ imcentroid — Compute and print relative shifts for a list of 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_negative">negative = no</A></B></DT>
+  <DT><B>negative = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='negative' Line='negative = no'>
   <DD>Are the features negative ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_background">background = INDEF</A></B></DT>
+  <DT><B>background = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='background' Line='background = INDEF'>
   <DD>The absolute reference level for the marginal centroid calculation.
   If background is INDEF, this is set to the mean value (between the
@@ -119,21 +108,21 @@ imcentroid — Compute and print relative shifts for a list of 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lower">lower = INDEF</A></B></DT>
+  <DT><B>lower = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lower' Line='lower = INDEF'>
   <DD>The lower threshold for the data.  Individual pixels less than this
   value will be given zero weight in the centroids.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_upper">upper = INDEF</A></B></DT>
+  <DT><B>upper = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='upper' Line='upper = INDEF'>
   <DD>The upper threshold for the data.  Individual pixels greater than this
   value will be given zero weight in the centroids.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_niterate">niterate = 3</A></B></DT>
+  <DT><B>niterate = 3</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='niterate' Line='niterate = 3'>
   <DD>The maximum number of centering iterations to perform.  The centering
   will halt when this limit is reached or when the desired tolerance
@@ -141,14 +130,14 @@ imcentroid — Compute and print relative shifts for a list of 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_tolerance">tolerance = 0</A></B></DT>
+  <DT><B>tolerance = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='tolerance' Line='tolerance = 0'>
   <DD>The tolerance for convergence of the centering algorithm.  This is the
   integral shift of the centering box from one iteration to the next.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_maxshift">maxshift = INDEFR</A></B></DT>
+  <DT><B>maxshift = INDEFR</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='maxshift' Line='maxshift = INDEFR'>
   <DD>The maximum permitted difference between the predicted shift and the
   the computed shift for each object. Objects with shifts greater than
@@ -156,7 +145,7 @@ imcentroid — Compute and print relative shifts for a list of 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print the centers for the individual objects ?  If verbose is no
   only the shifts relative to the reference coordinates will be reported.
@@ -166,7 +155,7 @@ imcentroid — Compute and print relative shifts for a list of 2-D images
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -266,7 +255,7 @@ imcentroid — Compute and print relative shifts for a list of 2-D images
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_centering_algorithm">CENTERING ALGORITHM</A></H2>
+  <H3>Centering algorithm</H3>
   <! BeginSection: 'CENTERING ALGORITHM'>
   <UL>
   <P>
@@ -295,7 +284,7 @@ imcentroid — Compute and print relative shifts for a list of 2-D images
   <P>
   </UL>
   <! EndSection:   'CENTERING ALGORITHM'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -324,7 +313,7 @@ imcentroid — Compute and print relative shifts for a list of 2-D images
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   The coarse centering portion of the algorithm can be fooled if the
@@ -333,7 +322,7 @@ imcentroid — Compute and print relative shifts for a list of 2-D images
   complicated shape to the background.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imalign, imshift, xregister, geomap, geotran
@@ -342,5 +331,3 @@ imcentroid — Compute and print relative shifts for a list of 2-D images
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'CENTERING ALGORITHM' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _precess:
+
 precess — Precess a list of astronomical coordinates
 ====================================================
 
@@ -5,55 +7,42 @@ precess — Precess a list of astronomical coordinates
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>precess (Oct87)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.astutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>precess (Oct87)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>precess</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   precess -- general astronomical coordinate precession
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   precess files startyear endyear
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_files">files</A></B></DT>
+  <DT><B>files</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='files' Line='files'>
   <DD>The name of a file (or a file list or template) containing the coordinates
   to be precessed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_startyear">startyear</A></B></DT>
+  <DT><B>startyear</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='startyear' Line='startyear'>
   <DD>The default equinox of the input coordinates.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_endyear">endyear</A></B></DT>
+  <DT><B>endyear</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='endyear' Line='endyear'>
   <DD>The default target year to which the coordinates will be precessed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_stdepoch">stdepoch = 0</A></B></DT>
+  <DT><B>stdepoch = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='stdepoch' Line='stdepoch = 0'>
   <DD>If nonzero, coordinates will be output precessed to both <B>endyear</B>
   and the specified standard epoch.
@@ -61,7 +50,7 @@ precess — Precess a list of astronomical coordinates
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Coordinates are read from the input file as RA and DEC pairs,
@@ -74,7 +63,7 @@ precess — Precess a list of astronomical coordinates
   Basic data is taken from the Explanation to the American Ephemeris.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   Precess coordinate entered interactively from 1950 to 1990, except where
@@ -109,5 +98,3 @@ precess — Precess a list of astronomical coordinates
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES'  >
   
-  </BODY>
-  </HTML>

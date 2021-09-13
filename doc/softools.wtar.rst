@@ -1,3 +1,5 @@
+.. _wtar:
+
 wtar — Write a TAR format archive file
 ======================================
 
@@ -5,60 +7,47 @@ wtar — Write a TAR format archive file
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>wtar (Oct92)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>softools</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>wtar (Oct92)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>wtar</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   wtar -- write TAR format archive file
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   wtar [-flags] [-f archive] [files]
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_arguments">ARGUMENTS</A></H2>
+  <H3>Arguments</H3>
   <! BeginSection: 'ARGUMENTS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_">-d</A></B></DT>
+  <DT><B>-d</B></DT>
   <! Sec='ARGUMENTS' Level=0 Label='' Line='-d'>
   <DD>Print debug messages.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-o</A></B></DT>
+  <DT><B>-o</B></DT>
   <! Sec='ARGUMENTS' Level=0 Label='' Line='-o'>
   <DD>Omit binary files.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-t</A></B></DT>
+  <DT><B>-t</B></DT>
   <! Sec='ARGUMENTS' Level=0 Label='' Line='-t'>
   <DD>Print the name of each file as it is written or omitted.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-v</A></B></DT>
+  <DT><B>-v</B></DT>
   <! Sec='ARGUMENTS' Level=0 Label='' Line='-v'>
   <DD>Verbose mode; print more information about each file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">-f archive</A></B></DT>
+  <DT><B>-f archive</B></DT>
   <! Sec='ARGUMENTS' Level=0 Label='' Line='-f archive'>
   <DD>The tar format file to be written, i.e., "<TT>stdout</TT>", a host magtape device
   name (e.g., "/dev/nrmt8"<TT> or </TT>"MSA0"<TT>), or the IRAF virtual filename of a disk
@@ -66,7 +55,7 @@ wtar — Write a TAR format archive file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_files">files</A></B></DT>
+  <DT><B>files</B></DT>
   <! Sec='ARGUMENTS' Level=0 Label='files' Line='files'>
   <DD>The names of the files or root directories of directory trees to be written
   to the archive file.  If no files are specified </TT>"."<TT> (the directory tree
@@ -75,7 +64,7 @@ wtar — Write a TAR format archive file
   </DL>
   </UL>
   <! EndSection:   'ARGUMENTS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The named files and directories are written to the indicated
@@ -103,7 +92,7 @@ wtar — Write a TAR format archive file
   device name, e.g., "/dev/nrmt8"<TT> or </TT>"MSA0"<TT>.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Make a source-only archive of the IRAF system on the UNIX device
@@ -136,7 +125,7 @@ wtar — Write a TAR format archive file
   but switching between IRAF and host device names can be confusing.
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   rtar, rmbin
@@ -145,5 +134,3 @@ wtar — Write a TAR format archive file
   
   <! Contents: 'NAME' 'USAGE' 'ARGUMENTS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _epix:
+
 epix — Edit pixels in an image
 ==============================
 
@@ -5,61 +7,48 @@ epix — Edit pixels in an image
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>epix (Jun84)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>proto</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>epix (Jun84)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>epix</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   epix -- edit pixels in an image
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   epix image_name x y new_value
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_image_name">image_name</A></B></DT>
+  <DT><B>image_name</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='image_name' Line='image_name'>
   <DD>Name of image or image section to be edited.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xcoord">xcoord, ycoord</A></B></DT>
+  <DT><B>xcoord, ycoord</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xcoord' Line='xcoord, ycoord'>
   <DD>The coordinates of the pixel to be edited.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_new_value">new_value</A></B></DT>
+  <DT><B>new_value</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='new_value' Line='new_value'>
   <DD>The new value of the pixel.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_boxsize">boxsize = 3</A></B></DT>
+  <DT><B>boxsize = 3</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='boxsize' Line='boxsize = 3'>
   <DD>The width of a square subraster surrounding the pixel to be edited over which
   the rejection mean and the median will be computed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ksigma">ksigma = 0.0</A></B></DT>
+  <DT><B>ksigma = 0.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ksigma' Line='ksigma = 0.0'>
   <DD>The pixel rejection threshold for the iterative rejection algorithm used
   to compute the mean.  If zero, a rejection threshold will be computed based
@@ -67,14 +56,14 @@ epix — Edit pixels in an image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_edit_image">edit_image = yes</A></B></DT>
+  <DT><B>edit_image = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='edit_image' Line='edit_image = yes'>
   <DD>Set the pixel value to <I>new_value</I>?  If editing is disabled the mean
   and median may still be computed, and the subraster may still be printed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print the values of the pixels in the subraster surrounding the image,
   and compute the rejection mean and the median.
@@ -82,7 +71,7 @@ epix — Edit pixels in an image
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   A subraster <I>boxsize</I> pixels square is extracted centered on the pixel
@@ -92,7 +81,7 @@ epix — Edit pixels in an image
   the program will ask for the <I>new_value</I> and edit the image.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Replace the specified pixels with a value of zero.
@@ -104,7 +93,7 @@ epix — Edit pixels in an image
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imedit
@@ -113,5 +102,3 @@ epix — Edit pixels in an image
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

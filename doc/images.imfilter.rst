@@ -10,7 +10,6 @@ imfilter — Image filtering package
    imfilter.frmedian
    imfilter.frmode
    imfilter.gauss
-   imfilter.gradient
    imfilter.laplace
    imfilter.median
    imfilter.mode

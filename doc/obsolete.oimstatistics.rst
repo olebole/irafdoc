@@ -1,3 +1,5 @@
+.. _oimstatistics:
+
 oimstatistics — IMSTATISTICS from V2.11.3
 =========================================
 
@@ -5,62 +7,49 @@ oimstatistics — IMSTATISTICS from V2.11.3
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>oimstatistics (Jan90)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>oimstatistics (Jan90)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>oimstatistics</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   oimstatistics -- compute and print image pixel statistics
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage_">USAGE	</A></H2>
+  <H3>Usage	</H3>
   <! BeginSection: 'USAGE	'>
   <UL>
   oimstatistics images
   </UL>
   <! EndSection:   'USAGE	'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>Images for which pixel statistics are to be computed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fields">fields = "<TT>image,npix,mean,stddev,min,max</TT>"</A></B></DT>
+  <DT><B>fields = "<TT>image,npix,mean,stddev,min,max</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fields' Line='fields = "image,npix,mean,stddev,min,max"'>
   <DD>The statistical quantities to be computed and printed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lower">lower = INDEF</A></B></DT>
+  <DT><B>lower = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lower' Line='lower = INDEF'>
   <DD>Use only pixels with values greater than or equal to this limit.
   All pixels are above the default value of INDEF.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_upper">upper = INDEF</A></B></DT>
+  <DT><B>upper = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='upper' Line='upper = INDEF'>
   <DD>Use only pixels with values less than or equal to this limit.
   All pixels are below the default value of INDEF.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_binwidth">binwidth = 0.1</A></B></DT>
+  <DT><B>binwidth = 0.1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='binwidth' Line='binwidth = 0.1'>
   <DD>The width of the histogram bins used for computing the midpoint (estimate
   of the median) and the mode.
@@ -68,7 +57,7 @@ oimstatistics — IMSTATISTICS from V2.11.3
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_format">format = yes</A></B></DT>
+  <DT><B>format = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='format' Line='format = yes'>
   <DD>Label the output columns and print the result in fixed format. If format
   is "<TT>no</TT>" no column labels are printed and the output is in free format.
@@ -76,7 +65,7 @@ oimstatistics — IMSTATISTICS from V2.11.3
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The statistical quantities specified by the parameter <I>fields</I> are
@@ -122,7 +111,7 @@ oimstatistics — IMSTATISTICS from V2.11.3
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. To find the number of pixels, mean, standard deviation and the minimum
@@ -149,7 +138,7 @@ oimstatistics — IMSTATISTICS from V2.11.3
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   When using a very large number of pixels the accumulation of the sums
@@ -158,7 +147,7 @@ oimstatistics — IMSTATISTICS from V2.11.3
   deviation is small compared to the mean.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   </UL>
@@ -166,5 +155,3 @@ oimstatistics — IMSTATISTICS from V2.11.3
   
   <! Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

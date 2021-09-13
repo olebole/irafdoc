@@ -1,3 +1,5 @@
+.. _fitprofs:
+
 fitprofs — Fit gaussian profiles
 ================================
 
@@ -5,36 +7,23 @@ fitprofs — Fit gaussian profiles
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>fitprofs (Mar92)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.onedspec</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>fitprofs (Mar92)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>fitprofs</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   fitprofs -- Fit 1D profiles to features in image vectors
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   fitprofs input
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of input images to be fit.  The images may be one dimensional
   spectra (one or more spectra per image) or long slit spectra.  Other
@@ -44,7 +33,7 @@ fitprofs — Fit gaussian profiles
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lines">lines = "<TT></TT>"</A></B></DT>
+  <DT><B>lines = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lines' Line='lines = ""'>
   <DD>List of lines, columns, or apertures to be selected from the input image
   format.  The default empty list, "<TT></TT>", selects all vectors in the images.
@@ -53,13 +42,13 @@ fitprofs — Fit gaussian profiles
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_bands">bands = "<TT></TT>"</A></B></DT>
+  <DT><B>bands = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='bands' Line='bands = ""'>
   <DD>List of bands for 3D images.  The empty list, "<TT></TT>", selects all bands.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dispaxis">dispaxis = "<TT>)_.dispaxis</TT>", nsum = "<TT>)_.nsum</TT>"</A></B></DT>
+  <DT><B>dispaxis = "<TT>)_.dispaxis</TT>", nsum = "<TT>)_.nsum</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dispaxis' Line='dispaxis = ")_.dispaxis", nsum = ")_.nsum"'>
   <DD>Parameters for defining vectors in 2D and 3D images.  The
   dispersion axis is 1 for line vectors, 2 for column vectors, and 3 for band
@@ -71,7 +60,7 @@ fitprofs — Fit gaussian profiles
   <P>
   The following are the fitting parameters.
   <DL>
-  <DT><B><A NAME="l_region">region = "<TT></TT>"</A></B></DT>
+  <DT><B>region = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='region' Line='region = ""'>
   <DD>Region of the input vectors to be fit specified as a pair of space
   separated numbers.  The coordinates are defined in terms of the linear
@@ -81,7 +70,7 @@ fitprofs — Fit gaussian profiles
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_positions">positions = "<TT></TT>"</A></B></DT>
+  <DT><B>positions = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='positions' Line='positions = ""'>
   <DD>File of initial or fixed profile positions and (optional) peaks, profile
   types, and widths.  The
@@ -97,7 +86,7 @@ fitprofs — Fit gaussian profiles
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_background">background = "<TT></TT>"</A></B></DT>
+  <DT><B>background = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='background' Line='background = ""'>
   <DD>Background values defining the linear background.  If not specified the
   single pixel values nearest the fitting region endpoints are used.
@@ -113,14 +102,14 @@ fitprofs — Fit gaussian profiles
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_profile">profile = "<TT>gaussian</TT>" (gaussian|lorentzian|voigt)</A></B></DT>
+  <DT><B>profile = "<TT>gaussian</TT>" (gaussian|lorentzian|voigt)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='profile' Line='profile = "gaussian" (gaussian|lorentzian|voigt)'>
   <DD>Default profile type to be fit when a profile type is not specified in
   the positions file.  The type are "<TT>gaussian</TT>", "<TT>lorentzian</TT>", or "<TT>voigt</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_gfwhm">gfwhm = 20., lfwhm = 20.</A></B></DT>
+  <DT><B>gfwhm = 20., lfwhm = 20.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='gfwhm' Line='gfwhm = 20., lfwhm = 20.'>
   <DD>Default gaussian and lorentzian full width at half maximum (FWHM).
   These values are used for the initial and/or fixed width when they are
@@ -128,7 +117,7 @@ fitprofs — Fit gaussian profiles
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fitbackground">fitbackground = yes</A></B></DT>
+  <DT><B>fitbackground = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fitbackground' Line='fitbackground = yes'>
   <DD>Fit the background?  If "<TT>yes</TT>" a linear background across the fitting region
   will be fit simultaneously with the profiles.  If "<TT>no</TT>" the background will
@@ -136,7 +125,7 @@ fitprofs — Fit gaussian profiles
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fitpositions">fitpositions = "<TT>all</TT>"</A></B></DT>
+  <DT><B>fitpositions = "<TT>all</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fitpositions' Line='fitpositions = "all"'>
   <DD>Position fitting option.  This may be "<TT>fixed</TT>" to fix all positions at their
   initial values, "<TT>single</TT>" to fit a single shift to the positions while
@@ -145,7 +134,7 @@ fitprofs — Fit gaussian profiles
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fitgfwhm">fitgfwhm = "<TT>all</TT>", fitlfwhm = "<TT>all</TT>"</A></B></DT>
+  <DT><B>fitgfwhm = "<TT>all</TT>", fitlfwhm = "<TT>all</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fitgfwhm' Line='fitgfwhm = "all", fitlfwhm = "all"'>
   <DD>Profile width fitting options.  These may be "<TT>fixed</TT>" to fix all widths
   at their initial values, "<TT>single</TT>" to fit a single scale factor to the initial
@@ -156,7 +145,7 @@ fitprofs — Fit gaussian profiles
   The following parameters are used for error estimates as described
   below in the ERROR ESTIMATES section.
   <DL>
-  <DT><B><A NAME="l_nerrsample">nerrsample = 0</A></B></DT>
+  <DT><B>nerrsample = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nerrsample' Line='nerrsample = 0'>
   <DD>Number of samples for the error computation.  A value less than 10 turns
   off the error computation.  A value of ~10 does a rough error analysis, a
@@ -166,7 +155,7 @@ fitprofs — Fit gaussian profiles
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sigma0">sigma0 = INDEF, invgain = INDEF</A></B></DT>
+  <DT><B>sigma0 = INDEF, invgain = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sigma0' Line='sigma0 = INDEF, invgain = INDEF'>
   <DD>The pixel sigmas are modeled by the formula:
   <P>
@@ -183,7 +172,7 @@ fitprofs — Fit gaussian profiles
   <P>
   The following parameters determine the output of the task.
   <DL>
-  <DT><B><A NAME="l_components">components = "<TT></TT>"</A></B></DT>
+  <DT><B>components = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='components' Line='components = ""'>
   <DD>All profiles defined by the position file are simultaneously fit but only
   a subset of the fitted profiles may be selected for output.  A profile
@@ -194,7 +183,7 @@ fitprofs — Fit gaussian profiles
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print fitting results and record of output images created on the
   standard output (normally the terminal).
@@ -204,14 +193,14 @@ fitprofs — Fit gaussian profiles
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_logfile">logfile = "<TT>logfile</TT>"</A></B></DT>
+  <DT><B>logfile = "<TT>logfile</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "logfile"'>
   <DD>Logfile for fitting results.  If not specified the results will not be
   logged.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_plotfile">plotfile = "<TT>plotfile</TT>"</A></B></DT>
+  <DT><B>plotfile = "<TT>plotfile</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='plotfile' Line='plotfile = "plotfile"'>
   <DD>File to contain plot output.  The plots show the image vector with
   overplots of the total fit, the individual components, and the residuals.
@@ -220,14 +209,14 @@ fitprofs — Fit gaussian profiles
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output = "<TT></TT>"</A></B></DT>
+  <DT><B>output = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output = ""'>
   <DD>List of output images.  If not specified then no output images are created.
   If images are specified the list is matched with the input list.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_option">option = "<TT>fit</TT>" (fit|difference)</A></B></DT>
+  <DT><B>option = "<TT>fit</TT>" (fit|difference)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='option' Line='option = "fit" (fit|difference)'>
   <DD>Image output option.  The choices are "<TT>fit</TT>" to output the fitted image
   vector which is the sum of the fitted profiles (without a background),
@@ -235,7 +224,7 @@ fitprofs — Fit gaussian profiles
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_clobber">clobber = no, merge = no</A></B></DT>
+  <DT><B>clobber = no, merge = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='clobber' Line='clobber = no, merge = no'>
   <DD>Clobber or modify any existing output images?  If clobbering is not
   enabled a warning is printed and any existing output images are not
@@ -247,7 +236,7 @@ fitprofs — Fit gaussian profiles
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <B>Fitprofs</B> fits one dimensional profile functions to image vectors
@@ -350,7 +339,7 @@ fitprofs — Fit gaussian profiles
   or of the difference (residuals) of the data minus the model.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_error_estimates">ERROR ESTIMATES</A></H2>
+  <H3>Error estimates</H3>
   <! BeginSection: 'ERROR ESTIMATES'>
   <UL>
   Error estimates may be computed for the fitted parameters.
@@ -400,7 +389,7 @@ fitprofs — Fit gaussian profiles
   <P>
   </UL>
   <! EndSection:   'ERROR ESTIMATES'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  The following example creates an artificial spectrum and fits it.
@@ -449,17 +438,17 @@ fitprofs — Fit gaussian profiles
   Note that the value must be given twice to get a flat continuum.
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_FITPROFS">FITPROFS V2.11.3</A></B></DT>
+  <DT><B>FITPROFS V2.11.3</B></DT>
   <! Sec='REVISIONS' Level=0 Label='FITPROFS' Line='FITPROFS V2.11.3'>
   <DD>Modified to allow a more general specification of the background.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_FITPROFS">FITPROFS V2.11</A></B></DT>
+  <DT><B>FITPROFS V2.11</B></DT>
   <! Sec='REVISIONS' Level=0 Label='FITPROFS' Line='FITPROFS V2.11'>
   <DD>Modified to include lorentzian and voigt profiles.  The parameters and
   positions file format have changed in this version.  A new parameter
@@ -467,20 +456,20 @@ fitprofs — Fit gaussian profiles
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_FITPROFS">FITPROFS V2.10.3</A></B></DT>
+  <DT><B>FITPROFS V2.10.3</B></DT>
   <! Sec='REVISIONS' Level=0 Label='FITPROFS' Line='FITPROFS V2.10.3'>
   <DD>Error estimates based on a simple noise model are now computed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_FITPROFS">FITPROFS V2.10</A></B></DT>
+  <DT><B>FITPROFS V2.10</B></DT>
   <! Sec='REVISIONS' Level=0 Label='FITPROFS' Line='FITPROFS V2.10'>
   <DD>This task is new.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   The following CPU times were obtained with a Sun Sparcstation I.  The
@@ -515,7 +504,7 @@ fitprofs — Fit gaussian profiles
   and the 0.75 power of the number of pixels.
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   splot, stsdas.fitting.ngaussfit
@@ -524,5 +513,3 @@ fitprofs — Fit gaussian profiles
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'ERROR ESTIMATES' 'EXAMPLES' 'REVISIONS' 'TIME REQUIREMENTS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _obsfile:
+
 obsfile — Prepare an observations file from a text file
 =======================================================
 
@@ -5,37 +7,24 @@ obsfile — Prepare an observations file from a text file
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>obsfile (Apr94)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.photcal</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>obsfile (Apr94)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>obsfile</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   obsfile -- prepare an observations file from a list of user created 
   photometry files containing observations of objects in one or more fields
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   obsfile photfiles incolumns idfilters imsets observations
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_photfiles">photfiles</A></B></DT>
+  <DT><B>photfiles</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='photfiles' Line='photfiles'>
   <DD>A list of text files containing the image names or an image id, x-y positions,
   magnitudes, magnitude errors, airmasses, filter ids, exposure times, and time
@@ -45,7 +34,7 @@ obsfile — Prepare an observations file from a text file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_incolumns">incolumns</A></B></DT>
+  <DT><B>incolumns</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='incolumns' Line='incolumns'>
   <DD>A list of ten numbers separated by commas or whitespace specifying which
   columns in <I>photfiles</I> contain the following fields: the image name or id,
@@ -55,7 +44,7 @@ obsfile — Prepare an observations file from a text file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_idfilters">idfilters</A></B></DT>
+  <DT><B>idfilters</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='idfilters' Line='idfilters'>
   <DD>The list of filter ids separated by whitespace or commas which define a
   complete observation. The filter ids must correspond to those in
@@ -63,7 +52,7 @@ obsfile — Prepare an observations file from a text file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_imsets">imsets</A></B></DT>
+  <DT><B>imsets</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='imsets' Line='imsets'>
   <DD>The name of the text file which lists the observations of each field, assigns a
   name to each field, and tells OBSFILE which images belong to the same
@@ -76,14 +65,14 @@ obsfile — Prepare an observations file from a text file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_observations">observations</A></B></DT>
+  <DT><B>observations</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='observations' Line='observations'>
   <DD>The output observations file suitable for input to FITPARAMS or
   EVALFIT/INVERTFIT.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wrap">wrap = yes</A></B></DT>
+  <DT><B>wrap = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wrap' Line='wrap = yes'>
   <DD>Format the output observations file for easy reading ? If wrap = yes then the
   observation in each filter are written on a separate line and the * character
@@ -93,7 +82,7 @@ obsfile — Prepare an observations file from a text file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_obsparams">obsparams = "<TT></TT>"</A></B></DT>
+  <DT><B>obsparams = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='obsparams' Line='obsparams = ""'>
   <DD>The name of an optional text file containing the correct filter ids, exposure
   times, airmasses, and time of observations for each image whose values are
@@ -106,7 +95,7 @@ obsfile — Prepare an observations file from a text file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_obscolumns">obscolumns = "<TT>2 3 4 5</TT>"</A></B></DT>
+  <DT><B>obscolumns = "<TT>2 3 4 5</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='obscolumns' Line='obscolumns = "2 3 4 5"'>
   <DD>The list of numbers separated by commas or whitespace specifying which columns
   in the text file <I>obsparams</I> contain the correct filter ids, exposure
@@ -119,14 +108,14 @@ obsfile — Prepare an observations file from a text file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_minmagerr">minmagerr = 0.001</A></B></DT>
+  <DT><B>minmagerr = 0.001</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='minmagerr' Line='minmagerr = 0.001'>
   <DD>The error that will be assigned to a non-INDEF valued magnitude measurement
   whose recorded error is less than <I>minmagerr</I>.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_shifts">shifts = "<TT></TT>"</A></B></DT>
+  <DT><B>shifts = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='shifts' Line='shifts = ""'>
   <DD>The name of the text file specifying the x and y shifts to be ADDED to the x-y
   positions of all objects in an image before position matching (the original x's
@@ -137,7 +126,7 @@ obsfile — Prepare an observations file from a text file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apercors">apercors = "<TT></TT>"</A></B></DT>
+  <DT><B>apercors = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apercors' Line='apercors = ""'>
   <DD>The name of the text file specifying the aperture corrections to be ADDED to
   the extracted magnitudes. Aperture corrections are listed for each image, 1
@@ -148,14 +137,14 @@ obsfile — Prepare an observations file from a text file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_normtime">normtime = no</A></B></DT>
+  <DT><B>normtime = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='normtime' Line='normtime = no'>
   <DD>Normalize the magnitudes to an exposure time of one time unit using the
   exposure times in <I>photfiles</I>.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_tolerance">tolerance = 5.0</A></B></DT>
+  <DT><B>tolerance = 5.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='tolerance' Line='tolerance = 5.0'>
   <DD>The tolerance in pixels for matching objects in the same observation, but
   different images.  OBSFILE extracts the x and y coordinates of each object
@@ -168,14 +157,14 @@ obsfile — Prepare an observations file from a text file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_allfilters">allfilters = no</A></B></DT>
+  <DT><B>allfilters = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='allfilters' Line='allfilters = no'>
   <DD>Output only objects which are successfully matched in all the filters specified
   by <I>idfilters</I>?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verify">verify = no</A></B></DT>
+  <DT><B>verify = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verify' Line='verify = no'>
   <DD>Verify interactive user input? This option is used only if any of <I>imsets</I>,
   <I>obsparams</I>, <I>shifts</I>, or <I> apercors</I> are set to the standard input
@@ -183,7 +172,7 @@ obsfile — Prepare an observations file from a text file
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print messages about actions taken by the task or any warnings or errors
   encountered?
@@ -192,7 +181,7 @@ obsfile — Prepare an observations file from a text file
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -434,7 +423,7 @@ obsfile — Prepare an observations file from a text file
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_output">OUTPUT</A></H2>
+  <H3>Output</H3>
   <! BeginSection: 'OUTPUT'>
   <UL>
   For the previous set of UBV observations the output file
@@ -503,7 +492,7 @@ obsfile — Prepare an observations file from a text file
   <P>
   </UL>
   <! EndSection:   'OUTPUT'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -586,17 +575,17 @@ obsfile — Prepare an observations file from a text file
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   mkimsets,mknobsfile,mkobsfile
@@ -605,5 +594,3 @@ obsfile — Prepare an observations file from a text file
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'OUTPUT' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

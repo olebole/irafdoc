@@ -1,3 +1,5 @@
+.. _geomap:
+
 geomap — Compute geometric transforms using matched coordinate lists
 ====================================================================
 
@@ -5,36 +7,23 @@ geomap — Compute geometric transforms using matched coordinate lists
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>geomap (Jan01)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.immatch</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>geomap (Jan01)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>geomap</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   geomap -- compute one or more spatial transformation functions
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   geomap input database xmin xmax ymin ymax
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The list of text files containing the pixel coordinates of control points in
   the reference and input images. The control points are listed
@@ -42,14 +31,14 @@ geomap — Compute geometric transforms using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_database">database</A></B></DT>
+  <DT><B>database</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='database' Line='database'>
   <DD>The name of the text file database where the computed transformations will
   be stored.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xmin">xmin, xmax, ymin, ymax</A></B></DT>
+  <DT><B>xmin, xmax, ymin, ymax</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xmin' Line='xmin, xmax, ymin, ymax'>
   <DD>The range of reference coordinates over which the computed coordinate
   transformation is valid. If the user is working in pixel units  these limits
@@ -60,7 +49,7 @@ geomap — Compute geometric transforms using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_transforms">transforms = "<TT></TT>"</A></B></DT>
+  <DT><B>transforms = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='transforms' Line='transforms = ""'>
   <DD>An optional list of transform record names. If transforms is undefined 
   the database record(s) are assigned the names of the
@@ -68,7 +57,7 @@ geomap — Compute geometric transforms using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_results">results = "<TT></TT>"</A></B></DT>
+  <DT><B>results = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='results' Line='results = ""'>
   <DD>Optional output files containing a summary of the results including a
   description of the transform geometry and a listing of the input coordinates,
@@ -78,44 +67,44 @@ geomap — Compute geometric transforms using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fitgeometry">fitgeometry = "<TT>general</TT>"</A></B></DT>
+  <DT><B>fitgeometry = "<TT>general</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fitgeometry' Line='fitgeometry = "general"'>
   <DD>The fitting geometry to be used. The options are the following.
   <DL>
-  <DT><B><A NAME="l_shift">shift</A></B></DT>
+  <DT><B>shift</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='shift' Line='shift'>
   <DD>X and y shifts only are fit.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xyscale">xyscale</A></B></DT>
+  <DT><B>xyscale</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='xyscale' Line='xyscale'>
   <DD>X and y shifts and x and y magnification factors are fit. Axis flips are
   allowed for.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rotate">rotate</A></B></DT>
+  <DT><B>rotate</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='rotate' Line='rotate'>
   <DD>X and y shifts and a rotation angle are fit. Axis flips are allowed for.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rscale">rscale</A></B></DT>
+  <DT><B>rscale</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='rscale' Line='rscale'>
   <DD>X and y shifts, a magnification factor assumed to be the same in x and y, and a
   rotation angle are fit. Axis flips are allowed for.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rxyscale">rxyscale</A></B></DT>
+  <DT><B>rxyscale</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='rxyscale' Line='rxyscale'>
   <DD>X and y shifts, x and y magnifications factors, and a rotation angle are fit.
   Axis flips are allowed for.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_general">general</A></B></DT>
+  <DT><B>general</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='general' Line='general'>
   <DD>A polynomial of arbitrary order in x and y is fit. A linear term and a
   distortion term are computed separately. The linear term includes an x and y
@@ -134,23 +123,23 @@ geomap — Compute geometric transforms using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_function">function = "<TT>polynomial</TT>"</A></B></DT>
+  <DT><B>function = "<TT>polynomial</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='function' Line='function = "polynomial"'>
   <DD>The type of analytic surface to be fit. The options are the following.
   <DL>
-  <DT><B><A NAME="l_legendre">legendre</A></B></DT>
+  <DT><B>legendre</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='legendre' Line='legendre'>
   <DD>Legendre polynomials in x and y.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_chebyshev">chebyshev</A></B></DT>
+  <DT><B>chebyshev</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='chebyshev' Line='chebyshev'>
   <DD>Chebyshev polynomials in x and y.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_polynomial">polynomial</A></B></DT>
+  <DT><B>polynomial</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='polynomial' Line='polynomial'>
   <DD>Power series in x and y.
   </DD>
@@ -158,7 +147,7 @@ geomap — Compute geometric transforms using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xxorder">xxorder = 2, xyorder = 2,  yxorder = 2, yyorder = 2</A></B></DT>
+  <DT><B>xxorder = 2, xyorder = 2,  yxorder = 2, yyorder = 2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xxorder' Line='xxorder = 2, xyorder = 2,  yxorder = 2, yyorder = 2'>
   <DD>The order of the polynomials in x and y for the x and y fits respectively.
   The default order and cross term settings define the linear term in x
@@ -172,18 +161,18 @@ geomap — Compute geometric transforms using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xxterms">xxterms = "<TT>half</TT>", yxterms = "<TT>half</TT>"</A></B></DT>
+  <DT><B>xxterms = "<TT>half</TT>", yxterms = "<TT>half</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xxterms' Line='xxterms = "half", yxterms = "half"'>
   <DD>The options are:
   <DL>
-  <DT><B><A NAME="l_none">none</A></B></DT>
+  <DT><B>none</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='none' Line='none'>
   <DD>The individual polynomial terms contain powers of x or powers of y but not
   powers of both.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_half">half</A></B></DT>
+  <DT><B>half</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='half' Line='half'>
   <DD>The individual polynomial terms contain powers of x and powers of y, whose
   maximum combined power is max (xxorder - 1, xyorder - 1) for the x fit and
@@ -191,7 +180,7 @@ geomap — Compute geometric transforms using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_full">full</A></B></DT>
+  <DT><B>full</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='full' Line='full'>
   <DD>The individual polynomial terms contain powers of x and powers of y, whose
   maximum combined power is max (xxorder - 1, xyorder - 1) for the x fit and
@@ -208,52 +197,52 @@ geomap — Compute geometric transforms using matched coordinate lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_maxiter">maxiter = 0</A></B></DT>
+  <DT><B>maxiter = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='maxiter' Line='maxiter = 0'>
   <DD>The maximum number of rejection iterations. The default is no rejection.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_reject">reject = 3.0</A></B></DT>
+  <DT><B>reject = 3.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='reject' Line='reject = 3.0'>
   <DD>The rejection limit in units of sigma.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_calctype">calctype = "<TT>real</TT>"</A></B></DT>
+  <DT><B>calctype = "<TT>real</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='calctype' Line='calctype = "real"'>
   <DD>The precision of the coordinate transformation calculations. The options are
   real and double.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print messages about actions taken by the task ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = yes</A></B></DT>
+  <DT><B>interactive = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes'>
   <DD>In interactive mode the user may interact with the fitting process, e.g.
   change the order of the fit, reject points, display the data, etc.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_graphics">graphics = "<TT>stdgraph</TT>"</A></B></DT>
+  <DT><B>graphics = "<TT>stdgraph</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"'>
   <DD>The graphics device.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cursor">cursor = "<TT></TT>"</A></B></DT>
+  <DT><B>cursor = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""'>
   <DD>The graphics cursor.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -476,7 +465,7 @@ geomap — Compute geometric transforms using matched coordinate lists
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Compute the linear transformation between coordinate systems.
@@ -540,7 +529,7 @@ geomap — Compute geometric transforms using matched coordinate lists
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   <P>
@@ -550,7 +539,7 @@ geomap — Compute geometric transforms using matched coordinate lists
   <P>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imshift, magnify, rotate, imlintran, gregister, geotran, geoxytran
@@ -559,5 +548,3 @@ geomap — Compute geometric transforms using matched coordinate lists
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _tread:
+
 tread — Browse through a table.
 ===============================
 
@@ -5,32 +7,19 @@ tread — Browse through a table.
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>tread (Aug91)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>tables</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>tread (Aug91)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>tread</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   tread -- View a table (read only).
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   tread table
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The 'tread' task is a read-only version of 'tedit', the screen editor for STSDAS
@@ -69,13 +58,13 @@ tread — Browse through a table.
   <P>
   The following commands are used by 'tread':
   <DL>
-  <DT><B><A NAME="l_exit">exit</A></B></DT>
+  <DT><B>exit</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='exit' Line='exit'>
   <DD>Exit the table editor.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_find">find &lt;expression&gt;</A></B></DT>
+  <DT><B>find &lt;expression&gt;</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='find' Line='find &lt;expression&gt;'>
   <DD>Find the next row in the table which makes &lt;expression&gt; true and move
   the cursor to that row. The expression has the same syntax as an
@@ -90,27 +79,27 @@ tread — Browse through a table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_find">find forward &lt;expression&gt;</A></B></DT>
+  <DT><B>find forward &lt;expression&gt;</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='find' Line='find forward &lt;expression&gt;'>
   <DD>Find the next row in the table which makes &lt;expression&gt; true and move the
   cursor to that row. The search is done in the forwards direction.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_find">find backwards &lt;expression&gt;</A></B></DT>
+  <DT><B>find backwards &lt;expression&gt;</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='find' Line='find backwards &lt;expression&gt;'>
   <DD>Find the next row in the table which makes &lt;expression&gt; true and move the
   cursor to that row. The search is done in the backwards direction.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_goto">goto &lt;row&gt; &lt;column&gt;</A></B></DT>
+  <DT><B>goto &lt;row&gt; &lt;column&gt;</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='goto' Line='goto &lt;row&gt; &lt;column&gt;'>
   <DD>Move the cursor to &lt;row&gt; and &lt;column&gt;.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_help">help</A></B></DT>
+  <DT><B>help</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='help' Line='help'>
   <DD>Display online help information for the table editor. The help includes 
   a brief description of each command line command and the key bindings 
@@ -118,28 +107,28 @@ tread — Browse through a table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_next">next</A></B></DT>
+  <DT><B>next</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='next' Line='next'>
   <DD>Repeat the previous find command, using the same expression and search 
   direction that was used with it.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_next">next forward</A></B></DT>
+  <DT><B>next forward</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='next' Line='next forward'>
   <DD>Repeat the previous find command, changing the search direction to 
   forwards.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_next">next backwards</A></B></DT>
+  <DT><B>next backwards</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='next' Line='next backwards'>
   <DD>Repeat the previous find command, changing the search direction to 
   backwards.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_quit">quit</A></B></DT>
+  <DT><B>quit</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='quit' Line='quit'>
   <DD>Exit the table editor.
   </DD>
@@ -168,11 +157,11 @@ tread — Browse through a table.
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_table">table [string]</A></B></DT>
+  <DT><B>table [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='table' Line='table [string]'>
   <DD>Name of the table to be edited. The editor checks for the
   existence of the table and its access mode before editing. The table
@@ -180,7 +169,7 @@ tread — Browse through a table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(columns = "<TT></TT>") [string]</A></B></DT>
+  <DT><B>(columns = "<TT></TT>") [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(columns = "") [string]'>
   <DD>Names of the columns to be edited.
   A null or blank string means edit all columns.
@@ -202,14 +191,14 @@ tread — Browse through a table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(silent = no) [boolean]</A></B></DT>
+  <DT><B>(silent = no) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(silent = no) [boolean]'>
   <DD>Turn off the bell indicating warning messages?
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Display only the columns 'SHARP' and 'ROUND' from the table 'm12b.tab':
@@ -219,18 +208,18 @@ tread — Browse through a table.
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   This task was written by Bernie Simon.
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_see_also_">SEE ALSO </A></H2>
+  <H3>See also </H3>
   <! BeginSection: 'SEE ALSO '>
   <UL>
   tedit, tprint, tselect, stty
@@ -241,5 +230,3 @@ tread — Browse through a table.
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO '  >
   
-  </BODY>
-  </HTML>

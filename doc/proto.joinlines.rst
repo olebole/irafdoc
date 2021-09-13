@@ -1,3 +1,5 @@
+.. _joinlines:
+
 joinlines — Join text files line by line
 ========================================
 
@@ -5,36 +7,23 @@ joinlines — Join text files line by line
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>joinlines (Feb90)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>proto</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>joinlines (Feb90)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>joinlines</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   joinlines -- join input text files line by line.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   joinlines list1 [list2]
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_list1">list1</A></B></DT>
+  <DT><B>list1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='list1' Line='list1'>
   <DD>List of input text files to be joined.  It is an error if a file does
   not exist.  The special file "<TT>STDIN</TT>" may be used to read from the
@@ -42,7 +31,7 @@ joinlines — Join text files line by line
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_list2">list2</A></B></DT>
+  <DT><B>list2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='list2' Line='list2'>
   <DD>Optional second list of input text files to be combined with the
   first list.  This only applies when two lists are specified on
@@ -50,7 +39,7 @@ joinlines — Join text files line by line
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output = "<TT>STDOUT</TT>"</A></B></DT>
+  <DT><B>output = "<TT>STDOUT</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output = "STDOUT"'>
   <DD>Output filename.  The result of joining the input lines is appended
   to the specified file.  The special file "<TT>STDOUT</TT>" selects the standard
@@ -58,21 +47,21 @@ joinlines — Join text files line by line
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_delim">delim = "<TT> </TT>"</A></B></DT>
+  <DT><B>delim = "<TT> </TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='delim' Line='delim = " "'>
   <DD>The delimiter placed between joined input lines.  The default is a space
   (note that this will not be visible when viewed with <B>eparam</B>).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_missing">missing = "<TT>Missing</TT>"</A></B></DT>
+  <DT><B>missing = "<TT>Missing</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='missing' Line='missing = "Missing"'>
   <DD>This string is substituted for missing lines when going beyond the end
   of shorter input files.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_maxchars">maxchars = 161</A></B></DT>
+  <DT><B>maxchars = 161</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='maxchars' Line='maxchars = 161'>
   <DD>Maximum number of characters in output lines.  Longer output lines will
   be truncated and a warning may be given.  Note that this number always
@@ -80,7 +69,7 @@ joinlines — Join text files line by line
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_shortest">shortest = yes</A></B></DT>
+  <DT><B>shortest = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='shortest' Line='shortest = yes'>
   <DD>Stop at the end of the shortest file?  If the input files are of unequal
   number of lines then this option provides for stopping at the end
@@ -90,7 +79,7 @@ joinlines — Join text files line by line
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Warnings are printed to the standard error stream giving the number
   of lines exceeding the maximum number of output characters, the number
@@ -101,7 +90,7 @@ joinlines — Join text files line by line
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The task <B>joinlines</B> reads lines from each of the input text files and
@@ -145,7 +134,7 @@ joinlines — Join text files line by line
   this.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Join the two files "<TT>names</TT>" and "<TT>titles</TT>", redirecting the output into a third
@@ -177,12 +166,12 @@ joinlines — Join text files line by line
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   fields
@@ -191,5 +180,3 @@ joinlines — Join text files line by line
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

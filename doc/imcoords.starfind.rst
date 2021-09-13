@@ -1,3 +1,5 @@
+.. _starfind:
+
 starfind — Automatically detect stellar objects in a list of images
 ===================================================================
 
@@ -5,42 +7,29 @@ starfind — Automatically detect stellar objects in a list of images
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>starfind (May97)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imcoords</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>starfind (May97)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>starfind</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   starfind -- automatically detect stellar objects in a list of images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   starfind image output hwhmpsf threshold
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_image">image</A></B></DT>
+  <DT><B>image</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='image' Line='image'>
   <DD>The list of input images. The input images must be two-dimensional.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>The list of output object files. The number of output files must equal the
   number of input images. If output is "<TT>default</TT>", or "<TT>dir$default</TT>", or a
@@ -51,26 +40,26 @@ starfind — Automatically detect stellar objects in a list of images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_hwhmpsf">hwhmpsf</A></B></DT>
+  <DT><B>hwhmpsf</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='hwhmpsf' Line='hwhmpsf'>
   <DD>The half-width half-maximum of the image PSF in pixels.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_threshold">threshold</A></B></DT>
+  <DT><B>threshold</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold'>
   <DD>The detection threshold above local background in ADU.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_datamin">datamin = INDEF, datamax = INDEF</A></B></DT>
+  <DT><B>datamin = INDEF, datamax = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='datamin' Line='datamin = INDEF, datamax = INDEF'>
   <DD>The minimum and maximum good data values in ADU. Datamin and datamax
   default to the constants -MAX_REAL and MAX_REAL respectively.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fradius">fradius = 2.5 (hwhmpsf)</A></B></DT>
+  <DT><B>fradius = 2.5 (hwhmpsf)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fradius' Line='fradius = 2.5 (hwhmpsf)'>
   <DD>The fitting radius in units of hwhmpsf. Fradius defines the size
   of the Gaussian kernel used to compute the density enhancement image, and
@@ -78,26 +67,26 @@ starfind — Automatically detect stellar objects in a list of images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sepmin">sepmin = 5.0 (hwhmpsf)</A></B></DT>
+  <DT><B>sepmin = 5.0 (hwhmpsf)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sepmin' Line='sepmin = 5.0 (hwhmpsf)'>
   <DD>The minimum separation for detected objects in units of hwhmpsf.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_npixmin">npixmin = 5</A></B></DT>
+  <DT><B>npixmin = 5</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='npixmin' Line='npixmin = 5'>
   <DD>The minimum area of the detected objects in pixels.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_maglo">maglo = INDEF, maghi = INDEF</A></B></DT>
+  <DT><B>maglo = INDEF, maghi = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='maglo' Line='maglo = INDEF, maghi = INDEF'>
   <DD>The minimum and maximum magnitudes of the detected objects. Maglo and maghi
   default to the constants -MAX_REAL and MAX_REAL respectively.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_roundlo">roundlo = 0.0,  roundhi = 0.2</A></B></DT>
+  <DT><B>roundlo = 0.0,  roundhi = 0.2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='roundlo' Line='roundlo = 0.0,  roundhi = 0.2'>
   <DD>The minimum and maximum ellipticity values of the detected objects, where
   ellipticity is defined as 1 - b / a, and a and b are the semi-major and
@@ -105,7 +94,7 @@ starfind — Automatically detect stellar objects in a list of images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sharplo">sharplo = 0.5, sharphi = 2.0</A></B></DT>
+  <DT><B>sharplo = 0.5, sharphi = 2.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sharplo' Line='sharplo = 0.5, sharphi = 2.0'>
   <DD>The minimum and maximum sharpness values of the detected objects, where
   sharpness is defined to be the ratio of the object size to the
@@ -113,32 +102,32 @@ starfind — Automatically detect stellar objects in a list of images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wcs">wcs = "<TT></TT>"</A></B></DT>
+  <DT><B>wcs = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wcs' Line='wcs = ""'>
   <DD>The world coordinate system.  The options are:
   <DL>
-  <DT><B><A NAME="l_">"<TT>     </TT>"</A></B></DT>
+  <DT><B>"<TT>     </TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"     "'>
   <DD>The world coordinate system is undefined. Only logical (pixel) coordinates
   are printed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_logical">logical</A></B></DT>
+  <DT><B>logical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='logical' Line='logical'>
   <DD>The world coordinate system is the same as the logical (pixel) coordinate
   system,  but two sets of identical logical (pixel) coordinates are printed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_physical">physical</A></B></DT>
+  <DT><B>physical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='physical' Line='physical'>
   <DD>The world coordinate system is the same as the logical (pixel) coordinate
   system of the parent image if any.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_world">world</A></B></DT>
+  <DT><B>world</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='world' Line='world'>
   <DD>The world coordinate system of the image if any.
   </DD>
@@ -146,7 +135,7 @@ starfind — Automatically detect stellar objects in a list of images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wxformat">wxformat = "<TT></TT>", wyformat = "<TT></TT>"</A></B></DT>
+  <DT><B>wxformat = "<TT></TT>", wyformat = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wxformat' Line='wxformat = "", wyformat = ""'>
   <DD>The output format for the x and y axis world coordinates. If wxformat and
   wyformat are undefined then: 1) the value of the wcs format attribute is
@@ -158,29 +147,29 @@ starfind — Automatically detect stellar objects in a list of images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_boundary">boundary = "<TT>nearest</TT>"</A></B></DT>
+  <DT><B>boundary = "<TT>nearest</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"'>
   <DD>The boundary extension type. The choices are:
   <DL>
-  <DT><B><A NAME="l_nearest">nearest</A></B></DT>
+  <DT><B>nearest</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest'>
   <DD>Use the value of the nearest boundary pixel.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_constant">constant</A></B></DT>
+  <DT><B>constant</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='constant' Line='constant'>
   <DD>Use a constant value.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_reflect">reflect</A></B></DT>
+  <DT><B>reflect</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='reflect' Line='reflect'>
   <DD>Generate a value by reflecting around the boundary.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wrap">wrap</A></B></DT>
+  <DT><B>wrap</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='wrap' Line='wrap'>
   <DD>Generate a value by wrapping around to the other side of the image.
   </DD>
@@ -188,20 +177,20 @@ starfind — Automatically detect stellar objects in a list of images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_constant">constant = 0.0</A></B></DT>
+  <DT><B>constant = 0.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.0'>
   <DD>The constant for constant boundary extension.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nxblock">nxblock = INDEF, nyblock = 256</A></B></DT>
+  <DT><B>nxblock = INDEF, nyblock = 256</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nxblock' Line='nxblock = INDEF, nyblock = 256'>
   <DD>The working block size. If undefined nxblock and nyblock default
   to the number of columns and rows in the input image respectively.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = no</A></B></DT>
+  <DT><B>verbose = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
   <DD>Print messages about the progress of the task ?
   </DD>
@@ -209,7 +198,7 @@ starfind — Automatically detect stellar objects in a list of images
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -225,7 +214,7 @@ starfind — Automatically detect stellar objects in a list of images
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_algorithms">ALGORITHMS</A></H2>
+  <H3>Algorithms</H3>
   <! BeginSection: 'ALGORITHMS'>
   <UL>
   <P>
@@ -306,7 +295,7 @@ starfind — Automatically detect stellar objects in a list of images
   <P>
   </UL>
   <! EndSection:   'ALGORITHMS'>
-  <H2><A NAME="s_formats">FORMATS</A></H2>
+  <H3>Formats</H3>
   <! BeginSection: 'FORMATS'>
   <UL>
   <P>
@@ -380,7 +369,7 @@ starfind — Automatically detect stellar objects in a list of images
   <P>
   </UL>
   <! EndSection:   'FORMATS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -405,7 +394,7 @@ starfind — Automatically detect stellar objects in a list of images
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   Starfind requires approximately 8 CPU seconds to search a 512 by  512
@@ -413,13 +402,13 @@ starfind — Automatically detect stellar objects in a list of images
   		
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   <P>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imcentroid, apphot.daofind, daophot.daofind
@@ -428,5 +417,3 @@ starfind — Automatically detect stellar objects in a list of images
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'ALGORITHMS' 'FORMATS' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

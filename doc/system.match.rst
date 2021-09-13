@@ -1,3 +1,5 @@
+.. _match:
+
 match — Print all lines in a file that match a pattern
 ======================================================
 
@@ -5,57 +7,44 @@ match — Print all lines in a file that match a pattern
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>match (Nov84)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>system</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>match (Nov84)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>match</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   match -- match a pattern against the lines in a file or files
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   match pattern files
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_pattern">pattern</A></B></DT>
+  <DT><B>pattern</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pattern' Line='pattern'>
   <DD>The pattern to be matched.  A pattern may contain any of the
   pattern matching <I>meta-characters</I> described below.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_files">files</A></B></DT>
+  <DT><B>files</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='files' Line='files'>
   <DD>A template specifying the file or files to be searched.  Omitted if the
   standard input is redirected.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_meta">meta-characters = yes</A></B></DT>
+  <DT><B>meta-characters = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='meta' Line='meta-characters = yes'>
   <DD>Set to "<TT>no</TT>" to disable the pattern matching meta-characters, e.g., when
   you want to explicitly match one of the meta-characters as a regular character.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_stop">stop = no</A></B></DT>
+  <DT><B>stop = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='stop' Line='stop = no'>
   <DD>If <I>stop</I> is enabled, lines with match the pattern are "<TT>stopped</TT>" (not
   passed to the output), otherwise only those lines with match the pattern
@@ -63,7 +52,7 @@ match — Print all lines in a file that match a pattern
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_print_file_names">print_file_names = yes</A></B></DT>
+  <DT><B>print_file_names = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='print_file_names' Line='print_file_names = yes'>
   <DD>If more than one file is being searched, preface each printed line
   with the "<TT>file_name: </TT>".
@@ -71,7 +60,7 @@ match — Print all lines in a file that match a pattern
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The listed files are searched for the given pattern, copying each line that
@@ -97,7 +86,7 @@ match — Print all lines in a file that match a pattern
   with its file name.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -120,7 +109,7 @@ match — Print all lines in a file that match a pattern
   	cl&gt; match "<TT>:$</TT>" spool stop+ | page
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   lcase, ucase, translit, sort, unique
@@ -129,5 +118,3 @@ match — Print all lines in a file that match a pattern
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

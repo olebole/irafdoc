@@ -1,3 +1,5 @@
+.. _apnoise:
+
 apnoise — Compute and examine noise characteristics of spectra
 ==============================================================
 
@@ -5,42 +7,29 @@ apnoise — Compute and examine noise characteristics of spectra
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>apnoise (Sep96)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.twodspec.apextract</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>apnoise (Sep96)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>apnoise</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   apnoise -- Compute and examine noise characteristics of spectra
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   apnoise input dmin dmax nbins
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of input spectra to examine.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apertures">apertures = "<TT></TT>"</A></B></DT>
+  <DT><B>apertures = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""'>
   <DD>Apertures to recenter, resize, trace, and extract.  This only applies
   to apertures read from the input or reference database.  Any new
@@ -52,7 +41,7 @@ apnoise — Compute and examine noise characteristics of spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_references">references = "<TT></TT>"</A></B></DT>
+  <DT><B>references = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='references' Line='references = ""'>
   <DD>List of reference images to be used to define apertures for the input
   images.  When a reference image is given it supersedes apertures
@@ -66,7 +55,7 @@ apnoise — Compute and examine noise characteristics of spectra
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_dmin">dmin, dmax, nbins</A></B></DT>
+  <DT><B>dmin, dmax, nbins</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dmin' Line='dmin, dmax, nbins'>
   <DD>The noise sigma is computed in a set of bins over the specified
   range of image data numbers.
@@ -74,7 +63,7 @@ apnoise — Compute and examine noise characteristics of spectra
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = yes</A></B></DT>
+  <DT><B>interactive = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes'>
   <DD>Run this task interactively?  If the task is not run interactively then
   all user queries are suppressed and interactive aperture editing and trace
@@ -82,7 +71,7 @@ apnoise — Compute and examine noise characteristics of spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_find">find = yes</A></B></DT>
+  <DT><B>find = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='find' Line='find = yes'>
   <DD>Find the spectra and define apertures automatically?  In order for
   spectra to be found automatically there must be no apertures for the
@@ -90,31 +79,31 @@ apnoise — Compute and examine noise characteristics of spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_recenter">recenter = yes</A></B></DT>
+  <DT><B>recenter = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='recenter' Line='recenter = yes'>
   <DD>Recenter the apertures?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_resize">resize = yes</A></B></DT>
+  <DT><B>resize = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='resize' Line='resize = yes'>
   <DD>Resize the apertures?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_edit">edit = yes</A></B></DT>
+  <DT><B>edit = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='edit' Line='edit = yes'>
   <DD>Edit the apertures?  The <I>interactive</I> parameter must also be yes.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_trace">trace = yes</A></B></DT>
+  <DT><B>trace = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='trace' Line='trace = yes'>
   <DD>Trace the apertures?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fittrace">fittrace = yes</A></B></DT>
+  <DT><B>fittrace = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fittrace' Line='fittrace = yes'>
   <DD>Interactively fit the traced positions by a function?  The <I>interactive</I>
   parameter must also be yes.
@@ -122,7 +111,7 @@ apnoise — Compute and examine noise characteristics of spectra
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_line">line = INDEF, nsum = 1</A></B></DT>
+  <DT><B>line = INDEF, nsum = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='line' Line='line = INDEF, nsum = 1'>
   <DD>The dispersion line (line or column perpendicular to the dispersion
   axis) and number of adjacent lines (half before and half after unless
@@ -136,7 +125,7 @@ apnoise — Compute and examine noise characteristics of spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_threshold">threshold = 10.</A></B></DT>
+  <DT><B>threshold = 10.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 10.'>
   <DD>Division threshold.  If a pixel in the two dimensional normalization spectrum
   is less than this value then a flat field value of 1 is output.
@@ -145,7 +134,7 @@ apnoise — Compute and examine noise characteristics of spectra
   <P>
   The following parameters control the profile and spectrum fitting.
   <DL>
-  <DT><B><A NAME="l_background">background = "<TT>none</TT>"</A></B></DT>
+  <DT><B>background = "<TT>none</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='background' Line='background = "none"'>
   <DD>Type of background subtraction.  The choices are "<TT>none</TT>" for no
   background subtraction, "<TT>average</TT>" to average the background within the
@@ -158,7 +147,7 @@ apnoise — Compute and examine noise characteristics of spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pfit">pfit = "<TT>fit1d</TT>" (fit1d|fit2d)</A></B></DT>
+  <DT><B>pfit = "<TT>fit1d</TT>" (fit1d|fit2d)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pfit' Line='pfit = "fit1d" (fit1d|fit2d)'>
   <DD>Profile fitting algorithm to use with variance weighting or cleaning.
   When determining a profile the two dimensional spectrum is divided by
@@ -170,13 +159,13 @@ apnoise — Compute and examine noise characteristics of spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_clean">clean = no</A></B></DT>
+  <DT><B>clean = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='clean' Line='clean = no'>
   <DD>Detect and replace deviant pixels?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_skybox">skybox = 1</A></B></DT>
+  <DT><B>skybox = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='skybox' Line='skybox = 1'>
   <DD>Box car smoothing length for sky background when using background
   subtraction.  Since the background noise is often the limiting factor
@@ -187,7 +176,7 @@ apnoise — Compute and examine noise characteristics of spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_saturation">saturation = INDEF</A></B></DT>
+  <DT><B>saturation = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='saturation' Line='saturation = INDEF'>
   <DD>Saturation or nonlinearity level.  During variance weighted extractions
   wavelength points having any pixels above this value are excluded from the
@@ -195,7 +184,7 @@ apnoise — Compute and examine noise characteristics of spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_readnoise">readnoise = "<TT>0.</TT>"</A></B></DT>
+  <DT><B>readnoise = "<TT>0.</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='readnoise' Line='readnoise = "0."'>
   <DD>Read out noise in photons.  This parameter defines the minimum noise
   sigma.  It is defined in terms of photons (or electrons) and scales
@@ -204,7 +193,7 @@ apnoise — Compute and examine noise characteristics of spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_gain">gain = "<TT>1.</TT>"</A></B></DT>
+  <DT><B>gain = "<TT>1.</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='gain' Line='gain = "1."'>
   <DD>Detector gain or conversion factor between photons/electrons and
   data values.  It is specified as the number of photons per data value.
@@ -213,7 +202,7 @@ apnoise — Compute and examine noise characteristics of spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lsigma">lsigma = 3., usigma = 3.</A></B></DT>
+  <DT><B>lsigma = 3., usigma = 3.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lsigma' Line='lsigma = 3., usigma = 3.'>
   <DD>Lower and upper rejection thresholds, given as a number of times the
   estimated sigma of a pixel, for cleaning.
@@ -221,7 +210,7 @@ apnoise — Compute and examine noise characteristics of spectra
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_additional_parameters">ADDITIONAL PARAMETERS</A></H2>
+  <H3>Additional parameters</H3>
   <! BeginSection: 'ADDITIONAL PARAMETERS'>
   <UL>
   I/O parameters and the default dispersion axis are taken from the
@@ -233,7 +222,7 @@ apnoise — Compute and examine noise characteristics of spectra
   <B>aptrace</B>.
   </UL>
   <! EndSection:   'ADDITIONAL PARAMETERS'>
-  <H2><A NAME="s_cursor_commands">CURSOR COMMANDS</A></H2>
+  <H3>Cursor commands</H3>
   <! BeginSection: 'CURSOR COMMANDS'>
   <UL>
   The following cursor keys and colon commands are available during the
@@ -255,7 +244,7 @@ apnoise — Compute and examine noise characteristics of spectra
   </PRE>
   </UL>
   <! EndSection:   'CURSOR COMMANDS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <B>Apnoise</B> computes the noise sigma as a function of data value
@@ -300,7 +289,7 @@ apnoise — Compute and examine noise characteristics of spectra
   and quitting.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  To check that the read noise and gain parameters are reasonable for
@@ -319,11 +308,11 @@ apnoise — Compute and examine noise characteristics of spectra
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_APNOISE">APNOISE V2.11</A></B></DT>
+  <DT><B>APNOISE V2.11</B></DT>
   <! Sec='REVISIONS' Level=0 Label='APNOISE' Line='APNOISE V2.11'>
   <DD>The "<TT>apertures</TT>" parameter can be used to select apertures for resizing,
   recentering, tracing, and extraction.  This parameter name was previously
@@ -333,7 +322,7 @@ apnoise — Compute and examine noise characteristics of spectra
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   apbackground, approfile, apvariance, apfit, icfit, minmax,
@@ -343,5 +332,3 @@ apnoise — Compute and examine noise characteristics of spectra
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'ADDITIONAL PARAMETERS' 'CURSOR COMMANDS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

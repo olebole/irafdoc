@@ -1,3 +1,5 @@
+.. _tinfo:
+
 tinfo — Display table size information.
 =======================================
 
@@ -5,32 +7,19 @@ tinfo — Display table size information.
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>tinfo (Jun1999)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>tables</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>tinfo (Jun1999)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>tinfo</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   tinfo -- Display information about a table.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   tinfo table
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task is used to display information about a table.
@@ -49,17 +38,17 @@ tinfo — Display table size information.
   any value assigned by the user will be overwritten.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_table">table [file name template]</A></B></DT>
+  <DT><B>table [file name template]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='table' Line='table [file name template]'>
   <DD>A list of tables for which size information is to be produced.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(ttout = yes) [boolean]</A></B></DT>
+  <DT><B>(ttout = yes) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(ttout = yes) [boolean]'>
   <DD>Display information on the terminal screen as it is being placed into
   parameters?  Setting 'ttout = no' will cause information to be placed
@@ -67,7 +56,7 @@ tinfo — Display table size information.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(nrows) [integer]</A></B></DT>
+  <DT><B>(nrows) [integer]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(nrows) [integer]'>
   <DD>The number of rows written to the table.
   This and all subsequent parameters are output task parameters;
@@ -75,19 +64,19 @@ tinfo — Display table size information.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(ncols) [integer]</A></B></DT>
+  <DT><B>(ncols) [integer]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(ncols) [integer]'>
   <DD>The number of columns in the table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(npar) [integer]</A></B></DT>
+  <DT><B>(npar) [integer]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(npar) [integer]'>
   <DD>The number of header parameters in the table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(rowlen) [real]</A></B></DT>
+  <DT><B>(rowlen) [real]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(rowlen) [real]'>
   <DD>For a row-ordered table,
   'rowlen' is the amount of space allocated for each row in the table file.
@@ -97,7 +86,7 @@ tinfo — Display table size information.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(rowused) [real]</A></B></DT>
+  <DT><B>(rowused) [real]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(rowused) [real]'>
   <DD>'rowused' is the amount of the row length ('rowlen')
   that has actually been used
@@ -113,26 +102,26 @@ tinfo — Display table size information.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(allrows) [integer]</A></B></DT>
+  <DT><B>(allrows) [integer]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(allrows) [integer]'>
   <DD>The number of allocated rows.
   This is relevant only for column-ordered STSDAS format tables.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(maxpar) [integer]</A></B></DT>
+  <DT><B>(maxpar) [integer]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(maxpar) [integer]'>
   <DD>The space allocated for header parameters.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(maxcols) [integer]</A></B></DT>
+  <DT><B>(maxcols) [integer]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(maxcols) [integer]'>
   <DD>The space allocated for column descriptors.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(tbltype) [string]</A></B></DT>
+  <DT><B>(tbltype) [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(tbltype) [string]'>
   <DD>The table type, currently either "<TT>stsdas</TT>", "<TT>fits</TT>" or "<TT>text</TT>".
   "<TT>stsdas</TT>" is a machine dependent binary format,
@@ -144,7 +133,7 @@ tinfo — Display table size information.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(subtype) [string]</A></B></DT>
+  <DT><B>(subtype) [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(subtype) [string]'>
   <DD>For FITS tables the subtype can be either
   "<TT>ascii</TT>" (a TABLE extension) or "<TT>binary</TT>" (a BINTABLE extension).
@@ -159,7 +148,7 @@ tinfo — Display table size information.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(tblversion) [integer]</A></B></DT>
+  <DT><B>(tblversion) [integer]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(tblversion) [integer]'>
   <DD>The version code is an integer that identifies the version of
   the tables package that created or last modified the table.
@@ -174,7 +163,7 @@ tinfo — Display table size information.
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Get size information about the file 'm87pol.tab',
@@ -186,18 +175,18 @@ tinfo — Display table size information.
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   This task was written by Phil Hodge.
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   tlcol
@@ -206,5 +195,3 @@ tinfo — Display table size information.
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

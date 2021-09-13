@@ -1,3 +1,5 @@
+.. _page:
+
 page — Page through a file
 ==========================
 
@@ -5,69 +7,56 @@ page — Page through a file
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>page (Nov86)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>system</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>page (Nov86)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>page</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   page -- display a file or files one page at a time
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   page files
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_files">files</A></B></DT>
+  <DT><B>files</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='files' Line='files'>
   <DD>The list of files.  If omitted, text is read from the standard input.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_map_cc">map_cc = yes</A></B></DT>
+  <DT><B>map_cc = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='map_cc' Line='map_cc = yes'>
   <DD>Map non-printing control characters into printable form, e.g., BEL
   (ctrl/G, ASCII 7) is printed as "<TT>^G</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_clear_screen">clear_screen = no</A></B></DT>
+  <DT><B>clear_screen = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='clear_screen' Line='clear_screen = no'>
   <DD>If set, the screen is cleared before each page is written.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_first_page">first_page = 1</A></B></DT>
+  <DT><B>first_page = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='first_page' Line='first_page = 1'>
   <DD>The first page to be printed.  Pages are defined by form feed characters
   embedded in the text.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_prompt">prompt = "<TT></TT>"</A></B></DT>
+  <DT><B>prompt = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='prompt' Line='prompt = ""'>
   <DD>Optional prompt string for the end-of-page prompt.  If no prompt string is
   given the name of the file being paged is used.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_device">device = "<TT>terminal</TT>"</A></B></DT>
+  <DT><B>device = "<TT>terminal</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='device' Line='device = "terminal"'>
   <DD>The output device.  The special device <I>text</I> may be specified to
   represent standout mode with upper case rather than reverse video characters.
@@ -75,7 +64,7 @@ page — Page through a file
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <I>Page</I> displays a file on the terminal, one page of text at a time,
@@ -166,7 +155,7 @@ page — Page through a file
   to some other file will cause the old spool file to be closed.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -188,14 +177,14 @@ page — Page through a file
   	cl&gt; rfits mta make- long+ | page
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   Since <I>page</I> does not currently buffer any input text, backwards motions
   and absolute line positioning are not permitted when paging the standard input.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   type, match, head, tail
@@ -204,5 +193,3 @@ page — Page through a file
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

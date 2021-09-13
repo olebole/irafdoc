@@ -1,3 +1,5 @@
+.. _calcomp:
+
 calcomp — Plot metacode on a Calcomp pen plotter
 ================================================
 
@@ -5,48 +7,35 @@ calcomp — Plot metacode on a Calcomp pen plotter
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>calcomp (Mar86)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>plot</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>calcomp (Mar86)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>calcomp</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   calcomp -- plot a GKI metacode file on a Calcomp pen plotter
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   calcomp input
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>Name of input GKI metacode file, file template, or list of files.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_device">device = "<TT>calcomp</TT>"</A></B></DT>
+  <DT><B>device = "<TT>calcomp</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='device' Line='device = "calcomp"'>
   <DD>Name of the destination plotter (as referenced in graphcap).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_generic">generic = no</A></B></DT>
+  <DT><B>generic = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='generic' Line='generic = no'>
   <DD>Ignore remaining kernel dependent parameters -- if yes, then none of the
   following parameters will be used; this is automatically the case, for
@@ -54,27 +43,27 @@ calcomp — Plot metacode on a Calcomp pen plotter
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_debug">debug = no</A></B></DT>
+  <DT><B>debug = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='debug' Line='debug = no'>
   <DD>Print decoded graphics instructions during processing -- print each GKI 
   metacode instruction on standard output.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = no</A></B></DT>
+  <DT><B>verbose = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
   <DD>Print elements of polylines, etc. in debug mode -- if yes, this is essentially
   all of the information present in the input metacode file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_gkiunits">gkiunits = no</A></B></DT>
+  <DT><B>gkiunits = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='gkiunits' Line='gkiunits = no'>
   <DD>Print coordinates in GKI rather than NDC units if in debug mode.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xscale">xscale = INDEF</A></B></DT>
+  <DT><B>xscale = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xscale' Line='xscale = INDEF'>
   <DD>X scale in device units per GKI unit; e.g. 0.0003 is 3 ten-thousandths of an
   inch per GKI unit on a plotter calibrated in inches; normally a plot is 32767
@@ -84,13 +73,13 @@ calcomp — Plot metacode on a Calcomp pen plotter
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_yscale">yscale = INDEF</A></B></DT>
+  <DT><B>yscale = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='yscale' Line='yscale = INDEF'>
   <DD>Y scale in device units per GKI unit -- see xscale.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_txquality">txquality = "<TT>normal</TT>"</A></B></DT>
+  <DT><B>txquality = "<TT>normal</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='txquality' Line='txquality = "normal"'>
   <DD>Text quality; "<TT>normal</TT>" means use the text quality specified in the metacode
   file.  "<TT>Low</TT>" means override the metacode font with the Calcomp symbol font,
@@ -100,7 +89,7 @@ calcomp — Plot metacode on a Calcomp pen plotter
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lwtype">lwtype = "<TT>ntracing</TT>"</A></B></DT>
+  <DT><B>lwtype = "<TT>ntracing</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lwtype' Line='lwtype = "ntracing"'>
   <DD>Type of line and text width implementation.  "<TT>Ntracing</TT>" causes the pen plotter
   to draw each line or character several times with slight offsets to simulate 
@@ -110,7 +99,7 @@ calcomp — Plot metacode on a Calcomp pen plotter
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ltover">ltover = no</A></B></DT>
+  <DT><B>ltover = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ltover' Line='ltover = no'>
   <DD>Line type override, if yes, causes the pen plotter to draw all lines solidly,
   rather than as dashed or dotted lines if these are specified in the metacode.
@@ -118,7 +107,7 @@ calcomp — Plot metacode on a Calcomp pen plotter
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lwover">lwover = yes</A></B></DT>
+  <DT><B>lwover = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lwover' Line='lwover = yes'>
   <DD>Line width override; causes all lines and text to come out with single width
   in order to speed up plotting.  If bold text, axes, etc. are desired and
@@ -126,7 +115,7 @@ calcomp — Plot metacode on a Calcomp pen plotter
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lcover">lcover = no</A></B></DT>
+  <DT><B>lcover = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lcover' Line='lcover = no'>
   <DD>Line color override, if yes, causes the pen plotter to ignore any requests in
   the metacode for a colored pen change.  Pen change is not implemented at all
@@ -134,7 +123,7 @@ calcomp — Plot metacode on a Calcomp pen plotter
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dashlen">dashlen = INDEF</A></B></DT>
+  <DT><B>dashlen = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dashlen' Line='dashlen = INDEF'>
   <DD>Length of the dash in dashed lines in device units, usually inches.  Shorter
   dashes usually take longer to plot but may look nicer.  If left INDEF, a
@@ -142,7 +131,7 @@ calcomp — Plot metacode on a Calcomp pen plotter
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_gaplen">gaplen = INDEF</A></B></DT>
+  <DT><B>gaplen = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='gaplen' Line='gaplen = INDEF'>
   <DD>Length of the gap in dashed or dotted lines, in device units.  Longer gaps 
   result in faster plotting at the expense of clarity.  If left INDEF, a local
@@ -150,7 +139,7 @@ calcomp — Plot metacode on a Calcomp pen plotter
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_plwsep">plwsep = INDEF</A></B></DT>
+  <DT><B>plwsep = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='plwsep' Line='plwsep = INDEF'>
   <DD>Parallel line width separation -- if bold lines are implemented with "<TT>lwtype
   = ntracing</TT>", this is the right-angle distance between adjacent traces.  If
@@ -159,7 +148,7 @@ calcomp — Plot metacode on a Calcomp pen plotter
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Task <B>calcomp</B> is an IRAF graphics kernel.  It may be run standalone to
@@ -203,7 +192,7 @@ calcomp — Plot metacode on a Calcomp pen plotter
   though they were exactly 5 degrees.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Plot a metacode file exactly as is:
@@ -231,7 +220,7 @@ calcomp — Plot metacode on a Calcomp pen plotter
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   Pen plotters vary considerably in their plotting rates.  At NOAO, plotting a
@@ -245,7 +234,7 @@ calcomp — Plot metacode on a Calcomp pen plotter
   a lot of bold text, or with dashed and dotted AND bold data lines.
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   When using multiple tracing to simulate bold lines that intersect at very
@@ -253,7 +242,7 @@ calcomp — Plot metacode on a Calcomp pen plotter
   as it approaches the obtuse vertex.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   See task <B>longplot</B>, also in the plot package, for a task designed to
@@ -264,5 +253,3 @@ calcomp — Plot metacode on a Calcomp pen plotter
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

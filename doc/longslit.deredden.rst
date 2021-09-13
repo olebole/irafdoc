@@ -1,3 +1,5 @@
+.. _deredden:
+
 deredden — Apply interstellar extinction correction
 ===================================================
 
@@ -5,36 +7,23 @@ deredden — Apply interstellar extinction correction
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>deredden (Feb94)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.onedspec</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>deredden (Feb94)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>deredden</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   deredden -- Apply interstellar reddening correction
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   deredden input output [records] value
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of input spectra to be dereddened.  When using record
   format extensions the root names are specified, otherwise full
@@ -42,7 +31,7 @@ deredden — Apply interstellar extinction correction
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>List of derreddened spectra.  If no output list is specified then
   the input spectra are modified.  Also the output name may be
@@ -54,7 +43,7 @@ deredden — Apply interstellar extinction correction
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_records">records (imred.irs and imred.iids only)</A></B></DT>
+  <DT><B>records (imred.irs and imred.iids only)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='records' Line='records (imred.irs and imred.iids only)'>
   <DD>The set of record number extensions to be applied to each input
   and output root name when using record number extension 
@@ -65,7 +54,7 @@ deredden — Apply interstellar extinction correction
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_value">value</A></B></DT>
+  <DT><B>value</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='value' Line='value'>
   <DD>Extinction parameter value as selected by the type parameter.
   This value may be a visual extinction, A(V), the color excess between
@@ -74,29 +63,29 @@ deredden — Apply interstellar extinction correction
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_R">R = 3.1</A></B></DT>
+  <DT><B>R = 3.1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='R' Line='R = 3.1'>
   <DD>The ratio of extinction at V, A(V), to color excess between B and V, E(B-V).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_type">type = "<TT>E(B-V)</TT>"</A></B></DT>
+  <DT><B>type = "<TT>E(B-V)</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='type' Line='type = "E(B-V)"'>
   <DD>The type of extinction parameter used.  The values may be:
   <DL>
-  <DT><B><A NAME="l_A">A(V)</A></B></DT>
+  <DT><B>A(V)</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='A' Line='A(V)'>
   <DD>The absolute extinction at the V band at 5550 Angstroms.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_E">E(B-V)</A></B></DT>
+  <DT><B>E(B-V)</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='E' Line='E(B-V)'>
   <DD>The color excess between the B and V bands.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_c">c     </A></B></DT>
+  <DT><B>c     </B></DT>
   <! Sec='PARAMETERS' Level=1 Label='c' Line='c     '>
   <DD>The logarithmic H beta extinction.
   </DD>
@@ -104,7 +93,7 @@ deredden — Apply interstellar extinction correction
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apertures">apertures = "<TT></TT>"</A></B></DT>
+  <DT><B>apertures = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""'>
   <DD>List of apertures to be selected from input one dimensional spectra
   to be calibrated.  If no list is specified then all apertures are
@@ -114,7 +103,7 @@ deredden — Apply interstellar extinction correction
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_override">override = no, uncorrect = yes</A></B></DT>
+  <DT><B>override = no, uncorrect = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='override' Line='override = no, uncorrect = yes'>
   <DD>If a spectrum has been previously corrected it will contain the header
   parameter DEREDDEN.  If this parameter is present and the override
@@ -132,7 +121,7 @@ deredden — Apply interstellar extinction correction
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The input spectra are corrected for interstellar extinction, or
@@ -204,7 +193,7 @@ deredden — Apply interstellar extinction correction
   be used to add interstellar extinction.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  To deredden a spectrum with an extinction of 1.2 magnitudes at V:
@@ -244,11 +233,11 @@ deredden — Apply interstellar extinction correction
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_DEREDDEN">DEREDDEN V2.10.3</A></B></DT>
+  <DT><B>DEREDDEN V2.10.3</B></DT>
   <! Sec='REVISIONS' Level=0 Label='DEREDDEN' Line='DEREDDEN V2.10.3'>
   <DD>Extended to operate on two and three dimensional spatial spectra such as
   calibrated long slit and Fabry-Perot data.
@@ -259,14 +248,14 @@ deredden — Apply interstellar extinction correction
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_DEREDDEN">DEREDDEN V2.10</A></B></DT>
+  <DT><B>DEREDDEN V2.10</B></DT>
   <! Sec='REVISIONS' Level=0 Label='DEREDDEN' Line='DEREDDEN V2.10'>
   <DD>This task is new.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_notes">NOTES</A></H2>
+  <H3>Notes</H3>
   <! BeginSection: 'NOTES'>
   <UL>
   Since there can be only one deredding flag in multispectral images
@@ -274,7 +263,7 @@ deredden — Apply interstellar extinction correction
   corrections and then only the last correction will be recorded.
   </UL>
   <! EndSection:   'NOTES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   calibrate
@@ -283,5 +272,3 @@ deredden — Apply interstellar extinction correction
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'NOTES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

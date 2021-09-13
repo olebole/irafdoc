@@ -1,3 +1,5 @@
+.. _imedit:
+
 imedit — Examine and edit pixels in images
 ==========================================
 
@@ -5,42 +7,29 @@ imedit — Examine and edit pixels in images
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>imedit (Aug07)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.tv</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>imedit (Aug07)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>imedit</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   imedit -- examine and edit pixels in images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   imedit input output
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of images to be edited.  Images must be two dimensional.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>List of output images.  The list must match the input list or be empty.
   In the latter case the output image is the same as the input image; i.e.
@@ -48,7 +37,7 @@ imedit — Examine and edit pixels in images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cursor">cursor = "<TT></TT>"</A></B></DT>
+  <DT><B>cursor = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""'>
   <DD>The editing commands are entered via a cursor list.  When the task is
   run interactively this will normally be the standard image cursor
@@ -61,7 +50,7 @@ imedit — Examine and edit pixels in images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_logfile">logfile = "<TT></TT>"</A></B></DT>
+  <DT><B>logfile = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = ""'>
   <DD>File in which to record the editing commands which modify the images.
   The display and statistics commands which don't modify the images are
@@ -71,7 +60,7 @@ imedit — Examine and edit pixels in images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_display">display = yes</A></B></DT>
+  <DT><B>display = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='display' Line='display = yes'>
   <DD>Display the image during editing?  If yes then the display command,
   given by the parameter <I>command</I>, is used to display the image.
@@ -80,7 +69,7 @@ imedit — Examine and edit pixels in images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_autodisplay">autodisplay = yes</A></B></DT>
+  <DT><B>autodisplay = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='autodisplay' Line='autodisplay = yes'>
   <DD>Automatically redisplay the image after each change?  If the display
   of the image is rapid enough then each change can be displayed as
@@ -91,7 +80,7 @@ imedit — Examine and edit pixels in images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_autosurface">autosurface = no</A></B></DT>
+  <DT><B>autosurface = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='autosurface' Line='autosurface = no'>
   <DD>Automatically display surface plots after each change?  In addition
   to the image display command, the task can display a before and after
@@ -100,7 +89,7 @@ imedit — Examine and edit pixels in images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_aperture">aperture = "<TT>circular</TT>"</A></B></DT>
+  <DT><B>aperture = "<TT>circular</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='aperture' Line='aperture = "circular"'>
   <DD>Aperture for aperture editing.  Some commands specify the region to
   be edited by a center and radius.  The shape of the aperture is selected
@@ -110,7 +99,7 @@ imedit — Examine and edit pixels in images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_radius">radius = 2.</A></B></DT>
+  <DT><B>radius = 2.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='radius' Line='radius = 2.'>
   <DD>Radius of the aperture for commands selecting an aperture.  For circular
   apertures this is the radius while for square apertures it is half of the
@@ -122,7 +111,7 @@ imedit — Examine and edit pixels in images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_search">search = 2.</A></B></DT>
+  <DT><B>search = 2.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='search' Line='search = 2.'>
   <DD>Search radius for adjusting the position of the region to be edited.
   This applies to both aperture regions and rectangular regions.  The
@@ -135,7 +124,7 @@ imedit — Examine and edit pixels in images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_buffer">buffer = 1.</A></B></DT>
+  <DT><B>buffer = 1.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='buffer' Line='buffer = 1.'>
   <DD>Background buffer width.  A buffer annulus separates the region to be
   edited from a background annulus used for determining the background.
@@ -144,7 +133,7 @@ imedit — Examine and edit pixels in images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_width">width = 2.</A></B></DT>
+  <DT><B>width = 2.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='width' Line='width = 2.'>
   <DD>Width of background annulus.  The pixels used for background determinations
   is taken from an annulus of the same shape as the region to be edited and
@@ -152,7 +141,7 @@ imedit — Examine and edit pixels in images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xorder">xorder = 2, yorder = 2</A></B></DT>
+  <DT><B>xorder = 2, yorder = 2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xorder' Line='xorder = 2, yorder = 2'>
   <DD>Orders (number of terms) of surface polynomial fit to background pixels
   for statistics and background subtraction.  The orders should generally
@@ -161,21 +150,21 @@ imedit — Examine and edit pixels in images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_value">value = 0.</A></B></DT>
+  <DT><B>value = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='value' Line='value = 0.'>
   <DD>Value for constant substitution.  One editing command is replacement of
   a region by this value.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_minvalue">minvalue = INDEF, maxvalue = INDEF</A></B></DT>
+  <DT><B>minvalue = INDEF, maxvalue = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='minvalue' Line='minvalue = INDEF, maxvalue = INDEF'>
   <DD>Range of values which may be modified.  Value of INDEF map to the minimum
   and maximum possible values.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sigma">sigma = INDEF</A></B></DT>
+  <DT><B>sigma = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sigma' Line='sigma = INDEF'>
   <DD>Sigma of noise to be added to substitution values.  If less than or
   equal to zero then no noise is added.  If INDEF then pixel values from
@@ -185,13 +174,13 @@ imedit — Examine and edit pixels in images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_angh">angh = -33., angv = 25.</A></B></DT>
+  <DT><B>angh = -33., angv = 25.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='angh' Line='angh = -33., angv = 25.'>
   <DD>Horizontal and vertical viewing angles (in degrees) for surface plots.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_command">command = "<TT>display $image 1 erase=$erase fill=yes order=0 &gt;&amp; dev$null</TT>"</A></B></DT>
+  <DT><B>command = "<TT>display $image 1 erase=$erase fill=yes order=0 &gt;&amp; dev$null</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='command' Line='command = "display $image 1 erase=$erase fill=yes order=0 &gt;&amp; dev$null"'>
   <DD>Command for displaying images.  This task displays images by executing a
   standard IRAF command.  Two arguments may be substituted by the appropriate
@@ -202,7 +191,7 @@ imedit — Examine and edit pixels in images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_graphics">graphics = "<TT>stdgraph</TT>"</A></B></DT>
+  <DT><B>graphics = "<TT>stdgraph</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"'>
   <DD>Graphics device used for surface plots.  Normally this is the standard
   graphics device "<TT>stdgraph</TT>" though other possibilities are "<TT>stdplot</TT>"
@@ -211,7 +200,7 @@ imedit — Examine and edit pixels in images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_default">default = "<TT>b</TT>"</A></B></DT>
+  <DT><B>default = "<TT>b</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='default' Line='default = "b"'>
   <DD>Default command option for simple position list input.  If the input
   is a list of column and line positions (x,y) then the command executed
@@ -222,7 +211,7 @@ imedit — Examine and edit pixels in images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fixpix">fixpix = no</A></B></DT>
+  <DT><B>fixpix = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fixpix' Line='fixpix = no'>
   <DD>Fixpix style input?  This type of input consists of rectangular regions
   specified by lines giving the starting and ending column and starting
@@ -235,7 +224,7 @@ imedit — Examine and edit pixels in images
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Regions of images are examined and edited.  This may be done interactively
@@ -341,7 +330,7 @@ imedit — Examine and edit pixels in images
   to be written.  This can be used to save partial changes.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_replacement_algorithms">REPLACEMENT ALGORITHMS</A></H2>
+  <H3>Replacement algorithms</H3>
   <! BeginSection: 'REPLACEMENT ALGORITHMS'>
   <UL>
   The parameters "<TT>minvalue</TT>" and "<TT>maxvalue</TT>" are may be used to limit the
@@ -349,7 +338,7 @@ imedit — Examine and edit pixels in images
   are selected as described below.
   <P>
   <DL>
-  <DT><B><A NAME="l_a">a, b</A></B></DT>
+  <DT><B>a, b</B></DT>
   <! Sec='REPLACEMENT ALGORITHMS' Level=0 Label='a' Line='a, b'>
   <DD>Replace rectangular or aperture regions by background values.  A background
   surface is fit the pixels in the background annulus if the x and y orders
@@ -363,7 +352,7 @@ imedit — Examine and edit pixels in images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_c">c, f, l</A></B></DT>
+  <DT><B>c, f, l</B></DT>
   <! Sec='REPLACEMENT ALGORITHMS' Level=0 Label='c' Line='c, f, l'>
   <DD>Replace rectangular or line regions by interpolation from the nearest
   background column or line.  The <TT>'f'</TT> line option interpolates across the
@@ -379,7 +368,7 @@ imedit — Examine and edit pixels in images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_d">d, e, v</A></B></DT>
+  <DT><B>d, e, v</B></DT>
   <! Sec='REPLACEMENT ALGORITHMS' Level=0 Label='d' Line='d, e, v'>
   <DD>Replace rectangular, aperture, or vector regions by the specified
   constant value.  This may be used to flag pixels or make masks.
@@ -388,7 +377,7 @@ imedit — Examine and edit pixels in images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_j">j, k</A></B></DT>
+  <DT><B>j, k</B></DT>
   <! Sec='REPLACEMENT ALGORITHMS' Level=0 Label='j' Line='j, k'>
   <DD>Replace rectangular or aperture regions in the editor buffer by the data
   from the input image.  This may be used to undo any change.  Note that
@@ -397,7 +386,7 @@ imedit — Examine and edit pixels in images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_m">m, n</A></B></DT>
+  <DT><B>m, n</B></DT>
   <! Sec='REPLACEMENT ALGORITHMS' Level=0 Label='m' Line='m, n'>
   <DD>Replace an aperture region by another aperture region.  There is no
   centering applied in this option.  The aperture region to copy is
@@ -408,7 +397,7 @@ imedit — Examine and edit pixels in images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_u">u</A></B></DT>
+  <DT><B>u</B></DT>
   <! Sec='REPLACEMENT ALGORITHMS' Level=0 Label='u' Line='u'>
   <DD>Undo the last change.  When a change is made the before and after data
   are saved.  An undo exchanges the two sets of data.  Note that it is
@@ -418,7 +407,7 @@ imedit — Examine and edit pixels in images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">=, &lt;, &gt;</A></B></DT>
+  <DT><B>=, &lt;, &gt;</B></DT>
   <! Sec='REPLACEMENT ALGORITHMS' Level=0 Label='' Line='=, &lt;, &gt;'>
   <DD>The all pixels with a value equal to that of the pixel at the cursor
   position are replaced by the specified constant value.  This is intended
@@ -428,7 +417,7 @@ imedit — Examine and edit pixels in images
   </DL>
   </UL>
   <! EndSection:   'REPLACEMENT ALGORITHMS'>
-  <H2><A NAME="s_commands">COMMANDS</A></H2>
+  <H3>Commands</H3>
   <! BeginSection: 'COMMANDS'>
   <UL>
   <CENTER>		IMEDIT CURSOR KEYSTROKE COMMANDS
@@ -528,13 +517,13 @@ imedit — Examine and edit pixels in images
   </PRE>
   </UL>
   <! EndSection:   'COMMANDS'>
-  <H2><A NAME="s_keywords">KEYWORDS</A></H2>
+  <H3>Keywords</H3>
   <! BeginSection: 'KEYWORDS'>
   <UL>
   None
   </UL>
   <! EndSection:   'KEYWORDS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  Interactively edit an image.
@@ -572,11 +561,11 @@ imedit — Examine and edit pixels in images
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_IMEDIT">IMEDIT V2.13</A></B></DT>
+  <DT><B>IMEDIT V2.13</B></DT>
   <! Sec='REVISIONS' Level=0 Label='IMEDIT' Line='IMEDIT V2.13'>
   <DD>The <TT>'v'</TT> option was added to allow vector replacement.
   The <TT>'='</TT>, <TT>'<'</TT>, <TT>'>'</TT> options were added to replace values matching the pixel
@@ -584,28 +573,28 @@ imedit — Examine and edit pixels in images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_IMEDIT">IMEDIT V2.11.2</A></B></DT>
+  <DT><B>IMEDIT V2.11.2</B></DT>
   <! Sec='REVISIONS' Level=0 Label='IMEDIT' Line='IMEDIT V2.11.2'>
   <DD>The temporary editor image was changed to use a unique temporary image
   name beginning with "<TT>imedit</TT>" rather than the fixed name of "<TT>epixbuf</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_IMEDIT">IMEDIT V2.11</A></B></DT>
+  <DT><B>IMEDIT V2.11</B></DT>
   <! Sec='REVISIONS' Level=0 Label='IMEDIT' Line='IMEDIT V2.11'>
   <DD>If xorder or yorder are zero then a median background is computed
   for the <TT>'a'</TT> and <TT>'b'</TT> keys.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_IMEDIT">IMEDIT V2.10.4</A></B></DT>
+  <DT><B>IMEDIT V2.10.4</B></DT>
   <! Sec='REVISIONS' Level=0 Label='IMEDIT' Line='IMEDIT V2.10.4'>
   <DD>The <TT>'u'</TT>, <TT>'j'</TT>, <TT>'k'</TT>, and <TT>'n'</TT> keys were added to those recorded in the
   log file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_IMEDIT">IMEDIT V2.8</A></B></DT>
+  <DT><B>IMEDIT V2.8</B></DT>
   <! Sec='REVISIONS' Level=0 Label='IMEDIT' Line='IMEDIT V2.8'>
   <DD>This task is a first version of what will be an evolving task.
   Additional features and options will be added as they are suggested.
@@ -634,7 +623,7 @@ imedit — Examine and edit pixels in images
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   ccdred.instruments proto.fixpix
@@ -643,5 +632,3 @@ imedit — Examine and edit pixels in images
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'REPLACEMENT ALGORITHMS' 'COMMANDS' 'KEYWORDS' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

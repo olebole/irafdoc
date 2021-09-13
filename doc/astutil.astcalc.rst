@@ -1,3 +1,5 @@
+.. _astcalc:
+
 astcalc — Astronomical calculator
 =================================
 
@@ -5,36 +7,23 @@ astcalc — Astronomical calculator
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>astcalc (Jan96)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>astutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>astcalc (Jan96)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>astcalc</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   astcalc -- astronomical calculator
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   astcalc
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_commands">commands</A></B></DT>
+  <DT><B>commands</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='commands' Line='commands'>
   <DD>A file of commands using the simple syntax given in the DESCRIPTION.  If no
   file name is given then the commands are read interactively from the
@@ -46,7 +35,7 @@ astcalc — Astronomical calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_images">images = "<TT></TT>"</A></B></DT>
+  <DT><B>images = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images = ""'>
   <DD>Optional list of images.  The command input is repeated for each image.
   Image header keyword values may be read and used as variables and
@@ -55,7 +44,7 @@ astcalc — Astronomical calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_table">table = "<TT></TT>"</A></B></DT>
+  <DT><B>table = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='table' Line='table = ""'>
   <DD>Optional text file containing columns of values.  The table consists of
   one or more lines of whitespace separated columns of values.  Note that a
@@ -66,7 +55,7 @@ astcalc — Astronomical calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_prompt">prompt = "<TT>astcalc&gt; </TT>"</A></B></DT>
+  <DT><B>prompt = "<TT>astcalc&gt; </TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='prompt' Line='prompt = "astcalc&gt; "'>
   <DD>When no command file is specified the input commands are read from the
   standard input (the terminal) and the value of the <I>prompt</I> string is
@@ -76,7 +65,7 @@ astcalc — Astronomical calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = no</A></B></DT>
+  <DT><B>verbose = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
   <DD>Print each variable assignment?  This is useful for debugging command
   files.
@@ -84,7 +73,7 @@ astcalc — Astronomical calculator
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <B>Astcalc</B> evaluates statements using variables, constants, and
@@ -296,7 +285,7 @@ astcalc — Astronomical calculator
   </PRE>
   <P>
   <DL>
-  <DT><B><A NAME="l_sexstr">sexstr (number), sexstr (number, digits)</A></B></DT>
+  <DT><B>sexstr (number), sexstr (number, digits)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='sexstr' Line='sexstr (number), sexstr (number, digits)'>
   <DD>Convert a number to a sexagesimal string in the format X:MM:SS.SS.  There
   is an optional second argument (the default is 0) which is the number of
@@ -304,7 +293,7 @@ astcalc — Astronomical calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_epoch">epoch (date[, ut])</A></B></DT>
+  <DT><B>epoch (date[, ut])</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='epoch' Line='epoch (date[, ut])'>
   <DD>Compute an epoch given a date and time.  The date is a string in the
   format DD/MM/YY, YYYY-MM-DD, or YYYY-MM-DDTHH:MM:SS.
@@ -316,14 +305,14 @@ astcalc — Astronomical calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_julday">julday (date[, ut])</A></B></DT>
+  <DT><B>julday (date[, ut])</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='julday' Line='julday (date[, ut])'>
   <DD>Compute a Julian day given a date and time.  The date and time are
   specified as described previously.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_mst">mst (date[, ut], longitude)</A></B></DT>
+  <DT><B>mst (date[, ut], longitude)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='mst' Line='mst (date[, ut], longitude)'>
   <DD>Compute a mean sidereal time given a date, time, and longitude in degrees.  The
   date and (optional) time are specified as described previously.  The longitude
@@ -333,7 +322,7 @@ astcalc — Astronomical calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_precess">precess (ra, dec, epoch1, epoch2)</A></B></DT>
+  <DT><B>precess (ra, dec, epoch1, epoch2)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='precess' Line='precess (ra, dec, epoch1, epoch2)'>
   <DD>Precess coordinates from one epoch to another.  The ra is the
   right ascension in hours, the dec in the declination in degrees,
@@ -344,7 +333,7 @@ astcalc — Astronomical calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ra_precess">ra_precess (ra, dec, epoch1, epoch2)</A></B></DT>
+  <DT><B>ra_precess (ra, dec, epoch1, epoch2)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='ra_precess' Line='ra_precess (ra, dec, epoch1, epoch2)'>
   <DD>Precess a right ascension from one epoch to another.  The ra is the
   input right ascension in hours, the dec is the declination in degrees,
@@ -354,7 +343,7 @@ astcalc — Astronomical calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dec_precess">dec_precess (ra1, dec1, epoch1, epoch2)</A></B></DT>
+  <DT><B>dec_precess (ra1, dec1, epoch1, epoch2)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='dec_precess' Line='dec_precess (ra1, dec1, epoch1, epoch2)'>
   <DD>Precess a declination from one epoch to another.  The ra is the
   input right ascension in hours, the dec is the declination in degrees,
@@ -364,7 +353,7 @@ astcalc — Astronomical calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_arcsep">arcsep (ra1, dec1, ra2, dec2)</A></B></DT>
+  <DT><B>arcsep (ra1, dec1, ra2, dec2)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='arcsep' Line='arcsep (ra1, dec1, ra2, dec2)'>
   <DD>Compute the separation between two spherical coordinates.  The parameters
   ra1 and ra2 are coordinates in hours (right ascension, longitude, etc.)
@@ -373,7 +362,7 @@ astcalc — Astronomical calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_airmass">airmass (ra, dec, st, latitude)</A></B></DT>
+  <DT><B>airmass (ra, dec, st, latitude)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='airmass' Line='airmass (ra, dec, st, latitude)'>
   <DD>Compute an airmass given right ascension in hours, declination in
   degrees, sidereal time in hours, and latitude in degrees.  The latitude
@@ -382,7 +371,7 @@ astcalc — Astronomical calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_eairmass">eairmass (ra, dec, st, exptime, latitude)</A></B></DT>
+  <DT><B>eairmass (ra, dec, st, exptime, latitude)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='eairmass' Line='eairmass (ra, dec, st, exptime, latitude)'>
   <DD>Compute an "<TT>effective</TT>" airmass given right ascension in hours, declination
   in degrees, beginning sidereal time in hours, exposure time in seconds, and
@@ -398,7 +387,7 @@ astcalc — Astronomical calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_obsdb">obsdb (observatory, parameter)</A></B></DT>
+  <DT><B>obsdb (observatory, parameter)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='obsdb' Line='obsdb (observatory, parameter)'>
   <DD>Return a value from the observatory database.  The observatory parameter is
   a observatory identification string as defined in the database.  Another
@@ -431,7 +420,7 @@ astcalc — Astronomical calculator
   </PRE>
   <P>
   <DL>
-  <DT><B><A NAME="l_print">print ([argument, ...])</A></B></DT>
+  <DT><B>print ([argument, ...])</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='print' Line='print ([argument, ...])'>
   <DD>Print the arguments with default formats based on the type of value ending
   with a newline.  There may be zero or more arguments.  With zero arguments
@@ -439,7 +428,7 @@ astcalc — Astronomical calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_printf">printf (fmt [, argument, ...])</A></B></DT>
+  <DT><B>printf (fmt [, argument, ...])</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='printf' Line='printf (fmt [, argument, ...])'>
   <DD>Print a list of arguments using the formatting syntax described later.
   Parameters to be formatted are given by the % fields and the values are
@@ -449,7 +438,7 @@ astcalc — Astronomical calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_error">error (message)</A></B></DT>
+  <DT><B>error (message)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='error' Line='error (message)'>
   <DD>Print the "<TT>message</TT>", which can be any string variable such as might
   be produced by "<TT>format</TT>", and abort the task.  This is useful in
@@ -458,14 +447,14 @@ astcalc — Astronomical calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_clget">clget (parameter)</A></B></DT>
+  <DT><B>clget (parameter)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='clget' Line='clget (parameter)'>
   <DD>Get the value of a CL parameter.  The argument must be a string.  The
   function value is the value of the parameter.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_clput">clput (parameter, value)</A></B></DT>
+  <DT><B>clput (parameter, value)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='clput' Line='clput (parameter, value)'>
   <DD>Put a value into a CL parameter.  The parameter argument must be a
   string and the value can be anything.  The function returns a string
@@ -474,7 +463,7 @@ astcalc — Astronomical calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_scan">scan (string, var, ...)</A></B></DT>
+  <DT><B>scan (string, var, ...)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='scan' Line='scan (string, var, ...)'>
   <DD>Parse a string of whitespace separated words into a list of
   variables.  The number of variables assigned is
@@ -482,7 +471,7 @@ astcalc — Astronomical calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fscan">fscan (var, ...)</A></B></DT>
+  <DT><B>fscan (var, ...)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='fscan' Line='fscan (var, ...)'>
   <DD>Scan a line of a text file into a list of variables.  The arguments
   are zero or more variable names to which to assign the values of
@@ -491,14 +480,14 @@ astcalc — Astronomical calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_imget">imget (parameter)</A></B></DT>
+  <DT><B>imget (parameter)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='imget' Line='imget (parameter)'>
   <DD>Get the value of an image header keyword from the current image.  The
   argument must be a string.  The function value is the value of the keyword.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_imput">imput (parameter, value)</A></B></DT>
+  <DT><B>imput (parameter, value)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='imput' Line='imput (parameter, value)'>
   <DD>Put a value into an image header keyword for the current image.  The
   parameter argument must be a string and the value can be anything.  If the
@@ -509,7 +498,7 @@ astcalc — Astronomical calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_imdel">imdel (parameter)</A></B></DT>
+  <DT><B>imdel (parameter)</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='imdel' Line='imdel (parameter)'>
   <DD>Delete an image header keyword.  The parameter argument must be a string.
   The returned values are the strings "<TT>imdel: parameter not found</TT>"
@@ -520,7 +509,7 @@ astcalc — Astronomical calculator
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_formats">FORMATS</A></H2>
+  <H3>Formats</H3>
   <! BeginSection: 'FORMATS'>
   <UL>
   A  format  specification has the form "<TT>%w.dCn</TT>", where w is the field
@@ -600,7 +589,7 @@ astcalc — Astronomical calculator
   <P>
   </UL>
   <! EndSection:   'FORMATS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  This example shows interactive use.
@@ -747,18 +736,18 @@ astcalc — Astronomical calculator
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_ASTCALC">ASTCALC V2.15</A></B></DT>
+  <DT><B>ASTCALC V2.15</B></DT>
   <! Sec='REVISIONS' Level=0 Label='ASTCALC' Line='ASTCALC V2.15'>
   <DD>The $D variable was changed from the old MM/DD/YY format to the post-Y2K
   YYYY-MM-DD format.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ASTCALC">ASTCALC V2.11.2</A></B></DT>
+  <DT><B>ASTCALC V2.11.2</B></DT>
   <! Sec='REVISIONS' Level=0 Label='ASTCALC' Line='ASTCALC V2.11.2'>
   <DD>Y2K update:  The epoch, julday, and mst functions now take either the old
   or new FITS style date strings.  The time argument is optional and if
@@ -768,14 +757,14 @@ astcalc — Astronomical calculator
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ASTCALC">ASTCALC V2.11</A></B></DT>
+  <DT><B>ASTCALC V2.11</B></DT>
   <! Sec='REVISIONS' Level=0 Label='ASTCALC' Line='ASTCALC V2.11'>
   <DD>This task is new in this release.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   astradius, asthedit, setairmass, setjd, asttimes, precess, observatory, hedit
@@ -784,5 +773,3 @@ astcalc — Astronomical calculator
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'FORMATS' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

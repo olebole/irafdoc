@@ -1,3 +1,5 @@
+.. _bplot:
+
 bplot — Batch plots of spectra
 ==============================
 
@@ -5,43 +7,30 @@ bplot — Batch plots of spectra
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>bplot (Mar92)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.onedspec</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>bplot (Mar92)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>bplot</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   bplot -- Plot spectra noninteractively using SPLOT
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   bplot images [records]
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>List of images to be plotted.  These may be one dimensional, multiaperture,
   long slit, or nonspectral images.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_records">records (imred.irs and imred.iids only)</A></B></DT>
+  <DT><B>records (imred.irs and imred.iids only)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='records' Line='records (imred.irs and imred.iids only)'>
   <DD>List of records to be appended to the input image root names when
   using record number extension format.  The syntax of this list is comma
@@ -51,27 +40,27 @@ bplot — Batch plots of spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apertures">apertures = "<TT></TT>"</A></B></DT>
+  <DT><B>apertures = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""'>
   <DD>List of apertures/lines/columns to be plotted in each image.  If
   <I>apertures</I> is null all of the apertures/lines/columns will be plotted.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_band">band = 1</A></B></DT>
+  <DT><B>band = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='band' Line='band = 1'>
   <DD>The band or plane of a three dimensional image to be plotted in each image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_graphics">graphics = "<TT>stdgraph</TT>"</A></B></DT>
+  <DT><B>graphics = "<TT>stdgraph</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"'>
   <DD>Output graphics device.  This may be one of "<TT>stdgraph</TT>", "<TT>stdplot</TT>",
   "<TT>stdvdm</TT>", or the actual device name.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cursor">cursor = "<TT>onedspec$gcurval.dat</TT>"</A></B></DT>
+  <DT><B>cursor = "<TT>onedspec$gcurval.dat</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = "onedspec$gcurval.dat"'>
   <DD>File(s) containing cursor commands for the SPLOT task.
   The files will be cycled sequentially.  If there is more than one file
@@ -85,20 +74,20 @@ bplot — Batch plots of spectra
   In <B>splot</B> they are query parameters but in <B>bplot</B> they are hidden
   parameters.
   <DL>
-  <DT><B><A NAME="l_next_image">next_image = "<TT></TT>"</A></B></DT>
+  <DT><B>next_image = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='next_image' Line='next_image = ""'>
   <DD>In response to <TT>'g'</TT> (get next image) this parameter specifies the image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_new_image">new_image = "<TT></TT>"</A></B></DT>
+  <DT><B>new_image = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='new_image' Line='new_image = ""'>
   <DD>In response to <TT>'i'</TT> (write current spectrum) this parameter specifies the
   name of a new image to create or existing image to overwrite.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_overwrite">overwrite = yes</A></B></DT>
+  <DT><B>overwrite = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='overwrite' Line='overwrite = yes'>
   <DD>Overwrite an existing output image?  If set to yes it is possible to write
   back into the input spectrum or to some other existing image.  Otherwise
@@ -106,7 +95,7 @@ bplot — Batch plots of spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_spec2">spec2 = "<TT></TT>"</A></B></DT>
+  <DT><B>spec2 = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='spec2' Line='spec2 = ""'>
   <DD>When adding, subtracting, multiplying, or dividing by a second spectrum
   (<TT>'+'</TT>, <TT>'-'</TT>, <TT>'*'</TT>, <TT>'/'</TT> keys in the <TT>'f'</TT> mode) this parameter is used to get
@@ -114,35 +103,35 @@ bplot — Batch plots of spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_constant">constant = 0.</A></B></DT>
+  <DT><B>constant = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.'>
   <DD>When adding or multiplying by a constant (<TT>'p'</TT> or <TT>'m'</TT> keys in the <TT>'f'</TT> mode)
   the parameter is used to get the constant.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wavelength">wavelength = 0.</A></B></DT>
+  <DT><B>wavelength = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wavelength' Line='wavelength = 0.'>
   <DD>This parameter is used to get a dispersion coordinate value during deblending or
   when changing the dispersion coordinates with <TT>'u'</TT>.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_linelist">linelist = "<TT></TT>"</A></B></DT>
+  <DT><B>linelist = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='linelist' Line='linelist = ""'>
   <DD>During deblending this parameter is used to get a list of line positions
   and widths.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wstart">wstart = 0., wend = 0., dw = 0.</A></B></DT>
+  <DT><B>wstart = 0., wend = 0., dw = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wstart' Line='wstart = 0., wend = 0., dw = 0.'>
   <DD>In response to <TT>'p'</TT> (convert to a linear wavelength scale) these parameter
   specify the starting wavelength, ending wavelength, and wavelength per pixel.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_boxsize">boxsize = 2</A></B></DT>
+  <DT><B>boxsize = 2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='boxsize' Line='boxsize = 2'>
   <DD>In response to <TT>'s'</TT> (smooth) this parameter specifies the box size in pixels
   to be used for the boxcar smooth
@@ -150,7 +139,7 @@ bplot — Batch plots of spectra
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The spectra in the input image list are successively processed by the task
@@ -177,7 +166,7 @@ bplot — Batch plots of spectra
   to be manipulated in differing ways.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. To plot all of apertures of the multiaperture spectra indicated by the file
@@ -237,18 +226,18 @@ bplot — Batch plots of spectra
   that are in one to one correspondence with the range of apertures.
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_BPLOT">BPLOT V2.10.3</A></B></DT>
+  <DT><B>BPLOT V2.10.3</B></DT>
   <! Sec='REVISIONS' Level=0 Label='BPLOT' Line='BPLOT V2.10.3'>
   <DD>The query parameters from SPLOT were added as hidden parameters in BPLOT
   to allow use of those keys in a batch way.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_BPLOT">BPLOT V2.10</A></B></DT>
+  <DT><B>BPLOT V2.10</B></DT>
   <! Sec='REVISIONS' Level=0 Label='BPLOT' Line='BPLOT V2.10'>
   <DD>The <I>apertures</I> and <I>band</I> parameters been added to select
   apertures from multiple spectra and long slit images, and bands from 3D
@@ -259,7 +248,7 @@ bplot — Batch plots of spectra
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   The cursor file command keystrokes cannot include any of the cursor
@@ -286,7 +275,7 @@ bplot — Batch plots of spectra
   with the second (as encoded in the range string:  "<TT>2x2</TT>").
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   splot, specplot, slist, gkiextract, gkimosaic, implot, graph, ranges
@@ -295,5 +284,3 @@ bplot — Batch plots of spectra
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

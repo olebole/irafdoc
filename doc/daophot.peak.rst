@@ -1,3 +1,5 @@
+.. _peak:
+
 peak — Fit the psf to single stars
 ==================================
 
@@ -5,42 +7,29 @@ peak — Fit the psf to single stars
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>peak (May00)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.daophot</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>peak (May00)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>peak</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   peak -- fit the PSF model to single stars
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   peak image photfile psfimage peakfile rejfile
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_image">image</A></B></DT>
+  <DT><B>image</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='image' Line='image'>
   <DD>The list of images containing the stars to be fit.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_photfile">photfile</A></B></DT>
+  <DT><B>photfile</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='photfile' Line='photfile'>
   <DD>The list of input photometry files containing initial estimates of the
   positions and magnitudes of the stars to be fit. The number of photometry
@@ -53,7 +42,7 @@ peak — Fit the psf to single stars
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_psfimage">psfimage</A></B></DT>
+  <DT><B>psfimage</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='psfimage' Line='psfimage'>
   <DD>The list of images containing the PSF models computed by the DAOPHOT PSF task.
   The number of PSF images must be equal to the number of input images.  If
@@ -63,7 +52,7 @@ peak — Fit the psf to single stars
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_peakfile">peakfile</A></B></DT>
+  <DT><B>peakfile</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='peakfile' Line='peakfile'>
   <DD>The list of output photometry files. There must be one output photometry
   file for every input image.  If peakfile is "<TT>default</TT>", "<TT>dir$default</TT>", or a
@@ -74,7 +63,7 @@ peak — Fit the psf to single stars
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rejfile">rejfile</A></B></DT>
+  <DT><B>rejfile</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rejfile' Line='rejfile'>
   <DD>The list of output rejected photometry files containing the positions and sky
   values of stars that could not be fit. If rejfile is undefined, results for all
@@ -89,7 +78,7 @@ peak — Fit the psf to single stars
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_datapars">datapars = "<TT></TT>"</A></B></DT>
+  <DT><B>datapars = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='datapars' Line='datapars = ""'>
   <DD>The name of the file containing the data dependent parameters. The parameters
   <I>scale</I>, <I>datamin</I>, and <I>datamax</I> are located here. If datapars
@@ -97,7 +86,7 @@ peak — Fit the psf to single stars
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_daopars">daopars = "<TT></TT>"</A></B></DT>
+  <DT><B>daopars = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='daopars' Line='daopars = ""'>
   <DD>The name of the file containing the daophot fitting parameters. The parameters
   <I>psfrad</I> and <I>fitrad</I> are located here. If <I>daopars</I> is undefined
@@ -105,7 +94,7 @@ peak — Fit the psf to single stars
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wcsin">wcsin = "<TT>)_.wcsin</TT>", wcsout = "<TT>)_.wcsout</TT>", wcspsf = "<TT>)_.wcspsf</TT>"</A></B></DT>
+  <DT><B>wcsin = "<TT>)_.wcsin</TT>", wcsout = "<TT>)_.wcsout</TT>", wcspsf = "<TT>)_.wcspsf</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wcsin' Line='wcsin = ")_.wcsin", wcsout = ")_.wcsout", wcspsf = ")_.wcspsf"'>
   <DD>The coordinate system of the input coordinates read from <I>photfile</I>, of the
   psf model <I>psfimage</I>, and of the output coordinates written to
@@ -118,7 +107,7 @@ peak — Fit the psf to single stars
   system options are "<TT>logical</TT>", "<TT>tv</TT>", and "<TT>physical</TT>". The image cursor coordinate
   system is assumed to be the "<TT>tv</TT>" system.
   <DL>
-  <DT><B><A NAME="l_logical">logical</A></B></DT>
+  <DT><B>logical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='logical' Line='logical'>
   <DD>Logical coordinates are pixel coordinates relative to the current image.
   The  logical coordinate system is the coordinate system used by the image
@@ -129,7 +118,7 @@ peak — Fit the psf to single stars
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_tv">tv</A></B></DT>
+  <DT><B>tv</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='tv' Line='tv'>
   <DD>Tv coordinates are the pixel coordinates used by the display servers. Tv
   coordinates  include  the effects of any input image section, but do not
@@ -144,7 +133,7 @@ peak — Fit the psf to single stars
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_physical">physical</A></B></DT>
+  <DT><B>physical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='physical' Line='physical'>
   <DD>Physical coordinates are pixel coordinates invariant  with respect to linear
   transformations of the physical image data.  For example, if the current image
@@ -158,7 +147,7 @@ peak — Fit the psf to single stars
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_world">world</A></B></DT>
+  <DT><B>world</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='world' Line='world'>
   <DD>World coordinates are image coordinates in any units which are invariant
   with respect to linear transformations of the physical image data. For
@@ -174,7 +163,7 @@ peak — Fit the psf to single stars
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cache">cache = "<TT>)_.cache</TT>"</A></B></DT>
+  <DT><B>cache = "<TT>)_.cache</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cache' Line='cache = ")_.cache"'>
   <DD>Cache the image pixels in memory. Cache may be set to the value of the apphot
   package parameter (the default), "<TT>yes</TT>", or "<TT>no</TT>". By default caching is
@@ -182,21 +171,21 @@ peak — Fit the psf to single stars
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verify">verify = "<TT>)_.verify</TT>"</A></B></DT>
+  <DT><B>verify = "<TT>)_.verify</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verify' Line='verify = ")_.verify"'>
   <DD>Verify the critical PEAK task parameters? Verify can be set to the DAOPHOT
   package parameter value (the default), "<TT>yes</TT>", or "<TT>no</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_update">update = "<TT>)_.update</TT>"</A></B></DT>
+  <DT><B>update = "<TT>)_.update</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='update' Line='update = ")_.update"'>
   <DD>Update the PEAK task parameters if <I>verify</I> is "<TT>yes</TT>"? Update can be
   set to the default daophot package parameter value, "<TT>yes</TT>", or "<TT>no</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = "<TT>)_.verbose</TT>"</A></B></DT>
+  <DT><B>verbose = "<TT>)_.verbose</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = ")_.verbose"'>
   <DD>Print messages about the progress of the task ? Verbose can be set to the
   DAOPHOT package parameter value (the default), "<TT>yes</TT>", or "<TT>no</TT>".
@@ -204,7 +193,7 @@ peak — Fit the psf to single stars
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   PEAK computes x and y centers, sky values  and magnitudes for all the stars in
@@ -351,7 +340,7 @@ peak — Fit the psf to single stars
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_output">OUTPUT</A></H2>
+  <H3>Output</H3>
   <! BeginSection: 'OUTPUT'>
   <UL>
   <P>
@@ -375,7 +364,7 @@ peak — Fit the psf to single stars
   <P>
   </UL>
   <! EndSection:   'OUTPUT'>
-  <H2><A NAME="s_errors">ERRORS</A></H2>
+  <H3>Errors</H3>
   <! BeginSection: 'ERRORS'>
   <UL>
   <P>
@@ -392,7 +381,7 @@ peak — Fit the psf to single stars
   <P>
   </UL>
   <! EndSection:   'ERRORS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -516,18 +505,18 @@ peak — Fit the psf to single stars
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   <P>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   datapars,daopars,nstar,allstar
@@ -536,5 +525,3 @@ peak — Fit the psf to single stars
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'OUTPUT' 'ERRORS' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

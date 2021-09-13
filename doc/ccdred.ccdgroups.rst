@@ -1,3 +1,5 @@
+.. _ccdgroups:
+
 ccdgroups — Group CCD images into image lists
 =============================================
 
@@ -5,78 +7,65 @@ ccdgroups — Group CCD images into image lists
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>ccdgroups (Jun87)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.imred.ccdred</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>ccdgroups (Jun87)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>ccdgroups</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   ccdgroups -- Group CCD images into image lists
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   ccdgroups images output
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>List of CCD images to be grouped.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>Output root group filename.  The image group lists will be put in files
   with this root name followed by a number.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_group">group = "<TT>ccdtype</TT>"</A></B></DT>
+  <DT><B>group = "<TT>ccdtype</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='group' Line='group = "ccdtype"'>
   <DD>Group type.  There are currently four grouping types:
   <DL>
-  <DT><B><A NAME="l_ccdtype">ccdtype</A></B></DT>
+  <DT><B>ccdtype</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='ccdtype' Line='ccdtype'>
   <DD>Group by CCD image type.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_subset">subset</A></B></DT>
+  <DT><B>subset</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='subset' Line='subset'>
   <DD>Group by subset parameter.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_position">position</A></B></DT>
+  <DT><B>position</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='position' Line='position'>
   <DD>Group by position in right ascension (in hours) and declination (in degrees).
   The groups are defined by a radius parameter (in arc seconds).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_title">title</A></B></DT>
+  <DT><B>title</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='title' Line='title'>
   <DD>Group by identical titles.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_date">date</A></B></DT>
+  <DT><B>date</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='date' Line='date'>
   <DD>Group by identical dates.
   </DD>
@@ -84,13 +73,13 @@ ccdgroups — Group CCD images into image lists
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_radius">radius = 60.</A></B></DT>
+  <DT><B>radius = 60.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='radius' Line='radius = 60.'>
   <DD>Grouping radius when grouping by positions.  This is given in arc seconds.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ccdtype">ccdtype = "<TT></TT>"</A></B></DT>
+  <DT><B>ccdtype = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ccdtype' Line='ccdtype = ""'>
   <DD>CCD image types to select from the input image list.  If null ("<TT></TT>") then
   all image types are used.
@@ -98,7 +87,7 @@ ccdgroups — Group CCD images into image lists
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The input images, possible restricted to a particular CCD image type,
@@ -134,7 +123,7 @@ ccdgroups — Group CCD images into image lists
   and "<TT>dec</TT>".
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. For each object 5 exposures were taken to be combined in order to remove
@@ -221,7 +210,7 @@ ccdgroups — Group CCD images into image lists
    
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   ccdlist, ccdtypes, instruments, subsets
@@ -230,5 +219,3 @@ ccdgroups — Group CCD images into image lists
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

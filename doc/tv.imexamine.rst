@@ -1,3 +1,5 @@
+.. _imexamine:
+
 imexamine — Examine images using image display, graphics, and text
 ==================================================================
 
@@ -5,36 +7,23 @@ imexamine — Examine images using image display, graphics, and text
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>imexamine (Mar96)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.tv</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>imexamine (Mar96)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>imexamine</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   imexamine -- examine images using image display, plots, and text
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   imexamine [input [frame]]
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>Optional list of images to be examined.  If specified, images are examined
   in turn, displaying them automatically.  If no images are specified the
@@ -42,7 +31,7 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output = "<TT></TT>"</A></B></DT>
+  <DT><B>output = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output = ""'>
   <DD>Rootname for output images created with the <TT>'t'</TT> key.  If no name is specified
   then the name of the input image is used.  A three digit number is appended
@@ -52,14 +41,14 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ncoutput">ncoutput = 101, nloutput = 101</A></B></DT>
+  <DT><B>ncoutput = 101, nloutput = 101</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ncoutput' Line='ncoutput = 101, nloutput = 101'>
   <DD>Size of the output image created with the <TT>'t'</TT> key which is centered on the
   position of the cursor.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_frame">frame = 1</A></B></DT>
+  <DT><B>frame = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='frame' Line='frame = 1'>
   <DD>During program execution, a query parameter specifying the frame to be loaded.
   May also be specified on the command line when <I>imexamine</I> is used as a
@@ -67,27 +56,27 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_image">image</A></B></DT>
+  <DT><B>image</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='image' Line='image'>
   <DD>Query parameter for selecting images to be loaded.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_logfile">logfile = "<TT></TT>"</A></B></DT>
+  <DT><B>logfile = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = ""'>
   <DD>Logfile filename in which to record output of the commands producing text.
   If no filename is given then no logfile will be kept.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_keeplog">keeplog = no</A></B></DT>
+  <DT><B>keeplog = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='keeplog' Line='keeplog = no'>
   <DD>Log output results initially?  Logging can be toggled interactively during
   program execution.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_defkey">defkey = "<TT>a</TT>"</A></B></DT>
+  <DT><B>defkey = "<TT>a</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='defkey' Line='defkey = "a"'>
   <DD>Default key for cursor x-y input list.  This key is applied to input
   cursor lists which do not have a cursor key specified.  It is used
@@ -96,7 +85,7 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_autoredraw">autoredraw = yes</A></B></DT>
+  <DT><B>autoredraw = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='autoredraw' Line='autoredraw = yes'>
   <DD>Automatically redraw graphs after a parameter change?  If no then graphs
   are only drawn when a graph or redraw command is given.
@@ -106,7 +95,7 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_allframes">allframes = yes</A></B></DT>
+  <DT><B>allframes = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='allframes' Line='allframes = yes'>
   <DD>Use all frames for displaying images?  If set, images from the input list
   are loaded cycling through the available frames.  If not set the last frame
@@ -114,7 +103,7 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nframes">nframes = 0</A></B></DT>
+  <DT><B>nframes = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nframes' Line='nframes = 0'>
   <DD>Number of display frames.  When automatically loading images from the input
   list only this number of frames will be used.  This should, of course,
@@ -125,7 +114,7 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ncstat">ncstat = 5, nlstat = 5</A></B></DT>
+  <DT><B>ncstat = 5, nlstat = 5</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ncstat' Line='ncstat = 5, nlstat = 5'>
   <DD>The statistics command computes values from a box centered on the
   specified cursor position with the number of columns and lines
@@ -133,7 +122,7 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_graphcur">graphcur = "<TT></TT>"</A></B></DT>
+  <DT><B>graphcur = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='graphcur' Line='graphcur = ""'>
   <DD>Graphics cursor input.  If null the standard graphics cursor is used whenever
   graphics cursor input is requested.  A cursor file in the appropriate
@@ -141,7 +130,7 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_imagecur">imagecur = "<TT></TT>"</A></B></DT>
+  <DT><B>imagecur = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='imagecur' Line='imagecur = ""'>
   <DD>Image display cursor input.  If null the standard image display cursor is
   used whenever image cursor input is requested.  A cursor file in the
@@ -152,20 +141,20 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wcs">wcs = "<TT>logical</TT>"</A></B></DT>
+  <DT><B>wcs = "<TT>logical</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wcs' Line='wcs = "logical"'>
   <DD>The world coordinate system (<I>wcs</I>) to be used for axis labeling when
   input is from images.
   The following standard world systems are predefined.
   <DL>
-  <DT><B><A NAME="l_logical">logical</A></B></DT>
+  <DT><B>logical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='logical' Line='logical'>
   <DD>Logical coordinates are image pixel coordinates relative to the image currently
   being displayed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_physical">physical</A></B></DT>
+  <DT><B>physical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='physical' Line='physical'>
   <DD>The physical coordinate system is invariant with respect to linear
   transformations of the physical image matrix.  For example, if the reference
@@ -178,7 +167,7 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_world">world</A></B></DT>
+  <DT><B>world</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='world' Line='world'>
   <DD>The "<TT>world</TT>" coordinate system is the <I>current default WCS</I>.
   The default world system is the system named by the environment variable
@@ -188,7 +177,7 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xformat">xformat = "<TT></TT>", yformat = "<TT></TT>"</A></B></DT>
+  <DT><B>xformat = "<TT></TT>", yformat = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='xformat' Line='xformat = "", yformat = ""'>
   <DD>The numerical format for the world coordinate labels in the line and column
   plots and the format for printing world coordinates.  The values may be "<TT></TT>"
@@ -206,14 +195,14 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_graphics">graphics = "<TT>stdgraph</TT>"</A></B></DT>
+  <DT><B>graphics = "<TT>stdgraph</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"'>
   <DD>Graphics output device.  Normally this is the standard graphics device
   specified by the environment variable "<TT>stdgraph</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_display">display = "<TT>display(image='$1',frame=$2)</TT>"</A></B></DT>
+  <DT><B>display = "<TT>display(image='$1',frame=$2)</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='display' Line='display = "display(image='$1',frame=$2)"'>
   <DD>Command template used to display an image.  The image to be displayed is
   substituted for argument $1 and the frame for argument $2.  Any display task
@@ -221,7 +210,7 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_use_display">use_display = yes</A></B></DT>
+  <DT><B>use_display = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='use_display' Line='use_display = yes'>
   <DD>Use the image display?  Set to no to disable all interaction with the
   display device, e.g., when working at a terminal that does not provide image
@@ -230,7 +219,7 @@ imexamine — Examine images using image display, graphics, and text
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_additional_parameters">ADDITIONAL PARAMETERS</A></H2>
+  <H3>Additional parameters</H3>
   <! BeginSection: 'ADDITIONAL PARAMETERS'>
   <UL>
   The various graphs and the aperture sum command have parameters defined in
@@ -257,33 +246,33 @@ imexamine — Examine images using image display, graphics, and text
   for the parameter sets in which the parameter occurs.
   <P>
   <DL>
-  <DT><B><A NAME="l_angh">angh = -33., angv = 25.		(s)</A></B></DT>
+  <DT><B>angh = -33., angv = 25.		(s)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='angh' Line='angh = -33., angv = 25.		(s)'>
   <DD>Horizontal and vertical viewing angles (degrees) for surface plots.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_autoscale">autoscale = yes			(h)</A></B></DT>
+  <DT><B>autoscale = yes			(h)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='autoscale' Line='autoscale = yes			(h)'>
   <DD>In the case of integer data, automatically adjust <I>nbins</I> and
   <I>z2</I> to avoid aliasing effects.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_axes">axes = yes				(s)</A></B></DT>
+  <DT><B>axes = yes				(s)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='axes' Line='axes = yes				(s)'>
   <DD>Draw axes along edge of surface plots?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_background">background = yes			(jkr.)</A></B></DT>
+  <DT><B>background = yes			(jkr.)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='background' Line='background = yes			(jkr.)'>
   <DD>Fit and subtract a background for aperture sums, 1D gaussian fits, and
   radial profile plots?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_banner">banner = yes 			 (cehjklrsv.)</A></B></DT>
+  <DT><B>banner = yes 			 (cehjklrsv.)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='banner' Line='banner = yes 			 (cehjklrsv.)'>
   <DD>Add a standard banner to a graph?  The standard banner includes the
   IRAF user and host identification and time, the image name and title,
@@ -291,7 +280,7 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_beta">beta = INDEF			(ar.)</A></B></DT>
+  <DT><B>beta = INDEF			(ar.)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='beta' Line='beta = INDEF			(ar.)'>
   <DD>Beta value to use for Moffat profile fits.  If the value is INDEF
   the value will be determine as part of the fit otherwise the parameter
@@ -299,27 +288,27 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_boundary">boundary = "<TT>constant</TT>"		(v)</A></B></DT>
+  <DT><B>boundary = "<TT>constant</TT>"		(v)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='boundary' Line='boundary = "constant"		(v)'>
   <DD>Boundary extension for vector plots in which the averaging width might
   go outside of the image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_box">box = yes 				(cehjklrv.)</A></B></DT>
+  <DT><B>box = yes 				(cehjklrv.)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='box' Line='box = yes 				(cehjklrv.)'>
   <DD>Draw graph box and axes?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_buffer">buffer = 5.				(r.)</A></B></DT>
+  <DT><B>buffer = 5.				(r.)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='buffer' Line='buffer = 5.				(r.)'>
   <DD>Buffer distance from object aperture of background annulus for aperture sums
   and radial profile plots.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ceiling">ceiling = INDEF			(es)</A></B></DT>
+  <DT><B>ceiling = INDEF			(es)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='ceiling' Line='ceiling = INDEF			(es)'>
   <DD>Ceiling data value for contour and surface plots.  A value of INDEF does
   not apply a ceiling.  (In contour plots a value of 0. also does not
@@ -327,46 +316,46 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_center">center = yes			(jkr.)</A></B></DT>
+  <DT><B>center = yes			(jkr.)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='center' Line='center = yes			(jkr.)'>
   <DD>Apply a centering algorithm for doing aperture sums, 1D gaussian fits,
   and radial profile plots?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_constant">constant = 0.			(v)</A></B></DT>
+  <DT><B>constant = 0.			(v)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='constant' Line='constant = 0.			(v)'>
   <DD>Boundary extension constant for vector plots in which the averaging width
   might go outside of the image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dashpat">dashpat = 528			(e)</A></B></DT>
+  <DT><B>dashpat = 528			(e)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='dashpat' Line='dashpat = 528			(e)'>
   <DD>Dash pattern for negative contours.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fill">fill = no				(e)</A></B></DT>
+  <DT><B>fill = no				(e)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='fill' Line='fill = no				(e)'>
   <DD>Fill the output viewport regardless of the device aspect ratio?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fitplot">fitplot = yes			(r.)</A></B></DT>
+  <DT><B>fitplot = yes			(r.)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='fitplot' Line='fitplot = yes			(r.)'>
   <DD>Overplot the profile fit on the radial profile data?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fittype">fittype = "<TT>moffat</TT>"			(ar.)</A></B></DT>
+  <DT><B>fittype = "<TT>moffat</TT>"			(ar.)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='fittype' Line='fittype = "moffat"			(ar.)'>
   <DD>Profile type to fit the radial profile data?  The choices are "<TT>gaussian</TT>"
   and "<TT>moffat</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_floor">floor = INDEF			(es)</A></B></DT>
+  <DT><B>floor = INDEF			(es)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='floor' Line='floor = INDEF			(es)'>
   <DD>Floor data value for contour and surface plots.  A value of INDEF does
   not apply a floor.  (In contour plots a value of 0. also does not
@@ -374,71 +363,71 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interval">interval = 0			(e)</A></B></DT>
+  <DT><B>interval = 0			(e)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='interval' Line='interval = 0			(e)'>
   <DD>Contour interval.  If 0, a contour interval is chosen which places 20 to 30
   contours spanning the intensity range of the image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_iterations">iterations = 3			(ar)</A></B></DT>
+  <DT><B>iterations = 3			(ar)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='iterations' Line='iterations = 3			(ar)'>
   <DD>Number of iterations to adjust the fitting radius.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_label">label= no				(e)</A></B></DT>
+  <DT><B>label= no				(e)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='label' Line='label= no				(e)'>
   <DD>Label the major contours in the contour plot?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_logx">logx = no, logy = no		(chjklrv.)</A></B></DT>
+  <DT><B>logx = no, logy = no		(chjklrv.)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='logx' Line='logx = no, logy = no		(chjklrv.)'>
   <DD>Plot the x or y axis logarithmically?  The default for histogram plots is
   to plot the y axis logarithmically.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_magzero">magzero = 25.			(r.)</A></B></DT>
+  <DT><B>magzero = 25.			(r.)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='magzero' Line='magzero = 25.			(r.)'>
   <DD>Magnitude zero point for aperture sums.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_majrx">majrx=5, minrx=5, majry=5, minry=5	(cehjklrv.)</A></B></DT>
+  <DT><B>majrx=5, minrx=5, majry=5, minry=5	(cehjklrv.)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='majrx' Line='majrx=5, minrx=5, majry=5, minry=5	(cehjklrv.)'>
   <DD>Maximum number of major tick marks on each axis and number of minor tick marks
   between major tick marks.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_marker">marker = "<TT>box</TT>"			(chjklrv.)</A></B></DT>
+  <DT><B>marker = "<TT>box</TT>"			(chjklrv.)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='marker' Line='marker = "box"			(chjklrv.)'>
   <DD>Marker to be drawn if <B>pointmode</B> = yes.  Markers are "<TT>point</TT>", "<TT>box</TT>", 
   "<TT>cross</TT>", "<TT>plus</TT>", "<TT>circle</TT>", "<TT>hebar</TT>", "<TT>vebar</TT>", "<TT>hline</TT>", "<TT>vline</TT>" or "<TT>diamond</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_naverage">naverage = 1			(cjklv)</A></B></DT>
+  <DT><B>naverage = 1			(cjklv)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='naverage' Line='naverage = 1			(cjklv)'>
   <DD>Number of lines, columns, or width perpendicular to a vector to be averaged.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nbins">nbins = 512				(h)</A></B></DT>
+  <DT><B>nbins = 512				(h)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='nbins' Line='nbins = 512				(h)'>
   <DD>The number of bins in, or resolution of, histogram plots.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ncolumns">ncolumns = 21, nlines = 21		(ehs)</A></B></DT>
+  <DT><B>ncolumns = 21, nlines = 21		(ehs)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='ncolumns' Line='ncolumns = 21, nlines = 21		(ehs)'>
   <DD>Number of columns and lines used in contour, histogram, and surface plots.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ncontours">ncontours = 5			(e)</A></B></DT>
+  <DT><B>ncontours = 5			(e)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='ncontours' Line='ncontours = 5			(e)'>
   <DD>Number of contours to be drawn.  If 0, the contour interval may be specified,
   otherwise 20-30 nicely spaced contours are drawn.  A maximum of 40 contours
@@ -446,45 +435,45 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nhi">nhi = -1				(e)</A></B></DT>
+  <DT><B>nhi = -1				(e)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='nhi' Line='nhi = -1				(e)'>
   <DD>If -1, highs and lows are not marked.  If 0, highs and lows are marked
   on the plot.  If 1, the intensity of each pixel is marked on the plot.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pointmode">pointmode = no			(chlv)</A></B></DT>
+  <DT><B>pointmode = no			(chlv)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='pointmode' Line='pointmode = no			(chlv)'>
   <DD>Plot points or marks instead of lines?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pointmode">pointmode = yes			(jkr.)</A></B></DT>
+  <DT><B>pointmode = yes			(jkr.)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='pointmode' Line='pointmode = yes			(jkr.)'>
   <DD>Plot points or marks instead of lines?  For radial profile plots point
   mode should always be yes.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_radius">radius = 5.				(r.)</A></B></DT>
+  <DT><B>radius = 5.				(r.)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='radius' Line='radius = 5.				(r.)'>
   <DD>Radius of aperture for aperture sums and centering.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_round">round = no				(cehjklrv.)</A></B></DT>
+  <DT><B>round = no				(cehjklrv.)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='round' Line='round = no				(cehjklrv.)'>
   <DD>Extend the axes up to "<TT>nice</TT>" values?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rplot">rplot = 8.				(jkr.)</A></B></DT>
+  <DT><B>rplot = 8.				(jkr.)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='rplot' Line='rplot = 8.				(jkr.)'>
   <DD>Radius to which the radial profile or 1D profile fits are plotted.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sigma">sigma = 2.				(jk)</A></B></DT>
+  <DT><B>sigma = 2.				(jk)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='sigma' Line='sigma = 2.				(jk)'>
   <DD>Initial guess for 1D gaussian fits.  The value is in pixels even if the fitting
   is done in world coordinates.  This must be close to the true value
@@ -493,7 +482,7 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_szmarker">szmarker = 1			(chjklrv.)</A></B></DT>
+  <DT><B>szmarker = 1			(chjklrv.)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='szmarker' Line='szmarker = 1			(chjklrv.)'>
   <DD>Size of mark (except for points).  A positive size less than 1 specifies
   a fraction of the device size.  Values of 1, 2, 3, and 4 signify
@@ -501,19 +490,19 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ticklabels">ticklabels = yes			(cehjklrv.)</A></B></DT>
+  <DT><B>ticklabels = yes			(cehjklrv.)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='ticklabels' Line='ticklabels = yes			(cehjklrv.)'>
   <DD>Label the tick marks?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_title">title = "<TT></TT>"				(cehjklrsv.)</A></B></DT>
+  <DT><B>title = "<TT></TT>"				(cehjklrsv.)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='title' Line='title = ""				(cehjklrsv.)'>
   <DD>User title.  This is independent of the standard banner title.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_top_closed">top_closed = no			(h)</A></B></DT>
+  <DT><B>top_closed = no			(h)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='top_closed' Line='top_closed = no			(h)'>
   <DD>Include z2 in the top histogram bin?  Each bin of the histogram is a
   subinterval that is half open at the top.  <I>Top_closed</I> decides whether
@@ -522,34 +511,34 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_width">width = 5.				(jkr.)</A></B></DT>
+  <DT><B>width = 5.				(jkr.)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='width' Line='width = 5.				(jkr.)'>
   <DD>Width of background region for background subtraction in aperture sums,
   1D profile fits, and radial profile plots.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wcs">wcs = "<TT>physical</TT>"</A></B></DT>
+  <DT><B>wcs = "<TT>physical</TT>"</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='wcs' Line='wcs = "physical"'>
   <DD>World coordinate system for axis labeling and coordinate readback.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_x1">x1 = INDEF, x2 = INDEF, y1 = INDEF, y2 = INDEF	(chjklrv.)</A></B></DT>
+  <DT><B>x1 = INDEF, x2 = INDEF, y1 = INDEF, y2 = INDEF	(chjklrv.)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='x1' Line='x1 = INDEF, x2 = INDEF, y1 = INDEF, y2 = INDEF	(chjklrv.)'>
   <DD>Range of graph along each axis.  If INDEF the range is determined from
   the data range plus a buffer.  The default y1 for histogram plots is 0.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xformat">xformat, yformat</A></B></DT>
+  <DT><B>xformat, yformat</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='xformat' Line='xformat, yformat'>
   <DD>Set world image coordinate formats.  Any format changes take effect on the next
   usage; i.e. there is no automatic redrawing.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xlabel">xlabel, ylabel			(cehjklrv.)</A></B></DT>
+  <DT><B>xlabel, ylabel			(cehjklrv.)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='xlabel' Line='xlabel, ylabel			(cehjklrv.)'>
   <DD>Axis labels.  Each graph type has an appropriate default.  If the label
   value is "<TT>wcslabel</TT>" then the coordinate label from the image WCS
@@ -557,7 +546,7 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xorder">xorder = 0				(jk)</A></B></DT>
+  <DT><B>xorder = 0				(jk)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='xorder' Line='xorder = 0				(jk)'>
   <DD>Order for 1D gaussian background.  If 0 then a median is computed.  If
   1 then a constant background is fit simultaneously with the other gaussian
@@ -566,7 +555,7 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xorder">xorder = 0, yorder = 0		(r.)</A></B></DT>
+  <DT><B>xorder = 0, yorder = 0		(r.)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='xorder' Line='xorder = 0, yorder = 0		(r.)'>
   <DD>If either parameter is zero then the median value of the
   background annulus is used for background subtraction in aperture sums and
@@ -577,7 +566,7 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_zero">zero = 0.				(e)</A></B></DT>
+  <DT><B>zero = 0.				(e)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='zero' Line='zero = 0.				(e)'>
   <DD>Greyscale value of the zero contour, i.e., the value of a zero point shift
   to be applied to the image data before plotting.  Does not affect the values
@@ -585,7 +574,7 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_z1">z1 = INDEF, z2 = INDEF		(h)</A></B></DT>
+  <DT><B>z1 = INDEF, z2 = INDEF		(h)</B></DT>
   <! Sec='ADDITIONAL PARAMETERS' Level=0 Label='z1' Line='z1 = INDEF, z2 = INDEF		(h)'>
   <DD>Range of pixel values to be used in histogram.  INDEF values default to
   the range in the region being histogramed.
@@ -593,7 +582,7 @@ imexamine — Examine images using image display, graphics, and text
   </DL>
   </UL>
   <! EndSection:   'ADDITIONAL PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Images are examined using an image display, various types of plots, and
@@ -654,14 +643,14 @@ imexamine — Examine images using image display, graphics, and text
   depends on the type of graph as described below.
   <P>
   <DL>
-  <DT><B><A NAME="l_contour">contour plot</A></B></DT>
+  <DT><B>contour plot</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='contour' Line='contour plot'>
   <DD>This gives image coordinates directly and both the x and y cursor values
   are used.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_column">column plot</A></B></DT>
+  <DT><B>column plot</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='column' Line='column plot'>
   <DD>The x cursor position gives the line coordinate and the column coordinate
   used for the plot (that specified before averaging) gives the column
@@ -669,7 +658,7 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_line">line plot</A></B></DT>
+  <DT><B>line plot</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='line' Line='line plot'>
   <DD>The x cursor position gives the column coordinate and the line coordinate
   used for the plot (that specified before averaging) gives the line
@@ -677,28 +666,28 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_vector">vector plot</A></B></DT>
+  <DT><B>vector plot</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='vector' Line='vector plot'>
   <DD>The x cursor position defines a column and line coordinate along the vector
   plotted.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_surface">surface plot</A></B></DT>
+  <DT><B>surface plot</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='surface' Line='surface plot'>
   <DD>No cursor information is available in this plot and the cursor position
   used to make the surface plot (the center of the surface) is used again.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_histogram">histogram plot</A></B></DT>
+  <DT><B>histogram plot</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='histogram' Line='histogram plot'>
   <DD>No cursor information is available in this plot and the cursor position
   used to make the histogram (the center of the box) is used again.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_radial">radial profile plot</A></B></DT>
+  <DT><B>radial profile plot</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='radial' Line='radial profile plot'>
   <DD>No cursor information is available in this plot and the cursor position
   used to define the center is used again.
@@ -725,7 +714,7 @@ imexamine — Examine images using image display, graphics, and text
   a logfile.
   <P>
   <DL>
-  <DT><B><A NAME="l_a">a, <TT>','</TT></A></B></DT>
+  <DT><B>a, <TT>','</TT></B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='a' Line='a, ',''>
   <DD>Circular aperture photometry is performed at the position of the cursor.
   If the centering option is selected the cursor position is used as the
@@ -852,7 +841,7 @@ imexamine — Examine images using image display, graphics, and text
   adjustment of the fitting radius as noted above.
   <P>
   <DL>
-  <DT><B><A NAME="l_a">a</A></B></DT>
+  <DT><B>a</B></DT>
   <! Sec='DESCRIPTION' Level=1 Label='a' Line='a'>
   <DD>The output consists of the image line and column, the coordinates, the
   final radius used for the photometry and fitting, magnitude, flux, mean
@@ -870,7 +859,7 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"><TT>','</TT></A></B></DT>
+  <DT><B><TT>','</TT></B></DT>
   <! Sec='DESCRIPTION' Level=1 Label='' Line='',''>
   <DD>The output consists of the image line and column, magnitude, flux, number
   of pixels within the aperture, mean background, r (moment FWHM), e, pa (in
@@ -889,7 +878,7 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_b">b</A></B></DT>
+  <DT><B>b</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='b' Line='b'>
   <DD>The integer pixel coordinates defining a region of the image are printed.
   Two cursor positions are used to select the range of columns and lines.
@@ -900,14 +889,14 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_j">j, k</A></B></DT>
+  <DT><B>j, k</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='j' Line='j, k'>
   <DD>The fitted gaussian center, peak, sigma, full width at half maximum, and
   background at the center is computed and printed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_m">m</A></B></DT>
+  <DT><B>m</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='m' Line='m'>
   <DD>Statistics of a rectangular region centered on the cursor position are
   computed and printed.  The size of the statistics box is set by the
@@ -917,7 +906,7 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_x">x, y</A></B></DT>
+  <DT><B>x, y</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='x' Line='x, y'>
   <DD>The cursor x and y coordinates and the pixel value nearest this position
   are printed.  The <TT>'y'</TT> key may be used define a relative origin.  If
@@ -928,7 +917,7 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_z">z</A></B></DT>
+  <DT><B>z</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='z' Line='z'>
   <DD>A 10x10 grid of pixel values is printed.  The integer coordinates are
   also printed around the grid.
@@ -941,7 +930,7 @@ imexamine — Examine images using image display, graphics, and text
   device (normally the graphics terminal).
   <P>
   <DL>
-  <DT><B><A NAME="l_c">c</A></B></DT>
+  <DT><B>c</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='c' Line='c'>
   <DD>A plot of a column or average of columns is made with the line number as
   the ordinate and the pixel value as the abscissa.  The averaging number
@@ -950,7 +939,7 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_e">e</A></B></DT>
+  <DT><B>e</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='e' Line='e'>
   <DD>A contour plot of a region centered on the cursor is made.  The
   size of the region and various contouring and labeling options are
@@ -958,7 +947,7 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_h">h</A></B></DT>
+  <DT><B>h</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='h' Line='h'>
   <DD>A histogram of a region centered on the cursor is made.  The size
   of the region and various binning parameters are specified by
@@ -966,7 +955,7 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_l">l</A></B></DT>
+  <DT><B>l</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='l' Line='l'>
   <DD>A plot of a line or average of lines is made with the column number as
   the ordinate and the pixel value as the abscissa.  The averaging number
@@ -975,7 +964,7 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_r">r, <TT>'.'</TT></A></B></DT>
+  <DT><B>r, <TT>'.'</TT></B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='r' Line='r, '.''>
   <DD>A radial profile plot is made.  As with <TT>'a'</TT>/<TT>','</TT> there are options for centering
   and background subtraction.  There are also graphics option to set the
@@ -988,7 +977,7 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_s">s</A></B></DT>
+  <DT><B>s</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='s' Line='s'>
   <DD>A surface plot of a region centered on the cursor is made.  The size
   of the region and various surface and labeling options are
@@ -996,7 +985,7 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_u">u, v</A></B></DT>
+  <DT><B>u, v</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='u' Line='u, v'>
   <DD>A plot of a vector defined by two cursor positions is made.  The <TT>'u'</TT>
   plot uses the first cursor position to define the center of the vector
@@ -1017,7 +1006,7 @@ imexamine — Examine images using image display, graphics, and text
   The following commands control useful features of the task.
   <P>
   <DL>
-  <DT><B><A NAME="l_d">d</A></B></DT>
+  <DT><B>d</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='d' Line='d'>
   <DD>The display command given by the parameter <I>display</I> is given
   with appropriate image name.  By default this loads the image
@@ -1027,7 +1016,7 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_f">f</A></B></DT>
+  <DT><B>f</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='f' Line='f'>
   <DD>Redraw the last graph.  If the <I>autoredraw</I> parameter is no then
   this is used to redraw a graph after making parameter changes with
@@ -1036,33 +1025,33 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_g">g, i</A></B></DT>
+  <DT><B>g, i</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='g' Line='g, i'>
   <DD>Cursor input may be selected to be from the graphics cursor (g) or
   image display cursor (i).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_n">n, p</A></B></DT>
+  <DT><B>n, p</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='n' Line='n, p'>
   <DD>Go to the next or previous image in the image list or display frames.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_o">o</A></B></DT>
+  <DT><B>o</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='o' Line='o'>
   <DD>Overplot the next graph.  This generally only makes sense with the
   line, column, and histogram plots.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_q">q</A></B></DT>
+  <DT><B>q</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='q' Line='q'>
   <DD>Quit the task.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_t">t</A></B></DT>
+  <DT><B>t</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='t' Line='t'>
   <DD>Output an image centered on the cursor position with name and size set
   by the <I>output</I>, <I>ncoutput</I> and <I>nloutput</I> parameters.
@@ -1071,7 +1060,7 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_w">w</A></B></DT>
+  <DT><B>w</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='w' Line='w'>
   <DD>Toggle output to the logfile.  If no logfile is specified this has no
   effect except to print a message.  If the logfile is specified a message
@@ -1082,7 +1071,7 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:select</A></B></DT>
+  <DT><B>:select</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line=':select'>
   <DD>Select an image.  If an input image list is used the specified index
   number selects an image from the list.  If an input image list is not
@@ -1092,21 +1081,21 @@ imexamine — Examine images using image display, graphics, and text
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:eparam, :unlearn</A></B></DT>
+  <DT><B>:eparam, :unlearn</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line=':eparam, :unlearn'>
   <DD>These colon commands manipulate the various parameter sets as
   described below.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:c&lt;#&gt;, :l&lt;#&gt;</A></B></DT>
+  <DT><B>:c&lt;#&gt;, :l&lt;#&gt;</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line=':c&lt;#&gt;, :l&lt;#&gt;'>
   <DD>Special colon commands to plot specific columns or lines, symbolically
   shown as &lt;#&gt;, rather than use a cursor position.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:&lt;column&gt; &lt;line&gt; &lt;key&gt;</A></B></DT>
+  <DT><B>:&lt;column&gt; &lt;line&gt; &lt;key&gt;</B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line=':&lt;column&gt; &lt;line&gt; &lt;key&gt;'>
   <DD>Special colon command syntax to explicitly give image coordinates for
   a cursor command key.
@@ -1165,7 +1154,7 @@ imexamine — Examine images using image display, graphics, and text
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_commands">COMMANDS</A></H2>
+  <H3>Commands</H3>
   <! BeginSection: 'COMMANDS'>
   <UL>
   <P>
@@ -1300,7 +1289,7 @@ imexamine — Examine images using image display, graphics, and text
   </PRE>
   </UL>
   <! EndSection:   'COMMANDS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   The following  example illustrates many of the features in a descriptive
@@ -1345,7 +1334,7 @@ imexamine — Examine images using image display, graphics, and text
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   If an operation is interrupted, e.g., an image display or surface plot,
@@ -1365,17 +1354,17 @@ imexamine — Examine images using image display, graphics, and text
   the mouse out of the image window, which will avoid the problem.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_IMEXAMINE">IMEXAMINE V2.11.4</A></B></DT>
+  <DT><B>IMEXAMINE V2.11.4</B></DT>
   <! Sec='REVISIONS' Level=0 Label='IMEXAMINE' Line='IMEXAMINE V2.11.4'>
   <DD>(<TT>'t'</TT>): A new cursor key to create an output image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_IMEXAMINE">IMEXAMINE V2.11</A></B></DT>
+  <DT><B>IMEXAMINE V2.11</B></DT>
   <! Sec='REVISIONS' Level=0 Label='IMEXAMINE' Line='IMEXAMINE V2.11'>
   <DD>(<TT>'a'</TT> and <TT>'r'</TT>): The fit to the radial profile points now includes both a
   Gaussian and a Moffat profile.  The Moffat profile exponent parameter,
@@ -1400,7 +1389,7 @@ imexamine — Examine images using image display, graphics, and text
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   cursors, eparam, unlearn, plot.*, tvmark, digiphot.*, apphot.*,
@@ -1411,5 +1400,3 @@ imexamine — Examine images using image display, graphics, and text
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'ADDITIONAL PARAMETERS' 'DESCRIPTION' 'COMMANDS' 'EXAMPLES' 'BUGS' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

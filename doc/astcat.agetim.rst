@@ -1,3 +1,5 @@
+.. _agetim:
+
 agetim — Extract FITS images from image surveys
 ===============================================
 
@@ -5,40 +7,27 @@ agetim — Extract FITS images from image surveys
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>agetim (Mar00)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>astcat</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>agetim (Mar00)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>agetim</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   agetim -- extract fits images from image surveys
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   agetim regions output
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_regions">regions</A></B></DT>
+  <DT><B>regions</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='regions' Line='regions'>
   <DD>The source  of the extraction region definitions. The options are:
   <DL>
-  <DT><B><A NAME="l_">&lt;filename&gt;</A></B></DT>
+  <DT><B>&lt;filename&gt;</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='&lt;filename&gt;'>
   <DD>The name of a text file containing a list of region definitions, one
   region definition per line. The format of the regions file is described
@@ -46,7 +35,7 @@ agetim — Extract FITS images from image surveys
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">&lt;image list&gt;</A></B></DT>
+  <DT><B>&lt;image list&gt;</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='&lt;image list&gt;'>
   <DD>The list of images containing the region definition. The input images
   must have a valid FITS world coordinate system in order to be used
@@ -54,7 +43,7 @@ agetim — Extract FITS images from image surveys
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pars">pars</A></B></DT>
+  <DT><B>pars</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='pars' Line='pars'>
   <DD>If regions is set to the reserved keyword "<TT>pars</TT>" then a single region
   definition is read from the <I>aregpars</I> parameter set. By default a region
@@ -65,7 +54,7 @@ agetim — Extract FITS images from image surveys
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>The list of output FITS image files. The number of output files must be equal
   to the number regions in the regions list times the number of astrometry
@@ -78,7 +67,7 @@ agetim — Extract FITS images from image surveys
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_aregpars">aregpars = "<TT></TT>"</A></B></DT>
+  <DT><B>aregpars = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='aregpars' Line='aregpars = ""'>
   <DD>The region definition parameter set. The aregpars parameters define the
   extraction region center, region width, region center units, and the region
@@ -87,14 +76,14 @@ agetim — Extract FITS images from image surveys
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_imsurveys">imsurveys = "<TT>)_.imsurveys</TT>"</A></B></DT>
+  <DT><B>imsurveys = "<TT>)_.imsurveys</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='imsurveys' Line='imsurveys = ")_.imsurveys"'>
   <DD>The list of input image surveys. By default the image survey name is set to the
   value of the package parameter imsurveys. 
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wcsedit">wcsedit = no</A></B></DT>
+  <DT><B>wcsedit = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wcsedit' Line='wcsedit = no'>
   <DD>Convert a DSS WCS to a FITS WCS or add an approximate FITS style WCS to the
   output image headers if they don't already possess one ?  The WCS status
@@ -104,7 +93,7 @@ agetim — Extract FITS images from image surveys
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_hdredit">hdredit = no</A></B></DT>
+  <DT><B>hdredit = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='hdredit' Line='hdredit = no'>
   <DD>Add a set of standard keywords to the image header which may be required or
   useful in the later astrometric analysis steps ?  These parameters divide
@@ -115,20 +104,20 @@ agetim — Extract FITS images from image surveys
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_update">update = no</A></B></DT>
+  <DT><B>update = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='update' Line='update = no'>
   <DD>Update the default values of the algorithm parameters, e.g. aregpars
   on task termination ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print status messages on the terminal as the task proceeds ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_imdb">imdb = "<TT>)_.imdb</TT>"</A></B></DT>
+  <DT><B>imdb = "<TT>)_.imdb</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='imdb' Line='imdb = ")_.imdb"'>
   <DD>The image surveys configuration file. Imdb defaults to the value of the
   package parameter imdb. The default image surveys configuration file is
@@ -138,7 +127,7 @@ agetim — Extract FITS images from image surveys
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -226,7 +215,7 @@ agetim — Extract FITS images from image surveys
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -297,12 +286,12 @@ agetim — Extract FITS images from image surveys
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   If output file is not a fits file, as may be the case if an error occurred
@@ -311,7 +300,7 @@ agetim — Extract FITS images from image surveys
   statements in the FITS kernel and will be fixed for the next release.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   aslist, adumpim, aregpars
@@ -320,5 +309,3 @@ agetim — Extract FITS images from image surveys
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

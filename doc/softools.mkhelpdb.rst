@@ -1,3 +1,5 @@
+.. _mkhelpdb:
+
 mkhelpdb — Make (compile) a help database
 =========================================
 
@@ -5,36 +7,23 @@ mkhelpdb — Make (compile) a help database
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>mkhelpdb (Feb89)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>softools</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>mkhelpdb (Feb89)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>mkhelpdb</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   mkhelpdb -- update the help database
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   mkhelpdb helpdir helpdb
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_helpdir">helpdir = "<TT>lib$root.hd</TT>"</A></B></DT>
+  <DT><B>helpdir = "<TT>lib$root.hd</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='helpdir' Line='helpdir = "lib$root.hd"'>
   <DD>The filename of the root help directory file ("<TT>.hd</TT>" file) defining the
   help tree to be updated.  By convention this is <I>root.hd</I> in some
@@ -42,7 +31,7 @@ mkhelpdb — Make (compile) a help database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_helpdb">helpdb = "<TT>lib$helpdb.mip</TT>"</A></B></DT>
+  <DT><B>helpdb = "<TT>lib$helpdb.mip</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='helpdb' Line='helpdb = "lib$helpdb.mip"'>
   <DD>The filename of the help database file to be written.  By convention this
   is <I>helpdb.mip</I> in some directory (the "<TT>.mip</TT>" signifies that the file
@@ -50,7 +39,7 @@ mkhelpdb — Make (compile) a help database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = no</A></B></DT>
+  <DT><B>verbose = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
   <DD>If this switch is enabled, <I>mkhelpdb</I> will print a detailed description
   of the help database as it is being compiled.  A more concise summary listing
@@ -60,7 +49,7 @@ mkhelpdb — Make (compile) a help database
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The <I>mkhelpdb</I> task descends a tree of help directory ("<TT>.hd</TT>") files and
@@ -98,7 +87,7 @@ mkhelpdb — Make (compile) a help database
   </PRE>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Update the standard IRAF help database.
@@ -113,7 +102,7 @@ mkhelpdb — Make (compile) a help database
   	so&gt; mkhelpdb helpdir=noao$lib/root.hd helpdb=noao$lib/helpdb.mip
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   hdbexamine, help
@@ -122,5 +111,3 @@ mkhelpdb — Make (compile) a help database
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

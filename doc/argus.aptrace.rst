@@ -1,3 +1,5 @@
+.. _aptrace:
+
 aptrace — Trace positions of spectra
 ====================================
 
@@ -5,26 +7,13 @@ aptrace — Trace positions of spectra
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>aptrace (Sep96)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.twodspec.apextract</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>aptrace (Sep96)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>aptrace</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   aptrace -- Trace spectra for aperture extraction
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   <PRE>
@@ -32,17 +21,17 @@ aptrace — Trace positions of spectra
   </PRE>
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of input images to be traced.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apertures">apertures = "<TT></TT>"</A></B></DT>
+  <DT><B>apertures = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""'>
   <DD>Apertures to recenter, resize, trace, and extract.  This only applies
   to apertures read from the input or reference database.  Any new
@@ -54,7 +43,7 @@ aptrace — Trace positions of spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_references">references = "<TT></TT>"</A></B></DT>
+  <DT><B>references = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='references' Line='references = ""'>
   <DD>List of reference images to be used to define apertures for the input
   images.  When a reference image is given it supersedes apertures
@@ -68,7 +57,7 @@ aptrace — Trace positions of spectra
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = yes</A></B></DT>
+  <DT><B>interactive = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes'>
   <DD>Run this task interactively?  If the task is not run interactively then
   all user queries are suppressed and interactive aperture editing and trace
@@ -76,7 +65,7 @@ aptrace — Trace positions of spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_find">find = yes</A></B></DT>
+  <DT><B>find = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='find' Line='find = yes'>
   <DD>Find the spectra and define apertures automatically?  In order for
   spectra to be found automatically there must be no apertures for the
@@ -84,31 +73,31 @@ aptrace — Trace positions of spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_recenter">recenter = no</A></B></DT>
+  <DT><B>recenter = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='recenter' Line='recenter = no'>
   <DD>Recenter the apertures?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_resize">resize = yes</A></B></DT>
+  <DT><B>resize = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='resize' Line='resize = yes'>
   <DD>Resize the apertures?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_edit">edit = yes</A></B></DT>
+  <DT><B>edit = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='edit' Line='edit = yes'>
   <DD>Edit the apertures?  The <I>interactive</I> parameter must also be yes.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_trace">trace = yes</A></B></DT>
+  <DT><B>trace = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='trace' Line='trace = yes'>
   <DD>Trace the apertures?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fittrace">fittrace = yes</A></B></DT>
+  <DT><B>fittrace = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fittrace' Line='fittrace = yes'>
   <DD>Interactively fit the traced positions by a function?  The <I>interactive</I>
   parameter must also be yes.
@@ -116,7 +105,7 @@ aptrace — Trace positions of spectra
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_line">line = INDEF, nsum = 1</A></B></DT>
+  <DT><B>line = INDEF, nsum = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='line' Line='line = INDEF, nsum = 1'>
   <DD>The dispersion line (line or column perpendicular to the dispersion
   axis) and number of adjacent lines (half before and half after unless
@@ -129,14 +118,14 @@ aptrace — Trace positions of spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_step">step = 10</A></B></DT>
+  <DT><B>step = 10</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='step' Line='step = 10'>
   <DD>Step along the dispersion axis between determination of the spectrum
   positions.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nlost">nlost = 3</A></B></DT>
+  <DT><B>nlost = 3</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nlost' Line='nlost = 3'>
   <DD>Number of consecutive steps in which the profile is lost before quitting
   the tracing in one direction.  To force tracing to continue through
@@ -149,7 +138,7 @@ aptrace — Trace positions of spectra
   by a function of the dispersion line.  These parameters are those used by
   the ICFIT package.
   <DL>
-  <DT><B><A NAME="l_function">function = "<TT>legendre</TT>"</A></B></DT>
+  <DT><B>function = "<TT>legendre</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='function' Line='function = "legendre"'>
   <DD>Default trace fitting function.  The fitting function types are
   "<TT>chebyshev</TT>" polynomial, "<TT>legendre</TT>" polynomial, "<TT>spline1</TT>" linear spline, and
@@ -157,7 +146,7 @@ aptrace — Trace positions of spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_order">order = 2</A></B></DT>
+  <DT><B>order = 2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='order' Line='order = 2'>
   <DD>Default trace function order.  The order refers to the number of
   terms in the polynomial functions or the number of spline pieces in the spline
@@ -165,7 +154,7 @@ aptrace — Trace positions of spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sample">sample = "<TT>*</TT>"</A></B></DT>
+  <DT><B>sample = "<TT>*</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"'>
   <DD>Default fitting sample.  The sample is given by a set of colon separated
   ranges each separated by either whitespace or commas.  The string "<TT>*</TT>" refers
@@ -173,7 +162,7 @@ aptrace — Trace positions of spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_naverage">naverage = 1</A></B></DT>
+  <DT><B>naverage = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='naverage' Line='naverage = 1'>
   <DD>Default number of points to average or median.  Positive numbers
   average that number of sequential points to form a fitting point.
@@ -182,7 +171,7 @@ aptrace — Trace positions of spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_niterate">niterate = 0</A></B></DT>
+  <DT><B>niterate = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='niterate' Line='niterate = 0'>
   <DD>Default number of rejection iterations.  If greater than zero the fit is
   used to detect deviant traced positions and reject them before repeating the
@@ -190,7 +179,7 @@ aptrace — Trace positions of spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_low_reject">low_reject = 3., high_reject = 3.</A></B></DT>
+  <DT><B>low_reject = 3., high_reject = 3.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='low_reject' Line='low_reject = 3., high_reject = 3.'>
   <DD>Default lower and upper rejection sigma.  If greater than zero traced
   points deviating from the fit below and above the fit by more than this
@@ -198,7 +187,7 @@ aptrace — Trace positions of spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_grow">grow = 0.</A></B></DT>
+  <DT><B>grow = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='grow' Line='grow = 0.'>
   <DD>Default reject growing radius.  Traced points within a distance given by this
   parameter of any rejected point are also rejected.
@@ -206,7 +195,7 @@ aptrace — Trace positions of spectra
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_additional_parameters">ADDITIONAL PARAMETERS</A></H2>
+  <H3>Additional parameters</H3>
   <! BeginSection: 'ADDITIONAL PARAMETERS'>
   <UL>
   I/O parameters and the default dispersion axis are taken from the
@@ -220,7 +209,7 @@ aptrace — Trace positions of spectra
   except the package parameters are included in that task.
   </UL>
   <! EndSection:   'ADDITIONAL PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   For each image in the input image list the position of the spectrum
@@ -313,7 +302,7 @@ aptrace — Trace positions of spectra
   of the tasks in the package with the <I>trace</I> parameter.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_aptrace_database_coefficients">APTRACE DATABASE COEFFICIENTS</A></H2>
+  <H3>Aptrace database coefficients</H3>
   <! BeginSection: 'APTRACE DATABASE COEFFICIENTS'>
   <UL>
   The path of an aperture is described by a function that gives an additive
@@ -434,16 +423,16 @@ aptrace — Trace positions of spectra
   </PRE>
   </UL>
   <! EndSection:   'APTRACE DATABASE COEFFICIENTS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_APTRACE">APTRACE V2.11</A></B></DT>
+  <DT><B>APTRACE V2.11</B></DT>
   <! Sec='REVISIONS' Level=0 Label='APTRACE' Line='APTRACE V2.11'>
   <DD>The "<TT>apertures</TT>" parameter can be used to select apertures for resizing,
   recentering, tracing, and extraction.  This parameter name was previously
@@ -453,7 +442,7 @@ aptrace — Trace positions of spectra
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   apdefault, apfind, aprecenter, apresize, apedit, apall,
@@ -463,5 +452,3 @@ aptrace — Trace positions of spectra
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'ADDITIONAL PARAMETERS' 'DESCRIPTION' 'APTRACE DATABASE COEFFICIENTS' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

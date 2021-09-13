@@ -1,3 +1,5 @@
+.. _tbdump:
+
 tbdump — Print selected columns of a list of tables databases
 =============================================================
 
@@ -5,43 +7,30 @@ tbdump — Print selected columns of a list of tables databases
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>tbdump (Feb93)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.ptools</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>tbdump (Feb93)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>tbdump</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   tbdump -- print fields (columns) from a list of  APPHOT/DAOPHOT STSDAS table
   	  databases
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   tbdump tables columns expr
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_tables">tables</A></B></DT>
+  <DT><B>tables</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='tables' Line='tables'>
   <DD>The name of the APPHOT/DAOPHOT table database(s) to be dumped.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_columns">columns</A></B></DT>
+  <DT><B>columns</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='columns' Line='columns'>
   <DD>The template specifying the names of the columns to be dumped.
   A null or blank string means
@@ -57,7 +46,7 @@ tbdump — Print selected columns of a list of tables databases
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_expr">expr</A></B></DT>
+  <DT><B>expr</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='expr' Line='expr'>
   <DD>The boolean expression to be evaluated once per record.
   Only the fields in those records for which the boolean expression
@@ -67,7 +56,7 @@ tbdump — Print selected columns of a list of tables databases
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_datafile">datafile = STDOUT</A></B></DT>
+  <DT><B>datafile = STDOUT</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='datafile' Line='datafile = STDOUT'>
   <DD>If <I>Datafile</I> is not null ("<TT></TT>") then the table data will be written
   to an output file with this name. By default the table data is written
@@ -76,7 +65,7 @@ tbdump — Print selected columns of a list of tables databases
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cdfile">cdfile = "<TT></TT>"</A></B></DT>
+  <DT><B>cdfile = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cdfile' Line='cdfile = ""'>
   <DD>If <I>Cdfile</I> is not null ("<TT></TT>") then the column definitions will be written
   to an output file with this name.
@@ -85,7 +74,7 @@ tbdump — Print selected columns of a list of tables databases
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pfile">pfile = "<TT></TT>"</A></B></DT>
+  <DT><B>pfile = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pfile' Line='pfile = ""'>
   <DD>If <I>Pfile</I> is not null ("<TT></TT>") then the header parameters will be written
   to an output file with this name.
@@ -93,7 +82,7 @@ tbdump — Print selected columns of a list of tables databases
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rows">rows = "<TT>-</TT>"</A></B></DT>
+  <DT><B>rows = "<TT>-</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rows' Line='rows = "-"'>
   <DD><I>Rows</I> is a string which may be used to specify ranges of rows which are
   to be dumped.  The default of "<TT>-</TT>" means dump all rows.  The first
@@ -106,7 +95,7 @@ tbdump — Print selected columns of a list of tables databases
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pagwidth">pagwidth = 158</A></B></DT>
+  <DT><B>pagwidth = 158</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pagwidth' Line='pagwidth = 158'>
   <DD>The width of the output for printing the table data.  If any of the columns
   to be printed is wider than this an error message will be displayed, and
@@ -116,7 +105,7 @@ tbdump — Print selected columns of a list of tables databases
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task converts selected records from an APPHOT/DAOPHOT STSDAS table
@@ -218,7 +207,7 @@ tbdump — Print selected columns of a list of tables databases
   </PRE>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <PRE>
@@ -243,12 +232,12 @@ tbdump — Print selected columns of a list of tables databases
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   tables.tdump,tables.tprint,tables.tlcol,tables.tcreate,ptools.txdump,ptools.pdump
@@ -257,5 +246,3 @@ tbdump — Print selected columns of a list of tables databases
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

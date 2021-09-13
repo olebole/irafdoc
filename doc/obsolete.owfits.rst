@@ -1,3 +1,5 @@
+.. _owfits:
+
 owfits — Convert an IRAF image into a FITS image (dataio V2.10.4)
 =================================================================
 
@@ -5,42 +7,29 @@ owfits — Convert an IRAF image into a FITS image (dataio V2.10.4)
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>owfits (Jan90)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>dataio</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>owfits (Jan90)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>owfits</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   owfits -- convert IRAF image files to FITS image files
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   owfits iraf_files fits_files
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_iraf_files">iraf_files</A></B></DT>
+  <DT><B>iraf_files</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='iraf_files' Line='iraf_files'>
   <DD>String parameter specifying the input file(s), e.g. "<TT>file1</TT>" or "<TT>file*</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fits_files">fits_files</A></B></DT>
+  <DT><B>fits_files</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fits_files' Line='fits_files'>
   <DD>String parameter specifying the output destination.
   Magnetic tape output is assumed if the first two characters of fits_files
@@ -60,7 +49,7 @@ owfits — Convert an IRAF image into a FITS image (dataio V2.10.4)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_newtape">newtape</A></B></DT>
+  <DT><B>newtape</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='newtape' Line='newtape'>
   <DD>Boolean parameter specifying whether an output tape is blank or contains
   data. Newtape is requested only if no tape file number is specified in
@@ -68,7 +57,7 @@ owfits — Convert an IRAF image into a FITS image (dataio V2.10.4)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_bscale">bscale</A></B></DT>
+  <DT><B>bscale</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='bscale' Line='bscale'>
   <DD>The FITS bscale parameter, defined as p = i * bscale + bzero, where
   p and i are the physical and tape data values respectively.
@@ -77,7 +66,7 @@ owfits — Convert an IRAF image into a FITS image (dataio V2.10.4)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_bzero">bzero</A></B></DT>
+  <DT><B>bzero</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='bzero' Line='bzero'>
   <DD>The FITS bzero parameter (see bscale for a definition).
   Bzero is only requested if the scale switch is set and the autoscale
@@ -85,7 +74,7 @@ owfits — Convert an IRAF image into a FITS image (dataio V2.10.4)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_make_image">make_image = yes</A></B></DT>
+  <DT><B>make_image = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='make_image' Line='make_image = yes'>
   <DD>By default owfits writes the FITS image(s) to the output destination.
   If the make_image switch is turned off, owfits prints the FITS headers
@@ -94,14 +83,14 @@ owfits — Convert an IRAF image into a FITS image (dataio V2.10.4)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_long_header">long_header = no</A></B></DT>
+  <DT><B>long_header = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='long_header' Line='long_header = no'>
   <DD>If this switch is set the full FITS header will be printed on the standard
   output for each IRAF image converted.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_short_header">short_header = yes</A></B></DT>
+  <DT><B>short_header = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='short_header' Line='short_header = yes'>
   <DD>If this switch is set only a short header, listing files processed and
   their dimensions will be printed on the standard output.
@@ -109,7 +98,7 @@ owfits — Convert an IRAF image into a FITS image (dataio V2.10.4)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_bitpix">bitpix = 0</A></B></DT>
+  <DT><B>bitpix = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='bitpix' Line='bitpix = 0'>
   <DD>A bitpix of 8, 16, or 32 will produce either an unsigned byte,
   twos-complement 16 bit integer, or twos-complement 32 bit integer FITS
@@ -126,7 +115,7 @@ owfits — Convert an IRAF image into a FITS image (dataio V2.10.4)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_blocking_factor">blocking_factor = 0</A></B></DT>
+  <DT><B>blocking_factor = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='blocking_factor' Line='blocking_factor = 0'>
   <DD>The tape blocking factor for FITS.
   Wfits normally writes <I>blocking_factor</I> * 2880 byte records,
@@ -144,7 +133,7 @@ owfits — Convert an IRAF image into a FITS image (dataio V2.10.4)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_scale">scale = yes</A></B></DT>
+  <DT><B>scale = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='scale' Line='scale = yes'>
   <DD>If the scale switch is set, the IRAF image will be scaled before output.
   Two types of scaling are available. The scaling parameters bscale and
@@ -156,7 +145,7 @@ owfits — Convert an IRAF image into a FITS image (dataio V2.10.4)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_autoscale">autoscale = yes</A></B></DT>
+  <DT><B>autoscale = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='autoscale' Line='autoscale = yes'>
   <DD>If the autoscale switch is set, owfits calculates the appropriate bscale and
   bzero  factors
@@ -166,7 +155,7 @@ owfits — Convert an IRAF image into a FITS image (dataio V2.10.4)
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   IRAF data is read from disk and written to the specified destination,
@@ -184,7 +173,7 @@ owfits — Convert an IRAF image into a FITS image (dataio V2.10.4)
   with possible loss of precision.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Convert a series of IRAF image files to FITS image files on a blank
@@ -251,7 +240,7 @@ owfits — Convert an IRAF image into a FITS image (dataio V2.10.4)
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   OWFITS does not attempt to recover from write errors. When an error is
@@ -272,7 +261,7 @@ owfits — Convert an IRAF image into a FITS image (dataio V2.10.4)
   on the driver.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   orfits, reblock
@@ -281,5 +270,3 @@ owfits — Convert an IRAF image into a FITS image (dataio V2.10.4)
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

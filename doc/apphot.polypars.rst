@@ -1,3 +1,5 @@
+.. _polypars:
+
 polypars — Edit the polyphot parameters
 =======================================
 
@@ -5,49 +7,36 @@ polypars — Edit the polyphot parameters
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>polypars (May00)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.apphot</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>polypars (May00)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>polypars</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   polypars -- edit the polygonal aperture photometry parameters
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   polypars
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_zmag">zmag = 25.00</A></B></DT>
+  <DT><B>zmag = 25.00</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='zmag' Line='zmag = 25.00'>
   <DD>The zero point offset for the magnitude scale.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_mkpolygon">mkpolygon = no</A></B></DT>
+  <DT><B>mkpolygon = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='mkpolygon' Line='mkpolygon = no'>
   <DD>Draw the polygons on the screen.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The zero point of the magnitude scale is determined by <I>zmag</I>.
@@ -55,7 +44,7 @@ polypars — Edit the polyphot parameters
   If the <I>mkpolygon</I> switch is enabled polygons are marked on the screen.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -99,17 +88,17 @@ polypars — Edit the polyphot parameters
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   polyphot. polymark
@@ -118,5 +107,3 @@ polypars — Edit the polyphot parameters
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

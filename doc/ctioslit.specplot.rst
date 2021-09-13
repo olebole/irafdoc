@@ -1,3 +1,5 @@
+.. _specplot:
+
 specplot — Stack and plot multiple spectra
 ==========================================
 
@@ -5,43 +7,30 @@ specplot — Stack and plot multiple spectra
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>specplot (Jan96)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.onedspec</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>specplot (Jan96)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>specplot</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   specplot -- stack and plot multiple spectra
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   specplot spectra
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_spectra">spectra</A></B></DT>
+  <DT><B>spectra</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='spectra' Line='spectra'>
   <DD>List of spectra to plot.  The spectra are assigned index numbers increasing
   from one in the order of the list.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apertures">apertures = "<TT></TT>"</A></B></DT>
+  <DT><B>apertures = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""'>
   <DD>List of apertures to plot.  An empty list selects all apertures.
   An aperture list consists of a comma separated list of aperture numbers or
@@ -50,14 +39,14 @@ specplot — Stack and plot multiple spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_bands">bands = "<TT>1</TT>"</A></B></DT>
+  <DT><B>bands = "<TT>1</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='bands' Line='bands = "1"'>
   <DD>List of bands to plot if the image is three dimensional.  The list has
   the same syntax as for the apertures.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dispaxis">dispaxis = 1, nsum = 1</A></B></DT>
+  <DT><B>dispaxis = 1, nsum = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dispaxis' Line='dispaxis = 1, nsum = 1'>
   <DD>Parameters for defining vectors in 2D images.  The
   dispersion axis is 1 for line vectors and 2 for column vectors.
@@ -66,20 +55,20 @@ specplot — Stack and plot multiple spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_autolayout">autolayout = yes</A></B></DT>
+  <DT><B>autolayout = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='autolayout' Line='autolayout = yes'>
   <DD>Automatically layout the spectra by shifting or scaling to a common mean
   and determining a separation step which does overlaps the spectra
   by the specified fraction?  The algorithm uses the following parameters.
   <DL>
-  <DT><B><A NAME="l_autoscale">autoscale = yes</A></B></DT>
+  <DT><B>autoscale = yes</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='autoscale' Line='autoscale = yes'>
   <DD>Scale the spectra to a common mean?  If no then the spectra are shifted
   to a common mean and if yes they are scaled to a common mean.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fraction">fraction = 1.</A></B></DT>
+  <DT><B>fraction = 1.</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='fraction' Line='fraction = 1.'>
   <DD>The separation step which just avoids overlapping the spectra is multiplied
   by this number.  Numbers greater than 1 increase the separation while numbers
@@ -89,7 +78,7 @@ specplot — Stack and plot multiple spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_units">units = "<TT></TT>"</A></B></DT>
+  <DT><B>units = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='units' Line='units = ""'>
   <DD>Dispersion coordinate units.  If the spectra have known units, currently
   this is generally Angstroms, the plotted units may be converted
@@ -103,7 +92,7 @@ specplot — Stack and plot multiple spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_transform">transform = "<TT>none</TT>" (none|log)</A></B></DT>
+  <DT><B>transform = "<TT>none</TT>" (none|log)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='transform' Line='transform = "none" (none|log)'>
   <DD>Transform for the input pixel values.  Currently only "<TT>log</TT>" is implemented.
   If all pixels are negative the spectrum values will be unchanged and if
@@ -114,7 +103,7 @@ specplot — Stack and plot multiple spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_scale">scale = 1., offset = 0. (value, @file, keyword)</A></B></DT>
+  <DT><B>scale = 1., offset = 0. (value, @file, keyword)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='scale' Line='scale = 1., offset = 0. (value, @file, keyword)'>
   <DD>The scale and offset to apply to each spectrum.  The value of the parameter
   may be a constant value applying to all spectra, a file containing the
@@ -123,14 +112,14 @@ specplot — Stack and plot multiple spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_step">step = 0</A></B></DT>
+  <DT><B>step = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='step' Line='step = 0'>
   <DD>The step separating spectra when not using the autolayout option.
   The value of this parameter depends on the range of the data.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ptype">ptype = "<TT>1</TT>"</A></B></DT>
+  <DT><B>ptype = "<TT>1</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ptype' Line='ptype = "1"'>
   <DD>Default plotting type for the spectra.  A numeric value selects line plots
   while marker type strings select marker plots.  The sign of the line type
@@ -144,7 +133,7 @@ specplot — Stack and plot multiple spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_labels">labels = "<TT>user</TT>"</A></B></DT>
+  <DT><B>labels = "<TT>user</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='labels' Line='labels = "user"'>
   <DD>Spectrum labels to be used.  If the null string or the word "<TT>none</TT>" is
   given then the spectra are not labeled.  The word "<TT>imname</TT>" labels the
@@ -156,13 +145,13 @@ specplot — Stack and plot multiple spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ulabels">ulabels = "<TT></TT>"</A></B></DT>
+  <DT><B>ulabels = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ulabels' Line='ulabels = ""'>
   <DD>File containing user labels.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xlpos">xlpos = 1.02, ylpos = 0.0</A></B></DT>
+  <DT><B>xlpos = 1.02, ylpos = 0.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xlpos' Line='xlpos = 1.02, ylpos = 0.0'>
   <DD>The starting position for the spectrum labels in fractions of the
   graph limits.  The horizontal (x) position is measured from the left
@@ -173,14 +162,14 @@ specplot — Stack and plot multiple spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sysid">sysid = yes</A></B></DT>
+  <DT><B>sysid = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sysid' Line='sysid = yes'>
   <DD>Include system banner and separation step label?  This may be changed
   interactively using ":/sysid"<TT>.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_yscale">yscale = no</A></B></DT>
+  <DT><B>yscale = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='yscale' Line='yscale = no'>
   <DD>Draw a Y axis scale?  Since stacked plots are relative labeling the Y
   axes may not be useful.  This parameter allows adding the Y axis scale
@@ -188,14 +177,14 @@ specplot — Stack and plot multiple spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_title">title = </TT>""<TT>, xlabel = </TT>""<TT>, ylabel = </TT>""<TT></A></B></DT>
+  <DT><B>title = </TT>""<TT>, xlabel = </TT>""<TT>, ylabel = </TT>""<TT></B></DT>
   <! Sec='PARAMETERS' Level=0 Label='title' Line='title = "", xlabel = "", ylabel = ""'>
   <DD>Title, x axis label, and y axis label for graphs.  These may be changed
   interactively using ":/title</TT>", ":/xlabel"<TT>, and ":/ylabel</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xmin">xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF</A></B></DT>
+  <DT><B>xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xmin' Line='xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF'>
   <DD>The default limits for the initial graph.  If INDEF then the limit is
   determined from the range of the data (autoscaling).  These values can
@@ -204,20 +193,20 @@ specplot — Stack and plot multiple spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_logfile">logfile = "<TT></TT>"</A></B></DT>
+  <DT><B>logfile = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = ""'>
   <DD>Logfile to record the final set of spectra and scale factors displayed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_graphics">graphics = "<TT>stdgraph</TT>"</A></B></DT>
+  <DT><B>graphics = "<TT>stdgraph</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"'>
   <DD>Output graphics device.  One of "<TT>stdgraph</TT>", "<TT>stdplot</TT>", "<TT>stdvdm</TT>",
   @(enviroment variable), or actual device.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cursor">cursor = "<TT></TT>"</A></B></DT>
+  <DT><B>cursor = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""'>
   <DD>Graphics cursor input.  When null the standard cursor is used otherwise
   the specified file is used.
@@ -225,7 +214,7 @@ specplot — Stack and plot multiple spectra
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <B>Specplot</B> plots multiple spectra with provisions for scaling them,
@@ -345,7 +334,7 @@ specplot — Stack and plot multiple spectra
   value is negative.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_cursor_commands">CURSOR COMMANDS</A></H2>
+  <H3>Cursor commands</H3>
   <! BeginSection: 'CURSOR COMMANDS'>
   <UL>
   <P>
@@ -378,7 +367,7 @@ specplot — Stack and plot multiple spectra
   </PRE>
   </UL>
   <! EndSection:   'CURSOR COMMANDS'>
-  <H2><A NAME="s_colon_commands">COLON COMMANDS</A></H2>
+  <H3>Colon commands</H3>
   <! BeginSection: 'COLON COMMANDS'>
   <UL>
   <P>
@@ -431,7 +420,7 @@ specplot — Stack and plot multiple spectra
   </PRE>
   </UL>
   <! EndSection:   'COLON COMMANDS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. To make a nice plot of a set of spectra with the default layout:
@@ -452,11 +441,11 @@ specplot — Stack and plot multiple spectra
   attributes.
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_SPECPLOT">SPECPLOT V2.11</A></B></DT>
+  <DT><B>SPECPLOT V2.11</B></DT>
   <! Sec='REVISIONS' Level=0 Label='SPECPLOT' Line='SPECPLOT V2.11'>
   <DD>The scale and offset parameters may now be a value, a filename, or
   and image header keyword.
@@ -465,7 +454,7 @@ specplot — Stack and plot multiple spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_SPECPLOT">SPECPLOT V2.10.3</A></B></DT>
+  <DT><B>SPECPLOT V2.10.3</B></DT>
   <! Sec='REVISIONS' Level=0 Label='SPECPLOT' Line='SPECPLOT V2.10.3'>
   <DD>A color parameter was added for graphics terminals supporting color.
   <P>
@@ -478,7 +467,7 @@ specplot — Stack and plot multiple spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_SPECPLOT">SPECPLOT V2.10</A></B></DT>
+  <DT><B>SPECPLOT V2.10</B></DT>
   <! Sec='REVISIONS' Level=0 Label='SPECPLOT' Line='SPECPLOT V2.10'>
   <DD>New parameters were added to select apertures and bands, plot
   additional dimensions (for example the additional output from the extras
@@ -493,7 +482,7 @@ specplot — Stack and plot multiple spectra
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_notes">NOTES</A></H2>
+  <H3>Notes</H3>
   <! BeginSection: 'NOTES'>
   <UL>
   The automatic layout algorithm is relatively simple and may not
@@ -502,7 +491,7 @@ specplot — Stack and plot multiple spectra
   quality plots.
   </UL>
   <! EndSection:   'NOTES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   bplot, splot, onedspec, gtools, ranges
@@ -511,5 +500,3 @@ specplot — Stack and plot multiple spectra
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'CURSOR COMMANDS' 'COLON COMMANDS' 'EXAMPLES' 'REVISIONS' 'NOTES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

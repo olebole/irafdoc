@@ -1,3 +1,5 @@
+.. _mkpkg:
+
 mkpkg — Make or update an object library or package
 ===================================================
 
@@ -5,36 +7,23 @@ mkpkg — Make or update an object library or package
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>mkpkg (Mar90)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>softools</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>mkpkg (Mar90)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>mkpkg</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   mkpkg - make or update a package or library
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   mkpkg [switches] [module ...] [name=value ...]
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_arguments">ARGUMENTS</A></H2>
+  <H3>Arguments</H3>
   <! BeginSection: 'ARGUMENTS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_"><B>-d[ddd]</B></A></B></DT>
+  <DT><B><B>-d[ddd]</B></B></DT>
   <! Sec='ARGUMENTS' Level=0 Label='' Line='\fB-d[ddd]\fR'>
   <DD>Debug mode.  Print detailed messages describing what <I>mkpkg</I> is doing.
   There are four levels of debug messages, selected by repeating the "<TT>d</TT>"
@@ -44,7 +33,7 @@ mkpkg — Make or update an object library or package
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"><B>-f file</B></A></B></DT>
+  <DT><B><B>-f file</B></B></DT>
   <! Sec='ARGUMENTS' Level=0 Label='' Line='\fB-f file\fR'>
   <DD>Set the name of the file to be interpreted (default: "<TT>mkpkg</TT>").
   The special value "<TT>stdin</TT>" (lower case) allows commands to be entered
@@ -52,14 +41,14 @@ mkpkg — Make or update an object library or package
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"><B>-i</B></A></B></DT>
+  <DT><B><B>-i</B></B></DT>
   <! Sec='ARGUMENTS' Level=0 Label='' Line='\fB-i\fR'>
   <DD>Ignore errors.  Execution continues even if an error occurs.  In most cases
   it does anyhow, so this switch has little effect at present.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"><B>-n</B></A></B></DT>
+  <DT><B><B>-n</B></B></DT>
   <! Sec='ARGUMENTS' Level=0 Label='' Line='\fB-n\fR'>
   <DD>No execute.  Go through the motions, but do not touch any files.
   No execute mode automatically enables verbose mode (flag "<TT>-v</TT>").
@@ -67,7 +56,7 @@ mkpkg — Make or update an object library or package
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"><B>-p </B><I>pkgname</I></A></B></DT>
+  <DT><B><B>-p </B><I>pkgname</I></B></DT>
   <! Sec='ARGUMENTS' Level=0 Label='' Line='\fB-p \fIpkgname\fR'>
   <DD>Load the package environment for the named external package, e.g.,
   "<TT>mkpkg -p noao update</TT>".  If the same package is always specified
@@ -78,7 +67,7 @@ mkpkg — Make or update an object library or package
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"><B>-u</B>    [AOSVS/IRAF only]</A></B></DT>
+  <DT><B><B>-u</B>    [AOSVS/IRAF only]</B></DT>
   <! Sec='ARGUMENTS' Level=0 Label='' Line='\fB-u\fR    [AOSVS/IRAF only]'>
   <DD>Forcibly update the dates of improperly dated library modules.  This option
   is used when a binary archive is restored on a machine which cannot restore
@@ -95,14 +84,14 @@ mkpkg — Make or update an object library or package
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"><B>-v</B></A></B></DT>
+  <DT><B><B>-v</B></B></DT>
   <! Sec='ARGUMENTS' Level=0 Label='' Line='\fB-v\fR'>
   <DD>Verbose mode.  A message is printed whenever a file is touched.
   Recommended when running large mkpkg jobs in batch mode.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"><B>module</B></A></B></DT>
+  <DT><B><B>module</B></B></DT>
   <! Sec='ARGUMENTS' Level=0 Label='' Line='\fBmodule\fR'>
   <DD>The names of the module or modules (named entries in the "<TT>mkpkg</TT>" file) to be
   executed.  If no module is named the first module encountered is executed,
@@ -111,7 +100,7 @@ mkpkg — Make or update an object library or package
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"><B>name=value [name=value...]</B></A></B></DT>
+  <DT><B><B>name=value [name=value...]</B></B></DT>
   <! Sec='ARGUMENTS' Level=0 Label='' Line='\fBname=value [name=value...]\fR'>
   <DD>Enter the named symbol/value pair into the symbol table of the <I>mkpkg</I>
   macro preprocessor.  The symbols <I>XFLAGS</I> (for the XC compiler) and
@@ -121,7 +110,7 @@ mkpkg — Make or update an object library or package
   </DL>
   </UL>
   <! EndSection:   'ARGUMENTS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The <I>mkpkg</I> utility is used to make or update IRAF packages or libraries.
@@ -373,10 +362,10 @@ mkpkg — Make or update an object library or package
   file.  The IRAF <B>mkpkg</B> system include file <B>hlib$mkpkg.inc</B> is
   automatically included whenever <I>mkpkg</I> is run.
   <DL>
-  <DT><B><A NAME="l_"></A></B></DT>
+  <DT><B></B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line=''>
   <DD><DL>
-  <DT><B><A NAME="l_"><B>$set</B> symbol = value</A></B></DT>
+  <DT><B><B>$set</B> symbol = value</B></DT>
   <! Sec='DESCRIPTION' Level=1 Label='' Line='\fB$set\fR symbol = value'>
   <DD>Enter the named symbol into the symbol table with the given string value.
   Any existing symbol will be silently redefined.  Symbols defined within a
@@ -384,7 +373,7 @@ mkpkg — Make or update an object library or package
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"><B>$include</B> filename</A></B></DT>
+  <DT><B><B>$include</B> filename</B></DT>
   <! Sec='DESCRIPTION' Level=1 Label='' Line='\fB$include\fR filename'>
   <DD>Read commands (e.g., <B>$set</B> directives) from the named include file.
   The include filename may be any legal virtual filename, but only the
@@ -421,24 +410,24 @@ mkpkg — Make or update an object library or package
   the test, e.g., "<TT>$ifndef</TT>" tests whether the named symbol does not exist.
   Nesting is permitted.
   <DL>
-  <DT><B><A NAME="l_"></A></B></DT>
+  <DT><B></B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line=''>
   <DD><DL>
-  <DT><B><A NAME="l_"><B>$ifdef</B> (symbol [, symbol, ...])</A></B></DT>
+  <DT><B><B>$ifdef</B> (symbol [, symbol, ...])</B></DT>
   <! Sec='DESCRIPTION' Level=1 Label='' Line='\fB$ifdef\fR (symbol [, symbol, ...])'>
   <DD><BR>
   Test for the existence of one of the named symbols.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"><B>$ifeq</B> (symbol, value [, value,...])</A></B></DT>
+  <DT><B><B>$ifeq</B> (symbol, value [, value,...])</B></DT>
   <! Sec='DESCRIPTION' Level=1 Label='' Line='\fB$ifeq\fR (symbol, value [, value,...])'>
   <DD><BR>
   Test if the value of the named symbol matches one of the listed value strings.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"><B>$iferr</B></A></B></DT>
+  <DT><B><B>$iferr</B></B></DT>
   <! Sec='DESCRIPTION' Level=1 Label='' Line='\fB$iferr\fR'>
   <DD><BR>
   Test for an error return from the last directive executed which touched
@@ -446,14 +435,14 @@ mkpkg — Make or update an object library or package
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"><B>$iffile</B> (file [, file,...])</A></B></DT>
+  <DT><B><B>$iffile</B> (file [, file,...])</B></DT>
   <! Sec='DESCRIPTION' Level=1 Label='' Line='\fB$iffile\fR (file [, file,...])'>
   <DD><BR>
   Test for the existence of any of the named files.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"><B>$ifnewer</B> (file, filea)</A></B></DT>
+  <DT><B><B>$ifnewer</B> (file, filea)</B></DT>
   <! Sec='DESCRIPTION' Level=1 Label='' Line='\fB$ifnewer\fR (file, filea)'>
   <DD><B>$ifnewer</B> (file: filea [, fileb, ...])
   <BR>
@@ -463,7 +452,7 @@ mkpkg — Make or update an object library or package
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"><B>$ifolder</B> (file, filea)</A></B></DT>
+  <DT><B><B>$ifolder</B> (file, filea)</B></DT>
   <! Sec='DESCRIPTION' Level=1 Label='' Line='\fB$ifolder\fR (file, filea)'>
   <DD><B>$ifolder</B> (file: filea [, fileb, ...])
   <BR>
@@ -471,7 +460,7 @@ mkpkg — Make or update an object library or package
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"><B>$else</B></A></B></DT>
+  <DT><B><B>$else</B></B></DT>
   <! Sec='DESCRIPTION' Level=1 Label='' Line='\fB$else\fR'>
   <DD><BR>
   Marks the <I>else</I> clause of an <I>if</I> statement.  The <I>else-if</I>
@@ -480,14 +469,14 @@ mkpkg — Make or update an object library or package
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"><B>$endif</B></A></B></DT>
+  <DT><B><B>$endif</B></B></DT>
   <! Sec='DESCRIPTION' Level=1 Label='' Line='\fB$endif\fR'>
   <DD><BR>
   Terminates a $if or $if-$else statement.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"><B>$end</B></A></B></DT>
+  <DT><B><B>$end</B></B></DT>
   <! Sec='DESCRIPTION' Level=1 Label='' Line='\fB$end\fR'>
   <DD><BR>
   Terminates an arbitrary number of $if or $if-$else statements.  This is most
@@ -496,7 +485,7 @@ mkpkg — Make or update an object library or package
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"><B>$exit</B></A></B></DT>
+  <DT><B><B>$exit</B></B></DT>
   <! Sec='DESCRIPTION' Level=1 Label='' Line='\fB$exit\fR'>
   <DD>Terminate the current program; equivalent to a semicolon, but the latter
   is normally used only at the end of the program to match the colon at the
@@ -512,10 +501,10 @@ mkpkg — Make or update an object library or package
       The following preprocessor directives are available for calling <I>mkpkg</I>
   modules or altering the normal flow of control.
   <DL>
-  <DT><B><A NAME="l_"></A></B></DT>
+  <DT><B></B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line=' '>
   <DD><DL>
-  <DT><B><A NAME="l_"><B>$call</B> module[@subdir[/file]] [name=value] [name=value...]</A></B></DT>
+  <DT><B><B>$call</B> module[@subdir[/file]] [name=value] [name=value...]</B></DT>
   <! Sec='DESCRIPTION' Level=1 Label='' Line='\fB$call\fR module[@subdir[/file]] [name=value] [name=value...]'>
   <DD><BR>
   Call the named mkpkg-file module as a subroutine.  In most cases the called
@@ -528,7 +517,7 @@ mkpkg — Make or update an object library or package
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"><B>$update</B> module[@subdir[/file]] [name=value] [name=value...]</A></B></DT>
+  <DT><B><B>$update</B> module[@subdir[/file]] [name=value] [name=value...]</B></DT>
   <! Sec='DESCRIPTION' Level=1 Label='' Line='\fB$update\fR module[@subdir[/file]] [name=value] [name=value...]'>
   <DD><BR>
   Identical to <B>$call</B> except that the named module is understood to
@@ -538,7 +527,7 @@ mkpkg — Make or update an object library or package
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"><B>$goto</B> label</A></B></DT>
+  <DT><B><B>$goto</B> label</B></DT>
   <! Sec='DESCRIPTION' Level=1 Label='' Line='\fB$goto\fR label'>
   <DD><BR>
   Causes execution to resume at the line following the indicated label.
@@ -557,10 +546,10 @@ mkpkg — Make or update an object library or package
   order.  Additional capability is available via OS escapes, provided the
   resultant machine dependence is acceptable.
   <DL>
-  <DT><B><A NAME="l_"></A></B></DT>
+  <DT><B></B></DT>
   <! Sec='DESCRIPTION' Level=0 Label='' Line=' '>
   <DD><DL>
-  <DT><B><A NAME="l_"><B>$echo</B> message</A></B></DT>
+  <DT><B><B>$echo</B> message</B></DT>
   <! Sec='DESCRIPTION' Level=1 Label='' Line='\fB$echo\fR message'>
   <DD><BR>
   Print the given message string on the standard output.  The string must be
@@ -568,7 +557,7 @@ mkpkg — Make or update an object library or package
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"><B>$checkout</B> file directory</A></B></DT>
+  <DT><B><B>$checkout</B> file directory</B></DT>
   <! Sec='DESCRIPTION' Level=1 Label='' Line='\fB$checkout\fR file directory'>
   <DD><BR>
   Check the named file out of the indicated directory.  The checkout operation
@@ -580,7 +569,7 @@ mkpkg — Make or update an object library or package
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"><B>$checkin</B> file directory</A></B></DT>
+  <DT><B><B>$checkin</B> file directory</B></DT>
   <! Sec='DESCRIPTION' Level=1 Label='' Line='\fB$checkin\fR file directory'>
   <DD><BR>
   Check the named file back into the indicated directory.  The checkin operation
@@ -589,7 +578,7 @@ mkpkg — Make or update an object library or package
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"><B>$copy</B> filea fileb</A></B></DT>
+  <DT><B><B>$copy</B> filea fileb</B></DT>
   <! Sec='DESCRIPTION' Level=1 Label='' Line='\fB$copy\fR filea fileb'>
   <DD><BR>
   Make a copy <I>fileb</I> of the existing file <I>filea</I>.  On a UNIX host
@@ -598,14 +587,14 @@ mkpkg — Make or update an object library or package
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"><B>$delete</B> file [file ...]</A></B></DT>
+  <DT><B><B>$delete</B> file [file ...]</B></DT>
   <! Sec='DESCRIPTION' Level=1 Label='' Line='\fB$delete\fR file [file ...]'>
   <DD><BR>
   Delete the named file or files.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"><B>$generic</B> [-k] [-p prefix] [-t types] [-o root] files</A></B></DT>
+  <DT><B><B>$generic</B> [-k] [-p prefix] [-t types] [-o root] files</B></DT>
   <! Sec='DESCRIPTION' Level=1 Label='' Line='\fB$generic\fR [-k] [-p prefix] [-t types] [-o root] files'>
   <DD><BR>
   Run the generic preprocessor on the named files.  The generic preprocessor
@@ -613,7 +602,7 @@ mkpkg — Make or update an object library or package
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"><B>$link</B> [switches] file1 file2 ... fileN [-o file.e]</A></B></DT>
+  <DT><B><B>$link</B> [switches] file1 file2 ... fileN [-o file.e]</B></DT>
   <! Sec='DESCRIPTION' Level=1 Label='' Line='\fB$link\fR [switches] file1 file2 ... fileN [-o file.e]'>
   <DD><BR>
   Call XC with the given argument list to link the indicated files and libraries.
@@ -623,7 +612,7 @@ mkpkg — Make or update an object library or package
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"><B>$move</B> file destination</A></B></DT>
+  <DT><B><B>$move</B> file destination</B></DT>
   <! Sec='DESCRIPTION' Level=1 Label='' Line='\fB$move\fR file destination'>
   <DD><BR>
   Move the named file to the indicated directory, or rename the file in the
@@ -631,7 +620,7 @@ mkpkg — Make or update an object library or package
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"><B>$omake</B> file [dep1] [dep2 ...]</A></B></DT>
+  <DT><B><B>$omake</B> file [dep1] [dep2 ...]</B></DT>
   <! Sec='DESCRIPTION' Level=1 Label='' Line='\fB$omake\fR file [dep1] [dep2 ...]'>
   <DD><BR>
   Compile the named source file if it does not have a corresponding object file
@@ -641,7 +630,7 @@ mkpkg — Make or update an object library or package
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"><B>$purge</B> directory</A></B></DT>
+  <DT><B><B>$purge</B> directory</B></DT>
   <! Sec='DESCRIPTION' Level=1 Label='' Line='\fB$purge\fR directory'>
   <DD><BR>
   Delete all old versions of all files in the named directory.  Nothing is done
@@ -649,7 +638,7 @@ mkpkg — Make or update an object library or package
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"><B>$special</B> directory : filelist ;</A></B></DT>
+  <DT><B><B>$special</B> directory : filelist ;</B></DT>
   <! Sec='DESCRIPTION' Level=1 Label='' Line='\fB$special\fR directory : filelist ;'>
   <DD><BR>
   Add one or more files to the special file list for the host system.  This is
@@ -680,7 +669,7 @@ mkpkg — Make or update an object library or package
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"><B>$xc</B> [switches] file1 file2 ... fileN</A></B></DT>
+  <DT><B><B>$xc</B> [switches] file1 file2 ... fileN</B></DT>
   <! Sec='DESCRIPTION' Level=1 Label='' Line='\fB$xc\fR [switches] file1 file2 ... fileN'>
   <DD><BR>
   Call the XC compiler to compile the named files.  Note that the value of
@@ -689,7 +678,7 @@ mkpkg — Make or update an object library or package
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"><B>$debug</B> [on|off]</A></B></DT>
+  <DT><B><B>$debug</B> [on|off]</B></DT>
   <! Sec='DESCRIPTION' Level=1 Label='' Line='\fB$debug\fR [on|off]'>
   <DD><BR>
   Turn debug mode on or off.  If no argument is supplied debug mode is turned
@@ -697,7 +686,7 @@ mkpkg — Make or update an object library or package
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"><B>$verbose</B> [on|off]</A></B></DT>
+  <DT><B><B>$verbose</B> [on|off]</B></DT>
   <! Sec='DESCRIPTION' Level=1 Label='' Line='\fB$verbose\fR [on|off]'>
   <DD><BR>
   Turn verbose mode on or off.  If no argument is supplied verbose mode is turned
@@ -722,7 +711,7 @@ mkpkg — Make or update an object library or package
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   Update the current package.
@@ -768,7 +757,7 @@ mkpkg — Make or update an object library or package
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   xc, generic, softools package
@@ -777,5 +766,3 @@ mkpkg — Make or update an object library or package
   
   <! Contents: 'NAME' 'USAGE' 'ARGUMENTS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

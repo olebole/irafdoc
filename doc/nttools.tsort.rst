@@ -1,3 +1,5 @@
+.. _tsort:
+
 tsort — Sort a table.
 =====================
 
@@ -5,32 +7,19 @@ tsort — Sort a table.
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>tsort (Dec90)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>tables</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>tsort (Dec90)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>tsort</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   tsort -- Sort a table on one or more columns.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   tsort table columns
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task sorts an STSDAS-format table.  The sort is done in place, so if you want
@@ -55,11 +44,11 @@ tsort — Sort a table.
   of the value of 'ascend'. 
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_table">table [file name template]</A></B></DT>
+  <DT><B>table [file name template]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='table' Line='table [file name template]'>
   <DD>Name of the table, or tables, to be sorted in-place.
   All tables are sorted on the same column or columns; if more than one table
@@ -68,7 +57,7 @@ tsort — Sort a table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_columns">columns [string]</A></B></DT>
+  <DT><B>columns [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='columns' Line='columns [string]'>
   <DD>Column name or column name template describing columns on which sort will
   be performed.  A column name template consists of a list of
@@ -80,26 +69,26 @@ tsort — Sort a table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(ascend = yes) [boolean]</A></B></DT>
+  <DT><B>(ascend = yes) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(ascend = yes) [boolean]'>
   <DD>Sort the table in ascending order?  If you want the table sorted in descending
   order, set 'ascend = no'.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(casesens = yes) [boolean]</A></B></DT>
+  <DT><B>(casesens = yes) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(casesens = yes) [boolean]'>
   <DD>Are sorts on character columns to be case sensitive?  If 'casesens = yes',
   upper case letters will precede lower case letters.  If 'casesens = no',
   case is ignored by the sort operation.
   <DL>
-  <DT><B><A NAME="l_"></A></B></DT>
+  <DT><B></B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line=' '>
   <DD></DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Sort a table of star positions by right ascension and declination:
@@ -122,18 +111,18 @@ tsort — Sort a table.
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   This task was written by Bernie Simon.
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   tcopy
@@ -142,5 +131,3 @@ tsort — Sort a table.
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

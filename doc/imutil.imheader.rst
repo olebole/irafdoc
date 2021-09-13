@@ -1,3 +1,5 @@
+.. _imheader:
+
 imheader — Print an image header
 ================================
 
@@ -5,61 +7,48 @@ imheader — Print an image header
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>imheader (Jun97)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>imheader (Jun97)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>imheader</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   imheader -- list header parameters for a list of images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   imheader [images]
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>List of IRAF images.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_imlist">imlist = "<TT>*.imh,*.fits,*.pl,*.qp,*.hhh</TT>"</A></B></DT>
+  <DT><B>imlist = "<TT>*.imh,*.fits,*.pl,*.qp,*.hhh</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='imlist' Line='imlist = "*.imh,*.fits,*.pl,*.qp,*.hhh"'>
   <DD>The default IRAF image name template.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_longheader">longheader = no</A></B></DT>
+  <DT><B>longheader = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='longheader' Line='longheader = no'>
   <DD>Print verbose image header.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_userfields">userfields = yes</A></B></DT>
+  <DT><B>userfields = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='userfields' Line='userfields = yes'>
   <DD>If longheader is set print the information in the user area.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   IMHEADER prints header information in various formats for the list of IRAF
@@ -72,7 +61,7 @@ imheader — Print an image header
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -98,17 +87,17 @@ imheader — Print an image header
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imgets, hedit, hselect
@@ -117,5 +106,3 @@ imheader — Print an image header
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

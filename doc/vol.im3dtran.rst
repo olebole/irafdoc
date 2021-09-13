@@ -1,3 +1,5 @@
+.. _im3dtran:
+
 im3dtran — 3d image transpose (used for rotates as well)
 ========================================================
 
@@ -5,48 +7,35 @@ im3dtran — 3d image transpose (used for rotates as well)
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>im3dtran (Jan89)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>volumes</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>im3dtran (Jan89)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>im3dtran</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   im3dtran -- 3d image transpose, any axis to any other axis
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   im3dtran input output 
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>Input 3d image (datacube).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>Transposed datacube.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_len_blk">len_blk = 128</A></B></DT>
+  <DT><B>len_blk = 128</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='len_blk' Line='len_blk = 128'>
   <DD>Size in pixels of linear internal subraster.  IM3DTRAN will try to transpose
   a subraster up to len_blk cubed at one time.  Runtime is much faster with
@@ -54,19 +43,19 @@ im3dtran — 3d image transpose (used for rotates as well)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_new_x">new_x = 3</A></B></DT>
+  <DT><B>new_x = 3</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='new_x' Line='new_x = 3'>
   <DD>New x axis = old axis (1=x, 2=y, 3=z).  Default (3) replaces new x with old z.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_new_y">new_y = 2</A></B></DT>
+  <DT><B>new_y = 2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='new_y' Line='new_y = 2'>
   <DD>New y axis = old axis.  Default (2) is identity.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_new_z">new_z = 1</A></B></DT>
+  <DT><B>new_z = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='new_z' Line='new_z = 1'>
   <DD>New z axis = old axis.  Default (1) replaces new z with old x.
   </DD>
@@ -74,7 +63,7 @@ im3dtran — 3d image transpose (used for rotates as well)
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -105,7 +94,7 @@ im3dtran — 3d image transpose (used for rotates as well)
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -121,7 +110,7 @@ im3dtran — 3d image transpose (used for rotates as well)
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_timings">TIMINGS</A></H2>
+  <H3>Timings</H3>
   <! BeginSection: 'TIMINGS'>
   <UL>
   <P>
@@ -129,7 +118,7 @@ im3dtran — 3d image transpose (used for rotates as well)
   <P>
   </UL>
   <! EndSection:   'TIMINGS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   <P>
@@ -137,7 +126,7 @@ im3dtran — 3d image transpose (used for rotates as well)
   <P>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   pvol i2sun
@@ -146,5 +135,3 @@ im3dtran — 3d image transpose (used for rotates as well)
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIMINGS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

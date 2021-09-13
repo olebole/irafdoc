@@ -1,3 +1,5 @@
+.. _aptest:
+
 aptest — Run basic tests on the apphot package tasks
 ====================================================
 
@@ -5,36 +7,23 @@ aptest — Run basic tests on the apphot package tasks
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>aptest (Dec92)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.apphot</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>aptest (Dec92)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>aptest</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   aptest -- run basic tests on the apphot package tasks
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   aptest imname
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_imname">imname</A></B></DT>
+  <DT><B>imname</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='imname' Line='imname'>
   <DD>The name of the output test image. The actual test image is stored in fits
   format in the APPHOT package subdirectory test. If the image already exists
@@ -42,7 +31,7 @@ aptest — Run basic tests on the apphot package tasks
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_aplogfile">aplogfile = "<TT></TT>"</A></B></DT>
+  <DT><B>aplogfile = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='aplogfile' Line='aplogfile = ""'>
   <DD>The name of the output log file. By default all the text output is logged
   in a file called <I>"imname.log"</I>. If the log file already exists APTEST will
@@ -50,7 +39,7 @@ aptest — Run basic tests on the apphot package tasks
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_applotfile">applotfile = "<TT></TT>"</A></B></DT>
+  <DT><B>applotfile = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='applotfile' Line='applotfile = ""'>
   <DD>The name of the output log file. By default all the plot output is logged in
   a file called <I>"imname.plot"</I>. If the plot file already exists APTEST will
@@ -59,7 +48,7 @@ aptest — Run basic tests on the apphot package tasks
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   APTEST is a simple script which exercises each of the tasks in the APPHOT
@@ -72,7 +61,7 @@ aptest — Run basic tests on the apphot package tasks
   metacode file <I>applotfile</I>.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -102,17 +91,17 @@ aptest — Run basic tests on the apphot package tasks
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   </UL>
@@ -120,5 +109,3 @@ aptest — Run basic tests on the apphot package tasks
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

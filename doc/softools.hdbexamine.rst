@@ -1,3 +1,5 @@
+.. _hdbexamine:
+
 hdbexamine — Examine a help database
 ====================================
 
@@ -5,36 +7,23 @@ hdbexamine — Examine a help database
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>hdbexamine (Feb86)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>softools</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>hdbexamine (Feb86)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>hdbexamine</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   hdbexamine -- examine a help database
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   hdbexamine
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_helpdb">helpdb = "<TT>helpdb</TT>"</A></B></DT>
+  <DT><B>helpdb = "<TT>helpdb</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='helpdb' Line='helpdb = "helpdb"'>
   <DD>The filename of the help database to be examined.  The reserved name "<TT>helpdb</TT>"
   causes the actual filename to be taken from the environment variable of
@@ -42,7 +31,7 @@ hdbexamine — Examine a help database
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = no</A></B></DT>
+  <DT><B>verbose = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
   <DD>If this switch is enabled, <I>hdbexamine</I> will print a detailed description
   of the help database listing the modules in each package, the date the entry
@@ -53,7 +42,7 @@ hdbexamine — Examine a help database
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The <I>hdbexamine</I> task is used to examine the contents of a help
@@ -64,7 +53,7 @@ hdbexamine — Examine a help database
   directory tree, causes the database to be compiled incorrectly.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Print a concise summary of the contents and structure of the standard
@@ -90,7 +79,7 @@ hdbexamine — Examine a help database
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   mkhelpdb, help
@@ -99,5 +88,3 @@ hdbexamine — Examine a help database
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

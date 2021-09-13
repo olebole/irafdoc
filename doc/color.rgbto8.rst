@@ -1,3 +1,5 @@
+.. _rgbto8:
+
 rgbto8 — Create an 8-bit RGB image with special color map
 =========================================================
 
@@ -5,50 +7,37 @@ rgbto8 — Create an 8-bit RGB image with special color map
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>rgbto8 (Oct92)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>color</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>rgbto8 (Oct92)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>rgbto8</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   rgbto8 -- make an RGB 8-bit image and associated color map
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   rgbto8 red green blue rgb
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_red">red, green, blue</A></B></DT>
+  <DT><B>red, green, blue</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='red' Line='red, green, blue'>
   <DD>Input image names for the red, green, and blue components.  The images
   must all be two dimensional and of the same size.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rgb">rgb</A></B></DT>
+  <DT><B>rgb</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rgb' Line='rgb'>
   <DD>Output image name for the RGB 8-bit image.  A color map with the same
   image name but the extension "<TT>.sao</TT>" or "<TT>.imt</TT>" will also be created.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_maptype">maptype = "<TT>saoimage</TT>" (saoimage|imtool|ximtool)</A></B></DT>
+  <DT><B>maptype = "<TT>saoimage</TT>" (saoimage|imtool|ximtool)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='maptype' Line='maptype = "saoimage" (saoimage|imtool|ximtool)'>
   <DD>This parameter selects the type of color map file to be produced.  The
   choices are "<TT>saoimage</TT>" to produce a map for SAOimage, "<TT>imtool</TT>" to produce a
@@ -58,7 +47,7 @@ rgbto8 — Create an 8-bit RGB image with special color map
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rz1">rz1, rz2, gz1, gz2, bz1, bz2</A></B></DT>
+  <DT><B>rz1, rz2, gz1, gz2, bz1, bz2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rz1' Line='rz1, rz2, gz1, gz2, bz1, bz2'>
   <DD>Range of values in the input images to be mapped to the minimum and maximum
   intensity in each color.  Image pixel values outside the range are mapped
@@ -67,7 +56,7 @@ rgbto8 — Create an 8-bit RGB image with special color map
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_logmap">logmap = no</A></B></DT>
+  <DT><B>logmap = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='logmap' Line='logmap = no'>
   <DD>Use logarithmic intensity mapping?  The logarithm of the input pixel
   values, in the range given by the z1 and z2 parameters, is taken before
@@ -77,7 +66,7 @@ rgbto8 — Create an 8-bit RGB image with special color map
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <B>Rgbto8</B> takes three input IRAF images and produces an 8-bit color map
@@ -114,7 +103,7 @@ rgbto8 — Create an 8-bit RGB image with special color map
   and the mouse.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  Three 2048x2048 images of the Trifid nebula are obtained in
@@ -133,13 +122,13 @@ rgbto8 — Create an 8-bit RGB image with special color map
   with the image trifid8.
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   Example 1 takes 5 minutes on a SparcStation 2.
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   rgbdisplay, rgbdither, rgbsun, color.package
@@ -148,5 +137,3 @@ rgbto8 — Create an 8-bit RGB image with special color map
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

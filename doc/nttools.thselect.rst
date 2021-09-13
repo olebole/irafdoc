@@ -1,3 +1,5 @@
+.. _thselect:
+
 thselect — Select tables satisfying an expression; print keywords.
 ==================================================================
 
@@ -5,32 +7,19 @@ thselect — Select tables satisfying an expression; print keywords.
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>thselect (Jul2000)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>ttools</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>thselect (Jul2000)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>thselect</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   thselect -- Print table keyword values.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   thselect table keywords expr
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task was based on 'hselect',
@@ -43,18 +32,18 @@ thselect — Select tables satisfying an expression; print keywords.
   String values that contain whitespace will be enclosed in quotes.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_table">table [file name template]</A></B></DT>
+  <DT><B>table [file name template]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='table' Line='table [file name template]'>
   <DD>A list of tables for which keywords are to be printed.
   These will be opened read-only and will not be modified.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_keywords">keywords [string]</A></B></DT>
+  <DT><B>keywords [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='keywords' Line='keywords [string]'>
   <DD>One or more keywords, separated by commas and/or blanks.
   The special keywords such as "<TT>i_table</TT>"
@@ -70,7 +59,7 @@ thselect — Select tables satisfying an expression; print keywords.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_expr">expr = "<TT>yes</TT>" [string]</A></B></DT>
+  <DT><B>expr = "<TT>yes</TT>" [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='expr' Line='expr = "yes" [string]'>
   <DD>This is a boolean expression
   to be evaluated for each table in the list.
@@ -81,7 +70,7 @@ thselect — Select tables satisfying an expression; print keywords.
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  Compare 'thselect' with 'thedit' for displaying a single keyword value.
@@ -120,19 +109,19 @@ thselect — Select tables satisfying an expression; print keywords.
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   This task was written by Phil Hodge,
   based on 'hselect'.
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   hselect, thedit
@@ -141,5 +130,3 @@ thselect — Select tables satisfying an expression; print keywords.
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _lcalib:
+
 lcalib — List calibration file data
 ===================================
 
@@ -5,36 +7,23 @@ lcalib — List calibration file data
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>lcalib (Mar92)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.onedspec</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>lcalib (Mar92)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>lcalib</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   lcalib -- List information about the spectral calibration data
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   lcalib option star_name
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_option">option</A></B></DT>
+  <DT><B>option</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='option' Line='option'>
   <DD>Chooses calibration data to be listed.  Option
   may be: "<TT>bands</TT>" to list the bandpasses at each wavelength, "<TT>ext</TT>" to
@@ -45,7 +34,7 @@ lcalib — List calibration file data
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_star_name">star_name</A></B></DT>
+  <DT><B>star_name</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='star_name' Line='star_name'>
   <DD>Selects which star's magnitude list is chosen if the option parameter
   is "<TT>mags</TT>", "<TT>fnu</TT>", "<TT>flam</TT>", or "<TT>bands</TT>".  Also if <TT>'?'</TT> a list of available
@@ -56,7 +45,7 @@ lcalib — List calibration file data
   The following three queried parameters apply if the selected calibration
   file is for a blackbody.  See <B>standard</B> for further details.
   <DL>
-  <DT><B><A NAME="l_mag">mag</A></B></DT>
+  <DT><B>mag</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='mag' Line='mag'>
   <DD>The magnitude of the observed star in the band given by the
   <I>magband</I> parameter.  If the magnitude is not in the same band as
@@ -66,7 +55,7 @@ lcalib — List calibration file data
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_magband">magband</A></B></DT>
+  <DT><B>magband</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='magband' Line='magband'>
   <DD>The standard band name for the input magnitude.  This should generally
   be the same band as the blackbody calibration file.  If it is
@@ -74,7 +63,7 @@ lcalib — List calibration file data
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_teff">teff</A></B></DT>
+  <DT><B>teff</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='teff' Line='teff'>
   <DD>The effective temperature (deg K) or the spectral type of the star being
   calibrated.  If a spectral type is specified a "<TT>params.dat</TT>" file must exist
@@ -88,7 +77,7 @@ lcalib — List calibration file data
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_extinction">extinction</A></B></DT>
+  <DT><B>extinction</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='extinction' Line='extinction'>
   <DD>Extinction file.  The current standard extinction files:
   <PRE>
@@ -98,7 +87,7 @@ lcalib — List calibration file data
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_caldir">caldir</A></B></DT>
+  <DT><B>caldir</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='caldir' Line='caldir'>
   <DD>Calibration directory containing standard star data.  The directory name
   must end with /.  The current calibration directories available in the
@@ -110,7 +99,7 @@ lcalib — List calibration file data
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fnuzero">fnuzero = 3.68e-20</A></B></DT>
+  <DT><B>fnuzero = 3.68e-20</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fnuzero' Line='fnuzero = 3.68e-20'>
   <DD>The absolute flux per unit frequency at a magnitude of zero.  This is used
   to convert the calibration  magnitudes to absolute flux by the formula
@@ -127,7 +116,7 @@ lcalib — List calibration file data
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   LCALIB provides a means of checking the flux calibration data.  The calibration
@@ -153,7 +142,7 @@ lcalib — List calibration file data
   may also be used to list data from the calibration files.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -171,11 +160,11 @@ lcalib — List calibration file data
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_LCALIB">LCALIB V2.10</A></B></DT>
+  <DT><B>LCALIB V2.10</B></DT>
   <! Sec='REVISIONS' Level=0 Label='LCALIB' Line='LCALIB V2.10'>
   <DD>This task has a more compact listing for the "<TT>stars</TT>" option and allows
   paging a list of stars when the star name query is not recognized.
@@ -183,7 +172,7 @@ lcalib — List calibration file data
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   standard, sensfunc, onedstds$README
@@ -192,5 +181,3 @@ lcalib — List calibration file data
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

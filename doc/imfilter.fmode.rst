@@ -1,3 +1,5 @@
+.. _fmode:
+
 fmode — Quantize and box modal filter a list of 1D or 2D images
 ===============================================================
 
@@ -5,42 +7,29 @@ fmode — Quantize and box modal filter a list of 1D or 2D images
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>fmode (May95)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imfilter</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>fmode (May95)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>fmode</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   fmode -- quantize and box modal filter a list of images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   fmode input output xwindow ywindow
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of input images.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>List of filtered images. The number of input images must be the same as the
   number of output images. If the input image name equals the output image name
@@ -48,7 +37,7 @@ fmode — Quantize and box modal filter a list of 1D or 2D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xwindow">xwindow, ywindow</A></B></DT>
+  <DT><B>xwindow, ywindow</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xwindow' Line='xwindow, ywindow'>
   <DD>The size of the modal filter. Xwindow and ywindow must be odd.
   Even values for xwindow or ywindow will be rounded up to the
@@ -56,7 +45,7 @@ fmode — Quantize and box modal filter a list of 1D or 2D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_hmin">hmin = -32768, hmax = 32767</A></B></DT>
+  <DT><B>hmin = -32768, hmax = 32767</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='hmin' Line='hmin = -32768, hmax = 32767'>
   <DD>The histogram quantization parameters. Hmin and hmax define the minimum
   and maximum permitted values for the integer representation of the
@@ -66,7 +55,7 @@ fmode — Quantize and box modal filter a list of 1D or 2D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_zmin">zmin = INDEF, zmax = INDEF</A></B></DT>
+  <DT><B>zmin = INDEF, zmax = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='zmin' Line='zmin = INDEF, zmax = INDEF'>
   <DD>The quantization parameters. Zmin and zmax default to the minimum and
   maximum pixel values in the input image. Pixel values from zmin to zmax
@@ -77,7 +66,7 @@ fmode — Quantize and box modal filter a list of 1D or 2D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_zloreject">zloreject = INDEF, zhireject = INDEF</A></B></DT>
+  <DT><B>zloreject = INDEF, zhireject = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='zloreject' Line='zloreject = INDEF, zhireject = INDEF'>
   <DD>The minimum and maximum good pixel values. Zloreject and zhireject default
   to zmin and zmax in the input data or equivalently to hmin and hmax in the
@@ -85,7 +74,7 @@ fmode — Quantize and box modal filter a list of 1D or 2D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_unmap">unmap = yes</A></B></DT>
+  <DT><B>unmap = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='unmap' Line='unmap = yes'>
   <DD>Fmode rescales the integer values to numbers between zmin and zmax
   by default. If the user wishes to preserve the mode of the quantized images,
@@ -93,29 +82,29 @@ fmode — Quantize and box modal filter a list of 1D or 2D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_boundary">boundary = "<TT>nearest</TT>"</A></B></DT>
+  <DT><B>boundary = "<TT>nearest</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"'>
   <DD>The type of boundary extension. The options are:
   <DL>
-  <DT><B><A NAME="l_nearest">nearest</A></B></DT>
+  <DT><B>nearest</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest'>
   <DD>Use the value of the nearest pixel.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_constant">constant</A></B></DT>
+  <DT><B>constant</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='constant' Line='constant'>
   <DD>Use a constant value.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_reflect">reflect</A></B></DT>
+  <DT><B>reflect</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='reflect' Line='reflect'>
   <DD>Reflect pixel values around the boundary.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wrap">wrap</A></B></DT>
+  <DT><B>wrap</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='wrap' Line='wrap'>
   <DD>Wrap pixel values around the boundary.
   </DD>
@@ -123,13 +112,13 @@ fmode — Quantize and box modal filter a list of 1D or 2D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_constant">constant = 0.</A></B></DT>
+  <DT><B>constant = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.'>
   <DD>The value for constant valued boundary extension.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print messages about actions taken by the task ?
   </DD>
@@ -137,7 +126,7 @@ fmode — Quantize and box modal filter a list of 1D or 2D images
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -178,7 +167,7 @@ fmode — Quantize and box modal filter a list of 1D or 2D images
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   <P>
@@ -193,7 +182,7 @@ fmode — Quantize and box modal filter a list of 1D or 2D images
   <P>
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -234,7 +223,7 @@ fmode — Quantize and box modal filter a list of 1D or 2D images
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   It requires approximately 6.1 and 7.6 CPU seconds to modal filter a
@@ -243,7 +232,7 @@ fmode — Quantize and box modal filter a list of 1D or 2D images
   <P>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   This technique is most suitable for integer data and data which has not
@@ -255,7 +244,7 @@ fmode — Quantize and box modal filter a list of 1D or 2D images
   <P>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   mode, rmode, frmode
@@ -264,5 +253,3 @@ fmode — Quantize and box modal filter a list of 1D or 2D images
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'REFERENCES' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

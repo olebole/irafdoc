@@ -1,3 +1,5 @@
+.. _scoords:
+
 scoords — Set spectral coordinates as a pixel array (1D spectra only)
 =====================================================================
 
@@ -5,42 +7,29 @@ scoords — Set spectral coordinates as a pixel array (1D spectra only)
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>scoords (May97)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>onedspec</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>scoords (May97)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>scoords</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   scoords -- set spectrum coordinates from a pixel array (1D only)
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   scoords images coords
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>List of one dimensional spectrum image names.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_coords">coords</A></B></DT>
+  <DT><B>coords</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='coords' Line='coords'>
   <DD>List of file names containing the coordinate values.  There may be
   one file which applies to all input images or a matching list
@@ -51,14 +40,14 @@ scoords — Set spectral coordinates as a pixel array (1D spectra only)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_label">label = "<TT></TT>"</A></B></DT>
+  <DT><B>label = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='label' Line='label = ""'>
   <DD>Optional coordinate axis label.  A typical value is "<TT>Wavelength</TT>"
   for wavelength coordinates.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_units">units = "<TT></TT>"</A></B></DT>
+  <DT><B>units = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='units' Line='units = ""'>
   <DD>Optional coordinate axis units.  A typical value is "<TT>Angstroms</TT>".  In
   order to allow coordinate conversions by other IRAF spectra tasks
@@ -67,14 +56,14 @@ scoords — Set spectral coordinates as a pixel array (1D spectra only)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print a line as each spectrum is processed?
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <B>Scoords</B> sets spectral coordinates in one dimensional spectral
@@ -101,7 +90,7 @@ scoords — Set spectral coordinates as a pixel array (1D spectra only)
   is large enough to hold all the coordinates.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  Set the coordinates for a spectrum.
@@ -121,18 +110,18 @@ scoords — Set spectral coordinates as a pixel array (1D spectra only)
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_SCOORDS">SCOORDS V2.11</A></B></DT>
+  <DT><B>SCOORDS V2.11</B></DT>
   <! Sec='REVISIONS' Level=0 Label='SCOORDS' Line='SCOORDS V2.11'>
   <DD>This is a new task with this version.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   rtextimage, dispcor, specwcs, onedspec.package
@@ -141,5 +130,3 @@ scoords — Set spectral coordinates as a pixel array (1D spectra only)
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

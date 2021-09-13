@@ -1,3 +1,5 @@
+.. _afiltpars:
+
 afiltpars — Default astrometry file filtering parameters
 ========================================================
 
@@ -5,36 +7,23 @@ afiltpars — Default astrometry file filtering parameters
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>afiltpars (Mar00)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>astcat</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>afiltpars (Mar00)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>afiltpars</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   afiltpars -- edit the catalog filtering parameters
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   afiltpars
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_fsort">fsort = "<TT></TT>"</A></B></DT>
+  <DT><B>fsort = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fsort' Line='fsort = ""'>
   <DD>The field or field expression on which to sort the catalog / file records.
   The sort may be numeric or character. Sort fields may be expressed by name,
@@ -44,13 +33,13 @@ afiltpars — Default astrometry file filtering parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_freverse">freverse = no</A></B></DT>
+  <DT><B>freverse = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='freverse' Line='freverse = no'>
   <DD>Sort in descending order ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fexpr">fexpr = yes</A></B></DT>
+  <DT><B>fexpr = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fexpr' Line='fexpr = yes'>
   <DD>The boolean record selection expression. By default all catalog / file records
   are selected, otherwise only records matching the selection expression
@@ -59,7 +48,7 @@ afiltpars — Default astrometry file filtering parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fields">fields = "<TT>f[*]</TT>"</A></B></DT>
+  <DT><B>fields = "<TT>f[*]</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fields' Line='fields = "f[*]"'>
   <DD>The list of output fields and field expressions. By default the sorted and
   selected records are output as is. Output fields may be field names, e.g.
@@ -69,7 +58,7 @@ afiltpars — Default astrometry file filtering parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fnames">fnames = "<TT></TT>"</A></B></DT>
+  <DT><B>fnames = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fnames' Line='fnames = ""'>
   <DD>The list of new field names separated by commas. By default new fields, e.g.
   fields that are expressions of existing fields are assigned names of the form
@@ -78,7 +67,7 @@ afiltpars — Default astrometry file filtering parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fntypes">fntypes = "<TT></TT>"</A></B></DT>
+  <DT><B>fntypes = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fntypes' Line='fntypes = ""'>
   <DD>The list of new field types separated by commas. By default new fields are
   assigned type real. Permitted field types are "<TT>s</TT>" for string, "<TT>i</TT>" for
@@ -86,21 +75,21 @@ afiltpars — Default astrometry file filtering parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fnunits">fnunits = </TT>""<TT></A></B></DT>
+  <DT><B>fnunits = </TT>""<TT></B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fnunits' Line='fnunits = ""'>
   <DD>The list of new field units separated by commas. By default new fields are
   assigned units of INDEF. Units specifications may not contain embedded blanks.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fnformats">fnformats = </TT>""<TT></A></B></DT>
+  <DT><B>fnformats = </TT>""<TT></B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fnformats' Line='fnformats = ""'>
   <DD>The list of new field formats. By default string, integer, and floating
   point fields are assigned formats of </TT>"%10s"<TT>, </TT>"%10d"<TT>, and </TT>"%10g"<TT> respectively.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fosystem">fosystem = </TT>""<TT></A></B></DT>
+  <DT><B>fosystem = </TT>""<TT></B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fosystem' Line='fosystem = ""'>
   <DD>The output celestial coordinate system. If fosystem is undefined
   it defaults to the catalog celestial coordinate system. Popular options
@@ -109,7 +98,7 @@ afiltpars — Default astrometry file filtering parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fira">fira = </TT>"ra"<TT></A></B></DT>
+  <DT><B>fira = </TT>"ra"<TT></B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fira' Line='fira = "ra"'>
   <DD>The name of the catalog field containing the right ascension / longitude
   of an object. Most users should leave fira set to </TT>"ra"<TT>. If the user knows
@@ -118,7 +107,7 @@ afiltpars — Default astrometry file filtering parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fidec">fidec = </TT>"dec"<TT></A></B></DT>
+  <DT><B>fidec = </TT>"dec"<TT></B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fidec' Line='fidec = "dec"'>
   <DD>The name of the catalog field containing the declination / latitude
   of an object. Most users should leave fidec set to </TT>"dec"<TT>. If the user knows
@@ -127,7 +116,7 @@ afiltpars — Default astrometry file filtering parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_foraunits">foraunits = </TT>""<TT></A></B></DT>
+  <DT><B>foraunits = </TT>""<TT></B></DT>
   <! Sec='PARAMETERS' Level=0 Label='foraunits' Line='foraunits = ""'>
   <DD>The units of fira. Permitted values are </TT>"hours"<TT>, </TT>"degrees"<TT>, and </TT>"radians"<TT>. If
   foraunits is undefined it defaults to the preferred units of the
@@ -137,7 +126,7 @@ afiltpars — Default astrometry file filtering parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fodecunits">fodecunits = </TT>""<TT></A></B></DT>
+  <DT><B>fodecunits = </TT>""<TT></B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fodecunits' Line='fodecunits = ""'>
   <DD>The units of fidec. Permitted values are </TT>"degrees"<TT> and </TT>"radians"<TT>. If 
   fodecunits is undefined it defaults to the preferred units of the
@@ -145,21 +134,21 @@ afiltpars — Default astrometry file filtering parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_foraformat">foraformat = </TT>""<TT></A></B></DT>
+  <DT><B>foraformat = </TT>""<TT></B></DT>
   <! Sec='PARAMETERS' Level=0 Label='foraformat' Line='foraformat = ""'>
   <DD>The format of fira. If undefined foraformat defaults to the equivalent catalog
   format.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fodecformat">fodecformat = </TT>""<TT></A></B></DT>
+  <DT><B>fodecformat = </TT>""<TT></B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fodecformat' Line='fodecformat = ""'>
   <DD>The format of fidec. If undefined fodecformat defaults to the equivalent
   catalog format.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fixp">fixp = </TT>"xp"<TT></A></B></DT>
+  <DT><B>fixp = </TT>"xp"<TT></B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fixp' Line='fixp = "xp"'>
   <DD>The name of the catalog field containing the predicted x coordinate
   of an object. Most users should leave fixp set to </TT>"xp"<TT>. If the user knows
@@ -168,7 +157,7 @@ afiltpars — Default astrometry file filtering parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fiyp">fiyp = </TT>"yp"<TT></A></B></DT>
+  <DT><B>fiyp = </TT>"yp"<TT></B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fiyp' Line='fiyp = "yp"'>
   <DD>The name of the catalog field containing the predicted y coordinate
   of an object. Most users should leave fiyp set to </TT>"yp"<TT>. If the user knows
@@ -177,7 +166,7 @@ afiltpars — Default astrometry file filtering parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fixc">fixc = </TT>"xc"<TT></A></B></DT>
+  <DT><B>fixc = </TT>"xc"<TT></B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fixc' Line='fixc = "xc"'>
   <DD>The name of the catalog field containing the centered x coordinate
   of an object. Most users should leave fixc set to </TT>"xc"<TT>. If the user knows
@@ -186,7 +175,7 @@ afiltpars — Default astrometry file filtering parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fiyc">fiyc = </TT>"yc"<TT></A></B></DT>
+  <DT><B>fiyc = </TT>"yc"<TT></B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fiyc' Line='fiyc = "yc"'>
   <DD>The name of the catalog field containing the centered y coordinate
   of an object. Most users should leave fiyc set to </TT>"yc"<TT>. If the user knows
@@ -195,13 +184,13 @@ afiltpars — Default astrometry file filtering parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_foxformat">foxformat = </TT>"%10.3f"<TT></A></B></DT>
+  <DT><B>foxformat = </TT>"%10.3f"<TT></B></DT>
   <! Sec='PARAMETERS' Level=0 Label='foxformat' Line='foxformat = "%10.3f"'>
   <DD>The format of fixp and fixc. 
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_foyformat">foyformat = </TT>"%10.3f"<TT></A></B></DT>
+  <DT><B>foyformat = </TT>"%10.3f"<TT></B></DT>
   <! Sec='PARAMETERS' Level=0 Label='foyformat' Line='foyformat = "%10.3f"'>
   <DD>The format of fiyp and fiyc.
   </DD>
@@ -209,7 +198,7 @@ afiltpars — Default astrometry file filtering parameters
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The catalog / file filtering parameters  are used to filter the results
@@ -265,7 +254,7 @@ afiltpars — Default astrometry file filtering parameters
   standard names then generic field names of the form </TT>"f#"<TT> can be substituted.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_expressions">EXPRESSIONS</A></H2>
+  <H3>Expressions</H3>
   <! BeginSection: 'EXPRESSIONS'>
   <UL>
   <P>
@@ -329,7 +318,7 @@ afiltpars — Default astrometry file filtering parameters
   <P>
   </UL>
   <! EndSection:   'EXPRESSIONS'>
-  <H2><A NAME="s_formats">FORMATS</A></H2>
+  <H3>Formats</H3>
   <! BeginSection: 'FORMATS'>
   <UL>
   <P>
@@ -408,7 +397,7 @@ afiltpars — Default astrometry file filtering parameters
   <P>
   </UL>
   <! EndSection:   'FORMATS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. List the catalog / file filtering parameters.
@@ -439,17 +428,17 @@ afiltpars — Default astrometry file filtering parameters
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   agetcat, afiltcat
@@ -458,5 +447,3 @@ afiltpars — Default astrometry file filtering parameters
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXPRESSIONS' 'FORMATS' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

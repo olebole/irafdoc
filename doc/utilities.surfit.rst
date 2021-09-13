@@ -1,3 +1,5 @@
+.. _surfit:
+
 surfit — Fit a surface, z=f(x,y), to a set of x, y, z points
 ============================================================
 
@@ -5,36 +7,23 @@ surfit — Fit a surface, z=f(x,y), to a set of x, y, z points
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>surfit (Jun93)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>utilities</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>surfit (Jun93)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>surfit</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   surfit -- fit a surface, z=f(x,y), to a set of x, y, z points
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   surfit input
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>Input text file containing the data to be fit.  The file consists of lines
   with three or four whitespace separated values giving x, y, z, and
@@ -42,7 +31,7 @@ surfit — Fit a surface, z=f(x,y), to a set of x, y, z points
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_image">image = "<TT></TT>"</A></B></DT>
+  <DT><B>image = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='image' Line='image = ""'>
   <DD>Optional image name in which to create an evenly sampled image of the
   fitted surface.  If no name is specified a image is not created.  If an
@@ -55,7 +44,7 @@ surfit — Fit a surface, z=f(x,y), to a set of x, y, z points
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_coordinates">coordinates = "<TT></TT>", fit = "<TT></TT>"</A></B></DT>
+  <DT><B>coordinates = "<TT></TT>", fit = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='coordinates' Line='coordinates = "", fit = ""'>
   <DD>The first two columns of the text file specified by the coordinates parameter
   are use to supply x and y values which are evaluated by the surface and
@@ -68,38 +57,38 @@ surfit — Fit a surface, z=f(x,y), to a set of x, y, z points
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_function">function = "<TT>polynomial</TT>" (chebyshev|legendre|polynomial)</A></B></DT>
+  <DT><B>function = "<TT>polynomial</TT>" (chebyshev|legendre|polynomial)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='function' Line='function = "polynomial" (chebyshev|legendre|polynomial)'>
   <DD>Surface function type to fit.  The choices are a chebyshev, legendre,
   or simple power series bi-dimensional polynomial.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xorder">xorder = 2, yorder = 2</A></B></DT>
+  <DT><B>xorder = 2, yorder = 2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xorder' Line='xorder = 2, yorder = 2'>
   <DD>The polynomial orders in x and y.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xterms">xterms = "<TT>full</TT>"</A></B></DT>
+  <DT><B>xterms = "<TT>full</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xterms' Line='xterms = "full"'>
   <DD>The options are:
   <DL>
-  <DT><B><A NAME="l_none">none</A></B></DT>
+  <DT><B>none</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='none' Line='none'>
   <DD>The individual polynomial terms contain powers of x or powers of y but not
   powers of both.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_half">half</A></B></DT>
+  <DT><B>half</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='half' Line='half'>
   <DD>The individual polynomial terms contain powers of x and powers of y, whose
   maximum combined power is max (xorder - 1, yorder - 1).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_full">full</A></B></DT>
+  <DT><B>full</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='full' Line='full'>
   <DD>The individual polynomial terms contain powers of x and powers of y, whose
   maximum combined power is max (xorder - 1 + yorder - 1).
@@ -108,31 +97,31 @@ surfit — Fit a surface, z=f(x,y), to a set of x, y, z points
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_weighting">weighting = "<TT>user</TT>" (uniform|user|statistical|instrumental)</A></B></DT>
+  <DT><B>weighting = "<TT>user</TT>" (uniform|user|statistical|instrumental)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='weighting' Line='weighting = "user" (uniform|user|statistical|instrumental)'>
   <DD>The type of weighting for the fit. The options are:
   <DL>
-  <DT><B><A NAME="l_uniform">uniform</A></B></DT>
+  <DT><B>uniform</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='uniform' Line='uniform'>
   <DD>All weights are 1.  Any input weights are ignored.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_user">user</A></B></DT>
+  <DT><B>user</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='user' Line='user'>
   <DD>The weights in the fourth input column are used.  If no weight is given
   a weight of 1 is supplied.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_statistical">statistical</A></B></DT>
+  <DT><B>statistical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='statistical' Line='statistical'>
   <DD>The reciprocal of the absolute value of z input data is used as the weight.
   Any input weights are ignored.  Z values less than 1e-20 are set to 1e-20.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_instrumental">instrumental</A></B></DT>
+  <DT><B>instrumental</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='instrumental' Line='instrumental'>
   <DD>The fourth input column is taken as a sigma and the weight is the
   reciprocal of the sigma squared.  If no sigma is given a sigma of
@@ -142,7 +131,7 @@ surfit — Fit a surface, z=f(x,y), to a set of x, y, z points
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xmin">xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF</A></B></DT>
+  <DT><B>xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xmin' Line='xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF'>
   <DD>These parameters define the range of input x and y data to be used and
   also define the range over which the surface function is defined.  If
@@ -154,7 +143,7 @@ surfit — Fit a surface, z=f(x,y), to a set of x, y, z points
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_zmin">zmin = INDEF, zmax = INDEF</A></B></DT>
+  <DT><B>zmin = INDEF, zmax = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='zmin' Line='zmin = INDEF, zmax = INDEF'>
   <DD>These parameters apply threshold limits to the input data.  If INDEF
   the appropriate limit from the input data points is used.  Input
@@ -162,7 +151,7 @@ surfit — Fit a surface, z=f(x,y), to a set of x, y, z points
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ncols">ncols = 100, nlines = 100</A></B></DT>
+  <DT><B>ncols = 100, nlines = 100</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ncols' Line='ncols = 100, nlines = 100'>
   <DD>The number of columns and lines for the optional surface image.  These
   parameters determine the size of the image and how finely the x and
@@ -171,7 +160,7 @@ surfit — Fit a surface, z=f(x,y), to a set of x, y, z points
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task fits a surface, a function of two coordinates, to a set of
@@ -266,7 +255,7 @@ surfit — Fit a surface, z=f(x,y), to a set of x, y, z points
   this output with the basic results output.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  The following example shows use of all the output options using some
@@ -336,7 +325,7 @@ surfit — Fit a surface, z=f(x,y), to a set of x, y, z points
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   apphot.fitsky, apphot.txdump, imsurfit
@@ -345,5 +334,3 @@ surfit — Fit a surface, z=f(x,y), to a set of x, y, z points
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _r2df:
+
 r2df — Convert a CTIO 2-d frutti image into an IRAF image
 =========================================================
 
@@ -5,36 +7,23 @@ r2df — Convert a CTIO 2-d frutti image into an IRAF image
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>r2df (Jun86)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.mtlocal</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>r2df (Jun86)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>r2df</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   r2df -- convert CTIO 2D-Frutti image files to IRAF image files
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   r2df r2df_file file_list iraf_file
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_r2df_file">r2df_file</A></B></DT>
+  <DT><B>r2df_file</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='r2df_file' Line='r2df_file'>
   <DD>The 2D-Frutti data source.  If the data source is a disk file or an explicit
   tape file
@@ -44,7 +33,7 @@ r2df — Convert a CTIO 2-d frutti image into an IRAF image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_file_list">file_list</A></B></DT>
+  <DT><B>file_list</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='file_list' Line='file_list'>
   <DD>The files to be read from a tape are specified by the file_list string.  The
   string can consist of any sequence of file numbers separated by
@@ -57,7 +46,7 @@ r2df — Convert a CTIO 2-d frutti image into an IRAF image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_iraf_file">iraf_file</A></B></DT>
+  <DT><B>iraf_file</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='iraf_file' Line='iraf_file'>
   <DD>The IRAF image file which will receive the 2D-Frutti data if the make_image
   parameter switch is set.  For tape files specified by the file_list parameter
@@ -68,7 +57,7 @@ r2df — Convert a CTIO 2-d frutti image into an IRAF image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_make_image">make_image = yes</A></B></DT>
+  <DT><B>make_image = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='make_image' Line='make_image = yes'>
   <DD>This switch determines if 2D-Frutti image data is converted to an IRAF image
   file.  This switch is set to no to obtain just header information with the
@@ -76,20 +65,20 @@ r2df — Convert a CTIO 2-d frutti image into an IRAF image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_long_header">long_header = no</A></B></DT>
+  <DT><B>long_header = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='long_header' Line='long_header = no'>
   <DD>If this switch is set the full 2D-Frutti header is printed on standard output.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_short_header">short_header = yes</A></B></DT>
+  <DT><B>short_header = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='short_header' Line='short_header = yes'>
   <DD>If this switch is set only the output filename,
   the title string, and the image dimensions are printed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_standard_format">standard_format = yes</A></B></DT>
+  <DT><B>standard_format = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='standard_format' Line='standard_format = yes'>
   <DD>The 2D-Frutti standard format has least significant byte first.  Some 2D-Frutti
   data, however, does not follow this byte order convention.  Thus, to read
@@ -97,7 +86,7 @@ r2df — Convert a CTIO 2-d frutti image into an IRAF image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_datatype">datatype = "<TT>s</TT>"</A></B></DT>
+  <DT><B>datatype = "<TT>s</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='datatype' Line='datatype = "s"'>
   <DD>The IRAF image file may be of a different data type than 2D-Frutti image data.
   The data type may be specified as s for short, l for long, r for real, and
@@ -108,7 +97,7 @@ r2df — Convert a CTIO 2-d frutti image into an IRAF image
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_offset">offset = 0</A></B></DT>
+  <DT><B>offset = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='offset' Line='offset = 0'>
   <DD>Offset is an integer parameter specifying the offset to the tape file number
   appended to iraf_file.  For example if the user specifies offset = 100,
@@ -119,7 +108,7 @@ r2df — Convert a CTIO 2-d frutti image into an IRAF image
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Cerro Tololo 2D-Frutti format image data is read from the specified source;
@@ -129,7 +118,7 @@ r2df — Convert a CTIO 2-d frutti image into an IRAF image
   optionally be converted to an IRAF image of specified data type.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -143,7 +132,7 @@ r2df — Convert a CTIO 2-d frutti image into an IRAF image
   	da&gt; r2df mtb1600 1-999 r2dfile ma-
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   t2d, mtexamine, rewind
@@ -152,5 +141,3 @@ r2df — Convert a CTIO 2-d frutti image into an IRAF image
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

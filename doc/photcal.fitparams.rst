@@ -1,3 +1,5 @@
+.. _fitparams:
+
 fitparams — Compute the parameters of the transformation equations
 ==================================================================
 
@@ -5,36 +7,23 @@ fitparams — Compute the parameters of the transformation equations
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>fitparams (Aug91)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.photcal</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>fitparams (Aug91)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>fitparams</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   fitparams -- solve for the parameters of the transformation equations
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   fitparams observations catalogs config parameters
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_observations">observations</A></B></DT>
+  <DT><B>observations</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='observations' Line='observations'>
   <DD>The list of files containing the observational data.  Observations files are
   multi-column text files whose columns are delimited by whitespace, and
@@ -45,7 +34,7 @@ fitparams — Compute the parameters of the transformation equations
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_catalogs">catalogs</A></B></DT>
+  <DT><B>catalogs</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='catalogs' Line='catalogs'>
   <DD>The list of files containing the catalog data.  Catalog files are
   multi-column text files whose columns are delimited by whitespace,
@@ -58,7 +47,7 @@ fitparams — Compute the parameters of the transformation equations
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_config">config</A></B></DT>
+  <DT><B>config</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='config' Line='config'>
   <DD>The name of the configuration file. The configuration file is a text file
   specifying the format of the input catalog and observations files, and the
@@ -68,7 +57,7 @@ fitparams — Compute the parameters of the transformation equations
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_parameters">parameters</A></B></DT>
+  <DT><B>parameters</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='parameters' Line='parameters'>
   <DD>The name of the output database file.
   Parameters is a text database file to which the error analysis of the fit
@@ -81,17 +70,17 @@ fitparams — Compute the parameters of the transformation equations
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_weighting">weighting = "<TT>uniform</TT>"</A></B></DT>
+  <DT><B>weighting = "<TT>uniform</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='weighting' Line='weighting = "uniform"'>
   <DD>The following weighting schemes are supported.
   <DL>
-  <DT><B><A NAME="l_uniform">uniform</A></B></DT>
+  <DT><B>uniform</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='uniform' Line='uniform'>
   <DD>The data points are all assigned a weight of one.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_photometric">photometric</A></B></DT>
+  <DT><B>photometric</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='photometric' Line='photometric'>
   <DD>The total error squared for each data point is set to the total error in the
   catalog variables squared plus the total error in the observations variables
@@ -107,7 +96,7 @@ fitparams — Compute the parameters of the transformation equations
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_equations">equations</A></B></DT>
+  <DT><B>equations</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='equations' Line='equations'>
   <DD>The weight equation (see the description of the configuration file below)
   is evaluated for each point and the weight for that point is set to that
@@ -119,7 +108,7 @@ fitparams — Compute the parameters of the transformation equations
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_addscatter">addscatter = yes</A></B></DT>
+  <DT><B>addscatter = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='addscatter' Line='addscatter = yes'>
   <DD>Add an additional scatter term to the weights if the average error in the fit
   is much greater than the average error in the measurements? <I>Addscatter</I>
@@ -132,7 +121,7 @@ fitparams — Compute the parameters of the transformation equations
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_tolerance">tolerance = 3.0e-5</A></B></DT>
+  <DT><B>tolerance = 3.0e-5</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='tolerance' Line='tolerance = 3.0e-5'>
   <DD>The convergence tolerance for the non-linear least squares fit.
   The fit will stop iterating 
@@ -141,7 +130,7 @@ fitparams — Compute the parameters of the transformation equations
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_maxiter">maxiter = 15</A></B></DT>
+  <DT><B>maxiter = 15</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='maxiter' Line='maxiter = 15'>
   <DD>The maximum number of iterations for the non-linear least squares fit.
   When this number is reached the fitting process will terminate even
@@ -149,7 +138,7 @@ fitparams — Compute the parameters of the transformation equations
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nreject">nreject = 0</A></B></DT>
+  <DT><B>nreject = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nreject' Line='nreject = 0'>
   <DD>The maximum number of bad data rejection iterations. If <I>nreject</I> is
   greater than zero the initial fit is used
@@ -159,7 +148,7 @@ fitparams — Compute the parameters of the transformation equations
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_low_reject">low_reject = 3.0, high_reject = 3.0</A></B></DT>
+  <DT><B>low_reject = 3.0, high_reject = 3.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='low_reject' Line='low_reject = 3.0, high_reject = 3.0'>
   <DD>The lower and upper rejection limits in units of the rms of the fit.
   Points deviating from the initial fit by more than this amount are rejected
@@ -168,14 +157,14 @@ fitparams — Compute the parameters of the transformation equations
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_grow">grow = 0.0</A></B></DT>
+  <DT><B>grow = 0.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='grow' Line='grow = 0.0'>
   <DD>The default rejection growing radius. Points within a distance given
   by this parameter of any rejected point are also rejected.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = yes</A></B></DT>
+  <DT><B>interactive = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes'>
   <DD>Fit equations interactively ? When this parameter is <I>yes</I>, the user will 
   be presented with plots of the data and can interact with the fitting 
@@ -183,7 +172,7 @@ fitparams — Compute the parameters of the transformation equations
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_logfile">logfile = "<TT>STDOUT</TT>"</A></B></DT>
+  <DT><B>logfile = "<TT>STDOUT</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "STDOUT"'>
   <DD>The name of the output text file to which selected detailed results of the
   fitting process are written.  By default logfile is the standard output.
@@ -192,7 +181,7 @@ fitparams — Compute the parameters of the transformation equations
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_log_unmatched">log_unmatched = yes</A></B></DT>
+  <DT><B>log_unmatched = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='log_unmatched' Line='log_unmatched = yes'>
   <DD>Write the list of observations with no corresponding catalog entries to
   logfile? This option is useful for checking for errors in the observed
@@ -201,21 +190,21 @@ fitparams — Compute the parameters of the transformation equations
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_log_fit">log_fit = no</A></B></DT>
+  <DT><B>log_fit = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='log_fit' Line='log_fit = no'>
   <DD>Write the error analysis of the final fit in logfile? This option is
   useful for users who like to run fitparams in non-interactive mode.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_log_results">log_results = no</A></B></DT>
+  <DT><B>log_results = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='log_results' Line='log_results = no'>
   <DD>Write the results of the current fit to logfile? This option is
   useful for users who like to run fitparams in non-interactive mode.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_catdir">catdir = "<TT>)_.catdir</TT>"</A></B></DT>
+  <DT><B>catdir = "<TT>)_.catdir</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='catdir' Line='catdir = ")_.catdir"'>
   <DD>The directory containing the supported standard star catalogs.
   The default parameter value  redirects <I>catdir</I>
@@ -226,14 +215,14 @@ fitparams — Compute the parameters of the transformation equations
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_graphics">graphics = "<TT>stdgraph</TT>"</A></B></DT>
+  <DT><B>graphics = "<TT>stdgraph</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"'>
   <DD>The default graphics device. 
   This parameter is used only if <B>interactive=yes</B>.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cursor">cursor = "<TT></TT>"</A></B></DT>
+  <DT><B>cursor = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""'>
   <DD>Graphics cursor input. When null the standard graphics cursor is used.
   Otherwise the specified cursor command file is used.
@@ -243,7 +232,7 @@ fitparams — Compute the parameters of the transformation equations
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -297,7 +286,7 @@ fitparams — Compute the parameters of the transformation equations
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_the_configuration_file">THE CONFIGURATION FILE</A></H2>
+  <H3>The configuration file</H3>
   <! BeginSection: 'THE CONFIGURATION FILE'>
   <UL>
   <P>
@@ -427,7 +416,7 @@ fitparams — Compute the parameters of the transformation equations
   <P>
   </UL>
   <! EndSection:   'THE CONFIGURATION FILE'>
-  <H2><A NAME="s_the_non_linear_interactive_fitting_package">THE NON-LINEAR INTERACTIVE FITTING PACKAGE</A></H2>
+  <H3>The non-linear interactive fitting package</H3>
   <! BeginSection: 'THE NON-LINEAR INTERACTIVE FITTING PACKAGE'>
   <UL>
   <P>
@@ -478,14 +467,14 @@ fitparams — Compute the parameters of the transformation equations
   The following interactive cursor keystroke commands are available from
   with the INLFIT package.
   <DL>
-  <DT><B><A NAME="l_">?</A></B></DT>
+  <DT><B>?</B></DT>
   <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line='?'>
   <DD>The terminal is cleared and a menu of cursor keystroke and colon commands
   is printed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_c">c</A></B></DT>
+  <DT><B>c</B></DT>
   <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='c' Line='c'>
   <DD>The id, coordinates of the data point nearest the cursor, along with the
   function value, the fitted value and the residual, are printed on the status
@@ -493,21 +482,21 @@ fitparams — Compute the parameters of the transformation equations
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_d">d</A></B></DT>
+  <DT><B>d</B></DT>
   <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='d' Line='d'>
   <DD>The data point nearest the cursor and not previously deleted is marked with an
   X. It will not be used in further fits until it is undeleted.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_f">f</A></B></DT>
+  <DT><B>f</B></DT>
   <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='f' Line='f'>
   <DD>The function is fit to the data and the fit is graphed using the default
   plot type.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_g">g</A></B></DT>
+  <DT><B>g</B></DT>
   <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='g' Line='g'>
   <DD>Redefine the graph keys "<TT>h-l</TT>" from their defaults. A prompt is issued for the
   graph key to be redefined. Another prompt is issued for the data to be
@@ -539,7 +528,7 @@ fitparams — Compute the parameters of the transformation equations
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_h">h, i, j, k, l</A></B></DT>
+  <DT><B>h, i, j, k, l</B></DT>
   <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='h' Line='h, i, j, k, l'>
   <DD>By default each key produces a different graph. The graphs are described by
   the data which is graphed along each axis as defined above. The default graph
@@ -559,25 +548,25 @@ fitparams — Compute the parameters of the transformation equations
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_o">o</A></B></DT>
+  <DT><B>o</B></DT>
   <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='o' Line='o'>
   <DD>Overplot the next fit provided the graph format has not changed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_q">q</A></B></DT>
+  <DT><B>q</B></DT>
   <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='q' Line='q'>
   <DD>Exit from the interactive curve fitting package.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_r">r</A></B></DT>
+  <DT><B>r</B></DT>
   <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='r' Line='r'>
   <DD>Redraw the current graph.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_t">t</A></B></DT>
+  <DT><B>t</B></DT>
   <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='t' Line='t'>
   <DD>Toggle fit overplotting on and off. If this option is on the data
   and fitted values are overplotted. Otherwise only data points are plotted.
@@ -585,7 +574,7 @@ fitparams — Compute the parameters of the transformation equations
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_u">u</A></B></DT>
+  <DT><B>u</B></DT>
   <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='u' Line='u'>
   <DD>Undelete the data point nearest the cursor which has been previously deleted.
   This option does not work over points marked as deleted by the application
@@ -593,7 +582,7 @@ fitparams — Compute the parameters of the transformation equations
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_w">w [key]</A></B></DT>
+  <DT><B>w [key]</B></DT>
   <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='w' Line='w [key]'>
   <DD>Set the graph window or data range along each axis to be graphed.. This is a 
   <B>gtools</B> option which prints the prompt "<TT>window:</TT>". The available cursor
@@ -602,7 +591,7 @@ fitparams — Compute the parameters of the transformation equations
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_I">I</A></B></DT>
+  <DT><B>I</B></DT>
   <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='I' Line='I'>
   <DD>Interrupt the task immediately without saving the current fit.
   </DD>
@@ -612,7 +601,7 @@ fitparams — Compute the parameters of the transformation equations
   The application program calling <B>inlfit</B> can add more commands.
   Parameter names can be abbreviated. The following commands are supported. 
   <DL>
-  <DT><B><A NAME="l_">:show [file]</A></B></DT>
+  <DT><B>:show [file]</B></DT>
   <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':show [file]'>
   <DD>Show the current values of the fitting parameters high_reject, 
   low_reject, niterate, grow, tol, itmax. The default output device
@@ -622,7 +611,7 @@ fitparams — Compute the parameters of the transformation equations
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:variables [file]</A></B></DT>
+  <DT><B>:variables [file]</B></DT>
   <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':variables [file]'>
   <DD>List the currently loaded variables. The number, id, minimum value and maximum
   value of each variable is printed. The default output device is the terminal
@@ -631,7 +620,7 @@ fitparams — Compute the parameters of the transformation equations
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:data [file]</A></B></DT>
+  <DT><B>:data [file]</B></DT>
   <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':data [file]'>
   <DD>List the raw data. The value of each standard catalog and observations
   catalog variable  for each data point is printed. The default output device
@@ -641,7 +630,7 @@ fitparams — Compute the parameters of the transformation equations
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:errors [file]</A></B></DT>
+  <DT><B>:errors [file]</B></DT>
   <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':errors [file]'>
   <DD>Show the error analysis of the current fit.  The number of iterations,
   total number of points, the number of rejected and deleted points,
@@ -657,7 +646,7 @@ fitparams — Compute the parameters of the transformation equations
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:results [file]</A></B></DT>
+  <DT><B>:results [file]</B></DT>
   <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':results [file]'>
   <DD>List the results of the current fit. The function value, the fitted value,
   the residual, and the weight are printed for each data point. The default
@@ -667,7 +656,7 @@ fitparams — Compute the parameters of the transformation equations
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:vshow [file]</A></B></DT>
+  <DT><B>:vshow [file]</B></DT>
   <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':vshow [file]'>
   <DD>A verbose version of "<TT>:show</TT>" which is equivalent to a "<TT>:show</TT>" plus a "<TT>:errors</TT>"
   plus a "<TT>:results</TT>". The default output device is the terminal (STDOUT)
@@ -676,13 +665,13 @@ fitparams — Compute the parameters of the transformation equations
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:page file</A></B></DT>
+  <DT><B>:page file</B></DT>
   <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':page file'>
   <DD>Page through the named file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:tolerance [value]</A></B></DT>
+  <DT><B>:tolerance [value]</B></DT>
   <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':tolerance [value]'>
   <DD>Show or set the value of the fitting tolerance. Tolerance is the maximum
   fraction by which the reduced chi-squared can change from one iteration to the
@@ -690,20 +679,20 @@ fitparams — Compute the parameters of the transformation equations
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:maxiter [value]</A></B></DT>
+  <DT><B>:maxiter [value]</B></DT>
   <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':maxiter [value]'>
   <DD>Show or set the maximum number of fitting iterations.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:nreject [value]</A></B></DT>
+  <DT><B>:nreject [value]</B></DT>
   <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':nreject [value]'>
   <DD>Show or set the maximum number of rejection iterations. A value of zero
   means that automatic bad data rejection is turned off. 
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:low_reject [value], :high_reject [value]</A></B></DT>
+  <DT><B>:low_reject [value], :high_reject [value]</B></DT>
   <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':low_reject [value], :high_reject [value]'>
   <DD>Show or set the values of the bad data rejection limits.
   If both low_reject and high_reject are zero then automatic bad data
@@ -717,14 +706,14 @@ fitparams — Compute the parameters of the transformation equations
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:grow [value]</A></B></DT>
+  <DT><B>:grow [value]</B></DT>
   <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':grow [value]'>
   <DD>Show or set the value of the rejection growing radius. Any points
   within this distance of a rejected point are also rejected. 
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:fit [parameter] [value]</A></B></DT>
+  <DT><B>:fit [parameter] [value]</B></DT>
   <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':fit [parameter] [value]'>
   <DD>Set the starting guess value for the named coefficient and allow the 
   parameter value to change (converge) during the fit.
@@ -732,7 +721,7 @@ fitparams — Compute the parameters of the transformation equations
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:const [parameter] [value]</A></B></DT>
+  <DT><B>:const [parameter] [value]</B></DT>
   <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':const [parameter] [value]'>
   <DD>Set the named parameter to be a constant with the specified value, i.e,
   its value won't change during the fit.
@@ -740,13 +729,13 @@ fitparams — Compute the parameters of the transformation equations
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:/help</A></B></DT>
+  <DT><B>:/help</B></DT>
   <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':/help'>
   <DD>Print help for the graph formatting options (the w key).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">:.help</A></B></DT>
+  <DT><B>:.help</B></DT>
   <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':.help'>
   <DD>Print help for the general IRAF graphics options.
   </DD>
@@ -754,7 +743,7 @@ fitparams — Compute the parameters of the transformation equations
   <P>
   </UL>
   <! EndSection:   'THE NON-LINEAR INTERACTIVE FITTING PACKAGE'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -820,7 +809,7 @@ fitparams — Compute the parameters of the transformation equations
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   chkconfig,mkconfig,gtools,inlfit
@@ -829,5 +818,3 @@ fitparams — Compute the parameters of the transformation equations
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'THE CONFIGURATION FILE' 'THE NON-LINEAR INTERACTIVE FITTING PACKAGE' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

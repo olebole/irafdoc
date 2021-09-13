@@ -1,3 +1,5 @@
+.. _tprint:
+
 tprint — Print tables--both headers and data.
 =============================================
 
@@ -5,32 +7,19 @@ tprint — Print tables--both headers and data.
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>tprint (Aug1999)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>tables</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>tprint (Aug1999)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>tprint</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   tprint -- Convert an STSDAS table to a readable ASCII file.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   tprint table
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task is similar to the 'tdump' task in that it takes an STSDAS
@@ -60,11 +49,11 @@ tprint — Print tables--both headers and data.
   The output will be printed to the standard output.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_table">table [file name template]</A></B></DT>
+  <DT><B>table [file name template]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='table' Line='table [file name template]'>
   <DD>The file names of tables to be printed.
   This parameter will accept a general file name template,
@@ -77,19 +66,19 @@ tprint — Print tables--both headers and data.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(prparam = no) [boolean]</A></B></DT>
+  <DT><B>(prparam = no) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(prparam = no) [boolean]'>
   <DD>Should the header parameters be printed?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(prdata = yes) [boolean]</A></B></DT>
+  <DT><B>(prdata = yes) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(prdata = yes) [boolean]'>
   <DD>Should the table data be printed?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(pwidth = 80) [integer, min=40, max=INDEF]</A></B></DT>
+  <DT><B>(pwidth = 80) [integer, min=40, max=INDEF]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(pwidth = 80) [integer, min=40, max=INDEF]'>
   <DD>If the output is redirected,
   'pwidth' specifies the width of the output page;
@@ -101,7 +90,7 @@ tprint — Print tables--both headers and data.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(plength = 0) [integer, min=0, max=INDEF]</A></B></DT>
+  <DT><B>(plength = 0) [integer, min=0, max=INDEF]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(plength = 0) [integer, min=0, max=INDEF]'>
   <DD>Lines of data per page.
   This is the number of rows from the table to be printed on each page;
@@ -120,7 +109,7 @@ tprint — Print tables--both headers and data.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(showrow = yes) [boolean]</A></B></DT>
+  <DT><B>(showrow = yes) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(showrow = yes) [boolean]'>
   <DD>Print the number of each row?
   <P>
@@ -130,7 +119,7 @@ tprint — Print tables--both headers and data.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(orig_row = yes) [boolean]</A></B></DT>
+  <DT><B>(orig_row = yes) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(orig_row = yes) [boolean]'>
   <DD>Print row numbers of the underlying table?
   <P>
@@ -147,7 +136,7 @@ tprint — Print tables--both headers and data.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(showhdr = yes) [boolean]</A></B></DT>
+  <DT><B>(showhdr = yes) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(showhdr = yes) [boolean]'>
   <DD>Print header information?
   <P>
@@ -161,14 +150,14 @@ tprint — Print tables--both headers and data.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(showunits = yes) [boolean]</A></B></DT>
+  <DT><B>(showunits = yes) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(showunits = yes) [boolean]'>
   <DD>Print the units for each column?  If 'showunits = yes'
   then the column units will be printed on the line below the column names.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(columns = "<TT></TT>") [string]</A></B></DT>
+  <DT><B>(columns = "<TT></TT>") [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(columns = "") [string]'>
   <DD>The names of the columns to be printed.
   An alternative way to do this
@@ -197,7 +186,7 @@ tprint — Print tables--both headers and data.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(rows = "<TT>-</TT>") [string]</A></B></DT>
+  <DT><B>(rows = "<TT>-</TT>") [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(rows = "-") [string]'>
   <DD>The range of rows which are to be printed.
   An alternative way to do this
@@ -218,7 +207,7 @@ tprint — Print tables--both headers and data.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(option = "<TT>plain</TT>") [string, allowed values: plain | html | latex | tex]</A></B></DT>
+  <DT><B>(option = "<TT>plain</TT>") [string, allowed values: plain | html | latex | tex]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(option = "plain") [string, allowed values: plain | html | latex | tex]'>
   <DD>The format in which output will be produced.
   If option = "<TT>plain</TT>", the output will be ordinary ASCII text which may
@@ -250,7 +239,7 @@ tprint — Print tables--both headers and data.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(align = yes) [boolean]</A></B></DT>
+  <DT><B>(align = yes) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(align = yes) [boolean]'>
   <DD>Increase column width to align with header?  This parameter is only useful
   when option = "<TT>plain</TT>".
@@ -268,7 +257,7 @@ tprint — Print tables--both headers and data.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(sp_col = "<TT></TT>") [string]</A></B></DT>
+  <DT><B>(sp_col = "<TT></TT>") [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(sp_col = "") [string]'>
   <DD>This is the name of a column in the table.
   If it is specified (non-null),
@@ -288,7 +277,7 @@ tprint — Print tables--both headers and data.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(lgroup = 0) [integer, min=0, max=INDEF]</A></B></DT>
+  <DT><B>(lgroup = 0) [integer, min=0, max=INDEF]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(lgroup = 0) [integer, min=0, max=INDEF]'>
   <DD>Print a blank line after each 'lgroup' lines.
   If 'lgroup' is greater than zero,
@@ -317,7 +306,7 @@ tprint — Print tables--both headers and data.
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  Print all tables in the default directory.
@@ -343,18 +332,18 @@ tprint — Print tables--both headers and data.
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   This task was written by Phil Hodge.
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   tdump, ranges
@@ -363,5 +352,3 @@ tprint — Print tables--both headers and data.
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

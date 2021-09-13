@@ -1,3 +1,5 @@
+.. _hdtoi:
+
 hdtoi — Apply DTOI transformation to density image
 ==================================================
 
@@ -5,100 +7,87 @@ hdtoi — Apply DTOI transformation to density image
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>hdtoi (May88)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>imred.dtoi</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>hdtoi (May88)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>hdtoi</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   hdtoi -- transform images according to hd curve
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   hdtoi input output database
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of images to be transformed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>List of output image names.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_database">database</A></B></DT>
+  <DT><B>database</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='database' Line='database'>
   <DD>Name of text database describing HD curve.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fog">fog = "<TT></TT>"</A></B></DT>
+  <DT><B>fog = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fog' Line='fog = ""'>
   <DD>Value of fog level, read from database if unspecified.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_option">option = "<TT>mean</TT>"</A></B></DT>
+  <DT><B>option = "<TT>mean</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='option' Line='option = "mean"'>
   <DD>Option for calculating fog density when <B>fog</B> is a file list, can be
   either "<TT>mean</TT>" or "<TT>median</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sigma">sigma = 3.0</A></B></DT>
+  <DT><B>sigma = 3.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sigma' Line='sigma = 3.0'>
   <DD>If <B>fog</B> is a file name, and <B>option</B> = "<TT>mean</TT>", the mean fog density
   is iteratively calculated using this rejection criteria.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_floor">floor = 0.0</A></B></DT>
+  <DT><B>floor = 0.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='floor' Line='floor = 0.0'>
   <DD>Value assigned to levels below fog, can be either 0.0 or -1.0.  
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ceiling">ceiling = 30000.</A></B></DT>
+  <DT><B>ceiling = 30000.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ceiling' Line='ceiling = 30000.'>
   <DD>The final intensities are scaled to this value, such that a saturated
   input density equals <B>ceiling</B> on output.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_datatype">datatype = "<TT>r</TT>"</A></B></DT>
+  <DT><B>datatype = "<TT>r</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='datatype' Line='datatype = "r"'>
   <DD>Datatype of output image pixels.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print log of processing to STDOUT.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Task <I>hdtoi</I> transforms one image to another as described by the 
@@ -134,7 +123,7 @@ hdtoi — Apply DTOI transformation to density image
   a <B>ceiling</B> that avoids the truncation of significant digits.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   Convert three density images to intensity images as described in database db1.
@@ -142,14 +131,14 @@ hdtoi — Apply DTOI transformation to density image
   	cl&gt; hdtoi denin* intim1,intim2,intim3 db1
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   Task <B>hdtoi</B> requires 20 cpu seconds to transform a 512 square image, with
   a 12 bit data range, on a VAX 750
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   spotlist, dematch, hdfit
@@ -158,5 +147,3 @@ hdtoi — Apply DTOI transformation to density image
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

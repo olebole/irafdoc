@@ -1,3 +1,5 @@
+.. _evalfit:
+
 evalfit — Compute the standard indices by evaluating the fit
 ============================================================
 
@@ -5,36 +7,23 @@ evalfit — Compute the standard indices by evaluating the fit
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>evalfit (Aug91)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.photcal</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>evalfit (Aug91)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>evalfit</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   evalfit -- evaluate the fit
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   evalfit observations config parameters calib
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_observations">observations</A></B></DT>
+  <DT><B>observations</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='observations' Line='observations'>
   <DD>The list of files containing the observations.
   <I>Observations</I> are multi-column text files, whose columns are delimited
@@ -43,7 +32,7 @@ evalfit — Compute the standard indices by evaluating the fit
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_config">config</A></B></DT>
+  <DT><B>config</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='config' Line='config'>
   <DD>The configuration file. <I>Config</I> is a text file which
   specifies the format of the <I>observations</I> and <I>catalog</I> files, and
@@ -53,7 +42,7 @@ evalfit — Compute the standard indices by evaluating the fit
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_parameters">parameters</A></B></DT>
+  <DT><B>parameters</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='parameters' Line='parameters'>
   <DD>The name of the file produced by the FITPARAMS task.
   <I>Parameters</I> is a text file 
@@ -66,7 +55,7 @@ evalfit — Compute the standard indices by evaluating the fit
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_calib">calib</A></B></DT>
+  <DT><B>calib</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='calib' Line='calib'>
   <DD>The name of the output file. <I>Calib</I> is a text file
   containing the name of the fitted object in the first column,
@@ -77,7 +66,7 @@ evalfit — Compute the standard indices by evaluating the fit
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_catalogs">catalogs</A></B></DT>
+  <DT><B>catalogs</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='catalogs' Line='catalogs'>
   <DD>The list of files containing the catalog data.
   <I>Catalogs</I> are multi-column text files, whose columns are delimited
@@ -88,18 +77,18 @@ evalfit — Compute the standard indices by evaluating the fit
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_errors">errors = "<TT>undefined</TT>"</A></B></DT>
+  <DT><B>errors = "<TT>undefined</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='errors' Line='errors = "undefined"'>
   <DD>The algorithm used to compute formal errors for each object fit. The choices
   are:
   <DL>
-  <DT><B><A NAME="l_undefined">undefined</A></B></DT>
+  <DT><B>undefined</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='undefined' Line='undefined'>
   <DD>No errors are computed and no error values are output.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_obserrors">obserrors</A></B></DT>
+  <DT><B>obserrors</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='obserrors' Line='obserrors'>
   <DD>The error in each fitted value is computed by summing in quadrature
   the contribution to the total error made by each individual error in the
@@ -108,7 +97,7 @@ evalfit — Compute the standard indices by evaluating the fit
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_equations">equations</A></B></DT>
+  <DT><B>equations</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='equations' Line='equations'>
   <DD>The error in each fitted value is computed by evaluating the error
   equations associated with each transformation equation. If no error equation
@@ -118,23 +107,23 @@ evalfit — Compute the standard indices by evaluating the fit
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_objects">objects = "<TT>all</TT>"</A></B></DT>
+  <DT><B>objects = "<TT>all</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='objects' Line='objects = "all"'>
   <DD>The type of objects to output to <I>calib</I>. The choices are:
   <DL>
-  <DT><B><A NAME="l_all">all</A></B></DT>
+  <DT><B>all</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='all' Line='all'>
   <DD>Both program and standard stars are output.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_program">program = yes</A></B></DT>
+  <DT><B>program = yes</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='program' Line='program = yes'>
   <DD>Only program stars are output.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_standard">standard = yes</A></B></DT>
+  <DT><B>standard = yes</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='standard' Line='standard = yes'>
   <DD>Only standard stars are output.
   </DD>
@@ -142,7 +131,7 @@ evalfit — Compute the standard indices by evaluating the fit
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_print">print = "<TT></TT>"</A></B></DT>
+  <DT><B>print = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='print' Line='print = ""'>
   <DD>Additional variables to be printed in the output file. These variables are
   printed immediately after the id, and may be any of the
@@ -151,7 +140,7 @@ evalfit — Compute the standard indices by evaluating the fit
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_format">format = "<TT></TT>"</A></B></DT>
+  <DT><B>format = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='format' Line='format = ""'>
   <DD>An SPP style format string to apply to the output data, in place of the
   default format.  SPP format strings
@@ -159,14 +148,14 @@ evalfit — Compute the standard indices by evaluating the fit
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_append">append = no</A></B></DT>
+  <DT><B>append = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='append' Line='append = no'>
   <DD>Append the output to <I>calib</I> instead of creating a new file. If the
   file already exists and <I>append</I> is "<TT>no</TT>" EVALFIT will abort.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_catdir">catdir = "<TT>)_.catdir</TT>"</A></B></DT>
+  <DT><B>catdir = "<TT>)_.catdir</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='catdir' Line='catdir = ")_.catdir"'>
   <DD>The directory containing the supported standard star catalogs.
   The default parameter value  redirects <I>catdir</I>
@@ -179,7 +168,7 @@ evalfit — Compute the standard indices by evaluating the fit
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -248,7 +237,7 @@ evalfit — Compute the standard indices by evaluating the fit
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_formats">FORMATS</A></H2>
+  <H3>Formats</H3>
   <! BeginSection: 'FORMATS'>
   <UL>
   A format specification has the form "<TT>%w.dCn</TT>", where w is the field width,
@@ -319,7 +308,7 @@ evalfit — Compute the standard indices by evaluating the fit
   <P>
   </UL>
   <! EndSection:   'FORMATS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -349,7 +338,7 @@ evalfit — Compute the standard indices by evaluating the fit
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   mkconfig,chkconfig,fitparams,invertfit
@@ -358,5 +347,3 @@ evalfit — Compute the standard indices by evaluating the fit
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'FORMATS' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

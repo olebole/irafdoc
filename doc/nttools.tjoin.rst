@@ -1,3 +1,5 @@
+.. _tjoin:
+
 tjoin — Perform a relational join of two tables.
 ================================================
 
@@ -5,32 +7,19 @@ tjoin — Perform a relational join of two tables.
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>tjoin (Apr99)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>tables</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>tjoin (Apr99)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>tjoin</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   tjoin -- Combine two tables based on equal values in common columns
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   tjoin intable1 intable2 outtable column1 column2
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task combines two tables into a new table on the basis of one or
@@ -72,29 +61,29 @@ tjoin — Perform a relational join of two tables.
   in this way, it stops with an error.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_intable1">intable1 [file name]</A></B></DT>
+  <DT><B>intable1 [file name]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='intable1' Line='intable1 [file name]'>
   <DD>First input table. 
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_intable2">intable2 [file name]</A></B></DT>
+  <DT><B>intable2 [file name]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='intable2' Line='intable2 [file name]'>
   <DD>Second input table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_outtable">outtable [file name]</A></B></DT>
+  <DT><B>outtable [file name]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable [file name]'>
   <DD>Output table.  This is the join of the two input tables.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_column1">column1 [string]</A></B></DT>
+  <DT><B>column1 [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='column1' Line='column1 [string]'>
   <DD>Names of the common columns in the first table. If there is more than
   one column name, the names should be separated by commas. If a column
@@ -104,7 +93,7 @@ tjoin — Perform a relational join of two tables.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_column2">column2 [string]</A></B></DT>
+  <DT><B>column2 [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='column2' Line='column2 [string]'>
   <DD>Comma separated list of names of the common columns in the second
   table. The number of names must match the number of names in column1.
@@ -112,7 +101,7 @@ tjoin — Perform a relational join of two tables.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(extrarows = "<TT>neither</TT>") [string, allowed values: neither|first|both]</A></B></DT>
+  <DT><B>(extrarows = "<TT>neither</TT>") [string, allowed values: neither|first|both]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(extrarows = "neither") [string, allowed values: neither|first|both]'>
   <DD>This parameter controls whether unmatched rows are added to the output 
   table. If it is set to 'neither', unmatched rows are not added. If it
@@ -123,7 +112,7 @@ tjoin — Perform a relational join of two tables.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(tolerance = "<TT>0.0</TT>") [string]</A></B></DT>
+  <DT><B>(tolerance = "<TT>0.0</TT>") [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(tolerance = "0.0") [string]'>
   <DD>Tolerance used in testing for equality between common columns. The
   values must be greater than or equal to zero. If there is more than
@@ -134,7 +123,7 @@ tjoin — Perform a relational join of two tables.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(casesens = yes) [boolean]</A></B></DT>
+  <DT><B>(casesens = yes) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(casesens = yes) [boolean]'>
   <DD>Is case important in testing equality of strings?
   If set to "<TT>yes</TT>", the test for equality is case sensitive.
@@ -142,7 +131,7 @@ tjoin — Perform a relational join of two tables.
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Combine a table of star positions and a table of star magnitudes to create
@@ -167,18 +156,18 @@ tjoin — Perform a relational join of two tables.
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   This task was written by Bernie Simon.
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   tselect, tproject, tproduct
@@ -187,5 +176,3 @@ tjoin — Perform a relational join of two tables.
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

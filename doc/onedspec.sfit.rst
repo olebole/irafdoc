@@ -1,3 +1,5 @@
+.. _sfit:
+
 sfit — Fit spectra and output fit, ratio, or difference
 =======================================================
 
@@ -5,43 +7,30 @@ sfit — Fit spectra and output fit, ratio, or difference
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>sfit (Mar92)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.onedspec</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>sfit (Mar92)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>sfit</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   sfit -- Fit spectra
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage_">USAGE	</A></H2>
+  <H3>Usage	</H3>
   <! BeginSection: 'USAGE	'>
   <UL>
   sfit input output
   </UL>
   <! EndSection:   'USAGE	'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>Input spectra to be fit.  These may be any combination of echelle,
   multispec, onedspec, long slit, and spectral cube format images.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>Output fitted spectra.  The number of output spectra must
   match the number of input spectra.  <B>Output</B> may be omitted if
@@ -49,7 +38,7 @@ sfit — Fit spectra and output fit, ratio, or difference
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lines">lines = "<TT>*</TT>", bands = "<TT>1</TT>"</A></B></DT>
+  <DT><B>lines = "<TT>*</TT>", bands = "<TT>1</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lines' Line='lines = "*", bands = "1"'>
   <DD>A range specifications for the image lines and bands to be fit.  Unspecified
   lines and bands will be copied from the original.  If the value is "<TT>*</TT>", all of
@@ -60,7 +49,7 @@ sfit — Fit spectra and output fit, ratio, or difference
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_type">type = "<TT>fit</TT>"</A></B></DT>
+  <DT><B>type = "<TT>fit</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='type' Line='type = "fit"'>
   <DD>Type of output spectra.  The choices are "<TT>fit</TT>" for the fitted function,
   "<TT>ratio</TT>" for the ratio of the input spectra to the fit, "<TT>difference</TT>" for
@@ -69,14 +58,14 @@ sfit — Fit spectra and output fit, ratio, or difference
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_replace">replace = no</A></B></DT>
+  <DT><B>replace = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='replace' Line='replace = no'>
   <DD>Replace rejected points by the fit in the difference, ratio, and
   data output types?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wavescale">wavescale = yes</A></B></DT>
+  <DT><B>wavescale = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wavescale' Line='wavescale = yes'>
   <DD>Wavelength scale the X axis of the plot?  This option requires that the
   spectra be wavelength calibrated.  If <B>wavescale</B> is no, the plots
@@ -84,14 +73,14 @@ sfit — Fit spectra and output fit, ratio, or difference
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_logscale">logscale = no</A></B></DT>
+  <DT><B>logscale = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='logscale' Line='logscale = no'>
   <DD>Take the log (base 10) of both axes?  This can be used when <B>listonly</B>
   is yes to measure the exponent of the slope of the continuum.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_override">override = no</A></B></DT>
+  <DT><B>override = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='override' Line='override = no'>
   <DD>Override previously fit spectra?  If <B>override</B> is yes and
   <B>interactive</B> is yes, the user will be prompted before each order is
@@ -100,21 +89,21 @@ sfit — Fit spectra and output fit, ratio, or difference
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_listonly">listonly = no</A></B></DT>
+  <DT><B>listonly = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='listonly' Line='listonly = no'>
   <DD>Don't modify any images?  If <B>listonly</B> is yes, the <B>output</B>
   image list may be skipped.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_logfiles">logfiles = "<TT>logfile</TT>"</A></B></DT>
+  <DT><B>logfiles = "<TT>logfile</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='logfiles' Line='logfiles = "logfile"'>
   <DD>List of log files to which to write the power series coefficients.  If
   <B>logfiles</B> = NULL ("<TT></TT>"), the coefficients will not be calculated.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = yes</A></B></DT>
+  <DT><B>interactive = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes'>
   <DD>Perform the fit interactively using the icfit commands?  This will allow
   the parameters for each spectrum to be adjusted independently.  A separate
@@ -124,7 +113,7 @@ sfit — Fit spectra and output fit, ratio, or difference
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sample">sample = "<TT>*</TT>"</A></B></DT>
+  <DT><B>sample = "<TT>*</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"'>
   <DD>The ranges of X values to be used in the fits.  The units will vary
   depending on the setting of the <B>wavescale</B> and <B>logscale</B>
@@ -135,7 +124,7 @@ sfit — Fit spectra and output fit, ratio, or difference
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_naverage">naverage = 1</A></B></DT>
+  <DT><B>naverage = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='naverage' Line='naverage = 1'>
   <DD>Number of sample points to combined to create a fitting point.
   A positive value specifies an average and a negative value specifies
@@ -143,7 +132,7 @@ sfit — Fit spectra and output fit, ratio, or difference
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_function">function = spline3</A></B></DT>
+  <DT><B>function = spline3</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='function' Line='function = spline3'>
   <DD>Function to be fit to the spectra.  The functions are
   "<TT>legendre</TT>" (legendre polynomial), "<TT>chebyshev</TT>" (chebyshev polynomial),
@@ -153,52 +142,52 @@ sfit — Fit spectra and output fit, ratio, or difference
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_order">order = 1</A></B></DT>
+  <DT><B>order = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='order' Line='order = 1'>
   <DD>The order of the polynomials or the number of spline pieces.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_low_reject">low_reject = 3., high_reject = 3.</A></B></DT>
+  <DT><B>low_reject = 3., high_reject = 3.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='low_reject' Line='low_reject = 3., high_reject = 3.'>
   <DD>Rejection limits below and above the fit in units of the residual sigma.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_niterate">niterate = 0</A></B></DT>
+  <DT><B>niterate = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='niterate' Line='niterate = 0'>
   <DD>Number of rejection iterations.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_grow">grow = 1.</A></B></DT>
+  <DT><B>grow = 1.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='grow' Line='grow = 1.'>
   <DD>When a pixel is rejected, pixels within this distance of the rejected pixel
   are also rejected.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_markrej">markrej = yes</A></B></DT>
+  <DT><B>markrej = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='markrej' Line='markrej = yes'>
   <DD>Mark rejected points?  If there are many rejected points it might be
   desired to not mark rejected points.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_graphics">graphics = "<TT>stdgraph</TT>"</A></B></DT>
+  <DT><B>graphics = "<TT>stdgraph</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"'>
   <DD>Graphics output device for interactive graphics.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cursor">cursor = "<TT></TT>"</A></B></DT>
+  <DT><B>cursor = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""'>
   <DD>Graphics cursor input.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   A one dimensional function is fit to spectra in a list of echelle,
@@ -269,7 +258,7 @@ sfit — Fit spectra and output fit, ratio, or difference
   defaults will be remembered from image to image.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_prompts">PROMPTS</A></H2>
+  <H3>Prompts</H3>
   <! BeginSection: 'PROMPTS'>
   <UL>
   If several images or lines are specified, the user is asked whether
@@ -297,7 +286,7 @@ sfit — Fit spectra and output fit, ratio, or difference
   </PRE>
   </UL>
   <! EndSection:   'PROMPTS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  To normalize all orders of the echelle spectrum for hd221170
@@ -337,11 +326,11 @@ sfit — Fit spectra and output fit, ratio, or difference
   	cl&gt; sfit uv.* type=ratio logscale+ listonly+ fun=leg order=2
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_SFIT">SFIT V2.10.4</A></B></DT>
+  <DT><B>SFIT V2.10.4</B></DT>
   <! Sec='REVISIONS' Level=0 Label='SFIT' Line='SFIT V2.10.4'>
   <DD>The task was expanded to include fitting specified bands in 3D multispec
   spectra.
@@ -350,14 +339,14 @@ sfit — Fit spectra and output fit, ratio, or difference
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_SFIT">SFIT V2.10</A></B></DT>
+  <DT><B>SFIT V2.10</B></DT>
   <! Sec='REVISIONS' Level=0 Label='SFIT' Line='SFIT V2.10'>
   <DD>This task is new.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   The errors are not listed for the power series coefficients.
@@ -368,7 +357,7 @@ sfit — Fit spectra and output fit, ratio, or difference
   Selection by aperture number is not supported.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   continuum, fit1d, icfit, ranges
@@ -377,5 +366,3 @@ sfit — Fit spectra and output fit, ratio, or difference
   
   <! Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'PROMPTS' 'EXAMPLES' 'REVISIONS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

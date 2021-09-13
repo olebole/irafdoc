@@ -1,3 +1,5 @@
+.. _gregister:
+
 gregister — Register 1-D or 2-D images using the geomap transforms
 ==================================================================
 
@@ -5,55 +7,42 @@ gregister — Register 1-D or 2-D images using the geomap transforms
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>gregister (Dec98)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.immatch</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>gregister (Dec98)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>gregister</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   gregister -- transform a list of images from one coordinate system to another
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   gregister input output database transforms
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of images to be transformed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>List of output images.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_database">database</A></B></DT>
+  <DT><B>database</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='database' Line='database'>
   <DD>The name of the text file database produced by GEOMAP containing the coordinate
   transformation(s).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_transforms">transforms</A></B></DT>
+  <DT><B>transforms</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='transforms' Line='transforms'>
   <DD>The list of the database record(s) containing the transformations. 
   The number of transforms must be 1 or the same as the number of input
@@ -63,17 +52,17 @@ gregister — Register 1-D or 2-D images using the geomap transforms
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_geometry">geometry = "<TT>geometric</TT>"</A></B></DT>
+  <DT><B>geometry = "<TT>geometric</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='geometry' Line='geometry = "geometric"'>
   <DD>The type of geometry to be applied: The choices are:
   <DL>
-  <DT><B><A NAME="l_linear">linear</A></B></DT>
+  <DT><B>linear</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='linear' Line='linear'>
   <DD>The linear part, shifts, scales and rotations are computed.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_geometric">geometric</A></B></DT>
+  <DT><B>geometric</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='geometric' Line='geometric'>
   <DD>The full transformation is computed.
   </DD>
@@ -81,7 +70,7 @@ gregister — Register 1-D or 2-D images using the geomap transforms
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xmin">xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF</A></B></DT>
+  <DT><B>xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xmin' Line='xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF'>
   <DD>The minimum and maximum x and y reference values of the output image.
   Xmin, xmax, ymin and ymax default to minimum and maximum values set in GEOMAP,
@@ -89,7 +78,7 @@ gregister — Register 1-D or 2-D images using the geomap transforms
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xscale">xscale = 1.0, yscale = 1.0</A></B></DT>
+  <DT><B>xscale = 1.0, yscale = 1.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xscale' Line='xscale = 1.0, yscale = 1.0'>
   <DD>The output x and y scales in units of reference x and y
   units per pixel, e.g "/ pixel or Angstroms / pixel if the reference
@@ -103,7 +92,7 @@ gregister — Register 1-D or 2-D images using the geomap transforms
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ncols">ncols = INDEF, nlines = INDEF</A></B></DT>
+  <DT><B>ncols = INDEF, nlines = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ncols' Line='ncols = INDEF, nlines = INDEF'>
   <DD>The number of columns and lines in the output image. Ncols and nlines default
   to the size of the input image. If xscale or yscale are defined ncols or nlines
@@ -111,7 +100,7 @@ gregister — Register 1-D or 2-D images using the geomap transforms
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xsample">xsample = 1.0, ysample = 1.0</A></B></DT>
+  <DT><B>xsample = 1.0, ysample = 1.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xsample' Line='xsample = 1.0, ysample = 1.0'>
   <DD>The coordinate surface subsampling factor. The coordinate surfaces are
   evaluated at every xsample-th pixel in x and every ysample-th pixel in y.
@@ -120,41 +109,41 @@ gregister — Register 1-D or 2-D images using the geomap transforms
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interpolant">interpolant = "<TT>linear</TT>"</A></B></DT>
+  <DT><B>interpolant = "<TT>linear</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interpolant' Line='interpolant = "linear"'>
   <DD>The choices are the following.
   <DL>
-  <DT><B><A NAME="l_nearest">nearest</A></B></DT>
+  <DT><B>nearest</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest'>
   <DD>Nearest neighbor.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_linear">linear</A></B></DT>
+  <DT><B>linear</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='linear' Line='linear'>
   <DD>Bilinear interpolation in x and y.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_poly3">poly3</A></B></DT>
+  <DT><B>poly3</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='poly3' Line='poly3'>
   <DD>Third order polynomial in x and y.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_poly5">poly5</A></B></DT>
+  <DT><B>poly5</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='poly5' Line='poly5'>
   <DD>Fifth order polynomial in x and y.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_spline3">spline3</A></B></DT>
+  <DT><B>spline3</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='spline3' Line='spline3'>
   <DD>Bicubic spline.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sinc">sinc</A></B></DT>
+  <DT><B>sinc</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='sinc' Line='sinc'>
   <DD>2D sinc interpolation. Users can specify the sinc interpolant width by
   appending a width value to the interpolant string, e.g. sinc51 specifies
@@ -163,7 +152,7 @@ gregister — Register 1-D or 2-D images using the geomap transforms
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lsinc">lsinc</A></B></DT>
+  <DT><B>lsinc</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='lsinc' Line='lsinc'>
   <DD>Look-up table sinc interpolation. Users can specify the look-up table sinc
   interpolant width by appending a width value to the interpolant string, e.g.
@@ -178,7 +167,7 @@ gregister — Register 1-D or 2-D images using the geomap transforms
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_drizzle">drizzle</A></B></DT>
+  <DT><B>drizzle</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='drizzle' Line='drizzle'>
   <DD>2D drizzle resampling. Users can specify the drizzle pixel fraction in x and y
   by appending a value between 0.0 and 1.0 in square brackets to the
@@ -192,29 +181,29 @@ gregister — Register 1-D or 2-D images using the geomap transforms
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_boundary">boundary = "<TT>nearest</TT>"</A></B></DT>
+  <DT><B>boundary = "<TT>nearest</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"'>
   <DD>The boundary extension choices are:
   <DL>
-  <DT><B><A NAME="l_nearest">nearest</A></B></DT>
+  <DT><B>nearest</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest'>
   <DD>Use the value of the nearest boundary pixel.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_constant">constant</A></B></DT>
+  <DT><B>constant</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='constant' Line='constant'>
   <DD>Use a constant value.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_reflect">reflect</A></B></DT>
+  <DT><B>reflect</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='reflect' Line='reflect'>
   <DD>Generate value by reflecting about the boundary.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wrap">wrap</A></B></DT>
+  <DT><B>wrap</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='wrap' Line='wrap'>
   <DD>Generate a value by wrapping around to the opposite side of the image.
   </DD>
@@ -222,20 +211,20 @@ gregister — Register 1-D or 2-D images using the geomap transforms
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_constant">constant = 0.</A></B></DT>
+  <DT><B>constant = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.'>
   <DD>The value of the constant for boundary extension.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fluxconserve">fluxconserve = yes</A></B></DT>
+  <DT><B>fluxconserve = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fluxconserve' Line='fluxconserve = yes'>
   <DD>Preserve the total image flux. The output pixel values are multiplied by
   the Jacobian of the coordinate transformation.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nxblock">nxblock = 512, nyblock = 512</A></B></DT>
+  <DT><B>nxblock = 512, nyblock = 512</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nxblock' Line='nxblock = 512, nyblock = 512'>
   <DD>If the dimensions of the output image are less than nxblock and nyblock
   then the entire image is transformed at once. Otherwise blocks of size
@@ -243,14 +232,14 @@ gregister — Register 1-D or 2-D images using the geomap transforms
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print messages about the progress of the task ?
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -310,7 +299,7 @@ gregister — Register 1-D or 2-D images using the geomap transforms
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_timings">TIMINGS</A></H2>
+  <H3>Timings</H3>
   <! BeginSection: 'TIMINGS'>
   <UL>
   It requires approximately 70 and 290 cpu seconds to correct a 512 by 512
@@ -319,11 +308,11 @@ gregister — Register 1-D or 2-D images using the geomap transforms
   <P>
   </UL>
   <! EndSection:   'TIMINGS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_1">1.</A></B></DT>
+  <DT><B>1.</B></DT>
   <! Sec='EXAMPLES' Level=0 Label='1' Line='1.'>
   <DD>Transform an image to the reference coordinate system of a 512 by 512 pixel
   square image. The output image will have the same scale and size as the
@@ -336,7 +325,7 @@ gregister — Register 1-D or 2-D images using the geomap transforms
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_2">2.</A></B></DT>
+  <DT><B>2.</B></DT>
   <! Sec='EXAMPLES' Level=0 Label='2' Line='2.'>
   <DD>Repeat the previous example but rescale the output image. The scale of the
   output image will be 2.5 reference units per pixel and its size will be
@@ -349,7 +338,7 @@ gregister — Register 1-D or 2-D images using the geomap transforms
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_3">3.</A></B></DT>
+  <DT><B>3.</B></DT>
   <! Sec='EXAMPLES' Level=0 Label='3' Line='3.'>
   <DD>Correct an image for 3rd order geometric distortion using an output scale of 2
   reference units per pixel unit and bicubic spline interpolation with no flux
@@ -364,7 +353,7 @@ gregister — Register 1-D or 2-D images using the geomap transforms
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_4">4.</A></B></DT>
+  <DT><B>4.</B></DT>
   <! Sec='EXAMPLES' Level=0 Label='4' Line='4.'>
   <DD>Transform three images using 3 different transformation records stored
   in the database file.
@@ -377,7 +366,7 @@ gregister — Register 1-D or 2-D images using the geomap transforms
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_5">5.</A></B></DT>
+  <DT><B>5.</B></DT>
   <! Sec='EXAMPLES' Level=0 Label='5' Line='5.'>
   <DD>Repeat the above example using the textfiles inlist, outlist, reclist which
   contain the list of input images, list of output images and list of coordinate
@@ -392,7 +381,7 @@ gregister — Register 1-D or 2-D images using the geomap transforms
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   Support does yet exist in the IRAF world coordinate system interface
@@ -401,7 +390,7 @@ gregister — Register 1-D or 2-D images using the geomap transforms
   <P>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imshift, magnify, rotate, imlintran, geomap, geotran, geoxytran
@@ -410,5 +399,3 @@ gregister — Register 1-D or 2-D images using the geomap transforms
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'TIMINGS' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

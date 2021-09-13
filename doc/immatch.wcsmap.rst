@@ -1,3 +1,5 @@
+.. _wcsmap:
+
 wcsmap — Compute geometric transforms using the image wcs
 =========================================================
 
@@ -5,64 +7,51 @@ wcsmap — Compute geometric transforms using the image wcs
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>wcsmap (Feb96)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.immatch</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>wcsmap (Feb96)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>wcsmap</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   wcsmap -- compute the spatial transformation function required to register
   a list of images using WCS information
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   wcsmap input reference database
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The list of input images containing the input wcs.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_reference">reference</A></B></DT>
+  <DT><B>reference</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='reference' Line='reference'>
   <DD>The list of reference images containing the reference wcs. The number of
   reference images must be one or equal to the number of input images.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_database">database</A></B></DT>
+  <DT><B>database</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='database' Line='database'>
   <DD>The name of the output text database file containing the computed
   transformations.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_transforms">transforms = "<TT></TT>"</A></B></DT>
+  <DT><B>transforms = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='transforms' Line='transforms = ""'>
   <DD>An optional list of transform names. If transforms is undefined the
   transforms are assigned record names identical to the names of the input images.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_results">results = "<TT></TT>"</A></B></DT>
+  <DT><B>results = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='results' Line='results = ""'>
   <DD>Optional output files containing a summary of the results including a
   description of the transform geometry and a listing of the input coordinates,
@@ -72,7 +61,7 @@ wcsmap — Compute geometric transforms using the image wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xmin">xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF</A></B></DT>
+  <DT><B>xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xmin' Line='xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF'>
   <DD>The minimum and maximum logical x and logical y coordinates used to generate
   the grid of reference image control points and define the region of
@@ -82,17 +71,17 @@ wcsmap — Compute geometric transforms using the image wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nx">nx = 10, ny = 10</A></B></DT>
+  <DT><B>nx = 10, ny = 10</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nx' Line='nx = 10, ny = 10'>
   <DD>The number of points in x and y used to generate the coordinate grid.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wcs">wcs = "<TT>world</TT>"</A></B></DT>
+  <DT><B>wcs = "<TT>world</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wcs' Line='wcs = "world"'>
   <DD>The world coordinate system of the coordinates.  The options are:
   <DL>
-  <DT><B><A NAME="l_physical">physical</A></B></DT>
+  <DT><B>physical</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='physical' Line='physical'>
   <DD>Physical coordinates are pixel coordinates which are invariant with
   respect to linear transformations of the physical image data.  For example,
@@ -104,7 +93,7 @@ wcsmap — Compute geometric transforms using the image wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_world">world</A></B></DT>
+  <DT><B>world</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='world' Line='world'>
   <DD>World coordinates are image coordinates which are invariant with
   respect to linear transformations of the physical image data and which
@@ -126,7 +115,7 @@ wcsmap — Compute geometric transforms using the image wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_transpose">transpose = no</A></B></DT>
+  <DT><B>transpose = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='transpose' Line='transpose = no'>
   <DD>Force a transpose of the reference image world coordinates before evaluating
   the world to logical coordinate transformation for the input image ? This
@@ -136,7 +125,7 @@ wcsmap — Compute geometric transforms using the image wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xformat">xformat = "<TT>%10.3f</TT>", yformat = "<TT>%10.3f</TT>"</A></B></DT>
+  <DT><B>xformat = "<TT>%10.3f</TT>", yformat = "<TT>%10.3f</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xformat' Line='xformat = "%10.3f", yformat = "%10.3f"'>
   <DD>The format of the output logical x and y reference and input pixel
   coordinates in columns 1 and 2 and 3 and 4 respectively. By default the
@@ -145,7 +134,7 @@ wcsmap — Compute geometric transforms using the image wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wxformat">wxformat = "<TT></TT>", wyformat = "<TT></TT>"</A></B></DT>
+  <DT><B>wxformat = "<TT></TT>", wyformat = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='wxformat' Line='wxformat = "", wyformat = ""'>
   <DD>The format of the output world x and y reference and input image coordinates
   in columns 5 and 6 respectively. The internal default formats will give
@@ -154,44 +143,44 @@ wcsmap — Compute geometric transforms using the image wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fitgeometry">fitgeometry = "<TT>general</TT>"</A></B></DT>
+  <DT><B>fitgeometry = "<TT>general</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fitgeometry' Line='fitgeometry = "general"'>
   <DD>The fitting geometry to be used. The options are the following.
   <DL>
-  <DT><B><A NAME="l_shift">shift</A></B></DT>
+  <DT><B>shift</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='shift' Line='shift'>
   <DD>X and y shifts only are fit.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xyscale">xyscale</A></B></DT>
+  <DT><B>xyscale</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='xyscale' Line='xyscale'>
   <DD>X and y shifts and x and y magnification factors are fit. Axis flips are
   allowed for.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rotate">rotate</A></B></DT>
+  <DT><B>rotate</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='rotate' Line='rotate'>
   <DD>X and y shifts and a rotation angle are fit. Axis flips are allowed for.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rscale">rscale</A></B></DT>
+  <DT><B>rscale</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='rscale' Line='rscale'>
   <DD>X and y shifts, a magnification factor assumed to be the same in x and y, and a
   rotation angle are fit. Axis flips are allowed for.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rxyscale">rxyscale</A></B></DT>
+  <DT><B>rxyscale</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='rxyscale' Line='rxyscale'>
   <DD>X and y shifts, x and y magnifications factors, and a rotation angle are fit.
   Axis flips are allowed for.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_general">general</A></B></DT>
+  <DT><B>general</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='general' Line='general'>
   <DD>A polynomial of arbitrary order in x and y is fit. A linear term and a
   distortion term are computed separately. The linear term includes an x and y
@@ -210,24 +199,24 @@ wcsmap — Compute geometric transforms using the image wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_function">function = "<TT>polynomial</TT>"</A></B></DT>
+  <DT><B>function = "<TT>polynomial</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='function' Line='function = "polynomial"'>
   <DD>The type of analytic coordinate surfaces to be fit. The options are the
   following.
   <DL>
-  <DT><B><A NAME="l_legendre">legendre</A></B></DT>
+  <DT><B>legendre</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='legendre' Line='legendre'>
   <DD>Legendre polynomials in x and y.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_chebyshev">chebyshev</A></B></DT>
+  <DT><B>chebyshev</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='chebyshev' Line='chebyshev'>
   <DD>Chebyshev polynomials in x and y.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_polynomial">polynomial</A></B></DT>
+  <DT><B>polynomial</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='polynomial' Line='polynomial'>
   <DD>Power series polynomials in x and y.
   </DD>
@@ -235,7 +224,7 @@ wcsmap — Compute geometric transforms using the image wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xxorder">xxorder = 2, xyorder = 2,  yxorder = 2, yyorder = 2</A></B></DT>
+  <DT><B>xxorder = 2, xyorder = 2,  yxorder = 2, yyorder = 2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xxorder' Line='xxorder = 2, xyorder = 2,  yxorder = 2, yyorder = 2'>
   <DD>The order of the polynomials in x and y for the x and y fits respectively.
   The default order and cross term settings define the linear term in x
@@ -249,18 +238,18 @@ wcsmap — Compute geometric transforms using the image wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_xxterms">xxterms = "<TT>half</TT>", yxterms = "<TT>half</TT>"</A></B></DT>
+  <DT><B>xxterms = "<TT>half</TT>", yxterms = "<TT>half</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='xxterms' Line='xxterms = "half", yxterms = "half"'>
   <DD>The options are:
   <DL>
-  <DT><B><A NAME="l_none">none</A></B></DT>
+  <DT><B>none</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='none' Line='none'>
   <DD>The individual polynomial terms contain powers of x or powers of y but not
   powers of both.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_half">half</A></B></DT>
+  <DT><B>half</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='half' Line='half'>
   <DD>The individual polynomial terms contain powers of x and powers of y, whose
   maximum combined power is MAX (xxorder - 1, xyorder - 1) for the x fit and
@@ -268,7 +257,7 @@ wcsmap — Compute geometric transforms using the image wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_full">full</A></B></DT>
+  <DT><B>full</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='full' Line='full'>
   <DD>The individual polynomial terms contain powers of x and powers of y, whose
   maximum combined power is MAX (xxorder - 1 + xyorder - 1) for the x fit and
@@ -284,26 +273,26 @@ wcsmap — Compute geometric transforms using the image wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_reject">reject = INDEF</A></B></DT>
+  <DT><B>reject = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='reject' Line='reject = INDEF'>
   <DD>The rejection limit in units of sigma. The default is no rejection.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_calctype">calctype = "<TT>real</TT>"</A></B></DT>
+  <DT><B>calctype = "<TT>real</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='calctype' Line='calctype = "real"'>
   <DD>The precision of coordinate transformation calculations. The options are "<TT>real</TT>"
   and "<TT>double</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print messages about the progress of the task?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = yes</A></B></DT>
+  <DT><B>interactive = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes'>
   <DD>Run the task interactively ?
   In interactive mode the user may interact with the fitting process, e.g.
@@ -311,13 +300,13 @@ wcsmap — Compute geometric transforms using the image wcs
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_graphics">graphics = "<TT>stdgraph</TT>"</A></B></DT>
+  <DT><B>graphics = "<TT>stdgraph</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"'>
   <DD>The graphics device.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_gcommands">gcommands = "<TT></TT>"</A></B></DT>
+  <DT><B>gcommands = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""'>
   <DD>The graphics cursor.
   </DD>
@@ -325,7 +314,7 @@ wcsmap — Compute geometric transforms using the image wcs
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -560,7 +549,7 @@ wcsmap — Compute geometric transforms using the image wcs
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_cursor_commands">CURSOR COMMANDS</A></H2>
+  <H3>Cursor commands</H3>
   <! BeginSection: 'CURSOR COMMANDS'>
   <UL>
   <P>
@@ -602,7 +591,7 @@ wcsmap — Compute geometric transforms using the image wcs
   <P>
   </UL>
   <! EndSection:   'CURSOR COMMANDS'>
-  <H2><A NAME="s_formats">FORMATS</A></H2>
+  <H3>Formats</H3>
   <! BeginSection: 'FORMATS'>
   <UL>
   <P>
@@ -683,7 +672,7 @@ wcsmap — Compute geometric transforms using the image wcs
   <P>
   </UL>
   <! EndSection:   'FORMATS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   <P>
@@ -704,7 +693,7 @@ wcsmap — Compute geometric transforms using the image wcs
       
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -757,17 +746,17 @@ wcsmap — Compute geometric transforms using the image wcs
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   wcstran,xregister,wcsxymatch,geomap,register,geotran
@@ -776,5 +765,3 @@ wcsmap — Compute geometric transforms using the image wcs
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'CURSOR COMMANDS' 'FORMATS' 'REFERENCES' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

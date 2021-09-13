@@ -1,3 +1,5 @@
+.. _gkimosaic:
+
 gkimosaic — Condense metacode frames to fit on one page
 =======================================================
 
@@ -5,93 +7,80 @@ gkimosaic — Condense metacode frames to fit on one page
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>gkimosaic (Mar87)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>plot</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>gkimosaic (Mar87)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>gkimosaic</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   gkimosaic -- condense metacode frames to fit on one page
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   gkimosaic input
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The metacode input, which can be redirected from STDIN or read from
   one or more binary metacode files.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output = "<TT></TT>"</A></B></DT>
+  <DT><B>output = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output = ""'>
   <DD>If <B>output</B> is specified, the mosaiced metacode is spooled to this
   file for later plotting.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_device">device = "<TT>stdgraph</TT>"</A></B></DT>
+  <DT><B>device = "<TT>stdgraph</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdgraph"'>
   <DD>Output plotting device.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nx">nx = 2</A></B></DT>
+  <DT><B>nx = 2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nx' Line='nx = 2'>
   <DD>The number of plots to draw in the x direction.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ny">ny = 2</A></B></DT>
+  <DT><B>ny = 2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ny' Line='ny = 2'>
   <DD>The number of plots to draw in the y direction.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fill">fill = no</A></B></DT>
+  <DT><B>fill = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fill' Line='fill = no'>
   <DD>The plots are reduced by equal factors in x and y when <B>fill</B> = no. 
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rotate">rotate = no</A></B></DT>
+  <DT><B>rotate = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rotate' Line='rotate = no'>
   <DD>Output the mosaiced plots rotated by 90 degrees.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = yes</A></B></DT>
+  <DT><B>interactive = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes'>
   <DD>If plotting to <B>stdgraph</B>, interactively examine each page of plots.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cursor">cursor = "<TT>stdgcur</TT>"</A></B></DT>
+  <DT><B>cursor = "<TT>stdgcur</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = "stdgcur"'>
   <DD>Source of cursor input.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Task <B>gkimosaic</B> condenses the plots in a metacode file to fit
@@ -139,7 +128,7 @@ gkimosaic — Condense metacode frames to fit on one page
   </PRE>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Plot every frame in the metacode file "<TT>oned.plots</TT>".  There will be 4 plots
@@ -160,7 +149,7 @@ gkimosaic — Condense metacode frames to fit on one page
       cl&gt; gkimosaic mcode.* nx=4 ny=4 output=plt.spool
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   Setting <B>device</B> to "<TT>stdvdm</TT>" does not work.  To produce an output file
@@ -168,7 +157,7 @@ gkimosaic — Condense metacode frames to fit on one page
   stream redirection feature of the cl.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   gkidir, gkiextract
@@ -177,5 +166,3 @@ gkimosaic — Condense metacode frames to fit on one page
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

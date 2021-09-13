@@ -1,3 +1,5 @@
+.. _odcombine:
+
 odcombine — Combine spectra (new version)
 =========================================
 
@@ -5,36 +7,23 @@ odcombine — Combine spectra (new version)
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>odcombine (Apr04)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>onedspec</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>odcombine (Apr04)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>odcombine</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   odcombine -- Combine spectra using various algorithms
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage_">USAGE	</A></H2>
+  <H3>Usage	</H3>
   <! BeginSection: 'USAGE	'>
   <UL>
   odcombine input output
   </UL>
   <! EndSection:   'USAGE	'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of input images containing spectra to be combined.  The spectra
   in the images to be combined are selected with the <I>apertures</I> and
@@ -45,7 +34,7 @@ odcombine — Combine spectra (new version)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>List of output images to be created containing the combined spectra.  If
   the grouping option is "<TT>all</TT>" then only one output image is created with the
@@ -66,14 +55,14 @@ odcombine — Combine spectra (new version)
   depending on the grouping a single name, root name, or a matching list
   is specified.
   <DL>
-  <DT><B><A NAME="l_headers">headers = "<TT></TT>" (optional)</A></B></DT>
+  <DT><B>headers = "<TT></TT>" (optional)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='headers' Line='headers = "" (optional)'>
   <DD>Optional output multiextension FITS file(s).  The extensions are dataless
   headers from each input image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_bpmasks">bpmasks = "<TT></TT>" (optional)</A></B></DT>
+  <DT><B>bpmasks = "<TT></TT>" (optional)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='bpmasks' Line='bpmasks = "" (optional)'>
   <DD>Optional output bad pixel mask(s) with good values of 0 and bad values of
   1.  Output pixels are marked as bad when no input pixels contributed to the
@@ -82,7 +71,7 @@ odcombine — Combine spectra (new version)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rejmask">rejmask = "<TT></TT>" (optional)</A></B></DT>
+  <DT><B>rejmask = "<TT></TT>" (optional)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rejmask' Line='rejmask = "" (optional)'>
   <DD>Optional output mask file(s) identifying rejected or excluded pixels.  The
   pixel mask is the size of the output image but there is one extra dimension
@@ -96,14 +85,14 @@ odcombine — Combine spectra (new version)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nrejmasks">nrejmasks = "<TT></TT>" (optional)</A></B></DT>
+  <DT><B>nrejmasks = "<TT></TT>" (optional)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nrejmasks' Line='nrejmasks = "" (optional)'>
   <DD>Optional output pixel mask(s) giving the number of input pixels rejected or
   excluded from the input images.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_expmasks">expmasks = "<TT></TT>" (optional)</A></B></DT>
+  <DT><B>expmasks = "<TT></TT>" (optional)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='expmasks' Line='expmasks = "" (optional)'>
   <DD>Optional output exposure mask(s) giving the sum of the exposure values of
   the input images with non-zero weights that contributed to that pixel.
@@ -116,7 +105,7 @@ odcombine — Combine spectra (new version)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sigma">sigma = "<TT></TT>" (optional)</A></B></DT>
+  <DT><B>sigma = "<TT></TT>" (optional)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sigma' Line='sigma = "" (optional)'>
   <DD>Optional output sigma image(s).  The sigma is the standard deviation,
   corrected for a finite population, of the input pixel values (excluding
@@ -124,7 +113,7 @@ odcombine — Combine spectra (new version)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_logfile">logfile = "<TT>STDOUT</TT>" (optional)</A></B></DT>
+  <DT><B>logfile = "<TT>STDOUT</TT>" (optional)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "STDOUT" (optional)'>
   <DD>Optional output log file.  If no file is specified then no log information is
   produced.  The special filename "<TT>STDOUT</TT>" prints log information to the
@@ -137,7 +126,7 @@ odcombine — Combine spectra (new version)
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_apertures">apertures = "<TT></TT>"</A></B></DT>
+  <DT><B>apertures = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""'>
   <DD>List of apertures to be selected for combining.  If none is specified
   then all apertures are selected.  The syntax is a blank or comma separated
@@ -145,26 +134,26 @@ odcombine — Combine spectra (new version)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_group">group = "<TT>apertures</TT>" (all|images|apertures)</A></B></DT>
+  <DT><B>group = "<TT>apertures</TT>" (all|images|apertures)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='group' Line='group = "apertures" (all|images|apertures)'>
   <DD>Option for grouping input spectra for combining (after selection by aperture)
   from one or more input images.  The options are:
   <DL>
-  <DT><B><A NAME="l_">"<TT>all</TT>"</A></B></DT>
+  <DT><B>"<TT>all</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"all"'>
   <DD>Combine all spectra from all images in the input list into a single output
   spectrum.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">"<TT>images</TT>"</A></B></DT>
+  <DT><B>"<TT>images</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"images"'>
   <DD>Combine all spectra in each input image into a single spectrum in
   separate output images.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">"<TT>apertures</TT>"</A></B></DT>
+  <DT><B>"<TT>apertures</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"apertures"'>
   <DD>Combine all spectra of the same aperture from all input images and put it
   into an output image with specified root name and a four digit aperture
@@ -179,7 +168,7 @@ odcombine — Combine spectra (new version)
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_first">first = no</A></B></DT>
+  <DT><B>first = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='first' Line='first = no'>
   <DD>Use the first input spectrum of each set to be combined to define the
   dispersion coordinates for combining and output?  If yes then all other
@@ -191,7 +180,7 @@ odcombine — Combine spectra (new version)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_w1">w1 = INDEF, w2=INDEF, dw = INDEF, nw = INDEF, log = no</A></B></DT>
+  <DT><B>w1 = INDEF, w2=INDEF, dw = INDEF, nw = INDEF, log = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='w1' Line='w1 = INDEF, w2=INDEF, dw = INDEF, nw = INDEF, log = no'>
   <DD>The output linear or log linear wavelength scale if the dispersion of the
   first spectrum is not used.  INDEF values are filled in from the maximum
@@ -208,7 +197,7 @@ odcombine — Combine spectra (new version)
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_combine">combine = "<TT>average</TT>" (average|median|sum)</A></B></DT>
+  <DT><B>combine = "<TT>average</TT>" (average|median|sum)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='combine' Line='combine = "average" (average|median|sum)'>
   <DD>Type of combining operation performed on the final set of pixels (after
   offsetting, masking, thresholding, and rejection).  The choices are
@@ -220,7 +209,7 @@ odcombine — Combine spectra (new version)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_reject">reject = "<TT>none</TT>" (none|minmax|ccdclip|crreject|sigclip|avsigclip|pclip)</A></B></DT>
+  <DT><B>reject = "<TT>none</TT>" (none|minmax|ccdclip|crreject|sigclip|avsigclip|pclip)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='reject' Line='reject = "none" (none|minmax|ccdclip|crreject|sigclip|avsigclip|pclip)'>
   <DD>Type of rejection operation performed on the pixels remaining after offsetting,
   masking and thresholding.  The algorithms are described in the
@@ -239,7 +228,7 @@ odcombine — Combine spectra (new version)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_outtype">outtype = "<TT>real</TT>" (none|short|ushort|integer|long|real|double)</A></B></DT>
+  <DT><B>outtype = "<TT>real</TT>" (none|short|ushort|integer|long|real|double)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='outtype' Line='outtype = "real" (none|short|ushort|integer|long|real|double)'>
   <DD>Output image pixel datatype.  The pixel datatypes are "<TT>double</TT>", "<TT>real</TT>",
   "<TT>long</TT>", "<TT>integer</TT>", unsigned short "<TT>ushort</TT>", and "<TT>short</TT>" with highest
@@ -250,7 +239,7 @@ odcombine — Combine spectra (new version)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_outlimits">outlimits = "<TT></TT>"</A></B></DT>
+  <DT><B>outlimits = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='outlimits' Line='outlimits = ""'>
   <DD>Output region limits specified as a pair of whitespace separated pixel
   values.
@@ -262,7 +251,7 @@ odcombine — Combine spectra (new version)
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_smaskformat">smaskformat = "<TT>bpmspectrum</TT>" (bpmspectrum|bpmpixel)</A></B></DT>
+  <DT><B>smaskformat = "<TT>bpmspectrum</TT>" (bpmspectrum|bpmpixel)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='smaskformat' Line='smaskformat = "bpmspectrum" (bpmspectrum|bpmpixel)'>
   <DD>When a mask is applied it must be matched to the input spectrum.  If the
   value of this parameter is "<TT>bpmspectrum</TT>" the mask file is assumed to have a
@@ -277,7 +266,7 @@ odcombine — Combine spectra (new version)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_smasktype">smasktype = "<TT>none</TT>" (none|goodvalue|badvalue|goodbits|badbit)</A></B></DT>
+  <DT><B>smasktype = "<TT>none</TT>" (none|goodvalue|badvalue|goodbits|badbit)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='smasktype' Line='smasktype = "none" (none|goodvalue|badvalue|goodbits|badbit)'>
   <DD>Type of pixel masking to use.  If "<TT>none</TT>" or "<TT></TT>" then no pixel masking is
   done even if an image has an associated  pixel mask.  The other choices are
@@ -291,7 +280,7 @@ odcombine — Combine spectra (new version)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_maskvalue">maskvalue = 0</A></B></DT>
+  <DT><B>maskvalue = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='maskvalue' Line='maskvalue = 0'>
   <DD>Mask value used with the <I>masktype</I> parameter.  If the mask type
   selects good or bad bits the value may be specified using IRAF notation
@@ -300,7 +289,7 @@ odcombine — Combine spectra (new version)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_blank">blank = 0.</A></B></DT>
+  <DT><B>blank = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='blank' Line='blank = 0.'>
   <DD>Output value to be used when there are no pixels.
   </DD>
@@ -328,7 +317,7 @@ odcombine — Combine spectra (new version)
   images with the apertures in an image varying first.
   <P>
   <DL>
-  <DT><B><A NAME="l_scale">scale = "<TT>none</TT>" (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)</A></B></DT>
+  <DT><B>scale = "<TT>none</TT>" (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='scale' Line='scale = "none" (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)'>
   <DD>Multiplicative image scaling to be applied.  The choices are none, multiply
   by the reciprocal of the mode, median, or mean of the specified statistics
@@ -339,7 +328,7 @@ odcombine — Combine spectra (new version)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_zero">zero = "<TT>none</TT>" (none|mode|median|mean|@&lt;file&gt;|!&lt;keyword&gt;)</A></B></DT>
+  <DT><B>zero = "<TT>none</TT>" (none|mode|median|mean|@&lt;file&gt;|!&lt;keyword&gt;)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='zero' Line='zero = "none" (none|mode|median|mean|@&lt;file&gt;|!&lt;keyword&gt;)'>
   <DD>Additive zero level image shifts to be applied.  The choices are none, add
   the negative of the mode, median, or mean of the specified statistics
@@ -350,7 +339,7 @@ odcombine — Combine spectra (new version)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_weight">weight = "<TT>none</TT>" (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)</A></B></DT>
+  <DT><B>weight = "<TT>none</TT>" (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='weight' Line='weight = "none" (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)'>
   <DD>Weights to be applied during the final averaging.  The choices are none,
   the mode, median, or mean of the specified statistics section, the exposure
@@ -363,7 +352,7 @@ odcombine — Combine spectra (new version)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_statsec">statsec = "<TT></TT>"</A></B></DT>
+  <DT><B>statsec = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='statsec' Line='statsec = ""'>
   <DD>Section of images to use in computing image statistics for scaling and
   weighting.  If no section is given then the entire region of the input is
@@ -377,7 +366,7 @@ odcombine — Combine spectra (new version)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"> expname = "<TT></TT>"</A></B></DT>
+  <DT><B> expname = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line=' expname = ""'>
   <DD>Image header keyword to be used with the exposure scaling and weighting
   options.  Also if an exposure keyword is specified that keyword will be
@@ -391,7 +380,7 @@ odcombine — Combine spectra (new version)
   
   </CENTER><BR>
   <DL>
-  <DT><B><A NAME="l_lthreshold">lthreshold = INDEF, hthreshold = INDEF</A></B></DT>
+  <DT><B>lthreshold = INDEF, hthreshold = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lthreshold' Line='lthreshold = INDEF, hthreshold = INDEF'>
   <DD>Low and high thresholds to be applied to the input pixels.  This is done
   before any scaling, rejection, and combining.  If INDEF the thresholds
@@ -399,7 +388,7 @@ odcombine — Combine spectra (new version)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nlow">nlow = 1,  nhigh = 1 (minmax)</A></B></DT>
+  <DT><B>nlow = 1,  nhigh = 1 (minmax)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nlow' Line='nlow = 1,  nhigh = 1 (minmax)'>
   <DD>The number of low and high pixels to be rejected by the "<TT>minmax</TT>" algorithm.
   These numbers are converted to fractions of the total number of input images
@@ -410,7 +399,7 @@ odcombine — Combine spectra (new version)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nkeep">nkeep = 1</A></B></DT>
+  <DT><B>nkeep = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nkeep' Line='nkeep = 1'>
   <DD>The minimum number of pixels to retain or the maximum number to reject
   when using the clipping algorithms (ccdclip, crreject, sigclip,
@@ -421,7 +410,7 @@ odcombine — Combine spectra (new version)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_mclip">mclip = yes (ccdclip, crreject, sigclip, avsigcliip)</A></B></DT>
+  <DT><B>mclip = yes (ccdclip, crreject, sigclip, avsigcliip)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='mclip' Line='mclip = yes (ccdclip, crreject, sigclip, avsigcliip)'>
   <DD>Use the median as the estimate for the true intensity rather than the
   average with high and low values excluded in the "<TT>ccdclip</TT>", "<TT>crreject</TT>",
@@ -431,7 +420,7 @@ odcombine — Combine spectra (new version)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_lsigma">lsigma = 3., hsigma = 3. (ccdclip, crreject, sigclip, avsigclip, pclip)</A></B></DT>
+  <DT><B>lsigma = 3., hsigma = 3. (ccdclip, crreject, sigclip, avsigclip, pclip)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='lsigma' Line='lsigma = 3., hsigma = 3. (ccdclip, crreject, sigclip, avsigclip, pclip)'>
   <DD>Low and high sigma clipping factors for the "<TT>ccdclip</TT>", "<TT>crreject</TT>", "<TT>sigclip</TT>",
   "<TT>avsigclip</TT>", and "<TT>pclip</TT>" algorithms.  They multiply a "<TT>sigma</TT>" factor
@@ -441,7 +430,7 @@ odcombine — Combine spectra (new version)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_rdnoise">rdnoise = "<TT>0.</TT>", gain = "<TT>1.</TT>", snoise = "<TT>0.</TT>" (ccdclip, crreject)</A></B></DT>
+  <DT><B>rdnoise = "<TT>0.</TT>", gain = "<TT>1.</TT>", snoise = "<TT>0.</TT>" (ccdclip, crreject)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='rdnoise' Line='rdnoise = "0.", gain = "1.", snoise = "0." (ccdclip, crreject)'>
   <DD>CCD readout noise in electrons, gain in electrons/DN, and sensitivity noise
   as a fraction.  These parameters are used with the "<TT>ccdclip</TT>" and "<TT>crreject</TT>"
@@ -459,7 +448,7 @@ odcombine — Combine spectra (new version)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sigscale">sigscale = 0.1 (ccdclip, crreject, sigclip, avsigclip)</A></B></DT>
+  <DT><B>sigscale = 0.1 (ccdclip, crreject, sigclip, avsigclip)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sigscale' Line='sigscale = 0.1 (ccdclip, crreject, sigclip, avsigclip)'>
   <DD>This parameter determines when poisson corrections are made to the
   computation of a sigma for images with different scale factors.  If all
@@ -474,7 +463,7 @@ odcombine — Combine spectra (new version)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pclip">pclip = -0.5 (pclip)</A></B></DT>
+  <DT><B>pclip = -0.5 (pclip)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pclip' Line='pclip = -0.5 (pclip)'>
   <DD>Percentile clipping algorithm parameter.  If greater than
   one in absolute value then it specifies a number of pixels above or
@@ -487,7 +476,7 @@ odcombine — Combine spectra (new version)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_grow">grow = 0.</A></B></DT>
+  <DT><B>grow = 0.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='grow' Line='grow = 0.'>
   <DD>Radius in pixels for additional pixel to be rejected in an image with a
   rejected pixel from one of the rejection algorithms.  This applies only to
@@ -507,7 +496,7 @@ odcombine — Combine spectra (new version)
   </CENTER><BR>
   <P>
   <DL>
-  <DT><B><A NAME="l_">&lt;package&gt;.interp</A></B></DT>
+  <DT><B>&lt;package&gt;.interp</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='&lt;package&gt;.interp'>
   <DD>When the spectra have to be interpolated to a common pixel sampling
   the "<TT>interp</TT>" parameter from the package from which ODCOMBINE is used
@@ -516,7 +505,7 @@ odcombine — Combine spectra (new version)
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <B>Odcombine</B> combines input spectra by interpolating them (if necessary)
@@ -588,7 +577,7 @@ odcombine — Combine spectra (new version)
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  Combine orders of echelle images.
@@ -614,11 +603,11 @@ odcombine — Combine spectra (new version)
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_ODCOMBINE">ODCOMBINE V2.12.3</A></B></DT>
+  <DT><B>ODCOMBINE V2.12.3</B></DT>
   <! Sec='REVISIONS' Level=0 Label='ODCOMBINE' Line='ODCOMBINE V2.12.3'>
   <DD>This is a new version that incorporates most of the features of
   IMCOMBINE.
@@ -628,13 +617,13 @@ odcombine — Combine spectra (new version)
   are noted.
   <P>
   <DL>
-  <DT><B><A NAME="l_"></A></B></DT>
+  <DT><B></B></DT>
   <! Sec='REVISIONS' Level=1 Label='' Line=''>
   <DD>The output is always a single spectrum per image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_"></A></B></DT>
+  <DT><B></B></DT>
   <! Sec='REVISIONS' Level=1 Label='' Line=''>
   <DD>The "<TT>first</TT>" option does not allow rebinning to a non-linear dispersion.
   Instead, it rebins to the nearest linear dispersion matching the first
@@ -645,7 +634,7 @@ odcombine — Combine spectra (new version)
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imcombine, scombine, scopy, sarith, lscombine
@@ -654,5 +643,3 @@ odcombine — Combine spectra (new version)
   
   <! Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

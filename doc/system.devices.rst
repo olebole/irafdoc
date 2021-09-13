@@ -1,3 +1,5 @@
+.. _devices:
+
 devices — Print information on the locally available devices
 ============================================================
 
@@ -5,19 +7,6 @@ devices — Print information on the locally available devices
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>devices (Jan99)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>NOAO/Tucson Devices</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>devices (Jan99)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>devices</TITLE>
-  <UL>
-  <PRE>
       <B>Device      Aliases 	Description+Location</B>
   <P>
       lw1		apl		HP LaserJet-4M, outside Rm B50-A
@@ -82,5 +71,3 @@ devices — Print information on the locally available devices
   <P>
   <! Contents:  >
   
-  </BODY>
-  </HTML>

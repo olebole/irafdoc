@@ -1,3 +1,5 @@
+.. _tabpar:
+
 tabpar — Transfer a table element to an IRAF parameter.
 =======================================================
 
@@ -5,32 +7,19 @@ tabpar — Transfer a table element to an IRAF parameter.
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>tabpar (May2002)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>tables</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>tabpar (May2002)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>tabpar</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   tabpar -- Copy a table element to an IRAF parameter.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   tabpar table column row
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task reads a table element specified by a table name, column name,
@@ -41,29 +30,29 @@ tabpar — Transfer a table element to an IRAF parameter.
   converted to numeric types with the built in functions real() and int().
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_table">table [file name]</A></B></DT>
+  <DT><B>table [file name]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='table' Line='table [file name]'>
   <DD>Name of the table from which this task is to read a value.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_column">column [string]</A></B></DT>
+  <DT><B>column [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='column' Line='column [string]'>
   <DD>Column name. (The column name is not case sensitive.)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_row">row [integer, min=1, max=INDEF]</A></B></DT>
+  <DT><B>row [integer, min=1, max=INDEF]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='row' Line='row [integer, min=1, max=INDEF]'>
   <DD>Row number.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(format=yes) [boolean]</A></B></DT>
+  <DT><B>(format=yes) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(format=yes) [boolean]'>
   <DD>Format the value using table print format?
   <P>
@@ -83,20 +72,20 @@ tabpar — Transfer a table element to an IRAF parameter.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(value) [string]</A></B></DT>
+  <DT><B>(value) [string]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(value) [string]'>
   <DD>This parameter is used to store the value read in from 'table'.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(undef) [boolean]</A></B></DT>
+  <DT><B>(undef) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(undef) [boolean]'>
   <DD>Is the value read in from 'table' undefined?
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Print the interval between the first 2 wavelengths (i.e., rows 1 and 2
@@ -136,18 +125,18 @@ tabpar — Transfer a table element to an IRAF parameter.
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   This task was written by Bernie Simon.
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   keypar, keytab, parkey, partab, tabkey
@@ -156,5 +145,3 @@ tabpar — Transfer a table element to an IRAF parameter.
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _photpars:
+
 photpars — Edit the aperture photometry parameters
 ==================================================
 
@@ -5,54 +7,41 @@ photpars — Edit the aperture photometry parameters
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>photpars (May00)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.digiphot.daophot</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>photpars (May00)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>photpars</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   photpars -- edit the photometry parameters
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   photpars
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_weighting">weighting = "<TT>constant</TT>"</A></B></DT>
+  <DT><B>weighting = "<TT>constant</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='weighting' Line='weighting = "constant"'>
   <DD>The type of weighting. The weighting is ignored by the PHOT task. The options
   are:
   <DL>
-  <DT><B><A NAME="l_constant">constant</A></B></DT>
+  <DT><B>constant</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='constant' Line='constant'>
   <DD>Uniform weights of 1 for each pixel are used.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_cone">cone</A></B></DT>
+  <DT><B>cone</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='cone' Line='cone'>
   <DD>A conical weighting function of full width half maximum <I>fwhmpsf</I> as
   defined in the DATAPARS parameter set is used.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_gauss">gauss</A></B></DT>
+  <DT><B>gauss</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='gauss' Line='gauss'>
   <DD>A Gaussian weighting function of full width half maximum <I>fwhmpsf</I> as
   defined in the DATAPARS parameter set is used.
@@ -61,7 +50,7 @@ photpars — Edit the aperture photometry parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apertures">apertures = "<TT>3</TT>" (scale units)</A></B></DT>
+  <DT><B>apertures = "<TT>3</TT>" (scale units)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = "3" (scale units)'>
   <DD>A list of aperture radii in units of the  scale parameter or the name of the
   file containing the list of apertures. List elements may be separated by
@@ -70,13 +59,13 @@ photpars — Edit the aperture photometry parameters
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_zmag">zmag = 25.00</A></B></DT>
+  <DT><B>zmag = 25.00</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='zmag' Line='zmag = 25.00'>
   <DD>The zero point offset for the magnitude scale. 
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_mkapert">mkapert = no</A></B></DT>
+  <DT><B>mkapert = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='mkapert' Line='mkapert = no'>
   <DD>Mark the photometry apertures on the displayed image?
   </DD>
@@ -84,7 +73,7 @@ photpars — Edit the aperture photometry parameters
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -103,7 +92,7 @@ photpars — Edit the aperture photometry parameters
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -145,17 +134,17 @@ photpars — Edit the aperture photometry parameters
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   epar,datapars,centerpars,fitskypars,phot
@@ -164,5 +153,3 @@ photpars — Edit the aperture photometry parameters
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

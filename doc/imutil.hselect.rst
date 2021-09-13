@@ -1,3 +1,5 @@
+.. _hselect:
+
 hselect — Select a subset of images satisfying a boolean expression
 ===================================================================
 
@@ -5,42 +7,29 @@ hselect — Select a subset of images satisfying a boolean expression
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>hselect (May85)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.imutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>hselect (May85)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>hselect</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   hselect - extract keyword values from images satisfying a selection expression
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   hselect images fields expr
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>Images forming the set from which selected images are to be drawn.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fields">fields</A></B></DT>
+  <DT><B>fields</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fields' Line='fields'>
   <DD>Comma separated list of keywords or keyword patterns to be extracted
   from each selected image.  The list elements are matched against the
@@ -49,14 +38,14 @@ hselect — Select a subset of images satisfying a boolean expression
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_expr">expr</A></B></DT>
+  <DT><B>expr</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='expr' Line='expr'>
   <DD>The boolean expression to be used as the selection criteria.  The expression
   is evaluated independently for each image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_missing">missing = "<TT>INDEF</TT>"</A></B></DT>
+  <DT><B>missing = "<TT>INDEF</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='missing' Line='missing = "INDEF"'>
   <DD>Output value for missing keywords.  Note that this will only occur when the
   fields are specified with leading "<TT>$</TT>".
@@ -64,7 +53,7 @@ hselect — Select a subset of images satisfying a boolean expression
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The function of <I>hselect</I> is to extract keyword values from a subset
@@ -92,7 +81,7 @@ hselect — Select a subset of images satisfying a boolean expression
   image.  See <B>hedit</B> for more on the special values and pattern syntax.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Compute the mean exposure time for all the images in a database.  Note that
@@ -139,14 +128,14 @@ hselect — Select a subset of images satisfying a boolean expression
   scanned into both string and numerical variables.
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   Since individual image headers are currently stored as separate files,
   selection from a large database is quite slow.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   hedit, imgets, imheader
@@ -155,5 +144,3 @@ hselect — Select a subset of images satisfying a boolean expression
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

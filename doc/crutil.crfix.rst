@@ -1,3 +1,5 @@
+.. _crfix:
+
 crfix — Fix cosmic rays in images using cosmic ray masks
 ========================================================
 
@@ -5,26 +7,13 @@ crfix — Fix cosmic rays in images using cosmic ray masks
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>crfix (Apr98)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.imred.crutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>crfix (Apr98)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>crfix</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   crfix -- fix cosmic rays in images using cosmic ray masks
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage_">USAGE	</A></H2>
+  <H3>Usage	</H3>
   <! BeginSection: 'USAGE	'>
   <UL>
   <PRE>
@@ -32,24 +21,24 @@ crfix — Fix cosmic rays in images using cosmic ray masks
   </PRE>
   </UL>
   <! EndSection:   'USAGE	'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>Input two dimensional image to be "<TT>fixed</TT>" (modified) by linear interpolation.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>Output image.  If the output image name exactly matches the input
   image name (including extensions) then the image will be modified in place.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_crmask">crmask</A></B></DT>
+  <DT><B>crmask</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='crmask' Line='crmask'>
   <DD>Cosmic ray mask identifying the cosmic rays to be fixed.  The mask
   values are zero for good data and non-zero for cosmic rays.
@@ -57,7 +46,7 @@ crfix — Fix cosmic rays in images using cosmic ray masks
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The input and output images are specified by the <I>input</I> and
@@ -75,7 +64,7 @@ crfix — Fix cosmic rays in images using cosmic ray masks
   along columns or lines.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  To replace cosmic rays in an image:
@@ -85,7 +74,7 @@ crfix — Fix cosmic rays in images using cosmic ray masks
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   fixpix, crmedian, crnebula, cosmicrays, credit, epix
@@ -94,5 +83,3 @@ crfix — Fix cosmic rays in images using cosmic ray masks
   
   <! Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

@@ -1,3 +1,5 @@
+.. _ccdinstrument:
+
 ccdinstrument — Review and edit instrument translation files
 ============================================================
 
@@ -5,43 +7,30 @@ ccdinstrument — Review and edit instrument translation files
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>ccdinstrument (Dec93)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.imred.ccdred</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>ccdinstrument (Dec93)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>ccdinstrument</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   ccdinstrument -- Setup and verify CCD instrument translation files
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage_">USAGE	</A></H2>
+  <H3>Usage	</H3>
   <! BeginSection: 'USAGE	'>
   <UL>
   ccdinstrument images
   </UL>
   <! EndSection:   'USAGE	'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>List of images to be verified or used to setup a CCD instrument translation
   file.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_instrument">instrument = "<TT>)_.instrument</TT>"</A></B></DT>
+  <DT><B>instrument = "<TT>)_.instrument</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='instrument' Line='instrument = ")_.instrument"'>
   <DD>CCD instrument translation file.  The default is to use the translation
   file defined in the <B>ccdred</B> package parameters.  Note that one would
@@ -50,14 +39,14 @@ ccdinstrument — Review and edit instrument translation files
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ssfile">ssfile = "<TT>)_.ssfile</TT>"</A></B></DT>
+  <DT><B>ssfile = "<TT>)_.ssfile</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ssfile' Line='ssfile = ")_.ssfile"'>
   <DD>Subset translation file.  The default is to use the file defined in
   the <B>ccdred</B> package parameters.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_edit">edit = yes</A></B></DT>
+  <DT><B>edit = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='edit' Line='edit = yes'>
   <DD>Edit the instrument translation file?  If "<TT>yes</TT>" an interactive
   mode is entered allowing translation parameters to be modified while if
@@ -65,7 +54,7 @@ ccdinstrument — Review and edit instrument translation files
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_parameters">parameters = "<TT>basic</TT>"</A></B></DT>
+  <DT><B>parameters = "<TT>basic</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='parameters' Line='parameters = "basic"'>
   <DD>Parameters to be displayed.  The choices are "<TT>basic</TT>" to display only the
   most basic parameters (those needed for the simplest automation of
@@ -79,7 +68,7 @@ ccdinstrument — Review and edit instrument translation files
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The purpose of this task is to provide an interface to simplify setting
@@ -242,7 +231,7 @@ ccdinstrument — Review and edit instrument translation files
   </PRE>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. To verify the translations for a set of images using the default
@@ -430,7 +419,7 @@ ccdinstrument — Review and edit instrument translation files
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   instruments, setinstrument
@@ -439,5 +428,3 @@ ccdinstrument — Review and edit instrument translation files
   
   <! Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

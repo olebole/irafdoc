@@ -1,3 +1,5 @@
+.. _fluxcalib:
+
 fluxcalib — Apply flux calibration to images (obsolete)
 =======================================================
 
@@ -5,42 +7,29 @@ fluxcalib — Apply flux calibration to images (obsolete)
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>fluxcalib (Oct86)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.twodspec.longslit</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>fluxcalib (Oct86)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>fluxcalib</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   fluxcalib -- Apply flux calibration
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   fluxcalib images fluxfile
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>List of input images to be flux calibrated.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>List of output flux calibrated images.  The output images may be the same
   as the input images.  The output image will be of type real regardless
@@ -48,26 +37,26 @@ fluxcalib — Apply flux calibration to images (obsolete)
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fluxfile">fluxfile</A></B></DT>
+  <DT><B>fluxfile</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fluxfile' Line='fluxfile'>
   <DD>Flux calibration file from <B>onedspec.sensfunc</B>.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fnu">fnu = no</A></B></DT>
+  <DT><B>fnu = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fnu' Line='fnu = no'>
   <DD>Convert the flux calibration to flux per unit frequency (F-nu)?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_exposure">exposure = "<TT>otime</TT>"</A></B></DT>
+  <DT><B>exposure = "<TT>otime</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='exposure' Line='exposure = "otime"'>
   <DD>Exposure time keyword in image headers.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   The specified images are flux calibrated using a flux calibration image
@@ -115,7 +104,7 @@ fluxcalib — Apply flux calibration to images (obsolete)
   without requiring this keyword to be changed.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   Standard stars were observed and extracted to one dimensional spectra.
@@ -144,18 +133,18 @@ fluxcalib — Apply flux calibration to images (obsolete)
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_FLUXCALIB">FLUXCALIB V2.10</A></B></DT>
+  <DT><B>FLUXCALIB V2.10</B></DT>
   <! Sec='REVISIONS' Level=0 Label='FLUXCALIB' Line='FLUXCALIB V2.10'>
   <DD>The output pixel type is now forced to be real.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   onedspec.standard onedspec.sensfunc
@@ -164,5 +153,3 @@ fluxcalib — Apply flux calibration to images (obsolete)
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

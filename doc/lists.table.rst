@@ -1,3 +1,5 @@
+.. _table:
+
 table — Format a list of words into a table
 ===========================================
 
@@ -5,61 +7,48 @@ table — Format a list of words into a table
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>table (Jan86)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>lists</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>table (Jan86)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>table</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   table -- format single column input into a table
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   table input_files
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input_files">input_files</A></B></DT>
+  <DT><B>input_files</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input_files' Line='input_files'>
   <DD>List of files to be formatted, may be STDIN.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_first_col">first_col = 7</A></B></DT>
+  <DT><B>first_col = 7</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='first_col' Line='first_col = 7'>
   <DD>Offset to first column of table
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_last_col">last_col = 0</A></B></DT>
+  <DT><B>last_col = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='last_col' Line='last_col = 0'>
   <DD>Offset to last column of table.  The value <B>last_col</B> = 0 indicates 
   right margin.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ncols">ncols = 0</A></B></DT>
+  <DT><B>ncols = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ncols' Line='ncols = 0'>
   <DD>Number of columns.  The value <B>ncols</B> = 0 indicates maximum that will fit.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_maxstrlen">maxstrlen = 0</A></B></DT>
+  <DT><B>maxstrlen = 0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='maxstrlen' Line='maxstrlen = 0'>
   <DD>Maximum string length for table entry.  The value <B>maxstrlen</B> = 0
   indicates no limit.
@@ -67,7 +56,7 @@ table — Format a list of words into a table
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Task <B>table</B> reads a list of strings from the standard input or a 
@@ -77,7 +66,7 @@ table — Format a list of words into a table
   is not sorted; this should be done as a separate operation if desired.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. Format a file containing names into a two column table.  The table is 
@@ -86,7 +75,7 @@ table — Format a list of words into a table
   	cl&gt; sort names | table ncols=2
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   words, tokens
@@ -95,5 +84,3 @@ table — Format a list of words into a table
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

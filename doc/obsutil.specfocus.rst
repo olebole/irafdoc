@@ -1,3 +1,5 @@
+.. _specfocus:
+
 specfocus — Determine spectral focus and alignment variations
 =============================================================
 
@@ -5,36 +7,23 @@ specfocus — Determine spectral focus and alignment variations
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>specfocus (Nov01)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.obsutil</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>specfocus (Nov01)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>specfocus</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   specfocus -- Determine spectral focus and alignment variations
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   specfocus images
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>List of 1D or 2D focus images.  Typically the input is a list of raw
   2D CCD images of arc slit spectra.  The 1D image input is provided to
@@ -42,7 +31,7 @@ specfocus — Determine spectral focus and alignment variations
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_focus">focus = "<TT></TT>"</A></B></DT>
+  <DT><B>focus = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='focus' Line='focus = ""'>
   <DD>List of focus identification values to be associated with each input image
   or an image header keyword containing the values.  The list may be an
@@ -54,20 +43,20 @@ specfocus — Determine spectral focus and alignment variations
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_corwidth">corwidth = 20.</A></B></DT>
+  <DT><B>corwidth = 20.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='corwidth' Line='corwidth = 20.'>
   <DD>Correlation width in pixels.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_level">level = 0.5</A></B></DT>
+  <DT><B>level = 0.5</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='level' Line='level = 0.5'>
   <DD>Percent or fraction of the correlation peak at which to measure focus
   widths.  The default is 50% or full width at half maximum.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_shifts">shifts = yes</A></B></DT>
+  <DT><B>shifts = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='shifts' Line='shifts = yes'>
   <DD>Compute dispersion shifts across the dispersion when there are multiple
   samples?  If yes and there are multiple samples across the dispersion
@@ -77,14 +66,14 @@ specfocus — Determine spectral focus and alignment variations
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_dispaxis">dispaxis = 2</A></B></DT>
+  <DT><B>dispaxis = 2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dispaxis' Line='dispaxis = 2'>
   <DD>Dispersion axis for 2D images.  The image header keyword DISPAXIS has
   precedence over this value.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nspectra">nspectra = 1, ndisp = 1</A></B></DT>
+  <DT><B>nspectra = 1, ndisp = 1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nspectra' Line='nspectra = 1, ndisp = 1'>
   <DD>The number of spectral samples across the dispersion
   and the number of subpieces along the dispersion to divide the spectra
@@ -96,7 +85,7 @@ specfocus — Determine spectral focus and alignment variations
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_slit1">slit1 = INDEF, slit2 = INDEF</A></B></DT>
+  <DT><B>slit1 = INDEF, slit2 = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='slit1' Line='slit1 = INDEF, slit2 = INDEF'>
   <DD>The lower and upper edges of the slit (or data region) in pixel
   coordinates (lines or columns) across the dispersion axis.  A value
@@ -105,7 +94,7 @@ specfocus — Determine spectral focus and alignment variations
   </DL>
   <P>
   <DL>
-  <DT><B><A NAME="l_logfile">logfile = "<TT>logfile</TT>"</A></B></DT>
+  <DT><B>logfile = "<TT>logfile</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "logfile"'>
   <DD>File in which to record the results.  If no file is specified no log
   output is produced.
@@ -113,7 +102,7 @@ specfocus — Determine spectral focus and alignment variations
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_cursor_commands">CURSOR COMMANDS</A></H2>
+  <H3>Cursor commands</H3>
   <! BeginSection: 'CURSOR COMMANDS'>
   <UL>
   All keys select an image and a sample (one of the <I>ndisp</I> samples along
@@ -136,7 +125,7 @@ specfocus — Determine spectral focus and alignment variations
   <P>
   </UL>
   <! EndSection:   'CURSOR COMMANDS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task estimates the dispersion width of spectral lines in sequences of
@@ -372,7 +361,7 @@ specfocus — Determine spectral focus and alignment variations
   key quits the task.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  A series of 2D focus images is obtained with focus values
@@ -433,7 +422,7 @@ specfocus — Determine spectral focus and alignment variations
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imexamine, implot, ranges, splot
@@ -442,5 +431,3 @@ specfocus — Determine spectral focus and alignment variations
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'CURSOR COMMANDS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

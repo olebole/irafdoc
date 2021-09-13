@@ -1,3 +1,5 @@
+.. _psfmatch:
+
 psfmatch — Match the point-spread functions of 1-D or 2-D images
 ================================================================
 
@@ -5,42 +7,29 @@ psfmatch — Match the point-spread functions of 1-D or 2-D images
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>psfmatch (Oct94)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>images.immatch</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>psfmatch (Oct94)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>psfmatch</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   psfmatch -- match the point spread functions of 1 and 2D images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   psfmatch input reference psfdata kernel 
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The list of input images to be matched.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_reference">reference</A></B></DT>
+  <DT><B>reference</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='reference' Line='reference'>
   <DD>The list of reference images to which the input images are to be matched if
   <I>convolution</I> = "<TT>image</TT>", or the list of reference image psfs if 
@@ -51,7 +40,7 @@ psfmatch — Match the point-spread functions of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_psfdata">psfdata</A></B></DT>
+  <DT><B>psfdata</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='psfdata' Line='psfdata'>
   <DD>The list of objects used to compute the psf matching function if
   <I>convolution</I> is "<TT>image</TT>", or the list of input image psfs if 
@@ -64,7 +53,7 @@ psfmatch — Match the point-spread functions of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_kernel">kernel</A></B></DT>
+  <DT><B>kernel</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='kernel' Line='kernel'>
   <DD>The list of input/output psf matching function images to be convolved with the
   input images to produce the output images. The number of kernel images
@@ -72,7 +61,7 @@ psfmatch — Match the point-spread functions of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output = "<TT></TT>"</A></B></DT>
+  <DT><B>output = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output = ""'>
   <DD>The list of output matched images. If <I>output</I> is the NULL string
   then the psf matching function is computed for each input image and written to
@@ -81,11 +70,11 @@ psfmatch — Match the point-spread functions of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_convolution">convolution = "<TT>image</TT>"</A></B></DT>
+  <DT><B>convolution = "<TT>image</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='convolution' Line='convolution = "image"'>
   <DD>The algorithm used to compute the psf matching function. The options are:
   <DL>
-  <DT><B><A NAME="l_image">image</A></B></DT>
+  <DT><B>image</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='image' Line='image'>
   <DD>The psf matching function is computed directly from the reference and input
   image data using the objects specified in <I>psfdata</I>, the data
@@ -94,14 +83,14 @@ psfmatch — Match the point-spread functions of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_psf">psf   </A></B></DT>
+  <DT><B>psf   </B></DT>
   <! Sec='PARAMETERS' Level=1 Label='psf' Line='psf   '>
   <DD>The psf matching function is computed directly from pre-computed
   reference and input image psfs using the convolution theorem.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_kernel">kernel</A></B></DT>
+  <DT><B>kernel</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='kernel' Line='kernel'>
   <DD>No psf matching function is computed. Instead the psf matching function
   is  read from the input image <I>kernel</I>.
@@ -110,7 +99,7 @@ psfmatch — Match the point-spread functions of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dnx">dnx = 31, ls dny = 31</A></B></DT>
+  <DT><B>dnx = 31, ls dny = 31</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dnx' Line='dnx = 31, ls dny = 31'>
   <DD>The x and y width of the data region to be extracted around each object. The
   data region should be big enough to include both object and sky data.
@@ -119,7 +108,7 @@ psfmatch — Match the point-spread functions of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_pnx">pnx = 15, pny = 15</A></B></DT>
+  <DT><B>pnx = 15, pny = 15</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='pnx' Line='pnx = 15, pny = 15'>
   <DD>The x and y width of the psf matching function to be computed which must be
   less than <I>dnx</I> and <I>dny</I> respectively. The psf
@@ -130,7 +119,7 @@ psfmatch — Match the point-spread functions of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_center">center = yes</A></B></DT>
+  <DT><B>center = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='center' Line='center = yes'>
   <DD>Center the objects in <I>psfdata</I> before extracting the data from the
   input and reference images. Centering should be turned off if the objects
@@ -140,7 +129,7 @@ psfmatch — Match the point-spread functions of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_background">background = median</A></B></DT>
+  <DT><B>background = median</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='background' Line='background = median'>
   <DD>The default background function to be subtracted from the input
   and reference image data in each object region before the
@@ -151,34 +140,34 @@ psfmatch — Match the point-spread functions of 1-D or 2-D images
   "<TT>kernel</TT>".
   The options are:
   <DL>
-  <DT><B><A NAME="l_none">none</A></B></DT>
+  <DT><B>none</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='none' Line='none'>
   <DD>no background subtraction is done.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">"<TT>insky refsky</TT>"</A></B></DT>
+  <DT><B>"<TT>insky refsky</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='' Line='"insky refsky"'>
   <DD>the numerical values of insky and refsky are subtracted from the
   input and reference image respectively.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_mean">mean</A></B></DT>
+  <DT><B>mean</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='mean' Line='mean'>
   <DD>the mean of the input and reference image region is computed and subtracted
   from the image data.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_median">median</A></B></DT>
+  <DT><B>median</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='median' Line='median'>
   <DD>the median of the input and reference image region is computed and subtracted
   from the data.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_plane">plane</A></B></DT>
+  <DT><B>plane</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='plane' Line='plane'>
   <DD>a plane is fit to the input and reference image region and subtracted
   from the data.
@@ -187,14 +176,14 @@ psfmatch — Match the point-spread functions of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_loreject">loreject = INDEF, ls hireject = INDEF</A></B></DT>
+  <DT><B>loreject = INDEF, ls hireject = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='loreject' Line='loreject = INDEF, ls hireject = INDEF'>
   <DD>The k-sigma rejection limits for removing the effects of bad data from the
   background fit.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_apodize">apodize = 0.0</A></B></DT>
+  <DT><B>apodize = 0.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='apodize' Line='apodize = 0.0'>
   <DD>The fraction of the input and reference image data endpoints in x and y
   to apodize with a
@@ -204,7 +193,7 @@ psfmatch — Match the point-spread functions of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_fluxratio">fluxratio = INDEF</A></B></DT>
+  <DT><B>fluxratio = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='fluxratio' Line='fluxratio = INDEF'>
   <DD>The ratio of the integrated flux of the reference objects to the integrated
   flux of the input objects.
@@ -212,19 +201,19 @@ psfmatch — Match the point-spread functions of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_filter">filter = "<TT>replace</TT>"</A></B></DT>
+  <DT><B>filter = "<TT>replace</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='filter' Line='filter = "replace"'>
   <DD>The filter used to remove high frequency noise from the psf
   matching function. Filtering is not performed if <I>convolution</I>
   is "<TT>kernel</TT>". The options are:
   <DL>
-  <DT><B><A NAME="l_cosbell">cosbell</A></B></DT>
+  <DT><B>cosbell</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='cosbell' Line='cosbell'>
   <DD>apply a cosine bell taper to the psf matching function in frequency space. 
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_replace">replace</A></B></DT>
+  <DT><B>replace</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='replace' Line='replace'>
   <DD>replace the high-frequency low signal-to-noise components of the psf matching
   function with a gaussian model computed from the low frequency
@@ -232,7 +221,7 @@ psfmatch — Match the point-spread functions of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_model">model</A></B></DT>
+  <DT><B>model</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='model' Line='model'>
   <DD>replace the entire psf matching function with a gaussian model fit to the
   low frequency high signal-to-noise components of the matching function.
@@ -241,7 +230,7 @@ psfmatch — Match the point-spread functions of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_sx1">sx1 = INDEF, sx2 = INDEF, sy1 = INDEF, sy2 = INDEF</A></B></DT>
+  <DT><B>sx1 = INDEF, sx2 = INDEF, sy1 = INDEF, sy2 = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='sx1' Line='sx1 = INDEF, sx2 = INDEF, sy1 = INDEF, sy2 = INDEF'>
   <DD>The limits of the cosine bell taper in frequency space. Frequency components
   inside sx1 and sy1 are unaltered. Frequency components outside sx2 and sy2
@@ -250,20 +239,20 @@ psfmatch — Match the point-spread functions of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_radsym">radsym = no</A></B></DT>
+  <DT><B>radsym = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='radsym' Line='radsym = no'>
   <DD>Compute a radially symmetric cosine bell function ?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_threshold">threshold = 0.2</A></B></DT>
+  <DT><B>threshold = 0.2</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 0.2'>
   <DD>The low frequency cutoff in fraction of the total input image spectrum
   power for the filtering options "<TT>replace</TT>" and "<TT>model</TT>".
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_normfactor">normfactor = 1.0</A></B></DT>
+  <DT><B>normfactor = 1.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='normfactor' Line='normfactor = 1.0'>
   <DD>The total power in the computed psf matching function <I>kernel</I>. By default
   the psf matching function is normalized.  If <I>normfactor</I>
@@ -272,30 +261,30 @@ psfmatch — Match the point-spread functions of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_boundary_type">boundary_type = "<TT>nearest</TT>"</A></B></DT>
+  <DT><B>boundary_type = "<TT>nearest</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='boundary_type' Line='boundary_type = "nearest"'>
   <DD>The boundary extension algorithm used to compute the output matched
   image.  The options are:
   <DL>
-  <DT><B><A NAME="l_nearest">nearest</A></B></DT>
+  <DT><B>nearest</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest'>
   <DD>use the value of the nearest boundary pixel.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_constant">constant</A></B></DT>
+  <DT><B>constant</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='constant' Line='constant'>
   <DD>use a constant value.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_reflect">reflect</A></B></DT>
+  <DT><B>reflect</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='reflect' Line='reflect'>
   <DD>generate a value by reflecting about the boundary.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_wrap">wrap</A></B></DT>
+  <DT><B>wrap</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='wrap' Line='wrap'>
   <DD>generate a value by wrapping around to the opposite side of the image.
   </DD>
@@ -303,44 +292,44 @@ psfmatch — Match the point-spread functions of 1-D or 2-D images
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_constant">constant = 0.0</A></B></DT>
+  <DT><B>constant = 0.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.0'>
   <DD>The default constant for constant boundary extension.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interactive">interactive = no</A></B></DT>
+  <DT><B>interactive = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = no'>
   <DD>Compute the psf matching function for each image
   interactively using graphics cursor and, optionally, image cursor input.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose</A></B></DT>
+  <DT><B>verbose</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose'>
   <DD>Print messages about the progress of the task in non-interactive mode.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_graphics">graphics = "<TT>stdgraph</TT>"</A></B></DT>
+  <DT><B>graphics = "<TT>stdgraph</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"'>
   <DD>The default graphics device.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_display">display = "<TT>stdimage</TT>"</A></B></DT>
+  <DT><B>display = "<TT>stdimage</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='display' Line='display = "stdimage"'>
   <DD>The default image display device.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_gcommands">gcommands = "<TT></TT>"</A></B></DT>
+  <DT><B>gcommands = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""'>
   <DD>The default graphics cursor.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_icommands">icommands = "<TT></TT>"</A></B></DT>
+  <DT><B>icommands = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""'>
   <DD>The default image display cursor.
   </DD>
@@ -348,7 +337,7 @@ psfmatch — Match the point-spread functions of 1-D or 2-D images
   <P>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -507,7 +496,7 @@ psfmatch — Match the point-spread functions of 1-D or 2-D images
   <P>
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_cursor_commands">CURSOR COMMANDS</A></H2>
+  <H3>Cursor commands</H3>
   <! BeginSection: 'CURSOR COMMANDS'>
   <UL>
   <P>
@@ -570,7 +559,7 @@ psfmatch — Match the point-spread functions of 1-D or 2-D images
   <P>
   </UL>
   <! EndSection:   'CURSOR COMMANDS'>
-  <H2><A NAME="s_algorithms">ALGORITHMS</A></H2>
+  <H3>Algorithms</H3>
   <! BeginSection: 'ALGORITHMS'>
   <UL>
   <P>
@@ -665,7 +654,7 @@ psfmatch — Match the point-spread functions of 1-D or 2-D images
   <P>
   </UL>
   <! EndSection:   'ALGORITHMS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -748,17 +737,17 @@ psfmatch — Match the point-spread functions of 1-D or 2-D images
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   convolve, gauss, stsdas.fconvolve, digiphot.daophot.psf
@@ -767,5 +756,3 @@ psfmatch — Match the point-spread functions of 1-D or 2-D images
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'CURSOR COMMANDS' 'ALGORITHMS' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

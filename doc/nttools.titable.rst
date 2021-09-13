@@ -1,3 +1,5 @@
+.. _titable:
+
 titable — Insert 2-D tables into rows of a 3-D table.
 =====================================================
 
@@ -5,32 +7,19 @@ titable — Insert 2-D tables into rows of a 3-D table.
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>titable (Mar97)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>tables</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>titable (Mar97)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>titable</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   titable -- Inserts 2-D tables into rows of a 3-D table.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   titable intable outtable
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task performs the inverse operation of task txtable: it inserts one or 
@@ -85,44 +74,44 @@ titable — Insert 2-D tables into rows of a 3-D table.
   there is a match in column names.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_intable">intable [file name list/template]</A></B></DT>
+  <DT><B>intable [file name list/template]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='intable' Line='intable [file name list/template]'>
   <DD>A list of one or more tables to be inserted. Row/column selectors are supported.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_outtable">outtable [table name]</A></B></DT>
+  <DT><B>outtable [table name]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable [table name]'>
   <DD>Name of 3-D output table, including extension. No support exists for 
   "<TT>STDOUT</TT>" (ASCII output).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(template = "<TT></TT>") [table name]</A></B></DT>
+  <DT><B>(template = "<TT></TT>") [table name]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(template = "") [table name]'>
   <DD>Name of 3-D table to be used as template when creating a new output table.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(row = INDEF) [int]</A></B></DT>
+  <DT><B>(row = INDEF) [int]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(row = INDEF) [int]'>
   <DD>Row where insertion begins. If set to INDEF or a negative value, the row
   number will be looked for in the input table header.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(verbose = yes) [boolean]</A></B></DT>
+  <DT><B>(verbose = yes) [boolean]</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='' Line='(verbose = yes) [boolean]'>
   <DD>Display names of input and output tables as files are processed ?
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   Insert columns named FLUX and WAVELENGTH from input tables into a 3-D table:
@@ -133,7 +122,7 @@ titable — Insert 2-D tables into rows of a 3-D table.
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   The output and template table names must be supplied in full, including 
@@ -143,13 +132,13 @@ titable — Insert 2-D tables into rows of a 3-D table.
   "<TT>access</TT>" routine in IRAF's fio library works.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   This task was written by I. Busko.
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   txtable, selectors
@@ -158,5 +147,3 @@ titable — Insert 2-D tables into rows of a 3-D table.
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

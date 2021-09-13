@@ -1,3 +1,5 @@
+.. _ccdlist:
+
 ccdlist — List CCD processing information
 =========================================
 
@@ -5,43 +7,30 @@ ccdlist — List CCD processing information
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>ccdlist (Jun87)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.imred.ccdred</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>ccdlist (Jun87)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>ccdlist</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   ccdlist -- List CCD processing information
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   ccdlist images
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_images">images</A></B></DT>
+  <DT><B>images</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
   <DD>CCD images to be listed.  A subset of the these may be selected using the
   CCD image type parameter.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ccdtype">ccdtype = "<TT></TT>"</A></B></DT>
+  <DT><B>ccdtype = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ccdtype' Line='ccdtype = ""'>
   <DD>CCD image type to be listed.  If no type is specified then all the images
   are listed.  If an image type is specified then only images
@@ -50,28 +39,28 @@ ccdlist — List CCD processing information
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_names">names = no</A></B></DT>
+  <DT><B>names = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='names' Line='names = no'>
   <DD>List the image names only?  Used with the CCD image type parameter to make
   a list of the images of the specified type.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_long">long = no</A></B></DT>
+  <DT><B>long = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='long' Line='long = no'>
   <DD>Long format listing?  The images are listed in a long format containing some
   image parameters and the processing history.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_ccdproc">ccdproc (pset)</A></B></DT>
+  <DT><B>ccdproc (pset)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='ccdproc' Line='ccdproc (pset)'>
   <DD>CCD processing parameter set.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Information from the specified input images is listed on the standard
@@ -107,7 +96,7 @@ ccdlist — List CCD processing information
   lists in IRAF tasks.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. To list the default format for all images:
@@ -176,7 +165,7 @@ ccdlist — List CCD processing information
   This file can be used as an @ file for processing.
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   ccdtypes ccdgroups
@@ -185,5 +174,3 @@ ccdlist — List CCD processing information
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

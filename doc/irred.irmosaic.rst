@@ -1,3 +1,5 @@
+.. _irmosaic:
+
 irmosaic — Mosaic an ordered list of images onto a grid
 =======================================================
 
@@ -5,36 +7,23 @@ irmosaic — Mosaic an ordered list of images onto a grid
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>irmosaic (Oct89)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.nproto</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>irmosaic (Oct89)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>irmosaic</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   irmosaic -- mosaic a set of infrared ccd images
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   mosaic input output database nxsub nysub
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>The list of input images to be mosaiced. The images are
   assumed to be ordered either by row,
@@ -45,32 +34,32 @@ irmosaic — Mosaic an ordered list of images onto a grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>The name of the output image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_database">database</A></B></DT>
+  <DT><B>database</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='database' Line='database'>
   <DD>The name of the text file listing the operations performed by irmosaic.
   This list can be used as input for iralign.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nxsub">nxsub</A></B></DT>
+  <DT><B>nxsub</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nxsub' Line='nxsub'>
   <DD>The number of subrasters along a row of the output image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nysub">nysub</A></B></DT>
+  <DT><B>nysub</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nysub' Line='nysub'>
   <DD>The number of subrasters along a column of the output image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_trim_section">trim_section = "<TT>[*,*]</TT>"</A></B></DT>
+  <DT><B>trim_section = "<TT>[*,*]</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='trim_section' Line='trim_section = "[*,*]"'>
   <DD>The section of the input images to be mosaiced into the output image.
   Section can be used to flip and/or trim the individual subrasters before adding
@@ -79,7 +68,7 @@ irmosaic — Mosaic an ordered list of images onto a grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_null_input">null_input = "<TT></TT>"</A></B></DT>
+  <DT><B>null_input = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='null_input' Line='null_input = ""'>
   <DD>The list of unobserved subrasters. For example if the subrasters 3 to 5 and
   10 of a sequence of observations were not observed then
@@ -90,7 +79,7 @@ irmosaic — Mosaic an ordered list of images onto a grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_corner">corner = "<TT>ll</TT>"</A></B></DT>
+  <DT><B>corner = "<TT>ll</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='corner' Line='corner = "ll"'>
   <DD>The starting position in the output image.
   The four options are "<TT>ll</TT>" for lower left corner, "<TT>lr</TT>" for lower right corner,
@@ -98,21 +87,21 @@ irmosaic — Mosaic an ordered list of images onto a grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_direction">direction = "<TT>row</TT>"</A></B></DT>
+  <DT><B>direction = "<TT>row</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='direction' Line='direction = "row"'>
   <DD>Add subrasters to the output image in row or column order. The options are
   "<TT>row</TT>" for row order and "<TT>column</TT>" for column order.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_raster">raster = no</A></B></DT>
+  <DT><B>raster = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='raster' Line='raster = no'>
   <DD>Add subrasters to the output image in a raster pattern or return to the start
   of a column or a row?
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_median_section">median_section = "<TT></TT>"</A></B></DT>
+  <DT><B>median_section = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='median_section' Line='median_section = ""'>
   <DD>The section of each input subraster for which the median is computed. If
   <I>median_section</I> is the null string then the medians are not computed.
@@ -121,14 +110,14 @@ irmosaic — Mosaic an ordered list of images onto a grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_subtract">subtract = no</A></B></DT>
+  <DT><B>subtract = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='subtract' Line='subtract = no'>
   <DD>Subtract the median value from each input subraster before placing the
   subraster in the output image.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nimcols">nimcols = INDEF</A></B></DT>
+  <DT><B>nimcols = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nimcols' Line='nimcols = INDEF'>
   <DD>The number of columns in the output image. If <I>nimcols</I> is INDEF then
   the program will compute the number of columns using the size of the input
@@ -136,7 +125,7 @@ irmosaic — Mosaic an ordered list of images onto a grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nimrows">nimrows = INDEF</A></B></DT>
+  <DT><B>nimrows = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nimrows' Line='nimrows = INDEF'>
   <DD>The number of rows in the output image. If <I>nimrows</I> is INDEF then
   the program will compute the number of rows using the size of the input
@@ -144,7 +133,7 @@ irmosaic — Mosaic an ordered list of images onto a grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nxoverlap">nxoverlap = -1</A></B></DT>
+  <DT><B>nxoverlap = -1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nxoverlap' Line='nxoverlap = -1'>
   <DD>The number of columns between adjacent frames. A negative value specifies 
   the amount of column space between adjacent subrasters.
@@ -153,7 +142,7 @@ irmosaic — Mosaic an ordered list of images onto a grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nyoverlap">nyoverlap = -1</A></B></DT>
+  <DT><B>nyoverlap = -1</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nyoverlap' Line='nyoverlap = -1'>
   <DD>The number of rows between adjacent frames. A negative value specifies
   the amount of row space between adjacent subrasters.
@@ -161,14 +150,14 @@ irmosaic — Mosaic an ordered list of images onto a grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_oval">oval = 0.0</A></B></DT>
+  <DT><B>oval = 0.0</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='oval' Line='oval = 0.0'>
   <DD>The output image pixel value in regions undefined by the by the list of input
   images.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_opixtype">opixtype = "<TT>r</TT>"</A></B></DT>
+  <DT><B>opixtype = "<TT>r</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='opixtype' Line='opixtype = "r"'>
   <DD>The pixel type of the output image. The options are "<TT>s</TT>" (short integer),
   "<TT>i</TT>" (integer), "<TT>l</TT>" (long integer), "<TT>r</TT>" (real) and "<TT>d</TT>" for double
@@ -176,14 +165,14 @@ irmosaic — Mosaic an ordered list of images onto a grid
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_verbose">verbose = yes</A></B></DT>
+  <DT><B>verbose = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
   <DD>Print messages about task progress and actions taken.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <P>
@@ -210,7 +199,7 @@ irmosaic — Mosaic an ordered list of images onto a grid
   if <I>verbose</I> is set to yes.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -236,19 +225,19 @@ irmosaic — Mosaic an ordered list of images onto a grid
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   At present only integral pixel overlaps are allowed in this routine.
   Fine tuning of the alignments can be done with iralign.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   iralign, irmatch1d, irmatch2d
@@ -257,5 +246,3 @@ irmosaic — Mosaic an ordered list of images onto a grid
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

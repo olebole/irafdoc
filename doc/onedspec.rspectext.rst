@@ -1,3 +1,5 @@
+.. _rspectext:
+
 rspectext — Convert ascii text spectra to image spectra
 =======================================================
 
@@ -5,43 +7,30 @@ rspectext — Convert ascii text spectra to image spectra
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>rspectext (Oct93)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>onedspec</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>rspectext (Oct93)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>rspectext</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   rspectext -- convert 1D ascii text spectra to IRAF image spectra
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   rspectext input output
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_input">input</A></B></DT>
+  <DT><B>input</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
   <DD>Input list of ascii text spectra.  These may have a optional FITS header
   at the beginning and then two columns of wavelength and flux.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_output">output</A></B></DT>
+  <DT><B>output</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
   <DD>Output list of IRAF spectra image names.  The list must match the
   input list.
@@ -52,30 +41,30 @@ rspectext — Convert ascii text spectra to image spectra
   The following parameters are only used if there is no FITS header
   with the data.
   <DL>
-  <DT><B><A NAME="l_title">title = "<TT></TT>"</A></B></DT>
+  <DT><B>title = "<TT></TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='title' Line='title = ""'>
   <DD>Title to be assigned to the spectra.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_flux">flux = no</A></B></DT>
+  <DT><B>flux = no</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='flux' Line='flux = no'>
   <DD>Are the flux values flux calibrated?  If so then header keywords are
   inserted to identify this for the IRAF spectral software.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_dtype">dtype = "<TT>linear</TT>" (none|linear|log|nonlinear|interp)</A></B></DT>
+  <DT><B>dtype = "<TT>linear</TT>" (none|linear|log|nonlinear|interp)</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dtype' Line='dtype = "linear" (none|linear|log|nonlinear|interp)'>
   <DD>Type of dispersion to assign to the spectra.  The options are:
   <DL>
-  <DT><B><A NAME="l_none">none</A></B></DT>
+  <DT><B>none</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='none' Line='none'>
   <DD>No dispersion function and nothing is added to the image header.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_linear">linear</A></B></DT>
+  <DT><B>linear</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='linear' Line='linear'>
   <DD>Store the linear dispersion parameters <B>crval1</B> and <B>cdelt1</B>
   in the image header.  The wavelength values are ignored.  This may
@@ -85,7 +74,7 @@ rspectext — Convert ascii text spectra to image spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_log">log</A></B></DT>
+  <DT><B>log</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='log' Line='log'>
   <DD>Store the log-linear dispersion parameters <B>crval1</B> and <B>cdelt1</B> in
   the image header.  The wavelength values are ignored.  This may be used if
@@ -95,7 +84,7 @@ rspectext — Convert ascii text spectra to image spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nonlinear">nonlinear</A></B></DT>
+  <DT><B>nonlinear</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='nonlinear' Line='nonlinear'>
   <DD>Store the wavelength values in the image header as a lookup table.
   The flux values are not resampled.  The wavelength values need not
@@ -103,7 +92,7 @@ rspectext — Convert ascii text spectra to image spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_interp">interp</A></B></DT>
+  <DT><B>interp</B></DT>
   <! Sec='PARAMETERS' Level=1 Label='interp' Line='interp'>
   <DD>Use the wavelength values to resample to a linear dispersion between
   the first and last wavelength values.  The dispersion per pixel is
@@ -113,7 +102,7 @@ rspectext — Convert ascii text spectra to image spectra
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_crval1">crval1 = 1., cdelt1 = 1.</A></B></DT>
+  <DT><B>crval1 = 1., cdelt1 = 1.</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='crval1' Line='crval1 = 1., cdelt1 = 1.'>
   <DD>The wavelength coordinate of the first pixel and the wavelength interval
   per pixel to be used with the linear and log dispersion types.
@@ -121,7 +110,7 @@ rspectext — Convert ascii text spectra to image spectra
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Ascii text files consisting of an optional FITS header (usually produced
@@ -140,7 +129,7 @@ rspectext — Convert ascii text spectra to image spectra
   or resampled dispersion functions.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1.  Create spectrum from a text file originally produced by <B>wspectext</B>.
@@ -191,24 +180,24 @@ rspectext — Convert ascii text spectra to image spectra
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_revisions">REVISIONS</A></H2>
+  <H3>Revisions</H3>
   <! BeginSection: 'REVISIONS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_RSPECTEXT">RSPECTEXT V2.11</A></B></DT>
+  <DT><B>RSPECTEXT V2.11</B></DT>
   <! Sec='REVISIONS' Level=0 Label='RSPECTEXT' Line='RSPECTEXT V2.11'>
   <DD>The task now automatically senses the presence of a header.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_RSPECTEXT">RSPECTEXT V2.10.3</A></B></DT>
+  <DT><B>RSPECTEXT V2.10.3</B></DT>
   <! Sec='REVISIONS' Level=0 Label='RSPECTEXT' Line='RSPECTEXT V2.10.3'>
   <DD>This is a new task with this version.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'REVISIONS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   wspectext, rtextimage, dispcor, mkms, imspec, sinterp
@@ -217,5 +206,3 @@ rspectext — Convert ascii text spectra to image spectra
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

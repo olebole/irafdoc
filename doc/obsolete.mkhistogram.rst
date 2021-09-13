@@ -1,3 +1,5 @@
+.. _mkhistogram:
+
 mkhistogram — List or plot the histogram of a data stream (noao.proto V2.9)
 ===========================================================================
 
@@ -5,68 +7,55 @@ mkhistogram — List or plot the histogram of a data stream (noao.proto V2.9)
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>mkhistogram (Feb88)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>obsolete</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>mkhistogram (Feb88)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>mkhistogram</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   mkhistogram -- print or plot the histogram of a data stream
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   mkhistogram file
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_file">file</A></B></DT>
+  <DT><B>file</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='file' Line='file'>
   <DD>The name of the text file containing the data (may be STDIN).
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_nbins">nbins</A></B></DT>
+  <DT><B>nbins</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='nbins' Line='nbins'>
   <DD>The number of bins in the histogram.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_z1">z1 = INDEF, z2 = INDEF</A></B></DT>
+  <DT><B>z1 = INDEF, z2 = INDEF</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='z1' Line='z1 = INDEF, z2 = INDEF'>
   <DD>The minimum and maximum histogram intensity. Z1 and z2 default to the data
   minimum and maximum.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_listout">listout = yes</A></B></DT>
+  <DT><B>listout = yes</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='listout' Line='listout = yes'>
   <DD>List instead of plot the histogram.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_device">device = "<TT>stdgraph</TT>"</A></B></DT>
+  <DT><B>device = "<TT>stdgraph</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdgraph"'>
   <DD>The output graphics device.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   MKHISTOGRAM calculates the histogram of the data in the text
@@ -77,7 +66,7 @@ mkhistogram — List or plot the histogram of a data stream (noao.proto V2.9)
   Otherwise the histogram is listed on the standard output.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   <P>
@@ -97,23 +86,23 @@ mkhistogram — List or plot the histogram of a data stream (noao.proto V2.9)
   <P>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_time_requirements">TIME REQUIREMENTS</A></H2>
+  <H3>Time requirements</H3>
   <! BeginSection: 'TIME REQUIREMENTS'>
   <UL>
   </UL>
   <! EndSection:   'TIME REQUIREMENTS'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_use_instead">USE INSTEAD</A></H2>
+  <H3>Use instead</H3>
   <! BeginSection: 'USE INSTEAD'>
   <UL>
   plot.phistogram
   </UL>
   <! EndSection:   'USE INSTEAD'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   images.imhistogram, fields
@@ -122,5 +111,3 @@ mkhistogram — List or plot the histogram of a data stream (noao.proto V2.9)
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'USE INSTEAD' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

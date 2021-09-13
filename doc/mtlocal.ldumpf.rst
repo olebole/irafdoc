@@ -1,3 +1,5 @@
+.. _ldumpf:
+
 ldumpf — List the permanent files on a Cyber DUMPF tape
 =======================================================
 
@@ -5,36 +7,23 @@ ldumpf — List the permanent files on a Cyber DUMPF tape
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>ldumpf (Jun87)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>noao.mtlocal</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>ldumpf (Jun87)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>ldumpf</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   ldumpf -- list the permanent files on a Cyber DUMPF tape.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   ldumpf dumpf_file file_list
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_dumpf_file">dumpf_file</A></B></DT>
+  <DT><B>dumpf_file</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='dumpf_file' Line='dumpf_file'>
   <DD>The DUMPF data source, i.e., the name of a magtape device or a DUMPF
   format disk file.   If reading from tape, the files to be listed are
@@ -42,14 +31,14 @@ ldumpf — List the permanent files on a Cyber DUMPF tape
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_file_list">file_list</A></B></DT>
+  <DT><B>file_list</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='file_list' Line='file_list'>
   <DD>A string listing the DUMPF files to be listed from <I>dumpf_file</I>.
   </DD>
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   Cyber permanent files stored on DUMPF tapes are listed.  The permanent file
@@ -60,7 +49,7 @@ ldumpf — List the permanent files on a Cyber DUMPF tape
   <B>rdumpf</B>.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   List all permanent files on a DUMPF tape:
@@ -72,7 +61,7 @@ ldumpf — List the permanent files on a Cyber DUMPF tape
   	cl&gt; ldumpf mta 4
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   The Cyber format readers, including task <I>ldumpf</I>, have not been 
@@ -82,7 +71,7 @@ ldumpf — List the permanent files on a Cyber DUMPF tape
   volume of a multivolume tape.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   rdumpf
@@ -91,5 +80,3 @@ ldumpf — List the permanent files on a Cyber DUMPF tape
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

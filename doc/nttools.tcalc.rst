@@ -1,3 +1,5 @@
+.. _tcalc:
+
 tcalc — Perform arithmetic operations on table columns.
 =======================================================
 
@@ -5,32 +7,19 @@ tcalc — Perform arithmetic operations on table columns.
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>tcalc (Jan92)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>ttools</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>tcalc (Jan92)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>tcalc</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   tcalc -- Perform arithmetic operations on table columns.
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   tcalc table outcol equals
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   This task evaluates an arbitrary expression that includes column names,
@@ -108,11 +97,11 @@ tcalc — Perform arithmetic operations on table columns.
   blanks.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_table">table  [file name template]</A></B></DT>
+  <DT><B>table  [file name template]</B></DT>
   <! Sec='PARAMETERS' Level=-1 Label='table' Line='table  [file name template]'>
   <DD>The input table, or tables; these files are modified in-place.
   Results will be written to a new column in the table unless an
@@ -121,7 +110,7 @@ tcalc — Perform arithmetic operations on table columns.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_outcol">outcol [string]</A></B></DT>
+  <DT><B>outcol [string]</B></DT>
   <! Sec='PARAMETERS' Level=-1 Label='outcol' Line='outcol [string]'>
   <DD>Output column name.  This is the column where results are written.
   Caution: if this column already exists, then it will be overwritten
@@ -130,7 +119,7 @@ tcalc — Perform arithmetic operations on table columns.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_equals">equals [string]</A></B></DT>
+  <DT><B>equals [string]</B></DT>
   <! Sec='PARAMETERS' Level=-1 Label='equals' Line='equals [string]'>
   <DD>The arithmetic expression to evaluate. If the expression is too long
   to pass as a parameter, place the expression in a file and set the
@@ -139,21 +128,21 @@ tcalc — Perform arithmetic operations on table columns.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(datatype = real) [string, allowed values: real | double | int ]</A></B></DT>
+  <DT><B>(datatype = real) [string, allowed values: real | double | int ]</B></DT>
   <! Sec='PARAMETERS' Level=-1 Label='' Line='(datatype = real) [string, allowed values: real | double | int ]'>
   <DD><P>
   Type of data stored in the output column, if it is a new column.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(colunits) [string]</A></B></DT>
+  <DT><B>(colunits) [string]</B></DT>
   <! Sec='PARAMETERS' Level=-1 Label='' Line='(colunits) [string]'>
   <DD>Units for the output column, if it is a new column.  This parameter
   may be blank.
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_">(colfmt) [string]</A></B></DT>
+  <DT><B>(colfmt) [string]</B></DT>
   <! Sec='PARAMETERS' Level=-1 Label='' Line='(colfmt) [string]'>
   <DD>Print format for the output column, if it is a new column.  If this
   parameter is left blank then a default will be used.  Type "<TT>help
@@ -162,7 +151,7 @@ tcalc — Perform arithmetic operations on table columns.
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_examples_">EXAMPLES </A></H2>
+  <H3>Examples </H3>
   <! BeginSection: 'EXAMPLES '>
   <UL>
   1.  Create a column called 'FLUX', which will contain a value equal to
@@ -188,18 +177,18 @@ tcalc — Perform arithmetic operations on table columns.
   <P>
   </UL>
   <! EndSection:   'EXAMPLES '>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_references">REFERENCES</A></H2>
+  <H3>References</H3>
   <! BeginSection: 'REFERENCES'>
   <UL>
   This task was written by Bernie Simon.
   </UL>
   <! EndSection:   'REFERENCES'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   imcalc
@@ -211,5 +200,3 @@ tcalc — Perform arithmetic operations on table columns.
   
   <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES ' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

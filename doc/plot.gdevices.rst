@@ -1,3 +1,5 @@
+.. _gdevices:
+
 gdevices — List available imaging or other graphics devices
 ===========================================================
 
@@ -5,36 +7,23 @@ gdevices — List available imaging or other graphics devices
 
 .. raw:: html
 
-  <BODY>
-  <TABLE WIDTH="100%" BORDER=0><TR>
-  <TD ALIGN=LEFT><FONT SIZE=4>
-  <B>gdevices (Apr92)</B></FONT></TD>
-  <TD ALIGN=CENTER><FONT SIZE=4>
-  <B>plot</B>
-  </FONT></TD>
-  <TD ALIGN=RIGHT><FONT SIZE=4>
-  <B>gdevices (Apr92)</B></FONT></TD>
-  </TR></TABLE><P>
-  <TITLE>gdevices</TITLE>
-  <UL>
-  </UL>
-  <H2><A NAME="s_name">NAME</A></H2>
+  <H3>Name</H3>
   <! BeginSection: 'NAME'>
   <UL>
   gdevices -- list available imaging or other graphics devices
   </UL>
   <! EndSection:   'NAME'>
-  <H2><A NAME="s_usage">USAGE</A></H2>
+  <H3>Usage</H3>
   <! BeginSection: 'USAGE'>
   <UL>
   gdevices
   </UL>
   <! EndSection:   'USAGE'>
-  <H2><A NAME="s_parameters">PARAMETERS</A></H2>
+  <H3>Parameters</H3>
   <! BeginSection: 'PARAMETERS'>
   <UL>
   <DL>
-  <DT><B><A NAME="l_devices">devices = "<TT>^imt</TT>"</A></B></DT>
+  <DT><B>devices = "<TT>^imt</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='devices' Line='devices = "^imt"'>
   <DD>A list of patterns identifying the class of devices for which information
   is to be output.  If multiple patterns are given they should be separated
@@ -42,7 +31,7 @@ gdevices — List available imaging or other graphics devices
   </DD>
   </DL>
   <DL>
-  <DT><B><A NAME="l_graphcap">graphcap = "<TT>graphcap</TT>"</A></B></DT>
+  <DT><B>graphcap = "<TT>graphcap</TT>"</B></DT>
   <! Sec='PARAMETERS' Level=0 Label='graphcap' Line='graphcap = "graphcap"'>
   <DD>The graphcap file to be scanned (any termcap format file will do).  By default
   the graphcap file specified by the graphcap environment variable, usually
@@ -51,7 +40,7 @@ gdevices — List available imaging or other graphics devices
   </DL>
   </UL>
   <! EndSection:   'PARAMETERS'>
-  <H2><A NAME="s_description">DESCRIPTION</A></H2>
+  <H3>Description</H3>
   <! BeginSection: 'DESCRIPTION'>
   <UL>
   <B>gdevices</B> prints a table of the available devices in a given class of
@@ -64,7 +53,7 @@ gdevices — List available imaging or other graphics devices
   <I>graphcap</I> parameters any class of devices in any file can be listed.
   </UL>
   <! EndSection:   'DESCRIPTION'>
-  <H2><A NAME="s_examples">EXAMPLES</A></H2>
+  <H3>Examples</H3>
   <! BeginSection: 'EXAMPLES'>
   <UL>
   1. List the available stdimage (e.g. IMTOOL or SAOIMAGE) devices.
@@ -105,14 +94,14 @@ gdevices — List available imaging or other graphics devices
   </PRE>
   </UL>
   <! EndSection:   'EXAMPLES'>
-  <H2><A NAME="s_bugs">BUGS</A></H2>
+  <H3>Bugs</H3>
   <! BeginSection: 'BUGS'>
   <UL>
   The method used to extract device entries involves multiple scans of the
   graphcap file hence is not very efficient.
   </UL>
   <! EndSection:   'BUGS'>
-  <H2><A NAME="s_see_also">SEE ALSO</A></H2>
+  <H3>See also</H3>
   <! BeginSection: 'SEE ALSO'>
   <UL>
   system.devices, dev$graphcap
@@ -121,5 +110,3 @@ gdevices — List available imaging or other graphics devices
   
   <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
   
-  </BODY>
-  </HTML>

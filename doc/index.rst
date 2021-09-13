@@ -1,5 +1,5 @@
-clpackage
-=========
+IRAF task help
+==============
 
 .. toctree:: :maxdepth: 2
 

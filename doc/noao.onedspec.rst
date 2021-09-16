@@ -44,5 +44,3 @@ onedspec — One dimensional spectral red & analysis package
    onedspec.wspectext
    onedspec.package
    onedspec.specwcs
-   onedspec.linelists
-   onedspec.onedstds

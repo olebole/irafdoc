@@ -3,9 +3,6 @@ quadred — CCD reductions for QUAD amplifier data
 
 .. toctree:: :maxdepth: 1
 
-   quadred.SPECIAL VERSION OF CCDRED PACKAGE FOR MULTI
-   quadred.multi
-   quadred.include line
    quadred.badpiximage
    quadred.ccdgroups
    quadred.ccdhedit
@@ -23,8 +20,6 @@ quadred — CCD reductions for QUAD amplifier data
    quadred.mkskyflat
    quadred.setinstrument
    quadred.zerocombine
-   quadred.SPECIAL TASKS FOR MULTI
-   quadred.gainmeasure
    quadred.quadscale
    quadred.qstatistics
    quadred.quadsections
@@ -32,9 +27,6 @@ quadred — CCD reductions for QUAD amplifier data
    quadred.quadsplit
    quadred.quadjoin
    quadred.quadproc
-   quadred.qdarkcombine
-   quadred.qflatcombine
-   quadred.qzerocombine
    quadred.package
    quadred.quadformat
    quadred.ccdgeometry

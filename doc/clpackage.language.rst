@@ -7,7 +7,6 @@ language — The command language itself
    language.commands
    language.cursors
    language.declarations
-   language.for * C
    language.logging
    language.parameters
    language.access

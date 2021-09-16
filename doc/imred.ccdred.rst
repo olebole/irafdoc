@@ -10,7 +10,6 @@ ccdred — Generic CCD reductions
    ccdred.ccdlist
    ccdred.ccdmask
    ccdred.ccdproc
-   ccdred.ccdtest
    ccdred.combine
    ccdred.darkcombine
    ccdred.flatcombine

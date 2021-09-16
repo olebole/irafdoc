@@ -6,7 +6,6 @@ softools — Software tools package
    softools.generic
    softools.hdbexamine
    softools.lroff
-   softools.memchk
    softools.mkapropos
    softools.mkhelpdb
    softools.mkmanpage
@@ -18,4 +17,3 @@ softools — Software tools package
    softools.rtar
    softools.wtar
    softools.xc
-   softools.xyacc

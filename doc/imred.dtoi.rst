@@ -8,4 +8,3 @@ dtoi — Density to Intensity reductions for photographic plates
    dtoi.hdshift
    dtoi.hdtoi
    dtoi.selftest
-   dtoi.spotlist

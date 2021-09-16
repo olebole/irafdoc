@@ -6,7 +6,6 @@ photcal — Photometric Calibration Package
    photcal.mkapfile
    photcal.mkcatalog
    photcal.mkimsets
-   photcal.mk(n)obsfile
    photcal.mkphotcors
    photcal.apfile
    photcal.obsfile
@@ -15,5 +14,3 @@ photcal — Photometric Calibration Package
    photcal.fitparams
    photcal.evalfit
    photcal.invertfit
-   photcal.help config
-   photcal.help pcintro

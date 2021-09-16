@@ -48,6 +48,7 @@ nttools — NOAO version of TTOOLS package
    nttools.ttranspose
    nttools.tunits
    nttools.tupar
+   nttools.3
    nttools.tiimage
    nttools.titable
    nttools.tximage

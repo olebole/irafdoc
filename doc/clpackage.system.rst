@@ -35,6 +35,7 @@ system — System utilities package
    system.rewind
    system.sort
    system.spy
+   system.system
    system.tail
    system.tee
    system.touch

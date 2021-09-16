@@ -42,3 +42,7 @@ onedspec — One dimensional spectral red & analysis package
    onedspec.standard
    onedspec.telluric
    onedspec.wspectext
+   onedspec.package
+   onedspec.specwcs
+   onedspec.linelists
+   onedspec.onedstds

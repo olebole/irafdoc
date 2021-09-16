@@ -21,3 +21,10 @@ ccdred — Generic CCD reductions
    ccdred.mkskyflat
    ccdred.setinstrument
    ccdred.zerocombine
+   ccdred.ccdgeometry
+   ccdred.ccdtypes
+   ccdred.flatfields
+   ccdred.guide
+   ccdred.instruments
+   ccdred.package
+   ccdred.subsets

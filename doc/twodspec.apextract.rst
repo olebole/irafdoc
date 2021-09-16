@@ -17,3 +17,8 @@ apextract — Aperture Extraction Package
    apextract.apscatter
    apextract.apsum
    apextract.aptrace
+   apextract.apbackground
+   apextract.approfiles
+   apextract.apvariance
+   apextract.extras
+   apextract.package

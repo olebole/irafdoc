@@ -3,13 +3,14 @@ IRAF task help
 
 .. toctree:: :maxdepth: 1
 
-   clpackage.dataio
+   clpackage.language
    clpackage.images
    clpackage.lists
-   clpackage.obsolete
-   clpackage.noao
    clpackage.plot
-   clpackage.proto
-   clpackage.softools
+   clpackage.dataio
    clpackage.system
    clpackage.utilities
+   clpackage.softools
+   clpackage.noao
+   clpackage.proto
+   clpackage.obsolete

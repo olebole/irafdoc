@@ -7,3 +7,4 @@ color — Prototype color image display/conversion package
    color.rgbdither
    color.rgbsun
    color.rgbto8
+   color.package

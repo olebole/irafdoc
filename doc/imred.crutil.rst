@@ -11,3 +11,4 @@ crutil — Tasks for detecting and removing cosmic rays
    crutil.crgrow
    crutil.crmedian
    crutil.crnebula
+   crutil.overview

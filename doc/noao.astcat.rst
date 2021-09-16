@@ -18,3 +18,7 @@ astcat — Astronomical catalog and surveys access package
    astcat.afiltpars
    astcat.aimpars
    astcat.awcspars
+   astcat.help ccsystems
+   astcat.help catalogs
+   astcat.help surveys
+   astcat.help afiles

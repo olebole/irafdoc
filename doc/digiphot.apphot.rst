@@ -20,6 +20,7 @@ apphot — Aperture Photometry Package
    apphot.qphot
    apphot.radprof
    apphot.wphot
+   apphot.lintran
    apphot.pcalc
    apphot.pconvert
    apphot.pdump

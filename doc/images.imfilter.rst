@@ -1,7 +1,7 @@
 imfilter — Image filtering package
 ==================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    imfilter.boxcar
    imfilter.convolve
@@ -10,6 +10,7 @@ imfilter — Image filtering package
    imfilter.frmedian
    imfilter.frmode
    imfilter.gauss
+   imfilter.gradient
    imfilter.laplace
    imfilter.median
    imfilter.mode

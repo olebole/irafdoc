@@ -1,7 +1,7 @@
 astcat — Astronomical catalog and surveys access package
 ========================================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    astcat.asttest
    astcat.aclist

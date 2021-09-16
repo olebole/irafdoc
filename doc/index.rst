@@ -1,10 +1,9 @@
 IRAF task help
 ==============
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    clpackage.dataio
-   clpackage.dbms
    clpackage.images
    clpackage.lists
    clpackage.obsolete

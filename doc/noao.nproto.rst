@@ -1,7 +1,7 @@
 nproto — Prototype (temporary, contributed) tasks
 =================================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    nproto.binpairs
    nproto.findthresh

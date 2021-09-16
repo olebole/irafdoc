@@ -1,7 +1,7 @@
 ctioslit — CTIO spectrophotometric reduction package
 ====================================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    ctioslit.apall
    ctioslit.apdefault

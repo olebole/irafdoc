@@ -1,7 +1,7 @@
 hydra — KPNO HYDRA (and NESSIE) reduction package
 =================================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    hydra.apall
    hydra.apdefault

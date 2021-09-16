@@ -1,7 +1,7 @@
 imgeom — Image geometric transformation package
 ===============================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    imgeom.blkavg
    imgeom.blkrep

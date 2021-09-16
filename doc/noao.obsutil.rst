@@ -1,7 +1,7 @@
 obsutil — Observing utilities (planning or evaluation)
 ======================================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    obsutil.psfmeasure
    obsutil.specfocus

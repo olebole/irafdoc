@@ -1,7 +1,7 @@
 astutil — Astronomical utilities package
 ========================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    astutil.airmass
    astutil.astcalc

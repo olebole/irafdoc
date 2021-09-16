@@ -1,7 +1,7 @@
 imred — Image reductions package
 ================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    imred.argus
    imred.bias
@@ -17,4 +17,5 @@ imred — Image reductions package
    imred.irs
    imred.kpnocoude
    imred.kpnoslit
+   imred.quadred
    imred.specred

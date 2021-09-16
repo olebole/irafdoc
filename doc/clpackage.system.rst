@@ -1,7 +1,7 @@
 system — System utilities package
 =================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    system.allocate
    system.concatenate

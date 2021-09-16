@@ -1,7 +1,7 @@
 longslit — Longslit Package
 ===========================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    longslit.background
    longslit.bplot

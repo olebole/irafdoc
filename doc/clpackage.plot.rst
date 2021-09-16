@@ -1,7 +1,7 @@
 plot — Plot package
 ===================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    plot.calcomp
    plot.contour

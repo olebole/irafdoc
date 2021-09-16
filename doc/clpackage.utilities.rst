@@ -1,7 +1,7 @@
 utilities — Miscellaneous utilities package
 ===========================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    utilities.bases
    utilities.curfit

@@ -1,7 +1,7 @@
 proto — Prototype or interim tasks
 ==================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    proto.color
    proto.vol

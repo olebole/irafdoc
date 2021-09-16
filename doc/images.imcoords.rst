@@ -1,7 +1,7 @@
 imcoords — Image coordinates package
 ====================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    imcoords.ccfind
    imcoords.ccget

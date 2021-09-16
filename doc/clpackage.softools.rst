@@ -1,7 +1,7 @@
 softools — Software tools package
 =================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    softools.generic
    softools.hdbexamine

@@ -1,7 +1,7 @@
 irred — KPNO IR camera reductions
 =================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    irred.txdump
    irred.center

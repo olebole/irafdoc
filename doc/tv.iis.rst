@@ -1,7 +1,7 @@
 iis — IIS image display control package
 =======================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    iis.blink
    iis.cv

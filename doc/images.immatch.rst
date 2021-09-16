@@ -1,7 +1,7 @@
 immatch — Image matching and combining package
 ==============================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    immatch.geomap
    immatch.geotran

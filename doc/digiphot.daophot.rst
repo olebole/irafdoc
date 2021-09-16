@@ -1,7 +1,7 @@
 daophot — Dao Crowded-Field Photometry Package
 ==============================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    daophot.addstar
    daophot.allstar

@@ -1,7 +1,7 @@
 kpnocoude — KPNO coude reduction package (slit and 3 fiber)
 ===========================================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    kpnocoude.apall
    kpnocoude.apdefault

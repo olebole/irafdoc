@@ -1,7 +1,7 @@
 crutil — Tasks for detecting and removing cosmic rays
 =====================================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    crutil.cosmicrays
    crutil.craverage

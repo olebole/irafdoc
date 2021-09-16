@@ -1,7 +1,7 @@
 vol — Prototype volume rendering package
 ========================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    vol.i2sun
    vol.im3dtran

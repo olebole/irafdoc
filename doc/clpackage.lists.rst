@@ -1,7 +1,7 @@
 lists — List processing package
 ===============================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    lists.average
    lists.columns

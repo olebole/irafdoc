@@ -1,7 +1,7 @@
 images — General image processing package
 =========================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    images.imcoords
    images.imfilter

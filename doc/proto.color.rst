@@ -1,7 +1,7 @@
 color — Prototype color image display/conversion package
 ========================================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    color.rgbdisplay
    color.rgbdither

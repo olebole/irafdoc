@@ -1,7 +1,7 @@
 bias — General bias subtraction tools
 =====================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    bias.colbias
    bias.linebias

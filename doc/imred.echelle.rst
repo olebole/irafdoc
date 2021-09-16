@@ -1,7 +1,7 @@
 echelle — Echelle spectral reductions (slit and FOE)
 ====================================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    echelle.apall
    echelle.apdefault

@@ -1,7 +1,7 @@
 nttools — NOAO version of TTOOLS package
 ========================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    nttools.keypar
    nttools.keytab

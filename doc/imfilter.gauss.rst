@@ -1,7 +1,7 @@
 .. _gauss:
 
-gauss — Convolve a list of 1 or 2-D images with an elliptical Gaussian       gradient - Convolve a list of 1 or 2-D images with a gradient operator
-===================================================================================================================================================
+gauss — Convolve a list of 1 or 2-D images with an elliptical Gaussian
+======================================================================
 
 **Package: imfilter**
 

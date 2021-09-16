@@ -1,7 +1,7 @@
 onedspec — One dimensional spectral red & analysis package
 ==========================================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    onedspec.aidpars
    onedspec.autoidentify

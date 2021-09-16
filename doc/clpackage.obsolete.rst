@@ -1,7 +1,7 @@
 obsolete — Obsolete tasks
 =========================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    obsolete.imtitle
    obsolete.mkhistogram

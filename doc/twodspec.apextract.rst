@@ -1,11 +1,10 @@
 apextract — Aperture Extraction Package
 =======================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    apextract.apall
    apextract.apdefault
-   apextract.apdemos
    apextract.apedit
    apextract.apfind
    apextract.apfit

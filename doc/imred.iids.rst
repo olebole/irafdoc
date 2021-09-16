@@ -1,7 +1,7 @@
 iids — KPNO IIDS spectral reductions
 ====================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    iids.addsets
    iids.batchred

@@ -1,7 +1,7 @@
 irs — KPNO IRS spectral reductions
 ==================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    irs.addsets
    irs.batchred

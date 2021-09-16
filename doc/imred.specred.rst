@@ -1,7 +1,7 @@
 specred — Generic slit and fiber spectral reduction package
 ===========================================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    specred.apall
    specred.apdefault

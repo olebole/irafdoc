@@ -1,7 +1,7 @@
 mtlocal — Magtape i/o for special NOAO format tapes
 ===================================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    mtlocal.ldumpf
    mtlocal.r2df

@@ -1,7 +1,7 @@
-kpnoslit — KPNO low/moderate dispersion slits (Goldcam, RCspec, Whitecam)	quadred - CCD reductions for QUAD amplifier data
-==========================================================================================================================
+kpnoslit — KPNO low/moderate dispersion slits (Goldcam, RCspec, Whitecam)
+=========================================================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    kpnoslit.apall
    kpnoslit.apdefault

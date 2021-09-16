@@ -1,7 +1,7 @@
 dtoi — Density to Intensity reductions for photographic plates
 ==============================================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    dtoi.dematch
    dtoi.hdfit

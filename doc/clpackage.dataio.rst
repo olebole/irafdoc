@@ -1,7 +1,7 @@
 dataio — Data format conversion package (RFITS, etc.)
 =====================================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    dataio.bintxt
    dataio.export

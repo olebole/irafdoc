@@ -1,7 +1,7 @@
 argus — CTIO ARGUS reduction package
 ====================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    argus.apall
    argus.apdefault

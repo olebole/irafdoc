@@ -1,7 +1,7 @@
 ccdred — Generic CCD reductions
 ===============================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    ccdred.badpiximage
    ccdred.ccdgroups

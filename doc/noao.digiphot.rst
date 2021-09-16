@@ -1,7 +1,7 @@
 digiphot — Digital stellar photometry package
 =============================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    digiphot.apphot
    digiphot.daophot

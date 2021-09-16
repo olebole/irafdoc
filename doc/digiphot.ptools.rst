@@ -1,7 +1,7 @@
 ptools — Photometry Tools Package
 =================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    ptools.istable
    ptools.pconcat

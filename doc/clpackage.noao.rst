@@ -1,14 +1,12 @@
 noao — The NOAO optical astronomy packages
 ==========================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    noao.artdata
-   noao.astrometry
    noao.astcat
    noao.astutil
    noao.digiphot
-   noao.focas
    noao.imred
    noao.mtlocal
    noao.nobsolete
@@ -17,5 +15,4 @@ noao — The NOAO optical astronomy packages
    noao.obsutil
    noao.onedspec
    noao.rv
-   noao.surfphot
    noao.twodspec

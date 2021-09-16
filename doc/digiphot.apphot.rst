@@ -1,7 +1,7 @@
 apphot — Aperture Photometry Package
 ====================================
 
-.. toctree:: :maxdepth: 2
+.. toctree:: :maxdepth: 1
 
    apphot.aptest
    apphot.center

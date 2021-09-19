@@ -1,104 +1,104 @@
 .. _fixpix:
 
-fixpix — Fix bad pixels by linear interpolation from nearby pixels
-==================================================================
+fixpix: Fix bad pixels by linear interpolation from nearby pixels
+=================================================================
 
 **Package: proto**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   fixpix -- fix pixels identified by a bad pixel mask, image, or file
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage	</H3>
-  <! BeginSection: 'USAGE	'>
-  <UL>
-  <PRE>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage	</h3>
+  <!-- BeginSection: 'USAGE	' -->
+  <pre>
   fixpix images masks
-  </PRE>
-  </UL>
-  <! EndSection:   'USAGE	'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>images</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
-  <DD>List of two dimensional images to be "<TT>fixed</TT>" (modified) by
+  </pre>
+  <!-- EndSection:   'USAGE	' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>images</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
+  <dd>List of two dimensional images to be <tt>"fixed"</tt> (modified) by
   linear interpolation.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>masks</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='masks' Line='masks'>
-  <DD>List of bad pixel masks, images, or files (collectively called masks)
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>masks</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='masks' Line='masks' -->
+  <dd>List of bad pixel masks, images, or files (collectively called masks)
   identifying the bad pixels.  The list of masks must either match the
   list of input images in number or a single mask may be specified to apply
-  to all images.  The special name "<TT>BPM</TT>" may be specified to select a mask
-  specified by the header keyword "<TT>BPM</TT>" in the input image.  The possible
+  to all images.  The special name <tt>"BPM"</tt> may be specified to select a mask
+  specified by the header keyword <tt>"BPM"</tt> in the input image.  The possible
   mask formats are given in the DESCRIPTION section.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>linterp = "<TT>INDEF</TT>", cinterp = "<TT>INDEF</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='linterp' Line='linterp = "INDEF", cinterp = "INDEF"'>
-  <DD>Normally interpolation is performed across the narrowest dimension spanning
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>linterp = <tt>"INDEF"</tt>, cinterp = <tt>"INDEF"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='linterp' Line='linterp = "INDEF", cinterp = "INDEF"' -->
+  <dd>Normally interpolation is performed across the narrowest dimension spanning
   the bad pixels with interpolation along image lines if the two dimensions are
   equal.  However specific values in the mask may be used to
   identify the desired interpolation direction.  The value in the mask
-  specifying line interpolation is given by the <I>linterp</I> parameter and
-  the value specifying column interpolation is given by the <I>cinterp</I>
+  specifying line interpolation is given by the <i>linterp</i> parameter and
+  the value specifying column interpolation is given by the <i>cinterp</i>
   parameter.  Any values which are do not match one of these parameters
   results in interpolation along the narrowest dimension.  Note that a
   text file mask always has 2 for pixels with narrow dimension along
   lines and 3 for pixels with narrow dimension along columns.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verbose = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
-  <DD>If this parameter is set to yes a line identifying each image and
-  associated mask is printed.  If the <I>pixels</I> parameter is
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verbose = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
+  <dd>If this parameter is set to yes a line identifying each image and
+  associated mask is printed.  If the <i>pixels</i> parameter is
   set then a list of the pixels modified is also printed.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>pixels = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='pixels' Line='pixels = no'>
-  <DD>List the pixels modified?  This is only done if this parameters and
-  the <I>verbose</I> parameter are set.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>pixels = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='pixels' Line='pixels = no' -->
+  <dd>List the pixels modified?  This is only done if this parameters and
+  the <i>verbose</i> parameter are set.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   Pixels in a list of images identified by bad pixel masks, images, or text
   files (collectively called masks here) are replaced by linear interpolation
   along lines or columns using the nearest good pixels.  The list of input
-  images, specified by the <I>images</I> parameter, are matched with a list of
-  masks, specified by the <I>masks</I> parameter.  The list of masks must
+  images, specified by the <i>images</i> parameter, are matched with a list of
+  masks, specified by the <i>masks</i> parameter.  The list of masks must
   match the list of input images or a single mask name may be given to apply
-  to all input images.  The special mask name "<TT>BPM</TT>" may be used to
+  to all input images.  The special mask name <tt>"BPM"</tt> may be used to
   select a mask name given in the input image header under the keyword
-  "<TT>BPM</TT>".
-  <P>
+  <tt>"BPM"</tt>.
+  </p>
+  <p>
   There are three types of masks which may be used.  The preferred type
-  is a bad pixel mask given as a "<TT>pixel list</TT>" image.  Pixel list images
-  have the extension "<TT>.pl</TT>" signifying a special compact file of integer
+  is a bad pixel mask given as a <tt>"pixel list"</tt> image.  Pixel list images
+  have the extension <tt>".pl"</tt> signifying a special compact file of integer
   values ideal for identifying sets of pixels.  For a bad pixel mask the
   good pixels have a value of zero and bad pixels have positive integer
   values.
-  <P>
+  </p>
+  <p>
   The second type is any image format.  The image will be internally
   converted to a bad pixel mask.  Note that real image values will be
   truncated to integers.  Again good pixels will have values of zero and bad
   pixels will have positive values.
-  <P>
+  </p>
+  <p>
   The final format is a text file with lines giving the integer coordinates
   of a single pixel or a rectangular region.  A single pixel is specified by
   a column and line number.  A region is specified by a starting column, an
@@ -107,29 +107,32 @@ fixpix — Fix bad pixels by linear interpolation from nearby pixels
   of zero for non-specified pixels, a value of two for pixels with narrowest
   interpolation direction along lines, and three for pixels with narrowest
   interpolation direction along columns.
-  <P>
-  As noted previously, bad pixels are "<TT>fixed</TT>" by replacing them with values
+  </p>
+  <p>
+  As noted previously, bad pixels are <tt>"fixed"</tt> by replacing them with values
   by linear interpolation to the nearest pixels not identified as bad.
   Normally interpolation is performed across the narrowest dimension spanning
   bad pixels with interpolation along image lines if the two dimensions are
   equal.  However specific values in the mask may be used to identify the
   desired interpolation direction.  The value in the mask specifying line
-  interpolation is given by the <I>linterp</I> parameter and the value
-  specifying column interpolation is given by the <I>cinterp</I> parameter.
+  interpolation is given by the <i>linterp</i> parameter and the value
+  specifying column interpolation is given by the <i>cinterp</i> parameter.
   Any values which are do not match one of these parameters results in
   interpolation along the narrowest dimension.  Note that a text file mask
   always has 1 for pixels with narrow dimension along lines and 2 for pixels
   with narrow dimension along columns.
-  <P>
-  The <I>verbose</I> allows printing a line giving the task name, the
-  image name, and the mask name.  In addition, if the <I>pixels</I>
+  </p>
+  <p>
+  The <i>verbose</i> allows printing a line giving the task name, the
+  image name, and the mask name.  In addition, if the <i>pixels</i>
   parameter is set the pixels modified are listed.  The list of pixels
   consists of the column and line of the pixel, the original
   and replaced pixel values, and the column and line of the one or two
   pixels used for the interpolation.  If the bad pixel region has no
   pixels at one end, that is there are bad pixels all the way to one edge
   of the image, then the single pixel used is printed.
-  <P>
+  </p>
+  <p>
   Normally the input images and the masks will have the same dimension.
   However, this task matches bad pixels in the masks with the input images
   based on physical coordinates.  Thus, the mask image may be bigger or
@@ -141,44 +144,45 @@ fixpix — Fix bad pixels by linear interpolation from nearby pixels
   the effect of allowing image sections to be applied to images having
   a bad pixel mask specified in the image and still having the bad pixel
   mask be valid.
-  <P>
+  </p>
+  <p>
   Mask images may be made in a variety of ways.  Any task which produces
   and modifies image values may be used.  Some useful tasks are
-  <B>imexpr, imreplace, imcopy,</B> and <B>mkpattern</B>.  If a new image
-  is specified with the explicit "<TT>.pl</TT>" extension then the pixel mask
+  <b>imexpr, imreplace, imcopy,</b> and <b>mkpattern</b>.  If a new image
+  is specified with the explicit <tt>".pl"</tt> extension then the pixel mask
   format is produced.  Two other ways to make masks are with the
-  tasks <B>text2mask</B> and <B>ccdmask</B>.  The former uses an input
+  tasks <b>text2mask</b> and <b>ccdmask</b>.  The former uses an input
   text file consisting of rectangular region.  This is the old
-  "<TT>fixpix</TT>" format.  The task <B>ccdmask</B> is specialized to make a mask
+  <tt>"fixpix"</tt> format.  The task <b>ccdmask</b> is specialized to make a mask
   of bad pixels from flat fields or, even better, from the ratio of
   two flat fields of different exposure levels.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1.  A list of images have bad pixel masks defined in the image header.
   To replace the bad pixels by interpolation along the narrowest
   dimension:
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; fixpix obj* BPM
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2.  A simple mask of 0s and 1s defines bad columns in spectral data
   with dispersion along the lines.  To interpolate along the lines:
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; fixpix spec00*h ccdmask linterp=1 v+
       FIXPIX: image spec001.imh with mask ccdmask
       FIXPIX: image spec002.imh with mask ccdmask
       ...
-  </PRE>
-  <P>
+  </pre>
+  <p>
   3.  A text file of bad pixels is used and the modified pixels are printed
   with:
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; type mask.dat
       1 2 1 1
       25 26 25 25
@@ -199,8 +203,8 @@ fixpix — Fix bad pixels by linear interpolation from nearby pixels
         27   27       1.       1.  27   26  27   28
         49   50       1.       1.  49   49
         50   50       1.       1.  50   49
-  </PRE>
-  <P>
+  </pre>
+  <p>
   4.  Because a text file input automatically sets the mask values to
   2 or 3 you may need to set the linterp and cinterp parameters to
   force the direction.  In particular, to apply FIXPIX to a 1D image,
@@ -209,31 +213,29 @@ fixpix — Fix bad pixels by linear interpolation from nearby pixels
   it is trying to interpolation between line 0 and line 2 which is
   obviously not what is intended.  To make this work set linterp to
   3:
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; fixpix myimage mask.dat linterp=3
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Revisions</H3>
-  <! BeginSection: 'REVISIONS'>
-  <UL>
-  <DL>
-  <DT><B>FIXPIX V2.11</B></DT>
-  <! Sec='REVISIONS' Level=0 Label='FIXPIX' Line='FIXPIX V2.11'>
-  <DD>This task replaces the old task (now obsolete.ofixpix) and works with the
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Revisions</h3>
+  <!-- BeginSection: 'REVISIONS' -->
+  <dl>
+  <dt><b>FIXPIX V2.11</b></dt>
+  <!-- Sec='REVISIONS' Level=0 Label='FIXPIX' Line='FIXPIX V2.11' -->
+  <dd>This task replaces the old task (now obsolete.ofixpix) and works with the
   more general pixel mask facilities.  It also provides greater flexibility
   in choosing the interpolation direction.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'REVISIONS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </dd>
+  </dl>
+  <!-- EndSection:   'REVISIONS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   epix, imedit, ccdproc, text2mask, obsolete.ofixpix
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

@@ -1,146 +1,154 @@
 .. _polyfit:
 
-polyfit — Fit polynomial to list of X,Y data
-============================================
+polyfit: Fit polynomial to list of X,Y data
+===========================================
 
 **Package: utilities**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   polyfit -- fit a polynomial to sets of data
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   polyfit filelist order
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B><B>filelist</B></B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='\fBfilelist\fR'>
-  <DD>File containing X,Y, SIGMAY triples to be fit. May be STDIN, or a list
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b><b>filelist</b></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='\fBfilelist\fR' -->
+  <dd>File containing X,Y, SIGMAY triples to be fit. May be STDIN, or a list
   of file names. Note that the third list quantity is only required if
-  <I>weighting</I> = instrumental.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B><B>order</B></B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='\fBorder\fR'>
-  <DD>The order of the polynomial fit. (e.g. a parabolic fit has order 2)
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>weighting = uniform</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='weighting' Line='weighting = uniform'>
-  <DD>The type of weighting for the fit. The choices are:
-  <DL>
-  <DT><B>uniform</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='uniform' Line='uniform'>
-  <DD>No weighting.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>instrumental</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='instrumental' Line='instrumental'>
-  <DD>The weight of each point is equal to 1. / SIGMAY ** 2.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>statistical</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='statistical' Line='statistical'>
-  <DD>The weight of each point is equal to 1. / Y.
-  </DD>
-  </DL>
-  </DD>
-  </DL>
-  <DL>
-  <DT><B><B>verbose</B> = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='\fBverbose\fR = no'>
-  <DD>If <B>verbose</B> = yes, additional information about the fit is printed on
+  <i>weighting</i> = instrumental.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b><b>order</b></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='\fBorder\fR' -->
+  <dd>The order of the polynomial fit. (e.g. a parabolic fit has order 2)
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>weighting = uniform</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='weighting' Line='weighting = uniform' -->
+  <dd>The type of weighting for the fit. The choices are:
+  <dl>
+  <dt><b>uniform</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='uniform' Line='uniform' -->
+  <dd>No weighting.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>instrumental</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='instrumental' Line='instrumental' -->
+  <dd>The weight of each point is equal to 1. / SIGMAY ** 2.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>statistical</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='statistical' Line='statistical' -->
+  <dd>The weight of each point is equal to 1. / Y.
+  </dd>
+  </dl>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b><b>verbose</b> = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='\fBverbose\fR = no' -->
+  <dd>If <b>verbose</b> = yes, additional information about the fit is printed on
   the standard output.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B><B>listdata</B> = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='\fBlistdata\fR = no'>
-  <DD>If <B>listdata</B> = yes, the only output will be the calculated values for the
-  X,Y pairs. This is useful as input to <I>graph</I>.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b><b>listdata</b> = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='\fBlistdata\fR = no' -->
+  <dd>If <b>listdata</b> = yes, the only output will be the calculated values for the
+  X,Y pairs. This is useful as input to <i>graph</i>.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   A polynomial weighted fit of specified order is fit to the X,Y, SIGMAY data
   triples
   read from the input file, files, or STDIN. The resulting coefficients
   of the polynomial are printed on the first line of the standard output.
   The uncertainty in each coefficient is printed on the next line.
   These are listed as:
-  <P>
-  <BR>
+  </p>
+  <br>
+  <p>
   a0 a1 a2 a3 ...
-  <BR>
+  <br>
   s0 s1 s2 s3 ...
-  <P>
-  <BR>
+  </p>
+  <br>
+  <p>
   where the polynomial has the form:
-  <P>
-  <BR>
+  </p>
+  <br>
+  <p>
   y = a0 + a1*x + a2*x**2 + a3*x**3 + ...
-  <P>
-  <BR>
-  and the coefficients have uncertainties ("<TT>sigmas</TT>") s0 - sN.
-  <P>
+  </p>
+  <br>
+  <p>
+  and the coefficients have uncertainties (<tt>"sigmas"</tt>) s0 - sN.
+  </p>
+  <p>
   If verbose is set to yes, the following additional information is
   listed: the resulting reduced chi-square, f-test, correlation coefficient,
   standard deviation of residuals, and number of items in the list.
   Also a tabular listing of each data element, X,Y, SIGMAY and the independent
   variable, Yc, as calculated according to the fit, is printed.
-  <P>
+  </p>
+  <p>
   If listdata is set to yes, the only output which will appear will
   be the listing of X,Yc,Y, SIGMAY. This provides a list suitable as input to
   GRAPH or any other list oriented utility. Setting listdata to yes
   overrides the verbose option.
-  <P>
+  </p>
+  <p>
   The routine REGRES from the library of routines written by Bevington is used 
-  for the fit; see <B>Data Reduction and Error Analysis</B>, by Bevington.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  for the fit; see <b>Data Reduction and Error Analysis</b>, by Bevington.
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   	cl&gt; polyfit STDIN 2
-  <BR>
+  <br>
   	cl&gt; polyfit datafile 4 verbose+
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <p>
   The maximum number of data elements is currently limited to 1000
   X,Y,SIGMAY triples.  Also the system must be overdetermined.  That is, the
   number of data elements must exceed the order by at least 2.
-  <P>
+  </p>
+  <p>
   Beware of data elements having large dynamic range.  The limitation
   of the machine exponent range can produce overflow and underflow
   arithmetic exceptions.
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   curfit
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

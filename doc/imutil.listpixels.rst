@@ -1,114 +1,113 @@
 .. _listpixels:
 
-listpixels — Convert an image section into a list of pixels
-===========================================================
+listpixels: Convert an image section into a list of pixels
+==========================================================
 
 **Package: imutil**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   listpixels -- print the pixel values for a list of images
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   listpixels images
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>images</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
-  <DD>Images or list of image sections whose pixels are to be printed.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>wcs = "<TT>logical</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='wcs' Line='wcs = "logical"'>
-  <DD>The world coordinate system to be used for coordinate output. The following
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>images</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
+  <dd>Images or list of image sections whose pixels are to be printed.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>wcs = <tt>"logical"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='wcs' Line='wcs = "logical"' -->
+  <dd>The world coordinate system to be used for coordinate output. The following
   standard systems are defined.
-  <DL>
-  <DT><B>logical</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='logical' Line='logical'>
-  <DD>Logical coordinates are image pixel coordinates relative to the input
+  <dl>
+  <dt><b>logical</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='logical' Line='logical' -->
+  <dd>Logical coordinates are image pixel coordinates relative to the input
   image. For example the pixel coordinates of the lower left corner
   of an image section will always be (1,1) in logical units regardless of
   their values in the original image.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>physical</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='physical' Line='physical'>
-  <DD>Physical coordinates are image pixel coordinates with respect to the original
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>physical</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='physical' Line='physical' -->
+  <dd>Physical coordinates are image pixel coordinates with respect to the original
   image. For example the pixel coordinates of the lower left corner
   of an image section will be its coordinates in the original image,
   including the effects of any linear transformations done on that image.
   Physical coordinates are invariant with respect to transformations
   of the physical image matrix.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>world</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='world' Line='world'>
-  <DD>World coordinates are image pixel coordinates with respect to the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>world</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='world' Line='world' -->
+  <dd>World coordinates are image pixel coordinates with respect to the
   current default world coordinate system. For example in the case
   of spectra world coordinates would most likely be in angstroms.
   The default world coordinate system is the system named by the environment
-  variable <I>defwcs</I> if defined in the user environment and present in
+  variable <i>defwcs</i> if defined in the user environment and present in
   the image world coordinate system description, else it is the first user
   world coordinate system defined for the image, else physical coordinates
   are returned.
-  </DD>
-  </DL>
-  <P>
+  </dd>
+  </dl>
   In addition to these three reserved world coordinate system names, the names
   of any user world coordinate system defined for the image may be given.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>formats = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='formats' Line='formats = ""'>
-  <DD>The default output formats for the pixel coordinates, one format
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>formats = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='formats' Line='formats = ""' -->
+  <dd>The default output formats for the pixel coordinates, one format
   per axis, with the individual formats separated by whitespace .
   If formats are undefined, listpixels uses the formatting options
   stored with the WCS in the image header. If the WCS formatting options
   are not stored in the image header, then listpixels uses a default
   value.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verbose = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
-  <DD>Print a title line for each image whose pixels are to be listed.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verbose = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
+  <dd>Print a title line for each image whose pixels are to be listed.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   The pixel coordinates in the world coordinates system specified by
-  <I>wcs</I> and using the formats specified by <I>formats</I> are
+  <i>wcs</i> and using the formats specified by <i>formats</i> are
   printed on the standard output on the standard output followed by
   the pixel value.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Formats</H3>
-  <! BeginSection: 'FORMATS'>
-  <UL>
-  A  format  specification has the form "<TT>%w.dCn</TT>", where w is the field
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Formats</h3>
+  <!-- BeginSection: 'FORMATS' -->
+  <p>
+  A  format  specification has the form <tt>"%w.dCn"</tt>, where w is the field
   width, d is the number of decimal places or the number of digits  of
   precision,  C  is  the  format  code,  and  n is radix character for
-  format code "<TT>r</TT>" only.  The w and d fields are optional.  The  format
+  format code <tt>"r"</tt> only.  The w and d fields are optional.  The  format
   codes C are as follows:
       
-  <PRE>
+  </p>
+  <pre>
   b       boolean (YES or NO)
   c       single character (c or '\c' or '\0nnn')
   d       decimal integer
@@ -161,7 +160,7 @@ listpixels — Convert an image section into a list of pixels
   %-15.7e     same as above but left justified
   %12.5g      print a real number right justified in general format
   %-12.5g     same as above but left justified
-  <P>
+  
   %h	    format as nn:nn:nn.n
   %15h	    right justify nn:nn:nn.n in field of 15 characters
   %-15h	    left justify nn:nn:nn.n in a field of 15 characters
@@ -173,23 +172,22 @@ listpixels — Convert an image section into a list of pixels
   %-15H	    / by 15 and left justify nn:nn:nn.n in field of 15 characters
   %12.2H	    / by 15 and right justify nn:nn:nn.nn
   %-12.2H	    / by 15 and left justify nn:nn:nn.nn
-  <P>
+  
   \n          insert a newline
-  </PRE>
-  </UL>
-  <! EndSection:   'FORMATS'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'FORMATS' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. List the pixels of an image on the standard output.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; listpix m81
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. List a subraster of the above image in logical coordinates.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; listpix m81[51:55,151:155]
   	    1. 1. ...
   	    2. 1. ...
@@ -198,11 +196,11 @@ listpixels — Convert an image section into a list of pixels
   	    5. 1. ...
   	    1. 2. ...
   	    .. .. ...
-  </PRE>
-  <P>
+  </pre>
+  <p>
   3. List the same subraster in physical coordinates.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; listpix m81[51:55,151:155] wcs=physical
   	    51. 151. ...
   	    52. 151. ...
@@ -211,39 +209,34 @@ listpixels — Convert an image section into a list of pixels
   	    55. 151. ...
   	    51. 152. ...
   	    ... .... ...
-  </PRE>
-  <P>
+  </pre>
+  <p>
   4. List a spectrum that has been dispersion corrected in angstrom units.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; listpix n7027 wcs=world
-  </PRE>
-  <P>
+  </pre>
+  <p>
   5. List the RA and DEC coordinates in hms and dms format and pixels value
   for an image section where axis 1 is RA and axis 2 is DEC.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; listpix m51 wcs=world formats="%H %h"
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Time requirements</H3>
-  <! BeginSection: 'TIME REQUIREMENTS'>
-  <UL>
-  </UL>
-  <! EndSection:   'TIME REQUIREMENTS'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Time requirements</h3>
+  <!-- BeginSection: 'TIME REQUIREMENTS' -->
+  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   imheader, imgets, imhistogram
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'FORMATS' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'FORMATS' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

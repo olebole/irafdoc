@@ -1,70 +1,69 @@
 .. _tbcalc:
 
-tbcalc — Do arithmetic on a list of apphot/daophot tables databases
-===================================================================
+tbcalc: Do arithmetic on a list of apphot/daophot tables databases
+==================================================================
 
 **Package: ptools**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   tbcalc - perform an arithmetic operation on a column in a list of apphot/daophot
   	 ST tables databases
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   tbcalc textfiles column value
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>textfiles</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='textfiles' Line='textfiles'>
-  <DD>The APPHOT/DAOPHOT ST tables database(s) containing the column to be recomputed.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>column</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='column' Line='column'>
-  <DD>The column to be recomputed. Column must be an integer or real column
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>textfiles</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='textfiles' Line='textfiles' -->
+  <dd>The APPHOT/DAOPHOT ST tables database(s) containing the column to be recomputed.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>column</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='column' Line='column' -->
+  <dd>The column to be recomputed. Column must be an integer or real column
   in the input file(s).
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>value</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='value' Line='value'>
-  <DD>The arithmetic expression used to recompute the specified column.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>value</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='value' Line='value' -->
+  <dd>The arithmetic expression used to recompute the specified column.
   Value may be an integer or real expression but must match the data
   type of column.
-  </DD>
-  </DL>
-  <P>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <P>
-  TBCALC reads in the value of the <I>column</I> 
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  TBCALC reads in the value of the <i>column</i> 
   from a set of  APPHOT/DAOPHOT ST tables databases, replaces it with a new
-  value specified by the arithmetic expression <I>value</I>,
+  value specified by the arithmetic expression <i>value</i>,
   and updates the ST tables databases(s).
-  <P>
-  The expression <I>value</I> consists of variables which are column names
+  </p>
+  <p>
+  The expression <i>value</i> consists of variables which are column names
   in the APPHOT/DAOPHOT ST tables database.
   TBCALC uses the TABLES package task TCALC to actually perform the
   arithmetic operation.
-  <P>
+  </p>
+  <p>
   The supported
   arithmetic operators and functions are briefly described below.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   addition		+		subtraction		-
   multiplication		*		division		/
   negation		-		exponentiation		**
@@ -77,43 +76,36 @@ tbcalc — Do arithmetic on a list of apphot/daophot tables databases
   minimum			min(x,y)	maximum			max(x,y)
   convert to integer	int(x)		convert to real		real(x)
   nearest integer		nint(x)		modulo			mod(x)
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
+  </pre>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Change the XCENTER and YCENTER fields to XCENTER + 5.4 and YCENTER + 10.3
   respectively in a file produced by the daophot package allstar task.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	pt&gt; tbcalc m92.als.1 xcenter "xcenter+5.4"
   	pt&gt; tbcalc m92.als.1 ycenter "ycenter+10.3"
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2.  Add a constant to the computed magnitudes produced by the daophot
   package nstar task.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	pt&gt; tbcalc n4147.nst.2 mag "mag+3.457"
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  <P>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   ptools.txcalc,tables.tcalc,ptools.pcalc
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

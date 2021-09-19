@@ -1,14 +1,16 @@
 .. _devices:
 
-devices — Print information on the locally available devices
-============================================================
+devices: Print information on the locally available devices
+===========================================================
 
 **Package: system**
 
 .. raw:: html
 
-      <B>Device      Aliases 	Description+Location</B>
-  <P>
+  </tr></table><p>
+  <pre>
+      <b>Device      Aliases 	Description+Location</b>
+  
       lw1		apl		HP LaserJet-4M, outside Rm B50-A
       lw1p2			lw1 with 2 landscape pages per page
       lw2		apl2		HP LaserJet-4000N, Rm 135
@@ -35,14 +37,14 @@ devices — Print information on the locally available devices
       epsf	eps		EPS file ./sgi$$.eps, portrait mode
       epsfl	epsl		EPS file ./sgi$$.eps, landscape mode
       epshalf	epsh		halfpage portrait EPS file, ./sgi$$.eps
-  <P>
+  
       (*)This device is available on UNIX systems only.  A specific output
       device may be selected by defining PRINTER in the user environment.
-  <P>
+  
       All the ``lw'' devices can be specified as shown above with a trailing 
-      <TT>`s'</TT> to indicate a finer linewidth will be used, intended for small, dense
+      <tt>`s'</tt> to indicate a finer linewidth will be used, intended for small, dense
       plots, e.g., lw1s.
-  <P>
+  
       gemini!mta=mta6250,mta1600     HP 1/2" tapedrive, Rm 101
       gemini!mtb        [8500]       Exabyte Eliant 820, Rm 101
       gemini!mtc        [8200]       Exabyte 8200, Rm 101
@@ -68,6 +70,6 @@ devices — Print information on the locally available devices
       draco!mtg                      WANG DAT
       draco!mti			   HP 1/2" tapedrive, Rm 101 [VMS cluster only]
       draco!mtj			   Exabyte 8200, Rm 101 [VMS cluster only]
-  <P>
-  <! Contents:  >
+  
+  <!-- Contents:  -->
   

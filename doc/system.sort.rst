@@ -1,105 +1,109 @@
 .. _sort:
 
-sort — Sort a text file
-=======================
+sort: Sort a text file
+======================
 
 **Package: system**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   sort -- sort a file or the standard input
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   sort input_file
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input_file</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input_file' Line='input_file'>
-  <DD>The text file to be sorted.  If the standard input is redirected the standard
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input_file</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input_file' Line='input_file' -->
+  <dd>The text file to be sorted.  If the standard input is redirected the standard
   input is sorted.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>column = 0</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='column' Line='column = 0'>
-  <DD>If 0, sort entire text lines, else sort based on data/text starting
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>column = 0</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='column' Line='column = 0' -->
+  <dd>If 0, sort entire text lines, else sort based on data/text starting
   in the specified column.  Columns are delimited by whitespace.  Thus,
-  <PRE>
+  <pre>
   	12   abc   34   56
-  </PRE>
-  has four columns, "<TT>abc</TT>" being in the second.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>ignore_whitespace = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='ignore_whitespace' Line='ignore_whitespace = no'>
-  <DD>Ignore leading whitespace.  Useful only when column = 0 and the sort is
+  </pre>
+  has four columns, <tt>"abc"</tt> being in the second.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>ignore_whitespace = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='ignore_whitespace' Line='ignore_whitespace = no' -->
+  <dd>Ignore leading whitespace.  Useful only when column = 0 and the sort is
   non-numeric.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>numeric_sort = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='numeric_sort' Line='numeric_sort = no'>
-  <DD>If set, make numerical (rather than ASCII text) comparisons.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>reverse_sort = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='reverse_sort' Line='reverse_sort = no'>
-  <DD>If set, sort in reverse text/numeric order.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <I>Sort</I> sorts the contents of the given text file, or the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>numeric_sort = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='numeric_sort' Line='numeric_sort = no' -->
+  <dd>If set, make numerical (rather than ASCII text) comparisons.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>reverse_sort = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='reverse_sort' Line='reverse_sort = no' -->
+  <dd>If set, sort in reverse text/numeric order.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  <i>Sort</i> sorts the contents of the given text file, or the
   standard input, either on a textual (based on the ASCII collating
   sequence), or on a numeric basis.  If a numeric sort is requested,
   and either field in any comparison is non-numeric, a string (ASCII)
   comparison will be made instead.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Sort the output of the set command into alphabetic (ASCII collating)
   order.
-  <P>
+  </p>
+  <p>
   	cl&gt; set | sort
-  <P>
-  2. Sort the contents of "<TT>file</TT>", in reverse ASCII order, ignoring the
+  </p>
+  <p>
+  2. Sort the contents of <tt>"file"</tt>, in reverse ASCII order, ignoring the
   contents of columns 1 through 4.
-  <P>
+  </p>
+  <p>
   	cl&gt; sort file rev+ col=5
-  <P>
+  </p>
+  <p>
   3. Print a long form directory listing with the files sorted by size,
   largest files first.
-  <P>
+  </p>
+  <p>
   	cl&gt; dir | sort num+ rev+ col=3
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <p>
   Only one file can be sorted per call, and only one column or all columns can
   be used for the sort.  The current program is inefficient for large numeric
   sorting tasks because the same numeric field may be decoded into its
   corresponding binary value many times.
-  </UL>
-  <! EndSection:    'BUGS'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS'  >
+  <!-- EndSection:    'BUGS' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS'  -->
   

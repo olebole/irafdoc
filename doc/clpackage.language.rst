@@ -1,5 +1,5 @@
-language — The command language itself
-======================================
+language: The command language itself
+=====================================
 
 .. toctree:: :maxdepth: 1
 

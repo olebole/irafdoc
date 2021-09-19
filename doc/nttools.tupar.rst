@@ -1,34 +1,36 @@
 .. _tupar:
 
-tupar — Edit table header keywords.
-===================================
+tupar: Edit table header keywords.
+==================================
 
 **Package: nttools**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   tupar -- Edit table header parameters.
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   tupar table
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   This task is an interactive editor that allows the user to modify table
   header parameters.
   Prompts are written to STDERR rather than
   STDOUT so that STDOUT can be redirected to a file.
   If STDERR is redirected, no prompts will appear.
   Prompting is also turned off if the input is redirected from a file.
-  <P>
+  </p>
+  <p>
   The table to be edited is copied to a temporary table
   in the same directory as the original table
   (or in tmp$ if the first copy attempt fails),
@@ -37,34 +39,38 @@ tupar — Edit table header keywords.
   the copy is renamed back to the name of the original table.
   If you quit rather than exit,
   then the copy is deleted, so the original table will remain unchanged.
-  <P>
-  The prompt "<TT>:</TT>" is used by the task when it is waiting for user input.
+  </p>
+  <p>
+  The prompt <tt>":"</tt> is used by the task when it is waiting for user input.
   At this prompt the user can enter any editor command.
-  The "<TT>e</TT>" command (or end of file, e.g. Control-Z) will exit the editor.
+  The <tt>"e"</tt> command (or end of file, e.g. Control-Z) will exit the editor.
   The following commands are available:  e, q, g, p, d, r, k, t, l.
   These commands are interpreted as exit, quit (without saving changes),
   get, put, delete, replace, change keyword name, type, and list respectively.
   Each of these commands is described in detail below:
-  <P>
-  The exit command, specified by "<TT>e</TT>" or end of file,
+  </p>
+  <p>
+  The exit command, specified by <tt>"e"</tt> or end of file,
   will close the file--saving all changes,
   and open the next file if more than one file was specified
   for the 'table' input parameter.
-  <P>
+  </p>
+  <p>
   The quit command is similar to exit except that changes that were made
   to the header parameters will not take effect,
   unless 'inplace = yes'.
   If changes were made to the table header
   you will be prompted for confirmation
-  unless the command was given followed by "<TT>!</TT>";
-  for example, "<TT>q!</TT>" or "<TT>quit!</TT>".
-  <P>
-  The type command, specified by "<TT>t</TT>", and the list command,
-  specified by "<TT>l</TT>",
+  unless the command was given followed by <tt>"!"</tt>;
+  for example, <tt>"q!"</tt> or <tt>"quit!"</tt>.
+  </p>
+  <p>
+  The type command, specified by <tt>"t"</tt>, and the list command,
+  specified by <tt>"l"</tt>,
   both display header parameters---one header per line of output.
   The difference between the two commands is that list will show the parameter
   number and type will not.
-  Entering the command "<TT>t</TT>" or "<TT>l</TT>" will produce
+  Entering the command <tt>"t"</tt> or <tt>"l"</tt> will produce
   a listing of all header parameters.
   Optionally, an integer may follow
   the command indicating that only a particular parameter is to be displayed.
@@ -73,50 +79,52 @@ tupar — Edit table header keywords.
   an error message will be displayed.
   The output consists of the name of the header parameter,
   its data type (indicated by a single letter,
-  "<TT>r</TT>" for real, "<TT>b</TT>" for boolean, "<TT>i</TT>" for integer, or "<TT>d</TT>" for double),
+  <tt>"r"</tt> for real, <tt>"b"</tt> for boolean, <tt>"i"</tt> for integer, or <tt>"d"</tt> for double),
   and its current value.
   If the keyword has an associated comment,
   the comment will be displayed following the value.
   The following are examples of valid syntax for listing header parameters:
-  <PRE>
+  </p>
+  <pre>
   t
   l
   t 3
   l 300 310
-  </PRE>
-  <P>
-  The get command, indicated by "<TT>g</TT>", will look for a specific keyword and
+  </pre>
+  <p>
+  The get command, indicated by <tt>"g"</tt>, will look for a specific keyword and
   display its current value.
   Optionally, the data type can be specified
-  using the letter "<TT>r</TT>" for real, "<TT>i</TT>" for integer, "<TT>d</TT>" for double, or
-  "<TT>b</TT>" for boolean.
+  using the letter <tt>"r"</tt> for real, <tt>"i"</tt> for integer, <tt>"d"</tt> for double, or
+  <tt>"b"</tt> for boolean.
   If no data type is specified, then the type is assumed to be text.
   If the data type is specified,
-  the type immediately follows the "<TT>g</TT>" command;
-  for example, typing the command "<TT>gd X</TT>" will get the value 
-  contained in the header keyword "<TT>X</TT>" and display it as a double-precision
+  the type immediately follows the <tt>"g"</tt> command;
+  for example, typing the command <tt>"gd X"</tt> will get the value 
+  contained in the header keyword <tt>"X"</tt> and display it as a double-precision
   real value.
-  If "<TT>X</TT>" does not exist, no output will be produced.
+  If <tt>"X"</tt> does not exist, no output will be produced.
   If the keyword has an associated comment,
   the get command displays the comment following the value;
   a text string value will be enclosed in quotes
   to distinguish the value from the comment.
   Examples of valid syntax follow:
-  <PRE>
+  </p>
+  <pre>
   g history
   gd coeff0
   gi numpts
-  </PRE>
-  <P>
-  The put command, specified by "<TT>p</TT>", will either replace the value of an
+  </pre>
+  <p>
+  The put command, specified by <tt>"p"</tt>, will either replace the value of an
   existing parameter,
   or it will create a new parameter if the specified parameter is not found.
-  The "<TT>p</TT>" command is followed on the command line by a keyword
+  The <tt>"p"</tt> command is followed on the command line by a keyword
   name and the parameter value.
   A comment may optionally follow the value.
-  The "<TT>p</TT>" command itself should
-  be followed by a single letter type specifier, "<TT>i</TT>" for integer,
-  "<TT>r</TT>" for real, "<TT>d</TT>" for double, or "<TT>b</TT>" for boolean.
+  The <tt>"p"</tt> command itself should
+  be followed by a single letter type specifier, <tt>"i"</tt> for integer,
+  <tt>"r"</tt> for real, <tt>"d"</tt> for double, or <tt>"b"</tt> for boolean.
   If no type is specified, then the data type is assumed to be text.
   In order to specify a comment with a parameter of type text,
   the parameter value must be enclosed in quotes
@@ -124,36 +132,38 @@ tupar — Edit table header keywords.
   HISTORY and COMMENT are already comments,
   and further comments cannot be added to them.)
   Examples of valid put command syntax follow:
-  <PRE>
+  </p>
+  <pre>
   p comment Created for testing.
   gd coeff0
   pd coeff0 3.141592653589793
   pi ncoeff 7 number of coefficients
   pt fittype chebychev
   pt fittype "chebychev" type of fit that these coefficients represent
-  </PRE>
-  <P>
-  The replace command, specified by "<TT>r</TT>", works much like the put command
+  </pre>
+  <p>
+  The replace command, specified by <tt>"r"</tt>, works much like the put command
   described above; however, it will prompt the user for confirmation before
   actually changing any values in the table.
   A parameter can be specified by name or by number.
-  The "<TT>r</TT>" command will not change a keyword name or a data type,
-  whereas the "<TT>p</TT>" command can.
+  The <tt>"r"</tt> command will not change a keyword name or a data type,
+  whereas the <tt>"p"</tt> command can.
   After the command is entered,
   the current value of the keyword is displayed and
   the editor waits for a new value to be entered by the user.
   Pressing the return key indicates that no change is to be made.
   Pressing the space bar will blank the current value.
   You will then be prompted for
-  confirmation unless the command was issued as "<TT>r!</TT>" or the input was
+  confirmation unless the command was issued as <tt>"r!"</tt> or the input was
   redirected from a file.
   The default action is given by the 'delete_default' parameter.
-  <P>
+  </p>
+  <p>
   A range of contiguous parameters can be replaced at one time by giving
   the names or numbers of the first and last parameters to be replaced.
   This can involve a lot of prompting for confirmation,
   especially if several tables are being edited with 'same=yes'.
-  In this context, "<TT>contiguous</TT>" means adjacent in the table header.
+  In this context, <tt>"contiguous"</tt> means adjacent in the table header.
   Thus, when replacing a range by name,
   it is not the parameters that fall alphabetically within the limits
   that will be replaced
@@ -165,127 +175,126 @@ tupar — Edit table header keywords.
   When no replacement value is given (i.e., just hit the return key),
   then the current keyword value is not changed,
   either in the first table or in subsequent tables.
-  <P>
+  </p>
+  <p>
   Sample replace commands follow:
-  <PRE>
+  </p>
+  <pre>
   r coeff0
   r 17
   r! 17
   r junk dummy
   r junk 12
   r 5 12
-  </PRE>
-  <P>
-  The delete command, specified by "<TT>d</TT>", will delete a header parameter by
+  </pre>
+  <p>
+  The delete command, specified by <tt>"d"</tt>, will delete a header parameter by
   either name or number.
   The editor prompts for confirmation of delete,
   unless input is redirected from a file.
   The default action is given by the 'delete_default' parameter.
-  If you do not want to be prompted for confirmation, enter the command as "<TT>d!</TT>".
+  If you do not want to be prompted for confirmation, enter the command as <tt>"d!"</tt>.
   If you want to delete a history or comment record other than the first,
   you can identify the parameter by number rather than name.
-  <P>
+  </p>
+  <p>
   A range of contiguous parameters can be deleted at one time by giving
   the names or numbers of the first and last parameters to be deleted.
   As with replacing a range of parameters,
   a contiguous block of parameters will be deleted.
-  <P>
+  </p>
+  <p>
   Examples of valid delete commands follow:
-  <PRE>
+  </p>
+  <pre>
   d testflag
   d 17
   d! 17
   d junk dummy
   d junk 12
   d 5 12
-  </PRE>
-  <P>
-  The "<TT>k</TT>" command changes the name of a keyword
+  </pre>
+  <p>
+  The <tt>"k"</tt> command changes the name of a keyword
   without changing the data type, value, or comment.
-  Give the current and new keyword names following the "<TT>k</TT>".
+  Give the current and new keyword names following the <tt>"k"</tt>.
   Note that keywords are limited to eight characters.
   If the name of a COMMENT or HISTORY keyword is changed,
   only the first occurrence of that keyword will be changed.
-  <P>
+  </p>
+  <p>
   Examples of valid change keyword commands follow:
-  <PRE>
+  </p>
+  <pre>
   k history comment
   k dummy test
-  </PRE>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>table [file name template]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='table' Line='table [file name template]'>
-  <DD>A table name or list of table names whose header parameters are to be edited.
+  </pre>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>table [file name template]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='table' Line='table [file name template]' -->
+  <dd>A table name or list of table names whose header parameters are to be edited.
   Unless 'inplace = yes',
   each table will be copied (one at a time) to a temporary table,
   and changes are made to the copy until you exit.
   This can cause problems if there is not enough disk space for the copy;
   however, the 'inplace' parameter can
-  be set to "<TT>yes</TT>" so that the tables are opened in-place.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(same = no) [boolean]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(same = no) [boolean]'>
-  <DD>Apply the same set of instructions to all tables?  
-  <P>
+  be set to <tt>"yes"</tt> so that the tables are opened in-place.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(same = no) [boolean]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(same = no) [boolean]' -->
+  <dd>Apply the same set of instructions to all tables?  
   This is only relevant when more than one table is being edited.
   If 'same = no', instructions are processed separately for each table,
-  with the "<TT>e</TT>" command used to end processing of a table and open
+  with the <tt>"e"</tt> command used to end processing of a table and open
   the next table.
-  <P>
   If 'same = yes', the same instruction set is applied to all tables.
   These instructions will be read from STDIN (which may be redirected)
   and saved in a local buffer while the first table in the list is open.
   For each subsequent table the instructions will be read from the local buffer.
   Caution is advised when deleting or replacing parameters, especially by
   number; remember that prompting for confirmation is turned off if the
-  input is redirected or if the instruction is given as "<TT>d!</TT>" or "<TT>r!</TT>".
-  <P>
+  input is redirected or if the instruction is given as <tt>"d!"</tt> or <tt>"r!"</tt>.
   If 'same = yes' and you quit (rather than exit) from editing the first table,
   the behavior of the task depends on whether changes were made before quitting.
   If changes were made then the task aborts immediately
   without opening the other tables in the input list.
   If no change was made then the other tables are processed.
-  The idea is to allow "<TT>g</TT>", "<TT>t</TT>", and "<TT>l</TT>" commands
+  The idea is to allow <tt>"g"</tt>, <tt>"t"</tt>, and <tt>"l"</tt> commands
   and still be able to quit rather than exit,
   since nothing was modified.
   If changes were made but you quit,
   that's interpreted as trying to recover from an error,
   so we don't change the first table and we don't continue.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(verbose = yes) [boolean]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(verbose = yes) [boolean]'>
-  <DD>Display the name of each table when it is opened?  
-  <P>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(verbose = yes) [boolean]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(verbose = yes) [boolean]' -->
+  <dd>Display the name of each table when it is opened?  
   If STDOUT is redirected
   then these file names will be written to STDERR as well as to STDOUT.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(readonly = no) [boolean]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(readonly = no) [boolean]'>
-  <DD>Prevent changes from being made to the file?  
-  <P>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(readonly = no) [boolean]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(readonly = no) [boolean]' -->
+  <dd>Prevent changes from being made to the file?  
   If 'readonly = yes', then the
   table is opened with read only access.  This is useful for viewing the
   contents of the table while at the same time preventing changes from
-  being made to it.  (Only the "<TT>g</TT>", "<TT>t</TT>", and "<TT>l</TT>" commands are useful in
+  being made to it.  (Only the <tt>"g"</tt>, <tt>"t"</tt>, and <tt>"l"</tt> commands are useful in
   read only mode).
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(inplace = no) [boolean]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(inplace = no) [boolean]'>
-  <DD>Edit the original table in-place?
-  <P>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(inplace = no) [boolean]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(inplace = no) [boolean]' -->
+  <dd>Edit the original table in-place?
   By default a copy of the original table is made,
   either in the same directory or in tmp$.
   This makes it possible to quit without saving changes.
@@ -294,51 +303,52 @@ tupar — Edit table header keywords.
   so the 'inplace' parameter gives you the option
   of editing the original table.
   In this case, however, it will not be possible to quit without saving changes.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(quit_default = no) [boolean]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(quit_default = no) [boolean]'>
-  <DD>The value of this parameter is the default response to the prompt
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(quit_default = no) [boolean]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(quit_default = no) [boolean]' -->
+  <dd>The value of this parameter is the default response to the prompt
   for confirmation if you give the quit command.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(delete_default = yes) [boolean]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(delete_default = yes) [boolean]'>
-  <DD>The value of this parameter is the default response to the prompt
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(delete_default = yes) [boolean]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(delete_default = yes) [boolean]' -->
+  <dd>The value of this parameter is the default response to the prompt
   for confirmation for the delete and replace commands.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>go_ahead [boolean]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='go_ahead' Line='go_ahead [boolean]'>
-  <DD>The user does not set this explicitly.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>go_ahead [boolean]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='go_ahead' Line='go_ahead [boolean]' -->
+  <dd>The user does not set this explicitly.
   It is the parameter which is actually gotten in response to a prompt.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. This example reads all history records from all tables in the default
   directory and writes them to 'history.lis'.
-  <PRE>
-  <P>
+  </p>
+  <pre>
+  
   tt&gt; tupar *.tab same=yes verbose=no readonly=yes &gt;history.lis
           (The task writes a ":" prompt and waits for input.)
   :g history
   :q
   tt&gt;
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. This example illustrates the use of each of the commands when editing
   parameters in one table.  This kind of interactive use of the task
   would not be appropriate when operating on a list of tables unless
-  the 'same' parameter is set to "<TT>no</TT>".
-  <PRE>
-  <P>
+  the 'same' parameter is set to <tt>"no"</tt>.
+  </p>
+  <pre>
+  
   tt&gt; tupar junk
           (The task writes the table name and a ":" prompt and waits for input.)
   junk.lis
@@ -394,29 +404,28 @@ tupar — Edit table header keywords.
   no action taken
   :q
   tt&gt;
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>References</H3>
-  <! BeginSection: 'REFERENCES'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <!-- EndSection:   'BUGS' -->
+  <h3>References</h3>
+  <!-- BeginSection: 'REFERENCES' -->
+  <p>
   This task was written by Phil Hodge.
-  </UL>
-  <! EndSection:   'REFERENCES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'REFERENCES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   tprint, tdump, tedit
-  <P>
-  Type "<TT>help tables opt=sys</TT>" for a higher-level description of the 'tables' 
+  </p>
+  <p>
+  Type <tt>"help tables opt=sys"</tt> for a higher-level description of the 'tables' 
   package.
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

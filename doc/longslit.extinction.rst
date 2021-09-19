@@ -1,61 +1,61 @@
 .. _extinction:
 
-extinction — Apply atmospheric extinction corrections to images (obsolete)
-==========================================================================
+extinction: Apply atmospheric extinction corrections to images (obsolete)
+=========================================================================
 
 **Package: longslit**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   extinction -- Apply atmospheric extinction corrections
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   extinction images
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
-  <DD>List of input images to be extinction corrected.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
-  <DD>List of output extinction corrected images.  Output images may be the
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
+  <dd>List of input images to be extinction corrected.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
+  <dd>List of output extinction corrected images.  Output images may be the
   same as the input images.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>extinction = "<TT>onedstds$kpnoextinct.dat</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='extinction' Line='extinction = "onedstds$kpnoextinct.dat"'>
-  <DD>Extinction file to be used.  The standard extinction files:
-  <P>
-  <PRE>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>extinction = <tt>"onedstds$kpnoextinct.dat"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='extinction' Line='extinction = "onedstds$kpnoextinct.dat"' -->
+  <dd>Extinction file to be used.  The standard extinction files:
+  <pre>
   	onedstds$kpnoextinct.dat - KPNO standard extinction
   	onedstds$ctioextinct.dat - CTIO standard extinction
-  </PRE>
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </pre>
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   The specified images are corrected for atmospheric extinction according
   to the formula
-  <P>
+  </p>
+  <p>
       correction factor = 10 ** (0.4 * airmass * extinction)
-  <P>
+  </p>
+  <p>
   where the extinction is a tabulated function of the wavelength.  The
   extinction file contains lines of wavelength and extinction at that
   wavelength.  The units of the wavelength must be the same as those of
@@ -65,14 +65,17 @@ extinction — Apply atmospheric extinction corrections to images (obsolete)
   still be wavelength.  The table values are interpolated
   to the wavelengths of the image pixels and the correction applied to
   the pixel values.  Note that the image pixel values are modifed.
-  <P>
+  </p>
+  <p>
   The airmass is sought in the image header under the name AIRMASS.  If the
   airmass is not found then it is computed from the zenith distance (ZD in hours)
-  using the approximation formula from Allen's "<TT>Astrophysical Quantities</TT>", 1973,
+  using the approximation formula from Allen's <tt>"Astrophysical Quantities"</tt>, 1973,
   page125 and page 133
-  <P>
+  </p>
+  <p>
   	AIRMASS = sqrt (cos (ZD) ** 2 + 2 * scale + 1)
-  <P>
+  </p>
+  <p>
   where the atmospheric scale height is set to be 750.  If the parameter ZD
   is not found then it must be computed from the hour angle (HA in hours),
   the declination (DEC in degrees), and the observation latitude (LATITUDE
@@ -80,42 +83,43 @@ extinction — Apply atmospheric extinction corrections to images (obsolete)
   (RA in hours) and siderial time (ST in hours).  Computed quantities are
   recorded in the image header.  Flags indicating extinction correction are
   also set in the image header.
-  <P>
+  </p>
+  <p>
   The image header keyword DISPAXIS must be present with a value of 1 for
   dispersion parallel to the lines (varying with the column coordinate) or 2
   for dispersion parallel to the columns (varying with line coordinate).
-  This parameter may be added using <B>hedit</B>.  Note that if the image has
-  been transposed (<B>imtranspose</B>) the dispersion axis should still refer
+  This parameter may be added using <b>hedit</b>.  Note that if the image has
+  been transposed (<b>imtranspose</b>) the dispersion axis should still refer
   to the original dispersion axis unless the physical world coordinate system
-  is first reset (see <B>wcsreset\R).  This is done in order to allow images
+  is first reset (see <b>wcsreset</b>).  This is done in order to allow images
   which have DISPAXIS defined prior to transposing to still work correctly
   without requiring this keyword to be changed.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. A set of dispersion corrected images is extinction corrected in-place as
   follows:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; extinction img* img*
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. To keep the uncorrected image:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; extinction nite1.004 nite1ext.004
-  </PRE>
-  <P>
+  </pre>
+  <p>
   3.  If the DISPAXIS keyword is missing and the dispersion is running
   vertically (varying with the image lines):
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; hedit *.imh dispaxis 2 add+
-  </PRE>
-  </UL>
-  <! EndSection:    'EXAMPLES'>
+  </pre>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES'  >
+  <!-- EndSection:    'EXAMPLES' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES'  -->
   

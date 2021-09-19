@@ -1,62 +1,66 @@
 .. _mkdir:
 
-mkdir — Create a new directory
-==============================
+mkdir: Create a new directory
+=============================
 
 **Package: system**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   mkdir -- make a new directory
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   mkdir newdir
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>newdir</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='newdir' Line='newdir'>
-  <DD>New directory or subdirectory to be made.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <I>Mkdir</I> creates a new directory with the given name.
-  <I>Newdir</I> may be an IRAF virtual directory name (not a logical name)
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>newdir</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='newdir' Line='newdir' -->
+  <dd>New directory or subdirectory to be made.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  <i>Mkdir</i> creates a new directory with the given name.
+  <i>Newdir</i> may be an IRAF virtual directory name (not a logical name)
   or a host directory name.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
-  1. Make a subdirectory named "<TT>sub1</TT>".
-  <P>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
+  1. Make a subdirectory named <tt>"sub1"</tt>.
+  </p>
+  <p>
   	cl&gt; mkdir sub1
-  <P>
-  2. Make a subdirectory "<TT>sub2</TT>" below "<TT>sub1</TT>".  The subdirectory "<TT>sub1</TT>" must
+  </p>
+  <p>
+  2. Make a subdirectory <tt>"sub2"</tt> below <tt>"sub1"</tt>.  The subdirectory <tt>"sub1"</tt> must
   already exist.
-  <P>
+  </p>
+  <p>
   	cl&gt; mkdir sub1/sub2
-  <P>
-  3. Make a directory "<TT>blue</TT>" at the same level in the directory hierarchy as
-  the current directory ("<TT>..</TT>" is a synonym for the previous directory).
-  <P>
+  </p>
+  <p>
+  3. Make a directory <tt>"blue"</tt> at the same level in the directory hierarchy as
+  the current directory (<tt>".."</tt> is a synonym for the previous directory).
+  </p>
+  <p>
   	cl&gt; mkdir ../blue
-  </UL>
-  <! EndSection:    'EXAMPLES'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES'  >
+  <!-- EndSection:    'EXAMPLES' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES'  -->
   

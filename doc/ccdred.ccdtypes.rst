@@ -1,25 +1,26 @@
 .. _ccdtypes:
 
-ccdtypes — Description of the CCD image types
-=============================================
+ccdtypes: Description of the CCD image types
+============================================
 
 **Package: ccdred**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   ccdtypes -- Description of the CCD image types
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Ccdtypes</H3>
-  <! BeginSection: 'CCDTYPES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Ccdtypes</h3>
+  <!-- BeginSection: 'CCDTYPES' -->
+  <p>
   The following CCD image types may be specified as the value of the parameter
-  <I>ccdtype</I>:
-  <P>
-  <PRE>
+  <i>ccdtype</i>:
+  </p>
+  <pre>
   	""	- (the null string) all image types
   	object	- object images
   	zero	- zero level images such as a bias or preflash
@@ -30,57 +31,62 @@ ccdtypes — Description of the CCD image types
   	other   - other image types defined in the translation file
   	none	- images without an image type parameter
   	unknown - image types not defined in the translation file
-  </PRE>
-  </UL>
-  <! EndSection:   'CCDTYPES'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  The <B>ccdred</B> package recognizes certain standard CCD image types
+  </pre>
+  <!-- EndSection:   'CCDTYPES' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  The <b>ccdred</b> package recognizes certain standard CCD image types
   identified in the image header.  The tasks may select images of a
   particular CCD image type from image lists with the parameter
-  <I>ccdtype</I> and also recognize and take special actions for
+  <i>ccdtype</i> and also recognize and take special actions for
   calibration images.
-  <P>
+  </p>
+  <p>
   In order to make use of CCD image type information the header keyword
   identifying the image type must be specified in the instrument
   translation file.  This entry has the form
-  <P>
+  </p>
+  <p>
   	imagetyp keyword
-  <P>
+  </p>
+  <p>
   where keyword is the image header keyword.  This allows the package to
   access the image type string.  There must also be a translation between
   the image type strings and the CCD types as recognized by the package.
   This information consists of lines in the instrument translation file
   of the form
-  <P>
+  </p>
+  <p>
   	header	package
-  <P>
+  </p>
+  <p>
   where header is the exact string given in the image header and package
   is one of the types recognized by the package.  The image header string
   can be virtually anything and if it contains blanks it must be
   quoted.  The package image types are those given above except for
-  the null string, "<TT>none</TT>", and "<TT>unknown</TT>".  That is, these types may
+  the null string, <tt>"none"</tt>, and <tt>"unknown"</tt>.  That is, these types may
   be specified as a CCD image type in selecting images but not as a translations
   of image type strings.
-  <P>
+  </p>
+  <p>
   There may be more than one image type that maps to the same package
   type.  In particular other standard CCD image types, such as comparison
   spectra, multiple exposure, standard star, etc., should be mapped to
   object or other.  There may also be more than one type of flat field, i.e. dome
   flat, sky flat, and lamp flat.  For more on the instrument translation
-  file see the help for <B>instruments</B>.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  file see the help for <b>instruments</b>.
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. The example entries in the instrument translation file are from the 1986
   NOAO CCD image header format produced by the CAMERA format tape writer.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       imagetyp			data-typ
-  <P>
+  
       'OBJECT (0)'		object
       'DARK (1)'			dark
       'PROJECTOR FLAT (2)'	flat
@@ -88,16 +94,17 @@ ccdtypes — Description of the CCD image types
       'COMPARISON LAMP (4)'	other
       'BIAS (5)'			zero
       'DOME FLAT (6)'		flat
-  </PRE>
-  <P>
-  The image header keyword describing the image type is "<TT>data-typ</TT>".
+  </pre>
+  <p>
+  The image header keyword describing the image type is <tt>"data-typ"</tt>.
   The values of the image type strings in the header contain blanks so they
   are quoted.  Also the case of the strings is important.  Note that there
   are two types of flat field images and two types of other images.
-  <P>
-  2. One way to check the image types is with the task <B>ccdlist</B>.
-  <P>
-  <PRE>
+  </p>
+  <p>
+  2. One way to check the image types is with the task <b>ccdlist</b>.
+  </p>
+  <pre>
       cl&gt; ccdlist *.imh
       Zero.imh[504,1][real][zero][1][OT]:FOCUS L98-193
       Flat1.imh[504,1][real][flat][1][OTZ]:dflat 6v+blue 5s
@@ -106,14 +113,15 @@ ccdtypes — Description of the CCD image types
       ccd004.imh[544,512][short][object][1]:L98-193
       ccd005.imh[544,512][short][object][1]:L98-193
       oldformat.imh[544,512][short][none][1]:M31 V
-  </PRE>
-  <P>
-  The unknown type has a header image type of "<TT>MUL (8)</TT>".  The old format
+  </pre>
+  <p>
+  The unknown type has a header image type of <tt>"MUL (8)"</tt>.  The old format
   image does not have any header type.
-  <P>
+  </p>
+  <p>
   3. To select only images of a particular type:
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; ccdlist *.imh ccdtype=object
       ccd003.imh[544,512][short][object][1]:L98-193
       ccd004.imh[544,512][short][object][1]:L98-193
@@ -122,28 +130,29 @@ ccdtypes — Description of the CCD image types
       ccd002.imh[504,504][real][unknown][1][OTZF]:FOCUS L98-193
       cl&gt; ccdlist *.imh ccdtype=none
       oldformat.imh[544,512][short][none][1]:M31 V
-  </PRE>
-  <P>
-  4. To process images with <B>ccdproc</B>:
-  <P>
-  <PRE>
+  </pre>
+  <p>
+  4. To process images with <b>ccdproc</b>:
+  </p>
+  <pre>
       cl&gt; ccdproc *.imh
       cl&gt; ccdproc *.imh ccdtype=object
-  </PRE>
-  <P>
+  </pre>
+  <p>
   In the first case all the images will be processed (the default value of
-  <I>ccdtype</I> is "<TT></TT>").  However, the task recognizes the calibration
+  <i>ccdtype</i> is <tt>""</tt>).  However, the task recognizes the calibration
   images, such as zero level and flat fields, and processes them appropriately.
   In the second case only object images are processed and all other images
   are ignored (except if needed as a calibration image).
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   instruments
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'CCDTYPES' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'CCDTYPES' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

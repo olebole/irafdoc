@@ -1,5 +1,5 @@
-ptools — Photometry Tools Package
-=================================
+ptools: Photometry Tools Package
+================================
 
 .. toctree:: :maxdepth: 1
 

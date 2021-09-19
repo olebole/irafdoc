@@ -1,93 +1,103 @@
 .. _chdir:
 
-chdir — Change directory
-========================
+chdir: Change directory
+=======================
 
 **Package: language**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   chdir, cd -- change the current working directory
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   chdir [newdir]  or  cd [newdir]
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>newdir</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='newdir' Line='newdir'>
-  <DD>The new working directory.
-  The special name "<TT>.</TT>" refers to the current directory; "<TT>..</TT>" refers to the next
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>newdir</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='newdir' Line='newdir' -->
+  <dd>The new working directory.
+  The special name <tt>"."</tt> refers to the current directory; <tt>".."</tt> refers to the next
   higher directory.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <I>Chdir</I> is used to change the current working directory.
-  When called without any arguments, <I>chdir</I> sets the default directory
-  to "<TT>home$</TT>", the users home directory.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  <i>Chdir</i> is used to change the current working directory.
+  When called without any arguments, <i>chdir</i> sets the default directory
+  to <tt>"home$"</tt>, the users home directory.
   The new directory can be specified as an IRAF logical name,
   as a sub-directory of the current directory,
   as a path from either a logical directory or the current directory,
   or as an operating system dependent name.
-  <P>
-  The names <I>chdir</I> and <I>cd</I> are synonyms.  Note that the command
-  <I>back</I> may be called after a <I>chdir</I> to return to the previous
+  </p>
+  <p>
+  The names <i>chdir</i> and <i>cd</i> are synonyms.  Note that the command
+  <i>back</i> may be called after a <i>chdir</i> to return to the previous
   directory without typing its name.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Return to our home directory.
-  <P>
+  </p>
+  <p>
   	cl&gt; cd
-  <P>
-  2. Go to the package logical directory "<TT>pkg$</TT>".
-  <P>
+  </p>
+  <p>
+  2. Go to the package logical directory <tt>"pkg$"</tt>.
+  </p>
+  <p>
   	cl&gt; chdir pkg
-  <P>
-  3. Go down one level to the directory "<TT>dataio</TT>", a subdirectory of "<TT>pkg</TT>".
-  <P>
+  </p>
+  <p>
+  3. Go down one level to the directory <tt>"dataio"</tt>, a subdirectory of <tt>"pkg"</tt>.
+  </p>
+  <p>
   	cl&gt; cd dataio
-  <P>
-  4. From "<TT>dataio</TT>", go back up to "<TT>pkg</TT>" and down into "<TT>images</TT>".
-  <P>
+  </p>
+  <p>
+  4. From <tt>"dataio"</tt>, go back up to <tt>"pkg"</tt> and down into <tt>"images"</tt>.
+  </p>
+  <p>
   	cl&gt; cd ../images
-  <P>
-  5. Go to the "<TT>tv</TT>" directory, a subdirectory of "<TT>images</TT>", regardless of the
+  </p>
+  <p>
+  5. Go to the <tt>"tv"</tt> directory, a subdirectory of <tt>"images"</tt>, regardless of the
   current directory
-  <P>
+  </p>
+  <p>
   	cl&gt; cd pkg$images/tv
-  <P>
+  </p>
+  <p>
   6. On a VMS system, define a new logical directory on a different disk device
   and go there.  Note that the character $ is not permitted in host file or
   directory names.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; set dd = scr1:[data]
   	cl&gt; cd dd
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   back, pathnames
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

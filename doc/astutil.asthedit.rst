@@ -1,197 +1,206 @@
 .. _asthedit:
 
-asthedit — Astronomical header editor
-=====================================
+asthedit: Astronomical header editor
+====================================
 
 **Package: astutil**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   asthedit -- astronomical header editor
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   asthedit images commands
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>images</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
-  <DD>List of images to be used.  The image header keywords are used in this task
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>images</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
+  <dd>List of images to be used.  The image header keywords are used in this task
   as variables which are read, modified, created, or deleted.  If the images
-  do not have write permission or the <I>update</I> parameter is "<TT>no</TT>" then the
+  do not have write permission or the <i>update</i> parameter is <tt>"no"</tt> then the
   image headers will not be modified.  If no images are specified then this
-  task can be used as a calculator (though see <B>astcalc</B>).
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>commands</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='commands' Line='commands'>
-  <DD>A file of commands using the simple syntax given in the DESCRIPTION.  If no
+  task can be used as a calculator (though see <b>astcalc</b>).
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>commands</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='commands' Line='commands' -->
+  <dd>A file of commands using the simple syntax given in the DESCRIPTION.  If no
   file name is given then the commands are read interactively from the
-  standard input with a prompt given by the <I>prompt</I> parameter.  The
-  command input ends with either EOF or "<TT>quit</TT>".  If a list of images and/or a
+  standard input with a prompt given by the <i>prompt</i> parameter.  The
+  command input ends with either EOF or <tt>"quit"</tt>.  If a list of images and/or a
   table is specified the commands are repeated for each image or until the
-  end of the table is reached.  Comments beginning with <TT>'#'</TT>, blank lines, and
+  end of the table is reached.  Comments beginning with <tt>'#'</tt>, blank lines, and
   escaped newlines are allowed.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>table = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='table' Line='table = ""'>
-  <DD>Optional text file containing columns of values.  The table consists of
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>table = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='table' Line='table = ""' -->
+  <dd>Optional text file containing columns of values.  The table consists of
   one or more lines of whitespace separated columns of values.  Note that a
   string with whitespace needs to be quoted.  One line of the table is
   scanned for each image.  There must be at lest as many fields as are
   defined by the column names.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>colnames = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='colnames' Line='colnames = ""'>
-  <DD>List of whitespace separated column names.  These are the names referenced
-  in the command file by $&lt;name&gt;.  The leading <TT>'$'</TT> is not included in the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>colnames = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='colnames' Line='colnames = ""' -->
+  <dd>List of whitespace separated column names.  These are the names referenced
+  in the command file by $&lt;name&gt;.  The leading <tt>'$'</tt> is not included in the
   column name specification.  There may be fewer columns than the number of
   columns in the table.  Dummy names must be used if some columns occur
   before a column to be referenced.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>prompt = "<TT>asthedit&gt; </TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='prompt' Line='prompt = "asthedit&gt; "'>
-  <DD>When no command file is specified the input commands are read from the
-  standard input (the terminal) and the value of the <I>prompt</I> string is
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>prompt = <tt>"asthedit&gt; "</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='prompt' Line='prompt = "asthedit&gt; "' -->
+  <dd>When no command file is specified the input commands are read from the
+  standard input (the terminal) and the value of the <i>prompt</i> string is
   printed as a prompt.  Note that if the input command file is specified as
-  "<TT>STDIN</TT>" there will be no prompt even though commands will also be read from
+  <tt>"STDIN"</tt> there will be no prompt even though commands will also be read from
   the standard input.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>update = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='update' Line='update = yes'>
-  <DD>Update the image headers?  If no then any new, modified, or deleted
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>update = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='update' Line='update = yes' -->
+  <dd>Update the image headers?  If no then any new, modified, or deleted
   keywords will not be recorded in the image headers.  This allows using the
   task only for computing and printing quantities.  Also this allows
   accessing read-only images.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verbose = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
-  <DD>Print each keyword added or modified?
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>oldstyle = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='oldstyle' Line='oldstyle = no'>
-  <DD>Use the old style syntax of this task from versions prior to V2.11.  This
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verbose = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
+  <dd>Print each keyword added or modified?
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>oldstyle = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='oldstyle' Line='oldstyle = no' -->
+  <dd>Use the old style syntax of this task from versions prior to V2.11.  This
   parameter allows backward compatibility for command files previously
   developed.  Some aspects of the new syntax are still available.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <B>Asthedit</B> evaluates expressions using image header keywords, column
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  <b>Asthedit</b> evaluates expressions using image header keywords, column
   names from a text table, CL parameters, internal variables, constants, and
   functions to create or modify image header keywords.  This task is
   particularly useful for adding keywords from a table and deriving keywords
   used by IRAF tasks which are not present in the images.  It differs from
-  <B>hedit</B> in that it includes astronomical functions, operates from a
+  <b>hedit</b> in that it includes astronomical functions, operates from a
   command file which may perform many edits, and references columns from a
   text table.  The command file may be omitted in which case commands may be
   entered interactively for the first image and then the same commands will
   be repeated for any subsequent images.
-  <P>
+  </p>
+  <p>
   This task may be used interactively or with input from a command file
-  (<I>commands</I>).  If no command file is specified a prompt (<I>prompt</I>)
+  (<i>commands</i>).  If no command file is specified a prompt (<i>prompt</i>)
   is printed and commands are entered interactively.  The input is terminated
-  with either the end-of-file character (EOF) or the command "<TT>quit</TT>".  Input
+  with either the end-of-file character (EOF) or the command <tt>"quit"</tt>.  Input
   command files simply contain the same input in a file and end with the end
-  of the file or "<TT>quit</TT>".  The input commands, either those entered
+  of the file or <tt>"quit"</tt>.  The input commands, either those entered
   interactively or from a file, are repeated for each image in the image list
   and until the end of the input text table is reached, whichever comes
   first.  Generally this task is used on one or more images but if no
   image is specified the commands are executed just once and task behaves
   like an calculator.
-  <P>
+  </p>
+  <p>
   The command input consists of statements with each statement on a
   line by itself.  However long statements may be broken up with
   escaped newlines using the back-slash as the escape character;
-  i.e. \&lt;newline&gt;.  Comments beginning with <TT>'#'</TT>, blank lines,
+  i.e. \&lt;newline&gt;.  Comments beginning with <tt>'#'</tt>, blank lines,
   and whitespace are ignored.
-  <P>
+  </p>
+  <p>
   There are three types of statements: assignment, expressions, and
   conditional.  Each statement is on a line by itself though long statements
   may be broken up with escaped newlines (\&lt;newline&gt;).  Assignment statements
   have an image header keyword name (or variable name beginning with $), an
-  equal sign (but see the <I>oldstyle</I> parameter), and an expression.
+  equal sign (but see the <i>oldstyle</i> parameter), and an expression.
   Expression statements consist of only the expression with the value of the
   expression being ignored.  Expression statements are generally used with
   certain functions.  Conditional statements are blocks of if-endif and
   if-else-endif with assignment and expression statements between the
   if-else-endif statements.  These may not be nested.
-  <P>
+  </p>
+  <p>
   In earlier versions of this task there were only assignment statements
   and these did not use an equal sign; i.e. all statements consisted
   of an image header keyword and an expression separated by whitespace
   except that a keyword name by itself indicates deletion of a keyword.
-  In order to interpret old command files the <I>oldstyle</I> parameter
+  In order to interpret old command files the <i>oldstyle</i> parameter
   may be set to yes.  This will insert an equal sign internally.  It
   also only allows a subset of statements to not begin with a keyword
   or variable.  These are if, else, endif, print, printf, and quit.
   Note that with the old style syntax one may still include an equal
   sign.  It is recommended that the old style syntax not be used because
   of the greater flexibility in the new syntax.
-  <P>
+  </p>
+  <p>
   An image header keyword name is an arbitrary identifier which must begin
-  with an alphabetic character or <TT>'$'</TT> followed by an alphabetic character and
-  may use alphabetic characters, digits, or the characters <TT>'_'</TT>, <TT>'$'</TT>, or <TT>'.'</TT>.
+  with an alphabetic character or <tt>'$'</tt> followed by an alphabetic character and
+  may use alphabetic characters, digits, or the characters <tt>'_'</tt>, <tt>'$'</tt>, or <tt>'.'</tt>.
   Keyword names are case insensitive.  Because some additional characters are
   allowed in the FITS definition of keyword names, such names may be
-  referenced with the special <TT>'@'</TT> operator described below.
-  <P>
+  referenced with the special <tt>'@'</tt> operator described below.
+  </p>
+  <p>
   One may also use internal variables which have the same identifier rules
-  but begin with <TT>'$'</TT>.  Note that these variables are case sensitive (as are
-  function names).  There are a few special predefined variables: "<TT>$I</TT>"
-  contains the current image name, "<TT>$D</TT>" contains the current local date (in
-  old FITS DD/MM/YY format), "<TT>$T</TT>" contains the current local time, "<TT>$GMD</TT>"
+  but begin with <tt>'$'</tt>.  Note that these variables are case sensitive (as are
+  function names).  There are a few special predefined variables: <tt>"$I"</tt>
+  contains the current image name, <tt>"$D"</tt> contains the current local date (in
+  old FITS DD/MM/YY format), <tt>"$T"</tt> contains the current local time, <tt>"$GMD"</tt>
   contains the current Greenwich meridian date (in FITS YYYY-MM-DD format),
-  "<TT>$GMT</TT>" contains the current Greenwich meridian time, and "<TT>$GMDT</TT>" contains
+  <tt>"$GMT"</tt> contains the current Greenwich meridian time, and <tt>"$GMDT"</tt> contains
   the current date and time in FITS YYYY-MM-DDTHH:MM:SS format.
-  <P>
+  </p>
+  <p>
   Before the commands are interpreted for each image a line of a text
   file may be read.  This occurs when a file is specified by the
-  <I>table</I> parameter.  The line is scanned and the values of each
-  column are stored in the variable names specified by the <I>colnames</I>
+  <i>table</i> parameter.  The line is scanned and the values of each
+  column are stored in the variable names specified by the <i>colnames</i>
   parameter.  The values may be referenced in expressions by the
-  specified column name preceded with <TT>'$'</TT>.  Note that additional lines
-  may be scanned with the "<TT>fscan</TT>" function.  The user is then responsible
+  specified column name preceded with <tt>'$'</tt>.  Note that additional lines
+  may be scanned with the <tt>"fscan"</tt> function.  The user is then responsible
   for the table containing the correct sequence of lines when there
   are multiple images.
-  <P>
-  In <B>asthedit</B> identifiers are image header keywords and lines
-  for the table file are read automatically.  A related task is <B>astcalc</B>.
+  </p>
+  <p>
+  In <b>asthedit</b> identifiers are image header keywords and lines
+  for the table file are read automatically.  A related task is <b>astcalc</b>.
   In this task all variables are maintained internally and input and output
   are performed explicitly by functions.  There are functions to read,
   write, and delete image header keywords from a list of images.
-  <P>
+  </p>
+  <p>
   STATEMENTS
-  <P>
+  </p>
+  <p>
   The following gives a more formal description of the statement syntax
-  and the special words "<TT>if</TT>", "<TT>else</TT>", "<TT>endif</TT>", and "<TT>quit</TT>".
-  <P>
-  <PRE>
+  and the special words <tt>"if"</tt>, <tt>"else"</tt>, <tt>"endif"</tt>, and <tt>"quit"</tt>.
+  </p>
+  <pre>
   	&lt;keyword&gt;
           &lt;keyword&gt; = &lt;expression&gt;
   	$&lt;variable&gt; = &lt;expression&gt; 
@@ -205,16 +214,17 @@ asthedit — Astronomical header editor
               &lt;statements&gt;
           endif
           quit
-  </PRE>
-  <P>
-  The result of the expression in the "<TT>if</TT>" statement is normally a logical
+  </pre>
+  <p>
+  The result of the expression in the <tt>"if"</tt> statement is normally a logical
   value.  However, a numeric value of 0 is false while any other value is
-  true and any string beginning with either "<TT>y</TT>" or "<TT>Y</TT>" is true with
+  true and any string beginning with either <tt>"y"</tt> or <tt>"Y"</tt> is true with
   any other value being false; i.e. string values of yes and no may be used.
-  <P>
+  </p>
+  <p>
   The old style syntax allows the following statements.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	&lt;keyword&gt;
           &lt;keyword&gt;     &lt;expression&gt;
   	$&lt;variable&gt;   &lt;expression&gt; 
@@ -231,66 +241,74 @@ asthedit — Astronomical header editor
               &lt;statements&gt;
           endif
           quit
-  </PRE>
-  <P>
+  </pre>
+  <p>
   Old style command files would only use the first two statements.
-  <P>
+  </p>
+  <p>
   KEYWORD NAMES AND VARIABLES
-  <P>
+  </p>
+  <p>
   Keyword names and variables may formally be defined as:
-  <P>
-  <PRE>
+  </p>
+  <pre>
           [$]{a-zA-Z}[{a-zA-Z0-9._$}]*
-  </PRE>
-  <P>
+  </pre>
+  <p>
   where [] indicate optional, {} indicates a class, - indicates an ASCII
   range of characters, and * indicates zero or more occurrences.  In words, a
   keyword must begin with an alphabetic character, a variable or text file
-  column name begins with <TT>'$'</TT> and an alphabetic character, and both may be
-  followed by any combinations of alphabetic, digit, or <TT>'.'</TT>, <TT>'_'</TT>, and <TT>'$'</TT>
+  column name begins with <tt>'$'</tt> and an alphabetic character, and both may be
+  followed by any combinations of alphabetic, digit, or <tt>'.'</tt>, <tt>'_'</tt>, and <tt>'$'</tt>
   characters.
-  <P>
+  </p>
+  <p>
   There are a few predefined variables which may be referenced in
   expressions.
-  <P>
-  <PRE>
+  </p>
+  <pre>
           $I      The name of the current image (if used)
           $D      The current date in the DD/MM/YY format
           $T      The current (local) time as a sexagesimal string
-  </PRE>
-  <P>
+  </pre>
+  <p>
   The date and time are set once at the beginning of execution.
-  <P>
+  </p>
+  <p>
   Though not recommended it is possible to use any set of characters
-  for a variable provided the variable is referenced as @"<TT>&lt;name&gt;</TT>".
-  For example one could use @"<TT>date-obs</TT>" to include the character <TT>'-'</TT>.
-  This option is primarily used for FITS keywords that use <TT>'-'</TT> as
+  for a variable provided the variable is referenced as @<tt>"&lt;name&gt;"</tt>.
+  For example one could use @<tt>"date-obs"</tt> to include the character <tt>'-'</tt>.
+  This option is primarily used for FITS keywords that use <tt>'-'</tt> as
   a hyphen character and must be escaped from interpretation as the
   an arithmetic subtraction operator.
-  <P>
+  </p>
+  <p>
   EXPRESSIONS
-  <P>
+  </p>
+  <p>
   Expressions consist of operands and operators.  The operands may be any
   image header keyword, previously defined variable, column name, quoted
   string constants, numeric constants, and functions.  Values given as
   sexagesimal strings are automatically converted to decimal numbers.  The
   operators are arithmetic, logical, and string.  The expression syntax is
   equivalent to that used in the CL and SPP languages.
-  <P>
-  Additional information may be found in the help for <B>hedit</B> except that
+  </p>
+  <p>
+  Additional information may be found in the help for <b>hedit</b> except that
   all unquoted nonnumeric strings are considered to be keywords or variables
-   and so the <TT>'('</TT>, <TT>')'</TT> operators are not used.  The "<TT>field</TT>" references are
-  not needed so the references "<TT>.</TT>" and  "<TT>$</TT>" are not used and are not legal
+   and so the <tt>'('</tt>, <tt>')'</tt> operators are not used.  The <tt>"field"</tt> references are
+  not needed so the references <tt>"."</tt> and  <tt>"$"</tt> are not used and are not legal
   variable names in this task.
-  <P>
+  </p>
+  <p>
   operators:
-  <P>
+  </p>
+  <p>
   The following operators are recognized in expressions.  With the exception
-  of the operators "<TT>?</TT>", "<TT>?=</TT>", and "<TT>@</TT>", the operator set is equivalent to that
+  of the operators <tt>"?"</tt>, <tt>"?="</tt>, and <tt>"@"</tt>, the operator set is equivalent to that
   available in the CL and SPP languages.
-  <P>
-  <P>
-  <PRE>
+  </p>
+  <pre>
           +  -  *  /              arithmetic operators
           **                      exponentiation
           //                      string concatenation
@@ -300,59 +318,63 @@ asthedit — Astronomical header editor
           ?=                      string equals pattern
           ? :                     conditional expression
           @                       reference a variable
-  </PRE>
-  <P>
-  <P>
-  The operators "<TT>==</TT>", "<TT>&amp;&amp;</TT>", and "<TT>||</TT>" may be abbreviated as "<TT>=</TT>", "<TT>&amp;</TT>", and "<TT>|</TT>"
+  </pre>
+  <p>
+  The operators <tt>"=="</tt>, <tt>"&amp;&amp;"</tt>, and <tt>"||"</tt> may be abbreviated as <tt>"="</tt>, <tt>"&amp;"</tt>, and <tt>"|"</tt>
   if desired.  The ?= operator performs pattern matching upon strings.
   The @ operator is required to reference keywords with
   one of the operator characters.  This is most like to be used as:
-  <P>
-          @"<TT>date-obs</TT>"
-  <P>
+  </p>
+  <p>
+          @<tt>"date-obs"</tt>
+  </p>
+  <p>
   A point to be aware of is that in the ?: conditional expression both
   possible result values are evaluated though the result of the expression
   is only one of them.  This means that one should not use this to
   call I/O functions that one wants to be executed only if a certain
   condition holds.
-  <P>
+  </p>
+  <p>
   intrinsic functions:
-  <P>
+  </p>
+  <p>
   A number of standard intrinsic functions are recognized within expressions.
   The set of functions currently supported is shown below.
-  <P>
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	abs     atan2   deg     log     min     real    sqrt
   	acos    bool    double  log10   mod     short   str
   	asin    cos     exp     long    nint    sin     tan
   	atan    cosh    int     max     rad     sinh    tanh
-  </PRE>
-  <P>
-  <P>
+  </pre>
+  <p>
   The trigonometric functions operate in units of radians.
-  The <I>min</I> and <I>max</I> functions may have any number of arguments up
+  The <i>min</i> and <i>max</i> functions may have any number of arguments up
   to a maximum of sixteen or so (configurable).  The arguments need not all
   be of the same datatype.
-  <P>
+  </p>
+  <p>
   A function call may take either of the following forms:
-  <P>
-  <PRE>
-          &lt;identifier&gt; <TT>'('</TT> arglist <TT>')'</TT>
+  </p>
+  <pre>
+          &lt;identifier&gt; <tt>'('</tt> arglist <tt>')'</tt>
   or
-          &lt;string_expr&gt; <TT>'('</TT> arglist <TT>')'</TT>
-  </PRE>
-  <P>
+          &lt;string_expr&gt; <tt>'('</tt> arglist <tt>')'</tt>
+  </pre>
+  <p>
   The first form is the conventional form found in all programming languages.
   The second permits the generation of function names by string valued
   expressions and might be useful on rare occasions.
-  <P>
+  </p>
+  <p>
   special functions:
-  <P>
+  </p>
+  <p>
   In addition to the above intrinsic functions there are a number of
   astronomical functions. More will be added in time.  These are:
-  <P>
-  <PRE>
+  </p>
+  <pre>
        sexstr - convert a number to a sexagesimal string (xx:mm:ss.ss)
         epoch - compute an epoch given a date and time
        julday - compute a Julian day given a date and time
@@ -363,134 +385,133 @@ asthedit — Astronomical header editor
      eairmass - compute effective airmass given
   		ra, dec, sidereal time, exposure time, and latitude
         obsdb - get parameters from the observatory database
-  </PRE>
-  <P>
-  <DL>
-  <DT><B>sexstr (number), sexstr (number, digits)</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='sexstr' Line='sexstr (number), sexstr (number, digits)'>
-  <DD>Convert a number to a sexagesimal string in the format X:MM:SS.SS.  There
+  </pre>
+  <dl>
+  <dt><b>sexstr (number), sexstr (number, digits)</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='sexstr' Line='sexstr (number), sexstr (number, digits)' -->
+  <dd>Convert a number to a sexagesimal string in the format X:MM:SS.SS.  There
   is an optional second argument (the default is 0) which is the number of
   decimal digits in the seconds field.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>epoch (date[, ut])</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='epoch' Line='epoch (date[, ut])'>
-  <DD>Compute an epoch given a date and time.  The date is a string in the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>epoch (date[, ut])</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='epoch' Line='epoch (date[, ut])' -->
+  <dd>Compute an epoch given a date and time.  The date is a string in the
   format DD/MM/YY, YYYY-MM-DD, or YYYY-MM-DDTHH:MM:SS.
   Typically this argument will be the standard FITS
   keyword DATE-OBS.  Because of possible confusion of the hyphen with
-  subtraction this keyword would be specified as @"<TT>date-obs</TT>".  The time
+  subtraction this keyword would be specified as @<tt>"date-obs"</tt>.  The time
   argument is optional.  If it is not given the time from the date
   string will be used and if absent a time of 0h is used.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>julday (date[, ut])</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='julday' Line='julday (date[, ut])'>
-  <DD>Compute a Julian day given a date and time.  The date and time are
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>julday (date[, ut])</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='julday' Line='julday (date[, ut])' -->
+  <dd>Compute a Julian day given a date and time.  The date and time are
   specified as described previously.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>mst (date[, ut], longitude)</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='mst' Line='mst (date[, ut], longitude)'>
-  <DD>Compute a mean sidereal time given a date, time, and longitude in degrees.  The
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>mst (date[, ut], longitude)</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='mst' Line='mst (date[, ut], longitude)' -->
+  <dd>Compute a mean sidereal time given a date, time, and longitude in degrees.  The
   date and (optional) time are specified as described previously.  The longitude
   may be given as a constant or using the observatory database function
   as shown in the examples.  The returned value is a sexagesimal
   string with two decimals in the seconds.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>precess (ra, dec, epoch1, epoch2)</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='precess' Line='precess (ra, dec, epoch1, epoch2)'>
-  <DD>Precess coordinates from one epoch to another.  The ra is the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>precess (ra, dec, epoch1, epoch2)</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='precess' Line='precess (ra, dec, epoch1, epoch2)' -->
+  <dd>Precess coordinates from one epoch to another.  The ra is the
   right ascension in hours, the dec in the declination in degrees,
   and the epochs are in years.  This function returns a formatted string with
   the precessed right ascension, declination, and epoch.  Numerical
   values for the right ascension and declination are obtained with the
   functions ra_precess and dec_precess.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>ra_precess (ra, dec, epoch1, epoch2)</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='ra_precess' Line='ra_precess (ra, dec, epoch1, epoch2)'>
-  <DD>Precess a right ascension from one epoch to another.  The ra is the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>ra_precess (ra, dec, epoch1, epoch2)</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='ra_precess' Line='ra_precess (ra, dec, epoch1, epoch2)' -->
+  <dd>Precess a right ascension from one epoch to another.  The ra is the
   input right ascension in hours, the dec is the declination in degrees,
   and the epochs are in years.  Because a function can return only one
   value there is a second function to return the precessed declination.
   The returned value is a sexagesimal string with two decimals in the seconds.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>dec_precess (ra1, dec1, epoch1, epoch2)</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='dec_precess' Line='dec_precess (ra1, dec1, epoch1, epoch2)'>
-  <DD>Precess a declination from one epoch to another.  The ra is the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>dec_precess (ra1, dec1, epoch1, epoch2)</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='dec_precess' Line='dec_precess (ra1, dec1, epoch1, epoch2)' -->
+  <dd>Precess a declination from one epoch to another.  The ra is the
   input right ascension in hours, the dec is the declination in degrees,
   and the epochs are in years.  Because a function can return only one
   value there is a second function to return the precessed right ascension.
   The returned value is a sexagesimal string with two decimals in the seconds.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>arcsep (ra1, dec1, ra2, dec2)</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='arcsep' Line='arcsep (ra1, dec1, ra2, dec2)'>
-  <DD>Compute the separation between two spherical coordinates.  The parameters
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>arcsep (ra1, dec1, ra2, dec2)</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='arcsep' Line='arcsep (ra1, dec1, ra2, dec2)' -->
+  <dd>Compute the separation between two spherical coordinates.  The parameters
   ra1 and ra2 are coordinates in hours (right ascension, longitude, etc.)
   and the dec1 and dec2 parameters are coordinates in degrees (declination,
   latitude, etc.).  The computed value is returned in seconds of arc.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>airmass (ra, dec, st, latitude)</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='airmass' Line='airmass (ra, dec, st, latitude)'>
-  <DD>Compute an airmass given right ascension in hours, declination in
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>airmass (ra, dec, st, latitude)</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='airmass' Line='airmass (ra, dec, st, latitude)' -->
+  <dd>Compute an airmass given right ascension in hours, declination in
   degrees, sidereal time in hours, and latitude in degrees.  The latitude
   is often specified using the observatory database function as shown
   in the examples.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>eairmass (ra, dec, st, exptime, latitude)</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='eairmass' Line='eairmass (ra, dec, st, exptime, latitude)'>
-  <DD>Compute an "<TT>effective</TT>" airmass given right ascension in hours, declination
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>eairmass (ra, dec, st, exptime, latitude)</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='eairmass' Line='eairmass (ra, dec, st, exptime, latitude)' -->
+  <dd>Compute an <tt>"effective"</tt> airmass given right ascension in hours, declination
   in degrees, beginning sidereal time in hours, exposure time in seconds, and
   latitude in degrees.  The The latitude is often specified using the
   observatory database function as shown in the examples.  The effective
   airmass is based on a Simpson's rule weighting of the beginning, middle,
   and ending airmass (with no provision for paused exposure).  The weights
   are:
-  <P>
-  <PRE>
+  <pre>
       effective = beginning + 4 * middle + ending
-  </PRE>
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>obsdb (observatory, parameter)</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='obsdb' Line='obsdb (observatory, parameter)'>
-  <DD>Return a value from the observatory database.  The observatory parameter is
+  </pre>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>obsdb (observatory, parameter)</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='obsdb' Line='obsdb (observatory, parameter)' -->
+  <dd>Return a value from the observatory database.  The observatory parameter is
   a observatory identification string as defined in the database.  Often this
   is the value stored in the OBSERVAT keyword.  Another special value is
-  "<TT>observatory</TT>" which then follows a name resolution scheme.  The observatory
-  database mechanism is described by the help topic <B>observatory</B>.  The
+  <tt>"observatory"</tt> which then follows a name resolution scheme.  The observatory
+  database mechanism is described by the help topic <b>observatory</b>.  The
   parameter is a string given the quantity desired.  Typically this would be
-  "<TT>longitude</TT>" or "<TT>latitude</TT>" but there are other possible parameters.
-  </DD>
-  </DL>
-  <P>
+  <tt>"longitude"</tt> or <tt>"latitude"</tt> but there are other possible parameters.
+  </dd>
+  </dl>
+  <p>
   input/output functions:
-  <P>
+  </p>
+  <p>
   There are special functions for formatting, printing, error aborts,
   reading, writing, and deleting image header keywords, reading a text file,
-  and reading and writing CL parameters.  Note that in <B>asthedit</B>
+  and reading and writing CL parameters.  Note that in <b>asthedit</b>
   one would not normally use the image input/output functions or
   the text file scanning function since any keyword reference reads or
   writes to the image header and one line of the text file is scanned
   automatically for each image.
-  <P>
-  <PRE>
+  </p>
+  <pre>
        print  - print a set of arguments with default format
        printf - print a set arguments with specified format
        format - format a string
@@ -502,108 +523,106 @@ asthedit — Astronomical header editor
        imget  - get the value of an image header keyword
        imput  - put (add or modify) the value of an image header keyword
        imdel  - delete an image header keyword
-  </PRE>
-  <P>
-  <DL>
-  <DT><B>print ([argument, ...])</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='print' Line='print ([argument, ...])'>
-  <DD>Print the arguments with default formats based on the type of value ending
+  </pre>
+  <dl>
+  <dt><b>print ([argument, ...])</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='print' Line='print ([argument, ...])' -->
+  <dd>Print the arguments with default formats based on the type of value ending
   with a newline.  There may be zero or more arguments.  With zero arguments
   only a newline will be printed.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>printf (fmt [, argument, ...])</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='printf' Line='printf (fmt [, argument, ...])'>
-  <DD>Print a list of arguments using the formatting syntax described later.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>printf (fmt [, argument, ...])</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='printf' Line='printf (fmt [, argument, ...])' -->
+  <dd>Print a list of arguments using the formatting syntax described later.
   Parameters to be formatted are given by the % fields and the values are
   passed as further arguments in the order in which they are referenced.
-  There is no automatic newline so the format must include "<TT>\n</TT>" to
+  There is no automatic newline so the format must include <tt>"\n"</tt> to
   produce newlines.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>error (message)</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='error' Line='error (message)'>
-  <DD>Print the "<TT>message</TT>", which can be any string variable such as might
-  be produced by "<TT>format</TT>", and abort the task.  This is useful in
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>error (message)</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='error' Line='error (message)' -->
+  <dd>Print the <tt>"message"</tt>, which can be any string variable such as might
+  be produced by <tt>"format"</tt>, and abort the task.  This is useful in
   conjunction with the conditional operator to abort if a variable
   takes an inappropriate value.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>clget (parameter)</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='clget' Line='clget (parameter)'>
-  <DD>Get the value of a CL parameter.  The argument must be a string.  The
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>clget (parameter)</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='clget' Line='clget (parameter)' -->
+  <dd>Get the value of a CL parameter.  The argument must be a string.  The
   function value is the value of the parameter.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>clput (parameter, value)</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='clput' Line='clput (parameter, value)'>
-  <DD>Put a value into a CL parameter.  The parameter argument must be a
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>clput (parameter, value)</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='clput' Line='clput (parameter, value)' -->
+  <dd>Put a value into a CL parameter.  The parameter argument must be a
   string and the value can be anything.  The function returns a string
-  of the form "<TT>clput: parameter = value</TT>" where parameter and value are
+  of the form <tt>"clput: parameter = value"</tt> where parameter and value are
   the actual values.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>scan (string, var, ...)</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='scan' Line='scan (string, var, ...)'>
-  <DD>Parse a string of whitespace separated words into a list of
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>scan (string, var, ...)</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='scan' Line='scan (string, var, ...)' -->
+  <dd>Parse a string of whitespace separated words into a list of
   keywords or variables.  The number of variables assigned is
   the returned value of the function.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>fscan (var, ...)</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='fscan' Line='fscan (var, ...)'>
-  <DD>Scan a line of a text file into a list of keywords or variables.  The arguments
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>fscan (var, ...)</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='fscan' Line='fscan (var, ...)' -->
+  <dd>Scan a line of a text file into a list of keywords or variables.  The arguments
   are zero or more variable names to which to assign the values of
   the whitespace separated fields.  The number of variables assigned
   is the returned value of the function.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>imget (parameter)</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='imget' Line='imget (parameter)'>
-  <DD>Get the value of an image header keyword from the current image.  The
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>imget (parameter)</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='imget' Line='imget (parameter)' -->
+  <dd>Get the value of an image header keyword from the current image.  The
   argument must be a string.  The function value is the value of the keyword.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>imput (parameter, value)</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='imput' Line='imput (parameter, value)'>
-  <DD>Put a value into an image header keyword for the current image.  The
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>imput (parameter, value)</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='imput' Line='imput (parameter, value)' -->
+  <dd>Put a value into an image header keyword for the current image.  The
   parameter argument must be a string and the value can be anything.  If the
   keyword exists it will be modified and if it does not exist it will be
-  added.  The function returns a string of the form "<TT>imput: parameter =
-  value</TT>" for new keywords or "<TT>imput: parameter = old_value -&gt; value</TT>" for
+  added.  The function returns a string of the form <tt>"imput: parameter =
+  value"</tt> for new keywords or <tt>"imput: parameter = old_value -&gt; value"</tt> for
   modified keywords where parameter and value are the actual values.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>imdel (parameter)</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='imdel' Line='imdel (parameter)'>
-  <DD>Delete an image header keyword.  The parameter argument must be a string.
-  The returned values are the strings "<TT>imdel: parameter not found</TT>"
-  or "<TT>imdel: parameter = value (DELETED)</TT>" where parameter is the parameter
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>imdel (parameter)</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='imdel' Line='imdel (parameter)' -->
+  <dd>Delete an image header keyword.  The parameter argument must be a string.
+  The returned values are the strings <tt>"imdel: parameter not found"</tt>
+  or <tt>"imdel: parameter = value (DELETED)"</tt> where parameter is the parameter
   name and value is the old value.
-  </DD>
-  </DL>
-  <P>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Formats</H3>
-  <! BeginSection: 'FORMATS'>
-  <UL>
-  A  format  specification has the form "<TT>%w.dCn</TT>", where w is the field
+  </dd>
+  </dl>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Formats</h3>
+  <!-- BeginSection: 'FORMATS' -->
+  <p>
+  A  format  specification has the form <tt>"%w.dCn"</tt>, where w is the field
   width, d is the number of decimal places or the number of digits  of
   precision,  C  is  the  format  code,  and  n is radix character for
-  format code "<TT>r</TT>" only.  The w and d fields are optional.  The  format
+  format code <tt>"r"</tt> only.  The w and d fields are optional.  The  format
   codes C are as follows:
       
-  <PRE>
+  </p>
+  <pre>
   b       boolean (YES or NO)
   c       single character (c or '\c' or '\0nnn')
   d       decimal integer
@@ -656,7 +675,7 @@ asthedit — Astronomical header editor
   %-15.7e     same as above but left justified
   %12.5g      print a real number right justified in general format
   %-12.5g     same as above but left justified
-  <P>
+  
   %h	    format as nn:nn:nn.n
   %15h	    right justify nn:nn:nn.n in field of 15 characters
   %-15h	    left justify nn:nn:nn.n in a field of 15 characters
@@ -668,18 +687,16 @@ asthedit — Astronomical header editor
   %-15H	    / by 15 and left justify nn:nn:nn.n in field of 15 characters
   %12.2H	    / by 15 and right justify nn:nn:nn.nn
   %-12.2H	    / by 15 and left justify nn:nn:nn.nn
-  <P>
+  
   \n          insert a newline
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'FORMATS'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'FORMATS' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1.  The following command file exercises the astronomical functions:
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; type cmds
       observat = "kpno"
       time = sexstr (1.2345)
@@ -716,15 +733,16 @@ asthedit — Astronomical header editor
         airmass = 1.07968415451148 -&gt; DELETED
         airmass =  
         airmass =  -&gt; 1.08519059292424
-  </PRE>
-  <P>
+  </pre>
+  <p>
   Note the use of the keyword deletion and syntax for adding an empty
   value.
-  <P>
+  </p>
+  <p>
   2.  The following command file shows computing a mid-ut and using a table
   of values.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; type cmds
       midut = sexstr ($ut + $itime/3600./2.)
       imagetyp = $imagetyp
@@ -745,12 +763,12 @@ asthedit — Astronomical header editor
         midut = 9:48:05
         imagetyp = comp
       ...
-  </PRE>
-  <P>
+  </pre>
+  <p>
   3.  The following example computes quantities used by some NOAO tasks from
   a minimal ESO/IHAP header.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; type eso.dat
       observat = "eso"
       ut = sexstr ((@'tm-start'+0.1) / 3600.)
@@ -810,19 +828,20 @@ asthedit — Astronomical header editor
   	IMAGETYP= 'object  '
   	FILTER  = 'V       '
   	...
-  </PRE>
-  <P>
+  </pre>
+  <p>
   The 0.1 in the UT calculation are to account for round-off.
   Note the use of the conditional expression for the exposure time.
-  <P>
+  </p>
+  <p>
   4.  The following example is for a case where there was no telescope
   information but there is date and time information.  This example is
   relevant to data from the Kitt Peak Schmidt telescope circa 1993.
   A table is prepared with the RA, Dec, and Epoch of each observation
   and all other information is derived from the date, ut, and observatory
   database. 
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; type table.dat
       12:45:32  +49:34:12   1950
       13:12:02  -01:12:05   1950
@@ -852,14 +871,15 @@ asthedit — Astronomical header editor
         st = 14:53:39.81
         airmass = 1.336016291162518
         midut = 9:32:27
-  </PRE>
-  <P>
+  </pre>
+  <p>
   Note the use of the table and image header epochs in the precession.
-  <P>
+  </p>
+  <p>
   5.  The following example shows the use of the printf function,
   and a null image name, and interactive command input.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; asthedit "" ""
       astcalc&gt; ra = 12:20:30
       astcalc&gt; dec = 45:00:10
@@ -868,49 +888,42 @@ asthedit — Astronomical header editor
       astcalc&gt; ra1 = ra_precess (ra, dec, ep1, ep2)
       astcalc&gt; printf ("ra=%h dec=%h\n", ra1, dec_precess (ra, dec, ep1, ep2))
       ra=12:22:57.4 dec=44:43:32.25
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Revisions</H3>
-  <! BeginSection: 'REVISIONS'>
-  <UL>
-  <DL>
-  <DT><B>ASTHEDIT V2.11.2</B></DT>
-  <! Sec='REVISIONS' Level=0 Label='ASTHEDIT' Line='ASTHEDIT V2.11.2'>
-  <DD>Y2K update:  The epoch, julday, and mst functions now take either the old
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Revisions</h3>
+  <!-- BeginSection: 'REVISIONS' -->
+  <dl>
+  <dt><b>ASTHEDIT V2.11.2</b></dt>
+  <!-- Sec='REVISIONS' Level=0 Label='ASTHEDIT' Line='ASTHEDIT V2.11.2' -->
+  <dd>Y2K update:  The epoch, julday, and mst functions now take either the old
   or new FITS style date strings.  The time argument is optional and if
   it is not specified the time from the date string is used and if neither
   time is present a value of 0h is used.  New internal variables $GMD,
   $GMT, and $GMDT for the current time Greenwich time are defined.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>ASTHEDIT V2.11</B></DT>
-  <! Sec='REVISIONS' Level=0 Label='ASTHEDIT' Line='ASTHEDIT V2.11'>
-  <DD>There are new astronomical functions and input/output functions.
-  <P>
-  The command syntax may now use "<TT>=</TT>" as a delimiter as well as the whitespace.
-  <P>
-  A new parameter "<TT>update</TT>" allows protecting images and accessing read-only
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>ASTHEDIT V2.11</b></dt>
+  <!-- Sec='REVISIONS' Level=0 Label='ASTHEDIT' Line='ASTHEDIT V2.11' -->
+  <dd>There are new astronomical functions and input/output functions.
+  The command syntax may now use <tt>"="</tt> as a delimiter as well as the whitespace.
+  A new parameter <tt>"update"</tt> allows protecting images and accessing read-only
   images for the purpose of calculating and printing quantities.
-  <P>
-  The special variable name "<TT>$I</TT>" has the value of the image name, $D
+  The special variable name <tt>"$I"</tt> has the value of the image name, $D
   the current date, and $T the current time.
-  <P>
   The case of no image name creates and deletes a temporary image so the
-  task can be used purely as a calculator (but see <B>astcalc</B>).
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'REVISIONS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  task can be used purely as a calculator (but see <b>astcalc</b>).
+  </dd>
+  </dl>
+  <!-- EndSection:   'REVISIONS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   astcalc, hedit, hfix, mkheader, setairmass, setjd, asttimes, precess,
   observatory
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'FORMATS' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'FORMATS' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

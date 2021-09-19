@@ -1,54 +1,53 @@
 .. _galactic:
 
-galactic — Convert ra, dec to galactic coordinates
-==================================================
+galactic: Convert ra, dec to galactic coordinates
+=================================================
 
 **Package: astutil**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   galactic -- convert between equatorial and galactic coordinates
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   galactic files
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>files</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='files' Line='files'>
-  <DD>The name of a file (or a file list or template) containing the coordinates
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>files</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='files' Line='files' -->
+  <dd>The name of a file (or a file list or template) containing the coordinates
   to be converted.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>in_coords = "<TT>equatorial</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='in_coords' Line='in_coords = "equatorial"'>
-  <DD>Type of input coordinates.  May be either "<TT>equatorial</TT>" (RA and DEC) or
-  "<TT>galactic</TT>" (l and b).
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>print_coords = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='print_coords' Line='print_coords = yes'>
-  <DD>If <B>print_coords</B> = yes, the RA, DEC and epoch (as well as lII and bII) 
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>in_coords = <tt>"equatorial"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='in_coords' Line='in_coords = "equatorial"' -->
+  <dd>Type of input coordinates.  May be either <tt>"equatorial"</tt> (RA and DEC) or
+  <tt>"galactic"</tt> (l and b).
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>print_coords = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='print_coords' Line='print_coords = yes' -->
+  <dd>If <b>print_coords</b> = yes, the RA, DEC and epoch (as well as lII and bII) 
   will be listed on the output file.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  Program <B>galactic</B> is used to convert between equatorial and
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  Program <b>galactic</b> is used to convert between equatorial and
   galactic coordinates.  It converts in either direction based on the
   specified input coordinates.  Coordinates are read from the input file
   as RA and DEC or galactic longitude and latitude pairs, one pair per
@@ -58,16 +57,16 @@ galactic — Convert ra, dec to galactic coordinates
   before conversion for equatorial to galactic or to the specified epoch
   for galactic to equatorial.  Coordinates may be entered in either
   decimal or sexagesimal notation.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Convert the given RA and DEC coordinates to galactic coordinates.  When
   the epoch is specified as other than 1950.0, precess before converting.
   The lines input by the user are marked:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; galactic STDIN 	         		[input]
   	12:30:10.12 10:18:27.5 1930.			[input]
     	12:30:10.12   10:18:27.5  1930.00     288.4695   72.2884
@@ -76,27 +75,30 @@ galactic — Convert ra, dec to galactic coordinates
   	12.5  10:18                                     [input]
     	12:30:00.00   10:18:00.0  1950.00     287.4598   72.3202
   	(eof=&lt;ctrl/z&gt;)					[input]
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. The following is equivalent, except that coordinate input is taken from
-  the file "<TT>coords</TT>", rather than from the terminal:
-  <P>
-  <PRE>
+  the file <tt>"coords"</tt>, rather than from the terminal:
+  </p>
+  <pre>
   	cl&gt; galactic coords 				[input]
     	12:30:10.12   10:18:27.5  1930.00     288.4695   72.2884
     	12:30:00.00   10:18:00.0  1950.00     287.4598   72.3202
     	12:30:00.00   10:18:00.0  1950.00     287.4598   72.3202
-  </PRE>
-  <P>
+  </pre>
+  <p>
   3. If image headers contain the coordinates, in this case RA, DEC, and EPOCH,
   then one can get the galactic coordinates for the image by:
-  <P>
+  </p>
+  <p>
   	cl&gt; hselect *.imh ra,dec,epoch yes | galactic STDIN
-  <P>
-  (Consult the help for the task <B>hselect</B> for information about selecting
+  </p>
+  <p>
+  (Consult the help for the task <b>hselect</b> for information about selecting
   fields from image headers.)
-  </UL>
-  <! EndSection:    'EXAMPLES'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES'  >
+  <!-- EndSection:    'EXAMPLES' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES'  -->
   

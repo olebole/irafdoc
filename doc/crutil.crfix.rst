@@ -1,85 +1,83 @@
 .. _crfix:
 
-crfix — Fix cosmic rays in images using cosmic ray masks
-========================================================
+crfix: Fix cosmic rays in images using cosmic ray masks
+=======================================================
 
 **Package: crutil**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   crfix -- fix cosmic rays in images using cosmic ray masks
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage	</H3>
-  <! BeginSection: 'USAGE	'>
-  <UL>
-  <PRE>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage	</h3>
+  <!-- BeginSection: 'USAGE	' -->
+  <pre>
   crfix input output masks
-  </PRE>
-  </UL>
-  <! EndSection:   'USAGE	'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
-  <DD>Input two dimensional image to be "<TT>fixed</TT>" (modified) by linear interpolation.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
-  <DD>Output image.  If the output image name exactly matches the input
+  </pre>
+  <!-- EndSection:   'USAGE	' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
+  <dd>Input two dimensional image to be <tt>"fixed"</tt> (modified) by linear interpolation.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
+  <dd>Output image.  If the output image name exactly matches the input
   image name (including extensions) then the image will be modified in place.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>crmask</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='crmask' Line='crmask'>
-  <DD>Cosmic ray mask identifying the cosmic rays to be fixed.  The mask
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>crmask</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='crmask' Line='crmask' -->
+  <dd>Cosmic ray mask identifying the cosmic rays to be fixed.  The mask
   values are zero for good data and non-zero for cosmic rays.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  The input and output images are specified by the <I>input</I> and
-  <I>output</I> parameters.  If the input and output image names are
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  The input and output images are specified by the <i>input</i> and
+  <i>output</i> parameters.  If the input and output image names are
   identifical (including extensions) then image is modified in place.  Cosmic
-  rays, identified in a cosmic ray mask specified by the <I>crmask</I>
+  rays, identified in a cosmic ray mask specified by the <i>crmask</i>
   parameter, are replaced in the output image by linear interpolation along
   lines or columns using the nearest good pixels.  The special mask name
-  "<TT>BPM</TT>" may be used to select a mask name given in the input image header
-  under the keyword "<TT>BPM</TT>".
-  <P>
-  Cosmic ray pixels are "<TT>fixed</TT>" by replacing them with values
+  <tt>"BPM"</tt> may be used to select a mask name given in the input image header
+  under the keyword <tt>"BPM"</tt>.
+  </p>
+  <p>
+  Cosmic ray pixels are <tt>"fixed"</tt> by replacing them with values
   by linear interpolation to the nearest pixels not identified as bad.
   The interpolation direction is the shortest length between good pixels
   along columns or lines.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1.  To replace cosmic rays in an image:
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; crfix obj012 crobj012 crmask012
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   fixpix, crmedian, crnebula, cosmicrays, credit, epix
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

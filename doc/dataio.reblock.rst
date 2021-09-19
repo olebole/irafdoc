@@ -1,150 +1,149 @@
 .. _reblock:
 
-reblock — Copy a binary file, optionally reblocking
-===================================================
+reblock: Copy a binary file, optionally reblocking
+==================================================
 
 **Package: dataio**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   reblock -- copy a file to tape or disk with optional reblocking
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   reblock infiles outfiles file_list
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>infiles  </B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='infiles' Line='infiles  '>
-  <DD>The input file list or device name, e.g. "<TT>mta1600[2]</TT>" or "<TT>mta800</TT>", "<TT>file1</TT>",
-  "<TT>file1,file2</TT>", or "<TT>@infiles</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>outfiles  </B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='outfiles' Line='outfiles  '>
-  <DD>The list of output files or device name, e.g. "<TT>gemini!mtb</TT>", "<TT>out1</TT>",
-  "<TT>out1,out2</TT>", or "<TT>@outfiles</TT>".
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>infiles  </b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='infiles' Line='infiles  ' -->
+  <dd>The input file list or device name, e.g. <tt>"mta1600[2]"</tt> or <tt>"mta800"</tt>, <tt>"file1"</tt>,
+  <tt>"file1,file2"</tt>, or <tt>"@infiles"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>outfiles  </b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='outfiles' Line='outfiles  ' -->
+  <dd>The list of output files or device name, e.g. <tt>"gemini!mtb"</tt>, <tt>"out1"</tt>,
+  <tt>"out1,out2"</tt>, or <tt>"@outfiles"</tt>.
   If multiple file output to disk is requested,  and the specified number
   of output files is 1, the output file names will be generated
   by concatenating the tape file number (the input files are on tape) or
   a sequence number (the input files are on disk) onto the output file
   name.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>file_list</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='file_list' Line='file_list'>
-  <DD>List of tape file numbers or ranges delimited by commas,
-  e.g. "<TT>1-3,5_8</TT>".
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>file_list</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='file_list' Line='file_list' -->
+  <dd>List of tape file numbers or ranges delimited by commas,
+  e.g. <tt>"1-3,5_8"</tt>.
   File_list is requested only if the magtape input device is specified.
   Files will be read in ascending order regardless of the ordering of the list.
   Reading will terminate silently if EOT is reached, thus a list such as
-  "<TT>1-999</TT>" may be used to read all files on the tape.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>newtape  </B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='newtape' Line='newtape  '>
-  <DD>If the output device is magtape, newtape specifies whether the tape is
+  <tt>"1-999"</tt> may be used to read all files on the tape.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>newtape  </b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='newtape' Line='newtape  ' -->
+  <dd>If the output device is magtape, newtape specifies whether the tape is
   blank or contains data.
-  Newtape is requested only if no tape file number is specified, e.g. "<TT>mta1600</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>outblock = INDEF</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='outblock' Line='outblock = INDEF'>
-  <DD>Size of the output block  bytes.
+  Newtape is requested only if no tape file number is specified, e.g. <tt>"mta1600"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>outblock = INDEF</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='outblock' Line='outblock = INDEF' -->
+  <dd>Size of the output block  bytes.
   In the  default case and for disk output, the output block size is set to the
   file i/o disk default buffer size.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>inrecord = INDEF, outrecord = INDEF</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='inrecord' Line='inrecord = INDEF, outrecord = INDEF'>
-  <DD>The sizes of the input and output logical records in bytes.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>inrecord = INDEF, outrecord = INDEF</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='inrecord' Line='inrecord = INDEF, outrecord = INDEF' -->
+  <dd>The sizes of the input and output logical records in bytes.
   The default input and output record sizes are set equal to
   the input and output block sizes respectively. If inrecord &gt; outrecord,
   records are trimmed; if inrecord &lt; outrecord, records are padded; if
   inrecord = outrecord, records are simply counted. If only one of inrecord or
   outrecord is set, the undefined parameter defaults to the value of the
   other.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>skipn = 0    </B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='skipn' Line='skipn = 0    '>
-  <DD>The number of input blocks (tape input) or records (disk input, size inrecord)
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>skipn = 0    </b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='skipn' Line='skipn = 0    ' -->
+  <dd>The number of input blocks (tape input) or records (disk input, size inrecord)
   to be skipped.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>copyn = INDEF</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='copyn' Line='copyn = INDEF'>
-  <DD>The number of input blocks (tape input) or records
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>copyn = INDEF</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='copyn' Line='copyn = INDEF' -->
+  <dd>The number of input blocks (tape input) or records
   (disk input, size inrecord) to be copied. Copyn defaults to a very large number.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>byteswap = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='byteswap' Line='byteswap = no'>
-  <DD>Swap every other byte. For example if byteswap is enabled, bytes 1 2 3 4 5 6
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>byteswap = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='byteswap' Line='byteswap = no' -->
+  <dd>Swap every other byte. For example if byteswap is enabled, bytes 1 2 3 4 5 6
   would become bytes 2 1 4 3 6 5 on output.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>wordswap = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='wordswap' Line='wordswap = no'>
-  <DD>Swap every 4 bytes. For example if byteswap is enabled, bytes 1 2 3 4 5 6 7 8
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>wordswap = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='wordswap' Line='wordswap = no' -->
+  <dd>Swap every 4 bytes. For example if byteswap is enabled, bytes 1 2 3 4 5 6 7 8
   would become 4 3 2 1 8 7 6 5 on output.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>pad_block = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='pad_block' Line='pad_block = no'>
-  <DD>If pad_block is set, reblock pads trailing blocks until they are outblock
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>pad_block = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='pad_block' Line='pad_block = no' -->
+  <dd>If pad_block is set, reblock pads trailing blocks until they are outblock
   bytes long, otherwise trailing blocks may be short.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>padchar  = 0</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='padchar' Line='padchar  = 0'>
-  <DD>Single character used to pad blocks or records.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>padchar  = 0</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='padchar' Line='padchar  = 0' -->
+  <dd>Single character used to pad blocks or records.
   Padchar is only requested if pad_record or pad_block
   is set. If padchar equals one of the digits 0 through nine, records and
   blocks are padded with the face value of the character, otherwise the
   ASCII value is used.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>offset = 0</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='offset' Line='offset = 0'>
-  <DD>The number which added to the tape file number is appended to <I>outfiles</I>
-  to produce the output file name. For example if file_list = "<TT>1-3</TT>", outfiles =
-  "<TT>out</TT>" and offset = 100, the three files out101, out102, out103 would
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>offset = 0</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='offset' Line='offset = 0' -->
+  <dd>The number which added to the tape file number is appended to <i>outfiles</i>
+  to produce the output file name. For example if file_list = <tt>"1-3"</tt>, outfiles =
+  <tt>"out"</tt> and offset = 100, the three files out101, out102, out103 would
   be produced rather than out001, out002 and out003.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verbose = yes  </B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes  '>
-  <DD>Print messages about files, blocks copied etc.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verbose = yes  </b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes  ' -->
+  <dd>Print messages about files, blocks copied etc.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   REBLOCK is a procedure to copy disk or tape resident files to
   disk or tape. Multiple input tape or disk files may be specified.
   If multiple files are output to disk, and only one output file name is
@@ -156,7 +155,8 @@ reblock — Copy a binary file, optionally reblocking
   exists, or at BOT or EOT. If no file number is specified REBLOCK asks
   whether the tape is new or old and begin writing at BOT or EOT as
   appropriate.
-  <P>
+  </p>
+  <p>
   Before beginning the copy, the user may request reblock to skip
   n (default 0) blocks (tape input) or logical records (disk input).
   The user can also specify that
@@ -166,7 +166,8 @@ reblock — Copy a binary file, optionally reblocking
   (default yes) reblock prints the input and output file names,
   the number of blocks read and written and the number of records read and
   written.
-  <P>
+  </p>
+  <p>
   Reblock
   uses the default buffer sizes supplied by mtio and file i/o to determine the 
   maximum number of bytes which can be read in a single read call. For tapes
@@ -179,7 +180,8 @@ reblock — Copy a binary file, optionally reblocking
   will be less than the default buffer size. All magtape and disk reads are
   done with the file i/o read procedure and a call to fstati determines the number
   of bytes actually read.
-  <P>
+  </p>
+  <p>
   If all the defaults are set, a binary copy is performed.
   In tape to tape copies the block and record sizes are preserved,
   but the density may
@@ -192,56 +194,56 @@ reblock — Copy a binary file, optionally reblocking
   The last block in a file may be short. If uniform sized blocks are
   desired, pad_block must be set, in which case trailing partially filled
   blocks will be padded with padchar.
-  <P>
+  </p>
+  <p>
   Logical records are distinguished from blocks (physical records).
   The input and output record sizes default to
   the size of the input and output blocks respectively.
   Logical records may be shorter or longer than the  block sizes.
-  <P>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Copy a magnetic tape preserving the record sizes but changing
   the density from 800 bpi to 1600 bpi.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; reblock mtb800 mta1600[1] 1-999
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. Reblock a magnetic tape changing the block size from 4000 bytes to 8000
   bytes and padding the last block.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; reblock mtb1600 mta1600[1] 1-999 outb=8000 padb+
-  </PRE>
-  <P>
+  </pre>
+  <p>
   3. Copy a series of disk fits files to tape
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; reblock @fitsfiles mta[1] outb=28800
-  </PRE>
-  <P>
+  </pre>
+  <p>
   4. Trim the records of a disk file.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; reblock infile outfile inrec=80 outrec=72
-  </PRE>
-  <P>
+  </pre>
+  <p>
   5. Pad the records of a disk file with blanks.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; reblock input output inrec=81 outrec=82 padchar=" "
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   t2d
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

@@ -1,58 +1,57 @@
 .. _entab:
 
-entab — Replace blanks with tabs and blanks
-===========================================
+entab: Replace blanks with tabs and blanks
+==========================================
 
 **Package: utilities**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   entab -- replaces blanks by tabs and blanks
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   entab files
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>files</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='files' Line='files'>
-  <DD>Template specifying the files to be processed, e.g. "<TT>file</TT>" or "<TT>file*</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>tablist = "<TT>9 +8</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='tablist' Line='tablist = "9 +8"'>
-  <DD>String containing a list of tabstops separated by blanks or commas.
-  A two element string of the form "<TT>m +n</TT>" will set
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>files</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='files' Line='files' -->
+  <dd>Template specifying the files to be processed, e.g. <tt>"file"</tt> or <tt>"file*"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>tablist = <tt>"9 +8"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='tablist' Line='tablist = "9 +8"' -->
+  <dd>String containing a list of tabstops separated by blanks or commas.
+  A two element string of the form <tt>"m +n"</tt> will set
   tabstops in every n columns beginning in column m.
-  A null string defaults to "<TT>9 +8</TT>".
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Example</H3>
-  <! BeginSection: 'EXAMPLE'>
-  <UL>
-  Convert the file "<TT>prog.c</TT>", written using full tabstop indents, to
+  A null string defaults to <tt>"9 +8"</tt>.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Example</h3>
+  <!-- BeginSection: 'EXAMPLE' -->
+  <p>
+  Convert the file <tt>"prog.c"</tt>, written using full tabstop indents, to
   an equivalent file with an initial indent of one full tabstop, 
   with 4 space indents thereafter.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; detab prog.c tab='9 +4' | entab &gt; temp
   	cl&gt; delete prog.c
   	cl&gt; rename temp prog.c
-  </PRE>
-  </UL>
-  <! EndSection:    'EXAMPLE'>
+  </pre>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'EXAMPLE'  >
+  <!-- EndSection:    'EXAMPLE' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'EXAMPLE'  -->
   

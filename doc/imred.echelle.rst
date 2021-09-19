@@ -1,5 +1,5 @@
-echelle — Echelle spectral reductions (slit and FOE)
-====================================================
+echelle: Echelle spectral reductions (slit and FOE)
+===================================================
 
 .. toctree:: :maxdepth: 1
 

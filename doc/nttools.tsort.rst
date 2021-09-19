@@ -1,27 +1,28 @@
 .. _tsort:
 
-tsort — Sort a table.
-=====================
+tsort: Sort a table.
+====================
 
 **Package: nttools**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   tsort -- Sort a table on one or more columns.
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   tsort table columns
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   This task sorts an STSDAS-format table.  The sort is done in place, so if you want
   to keep a copy of the unsorted table, you should copy it with the 'tcopy'
   task before you
@@ -39,95 +40,91 @@ tsort — Sort a table.
   sorted column is a character string).  If 'casesens = yes', upper 
   case characters
   precede lower case characters.  Otherwise, case is not significant
-  in determining the sort order.  When sorting a boolean column, "<TT>no</TT>" precedes
-  "<TT>yes</TT>".  Null table elements are always last in the sort, regardless
+  in determining the sort order.  When sorting a boolean column, <tt>"no"</tt> precedes
+  <tt>"yes"</tt>.  Null table elements are always last in the sort, regardless
   of the value of 'ascend'. 
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>table [file name template]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='table' Line='table [file name template]'>
-  <DD>Name of the table, or tables, to be sorted in-place.
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>table [file name template]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='table' Line='table [file name template]' -->
+  <dd>Name of the table, or tables, to be sorted in-place.
   All tables are sorted on the same column or columns; if more than one table
   is specified all tables must have the column(s) specified by the 'columns'
   parameter.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>columns [string]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='columns' Line='columns [string]'>
-  <DD>Column name or column name template describing columns on which sort will
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>columns [string]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='columns' Line='columns [string]' -->
+  <dd>Column name or column name template describing columns on which sort will
   be performed.  A column name template consists of a list of
   column names, or column patterns containing wildcard characters.
   Individual column names, or templates, are separated by commas or white space.
   The list of columns can be placed in a file and the name of the 
   file passed to 'columns' (preceded by a
-  "<TT>@</TT>" character). 
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(ascend = yes) [boolean]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(ascend = yes) [boolean]'>
-  <DD>Sort the table in ascending order?  If you want the table sorted in descending
+  <tt>"@"</tt> character). 
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(ascend = yes) [boolean]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(ascend = yes) [boolean]' -->
+  <dd>Sort the table in ascending order?  If you want the table sorted in descending
   order, set 'ascend = no'.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(casesens = yes) [boolean]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(casesens = yes) [boolean]'>
-  <DD>Are sorts on character columns to be case sensitive?  If 'casesens = yes',
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(casesens = yes) [boolean]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(casesens = yes) [boolean]' -->
+  <dd>Are sorts on character columns to be case sensitive?  If 'casesens = yes',
   upper case letters will precede lower case letters.  If 'casesens = no',
   case is ignored by the sort operation.
-  <DL>
-  <DT><B></B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='' Line=' '>
-  <DD></DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  <dl>
+  <dt><b></b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='' Line=' ' -->
+  <dd></dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Sort a table of star positions by right ascension and declination:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   tt&gt; tsort starcat.tab ra,dec
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. Sort a phone list. Make the sort case insensitive:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   tt&gt; tsort phone.tab lname,fname case-
-  </PRE>
-  <P>
+  </pre>
+  <p>
   3. Sort a star catalog so that all binary stars (i.e., a boolean column
   named 'binary') are first:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   tt&gt; tsort starcat.tab binary asc-
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>References</H3>
-  <! BeginSection: 'REFERENCES'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <!-- EndSection:   'BUGS' -->
+  <h3>References</h3>
+  <!-- BeginSection: 'REFERENCES' -->
+  <p>
   This task was written by Bernie Simon.
-  </UL>
-  <! EndSection:   'REFERENCES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'REFERENCES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   tcopy
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

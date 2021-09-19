@@ -1,107 +1,106 @@
 .. _urlget:
 
-urlget — Get a (http) URL to a named file
-=========================================
+urlget: Get a (http) URL to a named file
+========================================
 
 **Package: system**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   urlget -- Get a (http) URL to the named file
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   urlget url fname
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>url</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='url' Line='url'>
-  <DD>The URL to download.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>fname</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='fname' Line='fname'>
-  <DD>The name of the file to create containing the URL contents.  If not
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>url</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='url' Line='url' -->
+  <dd>The URL to download.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>fname</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='fname' Line='fname' -->
+  <dd>The name of the file to create containing the URL contents.  If not
   specified, the trailing part of the URL is used as the filename.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>use_cache = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='use_cache' Line='use_cache = yes'>
-  <DD>Use the system file cache?  If 'yes' and the file already exists in the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>use_cache = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='use_cache' Line='use_cache = yes' -->
+  <dd>Use the system file cache?  If 'yes' and the file already exists in the
   cache, the cached file will be copied to the output filename.
   If 'no' then the URL will be downloaded again.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>extn = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='extn' Line='extn = ""'>
-  <DD>Optional filename extension to put on the cached filename.  This can be
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>extn = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='extn' Line='extn = ""' -->
+  <dd>Optional filename extension to put on the cached filename.  This can be
   used to force files to be saved as a particular type in the cache.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verbose = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
-  <DD>Print verbose output?
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>cache = "<TT>cache$</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='cache' Line='cache = "cache$"'>
-  <DD>Logical cache directory name.
-  </DD>
-  </DL>
-  <P>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  The <I>URLGET</I> task is used to download a URL (HTTP protocol only) to a 
-  local file named by the <I>fname</I> parameter.  If no <I>fname</I> is given, 
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verbose = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
+  <dd>Print verbose output?
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>cache = <tt>"cache$"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='cache' Line='cache = "cache$"' -->
+  <dd>Logical cache directory name.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  The <i>URLGET</i> task is used to download a URL (HTTP protocol only) to a 
+  local file named by the <i>fname</i> parameter.  If no <i>fname</i> is given, 
   a filename is constructed from the last part of the URL (i.e.
-  characters trailing any of the <TT>'?'</TT>, <TT>'/'</TT>, or <TT>'&'</TT> delimiters).  Because 
-  the URL may not point to a static file, use of the <I>fname</I> parameter
+  characters trailing any of the <tt>'?'</tt>, <tt>'/'</tt>, or <tt>'&amp;'</tt> delimiters).  Because 
+  the URL may not point to a static file, use of the <i>fname</i> parameter
   is recommended.
-  <P>
-  If the <I>use_cache</I> parameter is set, the URL will only be downloaded if
-  it does not already exist in the file cache pointed to by the <I>cache</I>
+  </p>
+  <p>
+  If the <i>use_cache</i> parameter is set, the URL will only be downloaded if
+  it does not already exist in the file cache pointed to by the <i>cache</i>
   parameter, otherwise the cached file will be copied to the output filename.
-  The <I>extn</I> parameter may be to used to force a specific file extension
+  The <i>extn</i> parameter may be to used to force a specific file extension
   to be appended to the filename in the cache, this allows a URL to be passed
   to a task and treated as if it were a file of a specific type.
-  <P>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Download a FITS image from a URL (these are equivalent):
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; urlget http://iraf.noao.edu/foo.fits 
       cl&gt; urlget http://iraf.noao.edu/foo.fits foo.fits
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. Force a URL to be downloaded again:
-  <PRE>
+  </p>
+  <pre>
       cl&gt; urlget http://iraf.noao.edu/foo.fits use_cache=no
-  </PRE>
-  <P>
+  </pre>
+  <p>
   3. Download a URL with special characters:
-  <PRE>
+  </p>
+  <pre>
       cl&gt; urlget http://iraf.noao.edu/scripts/tget?f=foo.fits
   or
       cl&gt; s1 = "http://iraf.noao.edu/scripts/tget?f=foo.fits"
@@ -109,25 +108,19 @@ urlget — Get a (http) URL to a named file
   or
       cl&gt; s1 = "http://iraf.noao.edu/scripts/tget?f=foo.fits&amp;d=/iraf/web"
       cl&gt; urlget(s1,"foo.fits",verbose+)
-  </PRE>
-  <P>
+  </pre>
+  <p>
   Escaping special characters isn't required from the commandline since the
   URL is assumed to be whitespace or comma delimited.
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  <P>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
-  <P>
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

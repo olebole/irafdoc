@@ -1,16 +1,17 @@
 .. _approfiles:
 
-approfiles — Profile determination algorithms
-=============================================
+approfiles: Profile determination algorithms
+============================================
 
 **Package: apextract**
 
 .. raw:: html
 
+  </tr></table><p>
+  <p style="text-align:center">Spectrum Profile Determinations
   
-  </CENTER><BR>
-  <P>
-  <P>
+  </p>
+  <p>
   The foundation of variance weighted or optimal extraction, cosmic ray
   detection and removal, two dimensional flat field normalization, and
   spectrum fitting and modeling is the accurate determination of the
@@ -21,7 +22,8 @@ approfiles — Profile determination algorithms
   This technique was sensitive to perturbations from cosmic rays
   and the exact choice of averaging parameters.  The current version of
   the package uses two different algorithm which are much more stable.
-  <P>
+  </p>
+  <p>
   The basic idea is to normalize each profile along the dispersion to
   unit flux and then fit a low order function to sets of unsaturated
   points at nearly the same point in the profile parallel to the
@@ -39,8 +41,9 @@ approfiles — Profile determination algorithms
   quite aggressive without significantly affecting the profile
   estimates.  Effects from saturated pixels are minimized by excluding
   from the profile determination any profiles containing one or more
-  saturated pixels as defined by the <I>saturation</I> parameter.
-  <P>
+  saturated pixels as defined by the <i>saturation</i> parameter.
+  </p>
+  <p>
   The normalization is, in fact, the one dimensional spectrum.  Initially
   this is the simple sum across the aperture which is then updated by the
   variance weighted sum with deviant pixels possibly removed.  This updated
@@ -49,7 +52,8 @@ approfiles — Profile determination algorithms
   estimate is the product of the normalization factor and the profile.  This
   model is used for estimating the pixel intensities and, thence, the
   variances.
-  <P>
+  </p>
+  <p>
   There are two important requirements that must be met by the profile fitting
   algorithm.  First it is essential that the image data not be
   interpolated.  Any interpolation introduces correlated errors and
@@ -65,9 +69,10 @@ approfiles — Profile determination algorithms
   shape such as a gaussian.  In the methods used here there is no
   assumption made about the underlying profile other than it vary
   smoothly with wavelength.
-  <P>
+  </p>
+  <p>
   These requirements lead to two fitting algorithms which the user
-  selects with the <I>pfit</I> parameter.  The primary method, "<TT>fit1d</TT>",
+  selects with the <i>pfit</i> parameter.  The primary method, <tt>"fit1d"</tt>,
   fits low order, one dimensional functions to the lines or columns
   most nearly parallel to the dispersion.  While this is intended for
   spectra which are well aligned with the image axes, even fairly large
@@ -82,17 +87,19 @@ approfiles — Profile determination algorithms
   tracing the spectrum but which does not interpolate the image data.
   Instead it weights and couples polynomial coefficients.  This
   method was developed by Tom Marsh and is described in detail in the
-  paper, "<TT>The Extraction of Highly Distorted Spectra</TT>", PASP 101, 1032,
-  Nov. 1989.  Here we refer to this method as the Marsh or "<TT>fit2d</TT>"
+  paper, <tt>"The Extraction of Highly Distorted Spectra"</tt>, PASP 101, 1032,
+  Nov. 1989.  Here we refer to this method as the Marsh or <tt>"fit2d"</tt>
   algorithm and do not attempt to explain it further.
-  <P>
+  </p>
+  <p>
   The choice of when to use the one dimensional or the two dimensional
-  fitting is left to the user.  The "<TT>fit1d</TT>" algorithm is preferable since it
+  fitting is left to the user.  The <tt>"fit1d"</tt> algorithm is preferable since it
   is faster, easier to understand, and has proved to be very robust.  The
-  "<TT>fit2d</TT>" algorithm usually works just as well but is slower and has been
+  <tt>"fit2d"</tt> algorithm usually works just as well but is slower and has been
   seen to fail on some data.  The user may simply try both to achieve the
   best results.
-  <P>
+  </p>
+  <p>
   What follows are some implementation details of the preceding ideas in the
   APEXTRACT package.  For column/line fitting, the fitting function is a
   cubic spline.  A base number of spline pieces is set by rounding up the
@@ -104,7 +111,8 @@ approfiles — Profile determination algorithms
   profile shifts under it.  Finally the number of pieces is doubled
   because experience shows that for low tilts it doesn't matter but for
   large tilts this improves the results dramatically.
-  <P>
+  </p>
+  <p>
   For the Marsh algorithm there are two parameters to be set, the
   polynomial order parallel to the dispersion and the spacing between
   parallel, coupled polynomials.  The algorithm requires that the spacing
@@ -117,14 +125,16 @@ approfiles — Profile determination algorithms
   of polynomials across the profile but this is obviously  determined
   from the polynomial spacing and the width of the aperture including an
   extra pixel on either side.
-  <P>
+  </p>
+  <p>
   Both fitting algorithms weight the pixels by their variance as computed
   from the background and background variance if background subtraction
   is specified, the spectrum estimate from the profile and the spectrum
   normalization, and the detector noise parameters.  A poisson
   plus constant gaussian readout noise model is used.  The noise model is
-  described further in <B>apvariance</B>.
-  <P>
+  described further in <b>apvariance</b>.
+  </p>
+  <p>
   As mentioned earlier, the profile fitting can be iterated to remove
   deviant pixels.  This is done by rejecting pixels greater than a
   specified number of sigmas above or below the expected value based
@@ -132,13 +142,14 @@ approfiles — Profile determination algorithms
   detector noise parameters, and the overall chi square of the residuals.
   Rejected points are removed from the profile normalization and
   from the fits.
-  </UL>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   apbackground apvariance apall apsum apfit apflatten
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'SEE ALSO'  -->
   

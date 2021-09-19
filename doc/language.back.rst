@@ -1,56 +1,61 @@
 .. _back:
 
-back — Return to the previous directory (after a chdir)
-=======================================================
+back: Return to the previous directory (after a chdir)
+======================================================
 
 **Package: language**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   back -- return to the previous directory
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   back
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <p>
   None.
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <I>Back</I> is used after a call to <I>chdir</I> or <I>cd</I> to return to the
-  previous directory.  Repetitive calls to <I>back</I> may be used to toggle
+  </p>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  <i>Back</i> is used after a call to <i>chdir</i> or <i>cd</i> to return to the
+  previous directory.  Repetitive calls to <i>back</i> may be used to toggle
   between two directories.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  1. Go to the logical directory "<TT>dataio</TT>".
-  <P>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
+  1. Go to the logical directory <tt>"dataio"</tt>.
+  </p>
+  <p>
   	cl&gt; cd dataio
-  <P>
+  </p>
+  <p>
   2. Return to the previous directory, and then go back to the dataio directory.
-  <P>
+  </p>
+  <p>
   	cl&gt; back;back
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   chdir, pathnames
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

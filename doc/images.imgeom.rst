@@ -1,5 +1,5 @@
-imgeom — Image geometric transformation package
-===============================================
+imgeom: Image geometric transformation package
+==============================================
 
 .. toctree:: :maxdepth: 1
 

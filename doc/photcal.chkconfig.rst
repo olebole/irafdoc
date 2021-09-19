@@ -1,79 +1,71 @@
 .. _chkconfig:
 
-chkconfig — Check the configuration file for grammar and syntax errors
-======================================================================
+chkconfig: Check the configuration file for grammar and syntax errors
+=====================================================================
 
 **Package: photcal**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   chkconfig -- Check the grammar and syntax of the configuration file
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   chkconfig config
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>config</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='config' Line='config'>
-  <DD>The name of the configuration file to be checked. <I>Config</I> is the
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>config</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='config' Line='config' -->
+  <dd>The name of the configuration file to be checked. <i>Config</i> is the
   text file specifying both the format of the input files, and the form of
   transformation equations.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verbose = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
-  <DD>Print detailed diagnostic information on the standard output ?
-  </DD>
-  </DL>
-  <P>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <P>
-  CHKCONFIG parses the configuration file <I>config</I> line by line,
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verbose = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
+  <dd>Print detailed diagnostic information on the standard output ?
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  CHKCONFIG parses the configuration file <i>config</i> line by line,
   searching for syntax and/or semantic errors.  Its primary function is to aid
   the user in setting up a complete and correct set of transformation
   equations to be fit.  CHKCONFIG is run automatically by the task MKCONFIG,
   but can also be run stand-alone at any time.
-  <P>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   Check the configuration file for grammar and syntax errors.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   ph&gt; chk config
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   mkconfig,fitparams
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

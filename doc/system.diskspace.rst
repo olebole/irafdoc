@@ -1,39 +1,39 @@
 .. _diskspace:
 
-diskspace — Show how much diskspace is available
-================================================
+diskspace: Show how much diskspace is available
+===============================================
 
 **Package: system**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   diskspace -- summarize disk space utilization
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   diskspace
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <I>Diskspace</I> lists the disk devices available on the host system,
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  <i>Diskspace</i> lists the disk devices available on the host system,
   giving the name, capacity, and free space available on each device.
   The format and contents of the output are host system dependent.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Example</H3>
-  <! BeginSection: 'EXAMPLE'>
-  <UL>
-  <P>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Example</h3>
+  <!-- BeginSection: 'EXAMPLE' -->
+  <p>
   1. Print the available diskspace (UNIX host).
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; disk
   	Filesystem    kbytes    used   avail capacity  Mounted on
   	/dev/hp0a       7421    5312    1366    80%    /
@@ -47,9 +47,9 @@ diskspace — Show how much diskspace is available
   	/dev/ra0h      79798   41696   30122    58%    /iraf
   	/dev/ra1h     397102  306688   50702    86%    /tmp2
   	/dev/ra2h     397102  275010   82380    77%    /tmp3
-  </PRE>
-  </UL>
-  <! EndSection:    'EXAMPLE'>
+  </pre>
   
-  <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'EXAMPLE'  >
+  <!-- EndSection:    'EXAMPLE' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'EXAMPLE'  -->
   

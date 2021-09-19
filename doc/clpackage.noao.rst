@@ -1,5 +1,5 @@
-noao — The NOAO optical astronomy packages
-==========================================
+noao: The NOAO optical astronomy packages
+=========================================
 
 .. toctree:: :maxdepth: 1
 

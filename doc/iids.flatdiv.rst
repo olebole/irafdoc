@@ -1,108 +1,110 @@
 .. _flatdiv:
 
-flatdiv — Divide spectra by flat field
-======================================
+flatdiv: Divide spectra by flat field
+=====================================
 
 **Package: iids**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   flatdiv -- Divide spectra by flat field spectra
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   flatdiv input records
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
-  <DD>The root file name for the input records to be divided.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>records</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='records' Line='records'>
-  <DD>The range of spectra to be included in the divide operation.
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
+  <dd>The root file name for the input records to be divided.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>records</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='records' Line='records' -->
+  <dd>The range of spectra to be included in the divide operation.
   Each range item will be appended to the root name to form an
   image file name.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
-  <DD>New spectra are created by the flatdiv operation. This parameter
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
+  <dd>New spectra are created by the flatdiv operation. This parameter
   specifies the root name to be used for the created spectra.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>start_rec</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='start_rec' Line='start_rec'>
-  <DD>Each new spectrum created as "<TT>output</TT>" has its root name and a 
-  trailing number appended starting with "<TT>start_rec</TT>". Subsequent
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>start_rec</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='start_rec' Line='start_rec' -->
+  <dd>Each new spectrum created as <tt>"output"</tt> has its root name and a 
+  trailing number appended starting with <tt>"start_rec"</tt>. Subsequent
   output images will have an incremented trailing number.
   Note that even if an output image is not created because the input
   image has already been flattened or the input image is not found the
   output record number is still incremented.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>flat_file</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='flat_file' Line='flat_file'>
-  <DD>The root name for the sensitivity spectra as produced by FLATFIT.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>flat_file</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='flat_file' Line='flat_file' -->
+  <dd>The root name for the sensitivity spectra as produced by FLATFIT.
   Normally with multi-aperture instruments, FLATFIT will produce a
   spectrum appropriate to each aperture and the file name will have
-  "<TT>flat_file</TT>" as the file name root and the aperture number appended.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>coincor = )_.coincor</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='coincor' Line='coincor = )_.coincor'>
-  <DD>If set to yes, coincidence correction is applied to the data during
+  <tt>"flat_file"</tt> as the file name root and the aperture number appended.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>coincor = )_.coincor</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='coincor' Line='coincor = )_.coincor' -->
+  <dd>If set to yes, coincidence correction is applied to the data during
   the division, and the following three parameters are required.
-  For more about this correction see <B>coincor</B>.
-  <DL>
-  <DT><B>ccmode = )_.ccmode</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='ccmode' Line='ccmode = )_.ccmode'>
-  <DD>The mode by which the coincidence correction is to be performed.
-  This may be "<TT>iids</TT>" or "<TT>photo</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>deadtime = )_.deadtime</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='deadtime' Line='deadtime = )_.deadtime'>
-  <DD>The detector deadtime in seconds.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>power = )_.power</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='power' Line='power = )_.power'>
-  <DD>Power law IIDS non-linear correction exponent.
-  </DD>
-  </DL>
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  For more about this correction see <b>coincor</b>.
+  <dl>
+  <dt><b>ccmode = )_.ccmode</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='ccmode' Line='ccmode = )_.ccmode' -->
+  <dd>The mode by which the coincidence correction is to be performed.
+  This may be <tt>"iids"</tt> or <tt>"photo"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>deadtime = )_.deadtime</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='deadtime' Line='deadtime = )_.deadtime' -->
+  <dd>The detector deadtime in seconds.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>power = )_.power</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='power' Line='power = )_.power' -->
+  <dd>Power law IIDS non-linear correction exponent.
+  </dd>
+  </dl>
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   The input spectra are divided by the flat fields which are
   represented by spectra produced by FLATFIT.
-  <P>
+  </p>
+  <p>
   To avoid possible division by zero, any zeroes in the flat field
   spectra generated by FLATFIT are replaced by 1.0.
-  <P>
+  </p>
+  <p>
   The input spectra may optionally be corrected for coincidence losses.
-  <P>
+  </p>
+  <p>
   If the input and output spectra (after appending the record numbers) are
   the same then the division is performed in-place; i.e. the flattened spectra
   replace the original input spectra.
@@ -111,42 +113,49 @@ flatdiv — Divide spectra by flat field
   output record number is still incremented.  This is to insure that if
   in-place division is desired that the input and output names remain
   matched.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   The following example divides a series of spectra to produce 20 new
   spectra having names nite1.1221 ... nite1.1240.
-  <P>
+  </p>
+  <p>
   	cl&gt; flatdiv nite1 1201-1220 nite1 1221
-  <P>
+  </p>
+  <p>
   The same spectra as above are simultaneously corrected for
   coincidence losses.
-  <P>
+  </p>
+  <p>
   	cl&gt; flatdiv nite1 1201-1220 nite1 1221 coincor=yes
-  <P>
+  </p>
+  <p>
   The flattened spectra replace the unflattened spectra.
-  <P>
+  </p>
+  <p>
   	cl&gt; flatdiv nite1 1201-1220 nite1 1201
-  <P>
+  </p>
+  <p>
   Note that the input record numbers must be contiguous and the starting
   output record number must be the same as the first input record number.
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Time requirements</H3>
-  <! BeginSection: 'TIME REQUIREMENTS'>
-  <UL>
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Time requirements</h3>
+  <!-- BeginSection: 'TIME REQUIREMENTS' -->
+  <p>
   Approximately 1 second is required to correct a spectrum of length
   1024 points.
-  </UL>
-  <! EndSection:   'TIME REQUIREMENTS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   coincor, flatfit
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'SEE ALSO'  -->
   

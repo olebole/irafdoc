@@ -1,157 +1,148 @@
 .. _photpars:
 
-photpars — Edit the photometry parameters
-=========================================
+photpars: Edit the photometry parameters
+========================================
 
 **Package: apphot**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   photpars -- edit the photometry parameters
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   photpars
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>weighting = "<TT>constant</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='weighting' Line='weighting = "constant"'>
-  <DD>The type of weighting for the WPHOT task. The weighting parameter is
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>weighting = <tt>"constant"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='weighting' Line='weighting = "constant"' -->
+  <dd>The type of weighting for the WPHOT task. The weighting parameter is
   ignored by the PHOT task. The options are:
-  <DL>
-  <DT><B>constant</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='constant' Line='constant'>
-  <DD>Uniform weights of 1 for each pixel are used.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>cone</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='cone' Line='cone'>
-  <DD>A conical weighting function of full width half maximum <I>fwhmpsf</I> as
+  <dl>
+  <dt><b>constant</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='constant' Line='constant' -->
+  <dd>Uniform weights of 1 for each pixel are used.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>cone</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='cone' Line='cone' -->
+  <dd>A conical weighting function of full width half maximum <i>fwhmpsf</i> as
   defined in the DATAPARS parameter set is used.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>gauss</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='gauss' Line='gauss'>
-  <DD>A Gaussian weighting function of full width half maximum <I>fwhmpsf</I> as
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>gauss</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='gauss' Line='gauss' -->
+  <dd>A Gaussian weighting function of full width half maximum <i>fwhmpsf</i> as
   defined in the DATAPARS parameter set is used.
-  </DD>
-  </DL>
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>apertures = "<TT>3</TT>" (scale units)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = "3" (scale units)'>
-  <DD>A list of aperture radii in units of the  scale parameter or the name of the
+  </dd>
+  </dl>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>apertures = <tt>"3"</tt> (scale units)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = "3" (scale units)' -->
+  <dd>A list of aperture radii in units of the  scale parameter or the name of the
   file containing the list of aperture radii. List elements may be separated by
   whitespace or commas. A range syntax of the form ap1:apN:apstep is also
   supported. 
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>zmag = 25.00</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='zmag' Line='zmag = 25.00'>
-  <DD>The zero point offset for the magnitude scale.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>mkapert = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='mkapert' Line='mkapert = no'>
-  <DD>Mark the photometry apertures on the displayed image ?
-  </DD>
-  </DL>
-  <P>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <P>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>zmag = 25.00</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='zmag' Line='zmag = 25.00' -->
+  <dd>The zero point offset for the magnitude scale.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>mkapert = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='mkapert' Line='mkapert = no' -->
+  <dd>Mark the photometry apertures on the displayed image ?
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   The integral of the flux within the circular apertures specified by
-  <I>apertures</I> is computed by summing pixels in the aperture with
-  the specified weighting function <I>weighting</I>. The fraction of each pixel
+  <i>apertures</i> is computed by summing pixels in the aperture with
+  the specified weighting function <i>weighting</i>. The fraction of each pixel
   lying within the aperture is computed by an approximation and all the
   approximations are summed.  The zero point of the magnitude
-  scale is determined by <I>zmag</I>.
-  <P>
-  Apertures is specified in units of the image scale. If <I>scale</I>
+  scale is determined by <i>zmag</i>.
+  </p>
+  <p>
+  Apertures is specified in units of the image scale. If <i>scale</i>
   is specified in units of the half-width at half-maximum of the point
   spread function the aperture per pixel  a single value of apertures
   will work well on images with differing psfs.
-  <P>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. List the PHOTPARS parameters.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       da&gt; lpar photpars
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. Edit the PHOTPARS parameters.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       da&gt; photpars
-  </PRE>
-  <P>
+  </pre>
+  <p>
   3. Edit the PHOTPARS parameters from within the PHOT task.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       da&gt; epar phot
-  <P>
+  
   	... edit a few phot parameters
-  <P>
+  
   	... move to the photpars parameter and type :e
-  <P>
+  
   	... edit the photpars parameters and type :wq
-  <P>
+  
   	... finish editing the phot parameters and type :wq
-  <P>
-  </PRE>
-  <P>
+  
+  </pre>
+  <p>
   4. Save the current PHOTPARS parameter set in a text file photnite1.par.
   This can also be done from inside a higher level task as in the
   above example.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       da&gt; photpars
-  <P>
-  	... edit some parameters
-  <P>
-  	... type ":w photnite1.par"  from within epar
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Time requirements</H3>
-  <! BeginSection: 'TIME REQUIREMENTS'>
-  <UL>
-  </UL>
-  <! EndSection:   'TIME REQUIREMENTS'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
-  phot,wphot,radprof
-  </UL>
-  <! EndSection:    'SEE ALSO'>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
+  	... edit some parameters
+  
+  	... type ":w photnite1.par"  from within epar
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Time requirements</h3>
+  <!-- BeginSection: 'TIME REQUIREMENTS' -->
+  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
+  phot,wphot,radprof
+  </p>
+  
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

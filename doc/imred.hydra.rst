@@ -1,5 +1,5 @@
-hydra — KPNO HYDRA (and NESSIE) reduction package
-=================================================
+hydra: KPNO HYDRA (and NESSIE) reduction package
+================================================
 
 .. toctree:: :maxdepth: 1
 

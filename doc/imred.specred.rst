@@ -1,5 +1,5 @@
-specred — Generic slit and fiber spectral reduction package
-===========================================================
+specred: Generic slit and fiber spectral reduction package
+==========================================================
 
 .. toctree:: :maxdepth: 1
 

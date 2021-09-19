@@ -1,235 +1,235 @@
 .. _gauss:
 
-gauss — Convolve a list of 1 or 2-D images with an elliptical Gaussian
-======================================================================
+gauss: Convolve a list of 1 or 2-D images with an elliptical Gaussian
+=====================================================================
 
 **Package: imfilter**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   gauss -- convolve a list of images with an elliptical Gaussian function
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   gauss input output sigma
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
-  <DD>List of images to be convolved with the elliptical Gaussian function.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
-  <DD>List of output images. The number of output images must equal the number of
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
+  <dd>List of images to be convolved with the elliptical Gaussian function.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
+  <dd>List of output images. The number of output images must equal the number of
   input images. If the input image name equals the output image name, the
   convolved image will replace the input image.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>sigma</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='sigma' Line='sigma'>
-  <DD>The sigma of the Gaussian function in pixels along the direction <I>theta</I>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>sigma</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='sigma' Line='sigma' -->
+  <dd>The sigma of the Gaussian function in pixels along the direction <i>theta</i>
   of the major axis of the Gaussian function.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>ratio = 1.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='ratio' Line='ratio = 1.'>
-  <DD>The ratio of the sigma in the minor axis direction to the sigma in the major
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>ratio = 1.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='ratio' Line='ratio = 1.' -->
+  <dd>The ratio of the sigma in the minor axis direction to the sigma in the major
   axis direction of the Gaussian function.
-  If <I>ratio</I> is 1 the Gaussian function is circular.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>theta = 0.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='theta' Line='theta = 0.'>
-  <DD>The position of the major axis of the elliptical Gaussian function.
-  <I>Theta</I> is measured counter-clockwise from the x axis and must be between
+  If <i>ratio</i> is 1 the Gaussian function is circular.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>theta = 0.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='theta' Line='theta = 0.' -->
+  <dd>The position of the major axis of the elliptical Gaussian function.
+  <i>Theta</i> is measured counter-clockwise from the x axis and must be between
   0 and 180 degrees.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>nsigma = 4.0</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='nsigma' Line='nsigma = 4.0'>
-  <DD>The distance along the major axis of the Gaussian function at which
-  the kernel is truncated in <I>sigma</I> pixels.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>bilinear = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='bilinear' Line='bilinear = yes'>
-  <DD>Use the fact that the Gaussian function is separable (bilinear) in x and y if
-  <I>theta</I> = 0, 90, or 180, to compute the 2D convolution more efficiently?
-  <I>Bilinear</I> is always set to "<TT>no</TT>" internally, if the position angle of
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>nsigma = 4.0</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='nsigma' Line='nsigma = 4.0' -->
+  <dd>The distance along the major axis of the Gaussian function at which
+  the kernel is truncated in <i>sigma</i> pixels.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>bilinear = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='bilinear' Line='bilinear = yes' -->
+  <dd>Use the fact that the Gaussian function is separable (bilinear) in x and y if
+  <i>theta</i> = 0, 90, or 180, to compute the 2D convolution more efficiently?
+  <i>Bilinear</i> is always set to <tt>"no"</tt> internally, if the position angle of
   the major axis of the Gaussian is other than 0, 90 or 180 degrees.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>boundary = "<TT>nearest</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"'>
-  <DD>The algorithm used to compute the values of the out of bounds pixels. The
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>boundary = <tt>"nearest"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"' -->
+  <dd>The algorithm used to compute the values of the out of bounds pixels. The
   options are:
-  <DL>
-  <DT><B>nearest</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest'>
-  <DD>Use the value of the nearest boundary pixel.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>constant</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='constant' Line='constant'>
-  <DD>Use a constant value.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>reflect</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='reflect' Line='reflect'>
-  <DD>Generate a value by reflecting around the boundary.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>wrap</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='wrap' Line='wrap'>
-  <DD>Generate a value by wrapping around to the opposite side of the image.
-  </DD>
-  </DL>
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>constant = 0.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.'>
-  <DD>The constant for constant-valued boundary extension.
-  </DD>
-  </DL>
-  <P>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <P>
-  GAUSS convolves the list of images in <I>input</I> with the
-  Gaussian kernel specified by <I>sigma</I>, <I>ratio</I>, <I>theta</I> and
-  <I>nsigma</I> and places the convolved images in <I>output</I>.
-  If the image names in <I>input</I> equal the image names in <I>output</I>
+  <dl>
+  <dt><b>nearest</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest' -->
+  <dd>Use the value of the nearest boundary pixel.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>constant</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='constant' Line='constant' -->
+  <dd>Use a constant value.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>reflect</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='reflect' Line='reflect' -->
+  <dd>Generate a value by reflecting around the boundary.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>wrap</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='wrap' Line='wrap' -->
+  <dd>Generate a value by wrapping around to the opposite side of the image.
+  </dd>
+  </dl>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>constant = 0.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.' -->
+  <dd>The constant for constant-valued boundary extension.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  GAUSS convolves the list of images in <i>input</i> with the
+  Gaussian kernel specified by <i>sigma</i>, <i>ratio</i>, <i>theta</i> and
+  <i>nsigma</i> and places the convolved images in <i>output</i>.
+  If the image names in <i>input</i> equal the image names in <i>output</i>
   the convolution is performed in place and the original images are
   overwritten. Out of bounds pixels are computed using the algorithm
-  specified by <I>boundary</I>.
-  <P>
-  If <I>bilinear</I> is "<TT>yes</TT>" and the major axis of the Gaussian kernel
+  specified by <i>boundary</i>.
+  </p>
+  <p>
+  If <i>bilinear</i> is <tt>"yes"</tt> and the major axis of the Gaussian kernel
   is aligned along either the x or y axis, GAUSS uses the fact that
   the Gaussian function is mathematically separable (bilinear) in x and y
   to speed up the convolution process. A bilinear 2D convolution kernel
   in x and y is one which can be separated into two equivalent 1D
   convolution kernels in x and y respectively. 
-  <P>
+  </p>
+  <p>
   Although the bilinear approximation and the full 2D convolution are
   mathematically equivalent, the user will actually see SMALL differences
   between an image convolved with the full 2D kernel and the same image
   convolved with the equivalent bilinear kernel.
   These differences are the result of the finite size of the convolution kernel
   (the integration does not extend to infinity in either direction),
-  and the fact that off-axis kernel elements outside the <I>nsigma</I> limit
+  and the fact that off-axis kernel elements outside the <i>nsigma</i> limit
   cannot be set to 0 in the bilinear case as they are in the full 2D
   case. Therefore the bilinear kernel is less radially symmetric than
   the full 2D kernel.  In most cases the differences are small and more
   than made up for by the greatly decreased execution time.
-  <P>
+  </p>
+  <p>
   The Gaussian kernel has an elliptical cross-section and Gaussian
   profile and is defined mathematically as follows.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   1. Circularly Symmetric Gaussian Function
-  <P>
+  
       ratio = 1   theta = 0.0   N = normalization factor
-  <P>
+  
       G = N * exp (-0.5 * (r / sigma) ** 2)
-  <P>
+  
   2. Elliptical Gaussian Function (Theta = 0, 90 or 180)
-  <P>
+  
       sigmax = sigma   sigmay = ratio * sigmax   N = normalization factor
-  <P>
+  
       A = cos (theta) ** 2 / sigmax ** 2 + sin (theta) ** 2 / sigmay ** 2
-  <P>
+  
       B = 0.0
-  <P>
+  
       C = sin (theta) ** 2 / sigmax ** 2 + cos (theta) ** 2 / sigmay ** 2
-  <P>
+  
       z = A * x ** 2 + B * x * y + C * y ** 2 
-  <P>
+  
       G = N * exp (-0.5 * z)
-  <P>
+  
   3. Elliptical Gaussian  Function (Arbitrary Theta)
-  <P>
+  
       sigmax = sigma   sigmay = ratio * sigmax   N=normalization factor
-  <P>
+  
       A = cos (theta) ** 2 / sigmax ** 2 + sin (theta) ** 2 / sigmay ** 2
-  <P>
+  
       B = 2 * (1 / sigmax ** 2 - 1 / sigmay ** 2) * sin (theta) * cos (theta)
-  <P>
+  
       C = sin (theta) ** 2 / sigmax ** 2 + cos (theta) ** 2 / sigmay ** 2
-  <P>
+  
       z = A * x ** 2 + B * x * y + C * y ** 2 
-  <P>
+  
       G = N * exp (-0.5 * z)
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
+  </pre>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Convolve an image with a circular Gaussian function of sigma 2.0, and
   size 4.0 sigma using nearest neighbor boundary extension and the bilinear
   kernel.
-  <P>
+  </p>
+  <p>
       cl&gt; gauss m83 m83.gau 2.0
-  <P>
+  </p>
+  <p>
   2. Do the same convolution using the full 2D kernel.
-  <P>
+  </p>
+  <p>
       cl&gt; gauss m83 m83.gau.2D 2.0 bilinear-
-  <P>
+  </p>
+  <p>
   3. Convolve an image with an elliptical Gaussian function whose sigma in the
   major and minor axis direction is 2.0 and 1.5 respectively, and whose position
   angle is 45 degrees, using wrap around boundary extension. In this case the
   full 2D kernel is used by default.
-  <P>
+  </p>
+  <p>
       cl&gt; gauss m84 m84.gau 2.0 ratio=.75 theta=45. bound=wrap
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Time requirements</H3>
-  <! BeginSection: 'TIME REQUIREMENTS'>
-  <UL>
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Time requirements</h3>
+  <!-- BeginSection: 'TIME REQUIREMENTS' -->
+  <p>
   GAUSS requires approximately 30 and 8 cpu seconds to
   convolve a 512 square real image with circularly symmetric Gaussian function
   of sigma 2 pixels, using the full 2D kernel and the bilinear
   kernel respectively, on a Sparc Station 1.
-  </UL>
-  <! EndSection:   'TIME REQUIREMENTS'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   convolve, gradient, laplace, boxcar
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

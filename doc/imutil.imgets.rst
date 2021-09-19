@@ -1,62 +1,62 @@
 .. _imgets:
 
-imgets — Return the value of an image header parameter as a string
-==================================================================
+imgets: Return the value of an image header parameter as a string
+=================================================================
 
 **Package: imutil**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   imgets -- get the value of an image header parameter as a string
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   imgets image param
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>image</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='image' Line='image'>
-  <DD>Name of the image to be accessed.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>param</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='param' Line='param'>
-  <DD>Name of the parameter whose value is to be returned.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>value = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='value' Line='value = ""'>
-  <DD>The value of the parameter, returned as a string.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  The value of the parameter <I>param</I> of the image <I>image</I> is returned
-  as a string in the output parameter <I>value</I>.  The CL type coercion
-  functions <I>int</I> and <I>real</I> may be used to decode the returned
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>image</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image' -->
+  <dd>Name of the image to be accessed.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>param</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='param' Line='param' -->
+  <dd>Name of the parameter whose value is to be returned.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>value = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='value' Line='value = ""' -->
+  <dd>The value of the parameter, returned as a string.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  The value of the parameter <i>param</i> of the image <i>image</i> is returned
+  as a string in the output parameter <i>value</i>.  The CL type coercion
+  functions <i>int</i> and <i>real</i> may be used to decode the returned
   value as an integer or floating point value.  Both standard image header
   parameters and special application or instrument dependent parameters may be
   accessed.  If the parameter cannot be found a warning message is printed and
-  the value "<TT>0</TT>" is returned.  Parameter names are case sensitive.
-  <P>
+  the value <tt>"0"</tt> is returned.  Parameter names are case sensitive.
+  </p>
+  <p>
   The following standard image header parameters may be accessed with
-  <B>imgets</B>:
-  <P>
-  <PRE>
+  <b>imgets</b>:
+  </p>
+  <pre>
   	i_pixtype			pixel type (short, real, etc.)
   	i_naxis				number of dimensions
   	i_naxis[1-7]			length of the axes (x=1,y=2)
@@ -64,44 +64,40 @@ imgets — Return the value of an image header parameter as a string
   	i_maxpixval			maximum pixel value or INDEF
   	i_title				image title string
   	i_pixfile			pixel storage file name
-  </PRE>
-  <P>
+  </pre>
+  <p>
   This task is most useful for image parameter access from within CL scripts.
-  The task <B>imheader</B> is more useful for just looking at the image header
+  The task <b>imheader</b> is more useful for just looking at the image header
   parameters.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  1. Fetch the instrument parameter "<TT>HA</TT>" (hour angle) from the image header of
-  the image "<TT>nite1.1001</TT>", and compute and print the hour angle in degrees:
-  <P>
-  <PRE>
-  <PRE>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
+  1. Fetch the instrument parameter <tt>"HA"</tt> (hour angle) from the image header of
+  the image <tt>"nite1.1001"</tt>, and compute and print the hour angle in degrees:
+  </p>
+  <pre>
   	cl&gt; imgets nite1.1001 HA
   	cl&gt; = real(imgets.value) * 15.0
   	42.79335
-  </PRE>
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. Print the number of pixels per line in the same image.
-  <P>
-  <PRE>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; imgets nite1.1001 i_naxis1
   	cl&gt; = int(imgets.value)
   	1024
-  </PRE>
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   imheader, hedit, hselect
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

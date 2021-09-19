@@ -1,52 +1,52 @@
 .. _mkskyflat:
 
-mkskyflat — Make sky corrected flat field images
-================================================
+mkskyflat: Make sky corrected flat field images
+===============================================
 
 **Package: ccdred**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   mkskyflat -- Make sky corrected flat field images
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   mkskyflat input output
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
-  <DD>List of blank sky images to be used to create sky corrected flat field
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
+  <dd>List of blank sky images to be used to create sky corrected flat field
   calibration images.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
-  <DD>List of output sky corrected flat field calibration images (called
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
+  <dd>List of output sky corrected flat field calibration images (called
   sky flats).  If none is specified or if the name is the same as the
   input image then the output image replaces the input image.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>ccdtype = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='ccdtype' Line='ccdtype = ""'>
-  <DD>CCD image type to select from the input images.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>xboxmin = 5, xboxmax = 0.25, yboxmin = 5, yboxmax = 0.25</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='xboxmin' Line='xboxmin = 5, xboxmax = 0.25, yboxmin = 5, yboxmax = 0.25'>
-  <DD>Minimum and maximum smoothing box size along the x and y axes.  The
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>ccdtype = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='ccdtype' Line='ccdtype = ""' -->
+  <dd>CCD image type to select from the input images.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>xboxmin = 5, xboxmax = 0.25, yboxmin = 5, yboxmax = 0.25</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='xboxmin' Line='xboxmin = 5, xboxmax = 0.25, yboxmin = 5, yboxmax = 0.25' -->
+  <dd>Minimum and maximum smoothing box size along the x and y axes.  The
   minimum box size is used at the edges and grows to the maximum size in
   the middle of the image.  This allows the smoothed image to better
   represent gradients at the edge of the image.  If a size is less then 1
@@ -54,32 +54,31 @@ mkskyflat — Make sky corrected flat field images
   greater than or equal to 1 then it is the box size in pixels.  A size
   greater than the size of image selects a box equal to the size of the
   image.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>clip = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='clip' Line='clip = yes'>
-  <DD>Clean the input images of objects?  If yes then a clipping algorithm is
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>clip = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='clip' Line='clip = yes' -->
+  <dd>Clean the input images of objects?  If yes then a clipping algorithm is
   used to detect and exclude objects from the smoothing.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>lowsigma = 2.5, highsigma = 2.5</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='lowsigma' Line='lowsigma = 2.5, highsigma = 2.5'>
-  <DD>Sigma clipping thresholds above and below the smoothed iillumination.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>ccdproc (pset)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='ccdproc' Line='ccdproc (pset)'>
-  <DD>CCD processing parameter set.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>lowsigma = 2.5, highsigma = 2.5</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='lowsigma' Line='lowsigma = 2.5, highsigma = 2.5' -->
+  <dd>Sigma clipping thresholds above and below the smoothed iillumination.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>ccdproc (pset)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='ccdproc' Line='ccdproc (pset)' -->
+  <dd>CCD processing parameter set.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   A sky corrected flat field calibration image, called a sky flat, is a
   flat field that when applied to observations of the sky have no large
   scale gradients.  Flat field images are generally obtained by exposures
@@ -92,41 +91,45 @@ mkskyflat — Make sky corrected flat field images
   to remove the noise leaving only the residual large scale iillumination
   pattern.  This iillumination pattern is divided into the original flat
   field to remove this residual.
-  <P>
+  </p>
+  <p>
   The advantage of creating a sky flat field is that when processing
   the observations no additional operations are required.  However,
   if the observations have already been processed with the original
   flat field then the residual iillumination pattern of blank sky
   calibration images may be created as an iillumination correction
-  to be applied by <B>ccdproc</B>.  Such a correction is created by the
-  task <B>mkskycor</B>.  If a good blank sky image is not
+  to be applied by <b>ccdproc</b>.  Such a correction is created by the
+  task <b>mkskycor</b>.  If a good blank sky image is not
   available then it may be desirable to remove the iillumination pattern
-  of the flat field image using <B>mkillumflat</B> or <B>mkillumcor</B>
+  of the flat field image using <b>mkillumflat</b> or <b>mkillumcor</b>
   provided the sky observations are truly uniformly illuminated.
-  For more on flat fields and iillumination corrections see <B>flatfields</B>.
-  <P>
+  For more on flat fields and iillumination corrections see <b>flatfields</b>.
+  </p>
+  <p>
   The input, blank sky images are first processed, based on the
-  <B>ccdproc</B> parameters, if needed.  These parameters also determine
+  <b>ccdproc</b> parameters, if needed.  These parameters also determine
   the flat field image to be used in making the sky flat.  The residual
   iillumination pattern is determined by heavily smoothing the image using
-  a moving "<TT>boxcar</TT>" average.  The effects of objects in the input image
+  a moving <tt>"boxcar"</tt> average.  The effects of objects in the input image
   may be minimized by using a sigma clipping algorithm to detect and
   exclude the objects from the average.  The output image is ratio of the
   flat field image, for the same subset as the input image, to the
   residual iillumination pattern determined from the processed blank sky
   input image.  The iillumination pattern is normalized by its mean to
   preserve the mean level of the flat field image.
-  <P>
+  </p>
+  <p>
   The smoothing algorithm is a moving average over a two dimensional
   box.  The algorithm is unconvential in that the box size is not fixed.
   The box size is increased from the specified minimum at the edges to
   the maximum in the middle of the image.  This permits a better estimate
   of the background at the edges, while retaining the very large scale
   smoothing in the center of the image.  Note that the sophisticated
-  tools of the <B>images</B> package may be used for smoothing but this
+  tools of the <b>images</b> package may be used for smoothing but this
   requires more of the user and, for the more sophisticated smoothing
   algorithms such as surface fitting, more processing time.
-  <P>
+  </p>
+  <p>
   Blank sky images may not be completely blank so a sigma clipping
   algorithm may be used to detect and exclude objects from the
   iillumination pattern.  This is done by computing the rms of the image
@@ -134,26 +137,26 @@ mkskyflat — Make sky corrected flat field images
   exceeding the specified threshold factors times the rms.  This is done
   before each image line is added to the moving average, except for the
   first few lines where an iterative process is used.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Two examples in which a new image is created and in which the
   input sky images are converted to sky flats are:
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; mkskyflat sky004 Skyflat
       cl&gt; mkskyflat sky* ""
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   ccdproc, flatfields, mkfringecor, mkillumcor, mkillumflat, mkskycor
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

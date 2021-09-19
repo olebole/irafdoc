@@ -1,131 +1,121 @@
 .. _tchcol:
 
-tchcol — Change column name, print format, or units.
-====================================================
+tchcol: Change column name, print format, or units.
+===================================================
 
 **Package: nttools**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   tchcol -- Change column description.
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   tchcol table oldname newname newfmt newunits
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   This task may be used to change the name of a column, the display
   format, or the units.
   To change more than one column the task must be called more than once.
   Only those items (name, units, format) that are not null will be changed.
-  The word "<TT>default</TT>" may be used to set 
+  The word <tt>"default"</tt> may be used to set 
   the print format or the units to their default values.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>table [file name template]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='table' Line='table [file name template]'>
-  <DD>Names of tables to be modified.
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>table [file name template]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='table' Line='table [file name template]' -->
+  <dd>Names of tables to be modified.
   The same change(s) will be made to all tables.
-  <P>
   Note that the tables are modified in-place.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>oldname = "<TT></TT>" [string]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='oldname' Line='oldname = "" [string]'>
-  <DD>Name of column to be changed.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>oldname = <tt>""</tt> [string]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='oldname' Line='oldname = "" [string]' -->
+  <dd>Name of column to be changed.
   If the column is not found,
   a message will be printed,
   and the current table will not be changed.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>newname = "<TT></TT>" [string]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='newname' Line='newname = "" [string]'>
-  <DD>New column name or a null string ("<TT></TT>").
-  <P>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>newname = <tt>""</tt> [string]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='newname' Line='newname = "" [string]' -->
+  <dd>New column name or a null string (<tt>""</tt>).
   If this is null or blank, the column name will not be changed.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>newfmt = "<TT></TT>" [string]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='newfmt' Line='newfmt = "" [string]'>
-  <DD>New value for print format, or "<TT>default</TT>" or "<TT></TT>".
-  <P>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>newfmt = <tt>""</tt> [string]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='newfmt' Line='newfmt = "" [string]' -->
+  <dd>New value for print format, or <tt>"default"</tt> or <tt>""</tt>.
   If this is null or blank, the display format will not be changed.
-  If 'newfmt = "<TT>default</TT>"' the print format will be set to the default
+  If 'newfmt = <tt>"default"</tt>' the print format will be set to the default
   for the column data type.
-  Type "<TT>help ttools opt=sysdoc</TT>" for more information about print formats.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>newunits = "<TT></TT>" [string]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='newunits' Line='newunits = "" [string]'>
-  <DD>New value for units, or "<TT>default</TT>" or "<TT></TT>".
-  <P>
+  Type <tt>"help ttools opt=sysdoc"</tt> for more information about print formats.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>newunits = <tt>""</tt> [string]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='newunits' Line='newunits = "" [string]' -->
+  <dd>New value for units, or <tt>"default"</tt> or <tt>""</tt>.
   If this is null or blank the units will not be changed.
-  If newunits = "<TT>default</TT>" the units will be set to null.
-  There is no way (with this task) to set the units to the value "<TT>default</TT>"!
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(verbose = yes) [boolean]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(verbose = yes) [boolean]'>
-  <DD>Print the names of tables as the task progresses?
-  <P>
+  If newunits = <tt>"default"</tt> the units will be set to null.
+  There is no way (with this task) to set the units to the value <tt>"default"</tt>!
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(verbose = yes) [boolean]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(verbose = yes) [boolean]' -->
+  <dd>Print the names of tables as the task progresses?
   If 'verbose=yes' then the table names are printed,
   and for each item that is changed, a message is printed
   giving the old and new values.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  In table 'm87pol.tab', change column name "<TT>chi</TT>" to "<TT>CHI</TT>" and set the units
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
+  In table 'm87pol.tab', change column name <tt>"chi"</tt> to <tt>"CHI"</tt> and set the units
   to degrees.  The display format is not changed.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   tt&gt; tchcol m87pol chi CHI "" degrees
-  </PRE>
-  <P>
-  In the same table, set the units of column "<TT>P</TT>" to null.
+  </pre>
+  <p>
+  In the same table, set the units of column <tt>"P"</tt> to null.
   The name and format are not changed.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   tt&gt; tchcol m87pol P "" "" default
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>References</H3>
-  <! BeginSection: 'REFERENCES'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <!-- EndSection:   'BUGS' -->
+  <h3>References</h3>
+  <!-- BeginSection: 'REFERENCES' -->
+  <p>
   This task was written by J.C. Hsu and was modified by Phil Hodge.
-  </UL>
-  <! EndSection:   'REFERENCES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
+  <!-- EndSection:   'REFERENCES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
   
-  <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

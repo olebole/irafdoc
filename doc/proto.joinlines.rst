@@ -1,111 +1,112 @@
 .. _joinlines:
 
-joinlines — Join text files line by line
-========================================
+joinlines: Join text files line by line
+=======================================
 
 **Package: proto**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   joinlines -- join input text files line by line.
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   joinlines list1 [list2]
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>list1</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='list1' Line='list1'>
-  <DD>List of input text files to be joined.  It is an error if a file does
-  not exist.  The special file "<TT>STDIN</TT>" may be used to read from the
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>list1</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='list1' Line='list1' -->
+  <dd>List of input text files to be joined.  It is an error if a file does
+  not exist.  The special file <tt>"STDIN"</tt> may be used to read from the
   terminal, redirected input, or a pipe.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>list2</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='list2' Line='list2'>
-  <DD>Optional second list of input text files to be combined with the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>list2</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='list2' Line='list2' -->
+  <dd>Optional second list of input text files to be combined with the
   first list.  This only applies when two lists are specified on
   the command line otherwise this parameter is ignored.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output = "<TT>STDOUT</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output' Line='output = "STDOUT"'>
-  <DD>Output filename.  The result of joining the input lines is appended
-  to the specified file.  The special file "<TT>STDOUT</TT>" selects the standard
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output = <tt>"STDOUT"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = "STDOUT"' -->
+  <dd>Output filename.  The result of joining the input lines is appended
+  to the specified file.  The special file <tt>"STDOUT"</tt> selects the standard
   output stream, which is usually the terminal but which may be redirected.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>delim = "<TT> </TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='delim' Line='delim = " "'>
-  <DD>The delimiter placed between joined input lines.  The default is a space
-  (note that this will not be visible when viewed with <B>eparam</B>).
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>missing = "<TT>Missing</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='missing' Line='missing = "Missing"'>
-  <DD>This string is substituted for missing lines when going beyond the end
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>delim = <tt>" "</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='delim' Line='delim = " "' -->
+  <dd>The delimiter placed between joined input lines.  The default is a space
+  (note that this will not be visible when viewed with <b>eparam</b>).
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>missing = <tt>"Missing"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='missing' Line='missing = "Missing"' -->
+  <dd>This string is substituted for missing lines when going beyond the end
   of shorter input files.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>maxchars = 161</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='maxchars' Line='maxchars = 161'>
-  <DD>Maximum number of characters in output lines.  Longer output lines will
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>maxchars = 161</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='maxchars' Line='maxchars = 161' -->
+  <dd>Maximum number of characters in output lines.  Longer output lines will
   be truncated and a warning may be given.  Note that this number always
   includes the final newline character.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>shortest = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='shortest' Line='shortest = yes'>
-  <DD>Stop at the end of the shortest file?  If the input files are of unequal
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>shortest = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='shortest' Line='shortest = yes' -->
+  <dd>Stop at the end of the shortest file?  If the input files are of unequal
   number of lines then this option provides for stopping at the end
   of the shortest file or the end of the longest file.  In the latter case
-  the string specified by the parameter <I>missing</I> is used for input
+  the string specified by the parameter <i>missing</i> is used for input
   from the shorter files.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verbose = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
-  <DD>Warnings are printed to the standard error stream giving the number
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verbose = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
+  <dd>Warnings are printed to the standard error stream giving the number
   of lines exceeding the maximum number of output characters, the number
   of lines exceeding the IRAF line length limit, and the number of files
   completed in case the files are of unequal length.  If verbose is no
   then no warnings are printed.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  The task <B>joinlines</B> reads lines from each of the input text files and
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  The task <b>joinlines</b> reads lines from each of the input text files and
   joins them into one line separated by the specified delimiter.  This is useful
   for making multicolumn files from individual files.  The output may
   be directed to the standard output, the default, or appended to a
   file.
-  <P>
-  The list of input files may be given in either <I>list1</I> or with
-  <I>list2</I>.  The second list is only used if two arguments are given
+  </p>
+  <p>
+  The list of input files may be given in either <i>list1</i> or with
+  <i>list2</i>.  The second list is only used if two arguments are given
   on the command line.  This feature is provided for compatibility with
   an earlier version of this task which only joined two files given separately.
-  <P>
+  </p>
+  <p>
   There is no limit to the possible number of characters per output line but
-  the parameter <I>maxchars</I> may be used to truncate long lines.  This
+  the parameter <i>maxchars</i> may be used to truncate long lines.  This
   can be important because many IRAF tasks read files a line at a time
   with a fixed sized line buffer.  Also other tasks and host programs
   (for example UNIX/vi) have line limits as well.  If an input line
@@ -113,15 +114,17 @@ joinlines — Join text files line by line
   SZ_LINE characters (see hlib$iraf.h) and so the default for the maximum 
   number of output characters is set at the current value.  One may 
   chose to go beyond this limit.
-  <P>
+  </p>
+  <p>
   If the input files do not all have the same number of lines then there
-  are two courses of action.  If the <I>shortest</I> parameter is set
+  are two courses of action.  If the <i>shortest</i> parameter is set
   then the join operation is terminated with the last line from the
   shortest file.  If it is not set then the string from the parameter
-  <I>missing</I> is substituted for input from the shorter files until
+  <i>missing</i> is substituted for input from the shorter files until
   the end of the longest file is reached.  Note that the delimiter will
   still be placed between input lines even when such lines are missing.
-  <P>
+  </p>
+  <p>
   There are three types of warnings which may be produced if the verbose
   flag is set.  These are warnings for the number of lines exceeding the
   specified maximum number of characters resulting in truncated output,
@@ -132,51 +135,49 @@ joinlines — Join text files line by line
   terminal.  To redirect the warnings one must include the standard error
   stream in the redirection syntax.  See the examples for how to do
   this.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  1. Join the two files "<TT>names</TT>" and "<TT>titles</TT>", redirecting the output into a third
-  file "<TT>personnel_file</TT>".
-  <P>
-  <PRE>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
+  1. Join the two files <tt>"names"</tt> and <tt>"titles"</tt>, redirecting the output into a third
+  file <tt>"personnel_file"</tt>.
+  </p>
+  <pre>
   	cl&gt; joinlines names titles &gt; personnel_file
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. Join a set of magnitudes given in separate files and place the
-  output in "<TT>allmags</TT>".  Separate the columns by tabs.
-  <P>
-  <PRE>
+  output in <tt>"allmags"</tt>.  Separate the columns by tabs.
+  </p>
+  <pre>
   	cl&gt; joinlines mags* out=allmags delim="	"
-  </PRE>
-  <P>
+  </pre>
+  <p>
   3. Join a set of files into long lines and redirect the error output
   to a log file.  Set missing lines to INDEF value.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; joinlines tables* out=jointbls miss=INDEF short- ver+ &gt;&amp; log
-  </PRE>
-  <P>
+  </pre>
+  <p>
   4. Join the second column from the output of a program to the previous
   results.  This illustrates the use of pipes.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; myprog | fields STDIN 2 | joinlines last STDIN &gt; new
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   fields
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

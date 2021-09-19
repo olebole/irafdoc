@@ -1,69 +1,68 @@
 .. _ccget:
 
-ccget — Extract objects from a text file catalog
-================================================
+ccget: Extract objects from a text file catalog
+===============================================
 
 **Package: imcoords**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   ccget -- extract objects in a user specified field from a text file catalog
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   ccget input output lngcenter latcenter lngwidth latwidth
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
-  <DD>The input text file catalog(s). The text file columns must be
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
+  <dd>The input text file catalog(s). The text file columns must be
   delimited by whitespace and all the input catalogs must have the same format.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
-  <DD>The output catalogs containing the extracted objects. The number of
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
+  <dd>The output catalogs containing the extracted objects. The number of
   output catalogs must be one or equal to the number of input catalogs.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>lngcenter, latcenter</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='lngcenter' Line='lngcenter, latcenter'>
-  <DD>The center of the field containing the objects to be extracted. Lngcenter and
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>lngcenter, latcenter</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='lngcenter' Line='lngcenter, latcenter' -->
+  <dd>The center of the field containing the objects to be extracted. Lngcenter and
   latcenter are assumed to be in the coordinate system specified by
-  <I>fcsystem</I>, e.g. ra and dec for equatorial systems, galactic longitude and
+  <i>fcsystem</i>, e.g. ra and dec for equatorial systems, galactic longitude and
   latitude for galactic systems, etc. and in the units specified by
-  <I>fclngunits</I> and <I>latunits</I>.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>lngwidth, latwidth</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='lngwidth' Line='lngwidth, latwidth'>
-  <DD>The width of the user specified field in degrees.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>fcsystem = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='fcsystem' Line='fcsystem = ""'>
-  <DD>The celestial coordinate system of the field center. If undefined fcsystem
+  <i>fclngunits</i> and <i>latunits</i>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>lngwidth, latwidth</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='lngwidth' Line='lngwidth, latwidth' -->
+  <dd>The width of the user specified field in degrees.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>fcsystem = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='fcsystem' Line='fcsystem = ""' -->
+  <dd>The celestial coordinate system of the field center. If undefined fcsystem
   defaults to the catalog celestial coordinate system specified by
-  <I>catsystem</I>. The two systems of
-  most interest to users are "<TT>j2000</TT>" and "<TT>b1950</TT>". The full set of options is:
-  <P>
-  <DL>
-  <DT><B>equinox [epoch]</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='equinox' Line='equinox [epoch]'>
-  <DD>The equatorial mean place post-IAU 1976 (FK5) system if equinox is a
+  <i>catsystem</i>. The two systems of
+  most interest to users are <tt>"j2000"</tt> and <tt>"b1950"</tt>. The full set of options is:
+  <dl>
+  <dt><b>equinox [epoch]</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='equinox' Line='equinox [epoch]' -->
+  <dd>The equatorial mean place post-IAU 1976 (FK5) system if equinox is a
   Julian epoch, e.g. J2000.0 or 2000.0, or the equatorial mean place
   pre-IAU 1976 system (FK4) if equinox is a Besselian epoch, e.g. B1950.0
   or 1950.0. Julian equinoxes are prefixed by a J or j, Besselian equinoxes
@@ -75,12 +74,12 @@ ccget — Extract objects from a text file catalog
   Epochs without the J / j or B / b prefix default to the epoch type of
   equinox if the epoch value &lt;= 3000.0, otherwise epoch is interpreted as
   a Julian date.  If undefined epoch defaults to equinox.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>fk5 [equinox] [epoch]</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='fk5' Line='fk5 [equinox] [epoch]'>
-  <DD>The equatorial mean place post-IAU 1976 (FK5) system where equinox is
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>fk5 [equinox] [epoch]</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='fk5' Line='fk5 [equinox] [epoch]' -->
+  <dd>The equatorial mean place post-IAU 1976 (FK5) system where equinox is
   a Julian or Besselian epoch e.g. J2000.0  or B1980.0.
   Equinoxes without the J / j or B / b prefix are treated as Julian epochs.
   The default value of equinox is J2000.0.
@@ -89,12 +88,12 @@ ccget — Extract objects from a text file catalog
   Epochs without the J / j or B / b prefix default to Julian epochs
   if the epoch value &lt;= 3000.0, otherwise epoch is interpreted as
   a Julian date.  If undefined epoch defaults to equinox.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>fk4 [equinox] [epoch]</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='fk4' Line='fk4 [equinox] [epoch]'>
-  <DD>The equatorial mean place pre-IAU 1976 (FK4) system where equinox is a
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>fk4 [equinox] [epoch]</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='fk4' Line='fk4 [equinox] [epoch]' -->
+  <dd>The equatorial mean place pre-IAU 1976 (FK4) system where equinox is a
   Besselian or Julian epoch e.g. B1950.0  or J2000.0,
   and epoch is the Besselian epoch, the Julian epoch, or the Julian date of the
   observation.
@@ -105,12 +104,12 @@ ccget — Extract objects from a text file catalog
   Epochs without the J / j or B / b prefix default to Besselian epochs
   if the epoch value &lt;= 3000.0, otherwise epoch is interpreted as
   a Julian date.  If undefined epoch defaults to equinox.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>noefk4 [equinox] [epoch]</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='noefk4' Line='noefk4 [equinox] [epoch]'>
-  <DD>The equatorial mean place pre-IAU 1976 (FK4) system but without the E-terms
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>noefk4 [equinox] [epoch]</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='noefk4' Line='noefk4 [equinox] [epoch]' -->
+  <dd>The equatorial mean place pre-IAU 1976 (FK4) system but without the E-terms
   where equinox is a Besselian or Julian epoch e.g. B1950.0 or J2000.0,
   and epoch is the Besselian epoch, the Julian epoch, or the Julian date of the
   observation.
@@ -121,12 +120,12 @@ ccget — Extract objects from a text file catalog
   Epochs without the J / j or B / b prefix default to Besselian epochs
   if the epoch value &lt;= 3000.0, otherwise epoch is interpreted as
   a Julian day.  If undefined epoch defaults to equinox.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>apparent epoch</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='apparent' Line='apparent epoch'>
-  <DD>The equatorial geocentric apparent place post-IAU 1976 system where
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>apparent epoch</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='apparent' Line='apparent epoch' -->
+  <dd>The equatorial geocentric apparent place post-IAU 1976 system where
   epoch is the epoch of observation.
   Epoch is a Besselian epoch, a Julian epoch or a Julian date.
   Julian epochs are prefixed by a J or j, Besselian epochs by a B or b.
@@ -134,244 +133,242 @@ ccget — Extract objects from a text file catalog
   epochs if the epoch value &lt; 1984.0, Julian epochs
   if the epoch value &lt;= 3000.0, otherwise epoch is interpreted as
   a Julian date.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>ecliptic epoch</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='ecliptic' Line='ecliptic epoch'>
-  <DD>The ecliptic coordinate system where epoch is the epoch of observation.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>ecliptic epoch</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='ecliptic' Line='ecliptic epoch' -->
+  <dd>The ecliptic coordinate system where epoch is the epoch of observation.
   Epoch is a Besselian epoch, a Julian epoch, or a Julian date.
   Julian epochs are prefixed by a J or j, Besselian epochs by a B or b.
   Epochs without the J / j or B / b prefix default to Besselian epochs
   if the epoch values &lt; 1984.0, Julian epochs
   if the epoch value &lt;= 3000.0, otherwise epoch is interpreted as
   a Julian day.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>galactic [epoch]</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='galactic' Line='galactic [epoch]'>
-  <DD>The IAU 1958 galactic coordinate system.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>galactic [epoch]</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='galactic' Line='galactic [epoch]' -->
+  <dd>The IAU 1958 galactic coordinate system.
   Epoch is a Besselian epoch, a Julian epoch or a Julian date.
   Julian epochs are prefixed by a J or j, Besselian epochs by a B or b.
   Epochs without the J / j or B / b prefix default to Besselian
   epochs if the epoch value &lt; 1984.0, Julian epochs
   if the epoch value &lt;= 3000.0, otherwise epoch is interpreted as
   a Julian date. The default value of epoch is B1950.0.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>supergalactic [epoch]</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='supergalactic' Line='supergalactic [epoch]'>
-  <DD>The deVaucouleurs supergalactic coordinate system.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>supergalactic [epoch]</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='supergalactic' Line='supergalactic [epoch]' -->
+  <dd>The deVaucouleurs supergalactic coordinate system.
   Epoch is a Besselian epoch, a Julian epoch or a Julian date.
   Julian epochs are prefixed by a J or j, Besselian epochs by a B or b.
   Epochs without the J / j or B / b prefix default to Besselian
   epochs if the epoch value &lt; 1984.0, Julian epochs
   if the epoch value &lt;= 3000.0, otherwise epoch is interpreted as
   a Julian date. The default value of epoch is B1950.0.
-  </DD>
-  </DL>
-  <P>
+  </dd>
+  </dl>
   In all the above cases fields in [] are optional with the defaults as
   described. The epoch field for the fk5, galactic, and supergalactic
   coordinate systems is only used if the input coordinates are in the
   equatorial fk4, noefk4, or fk5 systems and proper motions are supplied.
   Since ccget does not currently support proper motions these fields are
   not required.
-  </DD>
-  </DL>
-  <P>
-  <DL>
-  <DT><B>fclngunits = "<TT></TT>", fclatunits = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='fclngunits' Line='fclngunits = "", fclatunits = ""'>
-  <DD>The units of the field center coordinates. The options are "<TT>hours</TT>", "<TT>degrees</TT>",
-  and "<TT>radians</TT>" for the ra / longitude coordinate and "<TT>degrees</TT>" and "<TT>radians</TT>"
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>fclngunits = <tt>""</tt>, fclatunits = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='fclngunits' Line='fclngunits = "", fclatunits = ""' -->
+  <dd>The units of the field center coordinates. The options are <tt>"hours"</tt>, <tt>"degrees"</tt>,
+  and <tt>"radians"</tt> for the ra / longitude coordinate and <tt>"degrees"</tt> and <tt>"radians"</tt>
   for the dec / latitude coordinates. If fclngunits and fclatunits are undefined
-  they default to the preferred units for the given system, e.g. "<TT>hours</TT>" and
-  degrees"<TT> for equatorial systems and </TT>"degrees"<TT> and </TT>"degrees"<TT> for ecliptic,
+  they default to the preferred units for the given system, e.g. <tt>"hours"</tt> and
+  <tt>"degrees"</tt> for equatorial systems and <tt>"degrees"</tt> and <tt>"degrees"</tt> for ecliptic,
   galactic, and supergalactic systems.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>colaliases = </TT>""<TT></B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='colaliases' Line='colaliases = ""'>
-  <DD>The list of input catalog column aliases separated by commas. By default the
-  catalog columns are </TT>"c1"<TT>, </TT>"c2"<TT>, </TT>"c10"<TT>, etc. If colaliases is defined then
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>colaliases = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='colaliases' Line='colaliases = ""' -->
+  <dd>The list of input catalog column aliases separated by commas. By default the
+  catalog columns are <tt>"c1"</tt>, <tt>"c2"</tt>, <tt>"c10"</tt>, etc. If colaliases is defined then
   the aliases are assigned to the columns in order. For example if colaliases
-  is </TT>"id,ra,dec,v,bv"<TT> then columns c1, c2, c3, c4, c5 will be assigned
+  is <tt>"id,ra,dec,v,bv"</tt> then columns c1, c2, c3, c4, c5 will be assigned
   the names id, ra, dec, v, and bv and any remaining columns in the input catalog
   file will be assigned default names beginning with c6.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>lngcolumn = </TT>"c2"<TT>, latcolumn = </TT>"c3"<TT></B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='lngcolumn' Line='lngcolumn = "c2", latcolumn = "c3"'>
-  <DD>The input catalog columns containing the coordinates of catalog objects.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>catsystem = </TT>"j2000"<TT></B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='catsystem' Line='catsystem = "j2000"'>
-  <DD>The celestial coordinate system of the input catalog(s). The two systems of
-  most interest to users are </TT>"j2000"<TT> and </TT>"b1950"<TT>. The full set of options is
-  described in the <I>fcsystem</I> parameter section.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>catlngunits = "<TT></TT>", catlatunits = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='catlngunits' Line='catlngunits = "", catlatunits = ""'>
-  <DD>The units of the catalog coordinates. The options are "<TT>hours</TT>", "<TT>degrees</TT>",
-  and "<TT>radians</TT>" for the ra / longitude coordinate and "<TT>degrees</TT>" and "<TT>radians</TT>"
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>lngcolumn = <tt>"c2"</tt>, latcolumn = <tt>"c3"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='lngcolumn' Line='lngcolumn = "c2", latcolumn = "c3"' -->
+  <dd>The input catalog columns containing the coordinates of catalog objects.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>catsystem = <tt>"j2000"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='catsystem' Line='catsystem = "j2000"' -->
+  <dd>The celestial coordinate system of the input catalog(s). The two systems of
+  most interest to users are <tt>"j2000"</tt> and <tt>"b1950"</tt>. The full set of options is
+  described in the <i>fcsystem</i> parameter section.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>catlngunits = <tt>""</tt>, catlatunits = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='catlngunits' Line='catlngunits = "", catlatunits = ""' -->
+  <dd>The units of the catalog coordinates. The options are <tt>"hours"</tt>, <tt>"degrees"</tt>,
+  and <tt>"radians"</tt> for the ra / longitude coordinate and <tt>"degrees"</tt> and <tt>"radians"</tt>
   for the dec / latitude coordinates. If catlngunits and catlatunits are undefined
-  they default to the preferred units for the catalog system, e.g. "<TT>hours</TT>" and
-  degrees"<TT> for equatorial systems and </TT>"degrees"<TT> and </TT>"degrees"<TT> for ecliptic,
+  they default to the preferred units for the catalog system, e.g. <tt>"hours"</tt> and
+  <tt>"degrees"</tt> for equatorial systems and <tt>"degrees"</tt> and <tt>"degrees"</tt> for ecliptic,
   galactic, and supergalactic systems.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>outsystem = </TT>""<TT></B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='outsystem' Line='outsystem = ""'>
-  <DD>The celestial coordinate system of the output coordinates. If undefined
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>outsystem = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='outsystem' Line='outsystem = ""' -->
+  <dd>The celestial coordinate system of the output coordinates. If undefined
   outsystem defaults to the celestial coordinate system of the catalog.
-  The two systems of most interest to users are </TT>"j2000"<TT> and </TT>"b1950"<TT>. The
-  full set of options is described under the <I>fcsystem</I> parameter
+  The two systems of most interest to users are <tt>"j2000"</tt> and <tt>"b1950"</tt>. The
+  full set of options is described under the <i>fcsystem</i> parameter
   section.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>olngunits = "<TT></TT>", olatunits = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='olngunits' Line='olngunits = "", olatunits = ""'>
-  <DD>The units of the output coordinates. The options are "<TT>hours</TT>", "<TT>degrees</TT>",
-  and "<TT>radians</TT>" for the ra / longitude coordinate and "<TT>degrees</TT>" and "<TT>radians</TT>"
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>olngunits = <tt>""</tt>, olatunits = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='olngunits' Line='olngunits = "", olatunits = ""' -->
+  <dd>The units of the output coordinates. The options are <tt>"hours"</tt>, <tt>"degrees"</tt>,
+  and <tt>"radians"</tt> for the ra / longitude coordinate and <tt>"degrees"</tt> and <tt>"radians"</tt>
   for the dec / latitude coordinates. If olngunits and olatunits are undefined
-  they default to the preferred units for outsystem, e.g. "<TT>hours</TT>" and degrees"<TT> for
-  equatorial systems and </TT>"degrees"<TT> and </TT>"degrees"<TT> for ecliptic, galactic, and
+  they default to the preferred units for outsystem, e.g. <tt>"hours"</tt> and <tt>"degrees"</tt> for
+  equatorial systems and <tt>"degrees"</tt> and <tt>"degrees"</tt> for ecliptic, galactic, and
   supergalactic systems.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>olngformat = </TT>""<TT>, olatformat=</TT>""<TT></B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='olngformat' Line='olngformat = "", olatformat=""'>
-  <DD>The output ra / longitude and dec / latitude formats if the output
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>olngformat = <tt>""</tt>, olatformat=<tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='olngformat' Line='olngformat = "", olatformat=""' -->
+  <dd>The output ra / longitude and dec / latitude formats if the output
   celestial coordinate system is different from the catalog celestial
-  coordinate system. The defaults are </TT>"  %010.1h"<TT> for hours, </TT>"  %9h"<TT> for degrees
-  and </TT>"  %9.7g"<TT> for radians.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>exprs = </TT>"c[*]"<TT></B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='exprs' Line='exprs = "c[*]"'>
-  <DD>The list of output columns and column expressions separated by commas.
+  coordinate system. The defaults are <tt>"  %010.1h"</tt> for hours, <tt>"  %9h"</tt> for degrees
+  and <tt>"  %9.7g"</tt> for radians.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>exprs = <tt>"c[*]"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='exprs' Line='exprs = "c[*]"' -->
+  <dd>The list of output columns and column expressions separated by commas.
   By default the entire record for the extracted object is output exactly
   as it is. The output columns can be individual columns e.g. c1 or c5
   or column ranges, e.g. c[1-10] or c[2-4]. Column expressions are
   expressions of the catalog columns, e.g c4 + c5.  Columns and column
   expression are output in the order in which they appear in exprs.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>formats = </TT>""<TT></B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='formats' Line='formats = ""'>
-  <DD>An optional list of column formats separated by commas. Column formats must
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>formats = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='formats' Line='formats = ""' -->
+  <dd>An optional list of column formats separated by commas. Column formats must
   be placeholders, e.g. the letter f for existing columns which are not
   reformatted (with the possible exception of the coordinate columns).
   Column expression formats may be any regular formatting expression.
-  For example if <I>exprs</I> is "<TT>c[1-3],c4+c5,c5+c7</TT>", then formats might be
-  "<TT>f,%7.3f,%7.3f</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verbose = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
-  <DD>Print messages on the standard output about actions taken by the task.
-  </DD>
-  </DL>
-  <P>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <P>
+  For example if <i>exprs</i> is <tt>"c[1-3],c4+c5,c5+c7"</tt>, then formats might be
+  <tt>"f,%7.3f,%7.3f"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verbose = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
+  <dd>Print messages on the standard output about actions taken by the task.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   Ccget extracts objects in a user specified field from the input catalogs
-  <I>input</I> and writes the extracted records to the output
-  catalogs <I>output</I>.
-  <P>
-  The user field is specified by the parameters <I>lngcenter</I>, <I>latcenter</I>,
-  <I>lngwidth</I>, and <I>latwidth</I>, where the field center is entered in
-  the celestial coordinate system specified by <I>fcsystem</I> and the
-  units are specified by <I>fclngunits</I> and <I>fclatunits</I>. If fcsystem
+  <i>input</i> and writes the extracted records to the output
+  catalogs <i>output</i>.
+  </p>
+  <p>
+  The user field is specified by the parameters <i>lngcenter</i>, <i>latcenter</i>,
+  <i>lngwidth</i>, and <i>latwidth</i>, where the field center is entered in
+  the celestial coordinate system specified by <i>fcsystem</i> and the
+  units are specified by <i>fclngunits</i> and <i>fclatunits</i>. If fcsystem
   is undefined it defaults to the value of the catalog coordinate system
-  <I>catsystem</I>.
-  <P>
+  <i>catsystem</i>.
+  </p>
+  <p>
   The input catalogs must be text files containing 2 or more columns separated
   by whitespace. By default these columns are assigned names of the form
   c1, c2, ..., cn. Legal columns names must have the form described
   in the following column names section. Users may assign their own names
   to the columns by setting
-  the <I>colaliases</I> parameter. The input catalog columns <I>lngcolumn</I> and
-  <I>latcolumn</I> must contain the ra / longitude and dec / latitude coordinates
-  of the catalog objects respectively. The parameters <I>catsystem</I>,
-  <I>catlngunits</I>, and <I>catlatunits</I> specify the coordinate system
+  the <i>colaliases</i> parameter. The input catalog columns <i>lngcolumn</i> and
+  <i>latcolumn</i> must contain the ra / longitude and dec / latitude coordinates
+  of the catalog objects respectively. The parameters <i>catsystem</i>,
+  <i>catlngunits</i>, and <i>catlatunits</i> specify the coordinate system
   of the input catalog and its coordinate units respectively.
-  <P>
+  </p>
+  <p>
   At task startup the user field center is transformed from the coordinate
-  system defined by <I>fcsystem</I> to the catalog coordinate system
-  <I>catsystem</I> and the ra / longitude and dec / latitude limits of the
+  system defined by <i>fcsystem</i> to the catalog coordinate system
+  <i>catsystem</i> and the ra / longitude and dec / latitude limits of the
   user field are computed. As each input catalog record is read, the catalog
   coordinates are decoded and tested against these limits. If the 
   object is inside the user field then the column and column
-  expressions specified by <I>exprs</I> are extracted from the input catalogs
+  expressions specified by <i>exprs</i> are extracted from the input catalogs
   and written to the output catalogs.
-  <P>
-  If the output celestial coordinate system <I>outsystem</I> is
-  different from <I>catsystem</I>, then the catalog coordinates are transformed
+  </p>
+  <p>
+  If the output celestial coordinate system <i>outsystem</i> is
+  different from <i>catsystem</i>, then the catalog coordinates are transformed
   and to the output coordinates system, and written to the output catalog
   in the units specified
-  by <I>olngunits</I> and <I>olatunits</I>, with the formats specified by
-  <I>olngformat</I> and <I>olatformat</I>. Existing columns are written to
+  by <i>olngunits</i> and <i>olatunits</i>, with the formats specified by
+  <i>olngformat</i> and <i>olatformat</i>. Existing columns are written to
   the output catalog in the same
   format they have in the input catalog. Column expressions are written
-  using the formats specified by <I>formats</I> or the builtin defaults
+  using the formats specified by <i>formats</i> or the builtin defaults
   of %5b, %10d, %10g, or %s for boolean, integer, floating point, or
   string columns  respectively.
-  <P>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Column names</H3>
-  <! BeginSection: 'COLUMN NAMES'>
-  <UL>
-  <P>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Column names</h3>
+  <!-- BeginSection: 'COLUMN NAMES' -->
+  <p>
   By default column names are of the form c1, c2, ..., cN. However users can
   also define their own column names, which must have the following syntax
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	{a-zA-Z}[{a-zA-Z0-9._$}]*
-  </PRE>
-  <P>
+  </pre>
+  <p>
   where [] indicates optional, {} indicates a class, - indicates an ascii
   range of characters, and * indicates zero or more occurrences. In words
   a column name must begin with an alphabetic character and be followed
-  by any combination of alphabetic, digit, or <TT>'.'</TT>, <TT>'_'</TT>, and <TT>'$'</TT> characters.
+  by any combination of alphabetic, digit, or <tt>'.'</tt>, <tt>'_'</tt>, and <tt>'$'</tt> characters.
   The ccget task imposes a 19 character limit on the columns names so it is
   best to keep them short.
-  <P>
-  </UL>
-  <! EndSection:   'COLUMN NAMES'>
-  <H3>Column expressions</H3>
-  <! BeginSection: 'COLUMN EXPRESSIONS'>
-  <UL>
-  <P>
+  </p>
+  <!-- EndSection:   'COLUMN NAMES' -->
+  <h3>Column expressions</h3>
+  <!-- BeginSection: 'COLUMN EXPRESSIONS' -->
+  <p>
   Expressions must consist of operands and operators. The operands may be
   column names, numeric constants, functions, and quoted string constants.
   Values given as sexagesimal strings are automatically converted to
   decimal numbers. The operators are arithmetic, logical, and string.
-  <P>
+  </p>
+  <p>
   The following operators are supported:
-  <P>
+  </p>
+  <p>
       
-  <PRE>
+  </p>
+  <pre>
               +  -  *  /              arithmetic operators
               **                      exponentiation
               //                      string concatenation
@@ -380,32 +377,33 @@ ccget — Extract objects from a text file catalog
               == != &amp;&amp; ||             equals, not equals, and, or
               ?=                      string equals pattern
               ? :                     conditional expression
-  </PRE>
-  <P>
+  </pre>
+  <p>
   The following intrinsic functions are supported:
-  <P>
+  </p>
+  <p>
       
-  <PRE>
+  </p>
+  <pre>
               abs     atan2   deg     log     min     real    sqrt
               acos    bool    double  log10   mod     short   str
               asin    cos     exp     long    nint    sin     tan
               atan    cosh    int     max     rad     sinh    tanh
-  </PRE>
-  <P>
+  </pre>
+  <p>
       
-  </UL>
-  <! EndSection:   'COLUMN EXPRESSIONS'>
-  <H3>Column formats</H3>
-  <! BeginSection: 'COLUMN FORMATS'>
-  <UL>
-  <P>
-  A  format  specification has the form "<TT>%w.dCn</TT>", where w is the field
+  </p>
+  <!-- EndSection:   'COLUMN EXPRESSIONS' -->
+  <h3>Column formats</h3>
+  <!-- BeginSection: 'COLUMN FORMATS' -->
+  <p>
+  A  format  specification has the form <tt>"%w.dCn"</tt>, where w is the field
   width, d is the number of decimal places or the number of digits  of
   precision,  C  is  the  format  code,  and  n is radix character for
-  format code "<TT>r</TT>" only.  The w and d fields are optional.  The  format
+  format code <tt>"r"</tt> only.  The w and d fields are optional.  The  format
   codes C are as follows:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   b       boolean (YES or NO)
   c       single character (c or '\c' or '\0nnn')
   d       decimal integer
@@ -422,18 +420,18 @@ ccget — Extract objects from a text file catalog
   w       output the number of spaces given by field W
   x       hexadecimal integer
   z       complex format (r,r) (D = precision)
-  <P>
-  <P>
+  
+  
   Conventions for w (field width) specification:
-  <P>
+  
       W =  n      right justify in field of N characters, blank fill
           -n      left justify in field of N characters, blank fill
           0n      zero fill at left (only if right justified)
   absent, 0       use as much space as needed (D field sets precision)
-  <P>
-  <P>
+  
+  
   Escape sequences (e.g. "\n" for newline):
-  <P>
+  
   \b      backspace   (not implemented)
        formfeed
   \n      newline (crlf)
@@ -443,48 +441,45 @@ ccget — Extract objects from a text file catalog
   \'      character constant delimiter character
   \\      backslash character
   \nnn    octal value of character
-  <P>
+  
   Examples
-  <P>
+  
   %s          format a string using as much space as required
   %-10s       left justify a string in a field of 10 characters
   %-10.10s    left justify and truncate a string in a field of 10 characters
   %10s        right justify a string in a field of 10 characters
   %10.10s     right justify and truncate a string in a field of 10 characters
-  <P>
+  
   %7.3f       print a real number right justified in floating point format
   %-7.3f      same as above but left justified
   %15.7e      print a real number right justified in exponential format
   %-15.7e     same as above but left justified
   %12.5g      print a real number right justified in general format
   %-12.5g     same as above but left justified
-  <P>
+  
   %h          format as nn:nn:nn.n
   %15h        right justify nn:nn:nn.n in field of 15 characters
   %-15h       left justify nn:nn:nn.n in a field of 15 characters
   %12.2h      right justify nn:nn:nn.nn
   %-12.2h     left justify nn:nn:nn.nn
-  <P>
+  
   %H          / by 15 and format as nn:nn:nn.n
   %15H        / by 15 and right justify nn:nn:nn.n in field of 15 characters
   %-15H       / by 15 and left justify nn:nn:nn.n in field of 15 characters
   %12.2H      / by 15 and right justify nn:nn:nn.nn
   %-12.2H     / by 15 and left justify nn:nn:nn.nn
-  <P>
+  
   \n          insert a newline
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'COLUMN FORMATS'>
-  <H3>Some builtin catalog formats</H3>
-  <! BeginSection: 'SOME BUILTIN CATALOG FORMATS'>
-  <UL>
-  <P>
+  </pre>
+  <!-- EndSection:   'COLUMN FORMATS' -->
+  <h3>Some builtin catalog formats</h3>
+  <!-- BeginSection: 'SOME BUILTIN CATALOG FORMATS' -->
+  <p>
   The nlandolt.dat catalog in noao$photcal/catalogs/ has the following format.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   # Column     Quantity 
-  <P>
+  
          1           id
          2           ra
          3          dec
@@ -502,83 +497,71 @@ ccget — Extract objects from a text file catalog
         15     err(v-r)
         16     err(r-i)
         17     err(v-i)
-  </PRE>
-  <P>
+  </pre>
+  <p>
   where the coordinates are in j2000, the errors are all mean errors of the mean,
   and n and m are the number of observations and number of independent nights
   of observations respectively.
-  <P>
-  </UL>
-  <! EndSection:   'SOME BUILTIN CATALOG FORMATS'>
-  <H3>References</H3>
-  <! BeginSection: 'REFERENCES'>
-  <UL>
-  <P>
+  </p>
+  <!-- EndSection:   'SOME BUILTIN CATALOG FORMATS' -->
+  <h3>References</h3>
+  <!-- BeginSection: 'REFERENCES' -->
+  <p>
   The catalog references are
-  <P>
-  <PRE>
+  </p>
+  <pre>
   nlandolt.dat - Landolt, A.U. 1992, A.J. 104, 340
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'REFERENCES'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
+  </pre>
+  <!-- EndSection:   'REFERENCES' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   Example 1. Extract all Landolt standard stars within a 1 degree field
   surrounding the position ra = 3:55:00 dec = 0:00:00 (J2000).
-  <P>
-  <PRE>
+  </p>
+  <pre>
   cl&gt; ccget nlandolt.dat output 03:55:00.0 0:00:00 1.0 1.0
-  </PRE>
-  <P>
+  </pre>
+  <p>
   Example 2. Repeat example 1 but output the coordinates in the b1950
   celestial coordinate system.
-  <P>
-  <PRE>
-  cl&gt; ccget nlandolt.dat output 03:55:00.0 0:00:00 1.0 1.0 \<BR>
+  </p>
+  <pre>
+  cl&gt; ccget nlandolt.dat output 03:55:00.0 0:00:00 1.0 1.0 \<br>
   outsystem=b1950
-  </PRE>
-  <P>
+  </pre>
+  <p>
   Example 3. Repeat example 1 but extract only the id, ra, dec, v, 
   and b-v fields from the Landolt catalog.  Note that since these
   columns are the first five in the catalog they can be specified
   as a range.
-  <P>
-  <PRE>
-  cl&gt; ccget nlandolt.dat output 03:55:00.0 0:00:00 1.0 1.0 \<BR>
+  </p>
+  <pre>
+  cl&gt; ccget nlandolt.dat output 03:55:00.0 0:00:00 1.0 1.0 \<br>
   exprs="c[1-5]"
-  </PRE>
-  <P>
+  </pre>
+  <p>
   Example 4. Repeat example 1 but extract the id, ra, dec, b and
   b-r colors. Note that b and b-r are not columns in the input catalog
   but may be computed from them. Note also that formats should be
   specified to give the desired spacing, although defaults will be
   supplied.
-  <P>
-  <PRE>
-  cl&gt; ccget nlandolt.dat output 03:55:00.0 0:00:00 1.0 1.0 \<BR>
+  </p>
+  <pre>
+  cl&gt; ccget nlandolt.dat output 03:55:00.0 0:00:00 1.0 1.0 \<br>
   exprs="c[1-3],c4+c5,c5+c7" formats="%7.3f,%7.3f
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Time requirements</H3>
-  <! BeginSection: 'TIME REQUIREMENTS'>
-  <UL>
-  </UL>
-  <! EndSection:   'TIME REQUIREMENTS'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Time requirements</h3>
+  <!-- BeginSection: 'TIME REQUIREMENTS' -->
+  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'COLUMN NAMES' 'COLUMN EXPRESSIONS' 'COLUMN FORMATS' 'SOME BUILTIN CATALOG FORMATS' 'REFERENCES' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'COLUMN NAMES' 'COLUMN EXPRESSIONS' 'COLUMN FORMATS' 'SOME BUILTIN CATALOG FORMATS' 'REFERENCES' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

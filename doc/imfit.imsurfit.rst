@@ -1,337 +1,336 @@
 .. _imsurfit:
 
-imsurfit — Fit a surface to a 2-D image
-=======================================
+imsurfit: Fit a surface to a 2-D image
+======================================
 
 **Package: imfit**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   imsurfit -- fit a surface function to an image
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage	</H3>
-  <! BeginSection: 'USAGE	'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage	</h3>
+  <!-- BeginSection: 'USAGE	' -->
+  <p>
   imsurfit input, output, xorder, yorder
-  </UL>
-  <! EndSection:   'USAGE	'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
-  <DD>List of images to be fit.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
-  <DD>Output image(s) of <I>type_output</I>.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>xorder</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='xorder' Line='xorder'>
-  <DD>The order in x of the polynomials (1 = constant) or the number of polynomial
+  </p>
+  <!-- EndSection:   'USAGE	' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
+  <dd>List of images to be fit.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
+  <dd>Output image(s) of <i>type_output</i>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>xorder</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='xorder' Line='xorder' -->
+  <dd>The order in x of the polynomials (1 = constant) or the number of polynomial
   pieces for the bicubic spline.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>yorder</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='yorder' Line='yorder'>
-  <DD>The order in y of the polynomials (1 = constant) or the number of polynomial
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>yorder</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='yorder' Line='yorder' -->
+  <dd>The order in y of the polynomials (1 = constant) or the number of polynomial
   pieces for the bicubic spline.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>cross_terms = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='cross_terms' Line='cross_terms = yes'>
-  <DD>Cross terms for the polynomials. For example, if <I>xorder</I> = 2 and
-  <I>yorder</I> = 2
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>cross_terms = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='cross_terms' Line='cross_terms = yes' -->
+  <dd>Cross terms for the polynomials. For example, if <i>xorder</i> = 2 and
+  <i>yorder</i> = 2
   then a function of the form z = a + b * x + c * y + d * x * y will be fit.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>function = "<TT>leg</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='function' Line='function = "leg"'>
-  <DD>Functional for of surface to be fit to the image. The available functions
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>function = <tt>"leg"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "leg"' -->
+  <dd>Functional for of surface to be fit to the image. The available functions
   (with minimum match abbreviation) are:
-  <DL>
-  <DT><B>legendre</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='legendre' Line='legendre'>
-  <DD></DD>
-  </DL>
-  <DL>
-  <DT><B>chebyshev</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='chebyshev' Line='chebyshev'>
-  <DD></DD>
-  </DL>
-  <DL>
-  <DT><B>spline3</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='spline3' Line='spline3'>
-  <DD></DD>
-  </DL>
-  <DL>
-  <DT><B>spline1</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='spline1' Line='spline1'>
-  <DD></DD>
-  </DL>
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>type_output = "<TT>fit</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='type_output' Line='type_output = "fit"'>
-  <DD>The type of output image.  The allowed types (with minimum match abbreviation)
+  <dl>
+  <dt><b>legendre</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='legendre' Line='legendre' -->
+  <dd></dd>
+  </dl>
+  <dl>
+  <dt><b>chebyshev</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='chebyshev' Line='chebyshev' -->
+  <dd></dd>
+  </dl>
+  <dl>
+  <dt><b>spline3</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='spline3' Line='spline3' -->
+  <dd></dd>
+  </dl>
+  <dl>
+  <dt><b>spline1</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='spline1' Line='spline1' -->
+  <dd></dd>
+  </dl>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>type_output = <tt>"fit"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='type_output' Line='type_output = "fit"' -->
+  <dd>The type of output image.  The allowed types (with minimum match abbreviation)
   are:
-  <DL>
-  <DT><B>clean</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='clean' Line='clean'>
-  <DD>The input image with deviant pixels in the good regions replaced by the
+  <dl>
+  <dt><b>clean</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='clean' Line='clean' -->
+  <dd>The input image with deviant pixels in the good regions replaced by the
   fitted value.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>fit  </B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='fit' Line='fit  '>
-  <DD>An image created from the surface fits to the image.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>residual</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='residual' Line='residual'>
-  <DD>The difference of the input image and the fitted image.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>response</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='response' Line='response'>
-  <DD>The ratio of the input image to the fitted image.
-  All fitted (denominator) pixels below <I>div_min</I> are given a value of 1.
-  </DD>
-  </DL>
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>xmedian = 1, ymedian = 1</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='xmedian' Line='xmedian = 1, ymedian = 1'>
-  <DD>The x and y dimensions of the box used for median processing.
-  If <I>xmedian</I> &gt; 1 or <I>ymedian</I> is &gt; 1,
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>fit  </b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='fit' Line='fit  ' -->
+  <dd>An image created from the surface fits to the image.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>residual</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='residual' Line='residual' -->
+  <dd>The difference of the input image and the fitted image.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>response</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='response' Line='response' -->
+  <dd>The ratio of the input image to the fitted image.
+  All fitted (denominator) pixels below <i>div_min</i> are given a value of 1.
+  </dd>
+  </dl>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>xmedian = 1, ymedian = 1</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='xmedian' Line='xmedian = 1, ymedian = 1' -->
+  <dd>The x and y dimensions of the box used for median processing.
+  If <i>xmedian</i> &gt; 1 or <i>ymedian</i> is &gt; 1,
   then the median is calculated for each box and used in the surface
   fit instead of the individual pixels.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>median_percent = 50.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='median_percent' Line='median_percent = 50.'>
-  <DD>If the number of pixels in the median box is less than <I>median_percent</I> *
-  <I>xmedian</I> * <I>ymedian</I> the box will be omitted from the fit.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>upper = 0., lower = 0.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='upper' Line='upper = 0., lower = 0.'>
-  <DD>The number of sigma  limits for pixel rejection. If <I>upper</I> &gt; 0. or
-  <I>lower</I> &gt; 0. and median processing is turned off,
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>median_percent = 50.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='median_percent' Line='median_percent = 50.' -->
+  <dd>If the number of pixels in the median box is less than <i>median_percent</i> *
+  <i>xmedian</i> * <i>ymedian</i> the box will be omitted from the fit.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>upper = 0., lower = 0.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='upper' Line='upper = 0., lower = 0.' -->
+  <dd>The number of sigma  limits for pixel rejection. If <i>upper</i> &gt; 0. or
+  <i>lower</i> &gt; 0. and median processing is turned off,
   pixel rejection is enabled.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>ngrow = 0</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='ngrow' Line='ngrow = 0'>
-  <DD>The radius in pixels for region growing.
-  Pixels within a distance of <I>ngrow</I> pixels of
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>ngrow = 0</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='ngrow' Line='ngrow = 0' -->
+  <dd>The radius in pixels for region growing.
+  Pixels within a distance of <i>ngrow</i> pixels of
   a rejected pixel are also rejected.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>niter = 0</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='niter' Line='niter = 0'>
-  <DD>The maximum number of iterations in the rejection cycle.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>niter = 0</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='niter' Line='niter = 0' -->
+  <dd>The maximum number of iterations in the rejection cycle.
   Rejection will be terminated if the number of rejected pixels is zero
-  or the number of iterations equals <I>niter</I>.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>regions = "<TT>all</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='regions' Line='regions = "all"'>
-  <DD>The available options (with minimum match abbreviation) are:
-  <DL>
-  <DT><B>all</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='all' Line='all'>
-  <DD>All points in the image are fit.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>rows</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='rows' Line='rows'>
-  <DD>The fit is performed on the image rows specified by <I>rows</I>.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>columns</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='columns' Line='columns'>
-  <DD>The fit is performed on the image columns specified by <I>columns</I>.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>border</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='border' Line='border'>
-  <DD>The fit is performed on a border around the image whose width is specified
-  by <I>border</I>.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>sections</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='sections' Line='sections'>
-  <DD>The fit is performed on image sections listed in the file specified
-  by <I>sections</I>.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>circle</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='circle' Line='circle'>
-  <DD>The fit is performed on a circular region whose parameters are specified by
-  <I>circle</I>.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>invcircle</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='invcircle' Line='invcircle'>
-  <DD>The fit is performed on a region exterior to the circular region whose
-  parameters are specified by <I>circle</I>.
-  </DD>
-  </DL>
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>rows = "<TT>*</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='rows' Line='rows = "*"'>
-  <DD>When <I>region_type</I> = 'rows', the string parameter <I>rows</I> specifies
+  or the number of iterations equals <i>niter</i>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>regions = <tt>"all"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='regions' Line='regions = "all"' -->
+  <dd>The available options (with minimum match abbreviation) are:
+  <dl>
+  <dt><b>all</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='all' Line='all' -->
+  <dd>All points in the image are fit.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>rows</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='rows' Line='rows' -->
+  <dd>The fit is performed on the image rows specified by <i>rows</i>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>columns</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='columns' Line='columns' -->
+  <dd>The fit is performed on the image columns specified by <i>columns</i>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>border</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='border' Line='border' -->
+  <dd>The fit is performed on a border around the image whose width is specified
+  by <i>border</i>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>sections</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='sections' Line='sections' -->
+  <dd>The fit is performed on image sections listed in the file specified
+  by <i>sections</i>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>circle</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='circle' Line='circle' -->
+  <dd>The fit is performed on a circular region whose parameters are specified by
+  <i>circle</i>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>invcircle</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='invcircle' Line='invcircle' -->
+  <dd>The fit is performed on a region exterior to the circular region whose
+  parameters are specified by <i>circle</i>.
+  </dd>
+  </dl>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>rows = <tt>"*"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='rows' Line='rows = "*"' -->
+  <dd>When <i>region_type</i> = 'rows', the string parameter <i>rows</i> specifies
   the rows to be fit.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>columns = "<TT>*</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='columns' Line='columns = "*"'>
-  <DD>When <I>region_type</I> = 'columns', the string parameter <I>columns</I>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>columns = <tt>"*"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='columns' Line='columns = "*"' -->
+  <dd>When <i>region_type</i> = 'columns', the string parameter <i>columns</i>
   specifies the columns to be fit.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>border = "<TT>50</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='border' Line='border = "50"'>
-  <DD>When <I>region_type</I> = 'border', the
-  string parameter <I>border</I> specifies the width of the border to be fit.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>sections = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='sections' Line='sections = ""'>
-  <DD>When <I>region_type</I> = 'sections', the
-  string parameter <I>sections</I> is the name of the  file containing the list of
-  image sections to be fit, where <I>Sections</I> may be the standard
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>border = <tt>"50"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='border' Line='border = "50"' -->
+  <dd>When <i>region_type</i> = 'border', the
+  string parameter <i>border</i> specifies the width of the border to be fit.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>sections = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='sections' Line='sections = ""' -->
+  <dd>When <i>region_type</i> = 'sections', the
+  string parameter <i>sections</i> is the name of the  file containing the list of
+  image sections to be fit, where <i>Sections</i> may be the standard
   input (STDIN).
   The sections must be listed one per line in the following form: x1 x2 y1 y2.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>circle = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='circle' Line='circle = ""'>
-  <DD>The string parameter <I>circle</I> lists the parameter needed to specify
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>circle = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='circle' Line='circle = ""' -->
+  <dd>The string parameter <i>circle</i> lists the parameter needed to specify
   the circle in the following format: xcenter ycenter radius. The three
   parameters must be integers.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>div_min = INDEF</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='div_min' Line='div_min = INDEF'>
-  <DD>When <I>type_output</I> = 'response' all divisions in which the fitted value
-  is below <I>div_min</I> are set to the value 1.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>div_min = INDEF</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='div_min' Line='div_min = INDEF' -->
+  <dd>When <i>type_output</i> = 'response' all divisions in which the fitted value
+  is below <i>div_min</i> are set to the value 1.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   A surface is fit to selected portions of the input image.
-  The user may elect to fit the whole image, <I>region_type</I> = 'all',
-  selected rows, <I>region_type</I> = 'rows', selected columns,
-  <I>region_type</I> = 'columns', a
-  border around the image, <I>region_type</I> = 'border' or image sections, 
-  <I>region_type</I> = 'sections'. If the sections  option is enabled the user
+  The user may elect to fit the whole image, <i>region_type</i> = 'all',
+  selected rows, <i>region_type</i> = 'rows', selected columns,
+  <i>region_type</i> = 'columns', a
+  border around the image, <i>region_type</i> = 'border' or image sections, 
+  <i>region_type</i> = 'sections'. If the sections  option is enabled the user
   must supply the name of the file containing a list of sections,
-  <I>sections</I> = 'list', or enter them from the standard input. In either case
+  <i>sections</i> = 'list', or enter them from the standard input. In either case
   the sections must be listed one per line in the following form: x1 x2 y1 y2.
-  <P>
-  The parameter <I>surface_type</I> may be a
-  "<TT>legendre</TT>" polynomial, "<TT>chebyshev</TT>" polynomial,
-  a cubic spline ("<TT>spline3</TT>") or a linear spline ("<TT>spline1</TT>").
+  </p>
+  <p>
+  The parameter <i>surface_type</i> may be a
+  <tt>"legendre"</tt> polynomial, <tt>"chebyshev"</tt> polynomial,
+  a cubic spline (<tt>"spline3"</tt>) or a linear spline (<tt>"spline1"</tt>).
   The order of the polynomials is selected in both x and y.
   Cross terms for the polynomial surfaces are optional.
-  For the cubic spline the parameters <I>xorder</I> and <I>yorder</I> specify
+  For the cubic spline the parameters <i>xorder</i> and <i>yorder</i> specify
   the number of polynomial pieces to be fit to the surface in
   each direction.
-  <P>
+  </p>
+  <p>
   The output image may be the fitted image, the difference between the
   input and the fitted image, the ratio of the input to the fitted image
   or the input image with deviant pixels in the fitted regions replaced
-  with the fitted values, according to whether <I>type_output</I> =
+  with the fitted values, according to whether <i>type_output</i> =
   'fit', 'residual',
-  'response' or 'clean'. If <I>type_output</I> = 'response' then pixels in the
-  fitted image with values &lt; <I>div_min</I> are replaced by 1.
-  If <I>type_output</I> =
-  'clean' then at least one of <I>upper</I> or <I>lower</I> must be &gt; 0.
-  <P>
+  'response' or 'clean'. If <i>type_output</i> = 'response' then pixels in the
+  fitted image with values &lt; <i>div_min</i> are replaced by 1.
+  If <i>type_output</i> =
+  'clean' then at least one of <i>upper</i> or <i>lower</i> must be &gt; 0.
+  </p>
+  <p>
   Pixel rejection is enabled if median processing is turned off,
-  <I>niter</I> &gt; 0,
-  and at least one of the parameters <I>upper</I> and <I>lower</I> is &gt; 0.
+  <i>niter</i> &gt; 0,
+  and at least one of the parameters <i>upper</i> and <i>lower</i> is &gt; 0.
   Region growing
-  can be turned on by setting <I>ngrow</I> &gt; 0, in which case all pixels within
+  can be turned on by setting <i>ngrow</i> &gt; 0, in which case all pixels within
   a radius ngrow of a deviant pixel will be rejected.
-  <P>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. To create a smoothed version of an image:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; imsurfit m74 m74smooth 5 10 function=spline3
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. To create a smoothed version of an image using median processing:
-  <P>
-  <PRE>
-  	cl&gt; imsurfit m74 m74med 5 10 function=spline3 \<BR>
+  </p>
+  <pre>
+  	cl&gt; imsurfit m74 m74med 5 10 function=spline3 \<br>
   	&gt;&gt;&gt; xmed=5 ymed=5
-  </PRE>
-  <P>
+  </pre>
+  <p>
   3. To subtract a constant background from an image:
-  <P>
-  <PRE>
-  	cl&gt; imsurfit abell30 abell30bck 1 1 function=leg \<BR>
+  </p>
+  <pre>
+  	cl&gt; imsurfit abell30 abell30bck 1 1 function=leg \<br>
   	&gt;&gt;&gt; type=resid
-  </PRE>
-  <P>
+  </pre>
+  <p>
   4. To make a ratio image using signals above 1000 units:
-  <P>
-  <PRE>
-  	cl&gt; imsurfit n7006 n7006ratio 20 20 function=spline3 \<BR>
+  </p>
+  <pre>
+  	cl&gt; imsurfit n7006 n7006ratio 20 20 function=spline3 \<br>
   	&gt;&gt;&gt; type=response div_min=1000
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Timings</H3>
-  <! BeginSection: 'TIMINGS'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Timings</h3>
+  <!-- BeginSection: 'TIMINGS' -->
+  <p>
   Fitting and subtracting a constant from a 512 by 512 IRAF image requires
   ~35 cpu seconds. Approximately 130 cpu seconds are required to fit a
   second degree polynomial in x and y (including cross-terms) to a
@@ -339,12 +338,11 @@ imsurfit — Fit a surface to a 2-D image
   512 IRAF image, and to subtract the fitted image from the input image.
   To produce a smooth 512 by 512 IRAF image using a 10 by 10 bicubic spline
   requires ~300 cpu seconds. Timings refer to a VAX 11/750 + fpa.
-  <P>
-  </UL>
-  <! EndSection:   'TIMINGS'>
-  <H3>Notes</H3>
-  <! BeginSection: 'NOTES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'TIMINGS' -->
+  <h3>Notes</h3>
+  <!-- BeginSection: 'NOTES' -->
+  <p>
   The surface fitting code uses the IRAF SURFIT math routines,
   which have been optimized for image fitting .
   The routines which fit selected portions
@@ -352,8 +350,9 @@ imsurfit — Fit a surface to a 2-D image
   maintain a list of rejected pixels utilize the ranges and pixlist packages
   of routines currently maintained in the images directory. These will be
   replaced by more general ranges and image masking routines in the future.
-  </UL>
-  <! EndSection:    'NOTES'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIMINGS' 'NOTES'  >
+  <!-- EndSection:    'NOTES' -->
+  
+  <!-- Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIMINGS' 'NOTES'  -->
   

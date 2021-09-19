@@ -1,149 +1,153 @@
 .. _hdtoi:
 
-hdtoi — Apply DTOI transformation to density image
-==================================================
+hdtoi: Apply DTOI transformation to density image
+=================================================
 
 **Package: dtoi**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   hdtoi -- transform images according to hd curve
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   hdtoi input output database
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
-  <DD>List of images to be transformed.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
-  <DD>List of output image names.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>database</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='database' Line='database'>
-  <DD>Name of text database describing HD curve.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>fog = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='fog' Line='fog = ""'>
-  <DD>Value of fog level, read from database if unspecified.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>option = "<TT>mean</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='option' Line='option = "mean"'>
-  <DD>Option for calculating fog density when <B>fog</B> is a file list, can be
-  either "<TT>mean</TT>" or "<TT>median</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>sigma = 3.0</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='sigma' Line='sigma = 3.0'>
-  <DD>If <B>fog</B> is a file name, and <B>option</B> = "<TT>mean</TT>", the mean fog density
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
+  <dd>List of images to be transformed.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
+  <dd>List of output image names.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>database</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database' -->
+  <dd>Name of text database describing HD curve.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>fog = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='fog' Line='fog = ""' -->
+  <dd>Value of fog level, read from database if unspecified.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>option = <tt>"mean"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='option' Line='option = "mean"' -->
+  <dd>Option for calculating fog density when <b>fog</b> is a file list, can be
+  either <tt>"mean"</tt> or <tt>"median"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>sigma = 3.0</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='sigma' Line='sigma = 3.0' -->
+  <dd>If <b>fog</b> is a file name, and <b>option</b> = <tt>"mean"</tt>, the mean fog density
   is iteratively calculated using this rejection criteria.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>floor = 0.0</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='floor' Line='floor = 0.0'>
-  <DD>Value assigned to levels below fog, can be either 0.0 or -1.0.  
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>ceiling = 30000.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='ceiling' Line='ceiling = 30000.'>
-  <DD>The final intensities are scaled to this value, such that a saturated
-  input density equals <B>ceiling</B> on output.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>datatype = "<TT>r</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='datatype' Line='datatype = "r"'>
-  <DD>Datatype of output image pixels.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verbose = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
-  <DD>Print log of processing to STDOUT.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  Task <I>hdtoi</I> transforms one image to another as described by the 
-  <B>database</B>.  There is only one HD curve per run; the same 
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>floor = 0.0</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='floor' Line='floor = 0.0' -->
+  <dd>Value assigned to levels below fog, can be either 0.0 or -1.0.  
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>ceiling = 30000.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='ceiling' Line='ceiling = 30000.' -->
+  <dd>The final intensities are scaled to this value, such that a saturated
+  input density equals <b>ceiling</b> on output.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>datatype = <tt>"r"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='datatype' Line='datatype = "r"' -->
+  <dd>Datatype of output image pixels.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verbose = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
+  <dd>Print log of processing to STDOUT.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  Task <i>hdtoi</i> transforms one image to another as described by the 
+  <b>database</b>.  There is only one HD curve per run; the same 
   transformation is applied to all input images.
-  <P>
+  </p>
+  <p>
   The fog value can be obtained in three ways: read from the database, read
   as a floating point number, or calculated from a list of fog images.  If 
-  parameter <B>fog</B> is not specified, the fog value is read from 
-  <B>database</B>.  If <B>fog</B> is specified, it can be entered
+  parameter <b>fog</b> is not specified, the fog value is read from 
+  <b>database</b>.  If <b>fog</b> is specified, it can be entered
   as either a floating point number or as a list of file names.  If the
   value cannot be read as a number, it is assumed to be a file name.  In that
   case, the density of each file in the fog list is calculated and the 
-  average of these values is subtracted from <B>input</B> before processing.
+  average of these values is subtracted from <b>input</b> before processing.
   The algorithm used to calculate the fog density is selected by the
-  <B>option</B> parameter, and is either a "<TT>mean</TT>" or "<TT>median</TT>" calculation.
+  <b>option</b> parameter, and is either a <tt>"mean"</tt> or <tt>"median"</tt> calculation.
   The fog density can be the mean value after pixels more than the specified
   number of sigma have been rejected, or the median value of all the fog spot
   pixels.
-  <P>
+  </p>
+  <p>
   The fog value is subtracted from the input image before the transformation
   takes place.  It is possible that some density values will fall below
   the fog level; these values are handled in one of two ways.  Values
-  below the fog value are set equal to 0.0 when <B>floor</B> = 0.0.  If 
-  <B>floor</B> = -1.0, the resulting intensity = -1 * intensity (abs (value)).
-  <P>
+  below the fog value are set equal to 0.0 when <b>floor</b> = 0.0.  If 
+  <b>floor</b> = -1.0, the resulting intensity = -1 * intensity (abs (value)).
+  </p>
+  <p>
   A scaling factor is applied to the final intensities, as typically
-  they will be &lt; 1.0.  The <B>ceiling</B> parameter is used to specify what
+  they will be &lt; 1.0.  The <b>ceiling</b> parameter is used to specify what
   value a saturated density is transformed to; all intensities are scaled
   to this upper limit.  The precision of the transformation is unaffected by 
   this parameter, although caution must be used if the output image pixel
   type is an integer.  The user is responsible for choosing
-  a <B>ceiling</B> that avoids the truncation of significant digits.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  a <b>ceiling</b> that avoids the truncation of significant digits.
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   Convert three density images to intensity images as described in database db1.
-  <P>
+  </p>
+  <p>
   	cl&gt; hdtoi denin* intim1,intim2,intim3 db1
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Time requirements</H3>
-  <! BeginSection: 'TIME REQUIREMENTS'>
-  <UL>
-  Task <B>hdtoi</B> requires 20 cpu seconds to transform a 512 square image, with
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Time requirements</h3>
+  <!-- BeginSection: 'TIME REQUIREMENTS' -->
+  <p>
+  Task <b>hdtoi</b> requires 20 cpu seconds to transform a 512 square image, with
   a 12 bit data range, on a VAX 750
-  </UL>
-  <! EndSection:   'TIME REQUIREMENTS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   spotlist, dematch, hdfit
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'SEE ALSO'  -->
   

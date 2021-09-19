@@ -1,136 +1,138 @@
 .. _bscale:
 
-bscale — Linearly transform the intensities of a list of images
-===============================================================
+bscale: Linearly transform the intensities of a list of images
+==============================================================
 
 **Package: proto**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   bscale -- linearly transform the intensity scales of a list of images
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage	</H3>
-  <! BeginSection: 'USAGE	'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage	</h3>
+  <!-- BeginSection: 'USAGE	' -->
+  <p>
   bscale input output 
-  </UL>
-  <! EndSection:   'USAGE	'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input </B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input '>
-  <DD>List of images to be transformed.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
-  <DD>List of output transformed images. If the output list is the same as the input
+  </p>
+  <!-- EndSection:   'USAGE	' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input </b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input ' -->
+  <dd>List of images to be transformed.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
+  <dd>List of output transformed images. If the output list is the same as the input
   list the input images are overwritten.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>bzero = "<TT>0.</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='bzero' Line='bzero = "0."'>
-  <DD>The zero point to be subtracted before applying the scale factor.
-  The options are a numerical value, "<TT>mean</TT>", "<TT>median</TT>", or "<TT>mode</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>bscale = "<TT>1.</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='bscale' Line='bscale = "1."'>
-  <DD>The scale factor to be applied.  The options are a numerical value,
-  "<TT>mean</TT>", "<TT>median</TT>", or "<TT>mode</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>section = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='section' Line='section = ""'>
-  <DD>The image section to be used for computing the image statistics.  If section
-  is "<TT></TT>", <I>step</I> is used to define the default image section. <I>Section</I>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>bzero = <tt>"0."</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='bzero' Line='bzero = "0."' -->
+  <dd>The zero point to be subtracted before applying the scale factor.
+  The options are a numerical value, <tt>"mean"</tt>, <tt>"median"</tt>, or <tt>"mode"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>bscale = <tt>"1."</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='bscale' Line='bscale = "1."' -->
+  <dd>The scale factor to be applied.  The options are a numerical value,
+  <tt>"mean"</tt>, <tt>"median"</tt>, or <tt>"mode"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>section = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='section' Line='section = ""' -->
+  <dd>The image section to be used for computing the image statistics.  If section
+  is <tt>""</tt>, <i>step</i> is used to define the default image section. <i>Section</i>
   is used to confine the computation of the mean, median, and mode
   to a specific region of the image.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>step = 10</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='step' Line='step = 10'>
-  <DD>The step size in pixels which defines the default image section to be used
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>step = 10</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='step' Line='step = 10' -->
+  <dd>The step size in pixels which defines the default image section to be used
   for computing the mean, median, and mode.
   In image section notation the default section is equivalent to [*:10,*:10,...].
-  <I>Step</I> is used if
-  the sampling along an axis is not defined by <I>section</I>.
+  <i>Step</i> is used if
+  the sampling along an axis is not defined by <i>section</i>.
   Subsampling can significantly reduce the memory and 
   time required for the computation of the mean, median, and mode.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>upper = "<TT>INDEF</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='upper' Line='upper = "INDEF"'>
-  <DD>Upper intensity limit to be used for computing the mean, median, and mode.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>lower = "<TT>INDEF</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='lower' Line='lower = "INDEF"'>
-  <DD>Lower intensity limit to be used for computing the mean, median, and mode.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verbose = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
-  <DD>Print messages about actions taken by the task?
-  </DD>
-  </DL>
-  <P>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <P>
-  The specified input images <I>input</I>  are linearly transformed in intensity
-  and written to the list of output images <I>output</I>, using the
-  zero point specified by <I>bzero</I> and the scale factor specified by
-  <I>bscale</I>.  If the output image list
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>upper = <tt>"INDEF"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='upper' Line='upper = "INDEF"' -->
+  <dd>Upper intensity limit to be used for computing the mean, median, and mode.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>lower = <tt>"INDEF"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='lower' Line='lower = "INDEF"' -->
+  <dd>Lower intensity limit to be used for computing the mean, median, and mode.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verbose = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
+  <dd>Print messages about actions taken by the task?
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  The specified input images <i>input</i>  are linearly transformed in intensity
+  and written to the list of output images <i>output</i>, using the
+  zero point specified by <i>bzero</i> and the scale factor specified by
+  <i>bscale</i>.  If the output image list
   is the same as the input image list the input images will be overwritten.
-  <P>
+  </p>
+  <p>
   The expression defining the linear transformation is listed below.
-  <P>
+  </p>
+  <p>
   	NEW = (OLD - BZERO) / BSCALE
-  <P>
+  </p>
+  <p>
   OLD is the input pixel brightness, NEW is the output
   pixel brightness, BZERO is the zero point offset, and BSCALE is the
-  scale factor.  The values of the scaling parameters <I>bzero</I> and
-  <I>bscale</I>
+  scale factor.  The values of the scaling parameters <i>bzero</i> and
+  <i>bscale</i>
   may be specified explicitly or the mean, median, or mode of the image
   may be used for either quantity.  If the input image pixel type
   is short, integer, or long, overflow or truncation may occur.
-  <P>
+  </p>
+  <p>
   When one of the scaling parameters is the image mean, median,
   or mode, then the image mean, median, and mode are calculated. The statistics
   computation can be restricted to a section of the input image by setting
   the parameter
-  <I>section</I>. Otherwise the parameter <I>step</I> is used to
+  <i>section</i>. Otherwise the parameter <i>step</i> is used to
   define a default image section.
   Subsampling the image can significantly reduce the memory
   and time requirements for computing the statistics of large images.
   If numerical values for both the scaling parameters are specified, then
   the image statistics are not computed. The statistics computation can
   be limited to given intensity range by setting the parameters
-  <I>lower</I> and <I>upper</I>.
-  <P>
+  <i>lower</i> and <i>upper</i>.
+  </p>
+  <p>
   The mean, median, and mode are computed using the following algorithm.
   Note that this algorithm requires that all the data to used for computing
   the statistics must be in memory.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   1. The data in the specified image section is read into a buffer.
   2. The data is sorted in increasing order of intensity.
   3. The points outside upper and lower are excluded.
@@ -141,66 +143,62 @@ bscale — Linearly transform the intensities of a list of images
      computed.
   7. The location of the bin containing the most data points is determined.
   8. The median of the data values in that bin is used to estimate the mode.
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
+  </pre>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Use the mode to subtract a constant background from a list of images.
   Overwrite the input images.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; bscale *.imh *.imh bzero=mode
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. Scale a list of images to a unit mean. Overwrite the input images.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; bscale *.imh *.imh bscale=mean
-  </PRE>
-  <P>
+  </pre>
+  <p>
   3. Scale a list of images to the intensity range 0 to 511,
   where 234. and 1243. are the original data range. Overwrite the input
   images. This example uses the CL to calculate bscale.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; bscale.bzero = 234.
   	cl&gt; bscale.bscale = (1243. - 234.) / 512.
   	cl&gt; bscale *.imh *.imh
-  </PRE>
-  <P>
+  </pre>
+  <p>
   4. Scale an image using a user specified bzero and bscale and create a new
   output image: 
-  <P>
-  <PRE>
+  </p>
+  <pre>
           cl&gt; bscale imagein imageout bzero=0.0 bscale=1.10 
-  </PRE>
-  <P>
+  </pre>
+  <p>
   5. Median subtract a list of input images using the percent replace facility to
   create the output image names.
-  <P>
-  <PRE>
+  </p>
+  <pre>
           cl&gt; bscale images*.imh %i%outi%*.imh bzero=median bscale=1.0
-  </PRE>
-  <P>
+  </pre>
+  <p>
   6. Repeat the previous example but use the @ file facility for specifying
   the input and output image lists.
-  <P>
-  <PRE>
+  </p>
+  <pre>
           cl&gt; bscale @infile @outfile bzero=median bscale=1.0
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   imarith,imcombine
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

@@ -1,80 +1,85 @@
 .. _flprcache:
 
-flprcache — Flush the process cache
-===================================
+flprcache: Flush the process cache
+==================================
 
 **Package: language**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   flprcache -- flush the process cache
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   flprcache process
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>process</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='process' Line='process'>
-  <DD>Either the task number as printed by <I>prcache</I>, or the name of one
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>process</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='process' Line='process' -->
+  <dd>Either the task number as printed by <i>prcache</i>, or the name of one
   of the tasks in the process.  If no process is named, all processes
   are flushed from the cache (unless they are locked in the cache).
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   When an executable task is first run, the CL spawns the associated executable
   file as a subprocess and then runs the task.  When the task completes the
   process does not exit, rather it remains connected to the CL as a subprocess,
   but becomes idle waiting for another command from the CL.  The set of such
-  idle processes forms what is referred to as the CL "<TT>process cache</TT>".
+  idle processes forms what is referred to as the CL <tt>"process cache"</tt>.
   The purpose of the process cache is to minimize the overhead required to
   run a task; the first time a task is called response is slow since the
   process has to be executed, but thereafter response is fast provided the
   process remains in the cache.
-  <P>
-  The <I>flprcache</I> command flushes the process cache, terminating
+  </p>
+  <p>
+  The <i>flprcache</i> command flushes the process cache, terminating
   the connected subprocesses therein.  If an argument is specified only the
   specific cache slot is cleared, otherwise all cache slots are flushed.
-  Processes which have been "<TT>locked</TT>" in the cache with <I>prcache</I> are
+  Processes which have been <tt>"locked"</tt> in the cache with <i>prcache</i> are
   not flushed unless explicitly named.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  1. Run <I>prcache</I> to get the process slot number, then flush the process
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
+  1. Run <i>prcache</i> to get the process slot number, then flush the process
   by slot number.
-  <P>
+  </p>
+  <p>
   	cl&gt; flpr 5
-  <P>
+  </p>
+  <p>
   2. Flush all idle processes which are not locked in the cache.
-  <P>
+  </p>
+  <p>
   	cl&gt; flpr
-  <P>
-  3. Flush the "<TT>x_system.e</TT>" process by naming the "<TT>directory</TT>" task, which
+  </p>
+  <p>
+  3. Flush the <tt>"x_system.e"</tt> process by naming the <tt>"directory"</tt> task, which
   is contained in that process.  Lock a fresh copy of the process in the cache.
   This initializes the process, and may be necessary if a system task is
   interrupted at the wrong time.
-  <P>
+  </p>
+  <p>
   	cl&gt; flpr dir; prc dir
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <p>
   In some circumstances the CL may believe that a process in the
   process cache is running when this is not the case.  The CL will
   not attempt to communicate with a running process, and will be
@@ -83,14 +88,15 @@ flprcache — Flush the process cache
   (this is harmless since the CL is then restarted).
   The user may eventually be required to kill the sub-process using
   operating system facilities.
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   prcache
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

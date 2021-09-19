@@ -1,136 +1,136 @@
 .. _mtexamine:
 
-mtexamine — Examine the structure of a magnetic tape
-====================================================
+mtexamine: Examine the structure of a magnetic tape
+===================================================
 
 **Package: dataio**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   mtexamine -- examine the structure of magtape or a single disk file
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   mtexamine tape_file
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>tape_file</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='tape_file' Line='tape_file'>
-  <DD>Tape or disk file, e.g. "<TT>mta1600[2]</TT>", "<TT>mta1600</TT>" or "<TT>data</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>file_list = "<TT>1-999</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='file_list' Line='file_list = "1-999"'>
-  <DD>List of tape file numbers or ranges delimited by commas, e.g. "<TT>1-3,5-8</TT>".
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>tape_file</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='tape_file' Line='tape_file' -->
+  <dd>Tape or disk file, e.g. <tt>"mta1600[2]"</tt>, <tt>"mta1600"</tt> or <tt>"data"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>file_list = <tt>"1-999"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='file_list' Line='file_list = "1-999"' -->
+  <dd>List of tape file numbers or ranges delimited by commas, e.g. <tt>"1-3,5-8"</tt>.
   File_list is used only if no file number is given in tape_file.
   Files will be read in ascending order, regardless of the order of the list.
-  Reading will terminate if EOT is reached, thus a list such as "<TT>1-999</TT>"
+  Reading will terminate if EOT is reached, thus a list such as <tt>"1-999"</tt>
   may be used to read all the files on the tape. File_list is ignored is input
   is a single disk file.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>dump_records = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='dump_records' Line='dump_records = no'>
-  <DD>Dump selected records?
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>rec_list = "<TT>1-999</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='rec_list' Line='rec_list = "1-999"'>
-  <DD>List of tape record numbers or ranges to be dumped delimited by whitespace
-  or commas e.g "<TT>1-3,4</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>swapbytes = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='swapbytes' Line='swapbytes = no'>
-  <DD>Swap bytes?
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>byte_chunk = 1</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='byte_chunk' Line='byte_chunk = 1'>
-  <DD>The number of bytes which are considered as one output element.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>dump_records = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='dump_records' Line='dump_records = no' -->
+  <dd>Dump selected records?
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>rec_list = <tt>"1-999"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='rec_list' Line='rec_list = "1-999"' -->
+  <dd>List of tape record numbers or ranges to be dumped delimited by whitespace
+  or commas e.g <tt>"1-3,4"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>swapbytes = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='swapbytes' Line='swapbytes = no' -->
+  <dd>Swap bytes?
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>byte_chunk = 1</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='byte_chunk' Line='byte_chunk = 1' -->
+  <dd>The number of bytes which are considered as one output element.
   The maximum number of bytes permitted in byte_chunk is the number of
   bytes in a long integer on the host machine.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output_format = "<TT>o</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output_format' Line='output_format = "o"'>
-  <DD>Permitted types are character(c), octal(o), hexadecimal (x), decimal (d)
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output_format = <tt>"o"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output_format' Line='output_format = "o"' -->
+  <dd>Permitted types are character(c), octal(o), hexadecimal (x), decimal (d)
   or unsigned decimal (u).  Character dumps are only permitted for byte_chunk = 1.
   Unless decimal format is specified, the data are dumped as
   unsigned integers.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   By default mtexamine determines the record structure of all files
   on a magnetic tape or a single disk file.
   Selected files can be dumped by setting the file_list parameter.
   Selected records can be dumped by setting the dump_record switch
   and entering a record list. The user can select the byte chunk
   and the output format for the dump.
-  <P>
+  </p>
+  <p>
   Mtexamine can also be used to dump a single disk file. However the concept
   of a block is not well defined for disk files. Mtexamine defines a block
   to be one IRAF file io block which is usually some multiple of the machine
   block size.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Determine the record structure of a magnetic tape and send the result to
   the file tapedump.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; mtexamine mtb1600 &gt; tapedump
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. Dump the third tape file in octal bytes on the standard output.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; mtexamine mtb1600[3] du+
-  </PRE>
-  <P>
+  </pre>
+  <p>
   3. Dump the contents of the fifth record of the third tape file in ASCII
   characters on the standard output.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; mtexamine mtb1600[3] du+ re=5 ou=c
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <p>
   The IRAF magtape i/o routines do not permit data beyond a double EOF
   to be accessed. Therefore mtexamine cannot be used to examine tapes with
   embedded double EOFs.
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   rewind, allocate
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

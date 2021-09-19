@@ -1,5 +1,5 @@
-rv — Radial velocity analysis package
-=====================================
+rv: Radial velocity analysis package
+====================================
 
 .. toctree:: :maxdepth: 1
 

@@ -1,80 +1,82 @@
 .. _type:
 
-type — Type a text file on the standard output
-==============================================
+type: Type a text file on the standard output
+=============================================
 
 **Package: system**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   type -- type a file or files on the standard output
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   type input_files
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input_files</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input_files' Line='input_files'>
-  <DD>A template specifying the file or files to be typed.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>map_cc = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='map_cc' Line='map_cc = yes'>
-  <DD>If set, output any non-printing control characters in the input text in
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input_files</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input_files' Line='input_files' -->
+  <dd>A template specifying the file or files to be typed.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>map_cc = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='map_cc' Line='map_cc = yes' -->
+  <dd>If set, output any non-printing control characters in the input text in
   a printable form, e.g., ctrl/c (ASCII 3) would be output as ^C.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>device = "<TT>terminal</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='device' Line='device = "terminal"'>
-  <DD>The output device, defaulting to the user's terminal.  If the special device
-  "<TT>text</TT>" is named, any standout mode control characters embedded in the text
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>device = <tt>"terminal"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "terminal"' -->
+  <dd>The output device, defaulting to the user's terminal.  If the special device
+  <tt>"text"</tt> is named, any standout mode control characters embedded in the text
   will cause the enclosed text to be output in upper case.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <I>Type</I> copies the named files (or the files selected by
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  <i>Type</i> copies the named files (or the files selected by
   the file template) to the standard output.
   If there is more than one file in the input list, a header naming the file
   to be printed will precede each output file.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
-  1. Type all files in the current directory with the extension "<TT>.x</TT>" on the
-  standard output.  Do not pause between files or pages (unlike <I>page</I>).
-  <P>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
+  1. Type all files in the current directory with the extension <tt>".x"</tt> on the
+  standard output.  Do not pause between files or pages (unlike <i>page</i>).
+  </p>
+  <p>
   	cl&gt; type *.x
-  <P>
-  2. Capture the manual page for task <I>hedit</I> in a text file, in a form
+  </p>
+  <p>
+  2. Capture the manual page for task <i>hedit</i> in a text file, in a form
   suitable for printing on any device.
-  <P>
+  </p>
+  <p>
   	cl&gt; help hedit | type dev=text &gt; hedit.doc
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   page, head, tail, concatenate, lprint
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

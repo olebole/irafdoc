@@ -1,73 +1,73 @@
 .. _tee:
 
-tee — Tee the standard output into a file
-=========================================
+tee: Tee the standard output into a file
+========================================
 
 **Package: system**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   tee -- tee the standard output to a file
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   tee file
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>file</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='file' Line='file'>
-  <DD>The name of the output file.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>out_type = "<TT>text</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='out_type' Line='out_type = "text"'>
-  <DD>The type of output file to be created, either "<TT>text</TT>" or "<TT>binary</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>append = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='append' Line='append = no'>
-  <DD>If set, append to an existing file, otherwise create a new file.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <I>Tee</I> copies its input to both the standard output and the named file.
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>file</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='file' Line='file' -->
+  <dd>The name of the output file.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>out_type = <tt>"text"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='out_type' Line='out_type = "text"' -->
+  <dd>The type of output file to be created, either <tt>"text"</tt> or <tt>"binary"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>append = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='append' Line='append = no' -->
+  <dd>If set, append to an existing file, otherwise create a new file.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  <i>Tee</i> copies its input to both the standard output and the named file.
   Its primary use is in pipes where one wants to capture some intermediate output.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
-  1. The results of the <I>set</I> command are captured in the file "<TT>temp</TT>",
-  and are also passed on to the "<TT>match</TT>" command.  The result is
-  a "<TT>temp</TT>" file of perhaps 100 lines, with the output to the screen
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
+  1. The results of the <i>set</i> command are captured in the file <tt>"temp"</tt>,
+  and are also passed on to the <tt>"match"</tt> command.  The result is
+  a <tt>"temp"</tt> file of perhaps 100 lines, with the output to the screen
   only around 5 lines.
-  <P>
+  </p>
+  <p>
   	cl&gt; set | tee temp | match tty
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <p>
   Since the processes in an IRAF pipe execute serially rather than concurrently,
   the teed output will not appear until all tasks to the left have completed.
-  </UL>
-  <! EndSection:    'BUGS'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS'  >
+  <!-- EndSection:    'BUGS' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS'  -->
   

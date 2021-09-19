@@ -1,123 +1,118 @@
 .. _defvar:
 
-defvar — Test if an environment variable is defined
-===================================================
+defvar: Test if an environment variable is defined
+==================================================
 
 **Package: language**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
-  <PRE>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <pre>
   defpac  -- test if the named package is defined
   deftask -- test if the named task is defined
   defpar  -- test if the named parameter is defined
   defvar  -- test if the named environment variable is defined
-  </PRE>
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
-  <PRE>
+  </pre>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <pre>
   defpac  (pacname)
   deftask (taskname)
   defpar  (param)
   defvar  (variable)
-  </PRE>
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>pacname</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='pacname' Line='pacname'>
-  <DD>An IRAF package name.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>taskname</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='taskname' Line='taskname'>
-  <DD>An IRAF taskname.  It may be specified as "<TT>taskname</TT>" or as
-  "<TT>packagename.taskname</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>param</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='param' Line='param'>
-  <DD>An IRAF parameter name.  It may be specified as "<TT>paramname</TT>",
-  "<TT>taskname.paramname</TT>" or "<TT>packagename.taskname.paramname</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>variable</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='variable' Line='variable'>
-  <DD>An environment variable name.  It may be specified as "<TT>varname</TT>".
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>pacname</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='pacname' Line='pacname' -->
+  <dd>An IRAF package name.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>taskname</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='taskname' Line='taskname' -->
+  <dd>An IRAF taskname.  It may be specified as <tt>"taskname"</tt> or as
+  <tt>"packagename.taskname"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>param</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='param' Line='param' -->
+  <dd>An IRAF parameter name.  It may be specified as <tt>"paramname"</tt>,
+  <tt>"taskname.paramname"</tt> or <tt>"packagename.taskname.paramname"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>variable</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='variable' Line='variable' -->
+  <dd>An environment variable name.  It may be specified as <tt>"varname"</tt>.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   These routines return a boolean value indicating whether the
   relevant parameter, task or package has been defined.
-  A task becomes defined when the package to which it belongs is "<TT>loaded</TT>"
-  by entering the name of the package as a command, or whenever a <I>task</I>
+  A task becomes defined when the package to which it belongs is <tt>"loaded"</tt>
+  by entering the name of the package as a command, or whenever a <i>task</i>
   declaration is input to the CL.  A parameter becomes defined when the
   task to which it belongs is defined; the task need not be currently
   executing for its parameters to be defined.  When a package is exited,
-  e.g., after entry of the <I>bye</I> command, all the task and parameter
+  e.g., after entry of the <i>bye</i> command, all the task and parameter
   declarations for the package are discarded.  Environment variables may
   be either in the host environment, or in the CL environment as a result
-  of a <I>set</I> or <I>reset</I> statement.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  of a <i>set</i> or <i>reset</i> statement.
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Test if a task exists.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; if (deftask ("system.page"))
   	&gt;&gt;&gt;	print ("task page exists")
   	&gt;&gt;&gt; else
   	&gt;&gt;&gt;	print ("task page not found")
   	task page exists
   	cl&gt;
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. Add the value of the named parameter into a sum, but only if the parameter
   exists (the example is for a script).
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	sum = 0
   	for (i=0;  i &lt;= 10;  i+=1) {
   	    parname = "data" // i
   	    if (defpar (parname)
   		sum += parname
   	}
-  </PRE>
-  <P>
+  </pre>
+  <p>
   3. Checked whether the 'IRAFARCH' environment variable is defined.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; if (defvar("IRAFARCH")) {
   	&gt;&gt;&gt;    print ("IRAFARCH is " // envget("IRAFARCH")
   	&gt;&gt;&gt; }
   	&gt;&gt;&gt; ;
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   package, task, redefine, lparam
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

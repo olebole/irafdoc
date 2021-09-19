@@ -1,250 +1,263 @@
 .. _crtpict:
 
-crtpict — Generate greyscale plots of IRAF images
-=================================================
+crtpict: Generate greyscale plots of IRAF images
+================================================
 
 **Package: plot**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   crtpict -- make a hardcopy of an IRAF image
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   crtpict input 
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
-  <DD>Input images to be processed.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>device = "<TT>dicomed</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='device' Line='device = "dicomed"'>
-  <DD>The output device.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>auto_fill = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='auto_fill' Line='auto_fill = yes'>
-  <DD>If set to yes, the image will be scaled to fit the device viewport.
-  The aspect ratio is always preserved when <I>auto_fill</I> = yes.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>xmag = 1.0, ymag = 1.0</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='xmag' Line='xmag = 1.0, ymag = 1.0'>
-  <DD>When <I>auto_fill</I> = no, the x and y magnification ratios are specified
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
+  <dd>Input images to be processed.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>device = <tt>"dicomed"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "dicomed"' -->
+  <dd>The output device.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>auto_fill = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='auto_fill' Line='auto_fill = yes' -->
+  <dd>If set to yes, the image will be scaled to fit the device viewport.
+  The aspect ratio is always preserved when <i>auto_fill</i> = yes.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>xmag = 1.0, ymag = 1.0</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='xmag' Line='xmag = 1.0, ymag = 1.0' -->
+  <dd>When <i>auto_fill</i> = no, the x and y magnification ratios are specified
   by these parameters.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>replicate = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='replicate' Line='replicate = yes'>
-  <DD>The image pixels are block replicated to fit the device viewport when
-  <I>replicate</I> = yes.  Otherwise, the pixels are linearly interpolated
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>replicate = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='replicate' Line='replicate = yes' -->
+  <dd>The image pixels are block replicated to fit the device viewport when
+  <i>replicate</i> = yes.  Otherwise, the pixels are linearly interpolated
   to match the device pixels.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>x_block_avg = 1, y_block_avg = 1</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='x_block_avg' Line='x_block_avg = 1, y_block_avg = 1'>
-  <DD>These parameters are used when <I>replicate</I> = no to decrease the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>x_block_avg = 1, y_block_avg = 1</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='x_block_avg' Line='x_block_avg = 1, y_block_avg = 1' -->
+  <dd>These parameters are used when <i>replicate</i> = no to decrease the
   effective output device resolution, and speed up the interpolation.  The
   pixels are interpolated to the block averaged output device, then
   block replicated to fill the device viewport.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>ztrans = "<TT>auto</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='ztrans' Line='ztrans = "auto"'>
-  <DD>This parameter specifies how the image intensities are mapped into the 
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>ztrans = <tt>"auto"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='ztrans' Line='ztrans = "auto"' -->
+  <dd>This parameter specifies how the image intensities are mapped into the 
   greyscale values of the output device.  Intensity z1 maps to black, z2 to white.
-  The 4 choices for <I>ztrans</I> are:
-  <PRE>
-  <P>
+  The 4 choices for <i>ztrans</i> are:
+  <pre>
+  
   	"auto"		- z1 and z2 centered on median of image
   	"min_max"	- set z1 and z2 to specified intensities
   	"none" 		- truncate intensities to fit output range
   	"user"		- user supplies look up table of values
-  </PRE>
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>lutfile = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='lutfile' Line='lutfile = ""'>
-  <DD>Name of text file containing the look up table when <I>ztrans</I> = user. 
+  </pre>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>lutfile = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='lutfile' Line='lutfile = ""' -->
+  <dd>Name of text file containing the look up table when <i>ztrans</i> = user. 
   The table should contain two columns per line; column 1 contains the 
   intensity, column 2 the desired greyscale output.  
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>contrast = 0.25</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='contrast' Line='contrast = 0.25'>
-  <DD>Used when automatically determining z1 and z2.  The slope of the transfer
-  function is divided by <I>contrast</I>, so negative values of <I>contrast</I>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>contrast = 0.25</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='contrast' Line='contrast = 0.25' -->
+  <dd>Used when automatically determining z1 and z2.  The slope of the transfer
+  function is divided by <i>contrast</i>, so negative values of <i>contrast</i>
   result in a negative transfer function.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>nsample_lines = 25</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='nsample_lines' Line='nsample_lines = 25'>
-  <DD>Used when automatically determining z1 and z2, this parameter sets the number 
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>nsample_lines = 25</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='nsample_lines' Line='nsample_lines = 25' -->
+  <dd>Used when automatically determining z1 and z2, this parameter sets the number 
   of image lines to be sampled when determining the median.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>z1 = 0.0, z2 = 0.0</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='z1' Line='z1 = 0.0, z2 = 0.0'>
-  <DD>These parameters are used when <I>ztrans</I> = "<TT>min_max</TT>", to specify which
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>z1 = 0.0, z2 = 0.0</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='z1' Line='z1 = 0.0, z2 = 0.0' -->
+  <dd>These parameters are used when <i>ztrans</i> = <tt>"min_max"</tt>, to specify which
   pixel values map to black and white.  
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>perimeter = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='perimeter' Line='perimeter = yes'>
-  <DD>Draw annotated axes around the plot perimeter?
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>image_fraction = 0.70</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='image_fraction' Line='image_fraction = 0.70'>
-  <DD>The fraction of the vertical device viewport reserved for the image.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>graphics_fraction = 0.20</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='graphics_fraction' Line='graphics_fraction = 0.20'>
-  <DD>The fraction of the vertical device viewport reserved for histogram
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>perimeter = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='perimeter' Line='perimeter = yes' -->
+  <dd>Draw annotated axes around the plot perimeter?
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>image_fraction = 0.70</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='image_fraction' Line='image_fraction = 0.70' -->
+  <dd>The fraction of the vertical device viewport reserved for the image.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>graphics_fraction = 0.20</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='graphics_fraction' Line='graphics_fraction = 0.20' -->
+  <dd>The fraction of the vertical device viewport reserved for histogram
   plots and id information. 
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>greyscale_fraction = 0.05</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='greyscale_fraction' Line='greyscale_fraction = 0.05'>
-  <DD>The fraction of the vertical device viewport reserved for the greyscale
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>greyscale_fraction = 0.05</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='greyscale_fraction' Line='greyscale_fraction = 0.05' -->
+  <dd>The fraction of the vertical device viewport reserved for the greyscale
   step wedge.  
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output' Line='output = ""'>
-  <DD>Output metacode is appended to this file.
-  By naming an output file, the metacode can be "<TT>trapped</TT>", and the normal
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
+  <dd>Output metacode is appended to this file.
+  By naming an output file, the metacode can be <tt>"trapped"</tt>, and the normal
   spooling process intercepted.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  Procedure <B>crtpict</B> makes a photographic hardcopy plot of IRAF images.
-  <P>
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  Procedure <b>crtpict</b> makes a photographic hardcopy plot of IRAF images.
+  </p>
+  <p>
   The image can be automatically scaled to fill the output plotting window, with 
-  the aspect ratio preserved, by setting <B>auto_fill</B> = yes.  When 
-  <B>auto_fill</B> = no, magnification factors for the axes are entered as 
-  <B>xmag</B> and <B>ymag</B>, where negative values (as well as fractional 
+  the aspect ratio preserved, by setting <b>auto_fill</b> = yes.  When 
+  <b>auto_fill</b> = no, magnification factors for the axes are entered as 
+  <b>xmag</b> and <b>ymag</b>, where negative values (as well as fractional 
   values &lt; 1.0), indicate that the image is to be reduced.  By default, the
-  imaged is enlarged by block replication.  By setting <B>replicate</B> = no,
+  imaged is enlarged by block replication.  By setting <b>replicate</b> = no,
   the image will be linearly interpolated to fit the device area.  (In this
-  case, to speed things up, the <B>block_avg</B> parameters can be set to
+  case, to speed things up, the <b>block_avg</b> parameters can be set to
   reduce the effective output resolution.)  In either case, if an image needs
   to be reduced in size, it will be decimated.   
-  <P>
+  </p>
+  <p>
   Four methods of determining the greyscale transformation are available.
-  When <I>ztrans</I> = "<TT>none</TT>", no transformation between intensity and 
+  When <i>ztrans</i> = <tt>"none"</tt>, no transformation between intensity and 
   greyscale level occurs, the intensities are simply copied, which will most
   likely result in truncation.  With this method, the lowest bits of each pixel, 
   the lowest level variations, are always shown, regardless of the dynamic 
   range of the image.
-  <P>
-  When <I>ztrans</I> = "<TT>auto</TT>",
+  </p>
+  <p>
+  When <i>ztrans</i> = <tt>"auto"</tt>,
   the greyscale levels are automatically centered on the median of the image 
   pixels.  The window of intensities spanned by the greyscale is controlled 
-  by parameter <I>contrast</I>, which is divided into the calculated slope of 
-  the transfer function. The larger the absolute value of <I>contrast</I>, the 
+  by parameter <i>contrast</i>, which is divided into the calculated slope of 
+  the transfer function. The larger the absolute value of <i>contrast</i>, the 
   higher the contrast in the output image.  A subset of the image pixels are 
   used to determine the median; the number of lines sampled is 
-  <I>nsample_lines</I>.
-  <P>
-  When <B>ztrans</B> = "<TT>min_max</TT>", intensity <B>z1</B> maps to the minimum
-  greyscale level (black), <B>z2</B> maps to the maximum greyscale level
+  <i>nsample_lines</i>.
+  </p>
+  <p>
+  When <b>ztrans</b> = <tt>"min_max"</tt>, intensity <b>z1</b> maps to the minimum
+  greyscale level (black), <b>z2</b> maps to the maximum greyscale level
   (white) and the transfer function is linear in between these two endpoints.
-  If <I>z1</I> = <I>z2</I>, the image min and max map to black and white, modified
-  by <B>contrast</B>.  (NOTE:  When running <I>crtpict</I> on an image created with 
-  <I>snap</I>, <B>ztrans</B> should be set to "<TT>min_max</TT>", with <B>z1</B> = 0 and
-  <B>z2</B> = 1023, the maximum output value possible from the IIS.)
-  <P>
-  When <B>ztrans</B> = "<TT>user</TT>", a look up table of intensity values and their
+  If <i>z1</i> = <i>z2</i>, the image min and max map to black and white, modified
+  by <b>contrast</b>.  (NOTE:  When running <i>crtpict</i> on an image created with 
+  <i>snap</i>, <b>ztrans</b> should be set to <tt>"min_max"</tt>, with <b>z1</b> = 0 and
+  <b>z2</b> = 1023, the maximum output value possible from the IIS.)
+  </p>
+  <p>
+  When <b>ztrans</b> = <tt>"user"</tt>, a look up table of intensity values and their
   corresponding greyscale levels is read from the file specified by the
-  <B>lutfile</B> parameter.  From this information, 
-  <I>crtpict</I> constructs a piecewise linear look up table containing
+  <b>lutfile</b> parameter.  From this information, 
+  <i>crtpict</i> constructs a piecewise linear look up table containing
   4096 discrete values.  
   The text format table contains two columns per line; 
   column 1 contains the intensity, column 2 the desired greyscale output.  
   The greyscale values specified by the user must match those available on
-  the output device.  Task <B>showcap</B> can be used to determine the range
+  the output device.  Task <b>showcap</b> can be used to determine the range
   of acceptable greyscale levels.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1.  To subsample every 4th pixel of a large image, fill the output area and use
   previously determined values of z1 and z2 for the greyscale transformation
   the command would be:
-  <P>
+  </p>
+  <p>
       cl&gt; crtpict sunpic[*:4,*:4] ztrans=min z1=0 z2=800
-  <P>
+  </p>
+  <p>
   2.  To process every image with the root name ccdpic, using default values of
   all parameters, the command would be:
-  <P>
+  </p>
+  <p>
       cl&gt; crtpict ccdpic*
-  <P>
-  3.  To process images created with <B>snap</B>, ztrans and z2 must be changed
+  </p>
+  <p>
+  3.  To process images created with <b>snap</b>, ztrans and z2 must be changed
   from their default values:
-  <P>
+  </p>
+  <p>
       cl&gt; crtpict iis.snap ztrans=min z2=1023
-  <P>
+  </p>
+  <p>
   4.  Image `mypic' is processed using the look up table in file `mylut',
-  <P>
+  </p>
+  <p>
       cl&gt; crtpict mypic ztrans=user lutfile=mylut
-  <P>
+  </p>
+  <p>
   Where file `mylut' contains this information:
-  <PRE>
+  </p>
+  <pre>
   		10	40
   		1500	100
   		2500	100
   		3500	200
   		7500	255
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Timing</H3>
-  <! BeginSection: 'TIMING'>
-  <UL>
-  For a 512 x 512 real image, <B>crtpict</B> takes about 40 cpu seconds with
-  <B>auto_fill</B> and <B>replicate</B> = yes.  When <B>auto_fill</B> = yes
-  but <B>replicate</B> = no, <B>crtpict</B> requires almost 400 cpu seconds.
-  </UL>
-  <! EndSection:   'TIMING'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Timing</h3>
+  <!-- BeginSection: 'TIMING' -->
+  <p>
+  For a 512 x 512 real image, <b>crtpict</b> takes about 40 cpu seconds with
+  <b>auto_fill</b> and <b>replicate</b> = yes.  When <b>auto_fill</b> = yes
+  but <b>replicate</b> = no, <b>crtpict</b> requires almost 400 cpu seconds.
+  </p>
+  <!-- EndSection:   'TIMING' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   display, showcap
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIMING' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIMING' 'SEE ALSO'  -->
   

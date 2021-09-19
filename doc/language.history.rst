@@ -1,73 +1,79 @@
 .. _history:
 
-history — Display  commands previously executed
-===============================================
+history: Display  commands previously executed
+==============================================
 
 **Package: language**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   history -- display the last few commands
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   history [[-]ncommands]
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>ncommands</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='ncommands' Line='ncommands'>
-  <DD>The number of commands to be displayed.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  The <I>history</I> task prints a list of the last few commands executed.
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>ncommands</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='ncommands' Line='ncommands' -->
+  <dd>The number of commands to be displayed.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  The <i>history</i> task prints a list of the last few commands executed.
   Only commands which terminated normally are included.
   The number of commands to be printed may be specified on the command line
   if desired.  If the number is preceded by a minus sign the default
-  number of lines is not changed, otherwise <I>history</I> will take the
+  number of lines is not changed, otherwise <i>history</i> will take the
   value given as the new default number of commands to be printed.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Print the last few commands.
   	
   	cl&gt; history
-  <P>
+  </p>
+  <p>
   2. Print the entire history list.
-  <P>
+  </p>
+  <p>
   	cl&gt; history -999
-  <P>
+  </p>
+  <p>
   3. Change the default number of history lines to be printed to 5 (and print
   the last five commands).
-  <P>
+  </p>
+  <p>
   	cl&gt; history 5
-  <P>
-  4. Save the history in the file "<TT>commands</TT>".
-  <P>
+  </p>
+  <p>
+  4. Save the history in the file <tt>"commands"</tt>.
+  </p>
+  <p>
   	cl&gt; history -999 &gt; commands
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   ehistory
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

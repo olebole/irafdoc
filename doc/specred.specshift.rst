@@ -1,113 +1,113 @@
 .. _specshift:
 
-specshift — Shift spectral dispersion coordinate systems
-========================================================
+specshift: Shift spectral dispersion coordinate systems
+=======================================================
 
 **Package: specred**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   specshift -- Shift dispersion coordinate systems
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   specshift spectra shift
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>spectra</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='spectra' Line='spectra'>
-  <DD>List of spectra to be modified.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>shift</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='shift' Line='shift'>
-  <DD>Dispersion coordinate shift to be added to the current dispersion coordinate
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>spectra</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='spectra' Line='spectra' -->
+  <dd>List of spectra to be modified.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>shift</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='shift' Line='shift' -->
+  <dd>Dispersion coordinate shift to be added to the current dispersion coordinate
   system.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>apertures = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""'>
-  <DD>List of apertures to be modified.  The null list
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>apertures = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
+  <dd>List of apertures to be modified.  The null list
   selects all apertures.  A list consists of comma separated
   numbers and ranges of numbers.  A range is specified by a hyphen.  An
-  optional step size may be given by using the <TT>'x'</TT> followed by a number.
-  See <B>xtools.ranges</B> for more information.  This parameter is ignored
+  optional step size may be given by using the <tt>'x'</tt> followed by a number.
+  See <b>xtools.ranges</b> for more information.  This parameter is ignored
   for N-dimensional spatial spectra such as long slit and Fabry-Perot.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verbose = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
-  <DD>Print a record of each aperture modified?
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verbose = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
+  <dd>Print a record of each aperture modified?
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   This task applies a shift to the dispersion coordinate system of selected
-  spectra.  The image data is not modified as with <B>imshift</B> but rather
+  spectra.  The image data is not modified as with <b>imshift</b> but rather
   the coordinate system is shifted relative to the data.  The spectra to be
   modified are selected by specifying a list of images and apertures.  If no
   aperture list is specified then all apertures in the images are modified.
   For N-dimensional spatial spectra such as long slit and Fabry-Perot the
   aperture list is ignored.
-  <P>
+  </p>
+  <p>
   The specified shift is added to the existing world coordinates.  For linear
   coordinate systems this has the effect of modifying CRVAL1, for linear
-  "<TT>multispec</TT>" coordinate systems this modifies the dispersion coordinate of
-  the first physical pixel, and for nonlinear "<TT>multispec</TT>" coordinate systems
+  <tt>"multispec"</tt> coordinate systems this modifies the dispersion coordinate of
+  the first physical pixel, and for nonlinear <tt>"multispec"</tt> coordinate systems
   this modifies the shift coefficient(s).
-  <P>
+  </p>
+  <p>
   It is also possible to shift the linearized coordinate systems (but not the
-  nonlinear coordinate systems) with <B>sapertures</B> or possibly with
-  <B>wcsedit</B> or <B>hedit</B> if the coordinate system is stored with a
+  nonlinear coordinate systems) with <b>sapertures</b> or possibly with
+  <b>wcsedit</b> or <b>hedit</b> if the coordinate system is stored with a
   global linear system.
-  <P>
-  The <I>verbose</I> parameter lists the images, the apertures, the shift, and
+  </p>
+  <p>
+  The <i>verbose</i> parameter lists the images, the apertures, the shift, and
   the old and new values for the first physical pixel are printed.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1.  To add 1.23 Angstroms to the coordinates of all apertures in the
-  image "<TT>ngc456.ms</TT>":
-  <P>
-  <PRE>
+  image <tt>"ngc456.ms"</tt>:
+  </p>
+  <pre>
   	cl&gt; specshift ngc456.ms 1.23
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Revisions</H3>
-  <! BeginSection: 'REVISIONS'>
-  <UL>
-  <DL>
-  <DT><B>SPECSHIFT V2.10.3</B></DT>
-  <! Sec='REVISIONS' Level=0 Label='SPECSHIFT' Line='SPECSHIFT V2.10.3'>
-  <DD>First version.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'REVISIONS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Revisions</h3>
+  <!-- BeginSection: 'REVISIONS' -->
+  <dl>
+  <dt><b>SPECSHIFT V2.10.3</b></dt>
+  <!-- Sec='REVISIONS' Level=0 Label='SPECSHIFT' Line='SPECSHIFT V2.10.3' -->
+  <dd>First version.
+  </dd>
+  </dl>
+  <!-- EndSection:   'REVISIONS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   sapertures, dopcor, imcoords.wcsreset, hedit, ranges, onedspec.package
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

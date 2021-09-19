@@ -1,78 +1,77 @@
 .. _flatten:
 
-flatten — Flatten images using a flat field
-===========================================
+flatten: Flatten images using a flat field
+==========================================
 
 **Package: generic**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   flatten -- Flatten images by dividing by a flat field
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage	</H3>
-  <! BeginSection: 'USAGE	'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage	</h3>
+  <!-- BeginSection: 'USAGE	' -->
+  <p>
   flatten images flatfield
-  </UL>
-  <! EndSection:   'USAGE	'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>images</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
-  <DD>Images to be flattened.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>flatfield</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='flatfield' Line='flatfield'>
-  <DD>Flat field image to be divided into the images.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>minflat = INDEF</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='minflat' Line='minflat = INDEF'>
-  <DD>All flat field pixels less than or equal to this value are replaced by
+  </p>
+  <!-- EndSection:   'USAGE	' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>images</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
+  <dd>Images to be flattened.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>flatfield</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='flatfield' Line='flatfield' -->
+  <dd>Flat field image to be divided into the images.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>minflat = INDEF</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='minflat' Line='minflat = INDEF' -->
+  <dd>All flat field pixels less than or equal to this value are replaced by
   unit response.  If INDEF all the flat field pixels are used.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>pixtype = "<TT>real</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='pixtype' Line='pixtype = "real"'>
-  <DD>The pixel datatype of the flattened image.  The null string ("<TT></TT>") defaults
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>pixtype = <tt>"real"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='pixtype' Line='pixtype = "real"' -->
+  <dd>The pixel datatype of the flattened image.  The null string (<tt>""</tt>) defaults
   the pixel datatype to that of the original image before flattening.
-  The other choices are "<TT>short</TT>", "<TT>integer</TT>", "<TT>long</TT>", and "<TT>real</TT>".
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  Each of the <I>images</I> is flatten by dividing by the <I>flatfield</I>
+  The other choices are <tt>"short"</tt>, <tt>"integer"</tt>, <tt>"long"</tt>, and <tt>"real"</tt>.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  Each of the <i>images</i> is flatten by dividing by the <i>flatfield</i>
   flat field image.  The flattened images replace the original images.
   The pixel datatype of the flattened images is specified by the
-  <I>pixtype</I>.  The null string ("<TT></TT>") leaves the datatype of the images
+  <i>pixtype</i>.  The null string (<tt>""</tt>) leaves the datatype of the images
   unchanged.  Low values in the flat field may be replaced by unit response
-  by specifying a <I>minflat</I> value.  All pixels in the flat field less
-  than or equal to <I>minflat</I> are given unit response.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  by specifying a <i>minflat</i> value.  All pixels in the flat field less
+  than or equal to <i>minflat</i> are given unit response.
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   To flatten a set of two dimensional images excluding pixels below
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; flatten frame* flat minflat=0.2
-  </PRE>
-  </UL>
-  <! EndSection:    'EXAMPLES'>
+  </pre>
   
-  <! Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES'  >
+  <!-- EndSection:    'EXAMPLES' -->
+  
+  <!-- Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES'  -->
   

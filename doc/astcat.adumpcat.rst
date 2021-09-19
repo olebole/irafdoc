@@ -1,106 +1,106 @@
 .. _adumpcat:
 
-adumpcat — Catalog access debugging task
-========================================
+adumpcat: Catalog access debugging task
+=======================================
 
 **Package: astcat**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   adumpcat -- query a catalog and capture the results
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   adumpcat catalog output ra dec size
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>catalog</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='catalog' Line='catalog'>
-  <DD>The name of the catalog to be queried. Catalog names have the form
-  catalog@site, e.g. "<TT>usno2@noao</TT>". The catalog address and query format are
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>catalog</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='catalog' Line='catalog' -->
+  <dd>The name of the catalog to be queried. Catalog names have the form
+  catalog@site, e.g. <tt>"usno2@noao"</tt>. The catalog address and query format are
   stored in a record called catalog in  the catalog configuration file.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
-  <DD>The name of the output query results file. The query results are written
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
+  <dd>The name of the output query results file. The query results are written
   to the output file without modification, i.e. they may contain comments,
   HTML markup, etc as well as the object list.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>ra  </B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='ra' Line='ra  '>
-  <DD>The right ascension of the field center in the units expected by the catalog
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>ra  </b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='ra' Line='ra  ' -->
+  <dd>The right ascension of the field center in the units expected by the catalog
   query. The value of ra replaces the default value of the ra query parameter.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>dec  </B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='dec' Line='dec  '>
-  <DD>The declination of the field center in the units expected by the catalog query.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>dec  </b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='dec' Line='dec  ' -->
+  <dd>The declination of the field center in the units expected by the catalog query.
   The value of dec replaces the default value of the dec query parameters.
   It may be necessary to add or remove a leading + to make the query work
   correctly.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>size</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='size' Line='size'>
-  <DD>The field size in units expected by the catalog query. The value of size
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>size</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='size' Line='size' -->
+  <dd>The field size in units expected by the catalog query. The value of size
   replaces the default value of the width, ra/xwidth, dec/ywidth,
   hwidth, x/rahwidth, y/dechwidth, or radius query parameters as appropriate.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>catdb = "<TT>)_.catdb</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='catdb' Line='catdb = ")_.catdb"'>
-  <DD>The catalog configuration file. The name of the catalog configuration file
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>catdb = <tt>")_.catdb"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='catdb' Line='catdb = ")_.catdb"' -->
+  <dd>The catalog configuration file. The name of the catalog configuration file
   defaults to the value of the package parameter of the same name.  The
-  default configuration file is "<TT>astcat$lib/catdb.dat</TT>".
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  default configuration file is <tt>"astcat$lib/catdb.dat"</tt>.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   Adumpcat is a simple catalog access debugging task which queries the
-  astrometric catalog <I>catalog</I>, captures the results, and writes them
-  to the file <I>output</I> without modification.
-  <P>
+  astrometric catalog <i>catalog</i>, captures the results, and writes them
+  to the file <i>output</i> without modification.
+  </p>
+  <p>
   The user must supply values for the query parameters ra, dec, and one or
   more of the size query parameters width, ra/xwidth, dec/ywidth, hwidth,
   ra/xhwidth, dec/yhwidth, or radius by
-  specifying appropriate values for the <I>ra</I>, <I>dec</I>, and <I>size</I>
+  specifying appropriate values for the <i>ra</i>, <i>dec</i>, and <i>size</i>
   parameters in the units expected by the catalog query. These values are
   treated as strings and passed directly to the catalog query without
   coordinate transformations or units conversions.
-  <P>
-  The catalog configuration file <I>catdb</I> contains a record for each
-  supported <I>catalog</I>. This record contains the catalog address,
+  </p>
+  <p>
+  The catalog configuration file <i>catdb</i> contains a record for each
+  supported <i>catalog</i>. This record contains the catalog address,
   the query format, and the output format. The default configuration file
-  is "<TT>astcat$lib/catdb.dat</TT>".
-  <P>
+  is <tt>"astcat$lib/catdb.dat"</tt>.
+  </p>
+  <p>
   The output of adumpcat can be used to refine the catalog record in the
   catalog configuration file.
-  <P>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. List the supported catalogs, select a catalog to query, make the query,
   and capture the results. The aclist task is used to list the supported
   catalogs, as well as to list the query and output formats for the selected
@@ -109,11 +109,11 @@ adumpcat — Catalog access debugging task
   that the size parameter is a halfwidth in minutes.  In this case the
   results containing leading and trailing comments and
   HTML markup as shown below.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   cl&gt; aclist *
   usno2@noao
-  <P>
+  
   cl&gt; aclist usno2@noao verb+
   Scanning catalog database astcat$lib/catdb.dat
   Listing the supported catalogs
@@ -130,18 +130,18 @@ adumpcat — Catalog access debugging task
       dec 2 0 d degrees %12.2h
       mag1 3 0 r INDEF %4.1f
       mag2 4 0 r INDEF %4.1f
-  <P>
+  
   cl&gt; adumpcat usno2@noao2 m51.res 13:29:53.27 +47:11:48.4 10.0
-  <P>
+  
   cl&gt; page m51.res
-  <P>
+  
   HTTP/1.1 200 OK^M
   Date: Mon, 27 Mar 2000 20:59:46 GMT^M
   Server: Apache/1.2.6^M
   Connection: close^M
   Content-Type: text/html^M
   ^M
-  <P>
+  
   &lt;HTML&gt;&lt;HEAD&gt;&lt;TITLE&gt;USNO search results&lt;/TITLE&gt;&lt;BODY&gt;
   &lt;body bgcolor="#FFF9E6"&gt;&lt;H1&gt;USNO extraction (00:00:00.0 :00:00:00)&lt;/H1&gt;&lt;P&gt;
   Output columns are RA, DEC, Red mag. (E/F) , and Blue mag. (O/J)&lt;P&gt;
@@ -176,25 +176,21 @@ adumpcat — Catalog access debugging task
     950 N. Cherry Ave., P.O. Box 26732,
     Tucson, AZ  85726, Phone: 520-318-8000, FAX: 520-318-8360
     &lt;P&gt;Updated: 04Aug1998&lt;/address&gt;&lt;/body&gt;&lt;/html&gt;
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Time requirements</H3>
-  <! BeginSection: 'TIME REQUIREMENTS'>
-  <UL>
-  </UL>
-  <! EndSection:   'TIME REQUIREMENTS'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Time requirements</h3>
+  <!-- BeginSection: 'TIME REQUIREMENTS' -->
+  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   aclist, agetcat
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

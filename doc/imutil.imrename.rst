@@ -1,87 +1,92 @@
 .. _imrename:
 
-imrename — Rename one or more images
-====================================
+imrename: Rename one or more images
+===================================
 
 **Package: imutil**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   imrename -- rename one or more images
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   imrename oldnames newnames
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>oldnames</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='oldnames' Line='oldnames'>
-  <DD>An image template specifying the names of the images to be renamed.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>newnames</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='newnames' Line='newnames'>
-  <DD>Either an image template specifying the new names for the images,
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>oldnames</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='oldnames' Line='oldnames' -->
+  <dd>An image template specifying the names of the images to be renamed.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>newnames</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='newnames' Line='newnames' -->
+  <dd>Either an image template specifying the new names for the images,
   or the name of the directory to which the images are to be renamed (moved).
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verbose = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
-  <DD>If verbose output is enabled a message will be printed on the standard output
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verbose = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
+  <dd>If verbose output is enabled a message will be printed on the standard output
   recording each rename operation.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  The <B>imrename</B> task renames one or more images.  The ordinary <I>rename</I>
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  The <b>imrename</b> task renames one or more images.  The ordinary <i>rename</i>
   task cannot be used to rename images since an image may consist of more than
   one file.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  1. Rename the image "<TT>pix</TT>" to "<TT>wfpc.1</TT>".
-  <P>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
+  1. Rename the image <tt>"pix"</tt> to <tt>"wfpc.1"</tt>.
+  </p>
+  <p>
   	cl&gt; imrename pix wfpc.1
-  <P>
-  2. Rename all the "<TT>nite1*</TT>" images as "<TT>nite1_c</TT>".
-  <P>
+  </p>
+  <p>
+  2. Rename all the <tt>"nite1*"</tt> images as <tt>"nite1_c"</tt>.
+  </p>
+  <p>
   	cl&gt; imrename nite1.*.imh nite1%%_c%.*.imh
-  <P>
-  3. Move the images in logical directory "<TT>dd</TT>" to the current directory.
-  <P>
+  </p>
+  <p>
+  3. Move the images in logical directory <tt>"dd"</tt> to the current directory.
+  </p>
+  <p>
   	cl&gt; imrename dd$*.imh .
-  <P>
+  </p>
+  <p>
   4. Move the pixel files associated with the images in the current directory
-  to a subdirectory "<TT>pix</TT>" of the current directory.
-  <P>
-  <PRE>
+  to a subdirectory <tt>"pix"</tt> of the current directory.
+  </p>
+  <pre>
   	cl&gt; reset imdir = HDR$pix/
   	cl&gt; imrename *.imh .
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   imcopy, imdelete, imheader
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

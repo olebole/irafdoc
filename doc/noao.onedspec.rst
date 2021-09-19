@@ -1,5 +1,5 @@
-onedspec — One dimensional spectral red & analysis package
-==========================================================
+onedspec: One dimensional spectral red & analysis package
+=========================================================
 
 .. toctree:: :maxdepth: 1
 

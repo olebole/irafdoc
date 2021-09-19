@@ -1,42 +1,42 @@
 .. _fitparams:
 
-fitparams — Compute the parameters of the transformation equations
-==================================================================
+fitparams: Compute the parameters of the transformation equations
+=================================================================
 
 **Package: photcal**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   fitparams -- solve for the parameters of the transformation equations
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   fitparams observations catalogs config parameters
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>observations</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='observations' Line='observations'>
-  <DD>The list of files containing the observational data.  Observations files are
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>observations</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='observations' Line='observations' -->
+  <dd>The list of files containing the observational data.  Observations files are
   multi-column text files whose columns are delimited by whitespace, and
   whose first column is usually reserved for the object id.
   All observations files in the list must have the same format.
   The format of legal observations files is described in further detail in
   the description section.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>catalogs</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='catalogs' Line='catalogs'>
-  <DD>The list of files containing the catalog data.  Catalog files are
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>catalogs</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='catalogs' Line='catalogs' -->
+  <dd>The list of files containing the catalog data.  Catalog files are
   multi-column text files whose columns are delimited by whitespace,
   and whose first column is always reserved for the object id.
   If more than one entry with the same id exists in the list of catalogs,
@@ -44,22 +44,22 @@ fitparams — Compute the parameters of the transformation equations
   All catalog files in the list must have the same format.
   The format of legal catalog files is described in further detail in
   the description section.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>config</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='config' Line='config'>
-  <DD>The name of the configuration file. The configuration file is a text file
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>config</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='config' Line='config' -->
+  <dd>The name of the configuration file. The configuration file is a text file
   specifying the format of the input catalog and observations files, and the
   form of the transformation
   equations. A brief description of the syntax and grammar of this file
   is given in the configuration file section.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>parameters</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='parameters' Line='parameters'>
-  <DD>The name of the output database file.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>parameters</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='parameters' Line='parameters' -->
+  <dd>The name of the output database file.
   Parameters is a text database file to which the error analysis of the fit
   and the parameter values and errors for each transformation equation are
   written. 
@@ -67,22 +67,22 @@ fitparams — Compute the parameters of the transformation equations
   one for each of the transformation equations. 
   If more than one record exists with the same record name, the 
   last record written takes precedence.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>weighting = "<TT>uniform</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='weighting' Line='weighting = "uniform"'>
-  <DD>The following weighting schemes are supported.
-  <DL>
-  <DT><B>uniform</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='uniform' Line='uniform'>
-  <DD>The data points are all assigned a weight of one.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>photometric</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='photometric' Line='photometric'>
-  <DD>The total error squared for each data point is set to the total error in the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>weighting = <tt>"uniform"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='weighting' Line='weighting = "uniform"' -->
+  <dd>The following weighting schemes are supported.
+  <dl>
+  <dt><b>uniform</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='uniform' Line='uniform' -->
+  <dd>The data points are all assigned a weight of one.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>photometric</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='photometric' Line='photometric' -->
+  <dd>The total error squared for each data point is set to the total error in the
   catalog variables squared plus the total error in the observations variables
   squared and the weight for each data point is set to 1.0 / error ** 2.
   This option assumes that all the sources of error are in the photometric
@@ -91,178 +91,177 @@ fitparams — Compute the parameters of the transformation equations
   photometric index, and that the contribution of each catalog or observations
   variable to the total error is weighted by the number of times it occurs
   in the transformation equation.
-  If <I>addscatter</I> is "<TT>yes</TT>" then an additional "<TT>scatter</TT>" term is fit and
+  If <i>addscatter</i> is <tt>"yes"</tt> then an additional <tt>"scatter"</tt> term is fit and
   added to the weights.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>equations</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='equations' Line='equations'>
-  <DD>The weight equation (see the description of the configuration file below)
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>equations</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='equations' Line='equations' -->
+  <dd>The weight equation (see the description of the configuration file below)
   is evaluated for each point and the weight for that point is set to that
   value.  If there is no weight equation the weights are all set to one.
-  If <I>addscatter</I> is "<TT>yes</TT>" then an additional "<TT>scatter</TT>" term is fit and
+  If <i>addscatter</i> is <tt>"yes"</tt> then an additional <tt>"scatter"</tt> term is fit and
   added to the weights.
-  </DD>
-  </DL>
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>addscatter = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='addscatter' Line='addscatter = yes'>
-  <DD>Add an additional scatter term to the weights if the average error in the fit
-  is much greater than the average error in the measurements? <I>Addscatter</I>
-  has no effect if <I>weighting</I> is "<TT>uniform</TT>". <I>Addscatter</I> is recommended
-  if <I>weighting</I> is "<TT>photometric</TT>" as the intrinsic error in the
+  </dd>
+  </dl>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>addscatter = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='addscatter' Line='addscatter = yes' -->
+  <dd>Add an additional scatter term to the weights if the average error in the fit
+  is much greater than the average error in the measurements? <i>Addscatter</i>
+  has no effect if <i>weighting</i> is <tt>"uniform"</tt>. <i>Addscatter</i> is recommended
+  if <i>weighting</i> is <tt>"photometric"</tt> as the intrinsic error in the
   transformations is often much greater than the formal errors of
   measurement and the scatter term stabilizes the fit.
-  Users of the <I>weighting</I> equals "<TT>equations</TT>" option
-  may wish to turn off <I>addscatter</I>.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>tolerance = 3.0e-5</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='tolerance' Line='tolerance = 3.0e-5'>
-  <DD>The convergence tolerance for the non-linear least squares fit.
+  Users of the <i>weighting</i> equals <tt>"equations"</tt> option
+  may wish to turn off <i>addscatter</i>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>tolerance = 3.0e-5</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='tolerance' Line='tolerance = 3.0e-5' -->
+  <dd>The convergence tolerance for the non-linear least squares fit.
   The fit will stop iterating 
   when the fractional change in the reduced chi-square of the residuals from 
-  iteration to iteration is less than <I>tolerance</I>. 
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>maxiter = 15</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='maxiter' Line='maxiter = 15'>
-  <DD>The maximum number of iterations for the non-linear least squares fit.
+  iteration to iteration is less than <i>tolerance</i>. 
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>maxiter = 15</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='maxiter' Line='maxiter = 15' -->
+  <dd>The maximum number of iterations for the non-linear least squares fit.
   When this number is reached the fitting process will terminate even
   if the fit has not converged.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>nreject = 0</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='nreject' Line='nreject = 0'>
-  <DD>The maximum number of bad data rejection iterations. If <I>nreject</I> is
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>nreject = 0</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='nreject' Line='nreject = 0' -->
+  <dd>The maximum number of bad data rejection iterations. If <i>nreject</i> is
   greater than zero the initial fit is used
   to detect and reject deviant points before performing the final fit.
-  No rejection is performed if <I>nreject</I> is less than or equal
+  No rejection is performed if <i>nreject</i> is less than or equal
   to zero.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>low_reject = 3.0, high_reject = 3.0</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='low_reject' Line='low_reject = 3.0, high_reject = 3.0'>
-  <DD>The lower and upper rejection limits in units of the rms of the fit.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>low_reject = 3.0, high_reject = 3.0</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='low_reject' Line='low_reject = 3.0, high_reject = 3.0' -->
+  <dd>The lower and upper rejection limits in units of the rms of the fit.
   Points deviating from the initial fit by more than this amount are rejected
   before performing the final fit.  No rejection is done if both limits
   are zero.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>grow = 0.0</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='grow' Line='grow = 0.0'>
-  <DD>The default rejection growing radius. Points within a distance given
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>grow = 0.0</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='grow' Line='grow = 0.0' -->
+  <dd>The default rejection growing radius. Points within a distance given
   by this parameter of any rejected point are also rejected.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>interactive = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes'>
-  <DD>Fit equations interactively ? When this parameter is <I>yes</I>, the user will 
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>interactive = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes' -->
+  <dd>Fit equations interactively ? When this parameter is <i>yes</i>, the user will 
   be presented with plots of the data and can interact with the fitting 
   process.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>logfile = "<TT>STDOUT</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "STDOUT"'>
-  <DD>The name of the output text file to which selected detailed results of the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>logfile = <tt>"STDOUT"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "STDOUT"' -->
+  <dd>The name of the output text file to which selected detailed results of the
   fitting process are written.  By default logfile is the standard output.
-  If logfile is "<TT></TT>", logging is turned off altogether. Otherwise new
+  If logfile is <tt>""</tt>, logging is turned off altogether. Otherwise new
   output is appended to logfile which can therefor become quite large.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>log_unmatched = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='log_unmatched' Line='log_unmatched = yes'>
-  <DD>Write the list of observations with no corresponding catalog entries to
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>log_unmatched = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='log_unmatched' Line='log_unmatched = yes' -->
+  <dd>Write the list of observations with no corresponding catalog entries to
   logfile? This option is useful for checking for errors in the observed
   object id names and for users who like to run fitparams in non-interactive
   mode.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>log_fit = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='log_fit' Line='log_fit = no'>
-  <DD>Write the error analysis of the final fit in logfile? This option is
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>log_fit = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='log_fit' Line='log_fit = no' -->
+  <dd>Write the error analysis of the final fit in logfile? This option is
   useful for users who like to run fitparams in non-interactive mode.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>log_results = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='log_results' Line='log_results = no'>
-  <DD>Write the results of the current fit to logfile? This option is
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>log_results = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='log_results' Line='log_results = no' -->
+  <dd>Write the results of the current fit to logfile? This option is
   useful for users who like to run fitparams in non-interactive mode.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>catdir = "<TT>)_.catdir</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='catdir' Line='catdir = ")_.catdir"'>
-  <DD>The directory containing the supported standard star catalogs.
-  The default parameter value  redirects <I>catdir</I>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>catdir = <tt>")_.catdir"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='catdir' Line='catdir = ")_.catdir"' -->
+  <dd>The directory containing the supported standard star catalogs.
+  The default parameter value  redirects <i>catdir</i>
   to a package parameter of the same name. A list of standard
-  catalogs may be obtained by printing the file "<TT>photcal$catalogs/README</TT>".
+  catalogs may be obtained by printing the file <tt>"photcal$catalogs/README"</tt>.
   Alternatively the user may create their own standard star catalogs 
   and standard star catalog directory.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>graphics = "<TT>stdgraph</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"'>
-  <DD>The default graphics device. 
-  This parameter is used only if <B>interactive=yes</B>.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>cursor = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""'>
-  <DD>Graphics cursor input. When null the standard graphics cursor is used.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>graphics = <tt>"stdgraph"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
+  <dd>The default graphics device. 
+  This parameter is used only if <b>interactive=yes</b>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>cursor = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
+  <dd>Graphics cursor input. When null the standard graphics cursor is used.
   Otherwise the specified cursor command file is used.
-  This parameter is used only if <B>interactive=yes</B>.
-  </DD>
-  </DL>
-  <P>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <P>
-  FITPARAMS parses the configuration file <I>config</I> checking for
+  This parameter is used only if <b>interactive=yes</b>.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  FITPARAMS parses the configuration file <i>config</i> checking for
   grammar and syntax errors.  FITPARAMS attempts to recover from any
   errors and to finish parsing the configuration
   file, but it will not process the input data if errors are present.
   The configuration file is described briefly in the configuration file
   section and in detail in the help page for the configuration file.
-  <P>
+  </p>
+  <p>
   Once the configuration file is successfully parsed, FITPARAMS reads the list
   of catalog files and loads the values of the catalog variables
-  declared in <I>config</I> into memory.
-  If no catalog section is declared in <I>config</I>, if the catalog section
-  is empty, or if catalogs is "<TT></TT>", no catalog data is read
-  and all the required input data is assumed to be in <I>observations</I>.
+  declared in <i>config</i> into memory.
+  If no catalog section is declared in <i>config</i>, if the catalog section
+  is empty, or if catalogs is <tt>""</tt>, no catalog data is read
+  and all the required input data is assumed to be in <i>observations</i>.
   After the catalog data is read, FITPARAMS reads the observations files
-  <I>observations</I>, matches the object ids of the observations with the
+  <i>observations</i>, matches the object ids of the observations with the
   corresponding catalog object ids, and loads all the observations
-  variables declared in <I>config</I> into memory. Id matching is disabled
+  variables declared in <i>config</i> into memory. Id matching is disabled
   if no catalog
   data is read, otherwise only those observations which have a matching catalog
   entry will be used in the fit. If a catalog section declaration was made
-  in <I>config</I>, even an empty one, FITPARAMS assumes that the object ids
-  are in column 1 of <I>observations</I>.
-  <P>
-  Legal <I>catalog</I> and <I>observations</I> files are multi-column text
+  in <i>config</i>, even an empty one, FITPARAMS assumes that the object ids
+  are in column 1 of <i>observations</i>.
+  </p>
+  <p>
+  Legal <i>catalog</i> and <i>observations</i> files are multi-column text
   files whose columns are delimited by whitespace.
-  The first column of a catalog file is <I>always</I> reserved for an object id.
-  The first column of an observations file is <I>usually</I> reserved for an
+  The first column of a catalog file is <i>always</i> reserved for an object id.
+  The first column of an observations file is <i>usually</i> reserved for an
   object id which can be
   used to match the observational data with the corresponding catalog data.
   All other columns may contain any quantity which can be
@@ -270,41 +269,43 @@ fitparams — Compute the parameters of the transformation equations
   (hh:mm:ss) are interpreted internally as real numbers. The constant
   INDEF can be used to represent data that is missing or undefined.
   Double precision and complex data are
-  not supported. Lines beginning with "<TT>#</TT>" are treated as comment lines.
-  <P>
+  not supported. Lines beginning with <tt>"#"</tt> are treated as comment lines.
+  </p>
+  <p>
   FITPARAMS solves the fit
   for each equation in the configuration file either interactively 
-  or non-interactively depending on the value of <I>interactive</I>,
-  and writes the solution in the output file <I>parameters</I> for later
+  or non-interactively depending on the value of <i>interactive</i>,
+  and writes the solution in the output file <i>parameters</i> for later
   use by the evaluation routines EVALFIT or INVERTFIT.
-  Selected results can also be written to <I>logfile</I> if
-  any of the switches <I>log_unmatched</I>, <I>log_fit</I>, or <I>log_results</I>
+  Selected results can also be written to <i>logfile</i> if
+  any of the switches <i>log_unmatched</i>, <i>log_fit</i>, or <i>log_results</i>
   are enabled.
   In interactive mode the user can use all the interactive capabilities
   of the interactive non-linear least squares package INLFIT.
   INLFIT is described more fully below. 
-  <P>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>The configuration file</H3>
-  <! BeginSection: 'THE CONFIGURATION FILE'>
-  <UL>
-  <P>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>The configuration file</h3>
+  <!-- BeginSection: 'THE CONFIGURATION FILE' -->
+  <p>
   The configuration file is a text file which specifies how the data is
   organized in the input files and how the transformation
   equations are to be fit.
-  <P>
+  </p>
+  <p>
   The input data are assumed to come from two different sources that may
   be either in the same input file or in different input files.
-  These sources are known as the <I>catalog</I> and the <I>observations</I>
+  These sources are known as the <i>catalog</i> and the <i>observations</i>
   respectively.
-  <P>
-  The <I>catalog</I> contains values indexed by a name called the
+  </p>
+  <p>
+  The <i>catalog</i> contains values indexed by a name called the
   matching name. This name must be in the first column of the
   catalog and is also assumed to be unique, i.e, each catalog
   entry is assumed to be unique.
-  <P>
-  The <I>observations</I> are values that may be either indexed by a matching
+  </p>
+  <p>
+  The <i>observations</i> are values that may be either indexed by a matching
   name if a catalog section is specified in the configuration file, or a
   stream of input values in an ordinary text file.
   If a catalog section is specified and non-empty, each observation is
@@ -312,19 +313,22 @@ fitparams — Compute the parameters of the transformation equations
   catalog entries, and only observations whose matching names are found in the
   catalog are used to compute the transformation equations.
   Otherwise all values are used.
-  <P>
-  The configuration file is divided in three sections: the <I>catalog
-  section</I> which describes the format of the catalog files, the
-  <I>observations section</I> which describes the format of the observation 
-  files, and the <I>transformation section</I> which defines the
+  </p>
+  <p>
+  The configuration file is divided in three sections: the <i>catalog
+  section</i> which describes the format of the catalog files, the
+  <i>observations section</i> which describes the format of the observation 
+  files, and the <i>transformation section</i> which defines the
   transformation equations in that order.
-  <P>
+  </p>
+  <p>
   The catalog and observations sections permit the user to assign
   names to the input file 
   columns. These columns can later be referenced by name in the configuration
   file by using these assigned names
   as if they were variables in a programming language.
-  <P>
+  </p>
+  <p>
   The transformation section is used to define the equations to solve,
   and assign initial values to the fitting parameters.
   The user may also optionally define equations for the derivatives of
@@ -334,22 +338,24 @@ fitparams — Compute the parameters of the transformation equations
   plotted in the interactive fitting process.
   It is possible to specify any number of transformation equations in
   this section.
-  <P>
+  </p>
+  <p>
   SAMPLE CONFIGURATION FILES
-  <P>
+  </p>
+  <p>
   Example 1. Configuration file for reducing UBV photoelectric photometry.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   # Configuration file for reducing UBV photoelectric photometry.
-  <P>
+  
   catalog
-  <P>
+  
   V	2		# V magnitude
   BV	3		# B - V color
   UB	4		# U - B color
-  <P>
+  
   observation
-  <P>
+  
   v	2		# v instrumental magnitude
   b 	3		# b instrumental magnitude
   u 	4		# u instrumental magnitude
@@ -357,39 +363,39 @@ fitparams — Compute the parameters of the transformation equations
   eb 	6		# error in b instrumental magnitude
   eu 	7		# error in u instrumental magnitude
   X       8		# airmass		
-  <P>
+  
   transformation
-  <P>
+  
   fit   v1 = 0.0, v2=0.16, v3=-0.043
   VFIT: V = v1 + v - v2 * X + v3 * (b - v)
         weight(VFIT) = 1.0 / ev ** 2
         plot(VFIT) = V, V - (v1 + v - v2 * X + v3 * (b - v))
-  <P>
+  
   fit    b1 = 0.0, b2=0.09, b3=1.21
   BVFIT: BV = b1 - b2 * X + b3 * (b - v)
          weight (BVFIT) = 1.0 / (eb ** 2 + ev ** 2)
          plot(BVFIT) = BV, BV - (b1 - b2 * X + b3 * (b - v))
-  <P>
+  
   fit    u1 = 0.0, u2=0.300, u3=0.861
   UBFIT: UB = u1 - u2 * X + u3 * (u - b)
          weight (UBFIT) = 1.0 / (eu ** 2 + eb ** 2)
          plot(UBFIT) = UB, UB - (u1 - u2 * X + u3 * (u - b))
-  </PRE>
-  <P>
+  </pre>
+  <p>
   Example 2. Configuration file for reducing UBV CCD photometry.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   catalog
-  <P>
+  
   V		2	# V magnitude
   BV		3	# B - V color
   UB		4	# U - B color
   error(V)	5	# error in V magnitude
   error(BV)	6	# error in B-V color
   error(UB)	7	# error in U-B color
-  <P>
+  
   observation
-  <P>
+  
   m1		2	# filter 1 instrumental magnitude
   error(m1)	3	# error in filter 1 instrumental magnitude
   Xm1		4	# airmass of filter 1  observation
@@ -399,37 +405,35 @@ fitparams — Compute the parameters of the transformation equations
   m3	 	10	# filter 3 instrumental magnitude
   error(m3) 	11	# error in filter 3 instrumental magnitude
   Xm3	        12	# airmass of filter 3 observation		
-  <P>
-  <P>
+  
+  
   transformation
-  <P>
+  
   fit   u1 = 27.0, u2=0.68, u3=0.05
   UFIT: m3 = u1 + V + BV + UB + u2 * Xm3 + u3 * UB
-  <P>
+  
   fit   b1 = 26.0, b2=0.30, b3=0.18
   BFIT: m2 = b1 + V + BV + b2 * Xm2 + b3 * BV
-  <P>
+  
   fit   v1 = 25.0, v2=0.17, v3=-0.02
   VFIT: m1 = v1 + V + v2 * Xm1 + v3 * BV
-  </PRE>
-  <P>
-  <P>
-  </UL>
-  <! EndSection:   'THE CONFIGURATION FILE'>
-  <H3>The non-linear interactive fitting package</H3>
-  <! BeginSection: 'THE NON-LINEAR INTERACTIVE FITTING PACKAGE'>
-  <UL>
-  <P>
+  </pre>
+  <!-- EndSection:   'THE CONFIGURATION FILE' -->
+  <h3>The non-linear interactive fitting package</h3>
+  <!-- BeginSection: 'THE NON-LINEAR INTERACTIVE FITTING PACKAGE' -->
+  <p>
   DESCRIPTION
-  <P>
+  </p>
+  <p>
   INLFIT fits an n-dimensional function to a set data
   points, iterating until the reduced chi-squared changes
-  by less than <I>tolerance</I> percent between successive iterations, or
+  by less than <i>tolerance</i> percent between successive iterations, or
   machine precision is reached and the fit converges, or until the maximum number
-  of iterations <I>maxiter</I> is reached.  If the maximum number
+  of iterations <i>maxiter</i> is reached.  If the maximum number
   of iterations is reached before convergence a status flag
   is set.
-  <P>
+  </p>
+  <p>
   After computing an initial fit, INLFIT presents the user with a plot of
   the fit and activates the graphics cursor.
   At this point the user may examine and/or interact with the fit by,
@@ -438,73 +442,79 @@ fitparams — Compute the parameters of the transformation equations
   deleting and undeleting points, 
   altering which parameters in the fitting function are actually to be
   fit and which are to be held constant, and refitting the data.
-  <P>
-  If <I>nreject</I> is greater than zero the RMS of the residuals is computed
-  and points whose residuals are less than <I>low_reject</I> * RMS
-  or <I>high_reject</I> * RMS value are excluded from the fit. Points within
-  a distance <I>grow</I> of a rejected point are also excluded from
+  </p>
+  <p>
+  If <i>nreject</i> is greater than zero the RMS of the residuals is computed
+  and points whose residuals are less than <i>low_reject</i> * RMS
+  or <i>high_reject</i> * RMS value are excluded from the fit. Points within
+  a distance <i>grow</i> of a rejected point are also excluded from
   the fit. The function is then refit without the rejected points.
   The rejection algorithm is executed until the number of rejection
-  iterations reaches <I>nreject</I> or no more points are rejected.
-  <P>
+  iterations reaches <i>nreject</i> or no more points are rejected.
+  </p>
+  <p>
   ALGORITHMS
-  <P>
+  </p>
+  <p>
   INLFIT uses the standard Levenberg-Marquardt non-linear least squares
   algorithm to fit the data. Detailed descriptions of the algorithm can
   be found in the following two references.
-  <PRE>
-  <P>
+  </p>
+  <pre>
+  
   1. Bevington, P.R., 1969, Data Reduction and Error Analysis for the
      Physical Sciences, Chapter 11, page 235.
-  <P>
+  
   2. Press, W.H. et al., 1986, Numerical Recipes: The Art of Scientific
      Computing, Chapter 14, page 523.
-  <P>
-  </PRE>
-  <P>
+  
+  </pre>
+  <p>
   CURSOR COMMANDS
-  <P>
+  </p>
+  <p>
   The following interactive cursor keystroke commands are available from
   with the INLFIT package.
-  <DL>
-  <DT><B>?</B></DT>
-  <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line='?'>
-  <DD>The terminal is cleared and a menu of cursor keystroke and colon commands
+  </p>
+  <dl>
+  <dt><b>?</b></dt>
+  <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line='?' -->
+  <dd>The terminal is cleared and a menu of cursor keystroke and colon commands
   is printed.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>c</B></DT>
-  <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='c' Line='c'>
-  <DD>The id, coordinates of the data point nearest the cursor, along with the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>c</b></dt>
+  <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='c' Line='c' -->
+  <dd>The id, coordinates of the data point nearest the cursor, along with the
   function value, the fitted value and the residual, are printed on the status
   line.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>d</B></DT>
-  <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='d' Line='d'>
-  <DD>The data point nearest the cursor and not previously deleted is marked with an
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>d</b></dt>
+  <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='d' Line='d' -->
+  <dd>The data point nearest the cursor and not previously deleted is marked with an
   X. It will not be used in further fits until it is undeleted.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>f</B></DT>
-  <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='f' Line='f'>
-  <DD>The function is fit to the data and the fit is graphed using the default
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>f</b></dt>
+  <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='f' Line='f' -->
+  <dd>The function is fit to the data and the fit is graphed using the default
   plot type.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>g</B></DT>
-  <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='g' Line='g'>
-  <DD>Redefine the graph keys "<TT>h-l</TT>" from their defaults. A prompt is issued for the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>g</b></dt>
+  <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='g' Line='g' -->
+  <dd>Redefine the graph keys <tt>"h-l"</tt> from their defaults. A prompt is issued for the
   graph key to be redefined. Another prompt is issued for the data to be
   plotted at which point the user must enter the x and y axis data to plot,
   delimited by a comma. The data types are the following (they can be
   abbreviated to up to three characters).
-  <PRE>
-  <P>
+  <pre>
+  
       function    Dependent variable or function
       fit         Fitted value
       residuals   Residuals (function - fit)
@@ -513,126 +523,127 @@ fitparams — Compute the parameters of the transformation equations
       identifier  Independent variable named "identifier" (if defined)
       var n       Independent variable number "n"
       user n      User defined plot equation "n"  (if defined)
-  <P>
-  </PRE>
+  
+  </pre>
   The application program can define independent variable names and user plot 
   functions, aside from the standard options provided. If variable names are 
   supplied, the user can reference them by their names. Otherwise they can be 
-  always referenced by "<TT>var n</TT>", where "<TT>n</TT>" is the variable number (the user has 
-  to know the variable order in this case). The "<TT>:variables</TT>" command will
+  always referenced by <tt>"var n"</tt>, where <tt>"n"</tt> is the variable number (the user has 
+  to know the variable order in this case). The <tt>":variables"</tt> command will
   list the currently defined variables by name and number.
   The application program may
   define any number of plot equations aside from the defaults provided. In this 
-  case the user may reference them by "<TT>user n</TT>", where "<TT>n</TT>" is the plot function 
+  case the user may reference them by <tt>"user n"</tt>, where <tt>"n"</tt> is the plot function 
   number (the user must know the equation order in this case). 
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>h, i, j, k, l</B></DT>
-  <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='h' Line='h, i, j, k, l'>
-  <DD>By default each key produces a different graph. The graphs are described by
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>h, i, j, k, l</b></dt>
+  <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='h' Line='h, i, j, k, l' -->
+  <dd>By default each key produces a different graph. The graphs are described by
   the data which is graphed along each axis as defined above. The default graph
   keys,
   which may be redefined by the application program or interactively by using 
-  the <TT>'g'</TT> key, are the following.
-  <PRE>
-  <P>
+  the <tt>'g'</tt> key, are the following.
+  <pre>
+  
           h       function, fit
           i       function, residuals
           j       function, ratio
           k       var 1, function
           l       user 1, user 2 (default)
-  <P>
-  </PRE>
-  The initial graph key, if not redefined by the application program is <TT>'h'</TT>.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>o</B></DT>
-  <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='o' Line='o'>
-  <DD>Overplot the next fit provided the graph format has not changed.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>q</B></DT>
-  <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='q' Line='q'>
-  <DD>Exit from the interactive curve fitting package.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>r</B></DT>
-  <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='r' Line='r'>
-  <DD>Redraw the current graph.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>t</B></DT>
-  <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='t' Line='t'>
-  <DD>Toggle fit overplotting on and off. If this option is on the data
+  
+  </pre>
+  The initial graph key, if not redefined by the application program is <tt>'h'</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>o</b></dt>
+  <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='o' Line='o' -->
+  <dd>Overplot the next fit provided the graph format has not changed.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>q</b></dt>
+  <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='q' Line='q' -->
+  <dd>Exit from the interactive curve fitting package.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>r</b></dt>
+  <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='r' Line='r' -->
+  <dd>Redraw the current graph.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>t</b></dt>
+  <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='t' Line='t' -->
+  <dd>Toggle fit overplotting on and off. If this option is on the data
   and fitted values are overplotted. Otherwise only data points are plotted.
   The fitted values are marked using boxes.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>u</B></DT>
-  <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='u' Line='u'>
-  <DD>Undelete the data point nearest the cursor which has been previously deleted.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>u</b></dt>
+  <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='u' Line='u' -->
+  <dd>Undelete the data point nearest the cursor which has been previously deleted.
   This option does not work over points marked as deleted by the application
   program before calling inlfit.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>w [key]</B></DT>
-  <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='w' Line='w [key]'>
-  <DD>Set the graph window or data range along each axis to be graphed.. This is a 
-  <B>gtools</B> option which prints the prompt "<TT>window:</TT>". The available cursor
-  keystroke commands are printed with <TT>'?'</TT> and on-line help is available by
-  typing "<TT>help gtools</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>I</B></DT>
-  <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='I' Line='I'>
-  <DD>Interrupt the task immediately without saving the current fit.
-  </DD>
-  </DL>
-  <P>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>w [key]</b></dt>
+  <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='w' Line='w [key]' -->
+  <dd>Set the graph window or data range along each axis to be graphed.. This is a 
+  <b>gtools</b> option which prints the prompt <tt>"window:"</tt>. The available cursor
+  keystroke commands are printed with <tt>'?'</tt> and on-line help is available by
+  typing <tt>"help gtools"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>I</b></dt>
+  <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='I' Line='I' -->
+  <dd>Interrupt the task immediately without saving the current fit.
+  </dd>
+  </dl>
+  <p>
   Colon commands are used to show or set the values of parameters.
-  The application program calling <B>inlfit</B> can add more commands.
+  The application program calling <b>inlfit</b> can add more commands.
   Parameter names can be abbreviated. The following commands are supported. 
-  <DL>
-  <DT><B>:show [file]</B></DT>
-  <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':show [file]'>
-  <DD>Show the current values of the fitting parameters high_reject, 
+  </p>
+  <dl>
+  <dt><b>:show [file]</b></dt>
+  <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':show [file]' -->
+  <dd>Show the current values of the fitting parameters high_reject, 
   low_reject, niterate, grow, tol, itmax. The default output device
   is the terminal (STDOUT) and the screen is cleared before the information
   is output. If a file is specified then the information is appended
   to the named file.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>:variables [file]</B></DT>
-  <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':variables [file]'>
-  <DD>List the currently loaded variables. The number, id, minimum value and maximum
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>:variables [file]</b></dt>
+  <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':variables [file]' -->
+  <dd>List the currently loaded variables. The number, id, minimum value and maximum
   value of each variable is printed. The default output device is the terminal
   (STDOUT) and the screen is cleared before the information is output.
   If a file is specified then the information is appended to the named file.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>:data [file]</B></DT>
-  <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':data [file]'>
-  <DD>List the raw data. The value of each standard catalog and observations
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>:data [file]</b></dt>
+  <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':data [file]' -->
+  <dd>List the raw data. The value of each standard catalog and observations
   catalog variable  for each data point is printed. The default output device
   is the terminal (STDOUT) and the screen is cleared before the information
   is output.  If a file is specified then the information is appended to
   the named file.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>:errors [file]</B></DT>
-  <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':errors [file]'>
-  <DD>Show the error analysis of the current fit.  The number of iterations,
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>:errors [file]</b></dt>
+  <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':errors [file]' -->
+  <dd>Show the error analysis of the current fit.  The number of iterations,
   total number of points, the number of rejected and deleted points,
   the standard deviation, the reduced chi, average error (always = 1.0 if
   weight = 1.0,  otherwise = 1.0 / &lt;weight&gt;),
@@ -643,58 +654,58 @@ fitparams — Compute the parameters of the transformation equations
   the terminal (STDOUT) and the screen is cleared before the information is 
   output. If a file is specified then the information is appended to
   the named file.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>:results [file]</B></DT>
-  <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':results [file]'>
-  <DD>List the results of the current fit. The function value, the fitted value,
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>:results [file]</b></dt>
+  <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':results [file]' -->
+  <dd>List the results of the current fit. The function value, the fitted value,
   the residual, and the weight are printed for each data point. The default
   output device is the terminal (STDOUT) and the screen is cleared before
   the information is output. If a file is specified then the information is
   appended to the named file.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>:vshow [file]</B></DT>
-  <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':vshow [file]'>
-  <DD>A verbose version of "<TT>:show</TT>" which is equivalent to a "<TT>:show</TT>" plus a "<TT>:errors</TT>"
-  plus a "<TT>:results</TT>". The default output device is the terminal (STDOUT)
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>:vshow [file]</b></dt>
+  <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':vshow [file]' -->
+  <dd>A verbose version of <tt>":show"</tt> which is equivalent to a <tt>":show"</tt> plus a <tt>":errors"</tt>
+  plus a <tt>":results"</tt>. The default output device is the terminal (STDOUT)
   and the screen is cleared before the information is output.
   If a file is specified then the information is appended to the named file.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>:page file</B></DT>
-  <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':page file'>
-  <DD>Page through the named file.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>:tolerance [value]</B></DT>
-  <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':tolerance [value]'>
-  <DD>Show or set the value of the fitting tolerance. Tolerance is the maximum
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>:page file</b></dt>
+  <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':page file' -->
+  <dd>Page through the named file.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>:tolerance [value]</b></dt>
+  <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':tolerance [value]' -->
+  <dd>Show or set the value of the fitting tolerance. Tolerance is the maximum
   fraction by which the reduced chi-squared can change from one iteration to the
   next for the fit to meet the convergence criteria.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>:maxiter [value]</B></DT>
-  <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':maxiter [value]'>
-  <DD>Show or set the maximum number of fitting iterations.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>:nreject [value]</B></DT>
-  <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':nreject [value]'>
-  <DD>Show or set the maximum number of rejection iterations. A value of zero
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>:maxiter [value]</b></dt>
+  <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':maxiter [value]' -->
+  <dd>Show or set the maximum number of fitting iterations.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>:nreject [value]</b></dt>
+  <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':nreject [value]' -->
+  <dd>Show or set the maximum number of rejection iterations. A value of zero
   means that automatic bad data rejection is turned off. 
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>:low_reject [value], :high_reject [value]</B></DT>
-  <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':low_reject [value], :high_reject [value]'>
-  <DD>Show or set the values of the bad data rejection limits.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>:low_reject [value], :high_reject [value]</b></dt>
+  <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':low_reject [value], :high_reject [value]' -->
+  <dd>Show or set the values of the bad data rejection limits.
   If both low_reject and high_reject are zero then automatic bad data
   rejection is turned off.
   If either of the high or low rejection limits are greater than zero,
@@ -703,118 +714,114 @@ fitparams — Compute the parameters of the transformation equations
   more than low_reject * rms below zero and high_reject * rms above zero
   are removed before the final fit. Rejected points are marked on the 
   graphs with diamonds. 
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>:grow [value]</B></DT>
-  <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':grow [value]'>
-  <DD>Show or set the value of the rejection growing radius. Any points
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>:grow [value]</b></dt>
+  <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':grow [value]' -->
+  <dd>Show or set the value of the rejection growing radius. Any points
   within this distance of a rejected point are also rejected. 
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>:fit [parameter] [value]</B></DT>
-  <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':fit [parameter] [value]'>
-  <DD>Set the starting guess value for the named coefficient and allow the 
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>:fit [parameter] [value]</b></dt>
+  <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':fit [parameter] [value]' -->
+  <dd>Set the starting guess value for the named coefficient and allow the 
   parameter value to change (converge) during the fit.
   If the value is not specified inlfit will use the last starting guess.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>:const [parameter] [value]</B></DT>
-  <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':const [parameter] [value]'>
-  <DD>Set the named parameter to be a constant with the specified value, i.e,
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>:const [parameter] [value]</b></dt>
+  <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':const [parameter] [value]' -->
+  <dd>Set the named parameter to be a constant with the specified value, i.e,
   its value won't change during the fit.
   If the value is not specified inlfit will use its last starting value.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>:/help</B></DT>
-  <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':/help'>
-  <DD>Print help for the graph formatting options (the w key).
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>:.help</B></DT>
-  <! Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':.help'>
-  <DD>Print help for the general IRAF graphics options.
-  </DD>
-  </DL>
-  <P>
-  </UL>
-  <! EndSection:   'THE NON-LINEAR INTERACTIVE FITTING PACKAGE'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>:/help</b></dt>
+  <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':/help' -->
+  <dd>Print help for the graph formatting options (the w key).
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>:.help</b></dt>
+  <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':.help' -->
+  <dd>Print help for the general IRAF graphics options.
+  </dd>
+  </dl>
+  <!-- EndSection:   'THE NON-LINEAR INTERACTIVE FITTING PACKAGE' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Fit a set of UBV standard star data non-interactively using the automatic
   bad data rejection algorithm and the configuration file shown in example
   2 under the configuration file section.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       ph&gt; fitparams m92.obs m92.cat m92.config m92.fit nreject=10 inter-
-  <P>
+  
   	... compute valued for the parameters in all the transformation
   	    equations
-  <P>
+  
       ph&gt; page m92.fit
-  <P>
+  
   	... check that the fitted parameter values are reasonable
-  <P>
+  
       ph&gt; invertfit m92.obs m92.cat m92.config m92.fit m92.out
-  <P>
+  
   	... evaluate the transformation equations for all the standard
   	    stars
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. Fit the same set of data interactively but deleting bad points by
   eye instead of using the automatic rejection algorithm.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       ph&gt; fitparams m92.obs m92.cat m92.config m92.fit 
-  <P>
+  
   	... a default plot of the UFIT equation comes up on the screen
   	    (the fit or right-hand side of the equation is plotted
   	    versus the function or left-hand side of the equation)
-  <P>
-  	... type <TT>'?'</TT> to show the available commands
-  <P>
-  	... type <TT>'i'</TT> to plot the residuals versus the function (LHS of
+  
+  	... type <tt>'?'</tt> to show the available commands
+  
+  	... type <tt>'i'</tt> to plot the residuals versus the function (LHS of
   	    the equation)
-  <P>
-  	... delete bad points with the <TT>'d'</TT> key and refit using the <TT>'f'</TT>
+  
+  	... delete bad points with the <tt>'d'</tt> key and refit using the <tt>'f'</tt>
   	    key
-  <P>
+  
   	... check for any dependencies of the residuals on the color
-  	    term by reprogramming the graph key <TT>'l'</TT> using the <TT>'g'</TT> key 
-  	    (type <TT>'g'</TT> to enter the reprogramming menu, <TT>'l'</TT> after the
-  	    prompt to reprogram the <TT>'l'</TT> key, and "UB, residuals" in
+  	    term by reprogramming the graph key <tt>'l'</tt> using the <tt>'g'</tt> key 
+  	    (type <tt>'g'</tt> to enter the reprogramming menu, <tt>'l'</tt> after the
+  	    prompt to reprogram the <tt>'l'</tt> key, and "UB, residuals" in
   	    response to the question of which axes to plot
-  <P>
-  	... list the plot windowing menu by typing <TT>'w'</TT> followed by <TT>'?'</TT>
+  
+  	... list the plot windowing menu by typing <tt>'w'</tt> followed by <tt>'?'</tt>
   	    after the "window:" prompt
-  <P>
-  	... type <TT>'w'</TT> followed by <TT>'z'</TT> after the ":window" prompt to zoom
-  	    up on an interesting area in the plot, a <TT>'w'</TT> followed by <TT>'a'</TT>
+  
+  	... type <tt>'w'</tt> followed by <tt>'z'</tt> after the ":window" prompt to zoom
+  	    up on an interesting area in the plot, a <tt>'w'</tt> followed by <tt>'a'</tt>
   	    will return to normal scaling
-  <P>
-  	... type <TT>'q'</TT> to quit the fit for this equation 
-  <P>
+  
+  	... type <tt>'q'</tt> to quit the fit for this equation 
+  
   	... answer "yes" to the question about saving the fit
-  <P>
+  
   	... proceed to the next fit by typing "next" in response to the
   	    prompt
-  <P>
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
-  chkconfig,mkconfig,gtools,inlfit
-  </UL>
-  <! EndSection:    'SEE ALSO'>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'THE CONFIGURATION FILE' 'THE NON-LINEAR INTERACTIVE FITTING PACKAGE' 'EXAMPLES' 'SEE ALSO'  >
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
+  chkconfig,mkconfig,gtools,inlfit
+  </p>
+  
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'THE CONFIGURATION FILE' 'THE NON-LINEAR INTERACTIVE FITTING PACKAGE' 'EXAMPLES' 'SEE ALSO'  -->
   

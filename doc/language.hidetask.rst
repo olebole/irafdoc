@@ -1,60 +1,59 @@
 .. _hidetask:
 
-hidetask — Make a task invisible to the user
-============================================
+hidetask: Make a task invisible to the user
+===========================================
 
 **Package: language**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   hidetask -- hide a task from the user
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   hidetask task,[task,...]
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>task</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='task' Line='task'>
-  <DD>The name of a task to be made hidden.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>task</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='task' Line='task' -->
+  <dd>The name of a task to be made hidden.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   If a task is only to be called from other tasks, and is not normally
   invoked directly by the user, then it may be useful to `hide' the task,
-  i.e., omit it from the list of tasks listed in the "<TT>?</TT>" and "<TT>??</TT>" commands.
-  The <I>hidetask</I> command performs this function.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  1. Define the task "<TT>_rew</TT>" and hide it from the user.  The purpose of the
+  i.e., omit it from the list of tasks listed in the <tt>"?"</tt> and <tt>"??"</tt> commands.
+  The <i>hidetask</i> command performs this function.
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
+  1. Define the task <tt>"_rew"</tt> and hide it from the user.  The purpose of the
   leading underscore (not required) is to ensure that the user does not
   accidentally run the task.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   cl&gt; task $_rew = "home$rew.e"
   cl&gt; hide _rew
-  </PRE>
-  <P>
-  2. Display the contents of the <I>language</I> package, including all
+  </pre>
+  <p>
+  2. Display the contents of the <i>language</i> package, including all
   hidden tasks (the _ does the trick).
-  <P>
-  <PRE>
+  </p>
+  <pre>
   cl&gt; ?_ lan
       language:
         ?             chdir         defpar        history       radix
@@ -69,14 +68,12 @@ hidetask — Make a task invisible to the user
         bye           d_p           fscan         package       unlearn
         cache         d_t           gflush        prcache       update
         cd            defpac        hidetask      print         wait
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

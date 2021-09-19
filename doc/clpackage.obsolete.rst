@@ -1,5 +1,5 @@
-obsolete — Obsolete tasks
-=========================
+obsolete: Obsolete tasks
+========================
 
 .. toctree:: :maxdepth: 1
 

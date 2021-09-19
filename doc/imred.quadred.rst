@@ -1,5 +1,5 @@
-quadred — CCD reductions for QUAD amplifier data
-================================================
+quadred: CCD reductions for QUAD amplifier data
+===============================================
 
 .. toctree:: :maxdepth: 1
 

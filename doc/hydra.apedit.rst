@@ -1,153 +1,151 @@
 .. _apedit:
 
-apedit — Edit apertures interactively
-=====================================
+apedit: Edit apertures interactively
+====================================
 
 **Package: hydra**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   apedit -- Edit apertures
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   apedit input
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
-  <DD>List of input images for which apertures are to be edited.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>apertures = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""'>
-  <DD>Apertures to recenter, resize, trace, and extract.  This only applies
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
+  <dd>List of input images for which apertures are to be edited.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>apertures = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
+  <dd>Apertures to recenter, resize, trace, and extract.  This only applies
   to apertures read from the input or reference database.  Any new
   apertures defined with the automatic finding algorithm or interactively
   are always selected.  The syntax is a list comma separated ranges
   where a range can be a single aperture number, a hyphen separated
-  range of aperture numbers, or a range with a step specified by "<TT>x&lt;step&gt;</TT>";
-  for example, "<TT>1,3-5,9-12x2</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>references = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='references' Line='references = ""'>
-  <DD>List of reference images to be used to define apertures for the input
+  range of aperture numbers, or a range with a step specified by <tt>"x&lt;step&gt;"</tt>;
+  for example, <tt>"1,3-5,9-12x2"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>references = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='references' Line='references = ""' -->
+  <dd>List of reference images to be used to define apertures for the input
   images.  When a reference image is given it supersedes apertures
-  previously defined for the input image. The list may be null, "<TT></TT>", or
+  previously defined for the input image. The list may be null, <tt>""</tt>, or
   any number of images less than or equal to the list of input images.
   If the reference image list is shorter than the input image list the
   last reference image is used for the remaining input images.
   There are three special words which may be used in place of an image
-  name.  The word "<TT>last</TT>" refers to the last set of apertures written to
-  the database.  The word "<TT>OLD</TT>" requires that an entry exist
-  and the word "<TT>NEW</TT>" requires that the entry not exist for each input image.
-  </DD>
-  </DL>
-  <P>
-  <DL>
-  <DT><B>interactive = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = no'>
-  <DD>Run this task interactively?  If the task is not run interactively then
+  name.  The word <tt>"last"</tt> refers to the last set of apertures written to
+  the database.  The word <tt>"OLD"</tt> requires that an entry exist
+  and the word <tt>"NEW"</tt> requires that the entry not exist for each input image.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>interactive = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = no' -->
+  <dd>Run this task interactively?  If the task is not run interactively then
   all user queries are suppressed and interactive aperture editing is
   disabled.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>find = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='find' Line='find = no'>
-  <DD>Find the spectra and define apertures automatically?  In order for
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>find = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='find' Line='find = no' -->
+  <dd>Find the spectra and define apertures automatically?  In order for
   spectra to be found automatically there must be no apertures for the
   input image or reference image defined in the database.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>recenter = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='recenter' Line='recenter = no'>
-  <DD>Recenter the apertures?
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>resize = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='resize' Line='resize = no'>
-  <DD>Resize the apertures?
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>edit = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='edit' Line='edit = yes'>
-  <DD>Edit the apertures?  The <I>interactive</I> parameter must also be yes.
-  </DD>
-  </DL>
-  <P>
-  <DL>
-  <DT><B>line = INDEF</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='line' Line='line = INDEF'>
-  <DD>The dispersion line (line or column perpendicular to the dispersion axis) to
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>recenter = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='recenter' Line='recenter = no' -->
+  <dd>Recenter the apertures?
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>resize = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='resize' Line='resize = no' -->
+  <dd>Resize the apertures?
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>edit = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='edit' Line='edit = yes' -->
+  <dd>Edit the apertures?  The <i>interactive</i> parameter must also be yes.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>line = INDEF</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='line' Line='line = INDEF' -->
+  <dd>The dispersion line (line or column perpendicular to the dispersion axis) to
   be graphed.  A value of INDEF uses the middle of the image.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>nsum = 10</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='nsum' Line='nsum = 10'>
-  <DD>Number of dispersion lines to be summed or medianed.  The lines are taken
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>nsum = 10</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='nsum' Line='nsum = 10' -->
+  <dd>Number of dispersion lines to be summed or medianed.  The lines are taken
   around the specified dispersion line.  A positive nsum selects a sum of
   lines and a negative selects a median of lines.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>width = 5.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='width' Line='width = 5.'>
-  <DD>Width of spectrum profiles.  This parameter is used for the profile
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>width = 5.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='width' Line='width = 5.' -->
+  <dd>Width of spectrum profiles.  This parameter is used for the profile
   centering algorithm in this and other tasks.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>radius = 5.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='radius' Line='radius = 5.'>
-  <DD>The profile centering error radius for the centering algorithm.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>threshold = 0.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 0.'>
-  <DD>Centering threshold for the centering algorithm.  The range of pixel intensities
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>radius = 5.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='radius' Line='radius = 5.' -->
+  <dd>The profile centering error radius for the centering algorithm.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>threshold = 0.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 0.' -->
+  <dd>Centering threshold for the centering algorithm.  The range of pixel intensities
   near the initial centering position must exceed this threshold.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Additional parameters</H3>
-  <! BeginSection: 'ADDITIONAL PARAMETERS'>
-  <UL>
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Additional parameters</h3>
+  <!-- BeginSection: 'ADDITIONAL PARAMETERS' -->
+  <p>
   I/O parameters and the default dispersion axis are taken from the
   package parameters, the default aperture parameters are taken from the
-  task <B>apdefault</B>.  Parameters for the various functions of finding,
+  task <b>apdefault</b>.  Parameters for the various functions of finding,
   recentering, and resizing are taken from the parameters for the
   appropriate task.
-  <P>
-  When this operation is performed from the task <B>apall</B> all parameters
+  </p>
+  <p>
+  When this operation is performed from the task <b>apall</b> all parameters
   except the package parameters are included in that task.
-  </UL>
-  <! EndSection:   'ADDITIONAL PARAMETERS'>
-  <H3>Cursor keys</H3>
-  <! BeginSection: 'CURSOR KEYS'>
-  <UL>
+  </p>
+  <!-- EndSection:   'ADDITIONAL PARAMETERS' -->
+  <h3>Cursor keys</h3>
+  <!-- BeginSection: 'CURSOR KEYS' -->
+  <p>
   When editing the apertures interactively the following cursor keys are
   available.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   ?    Print help
   a    Toggle the ALL flag
   b an Set background fitting parameters
@@ -177,30 +175,28 @@ apedit — Edit apertures interactively
   +  c Select the next aperture (in ID) to be the current aperture
   -  c Select the previous aperture (in ID) to be the current aperture
   I    Interrupt task immediately.  Database information is not saved.
-  </PRE>
-  <P>
+  </pre>
+  <p>
   The letter a following the key indicates if all apertures are affected when
   the ALL flag is set.  The letter c indicates that the key affects the
   current aperture while the letter n indicates that the key affects the
   aperture whose center is nearest the cursor.
-  </UL>
-  <! EndSection:   'CURSOR KEYS'>
-  <H3>Colon commands</H3>
-  <! BeginSection: 'COLON COMMANDS'>
-  <UL>
-  <P>
-  <PRE>
+  </p>
+  <!-- EndSection:   'CURSOR KEYS' -->
+  <h3>Colon commands</h3>
+  <!-- BeginSection: 'COLON COMMANDS' -->
+  <pre>
   :show [file]	   Print a list of the apertures (default STDOUT)
   :parameters [file] Print current parameter values (default STDOUT)
   :read [name]       Read from database (default current image)
   :write [name]      Write to database (default current image)
-  </PRE>
-  <P>
+  </pre>
+  <p>
   The remaining colon commands are task parameters and print the current
   value if no value is given or reset the current value to that specified.
   Use :parameters to see current parameter values.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   :apertures      :apidtable      :avglimits      :b_function
   :b_grow         :b_high_reject  :b_low_reject   :b_naverage
   :b_niterate     :b_order        :b_sample       :background
@@ -217,70 +213,75 @@ apedit — Edit apertures interactively
   :threshold      :title          :ulimit         :upper
   :usigma         :weights        :width          :write
   :ylevel		:t_nlost
-  </PRE>
-  </UL>
-  <! EndSection:   'COLON COMMANDS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'COLON COMMANDS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   For each image in the input image list, apertures are defined and edited
   interactively.  The aperture editor is invoked when the parameters
-  <I>interactive</I> and <I>edit</I> are both yes.  When this is the case
+  <i>interactive</i> and <i>edit</i> are both yes.  When this is the case
   the task will query whether to edit each image.  The responses are
-  "<TT>yes</TT>", "<TT>no</TT>", "<TT>YES</TT>", and "<TT>NO</TT>", where the upper case responses suppress
+  <tt>"yes"</tt>, <tt>"no"</tt>, <tt>"YES"</tt>, and <tt>"NO"</tt>, where the upper case responses suppress
   queries for all following images.
-  <P>
+  </p>
+  <p>
   When the aperture editor is entered a graph of the image lines or
-  columns specified by the parameters <I>line</I> and <I>nsum</I> is
-  drawn.  In the <B>apextract</B> package a dispersion line is either a
+  columns specified by the parameters <i>line</i> and <i>nsum</i> is
+  drawn.  In the <b>apextract</b> package a dispersion line is either a
   line or column in the image at one point along the dispersion axis.
   The dispersion axis may be defined in the image header under the
-  keyword DISPAXIS or by the package parameter <I>dispaxis</I>.  The
-  parameter <B>nsum</B> determines how many dispersion lines surrounding
+  keyword DISPAXIS or by the package parameter <i>dispaxis</i>.  The
+  parameter <b>nsum</b> determines how many dispersion lines surrounding
   the specified dispersion line are summed or medianed.  This improves the
   signal in the profiles of weaker spectra.  Once the graph is drawn an
   interactive cursor loop is entered.  The set of cursor keys and colon
   commands is given above and may be printed when the task is running using
-  the <TT>'?'</TT> key.  The CURSOR MODE keys and graph formatting options are also
-  available (see <B>cursor</B> and <B>gtools</B>).
-  <P>
+  the <tt>'?'</tt> key.  The CURSOR MODE keys and graph formatting options are also
+  available (see <b>cursor</b> and <b>gtools</b>).
+  </p>
+  <p>
   A status line, usually at the bottom of the graphics terminal,
-  indicates the current aperture and shows the ALL flag, <TT>'a'</TT> key, if set.  The
+  indicates the current aperture and shows the ALL flag, <tt>'a'</tt> key, if set.  The
   concept of the current aperture is used by several of the aperture
   editing commands.  Other commands operate on the aperture whose center
   is nearest the cursor.  It is important to know which commands operate
   on the current aperture and which operate on the nearest aperture to
   the cursor.
-  <P>
+  </p>
+  <p>
   The cursor keys and colon commands are used to define new apertures,
   delete existing apertures, modify the aperture number, beam number,
   title, center, and limits, set background fitting parameters, trace the
   positions of the spectra in the apertures, and extract aperture
   spectra.  When creating new apertures default parameters are supplied
   in two ways; if no apertures are defined then the default parameters
-  are taken from the task <B>apdefault</B> while if there is a current
+  are taken from the task <b>apdefault</b> while if there is a current
   aperture then a copy of its parameters are made.
-  <P>
-  The keys for creating a new aperture are <TT>'m'</TT> and <TT>'n'</TT> and <TT>'f'</TT>.  The key
-  <TT>'m'</TT> marks a new aperture and centers the aperture on the profile
+  </p>
+  <p>
+  The keys for creating a new aperture are <tt>'m'</tt> and <tt>'n'</tt> and <tt>'f'</tt>.  The key
+  <tt>'m'</tt> marks a new aperture and centers the aperture on the profile
   nearest the cursor.  The centering algorithm is described under the
-  help topic <B>center1d</B> and the parameters controlling the centering are
-  <I>width</I>, <I>radius</I>, and <I>threshold</I>.  The key <TT>'n'</TT> defines a
+  help topic <b>center1d</b> and the parameters controlling the centering are
+  <i>width</i>, <i>radius</i>, and <i>threshold</i>.  The key <tt>'n'</tt> defines a
   new aperture at the position of the cursor without centering.  This is
   used if there is no spectrum profile such as when defining sky apertures
-  or when defining apertures in extended profiles.  The <TT>'f'</TT> key finds new
-  apertures using the algorithm described in the task <B>apfind</B>.  The
+  or when defining apertures in extended profiles.  The <tt>'f'</tt> key finds new
+  apertures using the algorithm described in the task <b>apfind</b>.  The
   number of apertures found in this way is limited by the parameter
-  <B>nfind</B> and the number includes any previously defined
+  <b>nfind</b> and the number includes any previously defined
   apertures.  The new aperture number, beam number, and title are assigned using
-  the aperture assignment algorithm described in <B>apfind</B>.
-  <P>
-  The aperture number for the aperture <I>nearest</I> the cursor is changed
-  with the <TT>'j'</TT> key and the beam number is changed with the <TT>'k'</TT> key.  The
+  the aperture assignment algorithm described in <b>apfind</b>.
+  </p>
+  <p>
+  The aperture number for the aperture <i>nearest</i> the cursor is changed
+  with the <tt>'j'</tt> key and the beam number is changed with the <tt>'k'</tt> key.  The
   user is prompted for a new aperture number or beam number.  The
   aperture title may be set or changed with the :title colon command.
-  <P>
-  The <TT>'o'</TT> key may be used to reorder or correct the aperture
+  </p>
+  <p>
+  The <tt>'o'</tt> key may be used to reorder or correct the aperture
   identifications and beam numbers.  This is useful if the aperture
   numbers become disordered due to deletions and additions or if the
   first spectrum is missing when using the automatic identification
@@ -290,55 +291,62 @@ apedit — Edit apertures interactively
   assignment algorithm which uses information about the maximum
   separation between consecutive apertures, the direction of increasing
   aperture numbers, and an optional aperture identification table.  See
-  <B>apfind</B> for a description of the algorithm.
-  <P>
+  <b>apfind</b> for a description of the algorithm.
+  </p>
+  <p>
   After defining a new aperture it becomes the current aperture.  The
-  current aperture is indicated on the status line and the <TT>'.'</TT>, <TT>'+'</TT>, and
-  <TT>'-'</TT> keys are used to select a new current aperture.
-  <P>
-  Apertures are deleted with <TT>'d'</TT> key.  The aperture <I>nearest</I> the
+  current aperture is indicated on the status line and the <tt>'.'</tt>, <tt>'+'</tt>, and
+  <tt>'-'</tt> keys are used to select a new current aperture.
+  </p>
+  <p>
+  Apertures are deleted with <tt>'d'</tt> key.  The aperture <i>nearest</i> the
   cursor is deleted.
-  <P>
-  The aperture center may be changed with the <TT>'c'</TT>, <TT>'s'</TT>, and <TT>'g'</TT> keys and the
-  "<TT>:center value</TT>" colon command.  The <TT>'c'</TT> key applies the centering algorithm
-  to the aperture <I>nearest</I> the colon.  The <TT>'s'</TT> key shifts the center
-  of the <I>current</I> aperture to the position of the cursor.  The <TT>'g'</TT>
-  applies the <B>aprecenter</B> algorithm.  The :center command sets the
-  center of the <I>current</I> aperture to the value specified.  Except
+  </p>
+  <p>
+  The aperture center may be changed with the <tt>'c'</tt>, <tt>'s'</tt>, and <tt>'g'</tt> keys and the
+  <tt>":center value"</tt> colon command.  The <tt>'c'</tt> key applies the centering algorithm
+  to the aperture <i>nearest</i> the colon.  The <tt>'s'</tt> key shifts the center
+  of the <i>current</i> aperture to the position of the cursor.  The <tt>'g'</tt>
+  applies the <b>aprecenter</b> algorithm.  The :center command sets the
+  center of the <i>current</i> aperture to the value specified.  Except
   for the last option these commands may be applied to all apertures
   if the ALL flag is set.
-  <P>
+  </p>
+  <p>
   The aperture limits are defined relative to the aperture center.  The
-  limits may be changed with the <TT>'l'</TT>, <TT>'u'</TT>, <TT>'y'</TT>, and <TT>'z'</TT> keys and with the
-  "<TT>:lower value</TT>" and "<TT>:upper value</TT>" commands.  The <TT>'l'</TT> and <TT>'u'</TT> keys set
-  the lower and upper limits of the <I>current</I> aperture at the position
+  limits may be changed with the <tt>'l'</tt>, <tt>'u'</tt>, <tt>'y'</tt>, and <tt>'z'</tt> keys and with the
+  <tt>":lower value"</tt> and <tt>":upper value"</tt> commands.  The <tt>'l'</tt> and <tt>'u'</tt> keys set
+  the lower and upper limits of the <i>current</i> aperture at the position
   of the cursor.  The colon commands allow setting the limits explicitly.
-  The <TT>'y'</TT> key defines both limits for the <I>nearest</I> aperture as
+  The <tt>'y'</tt> key defines both limits for the <i>nearest</i> aperture as
   points at which the y cursor position intercepts the data profile.
   This requires that the aperture include a spectrum profile and that
-  the y cursor value lie below the peak of the profile.  The <TT>'z'</TT>
-  key applies the <B>apresize</B> algorithm.  Except for the colon
+  the y cursor value lie below the peak of the profile.  The <tt>'z'</tt>
+  key applies the <b>apresize</b> algorithm.  Except for the colon
   commands these commands may be applied to all apertures if the ALL
   flag is set.
-  <P>
-  The key <TT>'b'</TT> modifies the background fitting parameters for the aperture
-  <I>nearest</I> the cursor.  The default background parameters are
-  specified by the task <B>apdefault</B>.  Note that even though
+  </p>
+  <p>
+  The key <tt>'b'</tt> modifies the background fitting parameters for the aperture
+  <i>nearest</i> the cursor.  The default background parameters are
+  specified by the task <b>apdefault</b>.  Note that even though
   background parameters are defined, background subtraction is not
   performed during extraction unless specified.
-  When the <TT>'b'</TT> key is used the <B>icfit</B> graphical interface is entered
+  When the <tt>'b'</tt> key is used the <b>icfit</b> graphical interface is entered
   showing the background regions and function fit for the current image
   line.  Note that the background regions are specified relative to
   the aperture center and follows changes in the aperture position.
-  <P>
+  </p>
+  <p>
   The two types of
   extraction which may be specified are to average all points within
   a set of background regions or fit a function to the points in
   the background regions.  In the first case only the background sample
   parameter is used.  In the latter case the other parameters are
-  also used in conjunction with the <B>icfit</B> function fitting commands.
-  See <B>apbackground</B> for more on the background parameters.
-  <P>
+  also used in conjunction with the <b>icfit</b> function fitting commands.
+  See <b>apbackground</b> for more on the background parameters.
+  </p>
+  <p>
   Each aperture may have different background
   fitting parameters but newly defined apertures inherit the background
   fitting parameters of the last current aperture.  This will usually be
@@ -346,33 +354,37 @@ apedit — Edit apertures interactively
   aperture center rather than in absolute coordinates.  If the ALL flag
   is set then all apertures will be given the same background
   parameters.
-  <P>
-  The algorithms used in the tasks <B>apfind, aprecenter, apresize, aptrace</B>,
-  and <B>apsum</B> are available from the editor with the keys <TT>'f'</TT>, <TT>'g'</TT>, <TT>'z'</TT>,
-  <TT>'t'</TT>, and <TT>'e'</TT>
+  </p>
+  <p>
+  The algorithms used in the tasks <b>apfind, aprecenter, apresize, aptrace</b>,
+  and <b>apsum</b> are available from the editor with the keys <tt>'f'</tt>, <tt>'g'</tt>, <tt>'z'</tt>,
+  <tt>'t'</tt>, and <tt>'e'</tt>
   respectively.  Excluding finding, if the ALL flag is not set then the
   nearest aperture
   to the cursor is used.  This allows selective recentering, resizing,
   tracing and extracting.
   If the ALL flag is set then all apertures are traced or extracted.
   When extracting the output, rootname and profile name are queried.
-  <P>
-  Some general purpose keys window the graph <TT>'w'</TT> using the <B>gtools</B>
-  commands, redraw the graph <TT>'r'</TT>, and quit <TT>'q'</TT>.
-  <P>
-  The final cursor key is the <TT>'a'</TT> key.  The cursor keys which modify the
+  </p>
+  <p>
+  Some general purpose keys window the graph <tt>'w'</tt> using the <b>gtools</b>
+  commands, redraw the graph <tt>'r'</tt>, and quit <tt>'q'</tt>.
+  </p>
+  <p>
+  The final cursor key is the <tt>'a'</tt> key.  The cursor keys which modify the
   apertures were defined as operating on either the aperture nearest the
-  cursor or the current aperture.  The <TT>'a'</TT> key allows these keys to
-  affect all the apertures simultaneously.  The <TT>'a'</TT> key sets a flag which
+  cursor or the current aperture.  The <tt>'a'</tt> key allows these keys to
+  affect all the apertures simultaneously.  The <tt>'a'</tt> key sets a flag which
   is shown on the status line when it is set.  When set, the operation on
   one aperture is duplicated on the remaining apertures.  The operations
-  which apply to all apertures are set background <TT>'b'</TT>, center <TT>'c'</TT>, delete
-  <TT>'d'</TT>, extract <TT>'e'</TT>, recenter <TT>'g'</TT>, set lower limit <TT>'l'</TT>, shift <TT>'s'</TT>, trace
-  <TT>'t'</TT>, set upper limit <TT>'u'</TT>, set limits at the y cursor <TT>'y'</TT>, and resize
-  <TT>'z'</TT>.  The <TT>'b'</TT>, <TT>'l'</TT>, <TT>'s'</TT>, and <TT>'u'</TT> keys first set the background,
+  which apply to all apertures are set background <tt>'b'</tt>, center <tt>'c'</tt>, delete
+  <tt>'d'</tt>, extract <tt>'e'</tt>, recenter <tt>'g'</tt>, set lower limit <tt>'l'</tt>, shift <tt>'s'</tt>, trace
+  <tt>'t'</tt>, set upper limit <tt>'u'</tt>, set limits at the y cursor <tt>'y'</tt>, and resize
+  <tt>'z'</tt>.  The <tt>'b'</tt>, <tt>'l'</tt>, <tt>'s'</tt>, and <tt>'u'</tt> keys first set the background,
   aperture limits, or shift for the appropriate aperture and then are
   applied to the other apertures relative to their centers.
-  <P>
+  </p>
+  <p>
   All the parameters used in any of the operations may be examined or
   changed through colon commands.  The :parameters command lists all
   parameter values and :show lists the apertures.  The :read and :write
@@ -386,66 +398,71 @@ apedit — Edit apertures interactively
   current image name is used.  The change image command default is to
   print the current image name.  The remaining commands take a value.  If
   a value is not given then the current value is printed.
-  <P>
+  </p>
+  <p>
   The aperture editor may be selected from nearly every task using the
-  <B>edit</B> parameter.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  <b>edit</b> parameter.
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   The aperture editor is a very flexible and interactive tool
   for which it is impossible illustrate all likely uses.  The following
   give some simple examples.
-  <P>
-  1.  To define and edit apertures for image "<TT>n1.001</TT>":
-  <P>
+  </p>
+  <p>
+  1.  To define and edit apertures for image <tt>"n1.001"</tt>:
+  </p>
+  <p>
   	cl&gt; apedit n1.001
-  <P>
+  </p>
+  <p>
   2.  To define apertures for one image and then apply them to several other
   images:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; apedit n1.* ref=n1.001
   	Edit apertures for n1.001? (yes)
   	Edit apertures for n1.002? (yes) NO
-  </PRE>
-  <P>
-  Answer "<TT>yes</TT>" to the first query for editing n1.001.  To
-  the next query (for n1.002) respond with "<TT>NO</TT>".  The remaining
+  </pre>
+  <p>
+  Answer <tt>"yes"</tt> to the first query for editing n1.001.  To
+  the next query (for n1.002) respond with <tt>"NO"</tt>.  The remaining
   images then will not be edited interactively.  Note that after
   defining the apertures for n1.001 they are recorded in the database
   and subsequent images will be able to use them as reference apertures.
-  <P>
-  3.  Using the "<TT>:image name</TT>" and "<TT>:read image</TT>" colon commands and the
-  <TT>'f'</TT>, <TT>'g'</TT>, <TT>'z'</TT>, <TT>'t'</TT> and <TT>'e'</TT> keys the user can perform all the functions
-  available in the package without ever leaving the editor.  The <TT>'a'</TT> key
+  </p>
+  <p>
+  3.  Using the <tt>":image name"</tt> and <tt>":read image"</tt> colon commands and the
+  <tt>'f'</tt>, <tt>'g'</tt>, <tt>'z'</tt>, <tt>'t'</tt> and <tt>'e'</tt> keys the user can perform all the functions
+  available in the package without ever leaving the editor.  The <tt>'a'</tt> key
   to set the ALL flag is very useful when dealing with many spectra in a
   single image.
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Revisions</H3>
-  <! BeginSection: 'REVISIONS'>
-  <UL>
-  <DL>
-  <DT><B>APEDIT V2.11</B></DT>
-  <! Sec='REVISIONS' Level=0 Label='APEDIT' Line='APEDIT V2.11'>
-  <DD>The "<TT>apertures</TT>" parameter can be used to select apertures for resizing,
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Revisions</h3>
+  <!-- BeginSection: 'REVISIONS' -->
+  <dl>
+  <dt><b>APEDIT V2.11</b></dt>
+  <!-- Sec='REVISIONS' Level=0 Label='APEDIT' Line='APEDIT V2.11' -->
+  <dd>The <tt>"apertures"</tt> parameter can be used to select apertures for resizing,
   recentering, tracing, and extraction.  This parameter name was previously
   used for selecting apertures in the recentering algorithm.  The new
-  parameter name for this is now "<TT>aprecenter</TT>".
-  <P>
+  parameter name for this is now <tt>"aprecenter"</tt>.
   The aperture ID table information may now be contained in the
   image header under the keywords SLFIBnnn.
-  </DD>
-  </DL>
+  </dd>
+  </dl>
+  <p>
   SEE ALSO
-  <PRE>
+  </p>
+  <pre>
   apdefault, apfind, aprecenter, apresize, aptrace, apsum, apall
   center1d, cursor, gtools, icfit
-  </PRE>
-  </UL>
-  <! EndSection:    'REVISIONS'>
+  </pre>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'ADDITIONAL PARAMETERS' 'CURSOR KEYS' 'COLON COMMANDS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS'  >
+  <!-- EndSection:    'REVISIONS' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'ADDITIONAL PARAMETERS' 'CURSOR KEYS' 'COLON COMMANDS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS'  -->
   

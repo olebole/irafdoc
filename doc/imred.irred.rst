@@ -1,5 +1,5 @@
-irred — KPNO IR camera reductions
-=================================
+irred: KPNO IR camera reductions
+================================
 
 .. toctree:: :maxdepth: 1
 

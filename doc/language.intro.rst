@@ -1,24 +1,25 @@
 .. _intro:
 
-intro — A brief introduction to IRAF
-====================================
+intro: A brief introduction to IRAF
+===================================
 
 **Package: language**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   intro -- a brief introduction to the CL
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <P>
-  1. <B>General</B>
-  <P>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  1. <b>General</b>
+  </p>
+  <p>
       The CL (or Command Language) is the command interpreter of the IRAF
   environment.  Among it's responsibilities are: task initiation and
   termination; parameter retrieval and updating; and error handling.
@@ -27,29 +28,35 @@ intro — A brief introduction to IRAF
   roughly modeled after C and Ratfor as well as fairly sophisticated
   capabilities for performing mathematical calculations and string manipulation.
   The CL environment may easily be extended by the user.
-  <P>
-  <P>
-  2. <I>Task Initiation and Termination</I>
-  <P>
-      IRAF organizes tasks into groups called <I>packages</I>.  When a package
+  </p>
+  <p>
+  2. <i>Task Initiation and Termination</i>
+  </p>
+  <p>
+      IRAF organizes tasks into groups called <i>packages</i>.  When a package
   (which is itself a special kind of task) is invoked, it defines
   all the tasks which belong to that package, and the user may
   then execute any of the tasks in the package.  Some of these new
   tasks may themselves be packages.  Normally at the start of a
-  CL session, the <I>language</I> package, including all functions built directly
-  into the CL, and the <I>system</I> package, which contains basic system
+  CL session, the <i>language</i> package, including all functions built directly
+  into the CL, and the <i>system</i> package, which contains basic system
   utilities, are automatically invoked.  The user may configure their 
-  "<TT>login.cl</TT>" file to automatically invoke other packages.
-  <P>
+  <tt>"login.cl"</tt> file to automatically invoke other packages.
+  </p>
+  <p>
   Within the CL a task is invoked by entering its name, e.g.
-  <P>
+  </p>
+  <p>
        cl&gt; reduce args
-  <P>
+  </p>
+  <p>
   If two tasks in different packages have the same name, then the
   package name may be included:
-  <P>
+  </p>
+  <p>
        cl&gt; spectra.reduce args
-  <P>
+  </p>
+  <p>
   The task name may be followed by a parameter list and tasks
   may be linked together by pipes (see parameters).  The task initiates
   execution of either a script file, an ASCII file containing further
@@ -58,13 +65,15 @@ intro — A brief introduction to IRAF
   CL process.  The correspondence between the task name and the name
   of the script or image file is made using the task and redefine builtin
   commands.
-  <P>
+  </p>
+  <p>
   When a script is run the CL effectively calls itself recursively
   with the new incarnation of the CL having its standard input
   not from the terminal, but from the script file.  When the script
   terminates the recursion unwinds, and the CL returns to an interactive
   mode.  A script may itself call another script or executable.
-  <P>
+  </p>
+  <p>
   An executable is run as a separate process with communication
   and synchronization maintained using an inter-process communication
   link (a pipe in UNIX or a shared memory region in VMS).  When
@@ -78,10 +87,11 @@ intro — A brief introduction to IRAF
   image, or when the user explicitly clears the cache using the flprcache
   command.  The size of the process cache is small, usually only
   three executables can be maintained in the cache.
-  <P>
-  <P>
-  3. <I>Parameter Retrieval and Update</I>
-  <P>
+  </p>
+  <p>
+  3. <i>Parameter Retrieval and Update</i>
+  </p>
+  <p>
       Most CL tasks have a parameter list associated with them.  When the task
   starts up, the CL looks to see if the user has a private copy of the
   parameters from the last time he ran this task.  If so these parameters
@@ -93,27 +103,29 @@ intro — A brief introduction to IRAF
   pointed to by the IRAF logical name `uparm'.  A number of
   builtins are used to control the handling of parameters including
   lparam, eparam, update and unlearn.
-  <P>
-  <P>
-  4. <I>Error Handling</I>
-  <P>
+  </p>
+  <p>
+  4. <i>Error Handling</i>
+  </p>
+  <p>
       The CL attempts to trap most kinds of errors that may occur and
   to keep the user in a viable IRAF environment.  When an error occurs in
   a script, execution of the script is terminated and the CL returns to an
-  interactive level.  The user may force an error using the <I>error</I>
+  interactive level.  The user may force an error using the <i>error</i>
   builtin.  When a executable image encounters an error it cannot handle
   itself, it sends an error message to the CL and then hibernates in the
   process cache until its next invocation.  If executable was called by
   a script, the script is terminated and the CL returns to an interactive mode.
   The error message from the executable is relayed to the user.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   commands, mathfcns, strings
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'DESCRIPTION' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'DESCRIPTION' 'SEE ALSO'  -->
   

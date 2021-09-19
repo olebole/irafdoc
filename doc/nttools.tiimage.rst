@@ -1,27 +1,28 @@
 .. _tiimage:
 
-tiimage — Insert images into rows of a 3-D table.
-=================================================
+tiimage: Insert images into rows of a 3-D table.
+================================================
 
 **Package: nttools**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   tiimage -- Inserts images into rows of a 3-D table.
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   tiimage input outtable
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   This task performs the inverse operation of task tximage: it inserts one or 
   more images into rows of a 3-D table  The input may be a filename template, 
   including wildcard characters, or the name of a file (preceded by an @ sign) 
@@ -30,7 +31,8 @@ tiimage — Insert images into rows of a 3-D table.
   the specified row in the output table. Any dimensionality information existent
   in the input image is lost in the process, that is, the image will be always
   inserted as a 1-D array, regardless of its number of axis.
-  <P>
+  </p>
+  <p>
   If the output table exists, insertion will be done in place. Alternatively, 
   the task can create a 3-D table from information taken either from a template 
   3-D table, or, if this table is not supplied, from the input images themselves. 
@@ -38,12 +40,13 @@ tiimage — Insert images into rows of a 3-D table.
   used to select a single column in the table. If no selector is used, all 
   columns will be processed. Type 'help selectors' to see a description of 
   the selector syntax. 
-  <P>
+  </p>
+  <p>
   If the output table exists, insertion may take place in two ways. If the
   output table name contains a column selector that selects a single column
   in the table, all input images will be inserted in that column, starting
-  at the row pointed by task parameter "<TT>row</TT>". 
-  If "<TT>row</TT>" is negative or INDEF the task will look for the ORIG_ROW
+  at the row pointed by task parameter <tt>"row"</tt>. 
+  If <tt>"row"</tt> is negative or INDEF the task will look for the ORIG_ROW
   keyword in the image header and use that keyword value for row number.
   The second mode of insertion in an existing table is used if no matching
   column selector is found in the output table name. In this case the task
@@ -51,9 +54,10 @@ tiimage — Insert images into rows of a 3-D table.
   task tximage, and use that information to place the image in the proper 
   column. If no columnar information exists in the header, or if the column 
   name in there does not match any column in the output table, the image is 
-  skipped and the user warned. The "<TT>row</TT>" parameter processing works the same 
+  skipped and the user warned. The <tt>"row"</tt> parameter processing works the same 
   way in this second mode.
-  <P>
+  </p>
+  <p>
   If the output table does not exist, the task will look for a template table
   where to take column information from. If the template exists, the insertion
   operation will be performed in an analogous way as above. Notice that the
@@ -61,97 +65,99 @@ tiimage — Insert images into rows of a 3-D table.
   column selector in its name, or a sparse table if not, because only the 
   actual input images will be stored in an otherwise empty table (the template 
   data is not copied into the output, only the column descriptors).
-  <P>
+  </p>
+  <p>
   If the template is missing, the task will attempt to retrieve columnar
   information from the input image headers and build the output table with
   enough columns and rows to fit all images in the list. Only images that
   have columnar information in their headers can be processed, though. If
   no images are found with the proper header keywords, no output takes place.
-  <P>
+  </p>
+  <p>
   NOTE: Both the output and template table names must always be supplied 
   complete, including their extension. Otherwise the task may get confused 
   on the existence of an already existing table.
-  <P>
+  </p>
+  <p>
   The column matching criterion is based on the column name. An error results 
   when data types in input image and output column do not agree.
-  <P>
+  </p>
+  <p>
   If the maximum array size in a target column in the output 3-D table is
   larger than the number of pixels in the input image, the array will be filled 
   up starting from its first element, and the empty elements at the end will 
   be set to INDEF. If the maximum array size is smaller than the number of 
   pixels, insertion begins by the first pixel up to the maximum allowable size, 
   the remaining pixels being ignored.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input [image name list/template]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input [image name list/template]'>
-  <DD>A list of one or more images to be inserted.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>outtable [table name]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable [table name]'>
-  <DD>Name of 3-D output table, including extension. No support exists for 
-  "<TT>STDOUT</TT>" (ASCII output).
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(template = "<TT></TT>") [table name]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(template = "") [table name]'>
-  <DD>Name of 3-D table to be used as template when creating a new output table.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(row = INDEF) [int]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(row = INDEF) [int]'>
-  <DD>Row where insertion begins. If set to INDEF or a negative value, the row
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input [image name list/template]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input [image name list/template]' -->
+  <dd>A list of one or more images to be inserted.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>outtable [table name]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable [table name]' -->
+  <dd>Name of 3-D output table, including extension. No support exists for 
+  <tt>"STDOUT"</tt> (ASCII output).
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(template = <tt>""</tt>) [table name]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(template = "") [table name]' -->
+  <dd>Name of 3-D table to be used as template when creating a new output table.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(row = INDEF) [int]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(row = INDEF) [int]' -->
+  <dd>Row where insertion begins. If set to INDEF or a negative value, the row
   number will be looked for in the input image header.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(verbose = yes) [boolean]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(verbose = yes) [boolean]'>
-  <DD>Display names as files are processed ?
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(verbose = yes) [boolean]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(verbose = yes) [boolean]' -->
+  <dd>Display names as files are processed ?
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   Insert images into a 3-D table at column named FLUX:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   cl&gt; tiimage flux*.hhh "otable.tab[c:FLUX]"
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <p>
   The output and template table names must be supplied in full, including 
-  the extension (e.g. "<TT>.tab</TT>"). If the output table name is not typed in full, 
+  the extension (e.g. <tt>".tab"</tt>). If the output table name is not typed in full, 
   the task will create a new table in place of the existing one, with only 
   the rows actually inserted. This behavior relates to the way the underlying 
-  "<TT>access</TT>" routine in IRAF's fio library works.
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>References</H3>
-  <! BeginSection: 'REFERENCES'>
-  <UL>
+  <tt>"access"</tt> routine in IRAF's fio library works.
+  </p>
+  <!-- EndSection:   'BUGS' -->
+  <h3>References</h3>
+  <!-- BeginSection: 'REFERENCES' -->
+  <p>
   This task was written by I. Busko.
-  </UL>
-  <! EndSection:   'REFERENCES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'REFERENCES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   tximage, selectors
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

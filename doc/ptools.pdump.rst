@@ -1,93 +1,91 @@
 .. _pdump:
 
-pdump — Print selected columns of a list of  daophot/apphot databases
-=====================================================================
+pdump: Print selected columns of a list of  daophot/apphot databases
+====================================================================
 
 **Package: ptools**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   pdump - print fields from an APPHOT/DAOPHOT database
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   pdump infiles fields expr
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>infiles</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='infiles' Line='infiles'>
-  <DD>The APPHOT/DAOPHOT databases containing the fields to be dumped.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>fields</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='fields' Line='fields'>
-  <DD>A template defining the fields to be dumped from each record.
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>infiles</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='infiles' Line='infiles' -->
+  <dd>The APPHOT/DAOPHOT databases containing the fields to be dumped.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>fields</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='fields' Line='fields' -->
+  <dd>A template defining the fields to be dumped from each record.
   In the case of APPHOT/DAOPHOT text databases, the fields are specified by
   keywords defined by the
   #K and #N entries in the database. Upper or lower case and minimum match
-  abbreviations are permissible. Some fields such as "<TT>mag</TT>" may have
+  abbreviations are permissible. Some fields such as <tt>"mag"</tt> may have
   multiple entries. An individual entry can be referenced by specifying an
-  array index, e.g. "<TT>MAG[2]</TT>" or several values can be selected by
-  specifying a range of elements, e.g. "<TT>MAG[1-3]</TT>".
+  array index, e.g. <tt>"MAG[2]"</tt> or several values can be selected by
+  specifying a range of elements, e.g. <tt>"MAG[1-3]"</tt>.
   In the case of STSDAS table APPHOT/DAOPHOT databases the fields are the
   column names. Names must be spelled in full but upper or lower case is allowed.
   In the case of STSDAS table databases, it may be necessary to escape the
-  leading square bracket so that field "<TT>MAG[2]</TT>" would be referred to as
-  "<TT>MAG\[2]</TT>".  The fields are output in
+  leading square bracket so that field <tt>"MAG[2]"</tt> would be referred to as
+  <tt>"MAG\[2]"</tt>.  The fields are output in
   the order in which they are specified in the template.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>expr</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='expr' Line='expr'>
-  <DD>The boolean expression to be evaluated once per record.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>expr</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='expr' Line='expr' -->
+  <dd>The boolean expression to be evaluated once per record.
   Only the fields in those records for which the boolean expression
   evaluates to yes are printed.
-  If <I>expr</I> = "<TT>yes</TT>", the specified fields in all the records are
+  If <i>expr</i> = <tt>"yes"</tt>, the specified fields in all the records are
   printed.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>headers = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='headers' Line='headers = no'>
-  <DD>Dump the APPHOT/DAOPHOT database field headers. The selected
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>headers = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='headers' Line='headers = no' -->
+  <dd>Dump the APPHOT/DAOPHOT database field headers. The selected
   fields are printed on the standard output, preceded by the parameters list,
-  if <I>parameters</I> = yes, and the keyword, units,
+  if <i>parameters</i> = yes, and the keyword, units,
   and format information.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>parameters = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='parameters' Line='parameters = yes'>
-  <DD>Print the keyword parameters records on the
-  standard output if <I>headers</I> = yes.
-  </DD>
-  </DL>
-  <P>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  PDUMP selects a subset of fields specified by the <I>fields</I>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>parameters = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='parameters' Line='parameters = yes' -->
+  <dd>Print the keyword parameters records on the
+  standard output if <i>headers</i> = yes.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  PDUMP selects a subset of fields specified by the <i>fields</i>
   parameter from an APPHOT/DAOPHOT database or a list of databases
   and prints the results on the standard output.
-  If <I>headers</I> = no, the output is in simple list format
+  If <i>headers</i> = no, the output is in simple list format
   with adjacent fields
   separated by whitespace. The fields are printed in the order in
-  which they appear in <I>ields</I>. If <I>headers</I> = yes, the
+  which they appear in <i>ields</i>. If <i>headers</i> = yes, the
   selected fields are printed on the standard output, preceded by
-  the parameter list, if <I>parameters</I> = yes, and the keyword, units,
+  the parameter list, if <i>parameters</i> = yes, and the keyword, units,
   and format information.
   Newlines will not be inserted in the output if the input database
   was an APPHOT/DAOPHOT text file, so users should take
@@ -95,7 +93,8 @@ pdump — Print selected columns of a list of  daophot/apphot databases
   line limit of 161 characters.
   Newlines will be inserted if the original database was an
   STSDAS table.
-  <P>
+  </p>
+  <p>
   PDUMP is a simple CL script which calls TXDUMP if the APPHOT/DAOPHOT
   database was a text file and TBDUMP if it was an STSDAS table.
   Although the parameters of TBDUMP and TXDUMP have been tailored to
@@ -103,9 +102,10 @@ pdump — Print selected columns of a list of  daophot/apphot databases
   offers some capabilities that the other does not. In some
   situations users may wish to use the individual tasks instead of the
   generic script.
-  <P>
+  </p>
+  <p>
   The output records are selected on the basis of an input boolean
-  expression <I>expr</I> whose variables are the field names
+  expression <i>expr</i> whose variables are the field names
   specified by the #N keywords or the parameters specified by the
   #K keywords in the APPHOT/DAOPHOT text database or the column names
   in an ST tables database.
@@ -113,43 +113,45 @@ pdump — Print selected columns of a list of  daophot/apphot databases
   with a particular record into the field name variables the
   expression evaluates
   to yes, that record is included in the output table.
-  <P>
+  </p>
+  <p>
   The supported
   operators and functions are briefly described below. A detailed description
   of the boolean expression evaluator and its syntax can be found
   in the manual page for the IMAGES package HEDIT task.
-  <P>
+  </p>
+  <p>
   The following logical operators can be used in the boolean expression. 
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	equal		  ==	not equal		!=
   	less than	  &lt;	less than or equal	&lt;=
   	greater than	  &gt;	greater than or equal	&gt;=
   	or		  ||	and			&amp;&amp;
   	negation	  !	pattern match		?=
   	concatenation	  //
-  </PRE>
-  <P>
+  </pre>
+  <p>
   The pattern match character ?=  takes a
   string expression as its first argument and a pattern as its second argument.
   The result is yes if the pattern is contained in the string expression.
   Patterns are strings which may contain pattern matching meta-characters.
   The meta-characters themselves can be matched by preceeding them with the escape
   character.  The meta-characters listed below. 
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	beginning of string	^	end of string		$
   	one character		?	zero or more characters	*
-  	white space		#	escape character	\<BR>
+  	white space		#	escape character	\<br>
   	ignore case		{	end ignore case		}
   	begin character class	[	end character class	]
   	not, in char class	^	range, in char class	-
-  </PRE>
-  <P>
+  </pre>
+  <p>
   The expression may also include arithmetic operators and functions.
   The following arithmetic operators and functions are supported.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   addition		+		subtraction		-
   multiplication		*		division		/
   negation		-		exponentiation		**
@@ -162,63 +164,59 @@ pdump — Print selected columns of a list of  daophot/apphot databases
   minimum			min(x,y)	maximum			max(x,y)
   convert to integer	int(x)		convert to real		real(x)
   nearest integer		nint(x)		modulo			mod(x)
-  </PRE>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
+  </pre>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Select the fields XCENTER and YCENTER from the output of the APPHOT
   CENTER task.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       pt&gt; pdump image.ctr.3 "XCENTER,YCENTER" yes
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. Select the fields XCENTER and YCENTER from the output of the APPHOT
   CENTER task for all records with YCENTER &gt; 100.0.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       pt&gt; pdump image.ctr.3 "XCENTER,YCENTER" "YCENTER &gt; 100.0"
-  </PRE>
-  <P>
+  </pre>
+  <p>
   3. Select the fields ID, XCENTER, YCENTER and the first three magnitudes
   from the output of the APPHOT PHOT task. In the case of STSDAS table
   databases it may be necessary to escape the leading square bracket.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       pt&gt; pdump image.mag.3 "ID,XCEN,YCEN,MAG[1],MAG[2],MAG[3]" yes
-  <P>
+  
   		   or
-  <P>
+  
       pt&gt; pdump image.mag.3 "ID,XCEN,YCEN,MAG\[1],MAG\[2],MAG\[3]" yes
-  </PRE>
-  <P>
-  <P>
+  </pre>
+  <p>
   4. Select the ID, XCENTER, YCENTER, MSKY and MAG fields from the output
   of the DAOPHOT NSTAR task. Print the headers and parameters as well.
-  <P>
-  <PRE>
-      pt&gt; pdump image.nst.3 "ID,XCENTER,YCENTER,MSKY,MAG"  \<BR>
+  </p>
+  <pre>
+      pt&gt; pdump image.nst.3 "ID,XCENTER,YCENTER,MSKY,MAG"  \<br>
   	yes headers+ parameters+
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <p>
   Users should not dump more fields than fill a 161 character textline
   as IRAF does not currently fully support longer text lines.
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   ptools.txdump,ptools.tbdump,tables.tdump
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

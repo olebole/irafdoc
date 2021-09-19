@@ -1,108 +1,107 @@
 .. _findpars:
 
-findpars — Edit the star detection parameters
-=============================================
+findpars: Edit the star detection parameters
+============================================
 
 **Package: daophot**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   findpars -- edit the object detection parameters
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   findpars
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>threshold = 4.0 (sigma)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 4.0 (sigma)'>
-  <DD>The object detection threshold above local background in units of
-  <I>datapars.sigma</I>.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>nsigma = 1.5</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='nsigma' Line='nsigma = 1.5'>
-  <DD>The semi-major axis of the Gaussian convolution kernel used to computed the
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>threshold = 4.0 (sigma)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 4.0 (sigma)' -->
+  <dd>The object detection threshold above local background in units of
+  <i>datapars.sigma</i>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>nsigma = 1.5</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='nsigma' Line='nsigma = 1.5' -->
+  <dd>The semi-major axis of the Gaussian convolution kernel used to computed the
   density enhancement and mean density images in Gaussian sigma. This semi-
-  major axis is equal to min (2.0, 0.42466 * <I>nsigma</I> *
-  <I>datapars.fwhmpsf</I> / <I>datapars.scale</I>) pixels.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>ratio = 1.0</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='ratio' Line='ratio = 1.0'>
-  <DD>The ratio of the sigma of the Gaussian convolution kernel along the minor axis
-  direction to the sigma along the major axis direction.  <I>Ratio</I> defaults
+  major axis is equal to min (2.0, 0.42466 * <i>nsigma</i> *
+  <i>datapars.fwhmpsf</i> / <i>datapars.scale</i>) pixels.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>ratio = 1.0</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='ratio' Line='ratio = 1.0' -->
+  <dd>The ratio of the sigma of the Gaussian convolution kernel along the minor axis
+  direction to the sigma along the major axis direction.  <i>Ratio</i> defaults
   to 1.0 in which case the image is convolved with a circular Gaussian.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>theta = 0.0</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='theta' Line='theta = 0.0'>
-  <DD>The position of the major axis of the elliptical Gaussian. <I>Theta</I> is
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>theta = 0.0</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='theta' Line='theta = 0.0' -->
+  <dd>The position of the major axis of the elliptical Gaussian. <i>Theta</i> is
   measured counter-clockwise from the x axis.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>sharplo = .2, sharphi = 1.0</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='sharplo' Line='sharplo = .2, sharphi = 1.0'>
-  <DD><I>Sharplo</I> and <I>sharphi</I> are numerical cutoffs on the image sharpness
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>sharplo = .2, sharphi = 1.0</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='sharplo' Line='sharplo = .2, sharphi = 1.0' -->
+  <dd><i>Sharplo</i> and <i>sharphi</i> are numerical cutoffs on the image sharpness
   statistic chosen to eliminate brightness maxima which are due to bad pixels
   rather than to astronomical objects.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>roundlo = -1.0 roundhi = 1.0</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='roundlo' Line='roundlo = -1.0 roundhi = 1.0'>
-  <DD><I>Roundlo</I> and <I>roundhi</I> are numerical cutoffs on the image roundness
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>roundlo = -1.0 roundhi = 1.0</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='roundlo' Line='roundlo = -1.0 roundhi = 1.0' -->
+  <dd><i>Roundlo</i> and <i>roundhi</i> are numerical cutoffs on the image roundness
   statistic chosen to eliminate brightness maxima which are due to bad rows or
   columns rather than to astronomical objects.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>mkdetections = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='mkdetections' Line='mkdetections = no'>
-  <DD>Mark the positions of the detected objects on the displayed image ?
-  </DD>
-  </DL>
-  <P>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <P>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>mkdetections = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='mkdetections' Line='mkdetections = no' -->
+  <dd>Mark the positions of the detected objects on the displayed image ?
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   DAOFIND approximates the stellar point spread function with an elliptical
   Gaussian function, whose sigma along the semi-major axis is 0.42466 *
-  <I>datapars.fwhmpsf</I> / <I>datapars.scale</I> pixels, semi-minor to semi-major
-  axis ratio is <I>ratio</I>, and major axis position angle is <I>theta</I>.
-  Using this model, a convolution kernel, truncated at <I>nsigma</I> sigma,
+  <i>datapars.fwhmpsf</i> / <i>datapars.scale</i> pixels, semi-minor to semi-major
+  axis ratio is <i>ratio</i>, and major axis position angle is <i>theta</i>.
+  Using this model, a convolution kernel, truncated at <i>nsigma</i> sigma,
   and normalized to sum to zero, is constructed.
-  <P>
-  The density enhancement image <I>starmap</I> is computed by convolving the input
+  </p>
+  <p>
+  The density enhancement image <i>starmap</i> is computed by convolving the input
   image with the Gaussian kernel. This operation is mathematically equivalent to
   fitting, in the least-squares sense, the image data at each point with a
   truncated, lowered elliptical Gaussian function. After convolution each point
-  in <I>starmap</I> contains as estimate of the amplitude of the best fitting
-  Gaussian function at that point. Each point in <I>skymap</I>, if the user
+  in <i>starmap</i> contains as estimate of the amplitude of the best fitting
+  Gaussian function at that point. Each point in <i>skymap</i>, if the user
   chooses to compute it, contains an estimate of the best fitting sky value
   at that point.
-  <P>
-  After image convolution DAOFIND steps through <I>starmap</I> searching
-  for density enhancements greater than <I>findpars.threshold</I> *
-  <I>datapars.sigma</I>, and brighter than all other density enhancements
-  within a semi-major axis of 0.42466 <I>findpars.nsigma</I> *
-  <I>datapars.fwhmpsf</I>. As the program selects candidates, it computes two
+  </p>
+  <p>
+  After image convolution DAOFIND steps through <i>starmap</i> searching
+  for density enhancements greater than <i>findpars.threshold</i> *
+  <i>datapars.sigma</i>, and brighter than all other density enhancements
+  within a semi-major axis of 0.42466 <i>findpars.nsigma</i> *
+  <i>datapars.fwhmpsf</i>. As the program selects candidates, it computes two
   shape characteristics sharpness and roundness.  The sharpness statistic
   measures the ratio of the difference between the height of the central pixel
   and the mean of the surrounding non-bad pixels, to the height of the best
@@ -110,78 +109,74 @@ findpars — Edit the star detection parameters
   the ratio of, the difference in the height of the best fitting Gaussian
   function in x minus the best fitting Gaussian function in y, over the average
   of the best fitting Gaussian functions in x and y. The limits on these
-  parameters <I>findpars.sharplo</I>, <I>findpars.sharphi</I>,
-  <I>findpars.roundlo</I>, and <I>findpars.roundhi</I>, are set to weed out
+  parameters <i>findpars.sharplo</i>, <i>findpars.sharphi</i>,
+  <i>findpars.roundlo</i>, and <i>findpars.roundhi</i>, are set to weed out
   non-astronomical objects and brightness enhancements that are elongated in
   x and y respectively.
-  <P>
+  </p>
+  <p>
   Lastly the x and y centroids of the detected objects are computed by
   estimating the x and y positions of the best fitting 1D Gaussian
   functions in x and y respectively, a rough magnitude is estimated
   by computing the ratio of the amplitude of the best fitting Gaussian at
-  the object position to <I>findpars.threshold</I> * <I>datapars.sigma</I>,
+  the object position to <i>findpars.threshold</i> * <i>datapars.sigma</i>,
   and the object is added to the output coordinate file.
-  <P>
-  <P>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. List the object detection parameters.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	da&gt; lpar findpars
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. Edit the object detection parameters.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	da&gt; findpars
-  </PRE>
-  <P>
+  </pre>
+  <p>
   3. Edit the FINDPARS parameters from within the DAOFIND task.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	da&gt; epar daofind
-  <P>
+  
   	    ... edit a few daofind parameters
-  <P>
+  
   	    ... move to the findpars parameter and type :e
-  <P>
+  
   	    ... edit the findpars parameter and type :wq
-  <P>
+  
   	    ... finish editing the daofind parameters and type :wq
-  </PRE>
-  <P>
+  </pre>
+  <p>
   4. Save the current FINDPARS parameter set in a text file fndnite1.par.
   This can also be done from inside a higher level task as in the previous
   example.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	da&gt; findpars
-  <P>
-  	    ... edit the parameters
-  <P>
-  	    ... type ":w fndnite1.par" from within epar
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  daofind
-  <P>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
-  epar,lpar,daofind,datapars
-  </UL>
-  <! EndSection:    'SEE ALSO'>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
+  	    ... edit the parameters
+  
+  	    ... type ":w fndnite1.par" from within epar
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <p>
+  daofind
+  </p>
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
+  epar,lpar,daofind,datapars
+  </p>
+  
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

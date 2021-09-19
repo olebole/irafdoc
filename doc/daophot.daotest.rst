@@ -1,132 +1,124 @@
 .. _daotest:
 
-daotest — Run basic tests on the daophot package tasks
-======================================================
+daotest: Run basic tests on the daophot package tasks
+=====================================================
 
 **Package: daophot**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   daotest -- run basic tests on the daophot package tasks
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   daotest imname
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>imname</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='imname' Line='imname'>
-  <DD>The root name of the output test images. The input test image is stored in
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>imname</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='imname' Line='imname' -->
+  <dd>The root name of the output test images. The input test image is stored in
   fits format in the DAOPHOT package test directory. If the image already exists
   DAOTEST will exit with a warning message.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>daologfile = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='daologfile' Line='daologfile = ""'>
-  <DD>The name of the output log file. By default all the output image header
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>daologfile = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='daologfile' Line='daologfile = ""' -->
+  <dd>The name of the output log file. By default all the output image header
   listings and photometry file output is logged in a file
-  called <I>"imname.log"</I>. If the log file already exists DAOTEST will
+  called <i>"imname.log"</i>. If the log file already exists DAOTEST will
   exit with a warning message.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>daoplotfile = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='daoplotfile' Line='daoplotfile = ""'>
-  <DD>The name of the output plot file. By default all the graphics output is
-  logged in a file called <I>"imname.plot"</I>. If the plot file already exists
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>daoplotfile = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='daoplotfile' Line='daoplotfile = ""' -->
+  <dd>The name of the output plot file. By default all the graphics output is
+  logged in a file called <i>"imname.plot"</i>. If the plot file already exists
   DAOTEST will exit with a warning message.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   DAOTEST is a simple script which exercises each of the major tasks in the
   DAOPHOT package in turn. At startup DAOTEST reads a small fits image stored
-  in the DAOPHOT test subdirectory and creates the image <I>imname</I> in
+  in the DAOPHOT test subdirectory and creates the image <i>imname</i> in
   the user's working directory. DAOTEST initializes the DAOPHOT package by
   returning
   all the parameters to their default state, runs each of the DAOPHOT
   tasks in non-interactive mode, spools the text output to the file
-  <I>daologfile</I>, the graphics output from the PSF task to the plot
-  metacode file <I>applotfile</I>, and the image output from PSF, SUBSTAR
-  and ADDSTAR to <I>imname.psf.1</I>, <I>imname.sub.1</I>, and <I>imname.add.1</I>
+  <i>daologfile</i>, the graphics output from the PSF task to the plot
+  metacode file <i>applotfile</i>, and the image output from PSF, SUBSTAR
+  and ADDSTAR to <i>imname.psf.1</i>, <i>imname.sub.1</i>, and <i>imname.add.1</i>
   respectively.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Check to see that all the DAOPHOT tasks are functioning correctly.
-  <PRE>
+  </p>
+  <pre>
   	da&gt; daophot
-  <P>
+  
   	... load the daophot package
-  <P>
+  
   	da&gt; daotest testim
-  <P>
+  
   	... run the test script
-  <P>
+  
   	da&gt; lprint testim.log
-  <P>
+  
   	... print the text output
-  <P>
+  
   	da&gt; gkidir testim.plot
-  <P>
+  
   	... list the contents of the plot file
-  <P>
+  
   	da&gt; gkiextract testim.plot 1-N | stdplot
-  <P>
+  
   	... send the plots to the plotter
-  <P>
+  
   	da&gt; display testim 1
-  <P>
+  
   	... display the original image
-  <P>
+  
   	da&gt; surface testim.psf.1
-  <P>
+  
   	... make a surface plot of the psf look-up table
-  <P>
+  
   	da&gt; display testim.sub.1 1
-  <P>
+  
   	... display the image with all the stars fitted by ALLSTAR
   	    subtracted out
-  <P>
+  
   	da&gt; display testim.add.1 1
-  <P>
+  
   	... display the image  containing three additional artificial
   	    stars added by the ADDSTAR routine
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Time requirements</H3>
-  <! BeginSection: 'TIME REQUIREMENTS'>
-  <UL>
-  </UL>
-  <! EndSection:   'TIME REQUIREMENTS'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Time requirements</h3>
+  <!-- BeginSection: 'TIME REQUIREMENTS' -->
+  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

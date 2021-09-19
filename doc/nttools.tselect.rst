@@ -1,27 +1,28 @@
 .. _tselect:
 
-tselect — Create a new table from selected rows of a table.
-===========================================================
+tselect: Create a new table from selected rows of a table.
+==========================================================
 
 **Package: nttools**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   tselect -- Create a new table from selected rows of an old table.
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   tselect intable outtable expr
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   This task creates a new table from a subset of rows in an input table.  
   The rows are selected on the basis of a boolean expression whose
   variables are table column names.  If, after substituting the values associated
@@ -29,38 +30,38 @@ tselect — Create a new table from selected rows of a table.
   to yes, that row is included in the output table.  Boolean operators can be used
   in the expression in either their Fortran or SPP forms.  The following boolean
   operators can be used in the expression: 
-  <P>
-  <PRE>
+  </p>
+  <pre>
   equal		.eq.  ==	not equal		.ne.  !=
   less than	.lt.  &lt;		less than or equal	.le.  &lt;=
   greater than	.gt.  &gt;		greater than or equal	.ge.  &gt;=
   or		.or.  ||	and			.and. &amp;&amp;
   negation	.not. !		pattern match		      ?=
-  </PRE>
-  <P>
+  </pre>
+  <p>
   The pattern match operator (?=) has no corresponding Fortran form.  It takes a
   string expression as its first argument and a pattern as its second argument.
-  The result is "<TT>yes</TT>" if the pattern is contained in the string expression.
+  The result is <tt>"yes"</tt> if the pattern is contained in the string expression.
   Patterns are strings which may contain meta-characters (i.e., wildcard 
   characters used in pattern matching).
   The meta-characters themselves can be matched by preceeding them with the escape
   character (\).
   The meta-characters are: 
-  <P>
-  <PRE>
+  </p>
+  <pre>
   beginning of string	^	end of string		$
   one character		?	zero or more characters	*
-  white space		#	escape character	\<BR>
+  white space		#	escape character	\<br>
   begin ignoring case	{	end ignore case		}
   begin character class	[	end character class	]
   not, in char class	^	range, in char class	-
-  </PRE>
-  <P>
+  </pre>
+  <p>
   The expression may also include arithmetic operators and functions.
   Trigonometric functions use degrees, not radians.  The following arithmetic
   operators and functions can be used in the expression:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   addition		+	subtraction		-
   multiplication		*	division		/
   negation		-	exponentiation		**
@@ -75,8 +76,8 @@ tselect — Create a new table from selected rows of a table.
   row number		row()	maximum			max(x,y)
   nearest integer		nint(x)	convert to integer	int(x)
   convert to real		real(x) convert to string	str(x)
-  </PRE>
-  <P>
+  </pre>
+  <p>
   The row number function returns an integer value corresponding to the
   row number in the table.  The date difference function returns a real
   value corresponding to the Julian date of the first argument minus the
@@ -84,7 +85,8 @@ tselect — Create a new table from selected rows of a table.
   must be in CDBS date format:  i.e., character strings of the form
   YYYYMMDD:HHMMSSCC.  Any field after the colon is optional.  The last
   date field (CC) is hundreths of a second.
-  <P>
+  </p>
+  <p>
   One concept in most databases and in STSDAS tables is the concept of a
   null value: a value which indicates that the element is unknown or
   non-existent.  An element in an STSDAS table is null if it is INDEF in a
@@ -101,90 +103,89 @@ tselect — Create a new table from selected rows of a table.
   to true and the other evaluates to unknown.  It also sometimes returns
   nonintuitive results, as when checking that a column is not equal to
   INDEF.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>intable [file name template]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='intable' Line='intable [file name template]'>
-  <DD>Table(s) from which rows are copied. If input is redirected, this
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>intable [file name template]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='intable' Line='intable [file name template]' -->
+  <dd>Table(s) from which rows are copied. If input is redirected, this
   parameter will ignored and input will be read from STDIN instead.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>outtable [file name template]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable [file name template]'>
-  <DD>The new table(s) containing the copied rows.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>outtable [file name template]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable [file name template]' -->
+  <dd>The new table(s) containing the copied rows.
   If more than one input table was used, then the number of output 
   tables must equal the number of input tables.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>expr [string]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='expr' Line='expr [string]'>
-  <DD>The boolean expression which determines which rows are copied to the new
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>expr [string]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='expr' Line='expr [string]' -->
+  <dd>The boolean expression which determines which rows are copied to the new
   table.  The expression may be placed in a list file and the name of the file
-  passed to this parameter (preceded by the "<TT>@</TT>" character).
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  passed to this parameter (preceded by the <tt>"@"</tt> character).
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Extract all binary stars brighter than fifth magnitude from a catalog:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   tt&gt; tselect starcat.tab binary.tab "binary &amp;&amp; mag &lt;= 5."
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. Create a new set of spectra where all measurements with errors greater
   than ten percent are excluded. Use file name editing to create new tables
-  with the extension "<TT>.tbl</TT>" instead of "<TT>.tab</TT>":
-  <P>
-  <PRE>
+  with the extension <tt>".tbl"</tt> instead of <tt>".tab"</tt>:
+  </p>
+  <pre>
   tt&gt; tselect  *.tab  *.%tab%tbl%  "ERROR / (FLUX + .001) &lt; .1"
-  </PRE>
-  <P>
+  </pre>
+  <p>
   3. Create a table of engineering parameters whose names begin with a digit:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   tt&gt; tselect datalog.tab sublog.tab "name ?= '^[0-9]'"
-  </PRE>
-  <P>
+  </pre>
+  <p>
   4. Return all observations in a schedule for the day of Dec 31, 1989:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   tt&gt; tselect schedule.tab week.tab "abs(delta(date,'19891231:12'))&lt;.5"
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <p>
   Column names must be set off from operators by blanks in the
   expression so that they can be correctly parsed by the expression
   evaluator.  Expressions involving nulls may evaluate incorrectly, see
   above for a discussion.
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>References</H3>
-  <! BeginSection: 'REFERENCES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'BUGS' -->
+  <h3>References</h3>
+  <!-- BeginSection: 'REFERENCES' -->
+  <p>
   This task was written by Bernie Simon.
-  </UL>
-  <! EndSection:   'REFERENCES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'REFERENCES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   tproject, tjoin, tproduct
-  <P>
-  Type "<TT>help tables opt=sys</TT>" for a higher-level description of the 'tables' 
+  </p>
+  <p>
+  Type <tt>"help tables opt=sys"</tt> for a higher-level description of the 'tables' 
   package.
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

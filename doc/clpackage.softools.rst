@@ -1,12 +1,11 @@
-softools — Software tools package
-=================================
+softools: Software tools package
+================================
 
 .. toctree:: :maxdepth: 1
 
    softools.generic
    softools.hdbexamine
    softools.lroff
-   softools.mkapropos
    softools.mkhelpdb
    softools.mkmanpage
    softools.mkpkg
@@ -17,3 +16,4 @@ softools — Software tools package
    softools.rtar
    softools.wtar
    softools.xc
+   softools.xyacc

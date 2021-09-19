@@ -1,392 +1,397 @@
 .. _autoidentify:
 
-autoidentify — Automatically identify lines and fit dispersion
-==============================================================
+autoidentify: Automatically identify lines and fit dispersion
+=============================================================
 
 **Package: onedspec**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   autoidentify -- Automatically identify lines and fit dispersion
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Summary</H3>
-  <! BeginSection: 'SUMMARY'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Summary</h3>
+  <!-- BeginSection: 'SUMMARY' -->
+  <p>
   Spectral lines are automatically identified from a list of coordinates
   by pattern matching.  The identified lines are then used to fit a
   dispersion function which is written to a database for later use
   in dispersion calibration.  After a solution is found the identified
   lines and dispersion function may be examined interactively.
-  </UL>
-  <! EndSection:   'SUMMARY'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'SUMMARY' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   autoidentify images crval cdelt
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>images</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
-  <DD>List of images containing one dimensional spectra in which to identify
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>images</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
+  <dd>List of images containing one dimensional spectra in which to identify
   spectral lines and fit dispersion functions.  For two and three dimensional
   spectral and spatial data one may use an image section to select a one
-  dimensional spectral vector or use the <I>section</I> parameter.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>crval, cdelt</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='crval' Line='crval, cdelt'>
-  <DD>These parameters specify an approximate coordinate value and coordinate
+  dimensional spectral vector or use the <i>section</i> parameter.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>crval, cdelt</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='crval' Line='crval, cdelt' -->
+  <dd>These parameters specify an approximate coordinate value and coordinate
   interval per pixel.  They may be specified as numerical values, INDEF, or
   image header keyword names whose values are to be used.  The coordinate
   reference value is for the pixel specified by the parameter
-  <I>aidpars.crpix</I>.  The default reference pixel is INDEF which means the
+  <i>aidpars.crpix</i>.  The default reference pixel is INDEF which means the
   middle of the spectrum.  By default only the magnitude of the coordinate
   interval is used and the search will include both increasing and decreasing
   coordinate values with increasing pixel values.  If one or both of these
   parameters are specified as INDEF the search for a solution will be slower
   and more likely to fail.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>coordlist = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='coordlist' Line='coordlist = ""'>
-  <DD>Coordinate list consisting of an list of spectral line coordinates.
-  A comment line of the form "<TT># units &lt;units&gt;</TT>", where &lt;units&gt; is one of the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>coordlist = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='coordlist' Line='coordlist = ""' -->
+  <dd>Coordinate list consisting of an list of spectral line coordinates.
+  A comment line of the form <tt>"# units &lt;units&gt;"</tt>, where &lt;units&gt; is one of the
   understood units names, defines the units of the coordinate list.  If no units
   are specified then Angstroms are assumed.
   The line list is used for both the final identifications and for the set of
   lines to use in the automatic search.  A restricted search list may be
-  specified with the parameter <I>aidpars.reflist</I>.  The line list may
-  contain a comment line of the form "<TT># Spectrum &lt;name&gt;</TT>", where &lt;name&gt; is a
+  specified with the parameter <i>aidpars.reflist</i>.  The line list may
+  contain a comment line of the form <tt>"# Spectrum &lt;name&gt;"</tt>, where &lt;name&gt; is a
   filename containing a reference spectrum.  The reference spectrum will be
   used in selecting the strong lines for the automatic search.  A reference
-  spectrum may also be specified with the parameter <I>aidpars.refspec</I>.
-  <P>
-  Some standard line lists are available in the directory "<TT>linelists$</TT>".
-  See the help topic <I>linelists</I> for the available line lists.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>units = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='units' Line='units = ""'>
-  <DD>The units to use if no database entry exists.  The units are specified as
+  spectrum may also be specified with the parameter <i>aidpars.refspec</i>.
+  Some standard line lists are available in the directory <tt>"linelists$"</tt>.
+  See the help topic <i>linelists</i> for the available line lists.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>units = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='units' Line='units = ""' -->
+  <dd>The units to use if no database entry exists.  The units are specified as
   described in
-  <P>
-  <PRE>
+  <pre>
       cl&gt; help onedspec.package section=units
-  </PRE>
-  <P>
+  </pre>
   If no units are specified and a coordinate list is used then the units of
   the coordinate list are selected.  If a database entry exists then the
   units defined there override both this parameter and the coordinate list.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>interactive = yes (no|yes|NO|YES)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes (no|yes|NO|YES)'>
-  <DD>After automatically identifying the spectral lines and dispersion function
-  review and modify the solution interactively?  If "<TT>yes</TT>" a query is given
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>interactive = yes (no|yes|NO|YES)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes (no|yes|NO|YES)' -->
+  <dd>After automatically identifying the spectral lines and dispersion function
+  review and modify the solution interactively?  If <tt>"yes"</tt> a query is given
   for each spectrum providing the choice of interactive review.  The
-  query may be turned off during execution.  If "<TT>YES</TT>" the interactive review
+  query may be turned off during execution.  If <tt>"YES"</tt> the interactive review
   is entered automatically without a query.  The interactive, graphical
-  review is the same as the task <B>identify</B> with a few restriction.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>aidpars = "<TT></TT>" (parameter set)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='aidpars' Line='aidpars = "" (parameter set)'>
-  <DD>Parameter set for the automatic line identification algorithm.  The
-  parameters are described in the help topic <B>aidpars</B>.
-  </DD>
-  </DL>
-  <P>
+  review is the same as the task <b>identify</b> with a few restriction.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>aidpars = <tt>""</tt> (parameter set)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='aidpars' Line='aidpars = "" (parameter set)' -->
+  <dd>Parameter set for the automatic line identification algorithm.  The
+  parameters are described in the help topic <b>aidpars</b>.
+  </dd>
+  </dl>
+  <p>
   For two and three dimensional spectral images the following parameters are
   used to select a one dimensional spectrum.
-  <DL>
-  <DT><B>section = "<TT>middle line</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='section' Line='section = "middle line"'>
-  <DD>If an image is not one dimensional or specified as a one dimensional image
+  </p>
+  <dl>
+  <dt><b>section = <tt>"middle line"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='section' Line='section = "middle line"' -->
+  <dd>If an image is not one dimensional or specified as a one dimensional image
   section then the image section given by this parameter is used.  The
   section defines a one dimensional spectrum.  The dispersion direction is
   derived from the vector direction.
-  <P>
   The section parameter may be specified directly as an image section or
   in one of the following forms
-  <P>
-  <PRE>
+  <pre>
   line|column|x|y|z first|middle|last|# [first|middle|last|#]]
   first|middle|last|# [first|middle|last|#] line|column|x|y|z
-  </PRE>
-  <P>
+  </pre>
   where each field can be one of the strings separated by | except for #
   which is an integer number.  The field in [] is a second designator which
   is used with three dimensional data.  Abbreviations are allowed though
-  beware that <TT>'l'</TT> is not a sufficient abbreviation.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>nsum = "<TT>1</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='nsum' Line='nsum = "1"'>
-  <DD>Number of lines, columns, or bands across the designated dispersion axis to
+  beware that <tt>'l'</tt> is not a sufficient abbreviation.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>nsum = <tt>"1"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='nsum' Line='nsum = "1"' -->
+  <dd>Number of lines, columns, or bands across the designated dispersion axis to
   be summed when the image is a two or three dimensional image.
   It does not apply to multispec format spectra.  If the image is three
   dimensional an optional second number can be specified for the higher
   dimensional axis  (the first number applies to the lower axis number and
   the second to the higher axis number).  If a second number is not specified
   the first number is used for both axes.
-  </DD>
-  </DL>
-  <P>
+  </dd>
+  </dl>
+  <p>
   The following parameters are used in finding spectral lines.
-  <DL>
-  <DT><B>ftype = "<TT>emission</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='ftype' Line='ftype = "emission"'>
-  <DD>Type of spectral lines to be identified.  The possibly abbreviated choices are
-  "<TT>emission</TT>" and "<TT>absorption</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>fwidth = 4.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='fwidth' Line='fwidth = 4.'>
-  <DD>Full-width at the base (in pixels) of the spectral lines to be identified.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>cradius = 5.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='cradius' Line='cradius = 5.'>
-  <DD>The maximum distance, in pixels, allowed between a line position
+  </p>
+  <dl>
+  <dt><b>ftype = <tt>"emission"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='ftype' Line='ftype = "emission"' -->
+  <dd>Type of spectral lines to be identified.  The possibly abbreviated choices are
+  <tt>"emission"</tt> and <tt>"absorption"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>fwidth = 4.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='fwidth' Line='fwidth = 4.' -->
+  <dd>Full-width at the base (in pixels) of the spectral lines to be identified.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>cradius = 5.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='cradius' Line='cradius = 5.' -->
+  <dd>The maximum distance, in pixels, allowed between a line position
   and the initial estimate when defining a new line.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>threshold = 0.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 0.'>
-  <DD>In order for a line center to be determined the range of pixel intensities
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>threshold = 0.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 0.' -->
+  <dd>In order for a line center to be determined the range of pixel intensities
   around the line must exceed this threshold.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>minsep = 2.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='minsep' Line='minsep = 2.'>
-  <DD>The minimum separation, in pixels, allowed between line positions
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>minsep = 2.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='minsep' Line='minsep = 2.' -->
+  <dd>The minimum separation, in pixels, allowed between line positions
   when defining a new line.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>match = -3.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='match' Line='match = -3.'>
-  <DD>The maximum difference for a match between the line coordinate derived from
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>match = -3.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='match' Line='match = -3.' -->
+  <dd>The maximum difference for a match between the line coordinate derived from
   the dispersion function and a coordinate in the coordinate list.  Positive
   values are in user coordinate units and negative values are in units of
   pixels.
-  </DD>
-  </DL>
-  <P>
+  </dd>
+  </dl>
+  <p>
   The following parameters are used to fit a dispersion function to the user
-  coordinates.  The <B>icfit</B> routines are used and further descriptions
+  coordinates.  The <b>icfit</b> routines are used and further descriptions
   about these parameters may be found under that topic.
-  <DL>
-  <DT><B>function = "<TT>spline3</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='function' Line='function = "spline3"'>
-  <DD>The function to be fit to user coordinates as a function of the pixel
-  coordinates.  The choices are "<TT>chebyshev</TT>", "<TT>legendre</TT>", "<TT>spline1</TT>", or "<TT>spline3</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>order = 1</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='order' Line='order = 1'>
-  <DD>Order of the fitting function.  The order is the number of polynomial
+  </p>
+  <dl>
+  <dt><b>function = <tt>"spline3"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "spline3"' -->
+  <dd>The function to be fit to user coordinates as a function of the pixel
+  coordinates.  The choices are <tt>"chebyshev"</tt>, <tt>"legendre"</tt>, <tt>"spline1"</tt>, or <tt>"spline3"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>order = 1</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='order' Line='order = 1' -->
+  <dd>Order of the fitting function.  The order is the number of polynomial
   terms (coefficients) or the number of spline pieces.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>sample = "<TT>*</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"'>
-  <DD>Sample regions for fitting specified in pixel coordinates.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>niterate = 10</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='niterate' Line='niterate = 10'>
-  <DD>Number of rejection iterations.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>low_reject = 3.0, high_reject = 3.0</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='low_reject' Line='low_reject = 3.0, high_reject = 3.0'>
-  <DD>Lower and upper residual rejection in terms of the RMS of the fit.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>grow = 0</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='grow' Line='grow = 0'>
-  <DD>Distance from a rejected point in which additional points are automatically
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>sample = <tt>"*"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"' -->
+  <dd>Sample regions for fitting specified in pixel coordinates.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>niterate = 10</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='niterate' Line='niterate = 10' -->
+  <dd>Number of rejection iterations.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>low_reject = 3.0, high_reject = 3.0</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='low_reject' Line='low_reject = 3.0, high_reject = 3.0' -->
+  <dd>Lower and upper residual rejection in terms of the RMS of the fit.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>grow = 0</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='grow' Line='grow = 0' -->
+  <dd>Distance from a rejected point in which additional points are automatically
   rejected regardless of their residuals.
-  </DD>
-  </DL>
-  <P>
+  </dd>
+  </dl>
+  <p>
   The following parameters control the input and output.
-  <DL>
-  <DT><B>dbwrite = "<TT>yes</TT>"  (no|yes|NO|YES)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='dbwrite' Line='dbwrite = "yes"  (no|yes|NO|YES)'>
-  <DD>Automatically write or update the database with the line identifications
-  and dispersion function?  If "<TT>no</TT>" or "<TT>NO</TT>" then there is no database
-  output.  If "<TT>YES</TT>" the results are automatically written to the database.
-  If "<TT>yes</TT>" a query is made allowing the user to reply with "<TT>no</TT>", "<TT>yes</TT>", "<TT>NO</TT>"
-  or "<TT>YES</TT>".  The negative responses do not write to the database and the
+  </p>
+  <dl>
+  <dt><b>dbwrite = <tt>"yes"</tt>  (no|yes|NO|YES)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='dbwrite' Line='dbwrite = "yes"  (no|yes|NO|YES)' -->
+  <dd>Automatically write or update the database with the line identifications
+  and dispersion function?  If <tt>"no"</tt> or <tt>"NO"</tt> then there is no database
+  output.  If <tt>"YES"</tt> the results are automatically written to the database.
+  If <tt>"yes"</tt> a query is made allowing the user to reply with <tt>"no"</tt>, <tt>"yes"</tt>, <tt>"NO"</tt>
+  or <tt>"YES"</tt>.  The negative responses do not write to the database and the
   affirmative ones do write to the database.  The upper-case responses
   suppress any further queries for any remaining spectra.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>overwrite = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='overwrite' Line='overwrite = yes'>
-  <DD>Overwrite previous solutions in the database?  If there is a previous
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>overwrite = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='overwrite' Line='overwrite = yes' -->
+  <dd>Overwrite previous solutions in the database?  If there is a previous
   solution for the spectrum being identified this parameter selects whether
-  to skip the spectrum ("<TT>no</TT>") or find a new solution ("<TT>yes</TT>").  In the later
+  to skip the spectrum (<tt>"no"</tt>) or find a new solution (<tt>"yes"</tt>).  In the later
   case saving the solution to the database will overwrite the previous
   solution.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>database = "<TT>database</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"'>
-  <DD>Database for reading and writing the line identifications and
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>database = <tt>"database"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"' -->
+  <dd>Database for reading and writing the line identifications and
   dispersion functions.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verbose = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
-  <DD>Print results of the identification on the standard output?
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>logfile = "<TT>logfile</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "logfile"'>
-  <DD>Filename for recording log information about the identifications.
-  The null string, "<TT></TT>", may be specified to skip recording the log information.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>plotfile = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='plotfile' Line='plotfile = ""'>
-  <DD>Filename for recording log plot information as IRAF metacode.  A
-  null string, "<TT></TT>", may be specified to skip recording the plot information.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verbose = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
+  <dd>Print results of the identification on the standard output?
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>logfile = <tt>"logfile"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "logfile"' -->
+  <dd>Filename for recording log information about the identifications.
+  The null string, <tt>""</tt>, may be specified to skip recording the log information.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>plotfile = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='plotfile' Line='plotfile = ""' -->
+  <dd>Filename for recording log plot information as IRAF metacode.  A
+  null string, <tt>""</tt>, may be specified to skip recording the plot information.
   (Plot output is currently not implemented.)
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>graphics = "<TT>stdgraph</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"'>
-  <DD>Graphics device for the interactive review.  The default is the standard
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>graphics = <tt>"stdgraph"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
+  <dd>Graphics device for the interactive review.  The default is the standard
   graphics device which is generally a graphics terminal.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>cursor = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""'>
-  <DD>Cursor input file for the interactive review.  If a cursor file is not
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>cursor = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
+  <dd>Cursor input file for the interactive review.  If a cursor file is not
   given then the standard graphics cursor is read.
-  </DD>
-  </DL>
-  <P>
-  <DL>
-  <DT><B>query</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='query' Line='query'>
-  <DD>Parameter used by the program to query the user.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <B>Autoidentify</B> automatically identifies spectral lines from a list of
-  spectral line coordinates (<I>coordlist</I>) and determines a dispersion
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>query</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='query' Line='query' -->
+  <dd>Parameter used by the program to query the user.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  <b>Autoidentify</b> automatically identifies spectral lines from a list of
+  spectral line coordinates (<i>coordlist</i>) and determines a dispersion
   function.  The identified lines and the dispersion function may be reviewed
-  interactively (<I>interactive</I>) and the final results are recorded in a
-  <I>database</I>.
-  <P>
-  Each image in the input list (<I>images</I>) is considered in turn.  If the
+  interactively (<i>interactive</i>) and the final results are recorded in a
+  <i>database</i>.
+  </p>
+  <p>
+  Each image in the input list (<i>images</i>) is considered in turn.  If the
   image is not one dimensional or a one dimensional section of an image then
-  the parameter <I>section</I> is used to select a one dimensional
+  the parameter <i>section</i> is used to select a one dimensional
   spectrum.  It defines the dispersion direction and central spatial
   coordinate(s).  If the image is not one dimensional or a set of one
-  dimensional spectra n multispec format then the <I>nsum</I> parameter
+  dimensional spectra n multispec format then the <i>nsum</i> parameter
   selects the number of neighboring lines, columns, and bands to sum.
-  <P>
+  </p>
+  <p>
   This task is not intended to be used on all spectra in an image since in
   most cases the dispersion functions will be similar though possibly with a
   zero point shift.  Once one spectrum is identified the others may be
-  reidentified with <B>reidentify</B>.
-  <P>
+  reidentified with <b>reidentify</b>.
+  </p>
+  <p>
   The coordinate list of spectral lines often covers a much larger dispersion
   range than the spectra being identified.  This is true of the standard line
-  lists available in the "<TT>linelists$</TT>" directory.  While the algorithm for
+  lists available in the <tt>"linelists$"</tt> directory.  While the algorithm for
   identifying the lines will often succeed with a large line list it is not
   guaranteed nor will it find the solution quickly without additional
   information.  Thus it is highly desirable to provide the algorithm with
   approximate information about the spectra.  Generally this information is
   known by the observer or recorded in the image header.
-  <P>
+  </p>
+  <p>
   As implied in the previous paragraph, one may use a
   limited coordinate line list that matches the dispersion coverage of the
   spectra reasonably well (say within 100% of the dispersion range).
-  This may be done with the <I>coordlist</I> parameter or a second
+  This may be done with the <i>coordlist</i> parameter or a second
   coordinate list used only for the automatic search may be specified
-  with the parameter <I>aidpars.reflist</I>.  This allows using a smaller
+  with the parameter <i>aidpars.reflist</i>.  This allows using a smaller
   culled list of lines for finding the matching patterns and a large list
   with weaker lines for the final dispersion function fit.
-  <P>
-  The alternative to a limited list is to use the parameters <I>crval</I> and
-  <I>cdelt</I> to specify the approximate coordinate range and dispersion
+  </p>
+  <p>
+  The alternative to a limited list is to use the parameters <i>crval</i> and
+  <i>cdelt</i> to specify the approximate coordinate range and dispersion
   interval per pixel.  These parameters may be given explicitly or by
-  specifying image header keywords.  The pixel to which <I>crval</I> refers is
-  specified by the parameter <I>aidpars.crpix</I>.  By default this is INDEF
+  specifying image header keywords.  The pixel to which <i>crval</i> refers is
+  specified by the parameter <i>aidpars.crpix</i>.  By default this is INDEF
   which means use the center of the spectrum.  The direction in which the
   dispersion coordinates increase relative to the pixel coordinates may be
-  specified by the <I>aidpars.cddir</I> parameter.  The default is "<TT>unknown</TT>"
+  specified by the <i>aidpars.cddir</i> parameter.  The default is <tt>"unknown"</tt>
   to search in either direction.
-  <P>
+  </p>
+  <p>
   The algorithm used to automatically identify the spectral lines and
   find a dispersion function is described under the help topic
-  <B>aidpars</B>.  This topic also describes the various algorithm
+  <b>aidpars</b>.  This topic also describes the various algorithm
   parameters.  The default parameters are adequate for most data.
-  <P>
+  </p>
+  <p>
   The characteristics of the spectral lines to be found and identified are
-  set by several parameters.  The type of spectral lines, whether "<TT>emission</TT>"
-  or "<TT>absorption</TT>", is set by the parameter <I>ftype</I>.  For arc-line
-  calibration spectra this parameter is set to "<TT>emission</TT>".  The full-width
+  set by several parameters.  The type of spectral lines, whether <tt>"emission"</tt>
+  or <tt>"absorption"</tt>, is set by the parameter <i>ftype</i>.  For arc-line
+  calibration spectra this parameter is set to <tt>"emission"</tt>.  The full-width
   (in pixels) at the base of the spectral lines is set by the parameter
-  <I>fwidth</I>.  This is used by the centering algorithm to define the extent
-  of the line profile to be centered.  The <I>threshold</I> parameter defines
+  <i>fwidth</i>.  This is used by the centering algorithm to define the extent
+  of the line profile to be centered.  The <i>threshold</i> parameter defines
   a minimum contrast (difference) between a line peak and the neighboring
   continuum.  This allows noise peaks to be ignored.  Finding the center of a
   possible line begins with an initial position estimate.  This may be an
   interactive cursor position or the expected position from the coordinate
   line list.  The centering algorithm then searches for a line of the
   specified type, width, and threshold within a given distance, specified by
-  the <I>cradius</I> parameter.  These parameters and the centering algorithm
-  are described by the help topic <B>center1d</B>.
-  <P>
+  the <i>cradius</i> parameter.  These parameters and the centering algorithm
+  are described by the help topic <b>center1d</b>.
+  </p>
+  <p>
   To avoid finding the same line multiple times, say when there are two lines
   in the line list which are blended into a single in the observation, the
-  <I>minsep</I> parameter rejects any new line position found within that
+  <i>minsep</i> parameter rejects any new line position found within that
   distance of a previously defined line.
-  <P>
+  </p>
+  <p>
   The automatic identification of lines includes matching a line position in
   the spectrum against the list of coordinates in the coordinate line list.
-  The <I>match</I> parameter defines how close the measured line position must
+  The <i>match</i> parameter defines how close the measured line position must
   be to a coordinate in the line list to be considered a possible
   identification.  This parameter may be specified either in user coordinate
   units (those used in the line list) by using a positive value or in pixels
@@ -394,22 +399,24 @@ autoidentify — Automatically identify lines and fit dispersion
   converted to user coordinates based on a dispersion function and in the
   latter the line list coordinate is converted to pixels using the inverse of
   the dispersion function.
-  <P>
+  </p>
+  <p>
   The dispersion function is determined by fitting a set of pixel positions
   and user coordinate identifications by least squares to a specified
-  function type.  The fitting requires a function type, <I>function</I>, and
-  the order (number of coefficients or spline pieces), <I>order</I>.
-  In addition the fitting can be limited to specified regions, <I>sample</I>,
+  function type.  The fitting requires a function type, <i>function</i>, and
+  the order (number of coefficients or spline pieces), <i>order</i>.
+  In addition the fitting can be limited to specified regions, <i>sample</i>,
   and provide for the rejection of points with large residuals.  These
   parameters are set in advance and used during the automatic dispersion
   function determination.  Later the fitting may be modified interactively.
-  For additional discussion of these parameters see <B>icfit</B>.
-  <P>
+  For additional discussion of these parameters see <b>icfit</b>.
+  </p>
+  <p>
   The output of this program consists of log information, plot information,
   and the line identifications and dispersion function.  The log information
-  may be appended to the file specified by the <I>logfile</I> parameter
+  may be appended to the file specified by the <i>logfile</i> parameter
   and printed to the standard output (normally the terminal) by
-  setting the <I>verbose</I> parameter to yes.  This information consists
+  setting the <i>verbose</i> parameter to yes.  This information consists
   of a banner line, a line of column labels, and results for each spectrum.
   For each spectrum the spectrum name, the number of spectral lines found,
   the dispersion coordinate at the middle of the spectrum, the dispersion
@@ -417,78 +424,78 @@ autoidentify — Automatically identify lines and fit dispersion
   the lines used in the dispersion function fit is recorded.  The units of
   the RMS are those of the user (line list) coordinates.  If a solution is
   not found the spectrum name and a message is printed.
-  <P>
+  </p>
+  <p>
   The line identifications and dispersion function are written to the
-  specified <I>database</I>.  The current format of the database is described
-  in the help for <I>identify</I>.  If a database entry is already present for
-  a spectrum and the parameter <I>overwrite</I> is "<TT>no</TT>" then the spectrum is
+  specified <i>database</i>.  The current format of the database is described
+  in the help for <i>identify</i>.  If a database entry is already present for
+  a spectrum and the parameter <i>overwrite</i> is <tt>"no"</tt> then the spectrum is
   skipped and a message is printed to the standard output.   After a solution
   is found and after any interactive review (see below) the results may be
-  written to the database.  The <I>dbwrite</I> parameter may be specified as
-  "<TT>no</TT>" or "<TT>NO</TT>" to disable writing to the database (and no queries will be
-  made), as "<TT>yes</TT>" to query whether to or not to write to the database, or as
-  "<TT>YES</TT>" to automatically write the results to the database with no queries.
-  When a query is given the responses may be "<TT>no</TT>" or "<TT>yes</TT>" for an individual
-  spectrum or "<TT>NO</TT>" or "<TT>YES</TT>" for all remaining spectra without further
+  written to the database.  The <i>dbwrite</i> parameter may be specified as
+  <tt>"no"</tt> or <tt>"NO"</tt> to disable writing to the database (and no queries will be
+  made), as <tt>"yes"</tt> to query whether to or not to write to the database, or as
+  <tt>"YES"</tt> to automatically write the results to the database with no queries.
+  When a query is given the responses may be <tt>"no"</tt> or <tt>"yes"</tt> for an individual
+  spectrum or <tt>"NO"</tt> or <tt>"YES"</tt> for all remaining spectra without further
   queries.
-  <P>
+  </p>
+  <p>
   After a solution is found one may review and modify the line
   identifications and dispersion function using the graphical functions of
-  the <B>identify</B> task (with the exception that a new spectrum may not be
-  selected).  The review mode is selected with the <I>interactive</I>
-  parameter.  If the parameter is "<TT>no</TT>" or "<TT>NO</TT>" then no interactive review
+  the <b>identify</b> task (with the exception that a new spectrum may not be
+  selected).  The review mode is selected with the <i>interactive</i>
+  parameter.  If the parameter is <tt>"no"</tt> or <tt>"NO"</tt> then no interactive review
   will be provided and there will be no queries either.  If the parameter is
-  "<TT>YES</TT>" then the graphical review mode will be entered after each solution is
-  found without any query.  If the parameter is "<TT>yes</TT>" then a query will be
+  <tt>"YES"</tt> then the graphical review mode will be entered after each solution is
+  found without any query.  If the parameter is <tt>"yes"</tt> then a query will be
   made after a solution is found and after any log information is written to
-  the terminal.  One may respond to the query with "<TT>no</TT>" or "<TT>yes</TT>" for an
-  individual spectrum or "<TT>NO</TT>" or "<TT>YES</TT>" for all remaining spectra without
-  further queries.  For "<TT>yes</TT>" or "<TT>YES</TT>" the <I>identify</I> review  mode is
-  entered.  To exit type <TT>'q'</TT>.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  the terminal.  One may respond to the query with <tt>"no"</tt> or <tt>"yes"</tt> for an
+  individual spectrum or <tt>"NO"</tt> or <tt>"YES"</tt> for all remaining spectra without
+  further queries.  For <tt>"yes"</tt> or <tt>"YES"</tt> the <i>identify</i> review  mode is
+  entered.  To exit type <tt>'q'</tt>.
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1.  The following example finds a dispersion solution for the middle column
   of a long slit spectrum of a He-Ne-Ar arc spectrum using all the
   interactive options.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; autoid arc0022 6000 6 coord=linelists$henear.dat sec="mid col"
       AUTOIDENITFY: NOAO/IRAF IRAFX valdes@puppis Thu 15:50:31 25-Jan-96
         Spectrum                # Found   Midpoint Dispersion        RMS
         arc0022[50,*]                50      5790.       6.17      0.322
       arc0022[50,*]: Examine identifications interactively?  (yes): 
       arc0022[50,*]: Write results to database?  (yes): yes
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2.  The next example shows a non-interactive mode with no queries for
   the middle fiber of an extracted multispec image.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; autoid.coordlist="linelists$henear.dat"
       cl&gt; autoid a0003 5300 3.2 interactive- verbose- dbwrite=YES
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Revisions</H3>
-  <! BeginSection: 'REVISIONS'>
-  <UL>
-  <DL>
-  <DT><B>AUTOIDENTIFY V2.11</B></DT>
-  <! Sec='REVISIONS' Level=0 Label='AUTOIDENTIFY' Line='AUTOIDENTIFY V2.11'>
-  <DD>This task is new in this version.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'REVISIONS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Revisions</h3>
+  <!-- BeginSection: 'REVISIONS' -->
+  <dl>
+  <dt><b>AUTOIDENTIFY V2.11</b></dt>
+  <!-- Sec='REVISIONS' Level=0 Label='AUTOIDENTIFY' Line='AUTOIDENTIFY V2.11' -->
+  <dd>This task is new in this version.
+  </dd>
+  </dl>
+  <!-- EndSection:   'REVISIONS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   identify, reidentify, aidpars, linelists, center1d, icfit, gtools
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'SUMMARY' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'SUMMARY' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

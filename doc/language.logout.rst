@@ -1,53 +1,57 @@
 .. _logout:
 
-logout — Log out of the CL
-==========================
+logout: Log out of the CL
+=========================
 
 **Package: language**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   logout -- log out of the CL
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   logout
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <I>Logout</I> causes the CL to shut itself down, regardless of how many
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  <i>Logout</i> causes the CL to shut itself down, regardless of how many
   packages may currently be active.  The only way to shut the CL down without
-  killing it is to use <I>logout</I>; <I>bye</I> is not allowed to shut the
+  killing it is to use <i>logout</i>; <i>bye</i> is not allowed to shut the
   CL down, since it would be too easy to enter it by accident (and it takes
   a while to log back in).
-  <P>
+  </p>
+  <p>
   An error message will be printed if one attempts to log out of the CL while
   a device is still allocated.  The device should be deallocated and the
-  <I>logout</I> repeated, else type <I>logout</I> several times and you will
+  <i>logout</i> repeated, else type <i>logout</i> several times and you will
   be permitted to logout with the device still allocated.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Example</H3>
-  <! BeginSection: 'EXAMPLE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Example</h3>
+  <!-- BeginSection: 'EXAMPLE' -->
+  <p>
   1. Logout of the CL.
-  <P>
+  </p>
+  <p>
   	cl&gt; logo
-  </UL>
-  <! EndSection:   'EXAMPLE'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'EXAMPLE' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   deallocate, bye
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'EXAMPLE' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'EXAMPLE' 'SEE ALSO'  -->
   

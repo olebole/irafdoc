@@ -1,68 +1,69 @@
 .. _update:
 
-update — Update a task's parameters (flush to disk)
-===================================================
+update: Update a task's parameters (flush to disk)
+==================================================
 
 **Package: language**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   update -- update the parameters for a task on disk
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   update task [task ...]
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>task</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='task' Line='task'>
-  <DD>An IRAF task name.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>task</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='task' Line='task' -->
+  <dd>An IRAF task name.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   Normally when a task terminates the values of the task parameters used
   are stored for the next invocation of the task in a disk file in the
   users UPARM directory.  However if the task parameters have been
-  cached by the <I>cache</I> command, this will not be done until the
+  cached by the <i>cache</i> command, this will not be done until the
   CL terminates.  In the case of a background job, automatic updating of
-  parameters is disabled.  The <I>update</I> command is used to force the
+  parameters is disabled.  The <i>update</i> command is used to force the
   parameters for a task to be updated on disk.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Example</H3>
-  <! BeginSection: 'EXAMPLE'>
-  <UL>
-  1. Update the parameters for the <I>page</I> task.
-  <P>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Example</h3>
+  <!-- BeginSection: 'EXAMPLE' -->
+  <p>
+  1. Update the parameters for the <i>page</i> task.
+  </p>
+  <p>
   	cl&gt; update page
-  </UL>
-  <! EndSection:   'EXAMPLE'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
+  </p>
+  <!-- EndSection:   'EXAMPLE' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <p>
   The parameter set is only updated on disk if a parameter has been modified
   since the last update.
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   cache, unlearn
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLE' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLE' 'BUGS' 'SEE ALSO'  -->
   

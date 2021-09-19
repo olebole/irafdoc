@@ -1,103 +1,100 @@
 .. _sgikern:
 
-sgikern — Simple graphics interface (SGI) graphics kernel
-=========================================================
+sgikern: Simple graphics interface (SGI) graphics kernel
+========================================================
 
 **Package: plot**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   sgikern -- simple graphics interface (SGI) kernel
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   sgikern input
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
-  <DD>The list of input metacode files.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>device = "<TT>sgimc</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='device' Line='device = "sgimc"'>
-  <DD>The name of the logical or physical graphics device for which SGI metacode
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
+  <dd>The list of input metacode files.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>device = <tt>"sgimc"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "sgimc"' -->
+  <dd>The name of the logical or physical graphics device for which SGI metacode
   is to be generated.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>generic = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='generic' Line='generic = no'>
-  <DD>The remaining parameters are ignored when <B>generic</B> = yes.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>debug = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='debug' Line='debug = no'>
-  <DD>If <B>debug</B> = yes, the graphics instructions are decoded and printed
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>generic = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='generic' Line='generic = no' -->
+  <dd>The remaining parameters are ignored when <b>generic</b> = yes.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>debug = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='debug' Line='debug = no' -->
+  <dd>If <b>debug</b> = yes, the graphics instructions are decoded and printed
   during processing.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verbose = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
-  <DD>If <B>verbose</B> = yes, the elements of polylines, cell arrays, etc. will
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verbose = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
+  <dd>If <b>verbose</b> = yes, the elements of polylines, cell arrays, etc. will
   be printed in debug mode.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>gkiunits = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='gkiunits' Line='gkiunits = no'>
-  <DD>By default, coordinates are printed in NDC rather than GKI units.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  Task <I>sgikern</I> translates GKI metacode into a much simpler format and
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>gkiunits = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='gkiunits' Line='gkiunits = no' -->
+  <dd>By default, coordinates are printed in NDC rather than GKI units.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  Task <i>sgikern</i> translates GKI metacode into a much simpler format and
   then calls up a host system task to dispose of the intermediate file to a
   plotter device.  The SGI kernel can generate as output either an SGI metacode
   file, used to drive laser plotters and pen plotters, or a bitmap file, used
   to drive raster graphics devices.  Both types of files have a very simple
   format, making it straightforward to implement interfaces for new devices.
-  <P>
-  The SGI/SGK <B>metacode format</B> is a sequence of 16 bit integer values encoded
+  </p>
+  <p>
+  The SGI/SGK <b>metacode format</b> is a sequence of 16 bit integer values encoded
   in the machine independent MII format (twos complement, most significant byte
   first).  The SGI kernel reduces all IRAF plotting instructions to only four
   SGK metacode instructions, i.e.:
-  <P>
-  <P>
-  <PRE>
-  <PRE>
+  </p>
+  <pre>
   	opcode  arguments                description
-  <P>
+  
   	   1      0    0		start a new frame
   	   2      X    Y                move to (x,y)
   	   3      X    Y                draw to (x,y)
   	   4      W    0                set line width (&gt;= 1)
-  </PRE>
-  </PRE>
-  <P>
-  <P>
+  </pre>
+  <p>
   All coordinates are specified in GKI NDC units in the range 0-32767.  Note that
   all metacode instructions are the same length.  All text generation, line type
   emulation, mark drawing, etc., is done in the higher level IRAF software.
   The metacode file is a standard IRAF random access (non record structured)
   binary file.
-  <P>
-  The <B>bitmap format</B> written by the SGK is even simpler than the metacode
+  </p>
+  <p>
+  The <b>bitmap format</b> written by the SGK is even simpler than the metacode
   format.  Output consists either of a single binary raster file containing one
   or more bitmaps with no embedded header information, or a set of binary files
   with the same root name and the extensions .1, .2, etc., each of which contains
@@ -105,11 +102,11 @@ sgikern — Simple graphics interface (SGI) graphics kernel
   graphcap entry for the device and may be passed to the host dispose task on
   the foreign task command line if desired.  Page offsets may also be passed on
   the command line, e.g., to position the plot on the plotter page.
-  <P>
+  </p>
+  <p>
   The following graphcap fields apply to both metacode and bitmap devices.
-  <P>
-  <PRE>
-  <PRE>
+  </p>
+  <pre>
   	DD	host command to dispose of metacode file ($F)
   	DB	have the kernel print debug messages during execution
   	RM	boolean; if present, SGK will delete metacode file
@@ -117,13 +114,11 @@ sgikern — Simple graphics interface (SGI) graphics kernel
   	NF	store each frame in a new file (one frame/file)
   	RO	rotate plot (swap x and y)
   	YF	y-flip plot (flip y axis) (done after rotate)
-  </PRE>
-  </PRE>
-  <P>
+  </pre>
+  <p>
   The following additional fields are defined for bitmap devices.
-  <P>
-  <PRE>
-  <PRE>
+  </p>
+  <pre>
   	BI	boolean; presence indicates a bitmapped or raster device
   	LO	width in device pixels of a line of size 1.0
   	LS	difference in device pixels between line sizes
@@ -135,9 +130,8 @@ sgikern — Simple graphics interface (SGI) graphics kernel
   	BF	bit-flip each byte in bitmap (easier here than later)
   	BS	byte swap the bitmap when output (swap every two bytes)
   	WS	word swap the bitmap when output (swap every four bytes)
-  </PRE>
-  </PRE>
-  <P>
+  </pre>
+  <p>
   The multiframe count (MF) limits the number of frames per job, where a job
   refers to the dispose command submitted to the host to process the frames.
   If the new file flag (NF) is absent, all frames will be stored in the same
@@ -149,21 +143,23 @@ sgikern — Simple graphics interface (SGI) graphics kernel
   to keep the OS command to a reasonable length and to permit the use of host
   file templates to perform operate upon the full set of files (and to avoid
   having to choose between spaces and commas to delimit the filenames).
-  For example, if MF=8 and NF=yes, then "<TT>$F.[1-8]</TT>" will match the file set
-  on a UNIX host.  The template "<TT>$F.*</TT>" is less precise but would also work.
-  <P>
+  For example, if MF=8 and NF=yes, then <tt>"$F.[1-8]"</tt> will match the file set
+  on a UNIX host.  The template <tt>"$F.*"</tt> is less precise but would also work.
+  </p>
+  <p>
   The values of graphcap device capability fields may also be substituted
   symbolically when building up the dispose command.  If the sequence
-  $(<I>CC</I>) is encountered in the dispose command template, the string
-  value of the capability <I>CC</I> will be substituted.  For example, given
-  the sequence "<TT>-w $(xr)</TT>" and the graphcap capability entry "<TT>:xr#1024:</TT>",
-  the output sequence would be "<TT>-w 1024</TT>".  This feature is particularly
-  useful when several high level device entries include (via "<TT>tc=device</TT>")
+  $(<i>CC</i>) is encountered in the dispose command template, the string
+  value of the capability <i>CC</i> will be substituted.  For example, given
+  the sequence <tt>"-w $(xr)"</tt> and the graphcap capability entry <tt>":xr#1024:"</tt>,
+  the output sequence would be <tt>"-w 1024"</tt>.  This feature is particularly
+  useful when several high level device entries include (via <tt>"tc=device"</tt>)
   a generic device entry.  The DD string in the generic entry may substitute
   the values of device parameters defined differently in the high level
   entries; this avoids the need to duplicate an almost identical DD string
   in several device entries.
-  <P>
+  </p>
+  <p>
   The output raster will consist of PY lines each of length PX bits.  If PX is
   chosen to be a multiple of 8, there will be PX/8 bytes per line of the output
   raster.  Note that the values of PX and PY are arbitrary and should be chosen
@@ -174,7 +170,8 @@ sgikern — Simple graphics interface (SGI) graphics kernel
   each frame will occupy an integral number of SPP char units of storage in the
   output file, with the values of any extra bits at the end of the bitmap being
   undefined (a char is 16 bits on most IRAF host machines).
-  <P>
+  </p>
+  <p>
   The plot will be rasterized in a logical window XW one-bit pixels wide and YW
   pixels high.  The first YO lines of the output raster will be zero, with the
   plotting window beginning at line YO+1.  The first XO bits of each output line
@@ -185,39 +182,44 @@ sgikern — Simple graphics interface (SGI) graphics kernel
   line.  If fewer than 8 bits are used in each output byte more than XW physical
   bits of storage will be used, e.g., if NB=4, XW*2 bits of storage are required
   for a line of the plotting window.  The unused bits are set to zero.  The
-  translator can later "<TT>or</TT>" a mask into the zeroed bits, flip the data bits,
+  translator can later <tt>"or"</tt> a mask into the zeroed bits, flip the data bits,
   or perform any other bytewise operation using simple lookup table mapping
   techniques.
-  <P>
+  </p>
+  <p>
   The DD entry consists of three fields delimited by commas, i.e., the device
   name, including node name (not used at present for this kernel), the VOS
   root filename to be used to make a temporary file to contain the output (note
   that this is NOT a host filename), and lastly the command to be sent to the
   host system to dispose of the output metacode file or bitmap file to the
   plotter device.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  1. Convert the GIO/GKI metacode file "<TT>dev$mc</TT>" into an SGI format metacode file.
-  <P>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
+  1. Convert the GIO/GKI metacode file <tt>"dev$mc"</tt> into an SGI format metacode file.
+  </p>
+  <p>
       cl&gt; sgikern dev$mc device=sgimc
-  <P>
-  2. The same GIO/GKI metacode file read in the previous example ("<TT>dev$mc</TT>") can
-  be plotted on the SGI device "<TT>qms_sgi</TT>".
-  <P>
+  </p>
+  <p>
+  2. The same GIO/GKI metacode file read in the previous example (<tt>"dev$mc"</tt>) can
+  be plotted on the SGI device <tt>"qms_sgi"</tt>.
+  </p>
+  <p>
       cl&gt; sgikern dev$mc device=qms_sgi
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
-  "<TT>The IRAF Simple Graphics Interface (SGI)</TT>", August 1986
-  <BR>
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
+  <tt>"The IRAF Simple Graphics Interface (SGI)"</tt>, August 1986
+  <br>
   sgidecode, stdgraph, stdplot
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

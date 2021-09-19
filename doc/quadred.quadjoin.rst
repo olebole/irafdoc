@@ -1,80 +1,79 @@
 .. _quadjoin:
 
-quadjoin — Rejoin single amplifier images produced by quadsplit
-===============================================================
+quadjoin: Rejoin single amplifier images produced by quadsplit
+==============================================================
 
 **Package: quadred**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   quadjoin -- Split quadformat data into single amplifier images
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   quadjoin input
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
-  <DD>Root name of images to be joined.  Extensions based on the AMPLIST
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
+  <dd>Root name of images to be joined.  Extensions based on the AMPLIST
   keyword are applied to the root name.  This task does not
   allow a list of input root names.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output' Line='output = ""'>
-  <DD>Output image name.  If one is not given then the input root name is used.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>delete = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='delete' Line='delete = no'>
-  <DD>Delete subimages on completion?
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  Images in split "<TT>quadformat</TT>" (see help topic <B>quadformat</B> and
-  <B>quadsplit</B>) are rejoined into "<TT>quadformat</TT>".  The input images
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
+  <dd>Output image name.  If one is not given then the input root name is used.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>delete = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='delete' Line='delete = no' -->
+  <dd>Delete subimages on completion?
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  Images in split <tt>"quadformat"</tt> (see help topic <b>quadformat</b> and
+  <b>quadsplit</b>) are rejoined into <tt>"quadformat"</tt>.  The input images
   have a common root name and then an extension given by the amplifier
   labels in the AMPLIST keyword are added.  The output name may be specified
   or the input root name may be used.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. To join a split set of images:
-  <P>
-  <PRE>
+  </p>
+  <pre>
       qu&gt; dir quad0072*
       quad0072.11.imh     quad0072.21.imh
       quad0072.12.imh     quad0072.22.imh     
       qu&gt; quadjoin quad0072 delete+
       qu&gt; dir quad0072*
       quad0072.imh
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   quadformat, quadsplit
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

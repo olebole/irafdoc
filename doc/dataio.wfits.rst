@@ -1,41 +1,41 @@
 .. _wfits:
 
-wfits — Convert a list of IRAF images into FITS image data
-==========================================================
+wfits: Convert a list of IRAF images into FITS image data
+=========================================================
 
 **Package: dataio**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   wfits -- convert individual IRAF image files to FITS image data
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   wfits iraf_files fits_files
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>iraf_files</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='iraf_files' Line='iraf_files'>
-  <DD>The input IRAF image file(s), e.g.  "<TT>image.imh</TT>" or "<TT>*.imh</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>fits_files</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='fits_files' Line='fits_files'>
-  <DD>The output FITS files.
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>iraf_files</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='iraf_files' Line='iraf_files' -->
+  <dd>The input IRAF image file(s), e.g.  <tt>"image.imh"</tt> or <tt>"*.imh"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>fits_files</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='fits_files' Line='fits_files' -->
+  <dd>The output FITS files.
   Magnetic tape output is assumed if the first two characters of fits_files
-  are "<TT>mt</TT>", otherwise the disk output is assumed.  Tape output will begin
+  are <tt>"mt"</tt>, otherwise the disk output is assumed.  Tape output will begin
   at the file number specified in fits_files, e.g. file 5 if fits_files =
-  "<TT>mtb1600[5]</TT>", and the data in file 5 and succeeding files will be overwritten.
+  <tt>"mtb1600[5]"</tt>, and the data in file 5 and succeeding files will be overwritten.
   If no tape file number is specified in fits_files, the newtape parameter
   is queried, and tape output will begin at BOT (beginning of tape) if
   newtape = yes, otherwise at EOT (end of tape, after the double EOF).
@@ -45,88 +45,88 @@ wfits — Convert a list of IRAF images into FITS image data
   name for every input image. In the latter case fits_files is a root name
   and a sequence number will be appended to fits_files if the number of
   input images &gt; 1.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>newtape</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='newtape' Line='newtape'>
-  <DD>Boolean parameter specifying whether an output tape is blank or already
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>newtape</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='newtape' Line='newtape' -->
+  <dd>Boolean parameter specifying whether an output tape is blank or already
   contains data. Newtape is requested only if no tape file number is specified in
-  fits_files, e.g. fits_files = "<TT>mtb1600</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>bscale</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='bscale' Line='bscale'>
-  <DD>The FITS bscale parameter, defined as p = i * bscale + bzero, where
+  fits_files, e.g. fits_files = <tt>"mtb1600"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>bscale</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='bscale' Line='bscale' -->
+  <dd>The FITS bscale parameter, defined as p = i * bscale + bzero, where
   p and i are the physical and tape data values respectively.
   The bscale parameter is only requested if the scale switch is on
   and the autoscale switch is off.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>bzero</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='bzero' Line='bzero'>
-  <DD>The FITS bzero parameter (see bscale for a definition).
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>bzero</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='bzero' Line='bzero' -->
+  <dd>The FITS bzero parameter (see bscale for a definition).
   Bzero is only requested if the scale switch is on and the autoscale
   switch is off.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>fextn = "<TT>fits</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='fextn' Line='fextn = "fits"'>
-  <DD>The output fits file extension. If fextn is defined, an extension of
-  the form "<TT>.fextn</TT>", e.g. "<TT>.fits</TT>" is added to the output fits file name.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>fextn = <tt>"fits"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='fextn' Line='fextn = "fits"' -->
+  <dd>The output fits file extension. If fextn is defined, an extension of
+  the form <tt>".fextn"</tt>, e.g. <tt>".fits"</tt> is added to the output fits file name.
   Fextn should be chosen to be compatible with one of the permitted fits
   kernel extensions.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>extensions = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='extensions' Line='extensions = no'>
-  <DD>By default wfits writes each input image to a separate disk or tape FITS
-  file.  If <I>extensions</I> is "<TT>yes</TT>", then wfits will write all the images in
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>extensions = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='extensions' Line='extensions = no' -->
+  <dd>By default wfits writes each input image to a separate disk or tape FITS
+  file.  If <i>extensions</i> is <tt>"yes"</tt>, then wfits will write all the images in
   the input image list to a single disk or tape FITS file using the FITS
   standard IMAGE extension to write images other than the first. Extension
   numbering is 0 indexed. The first image will be written to extension 1 if
-  <I>global_header</I> is "<TT>yes</TT>", or to extension 0 if <I>global_hdr</I> is "<TT>no</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>global_hdr = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='global_hdr' Line='global_hdr = yes'>
-  <DD>Write a short global header to the 0th extension of the output FITS file
-  if <I>extensions</I> is "<TT>yes</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>make_image = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='make_image' Line='make_image = yes'>
-  <DD>By default wfits writes the FITS image(s) to the output destination.
+  <i>global_header</i> is <tt>"yes"</tt>, or to extension 0 if <i>global_hdr</i> is <tt>"no"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>global_hdr = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='global_hdr' Line='global_hdr = yes' -->
+  <dd>Write a short global header to the 0th extension of the output FITS file
+  if <i>extensions</i> is <tt>"yes"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>make_image = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='make_image' Line='make_image = yes' -->
+  <dd>By default wfits writes the FITS image(s) to the output destination.
   If the make_image switch is turned off, wfits prints the FITS headers
   on the standard output and no output file is created. In this way the
   output FITS headers can be examined before actually writing a FITS tape.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>long_header = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='long_header' Line='long_header = no'>
-  <DD>If this switch is set the full FITS header will be printed on the standard
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>long_header = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='long_header' Line='long_header = no' -->
+  <dd>If this switch is set the full FITS header will be printed on the standard
   output for each IRAF image converted.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>short_header = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='short_header' Line='short_header = yes'>
-  <DD>If this switch is set only a short header, listing the files processed and
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>short_header = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='short_header' Line='short_header = yes' -->
+  <dd>If this switch is set only a short header, listing the files processed and
   their dimensions will be printed on the standard output.
   The long_header switch must be turned off.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>bitpix = 0</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='bitpix' Line='bitpix = 0'>
-  <DD>A bitpix of 8, 16, or 32 will produce either an unsigned byte,
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>bitpix = 0</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='bitpix' Line='bitpix = 0' -->
+  <dd>A bitpix of 8, 16, or 32 will produce either an unsigned byte,
   twos-complement 16 bit integer, or twos-complement 32 bit integer FITS
   image. If bitpix is -32 or
   -64 IEEE real or double precision floating point FITS images are produced.
@@ -138,51 +138,50 @@ wfits — Convert a list of IRAF images into FITS image data
   of precision in their data may result. In this case wfits will issue a
   warning message and an estimate of the maximum loss of precision to be
   expected.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>blocking_factor = 0</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='blocking_factor' Line='blocking_factor = 0'>
-  <DD>The tape blocking factor for FITS.
-  Wfits normally writes <I>blocking_factor</I> * 2880 byte records,
-  where <I>blocking_factor</I> is an integer from 1 to 10.
-  If <I>blocking_factor</I> = 0, wfits uses the default FITS blocking
-  factor specified for the device  by the "<TT>fb</TT>" parameter in the
-  file dev$tapecap, or 1 if the "<TT>fb</TT>" parameter is not present. For
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>blocking_factor = 0</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='blocking_factor' Line='blocking_factor = 0' -->
+  <dd>The tape blocking factor for FITS.
+  Wfits normally writes <i>blocking_factor</i> * 2880 byte records,
+  where <i>blocking_factor</i> is an integer from 1 to 10.
+  If <i>blocking_factor</i> = 0, wfits uses the default FITS blocking
+  factor specified for the device  by the <tt>"fb"</tt> parameter in the
+  file dev$tapecap, or 1 if the <tt>"fb"</tt> parameter is not present. For
   devices which support variable block sizes, e.g. 9-track tapes, exabytes
-  and dats, "<TT>fb</TT>" is normally set to 10.
-  The user may override this value by setting <I>blocking_factor</I>
+  and dats, <tt>"fb"</tt> is normally set to 10.
+  The user may override this value by setting <i>blocking_factor</i>
   &gt;= 1 or &lt;= 10. If the device does not support variable block sizes, e.g.
   various types of cartridge drives, blocks of the size defined for the
-  device by the "<TT>bs</TT>" parameter in the dev$tapecap file are written
-  and <I>blocking_factor</I> is ignored.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>scale = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='scale' Line='scale = yes'>
-  <DD>If the scale switch is set, the IRAF image will be scaled before output.
+  device by the <tt>"bs"</tt> parameter in the dev$tapecap file are written
+  and <i>blocking_factor</i> is ignored.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>scale = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='scale' Line='scale = yes' -->
+  <dd>If the scale switch is set, the IRAF image will be scaled before output.
   Two types of scaling are available. The scaling parameters bscale and
   bzero may be entered by the user (autoscale = no), or the program can
   calculate the appropriate bscale and bzero factors (autoscale = yes).
   If the scale switch is turned off, the IRAF image data is converted
   directly to integers of the specified bitpix with possible loss of
   precision.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>autoscale = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='autoscale' Line='autoscale = yes'>
-  <DD>If the autoscale switch is set, wfits calculates the appropriate bscale and
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>autoscale = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='autoscale' Line='autoscale = yes' -->
+  <dd>If the autoscale switch is set, wfits calculates the appropriate bscale and
   bzero  factors based on the IRAF image data type, and the maximum and minimum
   values of the data.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   IRAF data is read from disk and written to the specified destination,
   either disk or magnetic tape. The FITS header may optionally be printed
   on the standard output as either a full listing or a short description,
@@ -196,118 +195,119 @@ wfits — Convert a list of IRAF images into FITS image data
   can be entered directly. If no scaling is requested the IRAF data values
   will be converted directly to FITS integers or floating point values
   with possible loss of precision.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Convert a list of IRAF image files to a list of FITS image files on a blank
   magnetic tape, allowing wfits to select the appropriate bitpix
   and scaling parameters.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; wfits iraf_file* mtb1600[1]
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. Convert a list of IRAF image files to FITS image files on disk,
   allowing wfits to select the appropriate bitpix and scaling parameters.
   In the first example below the images specified by the template are written
   to files fits001, fits002, etc. In the second the list of input images
   specified one per line in the text file imlist are written to the
   files specified one per line in the text file fitslist.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; wfits iraf_file* fits
-  <P>
+  
   	cl&gt; wfits @imlist @fitslist
-  </PRE>
-  <P>
+  </pre>
+  <p>
   3. Convert an IRAF image file to a 32 bits per pixel FITS file with no
   scaling and append to a tape already containing data.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; wfits iraf_file mtb1600[EOT] bi=32 sc-
-  </PRE>
-  <P>
+  </pre>
+  <p>
   4. Convert an IRAF image to a 16 bit FITS image on disk, and specify
   bscale and bzero explicitly in the process.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; wfits iraf_file fits_file bi=16 au- bs=4.0 bz=0.0
-  </PRE>
-  <P>
+  </pre>
+  <p>
   5. Print the FITS headers on the standard output.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; wfits iraf_file* ma-
-  </PRE>
-  <P>
+  </pre>
+  <p>
   6. Create a disk file called headers containing the FITS headers for a list
   of IRAF image files.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; wfits iraf_file* ma- &gt; headers
-  </PRE>
-  <P>
+  </pre>
+  <p>
   7. Write a FITS tape with 14400 bytes per record (5 2880 FITS records per
   tape block) on a 9-track tape.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; wfits images* mtb[1] block=5
-  </PRE>
-  <P>
+  </pre>
+  <p>
   8. Write a FITS Exabyte tape with a blocking factor of 1 (1 2880 FITS record
   per block). Note that wfits will normally by default write a 28000 (
   10 2880 FITS logical records per block) byte record.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; wfits images* mtb[1] block=1
-  </PRE>
-  <P>
+  </pre>
+  <p>
   9. Write a list of images to a single tape file using the FITS standard
   extension IMAGE. Users who are planning on reading their data with
   local FITS readers should check that those local readers support the
   FITS IMAGE extension before selecting this option.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; wfits *.imh mtb[1] block=1 extensions+
-  </PRE>
-  <P>
+  </pre>
+  <p>
   10. Repeat the previous example but do not write a global header.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; wfits *.imh mtb[1] block=1 extensions+ global-
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <p>
   WFITS does not attempt to recover from write errors. When an error is
   detected, WFITS issues an error message and attempts to write a double
   EOF at the end of the last good record. In this case the last file on
   the tape will be a partial file. IF WFITS is not successful in writing
-  the double EOF, the message "<TT>Cannot close magtape file (name)</TT>" will be
+  the double EOF, the message <tt>"Cannot close magtape file (name)"</tt> will be
   issued. Problems occur as some drives permit the double EOF to be
   written after the physical end of tape and some do not. Similarly
   some drives can read a double EOF after end of tape and some cannot. Depending
   on operating system and device driver, an attempt to read or write past
   end of tape may or may not be distinguishable from a normal write error.
-  <P>
+  </p>
+  <p>
   Blank pixel values are not correctly handled.
-  <P>
+  </p>
+  <p>
   Attempting to write at EOT on a blank tape will at best result in numerous
   error messages being issued and at worst result in tape runaway depending
   on the driver.
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   rfits, reblock, fits kernel
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

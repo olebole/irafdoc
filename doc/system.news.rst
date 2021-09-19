@@ -1,86 +1,99 @@
 .. _news:
 
-news — Page through the system news file
-========================================
+news: Page through the system news file
+=======================================
 
 **Package: system**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   news -- print the revisions summary for the current IRAF version
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   news
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  The <I>news</I> task uses the standard IRAF file pager to review a formatted
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  The <i>news</i> task uses the standard IRAF file pager to review a formatted
   summary of the system revisions for the version of IRAF being run.
   The revisions summaries for older versions of the system are also provided:
-  use the <I>N</I> and <I>P</I> pager keys to display the next or previous
+  use the <i>N</i> and <i>P</i> pager keys to display the next or previous
   system revisions summary.  The revisions summary is given in the file
-  "<TT>doc$newsfile</TT>".
-  <P>
+  <tt>"doc$newsfile"</tt>.
+  </p>
+  <p>
   For reasons of brevity, only the revisions summary is printed.  For detailed
   information on the revisions made to a particular science package, type
-  <P>
+  </p>
+  <p>
       cl&gt; help &lt;pkg&gt;.revisions op=sys
-  <P>
-  where "<TT>pkg</TT>" is the name of the CL package for which revisions information
+  </p>
+  <p>
+  where <tt>"pkg"</tt> is the name of the CL package for which revisions information
   is desired.  For detailed information on the revisions to the system
   software and programming interfaces, examine the system notes file,
-  given in the file "<TT>notes.*</TT>" in the directory "<TT>iraf$local</TT>".  The system
-  notes files for older versions of the system will be found in the "<TT>doc</TT>"
+  given in the file <tt>"notes.*"</tt> in the directory <tt>"iraf$local"</tt>.  The system
+  notes files for older versions of the system will be found in the <tt>"doc"</tt>
   directory.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <p>
   The revisions summary is often lengthy and may be easier to read if a
   printed copy is made.
-  <P>
-  Redirecting the output of <I>news</I>, e.g., to <I>lprint</I>, doesn't work
+  </p>
+  <p>
+  Redirecting the output of <i>news</i>, e.g., to <i>lprint</i>, doesn't work
   at present.
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'BUGS' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Page the revisions summary for the current IRAF release.
-  <P>
+  </p>
+  <p>
       cl&gt; news
-  <P>
+  </p>
+  <p>
   2. Print the revisions summary.
-  <P>
+  </p>
+  <p>
       cl&gt; lprint doc$newsfile
-  <P>
+  </p>
+  <p>
   3. Page the system notes file.  Anyone who develops software for IRAF
   should review this file with each new release, to see what has changed.
   Documentation for new system facilities is often given in the system
   notesfile.
-  <P>
+  </p>
+  <p>
       cl&gt; page iraf$local/notes.*
-  <P>
+  </p>
+  <p>
   4. Review the revisions summary for the IMAGES package.
-  <P>
+  </p>
+  <p>
       cl&gt; phelp images.revisions op=sys
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   help, phelp, page
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'BUGS' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'BUGS' 'EXAMPLES' 'SEE ALSO'  -->
   

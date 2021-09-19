@@ -1,102 +1,101 @@
 .. _gratings:
 
-gratings — Compute and print grating parameters
-===============================================
+gratings: Compute and print grating parameters
+==============================================
 
 **Package: astutil**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   gratings -- Compute and print grating parameters
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   gratings
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>echelle = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='echelle' Line='echelle = no'>
-  <DD>Is the grating an echelle grating?  This selects whether the angle of
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>echelle = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='echelle' Line='echelle = no' -->
+  <dd>Is the grating an echelle grating?  This selects whether the angle of
   incidence is greater or less than blaze angle when the angle of incidence
   or blaze angle are not specified.  For an echelle the angle of incidence
   is generally greater than the blaze angle.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>f = 590.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='f' Line='f = 590.'>
-  <DD>Focal length in millimeters.  Technically it is defined by the equation x =
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>f = 590.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='f' Line='f = 590.' -->
+  <dd>Focal length in millimeters.  Technically it is defined by the equation x =
   f * tan (theta) where x is distance from the optical axis on the detector
   and theta is the diffraction angle; i.e. it converts angular measures to
   millimeters on the detector.  If the focal length is specified as INDEF it
   is computed from the dispersion, which is required in this case, and the
   other parameters.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>gmm = 226.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='gmm' Line='gmm = 226.'>
-  <DD>Grating grooves per millimeter.  If specified as INDEF it is computed
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>gmm = 226.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='gmm' Line='gmm = 226.' -->
+  <dd>Grating grooves per millimeter.  If specified as INDEF it is computed
   from the order, which is required in this case, and the other parameters.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>blaze = 4.5</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='blaze' Line='blaze = 4.5'>
-  <DD>Blaze angle in degrees.  It is always specified or printed as a positive
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>blaze = 4.5</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='blaze' Line='blaze = 4.5' -->
+  <dd>Blaze angle in degrees.  It is always specified or printed as a positive
   angle relative to the grating normal.  If specified as INDEF it is
   computed from the other parameters.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>theta = -10.5</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='theta' Line='theta = -10.5'>
-  <DD>Angle of incidence in degrees.  The angle of incidence must be in the plane
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>theta = -10.5</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='theta' Line='theta = -10.5' -->
+  <dd>Angle of incidence in degrees.  The angle of incidence must be in the plane
   perpendicular to face of the grating.  The angle of incidence may be
   specified relative to the grating normal or the blaze angle though it is
   always printed relative to the grating normal.  To specify it relative to
   the blaze angle add 360 degrees; for example to have an angle of 15 degrees
   less than the blaze angle specify 360 - 15 = 345.  If the angle of
   incidence is specified as INDEF it is computed from the other parameters.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>order = 1</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='order' Line='order = 1'>
-  <DD>Order for which the wavelength and dispersion are specified.  If specified
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>order = 1</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='order' Line='order = 1' -->
+  <dd>Order for which the wavelength and dispersion are specified.  If specified
   as INDEF it will be computed from the grooves per mm, which is required in
   this case, and the other parameters.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>wavelength = INDEF</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='wavelength' Line='wavelength = INDEF'>
-  <DD>Blaze wavelength in Angstroms.  If specified as INDEF it will be computed
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>wavelength = INDEF</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='wavelength' Line='wavelength = INDEF' -->
+  <dd>Blaze wavelength in Angstroms.  If specified as INDEF it will be computed
   from the other parameters.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>dispersion = INDEF</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='dispersion' Line='dispersion = INDEF'>
-  <DD>Blaze dispersion in Angstroms per millimeter.  If specified as INDEF it
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>dispersion = INDEF</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='dispersion' Line='dispersion = INDEF' -->
+  <dd>Blaze dispersion in Angstroms per millimeter.  If specified as INDEF it
   will be computed from the focal length, which is required in this case,
   and the other parameters.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   This task computes the grating parameters specified as INDEF from the other
   grating parameters and prints the final set of self-consistent parameters.
   The parameters are the focal length to the detector, the grooves per
@@ -112,71 +111,76 @@ gratings — Compute and print grating parameters
   specified or when the combination of parameters is not possible.  In these
   cases a warning is printed and the input parameters, including INDEF
   values, are printed.
-  <P>
+  </p>
+  <p>
   If more than the minimum number of parameters are specified then some of
   the specified parameters will be adjusted to give a self-consistent set.
   In particular, if all parameters are specified the input wavelength and
   dispersion are ignored and new values are calculated.  If only one
   parameter is not specified then the dispersion is adjusted if it is not the
   dispersion the wavelength is adjusted if it is the dispersion.
-  <P>
+  </p>
+  <p>
   When the order is not specified, the nearest integer order is computed from
   the other non-integer parameters and then the wavelength and dispersion are
   recomputed based on the integer order.
-  <P>
+  </p>
+  <p>
   The basic grating equation used is
-  <P>
-  <PRE>
+  </p>
+  <pre>
   (1)	m * lambda = (sin(theta) + sin(beta)) / g
-  </PRE>
-  <P>
+  </pre>
+  <p>
   where m is the order, lambda the wavelength, g the grooves per wavelength unit,
   theta the angle of incidence to the grating normal, and beta the angle of
   diffraction to the normal.  The diffraction angle relative to that
   of the blaze maximum, psi, is given by
-  <P>
-  <PRE>
+  </p>
+  <pre>
   (2)	beta = psi + 2 * blaze - theta
-  </PRE>
-  <P>
+  </pre>
+  <p>
   where blaze is the blaze angle.  The diffraction angle psi is related to
   position on the detector, again measured from the blaze peak, by
-  <P>
-  <PRE>
+  </p>
+  <pre>
   (3)	x = f * tan(psi)
-  </PRE>
-  <P>
+  </pre>
+  <p>
   where f is the effective focal length (as defined by this equation).
   At the blaze maximum psi = x = 0 and the wavelength and dispersion
   per millimeter on the detector are given by (1) and the derivative of (1)
   with respect to x:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   (4)	wavelength = 1E7*(sin(theta)+sin(2*blaze-theta))/(gmm*order)
   (5)	dispersion = 1E7*cos(2*blaze-theta)/(gmm*order*f)
-  </PRE>
-  <P>
+  </pre>
+  <p>
   where the variable names are the same as the program parameters and
   the factor of 1E7 is the conversion between millimeters and Angstroms.
-  <P>
+  </p>
+  <p>
   Equations (4) and (5) are the ones solved by this task.  There are a some
   interesting points to note about the angle of incidence.  There are two
   solutions of these equations one with the angle of incidence less than the
   blaze angle and one greater than the blaze angle.  For an echelle the angle
   of incidence is generally set greater than the blaze angle to avoid light
-  lost by reflections back along the angle of incidence.  The <I>echelle</I>
+  lost by reflections back along the angle of incidence.  The <i>echelle</i>
   parameter is used to determine which side of the blaze angle the angle of
   incidence will be computed in the cases in which it is not specified;
   greater than the blaze angle when yes and less than the blaze angle when
   no.
-  <P>
+  </p>
+  <p>
   In spectrographs it is often the case that the angle between the
   incoming beam and center of the diffracted beam, delta, is fixed where
-  <P>
-  <PRE>
+  </p>
+  <pre>
   (6)	delta = 2 * |theta - blaze|
-  </PRE>
-  <P>
+  </pre>
+  <p>
   This fixes the angle between the blaze angle and the angle of incidence
   needed to center the blaze function on the detector.  If one wants to
   solve (4) and (5) for the blaze angle with this difference fixed the
@@ -189,18 +193,18 @@ gratings — Compute and print grating parameters
   grating normal) so if we set the angle of incidence to 6 + 360
   and the blaze angle to INDEF the resulting computation will
   determine blaze and theta with a fixed 6 degree angle.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1.  The default values are for a grating of 226 grooves per millimeter
   in a 590 mm focal length camera.  For a blaze angle of 4.5 degrees
   and an angle of incidence of -10.5 degrees (the angle is on the
   other side of the grating normal relative to the blaze angle) the
   first order wavelength and dispersion at the blaze peak is:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; gratings
   	Grating parameters:
   	  Focal length = 590. mm
@@ -210,12 +214,12 @@ gratings — Compute and print grating parameters
   	  Order = 1
   	  Blaze wavelength = 6706.696 Angstroms
   	  Blaze dispersion = 70.69458 Angstroms/mm
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2.  To find nearest order and the dispersion for a wavelength of 3400
   Angstroms:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; gratings order=INDEF wave=3400
   	Grating parameters:
   	  Focal length = 590. mm
@@ -225,12 +229,12 @@ gratings — Compute and print grating parameters
   	  Order = 2
   	  Blaze wavelength = 3353.348 Angstroms
   	  Blaze dispersion = 35.34729 Angstroms/mm
-  </PRE>
-  <P>
+  </pre>
+  <p>
   3.  To find the grating parameters need to center 8000 Angstroms with
   a dispersion of 90 Angstroms per millimeter:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; gratings gmm=INDEF blaze=INDEF theta=345 wave=8000 disp=90
   	Grating parameters:
   	  Focal length = 590. mm
@@ -240,12 +244,12 @@ gratings — Compute and print grating parameters
   	  Order = 1
   	  Blaze wavelength = 8000. Angstroms
   	  Blaze dispersion = 90. Angstroms/mm
-  </PRE>
-  <P>
+  </pre>
+  <p>
   4.  What focal length should be used to get a dispersion of 20 Angstroms/mm
   at 6700 Angstroms:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; gratings f=INDEF wave=6700 disp=20
   	Grating parameters:
   	  Focal length = 2085.49 mm
@@ -255,14 +259,14 @@ gratings — Compute and print grating parameters
   	  Order = 1
   	  Blaze wavelength = 6706.696 Angstroms
   	  Blaze dispersion = 20. Angstroms/mm
-  </PRE>
-  <P>
+  </pre>
+  <p>
   5.  What are the first order wavelength parameters for an echelle of
   31.6 grooves per millimeter with a 63 degree blaze, and a 6 degree
   angle of incidence relative to the blaze angle.  Then what are
   the wavelength parameters in 80th order and what order is 6563 in.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; gratings gmm=31.6 blaze=63 theta=69
   	Grating parameters:
   	  Focal length = 590. mm
@@ -290,15 +294,15 @@ gratings — Compute and print grating parameters
   	  Order = 85
   	  Blaze wavelength = 6598.105 Angstroms
   	  Blaze dispersion = 3.436772 Angstroms/mm
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   artdata.mkechelle
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

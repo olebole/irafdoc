@@ -1,5 +1,5 @@
-plot — Plot package
-===================
+plot: Plot package
+==================
 
 .. toctree:: :maxdepth: 1
 

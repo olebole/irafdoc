@@ -1,27 +1,28 @@
 .. _tquery:
 
-tquery — Create a new table from selected rows and columns in a table.
-======================================================================
+tquery: Create a new table from selected rows and columns in a table.
+=====================================================================
 
 **Package: nttools**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   tquery -- Create a new table from selected rows and columns of an old table.
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   tquery intable outtable expr columns sort
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   This task combines the functions of the tasks 'tselect', 'tproject', and
   'tsort' to create a more powerful task that can produce a sorted table of
   user-selected rows and columns.
@@ -40,134 +41,129 @@ tquery — Create a new table from selected rows and columns in a table.
   to eliminate duplicate rows from the output table.  The hidden parameter
   'ascend' sorts the table in ascending order, and the parameter 'casesens'
   specifies whether sort conditions are to be case sensitive.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>intable [file name template]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='intable' Line='intable [file name template]'>
-  <DD>Table(s) from which rows are copied. If input is redirected, this
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>intable [file name template]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='intable' Line='intable [file name template]' -->
+  <dd>Table(s) from which rows are copied. If input is redirected, this
   parameter will ignored and input will be read from STDIN instead.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>outtable [file name template]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable [file name template]'>
-  <DD>The new table(s) containing the copied rows.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>outtable [file name template]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable [file name template]' -->
+  <dd>The new table(s) containing the copied rows.
   The number of output tables must equal the number of input tables.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>expr [string]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='expr' Line='expr [string]'>
-  <DD>The boolean expression which determines which rows are copied to the new
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>expr [string]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='expr' Line='expr [string]' -->
+  <dd>The boolean expression which determines which rows are copied to the new
   table.  The expression may be placed in a file and the name of the file
-  preceeded by a <TT>'@'</TT> can be given in its place.  If the expression is null
+  preceeded by a <tt>'@'</tt> can be given in its place.  If the expression is null
   or blank, all rows are selected.  The syntax and method used to define
   this boolean expression is explained in detail in the help file for the
-  'tselect' task (type "<TT>help tselect</TT>" for more information).
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>columns [string]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='columns' Line='columns [string]'>
-  <DD>Column template describing the columns that are to be selected
+  'tselect' task (type <tt>"help tselect"</tt> for more information).
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>columns [string]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='columns' Line='columns [string]' -->
+  <dd>Column template describing the columns that are to be selected
   from the old table. A column template consists of a list
   of column names, which can include wildcard characters.
   The column names, or patterns, are separated by commas or white space.
   The list of columns can be placed in a file and then
   the name of that file passed to 'columns' (preceded by
-  the "<TT>@</TT>" character).  If the first non-white character in the template
-  is the negation character (either "<TT>~</TT>" or "<TT>!</TT>"),
+  the <tt>"@"</tt> character).  If the first non-white character in the template
+  is the negation character (either <tt>"~"</tt> or <tt>"!"</tt>),
   the new table will contain those columns
   that do NOT match the column template. If the column template
   is null or blank, all columns will be selected.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>sort [string]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='sort' Line='sort [string]'>
-  <DD>Column template describing the columns to be sorted.  The
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>sort [string]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='sort' Line='sort [string]' -->
+  <dd>Column template describing the columns to be sorted.  The
   first column name is the primary sort key with subsequent columns
   used to break ties.  If this parameter
   is null or blank, no sort will be done.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(uniq = no) [boolean]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(uniq = no) [boolean]'>
-  <DD>Make sure all rows are unique in a table?
-  <P>
-  If 'unique' is set to "<TT>yes</TT>", only one of each set of duplicate rows is included
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(uniq = no) [boolean]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(uniq = no) [boolean]' -->
+  <dd>Make sure all rows are unique in a table?
+  If 'unique' is set to <tt>"yes"</tt>, only one of each set of duplicate rows is included
   in the output table.  All columns in the output table must be identical for
   the row to be removed.  String comparisons are case sensitive.  Care should
   be used in setting this option for large tables, as it significantly increases
   the running time.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(ascend = yes) [boolean]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(ascend = yes) [boolean]'>
-  <DD>Should sorts be performed in ascending order?
-  <P>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(ascend = yes) [boolean]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(ascend = yes) [boolean]' -->
+  <dd>Should sorts be performed in ascending order?
   If 'ascend = yes', the table is sorted in ascending order, with the first
   row containing the smallest value of the sorted column.  Otherwise, the table
   is sorted in descending order, with the largest value first.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(casesens = yes) [boolean]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(casesens = yes) [boolean]'>
-  <DD>Are sort operations case sensitive?
-  <P>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(casesens = yes) [boolean]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(casesens = yes) [boolean]' -->
+  <dd>Are sort operations case sensitive?
   If 'casesens = yes', sorts on character columns are case sensitive, with upper
   case letters preceding lower case.  Otherwise, the sort is not case
   sensitive.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Extract all binary stars from a catalog; write their names, magnitudes,
   and colors to a new table, sorted on magnitude:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   tt&gt; tquery starcat.tab binary.tab binary name,mag,color mag
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. Remove duplicate rows from a set of tables. Otherwise, leave the tables
-  unchanged. Using file name editing (i.e., the "<TT>%</TT>" characters to delineate
-  old strings and new strings), change the file name extensions from "<TT>.tab</TT>"
-  to "<TT>.tbl</TT>".
-  <P>
-  <PRE>
+  unchanged. Using file name editing (i.e., the <tt>"%"</tt> characters to delineate
+  old strings and new strings), change the file name extensions from <tt>".tab"</tt>
+  to <tt>".tbl"</tt>.
+  </p>
+  <pre>
   tt&gt; tquery *.tab *.%tab%tbl% "" "" "" uniq+
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <p>
   Column names must be set off from operators by blanks in the expression so
   that they can be correctly parsed by the expression evaluator.
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>References</H3>
-  <! BeginSection: 'REFERENCES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'BUGS' -->
+  <h3>References</h3>
+  <!-- BeginSection: 'REFERENCES' -->
+  <p>
   This task was written by Bernie Simon.
-  </UL>
-  <! EndSection:   'REFERENCES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'REFERENCES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   tsort, tselect, tproject
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

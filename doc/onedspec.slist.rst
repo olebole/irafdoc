@@ -1,58 +1,58 @@
 .. _slist:
 
-slist — List spectrum header parameters
-=======================================
+slist: List spectrum header parameters
+======================================
 
 **Package: onedspec**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   slist -- List spectral header information
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   slist images
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>images</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
-  <DD>List of images to be listed.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>apertures = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""'>
-  <DD>List of apertures to be selected from the images for listing.  A null
-  list selects all apertures.  See <B>ranges</B> for the syntax of
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>images</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
+  <dd>List of images to be listed.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>apertures = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
+  <dd>List of apertures to be selected from the images for listing.  A null
+  list selects all apertures.  See <b>ranges</b> for the syntax of
   this list.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>long_header = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='long_header' Line='long_header = no'>
-  <DD>If set to yes, then a multiline listing of the header elements is given.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>long_header = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='long_header' Line='long_header = no' -->
+  <dd>If set to yes, then a multiline listing of the header elements is given.
   If set to no, then a single line per spectrum is given.  The contents
   of the listing depend on the format.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   This task lists header information from apertures in a list of input
   images.  There is a short one line per spectrum listing and a more
-  extended listing selected by the <I>long_header</I> parameter.
-  <P>
+  extended listing selected by the <i>long_header</i> parameter.
+  </p>
+  <p>
   In both short and long outputs the aperture information consists of
   lines with the following whitespace separated fields: the image line,
   the aperture number, the beam number, the dispersion type, the
@@ -69,7 +69,8 @@ slist — List spectrum header parameters
   the header which is defined for the original physical coordinates.
   The aperture titles may be identical with the image title if individual
   aperture titles are not defined.
-  <P>
+  </p>
+  <p>
   In the short output format the image title is given first followed
   by the above described information.  This format is compact and
   suitable for easy use in other programs (see the example below).
@@ -81,19 +82,20 @@ slist — List spectrum header parameters
   information is missing a value of INDEF is printed.  The keywords used
   are EXPTIME/ITIME/EXPOSURE (in that order) for the exposure time,
   and UT, ST, RA, DEC, HA, and AIRMASS for the remaining values.
-  <P>
+  </p>
+  <p>
       demoobj.ms: Hydra artificial image
   	EXPTIME = 2133.33 UT = 9:10:09.0    ST = 20:09:34.0
   	RA = 1:34:02.00   DEC = 30:37:03.0  HA = INDEF    AIRMASS = 2.3
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1.  List short header for an object and arc from a Hydra multifiber reduction
   for fibers 36 to 39.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; slist demoobj.ms,demoarc1.ms ap=36-39
       demoobj.ms 1 37 0 0 5785.85 6.140271 256 Sky fiber
       demoobj.ms 2 38 1 0 5785.85 6.140271 256 SS313
@@ -102,15 +104,16 @@ slist — List spectrum header parameters
       demoarc1.ms 2 37 0 0 5785.85 6.140271 256 Sky fiber
       demoarc1.ms 3 38 1 0 5785.85 6.140271 256 SS313
       demoarc1.ms 4 39 1 0 5785.85 6.140271 256 SS444
-  </PRE>
-  <P>
+  </pre>
+  <p>
   Note that fiber 37 is the first image line in demoobj.ms and teh second image
   line in demoarc.ms.  The dispersion is the same in all fibers by design.
-  <P>
+  </p>
+  <p>
   2.  List long headers for the two images of example 1 but restricted to
   apertures 38 and 39.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; slist demoobj.ms,demoarc1.ms ap=38,39 l+
       demoobj.ms: Hydra artificial image
   	EXPTIME = 2133.33 UT = 9:10:09.0    ST = 20:09:34.0
@@ -122,36 +125,37 @@ slist — List spectrum header parameters
   	RA = 1:34:02.00   DEC = 30:37:03.0  HA = INDEF    AIRMASS = 2.3
           3 38 1 0 5785.85 6.140271 256 SS313
   	4 39 1 0 5785.85 6.140271 256 SS444
-  </PRE>
-  <P>
+  </pre>
+  <p>
   The other header parameters are the same because this is artificial
   data using the same template header.
-  <P>
+  </p>
+  <p>
   3.  Dump the set of image headers on a printer in long format.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; slist *.ms.imh l+ | lprint
-  </PRE>
-  <P>
+  </pre>
+  <p>
   4.  The short form of SLIST may be used to get some of the aperture
   information for use in a script.  The following simply prints the
   image line corresponding to a specified aperture.  In a real application
   something more complex would be done.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	procedure example (images, aperture)
-  <P>
+  
   	string	images		{prompt="List of images"}
   	int	aperture	{prompt="Aperture"}
-  <P>
+  
   	begin
   		string temp, image
   		int	line
-  <P>
+  
   		# Use SLIST to print to a temporary file.
   		temp = mktemp ("example")
   		slist (images, aperture=aperture, long=no, &gt; temp)
-  <P>
+  
   		# Scan each line and print the line number.
   		list = temp
   		while (fscan (list, image, line) != EOF)
@@ -159,27 +163,25 @@ slist — List spectrum header parameters
   		list = ""
   		delete (temp, verify=no)
   	end
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Revisions</H3>
-  <! BeginSection: 'REVISIONS'>
-  <UL>
-  <DL>
-  <DT><B>SLIST V2.10</B></DT>
-  <! Sec='REVISIONS' Level=0 Label='SLIST' Line='SLIST V2.10'>
-  <DD>This task was revised to be relevant for the current spectral image
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Revisions</h3>
+  <!-- BeginSection: 'REVISIONS' -->
+  <dl>
+  <dt><b>SLIST V2.10</b></dt>
+  <!-- Sec='REVISIONS' Level=0 Label='SLIST' Line='SLIST V2.10' -->
+  <dd>This task was revised to be relevant for the current spectral image
   formats.  The old version is still available in the IRS/IIDS package.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'REVISIONS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </dd>
+  </dl>
+  <!-- EndSection:   'REVISIONS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   imheader, hselect
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

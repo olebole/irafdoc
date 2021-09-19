@@ -1,45 +1,45 @@
 .. _time:
 
-time — Print the current time
-=============================
+time: Print the current time
+============================
 
 **Package: language**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   time -- display the current time
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   time
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <I>Time</I> writes the current time and date on the standard output.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Example</H3>
-  <! BeginSection: 'EXAMPLE'>
-  <UL>
-  <PRE>
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  <i>Time</i> writes the current time and date on the standard output.
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Example</h3>
+  <!-- BeginSection: 'EXAMPLE' -->
+  <pre>
   cl&gt; time
   Fri 12:50:29 14-Feb-86
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLE'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLE' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   sleep, wait, jobs
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'EXAMPLE' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'EXAMPLE' 'SEE ALSO'  -->
   

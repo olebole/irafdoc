@@ -1,62 +1,65 @@
 .. _zoom:
 
-zoom — Zoom in on the image (change magnification)
-==================================================
+zoom: Zoom in on the image (change magnification)
+=================================================
 
 **Package: iis**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   zoom - zoom in on the image (change magnification)
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   zoom
-  <DL>
-  <DT><B>zoom_factor</B></DT>
-  <! Sec='USAGE' Level=0 Label='zoom_factor' Line='zoom_factor'>
-  <DD>Zoom factor by the display is to be expanded.  The factors are powers
+  </p>
+  <dl>
+  <dt><b>zoom_factor</b></dt>
+  <!-- Sec='USAGE' Level=0 Label='zoom_factor' Line='zoom_factor' -->
+  <dd>Zoom factor by the display is to be expanded.  The factors are powers
   of 2; 1 = no zoom, 2 = factor of 2, 3 = factor of 4, and 4 = factor of 8.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>window = no</B></DT>
-  <! Sec='USAGE' Level=0 Label='window' Line='window = no'>
-  <DD>Window the enlarged image?
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>window = no</b></dt>
+  <!-- Sec='USAGE' Level=0 Label='window' Line='window = no' -->
+  <dd>Window the enlarged image?
+  </dd>
+  </dl>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   The display is zoomed by the specified factor.  A zoom factor of 1 is no
   magnification and higher factors correspond to factors of 2.  The zoom
   replicates pixels on the monitor and only a part of the display frame
   centered on the display cursor is visible.  The window option allows
   the user to adjust interactively with the cursor the part of the zoomed
   frame.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   To magnify the displayed frame by a factor of 2:
-  <P>
+  </p>
+  <p>
   	cl&gt; zoom 2
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   cv
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

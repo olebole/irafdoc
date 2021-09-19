@@ -1,27 +1,28 @@
 .. _tcreate:
 
-tcreate — Create a STSDAS table from an ASCII descriptor table.
-===============================================================
+tcreate: Create a STSDAS table from an ASCII descriptor table.
+==============================================================
 
 **Package: nttools**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   tcreate -- Create a table from ASCII files describing a table format.
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   tcreate table cdfile datafile
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   This task reads an ASCII file containing column descriptions for a new table.
   The columns are defined and the table created;
   data are read in from a file specified by
@@ -34,40 +35,40 @@ tcreate — Create a STSDAS table from an ASCII descriptor table.
   The lines in the input files may be up to 8195 characters long,
   plus one character for the carriage return.
   The input 'datafile' is read free-format.
-  <P>
+  </p>
+  <p>
   Undefined values require a place holder in the data file.
   The word INDEF should be used as the place holder
   for undefined (indefinite) numerical values,
-  the word "<TT>no</TT>" for boolean values,
-  and a pair of adjacent quotes ("<TT></TT>") for undefined character strings.
+  the word <tt>"no"</tt> for boolean values,
+  and a pair of adjacent quotes (<tt>""</tt>) for undefined character strings.
   If a value for a character string contains one or more blanks,
   or the comment character (#),
-  then the entire value must be enclosed in quotes, e.g., "<TT>R CrB</TT>".
-  <P>
+  then the entire value must be enclosed in quotes, e.g., <tt>"R CrB"</tt>.
+  </p>
+  <p>
   This task can also read a file containing header parameters for the table.
-  <P>
+  </p>
+  <p>
   If a problem occurs when reading a particular data field,
   the execution continues, and the table entry is marked as undefined.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>table [file name]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='table' Line='table [file name]'>
-  <DD>Output file name for the table created by this task.
-  <P>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>table [file name]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='table' Line='table [file name]' -->
+  <dd>Output file name for the table created by this task.
   Note that, if 'table' is an existing FITS file,
   the table that is created will be appended
   as a new extension to the end of the file.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>cdfile = STDIN [file name]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='cdfile' Line='cdfile = STDIN [file name]'>
-  <DD>The name of the column definition file.
-  <P>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>cdfile = STDIN [file name]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='cdfile' Line='cdfile = STDIN [file name]' -->
+  <dd>The name of the column definition file.
   The column definition file contains one line for each column to be created.
   Each line contains up to four values giving attributes of the particular column.
   Every line must have a column name; optionally, it may have a data type,
@@ -81,22 +82,20 @@ tcreate — Create a STSDAS table from an ASCII descriptor table.
   The format is not used for internal representation of the data and
   is ignored when reading data---it is used only for display purposes,
   for example, by tasks such as 'tedit', 'tread', and 'tprint'.
-  Type "<TT>help ttools opt=sysdoc</TT>" for detailed information about print formats.
+  Type <tt>"help ttools opt=sysdoc"</tt> for detailed information about print formats.
   Comment lines may be included in this file
   by beginning the line with the comment symbol (#).
-  <P>
   The following data types are recognized by this parameter
   (the default data type is single-precision real):
-  <PRE>
-  <P>
+  <pre>
+  
        r - Single-precision real.
        d - Double-precision real.
        i - Integer.
        s - Short integer.
        b - Boolean.
        ch*n - Character string of maximum length n.
-  </PRE>
-  <P>
+  </pre>
   A column of arrays can be created by giving the array length
   in square brackets appended to the data type.
   For example, a data type of r[400] would mean that the column
@@ -113,7 +112,6 @@ tcreate — Create a STSDAS table from an ASCII descriptor table.
   the values need not all be on the same line of the data file.
   Text tables and column-ordered stsdas tables
   cannot contain arrays; see 'tbltype'.
-  <P>
   If you have an existing table
   with columns similar to those
   in the table you would like to create,
@@ -123,52 +121,46 @@ tcreate — Create a STSDAS table from an ASCII descriptor table.
   that is expected for 'tcreate.cdfile'.
   The syntax is also the same as
   for column definitions in text tables,
-  except for the leading "<TT>#c </TT>" in text tables.
-  <P>
-  If cdfile = "<TT>STDIN</TT>" and the input is not redirected,
+  except for the leading <tt>"#c "</tt> in text tables.
+  If cdfile = <tt>"STDIN"</tt> and the input is not redirected,
   the task prints a prompt asking for input.
   Press Control-Z (or Control-D, i.e. your EOF character)
   to terminate the list of column definitions;
   note that the Control-Z must NOT occur on the same line as the last
   column definition.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>datafile = "<TT>STDIN</TT>" [file name]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='datafile' Line='datafile = "STDIN" [file name]'>
-  <DD>The name of the input ASCII data file.
-  <P>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>datafile = <tt>"STDIN"</tt> [file name]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='datafile' Line='datafile = "STDIN" [file name]' -->
+  <dd>The name of the input ASCII data file.
   The values in the file must be in the order of the columns
   as given in the column-definitions file 'cdfile'.
-  Undefined values should have INDEF or "<TT></TT>" as place holders
+  Undefined values should have INDEF or <tt>""</tt> as place holders
   for numerical or character values, respectively.
   Each row for the table must begin with a new line in 'datafile',
   but there can be multiple lines in 'datafile' for each table row
   (see also 'nlines').
-  <P>
   If all data for a table row have been read from an input line
   but there are additional data on the line,
   or if there is a data type mismatch,
   the following warning will be
-  printed:  "<TT>out of synch or extra data in line &lt;number&gt;</TT>".
-  <P>
+  printed:  <tt>"out of synch or extra data in line &lt;number&gt;"</tt>.
   Lines in the input data file are limited to 8196 characters,
   including the newline at the end of each line.
   If a longer line is encountered, the task will stop with an error.
-  <P>
   As with 'cdfile',
-  if datafile = "<TT>STDIN</TT>" and the input is not redirected,
+  if datafile = <tt>"STDIN"</tt> and the input is not redirected,
   the task prints a prompt asking for input.
   Enter a carriage return before ending the last line
   and then press Control-Z (or Control-D, i.e. EOF) to close the file.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(uparfile) [file name]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(uparfile) [file name]'>
-  <DD>The name of the input ASCII file of header parameters.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(uparfile) [file name]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(uparfile) [file name]' -->
+  <dd>The name of the input ASCII file of header parameters.
   This file is optional.
-  <P>
   Each line of this file defines one header parameter,
   except that blank lines and lines beginning with # will be ignored.
   Each line should contain three parts:  keyword, datatype, and value;
@@ -180,36 +172,33 @@ tcreate — Create a STSDAS table from an ASCII descriptor table.
   but in that case it must be enclosed in quotes;
   otherwise, the portion of the value following the first word
   will be interpreted as a comment.
-  <P>
   Note that the syntax is not the same as
   for header keywords in text tables.
-  The latter uses the much more reasonable "<TT>#k keyword = value comment</TT>".
+  The latter uses the much more reasonable <tt>"#k keyword = value comment"</tt>.
   The datatype shouldn't need to be specified,
   since keywords are stored in the table as text strings anyway;
   the current syntax has been retained for backward compatibility.
-  <P>
-  It is possible, though not recommended, to set uparfile = "<TT>STDIN</TT>".
+  It is possible, though not recommended, to set uparfile = <tt>"STDIN"</tt>.
   The problem is that it is read twice,
   once just to count the number of entries, and once to read the values,
   so you would have to type in the values twice.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(nskip = 0) [integer, min=0, max=INDEF]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(nskip = 0) [integer, min=0, max=INDEF]'>
-  <DD>Number of lines to skip at the beginning of the data file.
-  <P>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(nskip = 0) [integer, min=0, max=INDEF]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(nskip = 0) [integer, min=0, max=INDEF]' -->
+  <dd>Number of lines to skip at the beginning of the data file.
   The 'tcreate' task will also skip blank lines and lines beginning with #;
   it will therefore not usually be necessary to specify 'nskip',
   as header lines may be commented out by inserting a leading #.
   Note that if 'nskip &gt; 0' then exactly 'nskip' lines will be skipped,
   even if some of them are blank or comment lines.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(nlines = 0) [integer, min=0, max=INDEF]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(nlines = 0) [integer, min=0, max=INDEF]'>
-  <DD>The number of lines in the input data file
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(nlines = 0) [integer, min=0, max=INDEF]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(nlines = 0) [integer, min=0, max=INDEF]' -->
+  <dd>The number of lines in the input data file
   corresponding to one row in the output table.
   If 'nlines = 0' (the default) then lines will
   be read from the data file until every column in the row is filled.
@@ -217,13 +206,12 @@ tcreate — Create a STSDAS table from an ASCII descriptor table.
   if for some rows the input data are compressed into fewer than this
   many lines, extra dummy lines must be included following the good data.
   Note that comment lines and blank lines are not counted.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(nrows = 0) [integer, min=0, max=INDEF]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(nrows = 0) [integer, min=0, max=INDEF]'>
-  <DD>The number of rows to write into the table.
-  <P>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(nrows = 0) [integer, min=0, max=INDEF]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(nrows = 0) [integer, min=0, max=INDEF]' -->
+  <dd>The number of rows to write into the table.
   If this value is zero, then the entire input data file will be read.
   If this value is greater than zero then
   no more than 'nrows' will be written to the table,
@@ -232,22 +220,21 @@ tcreate — Create a STSDAS table from an ASCII descriptor table.
   For a column-ordered table (see the 'tbltype' parameter),
   'nrows' is the number of rows that will be allocated,
   and the actual number in the data file may be smaller.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(hist = yes) [boolean]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(hist = yes) [boolean]'>
-  <DD>Add a history record containing a creation date?
-  <P>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(hist = yes) [boolean]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(hist = yes) [boolean]' -->
+  <dd>Add a history record containing a creation date?
   If 'hist = yes', a header parameter will be written to the table with the
   keyword 'HISTORY' that gives the date and time that 'tcreate' was run.
   This parameter is added after those that were read from the 'uparfile', if any.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(extrapar = 5) [integer, min=0, max=INDEF]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(extrapar = 5) [integer, min=0, max=INDEF]'>
-  <DD>Extra space to be reserved for header-parameter records.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(extrapar = 5) [integer, min=0, max=INDEF]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(extrapar = 5) [integer, min=0, max=INDEF]' -->
+  <dd>Extra space to be reserved for header-parameter records.
   This is the number of records for header parameters that will be allocated,
   in addition to the number needed to hold the parameters
   specified in the 'uparfile' parameter file.
@@ -256,27 +243,26 @@ tcreate — Create a STSDAS table from an ASCII descriptor table.
   up to five more parameters may be added
   (e.g., by using the 'tupar' task)
   without the table being rewritten to reallocate space.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(tbltype = "<TT>default</TT>") [string, allowed values:  default | row | </B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(tbltype = "default") [string, allowed values:  default | row | '>
-  <DD>column | text]
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(tbltype = <tt>"default"</tt>) [string, allowed values:  default | row | </b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(tbltype = "default") [string, allowed values:  default | row | ' -->
+  <dd>column | text]
   Type of table to create.
   The default is row-ordered stsdas format.
   To create a FITS table,
-  use tbltype = "<TT>default</TT>"
+  use tbltype = <tt>"default"</tt>
   and specify a table name ('table')
-  with filename extension "<TT>.fits</TT>", "<TT>.fit</TT>", or "<TT>.??f</TT>"
-  (<TT>'?'</TT> is any single character).
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(extracol = 0) [integer, min=0, max=INDEF]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(extracol = 0) [integer, min=0, max=INDEF]'>
-  <DD>Extra space to be reserved for columns in the output table.
+  with filename extension <tt>".fits"</tt>, <tt>".fit"</tt>, or <tt>".??f"</tt>
+  (<tt>'?'</tt> is any single character).
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(extracol = 0) [integer, min=0, max=INDEF]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(extracol = 0) [integer, min=0, max=INDEF]' -->
+  <dd>Extra space to be reserved for columns in the output table.
   This parameter is relevant only for a row-ordered stsdas format table.
-  <P>
   This is in addition to the number required to contain those columns
   described by 'cdfile'.
   One unit of space is taken by each
@@ -284,23 +270,23 @@ tcreate — Create a STSDAS table from an ASCII descriptor table.
   A double-precision column requires two units of allocated space,
   and a character-string column takes one unit of space for each four
   characters, or fraction thereof.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1.  Wait for the user to type in column definitions and data,
   each of which will be terminated by a Control-Z (or Control-D, i.e. EOF).
   The prompts are printed by the 'tcreate' task;
-  these are the lines beginning with "<TT>Give column definitions</TT>"
-  and "<TT>Give table data</TT>".
+  these are the lines beginning with <tt>"Give column definitions"</tt>
+  and <tt>"Give table data"</tt>.
   The table will have 4 columns and 2 rows.
-  <PRE>
-  <P>
+  </p>
+  <pre>
+  
   tt&gt; tcreate test STDIN STDIN
-  <P>
+  
   Give column definitions (name, datatype, print format, units)
    ... then newline &amp; EOF to finish.
   name  ch*12
@@ -308,21 +294,25 @@ tcreate — Create a STSDAS table from an ASCII descriptor table.
   dec   d     h12.0   degrees
   mag   r     f8.2
   ^Z
-  <P>
+  
   Give table data ... then newline &amp; EOF to finish.
   nameless      3:18:47   42:24   INDEF
   "SA0 123456"  19:00:06.3  -0:00:01  3.5
   ^Z
-  <P>
-  </PRE>
-  2. Create a table called "<TT>outfile.tab</TT>" using the columns specified
-  in "<TT>columns.cd</TT>" and the data in "<TT>data.dat</TT>".
-  <P>
+  
+  </pre>
+  <p>
+  2. Create a table called <tt>"outfile.tab"</tt> using the columns specified
+  in <tt>"columns.cd"</tt> and the data in <tt>"data.dat"</tt>.
+  </p>
+  <p>
   tt&gt; tcreate outfile columns.cd data.dat nskip=3
-  <P>
-  "<TT>columns.cd</TT>" may contain just the following:
-  <BR>
-  <PRE>
+  </p>
+  <p>
+  <tt>"columns.cd"</tt> may contain just the following:
+  <br>
+  </p>
+  <pre>
   STARno I  i5
   X	r      "F6.2"  pixels
   Y	R    F6.2     "pixels"
@@ -330,16 +320,18 @@ tcreate — Create a STSDAS table from an ASCII descriptor table.
   		SHARP	  R
   				ROUND		r
   STARNAME   ch*15
-  </PRE>
-  <P>
+  </pre>
+  <p>
   Note the free format of, and embedded tabs in, the column definitions file
   itself.  The format for display of MAG is not specified, but the unit is
   given as magnitude, so adjacent quotes are used to mark the position where
   the display format is expected.
-  <P>
-  The file "<TT>data.dat</TT>" may contain (if 'nskip=3', 'nlines=2'):
-  <BR>
-  <PRE>
+  </p>
+  <p>
+  The file <tt>"data.dat"</tt> may contain (if 'nskip=3', 'nlines=2'):
+  <br>
+  </p>
+  <pre>
   This is a header
         header2
          header3
@@ -349,18 +341,20 @@ tcreate — Create a STSDAS table from an ASCII descriptor table.
   14.0 "HD 122"
   3 20.0    21.0        22.0         23.0     24.0  ""
   dummy line
-  </PRE>
-  <P>
+  </pre>
+  <p>
   Note the tabbed and free format of the data file
   and the specification of the character strings.
   If the character data contain embedded blanks
   then the whole string should be quoted,
   otherwise this is not necessary.
   The final entry is the null character string.
-  <P>
+  </p>
+  <p>
   3. The following column definitions:
-  <BR>
-  <PRE>
+  <br>
+  </p>
+  <pre>
   STARno	 i i6
   X	 r f9.2  pixels
   Y	 r f9.2  pixels
@@ -368,29 +362,30 @@ tcreate — Create a STSDAS table from an ASCII descriptor table.
   SHARP	 r f9.3
   ROUND	 r f9.3
   STARNAME ch*15
-  <P>
+  
   could be used with the following data file:
-  <P>
+  
        1     7.92     2.64   -3.075    0.436    0.019   XXXXXXXXXXXXXXX
        2    33.89     3.14   -1.162    0.419    0.223
        3     3.68     5.07   -2.454    0.421   -0.123   HD12345
        4    42.70     5.08   -1.285    0.445    0.195   HD 123
-  </PRE>
-  <P>
+  </pre>
+  <p>
   4. The aperture photometry file from the 'daophot' task
   may have the following data:
-  <BR>
-  <PRE>
+  <br>
+  </p>
+  <pre>
            1     6.95     2.61   99.999   99.999   99.999   99.999 . . .
             464.618  9.71  0.52   9.999    9.999    9.999    9.999 . . .
            2   200.06     2.80   99.999   99.999   99.999   99.999
             465.180  7.79  0.16   9.999    9.999    9.999    9.999
            3   156.25     5.17   14.610   14.537   14.483   14.438
             462.206  7.26  0.37   0.013    0.014    0.015    0.016
-  <P>
-  <P>
+  
+  
   and could have the following column-definition file:
-  <P>
+  
   STARno	i
   X	r
   Y	r
@@ -403,11 +398,12 @@ tcreate — Create a STSDAS table from an ASCII descriptor table.
   MAG15	r
   SKYMOD	r
   SKYSD	r
-  </PRE>
-  <P>
+  </pre>
+  <p>
   The following could be used as an input file to define header parameters.
-  <BR>
-  <PRE>
+  <br>
+  </p>
+  <pre>
   comment t Created 1987 July 22
   NL      i 2
   NX      i 284
@@ -417,28 +413,26 @@ tcreate — Create a STSDAS table from an ASCII descriptor table.
   PH/ADU  r 20.0
   RNOISE  r 6.50
   BAD     r 300.0
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>References</H3>
-  <! BeginSection: 'REFERENCES'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <!-- EndSection:   'BUGS' -->
+  <h3>References</h3>
+  <!-- BeginSection: 'REFERENCES' -->
+  <p>
   This task was written by Phil Hodge.
-  </UL>
-  <! EndSection:   'REFERENCES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
-  Type "<TT>help ttools opt=sysdoc</TT>" for a higher-level description of the 'ttools'
+  </p>
+  <!-- EndSection:   'REFERENCES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
+  Type <tt>"help ttools opt=sysdoc"</tt> for a higher-level description of the 'ttools'
   package.
-  See also the files in "<TT>tables$doc/</TT>".
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  See also the files in <tt>"tables$doc/"</tt>.
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

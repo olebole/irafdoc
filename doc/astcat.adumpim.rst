@@ -1,121 +1,121 @@
 .. _adumpim:
 
-adumpim — Image survey access debugging task
-============================================
+adumpim: Image survey access debugging task
+===========================================
 
 **Package: astcat**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   adumpim -- query an image survey and capture the results in a fits file
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   adumpim imsurvey output ra dec size
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>imsurvey</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='imsurvey' Line='imsurvey'>
-  <DD>The name of the image survey to be queried. Image survey names have the form
-  survey@site, e.g. "<TT>dss2@cadc</TT>". The image survey address and query format are
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>imsurvey</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='imsurvey' Line='imsurvey' -->
+  <dd>The name of the image survey to be queried. Image survey names have the form
+  survey@site, e.g. <tt>"dss2@cadc"</tt>. The image survey address and query format are
   stored in a record called imsurvey in the image survey configuration file.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
-  <DD>The name of the output query results file. The query results are written
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
+  <dd>The name of the output query results file. The query results are written
   to the output file without modification, but at present they are implicitly
-  assumed to be in fits format. Users should append a "<TT>.fits</TT>" extension to
+  assumed to be in fits format. Users should append a <tt>".fits"</tt> extension to
   the output file name if they wish the output file to be visible to IRAF
   as a FITS image.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>ra  </B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='ra' Line='ra  '>
-  <DD>The right ascension of the field center in the units expected by the image
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>ra  </b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='ra' Line='ra  ' -->
+  <dd>The right ascension of the field center in the units expected by the image
   survey query. The value of ra replaces the default value of the ra query
   parameter.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>dec  </B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='dec' Line='dec  '>
-  <DD>The declination of the field center in the units expected by the image
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>dec  </b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='dec' Line='dec  ' -->
+  <dd>The declination of the field center in the units expected by the image
   survey query.  The value of dec replaces the default value of the dec query
   parameters. It may be necessary to add or remove a leading + sign from
   in order to make the query function correctly.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>size</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='size' Line='size'>
-  <DD>The field size in units expected by the image survey query. The value of size
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>size</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='size' Line='size' -->
+  <dd>The field size in units expected by the image survey query. The value of size
   replaces the default value of the width, xwidth, ywidth, hwidth, hxwidth,
   and hywidth query
   parameters as appropriate.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>imdb = "<TT>)_.imdb</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='imdb' Line='imdb = ")_.imdb"'>
-  <DD>The image survey configuration file. The name of the image survey configuration
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>imdb = <tt>")_.imdb"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='imdb' Line='imdb = ")_.imdb"' -->
+  <dd>The image survey configuration file. The name of the image survey configuration
   file defaults to the value of the imdb package parameter.  The default
-  configuration file is "<TT>astcat$lib/imdb.dat</TT>".
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  configuration file is <tt>"astcat$lib/imdb.dat"</tt>.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   Adumpim is a simple image survey access debugging task which queries the
-  image survey <I>imsurvey</I>, captures the results, and writes them
-  to the file <I>output</I> without modification.
-  <P>
+  image survey <i>imsurvey</i>, captures the results, and writes them
+  to the file <i>output</i> without modification.
+  </p>
+  <p>
   The user must supply values for the query parameters ra, dec, and one or
   more of the size query parameters width, xwidth, ywidth, hwidth, xhwidth,
   or yhwidth, by
-  specifying appropriate values for the <I>ra</I>, <I>dec</I>, and <I>size</I>
+  specifying appropriate values for the <i>ra</i>, <i>dec</i>, and <i>size</i>
   parameters in the units expected by the image survey query. These values are
   treated as strings and passed directly to the image survey query without
   coordinate transformations or units conversions.
-  <P>
-  The image survey configuration file <I>imdb</I> contains a record for each
-  supported <I>imsurvey</I>. This record contains the image survey address,
+  </p>
+  <p>
+  The image survey configuration file <i>imdb</i> contains a record for each
+  supported <i>imsurvey</i>. This record contains the image survey address,
   the query format, and the output format. The default image survey configuration
-  file is "<TT>astcat$lib/imdb.dat</TT>".
-  <P>
+  file is <tt>"astcat$lib/imdb.dat"</tt>.
+  </p>
+  <p>
   The output of adumpim can be used to refine the image survey record in the
   image survey configuration file.
-  <P>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. List the supported image surveys, select an image survey to query, make
   the query and capture the results. The aslist task is used  to list
   the supported image surveys and the query and output formats for the selected
   image survey as shown below. The query format tells the user that the input
   ra and dec must be in sexagesimal hours and degrees and in the J2000
   coordinate system that the size parameter is a radius in minutes.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   cl&gt; aslist *
   dss2@cadc
-  <P>
+  
   cl&gt; aslist dss2@cadc verb+
   Scanning image surveys database astcat$lib/imdb.dat
   Listing the supported image surveys
@@ -146,30 +146,26 @@ adumpim — Image survey access debugging task
        ewavlen INDEF INDEF r angstroms
          etemp INDEF INDEF r degrees
         epress INDEF INDEF r mbars
-  <P>
-  cl&gt; adumpim dss2@cadc m51.fits 13:29:53.27 +47:11:48.4 10.0
-  <P>
-  cl&gt; imheader m51.fits
-  <P>
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Time requirements</H3>
-  <! BeginSection: 'TIME REQUIREMENTS'>
-  <UL>
-  </UL>
-  <! EndSection:   'TIME REQUIREMENTS'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
-  aslist, agetim
-  </UL>
-  <! EndSection:    'SEE ALSO'>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
+  cl&gt; adumpim dss2@cadc m51.fits 13:29:53.27 +47:11:48.4 10.0
+  
+  cl&gt; imheader m51.fits
+  
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Time requirements</h3>
+  <!-- BeginSection: 'TIME REQUIREMENTS' -->
+  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
+  aslist, agetim
+  </p>
+  
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

@@ -1,5 +1,5 @@
-system — System utilities package
-=================================
+system: System utilities package
+================================
 
 .. toctree:: :maxdepth: 1
 
@@ -35,7 +35,6 @@ system — System utilities package
    system.rewind
    system.sort
    system.spy
-   system.system
    system.tail
    system.tee
    system.touch

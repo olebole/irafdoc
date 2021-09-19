@@ -1,80 +1,82 @@
 .. _sgidecode:
 
-sgidecode — Decode an SGI format metacode file
-==============================================
+sgidecode: Decode an SGI format metacode file
+=============================================
 
 **Package: plot**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   sgidecode -- decode simple graphics interface (SGI) metacode files
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   sgidecode input
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
-  <DD>The input SGI metacode files.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>generic = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='generic' Line='generic = no'>
-  <DD>Ignore remaining parameters?
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verbose = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
-  <DD>Print metacode in a verbose format?
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>gkiunits = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='gkiunits' Line='gkiunits = no'>
-  <DD>By default, coordinates are printed in NDC rather than GKI units.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  Task <I>sgidecode</I> is a debugging tool used to decode SGI metacode
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
+  <dd>The input SGI metacode files.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>generic = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='generic' Line='generic = no' -->
+  <dd>Ignore remaining parameters?
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verbose = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
+  <dd>Print metacode in a verbose format?
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>gkiunits = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='gkiunits' Line='gkiunits = no' -->
+  <dd>By default, coordinates are printed in NDC rather than GKI units.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  Task <i>sgidecode</i> is a debugging tool used to decode SGI metacode
   files.  The plotting instructions are decoded and printed in readable
   form on the standard output.  The input metacode can be read from one
   or more files or redirected from the standard input.
-  <P>
-  Coordinates are printed in NDC units (0-1) by default.  When <B>gkiunits</B>
+  </p>
+  <p>
+  Coordinates are printed in NDC units (0-1) by default.  When <b>gkiunits</b>
   = yes, coordinates are printed in gki units (0-32767).  Parameter
-  <B>verbose</B> is currently not implemented.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  1. Decode the metacode in file "<TT>home$vdm.sgi</TT>".
-  <P>
+  <b>verbose</b> is currently not implemented.
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
+  1. Decode the metacode in file <tt>"home$vdm.sgi"</tt>.
+  </p>
+  <p>
       cl&gt; sgidecode home$vdm.sgi
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   gkidecode sgikern
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

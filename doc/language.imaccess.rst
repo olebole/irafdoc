@@ -1,68 +1,69 @@
 .. _imaccess:
 
-imaccess — Test if an image exists
-==================================
+imaccess: Test if an image exists
+=================================
 
 **Package: language**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   imaccess -- test whether an image exists
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   bool = imaccess (image)
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>image</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='image' Line='image'>
-  <DD>The name of the image whose existence is to be tested.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <I>Imaccess</I> is a boolean intrinsic function returning true ("<TT>yes</TT>") if the
-  named image exists.  The function will return false ("<TT>no</TT>") if the image doesn't
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>image</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image' -->
+  <dd>The name of the image whose existence is to be tested.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  <i>Imaccess</i> is a boolean intrinsic function returning true (<tt>"yes"</tt>) if the
+  named image exists.  The function will return false (<tt>"no"</tt>) if the image doesn't
   exist, or if no image extension is supplied and the image name is ambiguous.
-  <I>Imaccess</I> can only be called as a function in an expression, not as a task.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  <i>Imaccess</i> can only be called as a function in an expression, not as a task.
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Print the header of an image if it exists.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       if (imaccess ("dev$wpix"))
   	imheader ("dev$wpix",long+)
       else
   	error (11, "Image not found")
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. Tell if a image exists.
-  <P>
-  	cl&gt; = imaccess ("<TT>dev$pix</TT>")
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
+  </p>
+  <p>
+  	cl&gt; = imaccess (<tt>"dev$pix"</tt>)
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <p>
   An optional second argument should be added to test whether the named file
   can be accessed for reading or writing.
-  </UL>
-  <! EndSection:    'BUGS'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS'  >
+  <!-- EndSection:    'BUGS' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS'  -->
   

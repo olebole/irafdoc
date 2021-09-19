@@ -1,110 +1,109 @@
 .. _keytab:
 
-keytab — Copy an image or table header keyword to a table element.
-==================================================================
+keytab: Copy an image or table header keyword to a table element.
+=================================================================
 
 **Package: nttools**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   keytab -- Copy a header keyword to a table element.
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   keytab input keyword table column row
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   This task reads a header keyword from either an image or a table file
   and writes it to a table element (row and column position). If the
   data type of the header keyword differs from that of the table
   element, then the value is converted to the appropriate data type. If
   the keyword is not found in the header, the element will be set to the
   null value appropriate for the column type.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input [file name]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input [file name]'>
-  <DD>Name of the file containing header keyword.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>keyword [string]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='keyword' Line='keyword [string]'>
-  <DD>Name of the header keyword to be read. (Keyword names are not case sensitive.)
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>table [file name]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='table' Line='table [file name]'>
-  <DD>Name of the table to which the value will be written.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>column [string]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='column' Line='column [string]'>
-  <DD>Name of table column. (Column names are not case sensitive.)
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>row [integer, min=1, max=INDEF]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='row' Line='row [integer, min=1, max=INDEF]'>
-  <DD>Table row number.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(silent = no) [bool]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(silent = no) [bool]'>
-  <DD>If this parameter is set to no (the default) a warning message will be
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input [file name]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input [file name]' -->
+  <dd>Name of the file containing header keyword.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>keyword [string]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='keyword' Line='keyword [string]' -->
+  <dd>Name of the header keyword to be read. (Keyword names are not case sensitive.)
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>table [file name]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='table' Line='table [file name]' -->
+  <dd>Name of the table to which the value will be written.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>column [string]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='column' Line='column [string]' -->
+  <dd>Name of table column. (Column names are not case sensitive.)
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>row [integer, min=1, max=INDEF]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='row' Line='row [integer, min=1, max=INDEF]' -->
+  <dd>Table row number.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(silent = no) [bool]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(silent = no) [bool]' -->
+  <dd>If this parameter is set to no (the default) a warning message will be
   printed if the keyword is not found in the header. If it is set
   to yes, the warning message is suppressed.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Copy the component name (i.e., the 'COMPNAME' header keyword) 
   from the table 'thruput.tab' to the
   first row of the table 'graph.tab'.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   tt&gt; keytab thruput.tab COMPNAME graph.tab COMPNAME 1
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. Copy the zero point of the second group (i.e., the 'CRVAL1' keyword)
   in the image file 'image.hhh' to the first
   wavelength in the table 'spectrum.tab'.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   tt&gt; keytab image.hhh[2] CRVAL1 spectrum.tab WAVELENGTH 1
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>References</H3>
-  <! BeginSection: 'REFERENCES'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>References</h3>
+  <!-- BeginSection: 'REFERENCES' -->
+  <p>
   This task was written by Bernie Simon.
-  </UL>
-  <! EndSection:   'REFERENCES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'REFERENCES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   keypar, parkey, partab, tabkey, tabpar
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'REFERENCES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'REFERENCES' 'SEE ALSO'  -->
   

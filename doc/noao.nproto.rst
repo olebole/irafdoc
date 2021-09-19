@@ -1,5 +1,5 @@
-nproto — Prototype (temporary, contributed) tasks
-=================================================
+nproto: Prototype (temporary, contributed) tasks
+================================================
 
 .. toctree:: :maxdepth: 1
 

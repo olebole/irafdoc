@@ -1,27 +1,28 @@
 .. _gtedit:
 
-gtedit — Graphically edit a table.
-==================================
+gtedit: Graphically edit a table.
+=================================
 
 **Package: nttools**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   gtedit -- Graphically edit an STSDAS table.
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   gtedit input xcolumn ycolumn
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   The 'gtedit' task lets you graphically edit 
   an STSDAS table.
   You can use the editor to delete rows. You can
@@ -31,34 +32,36 @@ gtedit — Graphically edit a table.
   save deleted points in a separate file by
   setting the 'reject' parameter to an output
   file name.
-  <P>
+  </p>
+  <p>
   The rows that are plotted can be selected using the :x and :y
   commands to specify columns for the X and Y axes. Points that
-  are to be deleted will be marked with an "<TT>x</TT>" (this information
+  are to be deleted will be marked with an <tt>"x"</tt> (this information
   is retained if columns change).
-  <P>
+  </p>
+  <p>
   To mark a point for deletion you can:
-  <PRE>
+  </p>
+  <pre>
   1) Specify the points individually
   2) Define a box in which all points will be deleted
   3) Delete all points on one side of the cursor or line segment
-  </PRE>
-  <P>
-  You can also toggle between "<TT>delete mode</TT>" and "<TT>undelete mode</TT>". When
+  </pre>
+  <p>
+  You can also toggle between <tt>"delete mode"</tt> and <tt>"undelete mode"</tt>. When
   you are in undelete mode, any previously-deleted points that you
   selected will be unmarked.
-  <P>
+  </p>
+  <p>
   If you don't like using 'gtedit', you can switch to the 'tedit'
   task and edit the table in the usual manner.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Cursor commands</H3>
-  <! BeginSection: 'CURSOR COMMANDS'>
-  <UL>
-  <P>
-  <PRE>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Cursor commands</h3>
+  <!-- BeginSection: 'CURSOR COMMANDS' -->
+  <pre>
   	GTEDIT Interactive Cursor Commands
-  <P>
+  
   ?	Print options
   :	Colon commands
   a	print out the complete row for the data point nearest the cursor
@@ -70,112 +73,105 @@ gtedit — Graphically edit a table.
   h	print out the column names of the input table
   l	delete all points with X values less than the cursor X position
   p	replot the graph possibly using new data columns
-  q	quit and do not save changes made since the last <TT>'f'</TT>
+  q	quit and do not save changes made since the last <tt>'f'</tt>
   r	delete all points with X values greater than the cursor X position
   s	mark one end of a line segment
   t	delete all points with Y values greater than the cursor Y position
   u	toggle between delete and undelete mode
   v	change from gtedit to tedit mode
   z	display current status (delete or undelete)
-  <P>
+  
   :x(-) xcolumn	set the table column for the X axis and possibly replot
   :y(-) ycolumn	set the table column for the Y axis and possibly replot
   - do not automatically replot after reading in new column
-  <P>
-  </PRE>
-  </UL>
-  <! EndSection:   'CURSOR COMMANDS'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input [file name]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input [file name]'>
-  <DD>The input table to be edited.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>xcolumn</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='xcolumn' Line='xcolumn'>
-  <DD>The name of the column in the input table to use for the X-axis of the plot.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>ycolumn</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='ycolumn' Line='ycolumn'>
-  <DD>The name of the column in the input table to use for the Y-axis of the plot.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(device = "<TT>stdgraph</TT>")</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(device = "stdgraph")'>
-  <DD>The standard graphics device.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(commands = "<TT></TT>")</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(commands = "")'>
-  <DD>The graphics cursor.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(inplace = no)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(inplace = no)'>
-  <DD>Edit the table inplace. No new output table is created and the original
+  
+  </pre>
+  <!-- EndSection:   'CURSOR COMMANDS' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input [file name]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input [file name]' -->
+  <dd>The input table to be edited.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>xcolumn</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='xcolumn' Line='xcolumn' -->
+  <dd>The name of the column in the input table to use for the X-axis of the plot.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>ycolumn</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='ycolumn' Line='ycolumn' -->
+  <dd>The name of the column in the input table to use for the Y-axis of the plot.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(device = <tt>"stdgraph"</tt>)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(device = "stdgraph")' -->
+  <dd>The standard graphics device.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(commands = <tt>""</tt>)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(commands = "")' -->
+  <dd>The graphics cursor.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(inplace = no)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(inplace = no)' -->
+  <dd>Edit the table inplace. No new output table is created and the original
   table is overwritten.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(output = "<TT></TT>")</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(output = "")'>
-  <DD>The name of the output table if the input table is not edited inplace. If
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(output = <tt>""</tt>)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(output = "")' -->
+  <dd>The name of the output table if the input table is not edited inplace. If
   inplace = no then output should be a valid filename.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(reject = "<TT></TT>")</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(reject = "")'>
-  <DD>If this parameter contains a valid filename then this table will contain
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(reject = <tt>""</tt>)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(reject = "")' -->
+  <dd>If this parameter contains a valid filename then this table will contain
   the points which were deleted using this task.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(gtpar = "<TT></TT>") [pset]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(gtpar = "") [pset]'>
-  <DD>The name of the pset containing the parameters which describe the plot
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(gtpar = <tt>""</tt>) [pset]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(gtpar = "") [pset]' -->
+  <dd>The name of the pset containing the parameters which describe the plot
   attributes.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Edit a table containing the output photometry from DAOPHOT. 
   Initially plot the magnitude (MAG) versus the error in the magnitude (MAGERR)
   to decide which points to delete.
-  <P>
-  <PRE>
+  </p>
+  <pre>
        st&gt; gtedit m31.mag MAG MERR
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>References</H3>
-  <! BeginSection: 'REFERENCES'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <!-- EndSection:   'BUGS' -->
+  <h3>References</h3>
+  <!-- BeginSection: 'REFERENCES' -->
+  <p>
   This task was written by Dennis Crabtree.
-  </UL>
-  <! EndSection:   'REFERENCES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
+  <!-- EndSection:   'REFERENCES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
   
-  <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'CURSOR COMMANDS' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'CURSOR COMMANDS' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

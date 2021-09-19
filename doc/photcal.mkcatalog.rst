@@ -1,67 +1,66 @@
 .. _mkcatalog:
 
-mkcatalog — Type in a standard star catalog or observations file
-================================================================
+mkcatalog: Type in a standard star catalog or observations file
+===============================================================
 
 **Package: photcal**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   mkcatalog -- create or edit a catalog, usually but not necessarily
   a standard star catalog
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   mkcatalog catalog
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>catalog</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='catalog' Line='catalog'>
-  <DD>The name of the new output catalog to be created or a previously existing
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>catalog</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='catalog' Line='catalog' -->
+  <dd>The name of the new output catalog to be created or a previously existing
   catalog to be edited.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>review = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='review' Line='review = no'>
-  <DD>Review any pre-existing entries?
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verify = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='verify' Line='verify = no'>
-  <DD>Verify each new entry?
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>edit = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='edit' Line='edit = yes'>
-  <DD>Enter edit mode after entering all the values?
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <P>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>review = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='review' Line='review = no' -->
+  <dd>Review any pre-existing entries?
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verify = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verify' Line='verify = no' -->
+  <dd>Verify each new entry?
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>edit = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='edit' Line='edit = yes' -->
+  <dd>Enter edit mode after entering all the values?
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   MKCATALOG is a script task which permits the user to create or edit
-  the catalog <I>catalog</I>, usually but not necessarily, a standard star
+  the catalog <i>catalog</i>, usually but not necessarily, a standard star
   catalog.  MKCATALOG has two modes of operation, entry mode and edit mode.
   In entry mode MKCATALOG prompts the user for input.
   In edit mode MKCATALOG calls up the default editor specified by
-  the IRAF environment variable <I>editor</I>.
-  <P>
-  If <I>catalog</I> is a new catalog, MKCATALOG prompts the user for 
+  the IRAF environment variable <i>editor</i>.
+  </p>
+  <p>
+  If <i>catalog</i> is a new catalog, MKCATALOG prompts the user for 
   the name of the object id column, the names of the data columns,
   the names of the error columns (these are optional), and the widths
   of the columns. Typing the end-of-file character &lt;EOF&gt;,
@@ -75,33 +74,37 @@ mkcatalog — Type in a standard star catalog or observations file
   output catalog.
   Entry mode is terminated by typing &lt;EOF&gt; in response to a query for
   a new object id.  The user may verify each new
-  entry by setting the parameter <I>verify</I> to "<TT>yes</TT>".
-  <P>
+  entry by setting the parameter <i>verify</i> to <tt>"yes"</tt>.
+  </p>
+  <p>
   Each new catalog created by MKCATALOG has an associated format
   description file listing the column names and numbers associations defined by
   the user. This file, referenced by its parent catalog name, can be
   used as input to the MKCONFIG task.
   The actual name of the format description file on disk is constructed by
-  prepending the catalog name <I>catalog</I> with the string "<TT>f</TT>" and
-  appending the string "<TT>.dat</TT>". For example if a new catalog 
-  called "<TT>UBVcat</TT>" is created by MKCATALOG, a format description
-  file called "<TT>fUBVcat.dat</TT>" will also be created. Any pre-existing format
+  prepending the catalog name <i>catalog</i> with the string <tt>"f"</tt> and
+  appending the string <tt>".dat"</tt>. For example if a new catalog 
+  called <tt>"UBVcat"</tt> is created by MKCATALOG, a format description
+  file called <tt>"fUBVcat.dat"</tt> will also be created. Any pre-existing format
   description file of that name, which does not have an associated catalog
   file, will be deleted.
-  <P>
-  If the catalog <I>catalog</I> exists and was created with MKCATALOG,
+  </p>
+  <p>
+  If the catalog <i>catalog</i> exists and was created with MKCATALOG,
   MKCATALOG reads
   the number of columns, the column names, and column widths from the
   header of the catalog, and enters entry mode positioned at the end
-  of the file. If the parameter <I>review</I> = "<TT>yes</TT>", then the user can
+  of the file. If the parameter <i>review</i> = <tt>"yes"</tt>, then the user can
   review and verify existing catalog entries before entering new ones.
   When entry mode is terminated MKCATALOG enters edit mode
   in the usual way. 
-  <P>
-  If <I>catalog</I> exists but was not created with MKCATALOG, MKCATALOG
+  </p>
+  <p>
+  If <i>catalog</i> exists but was not created with MKCATALOG, MKCATALOG
   enters edit mode immediately.
-  <P>
-  If <I>catalog</I> is a standard star catalog, the user should be aware
+  </p>
+  <p>
+  If <i>catalog</i> is a standard star catalog, the user should be aware
   that the object ids he/she has typed in, are those against which the object
   ids in the standard star observations files will be matched by the
   fitting task FITPARAMS.
@@ -110,43 +113,47 @@ mkcatalog — Type in a standard star catalog or observations file
   files to match those in the standard star catalog.
   For example, the PHOTCAL APPHOT/DAOPHOT pre-processor tasks MKNOBSFILE
   and MKOBSFILE, produce observations files whose object ids
-  are of the form "<TT>field-#</TT>", where "<TT>field</TT>" is the name
-  of the observed field and "<TT>#</TT>" is a sequence number, which is defined
+  are of the form <tt>"field-#"</tt>, where <tt>"field"</tt> is the name
+  of the observed field and <tt>"#"</tt> is a sequence number, which is defined
   only if there is more than one observed star in the field.
-  In this scheme the id of the  the fourth observed star in the field "<TT>M92</TT>"
-  is "<TT>M92-4</TT>". If this star is actually the standard star "<TT>IX-10</TT>" in
-  <I>catalog</I>, the user must change the object id in the observations file
-  to "<TT>IX-10</TT>". Alternatively the user can set up the naming
-  convention in <I>catalog</I> itself, to match  the naming
+  In this scheme the id of the  the fourth observed star in the field <tt>"M92"</tt>
+  is <tt>"M92-4"</tt>. If this star is actually the standard star <tt>"IX-10"</tt> in
+  <i>catalog</i>, the user must change the object id in the observations file
+  to <tt>"IX-10"</tt>. Alternatively the user can set up the naming
+  convention in <i>catalog</i> itself, to match  the naming
   convention of MKNOBSFILE
-  or MKOBSFILE by assigning the standard stars names like "<TT>field-#</TT>" and
+  or MKOBSFILE by assigning the standard stars names like <tt>"field-#"</tt> and
   subsequently measuring the standard stars in the same order as they
-  appear in the catalog.  In this scheme star, "<TT>M92-4</TT>" in
-  the observations file would also be "<TT>M92-4</TT>" in the standard star 
+  appear in the catalog.  In this scheme star, <tt>"M92-4"</tt> in
+  the observations file would also be <tt>"M92-4"</tt> in the standard star 
   catalog, and no editing would be required. This technique is most useful
   for standard sequences in clusters.
-  <P>
+  </p>
+  <p>
   THE MKCATALOG TASK AND THE ENTIRE PHOTCAL PACKAGE IMPOSE THE FOLLOWING
   RESTRICTIONS
   ON BOTH STAR ID NAMES AND THE COLUMN ID NAMES THAT MAY BE ASSIGNED, AND ON
   THE FORMAT OF EACH FIELD.
-  <P>
+  </p>
+  <p>
   Object id names must be composed of characters in the set [a-z,A-Z,0-9,+,-,_].
   Other characters may be included as part of the user id, but 
   will be ignored by the PHOTCAL id matching code. Object id names are
-  case insensitive. To the id matching code the name "<TT>BD+61_305</TT>" is the
-  same as "<TT>bd+61_305</TT>".
-  <P>
+  case insensitive. To the id matching code the name <tt>"BD+61_305"</tt> is the
+  same as <tt>"bd+61_305"</tt>.
+  </p>
+  <p>
   Column names must be composed of characters in the set [a-z,A-Z,0-9]
   and the first character of the column name must be a letter of the alphabet.
   This means for example, that an individual column cannot be assigned the
-  name "<TT>B-V</TT>", since "<TT>B-V</TT>" will be interpreted as an arithmetic expression not
+  name <tt>"B-V"</tt>, since <tt>"B-V"</tt> will be interpreted as an arithmetic expression not
   as a variable, by the PHOTCAL equation parsing routines.
-  "<TT>B-V</TT>" may be replaced with something like "<TT>BV</TT>" or "<TT>BMV</TT>".
+  <tt>"B-V"</tt> may be replaced with something like <tt>"BV"</tt> or <tt>"BMV"</tt>.
   MKCATALOG will complain if the user tries to enter an illegal column name.
-  Column names are case sensitive. Column "<TT>BV</TT>" is not the same as 
-  column "<TT>bv</TT>".
-  <P>
+  Column names are case sensitive. Column <tt>"BV"</tt> is not the same as 
+  column <tt>"bv"</tt>.
+  </p>
+  <p>
   Whitespace  is not permitted in either the object ids or in the column
   values. MKCATALOG will truncate any id or column value at the first
   whitespace encountered. The column widths entered by the user are used
@@ -155,28 +162,26 @@ mkcatalog — Type in a standard star catalog or observations file
   and to align the columns for ease of
   visual inspection by the user. The column widths are not used by the 
   PHOTCAL catalog reading code.
-  <P>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Create a new standard star catalog containing the 3 photometric indices
   V, B-V, and U-B and their respective errors. Note that MKCATALOG supplies
-  default names of the form "<TT>error(name)</TT>" for the error columns where "<TT>name</TT>"
+  default names of the form <tt>"error(name)"</tt> for the error columns where <tt>"name"</tt>
   is the name of the previous column. Users are strongly urged to use the
   default names since they simplify the use of the statistical weighting
   scheme in the FITPARAMS task. If no error information is available
   error column entry can be skipped by typing &lt;-&gt; in response to the query
   for an error column name.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   ph&gt; mkcatalog UBVcat
-  <P>
+  
       and shown below, note that the end-of-file character &lt;EOF&gt; is
       actually ^Z in this case
-  <P>
+  
   Enter the id column name (name, &lt;CR&gt;=ID, &lt;EOF&gt;=quit entry): 
       Enter width of id column (width, &lt;CR&gt;=15): 
   Enter a name for column 2 (name, &lt;CR&gt;=COL2, &lt;EOF&gt;=quit entry): V
@@ -192,8 +197,8 @@ mkcatalog — Type in a standard star catalog or observations file
   Enter a name for error column 7 (name, &lt;CR&gt;=error(UB), &lt;-&gt;=skip): 
       Enter width of column 7 (width, &lt;CR&gt;=10): 
   Enter a name for column 8 (name, &lt;CR&gt;=COL8, &lt;EOF&gt;=quit entry): ^Z
-  <P>
-  <P>
+  
+  
   Catalog UBVcat in file UBVcat has 7 columns
   	Column 1:  ID             
   	Column 2:  V         
@@ -202,55 +207,47 @@ mkcatalog — Type in a standard star catalog or observations file
   	Column 5:  error(BV) 
   	Column 6:  UB        
   	Column 7:  error(UB) 
-  <P>
-  <P>
-  <P>
-  <P>
-  <P>
-  </PRE>
-  <P>
-  <P>
+  
+  
+  
+  
+  
+  </pre>
+  <p>
   2. Add new entries to the file created in example 1.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   ph&gt; mkcatalog UBVcat
-  <P>
-  <P>
-  <P>
-  </PRE>
-  <P>
-  <P>
+  
+  
+  
+  </pre>
+  <p>
   3. Edit an existing catalog created with a foreign program.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   ph&gt; mkcatalog VRI.usr
-  <P>
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Time requirements</H3>
-  <! BeginSection: 'TIME REQUIREMENTS'>
-  <UL>
-  <P>
-  </UL>
-  <! EndSection:   'TIME REQUIREMENTS'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  <P>
+  
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Time requirements</h3>
+  <!-- BeginSection: 'TIME REQUIREMENTS' -->
+  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <p>
   The longest line permitted by an editor varies from editor to
   editor. Users should be aware that it may not be possible to use
   edit mode on very long text lines.
-  <P>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   photcal$catalogs/README,mknobsfile,mkobsfile,mkconfig
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

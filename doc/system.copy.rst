@@ -1,84 +1,87 @@
 .. _copy:
 
-copy — Copy a file or files (use IMCOPY for imagefiles)
-=======================================================
+copy: Copy a file or files (use IMCOPY for imagefiles)
+======================================================
 
 **Package: system**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   copy -- copy a file, or a set of files to a directory
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   copy input output
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
-  <DD>The input file or list of files to be copied.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
-  <DD>The (new) output file when copying one file to another, or the destination
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
+  <dd>The input file or list of files to be copied.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
+  <dd>The (new) output file when copying one file to another, or the destination
   directory when copying a set of files.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verbose = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
-  <DD>If set to "<TT>yes</TT>", a line of the type "<TT> from -&gt; to </TT>" is printed on the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verbose = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
+  <dd>If set to <tt>"yes"</tt>, a line of the type <tt>" from -&gt; to "</tt> is printed on the
   terminal for each file copied to a directory.  This parameter is not
   used when copying one file to another.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   Copy makes a copy of a single file, or it copies a set of files to a different
   directory.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
-  1. Copy all files in the current directory with extension "<TT>.x</TT>" to the
-  directory "<TT>home$src</TT>".  As each copy is made, the user is informed.
-  <P>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
+  1. Copy all files in the current directory with extension <tt>".x"</tt> to the
+  directory <tt>"home$src"</tt>.  As each copy is made, the user is informed.
+  </p>
+  <p>
   	cl&gt; copy *.x home$src ver+
-  <P>
-  2. Make a copy "<TT>fred.BAK</TT>" of the file "<TT>fred</TT>".
-  <P>
+  </p>
+  <p>
+  2. Make a copy <tt>"fred.BAK"</tt> of the file <tt>"fred"</tt>.
+  </p>
+  <p>
   	cl&gt; copy fred fred.BAK
-  <P>
-  3. Copy the "<TT>graphcap</TT>" file from the remote node "<TT>lyra</TT>" to the current node,
-  without changing the name of the file.  Note that "<TT>.</TT>" is a synonym for the
+  </p>
+  <p>
+  3. Copy the <tt>"graphcap"</tt> file from the remote node <tt>"lyra"</tt> to the current node,
+  without changing the name of the file.  Note that <tt>"."</tt> is a synonym for the
   current directory.
-  <P>
+  </p>
+  <p>
   	cl&gt; copy lyra!dev$graphcap .
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   concatenate, movefiles
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

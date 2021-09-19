@@ -1,173 +1,164 @@
 .. _median:
 
-median — Median box filter a list of 1D or 2D images
-====================================================
+median: Median box filter a list of 1D or 2D images
+===================================================
 
 **Package: imfilter**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   median -- median filter a list of images
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   median input output xwindow ywindow
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
-  <DD>List of input images.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
-  <DD>List of filtered images. The number of input images must be the same as
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
+  <dd>List of input images.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
+  <dd>List of filtered images. The number of input images must be the same as
   the number of output images. If the input image name is the same as the
   output image name the original image is replaced by the filtered image.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>xwindow, ywindow</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='xwindow' Line='xwindow, ywindow'>
-  <DD>The size of the median filter. Xwindow and ywindow are assumed to be
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>xwindow, ywindow</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='xwindow' Line='xwindow, ywindow' -->
+  <dd>The size of the median filter. Xwindow and ywindow are assumed to be
   odd integers. If either xwindow or ywindow are even they will be rounded
   up to the nearest odd integer.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>zloreject = INDEF, zhireject = INDEF</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='zloreject' Line='zloreject = INDEF, zhireject = INDEF'>
-  <DD>The minimum and maximum good pixel values. Zloreject and zhireject default to 
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>zloreject = INDEF, zhireject = INDEF</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='zloreject' Line='zloreject = INDEF, zhireject = INDEF' -->
+  <dd>The minimum and maximum good pixel values. Zloreject and zhireject default to 
   -MAX_REAL and MAX_REAL respectively.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>boundary = "<TT>nearest</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"'>
-  <DD>The type of boundary extension. The options are:
-  <DL>
-  <DT><B>nearest</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest'>
-  <DD>Use the value of the nearest boundary pixel.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>constant</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='constant' Line='constant'>
-  <DD>Use a constant value.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>reflect</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='reflect' Line='reflect'>
-  <DD>Reflect pixel values around the boundary.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>wrap</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='wrap' Line='wrap'>
-  <DD>Wrap pixel values around the boundary.
-  </DD>
-  </DL>
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>constant = 0.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.'>
-  <DD>The value for constant value boundary extension.
-  </DD>
-  </DL>
-  <P>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <P>
-  MEDIAN takes a list of input images <I>input</I> and produces a set of filtered
-  output images <I>output</I>. The median filter consists of a sliding
-  rectangular window  of dimensions <I>xwindow</I>
-  by <I>ywindow</I>. The center pixel in the window is replaced by the median
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>boundary = <tt>"nearest"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"' -->
+  <dd>The type of boundary extension. The options are:
+  <dl>
+  <dt><b>nearest</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest' -->
+  <dd>Use the value of the nearest boundary pixel.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>constant</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='constant' Line='constant' -->
+  <dd>Use a constant value.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>reflect</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='reflect' Line='reflect' -->
+  <dd>Reflect pixel values around the boundary.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>wrap</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='wrap' Line='wrap' -->
+  <dd>Wrap pixel values around the boundary.
+  </dd>
+  </dl>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>constant = 0.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.' -->
+  <dd>The value for constant value boundary extension.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  MEDIAN takes a list of input images <i>input</i> and produces a set of filtered
+  output images <i>output</i>. The median filter consists of a sliding
+  rectangular window  of dimensions <i>xwindow</i>
+  by <i>ywindow</i>. The center pixel in the window is replaced by the median
   of all the pixels in the
   window, where the median of a sequence of numbers is defined to be  the value
   of the (n + 1) /2 pixel.  If even the window dimensions are rounded up
   to odd integers.  Out of bounds
-  pixel references are handled by setting the parameter <I>boundary</I>.
-  <P>
-  The <I>zloreject</I> and <I>zhireject</I> parameters may be used to reject
+  pixel references are handled by setting the parameter <i>boundary</i>.
+  </p>
+  <p>
+  The <i>zloreject</i> and <i>zhireject</i> parameters may be used to reject
   bad data from the median filtering box. If no good 
   data is left in the filtering box, the median is set to zloreject
   if the majority of the pixels are less than zloreject, or to zhireject
   if the majority of pixels are greater than zhireject.
-  <P>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Median filter an image using a 5 by 5 window and nearest pixel boundary
   extension.
-  <P>
-  <PRE>
+  </p>
+  <pre>
      im&gt; median m74 m74.5by5 5 5
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. Median filter an image using a 3 by 3 window and constant boundary extension.
-  <P>
-  <PRE>
+  </p>
+  <pre>
      im&gt; median m74 m74.5by5 3 3 boun=const const=0.
-  </PRE>
-  <P>
+  </pre>
+  <p>
   3. Median filter the test image dev$pix, removing all pixels less than 5 or
   greater than 19935 from the filtering box.
-  <P>
-  <PRE>
+  </p>
+  <pre>
      im&gt; median dev$pix pix77 7 7 zlo=5 zhi=19935
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Time requirements</H3>
-  <! BeginSection: 'TIME REQUIREMENTS'>
-  <UL>
-  <P>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Time requirements</h3>
+  <!-- BeginSection: 'TIME REQUIREMENTS' -->
+  <p>
   Median requires approximately 11 and 19 CPU seconds to filter a 512 by
   512 integer image using a 5 by 5 and 7 by 7 filter window respectively
   (SPARCStation2).
-  <P>
-  </UL>
-  <! EndSection:   'TIME REQUIREMENTS'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  <P>
+  </p>
+  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <p>
   The sort routine for the smaller kernels has been optimized. It may be
   desirable to optimize higher order kernels in future.
-  <P>
+  </p>
+  <p>
   The IRAF task FMEDIAN is significantly more efficient than MEDIAN
   and should be used if the image is integer or can be quantized without
   significant loss of precision. 
-  <P>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
-  <P>
+  </p>
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   fmedian, rmedian, frmedian
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

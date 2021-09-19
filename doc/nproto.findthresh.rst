@@ -1,189 +1,189 @@
 .. _findthresh:
 
-findthresh — Estimate a CCD's sky noise from the gain and readnoise
-===================================================================
+findthresh: Estimate a CCD's sky noise from the gain and readnoise
+==================================================================
 
 **Package: nproto**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   findthresh -- Estimate the background noise level of a CCD
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   findthresh data
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>data</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='data' Line='data'>
-  <DD>The level of the sky (or any other data level, for that matter) in A/D
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>data</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='data' Line='data' -->
+  <dd>The level of the sky (or any other data level, for that matter) in A/D
   units, for which the random error is to be estimated.  If this is not
-  given on the command line and a list of <B>images</B> is specified then
+  given on the command line and a list of <b>images</b> is specified then
   the data level will be measured from the images.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>images = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='images' Line='images = ""'>
-  <DD>If not NULL ("<TT></TT>") and if <B>data</B> is not specified, this is a list of
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>images = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images = ""' -->
+  <dd>If not NULL (<tt>""</tt>) and if <b>data</b> is not specified, this is a list of
   images whose random background error per pixel is to be estimated.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>section = "<TT>[*,*]</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='section' Line='section = "[*,*]"'>
-  <DD>The selected image section for the statistics.  This should be chosen
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>section = <tt>"[*,*]"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='section' Line='section = "[*,*]"' -->
+  <dd>The selected image section for the statistics.  This should be chosen
   to exclude bad columns or rows, cosmic rays, and other blemishes.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>gain</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='gain' Line='gain'>
-  <DD>The CCD gain in electrons/ADU.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>gain</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='gain' Line='gain' -->
+  <dd>The CCD gain in electrons/ADU.
   This may be estimated using the FINDGAIN task.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>readnoise</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='readnoise' Line='readnoise'>
-  <DD>The CCD read noise in electrons.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>readnoise</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='readnoise' Line='readnoise' -->
+  <dd>The CCD read noise in electrons.
   This may be estimated using the FINDGAIN task.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>nframes = 1</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='nframes' Line='nframes = 1'>
-  <DD>The number of raw data frames that were coadded or averaged
-  to produce the <B>images</B>.  If this is not set to 1, the
-  <B>coaddtype</B> parameter must also be set to the proper value.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>coaddtype = "<TT>average</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='coaddtype' Line='coaddtype = "average"'>
-  <DD>For coadded frames (<B>nframes</B> &gt; 1) the type of combination
-  that was done, either "<TT>average</TT>" or "<TT>sum</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>center = "<TT>mean</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='center' Line='center = "mean"'>
-  <DD>The statistical measure of central tendency that is used to estimate
-  the data level of each image.  This can have the values:  <B>mean</B>,
-  <B>midpt</B>, or <B>mode</B>.  These are calculated using the same
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>nframes = 1</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='nframes' Line='nframes = 1' -->
+  <dd>The number of raw data frames that were coadded or averaged
+  to produce the <b>images</b>.  If this is not set to 1, the
+  <b>coaddtype</b> parameter must also be set to the proper value.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>coaddtype = <tt>"average"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='coaddtype' Line='coaddtype = "average"' -->
+  <dd>For coadded frames (<b>nframes</b> &gt; 1) the type of combination
+  that was done, either <tt>"average"</tt> or <tt>"sum"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>center = <tt>"mean"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='center' Line='center = "mean"' -->
+  <dd>The statistical measure of central tendency that is used to estimate
+  the data level of each image.  This can have the values:  <b>mean</b>,
+  <b>midpt</b>, or <b>mode</b>.  These are calculated using the same
   algorithm as the IMSTATISTICS task.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>binwidth = 0.1</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='binwidth' Line='binwidth = 0.1'>
-  <DD>The bin width of the histogram (in sigma) that is used to estimate the
-  <B>midpt</B> or <B>mode</B> of the data section in each image.
-  The default case of center=<B>mean</B> does not use this parameter.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verbose = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
-  <DD>Label the computed and measured background noise on output,
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>binwidth = 0.1</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='binwidth' Line='binwidth = 0.1' -->
+  <dd>The bin width of the histogram (in sigma) that is used to estimate the
+  <b>midpt</b> or <b>mode</b> of the data section in each image.
+  The default case of center=<b>mean</b> does not use this parameter.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verbose = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
+  <dd>Label the computed and measured background noise on output,
   rather than print them two per line?
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   FINDTHRESH can be used to estimate the expected random error per pixel
-  (in ADU) of the sky background of a CCD image, given the <B>gain</B> (in
-  electrons per ADU) and <B>readnoise</B> (in electrons) of the CCD.  The
+  (in ADU) of the sky background of a CCD image, given the <b>gain</b> (in
+  electrons per ADU) and <b>readnoise</b> (in electrons) of the CCD.  The
   sky background (or any other data level of interest) can be specified
-  directly with the <B>data</B> parameter, or the representative values can
-  be measured from a specified list of <B>images</B> as also governed by
-  the <B>section</B>, <B>center</B>, and <B>binwidth</B> parameters.
+  directly with the <b>data</b> parameter, or the representative values can
+  be measured from a specified list of <b>images</b> as also governed by
+  the <b>section</b>, <b>center</b>, and <b>binwidth</b> parameters.
   FINDTHRESH can be used with processed frames that are the coaddition or
   average of several raw images by choosing the correct values for the
-  <B>nframes</B> and <B>coaddtype</B> parameters.  In this case
-  (<B>nframes</B> &gt; 1), the effective gain and effective readnoise of the
+  <b>nframes</b> and <b>coaddtype</b> parameters.  In this case
+  (<b>nframes</b> &gt; 1), the effective gain and effective readnoise of the
   coadded frames will also be printed out.
-  <P>
-  The section over which the statistics of the <B>images</B> are computed
+  </p>
+  <p>
+  The section over which the statistics of the <b>images</b> are computed
   should be chosen carefully.  The frames may be displayed and perhaps
   blinked, and IMSTATISTICS, IMHISTOGRAM, IMPLOT, and other tasks may be
   used to compare the statistics of various sections of the images directly.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Algorithm</H3>
-  <! BeginSection: 'ALGORITHM'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Algorithm</h3>
+  <!-- BeginSection: 'ALGORITHM' -->
+  <p>
   The formula used by the task is:
-  <P>
-  <PRE>
+  </p>
+  <pre>
       random error in 1 pixel = sqrt (data*p(N) + r(N)**2) / p(N)
-  </PRE>
-  <P>
+  </pre>
+  <p>
   Where the effective gain, p(N), is given in electrons per ADU and
   the effective readnoise, r(N), is given in electrons.  The effective
-  gain and readnoise are calculated from the intrinsic <B>gain</B> and
-  <B>readnoise</B>, specified as parameters to the task, by the relations:
-  <P>
-  <PRE>
-      p(N) =      N  * <B>gain</B>        (only if the frames were <B>averaged</B>)
-      r(N) = sqrt(N) * <B>readnoise</B>   (whether averaged <B>or</B> summed frames)
-  </PRE>
-  <P>
+  gain and readnoise are calculated from the intrinsic <b>gain</b> and
+  <b>readnoise</b>, specified as parameters to the task, by the relations:
+  </p>
+  <pre>
+      p(N) =      N  * <b>gain</b>        (only if the frames were <b>averaged</b>)
+      r(N) = sqrt(N) * <b>readnoise</b>   (whether averaged <b>or</b> summed frames)
+  </pre>
+  <p>
   In our implementation, the level of the sky can be calculated using any
-  of the <B>mean</B>, <B>midpt</B> (an estimate of the median), or <B>mode</B>
-  as determined by the <B>center</B> parameter.  For the <B>midpt</B> or
-  <B>mode</B> choices only, the value of the <B>binwidth</B> parameter
+  of the <b>mean</b>, <b>midpt</b> (an estimate of the median), or <b>mode</b>
+  as determined by the <b>center</b> parameter.  For the <b>midpt</b> or
+  <b>mode</b> choices only, the value of the <b>binwidth</b> parameter
   determines the bin width (in sigma) of the histogram that is used in
   the calculation.  FINDTHRESH uses the IMSTATISTICS task to measure the
   statistics.
-  </UL>
-  <! EndSection:   'ALGORITHM'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'ALGORITHM' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   To estimate the CCD background noise at a specified data level, gain and
   readnoise (note that you will be prompted for the gain and the readnoise
   if you don't set them either explicitly on the command line, or previously
   using, for example, eparam):
-  <P>
-  <PRE>
+  </p>
+  <pre>
       lo&gt; findthresh 100 gain=2.3 readnoise=13.
-  </PRE>
-  <P>
+  </pre>
+  <p>
   To estimate the CCD background noise within a 100x100 section
   of a list of images, data*.imh:
-  <P>
-  <PRE>
+  </p>
+  <pre>
       lo&gt; findthresh data*.imh section="[271:370,361:460]"
-  </PRE>
-  <P>
+  </pre>
+  <p>
   To estimate the CCD background noise using the mode to estimate the
   sky level for each image section:
-  <P>
-  <PRE>
+  </p>
+  <pre>
       lo&gt; findthresh.section="[271:370,361:460]"
       lo&gt; findthresh data*.imh center=mode
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   findgain, imstatistics, imhistogram
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'ALGORITHM' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'ALGORITHM' 'EXAMPLES' 'SEE ALSO'  -->
   

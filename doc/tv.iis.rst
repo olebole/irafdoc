@@ -1,5 +1,5 @@
-iis — IIS image display control package
-=======================================
+iis: IIS image display control package
+======================================
 
 .. toctree:: :maxdepth: 1
 

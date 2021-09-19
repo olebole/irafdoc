@@ -1,203 +1,202 @@
 .. _telluric:
 
-telluric — Remove telluric features from 1D spectra
-===================================================
+telluric: Remove telluric features from 1D spectra
+==================================================
 
 **Package: onedspec**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   telluric -- remove telluric features from 1D spectra
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Summary</H3>
-  <! BeginSection: 'SUMMARY'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Summary</h3>
+  <!-- BeginSection: 'SUMMARY' -->
+  <p>
   Telluric calibration spectra are shifted and scaled to best divide out
   telluric features from data spectra.  This may be done non-interactively to
   minimize the RMS in some region or regions of the data spectra and
   interactively with a graphically search.
-  </UL>
-  <! EndSection:   'SUMMARY'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'SUMMARY' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   telluric input output cal
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
-  <DD>List of input data images containing one dimensional spectra to be
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
+  <dd>List of input data images containing one dimensional spectra to be
   corrected.  All spectra in each image are corrected. The spectra need not
   be wavelength calibrated.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
-  <DD>List of output corrected images.  The list must either match the input list
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
+  <dd>List of output corrected images.  The list must either match the input list
   or be an empty list.  If an empty list is specified the input spectra will
   be replaced by the corrected spectra.  The input spectra will also be
   replaced if the input and output image names are the same.  Any other image
   name must be for a new image otherwise a warning message will be given and
   the task will proceed to the next input image.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>cal  </B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='cal' Line='cal  '>
-  <DD>List of telluric calibration images.  If a single image is specified it
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>cal  </b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='cal' Line='cal  ' -->
+  <dd>List of telluric calibration images.  If a single image is specified it
   will apply to all the input images.  Otherwise the list of calibration
   images must match the list of input images.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>ignoreaps = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='ignoreaps' Line='ignoreaps = no'>
-  <DD>Ignore aperture numbers between the input spectra and the calibration
-  spectra?  If "<TT>no</TT>" then the calibration image must contain a spectrum
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>ignoreaps = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='ignoreaps' Line='ignoreaps = no' -->
+  <dd>Ignore aperture numbers between the input spectra and the calibration
+  spectra?  If <tt>"no"</tt> then the calibration image must contain a spectrum
   with the same aperture number as each spectrum in the input image.
   Otherwise the first spectrum in the calibration image will be used
   for all spectra in the input image.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>xcorr = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='xcorr' Line='xcorr = yes'>
-  <DD>Cross-correlate each input spectrum with the calibration spectrum to
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>xcorr = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='xcorr' Line='xcorr = yes' -->
+  <dd>Cross-correlate each input spectrum with the calibration spectrum to
   determine an shift for the calibration spectrum?  Only regions specified by
   the sample regions parameter will be used in the cross-correlation.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>tweakrms = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='tweakrms' Line='tweakrms = yes'>
-  <DD>Search for the minimum RMS in the corrected spectrum by adjusting the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>tweakrms = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='tweakrms' Line='tweakrms = yes' -->
+  <dd>Search for the minimum RMS in the corrected spectrum by adjusting the
   shifts and scales between the input spectrum and the calibration spectrum?
   The RMS is minimized in the specified sample regions.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>interactive = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes'>
-  <DD>Enter an interactive graphical mode to search for the best shift
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>interactive = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes' -->
+  <dd>Enter an interactive graphical mode to search for the best shift
   and scale between the input spectra and calibration spectra?  This
   is done after the optional automatic cross-correlation and RMS minimization
   step.  A query is made for each input spectrum so that the interactive
   step may be skipped during the execution of the task.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>sample = "<TT>*</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"'>
-  <DD>Sample regions to use for cross-correlation, automatic RMS minimization,
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>sample = <tt>"*"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"' -->
+  <dd>Sample regions to use for cross-correlation, automatic RMS minimization,
   and RMS values.  The sample regions are specified by a list of comma
   separated ranges.  The ranges are colon separate coordinate values.
   For dispersion calibrated spectra the coordinate values are in the
-  dispersion units otherwise they are in pixel coordinates.  The string "<TT>*</TT>"
+  dispersion units otherwise they are in pixel coordinates.  The string <tt>"*"</tt>
   selects the entire spectrum.  The sample regions may be changed
   interactively either with the cursor or with a colon command.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>threshold = 0.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 0.'>
-  <DD>Since the calibration consists of division by the scaled calibration data
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>threshold = 0.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 0.' -->
+  <dd>Since the calibration consists of division by the scaled calibration data
   it is possible for totally saturated lines to have zero or negative values.
   The task will quit if detects negative or zero calibration values.  The
-  <I>threshold</I> allows applying a minimum threshold to the calibration
+  <i>threshold</i> allows applying a minimum threshold to the calibration
   values so the task may continue.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>lag = 10</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='lag' Line='lag = 10'>
-  <DD>The cross-correlation lag to use when <I>xcorr</I> = yes.  The lag
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>lag = 10</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='lag' Line='lag = 10' -->
+  <dd>The cross-correlation lag to use when <i>xcorr</i> = yes.  The lag
   is given in pixels.   This is the distance to either side of the
   initial shift over which the cross-correlation profile is computed.
   If a value of zero is given then the cross-correlation step is not done.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>shift = 0., dshift = 1.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='shift' Line='shift = 0., dshift = 1.'>
-  <DD>The initial shift and shift step in pixels.  This initializes the shift
-  search parameters for the first spectrum.  If <I>dshift</I> is zero then
-  there will be no search for a new shift and the <TT>'x'</TT> interactive function is
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>shift = 0., dshift = 1.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='shift' Line='shift = 0., dshift = 1.' -->
+  <dd>The initial shift and shift step in pixels.  This initializes the shift
+  search parameters for the first spectrum.  If <i>dshift</i> is zero then
+  there will be no search for a new shift and the <tt>'x'</tt> interactive function is
   disabled.  These parameters may be changed interactively.  After the
   first spectrum subsequent spectra begin with the values from the last
   spectrum.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>scale = 1., dscale = 0.2</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='scale' Line='scale = 1., dscale = 0.2'>
-  <DD>The initial scale and scale step.  This initializes the scale
-  search parameters for the first spectrum.  If <I>dscale</I> is zero then
-  there will be no search for a new scale and the <TT>'y'</TT> interactive function is
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>scale = 1., dscale = 0.2</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='scale' Line='scale = 1., dscale = 0.2' -->
+  <dd>The initial scale and scale step.  This initializes the scale
+  search parameters for the first spectrum.  If <i>dscale</i> is zero then
+  there will be no search for a new scale and the <tt>'y'</tt> interactive function is
   disabled.  These parameters may be changed interactively.  After the
   first spectrum subsequent spectra begin with the values from the last
   spectrum.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>offset = 1.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='offset' Line='offset = 1.'>
-  <DD>The interactive search displays three candidate corrected spectra which
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>offset = 1.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='offset' Line='offset = 1.' -->
+  <dd>The interactive search displays three candidate corrected spectra which
   have been normalized to a mean of one.  The offset is added and subtracted
   to separate the three candidates.  The value may be changed interactively.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>smooth = 1</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='smooth' Line='smooth = 1'>
-  <DD>The displayed candidate corrected spectra are smoothed by a moving
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>smooth = 1</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='smooth' Line='smooth = 1' -->
+  <dd>The displayed candidate corrected spectra are smoothed by a moving
   boxcar average with a box size specified by this parameter.  The smoothing
   only applies to the displayed spectra and does not affect the measured
   RMS or the output corrected spectra.  The value may be changed interactively.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>cursor = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""'>
-  <DD>Input cursor for the interactive graphics.  A null value selects the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>cursor = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
+  <dd>Input cursor for the interactive graphics.  A null value selects the
   graphics cursor otherwise a file of cursor values may be specified.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>airmass</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='airmass' Line='airmass'>
-  <DD>Query parameter for the airmass.  If the airmass is not in the image
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>airmass</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='airmass' Line='airmass' -->
+  <dd>Query parameter for the airmass.  If the airmass is not in the image
   header under the keyword AIRMASS the user is queried for the airmass.
   This parameter should not be specified on the command line.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>answer</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='answer' Line='answer'>
-  <DD>Query parameter for responding to the interactive question.  This parameter
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>answer</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='answer' Line='answer' -->
+  <dd>Query parameter for responding to the interactive question.  This parameter
   should not be specified on the command line.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>interp = poly5</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='interp' Line='interp = poly5'>
-  <DD>The <B>package</B> parameter specifying the interpolation function for shifting
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>interp = poly5</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='interp' Line='interp = poly5' -->
+  <dd>The <b>package</b> parameter specifying the interpolation function for shifting
   the calibration spectra to match the input spectra.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   Input one dimensional spectra are corrected to remove telluric features by
   dividing by shifted and scaled calibration spectra.  The calibration
   spectra are generally of hot, nearly featureless stars; hence this procedure
@@ -207,39 +206,42 @@ telluric — Remove telluric features from 1D spectra
   in the abundance of the telluric species.  The intensity scaling
   uses Beer's law which is the approximation that the change in absorption
   with abundance is an exponential relation.  
-  <P>
+  </p>
+  <p>
   The following describes the correction.  Let J(x_i) be the calibration
   spectrum at a set of pixels x_i.  An interpolation function is fit to this
   spectrum to give J(x).  The shifted and scaled calibration function
   is then
-  <P>
-  <PRE>
+  </p>
+  <pre>
       (1)  J'(x) = max (threshold, J(x+dx)) ** (A / A_cal * scale)
-  </PRE>
-  <P>
+  </pre>
+  <p>
   where dx is the pixel shift parameter, A is the airmass of the input
   spectrum, A_cal is the airmass of the calibration spectrum, and
-  scale is the scale parameter.  The operator "<TT>**</TT>" is exponentiation.
+  scale is the scale parameter.  The operator <tt>"**"</tt> is exponentiation.
   The max operation limits the calibration spectrum to be greater
   than or equal to the specified threshold value.  If the calibration
   value is ever less than or equal to zero then the task will quit
   with a warning error.
-  <P>
+  </p>
+  <p>
   The output corrected spectrum is then computed as
-  <P>
-  <PRE>
+  </p>
+  <pre>
       (2)  I'(x_i) = I(x_i) / (J'(x_i) / &lt;J'&gt;)
-  </PRE>
-  <P>
+  </pre>
+  <p>
   where I' is the corrected spectrum, I is the input spectrum, and &lt;J'&gt; is
   the mean of the shifted and scaled calibration spectrum to keep the output
   intensities comparable to the input spectrum.  The value of &lt;J'&gt; is
-  printed in the output as the "<TT>normalization</TT>".  If the spectra are
+  printed in the output as the <tt>"normalization"</tt>.  If the spectra are
   dispersion calibrated, possibly with different dispersion parameters, then
   the x values in (2) from the input spectrum are converted to matching
   pixels in the calibration spectrum using the dispersion functions of the
   two spectra.
-  <P>
+  </p>
+  <p>
   The purpose of this task is to determine the best values of the
   shift and scale parameters dx and scale.  There
   are automatic and interactive methods provided.  The automatic
@@ -249,16 +251,18 @@ telluric — Remove telluric features from 1D spectra
   The automatic methods are performed first, if selected, followed
   by the interactive, graphical step.  The following describes
   the steps in the order in which they occur.
-  <P>
+  </p>
+  <p>
   The initial values of the shift and scale are set by the parameters
-  <I>shift</I> and <I>scale</I> for the first spectrum.  After that the values
+  <i>shift</i> and <i>scale</i> for the first spectrum.  After that the values
   determined for the previous spectrum, those actually applied to correcting
   that spectrum, are used as the initial values for the next spectrum.  The
   search steps and sample regions are also initialized by task parameters but
   may be modified during the interactive step and the modified values apply
   to subsequent spectra.
-  <P>
-  If the <I>xcorr</I> parameter is yes and the <I>lag</I> parameter is
+  </p>
+  <p>
+  If the <i>xcorr</i> parameter is yes and the <i>lag</i> parameter is
   not zero the calibration spectrum is cross-correlated against the input
   spectrum.  Each spectrum is prepared as follows.  A large scale continuum
   is fit by a quadratic chebyshev using 5 iterations of sigma clipping with a
@@ -266,18 +270,20 @@ telluric — Remove telluric features from 1D spectra
   rejecting the deviant points along with one pixel on either side.  This
   attempts to eliminate the effects of absorption lines.  The continuum fit
   is subtracted from the spectrum and the spectrum is extended and tapered by
-  a cosine function of length given by the <I>lag</I> parameter.
-  <P>
+  a cosine function of length given by the <i>lag</i> parameter.
+  </p>
+  <p>
   The prepared spectra are then cross-correlated by shifting the calibration
-  spectrum plus and minus the specified <I>lag</I> amount about the current
+  spectrum plus and minus the specified <i>lag</i> amount about the current
   shift value.  Only the regions in the input spectrum specified by the
   sample regions parameter are used in the correlation.  This produces a
   correlation profile whose peak defines the relative shift between the two
   spectra.  The current shift value is updated.  This method assumes the
   common telluric features dominate within the specified sample regions.  The
   lag size should be roughly the profile widths of the telluric features.
-  <P>
-  If the <I>tweakrms</I> parameter is yes and <I>dshift</I> is greater than
+  </p>
+  <p>
+  If the <i>tweakrms</i> parameter is yes and <i>dshift</i> is greater than
   zero trial corrections at the current shift value and plus and minus one
   shift step with the scale value fixed at its current value are made and the
   RMS in the sample regions computed.  If the RMS is smallest at the current
@@ -287,80 +293,88 @@ telluric — Remove telluric features from 1D spectra
   either the shift step is less than 0.01 pixels or the shift is more than
   two pixels from the initial shift.  In the latter case the final shift is
   reset to the original shift.
-  <P>
-  The scale factor is then varied if <I>dscale</I> is greater than zero by the
+  </p>
+  <p>
+  The scale factor is then varied if <i>dscale</i> is greater than zero by the
   scale step at a fixed shift in the same way as above to search for a
   smaller RMS in the sample regions.  This search terminates when the scale
   step is less than 0.01 or if the scale value has departed by 100% of the
   initial value.  In the latter case the scale value is left unchanged.
-  <P>
+  </p>
+  <p>
   The search over the shifts and scales is repeated a second time after which
   the tweak algorithm terminates.
-  <P>
+  </p>
+  <p>
   After the optional cross-correlation and tweak steps the interactive search
-  mode may be entered.  This occurs if <I>interactive</I> = yes.  A query is
-  asking whether to search interactively.  The answers may be "<TT>no</TT>", "<TT>yes</TT>",
-  "<TT>NO</TT>", or "<TT>YES</TT>".  The lower case answers apply to the current spectrum and
+  mode may be entered.  This occurs if <i>interactive</i> = yes.  A query is
+  asking whether to search interactively.  The answers may be <tt>"no"</tt>, <tt>"yes"</tt>,
+  <tt>"NO"</tt>, or <tt>"YES"</tt>.  The lower case answers apply to the current spectrum and
   the upper case answers apply to all subsequent spectra.  This means that if
-  an answer of "<TT>NO</TT>" or "<TT>YES</TT>" is given then there will be no further queries
+  an answer of <tt>"NO"</tt> or <tt>"YES"</tt> is given then there will be no further queries
   for the remaining input spectra.
-  <P>
+  </p>
+  <p>
   If the interactive step is selected a graph of three candidate corrections
   for the input spectrum is displayed.  There also may be a graph of the
   calibration or input spectrum shown for reference.  Initially the
   calibration spectrum is displayed.  The additional graph may be toggled off
-  and on and between the input and calibration spectra with the <TT>'c'</TT> and <TT>'d'</TT>
+  and on and between the input and calibration spectra with the <tt>'c'</tt> and <tt>'d'</tt>
   keys.  The three candidate corrected spectra will be with the current shift
   and scale in the middle and plus or minus one step in either the shift or
   scale.  Initially the spectra will be at different scale values.
   Information about the current shift and scale and the step used is given in
   the graph title.
-  <P>
-  One may toggle between shift steps and scale steps with the <TT>'x'</TT> (for shift)
-  or <TT>'y'</TT> (for scale) keys.  The RMS in the title is the RMS within the
+  </p>
+  <p>
+  One may toggle between shift steps and scale steps with the <tt>'x'</tt> (for shift)
+  or <tt>'y'</tt> (for scale) keys.  The RMS in the title is the RMS within the
   currently defined sample regions.  If one of the step values is zero then a
   display of different values of that parameter will not be selected.  The
   step size will need to be set with a colon command to search in that
   parameter.
-  <P>
-  If <TT>'x'</TT> is typed when the three spectra are at different shifts then the
+  </p>
+  <p>
+  If <tt>'x'</tt> is typed when the three spectra are at different shifts then the
   nearest spectrum to the y cursor at the x cursor position will be
   selected.  If the central spectrum is selected the step size is divided in
   half otherwise the current shift is changed and the  selected spectrum
   becomes the middle spectrum.  Three new spectra are then shown.  The same
-  applies if <TT>'y'</TT> is typed when the three spectra are at different scales.
+  applies if <tt>'y'</tt> is typed when the three spectra are at different scales.
   This allows an interactive search similar to the iterative tweakrms method
   described previously except the user can use whatever criteria is desired
   to search for the best scale and shift.
-  <P>
+  </p>
+  <p>
   There are additional keystrokes and colon commands to set or change sample
   regions, reset the current shift, scale, and step sizes, expand the step
   size in the current mode, adjust the offsets between the spectra, and
-  get help.  The <TT>'w'</TT> key and GTOOLS colon commands are available to window
+  get help.  The <tt>'w'</tt> key and GTOOLS colon commands are available to window
   the graphs.  Any changes in the x limits apply to both graphs while y limit
   adjustments apply to the graph pointed to by the cursor.
-  <P>
-  Two other commands require a short explanation.  The <TT>'a'</TT> key may
+  </p>
+  <p>
+  Two other commands require a short explanation.  The <tt>'a'</tt> key may
   be used to run the tweakrms algorithm starting from the current
   shift, scale, and steps and the current sample regions.  This allows
   one to graphically set or reset the sample regions before doing
-  the RMS minimization.  The "<TT>:smooth</TT>" command and associated
-  <I>smooth</I> task parameter allow the corrected spectra to be
+  the RMS minimization.  The <tt>":smooth"</tt> command and associated
+  <i>smooth</i> task parameter allow the corrected spectra to be
   displayed with a boxcar smoothing to better see faint features in
   noise.  It is important to realize that the smoothing is only
   done on the displayed spectra.  The telluric correction and computed RMS
   are done in the unsmoothed data.
-  <P>
-  After the interactive step is quit with <TT>'q'</TT> or if the interactive
+  </p>
+  <p>
+  After the interactive step is quit with <tt>'q'</tt> or if the interactive
   step is not done then the final output spectrum is computed and
   written to the output image.  A brief log output is printed for
   each spectrum.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Cursor keys and colon commands</H3>
-  <! BeginSection: 'CURSOR KEYS AND COLON COMMANDS'>
-  <UL>
-  <PRE>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Cursor keys and colon commands</h3>
+  <!-- BeginSection: 'CURSOR KEYS AND COLON COMMANDS' -->
+  <pre>
   ? - print help
   a - automatic RMS minimization within sample regions
   c - toggle calibration spectrum display
@@ -372,7 +386,7 @@ telluric — Remove telluric features from 1D spectra
   w - window commands (see :/help for additional information)
   x - graph and select from corrected shifted candidates
   y - graph and select from corrected scaled candidates
-  <P>
+  
   :help           - print help
   :shift  [value] - print or reset the current shift
   :scale  [value] - print or reset the current scale
@@ -381,70 +395,67 @@ telluric — Remove telluric features from 1D spectra
   :offset [value] - print or reset the current offset between spectra
   :sample [value] - print or reset the sample regions
   :smooth [value] - print or reset the smoothing box size
-  </PRE>
-  </UL>
-  <! EndSection:   'CURSOR KEYS AND COLON COMMANDS'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'CURSOR KEYS AND COLON COMMANDS' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1.  To interactively search for a best correction with the default
   cross-correlation and tweak steps:
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; telluric spec001.ms telspec001.ms spec005.ms
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2.  To search only for a scale factor:
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; telluric spec001.ms telspec001.ms spec005.ms xcorr- dshift=0.
-  </PRE>
-  <P>
+  </pre>
+  <p>
   3.  To processes a set of spectra non-interactively with the same calibration
   spectrum and to replace the input spectra with the corrected spectra and
   log the processing:
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; telluric spec* "" calspec inter- &gt; log
-  </PRE>
-  <P>
+  </pre>
+  <p>
   4.  To apply the simplest scaling by the ratio of the airmasses alone:
-  <P>
-  <PRE>
-      cl&gt; telluric spec* tel//spec* calspec inter- xcorr- tweak- inter- \<BR>
+  </p>
+  <pre>
+      cl&gt; telluric spec* tel//spec* calspec inter- xcorr- tweak- inter- \<br>
       &gt;&gt;&gt; scale=1. shift=0.
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Revisions</H3>
-  <! BeginSection: 'REVISIONS'>
-  <UL>
-  <DL>
-  <DT><B>TELLURIC V2.12.3</B></DT>
-  <! Sec='REVISIONS' Level=0 Label='TELLURIC' Line='TELLURIC V2.12.3'>
-  <DD>The normalization is printed.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>TELLURIC V2.11.2</B></DT>
-  <! Sec='REVISIONS' Level=0 Label='TELLURIC' Line='TELLURIC V2.11.2'>
-  <DD>Threshold parameter added.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>TELLURIC V2.11</B></DT>
-  <! Sec='REVISIONS' Level=0 Label='TELLURIC' Line='TELLURIC V2.11'>
-  <DD>This task is new in this version.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'REVISIONS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Revisions</h3>
+  <!-- BeginSection: 'REVISIONS' -->
+  <dl>
+  <dt><b>TELLURIC V2.12.3</b></dt>
+  <!-- Sec='REVISIONS' Level=0 Label='TELLURIC' Line='TELLURIC V2.12.3' -->
+  <dd>The normalization is printed.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>TELLURIC V2.11.2</b></dt>
+  <!-- Sec='REVISIONS' Level=0 Label='TELLURIC' Line='TELLURIC V2.11.2' -->
+  <dd>Threshold parameter added.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>TELLURIC V2.11</b></dt>
+  <!-- Sec='REVISIONS' Level=0 Label='TELLURIC' Line='TELLURIC V2.11' -->
+  <dd>This task is new in this version.
+  </dd>
+  </dl>
+  <!-- EndSection:   'REVISIONS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   skytweak
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'SUMMARY' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'CURSOR KEYS AND COLON COMMANDS' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'SUMMARY' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'CURSOR KEYS AND COLON COMMANDS' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

@@ -1,86 +1,86 @@
 .. _widstape:
 
-widstape — Convert ONEDSPEC spectra to IDSOUT text format
-=========================================================
+widstape: Convert ONEDSPEC spectra to IDSOUT text format
+========================================================
 
 **Package: mtlocal**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   widstape -- Write a Cyber style IDSOUT tape
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   widstape idsout input records
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>idsout</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='idsout' Line='idsout'>
-  <DD>The output file name to receive the card-image data. This may be a
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>idsout</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='idsout' Line='idsout' -->
+  <dd>The output file name to receive the card-image data. This may be a
   magtape specification (e.g. mta, mtb) or disk file name.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>input</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
-  <DD>The input root file name for the spectra to be written
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>records</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='records' Line='records'>
-  <DD>The record string to be appended to the root name to create the image
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>input</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
+  <dd>The input root file name for the spectra to be written
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>records</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='records' Line='records' -->
+  <dd>The record string to be appended to the root name to create the image
   names of the spectra to be written.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>new_tape = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='new_tape' Line='new_tape = no'>
-  <DD>If set to yes, the tape is rewound and output begins at BOT. If no,
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>new_tape = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='new_tape' Line='new_tape = no' -->
+  <dd>If set to yes, the tape is rewound and output begins at BOT. If no,
   output begins at EOT unless an explicit file specification is given
-  as part of the magtape file name for parameter "<TT>idsout</TT>" (e.g. mta[2]).
+  as part of the magtape file name for parameter <tt>"idsout"</tt> (e.g. mta[2]).
   If idsout contains a file specification of [1], then writing begins
   at BOT regardless of the value for new_tape.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>block_size = 3200</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='block_size' Line='block_size = 3200'>
-  <DD>The tape block size in bytes. This must be an integral factor of 80.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>ebcdic = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='ebcdic' Line='ebcdic = no'>
-  <DD>The default character code is ASCII, but if this parameter is set to yes,
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>block_size = 3200</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='block_size' Line='block_size = 3200' -->
+  <dd>The tape block size in bytes. This must be an integral factor of 80.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>ebcdic = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='ebcdic' Line='ebcdic = no' -->
+  <dd>The default character code is ASCII, but if this parameter is set to yes,
   the output character will be in EBCDIC.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   The specified spectra are copied to the output file in a card-image format
   defined in the IPPS-IIDS/IRS Reduction Manual. Values from the extended
   image header are used to fill in the observational parameters.
-  <P>
+  </p>
+  <p>
   The basic format consists of 4 - 80 byte header cards, 128 data cards
   having 8 data elements per card in 1PE10.3 FORTRAN equivalent format,
   and a trailing blank card for a total of 133 cards. 
   Thus spectra up to 1024 points may be contained in the IDSOUT format. 
   The format is outlined below:
-  <P>
-  <PRE>
+  </p>
+  <pre>
    Line	Column	Type
       1	   1-5	Integer	  Record number within IDSOUT text file
   	  6-10	Integer	  Integration time
@@ -101,39 +101,42 @@ widstape — Convert ONEDSPEC spectra to IDSOUT text format
   	 78-80	String	  END
   5-132		Real	  1024 pixel values, 8 per line
     133			  Blank line
-  </PRE>
-  <P>
-  The data of type real are in exponent format; i.e FORTRAN <TT>'E'</TT> format (1.234e3).
-  <P>
+  </pre>
+  <p>
+  The data of type real are in exponent format; i.e FORTRAN <tt>'E'</tt> format (1.234e3).
+  </p>
+  <p>
   There are no special marks between spectral images, 
   and when multiple spectra are written with a single command, the first card
   of a subsequent spectrum may be within the same physical tape block
   as the last card of the previous spectrum. This assures that all tape
   blocks (except the very last one in the tape file) are all the same
   length.  A double end-of-mark is written after the last spectrum.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   The following example writes an IDSOUT format tape starting at the
   beginning of the tape.
-  <P>
+  </p>
+  <p>
   	cl&gt; widstape mta nite1 1001-1200 new_tape+
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Time requirements: unix/vax 11/750</H3>
-  <! BeginSection: 'TIME REQUIREMENTS: UNIX/VAX 11/750'>
-  <UL>
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Time requirements: unix/vax 11/750</h3>
+  <!-- BeginSection: 'TIME REQUIREMENTS: UNIX/VAX 11/750' -->
+  <p>
   Each spectrum of 1024 points requires about 2 second.
-  </UL>
-  <! EndSection:   'TIME REQUIREMENTS: UNIX/VAX 11/750'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'TIME REQUIREMENTS: UNIX/VAX 11/750' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   rcardimage, ridsout
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS: UNIX/VAX 11/750' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS: UNIX/VAX 11/750' 'SEE ALSO'  -->
   

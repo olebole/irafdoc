@@ -1,52 +1,52 @@
 .. _mkskycor:
 
-mkskycor — Make sky illumination correction images
-==================================================
+mkskycor: Make sky illumination correction images
+=================================================
 
 **Package: ccdred**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   mkskycor -- Make sky iillumination correction images
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   mkskycor input output
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
-  <DD>List of input images for making sky iillumination correction images.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
-  <DD>List of output flat field iillumination correction images.  If none is
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
+  <dd>List of input images for making sky iillumination correction images.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
+  <dd>List of output flat field iillumination correction images.  If none is
   specified or if the name is the same as the input image then the output
   image replaces the input image.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>ccdtype = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='ccdtype' Line='ccdtype = ""'>
-  <DD>CCD image type to select from the input images.  If none is specified
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>ccdtype = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='ccdtype' Line='ccdtype = ""' -->
+  <dd>CCD image type to select from the input images.  If none is specified
   then all types are used.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>xboxmin = 5, xboxmax = 0.25, yboxmin = 5, yboxmax = 0.25</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='xboxmin' Line='xboxmin = 5, xboxmax = 0.25, yboxmin = 5, yboxmax = 0.25'>
-  <DD>Minimum and maximum smoothing box size along the x and y axes.  The
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>xboxmin = 5, xboxmax = 0.25, yboxmin = 5, yboxmax = 0.25</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='xboxmin' Line='xboxmin = 5, xboxmax = 0.25, yboxmin = 5, yboxmax = 0.25' -->
+  <dd>Minimum and maximum smoothing box size along the x and y axes.  The
   minimum box size is used at the edges and grows to the maximum size in
   the middle of the image.  This allows the smoothed image to better
   represent gradients at the edge of the image.  If a size is less then 1
@@ -54,40 +54,40 @@ mkskycor — Make sky illumination correction images
   greater than or equal to 1 then it is the box size in pixels.  A size
   greater than the size of image selects a box equal to the size of the
   image.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>clip = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='clip' Line='clip = yes'>
-  <DD>Clean the input images of objects?  If yes then a clipping algorithm is
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>clip = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='clip' Line='clip = yes' -->
+  <dd>Clean the input images of objects?  If yes then a clipping algorithm is
   used to detect and exclude objects from the smoothing.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>lowsigma = 2.5, highsigma = 2.5</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='lowsigma' Line='lowsigma = 2.5, highsigma = 2.5'>
-  <DD>Sigma clipping thresholds above and below the smoothed iillumination.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>ccdproc (parameter set)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='ccdproc' Line='ccdproc (parameter set)'>
-  <DD>CCD processing parameters.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>lowsigma = 2.5, highsigma = 2.5</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='lowsigma' Line='lowsigma = 2.5, highsigma = 2.5' -->
+  <dd>Sigma clipping thresholds above and below the smoothed iillumination.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>ccdproc (parameter set)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='ccdproc' Line='ccdproc (parameter set)' -->
+  <dd>CCD processing parameters.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   The large scale iillumination pattern of the input images, generally
   blank sky calibration images, is determined by heavily smoothing
-  the image using a moving "<TT>boxcar</TT>" average.  The effects of objects in
+  the image using a moving <tt>"boxcar"</tt> average.  The effects of objects in
   the image may be minimized by using a sigma clipping algorithm to
   detect and exclude the objects from the average.  This
-  iillumination image is applied by <B>ccdproc</B> to CCD images to remove
+  iillumination image is applied by <b>ccdproc</b> to CCD images to remove
   the iillumination pattern.
-  <P>
+  </p>
+  <p>
   The input images are automatically processed up through flat field
   calibration before computing the iillumination.  The iillumination
   correction is that needed to make the processed images flat
@@ -96,8 +96,9 @@ mkskycor — Make sky illumination correction images
   as the object observations.  Object images may be used but removal
   of the objects may not be very good; particularly large, bright objects.
   For further discussion of flat fields and iillumination corrections
-  see <B>flatfields</B>.
-  <P>
+  see <b>flatfields</b>.
+  </p>
+  <p>
   You will notice that when you process images with an iillumination
   correction you are dividing each image by a flat field calibration and
   an iillumination correction.  If the iillumination corrections are not
@@ -106,19 +107,21 @@ mkskycor — Make sky illumination correction images
   iillumination correction and using this product alone as the flat
   field.  This approach has the advantage of one less calibration image
   and two less computations (scaling and dividing the iillumination
-  correction).  Such an image, called a <I>sky flat</I>, may be created by
-  <B>mkskyflat</B> as an alternative to this task.
-  <P>
+  correction).  Such an image, called a <i>sky flat</i>, may be created by
+  <b>mkskyflat</b> as an alternative to this task.
+  </p>
+  <p>
   The smoothing algorithm is a moving average over a two dimensional
   box.  The algorithm is unconvential in that the box size is not fixed.
   The box size is increased from the specified minimum at the edges to
   the maximum in the middle of the image.  This permits a better estimate
   of the background at the edges, while retaining the very large scale
   smoothing in the center of the image.  Note that the sophisticated
-  tools of the <B>images</B> package may be used for smoothing but this
+  tools of the <b>images</b> package may be used for smoothing but this
   requires more of the user and, for the more sophisticated smoothing
   algorithms such as surface fitting, more processing time.
-  <P>
+  </p>
+  <p>
   Blank sky images may not be completely blank so a sigma clipping
   algorithm may be used to detect and exclude objects from the
   iillumination pattern.  This is done by computing the rms of the image
@@ -126,27 +129,27 @@ mkskycor — Make sky illumination correction images
   exceeding the specified threshold factors times the rms.  This is done
   before each image line is added to the moving average, except for the
   first few lines where an iterative process is used.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. The two examples below make an iillumination image from a blank sky image,
-  "<TT>sky017</TT>".  In the first example a separate iillumination image is created
+  <tt>"sky017"</tt>.  In the first example a separate iillumination image is created
   and in the second the iillumination image replaces the sky image.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; mkskycor sky017 Illum
       cl&gt; mkskycor sky017 sky017
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   ccdproc, flatfields, mkillumcor, mkillumflat, mkskyflat
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

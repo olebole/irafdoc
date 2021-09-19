@@ -1,5 +1,5 @@
-astcat — Astronomical catalog and surveys access package
-========================================================
+astcat: Astronomical catalog and surveys access package
+=======================================================
 
 .. toctree:: :maxdepth: 1
 

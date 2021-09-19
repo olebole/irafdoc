@@ -1,120 +1,117 @@
 .. _tabkey:
 
-tabkey — Copy a table element to an image or table header keyword.
-==================================================================
+tabkey: Copy a table element to an image or table header keyword.
+=================================================================
 
 **Package: nttools**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   tabkey -- Copy a table element to a header keyword.
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   tabkey table column row output keyword
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   This task copies the value of a table element to a header 
   keyword in either a table
   or an image. If the table element and the header keyword are of different
   data types, this task will convert the type.
   An error will occur if any attempt is made
   to copy an undefined table element to a header keyword. If the value of
-  the task parameter 'add' is "<TT>yes</TT>", the task will allow you to add a new
+  the task parameter 'add' is <tt>"yes"</tt>, the task will allow you to add a new
   keyword to the header, otherwise, adding a new keyword will cause an
   error.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>table [file name]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='table' Line='table [file name]'>
-  <DD>Name of table containing the element to be copied.  The particular element
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>table [file name]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='table' Line='table [file name]' -->
+  <dd>Name of table containing the element to be copied.  The particular element
   is defined by the 'column' and 'row' parameters.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>column [string]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='column' Line='column [string]'>
-  <DD>Name of column. (Column names are not case sensitive.)
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>row [integer, min=1, max=INDEF]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='row' Line='row [integer, min=1, max=INDEF]'>
-  <DD>Row number.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output [file name]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output' Line='output [file name]'>
-  <DD>Name of the file with the header keyword whose value is to be changed.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>keyword [string]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='keyword' Line='keyword [string]'>
-  <DD>Name of header keyword. (Header keyword names are not case sensitive.)
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(add = no) [boolean]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(add = no) [boolean]'>
-  <DD>Allow new keywords to be added to the header?
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>column [string]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='column' Line='column [string]' -->
+  <dd>Name of column. (Column names are not case sensitive.)
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>row [integer, min=1, max=INDEF]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='row' Line='row [integer, min=1, max=INDEF]' -->
+  <dd>Row number.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output [file name]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output [file name]' -->
+  <dd>Name of the file with the header keyword whose value is to be changed.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>keyword [string]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='keyword' Line='keyword [string]' -->
+  <dd>Name of header keyword. (Header keyword names are not case sensitive.)
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(add = no) [boolean]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(add = no) [boolean]' -->
+  <dd>Allow new keywords to be added to the header?
   If 'add = no', then only existing header keywords can be modified--an error
   will occur if a keyword is specified that does not already exist.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Copy the first component name (i.e., row 1 of column 'COMPNAME'
   from the file 'graph.tab' to the header of the
   table 'thruput.tab'.  If the keyword does not already exist, then add
   it:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   tt&gt; tabkey graph.tab COMPNAME 1 thruput.tab COMPNAME add+
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. Copy the date of the tenth observation (i.e., row 10 of column 'DATE')
   from the file 'schedule.tab' to the
   header keyword 'DATE' in 'image.hhh'. The keyword 'DATE' must already exist:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   tt&gt; tabkey schedule.tab DATE 10 image.hhh date
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>References</H3>
-  <! BeginSection: 'REFERENCES'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <!-- EndSection:   'BUGS' -->
+  <h3>References</h3>
+  <!-- BeginSection: 'REFERENCES' -->
+  <p>
   This task was written by Bernie Simon.
-  </UL>
-  <! EndSection:   'REFERENCES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'REFERENCES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   keypar, keytab, parkey, partab, tabpar
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

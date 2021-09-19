@@ -1,102 +1,106 @@
 .. _stdplot:
 
-stdplot — Plot metacode on the standard plotter device
-======================================================
+stdplot: Plot metacode on the standard plotter device
+=====================================================
 
 **Package: plot**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   stdplot -- draw metacode on the standard plotter device
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   stdplot input
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
-  <DD>The list of input metacode files.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>device = "<TT>stdplot</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdplot"'>
-  <DD>The type of plotting device.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>generic = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='generic' Line='generic = no'>
-  <DD>The remaining parameters are ignored when <B>generic</B> = yes.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>debug = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='debug' Line='debug = no'>
-  <DD>If <B>debug</B> = yes, the graphics instructions are decoded and printed
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
+  <dd>The list of input metacode files.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>device = <tt>"stdplot"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdplot"' -->
+  <dd>The type of plotting device.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>generic = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='generic' Line='generic = no' -->
+  <dd>The remaining parameters are ignored when <b>generic</b> = yes.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>debug = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='debug' Line='debug = no' -->
+  <dd>If <b>debug</b> = yes, the graphics instructions are decoded and printed
   during processing.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verbose = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
-  <DD>If <B>verbose</B> = yes, the elements of polylines, cell arrays, etc. will
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verbose = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
+  <dd>If <b>verbose</b> = yes, the elements of polylines, cell arrays, etc. will
   be printed in debug mode.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>gkiunits = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='gkiunits' Line='gkiunits = no'>
-  <DD>By default, coordinates are printed in NDC rather than GKI units.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  Task <I>stdplot</I> translates metacode and draws it on a plotting
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>gkiunits = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='gkiunits' Line='gkiunits = no' -->
+  <dd>By default, coordinates are printed in NDC rather than GKI units.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  Task <i>stdplot</i> translates metacode and draws it on a plotting
   device.
   Input is GKI metacode, which can be read from one or more binary
   files or redirected from the standard input.
-  <P>
-  If <B>debug</B> is set to yes, the plotting instructions are printed in
+  </p>
+  <p>
+  If <b>debug</b> is set to yes, the plotting instructions are printed in
   readable form during processing.
-  If <B>verbose</B> = yes, elements of polyline and cell array calls are
+  If <b>verbose</b> = yes, elements of polyline and cell array calls are
   printed in addition to the default debug output.
   Coordinates can be printed in either GKI (0 - 32767) or NDC (0.0 - 1.0)
   units.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  1. Extract the fourth frame from metacode file "<TT>oned.mc</TT>" and plot it.
-  <P>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
+  1. Extract the fourth frame from metacode file <tt>"oned.mc"</tt> and plot it.
+  </p>
+  <p>
       cl&gt; gkiextract oned.mc 4 | stdplot
-  <P>
-  2. Plot metacode frame "<TT>contour.demo</TT>" in debug mode, so the plotting
+  </p>
+  <p>
+  2. Plot metacode frame <tt>"contour.demo"</tt> in debug mode, so the plotting
   instructions can be read as they are processed.
-  <P>
+  </p>
+  <p>
       cl&gt; stdplot contour.demo debug+
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   gkiextract stdgraph
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

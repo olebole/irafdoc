@@ -1,100 +1,99 @@
 .. _doecslit:
 
-doecslit — Process Echelle slit spectra
-=======================================
+doecslit: Process Echelle slit spectra
+======================================
 
 **Package: echelle**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   doecslit -- Echelle slit spectra reduction task
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   doecslit objects
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Summary</H3>
-  <! BeginSection: 'SUMMARY'>
-  <UL>
-  <B>Doecslit</B> subtracts background sky or scattered light, extracts,
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Summary</h3>
+  <!-- BeginSection: 'SUMMARY' -->
+  <p>
+  <b>Doecslit</b> subtracts background sky or scattered light, extracts,
   wavelength calibrates, and flux calibrates multiorder echelle slit spectra
   which have been processed to remove the detector characteristics; i.e. CCD
   images have been bias, dark count, and flat field corrected.  The spectra
   should be oriented such that pixels of constant wavelength are aligned with
   the image columns or lines.  Small departures from this alignment are not
   critical resulting in only a small loss of resolution.  Single order
-  observations should be reduced with <B>doslit</B>.
-  </UL>
-  <! EndSection:   'SUMMARY'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>objects</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='objects' Line='objects'>
-  <DD>List of object images to be processed.  Previously processed spectra are
-  ignored unless the <I>redo</I> flag is set or the <I>update</I> flag is set
+  observations should be reduced with <b>doslit</b>.
+  </p>
+  <!-- EndSection:   'SUMMARY' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>objects</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='objects' Line='objects' -->
+  <dd>List of object images to be processed.  Previously processed spectra are
+  ignored unless the <i>redo</i> flag is set or the <i>update</i> flag is set
   and dependent calibration data has changed.  If the images contain the
-  keyword IMAGETYP then only those with a value of "<TT>object</TT>" or "<TT>OBJECT</TT>"
-  are used and those with a value of "<TT>comp</TT>" or "<TT>COMPARISON</TT>" are added
+  keyword IMAGETYP then only those with a value of <tt>"object"</tt> or <tt>"OBJECT"</tt>
+  are used and those with a value of <tt>"comp"</tt> or <tt>"COMPARISON"</tt> are added
   to the list of arcs.  Extracted spectra are ignored.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>apref = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='apref' Line='apref = ""'>
-  <DD>Aperture reference spectrum.  This spectrum is used to define the basic
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>apref = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='apref' Line='apref = ""' -->
+  <dd>Aperture reference spectrum.  This spectrum is used to define the basic
   extraction apertures and is typically a bright star spectrum.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>arcs = "<TT></TT>" (at least one if dispersion correcting)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='arcs' Line='arcs = "" (at least one if dispersion correcting)'>
-  <DD>List of arc calibration spectra.  These spectra are used to define
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>arcs = <tt>""</tt> (at least one if dispersion correcting)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='arcs' Line='arcs = "" (at least one if dispersion correcting)' -->
+  <dd>List of arc calibration spectra.  These spectra are used to define
   the dispersion functions.  The first spectrum is used to mark lines
   and set the dispersion function interactively and dispersion functions
   for all other arc spectra are derived from it.  If the images contain
-  the keyword IMAGETYP then only those with a value of "<TT>comp</TT>" or
-  "<TT>COMPARISON</TT>" are used.  All others are ignored as are extracted spectra.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>arctable = "<TT></TT>" (optional) (refspectra)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='arctable' Line='arctable = "" (optional) (refspectra)'>
-  <DD>Table defining which arc spectra are to be assigned to which object
-  spectra (see <B>refspectra</B>).  If not specified an assignment based
-  on a header parameter, <I>sparams.sort</I>, such as the Julian date
+  the keyword IMAGETYP then only those with a value of <tt>"comp"</tt> or
+  <tt>"COMPARISON"</tt> are used.  All others are ignored as are extracted spectra.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>arctable = <tt>""</tt> (optional) (refspectra)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='arctable' Line='arctable = "" (optional) (refspectra)' -->
+  <dd>Table defining which arc spectra are to be assigned to which object
+  spectra (see <b>refspectra</b>).  If not specified an assignment based
+  on a header parameter, <i>sparams.sort</i>, such as the Julian date
   is made.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>standards = "<TT></TT>" (at least one if flux calibrating)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='standards' Line='standards = "" (at least one if flux calibrating)'>
-  <DD>List of standard star spectra.  The standard stars must have entries in
-  the calibration database (package parameter <I>echelle.caldir</I>).
-  </DD>
-  </DL>
-  <P>
-  <DL>
-  <DT><B>readnoise = 0., gain = 1. (apsum)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='readnoise' Line='readnoise = 0., gain = 1. (apsum)'>
-  <DD>Read out noise in photons and detector gain in photons per data value.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>standards = <tt>""</tt> (at least one if flux calibrating)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='standards' Line='standards = "" (at least one if flux calibrating)' -->
+  <dd>List of standard star spectra.  The standard stars must have entries in
+  the calibration database (package parameter <i>echelle.caldir</i>).
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>readnoise = 0., gain = 1. (apsum)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='readnoise' Line='readnoise = 0., gain = 1. (apsum)' -->
+  <dd>Read out noise in photons and detector gain in photons per data value.
   This parameter defines the minimum noise sigma and the conversion between
   photon Poisson statistics and the data number statistics.  Image header
   keywords (case insensitive) may be specified to obtain the values from the
   image header.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>datamax = INDEF (apsum.saturation)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='datamax' Line='datamax = INDEF (apsum.saturation)'>
-  <DD>The maximum data value which is not a cosmic ray.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>datamax = INDEF (apsum.saturation)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='datamax' Line='datamax = INDEF (apsum.saturation)' -->
+  <dd>The maximum data value which is not a cosmic ray.
   When cleaning cosmic rays and/or using variance weighted extraction
   very strong cosmic rays (pixel values much larger than the data) can
   cause these operations to behave poorly.  If a value other than INDEF
@@ -103,700 +102,690 @@ doecslit — Process Echelle slit spectra
   This applies only to the object spectra and not the standard star or
   arc spectra.  For more
   on this see the discussion of the saturation parameter in the
-  <B>apextract</B> package.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>norders = 10 (apfind)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='norders' Line='norders = 10 (apfind)'>
-  <DD>Number of orders to be found automatically.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>width = 5. (apedit)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='width' Line='width = 5. (apedit)'>
-  <DD>Approximate full width of the spectrum profiles.  This parameter is used
+  <b>apextract</b> package.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>norders = 10 (apfind)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='norders' Line='norders = 10 (apfind)' -->
+  <dd>Number of orders to be found automatically.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>width = 5. (apedit)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='width' Line='width = 5. (apedit)' -->
+  <dd>Approximate full width of the spectrum profiles.  This parameter is used
   to define a width and error radius for the profile centering algorithm,
   and defaults for the aperture limits and background regions.
-  </DD>
-  </DL>
-  <P>
-  <DL>
-  <DT><B>dispcor = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='dispcor' Line='dispcor = yes'>
-  <DD>Dispersion correct spectra?  This may involve either defining a nonlinear
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>dispcor = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='dispcor' Line='dispcor = yes' -->
+  <dd>Dispersion correct spectra?  This may involve either defining a nonlinear
   dispersion coordinate system in the image header or resampling the
   spectra to uniform linear wavelength coordinates as selected by
-  the parameter <I>sparams.linearize</I>.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>extcor = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='extcor' Line='extcor = no'>
-  <DD>Extinction correct the spectra?
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>fluxcal = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='fluxcal' Line='fluxcal = no'>
-  <DD>Flux calibrate the spectra using standard star observations?
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>resize = no (apresize)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='resize' Line='resize = no (apresize)'>
-  <DD>Resize the defaults apertures for each object based on the spectrum profile?
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>clean = no (apsum)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='clean' Line='clean = no (apsum)'>
-  <DD>Detect and correct for bad pixels during extraction?  This is the same
-  as the clean option in the <B>apextract</B> package.  If yes this also
+  the parameter <i>sparams.linearize</i>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>extcor = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='extcor' Line='extcor = no' -->
+  <dd>Extinction correct the spectra?
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>fluxcal = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='fluxcal' Line='fluxcal = no' -->
+  <dd>Flux calibrate the spectra using standard star observations?
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>resize = no (apresize)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='resize' Line='resize = no (apresize)' -->
+  <dd>Resize the defaults apertures for each object based on the spectrum profile?
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>clean = no (apsum)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='clean' Line='clean = no (apsum)' -->
+  <dd>Detect and correct for bad pixels during extraction?  This is the same
+  as the clean option in the <b>apextract</b> package.  If yes this also
   implies variance weighted extraction.  In addition the datamax parameters
   can be useful.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>trace = yes (non-quicklook mode only) (aptrace)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='trace' Line='trace = yes (non-quicklook mode only) (aptrace)'>
-  <DD>Allow tracing each object spectrum separately?  If not set then the trace
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>trace = yes (non-quicklook mode only) (aptrace)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='trace' Line='trace = yes (non-quicklook mode only) (aptrace)' -->
+  <dd>Allow tracing each object spectrum separately?  If not set then the trace
   from the aperture reference is used, with recentering to allow for shifts
   across the dispersion.  If set then each object and standard star
   image is retraced.  Retracing is NOT done in quicklook mode.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>background = "<TT>none</TT>" (apsum, apscatter)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='background' Line='background = "none" (apsum, apscatter)'>
-  <DD>Type of background light subtraction.  The choices are "<TT>none</TT>" for no
-  background subtraction, "<TT>scattered</TT>" for a global scattered light
-  subtraction, "<TT>average</TT>" to average the background within background regions,
-  "<TT>median</TT>" to use the median in background regions, "<TT>minimum</TT>" to use the
-  minimum in background regions, or "<TT>fit</TT>" to fit across the dispersion using
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>background = <tt>"none"</tt> (apsum, apscatter)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='background' Line='background = "none" (apsum, apscatter)' -->
+  <dd>Type of background light subtraction.  The choices are <tt>"none"</tt> for no
+  background subtraction, <tt>"scattered"</tt> for a global scattered light
+  subtraction, <tt>"average"</tt> to average the background within background regions,
+  <tt>"median"</tt> to use the median in background regions, <tt>"minimum"</tt> to use the
+  minimum in background regions, or <tt>"fit"</tt> to fit across the dispersion using
   the background within background regions.  The scattered light option fits
   and subtracts a smooth global background and modifies the input images.
   This is a slow operation and so is NOT performed in quicklook mode.  The
-  other background options are local to each aperture.  The "<TT>fit</TT>" option uses
-  additional fitting parameters from <B>sparams</B> and the "<TT>scattered</TT>" option
-  uses parameters from <B>apscat1</B> and <B>apscat2</B>.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>splot = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='splot' Line='splot = no'>
-  <DD>Plot the final spectra?  In quicklook mode a noninteractive, stacked plot
-  is automatically produced using the task <B>specplot</B> while in
-  non-quicklook mode a query is given and the task <B>splot</B> is used for
+  other background options are local to each aperture.  The <tt>"fit"</tt> option uses
+  additional fitting parameters from <b>sparams</b> and the <tt>"scattered"</tt> option
+  uses parameters from <b>apscat1</b> and <b>apscat2</b>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>splot = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='splot' Line='splot = no' -->
+  <dd>Plot the final spectra?  In quicklook mode a noninteractive, stacked plot
+  is automatically produced using the task <b>specplot</b> while in
+  non-quicklook mode a query is given and the task <b>splot</b> is used for
   interactive plotting.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>redo = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='redo' Line='redo = no'>
-  <DD>Redo operations previously done?  If no then previously processed spectra
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>redo = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='redo' Line='redo = no' -->
+  <dd>Redo operations previously done?  If no then previously processed spectra
   in the objects list will not be processed unless required by the
   update option.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>update = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='update' Line='update = no'>
-  <DD>Update processing of previously processed spectra if the aperture
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>update = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='update' Line='update = no' -->
+  <dd>Update processing of previously processed spectra if the aperture
   reference image, the dispersion reference image, or standard star
   calibration data are changed?
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>quicklook = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='quicklook' Line='quicklook = no'>
-  <DD>Extract and calibrate spectra with minimal interaction?  In quicklook mode
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>quicklook = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='quicklook' Line='quicklook = no' -->
+  <dd>Extract and calibrate spectra with minimal interaction?  In quicklook mode
   only aperture reference definitions, the initial dispersion function
   solution, and the standard star setup are done interactively.  Scattered
   light subtraction and individual object tracing are not performed.
-  Normally the <I>splot</I> option is set in this mode to produce an automatic
+  Normally the <i>splot</i> option is set in this mode to produce an automatic
   final spectrum plot for each object.  It is recommended that this mode not be
   used for final reductions.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>batch = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='batch' Line='batch = no'>
-  <DD>Process spectra as a background or batch job provided there are no interactive
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>batch = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='batch' Line='batch = no' -->
+  <dd>Process spectra as a background or batch job provided there are no interactive
   steps remaining.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>listonly = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='listonly' Line='listonly = no'>
-  <DD>List processing steps but don't process?
-  </DD>
-  </DL>
-  <P>
-  <DL>
-  <DT><B>sparams = "<TT></TT>" (pset)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='sparams' Line='sparams = "" (pset)'>
-  <DD>Name of parameter set containing additional processing parameters.  This
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>listonly = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='listonly' Line='listonly = no' -->
+  <dd>List processing steps but don't process?
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>sparams = <tt>""</tt> (pset)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='sparams' Line='sparams = "" (pset)' -->
+  <dd>Name of parameter set containing additional processing parameters.  This
   parameter is only for indicating the link to the parameter set
-  <B>sparams</B> and should not be given a value.  The parameter set may be
-  examined and modified in the usual ways (typically with "<TT>epar
-  sparams</TT>" or "<TT>:e sparams</TT>" from the parameter editor).  The parameters are
+  <b>sparams</b> and should not be given a value.  The parameter set may be
+  examined and modified in the usual ways (typically with <tt>"epar
+  sparams"</tt> or <tt>":e sparams"</tt> from the parameter editor).  The parameters are
   described below.
-  </DD>
-  </DL>
-  <P>
-  <CENTER>-- GENERAL PARAMETERS --
+  </dd>
+  </dl>
+  <p style="text-align:center">-- GENERAL PARAMETERS --
   
-  </CENTER><BR>
-  <DL>
-  <DT><B>line = INDEF, nsum = 10</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='line' Line='line = INDEF, nsum = 10'>
-  <DD>The dispersion line (line or column perpendicular to the dispersion
+  </p>
+  <dl>
+  <dt><b>line = INDEF, nsum = 10</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='line' Line='line = INDEF, nsum = 10' -->
+  <dd>The dispersion line (line or column perpendicular to the dispersion
   axis) and number of adjacent lines (half before and half after unless
   at the end of the image) used in finding, recentering, resizing,
   editing, and tracing operations.  A line of INDEF selects the middle of the
   image along the dispersion axis.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>extras = no (apsum)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='extras' Line='extras = no (apsum)'>
-  <DD>Include raw unweighted and uncleaned spectra, the background spectra, and
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>extras = no (apsum)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='extras' Line='extras = no (apsum)' -->
+  <dd>Include raw unweighted and uncleaned spectra, the background spectra, and
   the estimated sigma spectra in a three dimensional output image format.
-  See the discussion in the <B>apextract</B> package for further information.
-  </DD>
-  </DL>
-  <P>
-  <CENTER>-- AUTOMATIC APERTURE RESIZING PARAMETERS --
+  See the discussion in the <b>apextract</b> package for further information.
+  </dd>
+  </dl>
+  <p style="text-align:center">-- AUTOMATIC APERTURE RESIZING PARAMETERS --
   
-  </CENTER><BR>
-  <DL>
-  <DT><B>ylevel = 0.05 (apresize)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='ylevel' Line='ylevel = 0.05 (apresize)'>
-  <DD>Fraction of the peak to set aperture limits during automatic resizing.
-  </DD>
-  </DL>
-  <P>
-  <CENTER>-- TRACE PARAMETERS --
+  </p>
+  <dl>
+  <dt><b>ylevel = 0.05 (apresize)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='ylevel' Line='ylevel = 0.05 (apresize)' -->
+  <dd>Fraction of the peak to set aperture limits during automatic resizing.
+  </dd>
+  </dl>
+  <p style="text-align:center">-- TRACE PARAMETERS --
   
-  </CENTER><BR>
-  <DL>
-  <DT><B>t_step = 10 (aptrace)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='t_step' Line='t_step = 10 (aptrace)'>
-  <DD>Step along the dispersion axis between determination of the spectrum
-  positions.  Note the <I>nsum</I> parameter is also used to enhance the
+  </p>
+  <dl>
+  <dt><b>t_step = 10 (aptrace)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='t_step' Line='t_step = 10 (aptrace)' -->
+  <dd>Step along the dispersion axis between determination of the spectrum
+  positions.  Note the <i>nsum</i> parameter is also used to enhance the
   signal-to-noise at each step.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>t_function = "<TT>spline3</TT>", t_order = 2 (aptrace)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='t_function' Line='t_function = "spline3", t_order = 2 (aptrace)'>
-  <DD>Default trace fitting function and order.  The fitting function types are
-  "<TT>chebyshev</TT>" polynomial, "<TT>legendre</TT>" polynomial, "<TT>spline1</TT>" linear spline, and
-  "<TT>spline3</TT>" cubic spline.  The order refers to the number of
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>t_function = <tt>"spline3"</tt>, t_order = 2 (aptrace)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='t_function' Line='t_function = "spline3", t_order = 2 (aptrace)' -->
+  <dd>Default trace fitting function and order.  The fitting function types are
+  <tt>"chebyshev"</tt> polynomial, <tt>"legendre"</tt> polynomial, <tt>"spline1"</tt> linear spline, and
+  <tt>"spline3"</tt> cubic spline.  The order refers to the number of
   terms in the polynomial functions or the number of spline pieces in the spline
   functions.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>t_niterate = 1, t_low = 3., t_high = 3. (aptrace)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='t_niterate' Line='t_niterate = 1, t_low = 3., t_high = 3. (aptrace)'>
-  <DD>Default number of rejection iterations and rejection sigma thresholds.
-  </DD>
-  </DL>
-  <P>
-  <CENTER>-- BACKGROUND AND SCATTERED LIGHT PARAMETERS --
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>t_niterate = 1, t_low = 3., t_high = 3. (aptrace)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='t_niterate' Line='t_niterate = 1, t_low = 3., t_high = 3. (aptrace)' -->
+  <dd>Default number of rejection iterations and rejection sigma thresholds.
+  </dd>
+  </dl>
+  <p style="text-align:center">-- BACKGROUND AND SCATTERED LIGHT PARAMETERS --
   
-  </CENTER><BR>
-  <DL>
-  <DT><B>b_function = "<TT>legendre</TT>", b_order = 1 (apsum)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='b_function' Line='b_function = "legendre", b_order = 1 (apsum)'>
-  <DD>Default background fitting function and order.  The fitting function types are
-  "<TT>chebyshev</TT>" polynomial, "<TT>legendre</TT>" polynomial, "<TT>spline1</TT>" linear spline, and
-  "<TT>spline3</TT>" cubic spline.  The order refers to the number of
+  </p>
+  <dl>
+  <dt><b>b_function = <tt>"legendre"</tt>, b_order = 1 (apsum)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='b_function' Line='b_function = "legendre", b_order = 1 (apsum)' -->
+  <dd>Default background fitting function and order.  The fitting function types are
+  <tt>"chebyshev"</tt> polynomial, <tt>"legendre"</tt> polynomial, <tt>"spline1"</tt> linear spline, and
+  <tt>"spline3"</tt> cubic spline.  The order refers to the number of
   terms in the polynomial functions or the number of spline pieces in the spline
   functions.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>b_naverage = -100 (apsum)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='b_naverage' Line='b_naverage = -100 (apsum)'>
-  <DD>Default number of points to average or median.  Positive numbers
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>b_naverage = -100 (apsum)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='b_naverage' Line='b_naverage = -100 (apsum)' -->
+  <dd>Default number of points to average or median.  Positive numbers
   average that number of sequential points to form a fitting point.
   Negative numbers median that number, in absolute value, of sequential
   points.  A value of 1 does no averaging and each data point is used in the
   fit.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>b_niterate = 0 (apsum)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='b_niterate' Line='b_niterate = 0 (apsum)'>
-  <DD>Default number of rejection iterations.  If greater than zero the fit is
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>b_niterate = 0 (apsum)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='b_niterate' Line='b_niterate = 0 (apsum)' -->
+  <dd>Default number of rejection iterations.  If greater than zero the fit is
   used to detect deviant fitting points and reject them before repeating the
   fit.  The number of iterations of this process is given by this parameter.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>b_low_reject = 3., b_high_reject = 3. (apsum)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='b_low_reject' Line='b_low_reject = 3., b_high_reject = 3. (apsum)'>
-  <DD>Default background lower and upper rejection sigmas.  If greater than zero
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>b_low_reject = 3., b_high_reject = 3. (apsum)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='b_low_reject' Line='b_low_reject = 3., b_high_reject = 3. (apsum)' -->
+  <dd>Default background lower and upper rejection sigmas.  If greater than zero
   points deviating from the fit below and above the fit by more than this
   number of times the sigma of the residuals are rejected before refitting.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>buffer = 1. (apscatter)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='buffer' Line='buffer = 1. (apscatter)'>
-  <DD>Buffer distance from the edge of any aperture for data to be included
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>buffer = 1. (apscatter)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='buffer' Line='buffer = 1. (apscatter)' -->
+  <dd>Buffer distance from the edge of any aperture for data to be included
   in the scattered light determination.  This parameter may be modified
   interactively.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>apscat1 = "<TT></TT>", apscat2 = "<TT></TT>" (apscatter)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='apscat1' Line='apscat1 = "", apscat2 = "" (apscatter)'>
-  <DD>Parameter sets for the fitting functions across and along the dispersion.
-  These parameters are those used by <B>icfit</B>.  These parameters are
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>apscat1 = <tt>""</tt>, apscat2 = <tt>""</tt> (apscatter)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='apscat1' Line='apscat1 = "", apscat2 = "" (apscatter)' -->
+  <dd>Parameter sets for the fitting functions across and along the dispersion.
+  These parameters are those used by <b>icfit</b>.  These parameters are
   usually set interactively.
-  </DD>
-  </DL>
-  <P>
-  <CENTER>-- APERTURE EXTRACTION PARAMETERS --
+  </dd>
+  </dl>
+  <p style="text-align:center">-- APERTURE EXTRACTION PARAMETERS --
   
-  </CENTER><BR>
-  <DL>
-  <DT><B>weights = "<TT>none</TT>" (apsum) (none|variance)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='weights' Line='weights = "none" (apsum) (none|variance)'>
-  <DD>Type of extraction weighting.  Note that if the <I>clean</I> parameter is
-  set then the weights used are "<TT>variance</TT>" regardless of the weights
+  </p>
+  <dl>
+  <dt><b>weights = <tt>"none"</tt> (apsum) (none|variance)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='weights' Line='weights = "none" (apsum) (none|variance)' -->
+  <dd>Type of extraction weighting.  Note that if the <i>clean</i> parameter is
+  set then the weights used are <tt>"variance"</tt> regardless of the weights
   specified by this parameter.  The choices are:
-  <DL>
-  <DT><B>"<TT>none</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='' Line='"none"'>
-  <DD>The pixels are summed without weights except for partial pixels at the
+  <dl>
+  <dt><b><tt>"none"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='' Line='"none"' -->
+  <dd>The pixels are summed without weights except for partial pixels at the
   ends.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>"<TT>variance</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='' Line='"variance"'>
-  <DD>The extraction is weighted by the variance based on the data values
-  and a poisson/ccd model using the <I>gain</I> and <I>readnoise</I>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b><tt>"variance"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='' Line='"variance"' -->
+  <dd>The extraction is weighted by the variance based on the data values
+  and a poisson/ccd model using the <i>gain</i> and <i>readnoise</i>
   parameters.
-  </DD>
-  </DL>
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>pfit = "<TT>fit1d</TT>" (apsum and approfile) (fit1d|fit2d)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='pfit' Line='pfit = "fit1d" (apsum and approfile) (fit1d|fit2d)'>
-  <DD>Type of profile fitting algorithm to use.  The "<TT>fit1d</TT>" algorithm is
+  </dd>
+  </dl>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>pfit = <tt>"fit1d"</tt> (apsum and approfile) (fit1d|fit2d)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='pfit' Line='pfit = "fit1d" (apsum and approfile) (fit1d|fit2d)' -->
+  <dd>Type of profile fitting algorithm to use.  The <tt>"fit1d"</tt> algorithm is
   preferred except in cases of extreme tilt.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>lsigma = 3., usigma = 3. (apsum)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='lsigma' Line='lsigma = 3., usigma = 3. (apsum)'>
-  <DD>Lower and upper rejection thresholds, given as a number of times the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>lsigma = 3., usigma = 3. (apsum)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='lsigma' Line='lsigma = 3., usigma = 3. (apsum)' -->
+  <dd>Lower and upper rejection thresholds, given as a number of times the
   estimated sigma of a pixel, for cleaning.
-  </DD>
-  </DL>
-  <P>
-  <CENTER>-- ARC DISPERSION FUNCTION PARAMETERS --
+  </dd>
+  </dl>
+  <p style="text-align:center">-- ARC DISPERSION FUNCTION PARAMETERS --
   
-  </CENTER><BR>
-  <DL>
-  <DT><B>threshold = 10. (identify/reidentify)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 10. (identify/reidentify)'>
-  <DD>In order for a feature center to be determined the range of pixel intensities
+  </p>
+  <dl>
+  <dt><b>threshold = 10. (identify/reidentify)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 10. (identify/reidentify)' -->
+  <dd>In order for a feature center to be determined the range of pixel intensities
   around the feature must exceed this threshold.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>coordlist = "<TT>linelist$thar.dat</TT>" (ecidentify)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='coordlist' Line='coordlist = "linelist$thar.dat" (ecidentify)'>
-  <DD>Arc line list consisting of an ordered list of wavelengths.
-  Some standard line lists are available in the directory "<TT>linelist$</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>match = 1. (ecidentify)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='match' Line='match = 1. (ecidentify)'>
-  <DD>The maximum difference for a match between the dispersion function computed
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>coordlist = <tt>"linelist$thar.dat"</tt> (ecidentify)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='coordlist' Line='coordlist = "linelist$thar.dat" (ecidentify)' -->
+  <dd>Arc line list consisting of an ordered list of wavelengths.
+  Some standard line lists are available in the directory <tt>"linelist$"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>match = 1. (ecidentify)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='match' Line='match = 1. (ecidentify)' -->
+  <dd>The maximum difference for a match between the dispersion function computed
   value and a wavelength in the coordinate list.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>fwidth = 4. (ecidentify)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='fwidth' Line='fwidth = 4. (ecidentify)'>
-  <DD>Approximate full base width (in pixels) of arc lines.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>cradius = 10. (reidentify)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='cradius' Line='cradius = 10. (reidentify)'>
-  <DD>Radius from previous position to reidentify arc line.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>i_function = "<TT>legendre</TT>", i_xorder = 3, i_yorder = 3 (ecidentify)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='i_function' Line='i_function = "legendre", i_xorder = 3, i_yorder = 3 (ecidentify)'>
-  <DD>The default function, function order for the pixel position dependence, and
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>fwidth = 4. (ecidentify)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='fwidth' Line='fwidth = 4. (ecidentify)' -->
+  <dd>Approximate full base width (in pixels) of arc lines.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>cradius = 10. (reidentify)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='cradius' Line='cradius = 10. (reidentify)' -->
+  <dd>Radius from previous position to reidentify arc line.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>i_function = <tt>"legendre"</tt>, i_xorder = 3, i_yorder = 3 (ecidentify)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='i_function' Line='i_function = "legendre", i_xorder = 3, i_yorder = 3 (ecidentify)' -->
+  <dd>The default function, function order for the pixel position dependence, and
   function order for the aperture number dependence to be fit to the arc
-  wavelengths.  The functions choices are "<TT>chebyshev</TT>" or "<TT>legendre</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>i_niterate = 3, i_low = 3.0, i_high = 3.0 (ecidentify)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='i_niterate' Line='i_niterate = 3, i_low = 3.0, i_high = 3.0 (ecidentify)'>
-  <DD>Number of rejection iterations and sigma thresholds for rejecting arc
+  wavelengths.  The functions choices are <tt>"chebyshev"</tt> or <tt>"legendre"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>i_niterate = 3, i_low = 3.0, i_high = 3.0 (ecidentify)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='i_niterate' Line='i_niterate = 3, i_low = 3.0, i_high = 3.0 (ecidentify)' -->
+  <dd>Number of rejection iterations and sigma thresholds for rejecting arc
   lines from the dispersion function fits.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>refit = yes (ecreidentify)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='refit' Line='refit = yes (ecreidentify)'>
-  <DD>Refit the dispersion function?  If yes and there is more than 1 line
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>refit = yes (ecreidentify)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='refit' Line='refit = yes (ecreidentify)' -->
+  <dd>Refit the dispersion function?  If yes and there is more than 1 line
   and a dispersion function was defined in the arc reference then a new
   dispersion function of the same type as in the reference image is fit
   using the new pixel positions.  Otherwise only a zero point shift is
   determined for the revised fitted coordinates without changing the
   form of the dispersion function.
-  </DD>
-  </DL>
-  <P>
-  <CENTER>-- AUTOMATIC ARC ASSIGNMENT PARAMETERS --
+  </dd>
+  </dl>
+  <p style="text-align:center">-- AUTOMATIC ARC ASSIGNMENT PARAMETERS --
   
-  </CENTER><BR>
-  <DL>
-  <DT><B>select = "<TT>interp</TT>" (refspectra)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='select' Line='select = "interp" (refspectra)'>
-  <DD>Selection method for assigning wavelength calibration spectra.
+  </p>
+  <dl>
+  <dt><b>select = <tt>"interp"</tt> (refspectra)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='select' Line='select = "interp" (refspectra)' -->
+  <dd>Selection method for assigning wavelength calibration spectra.
   Note that an arc assignment table may be used to override the selection
   method and explicitly assign arc spectra to object spectra.
   The automatic selection methods are:
-  <DL>
-  <DT><B>average</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='average' Line='average'>
-  <DD>Average two reference spectra without regard to any sort parameter.
+  <dl>
+  <dt><b>average</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='average' Line='average' -->
+  <dd>Average two reference spectra without regard to any sort parameter.
   If only one reference spectrum is specified then it is assigned with a
   warning.  If more than two reference spectra are specified then only the
   first two are used and a warning is given.
   This option is used to assign two reference spectra, with equal weights,
   independent of any sorting parameter.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>following</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='following' Line='following'>
-  <DD>Select the nearest following spectrum in the reference list based on the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>following</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='following' Line='following' -->
+  <dd>Select the nearest following spectrum in the reference list based on the
   sorting parameter.  If there is no following spectrum use the nearest preceding
   spectrum.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>interp</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='interp' Line='interp'>
-  <DD>Interpolate between the preceding and following spectra in the reference
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>interp</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='interp' Line='interp' -->
+  <dd>Interpolate between the preceding and following spectra in the reference
   list based on the sorting parameter.  If there is no preceding and following
   spectrum use the nearest spectrum.  The interpolation is weighted by the
   relative distances of the sorting parameter.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>match</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='match' Line='match'>
-  <DD>Match each input spectrum with the reference spectrum list in order.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>match</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='match' Line='match' -->
+  <dd>Match each input spectrum with the reference spectrum list in order.
   This overrides the reference aperture check.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>nearest</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest'>
-  <DD>Select the nearest spectrum in the reference list based on the sorting
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>nearest</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest' -->
+  <dd>Select the nearest spectrum in the reference list based on the sorting
   parameter.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>preceding</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='preceding' Line='preceding'>
-  <DD>Select the nearest preceding spectrum in the reference list based on the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>preceding</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='preceding' Line='preceding' -->
+  <dd>Select the nearest preceding spectrum in the reference list based on the
   sorting parameter.  If there is no preceding spectrum use the nearest following
   spectrum.
-  </DD>
-  </DL>
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>sort = "<TT>jd</TT>" (setjd and refspectra)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='sort' Line='sort = "jd" (setjd and refspectra)'>
-  <DD>Image header keyword to be used as the sorting parameter for selection
+  </dd>
+  </dl>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>sort = <tt>"jd"</tt> (setjd and refspectra)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='sort' Line='sort = "jd" (setjd and refspectra)' -->
+  <dd>Image header keyword to be used as the sorting parameter for selection
   based on order.  The header parameter must be numeric but otherwise may
   be anything.  Common sorting parameters are times or positions.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>group = "<TT>ljd</TT>" (setjd and refspectra)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='group' Line='group = "ljd" (setjd and refspectra)'>
-  <DD>Image header keyword to be used to group spectra.  For those selection
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>group = <tt>"ljd"</tt> (setjd and refspectra)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='group' Line='group = "ljd" (setjd and refspectra)' -->
+  <dd>Image header keyword to be used to group spectra.  For those selection
   methods which use the group parameter the reference and object
   spectra must have identical values for this keyword.  This can
   be anything but it must be constant within a group.  Common grouping
-  parameters are the date of observation "<TT>date-obs</TT>" (provided it does not
+  parameters are the date of observation <tt>"date-obs"</tt> (provided it does not
   change over a night) or the local Julian day number.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>time = no, timewrap = 17. (refspectra)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='time' Line='time = no, timewrap = 17. (refspectra)'>
-  <DD>Is the sorting parameter a 24 hour time?  If so then the time origin
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>time = no, timewrap = 17. (refspectra)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='time' Line='time = no, timewrap = 17. (refspectra)' -->
+  <dd>Is the sorting parameter a 24 hour time?  If so then the time origin
   for the sorting is specified by the timewrap parameter.  This time
   should precede the first observation and follow the last observation
   in a 24 hour cycle.
-  </DD>
-  </DL>
-  <P>
-  <CENTER>-- DISPERSION  CORRECTION PARAMETERS --
+  </dd>
+  </dl>
+  <p style="text-align:center">-- DISPERSION  CORRECTION PARAMETERS --
   
-  </CENTER><BR>
-  <DL>
-  <DT><B>linearize = yes (dispcor)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='linearize' Line='linearize = yes (dispcor)'>
-  <DD>Interpolate the spectra to a linear dispersion sampling?  If yes the
+  </p>
+  <dl>
+  <dt><b>linearize = yes (dispcor)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='linearize' Line='linearize = yes (dispcor)' -->
+  <dd>Interpolate the spectra to a linear dispersion sampling?  If yes the
   spectra will be interpolated to a linear or log linear sampling using
   the linear dispersion parameters specified by other parameters.  If
   no the nonlinear dispersion function(s) from the dispersion function
   database are assigned to the input image world coordinate system
   and the spectral data is not interpolated.  Note the interpolation
-  function type is set by the package parameter <I>interp</I>.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>log = no (ecdispcor)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='log' Line='log = no (ecdispcor)'>
-  <DD>Use linear logarithmic wavelength coordinates?  Linear logarithmic
+  function type is set by the package parameter <i>interp</i>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>log = no (ecdispcor)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='log' Line='log = no (ecdispcor)' -->
+  <dd>Use linear logarithmic wavelength coordinates?  Linear logarithmic
   wavelength coordinates have wavelength intervals which are constant
   in the logarithm of the wavelength.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>flux = yes (ecdispcor)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='flux' Line='flux = yes (ecdispcor)'>
-  <DD>Conserve the total flux during interpolation?  If <I>no</I> the output
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>flux = yes (ecdispcor)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='flux' Line='flux = yes (ecdispcor)' -->
+  <dd>Conserve the total flux during interpolation?  If <i>no</i> the output
   spectrum is interpolated from the input spectrum at each output
-  wavelength coordinate.  If <I>yes</I> the input spectrum is integrated
+  wavelength coordinate.  If <i>yes</i> the input spectrum is integrated
   over the extent of each output pixel.  This is slower than
   simple interpolation.
-  </DD>
-  </DL>
-  <P>
-  <CENTER>-- SENSITIVITY CALIBRATION PARAMETERS --
+  </dd>
+  </dl>
+  <p style="text-align:center">-- SENSITIVITY CALIBRATION PARAMETERS --
   
-  </CENTER><BR>
-  <DL>
-  <DT><B>bandwidth = 10., bandsep = 10. (standard)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='bandwidth' Line='bandwidth = 10., bandsep = 10. (standard)'>
-  <DD>Interpolated bandpass grid.  If INDEF then the same bandpasses as in the
+  </p>
+  <dl>
+  <dt><b>bandwidth = 10., bandsep = 10. (standard)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='bandwidth' Line='bandwidth = 10., bandsep = 10. (standard)' -->
+  <dd>Interpolated bandpass grid.  If INDEF then the same bandpasses as in the
   calibration files are used otherwise the calibration data is interpolated
   to the specified set of bandpasses.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>s_interact = yes (standard)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='s_interact' Line='s_interact = yes (standard)'>
-  <DD>Display the bandpasses on the standard star data and allow interactive
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>s_interact = yes (standard)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='s_interact' Line='s_interact = yes (standard)' -->
+  <dd>Display the bandpasses on the standard star data and allow interactive
   addition and deletion of bandpasses.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>s_function = "<TT>spline3</TT>", s_order = 1 (sensfunc)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='s_function' Line='s_function = "spline3", s_order = 1 (sensfunc)'>
-  <DD>Function and order used to fit the sensitivity data.  The function types are
-  "<TT>chebyshev</TT>" polynomial, "<TT>legendre</TT>" polynomial, "<TT>spline3</TT>" cubic spline,
-  and "<TT>spline1</TT>" linear spline.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>s_function = <tt>"spline3"</tt>, s_order = 1 (sensfunc)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='s_function' Line='s_function = "spline3", s_order = 1 (sensfunc)' -->
+  <dd>Function and order used to fit the sensitivity data.  The function types are
+  <tt>"chebyshev"</tt> polynomial, <tt>"legendre"</tt> polynomial, <tt>"spline3"</tt> cubic spline,
+  and <tt>"spline1"</tt> linear spline.
   Order of the sensitivity fitting function.  The value corresponds to the
   number of polynomial terms or the number of spline pieces.  The default
   values may be changed interactively.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>fnu = no (calibrate)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='fnu' Line='fnu = no (calibrate)'>
-  <DD>The default calibration is into units of F-lambda. If <I>fnu</I> = yes then
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>fnu = no (calibrate)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='fnu' Line='fnu = no (calibrate)' -->
+  <dd>The default calibration is into units of F-lambda. If <i>fnu</i> = yes then
   the calibrated spectrum will be in units of F-nu.
-  </DD>
-  </DL>
-  <P>
-  <CENTER>PACKAGE PARAMETERS
+  </dd>
+  </dl>
+  <p style="text-align:center">PACKAGE PARAMETERS
   
-  </CENTER><BR>
-  <DL>
-  <DT><B>dispaxis = 2</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='dispaxis' Line='dispaxis = 2'>
-  <DD>Default dispersion axis.  The dispersion axis is 1 for dispersion
+  </p>
+  <dl>
+  <dt><b>dispaxis = 2</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='dispaxis' Line='dispaxis = 2' -->
+  <dd>Default dispersion axis.  The dispersion axis is 1 for dispersion
   running along image lines and 2 for dispersion running along image
   columns.  If the image header parameter DISPAXIS is defined it has
   precedence over this parameter.  The default value defers to the
   package parameter of the same name.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>extinction = "<TT>onedstds$kpnoextinct.dat</TT>" (standard, sensfunc, calibrate)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='extinction' Line='extinction = "onedstds$kpnoextinct.dat" (standard, sensfunc, calibrate)'>
-  <DD>Extinction file for a site.  There are two extinction files in the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>extinction = <tt>"onedstds$kpnoextinct.dat"</tt> (standard, sensfunc, calibrate)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='extinction' Line='extinction = "onedstds$kpnoextinct.dat" (standard, sensfunc, calibrate)' -->
+  <dd>Extinction file for a site.  There are two extinction files in the
   NOAO standards library, onedstds$, for KPNO and CTIO.  These extinction
   files are used for extinction and flux calibration.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>caldir (standard)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='caldir' Line='caldir (standard)'>
-  <DD>Standard star calibration directory.  A directory containing standard
-  star data files.  Note that the directory name must end with <TT>'/'</TT>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>caldir (standard)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='caldir' Line='caldir (standard)' -->
+  <dd>Standard star calibration directory.  A directory containing standard
+  star data files.  Note that the directory name must end with <tt>'/'</tt>.
   There are a number of standard star calibrations directories in the NOAO
   standards library, onedstds$.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>observatory = "<TT>observatory</TT>" (observatory)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory = "observatory" (observatory)'>
-  <DD>The default observatory to use for latitude dependent computations.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>observatory = <tt>"observatory"</tt> (observatory)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory = "observatory" (observatory)' -->
+  <dd>The default observatory to use for latitude dependent computations.
   If the OBSERVAT keyword in the image header it takes precedence over
   this parameter.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>interp = "<TT>poly5</TT>" (nearest|linear|poly3|poly5|spline3|sinc) (dispcor)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='interp' Line='interp = "poly5" (nearest|linear|poly3|poly5|spline3|sinc) (dispcor)'>
-  <DD>Spectrum interpolation type used when spectra are resampled.  The choices are:
-  <P>
-  <PRE>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>interp = <tt>"poly5"</tt> (nearest|linear|poly3|poly5|spline3|sinc) (dispcor)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='interp' Line='interp = "poly5" (nearest|linear|poly3|poly5|spline3|sinc) (dispcor)' -->
+  <dd>Spectrum interpolation type used when spectra are resampled.  The choices are:
+  <pre>
           nearest - nearest neighbor
            linear - linear
             poly3 - 3rd order polynomial
             poly5 - 5th order polynomial
           spline3 - cubic spline
              sinc - sinc function
-  </PRE>
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>database = "<TT>database</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"'>
-  <DD>Database name used by various tasks.  This is a directory which is created
+  </pre>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>database = <tt>"database"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"' -->
+  <dd>Database name used by various tasks.  This is a directory which is created
   if necessary.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verbose = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
-  <DD>Verbose output?  If set then almost all the information written to the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verbose = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
+  <dd>Verbose output?  If set then almost all the information written to the
   logfile is also written to the terminal except when the task is a
   background or batch process.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>logfile = "<TT>logfile</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "logfile"'>
-  <DD>If specified detailed text log information is written to this file.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>plotfile = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='plotfile' Line='plotfile = ""'>
-  <DD>If specified metacode plots are recorded in this file for later review.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>logfile = <tt>"logfile"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "logfile"' -->
+  <dd>If specified detailed text log information is written to this file.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>plotfile = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='plotfile' Line='plotfile = ""' -->
+  <dd>If specified metacode plots are recorded in this file for later review.
   Since plot information can become large this should be used only if
   really desired.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Environment parameters</H3>
-  <! BeginSection: 'ENVIRONMENT PARAMETERS'>
-  <UL>
-  The environment parameter <I>imtype</I> is used to determine the extension
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Environment parameters</h3>
+  <!-- BeginSection: 'ENVIRONMENT PARAMETERS' -->
+  <p>
+  The environment parameter <i>imtype</i> is used to determine the extension
   of the images to be processed and created.  This allows use with any
   supported image extension.  For STF images the extension has to be exact;
-  for example "<TT>d1h</TT>".
-  </UL>
-  <! EndSection:   'ENVIRONMENT PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <B>Doecslit</B> subtracts background sky or scattered light, extracts,
+  for example <tt>"d1h"</tt>.
+  </p>
+  <!-- EndSection:   'ENVIRONMENT PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  <b>Doecslit</b> subtracts background sky or scattered light, extracts,
   wavelength calibrates, and flux calibrates multiorder echelle slit spectra
   which have been processed to remove the detector characteristics; i.e. CCD
   images have been bias, dark count, and flat field corrected.  The spectra
   should be oriented such that pixels of constant wavelength are aligned with
   the image columns or lines.  Small departures from this alignment are not
   critical resulting in only a small loss of resolution.  Single order
-  observations should be reduced with <B>doslit</B>.
-  <P>
+  observations should be reduced with <b>doslit</b>.
+  </p>
+  <p>
   The task is a command language script which collects and combines the
   functions and parameters of many general purpose tasks to provide a single,
   complete data reduction path and a degree of guidance, automation, and
   record keeping.  In the following description and in the parameter section
   the various general tasks used are identified.  Further
   information about those tasks and their parameters may be found in their
-  documentation.  <B>Doecslit</B> also simplifies and consolidates parameters
+  documentation.  <b>Doecslit</b> also simplifies and consolidates parameters
   from those tasks and keeps track of previous processing to avoid
   duplications.
-  <P>
+  </p>
+  <p>
   The general organization of the task is to do the interactive setup steps,
   such as the aperture definitions and reference dispersion function
   determination, first using representative calibration data and then perform
   the majority of the reductions automatically, possibly as a background
   process, with reference to the setup data.  In addition, the task
   determines which setup and processing operations have been completed in
-  previous executions of the task and, contingent on the <I>redo</I> and
-  <I>update</I> options, skip or repeat some or all the steps.
-  <P>
+  previous executions of the task and, contingent on the <i>redo</i> and
+  <i>update</i> options, skip or repeat some or all the steps.
+  </p>
+  <p>
   The description is divided into a quick usage outline followed by details
   of the parameters and algorithms.  The usage outline is provided as a
   checklist and a refresher for those familiar with this task and the
   component tasks.  It presents only the default or recommended usage
   since there are many variations possible.
-  <P>
-  <B>Usage Outline</B>
-  <P>
-  <DL>
-  <DT><B>[1]</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='' Line='[1]'>
-  <DD>The images are first processed with <B>ccdproc</B> for overscan,
+  </p>
+  <p>
+  <b>Usage Outline</b>
+  </p>
+  <dl>
+  <dt><b>[1]</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='' Line='[1]' -->
+  <dd>The images are first processed with <b>ccdproc</b> for overscan,
   zero level, dark count, and flat field corrections.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>[2]</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='' Line='[2]'>
-  <DD>Set the <B>doecslit</B> parameters with <B>eparam</B>.  Specify the object
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>[2]</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='' Line='[2]' -->
+  <dd>Set the <b>doecslit</b> parameters with <b>eparam</b>.  Specify the object
   images to be processed, an aperture reference image (usually a bright
   star spectrum) to use in finding the orders and defining the
   aperture parameters, one or more arc images, and one or more standard
   star images.  If there are many object, arc, or standard star images
-  you might prepare "<TT>@ files</TT>".  Set the detector and data
+  you might prepare <tt>"@ files"</tt>.  Set the detector and data
   specific parameters.  Select the processing options desired.
-  Finally you might wish to review the <B>sparams</B> algorithm parameters
+  Finally you might wish to review the <b>sparams</b> algorithm parameters
   though the defaults are probably adequate.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>[3]</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='' Line='[3]'>
-  <DD>Run the task.  This may be repeated multiple times with different
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>[3]</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='' Line='[3]' -->
+  <dd>Run the task.  This may be repeated multiple times with different
   observations and the task will generally only do the setup steps
   once and only process new images.  Queries presented during the
   execution for various interactive operations may be answered with
-  "<TT>yes</TT>", "<TT>no</TT>", "<TT>YES</TT>", or "<TT>NO</TT>".  The lower case responses apply just
+  <tt>"yes"</tt>, <tt>"no"</tt>, <tt>"YES"</tt>, or <tt>"NO"</tt>.  The lower case responses apply just
   to that query while the upper case responses apply to all further
   such queries during the current execution and no further queries of that
   type will be made.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>[4]</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='' Line='[4]'>
-  <DD>The specified number of orders (ranked by peak strength) in the aperture
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>[4]</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='' Line='[4]' -->
+  <dd>The specified number of orders (ranked by peak strength) in the aperture
   reference image are located and default fixed width apertures are
   assigned.  If the resize option is set the apertures are resized by finding
   the level which is 5% (the default) of the peak above local background.
@@ -805,64 +794,64 @@ doecslit — Process Echelle slit spectra
   highly recommended.  Note that it is important that the aperture numbers be
   sequential with the orders and if any orders are skipped the aperture
   numbers should also skip.  It is also important to verify the background
-  regions with the <TT>'b'</TT> key.  Usually you want any changes made to the
-  background definitions to apply to all apertures so use the <TT>'a'</TT> key to
+  regions with the <tt>'b'</tt> key.  Usually you want any changes made to the
+  background definitions to apply to all apertures so use the <tt>'a'</tt> key to
   select all apertures before modifying the background parameters.  To exit
-  the background mode and then to exit the review mode use <TT>'q'</TT>.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>[5]</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='' Line='[5]'>
-  <DD>The order positions at a series of points along the dispersion are measured
+  the background mode and then to exit the review mode use <tt>'q'</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>[5]</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='' Line='[5]' -->
+  <dd>The order positions at a series of points along the dispersion are measured
   and a function is fit to these positions.  This may be done interactively
   to examine the traced positions and adjust the fitting parameters.  To exit
-  the interactive fitting type <TT>'q'</TT>.  Not all orders need be examined and the
-  "<TT>NO</TT>" response will quit the interactive fitting using the last defined
+  the interactive fitting type <tt>'q'</tt>.  Not all orders need be examined and the
+  <tt>"NO"</tt> response will quit the interactive fitting using the last defined
   fitting parameters on the remaining traces.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>[6]</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='' Line='[6]'>
-  <DD>Apertures are now defined for all standard and object images.  This is only
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>[6]</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='' Line='[6]' -->
+  <dd>Apertures are now defined for all standard and object images.  This is only
   done if there are no previous aperture definitions for the image.  The
   aperture references previously defined are used as the initial set of
   apertures for each image.  The apertures are then recentered by an average
   shift over all orders and resized if that option is selected.
   The apertures may also be retraced and interactively examined
   for each image if the tracing option is selected and quicklook mode is not.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>[7]</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='' Line='[7]'>
-  <DD>If scattered light subtraction is selected the scattered light parameters
-  are set using the aperture reference image and the task <B>apscatter</B>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>[7]</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='' Line='[7]' -->
+  <dd>If scattered light subtraction is selected the scattered light parameters
+  are set using the aperture reference image and the task <b>apscatter</b>.
   The purpose of this is to interactively define the aperture buffer distance
   for the scattered light and the cross and parallel dispersion fitting
   parameters.  The fitting parameters are taken from and recorded in the
-  parameter sets <B>apscat1</B> and <B>apscat2</B>.  All other scattered light
+  parameter sets <b>apscat1</b> and <b>apscat2</b>.  All other scattered light
   subtractions are done noninteractively with these parameters.  Note that
   the scattered light correction modifies the input images.  Scattered light
   subtraction is not done in quicklook mode.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>[8]</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='' Line='[8]'>
-  <DD>If dispersion correction is selected the first arc in the arc list is
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>[8]</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='' Line='[8]' -->
+  <dd>If dispersion correction is selected the first arc in the arc list is
   extracted.  The dispersion function is defined using the task
-  <B>ecidentify</B>.  Identify a few arc lines in a few orders with <TT>'m'</TT> and
-  <TT>'o'</TT> and use the <TT>'l'</TT> line list identification command to automatically add
+  <b>ecidentify</b>.  Identify a few arc lines in a few orders with <tt>'m'</tt> and
+  <tt>'o'</tt> and use the <tt>'l'</tt> line list identification command to automatically add
   additional lines and fit the dispersion function.  Check the quality of the
-  dispersion function fit with <TT>'f'</TT>.  When satisfied exit with <TT>'q'</TT>.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>[9]</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='' Line='[9]'>
-  <DD>If the flux calibration option is selected the standard star spectra are
+  dispersion function fit with <tt>'f'</tt>.  When satisfied exit with <tt>'q'</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>[9]</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='' Line='[9]' -->
+  <dd>If the flux calibration option is selected the standard star spectra are
   processed (if not done previously).  The images are background subtracted,
   extracted, and wavelength calibrated.  The appropriate arc
   calibration spectra are extracted and the dispersion function refit
@@ -871,123 +860,133 @@ doecslit — Process Echelle slit spectra
   for the name of the standard star calibration data file.  Because echelle
   spectra are often at much higher dispersion than the calibration data,
   interpolated bandpasses may be defined with the bandpass parameters in
-  <B>sparams</B> and checked or modified interactively.
-  <P>
+  <b>sparams</b> and checked or modified interactively.
   After all the standard stars are processed a sensitivity function is
-  determined using the interactive task <B>sensfunc</B>.  Finally, the
+  determined using the interactive task <b>sensfunc</b>.  Finally, the
   standard star spectra are extinction corrected and flux calibrated
   using the derived sensitivity function.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>[10]</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='' Line='[10]'>
-  <DD>The object spectra are now automatically background subtracted
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>[10]</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='' Line='[10]' -->
+  <dd>The object spectra are now automatically background subtracted
   (an alternative to scattered light subtraction),
   extracted, wavelength calibrated, and flux calibrated.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>[11]</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='' Line='[11]'>
-  <DD>The option to examine the final spectra with <B>splot</B> may be given.
-  To exit type <TT>'q'</TT>.  In quicklook mode the spectra are plotted
-  noninteractively with <B>specplot</B>.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>[12]</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='' Line='[12]'>
-  <DD>The final spectra will have the same name as the original 2D images
-  with a "<TT>.ec</TT>" extension added.
-  </DD>
-  </DL>
-  <P>
-  <B>Spectra and Data Files</B>
-  <P>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>[11]</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='' Line='[11]' -->
+  <dd>The option to examine the final spectra with <b>splot</b> may be given.
+  To exit type <tt>'q'</tt>.  In quicklook mode the spectra are plotted
+  noninteractively with <b>specplot</b>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>[12]</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='' Line='[12]' -->
+  <dd>The final spectra will have the same name as the original 2D images
+  with a <tt>".ec"</tt> extension added.
+  </dd>
+  </dl>
+  <p>
+  <b>Spectra and Data Files</b>
+  </p>
+  <p>
   The basic input consists of echelle slit object, standard star, and arc
   calibration spectra stored as IRAF images.
   The type of image format is defined by the
-  environment parameter <I>imtype</I>.  Only images with that extension will
+  environment parameter <i>imtype</i>.  Only images with that extension will
   be processed and created.
   The raw CCD images must be
   processed to remove overscan, bias, dark count, and flat field effects.
-  This is generally done using the <B>ccdred</B> package.  Flat fields which
+  This is generally done using the <b>ccdred</b> package.  Flat fields which
   are not contaminated by low counts between the apertures may be prepared
-  with the task <B>apflatten</B> (recommended) or <B>apnormalize</B>.  Lines of
+  with the task <b>apflatten</b> (recommended) or <b>apnormalize</b>.  Lines of
   constant wavelength across the orders should be closely aligned with one of
   the image axes.  Sometimes the orders are aligned rather than the spectral
   features.  This will result in a small amount of resolution loss but is
   often acceptable.  In some cases one may correct for misalignment with the
-  <B>rotate</B> task.  More complex geometric problems and observations of
-  extended objects should be handled by the <B>longslit</B> package and single
-  order observations should be processed by <B>doslit</B>.
-  <P>
+  <b>rotate</b> task.  More complex geometric problems and observations of
+  extended objects should be handled by the <b>longslit</b> package and single
+  order observations should be processed by <b>doslit</b>.
+  </p>
+  <p>
   The aperture reference spectrum is generally a bright star.  The arc
   spectra are comparison arc lamp observations (they must all be of the same
   type).  The assignment of arc calibration exposures to object exposures is
   generally done by selecting the nearest in time and interpolating.
-  However, the optional <I>arc assignment table</I> may be used to explicitly
+  However, the optional <i>arc assignment table</i> may be used to explicitly
   assign arc images to specific objects.  The format of this file is
-  described in task <B>refspectra</B>.
-  <P>
+  described in task <b>refspectra</b>.
+  </p>
+  <p>
   The final reduced spectra are recorded in two or three dimensional IRAF
   images.  The images have the same name as the original images with an added
-  "<TT>.ec</TT>" extension.  Each line in the reduced image is a one dimensional
+  <tt>".ec"</tt> extension.  Each line in the reduced image is a one dimensional
   spectrum with associated aperture, order, and wavelength
-  information.  When the <I>extras</I> parameter is set the lines in the
+  information.  When the <i>extras</i> parameter is set the lines in the
   third dimension contain additional information (see
-  <B>apsum</B> for further details).  These spectral formats are accepted by the
-  one dimensional spectroscopy tasks such as the plotting tasks <B>splot</B>
-  and <B>specplot</B>.  The special task <B>scopy</B> may be used to extract
+  <b>apsum</b> for further details).  These spectral formats are accepted by the
+  one dimensional spectroscopy tasks such as the plotting tasks <b>splot</b>
+  and <b>specplot</b>.  The special task <b>scopy</b> may be used to extract
   specific apertures or to change format to individual one dimensional
-  images.  The task <B>scombine</B> is used to combine or merge orders into
+  images.  The task <b>scombine</b> is used to combine or merge orders into
   a single spectrum.
-  <P>
-  <B>Package Parameters</B>
-  <P>
-  The <B>echelle</B> package parameters set parameters which change
+  </p>
+  <p>
+  <b>Package Parameters</b>
+  </p>
+  <p>
+  The <b>echelle</b> package parameters set parameters which change
   infrequently and define the standard I/O functions.  The extinction file
   is used for making extinction corrections and the standard star
   calibration directory is used for determining flux calibrations from
   standard star observations.  The calibration directories contain data files
   with standard star fluxes and band passes.  The available extinction
   files and flux calibration directories may be listed using the command:
-  <PRE>
-  <P>
+  </p>
+  <pre>
+  
   	cl&gt; page onedstds$README
-  <P>
-  </PRE>
+  
+  </pre>
+  <p>
   The extinction correction requires computation of an air mass using the
-  task <B>setairmass</B>.  The air mass computation needs information
+  task <b>setairmass</b>.  The air mass computation needs information
   about the observation and, in particular, the latitude of the observatory.
   This is determined using the OBSERVAT image header keyword.  If this
   keyword is not present the observatory parameter is used.  See the
-  task <B>observatory</B> for more on defining the observatory parameters.
-  <P>
+  task <b>observatory</b> for more on defining the observatory parameters.
+  </p>
+  <p>
   The spectrum interpolation type is used whenever a spectrum needs to be
   resampled for linearization or performing operations between spectra
-  with different sampling.  The "<TT>sinc</TT>" interpolation may be of interest
-  as an alternative but see the cautions given in <B>onedspec.package</B>.
-  <P>
+  with different sampling.  The <tt>"sinc"</tt> interpolation may be of interest
+  as an alternative but see the cautions given in <b>onedspec.package</b>.
+  </p>
+  <p>
   The verbose parameter selects whether to print everything which goes
   into the log file on the terminal.  It is useful for monitoring
-  what the <B>doecslit</B> task does.  The log and plot files are useful for
+  what the <b>doecslit</b> task does.  The log and plot files are useful for
   keeping a record of the processing.  A log file is highly recommended.
   A plot file provides a record of the apertures, traces, and extracted
   spectra but can become quite large.
-  The plotfile is most conveniently viewed and printed with <B>gkimosaic</B>.
-  <P>
-  <B>Processing Parameters</B>
-  <P>
+  The plotfile is most conveniently viewed and printed with <b>gkimosaic</b>.
+  </p>
+  <p>
+  <b>Processing Parameters</b>
+  </p>
+  <p>
   The input images are specified by image lists.  The lists may be
   a list of explicit comma separate image names, @ files, or image
   templates using pattern matching against file names in the directory.
   To allow wildcard image lists to be used safely and conveniently the
   image lists are checked to remove extracted images (the .ec images)
   and to automatically identify object and arc spectra.  Object and arc
-  images are identified by the keyword IMAGETYP with values of "<TT>object</TT>",
-  "<TT>OBJECT</TT>", "<TT>comp</TT>", or "<TT>COMPARISON</TT>" (the current practice at NOAO).
+  images are identified by the keyword IMAGETYP with values of <tt>"object"</tt>,
+  <tt>"OBJECT"</tt>, <tt>"comp"</tt>, or <tt>"COMPARISON"</tt> (the current practice at NOAO).
   If arc images are found in the object list they are transferred to the
   arc list while if object images are found in the arc list they are ignored.
   All other image types, such as biases, darks, or flat fields, are
@@ -996,29 +995,33 @@ doecslit — Process Echelle slit spectra
   wildcard in the arc list to automatically find the arc spectra.
   If the data lack the identifying information it is up to the user
   to explicitly set the proper lists.
-  <P>
+  </p>
+  <p>
   As mentioned earlier, all the arc images must be of the same type;
   that is taken with the same arc lamp.  The aperture reference parameter
   is a single image name which is usually a bright star.
-  <P>
+  </p>
+  <p>
   The next set of parameters describe the noise characteristics and the
   general layout of the orders.  The read out noise and gain are used when
-  "<TT>cleaning</TT>" cosmic rays and when using variance or optimal weighting.  These
+  <tt>"cleaning"</tt> cosmic rays and when using variance or optimal weighting.  These
   parameters must be fairly accurate.  Note that these are the effective
   parameters and must be adjusted if previous processing has modified the
   pixel values; such as with an unnormalized flat field.
-  <P>
+  </p>
+  <p>
   The general direction in which the orders run is specified by the
   dispersion axis parameter.  Recall that ideally it is the direction
   of constant wavelength which should be aligned with an image axis and
   the dispersion direction will not be aligned because of the cross-dispersion.
-  The <I>norders</I> parameter is used to automatically find the orders.  The
+  The <i>norders</i> parameter is used to automatically find the orders.  The
   specified number of the brightest peaks are found.  Generally after finding the
   orders the aperture definitions are reviewed and adjusted interactively.
   The profile width should be approximately the full width at the profile
   base.  The default aperture limits and background regions are all
   derived from this width parameter.
-  <P>
+  </p>
+  <p>
   The next set of parameters select the processing steps and options.  The
   various calibration steps may be done simultaneously, that is at the same
   time as the basic extractions, or in separate executions of the task.
@@ -1026,8 +1029,9 @@ doecslit — Process Echelle slit spectra
   Dispersion correction requires at least one arc spectrum and flux
   calibration requires dispersion correction and at least one standard star
   observation.
-  <P>
-  The <I>resize</I> option resets the edges of the extraction apertures based
+  </p>
+  <p>
+  The <i>resize</i> option resets the edges of the extraction apertures based
   on the profile for each object and standard star order.  The default
   resizing is to the 5% point relative to the peak measured above the
   background.  This allows following changes in the seeing.  However, one
@@ -1035,23 +1039,26 @@ doecslit — Process Echelle slit spectra
   the observations.  Except in quicklook mode, the apertures for each object
   and standard star observation may be reviewed graphically and further
   adjustments made to the aperture width and background regions.
-  <P>
+  </p>
+  <p>
   The apertures for each observation are adjusted for small shifts relative
   to the reference aperture definitions.  If you think this is not sufficient,
   say to account for rotation of the detector or for differing atmospheric
-  dispersion, the <I>trace</I> option allows redefining the aperture trace
+  dispersion, the <i>trace</i> option allows redefining the aperture trace
   functions for each observation.  Note this is only allowed in non-quicklook
   mode.
-  <P>
-  The <I>clean</I> option invokes a profile
+  </p>
+  <p>
+  The <i>clean</i> option invokes a profile
   fitting and deviant point rejection algorithm as well as a variance weighting
   of points in the aperture.  See the next section for more about
   requirements to use this option.
-  <P>
-  The <I>background</I> option selects a type of correction for background
-  or scattered light.  If the type is "<TT>scattered</TT>" a global scattered light
+  </p>
+  <p>
+  The <i>background</i> option selects a type of correction for background
+  or scattered light.  If the type is <tt>"scattered"</tt> a global scattered light
   is fit to the data between the apertures  and subtracted from the images.
-  <I>Note that the input images are modified by this operation</I>.
+  <i>Note that the input images are modified by this operation</i>.
   This option is slow and is not allowed in quicklook
   mode.  Alternatively, a local background may be subtracted using
   background regions defined for each aperture.  The background may be
@@ -1060,59 +1067,67 @@ doecslit — Process Echelle slit spectra
   may be averaged, medianed, or the minimum value used.  Another choice
   is to fit the data in the background regions by a function and interpolate
   to the object aperture.
-  <P>
+  </p>
+  <p>
   Generally once a spectrum has been processed it will not be reprocessed if
   specified as an input spectrum.  However, changes to the underlying
   calibration data can cause such spectra to be reprocessed if the
-  <I>update</I> flag is set.  The changes which will cause an update are a new
+  <i>update</i> flag is set.  The changes which will cause an update are a new
   reference image, adding the scattered light subtraction option, a new arc
   reference image, and new standard stars.  If all input spectra are to be
-  processed regardless of previous processing the <I>redo</I> flag may be
+  processed regardless of previous processing the <i>redo</i> flag may be
   used.  Note that reprocessing clobbers the previously processed output
   spectra.
-  <P>
-  The final step is to plot the spectra if the <I>splot</I> option is
+  </p>
+  <p>
+  The final step is to plot the spectra if the <i>splot</i> option is
   selected.  In non-quicklook mode there is a query which may be
   answered either in lower or upper case.  The plotting uses the interactive
-  task <B>splot</B>.  In quicklook mode the plot appears noninteractively
-  using the task <B>specplot</B>.  
-  <P>
-  The <I>quicklook</I> option provides a simpler, less interactive, mode.
+  task <b>splot</b>.  In quicklook mode the plot appears noninteractively
+  using the task <b>specplot</b>.  
+  </p>
+  <p>
+  The <i>quicklook</i> option provides a simpler, less interactive, mode.
   The quicklook mode automatically assigns the reference apertures to
   the object and standard star observations without interactive review
   or tracing, does not do the time consuming scattered light correction,
-  and the <I>splot</I> option selects a noninteractive plot to be
+  and the <i>splot</i> option selects a noninteractive plot to be
   shown at the end of processing of each object and standard star
   spectrum.  While the algorithms used in quicklook mode are nearly the same
   as in non-quicklook mode and the final results may be the same it is
   recommended that the greater degree of monitoring and review in
   non-quicklook mode be used for careful final reductions.
-  <P>
+  </p>
+  <p>
   The batch processing option allows object spectra to be processed as a
   background or batch job.  This will occur only if the interactive
-  <I>splot</I> option is not active; either not set, turned off during
-  processing with "<TT>NO</TT>", or in quicklook mode.  In batch processing the
+  <i>splot</i> option is not active; either not set, turned off during
+  processing with <tt>"NO"</tt>, or in quicklook mode.  In batch processing the
   terminal output is suppressed.
-  <P>
-  The <I>listonly</I> option prints a summary of the processing steps
+  </p>
+  <p>
+  The <i>listonly</i> option prints a summary of the processing steps
   which will be performed on the input spectra without actually doing
   anything.  This is useful for verifying which spectra will be affected
   if the input list contains previously processed spectra.  The listing
   does not include any arc spectra which may be extracted to dispersion
   calibrate an object spectrum.
-  <P>
+  </p>
+  <p>
   The last parameter (excluding the task mode parameter) points to
   another parameter set for the algorithm parameters.  The default
-  parameter set is called <B>sparams</B>.  The algorithm parameters are
+  parameter set is called <b>sparams</b>.  The algorithm parameters are
   discussed further in the next section.
-  <P>
-  <B>Algorithms and Algorithm Parameters</B>
-  <P>
+  </p>
+  <p>
+  <b>Algorithms and Algorithm Parameters</b>
+  </p>
+  <p>
   This section summarizes the various algorithms used by the
-  <B>doecslit</B> task and the parameters which control and modify the
+  <b>doecslit</b> task and the parameters which control and modify the
   algorithms.  The algorithm parameters available to you are
-  collected in the parameter set <B>sparams</B>.  These parameters are
-  taken from the various general purpose tasks used by the <B>doecslit</B>
+  collected in the parameter set <b>sparams</b>.  These parameters are
+  taken from the various general purpose tasks used by the <b>doecslit</b>
   processing task.  Additional information about these parameters and
   algorithms may be found in the help for the actual
   task executed.  These tasks are identified below.  The aim of this
@@ -1120,63 +1135,72 @@ doecslit — Process Echelle slit spectra
   in one place separate from the processing parameters and include only
   those which are relevant for echelle slit data.  The parameter values
   can be changed from the defaults by using the parameter editor,
-  <PRE>
-  <P>
+  </p>
+  <pre>
+  
   cl&gt; epar sparams
-  <P>
-  </PRE>
-  or simple typing <I>sparams</I>.
-  The parameter editor can also be entered when editing the <B>doecslit</B>
-  parameters by typing <I>:e</I> when positioned at the <I>sparams</I>
+  
+  </pre>
+  <p>
+  or simple typing <i>sparams</i>.
+  The parameter editor can also be entered when editing the <b>doecslit</b>
+  parameters by typing <i>:e</i> when positioned at the <i>sparams</i>
   parameter.
-  <P>
-  <B>Aperture Definitions</B>
-  <P>
+  </p>
+  <p>
+  <b>Aperture Definitions</b>
+  </p>
+  <p>
   The first operation is to define the extraction apertures, which include the
   aperture width, background regions, and position dependence with
   wavelength, for the input echelle slit spectra and, if flux calibration is
   selected, the standard star spectra.  This is done only for spectra which
-  do not have previously defined apertures unless the <I>redo</I> option is
+  do not have previously defined apertures unless the <i>redo</i> option is
   set to force all definitions to be redone.  Thus, apertures may be
-  defined separately using the <B>apextract</B> tasks.  This is particularly
+  defined separately using the <b>apextract</b> tasks.  This is particularly
   useful if one needs to use reference images to define apertures for very
   weak spectra which are not well centered or traced by themselves.
-  <P>
-  Initially apertures are defined for a specified <I>aperture reference</I>
+  </p>
+  <p>
+  Initially apertures are defined for a specified <i>aperture reference</i>
   image.  The selected number of orders are found automatically by selecting
   the highest peaks in a cut across the dispersion.  Apertures are assigned
-  with a width given by the <I>width</I> parameter and numbered sequentially.
+  with a width given by the <i>width</i> parameter and numbered sequentially.
   The background regions are also defined in terms of the width parameter
   starting at one width distance from the profile center and extending to two
   widths on both sides of the profile.  As an example, if the width parameter
   is 5 pixels the default aperture limits are +/- 2.5 pixels and the
-  background sample regions will be "<TT>-10:-5,5:10</TT>".  If the <I>resize</I>
+  background sample regions will be <tt>"-10:-5,5:10"</tt>.  If the <i>resize</i>
   parameter is set the aperture limits are adjusted to a specified point on
-  the spectrum profile (see <B>apresize</B>).
-  <P>
+  the spectrum profile (see <b>apresize</b>).
+  </p>
+  <p>
   A query is then given allowing the aperture definitions to be reviewed and
-  modified.  Queries made by <B>doecslit</B> generally may be answered with either
-  lower case "<TT>yes</TT>" or "<TT>no</TT>" or with upper case "<TT>YES</TT>" or "<TT>NO</TT>".  The upper
+  modified.  Queries made by <b>doecslit</b> generally may be answered with either
+  lower case <tt>"yes"</tt> or <tt>"no"</tt> or with upper case <tt>"YES"</tt> or <tt>"NO"</tt>.  The upper
   case responses apply to all further queries and so are used to eliminate
   further queries of that kind.
-  <P>
+  </p>
+  <p>
   Reviewing the aperture definitions is highly recommended to check the
   aperture numbering, aperture limits, and background regions.  The aperture
   numbers must be linearly related, with a slope of +/- 1, to the true order
   numbers though absolute order numbers need not be known.  The key point is
   that if an order is skipped the aperture numbers must also skip.  The
-  background regions are checked with the <TT>'b'</TT> key.  Typically one adjusts all
+  background regions are checked with the <tt>'b'</tt> key.  Typically one adjusts all
   the background regions at the same time by selecting all apertures with
-  the <TT>'a'</TT> key first.  To exit the background and aperture editing steps type
-  <TT>'q'</TT>.
-  <P>
+  the <tt>'a'</tt> key first.  To exit the background and aperture editing steps type
+  <tt>'q'</tt>.
+  </p>
+  <p>
   Next the positions of the orders at various points along the dispersion
-  are measured and "<TT>trace functions</TT>" are fit.  The user is asked whether
+  are measured and <tt>"trace functions"</tt> are fit.  The user is asked whether
   to fit each trace function interactively.  This is selected to adjust
   the fitting parameters such as function type and order.  When
   interactively fitting a query is given for each aperture.  After the
   first aperture one may skip reviewing the other traces.
-  <P>
+  </p>
+  <p>
   After the aperture reference image is done all the object and standard star
   images are checked for aperture definitions and those without definitions
   are assigned apertures.  The assignment consists of inheriting the aperture
@@ -1184,31 +1208,34 @@ doecslit — Process Echelle slit spectra
   average shift that best centers all the apertures, resizing the apertures
   if the resize option is selected, and retracing the spectral orders if the
   retracing option is selected.  Retracing is only allowed in non-quicklook
-  mode (set by the <I>quicklook</I> parameter).  Also interactive review of
+  mode (set by the <i>quicklook</i> parameter).  Also interactive review of
   the aperture definitions is only done in
   non-quicklook mode.  In quicklook mode the aperture definitions are all set
   noninteractively without retracing.  It is recommended that quicklook only
   be used for initial quick extractions and calibration and that for final
   reductions one at least review the aperture definitions and possibly
   retrace each observation.
-  <P>
-  The above steps are all performed using tasks from the <B>apextract</B>
-  package and parameters from the <B>sparams</B> parameters.  As a quick
+  </p>
+  <p>
+  The above steps are all performed using tasks from the <b>apextract</b>
+  package and parameters from the <b>sparams</b> parameters.  As a quick
   summary, the dispersion direction of the spectra are determined from the
-  package <B>dispaxis</B> parameter if not defined in the image header.  The default
+  package <b>dispaxis</b> parameter if not defined in the image header.  The default
   line or column for finding the object position on the slit and the number
-  of image lines or columns to sum are set by the <I>line</I> and <I>nsum</I>
+  of image lines or columns to sum are set by the <i>line</i> and <i>nsum</i>
   parameters.  A line of INDEF (the default) selects the middle of the
   image.  The automatic finding algorithm is described for the task
-  <B>apfind</B> and basically finds the strongest peaks.  The resizing is
-  described in the task <B>apresize</B> and the parameters used are also
+  <b>apfind</b> and basically finds the strongest peaks.  The resizing is
+  described in the task <b>apresize</b> and the parameters used are also
   described there.  The tracing is
-  done as described in <B>aptrace</B> and consists of stepping along the image
-  using the specified <I>t_step</I> parameter.  The function fitting uses the
-  <B>icfit</B> commands with the other parameters from the tracing section.
-  <P>
-  <B>Background or Scattered Light Subtraction</B>
-  <P>
+  done as described in <b>aptrace</b> and consists of stepping along the image
+  using the specified <i>t_step</i> parameter.  The function fitting uses the
+  <b>icfit</b> commands with the other parameters from the tracing section.
+  </p>
+  <p>
+  <b>Background or Scattered Light Subtraction</b>
+  </p>
+  <p>
   In addition to not subtracting any sky or scattered light there are two
   approaches to subtracting background light.  The first is to determine
   a smooth global scattered light component.  The second is to subtract
@@ -1219,24 +1246,27 @@ doecslit — Process Echelle slit spectra
   subtraction is only done for object and standard star images and not
   for arc spectra.  Also, the global scattered light option is not done
   in quicklook mode.
-  <P>
+  </p>
+  <p>
   The global scattered light fitting and subtraction is done with the task
-  <B>apscatter</B>.  The function fitting parameters are set interactively
+  <b>apscatter</b>.  The function fitting parameters are set interactively
   using the aperture reference spectrum.  All other subtractions are done
   noninteractively with the same set of parameters.  The scattered light is
   subtracted from the input images, thus modifying them, and one might wish
   to first make backups of the original images.
-  <P>
+  </p>
+  <p>
   The scattered light is measured between the apertures using a specified
   buffer distance from the aperture edges.  The scattered light pixels are
   fit by a series of one dimensional functions across the dispersion.  The
   independent fits are then smoothed along the dispersion by again fitting
   low order functions.  These fits then define the smooth scattered light
   surface to be subtracted from the image.  The fitting parameters are
-  defined and recorded in the two parameter sets <I>apscat1</I> and
-  <I>apscat2</I>.  The scattered light algorithm is described more fully in
-  <B>apscatter</B>.  This algorithm is relatively slow.
-  <P>
+  defined and recorded in the two parameter sets <i>apscat1</i> and
+  <i>apscat2</i>.  The scattered light algorithm is described more fully in
+  <b>apscatter</b>.  This algorithm is relatively slow.
+  </p>
+  <p>
   Local background subtraction is done during extraction based on background
   regions and parameters defined by the default background parameters or
   changed during interactive review of the apertures.  The background
@@ -1246,26 +1276,29 @@ doecslit — Process Echelle slit spectra
   are specified in pixels from the aperture center and follow changes in
   center of the spectrum along the dispersion.  The syntax is colon separated
   ranges with multiple ranges separated by a comma or space.  The background
-  fitting uses the <B>icfit</B> routines which include medians, iterative
+  fitting uses the <b>icfit</b> routines which include medians, iterative
   rejection of deviant points, and a choice of function types and orders.
   Note that it is important to use a method which rejects cosmic rays such as
-  using either medians over all the background regions (<I>background</I> =
-  "<TT>median</TT>") or median samples during fitting (<I>b_naverage</I> &lt; -1).  The
+  using either medians over all the background regions (<i>background</i> =
+  <tt>"median"</tt>) or median samples during fitting (<i>b_naverage</i> &lt; -1).  The
   background subtraction algorithm and options are described in greater
-  detail in <B>apsum</B> and <B>apbackground</B>.
-  <P>
-  <B>Extraction</B>
-  <P>
+  detail in <b>apsum</b> and <b>apbackground</b>.
+  </p>
+  <p>
+  <b>Extraction</b>
+  </p>
+  <p>
   The actual extraction of the spectra is done by summing across the
   fixed width apertures at each point along the dispersion.
   The default is to simply sum the pixels using
   partial pixels at the ends.  There is an option to weight the
-  sum based on a Poisson variance model using the <I>readnoise</I> and
-  <I>gain</I> detector parameters.  Note that if the <I>clean</I>
+  sum based on a Poisson variance model using the <i>readnoise</i> and
+  <i>gain</i> detector parameters.  Note that if the <i>clean</i>
   option is selected the variance weighted extraction is used regardless
-  of the <I>weights</I> parameter.  The sigma thresholds for cleaning
-  are also set in the <B>sparams</B> parameters.
-  <P>
+  of the <i>weights</i> parameter.  The sigma thresholds for cleaning
+  are also set in the <b>sparams</b> parameters.
+  </p>
+  <p>
   The cleaning and variance weighting options require knowing the effective
   (i.e. accounting for any image combining) read out noise and gain.
   These numbers need to be adjusted if the image has been processed
@@ -1274,39 +1307,44 @@ doecslit — Process Echelle slit spectra
   flat fielding).  These options also require using background subtraction
   if the profile does not go to zero.  For optimal extraction and
   cleaning to work it is recommended that any flat fielding be done
-  using flat fields produced by <B>apflatten</B>, no scattered light
+  using flat fields produced by <b>apflatten</b>, no scattered light
   correction, and using background subtraction if there is any
   appreciable sky or to compensate for scattered light.
   For further discussion of cleaning and variance weighted extraction see
-  <B>apvariance</B> and <B>approfiles</B> as well as  <B>apsum</B>.
-  <P>
-  <B>Dispersion Correction</B>
-  <P>
-  If dispersion correction is not selected, <I>dispcor</I>=no, then the object
+  <b>apvariance</b> and <b>approfiles</b> as well as  <b>apsum</b>.
+  </p>
+  <p>
+  <b>Dispersion Correction</b>
+  </p>
+  <p>
+  If dispersion correction is not selected, <i>dispcor</i>=no, then the object
   spectra are simply extracted.  The extracted spectra may be plotted
-  by setting the <I>splot</I> option.  This produces a query and uses
-  the interactive <B>splot</B> task in non-quicklook mode and uses
-  <B>specplot</B> noninteractively in quicklook mode.
-  <P>
+  by setting the <i>splot</i> option.  This produces a query and uses
+  the interactive <b>splot</b> task in non-quicklook mode and uses
+  <b>specplot</b> noninteractively in quicklook mode.
+  </p>
+  <p>
   Dispersion corrections are applied to the extracted spectra if the
-  <I>dispcor</I> processing parameter is set.  There
+  <i>dispcor</i> processing parameter is set.  There
   are three basic steps involved; determining the dispersion functions
   relating pixel position to wavelength, assigning the appropriate
   dispersion function to a particular observation, and either storing
   the nonlinear dispersion function in the image headers or resampling the
   spectra to evenly spaced pixels in wavelength.
-  <P>
+  </p>
+  <p>
   The first arc spectrum in the arc list is used to define the reference
   dispersion solution.  It is extracted using the reference aperture definition.
   Note extractions of arc spectra are not background or scattered light
-  subtracted.  The interactive task <B>ecidentify</B> is used to define the
+  subtracted.  The interactive task <b>ecidentify</b> is used to define the
   dispersion function.  The idea is to mark some lines in a few orders whose
   wavelengths are known (with the line list used to supply additional lines after
   the first few identifications define the approximate wavelengths) and to fit a
   function giving the wavelength from the aperture number and pixel position.
-  <P>
-  The arc dispersion function parameters are for <B>ecidentify</B> and it's
-  related partner <B>ecreidentify</B>.  The parameters define a line list for
+  </p>
+  <p>
+  The arc dispersion function parameters are for <b>ecidentify</b> and it's
+  related partner <b>ecreidentify</b>.  The parameters define a line list for
   use in automatically assigning wavelengths to arc lines, a centering width
   (which should match the line widths at the base of the lines), the
   dispersion function type and orders, parameters to exclude bad lines from
@@ -1315,47 +1353,53 @@ doecslit — Process Echelle slit spectra
   generally be adequate and the dispersion function fitting parameters may be
   altered interactively.  One should consult the help for the two tasks for
   additional details of these parameters and the interactive operation of
-  <B>ecidentify</B>.
-  <P>
+  <b>ecidentify</b>.
+  </p>
+  <p>
   Once the reference dispersion function is defined other arc spectra are
   extracted as required by the object spectra.  The assignment of arcs is
   done either explicitly with an arc assignment table (parameter
-  <I>arctable</I>) or based on a header parameter such as a time.
+  <i>arctable</i>) or based on a header parameter such as a time.
   This assignments are made by the task
-  <B>refspectra</B>.  When two arcs are assigned to an object spectrum an
+  <b>refspectra</b>.  When two arcs are assigned to an object spectrum an
   interpolation is done between the two dispersion functions.  This makes an
   approximate correction for steady drifts in the dispersion.
-  <P>
-  The tasks <B>setjd</B> and <B>setairmass</B> are automatically run on all
+  </p>
+  <p>
+  The tasks <b>setjd</b> and <b>setairmass</b> are automatically run on all
   spectra.  This computes and adds the header parameters for the Julian date
   (JD), the local Julian day number (LJD), the universal time (UTMIDDLE), and
   the air mass at the middle of the exposure.  The default arc assignment is
   to use the Julian date grouped by the local Julian day number.  The
   grouping allows multiple nights of data to be correctly assigned at the
   same time.
-  <P>
+  </p>
+  <p>
   In non-quicklook mode the arc spectra assigned to each object are
   extracted using the same apertures as the object.  This accounts for
   changes in the recentering, aperture sizes, and tracing functions.
   In quicklook mode the arc spectra are extracted using the reference
   apertures.  When the same arc is used for several object images this
   allows the arc spectrum to only be extracted once.
-  <P>
+  </p>
+  <p>
   Defining the dispersion function for a new arc extraction is done with
-  the task <B>ecreidentify</B>.  This is done noninteractively with log
+  the task <b>ecreidentify</b>.  This is done noninteractively with log
   information recorded about the line reidentifications and the fit.
-  <P>
+  </p>
+  <p>
   The last step of dispersion correction is setting the dispersion
   of the object image from the arc images.  There are two choices here.
-  If the <I>linearize</I> parameter is not set the nonlinear dispersion
+  If the <i>linearize</i> parameter is not set the nonlinear dispersion
   function is stored in the image header.  Other IRAF tasks interpret
   this information when dispersion coordinates are needed for plotting
   or analysis.  This has the advantage of not requiring the spectra
   to be interpolated and the disadvantage that the dispersion
   information is only understood by IRAF tasks and cannot be readily
   exported to other analysis software.
-  <P>
-  If the <I>linearize</I> parameter is set then the spectra are resampled to a
+  </p>
+  <p>
+  If the <i>linearize</i> parameter is set then the spectra are resampled to a
   linear dispersion relation either in wavelength or the log of the
   wavelength.  For echelle spectra each order is linearized independently so
   that the wavelength interval per pixel is different in different orders.
@@ -1364,29 +1408,33 @@ doecslit — Process Echelle slit spectra
   taken from the limits determined from the arc reference spectrum and
   the number of pixels is the same as the original images.  The dispersion
   per pixel is then derived from these constraints.
-  <P>
+  </p>
+  <p>
   The linearization algorithm  parameters allow selecting the interpolation
   function type, whether to conserve flux per pixel by integrating across the
   extent of the final pixel, and whether to linearize to equal linear or
   logarithmic intervals.  The latter may be appropriate for radial velocity
   studies.  The default is to use a fifth order polynomial for interpolation,
   to conserve flux, and to not use logarithmic wavelength bins.  These
-  parameters are described fully in the help for the task <B>dispcor</B> which
+  parameters are described fully in the help for the task <b>dispcor</b> which
   performs the correction.
-  <P>
-  <B>Flux Calibration</B>
-  <P>
+  </p>
+  <p>
+  <b>Flux Calibration</b>
+  </p>
+  <p>
   Flux calibration consists of an extinction correction and an instrumental
   sensitivity calibration.  The extinction correction only depends on the
-  extinction function defined by the package parameter <I>extinct</I> and
+  extinction function defined by the package parameter <i>extinct</i> and
   determination of the airmass from the header parameters (the air mass is
-  computed by <B>setairmass</B> as mentioned earlier).  The sensitivity
+  computed by <b>setairmass</b> as mentioned earlier).  The sensitivity
   calibration depends on a sensitivity calibration spectrum determined from
   standard star observations for which there are tabulated absolute fluxes.
   The task that applies both the extinction correction and sensitivity
-  calibration to each extracted object spectrum is <B>calibrate</B>.  Consult
+  calibration to each extracted object spectrum is <b>calibrate</b>.  Consult
   the manual page for this task for more information.
-  <P>
+  </p>
+  <p>
   Generation of the sensitivity calibration spectrum is done before
   processing any object spectra since it has two interactive steps and
   requires all the standard star observations.  The first step is tabulating
@@ -1398,71 +1446,73 @@ doecslit — Process Echelle slit spectra
   bandpasses as in the calibration file are used.  Otherwise a uniform grid
   of bandpasses is interpolated.  Using interpolated bandpasses is not
   rigorous but is sometimes the only choice for echelle spectra.
-  <P>
+  </p>
+  <p>
   The standard star tabulations are done after each standard star is
   extracted and dispersion corrected.  You are asked for the name of the
   standard star as tabulated in the absolute flux data files in the directory
-  <I>caldir</I> defined by the package parameters.  If the <I>interact</I>
+  <i>caldir</i> defined by the package parameters.  If the <i>interact</i>
   parameter is yes the bandpasses can be displayed on the data and you can
   interactively add or delete bandpasses. The tabulation of the standard star
   observations over the standard bandpasses is done by the task
-  <B>standard</B>.  The tabulated data is stored in the file <I>std</I>.  Note
-  that if the <I>redo</I> flag is not set any new standard stars specified in
-  subsequent executions of <B>doecslit</B> are added to the previous data in
+  <b>standard</b>.  The tabulated data is stored in the file <i>std</i>.  Note
+  that if the <i>redo</i> flag is not set any new standard stars specified in
+  subsequent executions of <b>doecslit</b> are added to the previous data in
   the data file, otherwise the file is first deleted.  Modification of the
   tabulated standard star data, such as by adding new stars, will cause any
   spectra in the input list which have been previously calibrated to be
-  reprocessed if the <I>update</I> flag is set.
-  <P>
+  reprocessed if the <i>update</i> flag is set.
+  </p>
+  <p>
   After the standard star calibration bandpass fluxes are tabulated the
   information from all the standard stars is combined to produce a
-  sensitivity function for use by <B>calibrate</B>.  The sensitivity function
-  determination is interactive and uses the task <B>sensfunc</B>.  This task
+  sensitivity function for use by <b>calibrate</b>.  The sensitivity function
+  determination is interactive and uses the task <b>sensfunc</b>.  This task
   allows fitting a smooth sensitivity function to the ratio of the observed
   to calibrated fluxes verses wavelength.  The types of manipulations one
   needs to do include deleting bad observations, possibly removing variable
   extinction (for poor data), and possibly deriving a revised extinction
   function.  This is a complex operation and one should consult the manual
-  page for <B>sensfunc</B>.  The sensitivity function is saved as one
-  dimensional spectra (one per order) with the root name <I>sens</I>.
+  page for <b>sensfunc</b>.  The sensitivity function is saved as one
+  dimensional spectra (one per order) with the root name <i>sens</i>.
   Deletion of these images will also cause reprocessing to occur if the
-  <I>update</I> flag is set.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  <i>update</i> flag is set.
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1.  The following example uses artificial data and may be executed
   at the terminal (with IRAF V2.10).  This is similar to the sequence
-  performed by the test procedure "<TT>demos doecslit</TT>".
-  <P>
-  <PRE>
+  performed by the test procedure <tt>"demos doecslit"</tt>.
+  </p>
+  <pre>
   ec&gt; demos mkecslit
   Creating example longslit in image demoobj ...
   Creating example longslit in image demostd ...
   Creating example longslit in image demoarc ...
   ec&gt; echelle.verbose=no
   ec&gt; echelle.caldir=onedstds$spechayescal/
-  ec&gt; doecslit Bdemoobj apref=Bdemostd arcs=Bdemoarc stand=Bdemostd \<BR>
+  ec&gt; doecslit Bdemoobj apref=Bdemostd arcs=Bdemoarc stand=Bdemostd \<br>
   &gt;&gt;&gt; norders=3 extcor+ fluxcal+ resize+ splot+
   Set reference aperture for Bdemostd
   Edit apertures for Bdemostd?  (yes):
-  &lt;Check background with <TT>'b'</TT>, exit background and review with <TT>'q'</TT>&gt;
+  &lt;Check background with <tt>'b'</tt>, exit background and review with <tt>'q'</tt>&gt;
   Fit traced positions for Bdemostd interactively?  (yes):  
   Fit curve to aperture 1 of Bdemostd interactively  (yes):
-  &lt;Exit with <TT>'q'</TT>&gt;
+  &lt;Exit with <tt>'q'</tt>&gt;
   Fit curve to aperture 2 of Bdemostd interactively  (yes): N
   Edit apertures for Bdemoobj?  (yes):
-  &lt;Check background with <TT>'b'</TT>, exit background and review with <TT>'q'</TT>&gt;
+  &lt;Check background with <tt>'b'</tt>, exit background and review with <tt>'q'</tt>&gt;
   Fit traced positions for Bdemoobj interactively?  (yes): N
   Extract arc reference image Bdemoarc
   Determine dispersion solution for Bdemoarc
-  &lt;Type <TT>'m'</TT> at first strong line (pixel 156) and identify it as 4965&gt;
-  &lt;Type <TT>'k'</TT> to go to next order&gt;
+  &lt;Type <tt>'m'</tt> at first strong line (pixel 156) and identify it as 4965&gt;
+  &lt;Type <tt>'k'</tt> to go to next order&gt;
   &lt;Mark 52-&gt;5002, 74-&gt;5003.6, 155-&gt;5009.3&gt;
-  &lt;Type <TT>'k'</TT> to go to next order and mark 18-&gt;5044.7, 231-&gt;5059.8&gt;
-  &lt;Type <TT>'f'</TT> to see the fit residuals&gt;
-  &lt;Type <TT>'q'</TT> to quit fit and then <TT>'q'</TT> to exit&gt;
+  &lt;Type <tt>'k'</tt> to go to next order and mark 18-&gt;5044.7, 231-&gt;5059.8&gt;
+  &lt;Type <tt>'f'</tt> to see the fit residuals&gt;
+  &lt;Type <tt>'q'</tt> to quit fit and then <tt>'q'</tt> to exit&gt;
   Extract standard star spectrum Bdemostd
   Assign arc spectra for Bdemostd
   Extract and reidentify arc spectrum Bdemoarc
@@ -1474,14 +1524,14 @@ doecslit — Process Echelle slit spectra
   Bdemostd.ec.imh[1]: Artificial Echelle Spectrum
   Star name in calibration list: hz14
   Bdemostd.ec.imh[1]: Edit bandpasses? (no|yes|NO|YES|NO!|YES!) (no): y
-  &lt;Exit with <TT>'q'</TT>&gt;
+  &lt;Exit with <tt>'q'</tt>&gt;
   Bdemostd.ec.imh[2]: Artificial Echelle Spectrum
   Bdemostd.ec.imh[2]: Edit bandpasses? (no|yes|NO|YES|NO!|YES!) (y): N
   Bdemostd.ec.imh[3]: Artificial Echelle Spectrum
   Bdemostd.ec.imh[3]: Edit bandpasses? (no|yes|NO|YES|NO!|YES!) (N):
   Compute sensitivity function
   Fit aperture 1 interactively? (no|yes|NO|YES) (no|yes|NO|YES) (yes):
-  &lt;Exit with <TT>'q'</TT>&gt;
+  &lt;Exit with <tt>'q'</tt>&gt;
   Sensitivity function for aperture  1 --&gt; sens.0001
   Fit aperture 2 interactively? (no|yes|NO|YES) (no|yes|NO|YES) (yes): N
   Sensitivity function for aperture  2 --&gt; sens.0002
@@ -1490,7 +1540,7 @@ doecslit — Process Echelle slit spectra
   Standard stars:
   Splot spectrum? (no|yes|NO|YES) (yes):
   Image line/aperture to plot (0:) (1):
-  &lt;Exit with <TT>'q'</TT>&gt;
+  &lt;Exit with <tt>'q'</tt>&gt;
   Extract object spectrum Bdemoobj
   Assign arc spectra for Bdemoobj
   Extract and reidentify arc spectrum Bdemoarc
@@ -1503,36 +1553,34 @@ doecslit — Process Echelle slit spectra
   Bdemoobj.ec.imh:
   Splot spectrum? (no|yes|NO|YES) (yes):
   Image line/aperture to plot (0:) (1):
-  &lt;Exit with <TT>'q'</TT>&gt;
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Revisions</H3>
-  <! BeginSection: 'REVISIONS'>
-  <UL>
-  <DL>
-  <DT><B>DOECSLIT V2.10.3</B></DT>
-  <! Sec='REVISIONS' Level=0 Label='DOECSLIT' Line='DOECSLIT V2.10.3'>
-  <DD>The image format type to be
-  processed is selected with the <I>imtype</I> environment parameter.  The
+  &lt;Exit with <tt>'q'</tt>&gt;
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Revisions</h3>
+  <!-- BeginSection: 'REVISIONS' -->
+  <dl>
+  <dt><b>DOECSLIT V2.10.3</b></dt>
+  <!-- Sec='REVISIONS' Level=0 Label='DOECSLIT' Line='DOECSLIT V2.10.3' -->
+  <dd>The image format type to be
+  processed is selected with the <i>imtype</i> environment parameter.  The
   dispersion axis parameter is now a package parameter.  Images will only
-  be processed if the have the CCDPROC keyword.  A <I>datamax</I> parameter
+  be processed if the have the CCDPROC keyword.  A <i>datamax</i> parameter
   has been added to help improve cosmic ray rejection.  A bug which
   alphabetized the arc spectra was fixed.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'REVISIONS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </dd>
+  </dl>
+  <!-- EndSection:   'REVISIONS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   apbackground, apedit, apfind, approfiles, aprecenter, apresize, apsum, aptrace,
   apvariance, calibrate, ccdred, center1d, ctioslit, dispcor,
   echelle.doecslit, ecidentify, ecreidentify, icfit, kpnocoude, kpnoslit,
   msred, observatory, onedspec.package, refspectra, sensfunc, setairmass, setjd,
   splot, standard
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'SUMMARY' 'PARAMETERS' 'ENVIRONMENT PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'SUMMARY' 'PARAMETERS' 'ENVIRONMENT PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

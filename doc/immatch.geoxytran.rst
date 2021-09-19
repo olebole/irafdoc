@@ -1,114 +1,114 @@
 .. _geoxytran:
 
-geoxytran — Transform coordinate lists using the geomap transforms
-==================================================================
+geoxytran: Transform coordinate lists using the geomap transforms
+=================================================================
 
 **Package: immatch**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   geoxytran -- geometrically transform a list of coordinates
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   geoxytran input output database transforms
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
-  <DD>The list of input coordinate files to be transformed.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
-  <DD>The list of output transformed coordinate files. The number of output files must
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
+  <dd>The list of input coordinate files to be transformed.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
+  <dd>The list of output transformed coordinate files. The number of output files must
   be one or equal to the number of input files.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>database</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='database' Line='database'>
-  <DD>The name of the text database file written by the geomap task which
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>database</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database' -->
+  <dd>The name of the text database file written by the geomap task which
   contains the desired spatial transformation.
   If database is undefined geoxytran computes
   a linear transformation using the current
   values of the xref, yref, xout, yout, xshift, yshift, xmag, ymag, xrotation,
   and yrotation parameters.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>transforms</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='transforms' Line='transforms'>
-  <DD>The database record containing the desired spatial transformation. 
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>transforms</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='transforms' Line='transforms' -->
+  <dd>The database record containing the desired spatial transformation. 
   The number of records must be one or equal to the number of input coordinate
   files. Transforms is usually the name of the coordinate file that the
   geomap task used to compute the spatial transformation.
   If defined the values of xref, yref, xout, yout, xshift, yshift, xmag, ymag,
   xrotation, and yrotation will supersede the computed values in the
   database file.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>geometry = "<TT>geometric</TT>" (linear|geometric)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='geometry' Line='geometry = "geometric" (linear|geometric)'>
-  <DD>The type of geometric transformation. The geometry parameter is
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>geometry = <tt>"geometric"</tt> (linear|geometric)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='geometry' Line='geometry = "geometric" (linear|geometric)' -->
+  <dd>The type of geometric transformation. The geometry parameter is
   only requested if database is defined. The options are:
-  <DL>
-  <DT><B>linear</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='linear' Line='linear'>
-  <DD>Perform only the linear part of the spatial transformation.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>geometric</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='geometric' Line='geometric'>
-  <DD>Compute both the linear and distortion portions of the spatial transformation.
-  </DD>
-  </DL>
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>direction = "<TT>forward</TT>" (forward|backward)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='direction' Line='direction = "forward" (forward|backward)'>
-  <DD>The transformation direction may be "<TT>forward</TT>" or "<TT>backward</TT>".  The forward
+  <dl>
+  <dt><b>linear</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='linear' Line='linear' -->
+  <dd>Perform only the linear part of the spatial transformation.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>geometric</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='geometric' Line='geometric' -->
+  <dd>Compute both the linear and distortion portions of the spatial transformation.
+  </dd>
+  </dl>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>direction = <tt>"forward"</tt> (forward|backward)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='direction' Line='direction = "forward" (forward|backward)' -->
+  <dd>The transformation direction may be <tt>"forward"</tt> or <tt>"backward"</tt>.  The forward
   direction directly evaluates the database solution.  The backward
   direction iteratively determines the coordinate which evaluates to the
   specified coordinate.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>xref = INDEF, yref = INDEF</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='xref' Line='xref = INDEF, yref = INDEF'>
-  <DD>The x and y coordinates of the reference origin.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>xref = INDEF, yref = INDEF</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='xref' Line='xref = INDEF, yref = INDEF' -->
+  <dd>The x and y coordinates of the reference origin.
   If the database file is undefined xref and
   yref  default to [0.0,0.0]. Otherwise xref and yref
   default to the mean of minimum and maximum x and y values
   [(xmin + xmax) / 2.0, (ymin + ymax) / 2.0] computed by geomap.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>xmag = INDEF, ymag = INDEF</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='xmag' Line='xmag = INDEF, ymag = INDEF'>
-  <DD>The x and y scale factors in input units
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>xmag = INDEF, ymag = INDEF</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='xmag' Line='xmag = INDEF, ymag = INDEF' -->
+  <dd>The x and y scale factors in input units
   per reference unit. If database is undefined xmag and ymag
   default to [1.0, 1.0]. Otherwise xmag and ymag default to the values computed
   by geomap. 
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>xrotation = INDEF, yrotation = INDEF</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='xrotation' Line='xrotation = INDEF, yrotation = INDEF'>
-  <DD>The x and y rotation angles in degrees measured counter-clockwise with
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>xrotation = INDEF, yrotation = INDEF</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='xrotation' Line='xrotation = INDEF, yrotation = INDEF' -->
+  <dd>The x and y rotation angles in degrees measured counter-clockwise with
   respect to the x and y axes. If database
   is undefined then xrotation and yrotation are interpreted as the
   rotation of the coordinates with respect to the x and y axes and
@@ -121,101 +121,100 @@ geoxytran — Transform coordinate lists using the geomap transforms
   to the reference coordinate system will produce xrotation and yrotation
   values of [330.0,330.0] or equivalently [-30.0,-30.0] in the database file
   not [30.0,30.0].
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>xout = INDEF, yout = INDEF</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='xout' Line='xout = INDEF, yout = INDEF'>
-  <DD>The x and y coordinates of the output origin.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>xout = INDEF, yout = INDEF</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='xout' Line='xout = INDEF, yout = INDEF' -->
+  <dd>The x and y coordinates of the output origin.
   If the database file is undefined xout and
   yout  default to [0.0,0.0].
   If database is defined xout and yout
   default to the position that the reference origin [xref,yref]
   occupies in the transformed system.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>xshift = INDEF, yshift = INDEF</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='xshift' Line='xshift = INDEF, yshift = INDEF'>
-  <DD>The x and y shift of the reference origin in output units.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>xshift = INDEF, yshift = INDEF</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='xshift' Line='xshift = INDEF, yshift = INDEF' -->
+  <dd>The x and y shift of the reference origin in output units.
   If the database file is undefined xshift and yshift default to [0.0,0.0].
   If the database file is defined xshift and yshift default to the
   values computed by geomap. If defined xshift and yshift take precedence over
   the x and y shifts determined from xref, yref, xout and yout.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>xcolumn = 1, ycolumn = 2</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='xcolumn' Line='xcolumn = 1, ycolumn = 2'>
-  <DD>The columns in the input coordinate file containing the x and y coordinates.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>calctype = "<TT>real</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='calctype' Line='calctype = "real"'>
-  <DD>The precision of the coordinate transformation calculations. The options
-  are "<TT>real</TT>" and "<TT>double</TT>".  Note that this only applies to a "<TT>forward</TT>"
-  transformation.  The "<TT>backward</TT>" transformation is done iteratively and
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>xcolumn = 1, ycolumn = 2</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='xcolumn' Line='xcolumn = 1, ycolumn = 2' -->
+  <dd>The columns in the input coordinate file containing the x and y coordinates.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>calctype = <tt>"real"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='calctype' Line='calctype = "real"' -->
+  <dd>The precision of the coordinate transformation calculations. The options
+  are <tt>"real"</tt> and <tt>"double"</tt>.  Note that this only applies to a <tt>"forward"</tt>
+  transformation.  The <tt>"backward"</tt> transformation is done iteratively and
   is always calculated in double precision to get the best convergence.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>xformat = "<TT></TT>", yformat = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='xformat' Line='xformat = "", yformat = ""'>
-  <DD>The default output format for the computed x and y coordinates. If
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>xformat = <tt>""</tt>, yformat = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='xformat' Line='xformat = "", yformat = ""' -->
+  <dd>The default output format for the computed x and y coordinates. If
   xformat and yformat are undefined geoxytran outputs the coordinates
   using the maximum of the precision of the input coordinates
-  and the value of the <I>min_sigdigits</I> parameter.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>min_sigdigits = 7</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='min_sigdigits' Line='min_sigdigits = 7'>
-  <DD>The minimum precision of the output x and y coordinates.
-  </DD>
-  </DL>
-  <P>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <P>
+  and the value of the <i>min_sigdigits</i> parameter.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>min_sigdigits = 7</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='min_sigdigits' Line='min_sigdigits = 7' -->
+  <dd>The minimum precision of the output x and y coordinates.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   GEOXYTRAN applies  a coordinate transformation to a list of reference
-  coordinates in the text file <I>input</I> and writes the transformed
-  coordinates to the text file <I>output</I>. The input  coordinates
+  coordinates in the text file <i>input</i> and writes the transformed
+  coordinates to the text file <i>output</i>. The input  coordinates
   are read from, and the output coordinates written to, columns
-  <I>xcolumn</I> and <I>ycolumn</I> in the input and output
+  <i>xcolumn</i> and <i>ycolumn</i> in the input and output
   files. The format of the output coordinates can be specified using the
-  <I>xformat</I> and <I>yformat</I> parameters. If the output formats
+  <i>xformat</i> and <i>yformat</i> parameters. If the output formats
   are unspecified the coordinates are written out with a precision
   which is the maximum of the precision of the input coordinates
-  and the value of the <I>min_sigdigits</I> parameter. All remaining fields in
+  and the value of the <i>min_sigdigits</i> parameter. All remaining fields in
   the input file are copied to the output file without modification.
   Blank lines and comment lines are also passed to the output file
   unaltered.
-  <P>
-  The coordinate transformation either be read from record <I>transforms</I>
-  in the database file <I>database</I> computed by GEOMAP, or specified
-  by the user via the <I>xref</I>, <I>yref</I>, <I>xmag</I>, <I>ymag</I>,
-  <I>xrotation</I>, <I>yrotation</I>, <I>xout</I>, <I>yout</I>, <I>xshift</I>,
-  and <I>yshift</I> parameters.
-  <P>
+  </p>
+  <p>
+  The coordinate transformation either be read from record <i>transforms</i>
+  in the database file <i>database</i> computed by GEOMAP, or specified
+  by the user via the <i>xref</i>, <i>yref</i>, <i>xmag</i>, <i>ymag</i>,
+  <i>xrotation</i>, <i>yrotation</i>, <i>xout</i>, <i>yout</i>, <i>xshift</i>,
+  and <i>yshift</i> parameters.
+  </p>
+  <p>
   The transformation computed by GEOMAP has the following form.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	xout = f (xref, yref)
   	yout = g (xref, yref)
-  </PRE>
-  <P>
+  </pre>
+  <p>
   The functions f and g are either a power series polynomial or a Legendre
   or Chebyshev polynomial surface whose order and region of validity were
   set by the user when GEOMAP was run. The computed transformation is
   arbitrary and does not correspond to any physically meaningful model.
   However the first order terms can be given the simple geometrical
   interpretation shown below.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	xout = a + b * xref + c * yref
   	yout = d + e * xref + f * yref
   	   b = xmag * cos (xrotation)
@@ -224,18 +223,19 @@ geoxytran — Transform coordinate lists using the geomap transforms
   	   f = ymag * cos (yrotation)
   	   a = x0 - b * xref0 - c * yref0 = xshift
   	   d = y0 - e * xref0 - f * yref0 = xshift
-  </PRE>
-  <P>
+  </pre>
+  <p>
   Xref0, yref0, x0, and
   y0 are the origins of the reference and output coordinate systems
   respectively. xmag and ymag are the x and y scale factors in output units
   per reference unit and xrotation and yrotation are the rotation angles measured
   counter-clockwise of the x and y axes.
-  <P>
+  </p>
+  <p>
   The linear portion of the GEOMAP transformation may be altered after the fact
-  by setting some or all of the parameters <I>xref</I>, <I>yref</I>, <I>xout</I>,
-  <I>yout</I>, <I>xshift</I>, <I>yshift</I>, <I>xmag</I>, <I>ymag</I>, <I>xrotation</I>,
-  and <I>yrotation</I>. If defined these parameters will replace the corresponding
+  by setting some or all of the parameters <i>xref</i>, <i>yref</i>, <i>xout</i>,
+  <i>yout</i>, <i>xshift</i>, <i>yshift</i>, <i>xmag</i>, <i>ymag</i>, <i>xrotation</i>,
+  and <i>yrotation</i>. If defined these parameters will replace the corresponding
   values in the GEOMAP database file.
   Xref, yref, xshift, yshift, xout and yout can be used to redefine the shift
   where xshift and yshift take precedence over xref, yref, xout and yout.
@@ -244,8 +244,8 @@ geoxytran — Transform coordinate lists using the geomap transforms
   transformation. Note that xrotation and yrotation are interpreted as
   the rotation of the coordinate axes not the coordinates.
   The default values of these parameters are.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	  xref = (xmin + xmax) / 2.0
   	  yref = (ymin + ymax) / 2.0
   	  xout = f (xref,yref)
@@ -256,17 +256,17 @@ geoxytran — Transform coordinate lists using the geomap transforms
   	  ymag = ymag (database)
        xrotation = xrotation (database)
        yrotation = yrotation (database)
-  </PRE>
-  <P>
+  </pre>
+  <p>
   If the GEOMAP database is undefined then GEOXYTRAN performs a linear
   transformation on the input coordinates using the parameters
-  <I>xref</I>, <I>yref</I>, <I>xmag</I>, <I>ymag</I>, <I>xrotation</I>,
-  <I>yrotation</I>, <I>xout</I>, <I>yout</I>, <I>xshift</I>, and
-  <I>yshift</I> as shown below. Note that in this case xrotation and
+  <i>xref</i>, <i>yref</i>, <i>xmag</i>, <i>ymag</i>, <i>xrotation</i>,
+  <i>yrotation</i>, <i>xout</i>, <i>yout</i>, <i>xshift</i>, and
+  <i>yshift</i> as shown below. Note that in this case xrotation and
   yrotation are interpreted as the rotation of the coordinates
   themselves not the coordinate axes.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	xout = a + b * xref + c * yref
   	yout = d + e * xref + f * yref
   	   b = xmag * cos (xrotation)
@@ -275,52 +275,49 @@ geoxytran — Transform coordinate lists using the geomap transforms
   	   f = ymag * cos (yrotation)
   	   a = xo - b * xref0 - c * yref0 = xshift
   	   d = yo - e * xref0 - f * yref0 = xshift
-  </PRE>
-  <P>
-  <P>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Forward vs. backward transformations</H3>
-  <! BeginSection: 'Forward vs. Backward Transformations'>
-  <UL>
-  <P>
-  The transformation direction is specified by the <I>direction</I> parameter
-  which may take the values "<TT>forward</TT>" or "<TT>backward</TT>".  The forward transformation
+  </pre>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Forward vs. backward transformations</h3>
+  <!-- BeginSection: 'Forward vs. Backward Transformations' -->
+  <p>
+  The transformation direction is specified by the <i>direction</i> parameter
+  which may take the values <tt>"forward"</tt> or <tt>"backward"</tt>.  The forward transformation
   is a direct evaluation of the database solution.  The backward
   transformation is an iterative evaluation to obtain the coordinate which
   evaluates to the desired coordinate.
-  <P>
-  When the same solution is used with <B>geotran</B> to transform an image
-  to another image matching the "<TT>reference</TT>" image is needed to obtain
+  </p>
+  <p>
+  When the same solution is used with <b>geotran</b> to transform an image
+  to another image matching the <tt>"reference"</tt> image is needed to obtain
   coordinates in the transformed image.  This is because the transformation
-  is produced with <B>geomap</B> to map "<TT>reference</TT>" coordinates to the
+  is produced with <b>geomap</b> to map <tt>"reference"</tt> coordinates to the
   image which is subsequently transformed.  Therefore, if you have coordinates
-  in the image which has been transformed then you should use the "<TT>backward</TT>"
+  in the image which has been transformed then you should use the <tt>"backward"</tt>
   transformation to get coordinates for the transformed image.  But if you
   have standard coordinates from the reference image being matched then you
-  would use the "<TT>forward</TT>" transformation.  If you are not sure then you can
-  use <B>tvmark</B> to overlay the results to find which direction produces
+  would use the <tt>"forward"</tt> transformation.  If you are not sure then you can
+  use <b>tvmark</b> to overlay the results to find which direction produces
   the desired coordinates.
-  <P>
+  </p>
+  <p>
   Because the backward transformation is performed iteratively it can be
   slow.  If higher speeds are desired, such as when evaluating a very
   large number of coordinates, one might create a transformation solution
   that can be evaluated in the forward direction.  This is done by
-  using <B>geomap</B> with the reference and target coordinates reversed.
-  <P>
-  </UL>
-  <! EndSection:   'Forward vs. Backward Transformations'>
-  <H3>Formats</H3>
-  <! BeginSection: 'FORMATS'>
-  <UL>
-  <P>
-  A  format  specification has the form "<TT>%w.dCn</TT>", where w is the field
+  using <b>geomap</b> with the reference and target coordinates reversed.
+  </p>
+  <!-- EndSection:   'Forward vs. Backward Transformations' -->
+  <h3>Formats</h3>
+  <!-- BeginSection: 'FORMATS' -->
+  <p>
+  A  format  specification has the form <tt>"%w.dCn"</tt>, where w is the field
   width, d is the number of decimal places or the number of digits  of
   precision,  C  is  the  format  code,  and  n is radix character for
-  format code "<TT>r</TT>" only.  The w and d fields are optional.  The  format
+  format code <tt>"r"</tt> only.  The w and d fields are optional.  The  format
   codes C are as follows:
      
-  <PRE>
+  </p>
+  <pre>
   b       boolean (YES or NO)
   c       single character (c or '\c' or '\0nnn')
   d       decimal integer
@@ -372,7 +369,7 @@ geoxytran — Transform coordinate lists using the geomap transforms
   %-15.7e     same as above but left justified
   %12.5g      print a real number right justified in general format
   %-12.5g     same as above but left justified
-  <P>
+  
   %h          format as nn:nn:nn.n
   %15h        right justify nn:nn:nn.n in field of 15 characters
   %-15h       left justify nn:nn:nn.n in a field of 15 characters
@@ -384,32 +381,28 @@ geoxytran — Transform coordinate lists using the geomap transforms
   %-15H       / by 15 and left justify nn:nn:nn.n in field of 15 characters
   %12.2H      / by 15 and right justify nn:nn:nn.nn
   %-12.2H     / by 15 and left justify nn:nn:nn.nn
-  <P>
+  
   \n          insert a newline
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'FORMATS'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
-  <PRE>
+  </pre>
+  <!-- EndSection:   'FORMATS' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <pre>
   1. Compute the transformation from the reference system to the output
   system and then evaluate the transformation for both the input list and
   the list of unknowns.
-  <P>
+  
      cl&gt; type rtran
-  <P>
+  
   	1.0000  1.0000 184.1445 -153.0376
   	512.0000 1.0000 684.0376 184.1445
   	512.0000 512.0000 346.8555 684.0376
   	1.0000 512.0000 -153.0380 346.8555
-  <P>
+  
       cl&gt; geomap rtran rtran.db 1.0 512.0 1.0 512.0 intera-
-  <P>
+  
       cl&gt; type rtran.db
-  <P>
+  
   	# Tue 14:53:36 18-Apr-95
   	begin	rtran
   		output		rtran.db
@@ -436,61 +429,57 @@ geoxytran — Transform coordinate lists using the geomap transforms
   				0.9782647	0.6598474
   				-0.6598479	0.9782643
   	    	surface2	0
-  <P>
+  
       cl&gt; geoxytran rtran STDOUT rtran.db rtran
-  <P>
+  
   	184.1444 -153.038 184.1445 -153.0376
   	684.0377 184.1444 684.0376 184.1445
   	346.8554 684.0375 346.8555 684.0376
   	-153.038 346.8555 -153.038 346.8555
-  <P>
+  
       cl&gt; geoxytran unknowns unknowns.tran rtran.db rtran
-  <P>
-  <P>
+  
+  
   2.  Evaluate the backward transformation to take coordinates from the
   output system to the reference system.  In this example we use the
   output of the first example to illustrate getting back the coordinates
   used in the original geomap input.
-  <P>
-      cl&gt; geoxytran rtran STDOUT rtran.db rtran dir=forward |\<BR>
+  
+      cl&gt; geoxytran rtran STDOUT rtran.db rtran dir=forward |\<br>
       &gt;&gt;&gt; geoxytran STDIN STDOUT rtran.db rtran dir=backward
       0.999798 0.9997257 184.1445 -153.0376
           512. 0.9999674 684.0376 184.1445
   	512.     512. 346.8555 684.0376
       0.999918 512.0001 -153.0380 346.8555
-  <P>
-  <P>
+  
+  
   3. Evaluate the transform computed in example 1 for the same list of
   unknowns but modify the transformation slightly by setting xmag
   and ymag to 1.18 and 1.18 exactly.
-  <P>
-      cl&gt; geoxytran unknowns unknowns.tran rtran.db rtran xmag=1.18 \<BR>
+  
+      cl&gt; geoxytran unknowns unknowns.tran rtran.db rtran xmag=1.18 \<br>
   	ymag=1.18
-  <P>
-  <P>
+  
+  
   4. Evaluate the same transformation for the same unknowns as before
   using the linear transformation parameters not the transform computed
   by geomap. Note that the angle is the negative of the one defined
   in the database file.
-  <P>
-      cl&gt; geoxytran unknowns unknowns.tran "" xmag=1.18 ymag=1.18 \<BR>
-          xrot=34 yrot=34 xshift=183.826 yshift=-154.6757
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  <P>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
-  geomap, lists.lintran, geotran, gregister
-  </UL>
-  <! EndSection:    'SEE ALSO'>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'Forward vs. Backward Transformations' 'FORMATS' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
+      cl&gt; geoxytran unknowns unknowns.tran "" xmag=1.18 ymag=1.18 \<br>
+          xrot=34 yrot=34 xshift=183.826 yshift=-154.6757
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
+  geomap, lists.lintran, geotran, gregister
+  </p>
+  
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'Forward vs. Backward Transformations' 'FORMATS' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

@@ -1,27 +1,28 @@
 .. _imtab:
 
-imtab — Copy an image to a table column.
-========================================
+imtab: Copy an image to a table column.
+=======================================
 
 **Package: nttools**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   imtab -- Create a table from an image.
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   imtab input outtable colname
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   This task copies data from an image to a table.
   Pixel values are read from the image line by line
   and written to a column in increasing row number.
@@ -30,59 +31,60 @@ imtab — Copy an image to a table column.
   If the table already exists then columns will be added to it;
   names of new columns must not conflict with existing names.
   If the table does not exist it will be created.
-  <P>
+  </p>
+  <p>
   The number of names in the 'input' list must be the same as
   the number of names in the 'outtable' list,
-  unless 'outtable' is "<TT>STDOUT</TT>".
-  <P>
+  unless 'outtable' is <tt>"STDOUT"</tt>.
+  </p>
+  <p>
   Information about the image dimension and axis lengths will not be kept
   in keywords, but there is an option to write the image pixel numbers
   to columns of the table.
   The pixel coordinates may be just the pixel numbers,
   or they may be world coordinates at the pixel locations.
-  <P>
+  </p>
+  <p>
   A history record will be added to the table giving
   the name of the data column and the name of the image.
   If pixel coordinates are written to the table,
   another history record is written that also gives
   the column name for the image data
   and gives the column names for the pixel coordinates.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input = "<TT></TT>" [file name template]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input = "" [file name template]'>
-  <DD>The names of the images to be written to the tables.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>outtable = "<TT></TT>" [file name template]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable = "" [file name template]'>
-  <DD>The names of the output tables.
-  If outtable = "<TT>STDOUT</TT>" or if the output has been redirected,
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input = <tt>""</tt> [file name template]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input = "" [file name template]' -->
+  <dd>The names of the images to be written to the tables.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>outtable = <tt>""</tt> [file name template]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable = "" [file name template]' -->
+  <dd>The names of the output tables.
+  If outtable = <tt>"STDOUT"</tt> or if the output has been redirected,
   the values will be written to the standard output.
-  <P>
   If the output table is of type text (e.g. STDOUT),
   the data values will be in the first column.
   If the pixel coordinates are also printed,
   they will be in the following columns.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>colname = "<TT></TT>" [string]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='colname' Line='colname = "" [string]'>
-  <DD>A column of this name will be created in the output table,
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>colname = <tt>""</tt> [string]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='colname' Line='colname = "" [string]' -->
+  <dd>A column of this name will be created in the output table,
   and the values of the image will be written to this column.
   The same column name will be used for all output tables.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(pname = "<TT></TT>") [string]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(pname = "") [string]'>
-  <DD>If 'pname' is not null,
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(pname = <tt>""</tt>) [string]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(pname = "") [string]' -->
+  <dd>If 'pname' is not null,
   the pixel coordinates will also be written to columns of the table.
   The names of these columns will be the value of 'pname' with the
   numbers 1, 2, 3, etc appended,
@@ -91,41 +93,38 @@ imtab — Copy an image to a table column.
   since all the data values are written to one column.
   The same column names will be used for all output tables.
   See also 'wcs' and 'formats'.
-  <P>
   If 'pname' is null (or blank) the pixel numbers will not be written.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(wcs = "<TT>logical</TT>") [string, allowed values:  logical | physical | world]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(wcs = "logical") [string, allowed values:  logical | physical | world]'>
-  <DD>This parameter is only gotten if 'pname' is not null.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(wcs = <tt>"logical"</tt>) [string, allowed values:  logical | physical | world]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(wcs = "logical") [string, allowed values:  logical | physical | world]' -->
+  <dd>This parameter is only gotten if 'pname' is not null.
   In this case, the user has the option of which coordinate system
   should be used when writing pixel coordinates to the table.
-  The "<TT>logical</TT>" coordinates are simply the pixel numbers
+  The <tt>"logical"</tt> coordinates are simply the pixel numbers
   of the image or image section.
-  The "<TT>physical</TT>" coordinates are also pixel numbers,
+  The <tt>"physical"</tt> coordinates are also pixel numbers,
   but they can differ from logical coordinates
   if an image section has been taken.
   Physical coordinates have the same origin and sampling as the original image.
-  The "<TT>world</TT>" coordinates are coordinates such as wavelength, time,
+  The <tt>"world"</tt> coordinates are coordinates such as wavelength, time,
   or right ascension and declination.
   The translation from logical to world coordinates is given by
   header keywords CRVAL1, CRPIX1, CD1_1, CTYPE1, etc.
-  <P>
   The number of pixel coordinates written by 'imtab' differs from
-  the number written by 'listpixels' when wcs = "<TT>physical</TT>" or "<TT>world</TT>"
+  the number written by 'listpixels' when wcs = <tt>"physical"</tt> or <tt>"world"</tt>
   and an image section was used that reduces the dimension of the image.
   'imtab' gives one pixel coordinate column for each dimension
   of the original image, while 'listpixels' gives one pixel coordinate
   for each dimension of the image section.
-  <P>
-  Type "<TT>help mwcs$MWCS.hlp fi+</TT>" for extensive information on coordinate systems.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(formats) [string]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(formats) [string]'>
-  <DD>The print formats to use for the pixel coordinates, one format
+  Type <tt>"help mwcs$MWCS.hlp fi+"</tt> for extensive information on coordinate systems.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(formats) [string]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(formats) [string]' -->
+  <dd>The print formats to use for the pixel coordinates, one format
   per axis, with the individual formats separated by whitespace.
   This parameter is only gotten if 'pname' is not null.
   If the formats are not given, a default format is assigned.
@@ -134,90 +133,87 @@ imtab — Copy an image to a table column.
   so these formats will be used if the table is printed.
   If the output table is text rather than binary,
   these formats will be used to write the coordinates to the text table.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(tbltype = "<TT>default</TT>") [string, allowed values: default | row |</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(tbltype = "default") [string, allowed values: default | row |'>
-  <DD>column | text ]
-  <P>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(tbltype = <tt>"default"</tt>) [string, allowed values: default | row |</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(tbltype = "default") [string, allowed values: default | row |' -->
+  <dd>column | text ]
   If the output table does not already exist,
   you can specify whether the table should be created in row or column
   ordered format.
   As an alternative to a binary table,
-  tbltype = "<TT>text</TT>" means the output will be a plain text file.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  1.  Copy image "<TT>hr465_flux.imh</TT>" to table "<TT>hr465.tab</TT>", column "<TT>flux</TT>":
-  <P>
-  <PRE>
+  tbltype = <tt>"text"</tt> means the output will be a plain text file.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
+  1.  Copy image <tt>"hr465_flux.imh"</tt> to table <tt>"hr465.tab"</tt>, column <tt>"flux"</tt>:
+  </p>
+  <pre>
   	tt&gt; imtab hr465_flux.imh hr465.tab flux
-  </PRE>
-  <P>
-  2.  Copy the 2-D image "<TT>ir27.hhh</TT>" to column "<TT>ir27</TT>" of table "<TT>map.tab</TT>",
-  saving the pixel numbers in columns "<TT>pix1</TT>" and "<TT>pix2</TT>":
-  <P>
-  <PRE>
+  </pre>
+  <p>
+  2.  Copy the 2-D image <tt>"ir27.hhh"</tt> to column <tt>"ir27"</tt> of table <tt>"map.tab"</tt>,
+  saving the pixel numbers in columns <tt>"pix1"</tt> and <tt>"pix2"</tt>:
+  </p>
+  <pre>
   	tt&gt; imtab ir27.hhh map.tab ir27 pname="pix"
-  </PRE>
-  <P>
+  </pre>
+  <p>
   3.  Copy the 1-D section [257:257,129:384] of
-  x0y70206t.d0h to column "<TT>x0y70206</TT>" of table "<TT>focus.tab</TT>".
+  x0y70206t.d0h to column <tt>"x0y70206"</tt> of table <tt>"focus.tab"</tt>.
   Also write the right ascension and declination
-  ("<TT>world</TT>" coordinates) to columns "<TT>p1</TT>" and "<TT>p2</TT>" respectively
+  (<tt>"world"</tt> coordinates) to columns <tt>"p1"</tt> and <tt>"p2"</tt> respectively
   using HH:MM:SS.d and DD:MM:SS.d formats.
-  We use "<TT>%12.1H</TT>" for right ascension and "<TT>%12.1h</TT>" for declination.
-  The capital "<TT>H</TT>" in the format means that the values will be divided by 15
+  We use <tt>"%12.1H"</tt> for right ascension and <tt>"%12.1h"</tt> for declination.
+  The capital <tt>"H"</tt> in the format means that the values will be divided by 15
   to convert from degrees to hours before formatting in sexagesimal.
   Note that we get two columns of pixel coordinates even though
   the image section is only 1-D.
   Physical or world coordinates will be 2-D in this case
-  because the original image "<TT>x0y70206t.d0h</TT>" is 2-D.
-  <P>
-  <PRE>
-  	tt&gt; imtab x0y70206t.d0h[257:257,129:384] focus.tab x0y70206 \<BR>
+  because the original image <tt>"x0y70206t.d0h"</tt> is 2-D.
+  </p>
+  <pre>
+  	tt&gt; imtab x0y70206t.d0h[257:257,129:384] focus.tab x0y70206 \<br>
   	&gt;&gt;&gt; pname="p" wcs="world" formats="%12.1H %12.1h"
-  </PRE>
-  <P>
+  </pre>
+  <p>
   4.  Use the same image as in the previous example,
   but print the values on the standard output.
-  <P>
-  <PRE>
-  	tt&gt; imtab x0y70206t.d0h[257:257,129:384] STDOUT x0y70206 \<BR>
+  </p>
+  <pre>
+  	tt&gt; imtab x0y70206t.d0h[257:257,129:384] STDOUT x0y70206 \<br>
   	&gt;&gt;&gt; pname="p" wcs="world" formats="%12.1H %12.1h"
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>References</H3>
-  <! BeginSection: 'REFERENCES'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <!-- EndSection:   'BUGS' -->
+  <h3>References</h3>
+  <!-- BeginSection: 'REFERENCES' -->
+  <p>
   This task was written by Phil Hodge.
-  </UL>
-  <! EndSection:   'REFERENCES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'REFERENCES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   The 'tabim' task copies a column of a table to an image.
   The 'listpixels' task in the 'images' package writes data values and
   pixel coordinates to the standard output.
   The parameters 'wcs' and 'formats' are the same in 'imtab' and 'listpixels'.
   For detailed information on the distinction between logical, physical and
-  world coordinates, type "<TT>help mwcs$MWCS.hlp fi+</TT>".
-  <P>
-  Type "<TT>help tables option=sys</TT>" for a higher-level description of
+  world coordinates, type <tt>"help mwcs$MWCS.hlp fi+"</tt>.
+  </p>
+  <p>
+  Type <tt>"help tables option=sys"</tt> for a higher-level description of
   the tables package.
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

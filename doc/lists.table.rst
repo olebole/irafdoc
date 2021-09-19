@@ -1,86 +1,87 @@
 .. _table:
 
-table — Format a list of words into a table
-===========================================
+table: Format a list of words into a table
+==========================================
 
 **Package: lists**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   table -- format single column input into a table
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   table input_files
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input_files</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input_files' Line='input_files'>
-  <DD>List of files to be formatted, may be STDIN.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>first_col = 7</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='first_col' Line='first_col = 7'>
-  <DD>Offset to first column of table
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>last_col = 0</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='last_col' Line='last_col = 0'>
-  <DD>Offset to last column of table.  The value <B>last_col</B> = 0 indicates 
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input_files</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input_files' Line='input_files' -->
+  <dd>List of files to be formatted, may be STDIN.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>first_col = 7</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='first_col' Line='first_col = 7' -->
+  <dd>Offset to first column of table
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>last_col = 0</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='last_col' Line='last_col = 0' -->
+  <dd>Offset to last column of table.  The value <b>last_col</b> = 0 indicates 
   right margin.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>ncols = 0</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='ncols' Line='ncols = 0'>
-  <DD>Number of columns.  The value <B>ncols</B> = 0 indicates maximum that will fit.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>maxstrlen = 0</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='maxstrlen' Line='maxstrlen = 0'>
-  <DD>Maximum string length for table entry.  The value <B>maxstrlen</B> = 0
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>ncols = 0</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='ncols' Line='ncols = 0' -->
+  <dd>Number of columns.  The value <b>ncols</b> = 0 indicates maximum that will fit.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>maxstrlen = 0</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='maxstrlen' Line='maxstrlen = 0' -->
+  <dd>Maximum string length for table entry.  The value <b>maxstrlen</b> = 0
   indicates no limit.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  Task <B>table</B> reads a list of strings from the standard input or a 
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  Task <b>table</b> reads a list of strings from the standard input or a 
   list of files and assembles a nicely formatted table.  If reading 
   from multiple input files, make a separate table for each.  There is no 
   fixed limit to the size of the table which can be formatted.  The table 
   is not sorted; this should be done as a separate operation if desired.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Format a file containing names into a two column table.  The table is 
   sorted alphabetically first.
-  <P>
+  </p>
+  <p>
   	cl&gt; sort names | table ncols=2
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   words, tokens
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

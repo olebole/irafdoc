@@ -1,61 +1,60 @@
 .. _pselect:
 
-pselect — Select records from an apphot database
-================================================
+pselect: Select records from an apphot database
+===============================================
 
 **Package: apphot**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   pselect - select records from an APPHOT/DAOPHOT database
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   pselect infiles outfiles expr
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>infiles</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='infiles' Line='infiles'>
-  <DD>The APPHOT/DAOPHOT databases containing the records from which the
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>infiles</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='infiles' Line='infiles' -->
+  <dd>The APPHOT/DAOPHOT databases containing the records from which the
   selection is to be made.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>outfiles</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='outfiles' Line='outfiles'>
-  <DD>The output APPHOT/DAOPHOT databases containing the selected records.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>expr</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='expr' Line='expr'>
-  <DD>The boolean expression to be evaluated.  The expression
-  is evaluated once for each record.  If <I>expr</I> = yes,
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>outfiles</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='outfiles' Line='outfiles' -->
+  <dd>The output APPHOT/DAOPHOT databases containing the selected records.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>expr</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='expr' Line='expr' -->
+  <dd>The boolean expression to be evaluated.  The expression
+  is evaluated once for each record.  If <i>expr</i> = yes,
   a copy is made of the input file.
-  </DD>
-  </DL>
-  <P>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   PSELECT selects a subset of the records
   from an APPHOT/DAOPHOT database or a list of databases 
   and writes the new records out to another database or list of
   databases.
-  <P>
+  </p>
+  <p>
   The output records are selected on the basis of an input boolean
-  expression <I>expr</I> whose variables are in the case of text
+  expression <i>expr</i> whose variables are in the case of text
   databases the field names
   specified by the #N keywords or the parameters specified by the
   #K keywords and in the case of an STSDAS table database the
@@ -64,43 +63,45 @@ pselect — Select records from an apphot database
   with a particular record into the field name variables the
   expression evaluates
   to yes, that record is included in the output database.
-  <P>
+  </p>
+  <p>
   The supported
   operators and functions are briefly described below. A detailed description
   of the boolean expression evaluator and its syntax can be found
   in the manual page for the IMAGES package HEDIT task.
-  <P>
+  </p>
+  <p>
   The following logical operators can be used in the boolean expression. 
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	equal		  ==	not equal		!=
   	less than	  &lt;	less than or equal	&lt;=
   	greater than	  &gt;	greater than or equal	&gt;=
   	or		  ||	and			&amp;&amp;
   	negation	  !	pattern match		?=
   	concatenation	  //
-  </PRE>
-  <P>
+  </pre>
+  <p>
   The pattern match character ?=  takes a
   string expression as its first argument and a pattern as its second argument.
   The result is yes if the pattern is contained in the string expression.
   Patterns are strings which may contain pattern matching meta-characters.
   The meta-characters themselves can be matched by preceeding them with the escape
   character.  The meta-characters are listed below. 
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	beginning of string	^	end of string		$
   	one character		?	zero or more characters	*
-  	white space		#	escape character	\<BR>
+  	white space		#	escape character	\<br>
   	ignore case		{	end ignore case		}
   	begin character class	[	end character class	]
   	not, in char class	^	range, in char class	-
-  </PRE>
-  <P>
+  </pre>
+  <p>
   The boolean expression may also include arithmetic operators and functions.
   The following arithmetic operators and functions are supported.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   addition		+		subtraction		-
   multiplication		*		division		/
   negation		-		exponentiation		**
@@ -113,58 +114,53 @@ pselect — Select records from an apphot database
   minimum			min(x,y)	maximum			max(x,y)
   convert to integer	int(x)		convert to real		real(x)
   nearest integer		nint(x)		modulo			mod(x)
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
+  </pre>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Select the records from the output of the APPHOT CENTER task for
   which 100. &lt;= XCENTER &lt;= 200. and 300. &lt;= YCENTER &lt;= 400.
-  <P>
-  <PRE>
-      pt&gt; pselect m92.ctr.3 m92out \<BR>
+  </p>
+  <pre>
+      pt&gt; pselect m92.ctr.3 m92out \<br>
   	"XCE &gt;= 100. &amp;&amp; XCE &lt;= 200. &amp;&amp; YCE &gt;= 300. &amp;&amp; YCE &lt;= 400."
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. Select the records from the output of the APPHOT PHOT task for which
   the first magnitude is not equal to INDEF. In the case of the
   an STSDAS table database it may be necessary to escape the
   leading square bracket.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       pt&gt; pselect n4147.mag.3 n4147out "MAG[1] != INDEF"
-  <P>
+  
   			or
-  <P>
+  
       pt&gt; pselect n4147.mag.3 n4147out "MAG\[1] != INDEF"
-  </PRE>
-  <P>
+  </pre>
+  <p>
   3. Select the records from the output of the DAOPHOT ALLSTAR task
   for which CHI &lt;= 5.0 and MERR &lt;= .10 magnitudes.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       pt&gt; pselect m92b.al.2 m92out "CHI &lt;= 5.0 &amp;&amp; MERR &lt;= 1.0"
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <p>
   Array valued fields in text databases are not allowed in the expression
   field.
-  <P>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   images.hedit,ptools.tbselect,tables.tselect,ptools.txselect
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

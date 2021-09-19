@@ -1,27 +1,28 @@
 .. _tmerge:
 
-tmerge — Either merge or append tables.
-=======================================
+tmerge: Either merge or append tables.
+======================================
 
 **Package: nttools**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   tmerge -- Merge two tables, or append one to the other.
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   tmerge intable outtable option
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   This task is used to either merge or append tables,
   depending on the option selected by the 'option' parameter.
   The data type of each column is defined by
@@ -30,10 +31,11 @@ tmerge — Either merge or append tables.
   then data are converted to the type defined by the first table.
   Problems may occur when numerical data are written to
   a boolean column or a narrow character column.
-  <P>
-  The "<TT>merge</TT>" option is normally used for tables containing few,
+  </p>
+  <p>
+  The <tt>"merge"</tt> option is normally used for tables containing few,
   if any, common columns.
-  When the user selects "<TT>merge</TT>",
+  When the user selects <tt>"merge"</tt>,
   an output table is created containing as many columns
   as there are unique column names in all the input tables.
   (But see the description of the 'allcols' parameter.)
@@ -44,13 +46,14 @@ tmerge — Either merge or append tables.
   If different input tables have the same column names
   then the first values put into the output table
   will be overwritten by the later table values.
-  For example, if the two input tables both have the column name "<TT>X_VAL</TT>",
+  For example, if the two input tables both have the column name <tt>"X_VAL"</tt>,
   then for each row number,
   the values written to the output table
   will be taken from the second input table.
   See below regarding text tables.
-  <P>
-  On the other hand, if the "<TT>append</TT>" option is selected, all rows of
+  </p>
+  <p>
+  On the other hand, if the <tt>"append"</tt> option is selected, all rows of
   the first input table are written to the output table, followed by all
   rows of the second table, and so on, until all input tables are written
   to the output table.
@@ -59,18 +62,21 @@ tmerge — Either merge or append tables.
   Columns with the same name in different
   input tables will be written into the same output column, but no data
   will be overwritten because they are put into different rows.
-  The "<TT>append</TT>" option would normally be used for tables that have all
+  The <tt>"append"</tt> option would normally be used for tables that have all
   the same columns.
-  <P>
+  </p>
+  <p>
   An input table may have no rows.
   Such a table may be used as the first input table
   to control the order and definitions of columns in the output table.
-  <P>
+  </p>
+  <p>
   Header parameters are appended,
   and parameters with the same keyword name
   in different input tables are overwritten in the output file,
   except for history and comment keywords.
-  <P>
+  </p>
+  <p>
   Care must be taken with text tables.
   It is very likely that you would want
   'allcols = yes' if 'option = merge' and
@@ -79,7 +85,8 @@ tmerge — Either merge or append tables.
   If the output table is a text file,
   the line length may not be longer than 4095 characters,
   which is a limitation for any text table.
-  <P>
+  </p>
+  <p>
   Column units are not checked.
   If columns with the same name have different units
   in two different input tables,
@@ -88,60 +95,56 @@ tmerge — Either merge or append tables.
   but some and perhaps all of the data would come from the second input table,
   so the units in the output column definition would not be correct
   for those data.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>intable [file name template]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='intable' Line='intable [file name template]'>
-  <DD>Names of the tables to be merged or appended.  This parameter will take
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>intable [file name template]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='intable' Line='intable [file name template]' -->
+  <dd>Names of the tables to be merged or appended.  This parameter will take
   either a file name template describing several input tables, and may include
   wildcard characters, or it will take the name of a list file preceded by the
-  "<TT>@</TT>" character; in the latter case the list file contains a list of file names
+  <tt>"@"</tt> character; in the latter case the list file contains a list of file names
   with each file name on a separate line.  Wildcard characters should not be
   used for file name extensions because files other than tables will be
   processed, causing the program to crash.  For example, if the directory
-  contains files "<TT>table.tab</TT>" and "<TT>table.lis</TT>", the command "<TT>tmerge tab*</TT>" would
+  contains files <tt>"table.tab"</tt> and <tt>"table.lis"</tt>, the command <tt>"tmerge tab*"</tt> would
   open both files.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>outtable [file name]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable [file name]'>
-  <DD>The name of the output table.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>option = "<TT>merge</TT>" [string]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='option' Line='option = "merge" [string]'>
-  <DD>allowed values:  merge | append
-  <P>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>outtable [file name]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable [file name]' -->
+  <dd>The name of the output table.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>option = <tt>"merge"</tt> [string]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='option' Line='option = "merge" [string]' -->
+  <dd>allowed values:  merge | append
   Either merge the columns in each row of each input table--overwriting
   previous values--or append files to each other.
   See also 'allcols' below.
   (These options are discussed in greater detail in the DESCRIPTION section.)
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(allcols = yes) [boolean]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(allcols = yes) [boolean]'>
-  <DD>Define output table columns using columns from
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(allcols = yes) [boolean]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(allcols = yes) [boolean]' -->
+  <dd>Define output table columns using columns from
   all input tables?
-  <P>
   If 'allcols = no', the output table will contain
   only those columns defined in the first input table.
   If 'allcols = yes', the output table will contain
   all columns from all input tables.
   If 'option = merge', then it is likely that 'allcols' should be set to yes.
-  <P>
   For input tables that are simple text tables
   (i.e. that do not contain explicit column definitions),
   the 'allcols' parameter serves an additional function.
   When 'allcols = yes' the name of each column
   in a simple text table is changed
-  to be "<TT>c</TT>" followed by the column number in the output table.
+  to be <tt>"c"</tt> followed by the column number in the output table.
   This is intended to make the column names unique
   in order to allow merging text tables
   without having the columns overwrite previously written columns.
@@ -156,30 +159,28 @@ tmerge — Either merge or append tables.
   the modified column names will be retained.
   If the modified column names turn out not to be unique,
   a warning message will be printed.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(tbltype = "<TT>default</TT>") [string, allowed values:  default | row | </B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(tbltype = "default") [string, allowed values:  default | row | '>
-  <DD>column | text]
-  <P>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(tbltype = <tt>"default"</tt>) [string, allowed values:  default | row | </b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(tbltype = "default") [string, allowed values:  default | row | ' -->
+  <dd>column | text]
   This parameter specifies the table type.
-  Setting 'tbltype' to "<TT>row</TT>" or "<TT>column</TT>" results in an stsdas binary table,
+  Setting 'tbltype' to <tt>"row"</tt> or <tt>"column"</tt> results in an stsdas binary table,
   the contents of which may be either row ordered or column ordered;
   row order is recommended.
   You can also specify that the output be a text table.
-  The default ('tbltype = "<TT>default</TT>"') means that the type of the output table
+  The default ('tbltype = <tt>"default"</tt>') means that the type of the output table
   will be taken from the first input table.
-  <P>
-  If the extension of the output file name is "<TT>.fits</TT>" or "<TT>.??f</TT>",
+  If the extension of the output file name is <tt>".fits"</tt> or <tt>".??f"</tt>,
   the table to be created will be a BINTABLE extension in a FITS file,
   regardless of how 'tbltype' is set.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(allrows = 100) [integer, min=1, max=INDEF]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(allrows = 100) [integer, min=1, max=INDEF]'>
-  <DD>The number of rows to allocate.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(allrows = 100) [integer, min=1, max=INDEF]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(allrows = 100) [integer, min=1, max=INDEF]' -->
+  <dd>The number of rows to allocate.
   This parameter is only used for column-ordered tables
   (specified by the 'tbltype' parameter).
   The 'allrows' parameter is the minimum number of rows an output
@@ -191,13 +192,12 @@ tmerge — Either merge or append tables.
   the larger of 'allrows' or the number of rows in the largest table.
   If 'option = append', the total rows in the output table will be the larger
   of 'allrows' or the total number of rows in all input tables.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(extracol = 0) [integer, min=0, max=INDEF]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(extracol = 0) [integer, min=0, max=INDEF]'>
-  <DD>Extra space to be reserved for columns in the output table.
-  <P>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(extracol = 0) [integer, min=0, max=INDEF]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(extracol = 0) [integer, min=0, max=INDEF]' -->
+  <dd>Extra space to be reserved for columns in the output table.
   This parameter is relevant only for a row-ordered table
   (specified by the 'tbltype' parameter).
   The default value of zero is normally appropriate,
@@ -210,48 +210,46 @@ tmerge — Either merge or append tables.
   A double-precision column requires two units of allocated space,
   and a character-string column takes one unit of space for each four
   characters, or fraction thereof.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <PRE>
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <pre>
   1. Suppose you have the following two tables.
-  <P>
+  
   tbl1.tab:
   	one	two	three
   	---	---	-----
   	1	-17	alpha
   	2	-19	beta
   	3	-23	gamma
-  <P>
+  
   tbl2.tab:
   	one	three	four
   	---	-----	----
   	27	beta	3.14
   	28	delta	2.72
-  <P>
+  
   then the statement
-  <P>
+  
   	cl&gt; tmerge tbl1,tbl2 mrg merge
-  <P>
+  
   would create the following output table:
-  <P>
+  
   mrg.tab:
   	one	two	three	four
   	---	---	-----	----
   	27	-17	beta	3.14
   	28	-19	delta	2.72
   	3	-23	gamma	INDEF
-  <P>
+  
   while the statement
-  <P>
+  
   	cl&gt; tmerge tbl1,tbl2 app append
-  <P>
+  
   would create the following table:
-  <P>
+  
   app.tab:
   	one	two	three	four
   	---	---	-----	----
@@ -260,26 +258,24 @@ tmerge — Either merge or append tables.
   	3	-23	gamma	INDEF
   	27	INDEF	beta	3.14
   	28	INDEF	delta	2.72
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>References</H3>
-  <! BeginSection: 'REFERENCES'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <!-- EndSection:   'BUGS' -->
+  <h3>References</h3>
+  <!-- BeginSection: 'REFERENCES' -->
+  <p>
   This task was written by Phil Hodge.
-  </UL>
-  <! EndSection:   'REFERENCES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'REFERENCES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   tselect, tproject, and proto.joinlines for text files
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

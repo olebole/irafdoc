@@ -1,5 +1,5 @@
-daophot — Dao Crowded-Field Photometry Package
-==============================================
+daophot: Dao Crowded-Field Photometry Package
+=============================================
 
 .. toctree:: :maxdepth: 1
 

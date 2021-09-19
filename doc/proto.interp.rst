@@ -1,78 +1,77 @@
 .. _interp:
 
-interp — Interpolate for a value in a table of X,Y pairs
-========================================================
+interp: Interpolate for a value in a table of X,Y pairs
+=======================================================
 
 **Package: proto**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   interp -- compute an interpolated value from a table of x,y pairs
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   interp tbl_file
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>tbl_file</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='tbl_file' Line='tbl_file'>
-  <DD>Text file containing X,Y pairs comprising the table.
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>tbl_file</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='tbl_file' Line='tbl_file' -->
+  <dd>Text file containing X,Y pairs comprising the table.
   The pairs must be in either ascending or descending order.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>curve_gen = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='curve_gen' Line='curve_gen = no'>
-  <DD>If set to no, x-values are read from the file(s) specified by the parameter
-  "<TT>input</TT>". If set to yes, the parameters x1, x2, and dx are used to create
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>curve_gen = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='curve_gen' Line='curve_gen = no' -->
+  <dd>If set to no, x-values are read from the file(s) specified by the parameter
+  <tt>"input"</tt>. If set to yes, the parameters x1, x2, and dx are used to create
   a list of new x,y pairs interpolated at x1, x1+dx, ... x2.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>input = STDIN</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input = STDIN'>
-  <DD>File(s) containing x-values for the interpolation
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>int_mode = 'linear'</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='int_mode' Line='int_mode = 'linear''>
-  <DD>The interpolation mode may be either 'linear' or 'spline'.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>x1</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='x1' Line='x1'>
-  <DD>The starting x-value for generating a series of new x,y pairs.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>x2</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='x2' Line='x2'>
-  <DD>The ending x-value of the generated series of pairs.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>dx</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='dx' Line='dx'>
-  <DD>The difference by which the x-values are incremented during the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>input = STDIN</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input = STDIN' -->
+  <dd>File(s) containing x-values for the interpolation
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>int_mode = 'linear'</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='int_mode' Line='int_mode = 'linear'' -->
+  <dd>The interpolation mode may be either 'linear' or 'spline'.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>x1</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='x1' Line='x1' -->
+  <dd>The starting x-value for generating a series of new x,y pairs.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>x2</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='x2' Line='x2' -->
+  <dd>The ending x-value of the generated series of pairs.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>dx</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='dx' Line='dx' -->
+  <dd>The difference by which the x-values are incremented during the
   series generation.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   The pairs of X,Y values are read from the tbl_file. There must be
   at least 1 pair in the file. The table is then used to interpolate
   or extrapolate new y-values for given x-values. The x-values may come
@@ -80,54 +79,51 @@ interp — Interpolate for a value in a table of X,Y pairs
   internally generated (if curve_gen=yes) to produce a finely sampled
   version of the table. This may be useful for plotting a smooth curve
   through a series of points.
-  <P>
+  </p>
+  <p>
   The table X,Y values must be in a monotonic order, either ascending
   or descending. No restriction is made on spacing.
-  <P>
+  </p>
+  <p>
   If only one point is present in the table, all returned interpolated
   values will have the value at that point. If only two points are
   present, linear interpolation (or extrapolation) will be used.
   If additional points are present, an obscure but reliable algorithm
   is used to interpolate (or extrapolate).
-  <P>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. The following command reads the X,Y table from file testdata and waits for
      x-values from the terminal.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; interp testdata STDIN
-  </PRE>
-  <P>
-  <P>
+  </pre>
+  <p>
   2. The following command generates points to plot (by piping to graph) in the
      range from x=10 to x=20 at intervals of 0.1 (10.0, 10.1 ... 19.9, 20.0).
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; interp testdata curve_gen=yes x1=10 x2=20 dx=.1 | graph
-  </PRE>
-  <P>
+  </pre>
+  <p>
   3. The curve will be displayed and the original points from the table
      may be overlaid by:
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; graph testdata pointmode=yes append=yes
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <p>
   If a blank (null) table filename is entered, a floating divide error
   occurs.
-  <P>
-  </UL>
-  <! EndSection:    'BUGS'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS'  >
+  <!-- EndSection:    'BUGS' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS'  -->
   

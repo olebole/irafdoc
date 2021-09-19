@@ -1,5 +1,5 @@
-lists — List processing package
-===============================
+lists: List processing package
+==============================
 
 .. toctree:: :maxdepth: 1
 

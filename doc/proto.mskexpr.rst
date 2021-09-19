@@ -1,190 +1,197 @@
 .. _mskexpr:
 
-mskexpr — Create masks using an expression and reference images
-===============================================================
+mskexpr: Create masks using an expression and reference images
+==============================================================
 
 **Package: proto**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   mskexpr -- General mask expression evaluator
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   mskexpr expr masks refimages
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>expr</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='expr' Line='expr'>
-  <DD>The expression to be evaluated.  This may be the actual expression, or the
-  string "<TT>@file</TT>" in which case the expression is taken from the named file.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>masks</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='masks' Line='masks'>
-  <DD>The output masks. The size of the output masks defaults to the size of
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>expr</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='expr' Line='expr' -->
+  <dd>The expression to be evaluated.  This may be the actual expression, or the
+  string <tt>"@file"</tt> in which case the expression is taken from the named file.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>masks</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='masks' Line='masks' -->
+  <dd>The output masks. The size of the output masks defaults to the size of
   the reference image if any, the size of the reference mask if any, or the
   value of the dims parameter, in that order.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>refimages</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='refimages' Line='refimages'>
-  <DD>The optional list of reference images. If the reference image list is defined
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>refimages</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='refimages' Line='refimages' -->
+  <dd>The optional list of reference images. If the reference image list is defined
   there must be one reference image for every output mask. The reference image
-  operand name is "<TT>i</TT>" and the associated reference image keywords are
-  referred to as "<TT>i.&lt;keyword&gt;</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>refmasks</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='refmasks' Line='refmasks'>
-  <DD>The optional list of reference masks. If the reference mask list is defined
+  operand name is <tt>"i"</tt> and the associated reference image keywords are
+  referred to as <tt>"i.&lt;keyword&gt;"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>refmasks</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='refmasks' Line='refmasks' -->
+  <dd>The optional list of reference masks. If the reference mask list is defined
   there must be one reference mask for every output mask. The reference mask
-  operand name is "<TT>m</TT>" and the associated reference image keywords are
-  referred to as "<TT>m.&lt;keyword&gt;</TT>".
-  <P>
+  operand name is <tt>"m"</tt> and the associated reference image keywords are
+  referred to as <tt>"m.&lt;keyword&gt;"</tt>.
   If both a reference image and reference mask are defined the reference mask will
-  be matched to reference image as described by the help topic <B>pmmatch</B>.
-  The application default is a match in "<TT>logical</TT>" coordinates which is
+  be matched to reference image as described by the help topic <b>pmmatch</b>.
+  The application default is a match in <tt>"logical"</tt> coordinates which is
   effectively a trim or pad operation to match the size of the reference image.
-  However, by use of the "<TT>pmmatch</TT>" environment variable one may match in
-  "<TT>physcial</TT>" or "<TT>world</TT>" coordinates.  Note that the simple expression
-  "<TT>m</TT>" may be used to create an output mask file from the internal matching.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>dims = "<TT>512,512</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='dims' Line='dims = "512,512"'>
-  <DD>The default output mask dimensions. The value of dims is a comma delimited
+  However, by use of the <tt>"pmmatch"</tt> environment variable one may match in
+  <tt>"physcial"</tt> or <tt>"world"</tt> coordinates.  Note that the simple expression
+  <tt>"m"</tt> may be used to create an output mask file from the internal matching.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>dims = <tt>"512,512"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='dims' Line='dims = "512,512"' -->
+  <dd>The default output mask dimensions. The value of dims is a comma delimited
   list of dimensions.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>depth = 0</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='depth' Line='depth = 0'>
-  <DD>The output mask depth in bits. The maximum depth and current default is
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>depth = 0</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='depth' Line='depth = 0' -->
+  <dd>The output mask depth in bits. The maximum depth and current default is
   27.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>exprdb = "<TT>none</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='exprdb' Line='exprdb = "none"'>
-  <DD>The file name of an optional expression database. An expression database
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>exprdb = <tt>"none"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='exprdb' Line='exprdb = "none"' -->
+  <dd>The file name of an optional expression database. An expression database
   may be used to define symbolic constants or a library of custom function
   macros.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verbose = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
-  <DD>Print task status messages ?
-  </DD>
-  </DL>
-  <P>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <P>
-  Mskexpr evaluates a mask expression <I>expr</I> and writes the results to an
-  output mask <I>masks</I> image. If expr is preceded by an "<TT>@</TT>" sign then
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verbose = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
+  <dd>Print task status messages ?
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  Mskexpr evaluates a mask expression <i>expr</i> and writes the results to an
+  output mask <i>masks</i> image. If expr is preceded by an <tt>"@"</tt> sign then
   the expression is read from the named file.  The size of the output mask is
-  determined by the reference image <I>refimages</I> if any, the reference masks
-  <I>refmasks</I> if any, or the values of the <I>dims</I> parameter, in that
+  determined by the reference image <i>refimages</i> if any, the reference masks
+  <i>refmasks</i> if any, or the values of the <i>dims</i> parameter, in that
   order of precedence.
-  <P>
+  </p>
+  <p>
   The output mask is an integer image. Therefore any mask expression must
   evaluate to an integer value. The depth of the output mask in bits is defined
-  by the <I>depth</I> parameter. The default value is 27 bits.
-  <P>
+  by the <i>depth</i> parameter. The default value is 27 bits.
+  </p>
+  <p>
   Evaluation of the mask expression is carried out one line at a time. This
   is efficient and permits operations on masks with large reference images
   to be carried out efficiently without using excessive memory. The entire
   expression is evaluated once per line of the output mask.
-  <P>
-  <B>Reference Images and Masks</B>
-  <P>
+  </p>
+  <p>
+  <b>Reference Images and Masks</b>
+  </p>
+  <p>
   In most cases one wants to make output masks to associate with images.
   The reference image list provides a reference image which is used to
   define the size and some of the header for the output mask.  Note that
   a reference mask may be used for this purpose if no reference image
   is specified.
-  <P>
+  </p>
+  <p>
   Sometimes one may want to merge previous mask information into the output
   mask.  The reference mask can be used for this purpose using the operand
-  "<TT>m</TT>" in the expressions.
-  <P>
+  <tt>"m"</tt> in the expressions.
+  </p>
+  <p>
   When both a reference image and a reference mask are specified another
   useful feature is provided.  This consists of matching the reference
   mask to the reference image even when the two are of different sizes or
-  are related not "<TT>pixel-by-pixel</TT>" but through various transformations.
-  The matching feature is described in the help topic <B>pmmatch</B>.
+  are related not <tt>"pixel-by-pixel"</tt> but through various transformations.
+  The matching feature is described in the help topic <b>pmmatch</b>.
   (Note that the default for matching in world coordinates results in
   boolean mask values so if the actual mask values are needed the pmmatch
   setting must be set appropriately.)  The application default is a match
-  in "<TT>logical</TT>" coordinates which is effectively a trim or pad operation to
-  match the size of the reference image.  However, by use of the "<TT>pmmatch</TT>"
-  environment variable one may match in "<TT>physcial</TT>" or "<TT>world</TT>" coordinates.
-  <P>
+  in <tt>"logical"</tt> coordinates which is effectively a trim or pad operation to
+  match the size of the reference image.  However, by use of the <tt>"pmmatch"</tt>
+  environment variable one may match in <tt>"physcial"</tt> or <tt>"world"</tt> coordinates.
+  </p>
+  <p>
   This task is one way to create a matched mask for tasks that do not
-  do the matching.  The simple expression "<TT>m</TT>" when both a reference image
+  do the matching.  The simple expression <tt>"m"</tt> when both a reference image
   and reference mask are specified will output a mask from for the reference
   image that is match in logical pixel space.
-  <P>
-  <B>Operands</B>
-  <P>
+  </p>
+  <p>
+  <b>Operands</b>
+  </p>
+  <p>
   Input operands are represented symbolically in the input expression. Use of
   symbolic operands allows the same expression to be used with different data
   sets, simplifies the expression syntax, and allows a single input image
   to be used several places in the same expression.
-  <P>
+  </p>
+  <p>
   The following operands are recognized:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	i		reference image 
   	i.itime		reference image keyword
   	m		reference mask 
   	m.itime		reference mask keyword
   	1.2345		numeric constant
-  </PRE>
-  <P>
+  </pre>
+  <p>
   Finally, there is a special builtin type of operand used to represent the
   mask pixel coordinates in a mask expression.  These operands have the
-  special reserved names "<TT>I</TT>", "<TT>J</TT>", "<TT>K</TT>", etc., up to the dimensions of the
+  special reserved names <tt>"I"</tt>, <tt>"J"</tt>, <tt>"K"</tt>, etc., up to the dimensions of the
   output image.  The names must be upper case to avoid confusion to with the
-  input operands "<TT>i</TT>" and "<TT>m</TT>".
-  <P>
-  <PRE>
+  input operands <tt>"i"</tt> and <tt>"m"</tt>.
+  </p>
+  <pre>
           I                x coordinate of pixel (column)
           J                y coordinate of pixel (line)
           K                z coordinate of pixel (band)
-  </PRE>
-  <P>
-  <B>Operators</B>
-  <P>
+  </pre>
+  <p>
+  <b>Operators</b>
+  </p>
+  <p>
   The expression syntax implemented by mskexpr provides the following
   set of operators:
-  <P>
-  <PRE>
+  </p>
+  <pre>
           ( expr )                grouping
           + - * /                 arithmetic
           **                      exponentiation
           //                      concatenate
           expr ? expr1 : expr2    conditional expression
           @ "name"                get operand
-  <P>
+  
           &amp;&amp;                      logical and
           ||                      logical or
           !                       logical not
@@ -195,42 +202,48 @@ mskexpr — Create masks using an expression and reference images
           ==                      equals
           !=                      not equals
           ?=                      substring equals
-  <P>
+  
           &amp;                       bitwise and
           |                       bitwise or
           ^                       bitwise exclusive or
           ~                       bitwise not
-  </PRE>
-  <P>
-  The conditional expression has the value <I>expr1</I> if <I>expr</I> is true,
-  and <I>expr2</I> otherwise.  Since the expression is evaluated at every pixel
+  </pre>
+  <p>
+  The conditional expression has the value <i>expr1</i> if <i>expr</i> is true,
+  and <i>expr2</i> otherwise.  Since the expression is evaluated at every pixel
   this permits pixel-dependent operations such as checking for special pixel
   values, or selection of elements from either of two vectors.  For example,
   the command
-  <P>
+  </p>
+  <p>
           (i &gt; -10 &amp;&amp; i &lt; 32000) ? 0 : 1
-  <P>
+  </p>
+  <p>
   has the constant value 0 if the reference image is greater than -10 and less
   than 32000, and 1 otherwise. Conditional expressions are general expressions
   and may be nested or used anywhere an expression is permitted.
-  <P>
+  </p>
+  <p>
   The concatenation operator applies to all types of data, not just strings.
   Concatenating two vectors results in a vector the combined length of the
   two input vectors.
-  <P>
-  The substring equals operator "<TT>?=</TT>", used for string comparisons,  is like
-  "<TT>==</TT>" but checks for the presence of a substring, rather than exact equality
+  </p>
+  <p>
+  The substring equals operator <tt>"?="</tt>, used for string comparisons,  is like
+  <tt>"=="</tt> but checks for the presence of a substring, rather than exact equality
   of the two strings.
-  <P>
-  <B>Region Functions</B>
-  <P>
+  </p>
+  <p>
+  <b>Region Functions</b>
+  </p>
+  <p>
   Mskexpr supports a group of boolean region functions which can be used to set
   values inside or outside of certain geometric shapes. The routines may be
   called in two ways. The first way assumes that the output masks are two-
   dimensional. The second way assumes that they are multi-dimensional and
   specifies which dimensions the geometric operator applies to.
-  <P>
-  <PRE>
+  </p>
+  <pre>
         point (x1, y1)
        circle (xc, yc, r)
       ellipse (xc, yc, r, ratio, theta)
@@ -245,7 +258,7 @@ mskexpr — Create masks using an expression and reference images
      eannulus (xc, yc, r1, r2, ratio, theta)
      rannulus (xc, yc, r1, r2, ratio, theta)
      pannulus (width, x1, y1, ..., xn, yn)
-  <P>
+  
         point (I, J, x1, y1)
        circle (I, J, xc, yc, r)
       ellipse (I, J, xc, yc, r, ratio, theta)
@@ -260,7 +273,7 @@ mskexpr — Create masks using an expression and reference images
      eannulus (I, J, xc, yc, r1, r2, ratio, theta)
      rannulus (I, J, xc, yc, r1, r2, ratio, theta)
      pannulus (I, J, width, x1, y1, ..., xn, yn)
-  <P>
+  
         xc,yc - center coordinates in pixels
         r1,r2 - semi-major axis lengths in pixels
         ratio - ratio of semi-minor / semi-major axes
@@ -269,36 +282,39 @@ mskexpr — Create masks using an expression and reference images
         x2,y2 - ending coordinates in pixels
     x[n],y[n] - vertices of a polygon
        ranges - string defining a range, e.g. "100-200,300,400-500"
-  </PRE>
-  <P>
-  <B>Other Functions</B>
-  <P>
+  </pre>
+  <p>
+  <b>Other Functions</b>
+  </p>
+  <p>
   Where it makes sense all intrinsic functions support all datatypes, with
-  some restrictions on <I>bool</I> and <I>char</I>.  Arguments may be scalars or
+  some restrictions on <i>bool</i> and <i>char</i>.  Arguments may be scalars or
   vectors. Scalar and vector arguments may be mixed in the same function
   call.  Arguments are automatically type converted upon input as necessary.
   Some functions support a variable number of arguments and the details of
   the the operation to be performed may depend upon how many arguments are
   given.
-  <P>
-  Functions which operate upon vectors are applied to the <I>lines</I> of an
+  </p>
+  <p>
+  Functions which operate upon vectors are applied to the <i>lines</i> of an
   image.  When applied to an image of dimension two or greater, these
   functions are evaluated separately for every line of the multidimensional
   image.
-  <P>
+  </p>
+  <p>
   Standard Intrinsic Functions
-  <P>
-  <PRE>
+  </p>
+  <pre>
           abs (arg)                       absolute value
           max (arg, 0.0, ...)             maximum value
           min (arg1, arg2, ...)           minimum value
           mod (arg1, arg2)                modulus
          sqrt (arg)                       square root
-  </PRE>
-  <P>
+  </pre>
+  <p>
   Mathematical or trigonometric functions
-  <P>
-  <PRE>
+  </p>
+  <pre>
          acos (arg)                         arc cosine
          asin (arg)                         arc sine
          atan (arg [,arg2])                 arc tangent
@@ -312,15 +328,16 @@ mskexpr — Create masks using an expression and reference images
          sinh (arg)                         hyperbolic sine
           tan (arg)                         tangent
          tanh (arg)                         hyperbolic tangent
-  </PRE>
-  <P>
-  The trigonometric functions operate in units of radians.  The <I>deg</I> and
-  <I>rad</I> intrinsic functions (see below) can be used to convert to and from
+  </pre>
+  <p>
+  The trigonometric functions operate in units of radians.  The <i>deg</i> and
+  <i>rad</i> intrinsic functions (see below) can be used to convert to and from
   degrees if desired.
-  <P>
+  </p>
+  <p>
   Type conversion functions
-  <P>
-  <PRE>
+  </p>
+  <pre>
          bool (arg)                         coerce to boolean
         short (arg)                         coerce to short
           int (arg)                         truncate to integer
@@ -329,15 +346,16 @@ mskexpr — Create masks using an expression and reference images
          real (arg)                         coerce to real
        double (arg)                         coerce to double
           str (arg)                         coerce to string
-  </PRE>
-  <P>
+  </pre>
+  <p>
   The numeric type conversion functions will convert a string to a number if
-  called with a character argument.  The <I>str</I> function will convert any
+  called with a character argument.  The <i>str</i> function will convert any
   number to a string.
-  <P>
+  </p>
+  <p>
   Projection functions
-  <P>
-  <PRE>
+  </p>
+  <pre>
           len (arg)                         length of a vector
           hiv (arg)                         high value of a vector
           lov (arg)                         low value of a vector
@@ -345,168 +363,163 @@ mskexpr — Create masks using an expression and reference images
        median (arg)                         median of a vector
        stddev (arg [, ksigma])              standard deviation
           sum (arg)                         sum of a vector
-  </PRE>
-  <P>
+  </pre>
+  <p>
   The projection functions take a vector as input and return a scalar value as
-  output.  The functions <I>mean</I> and <I>stddev</I>, used to compute the mean
+  output.  The functions <i>mean</i> and <i>stddev</i>, used to compute the mean
   and standard deviation of a vector, allow an optional second argument which
   if given causes a K-sigma rejection to be performed.
-  <P>
+  </p>
+  <p>
   Miscellaneous functions
-  <P>
-  <PRE>
+  </p>
+  <pre>
           deg (arg)                         radians to degrees
           rad (arg)                         degrees to radians
        median (arg1, arg2, arg3, ...)       vector median of 3-5 vectors
          repl (arg, n)                      replicate
          sort (arg)                         sort a vector
         shift (arg, npix)                   shift a vector
-  </PRE>
-  <P>
-  The <I>median</I> function shown here computes the vector median of several
+  </pre>
+  <p>
+  The <i>median</i> function shown here computes the vector median of several
   input vectors, unlike the projection median which computes the median value
-  of a vector sample.  <I>sort</I> sorts a vector, returning the sorted vector
+  of a vector sample.  <i>sort</i> sorts a vector, returning the sorted vector
   as output (this can be useful for studying the statistics of a sample).
-  <I>shift</I> applies an integral pixel shift to a vector, wrapping around at
+  <i>shift</i> applies an integral pixel shift to a vector, wrapping around at
   the endpoints.  A positive shift shifts data features to the right (higher
   indices).
-  <P>
-  The <I>repl</I> (replicate) function replicates a data element, returning a
+  </p>
+  <p>
+  The <i>repl</i> (replicate) function replicates a data element, returning a
   vector of length (n * len(a)) as output.  For example, this can be used to
   create a dummy data array or image by replicating a constant value.
-  <P>
-  <B>The Expression Database</B>
-  <P>
-  The <I>mskexpr</I> expression database provides a macro facility which can be
+  </p>
+  <p>
+  <b>The Expression Database</b>
+  </p>
+  <p>
+  The <i>mskexpr</i> expression database provides a macro facility which can be
   used to create custom libraries of functions for specific applications. A
   simple example follows.
-  <P>
-  <PRE>
+  </p>
+  <pre>
           # Sample MSKEXPR expression database file.
-  <P>
+  
           # Constants.
           SQRTOF2=        1.4142135623730950488
           PI=             3.1415926535897932385
-  <P>
+  
           # Simple bad data functions.
   	bdata1		(i &lt; -100 || i &gt; 25000)
   	bdata2		(i &lt; -100 || i &gt; 32000)
-  <P>
+  
   	# New regions functions.
   	cmpie(xc,yc,r,t1,t2) 	circle (xc, yc, r) &amp;&amp; (! pie (xc, yc, t1, t2))
-  </PRE>
-  <P>
+  </pre>
+  <p>
   The complete syntax of a macro entry is as follows:
-  <P>
-          &lt;symbol&gt;[<TT>'('</TT> arg-list <TT>')'</TT>][<TT>':'</TT>|<TT>'='</TT>]     replacement-text
-  <P>
+  </p>
+  <p>
+          &lt;symbol&gt;[<tt>'('</tt> arg-list <tt>')'</tt>][<tt>':'</tt>|<tt>'='</tt>]     replacement-text
+  </p>
+  <p>
   The replacement text may appear on the same line as the macro name or may
   start on the next line, and may extend over multiple input lines if necessary.
   If so, continuation lines must be indented.  The first line with no whitespace
   at the beginning of the line terminates the macro. Macro functions may be
   nested.  Macro functions are indistinguishable from intrinsic functions in
   expressions.
-  <P>
-  <P>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Create a 0-valued 512 x 512 mask and set all the pixels inside a circular
   annulus to 1.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   cl&gt; type expr.dat
   cannulus (256., 256., 20., 40.) ? 1 : 0 
   cl&gt; mskexpr @expr.dat mask.pl ""
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. Repeat the previous example but set all the pixels outside the circular
   annulus to 1.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   cl&gt; type expr.dat
   ! cannulus (256., 256., 20., 40.) ? 1 : 0 
   cl&gt; mskexpr @expr.dat mask.pl ""
-  </PRE>
-  <P>
+  </pre>
+  <p>
   3. Create a 0-valued 512 x 512 mask and set all the pixels inside the
   intersection of 2 circles to 1.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   cl&gt; type expr.dat
   circle (220., 220., 50.) &amp;&amp; circle (240., 220., 50.) ? 1 : 0 
   cl&gt; mskexpr @expr.dat mask.pl ""
-  </PRE>
-  <P>
+  </pre>
+  <p>
   4. Create a 0 valued mask and set all the pixels outside the good
   data range 0 &lt;= pixval &lt;= 10000 in the reference image and outside
   a circle to 1. Note that the i character defines the reference image
   operand.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   cl&gt; type expr.dat
   i &lt; 0 || i &gt; 10000 || circle (256., 256., 50.) ? 1 : 0 
   cl&gt; mskexpr @expr.dat mask.pl dev$pix
-  </PRE>
-  <P>
+  </pre>
+  <p>
   5. Create a 0 valued 512 x 512 mask and set all the pixels inside a circle
   excluding a wedge shaped region to 1. The expression cmpie is used defined
-  and stored in the expression database "<TT>myexpr.db</TT>" 
-  <P>
-  <PRE>
+  and stored in the expression database <tt>"myexpr.db"</tt> 
+  </p>
+  <pre>
   cl&gt; type myexpr.db
   # Sample MSKEXPR expression database file.
-  <P>
+  
   # Constants.
   SQRTOF2=        1.4142135623730950488
   PI=             3.1415926535897932385
-  <P>
+  
   # Simple bad data functions.
   bdata1          (i &lt; -100 || i &gt; 25000)
   bdata2          (i &lt; -100 || i &gt; 32000)
-  <P>
+  
   # New regions functions.
   cmpie(xc,yc,r,t1,t2)    circle (xc, yc, r) &amp;&amp; (! pie (xc, yc, t1, t2))
-  <P>
+  
   cl&gt; type expr.dat
   cmpie (256., 256., 50., 0., 30.) ? 1 : 0
-  <P>
+  
   cl&gt; mskexpr @expr.dat mask.pl "" exprdb=myexpr.db
-  </PRE>
-  <P>
+  </pre>
+  <p>
   6.  A set of dithered images have been transformed to a common world
   coordinate system, stacked, and a mask created for the sources.  To
   create a boolean mask for one of the images from the deep source mask:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   cl&gt; set pmmatch="world"
   cl&gt; mskexpr "m" mask1.pl exp1 refmask=stackmask
-  </PRE>
-  <P>
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Time requirements</H3>
-  <! BeginSection: 'TIME REQUIREMENTS'>
-  <UL>
-  <P>
-  </UL>
-  <! EndSection:   'TIME REQUIREMENTS'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  <P>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Time requirements</h3>
+  <!-- BeginSection: 'TIME REQUIREMENTS' -->
+  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   imexpr, mskregions, pmmatch
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

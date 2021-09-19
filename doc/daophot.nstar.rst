@@ -1,126 +1,126 @@
 .. _nstar:
 
-nstar — Fit the psf to predefined groups of stars
-=================================================
+nstar: Fit the psf to predefined groups of stars
+================================================
 
 **Package: daophot**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   nstar -- fit the PSF to groups of stars simultaneously
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   nstar image groupfile psfimage nstarfile rejfile
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>image</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='image' Line='image'>
-  <DD>The list of images containing the stellar groups to be fit.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>groupfile</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='groupfile' Line='groupfile'>
-  <DD>The list of input group photometry files containing the group membership
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>image</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image' -->
+  <dd>The list of images containing the stellar groups to be fit.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>groupfile</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='groupfile' Line='groupfile' -->
+  <dd>The list of input group photometry files containing the group membership
   information and initial estimates for the positions and magnitudes of the stars
   to be measured. There must be one group file for every input image. If
-  groupfile is "<TT>default</TT>", "<TT>dir$default</TT>", or a directory specification then NSTAR
+  groupfile is <tt>"default"</tt>, <tt>"dir$default"</tt>, or a directory specification then NSTAR
   will look for a file with the name image.grp.? where ? is the highest existing
   version number. Groupfile is usually the output of the DAOPHOT GROUP task, but
   may also be the output of the NSTAR and PSF tasks. Groupfile may be an
   APPHOT/DAOPHOT text database or an STSDAS binary table.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>psfimage</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='psfimage' Line='psfimage'>
-  <DD>The list of images containing the PSF models computed by the DAOPHOT PSF task.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>psfimage</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='psfimage' Line='psfimage' -->
+  <dd>The list of images containing the PSF models computed by the DAOPHOT PSF task.
   The number of PSF images must be equal to the number of input images.  If
-  psfimage is "<TT>default</TT>", "<TT>dir$default</TT>", or a directory specification,
+  psfimage is <tt>"default"</tt>, <tt>"dir$default"</tt>, or a directory specification,
   then PEAK will look for an image with the name image.psf.?, where
   ? is the highest existing version number.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>nstarfile</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='nstarfile' Line='nstarfile'>
-  <DD>The list of output photometry files. There must be one output photometry
-  file for every input image.  If nstarfile is "<TT>default</TT>", "<TT>dir$default</TT>", or a
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>nstarfile</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='nstarfile' Line='nstarfile' -->
+  <dd>The list of output photometry files. There must be one output photometry
+  file for every input image.  If nstarfile is <tt>"default"</tt>, <tt>"dir$default"</tt>, or a
   directory specification, then NSTAR will write an output file with the name
   image.nst.? where ? is the next available version number. Nstarfile is a text
-  database if the DAOPHOT package parameter text is "<TT>yes</TT>", an STSDAS table
-  database if it is "<TT>no</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>rejfile</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='rejfile' Line='rejfile'>
-  <DD>The list of output rejected photometry files containing the positions and sky
+  database if the DAOPHOT package parameter text is <tt>"yes"</tt>, an STSDAS table
+  database if it is <tt>"no"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>rejfile</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='rejfile' Line='rejfile' -->
+  <dd>The list of output rejected photometry files containing the positions and sky
   values of stars that could not be fit. If rejfile is undefined, results for all
-  the stars in photfile are written to <I>nstarfile</I>, otherwise only the stars
-  which were successfully fit are written to <I>nstarfile</I> and the remainder are
-  written to rejfile. If rejfile is "<TT>default</TT>", "<TT>dir$default</TT>", or a directory
+  the stars in photfile are written to <i>nstarfile</i>, otherwise only the stars
+  which were successfully fit are written to <i>nstarfile</i> and the remainder are
+  written to rejfile. If rejfile is <tt>"default"</tt>, <tt>"dir$default"</tt>, or a directory
   specification NSTAR writes an output file with the name image.nst.? where ? is
   the next available version number. Otherwise rejfile must specify one output
   photometry file for every input image. Rejfile is a text database if the
-  DAOPHOT package parameter <I>text</I> is "<TT>yes</TT>", an STSDAS binary table database
-  if it is "<TT>no</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>datapars = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='datapars' Line='datapars = ""'>
-  <DD>The name of the file containing the data dependent parameters. The parameters
-  <I>scale</I>, <I>datamin</I>, and <I>datamax</I> are located here. If datapars
+  DAOPHOT package parameter <i>text</i> is <tt>"yes"</tt>, an STSDAS binary table database
+  if it is <tt>"no"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>datapars = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='datapars' Line='datapars = ""' -->
+  <dd>The name of the file containing the data dependent parameters. The parameters
+  <i>scale</i>, <i>datamin</i>, and <i>datamax</i> are located here. If datapars
   is undefined then the default parameter set in uparm directory is used.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>daopars = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='daopars' Line='daopars = ""'>
-  <DD>The name of the file containing the daophot fitting parameters. The parameters
-  <I>psfrad</I> and <I>fitrad</I> are located here. If <I>daopars</I> is undefined
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>daopars = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='daopars' Line='daopars = ""' -->
+  <dd>The name of the file containing the daophot fitting parameters. The parameters
+  <i>psfrad</i> and <i>fitrad</i> are located here. If <i>daopars</i> is undefined
   then the default parameter set in uparm directory is used.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>wcsin = "<TT>)_.wcsin</TT>", wcsout = "<TT>)_.wcsout</TT>", wcspsf = "<TT>)_.wcspsf</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='wcsin' Line='wcsin = ")_.wcsin", wcsout = ")_.wcsout", wcspsf = ")_.wcspsf"'>
-  <DD>The coordinate system of the input coordinates read from <I>groupfile</I>, of the
-  psf model <I>psfimage</I>, and of the output coordinates written to
-  <I>nstarfile</I> and <I>rejfile</I> respectively. The image header coordinate
-  system is used to transform from the input coordinate system to the "<TT>logical</TT>"
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>wcsin = <tt>")_.wcsin"</tt>, wcsout = <tt>")_.wcsout"</tt>, wcspsf = <tt>")_.wcspsf"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='wcsin' Line='wcsin = ")_.wcsin", wcsout = ")_.wcsout", wcspsf = ")_.wcspsf"' -->
+  <dd>The coordinate system of the input coordinates read from <i>groupfile</i>, of the
+  psf model <i>psfimage</i>, and of the output coordinates written to
+  <i>nstarfile</i> and <i>rejfile</i> respectively. The image header coordinate
+  system is used to transform from the input coordinate system to the <tt>"logical"</tt>
   pixel coordinate system used internally, from the internal logical system to
-  the PSF model system, and from the internal "<TT>logical</TT>" pixel coordinate system
+  the PSF model system, and from the internal <tt>"logical"</tt> pixel coordinate system
   to the output coordinate system. The input coordinate system options are
-  "<TT>logical</TT>", "<TT>tv</TT>", "<TT>physical</TT>", and "<TT>world</TT>". The PSF model and output coordinate
-  system options are "<TT>logical</TT>", "<TT>tv</TT>", and "<TT>physical</TT>". The image cursor coordinate
-  system is assumed to be the "<TT>tv</TT>" system.
-  <DL>
-  <DT><B>logical</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='logical' Line='logical'>
-  <DD>Logical coordinates are pixel coordinates relative to the current image.
+  <tt>"logical"</tt>, <tt>"tv"</tt>, <tt>"physical"</tt>, and <tt>"world"</tt>. The PSF model and output coordinate
+  system options are <tt>"logical"</tt>, <tt>"tv"</tt>, and <tt>"physical"</tt>. The image cursor coordinate
+  system is assumed to be the <tt>"tv"</tt> system.
+  <dl>
+  <dt><b>logical</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='logical' Line='logical' -->
+  <dd>Logical coordinates are pixel coordinates relative to the current image.
   The  logical coordinate system is the coordinate system used by the image
   input/output routines to access the image data on disk. In the logical
   coordinate system the coordinates of the first pixel of a  2D image, e.g.
   dev$ypix  and a 2D image section, e.g. dev$ypix[200:300,200:300] are
   always (1,1).
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>tv</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='tv' Line='tv'>
-  <DD>Tv coordinates are the pixel coordinates used by the display servers. Tv
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>tv</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='tv' Line='tv' -->
+  <dd>Tv coordinates are the pixel coordinates used by the display servers. Tv
   coordinates  include  the effects of any input image section, but do not
   include the effects of previous linear transformations. If the input
   image name does not include an image section, then tv coordinates are
@@ -130,12 +130,12 @@ nstar — Fit the psf to predefined groups of stars
   In the tv coordinate system the coordinates of the first pixel of a
   2D image, e.g. dev$ypix and a 2D image section, e.g. dev$ypix[200:300,200:300]
   are (1,1) and (200,200) respectively.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>physical</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='physical' Line='physical'>
-  <DD>Physical coordinates are pixel coordinates invariant  with respect to linear
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>physical</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='physical' Line='physical' -->
+  <dd>Physical coordinates are pixel coordinates invariant  with respect to linear
   transformations of the physical image data.  For example, if the current image
   was created by extracting a section of another image,  the  physical
   coordinates of an object in the current image will be equal to the physical
@@ -144,97 +144,100 @@ nstar — Fit the psf to predefined groups of stars
   coordinates of the first pixel of a 2D image, e.g. dev$ypix and a 2D
   image section, e.g. dev$ypix[200:300,200:300] are (1,1) and (200,200)
   respectively.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>world</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='world' Line='world'>
-  <DD>World coordinates are image coordinates in any units which are invariant
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>world</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='world' Line='world' -->
+  <dd>World coordinates are image coordinates in any units which are invariant
   with respect to linear transformations of the physical image data. For
   example, the ra and dec of an object will always be the same no matter
   how the image is linearly transformed. The units of input world coordinates
   must be the same as those expected by the image header wcs, e. g.
   degrees and degrees for celestial coordinate systems.
-  </DD>
-  </DL>
+  </dd>
+  </dl>
   The wcsin, wcspsf, and wcsout parameters default to the values of the package
   parameters of the same name. The default values of the package parameters
-  wcsin, wcspsf,  and wcsout are "<TT>logical</TT>", "<TT>physical</TT>" and "<TT>logical</TT>" respectively.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>cache = "<TT>)_.cache</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='cache' Line='cache = ")_.cache"'>
-  <DD>Cache the image pixels in memory. Cache may be set to the value of the apphot
-  package parameter (the default), "<TT>yes</TT>", or "<TT>no</TT>". By default caching is
+  wcsin, wcspsf,  and wcsout are <tt>"logical"</tt>, <tt>"physical"</tt> and <tt>"logical"</tt> respectively.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>cache = <tt>")_.cache"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='cache' Line='cache = ")_.cache"' -->
+  <dd>Cache the image pixels in memory. Cache may be set to the value of the apphot
+  package parameter (the default), <tt>"yes"</tt>, or <tt>"no"</tt>. By default caching is
   disabled.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verify = "<TT>)_.verify</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='verify' Line='verify = ")_.verify"'>
-  <DD>Verify the critical NSTAR task parameters? Verify can be set to the DAOPHOT
-  package parameter value (the default), "<TT>yes</TT>", or "<TT>no</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>update = "<TT>)_.update</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='update' Line='update = ")_.update"'>
-  <DD>Update the NSTAR task parameters if <I>verify</I> is "<TT>yes</TT>"? Update can be
-  set to the default daophot package parameter value, "<TT>yes</TT>", or "<TT>no</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verbose = "<TT>)_.verbose</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = ")_.verbose"'>
-  <DD>Print messages about the progress of the task ? Verbose can be set to the
-  DAOPHOT package parameter value (the default), "<TT>yes</TT>", or "<TT>no</TT>".
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verify = <tt>")_.verify"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verify' Line='verify = ")_.verify"' -->
+  <dd>Verify the critical NSTAR task parameters? Verify can be set to the DAOPHOT
+  package parameter value (the default), <tt>"yes"</tt>, or <tt>"no"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>update = <tt>")_.update"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='update' Line='update = ")_.update"' -->
+  <dd>Update the NSTAR task parameters if <i>verify</i> is <tt>"yes"</tt>? Update can be
+  set to the default daophot package parameter value, <tt>"yes"</tt>, or <tt>"no"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verbose = <tt>")_.verbose"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = ")_.verbose"' -->
+  <dd>Print messages about the progress of the task ? Verbose can be set to the
+  DAOPHOT package parameter value (the default), <tt>"yes"</tt>, or <tt>"no"</tt>.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   NSTAR computes x and y centers and magnitudes for all the stellar groups in
-  <I>groupfile</I> by fitting the PSF <I>psfimage</I> to the data in <I>image</I>.
+  <i>groupfile</i> by fitting the PSF <i>psfimage</i> to the data in <i>image</i>.
   NSTAR reads the group membership information along with initial estimates of
   the centers and magnitudes, and the sky values from the photometry file
-  <I>groupfile</I>.  <I>Groupfile</I> is usually the output of the DAOPHOT GROUP
+  <i>groupfile</i>.  <i>Groupfile</i> is usually the output of the DAOPHOT GROUP
   task but may also be the output of the PSF and NSTAR tasks. The computed
-  centers and magnitudes are written to <I>nstarfile</I> along with the sky
+  centers and magnitudes are written to <i>nstarfile</i> along with the sky
   values, the number of iterations it took to fit the star, the goodness of fit
-  statistic chi and the image sharpness statistic sharp. If <I>rejfile</I> is
-  undefined, only stars that are successfully fit are written to <I>nstarfile</I>,
-  and the remainder are written to <I>rejfile</I>. Otherwise all the stars are
-  written to <I>nstarfile</I>.  <I>Nstarfile</I> and <I>rejfile</I> are text
-  databases if the DAOPHOT package parameter <I>text</I> is "<TT>yes</TT>", an STSDAS table
-  database if it is "<TT>no</TT>".
-  <P>
-  The coordinates read from <I>groupfile</I> are assumed to be in coordinate
-  system defined by <I>wcsin</I>. The options are "<TT>logical</TT>", "<TT>tv</TT>", "<TT>physical</TT>",
-  and "<TT>world</TT>" and the transformation from the input coordinate system to the
-  internal "<TT>logical</TT>" system is defined by the image coordinate system. The
-  simplest default is the "<TT>logical</TT>" pixel system. Users working on with image
+  statistic chi and the image sharpness statistic sharp. If <i>rejfile</i> is
+  undefined, only stars that are successfully fit are written to <i>nstarfile</i>,
+  and the remainder are written to <i>rejfile</i>. Otherwise all the stars are
+  written to <i>nstarfile</i>.  <i>Nstarfile</i> and <i>rejfile</i> are text
+  databases if the DAOPHOT package parameter <i>text</i> is <tt>"yes"</tt>, an STSDAS table
+  database if it is <tt>"no"</tt>.
+  </p>
+  <p>
+  The coordinates read from <i>groupfile</i> are assumed to be in coordinate
+  system defined by <i>wcsin</i>. The options are <tt>"logical"</tt>, <tt>"tv"</tt>, <tt>"physical"</tt>,
+  and <tt>"world"</tt> and the transformation from the input coordinate system to the
+  internal <tt>"logical"</tt> system is defined by the image coordinate system. The
+  simplest default is the <tt>"logical"</tt> pixel system. Users working on with image
   sections but importing pixel coordinate lists generated from the parent image
-  must use the "<TT>tv</TT>" or "<TT>physical</TT>" input coordinate systems.
-  <P>
+  must use the <tt>"tv"</tt> or <tt>"physical"</tt> input coordinate systems.
+  </p>
+  <p>
   The coordinate system of the PSF model is the coordinate system defined by the
-  <I>wcspsf</I> parameter. Normally the PSF model was derived from the input image
-  and this parameter default to "<TT>logical</TT>". However if the PSF model was derived
-  from a larger image which is a "<TT>parent</TT>" of the input image, then wcspsf should
-  be set to "<TT>tv</TT>" or "<TT>physical</TT>" depending on the circumstances.
-  <P>
-  The coordinates written to <I>nstarfile</I> and <I>rejfile</I> are in the
-  coordinate system defined by <I>wcsout</I> with the exception of the psf model
+  <i>wcspsf</i> parameter. Normally the PSF model was derived from the input image
+  and this parameter default to <tt>"logical"</tt>. However if the PSF model was derived
+  from a larger image which is a <tt>"parent"</tt> of the input image, then wcspsf should
+  be set to <tt>"tv"</tt> or <tt>"physical"</tt> depending on the circumstances.
+  </p>
+  <p>
+  The coordinates written to <i>nstarfile</i> and <i>rejfile</i> are in the
+  coordinate system defined by <i>wcsout</i> with the exception of the psf model
   center coordinates PSFX and PSFY which are always in the logical system of
-  the input image. The options are "<TT>logical</TT>", "<TT>tv</TT>", and "<TT>physical</TT>". The simplest
-  default is the "<TT>logical</TT>" system.  Users wishing to correlate the output
+  the input image. The options are <tt>"logical"</tt>, <tt>"tv"</tt>, and <tt>"physical"</tt>. The simplest
+  default is the <tt>"logical"</tt> system.  Users wishing to correlate the output
   coordinates of objects measured in image sections or mosaic pieces with
-  coordinates in the parent image must use the "<TT>tv</TT>" or "<TT>physical</TT>" coordinate
+  coordinates in the parent image must use the <tt>"tv"</tt> or <tt>"physical"</tt> coordinate
   systems.
-  <P>
-  If <I>cache</I> is yes and the host machine physical memory and working set size
+  </p>
+  <p>
+  If <i>cache</i> is yes and the host machine physical memory and working set size
   are large enough, the input image pixels are cached in memory. If caching
   is enabled and NSTAR is run interactively the first measurement will appear
   to take a long time as the entire image must be read in before the measurement
@@ -249,71 +252,78 @@ nstar — Fit the psf to predefined groups of stars
   is doubled by converting it to a real image with the chpixtype task then the
   effect of caching in interactive is can be quite noticeable if measurements
   of objects in the top and bottom halves of the image are alternated.
-  <P>
-  By default NSTAR computes new centers for all the stars in <I>groupfile</I>.
-  However if the DAOPARS parameter <I>recenter</I> is "<TT>no</TT>", NSTAR assumes that the
-  x and y centers in <I>groupfile</I> are the true centers and does not refit
+  </p>
+  <p>
+  By default NSTAR computes new centers for all the stars in <i>groupfile</i>.
+  However if the DAOPARS parameter <i>recenter</i> is <tt>"no"</tt>, NSTAR assumes that the
+  x and y centers in <i>groupfile</i> are the true centers and does not refit
   them. This option can be quite useful in cases where accurate center values
   have been derived from an image that has been through some non-linear image
   restoration algorithm, but the photometry must be derived from the original
   unrestored image.
-  <P>
+  </p>
+  <p>
   By default NSTAR computes the sky value for each group by averaging the
-  individual sky values in <I>groupfile</I> for all the stars in the group. If
-  <I>groupsky</I> is "<TT>no</TT>" then the sky value for a particular pixel which
+  individual sky values in <i>groupfile</i> for all the stars in the group. If
+  <i>groupsky</i> is <tt>"no"</tt> then the sky value for a particular pixel which
   contributes to the group fit is set to the mean of the sky values of only those
   stars for which the pixel is within one fitting radius. However if the DAOPARS
-  parameter <I>fitksy</I> is "<TT>yes</TT>", then NSTAR computes a new group sky value as
+  parameter <i>fitksy</i> is <tt>"yes"</tt>, then NSTAR computes a new group sky value as
   part of the non-linear least-squares fit. Recomputing the sky can significantly
   reduce the scatter in the magnitudes in regions where the sky background is
-  varying rapidly, but users may need to increase <I>fitrad</I> to include more
+  varying rapidly, but users may need to increase <i>fitrad</i> to include more
   sky pixels in the fit. Users should experiment cautiously with this option.
-  <P>
+  </p>
+  <p>
   Only pixels within the good data range delimited by the DATAPARS task
-  parameters <I>datamin</I> and <I>datamax</I> are included in the fit. Most users
-  set <I>datamin</I> and <I>datamax</I> so as to exclude pixels outside the
+  parameters <i>datamin</i> and <i>datamax</i> are included in the fit. Most users
+  set <i>datamin</i> and <i>datamax</i> so as to exclude pixels outside the
   linearity regime of the detector. By default all the data is fit. Users are
   advised to determine accurate values for these parameters and set the
   appropriate parameters in DATAPARS before beginning any DAOPHOT reductions.
-  <P>
-  Only pixels within the fitting radius <I>fitrad</I> / <I>scale</I> are included
-  in the fit for each star. <I>Fitrad</I> is located in the DAOPARS task and
-  <I>scale</I> is located in the DATAPARS task. Since the non-linear least-squares
+  </p>
+  <p>
+  Only pixels within the fitting radius <i>fitrad</i> / <i>scale</i> are included
+  in the fit for each star. <i>Fitrad</i> is located in the DAOPARS task and
+  <i>scale</i> is located in the DATAPARS task. Since the non-linear least-squares
   fitting algorithm determines three unknowns, the x and y position of the star's
-   centroid and its brightness, the value of <I>fitrad</I> must be sufficiently
+   centroid and its brightness, the value of <i>fitrad</i> must be sufficiently
   large to include at least three pixels in the fit for each star. To accelerate
   the convergence of the non-linear least-squares fitting algorithm pixels within
-  <I>fitrad</I> are assigned weights which are  inversely proportional to the
+  <i>fitrad</i> are assigned weights which are  inversely proportional to the
   radial distance of the pixel from the x and y centroid of the star, falling
-  from a maximum at the centroid to zero at the fitting radius. <I>Fitrad</I> must
+  from a maximum at the centroid to zero at the fitting radius. <i>Fitrad</i> must
    be sufficiently large to include at least three pixels with non-zero weights
-  in the fit for each star. Values of <I>fitrad</I> close to the full-width at
+  in the fit for each star. Values of <i>fitrad</i> close to the full-width at
   half-maxima of the PSF are recommended. In actual fact NSTAR imposes a minimum
   number of pixel limit of four.
-  <P>
+  </p>
+  <p>
   NSTAR performs a weighted fit to the PSF. The weight of each pixel is computed
   by combining, the radial weighting function described above, with weights
   derived from the random errors NSTAR predicts based on the values of the
-  DATAPARS parameters <I>readnoise</I> and <I>epadu</I>, and the flat-fielding and
-  profile interpolation errors specified by the DAOPARS <I>flaterr</I> and
-  <I>proferr</I> parameters. To obtain optimal fits, users are strongly advised
+  DATAPARS parameters <i>readnoise</i> and <i>epadu</i>, and the flat-fielding and
+  profile interpolation errors specified by the DAOPARS <i>flaterr</i> and
+  <i>proferr</i> parameters. To obtain optimal fits, users are strongly advised
   to determine those parameters accurately and to enter their values in DATAPARS
   and DAOPARS before beginning any DAOPHOT reductions.
-  <P>
-  For each group of stars to be fit, NSTAR extracts a subraster from <I>image</I>
-  which extends approximately <I>psfrad</I> / <I>scale</I> + 1 pixels wide past
+  </p>
+  <p>
+  For each group of stars to be fit, NSTAR extracts a subraster from <i>image</i>
+  which extends approximately <i>psfrad</i> / <i>scale</i> + 1 pixels wide past
   the limiting values of the x and y coordinates of the stars in the group.
-  <I>Psfrad</I> is the PSF radius specified in the DAOPARS task, and <I>scale</I>
-  is the image scale specified by the DATAPARS task. <I>Psfrad</I> may be less
+  <i>Psfrad</i> is the PSF radius specified in the DAOPARS task, and <i>scale</i>
+  is the image scale specified by the DATAPARS task. <i>Psfrad</i> may be less
   than or equal to but can never exceed the value of the image header parameter
-  "<TT>PSFRAD</TT>" in <I>psfimage</I>. <I>Psfrad</I> should always be several pixels larger
-  than <I>fitrad</I> to permit the x and y centroids to wander during the fitting
+  <tt>"PSFRAD"</tt> in <i>psfimage</i>. <i>Psfrad</i> should always be several pixels larger
+  than <i>fitrad</i> to permit the x and y centroids to wander during the fitting
   process.
-  <P>
+  </p>
+  <p>
   As well as the computed x and y centers and magnitudes, NSTAR outputs the number
    of times the PSF fit had to be iterated before reaching convergence. The
   minimum number of iterations is four. The maximum number of iteration permitted
-  is specified by the <I>maxiter</I> parameter in the DAOPARS task. Obviously the
+  is specified by the <i>maxiter</i> parameter in the DAOPARS task. Obviously the
   results for stars which have reached the maximum iteration count should be
   viewed with suspicion. However since the convergence criteria are quite strict,
   (the computed magnitude must change  by less than .0005 magnitudes or 0.10
@@ -322,35 +332,39 @@ nstar — Fit the psf to predefined groups of stars
   reasonably well measured. It must be emphasized that every star in the group
   must individually satisfy the convergence criteria in order for the group to be
    considered adequately reduced.
-  <P>
+  </p>
+  <p>
   NSTAR computes a goodness of fit statistic chi which is essentially the ratio
   of the observed pixel-to-pixel scatter in the fitting residuals to the expected
   scatter. Since the expected scatter is dependent on the DATAPARS task parameters
-  <I>readnoise</I> and <I>epadu</I>, and the DAOPARS parameters <I>flaterr</I> and
-  <I>proferr</I> it is important for these values to be set correctly. A plot of
+  <i>readnoise</i> and <i>epadu</i>, and the DAOPARS parameters <i>flaterr</i> and
+  <i>proferr</i> it is important for these values to be set correctly. A plot of
   chi versus magnitude should scatter around unity with little or no trend in
   chi with magnitude, except at the bright end where saturation effects may be
   present.
-  <P>
+  </p>
+  <p>
   Finally NSTAR computes the statistic sharp which estimates the intrinsic angular
   size of the measured object outside the atmosphere. Sharp is roughly defined as
   the difference between the square of the width of the object and the square of
   the width of PSF. Sharp has values close to zero for single stars, large
   positive values for blended doubles and partially resolved galaxies and large
   negative values for cosmic rays and blemishes.
-  <P>
+  </p>
+  <p>
   NSTAR implements a highly sophisticated star rejection algorithm. First of all,
    any group of stars which is more than a certain size is simply not fit. The
-  maximum group size is specified by the <I>maxgroup</I> parameter in the DAOPARS
+  maximum group size is specified by the <i>maxgroup</i> parameter in the DAOPARS
   task. Larger groups may run into numerical precision problems during the fits.
-  Users should exercise care in increasing the <I>maxgroup</I> parameter. If two
+  Users should exercise care in increasing the <i>maxgroup</i> parameter. If two
   stars in a group have centroids separated by a critical distance, currently set
   arbitrarily to 0.37 * the FWHM of the stellar core, their photocentric position
   and combined magnitude is assigned to the brighter of the two stars, and the
   fainter is eliminated. Any star which converges to 12.5 magnitudes greater than
    the magnitude of the PSF is considered to be non-existent and eliminated from
   the group.
-  <P>
+  </p>
+  <p>
   After iteration 5, if the faintest star in the group has a brightness less than
    one sigma above zero, it is eliminated. After iterations 10, if the faintest
   star in the group has a brightness less than 1.5 sigma above zero, it is
@@ -360,15 +374,17 @@ nstar — Fit the psf to predefined groups of stars
   if two stars are separated by more than 0.37 * FWHM and less than 1.0 * FWHM
   and if the fainter of the two is more uncertain than 1.0, 1.5 or 2.0 sigma
   respectively the fainter one is eliminated.
-  <P>
+  </p>
+  <p>
   Whenever a star is eliminated the iteration counter is backed up by one and
   reduction proceeds with a smaller set of stars. Backing up the counter gives
   the second least certain star in the group two iterations to settle into a new
   fit before its fate is decided.  The star rejection algorithm depends upon the
-  DATAPARS <I>readnoise</I> and <I>gain</I> parameters and the DAOPARS parameter
-  <I>flaterr</I> and <I>proferr</I>. Therefore these parameters should be set to
+  DATAPARS <i>readnoise</i> and <i>gain</i> parameters and the DAOPARS parameter
+  <i>flaterr</i> and <i>proferr</i>. Therefore these parameters should be set to
   reasonable values before running NSTAR.
-  <P>
+  </p>
+  <p>
   NSTAR operates in a very similar manner to PEAK. However because it fits groups
    of stars simultaneously it is much more accurate than PEAK in crowded regions.
   The ALLSTAR task also fits groups of stars simultaneously, both  grouping the
@@ -377,24 +393,22 @@ nstar — Fit the psf to predefined groups of stars
   control over the grouping process and does not know at the end which stars were
   actually fit together. NSTAR is the task of choice when a user wants to
   maintain rigorous control over the composition of the stellar groups.
-  <P>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Output</H3>
-  <! BeginSection: 'OUTPUT'>
-  <UL>
-  <P>
-  If <I>verbose</I> = yes, a single line is output to the terminal for each star
-  fit or rejected. Full output is written to <I>nstarfile</I> and <I>rejfile</I>.
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Output</h3>
+  <!-- BeginSection: 'OUTPUT' -->
+  <p>
+  If <i>verbose</i> = yes, a single line is output to the terminal for each star
+  fit or rejected. Full output is written to <i>nstarfile</i> and <i>rejfile</i>.
   At the beginning of these two files a header listing the current values of the
   parameters is written. For each star fit/rejected the following quantities are
   written to the output file.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	id  group  xcenter  ycenter  mag  merr  msky  niter  sharpness
   	    chi  pier  perr
-  </PRE>
-  <P>
+  </pre>
+  <p>
   Id is the id number of the star and group is its group number. Xcenter and
   ycenter are the fitted coordinates in pixels. Mag and merr are the fitted
   magnitude and magnitude error respectively. Msky is the individual sky value
@@ -402,17 +416,15 @@ nstar — Fit the psf to predefined groups of stars
   sharpness and chi are the sharpness and goodness of fit statistic respectively.
   Pier and perror are the photometry error code and accompanying error message
   respectively.
-  <P>
-  </UL>
-  <! EndSection:   'OUTPUT'>
-  <H3>Errors</H3>
-  <! BeginSection: 'ERRORS'>
-  <UL>
-  <P>
+  </p>
+  <!-- EndSection:   'OUTPUT' -->
+  <h3>Errors</h3>
+  <!-- BeginSection: 'ERRORS' -->
+  <p>
   If no errors occur during the fitting process then pier is 0. Non-zero
   values of pier flag the following error conditions.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	0		# No error
   	1		# The star is in a group too large to fit
   	2		# The sky is undefined
@@ -421,169 +433,157 @@ nstar — Fit the psf to predefined groups of stars
   	5		# The star is too faint
   	6		# The star has merged with a brighter star
   	7		# The star is off the image
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'ERRORS'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
+  </pre>
+  <!-- EndSection:   'ERRORS' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Fit the PSF to a list stars in the test image dev$ypix. Good stars for
   making the PSF model can be found at (442,410), (348,189), and (379,67).
-  <P>
-  <PRE>
+  </p>
+  <pre>
      da&gt; datapars.epadu = 14.0
      da&gt; datapars.readnoise = 75.0
-  <P>
+  
          ... set the gain and readout noise for the detector
-  <P>
+  
      da&gt; daofind dev$ypix default fwhmpsf=2.5 sigma=5.0 threshold=20.0
-  <P>
+  
           ... answer verify prompts
-  <P>
+  
           ... find stars in the image
-  <P>
+  
           ... answer will appear in ypix.coo.1
-  <P>
-      da&gt; phot dev$ypix default default annulus=10. dannulus=5.       \<BR>
+  
+      da&gt; phot dev$ypix default default annulus=10. dannulus=5.       \<br>
           apertures = 3.0
-  <P>
+  
           ... answer verify prompts
-  <P>
+  
           ... do aperture photometry on the detected stars
-  <P>
+  
           ... answer will appear in ypix.mag.1
-  <P>
+  
       da&gt; display dev$ypix 1
-  <P>
-      da&gt; psf dev$ypix default "" default default default psfrad=11.0 \<BR>
+  
+      da&gt; psf dev$ypix default "" default default default psfrad=11.0 \<br>
           fitrad=3.0 mkstars=yes display=imdr
-  <P>
+  
           ... verify the critical parameters
-  <P>
+  
           ... move the image cursor to a candidate star and hit the a key,
               a plot of the stellar data appears
-  <P>
+  
           ... type ? for a listing of the graphics cursor menu
-  <P>
+  
           ... type a to accept the star, d to reject it
-  <P>
+  
           ... move to the next candidate stars and repeat the previous
               steps
-  <P>
+  
           ... type l to list all the psf stars
-  <P>
+  
           ... type f to fit the psf
-  <P>
+  
           ... move cursor to first psf star and type s to see residuals,
               repeat for all the psf stars
-  <P>
+  
           ... type w to save the PSF model
-  <P>
+  
           ... type q to quit, and q again to confirm
-  <P>
+  
           ... the output will appear in ypix.psf.1.imh, ypix.pst.1 and
               ypix.psg.1
-  <P>
+  
       da&gt; group dev$ypix default default default 
-  <P>
+  
           ... verify the prompts
-  <P>
+  
           ... the output will appear in ypix.grp.1
-  <P>
+  
       da&gt; nstar dev$ypix default default default default
-  <P>
+  
           ... verify the prompts
-  <P>
+  
           ... the results will appear in ypix.nst.1 and ypix.nrj.1
-  <P>
+  
       da&gt; pdump ypix.nst.1 sharpness,chi yes | graph
-  <P>
+  
           ... plot chi versus sharpness, the stars should cluster around
               sharpness = 0.0 and chi = 1.0, note that the frame does
               not have a lot of stars
-  <P>
+  
       da&gt; substar dev$ypix default  "" default default
-  <P>
+  
           ... subtract the fitted stars
-  <P>
+  
       da&gt; display ypix.sub.1 2
-  <P>
+  
           ... note that the psf stars subtract reasonably well but other
               objects which are not stars don't
-  </PRE>
-  <P>
-  <P>
+  </pre>
+  <p>
   2. Run nstar on a section of the input image using the group file and PSF
   model derived in example 1 for the parent image and writing the results
   in the coordinate system of the parent image.
-  <P>
-  <PRE>
-      da&gt; nstar dev$ypix[150:450,150:450] default default default default \<BR>
+  </p>
+  <pre>
+      da&gt; nstar dev$ypix[150:450,150:450] default default default default \<br>
           wcsin=tv wcspsf=tv wcsout=tv
-  <P>
+  
           ... answer the verify prompts
-  <P>
+  
           ... fit the stars
-  <P>
+  
           ... the results will appear in ypix.nst.2 and ypix.nrj.2
-  <P>
+  
       da&gt; display dev$ypix[150:450,150:450] 1
-  <P>
+  
           ... display the image
-  <P>
+  
       da&gt; pdump ypix.nst.2 xc,yc yes | tvmark 1 STDIN col=204
-  <P>
+  
           ... mark the stars
-  <P>
+  
       da&gt; substar dev$ypix ypix.nst.2 "" default default
-  <P>
+  
           ... subtract stars from parent image
-  <P>
+  
           ... the output images is ypix.sub.2
-  <P>
-  <P>
-      da&gt; substar dev$ypix[150:450,150:450] ypix.nst.2 "" default default  \<BR>
+  
+  
+      da&gt; substar dev$ypix[150:450,150:450] ypix.nst.2 "" default default  \<br>
           wcsin=tv wcspsf=tv wcsout=tv
-  <P>
+  
           ... subtract stars from the nstar input image
-  <P>
+  
           ... the output images is ypix.sub.3
-  <P>
-  </PRE>
-  <P>
-  <P>
-  <P>
+  
+  </pre>
+  <p>
   3. Run nstar exactly as in example 1 but submit the task to the background.
   Turn off verify and verbose.
-  <P>
-  <PRE>
-      da&gt; nstar dev$ypix default default default default verbose- \<BR>
+  </p>
+  <pre>
+      da&gt; nstar dev$ypix default default default default verbose- \<br>
           verify- &amp;
-  <P>
-          ... the results will appear in ypix.nst.3 and ypix.nrj.3
-  </PRE>
-  <P>
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Time requirements</H3>
-  <! BeginSection: 'TIME REQUIREMENTS'>
-  <UL>
-  </UL>
-  <! EndSection:   'TIME REQUIREMENTS'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
-  datapars,daopars,peak,allstar
-  </UL>
-  <! EndSection:    'SEE ALSO'>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'OUTPUT' 'ERRORS' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
+          ... the results will appear in ypix.nst.3 and ypix.nrj.3
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Time requirements</h3>
+  <!-- BeginSection: 'TIME REQUIREMENTS' -->
+  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
+  datapars,daopars,peak,allstar
+  </p>
+  
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'OUTPUT' 'ERRORS' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

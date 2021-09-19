@@ -1,248 +1,243 @@
 .. _aidpars:
 
-aidpars — Automatic line identification parameters and algorithm
-================================================================
+aidpars: Automatic line identification parameters and algorithm
+===============================================================
 
 **Package: onedspec**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   aidpars -- Automatic line identification parameters and algorithm
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Summary</H3>
-  <! BeginSection: 'SUMMARY'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Summary</h3>
+  <!-- BeginSection: 'SUMMARY' -->
+  <p>
   The automatic line identification parameters and algorithm used in
-  <B>autoidentify</B>, <B>identify</B>, and <B>reidentify</B> are described.
-  </UL>
-  <! EndSection:   'SUMMARY'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  <b>autoidentify</b>, <b>identify</b>, and <b>reidentify</b> are described.
+  </p>
+  <!-- EndSection:   'SUMMARY' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   aidpars
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>reflist = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='reflist' Line='reflist = ""'>
-  <DD>Optional reference coordinate list to use in the pattern matching algorithm
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>reflist = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='reflist' Line='reflist = ""' -->
+  <dd>Optional reference coordinate list to use in the pattern matching algorithm
   in place of the task coordinate list.  This file is a simple text list of
   dispersion coordinates.  It would normally be a culled and limited list of
   lines for the specific data being identified.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>refspec = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='refspec' Line='refspec = ""'>
-  <DD>Optional reference dispersion calibrated spectrum.  This template spectrum
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>refspec = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='refspec' Line='refspec = ""' -->
+  <dd>Optional reference dispersion calibrated spectrum.  This template spectrum
   is used to select the prominent lines for the pattern matching algorithm.
   It need not have the same dispersion increment or dispersion coverage as
   the target spectrum.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>crpix = "<TT>INDEF</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='crpix' Line='crpix = "INDEF"'>
-  <DD>Coordinate reference pixel for the coordinate reference value specified by
-  the <I>crval</I> parameter.  This may be specified as a pixel coordinate
-  or an image header keyword name (with or without a <TT>'!'</TT> prefix).  In the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>crpix = <tt>"INDEF"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='crpix' Line='crpix = "INDEF"' -->
+  <dd>Coordinate reference pixel for the coordinate reference value specified by
+  the <i>crval</i> parameter.  This may be specified as a pixel coordinate
+  or an image header keyword name (with or without a <tt>'!'</tt> prefix).  In the
   latter case the value of the keyword in the image header of the spectrum
   being identified is used.  A value of INDEF translates to the middle of
   the target spectrum.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>crquad = INDEF</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='crquad' Line='crquad = INDEF'>
-  <DD>Quadratic correction to the detected pixel positions to "<TT>linearize</TT>" the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>crquad = INDEF</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='crquad' Line='crquad = INDEF' -->
+  <dd>Quadratic correction to the detected pixel positions to <tt>"linearize"</tt> the
   pattern of line spacings.  The corrected positions x' are derived from
   the measured positions x by
-  <P>
-  <PRE>
+  <pre>
       x' = x + crquad * (x - crpix)**2
-  </PRE>
-  <P>
-  where crpix is the pixel reference point as defined by the <I>crpix</I>
+  </pre>
+  where crpix is the pixel reference point as defined by the <i>crpix</i>
   parameter.  The measured and corrected positions may be examined by
-  using the <TT>'t'</TT> debug flag.  The value may be a number or a header
-  keyword (with or without a <TT>'!'</TT> prefix).  The default of INDEF translates
+  using the <tt>'t'</tt> debug flag.  The value may be a number or a header
+  keyword (with or without a <tt>'!'</tt> prefix).  The default of INDEF translates
   to zero; i.e. no quadratic correction.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>cddir = "<TT>sign</TT>" (unknown|sign|increasing|decreasing)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='cddir' Line='cddir = "sign" (unknown|sign|increasing|decreasing)'>
-  <DD>The sense of the dispersion increment with respect to the pixel coordinates
-  in the input spectrum.  The possible values are "<TT>increasing</TT>" or
-  "<TT>decreasing</TT>" if the dispersion coordinates increase or decrease with
-  increasing pixel coordinates, "<TT>sign</TT>" to use the sign of the dispersion
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>cddir = <tt>"sign"</tt> (unknown|sign|increasing|decreasing)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='cddir' Line='cddir = "sign" (unknown|sign|increasing|decreasing)' -->
+  <dd>The sense of the dispersion increment with respect to the pixel coordinates
+  in the input spectrum.  The possible values are <tt>"increasing"</tt> or
+  <tt>"decreasing"</tt> if the dispersion coordinates increase or decrease with
+  increasing pixel coordinates, <tt>"sign"</tt> to use the sign of the dispersion
   increment (positive is increasing and negative is decreasing), and
-  "<TT>unknown</TT>" if the sense is unknown and to be determined by the algorithm.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>crsearch = "<TT>INDEF</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='crsearch' Line='crsearch = "INDEF"'>
-  <DD>Coordinate reference value search radius.  The value may be specified
+  <tt>"unknown"</tt> if the sense is unknown and to be determined by the algorithm.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>crsearch = <tt>"INDEF"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='crsearch' Line='crsearch = "INDEF"' -->
+  <dd>Coordinate reference value search radius.  The value may be specified
   as a numerical value or as an image header keyword (with or without
-  a <TT>'!'</TT> prefix) whose value is to be used.  The algorithm will search
+  a <tt>'!'</tt> prefix) whose value is to be used.  The algorithm will search
   for a final coordinate reference value within this amount of the value
-  specified by <I>crval</I>.  If the value is positive the search radius is
+  specified by <i>crval</i>.  If the value is positive the search radius is
   the specified value.  If the value is negative it is the absolute value
-  of this parameter times <I>cdelt</I> times the number of pixels in the
+  of this parameter times <i>cdelt</i> times the number of pixels in the
   input spectrum; i.e. it is the fraction of dispersion range covered by the
-  target spectrum assuming a dispersion increment per pixel of <I>cdelt</I>.
+  target spectrum assuming a dispersion increment per pixel of <i>cdelt</i>.
   A value of INDEF translates to -0.1 which corresponds to a search radius
   of 10% of the estimated dispersion range.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>cdsearch = "<TT>INDEF</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='cdsearch' Line='cdsearch = "INDEF"'>
-  <DD>Dispersion coordinate increment search radius.  The value may be specified
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>cdsearch = <tt>"INDEF"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='cdsearch' Line='cdsearch = "INDEF"' -->
+  <dd>Dispersion coordinate increment search radius.  The value may be specified
   as a numerical value or as an image header keyword (with or without
-  a <TT>'!'</TT> prefix) whose value is to be used.  The algorithm will search
+  a <tt>'!'</tt> prefix) whose value is to be used.  The algorithm will search
   for a dispersion coordinate increment within this amount of the value
-  specified by <I>cdelt</I>.  If the value is positive the search radius is
+  specified by <i>cdelt</i>.  If the value is positive the search radius is
   the specified value.  If the value is negative it is the absolute value of
-  this parameter times <I>cdelt</I>; i.e.  it is a fraction of <I>cdelt</I>.
+  this parameter times <i>cdelt</i>; i.e.  it is a fraction of <i>cdelt</i>.
   A value of INDEF translates to -0.1 which corresponds to a search radius
-  of 10% of <I>cdelt</I>.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>ntarget = 100</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='ntarget' Line='ntarget = 100'>
-  <DD>Number of spectral lines from the target spectrum to use in the pattern
+  of 10% of <i>cdelt</i>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>ntarget = 100</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='ntarget' Line='ntarget = 100' -->
+  <dd>Number of spectral lines from the target spectrum to use in the pattern
   matching.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>npattern = 5</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='npattern' Line='npattern = 5'>
-  <DD>Initial number of spectral lines in patterns to be matched.  There is a
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>npattern = 5</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='npattern' Line='npattern = 5' -->
+  <dd>Initial number of spectral lines in patterns to be matched.  There is a
   minimum of 3 and a maximum of 10.  The algorithm starts with the specified
   number and if no solution is found with that number it is iteratively
   decreased by one to the minimum of 3.  A larger number yields fewer
   and more likely candidate matches and so will produce a result sooner.
   But in order to be thorough the algorithm will try smaller patterns to
   search more possiblities.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>nneighbors = 10</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='nneighbors' Line='nneighbors = 10'>
-  <DD>Number of neighbors to use in making patterns of lines.  This parameter
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>nneighbors = 10</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='nneighbors' Line='nneighbors = 10' -->
+  <dd>Number of neighbors to use in making patterns of lines.  This parameter
   restricts patterns to include lines which are near each other.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>nbins = 6</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='nbins' Line='nbins = 6'>
-  <DD>Maximum number of bins to divide the reference coordinate list or spectrum
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>nbins = 6</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='nbins' Line='nbins = 6' -->
+  <dd>Maximum number of bins to divide the reference coordinate list or spectrum
   in searching for a solution.  When there are no weak dispersion constraints
   the algorithm subdivides the full range of the coordinate list or reference
   spectrum into one bin, two bins, etc. up to this maximum.  Each bin is
   searched for a solution.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>ndmax = 1000</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='ndmax' Line='ndmax = 1000'>
-  <DD>Maximum number of candidate dispersions to examine.  The algorithm ranks
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>ndmax = 1000</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='ndmax' Line='ndmax = 1000' -->
+  <dd>Maximum number of candidate dispersions to examine.  The algorithm ranks
   candidate dispersions by how many candidate spectral lines are fit and the
   the weights assigned by the pattern matching algorithm.  Starting from
   the highest rank it tests each candidate dispersion to see if it is
   a satisfactory solution.  This parameter determines how many candidate
   dispersion in the ranked list are examined.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>aidord = 3 (minimum of 2)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='aidord' Line='aidord = 3 (minimum of 2)'>
-  <DD>The order of the dispersion function fit by the automatic identification
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>aidord = 3 (minimum of 2)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='aidord' Line='aidord = 3 (minimum of 2)' -->
+  <dd>The order of the dispersion function fit by the automatic identification
   algorithm.  This is the number of polynomial coefficients so
   a value of two is a linear function and a value of three is a quadratic
   function.  The order should be restricted to values of two or three.
   Higher orders can lead to incorrect solutions because of the increased
   degrees of freedom if finding incorrect line identifications.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>maxnl = 0.02</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='maxnl' Line='maxnl = 0.02'>
-  <DD>Maximum non-linearity allowed in any trial dispersion function.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>maxnl = 0.02</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='maxnl' Line='maxnl = 0.02' -->
+  <dd>Maximum non-linearity allowed in any trial dispersion function.
   The definition of the non-linearity test is
-  <P>
-  <PRE>
+  <pre>
       maxnl &gt; (w(0.5) - w(0)) / (w(1) - w(0)) - 0.5
-  </PRE>
-  <P>
+  </pre>
   where w(x) is the dispersion function value (e.g. wavelength) of the fit
   and x is a normalized pixel positions where the endpoints of the spectrum
   are [0,1].  If the test fails on a trial dispersion fit then a linear
   function is determined.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>nfound = 6</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='nfound' Line='nfound = 6'>
-  <DD>Minimum number of identified spectral lines required in the final solution.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>nfound = 6</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='nfound' Line='nfound = 6' -->
+  <dd>Minimum number of identified spectral lines required in the final solution.
   If a candidate solution has fewer identified lines it is rejected.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>sigma = 0.05</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='sigma' Line='sigma = 0.05'>
-  <DD>Sigma (uncertainty) in the line center estimates specified in pixels.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>sigma = 0.05</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='sigma' Line='sigma = 0.05' -->
+  <dd>Sigma (uncertainty) in the line center estimates specified in pixels.
   This is used to propagate uncertainties in the line spacings in
   the observed patterns of lines.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>minratio = 0.1</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='minratio' Line='minratio = 0.1'>
-  <DD>Minimum spacing ratio used.  Patterns of lines in which the ratio of
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>minratio = 0.1</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='minratio' Line='minratio = 0.1' -->
+  <dd>Minimum spacing ratio used.  Patterns of lines in which the ratio of
   spacings between consecutive lines is less than this amount are excluded.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>rms = 0.1</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='rms' Line='rms = 0.1'>
-  <DD>RMS goal for a correct dispersion solution.  This is the RMS in the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>rms = 0.1</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='rms' Line='rms = 0.1' -->
+  <dd>RMS goal for a correct dispersion solution.  This is the RMS in the
   measured spectral lines relative to the expected positions from the
   coordinate line list based on the coordinate dispersion solution.
   The parameter is specified in terms of the line centering parameter
-  <I>fwidth</I> since for broader lines the pixel RMS would be expected
+  <i>fwidth</i> since for broader lines the pixel RMS would be expected
   to be larger.  A pixel-based RMS criterion is used to be independent of
   the dispersion.  The RMS will be small for a valid solution.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>fmatch = 0.2</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='fmatch' Line='fmatch = 0.2'>
-  <DD>Goal for the fraction of unidentified lines in a correct dispersion
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>fmatch = 0.2</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='fmatch' Line='fmatch = 0.2' -->
+  <dd>Goal for the fraction of unidentified lines in a correct dispersion
   solution.  This is the fraction of the strong lines seen in the spectrum
   which are not identified and also the fraction of all lines in the
   coordinate line list, within the range of the dispersion solution, not
   identified.  Both fractions will be small for a valid solution.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>debug = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='debug' Line='debug = ""'>
-  <DD>Print or display debugging information.  This is intended for the developer
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>debug = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='debug' Line='debug = ""' -->
+  <dd>Print or display debugging information.  This is intended for the developer
   and not the user.  The parameter is specified as a string of characters
   where each character displays some information.  The characters are:
-  <P>
-  <PRE>
+  <pre>
       a: Print candidate line assignments.
       b: Print search limits.
       c: Print list of line ratios.
@@ -254,28 +249,27 @@ aidpars — Automatic line identification parameters and algorithm
       t: Print list of target lines.
       v: Print vote array.
       w: Print wavelength bin limits.
-  </PRE>
-  <P>
+  </pre>
   The items with an asterisk are the most useful.  The graphs are exited
-  with <TT>'q'</TT> or <TT>'Q'</TT>.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  The <B>aidpars</B> parameter set contains the parameters for the automatic
-  spectral line identification algorithm used in the task <B>autoidentify</B>,
-  <B>identify</B>, and <B>reidentify</B>.  These tasks include the parameter
-  <I>aidpars</I> which links to this parameters set.  Typing <B>aidpars</B>
+  with <tt>'q'</tt> or <tt>'Q'</tt>.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  The <b>aidpars</b> parameter set contains the parameters for the automatic
+  spectral line identification algorithm used in the task <b>autoidentify</b>,
+  <b>identify</b>, and <b>reidentify</b>.  These tasks include the parameter
+  <i>aidpars</i> which links to this parameters set.  Typing <b>aidpars</b>
   allows these parameters to be edited.  When editing the parameters of the
-  other tasks with <B>eparam</B> one can edit the <B>aidpars</B> parameters by
-  type "<TT>:e</TT>" when pointing to the <I>aidpars</I> task parameter.  The values of
-  the <B>aidpars</B> parameters may also be set on the command line for the
+  other tasks with <b>eparam</b> one can edit the <b>aidpars</b> parameters by
+  type <tt>":e"</tt> when pointing to the <i>aidpars</i> task parameter.  The values of
+  the <b>aidpars</b> parameters may also be set on the command line for the
   task.  The discussion which follows describes the parameters and the
   algorithm.
-  <P>
+  </p>
+  <p>
   The goal of the automatic spectral line identification algorithm is to
   automate the identification of spectral lines so that given an observed
   spectrum of a spectral line source (called the target spectrum) and a file
@@ -285,7 +279,8 @@ aidpars — Automatic line identification parameters and algorithm
   identifications and dispersion function may be found even when there is
   limited or no knowledge of the dispersion coverage and resolution of the
   observation.
-  <P>
+  </p>
+  <p>
   However, when a general line list, including a large dispersion range and
   many weak lines, is used and the observation covers a much smaller portion
   of the coordinate list the algorithm may take a long to time or even fail
@@ -297,112 +292,124 @@ aidpars — Automatic line identification parameters and algorithm
   line strengths need not be very similar (due to different lamps or
   detectors) but will still help separate the inherently weak and strong
   lines.
-  <P>
-  <P>
+  </p>
+  <p>
   The Input
-  <P>
+  </p>
+  <p>
   The primary inputs to the algorithm are the observed one dimensional target
   spectrum in which the spectral lines are to be identified and a dispersion
   function determined and a file of reference dispersion coordinates.  These
   inputs are provided in the tasks using the automatic line identification
   algorithm.
-  <P>
+  </p>
+  <p>
   One way to limit the algorithm to a specific dispersion region and to the
   important spectral lines is to use a limited coordinate list.  One may do
-  this with the task coordinate list parameter (<I>coordlist</I>).  However,
+  this with the task coordinate list parameter (<i>coordlist</i>).  However,
   it is desirable to use a standard master line list that includes all the
   lines, both strong and weak.  Therefore, one may specify a limited line
-  list with the parameter <I>reflist</I>.  The coordinates in this list will
+  list with the parameter <i>reflist</i>.  The coordinates in this list will
   be used by the automatic identification algorithm to search for patterns
   while using the primary coordinate list for adding weaker lines during the
   dispersion function fitting.
-  <P>
-  The tasks <B>autoidentify</B> and <B>identify</B> also provide parameters to
+  </p>
+  <p>
+  The tasks <b>autoidentify</b> and <b>identify</b> also provide parameters to
   limit the search range.  These parameters specify a reference dispersion
-  coordinate (<I>crval</I>) and a dispersion increment per pixel (<I>cdelt</I>).
+  coordinate (<i>crval</i>) and a dispersion increment per pixel (<i>cdelt</i>).
   When these parameters are INDEF this tells the algorithm to search for a
   solution over the entire range of possibilities covering the coordinate
   line list or reference spectrum.
-  <P>
+  </p>
+  <p>
   The reference dispersion coordinate refers to an approximate coordinate at
-  the reference pixel coordinate specified by the parameter <I>crpix</I>.
+  the reference pixel coordinate specified by the parameter <i>crpix</i>.
   The default value for the reference pixel coordinate is INDEF which
   translates to the central pixel of the target spectrum.
-  <P>
-  The parameters <I>crsearch</I> and <I>cdsearch</I> specify the expected range
+  </p>
+  <p>
+  The parameters <i>crsearch</i> and <i>cdsearch</i> specify the expected range
   or uncertainty of the reference dispersion coordinate and dispersion
   increment per pixel respectively.  They may be specified as an absolute
   value or as a fraction.  When the values are positive they are used
   as an absolute value;
-  <P>
-  <PRE>
-      crval(final) = <I>crval</I> +/- <I>crsearch</I>
-      cdelt(final) = <I>cdelt</I> +/- <I>cdsearch</I>.
-  </PRE>
-  <P>
+  </p>
+  <pre>
+      crval(final) = <i>crval</i> +/- <i>crsearch</i>
+      cdelt(final) = <i>cdelt</i> +/- <i>cdsearch</i>.
+  </pre>
+  <p>
   When the values are negative they are used as a fraction of the dispersion
   range or fraction of the dispersion increment;
-  <P>
-  <PRE>
-      crval(final) = <I>crval</I> +/- abs (<I>crsearch</I> * <I>cdelt</I>) * N_pix
-      cdelt(final) = <I>cdelt</I> +/- abs (<I>cdsearch</I> * <I>cdelt</I>)
-  </PRE>
-  <P>
+  </p>
+  <pre>
+      crval(final) = <i>crval</i> +/- abs (<i>crsearch</i> * <i>cdelt</i>) * N_pix
+      cdelt(final) = <i>cdelt</i> +/- abs (<i>cdsearch</i> * <i>cdelt</i>)
+  </pre>
+  <p>
   where abs is the absolute value function and N_pix is the number of pixels
   in the target spectrum.  When the ranges are not given explicitly, that is
   they are specified as INDEF, default values of -0.1 are used.
-  <P>
-  The parameters <I>crval</I>, <I>cdelt</I>, <I>crpix</I>, <I>crsearch</I>,
-  and <I>cdsearch</I> may be given explicit numerical values or may
+  </p>
+  <p>
+  The parameters <i>crval</i>, <i>cdelt</i>, <i>crpix</i>, <i>crsearch</i>,
+  and <i>cdsearch</i> may be given explicit numerical values or may
   be image header keyword names.  In the latter case the values of the
   indicated keywords are used.  This feature allows the approximate
   dispersion range information to be provided by the data acquisition
   system; either by the instrumentation or by user input.
-  <P>
+  </p>
+  <p>
   Because sometimes only the approximate magnitude of the dispersion
   increment is known and not the sign (i.e. whether the dispersion
   coordinates increase or decrease with increasing pixel coordinates)
-  the parameter <I>cdsign</I> specifies if the dispersion direction is
-  "<TT>increasing</TT>", "<TT>decreasing</TT>", "<TT>unknown</TT>", or defined by the "<TT>sign</TT>" of the
-  approximate dispersion increment parameter (sign of <I>cdelt</I>).
-  <P>
+  the parameter <i>cdsign</i> specifies if the dispersion direction is
+  <tt>"increasing"</tt>, <tt>"decreasing"</tt>, <tt>"unknown"</tt>, or defined by the <tt>"sign"</tt> of the
+  approximate dispersion increment parameter (sign of <i>cdelt</i>).
+  </p>
+  <p>
   The above parameters defining the approximate dispersion of the target
-  spectrum apply to <I>autoidentify</I> and <I>identify</I>.  The task
-  <B>reidentify</B> does not use these parameters except that the <I>shift</I>
-  parameter corresponds to <I>crsearch</I> if it is non-zero.  This task
+  spectrum apply to <i>autoidentify</i> and <i>identify</i>.  The task
+  <b>reidentify</b> does not use these parameters except that the <i>shift</i>
+  parameter corresponds to <i>crsearch</i> if it is non-zero.  This task
   assumes that spectra to be reidentified are the same as a reference
   spectrum except for a zero point dispersion offset; i.e. the approximate
   dispersion parameters are the same as the reference spectrum.  The
   dispersion increment search range is set to be 5% and the sign of the
   dispersion increment is the same as the reference spectrum.
-  <P>
+  </p>
+  <p>
   An optional input is a dispersion calibrated reference spectrum (referred to
   as the reference spectrum in the discussion).  This is specified either in
-  the coordinate line list file or by the parameter <I>refspec</I>.  To
-  specify a spectrum in the line list file the comment "<TT># Spectrum &lt;image&gt;</TT>"
+  the coordinate line list file or by the parameter <i>refspec</i>.  To
+  specify a spectrum in the line list file the comment <tt>"# Spectrum &lt;image&gt;"</tt>
   is included where &lt;image&gt; is the image filename of the reference spectrum.
   Some of the standard line lists in linelists$ may include a reference
   spectrum.  The reference spectrum is used to select the strongest lines for
   the pattern matching algorithm.
-  <P>
-  <P>
+  </p>
+  <p>
   The Algorithm
-  <P>
+  </p>
+  <p>
   First a list of the pixel positions for the strong spectral lines in the
   target spectrum is created.  This is accomplished by finding the local
   maxima, sorting them by pixel value, and then using a centering algorithm
-  (<I>center1d</I>) to accurately find the centers of the line profiles.  Note
-  that task parameters <I>ftype</I>, <I>fwidth</I>, <I>cradius</I>,
-  <I>threshold</I>, and <I>minsep</I> are used for the centering.  The number
-  of spectral lines selected is set by the parameter <I>ntarget</I>.
-  <P>
+  (<i>center1d</i>) to accurately find the centers of the line profiles.  Note
+  that task parameters <i>ftype</i>, <i>fwidth</i>, <i>cradius</i>,
+  <i>threshold</i>, and <i>minsep</i> are used for the centering.  The number
+  of spectral lines selected is set by the parameter <i>ntarget</i>.
+  </p>
+  <p>
   In order to insure that lines are selected across the entire spectrum
   when all the strong lines are concentrated in only a part of the
   spectrum, the spectrum is divided into five regions and approximately
   a fifth of the requested number of lines is found in each region.
-  <P>
+  </p>
+  <p>
   A list of reference dispersion coordinates is selected from the coordinate
-  file (<I>coordlist</I> or <I>reflist</I>).  The number of reference
+  file (<i>coordlist</i> or <i>reflist</i>).  The number of reference
   dispersion coordinates is set at twice the number of target lines found.
   The reference coordinates are either selected uniformly from the coordinate
   file or by locating the strong spectral lines (in the same way as for the
@@ -410,24 +417,26 @@ aidpars — Automatic line identification parameters and algorithm
   is limited to the expected range of the dispersion as specified by the
   user.  If no approximate dispersion information is provided the range of
   the coordinate file or reference spectrum is used.
-  <P>
+  </p>
+  <p>
   The ratios of consecutive spacings (the lists are sorted in increasing
   order) for N-tuples of coordinates are computed from both lists.  The size
-  of the N-tuple pattern is set by the <I>npattern</I> parameter.  Rather than
+  of the N-tuple pattern is set by the <i>npattern</i> parameter.  Rather than
   considering all possible combinations of lines only patterns of lines with
-  all members within <I>nneighbors</I> in the lists are used; i.e. the first
-  and last members of a pattern must be within <I>nneighbors</I> of each other
+  all members within <i>nneighbors</i> in the lists are used; i.e. the first
+  and last members of a pattern must be within <i>nneighbors</i> of each other
   in the lists.  The default case is to find all sets of five lines which are
   within ten lines of each other and compute the three spacing ratios.
   Because very small spacing ratios become uncertain, the line patterns are
   limited to those with ratios greater than the minimum specified by the
-  <I>minratio</I> parameter.  Note that if the direction of the dispersion is
+  <i>minratio</i> parameter.  Note that if the direction of the dispersion is
   unknown then one computes the ratios in the reference coordinates in both
   directions.
-  <P>
+  </p>
+  <p>
   The basic idea is that similar patterns in the pixel list and the
   dispersion list will have matching spacing ratios to within a tolerance
-  derived by the uncertainties in the line positions (<I>sigma</I>) from the
+  derived by the uncertainties in the line positions (<i>sigma</i>) from the
   target spectrum.  The reference dispersion coordinates are assumed to have
   no uncertainty.  All matches in the ratio space are found between patterns
   in the two lists.  When matches are made then the candidate identifications
@@ -438,32 +447,35 @@ aidpars — Automatic line identification parameters and algorithm
   (of order 25% of the shorter list) then true identifications will appear in
   common in many different patterns.  Thus the highest counts of candidate
   identifications are the most likely to be true identifications.
-  <P>
+  </p>
+  <p>
   Because the relationship between the pixel positions of the lines in the
   target spectrum and the line positions in the reference coordinate space
   is generally non-linear the line spacing ratios are distorted and may
   reduce the pattern matching.  The line patterns are normally restricted
-  to be somewhat near each other by the <I>nneighbors</I> so some degree of
+  to be somewhat near each other by the <i>nneighbors</i> so some degree of
   distortion can be tolerated.  But in order to provide the ability to remove
-  some of this distortion when it is known the parameter <I>crquad</I> is
+  some of this distortion when it is known the parameter <i>crquad</i> is
   provided.  This parameter applies a quadratic transformation to the measured
-  pixel positions to another set of "<TT>linearized</TT>" positions  which are used
+  pixel positions to another set of <tt>"linearized"</tt> positions  which are used
   in the line ratio pattern matching.  The form of the transformation is
-  <P>
-  <PRE>
+  </p>
+  <pre>
       x' = x + crquad * (x - crpix)**2
-  </PRE>
-  <P>
+  </pre>
+  <p>
   where x is the measured position, x' is the transformed position,
   crquad is the value of the distortion parameter, and crpix is the value
   of the coordinate reference position.
-  <P>
+  </p>
+  <p>
   If approximate dispersion parameters and search ranges are defined then
   candidate identifications which fall outside the range of dispersion
   function possibilities are rejected.  From the remaining candidate
   identifications the highest vote getters are selected.  The number selected
   is three times the number of target lines.
-  <P>
+  </p>
+  <p>
   All linear dispersions functions, where dispersion and pixel coordinates
   are related by a zero point and slope, are found that pass within two
   pixels of two or more of the candidate identifications.  The dispersion
@@ -471,29 +483,31 @@ aidpars — Automatic line identification parameters and algorithm
   fitting the dispersion and secondarily by the total votes in the
   identifications.  Only the highest ranking candidate linear dispersion
   are kept.  The number of candidate dispersions kept is set by the
-  parameter <I>ndmax</I>.
-  <P>
+  parameter <i>ndmax</i>.
+  </p>
+  <p>
   The candidate dispersions are evaluated in order of their ranking.  Each
-  line in the coordinate file (<I>coordlist</I>) is converted to a pixel
+  line in the coordinate file (<i>coordlist</i>) is converted to a pixel
   coordinate based on the dispersion function.  The centering algorithm
   attempts to find a line profile near that position as defined by the
-  <I>match</I> parameter.  This may be specified in pixel or dispersion
+  <i>match</i> parameter.  This may be specified in pixel or dispersion
   coordinates.  All the lines found are used to fit a polynomial dispersion
-  function with <I>aidord</I> coefficients.  The order should be linear or
+  function with <i>aidord</i> coefficients.  The order should be linear or
   quadratic because otherwise the increased degrees of freedom allow
   unrealistic dispersion functions to appear to give a good result.  A
-  quadratic function (<I>aidord</I> = 3) is allowed since this is the
+  quadratic function (<i>aidord</i> = 3) is allowed since this is the
   approximate form of many dispersion functions.
-  <P>
+  </p>
+  <p>
   However, to avoid unrealistic dispersion functions a test is made that
   the maximum amplitude deviation from a linear function is less than
-  an amount specified by the <I>maxnl</I> parameter.  The definition of
+  an amount specified by the <i>maxnl</i> parameter.  The definition of
   the test is
-  <P>
-  <PRE>
+  </p>
+  <pre>
       maxnl &gt; (w(0.5) - w(0)) / (w(1) - w(0)) - 0.5
-  </PRE>
-  <P>
+  </pre>
+  <p>
   where w(x) is the dispersion function value (e.g. wavelength) of the fit
   and x is a normalized pixel positions where the endpoints of the spectrum
   are [0,1].  What this relation means is that the wavelength interval
@@ -502,30 +516,33 @@ aidpars — Automatic line identification parameters and algorithm
   is fit.  The process of adding lines based on the last dispersion function
   and then refitting the dispersion function is iterated twice.  At the end
   of this step if fewer than the number of lines specified by the parameter
-  <I>nfound</I> have been identified the candidate dispersion is eliminated.
-  <P>
+  <i>nfound</i> have been identified the candidate dispersion is eliminated.
+  </p>
+  <p>
   The quality of the line identifications and dispersion solution is
   evaluated based on three criteria.  The first one is the root-mean-square
   of the residuals between the pixel coordinates derived from lines found
   from the dispersion coordinate file based on the dispersion function and
   the observed pixel coordinates.  This pixel RMS is normalized by the target
-  RMS set with the <I>rms</I> parameter.  Note that the <I>rms</I> parameter
-  is specified in units of the <I>fwidth</I> parameter.  This is because if
+  RMS set with the <i>rms</i> parameter.  Note that the <i>rms</i> parameter
+  is specified in units of the <i>fwidth</i> parameter.  This is because if
   the lines are broader, requiring a larger fwidth to obtain a centroid,
   then the expected uncertainty would be larger.  A good solution will have
   a normalized rms value less than one.  A pixel RMS criterion, as opposed
   to a dispersion coordinate RMS, is used since this is independent of the
   actual dispersion of the spectrum.
-  <P>
+  </p>
+  <p>
   The other two criteria are the fraction of strong lines from the target
   spectrum list which were not identified with lines in the coordinate file
   and the fraction of all the lines in the coordinate file (within the
   dispersion range covered by the candidate dispersion) which were not
-  identified.  These are normalized to a target value given by <I>fmatch</I>.
+  identified.  These are normalized to a target value given by <i>fmatch</i>.
   The default matching goal is 0.3 which means that less than 30% of
   the lines should be unidentified or greater than 70% should be identified.
   As with the RMS, a value of one or less corresponds to a good solution.
-  <P>
+  </p>
+  <p>
   The reason the fraction identified criteria are used is that the pixel RMS
   can be minimized by finding solutions with large dispersion increment per
   pixel.  This puts all the lines in the coordinate file into a small range
@@ -539,7 +556,8 @@ aidpars — Automatic line identification parameters and algorithm
   large number of lines from the coordinate file.  However, an incorrect
   dispersion will also find a large number which are not matched.  Hence the
   fraction not matched will be high.
-  <P>
+  </p>
+  <p>
   The three criteria, all of which are normalized so that values less
   than one are good, are combined to a single figure of merit by a weighted
   average.  Equal weights have been found to work well; i.e. each criterion
@@ -547,13 +565,15 @@ aidpars — Automatic line identification parameters and algorithm
   correct solutions over a wide range of resolutions and dispersion coverage
   have figures of merit less than one and typically of order 0.2.  All
   incorrect candidate dispersion have values of order two to three.
-  <P>
+  </p>
+  <p>
   The search for the correct dispersion function terminates immediately,
   but after checking the first five most likely candidates, when
   a figure of merit less than one is found.  The order in which the candidate
   dispersions are tested, that is by rank, was chosen to try the most promising
   first so that often the correct solution is found on the first attempt.
-  <P>
+  </p>
+  <p>
   When the approximate dispersion is not known or is imprecise it is
   often the case that the pixel and coordinate lists will not overlap
   enough to have a sufficient number true coordinate pairs.  Thus, at a
@@ -561,24 +581,27 @@ aidpars — Automatic line identification parameters and algorithm
   space searched into bins of various sizes.  The largest size is the
   maximum dispersion range including allowance for the search radii.
   The smallest size bin is obtained by dividing the dispersion range by
-  the number specified by the <I>nbins</I> parameter.  The actual number
+  the number specified by the <i>nbins</i> parameter.  The actual number
   of bins searched at each bin size is actually twice the number of
   bins minus one because the bins are overlapped by 50%.
-  <P>
+  </p>
+  <p>
   The search is done starting with bins in the middle of the size range and
   in the middle of the dispersion range and working outward towards larger
   and smaller bins and larger and smaller dispersion ranges.  This is done to
   improved the chances of finding the correction dispersion function in the
   smallest number of steps.
-  <P>
+  </p>
+  <p>
   Another iteration performed if no solution is found after trying all the
   candidate dispersion and bins is to reduce the number of lines in the
-  pattern.  So the parameter <I>npattern</I> is an initial maximum pattern.
+  pattern.  So the parameter <i>npattern</i> is an initial maximum pattern.
   A larger pattern gives fewer and higher quality candidate identifications
   and so converges faster.  However, if no solution is found the algorithm
   tries more possible matches produced by a lower number of lines in
   the pattern.  The pattern groups are reduced to a minimum of three lines.
-  <P>
+  </p>
+  <p>
   When a set of line identifications and dispersion solution satisfying the
   figure of merit criterion is found a final step is performed.
   Up to this point only linear dispersion functions are used since higher order
@@ -590,74 +613,73 @@ aidpars — Automatic line identification parameters and algorithm
   more general dispersion function and then obtain a final dispersion
   function.  The line identifications and dispersion function are then
   returned to the task using this automatic line identification algorithm.
-  <P>
+  </p>
+  <p>
   If a satisfactory  solution is not found after searching all the
   possibilities the algorithm will inform the task using it and the task will
   report this appropriately.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. List the parameters.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; lpar aidpars
-  </PRE>
-  <P>
-  2. Edit the parameters with <B>eparam</B>.
-  <P>
-  <PRE>
+  </pre>
+  <p>
+  2. Edit the parameters with <b>eparam</b>.
+  </p>
+  <pre>
       cl&gt; aidpars
-  </PRE>
-  <P>
-  3. Edit the <B>aidpars</B> parameters from within <B>autoidentify</B>.
-  <P>
-  <PRE>
+  </pre>
+  <p>
+  3. Edit the <b>aidpars</b> parameters from within <b>autoidentify</b>.
+  </p>
+  <pre>
       cl&gt; epar autoid
   	[edit the parameters]
   	[move to the "aidpars" parameter and type :e]
   	[edit the aidpars parameters and type :q or EOF character]
   	[finish editing the autoidentify parameters]
   	[type :wq or the EOF character]
-  </PRE>
-  <P>
+  </pre>
+  <p>
   4. Set one of the parameters on the command line.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; autoidentify spec002 5400 2.5 crpix=1
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Revisions</H3>
-  <! BeginSection: 'REVISIONS'>
-  <UL>
-  <DL>
-  <DT><B>AIDPARS V2.12.2</B></DT>
-  <! Sec='REVISIONS' Level=0 Label='AIDPARS' Line='AIDPARS V2.12.2'>
-  <DD>There were many changes made in the paramters and algorithm.  New parameters
-  are "<TT>crquad</TT>" and "<TT>maxnl</TT>".  Changed definitions are for "<TT>rms</TT>".  Default
-  value changes are for "<TT>cddir</TT>", "<TT>ntarget</TT>", "<TT>ndmax</TT>", and "<TT>fmatch</TT>".  The most
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Revisions</h3>
+  <!-- BeginSection: 'REVISIONS' -->
+  <dl>
+  <dt><b>AIDPARS V2.12.2</b></dt>
+  <!-- Sec='REVISIONS' Level=0 Label='AIDPARS' Line='AIDPARS V2.12.2' -->
+  <dd>There were many changes made in the paramters and algorithm.  New parameters
+  are <tt>"crquad"</tt> and <tt>"maxnl"</tt>.  Changed definitions are for <tt>"rms"</tt>.  Default
+  value changes are for <tt>"cddir"</tt>, <tt>"ntarget"</tt>, <tt>"ndmax"</tt>, and <tt>"fmatch"</tt>.  The most
   significant changes in the algorithm are to allow for more non-linear
-  dispersion with the "<TT>maxnl</TT>" parameter, to decrease the "<TT>npattern</TT>" value
+  dispersion with the <tt>"maxnl"</tt> parameter, to decrease the <tt>"npattern"</tt> value
   if no solution is found with the specified value, and to search a larger
   number of candidate dispersions.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>AIDPARS V2.11</B></DT>
-  <! Sec='REVISIONS' Level=0 Label='AIDPARS' Line='AIDPARS V2.11'>
-  <DD>This parameter set is new in this version.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'REVISIONS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>AIDPARS V2.11</b></dt>
+  <!-- Sec='REVISIONS' Level=0 Label='AIDPARS' Line='AIDPARS V2.11' -->
+  <dd>This parameter set is new in this version.
+  </dd>
+  </dl>
+  <!-- EndSection:   'REVISIONS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   autoidentify, identify, reidentify, center1d
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'SUMMARY' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'SUMMARY' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

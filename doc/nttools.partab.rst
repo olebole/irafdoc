@@ -1,108 +1,105 @@
 .. _partab:
 
-partab — Transfer an IRAF parameter to a table element.
-=======================================================
+partab: Transfer an IRAF parameter to a table element.
+======================================================
 
 **Package: nttools**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   partab -- Copy an IRAF parameter to a table element.
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   partab value table column row
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   This task changes the value of a table element to the value of the input
-  parameter 'value'.  If 'value' is set to "<TT>INDEF</TT>", the table element will be
+  parameter 'value'.  If 'value' is set to <tt>"INDEF"</tt>, the table element will be
   set to undefined.  If the data type of the table element is different from
   that of the input parameter 'value', this task will perform 
   type conversion.  The strings
-  "<TT>yes</TT>", "<TT>y</TT>", "<TT>no</TT>", "<TT>n</TT>", "<TT>true</TT>", "<TT>t</TT>", "<TT>false</TT>", and "<TT>f</TT>", in either upper or
+  <tt>"yes"</tt>, <tt>"y"</tt>, <tt>"no"</tt>, <tt>"n"</tt>, <tt>"true"</tt>, <tt>"t"</tt>, <tt>"false"</tt>, and <tt>"f"</tt>, in either upper or
   lower case are interpreted as boolean values.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>value [string]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='value' Line='value [string]'>
-  <DD>The IRAF parameter that will be copied into the table element.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>table [file name]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='table' Line='table [file name]'>
-  <DD>Name of the table.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>column [string]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='column' Line='column [string]'>
-  <DD>Column name. (Column names are not case sensitive).
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>row [integer, min=1, max=INDEF]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='row' Line='row [integer, min=1, max=INDEF]'>
-  <DD>Row number.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>value [string]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='value' Line='value [string]' -->
+  <dd>The IRAF parameter that will be copied into the table element.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>table [file name]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='table' Line='table [file name]' -->
+  <dd>Name of the table.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>column [string]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='column' Line='column [string]' -->
+  <dd>Column name. (Column names are not case sensitive).
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>row [integer, min=1, max=INDEF]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='row' Line='row [integer, min=1, max=INDEF]' -->
+  <dd>Row number.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Set the twelfth component (i.e., row 12 of column 'COMPNAME') 
-  in the file 'graph.tab' to "<TT>FILTER1</TT>":
-  <P>
-  <PRE>
+  in the file 'graph.tab' to <tt>"FILTER1"</tt>:
+  </p>
+  <pre>
   tt&gt; partab FILTER1 graph.tab COMPNAME 12
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. Set the first wavelength (i.e., row 1 of column 'WAVELENGTH') in 
   the file 'spectrum.tab' to the value contained in parameter
-  <TT>'x'</TT>:
-  <P>
-  <PRE>
+  <tt>'x'</tt>:
+  </p>
+  <pre>
   tt&gt; partab (x) spectrum.tab WAVELENGTH 1
-  </PRE>
-  <P>
+  </pre>
+  <p>
   3. Set the hundreth wavelength (i.e., row 100 of column 'WAVELENGTH')
   in 'spectrum.tab' to undefined:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   tt&gt; partab INDEF spectrum.tab WAVELENGTH 100
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>References</H3>
-  <! BeginSection: 'REFERENCES'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <!-- EndSection:   'BUGS' -->
+  <h3>References</h3>
+  <!-- BeginSection: 'REFERENCES' -->
+  <p>
   This task was written by Bernie Simon.
-  </UL>
-  <! EndSection:   'REFERENCES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'REFERENCES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   keypar, keytab, parkey, tabkey, tabpar
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

@@ -1,91 +1,91 @@
 .. _skyctran:
 
-skyctran — Transform coordinates from one celestial wcs to another
-==================================================================
+skyctran: Transform coordinates from one celestial wcs to another
+=================================================================
 
 **Package: imcoords**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   skyctran -- convert astronomical coordinates from one system to another
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   skyctran input output insystem outsystem
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
-  <DD>The source of the input coordinates. The options are:
-  <DL>
-  <DT><B>&lt;filename&gt;</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='' Line='&lt;filename&gt;'>
-  <DD>The list of input coordinate files. Coordinates may be entered by hand by
-  setting input to "<TT>STDIN</TT>". A STDIN coordinate list is terminated by typing
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
+  <dd>The source of the input coordinates. The options are:
+  <dl>
+  <dt><b>&lt;filename&gt;</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='' Line='&lt;filename&gt;' -->
+  <dd>The list of input coordinate files. Coordinates may be entered by hand by
+  setting input to <tt>"STDIN"</tt>. A STDIN coordinate list is terminated by typing
   q or &lt;EOF&gt; (usually &lt;ctrl/d&gt; or &lt;ctrl/z&gt;).
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>imcursor</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='imcursor' Line='imcursor'>
-  <DD>If the input file name is equal to the reserved keyword "<TT>imcursor</TT>" the input
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>imcursor</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='imcursor' Line='imcursor' -->
+  <dd>If the input file name is equal to the reserved keyword <tt>"imcursor"</tt> the input
   coordinates are read from the image cursor and the input coordinate system
   is the coordinate system of the image specified by the insystem parameter.
   The coordinate list is terminated by typing q or  &lt;EOF&gt; (usually &lt;ctrl/d&gt; or
   &lt;ctr/z&gt;).
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>grid</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='grid' Line='grid'>
-  <DD>If the input file name is equal to the reserved
-  keyword "<TT>grid</TT>", an <I>nilng</I> by <I>nilat</I> grid of equally spaced
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>grid</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='grid' Line='grid' -->
+  <dd>If the input file name is equal to the reserved
+  keyword <tt>"grid"</tt>, an <i>nilng</i> by <i>nilat</i> grid of equally spaced
   input coordinates
-  is generating spanning the region defined by <I>ilngmin</I>, <I>ilngmax</I>,
-  <I>ilatmin</I>, <I>ilatmax</I>.
-  </DD>
-  </DL>
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
-  <DD>The list of output coordinate files. The number of output files must be
+  is generating spanning the region defined by <i>ilngmin</i>, <i>ilngmax</i>,
+  <i>ilatmin</i>, <i>ilatmax</i>.
+  </dd>
+  </dl>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
+  <dd>The list of output coordinate files. The number of output files must be
   equal to one or the number of input files. Results may be printed on the
-  terminal by setting output to "<TT>STDOUT</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>insystem, outsystem</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='insystem' Line='insystem, outsystem'>
-  <DD>The input and output celestial coordinate systems. The options are
+  terminal by setting output to <tt>"STDOUT"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>insystem, outsystem</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='insystem' Line='insystem, outsystem' -->
+  <dd>The input and output celestial coordinate systems. The options are
   the following:
-  <DL>
-  <DT><B>&lt;imagename&gt; [wcs]</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='' Line='&lt;imagename&gt; [wcs]'>
-  <DD>The celestial coordinate system is the world coordinate system of the image
+  <dl>
+  <dt><b>&lt;imagename&gt; [wcs]</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='' Line='&lt;imagename&gt; [wcs]' -->
+  <dd>The celestial coordinate system is the world coordinate system of the image
   &lt;imagename&gt; and the input or output pixel coordinates may be in the
-  "<TT>logical</TT>", "<TT>tv</TT>", "<TT>physical</TT>" or "<TT>world</TT>" coordinate systems. If wcs is not
-  specified "<TT>logical</TT>" is assumed, unless the input coordinates are read from the
-  image cursor, in which case "<TT>tv</TT>" is assumed. The image celestial coordinate
+  <tt>"logical"</tt>, <tt>"tv"</tt>, <tt>"physical"</tt> or <tt>"world"</tt> coordinate systems. If wcs is not
+  specified <tt>"logical"</tt> is assumed, unless the input coordinates are read from the
+  image cursor, in which case <tt>"tv"</tt> is assumed. The image celestial coordinate
   system must be one of the valid FITS celestial coordinate systems:
   equatorial (FK4, FK4-NO-E, FK5, ICRS, or GAPPT), ecliptic, galactic, or
   supergalactic.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>icrs [equinox] [epoch]</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='icrs' Line='icrs [equinox] [epoch]'>
-  <DD>The International Celestial Reverence System where equinox is
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>icrs [equinox] [epoch]</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='icrs' Line='icrs [equinox] [epoch]' -->
+  <dd>The International Celestial Reverence System where equinox is
   a Julian or Besselian epoch e.g. J2000.0  or B1980.0.
   Equinoxes without the J / j or B / b prefix are treated as Julian epochs.
   The default value of equinox is J2000.0.
@@ -94,12 +94,12 @@ skyctran — Transform coordinates from one celestial wcs to another
   Epochs without the J / j or B / b prefix default to Julian epochs
   if the epoch value &lt;= 3000.0, otherwise epoch is interpreted as
   a Julian date.  If undefined epoch defaults to equinox.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>equinox [epoch]</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='equinox' Line='equinox [epoch]'>
-  <DD>The equatorial mean place post-IAU 1976 (FK5) system if equinox is a
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>equinox [epoch]</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='equinox' Line='equinox [epoch]' -->
+  <dd>The equatorial mean place post-IAU 1976 (FK5) system if equinox is a
   Julian epoch, e.g. J2000.0 or 2000.0, or the equatorial mean place
   pre-IAU 1976 system (FK4) if equinox is a Besselian epoch, e.g. B1950.0
   or 1950.0. Julian equinoxes are prefixed by a J or j, Besselian equinoxes
@@ -111,12 +111,12 @@ skyctran — Transform coordinates from one celestial wcs to another
   Epochs without the J / j or B / b prefix default to the epoch type of
   equinox if the epoch value &lt;= 3000.0, otherwise epoch is interpreted as
   a Julian date.  If undefined epoch defaults to equinox.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>fk5 [equinox] [epoch] </B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='fk5' Line='fk5 [equinox] [epoch] '>
-  <DD>The equatorial mean place post-IAU 1976 (FK5) system where equinox is
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>fk5 [equinox] [epoch] </b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='fk5' Line='fk5 [equinox] [epoch] ' -->
+  <dd>The equatorial mean place post-IAU 1976 (FK5) system where equinox is
   a Julian or Besselian epoch e.g. J2000.0  or B1980.0.
   Equinoxes without the J / j or B / b prefix are treated as Julian epochs.
   The default value of equinox is J2000.0.
@@ -125,12 +125,12 @@ skyctran — Transform coordinates from one celestial wcs to another
   Epochs without the J / j or B / b prefix default to Julian epochs
   if the epoch value &lt;= 3000.0, otherwise epoch is interpreted as
   a Julian date.  If undefined epoch defaults to equinox.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>fk4 [equinox] [epoch]</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='fk4' Line='fk4 [equinox] [epoch]'>
-  <DD>The equatorial mean place pre-IAU 1976 (FK4) system where equinox is a
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>fk4 [equinox] [epoch]</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='fk4' Line='fk4 [equinox] [epoch]' -->
+  <dd>The equatorial mean place pre-IAU 1976 (FK4) system where equinox is a
   Besselian or Julian epoch e.g. B1950.0  or J2000.0,
   and epoch is the Besselian epoch, the Julian epoch, or the Julian date of the
   observation.
@@ -141,12 +141,12 @@ skyctran — Transform coordinates from one celestial wcs to another
   Epochs without the J / j or B / b prefix default to Besselian epochs
   if the epoch value &lt;= 3000.0, otherwise epoch is interpreted as
   a Julian date.  If undefined epoch defaults to equinox.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>noefk4 [equinox] [epoch]</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='noefk4' Line='noefk4 [equinox] [epoch]'>
-  <DD>The equatorial mean place pre-IAU 1976 (FK4) system but without the E-terms
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>noefk4 [equinox] [epoch]</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='noefk4' Line='noefk4 [equinox] [epoch]' -->
+  <dd>The equatorial mean place pre-IAU 1976 (FK4) system but without the E-terms
   where equinox is a Besselian or Julian epoch e.g. B1950.0 or J2000.0,
   and epoch is the Besselian epoch, the Julian epoch, or the Julian date of the
   observation.
@@ -157,12 +157,12 @@ skyctran — Transform coordinates from one celestial wcs to another
   Epochs without the J / j or B / b prefix default to Besselian epochs
   if the epoch value &lt;= 3000.0, otherwise epoch is interpreted as
   a Julian day.  If undefined epoch defaults to equinox.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>apparent epoch </B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='apparent' Line='apparent epoch '>
-  <DD>The equatorial geocentric apparent place post-IAU 1976 system where
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>apparent epoch </b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='apparent' Line='apparent epoch ' -->
+  <dd>The equatorial geocentric apparent place post-IAU 1976 system where
   epoch is the epoch of observation.
   Epoch is a Besselian epoch, a Julian epoch or a Julian date.
   Julian epochs are prefixed by a J or j, Besselian epochs by a B or b.
@@ -170,228 +170,222 @@ skyctran — Transform coordinates from one celestial wcs to another
   epochs if the epoch value &lt; 1984.0, Julian epochs
   if the epoch value &lt;= 3000.0, otherwise epoch is interpreted as
   a Julian date.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>ecliptic epoch</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='ecliptic' Line='ecliptic epoch'>
-  <DD>The ecliptic coordinate system where epoch is the epoch of observation.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>ecliptic epoch</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='ecliptic' Line='ecliptic epoch' -->
+  <dd>The ecliptic coordinate system where epoch is the epoch of observation.
   Epoch is a Besselian epoch, a Julian epoch, or a Julian date.
   Julian epochs are prefixed by a J or j, Besselian epochs by a B or b.
   Epochs without the J / j or B / b prefix default to Besselian epochs
   if the epoch values &lt; 1984.0, Julian epochs
   if the epoch value &lt;= 3000.0, otherwise epoch is interpreted as
   a Julian day.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>galactic [epoch]</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='galactic' Line='galactic [epoch]'>
-  <DD>The IAU 1958 galactic coordinate system.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>galactic [epoch]</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='galactic' Line='galactic [epoch]' -->
+  <dd>The IAU 1958 galactic coordinate system.
   Epoch is a Besselian epoch, a Julian epoch or a Julian date.
   Julian epochs are prefixed by a J or j, Besselian epochs by a B or b.
   Epochs without the J / j or B / b prefix default to Besselian
   epochs if the epoch value &lt; 1984.0, Julian epochs
   if the epoch value &lt;= 3000.0, otherwise epoch is interpreted as
   a Julian date. The default value of epoch is B1950.0.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>supergalactic [epoch]</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='supergalactic' Line='supergalactic [epoch]'>
-  <DD>The deVaucouleurs supergalactic coordinate system.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>supergalactic [epoch]</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='supergalactic' Line='supergalactic [epoch]' -->
+  <dd>The deVaucouleurs supergalactic coordinate system.
   Epoch is a Besselian epoch, a Julian epoch or a Julian date.
   Julian epochs are prefixed by a J or j, Besselian epochs by a B or b.
   Epochs without the J / j or B / b prefix default to Besselian
   epochs if the epoch value &lt; 1984.0, Julian epochs
   if the epoch value &lt;= 3000.0, otherwise epoch is interpreted as
   a Julian date. The default value of epoch is B1950.0.
-  </DD>
-  </DL>
-  <P>
+  </dd>
+  </dl>
   In all the above cases fields in [] are optional with the defaults as
   described. The epoch field for fk5, icrs, galactic, and supergalactic
   coordinate systems is required only if the input coordinates are in the
   equatorial fk4, noefk4, fk5, or icrs systems and proper motions are defined.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>transform = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='transform' Line='transform = no'>
-  <DD>If transform = no the computed output coordinates are appended to the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>transform = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='transform' Line='transform = no' -->
+  <dd>If transform = no the computed output coordinates are appended to the
   input line and the new extended line is written to the output file. If
   transform = yes the computed output coordinates replace
   the input coordinates in the input line and the edited line is written
-  to the output file. Transform is always set to "<TT>no</TT>" if the input
+  to the output file. Transform is always set to <tt>"no"</tt> if the input
   is from the unredirected standard input.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>lngcolumn = 1, latcolumn = 2</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='lngcolumn' Line='lngcolumn = 1, latcolumn = 2'>
-  <DD>The columns in the input file containing the x/ra/longitude and
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>lngcolumn = 1, latcolumn = 2</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='lngcolumn' Line='lngcolumn = 1, latcolumn = 2' -->
+  <dd>The columns in the input file containing the x/ra/longitude and
   y/dec/latitude coordinates. Lngcolumn and latcolumn are always 1 and
   2 if the input is from the unredirected standard input.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>plngcolumn = INDEF, platcolumn = INDEF</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='plngcolumn' Line='plngcolumn = INDEF, platcolumn = INDEF'>
-  <DD>The columns in the input file containing the ra and dec proper motions
-  in " / year. If plngcolumn and platcolumn are INDEF the proper motions
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>plngcolumn = INDEF, platcolumn = INDEF</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='plngcolumn' Line='plngcolumn = INDEF, platcolumn = INDEF' -->
+  <dd>The columns in the input file containing the ra and dec proper motions
+  in arcsec / year. If plngcolumn and platcolumn are INDEF the proper motions
   are assumed to be undefined. Proper motions
   are used only if the input coordinate system is equatorial fk4, noefk4,
   fk5, or icrs.  Plngcolumn and platcolumn are always 3 and 4 if the input is from
   the unredirected standard input.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>pxcolumn = INDEF, rvcolumn = INDEF</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='pxcolumn' Line='pxcolumn = INDEF, rvcolumn = INDEF'>
-  <DD>The columns in the input file containing the parallax and radial velocity in
-  in "<TT> and km / sec respectively. If pxcolumn and rvcolumn are INDEF, the 
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>pxcolumn = INDEF, rvcolumn = INDEF</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='pxcolumn' Line='pxcolumn = INDEF, rvcolumn = INDEF' -->
+  <dd>The columns in the input file containing the parallax and radial velocity in
+  in arcsec and km / sec respectively. If pxcolumn and rvcolumn are INDEF, the 
   parallax and radial velocities are assumed to be 0.0 and 0.0.
   Parallaxes and radial velocities are only used if proper motions are
   defined. Pxcolumn and rvcolumn are always 5 and 6 if the input is from the
   unredirected standard input.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>ilngmin = INDEF, ilngmax = INDEF, ilatmin = INDEF, ilatmax = INDEF </B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='ilngmin' Line='ilngmin = INDEF, ilngmax = INDEF, ilatmin = INDEF, ilatmax = INDEF '>
-  <DD>The lower and upper limits of the coordinate grid if <I>input</I> =
-  "<TT>grid</TT>".
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>ilngmin = INDEF, ilngmax = INDEF, ilatmin = INDEF, ilatmax = INDEF </b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='ilngmin' Line='ilngmin = INDEF, ilngmax = INDEF, ilatmin = INDEF, ilatmax = INDEF ' -->
+  <dd>The lower and upper limits of the coordinate grid if <i>input</i> =
+  <tt>"grid"</tt>.
   Ilngmin and ilngmax default to 1.0, 1.0, 0.0, 0.0, 0.0 and, 2048.0, ncols, 24.0,
   360.0, and TWOPI for coordinates in units of INDEF, pixels, hours, degrees,
   and radians respectively. Ilatmin and ilatmax default to 1.0, 1.0,
   -90.0, -90.0, -HALFPI and, 2048.0, nlines, 90.0, 90.0, and HALFPI
   for units of INDEF, pixels, degrees, degrees, and radians respectively.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>nilng = 10, nilat = 10</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='nilng' Line='nilng = 10, nilat = 10'>
-  <DD>The size of the computed coordinate grid if <I>input</I> = "<TT>grid</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>ilngunits = "<TT></TT>", ilatunits = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='ilngunits' Line='ilngunits = "", ilatunits = ""'>
-  <DD>The units of the input ra/longitude and dec/latitude coordinates.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>nilng = 10, nilat = 10</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='nilng' Line='nilng = 10, nilat = 10' -->
+  <dd>The size of the computed coordinate grid if <i>input</i> = <tt>"grid"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>ilngunits = <tt>""</tt>, ilatunits = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='ilngunits' Line='ilngunits = "", ilatunits = ""' -->
+  <dd>The units of the input ra/longitude and dec/latitude coordinates.
   The options are:
-  <DL>
-  <DT><B>hours</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='hours' Line='hours'>
-  <DD>Read the sky coordinates in hours.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>degrees</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='degrees' Line='degrees'>
-  <DD>Read the sky coordinates in degrees.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>radians</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='radians' Line='radians'>
-  <DD>Read the sky coordinates in radians.
-  </DD>
-  </DL>
-  <P>
+  <dl>
+  <dt><b>hours</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='hours' Line='hours' -->
+  <dd>Read the sky coordinates in hours.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>degrees</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='degrees' Line='degrees' -->
+  <dd>Read the sky coordinates in degrees.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>radians</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='radians' Line='radians' -->
+  <dd>Read the sky coordinates in radians.
+  </dd>
+  </dl>
   If the input system is the &lt;imagename&gt; [logical/tv/physical]
   system, pixel units are assumed regardless of the values
   of ilngunits or ilatunits.  The default ilngunits and
   ilatunits values are
   hours and degrees for the equatorial coordinate systems and degrees and
   degrees for the remaining sky coordinate systems.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>ilngformat = "<TT></TT>", ilatformat = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='ilngformat' Line='ilngformat = "", ilatformat = ""'>
-  <DD>The output format of the input x/ra/longitude and y/dec/latitude coordinates
-  if <I>input</I> = "<TT>grid</TT>".
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>ilngformat = <tt>""</tt>, ilatformat = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='ilngformat' Line='ilngformat = "", ilatformat = ""' -->
+  <dd>The output format of the input x/ra/longitude and y/dec/latitude coordinates
+  if <i>input</i> = <tt>"grid"</tt>.
   The options are discussed in the formats section of the help page below.
   If the input coordinate system is the &lt;imagename&gt; [logical/tv/physical]
   system, default formats of %10.3f and %10.3f are assumed regardless
   of the values of ilngunits and ilatunits. Otherwise default formats
-  of %12.3h, %12.2h, and %13.7g are assumed for input units of "<TT>hours</TT>", "<TT>degrees</TT>",
-  and "<TT>radians</TT>" respectively. For values of <I>input</I> other than "<TT>grid</TT>"
+  of %12.3h, %12.2h, and %13.7g are assumed for input units of <tt>"hours"</tt>, <tt>"degrees"</tt>,
+  and <tt>"radians"</tt> respectively. For values of <i>input</i> other than <tt>"grid"</tt>
   the output formats of the input coordinates are the same as the input
   formats.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>olngunits = "<TT></TT>", olatunits = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='olngunits' Line='olngunits = "", olatunits = ""'>
-  <DD>The units of the output ra/longitude and dec/latitude coordinates.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>olngunits = <tt>""</tt>, olatunits = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='olngunits' Line='olngunits = "", olatunits = ""' -->
+  <dd>The units of the output ra/longitude and dec/latitude coordinates.
   The options are:
-  <DL>
-  <DT><B>hours</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='hours' Line='hours'>
-  <DD>Output the sky coordinates in hours.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>degrees</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='degrees' Line='degrees'>
-  <DD>Output the sky coordinates in degrees.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>radians</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='radians' Line='radians'>
-  <DD>Output the sky coordinates in radians.
-  </DD>
-  </DL>
-  <P>
+  <dl>
+  <dt><b>hours</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='hours' Line='hours' -->
+  <dd>Output the sky coordinates in hours.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>degrees</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='degrees' Line='degrees' -->
+  <dd>Output the sky coordinates in degrees.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>radians</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='radians' Line='radians' -->
+  <dd>Output the sky coordinates in radians.
+  </dd>
+  </dl>
   If the output system is the &lt;imagename&gt; [logical/tv/physical]
   system, pixel units are assumed regardless of the values
   of olngunits or olatunits.  The default olngunits and
   olatunits values are
   hours and degrees for the equatorial coordinate systems and degrees and
   degrees for the remaining sky coordinate systems.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>olngformat = "<TT></TT>", olatformat = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='olngformat' Line='olngformat = "", olatformat = ""'>
-  <DD>The format of the computed x/ra/longitude and y/dec/latitude coordinates.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>olngformat = <tt>""</tt>, olatformat = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='olngformat' Line='olngformat = "", olatformat = ""' -->
+  <dd>The format of the computed x/ra/longitude and y/dec/latitude coordinates.
   The options are discussed in the formats section of the help page below.
   If the output coordinate system is the &lt;imagename&gt; [logical/tv/physical]
   system, default formats of %10.3f and %10.3f are assumed regardless
   of the values of olngunits and olatunits. Otherwise default formats
-  of %12.3h, %12.2h, and %13.7g are assumed for output units of "<TT>hours</TT>",
-  "<TT>degrees</TT>", and "<TT>radians</TT>" respectively.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>icommands = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""'>
-  <DD>The default image display cursor.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verbose = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
-  <DD>Print messages about actions taken by the task on the standard output?
-  </DD>
-  </DL>
-  <P>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <P>
+  of %12.3h, %12.2h, and %13.7g are assumed for output units of <tt>"hours"</tt>,
+  <tt>"degrees"</tt>, and <tt>"radians"</tt> respectively.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>icommands = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""' -->
+  <dd>The default image display cursor.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verbose = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
+  <dd>Print messages about actions taken by the task on the standard output?
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   SKYCTRAN converts coordinates in the input files
-  <I>input</I> from the input celestial coordinate system <I>insystem</I>
-  to the output celestial coordinate system <I>outsystem</I> and writes the
-  converted coordinates to the output files <I>output</I>. The input
-  files may be simple text files, the standard input "<TT>STDIN</TT>",
-  the image display cursor "<TT>imcursor</TT>", or a user specified coordinate grid.
+  <i>input</i> from the input celestial coordinate system <i>insystem</i>
+  to the output celestial coordinate system <i>outsystem</i> and writes the
+  converted coordinates to the output files <i>output</i>. The input
+  files may be simple text files, the standard input <tt>"STDIN"</tt>,
+  the image display cursor <tt>"imcursor"</tt>, or a user specified coordinate grid.
   The output files may be simple
-  text files or the standard output "<TT>STDOUT</TT>". SKYCTRAN may be used
+  text files or the standard output <tt>"STDOUT"</tt>. SKYCTRAN may be used
   to change the units of the input coordinates, e.g. from degrees and degrees
   to hours and degrees, to precess the coordinates, to convert from one
   celestial coordinate system to another, e.g. from equatorial to ecliptic
@@ -399,26 +393,29 @@ skyctran — Transform coordinates from one celestial wcs to another
   images whose fundamental coordinate systems are the same but observed at
   different epochs, e.g. FK4 B1950.0 and FK4 B1975.0, or different, e.g.
   equatorial FK4 B1950.0 and galactic.
-  <P>
-  The input data are read from columns <I>lngcolumn</I>, <I>latcolumn</I>,
-  <I>plngcolumn</I>, <I>platcolumn</I>, <I>pxcolumn</I>, and <I>rvcolumn</I>
-  in the input files and if <I>transform</I> = yes, the converted coordinates are
-  written to the same columns in the output files. If <I>transform</I> = "<TT>no</TT>",
+  </p>
+  <p>
+  The input data are read from columns <i>lngcolumn</i>, <i>latcolumn</i>,
+  <i>plngcolumn</i>, <i>platcolumn</i>, <i>pxcolumn</i>, and <i>rvcolumn</i>
+  in the input files and if <i>transform</i> = yes, the converted coordinates are
+  written to the same columns in the output files. If <i>transform</i> = <tt>"no"</tt>,
   the converted coordinates are appended to the input line creating two
   additional columns in the output file. If the input file is the
-  unredirected standard input then transpose is always "<TT>no</TT>". Comment lines, blanks
+  unredirected standard input then transpose is always <tt>"no"</tt>. Comment lines, blanks
   lines, and lines for which the input coordinates could not be successfully
   decoded are passed on to the output file without modification.
-  <P>
-  The input and output celestial coordinate systems <I>insystem</I> and
-  <I>outsystem</I> must be one of the following: equatorial, ecliptic, galactic, or
+  </p>
+  <p>
+  The input and output celestial coordinate systems <i>insystem</i> and
+  <i>outsystem</i> must be one of the following: equatorial, ecliptic, galactic, or
   supergalactic.  The equatorial systems must be one of: 1) FK4, the mean
   place pre-IAU 1976 system, 2) FK4-NO-E, the same as FK4 but without the
   E-terms, 3) FK5, the mean place post-IAU 1976 system, 4) ICRS,
   the International Celestial Reference System, 5) GAPPT, the geocentric
   apparent place in the post-IAU 1976 system. 
-  <P>
-  If <I>insystem</I> or <I>outsystem</I> is an image name then the celestial
+  </p>
+  <p>
+  If <i>insystem</i> or <i>outsystem</i> is an image name then the celestial
   coordinate system is read from the image header. SKYCTRAN assumes that
   the celestial coordinate system is represented in the image header by
   the FITS keywords CTYPE, CRPIX, CRVAL, CD (or alternatively CDELT / CROTA),
@@ -427,13 +424,15 @@ skyctran — Transform coordinates from one celestial wcs to another
   PROPOSED FUTS STANDARD KEYWORD. HOWEVER IT OR SOMETHING SIMILAR IS REQUIRED
   TO SPECIFY THE EPOCH OF THE COORDINATE SYSTEM WHICH MAY BE DIFFERENT
   FROM THE EPOCH OF THE OBSERVATION.
-  <P>
+  </p>
+  <p>
   The first four characters of the values of the ra/longitude and dec/latitude
   axis CTYPE keywords specify the celestial coordinate system.
   The permitted CTYPE values are RA--/DEC- for equatorial coordinate systems,
   ELON/ELAT for the ecliptic coordinate system, GLON/GLAT for the galactic
   coordinate system, and SLON/SLAT for the supergalactic coordinate system,
-  <P>
+  </p>
+  <p>
   If the image celestial coordinate system is equatorial, the value
   of the RADECSYS keyword specifies the fundamental equatorial system.
   The permitted values of RADECSYS are FK4, FK4-NO-E,
@@ -471,30 +470,35 @@ skyctran — Transform coordinates from one celestial wcs to another
   only the specification of the epoch of observation which is supplied
   via the MJD-WCS, MJD-OBS or DATE-OBS keywords as for the FK4, FK4-NO-E, FK5,
   and ICRS systems.
-  <P>
+  </p>
+  <p>
   If the celestial coordinate system is ecliptic the mean ecliptic and equinox of
   date are required. They are supplied via the MJD-WCS, MJD-OBS or DATE-OBS
   keywords as for the equatorial FK4, FK4-NO-E, FK5, ICRS, and GAPPT systems.
-  <P>
+  </p>
+  <p>
   If, the output coordinate system is galactic or supergalactic, the input
   coordinate system is FK4, FK4-NO-E, FK5, or ICRS and proper motions are
   supplied with the input coordinates, then the output epoch of the
   observation is also required. This is supplied via the MJD-WCS, MJD-OBS or
   DATE-OBS keywords as for the equatorial FK4, FK4-NO-E, FK5, ICRS, GAPPT,
   and ecliptic systems.
-  <P>
+  </p>
+  <p>
   USERS NEED TO BE AWARE THAT THE IRAF IMAGE WORLD COORDINATE SYSTEM
   CURRENTLY (IRAF VERSIONS 2.10.4 PATCH 2 AND EARLIER) SUPPORTS ONLY THE
-  EQUATORIAL SYSTEM (CTYPE (ra axis) = "<TT>RA--XXXX</TT>" CTYPE (dec axis) = "<TT>DEC-XXXX</TT>")
+  EQUATORIAL SYSTEM (CTYPE (ra axis) = <tt>"RA--XXXX"</tt> CTYPE (dec axis) = <tt>"DEC-XXXX"</tt>)
   WHERE XXXX IS THE PROJECTION TYPE, EVEN THOUGH THE SKYCTRAN TASK 
   SUPPORTS GALACTIC, ECLIPTIC, AND SUPERGALACTIC COORDINATES.
-  <P>
+  </p>
+  <p>
   USERS SHOULD ALSO REALIZE THAT IMAGE WORLD COORDINATE SYSTEM REPRESENTATION
   IN FITS IS STILL IN THE DRAFT STAGE. ALTHOUGH SKYCTRAN TRIES TO CONFORM TO
   THE CURRENT DRAFT PROPOSAL WHERE NO ADOPTED STANDARDS CURRENTLY EXIST, THE
   FINAL FITS STANDARD MAY DIFFER FROM THE ONE ADOPTED HERE.
-  <P>
-  The IRAF builtin world coordinate systems "<TT>logical</TT>", "<TT>tv</TT>", "<TT>physical</TT>", and
+  </p>
+  <p>
+  The IRAF builtin world coordinate systems <tt>"logical"</tt>, <tt>"tv"</tt>, <tt>"physical"</tt>, and
   world are also supported. This means for example that users can begin
   with cursor coordinates in image 1, use the image header of image 1
   to transform the pixel coordinates to the celestial coordinate system of
@@ -502,8 +506,9 @@ skyctran — Transform coordinates from one celestial wcs to another
   in the image 2 celestial coordinate system, and finally transform the
   celestial coordinate system 2 coordinates to pixel coordinates in image 2,
   all in one step.
-  <P>
-  The <I>logical coordinate system</I> is the pixel coordinate system of the
+  </p>
+  <p>
+  The <i>logical coordinate system</i> is the pixel coordinate system of the
   current image. This coordinate system is the one used by the image
   input/output routines to access the image on disk. In the
   logical coordinate system,
@@ -513,16 +518,18 @@ skyctran — Transform coordinates from one celestial wcs to another
   number of image dimensions is 7. In the case of an image section,
   the nx[i] refer to the dimensions of the section, not the dimensions
   of the full image.
-  <P>
-  The <I>tv coordinate system</I> is the pixel coordinate system used by the
+  </p>
+  <p>
+  The <i>tv coordinate system</i> is the pixel coordinate system used by the
   display servers XIMTOOL, SAOIMAGE, and IMTOOL.
   For images which are not image sections
   the tv and logical coordinate systems are identical. For images which are
   image sections the tv and physical coordinate systems are identical if
   the image has not undergone any prior linear transformations such as
   axis flips, section copies, shifts, scale changes, rotations, etc.
-  <P>
-  The <I>physical coordinate system</I> is the coordinate system in which the
+  </p>
+  <p>
+  The <i>physical coordinate system</i> is the coordinate system in which the
   pixel coordinates of an object are invariant to successive linear
   transformations
   of the image. In this coordinate system, the pixel coordinates of an object
@@ -530,22 +537,25 @@ skyctran — Transform coordinates from one celestial wcs to another
   rotations, etc on the image. For example, an object with the
   physical coordinates (x,y) in an image would still have physical
   coordinates (x, y) in an image which is a section of the original image.
-  <P>
-  The <I>world coordinate system</I> is the default coordinate system for the
+  </p>
+  <p>
+  The <i>world coordinate system</i> is the default coordinate system for the
   image. The default world coordinate system is the one named by the
-  environment variable "<TT>defwcs</TT>" if defined in the user environment (initially
+  environment variable <tt>"defwcs"</tt> if defined in the user environment (initially
   it is undefined) and present in the image header; else it is the first
   world coordinate system
   defined for the image (the .imh and .hhh image format support only one wcs
   but the .qp format can support more); else it is the physical coordinate
   system.
-  <P>
+  </p>
+  <p>
   IF AN ERROR IS ENCOUNTERED WHEN DECODING THE INPUT OR OUTPUT WORLD COORDINATE
   SYSTEMS, THEN AN ERROR FLAG IS PRINTED IN THE OUTPUT FILE AND ON THE STANDARD
-  OUTPUT IF <I>VERBOSE</I> IS YES, AND THE INPUT COORDINATES ARE COPIED TO THE
+  OUTPUT IF <i>VERBOSE</i> IS YES, AND THE INPUT COORDINATES ARE COPIED TO THE
   OUTPUT COORDINATES WITHOUT CHANGE.
-  <P>
-  <I>Ilngunits</I>, <I>ilatunits</I>, <I>olngunits</I>, and <I>olatunits</I>
+  </p>
+  <p>
+  <i>Ilngunits</i>, <i>ilatunits</i>, <i>olngunits</i>, and <i>olatunits</i>
   set the units of the input and output coordinate systems.
   If the input or output system is the &lt;imagename&gt; [logical/tv/physical]
   system pixel units are assumed regardless of the values
@@ -553,56 +563,55 @@ skyctran — Transform coordinates from one celestial wcs to another
   &lt;i/o&gt;latunits values are
   hours and degrees for the equatorial celestial coordinate system and
   degrees and degrees for the remaining celestial coordinate systems.
-  <P>
+  </p>
+  <p>
   The formats of the computed x/ra/longitude and y/dec/longitude coordinates
-  are specified with the <I>olngformat</I> and <I>olatformat</I> parameters.
+  are specified with the <i>olngformat</i> and <i>olatformat</i> parameters.
   The options are discussed in the formats section of the help page below.
   If the output coordinate system is the &lt;imagename&gt; [logical/tv/physical],
   default formats of %10.3f and %10.3f are assumed regardless
   of the values of olngunits and olatunits. Otherwise default formats
-  of %12.3h, %12.2h, and %g are assumed for output units of "<TT>hours</TT>", "<TT>degrees</TT>",
-  and "<TT>radians</TT>" respectively.
-  <P>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>User commands</H3>
-  <! BeginSection: 'USER COMMANDS'>
-  <UL>
-  <P>
+  of %12.3h, %12.2h, and %g are assumed for output units of <tt>"hours"</tt>, <tt>"degrees"</tt>,
+  and <tt>"radians"</tt> respectively.
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>User commands</h3>
+  <!-- BeginSection: 'USER COMMANDS' -->
+  <p>
   If the input file is STDIN the user can type in the input data by hand and
   set the input and output coordinate systems, the input and output coordinate
   units, and the output coordinate format interactively. The available commands
   are listed below.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	INTERACTIVE KEYSTROKE COMMANDS
-  <P>
+  
   The following commands must be followed by a carriage return.
-  <P>
+  
   ?	Print help
   :	Execute colon command
   data	Measure object
   q	Exit task
-  <P>
-  <P>
+  
+  
   	VALID DATA STRING
-  <P>
+  
   x/ra/long y/dec/lat [pmra pmdec [parallax radial velocity]]
-  <P>
-  <P>
+  
+  
   	COLON COMMANDS
-  <P>
+  
   The following commands must be followed by a carriage return.
-  <P>
+  
   :show				Show the input and output coordinate systems
   :isystem	[string]	Show / set the input coordinate system
   :osystem	[string]	Show / set the output coordinate system
   :iunits		[string string]	Show / set the input coordinate units
   :ounits		[string string]	Show / set the output coordinate units
   :oformat	[string string]	Show / set the output coordinate format
-  <P>
+  
   	VALID INPUT AND OUTPUT COORDINATE SYSTEMS
-  <P>
+  
   image [logical/tv/physical/world]
   equinox [epoch]
   noefk4 [equinox [epoch]]
@@ -613,48 +622,45 @@ skyctran — Transform coordinates from one celestial wcs to another
   ecliptic epoch
   galactic [epoch]
   supergalactic [epoch]
-  <P>
+  
   	VALID INPUT AND OUTPUT CELESTIAL COORDINATE UNITS
   	          AND THEIR DEFAULT FORMATS
-  <P>
+  
   hours		%12.3h
   degrees		%12.2h
   radians		%13.7h
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'USER COMMANDS'>
-  <H3>Image cursor commands</H3>
-  <! BeginSection: 'IMAGE CURSOR COMMANDS'>
-  <UL>
-  <P>
+  </pre>
+  <!-- EndSection:   'USER COMMANDS' -->
+  <h3>Image cursor commands</h3>
+  <!-- BeginSection: 'IMAGE CURSOR COMMANDS' -->
+  <p>
   In interactive image cursor mode the user can set the input and output
   coordinate systems, the output coordinate units, and the output coordinate
   formats. The available commands are listed below.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	INTERACTIVE KEYSTROKE COMMANDS
-  <P>
+  
   ?	Print help
   :	Execute colon command
   spbar	Measure object
   q	Exit task
-  <P>
-  <P>
+  
+  
   	COLON COMMANDS
-  <P>
+  
   :show				Show the input and output coordinate systems
   :isystem	[string]	Show / set the input coordinate system
   :osystem	[string]	Show / set the output coordinate system
   :ounits		[string string]	Show / set the output coordinate units
   :oformat	[string string]	Show / set the output coordinate format
-  <P>
+  
   	VALID INPUT COORDINATE SYSTEMS
-  <P>
+  
   image [tv]
-  <P>
+  
   	VALID OUTPUT COORDINATE SYSTEMS
-  <P>
+  
   image [logical/tv/physical/world]
   equinox [epoch]
   noefk4 [equinox [epoch]]
@@ -665,28 +671,25 @@ skyctran — Transform coordinates from one celestial wcs to another
   ecliptic epoch
   galactic [epoch]
   supergalactic [epoch]
-  <P>
+  
   	VALID OUTPUT COORDINATE UNITS AND THEIR DEFAULT FORMATS
-  <P>
+  
   hours		%12.3h
   degrees		%12.2h
   radians		%13.7g
-  </PRE>
-  <P>
-  <P>
-  </UL>
-  <! EndSection:   'IMAGE CURSOR COMMANDS'>
-  <H3>Formats</H3>
-  <! BeginSection: 'FORMATS'>
-  <UL>
-  <P>
-  A  format  specification has the form "<TT>%w.dCn</TT>", where w is the field
+  </pre>
+  <!-- EndSection:   'IMAGE CURSOR COMMANDS' -->
+  <h3>Formats</h3>
+  <!-- BeginSection: 'FORMATS' -->
+  <p>
+  A  format  specification has the form <tt>"%w.dCn"</tt>, where w is the field
   width, d is the number of decimal places or the number of digits  of
   precision,  C  is  the  format  code,  and  n is radix character for
-  format code "<TT>r</TT>" only.  The w and d fields are optional.  The  format
+  format code <tt>"r"</tt> only.  The w and d fields are optional.  The  format
   codes C are as follows:
    
-  <PRE>
+  </p>
+  <pre>
   b       boolean (YES or NO)
   c       single character (c or '\c' or '\0nnn')
   d       decimal integer
@@ -704,14 +707,14 @@ skyctran — Transform coordinates from one celestial wcs to another
   x       hexadecimal integer
   z       complex format (r,r) (D = precision)
    
-  <P>
+  
   Conventions for w (field width) specification:
    
       W =  n      right justify in field of N characters, blank fill
           -n      left justify in field of N characters, blank fill
           0n      zero fill at left (only if right justified)
   absent, 0       use as much space as needed (D field sets precision)
-  <P>
+  
   Escape sequences (e.g. "\n" for newline):
    
   \b      backspace   (not implemented)
@@ -738,7 +741,7 @@ skyctran — Transform coordinates from one celestial wcs to another
   %-15.7e     same as above but left justified
   %12.5g      print a real number right justified in general format
   %-12.5g     same as above but left justified
-  <P>
+  
   %h          format as nn:nn:nn.n
   %15h        right justify nn:nn:nn.n in field of 15 characters
   %-15h       left justify nn:nn:nn.n in a field of 15 characters
@@ -750,199 +753,196 @@ skyctran — Transform coordinates from one celestial wcs to another
   %-15H       / by 15 and left justify nn:nn:nn.n in field of 15 characters
   %12.2H      / by 15 and right justify nn:nn:nn.nn
   %-12.2H     / by 15 and left justify nn:nn:nn.nn
-  <P>
+  
   \n          insert a newline
-  </PRE>
-  <P>
-  <P>
-  </UL>
-  <! EndSection:   'FORMATS'>
-  <H3>References</H3>
-  <! BeginSection: 'REFERENCES'>
-  <UL>
-  <P>
+  </pre>
+  <!-- EndSection:   'FORMATS' -->
+  <h3>References</h3>
+  <!-- BeginSection: 'REFERENCES' -->
+  <p>
   Additional information on the IRAF world coordinate systems can be found in
   the help pages for the WCSEDIT and WCRESET tasks.
   Detailed documentation for the IRAF world coordinate system interface MWCS
-  can be found in the file "<TT>iraf$sys/mwcs/MWCS.hlp</TT>". This file can be
-  formatted and printed with the command "<TT>help iraf$sys/mwcs/MWCS.hlp fi+ |
-  lprint</TT>".
-  <P>
+  can be found in the file <tt>"iraf$sys/mwcs/MWCS.hlp"</tt>. This file can be
+  formatted and printed with the command <tt>"help iraf$sys/mwcs/MWCS.hlp fi+ |
+  lprint"</tt>.
+  </p>
+  <p>
   Details of the FITS header world coordinate system interface can
-  be found in the draft paper "<TT>World Coordinate Systems Representations Within the
-  FITS Format</TT>" by Hanisch and Wells, available from the iraf anonymous ftp
-  archive and the draft paper which supersedes it "<TT>Representations of Celestial
-  Coordinates in FITS</TT>" by Greisen and Calabretta available from the NRAO
+  be found in the draft paper <tt>"World Coordinate Systems Representations Within the
+  FITS Format"</tt> by Hanisch and Wells, available from the iraf anonymous ftp
+  archive and the draft paper which supersedes it <tt>"Representations of Celestial
+  Coordinates in FITS"</tt> by Greisen and Calabretta available from the NRAO
   anonymous ftp archives.
-  <P>
+  </p>
+  <p>
   The spherical astronomy routines employed here are derived from the Starlink
   SLALIB library provided courtesy of Patrick Wallace. These routines
   are very well documented internally with extensive references provided
   where appropriate. Interested users are encouraged to examine the routines
-  for this information. Type "<TT>help slalib</TT>" to get a listing of the SLALIB
-  routines, "<TT>help slalib opt=sys</TT>" to get a concise summary of the library,
-  and "<TT>help &lt;routine&gt;</TT>" to get a description of each routine's calling sequence,
+  for this information. Type <tt>"help slalib"</tt> to get a listing of the SLALIB
+  routines, <tt>"help slalib opt=sys"</tt> to get a concise summary of the library,
+  and <tt>"help &lt;routine&gt;"</tt> to get a description of each routine's calling sequence,
   required input and output, etc. An overview of the library can be found in the
-  paper "<TT>SLALIB - A Library of Subprograms</TT>", Starlink User Note 67.7
+  paper <tt>"SLALIB - A Library of Subprograms"</tt>, Starlink User Note 67.7
   by P.T. Wallace, available from the Starlink archives.
-  <P>
-  </UL>
-  <! EndSection:   'REFERENCES'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
+  </p>
+  <!-- EndSection:   'REFERENCES' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Precess the fk4 coordinates typed in by the user to the fk5 system with
   and without the proper motion values.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; skyctran STDIN STDOUT fk4 fk5
-  <P>
+  
   	# Insystem: fk4  Coordinates: equatorial FK4
   	#     Equinox: B1950.000 Epoch: B1950.00000000 MJD: 33281.92346
   	# Outsystem: fk5  Coordinates: equatorial FK5
   	#     Equinox: J2000.000 Epoch: J2000.00000000 MJD: 51544.50000
-  <P>
+  
   	# Input file: STDIN  Output file: STDOUT
-  <P>
+  
   	... not including proper motion
   	13:28:43.2 27:18:01.1
   	13:28:43.2 27:18:01.1 13:31:03.855  27:02:35.13
-  <P>
+  
   	... including proper motion
   	13:28:43.2 27:18:01.1 .36 -0.16
   	13:28:43.2 27:18:01.1 .36 -0.16 13:31:05.215  27:02:27.37
-  <P>
+  
   	... change the output coordinate system to fk5 1975.0 and repeat
   	:os fk5 1975.0
   	:os
-  <P>
+  
   	# Outsystem:  fk5 1975.0  Coordinates: equatorial FK5
   	#     Equinox: J1975.000 Epoch: J1975.00000000 MJD: 42413.25000
-  <P>
+  
   	13:28:43.2 27:18:01.1
   	13:28:43.2 27:18:01.1 13:29:53.564  27:10:17.69
-  <P>
+  
   	13:28:43.2 27:18:01.1 .36 -0.16
   	13:28:43.2 27:18:01.1 .36 -0.16 13:29:54.244  27:10:13.80
-  <P>
+  
   	... type EOF to quit
   	&lt;EOF&gt;
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. Precess a list of RAS in hours and DECS in degrees in the FK5 system
   equinox 1980.0 to equinox 2000.0 and write both the input coordinates and
   the output coordinates in hours and degrees to the output file. 
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; skyctran inlist outlist j1980.0 j2000.0 
-  <P>
+  
   		... or equivalently ...
-  <P>
+  
   	cl&gt; skyctran inlist outlist j1980.0 2000.0
-  <P>
+  
   		... or equivalently ...
-  <P>
+  
   	cl&gt; skyctran inlist outlist "fk5 1980.0" fk5
-  </PRE>
-  <P>
+  </pre>
+  <p>
   Note that if the coordinate system, e.g. fk5, is not specified explicitly
   then equinoxes &lt; 1984 must be prefixed by J, or a Besselian rather than
   a Julian epoch will be assumed.
-  <P>
+  </p>
+  <p>
   3. Repeat the previous example but replace the input coordinates with
   the precessed coordinates in the output file.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; skyctran inlist outlist j1980.0 j2000.0 transform+
-  </PRE>
-  <P>
+  </pre>
+  <p>
   4. Precess a list of RAS in hours and DECS in degrees in the FK4 system
   equinox 1950.0 to equinox 1975.0 and write both the input coordinates and
   the output coordinates in hours and degrees to the output file. The input
   and output epochs of observation default to the respective equinox
   values.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; skyctran inlist outlist 1950.0 1975.0 
-  <P>
+  
   		... or equivalently ...
-  <P>
+  
   	cl&gt; skyctran inlist outlist b1950.0 b1975.0 
-  <P>
+  
   		... or equivalently ...
-  <P>
+  
   	cl&gt; skyctran inlist outlist fk4 b1975.0 
-  <P>
+  
   		... or equivalently ...
-  <P>
+  
   	cl&gt; skyctran inlist outlist fk4 "fk4 1975.0" 
-  </PRE>
-  <P>
+  </pre>
+  <p>
   5. Convert a list of RAS in hours and DECS in degrees in the FK4 system
   equinox 1950.0 to RAS in hours and DECS in degrees in the FK5 system
   equinox 2000.0, and replace the input coordinates with the
   output coordinates in the output file. The Besselian epoch of the
   observation is 1987.25.
-  <P>
-  <PRE>
-  	cl&gt; skyctran inlist outlist "b1950.0 1987.25" j2000.0 \<BR>
+  </p>
+  <pre>
+  	cl&gt; skyctran inlist outlist "b1950.0 1987.25" j2000.0 \<br>
   	    transform+
-  </PRE>
-  <P>
+  </pre>
+  <p>
   6. Convert a list of RAS in hours and DECS in degrees to RAS in degrees
   and DECS in degrees, and replace the input coordinates with the output
   coordinates in the output file. As the input and output coordinate systems
   and equinoxes are the same no precession is performed.
-  <P>
-  <PRE>
-  	cl&gt; skyctran inlist outlist 2000.0 2000.0 olngunits=degrees \<BR>
+  </p>
+  <pre>
+  	cl&gt; skyctran inlist outlist 2000.0 2000.0 olngunits=degrees \<br>
   	    transform+
-  </PRE>
-  <P>
+  </pre>
+  <p>
   7. Convert a list of RAS in hours and DECS in degrees in the FK4
   system, equinox 1950.0, epoch of observation 1987.24, to galactic
   coordinates, and write both the input and output coordinate to the
   output file.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; skyctran inlist outlist "b1950.0 1987.25" galactic
-  </PRE>
-  <P>
+  </pre>
+  <p>
   8. Convert a list of RAS in hours and DECS in degrees in the FK5
   system, equinox 2000.0, to ecliptic coordinates on Julian date
   2449879.5, replacing the input coordinates with the converted
   coordinates in the output file.
-  <P>
-  <PRE>
-  	cl&gt; skyctran inlist outlist j2000 "ecliptic 2449879.5" \<BR>
+  </p>
+  <pre>
+  	cl&gt; skyctran inlist outlist j2000 "ecliptic 2449879.5" \<br>
   	    transform+
-  </PRE>
-  <P>
+  </pre>
+  <p>
   9. Display an image and use the cursor and image header coordinate
   system, equatorial FK4, equinox 1950.0, epoch 1987.25  to print the pixel
   and galactic coordinates of the marked objects on the image display.
   Note that the test image dev$wpix has an incorrect value of EPOCH (0.0) that
   would have confused skyctran and need to be changed.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; imcopy dev$wpix wpix
   	cl&gt; hedit wpix epoch 1950.0
   	cl&gt; display wpix 1 fi+
   	cl&gt; skyctran imcursor STDOUT wpix galactic
-  </PRE>
-  <P>
+  </pre>
+  <p>
   10. Convert a list of RAS in hours and DECS in degrees measured in the
   image created in example 9 to the FK5 equinox 2000.0 coordinate system.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; skyctran inlist outlist "wpix world" j2000.0
-  <P>
+  
   		   ... or equivalently ...
-  <P>
+  
   	cl&gt; skyctran inlist outlist "b1950.0 1987.25" j2000.0
-  </PRE>
-  <P>
+  </pre>
+  <p>
   11. Using an image whose header coordinate system is equatorial FK5
   equinox 2000.0 and a different image of the same region whose coordinate
   system is galactic use the image display and cursor to create a list of
@@ -952,54 +952,48 @@ skyctran — Transform coordinates from one celestial wcs to another
   image header coordinates are not fully supported. They will work
   however on two images which have equatorial coordinates systems
   which are precessed with respect to each other.
-  <P>
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; display image1
-  <P>
+  
   	    ... this is the reference image
-  <P>
+  
   	cl&gt; skyctran imcursor outlist image1 "image2 logical"
-  <P>
+  
   	    ... mark many widely scattered points on the displayed
   		image image1 terminating the input list with 
   		&lt;EOF&gt; which is usually &lt;ctrl/z&gt; or &lt;ctrl/d&gt;
-  </PRE>
-  <P>
+  </pre>
+  <p>
   12. Repeat example 11 but use a previously prepared list of image1
   logical pixel coordinates as input to the task.
-  <P>
-  <PRE>
-  	cl&gt; skyctran inlist outlist "image1 logical"\<BR>
+  </p>
+  <pre>
+  	cl&gt; skyctran inlist outlist "image1 logical"\<br>
   	    "image2 logical"
-  </PRE>
-  <P>
+  </pre>
+  <p>
   13. Repeat example 11 but have skyctran automatically generate a grid
   of 100 tie points.
-  <P>
-  <PRE>
-  	cl&gt; skyctran grid outlist "image1 logical"\<BR>
+  </p>
+  <pre>
+  	cl&gt; skyctran grid outlist "image1 logical"\<br>
   	    "image2 logical"
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Time requirements</H3>
-  <! BeginSection: 'TIME REQUIREMENTS'>
-  <UL>
-  </UL>
-  <! EndSection:   'TIME REQUIREMENTS'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Time requirements</h3>
+  <!-- BeginSection: 'TIME REQUIREMENTS' -->
+  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   setjd,precess,galactic,xray.xspatial.skypix,stsdas.toolbox.tools.tprecess
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'USER COMMANDS' 'IMAGE CURSOR COMMANDS' 'FORMATS' 'REFERENCES' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'USER COMMANDS' 'IMAGE CURSOR COMMANDS' 'FORMATS' 'REFERENCES' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

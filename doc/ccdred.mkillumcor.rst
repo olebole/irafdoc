@@ -1,52 +1,52 @@
 .. _mkillumcor:
 
-mkillumcor — Make flat field illumination correction images
-===========================================================
+mkillumcor: Make flat field illumination correction images
+==========================================================
 
 **Package: ccdred**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   mkillumcor -- Make flat field iillumination correction images
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   mkillumcor input output
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
-  <DD>List of input images for making flat field iillumination correction images.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
-  <DD>List of output flat field iillumination correction images.  If none is
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
+  <dd>List of input images for making flat field iillumination correction images.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
+  <dd>List of output flat field iillumination correction images.  If none is
   specified or if the name is the same as the input image then the output
   image replaces the input image.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>ccdtype = "<TT>flat</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='ccdtype' Line='ccdtype = "flat"'>
-  <DD>CCD image type to select from the input images.  If none is specified
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>ccdtype = <tt>"flat"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='ccdtype' Line='ccdtype = "flat"' -->
+  <dd>CCD image type to select from the input images.  If none is specified
   then all types are used.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>xboxmin = 5, xboxmax = 0.25, yboxmin = 5, yboxmax = 0.25</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='xboxmin' Line='xboxmin = 5, xboxmax = 0.25, yboxmin = 5, yboxmax = 0.25'>
-  <DD>Minimum and maximum smoothing box size along the x and y axes.  The
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>xboxmin = 5, xboxmax = 0.25, yboxmin = 5, yboxmax = 0.25</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='xboxmin' Line='xboxmin = 5, xboxmax = 0.25, yboxmin = 5, yboxmax = 0.25' -->
+  <dd>Minimum and maximum smoothing box size along the x and y axes.  The
   minimum box size is used at the edges and grows to the maximum size in
   the middle of the image.  This allows the smoothed image to better
   represent gradients at the edge of the image.  If a size is less then 1
@@ -54,67 +54,68 @@ mkillumcor — Make flat field illumination correction images
   greater than or equal to 1 then it is the box size in pixels.  A size
   greater than the size of image selects a box equal to the size of the
   image.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>clip = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='clip' Line='clip = yes'>
-  <DD>Clean the input images of objects?  If yes then a clipping algorithm is
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>clip = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='clip' Line='clip = yes' -->
+  <dd>Clean the input images of objects?  If yes then a clipping algorithm is
   used to detect and exclude deviant points from the smoothing.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>lowsigma = 2.5, highsigma = 2.5</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='lowsigma' Line='lowsigma = 2.5, highsigma = 2.5'>
-  <DD>Sigma clipping thresholds above and below the smoothed iillumination.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>divbyzero = 1.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='divbyzero' Line='divbyzero = 1.'>
-  <DD>The iillumination correction is the inverse of the smoothed flat field.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>lowsigma = 2.5, highsigma = 2.5</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='lowsigma' Line='lowsigma = 2.5, highsigma = 2.5' -->
+  <dd>Sigma clipping thresholds above and below the smoothed iillumination.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>divbyzero = 1.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='divbyzero' Line='divbyzero = 1.' -->
+  <dd>The iillumination correction is the inverse of the smoothed flat field.
   This may produce division by zero.  A warning is given if division
   by zero takes place and the result (the iillumination correction value)
   is replaced by the value of this parameter.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>ccdproc (parameter set)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='ccdproc' Line='ccdproc (parameter set)'>
-  <DD>CCD processing parameters.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>ccdproc (parameter set)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='ccdproc' Line='ccdproc (parameter set)' -->
+  <dd>CCD processing parameters.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   First, the input flat field images are automatically processed if
   needed.  Then, the large scale iillumination pattern of the images is
-  determined by heavily smoothing them using a moving "<TT>boxcar</TT>" average.
+  determined by heavily smoothing them using a moving <tt>"boxcar"</tt> average.
   The iillumination correction, the inverse of the iillumination pattern,
-  is applied by <B>ccdproc</B> to CCD images to remove the iillumination
+  is applied by <b>ccdproc</b> to CCD images to remove the iillumination
   pattern introduced by the flat field.  The combination of the flat
   field calibration and the iillumination correction based on the flat
   field is equivalent to removing the iillumination from the flat field
-  (see <B>mkillumflat</B>).  This two step calibration is generally used
+  (see <b>mkillumflat</b>).  This two step calibration is generally used
   when the observations have been previously flat field calibrated.  This
-  task is closely related to <B>mkskycor</B> which determines the
+  task is closely related to <b>mkskycor</b> which determines the
   iillumination correction from a blank sky image; this is preferable to
   using the iillumination from the flat field as it corrects for the
   residual iillumination error.  For a general discussion of the options
-  for flat fields and iillumination corrections see <B>flatfields</B>.
-  <P>
+  for flat fields and iillumination corrections see <b>flatfields</b>.
+  </p>
+  <p>
   The smoothing algorithm is a moving average over a two dimensional
   box.  The algorithm is unconvential in that the box size is not fixed.
   The box size is increased from the specified minimum at the edges to
   the maximum in the middle of the image.  This permits a better estimate
   of the background at the edges, while retaining the very large scale
   smoothing in the center of the image.  Note that the sophisticated
-  tools of the <B>images</B> package may be used for smoothing but this
+  tools of the <b>images</b> package may be used for smoothing but this
   requires more of the user and, for the more sophisticated smoothing
   algorithms such as surface fitting, more processing time.
-  <P>
+  </p>
+  <p>
   To minimize the effects of bad pixels a sigma clipping algorithm is
   used to detect and reject these pixels from the iillumination.  This is
   done by computing the rms of the image lines relative to the smoothed
@@ -122,23 +123,25 @@ mkillumcor — Make flat field illumination correction images
   factors times the rms.  This is done before each image line is added to
   the moving average, except for the first few lines where an iterative
   process is used.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. The example below makes an iillumination correction image from the
-  flat field image, "<TT>flat017</TT>".
-  <P>
+  flat field image, <tt>"flat017"</tt>.
+  </p>
+  <p>
       cl&gt; mkillumcor flat017 Illum
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   ccdproc, flatfields, mkillumflat, mkskycor, mkskyflat
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

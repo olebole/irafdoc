@@ -1,162 +1,159 @@
 .. _apmask:
 
-apmask — Create and IRAF pixel list mask of the apertures
-=========================================================
+apmask: Create and IRAF pixel list mask of the apertures
+========================================================
 
 **Package: apextract**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   apmask -- Make pixel mask from apertures definitions
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   apfind input
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
-  <DD>List of input images with aperture definitions.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
-  <DD>List of output mask names.  As a convention the extension "<TT>.pl</TT>" (pixel
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
+  <dd>List of input images with aperture definitions.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
+  <dd>List of output mask names.  As a convention the extension <tt>".pl"</tt> (pixel
   list) should be used.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>apertures = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""'>
-  <DD>Apertures to recenter, resize, trace, and create a mask.  This only applies
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>apertures = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
+  <dd>Apertures to recenter, resize, trace, and create a mask.  This only applies
   to apertures read from the input or reference database.  Any new
   apertures defined with the automatic finding algorithm or interactively
   are always selected.  The syntax is a list comma separated ranges
   where a range can be a single aperture number, a hyphen separated
-  range of aperture numbers, or a range with a step specified by "<TT>x&lt;step&gt;</TT>";
-  for example, "<TT>1,3-5,9-12x2</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>references = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='references' Line='references = ""'>
-  <DD>List of reference images to be used to define apertures for the input
+  range of aperture numbers, or a range with a step specified by <tt>"x&lt;step&gt;"</tt>;
+  for example, <tt>"1,3-5,9-12x2"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>references = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='references' Line='references = ""' -->
+  <dd>List of reference images to be used to define apertures for the input
   images.  When a reference image is given it supersedes apertures
-  previously defined for the input image. The list may be null, "<TT></TT>", or
+  previously defined for the input image. The list may be null, <tt>""</tt>, or
   any number of images less than or equal to the list of input images.
   There are three special words which may be used in place of an image
-  name.  The word "<TT>last</TT>" refers to the last set of apertures written to
-  the database.  The word "<TT>OLD</TT>" requires that an entry exist
-  and the word "<TT>NEW</TT>" requires that the entry not exist for each input image.
-  </DD>
-  </DL>
-  <P>
-  <DL>
-  <DT><B>interactive = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = no'>
-  <DD>Run this task interactively?  If the task is not run interactively then
+  name.  The word <tt>"last"</tt> refers to the last set of apertures written to
+  the database.  The word <tt>"OLD"</tt> requires that an entry exist
+  and the word <tt>"NEW"</tt> requires that the entry not exist for each input image.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>interactive = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = no' -->
+  <dd>Run this task interactively?  If the task is not run interactively then
   all user queries are suppressed and interactive aperture editing is
   disabled.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>find = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='find' Line='find = yes'>
-  <DD>Find the spectra and define apertures automatically?  In order for
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>find = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='find' Line='find = yes' -->
+  <dd>Find the spectra and define apertures automatically?  In order for
   spectra to be found automatically there must be no apertures for the
   input image or reference image defined in the database and the
-  parameter <I>nfind</I> must be greater than zero.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>recenter = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='recenter' Line='recenter = no'>
-  <DD>Recenter the apertures?
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>resize = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='resize' Line='resize = no'>
-  <DD>Resize the apertures?
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>edit = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='edit' Line='edit = yes'>
-  <DD>Edit the apertures?  The <I>interactive</I> parameter must also be yes.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>trace = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='trace' Line='trace = yes'>
-  <DD>Trace apertures?
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>fittrace = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='fittrace' Line='fittrace = yes'>
-  <DD>Fit the traced points interactively?  The <I>interactive</I> parameter
+  parameter <i>nfind</i> must be greater than zero.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>recenter = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='recenter' Line='recenter = no' -->
+  <dd>Recenter the apertures?
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>resize = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='resize' Line='resize = no' -->
+  <dd>Resize the apertures?
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>edit = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='edit' Line='edit = yes' -->
+  <dd>Edit the apertures?  The <i>interactive</i> parameter must also be yes.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>trace = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='trace' Line='trace = yes' -->
+  <dd>Trace apertures?
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>fittrace = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='fittrace' Line='fittrace = yes' -->
+  <dd>Fit the traced points interactively?  The <i>interactive</i> parameter
   must also be yes.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>mask = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='mask' Line='mask = yes'>
-  <DD>Create mask images?
-  </DD>
-  </DL>
-  <P>
-  <DL>
-  <DT><B>line = INDEF</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='line' Line='line = INDEF'>
-  <DD>The dispersion line (line or column perpendicular to the dispersion axis) to
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>mask = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='mask' Line='mask = yes' -->
+  <dd>Create mask images?
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>line = INDEF</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='line' Line='line = INDEF' -->
+  <dd>The dispersion line (line or column perpendicular to the dispersion axis) to
   be used in finding, recentering, resizing, editing, and starting to
   trace spectra.  A value of INDEF selects the middle of the image.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>nsum = 1</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='nsum' Line='nsum = 1'>
-  <DD>Number of dispersion lines to be summed or medianed.  The lines are taken
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>nsum = 1</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='nsum' Line='nsum = 1' -->
+  <dd>Number of dispersion lines to be summed or medianed.  The lines are taken
   around the specified dispersion line.  A positive value takes the
   sum and a negative value selects a median.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>buffer = 0.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='buffer' Line='buffer = 0.'>
-  <DD>Buffer to add to aperture limits.  One use for this is to increase
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>buffer = 0.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='buffer' Line='buffer = 0.' -->
+  <dd>Buffer to add to aperture limits.  One use for this is to increase
   the width of the apertures when a mask is used to fit data between
   the apertures.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Additional parameters</H3>
-  <! BeginSection: 'ADDITIONAL PARAMETERS'>
-  <UL>
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Additional parameters</h3>
+  <!-- BeginSection: 'ADDITIONAL PARAMETERS' -->
+  <p>
   I/O parameters and the default dispersion axis are taken from the
   package parameters, the default aperture parameters from
-  <B>apdefault</B>, automatic aperture finding parameters from
-  <B>apfind</B>, recentering parameters from <B>aprecenter</B>, resizing
-  parameters from <B>apresize</B>, parameters used for centering and
-  editing the apertures from <B>apedit</B>, and tracing parameters from
-  <B>aptrace</B>.
-  </UL>
-  <! EndSection:   'ADDITIONAL PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  <b>apdefault</b>, automatic aperture finding parameters from
+  <b>apfind</b>, recentering parameters from <b>aprecenter</b>, resizing
+  parameters from <b>apresize</b>, parameters used for centering and
+  editing the apertures from <b>apedit</b>, and tracing parameters from
+  <b>aptrace</b>.
+  </p>
+  <!-- EndSection:   'ADDITIONAL PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   Pixel list masks are created from the aperture definitions in the input
   images.  Pixel list masks are a compact way to define arbitrary
   regions of an image.  The masks may be used directly as an image with values
@@ -165,41 +162,39 @@ apmask — Create and IRAF pixel list mask of the apertures
   When this task was written there were no such tasks though eventually
   some tasks will be converted to use this general format.  The intent
   of making an aperture mask is to someday allow using it with the task
-  <B>imsurfit</B> to fit a background or scattered light surface.
-  (See <B>apscatter</B> for an alternative method).
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  <b>imsurfit</b> to fit a background or scattered light surface.
+  (See <b>apscatter</b> for an alternative method).
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. To replace all data outside the apertures by zero:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; apmask image image.pl nfind=10
   	cl&gt; imarith image * image.pl image1
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Revisions</H3>
-  <! BeginSection: 'REVISIONS'>
-  <UL>
-  <DL>
-  <DT><B>APMASK V2.11</B></DT>
-  <! Sec='REVISIONS' Level=0 Label='APMASK' Line='APMASK V2.11'>
-  <DD>The "<TT>apertures</TT>" parameter can be used to select apertures for resizing,
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Revisions</h3>
+  <!-- BeginSection: 'REVISIONS' -->
+  <dl>
+  <dt><b>APMASK V2.11</b></dt>
+  <!-- Sec='REVISIONS' Level=0 Label='APMASK' Line='APMASK V2.11' -->
+  <dd>The <tt>"apertures"</tt> parameter can be used to select apertures for resizing,
   recentering, tracing, and extraction.  This parameter name was previously
   used for selecting apertures in the recentering algorithm.  The new
-  parameter name for this is now "<TT>aprecenter</TT>".
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'REVISIONS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  parameter name for this is now <tt>"aprecenter"</tt>.
+  </dd>
+  </dl>
+  <!-- EndSection:   'REVISIONS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   apdefault, aprecenter, apresize, apedit, aptrace, apall
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'ADDITIONAL PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'ADDITIONAL PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

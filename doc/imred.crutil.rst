@@ -1,5 +1,5 @@
-crutil — Tasks for detecting and removing cosmic rays
-=====================================================
+crutil: Tasks for detecting and removing cosmic rays
+====================================================
 
 .. toctree:: :maxdepth: 1
 

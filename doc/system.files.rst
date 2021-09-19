@@ -1,106 +1,116 @@
 .. _files:
 
-files — Expand a file template into a list of files
-===================================================
+files: Expand a file template into a list of files
+==================================================
 
 **Package: system**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   files -- expand a file name template into a list of files
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   files template
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>template</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='template' Line='template'>
-  <DD>A file name template specifying the set of files to be listed.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>sort = "<TT>yes</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='sort' Line='sort = "yes"'>
-  <DD>Sort the file list.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <I>Files</I> lists all files matching the given template.  The existence of
-  the listed files is checked only if pattern matching is used, hence <I>files</I>
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>template</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='template' Line='template' -->
+  <dd>A file name template specifying the set of files to be listed.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>sort = <tt>"yes"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='sort' Line='sort = "yes"' -->
+  <dd>Sort the file list.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  <i>Files</i> lists all files matching the given template.  The existence of
+  the listed files is checked only if pattern matching is used, hence <i>files</i>
   may also be used to parse a comma delimited list of strings which are not
-  necessarily filenames.  <I>Files</I> performs the same function as "<TT>dir l+</TT>"
+  necessarily filenames.  <i>Files</i> performs the same function as <tt>"dir l+"</tt>
   but is simpler and more convenient to use when generating file lists.
-  <P>
-  The <I>files</I> task and all other tasks which operate upon groups of files
-  use the <B>file template</B> facility to specify the set of files to be
-  operated upon.  This should not be confused with the <B>image template</B>
+  </p>
+  <p>
+  The <i>files</i> task and all other tasks which operate upon groups of files
+  use the <b>file template</b> facility to specify the set of files to be
+  operated upon.  This should not be confused with the <b>image template</b>
   facility, used by tasks which operate upon sets of images and which is
-  documented in the manual page for the <I>sections</I> task.
-  <P>
+  documented in the manual page for the <i>sections</i> task.
+  </p>
+  <p>
   Pattern matching in a file template is provided by the usual pattern matching
-  meta-characters "<TT>*?[]</TT>", documented in the CL User's Guide.  Pattern matching 
+  meta-characters <tt>"*?[]"</tt>, documented in the CL User's Guide.  Pattern matching 
   is used to select files from one or more directories.  In addition, the
   filename template notation provides two operators for generating new filenames
-  from the matched filenames.  These are the <B>concatenation</B> operator "//"<TT>,
-  and the <B>string substitution</B> operator "<TT>%chars%newchars%</TT>".
+  from the matched filenames.  These are the <b>concatenation</b> operator <tt>"//"</tt>,
+  and the <b>string substitution</b> operator <tt>"%chars%newchars%"</tt>.
   The concatenation operator concatenates either a prefix to a filename,
   or a suffix to the root of a filename.  The string substitution operator
-  uses the "<TT>chars</TT>" to match filenames, and then replaces the "<TT>chars</TT>" by the
-  "<TT>newchars</TT>" to generate the final output filename.  Either string may be null
+  uses the <tt>"chars"</tt> to match filenames, and then replaces the <tt>"chars"</tt> by the
+  <tt>"newchars"</tt> to generate the final output filename.  Either string may be null
   length to insert into or delete characters from a filename.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Generate a single column list of files in the current directory,
   sorted in ASCII collating sequence.
-  <P>
+  </p>
+  <p>
   	cl&gt; files
-  <P>
+  </p>
+  <p>
   2. Generate an unsorted single column list of files in logical directory
-  "<TT>lib$</TT>".  Each entry in the output list is of the form "<TT>lib$...</TT>".
-  <P>
+  <tt>"lib$"</tt>.  Each entry in the output list is of the form <tt>"lib$..."</tt>.
+  </p>
+  <p>
   	cl&gt; files lib$ sort-
-  <P>
+  </p>
+  <p>
   3. Generate a file list to be used to make a set of new files.  The new file
-  names will be the old file names with "<TT>_1</TT>" concatenated to the root, e.g.,
-  "<TT>root.x</TT>" would map to "<TT>root_1.x</TT>" and so on.
-  <P>
+  names will be the old file names with <tt>"_1"</tt> concatenated to the root, e.g.,
+  <tt>"root.x"</tt> would map to <tt>"root_1.x"</tt> and so on.
+  </p>
+  <p>
   	cl&gt; files root.*//_1
-  <P>
+  </p>
+  <p>
   4. Generate a file list similar to that in [3], adding a directory prefix
   to each filename.
-  <P>
+  </p>
+  <p>
   	cl&gt; files dir$//root.*
-  <P>
+  </p>
+  <p>
   5. Use string substitution to change the filename extension of a set of files
-  to "<TT>.y</TT>".
-  <P>
+  to <tt>".y"</tt>.
+  </p>
+  <p>
   	cl&gt; files root.%*%y%
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   directory, pathnames, images.sections
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

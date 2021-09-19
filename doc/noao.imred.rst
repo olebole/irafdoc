@@ -1,5 +1,5 @@
-imred — Image reductions package
-================================
+imred: Image reductions package
+===============================
 
 .. toctree:: :maxdepth: 1
 

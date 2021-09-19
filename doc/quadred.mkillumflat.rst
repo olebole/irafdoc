@@ -1,51 +1,51 @@
 .. _mkillumflat:
 
-mkillumflat — Make illumination corrected flat fields
-=====================================================
+mkillumflat: Make illumination corrected flat fields
+====================================================
 
 **Package: quadred**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   mkillumflat -- Make illumination corrected flat fields
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   mkillumflat input output
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
-  <DD>List of input flat field images to be illumination corrected.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
-  <DD>List of output illumination corrected flat field images.
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
+  <dd>List of input flat field images to be illumination corrected.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
+  <dd>List of output illumination corrected flat field images.
   If none is specified or if the name is the same as the
   input image then the output image replaces the input image.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>ccdtype = "<TT>flat</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='ccdtype' Line='ccdtype = "flat"'>
-  <DD>CCD image type to select from the input images.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>xboxmin = 5, xboxmax = 0.25, yboxmin = 5, yboxmax = 0.25</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='xboxmin' Line='xboxmin = 5, xboxmax = 0.25, yboxmin = 5, yboxmax = 0.25'>
-  <DD>Minimum and maximum smoothing box size along the x and y axes.  The
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>ccdtype = <tt>"flat"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='ccdtype' Line='ccdtype = "flat"' -->
+  <dd>CCD image type to select from the input images.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>xboxmin = 5, xboxmax = 0.25, yboxmin = 5, yboxmax = 0.25</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='xboxmin' Line='xboxmin = 5, xboxmax = 0.25, yboxmin = 5, yboxmax = 0.25' -->
+  <dd>Minimum and maximum smoothing box size along the x and y axes.  The
   minimum box size is used at the edges and grows to the maximum size in
   the middle of the image.  This allows the smoothed image to better
   represent gradients at the edge of the image.  If a size is less then 1
@@ -53,74 +53,76 @@ mkillumflat — Make illumination corrected flat fields
   greater than or equal to 1 then it is the box size in pixels.  A size
   greater than the size of image selects a box equal to the size of the
   image.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>clip = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='clip' Line='clip = yes'>
-  <DD>Clean the input images of objects?  If yes then a clipping algorithm is
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>clip = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='clip' Line='clip = yes' -->
+  <dd>Clean the input images of objects?  If yes then a clipping algorithm is
   used to detect and exclude objects from the smoothing.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>lowsigma = 2.5, highsigma = 2.5</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='lowsigma' Line='lowsigma = 2.5, highsigma = 2.5'>
-  <DD>Sigma clipping thresholds above and below the smoothed illumination.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>divbyzero = 1.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='divbyzero' Line='divbyzero = 1.'>
-  <DD>The illumination flat field is the ratio of the flat field to a
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>lowsigma = 2.5, highsigma = 2.5</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='lowsigma' Line='lowsigma = 2.5, highsigma = 2.5' -->
+  <dd>Sigma clipping thresholds above and below the smoothed illumination.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>divbyzero = 1.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='divbyzero' Line='divbyzero = 1.' -->
+  <dd>The illumination flat field is the ratio of the flat field to a
   smoothed flat field.  This may produce division by zero.  A warning is
   given if division by zero takes place and the result (the illumination
   corrected flat field value) is replaced by the value of this
   parameter.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>ccdproc (parameter set)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='ccdproc' Line='ccdproc (parameter set)'>
-  <DD>CCD processing parameters.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>ccdproc (parameter set)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='ccdproc' Line='ccdproc (parameter set)' -->
+  <dd>CCD processing parameters.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   First, the input flat field images are processed as needed.  Then the
   large scale illumination pattern of the images is removed.  The
   illumination pattern is determined by heavily smoothing the image using
-  a moving "<TT>boxcar</TT>" average.  The output image is the ratio of the input
+  a moving <tt>"boxcar"</tt> average.  The output image is the ratio of the input
   image to the illumination pattern.  The illumination pattern is
   normalized by its mean to preserve the mean level of the input image.
-  <P>
+  </p>
+  <p>
   When this task is applied to flat field images only the small scale
   response effects are retained.  This is appropriate if the flat field
   images have illumination effects which differ from the astronomical
   images and blank sky images are not available for creating sky
   corrected flat fields.  When a high quality blank sky image is
-  available the related task <B>mkskyflat</B> should be used.  Note that
+  available the related task <b>mkskyflat</b> should be used.  Note that
   the illumination correction, whether from the flat field or a sky
   image, may be applied as a separate step by using the task
-  <B>mkillumcor</B> or <B>mkskycor</B> and applying the illumination
-  correction as a separate operation in <B>ccdproc</B>.  However, creating
+  <b>mkillumcor</b> or <b>mkskycor</b> and applying the illumination
+  correction as a separate operation in <b>ccdproc</b>.  However, creating
   an illumination corrected flat field image before processing is more
   efficient since one less operation per image processed is needed.  For
   more discussion about flat fields and illumination corrections see
-  <B>flatfields</B>.
-  <P>
+  <b>flatfields</b>.
+  </p>
+  <p>
   The smoothing algorithm is a moving average over a two dimensional
   box.  The algorithm is unconvential in that the box size is not fixed.
   The box size is increased from the specified minimum at the edges to
   the maximum in the middle of the image.  This permits a better estimate
   of the background at the edges, while retaining the very large scale
   smoothing in the center of the image.  Note that the sophisticated
-  tools of the <B>images</B> package may be used for smoothing but this
+  tools of the <b>images</b> package may be used for smoothing but this
   requires more of the user and, for the more sophisticated smoothing
   algorithms such as surface fitting, more processing time.
-  <P>
+  </p>
+  <p>
   To minimize the effects of bad pixels a sigma clipping algorithm is
   used to detect and reject these pixels from the illumination.  This is
   done by computing the rms of the image lines relative to the smoothed
@@ -128,26 +130,26 @@ mkillumflat — Make illumination corrected flat fields
   factors times the rms.  This is done before each image line is added to
   the moving average, except for the first few lines where an iterative
   process is used.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Two examples in which a new image is created and in which the
   input flat fields are corrected in place are:
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; mkllumflat flat004 FlatV
       cl&gt; mkillumflat flat* ""
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   ccdproc, flatfields, mkfringecor, mkillumcor, mkskycor, mkskyflat
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

@@ -1,59 +1,61 @@
 .. _cache:
 
-cache — Cache parameter files, or print the current cache list
-==============================================================
+cache: Cache parameter files, or print the current cache list
+=============================================================
 
 **Package: language**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   cache -- cache the parameters for a task in fast memory
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   cache task [task ...]
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>task</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='task' Line='task'>
-  <DD>The name of a task whose parameter set is to be cached in fast memory.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  The <I>cache</I> command loads the parameters of a task in memory.
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>task</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='task' Line='task' -->
+  <dd>The name of a task whose parameter set is to be cached in fast memory.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  The <i>cache</i> command loads the parameters of a task in memory.
   The CL normally reads the parameters for a task from disk whenever the
   task is executed.  Cacheing the parameters for frequently executed tasks
   can speed up execution significantly.  This is particularly important when
   the tasks are called from within a loop.
-  <P>
-  If the <I>cache</I> command is entered without any arguments a list of the
-  currently "<TT>cached</TT>" tasks is printed.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  1. Cache the parameters for the tasks <I>directory</I> and <I>page</I>.
-  <P>
+  </p>
+  <p>
+  If the <i>cache</i> command is entered without any arguments a list of the
+  currently <tt>"cached"</tt> tasks is printed.
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
+  1. Cache the parameters for the tasks <i>directory</i> and <i>page</i>.
+  </p>
+  <p>
   	cl&gt; cache dir page
-  <P>
+  </p>
+  <p>
   2. Cache the parameters for the tasks called in a loop within the body of
   a procedure script.  Note the use of command mode in the script.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	begin
   		cache ("alpha", "beta")
   		for (i=1;  i &lt;= 10;  i+=1) {
@@ -61,22 +63,22 @@ cache — Cache parameter files, or print the current cache list
   		    beta (i)
   		}
   	end
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <p>
   The parameter cache should not be confused with the process cache associated
-  with the <I>prcache</I> and <I>flprcache</I> commands.
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  with the <i>prcache</i> and <i>flprcache</i> commands.
+  </p>
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   unlearn, update, lparam, eparam
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

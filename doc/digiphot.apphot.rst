@@ -1,5 +1,5 @@
-apphot — Aperture Photometry Package
-====================================
+apphot: Aperture Photometry Package
+===================================
 
 .. toctree:: :maxdepth: 1
 

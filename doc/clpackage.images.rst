@@ -1,5 +1,5 @@
-images — General image processing package
-=========================================
+images: General image processing package
+========================================
 
 .. toctree:: :maxdepth: 1
 

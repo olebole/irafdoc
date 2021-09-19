@@ -1,79 +1,76 @@
 .. _access:
 
-access — Test if a file exists
-==============================
+access: Test if a file exists
+=============================
 
 **Package: language**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   access -- test whether a file exists
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   bool = access (filename)
   bool = imaccess (imagename)
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>filename</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='filename' Line='filename'>
-  <DD>The name of the file whose existence is to be tested.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>imagename</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='imagename' Line='imagename'>
-  <DD>The name of the image whose existence is to be tested.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <I>Access</I> is a boolean intrinsic function returning true ("<TT>yes</TT>") if the
-  named file exists.  <I>Access</I> can only be called as a function in an
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>filename</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='filename' Line='filename' -->
+  <dd>The name of the file whose existence is to be tested.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>imagename</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='imagename' Line='imagename' -->
+  <dd>The name of the image whose existence is to be tested.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  <i>Access</i> is a boolean intrinsic function returning true (<tt>"yes"</tt>) if the
+  named file exists.  <i>Access</i> can only be called as a function in an
   expression, not as a task.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Type a file if it exists.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       if (access ("lib$motd"))
   	type ("lib$motd")
       else
   	error (11, "File not found")
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. Tell if a file and an image exists.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; = access ("lib$motd")
   	cl&gt; = imaccess ("dev$pix")
-  </PRE>
-  <P>
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <p>
   An optional second argument should be added to test whether the named file
   can be accessed for reading or writing.
-  </UL>
-  <! EndSection:    'BUGS'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS'  >
+  <!-- EndSection:    'BUGS' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS'  -->
   

@@ -1,5 +1,5 @@
-digiphot — Digital stellar photometry package
-=============================================
+digiphot: Digital stellar photometry package
+============================================
 
 .. toctree:: :maxdepth: 1
 

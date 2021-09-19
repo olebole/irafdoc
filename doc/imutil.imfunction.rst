@@ -1,230 +1,226 @@
 .. _imfunction:
 
-imfunction — Apply a single argument function to a list of images
-=================================================================
+imfunction: Apply a single argument function to a list of images
+================================================================
 
 **Package: imutil**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   imfunction -- Apply a function to the image pixel values
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage	</H3>
-  <! BeginSection: 'USAGE	'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage	</h3>
+  <!-- BeginSection: 'USAGE	' -->
+  <p>
   imfunction input output function
-  </UL>
-  <! EndSection:   'USAGE	'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
-  <DD>The input image list.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
-  <DD>Output image list. The number of output images must match the number of
+  </p>
+  <!-- EndSection:   'USAGE	' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
+  <dd>The input image list.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
+  <dd>Output image list. The number of output images must match the number of
   input images. If the output image list equals the input image list
   the input images are overwritten.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>function</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='function' Line='function'>
-  <DD>Function to be applied to the input pixels. The options are:
-  <DL>
-  <DT><B>log10</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='log10' Line='log10'>
-  <DD>Take the logarithm to base 10 of an image. Negative and zero-valued
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>function</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function' -->
+  <dd>Function to be applied to the input pixels. The options are:
+  <dl>
+  <dt><b>log10</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='log10' Line='log10' -->
+  <dd>Take the logarithm to base 10 of an image. Negative and zero-valued
   pixels will be assigned the value -MAX_EXPONENT.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>alog10</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='alog10' Line='alog10'>
-  <DD>Taken the antilogarithm to base 10 of the image. Positive out-of-bounds
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>alog10</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='alog10' Line='alog10' -->
+  <dd>Taken the antilogarithm to base 10 of the image. Positive out-of-bounds
   pixel values will be assigned the value MAX_REAL, negative out-of-bounds
   pixel values will be assigned the value 0.0.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>ln   </B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='ln' Line='ln   '>
-  <DD>Take the natural logarithm of an image. Negative and zero-valued pixels
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>ln   </b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='ln' Line='ln   ' -->
+  <dd>Take the natural logarithm of an image. Negative and zero-valued pixels
   will be assigned the value - ln (10.) * MAX_EXPONENT.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>aln   </B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='aln' Line='aln   '>
-  <DD>Take the antilogarithm to base e of an image. Positive out-of-bounds pixel
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>aln   </b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='aln' Line='aln   ' -->
+  <dd>Take the antilogarithm to base e of an image. Positive out-of-bounds pixel
   values will be assigned the value MAX_REAL, negative out-of-bounds
   pixel values will be assigned the value 0.0
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>sqrt</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='sqrt' Line='sqrt'>
-  <DD>Take the square root of an image. Negative pixel values will be assigned
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>sqrt</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='sqrt' Line='sqrt' -->
+  <dd>Take the square root of an image. Negative pixel values will be assigned
   the value 0.0.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>square</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='square' Line='square'>
-  <DD>Take the square of an image.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>cbrt</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='cbrt' Line='cbrt'>
-  <DD>Take the cube root of an image.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>cube</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='cube' Line='cube'>
-  <DD>Take the cube of an image.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>abs  </B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='abs' Line='abs  '>
-  <DD>Take the absolute value of an image.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>neg  </B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='neg' Line='neg  '>
-  <DD>Take the negative of an image.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>cos  </B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='cos' Line='cos  '>
-  <DD>Take the cosine of an image.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>sin  </B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='sin' Line='sin  '>
-  <DD>Take the sine of an image.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>tan  </B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='tan' Line='tan  '>
-  <DD>Take the tangent of an image.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>acos</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='acos' Line='acos'>
-  <DD>Take the arc-cosine of an image. The output pixels will lie between
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>square</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='square' Line='square' -->
+  <dd>Take the square of an image.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>cbrt</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='cbrt' Line='cbrt' -->
+  <dd>Take the cube root of an image.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>cube</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='cube' Line='cube' -->
+  <dd>Take the cube of an image.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>abs  </b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='abs' Line='abs  ' -->
+  <dd>Take the absolute value of an image.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>neg  </b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='neg' Line='neg  ' -->
+  <dd>Take the negative of an image.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>cos  </b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='cos' Line='cos  ' -->
+  <dd>Take the cosine of an image.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>sin  </b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='sin' Line='sin  ' -->
+  <dd>Take the sine of an image.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>tan  </b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='tan' Line='tan  ' -->
+  <dd>Take the tangent of an image.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>acos</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='acos' Line='acos' -->
+  <dd>Take the arc-cosine of an image. The output pixels will lie between
   0.0 and PI.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>asin</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='asin' Line='asin'>
-  <DD>Take the arc-sine of an image. The output pixels will lie between -PI/2
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>asin</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='asin' Line='asin' -->
+  <dd>Take the arc-sine of an image. The output pixels will lie between -PI/2
   and +PI/2.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>atan</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='atan' Line='atan'>
-  <DD>Take the arc-tangent of an image. The output pixels will lie between
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>atan</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='atan' Line='atan' -->
+  <dd>Take the arc-tangent of an image. The output pixels will lie between
   -PI/2 and +PI/2.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>hcos</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='hcos' Line='hcos'>
-  <DD>Take the hyperbolic cosine of an image. Positive or negative
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>hcos</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='hcos' Line='hcos' -->
+  <dd>Take the hyperbolic cosine of an image. Positive or negative
   out-of-bounds pixels will be assigned the value MAX_REAL.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>hsin</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='hsin' Line='hsin'>
-  <DD>Take the hyperbolic sine of an image. Positive and negative out-of-bounds
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>hsin</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='hsin' Line='hsin' -->
+  <dd>Take the hyperbolic sine of an image. Positive and negative out-of-bounds
   pixel values will be assigned the values MAX_REAL and -MAX_REAL respectively.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>htan</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='htan' Line='htan'>
-  <DD>Take the hyperbolic tangent of an image.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>reciprocal</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='reciprocal' Line='reciprocal'>
-  <DD>Take the reciprocal of an image. Zero-valued pixels will be assigned
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>htan</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='htan' Line='htan' -->
+  <dd>Take the hyperbolic tangent of an image.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>reciprocal</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='reciprocal' Line='reciprocal' -->
+  <dd>Take the reciprocal of an image. Zero-valued pixels will be assigned
   the output value 0.0
-  </DD>
-  </DL>
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verbose = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
-  <DD>Print messages about actions taken by the task?
-  </DD>
-  </DL>
-  <P>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <P>
-  The selected function <I>function</I> is applied to the pixel values of all
-  the input images <I>input</I> to create the pixel values of the output
-  images <I>output</I>. The number of output images must equal the number of
+  </dd>
+  </dl>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verbose = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
+  <dd>Print messages about actions taken by the task?
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  The selected function <i>function</i> is applied to the pixel values of all
+  the input images <i>input</i> to create the pixel values of the output
+  images <i>output</i>. The number of output images must equal the number of
   input images. If the output image name is the same as the input image name
   the input image will be overwritten.
-  <P>
+  </p>
+  <p>
   If the input image is type real or double the output image will
   be of type real or double respectively. If the input image is type
   ushort then the output image will be type real. If the input image is one of
   the remaining integer data types, then the output image will be type
-  real, unless function is "<TT>abs</TT>" or "<TT>neg</TT>", in which case the output
+  real, unless function is <tt>"abs"</tt> or <tt>"neg"</tt>, in which case the output
   data type will be the same as the input data type.
-  <P>
+  </p>
+  <p>
   Values of the machine dependent constants MAX_REAL and MAX_EXPONENT can be
-  found in the file "<TT>hlib$mach.h</TT>". 
-  <P>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
+  found in the file <tt>"hlib$mach.h"</tt>. 
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Take the logarithm of the pixel values of images in1 and in2 and write
   the results to out1 and out2.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; imfunction in1,in2 out1,out2 log10
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   imarith,imreplace
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

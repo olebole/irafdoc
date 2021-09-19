@@ -1,67 +1,67 @@
 .. _credit:
 
-credit — Interactively edit cosmic rays using an image display
-==============================================================
+credit: Interactively edit cosmic rays using an image display
+=============================================================
 
 **Package: crutil**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   credit -- interactively edit cosmic rays using an image display
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage	</H3>
-  <! BeginSection: 'USAGE	'>
-  <UL>
-  <PRE>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage	</h3>
+  <!-- BeginSection: 'USAGE	' -->
+  <pre>
   credit input output
-  </PRE>
-  </UL>
-  <! EndSection:   'USAGE	'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  See parameters for <B>imedit</B>.
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  This task is a version of <B>imedit</B>.  See the help for that task
+  </pre>
+  <!-- EndSection:   'USAGE	' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <p>
+  See parameters for <b>imedit</b>.
+  </p>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  This task is a version of <b>imedit</b>.  See the help for that task
   for a description of the parameters and algorithms.
-  <P>
+  </p>
+  <p>
   For the purpose of editing cosmic rays the most useful editing option
-  is <TT>'b'</TT> to replace cosmic rays in a circular annulus using local sky
+  is <tt>'b'</tt> to replace cosmic rays in a circular annulus using local sky
   values.  This can be done interactively or using a list of positions
-  along with the <I>default</I> parameter value.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  along with the <i>default</i> parameter value.
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1.  To replace cosmic rays interactively.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; credit obj012 crobj012 crmask012
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2.  To use a two column list of positions and remove the cosmic rays using
-  the <TT>'b'</TT> key algorithm.
-  <P>
-  <PRE>
+  the <tt>'b'</tt> key algorithm.
+  </p>
+  <pre>
       cl&gt; credit obj012 crobj012 cursor=crlist.dat display-
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   imedit, epix
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

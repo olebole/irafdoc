@@ -1,122 +1,125 @@
 .. _gkimosaic:
 
-gkimosaic — Condense metacode frames to fit on one page
-=======================================================
+gkimosaic: Condense metacode frames to fit on one page
+======================================================
 
 **Package: plot**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   gkimosaic -- condense metacode frames to fit on one page
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   gkimosaic input
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
-  <DD>The metacode input, which can be redirected from STDIN or read from
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
+  <dd>The metacode input, which can be redirected from STDIN or read from
   one or more binary metacode files.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output' Line='output = ""'>
-  <DD>If <B>output</B> is specified, the mosaiced metacode is spooled to this
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
+  <dd>If <b>output</b> is specified, the mosaiced metacode is spooled to this
   file for later plotting.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>device = "<TT>stdgraph</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdgraph"'>
-  <DD>Output plotting device.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>nx = 2</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='nx' Line='nx = 2'>
-  <DD>The number of plots to draw in the x direction.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>ny = 2</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='ny' Line='ny = 2'>
-  <DD>The number of plots to draw in the y direction.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>fill = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='fill' Line='fill = no'>
-  <DD>The plots are reduced by equal factors in x and y when <B>fill</B> = no. 
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>rotate = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='rotate' Line='rotate = no'>
-  <DD>Output the mosaiced plots rotated by 90 degrees.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>interactive = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes'>
-  <DD>If plotting to <B>stdgraph</B>, interactively examine each page of plots.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>cursor = "<TT>stdgcur</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = "stdgcur"'>
-  <DD>Source of cursor input.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  Task <B>gkimosaic</B> condenses the plots in a metacode file to fit
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>device = <tt>"stdgraph"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdgraph"' -->
+  <dd>Output plotting device.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>nx = 2</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='nx' Line='nx = 2' -->
+  <dd>The number of plots to draw in the x direction.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>ny = 2</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='ny' Line='ny = 2' -->
+  <dd>The number of plots to draw in the y direction.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>fill = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='fill' Line='fill = no' -->
+  <dd>The plots are reduced by equal factors in x and y when <b>fill</b> = no. 
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>rotate = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='rotate' Line='rotate = no' -->
+  <dd>Output the mosaiced plots rotated by 90 degrees.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>interactive = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes' -->
+  <dd>If plotting to <b>stdgraph</b>, interactively examine each page of plots.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>cursor = <tt>"stdgcur"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = "stdgcur"' -->
+  <dd>Source of cursor input.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  Task <b>gkimosaic</b> condenses the plots in a metacode file to fit
   on a single page.  The plots can be examined interactively after
   each pageful.  The number of plots in x and y can be specified.  This
   task is useful for browsing through a large metacode file, and for
   compactly plotting a large number of metacode frames.
-  <P>
-  When <B>fill</B> = no, the plots will be
+  </p>
+  <p>
+  When <b>fill</b> = no, the plots will be
   reduced by equal factors in x and y; the aspect ratio of the original 
-  plot is preserved.  When <B>fill</B> = yes, the transformations in x and
+  plot is preserved.  When <b>fill</b> = yes, the transformations in x and
   y are handled separately, meaning that the reduction factors will not
-  be equal unless <B>nx</B> = <B>ny</B>.  
-  <P>
+  be equal unless <b>nx</b> = <b>ny</b>.  
+  </p>
+  <p>
   The mosaiced plots are drawn on the page rotated by 90 degrees
-  when <B>rotate</B> = yes.  This means the x axis of the plots can be
+  when <b>rotate</b> = yes.  This means the x axis of the plots can be
   placed along either the page width or length.
-  The plots can be output to a plotting <B>device</B>,
-  or spooled in file <B>output</B> for later plotting.
-  <P>
-  If plotting to <B>stdgraph</B>, the plot can be interactively
-  examined after each page of output by setting <B>interactive</B> = yes.
+  The plots can be output to a plotting <b>device</b>,
+  or spooled in file <b>output</b> for later plotting.
+  </p>
+  <p>
+  If plotting to <b>stdgraph</b>, the plot can be interactively
+  examined after each page of output by setting <b>interactive</b> = yes.
   The world coordinate system information of the individual plots has 
   been retained for cursor readback.
   Standard cursor mode keystroke commands are available as well as the
-  <I>gkimosaic</I> specific commands listed below.  Colon commands :nx, :ny, 
+  <i>gkimosaic</i> specific commands listed below.  Colon commands :nx, :ny, 
   :fill and :rotate take effect on the next page of output.  Command :skip
   allows you to browse through a metacode file, skipping either forward or
   backward by N input plots.
-  <PRE>
-  <P>
+  </p>
+  <pre>
+  
   	q				quit
   	return				quit
   	spacebar			continue
   	?				print help information
-  <P>
+  
   	:nx N				change value of nx to N
   	:ny N				change value of ny to N
   	:fill yes, :fill+, :fill	sets fill = yes
@@ -124,45 +127,50 @@ gkimosaic — Condense metacode frames to fit on one page
   	:rotate yes, :rotate+, :rotate	sets rotate = yes
   	:rotate no, :rotate-		sets rotate = no
   	:skip +/-N			skip forward/backward N plots
-  <P>
-  </PRE>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  1. Plot every frame in the metacode file "<TT>oned.plots</TT>".  There will be 4 plots
+  
+  </pre>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
+  1. Plot every frame in the metacode file <tt>"oned.plots"</tt>.  There will be 4 plots
   to the page originally, but this can be overridden interactively.
-  <P>
+  </p>
+  <p>
       cl&gt; gkimosaic oned.plots
-  <P>
-  2. Extract every third plot from the metacode file "<TT>oned.plots</TT>" with task
-  <I>gkiextract</I> and plot them four to a page.
-  <P>
+  </p>
+  <p>
+  2. Extract every third plot from the metacode file <tt>"oned.plots"</tt> with task
+  <i>gkiextract</i> and plot them four to a page.
+  </p>
+  <p>
       cl&gt; gkiextract oned.plots 1-99x3 | gkimosaic
-  <P>
-  3. Plot all frames in every metacode file beginning with "<TT>mcode.</TT>" and
+  </p>
+  <p>
+  3. Plot all frames in every metacode file beginning with <tt>"mcode."</tt> and
   condense them so 16 fit on a page.  The metacode is being spooled;
   it will be plotted, perhaps, when the computer isn't so busy.  Interactive
   mode is automatically disabled when not plotting to a graphics terminal.
-  <P>
+  </p>
+  <p>
       cl&gt; gkimosaic mcode.* nx=4 ny=4 output=plt.spool
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  Setting <B>device</B> to "<TT>stdvdm</TT>" does not work.  To produce an output file
-  of mosaiced metacode, use the <I>output</I> parameter or the "<TT>&gt;G</TT>" graphics 
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <p>
+  Setting <b>device</b> to <tt>"stdvdm"</tt> does not work.  To produce an output file
+  of mosaiced metacode, use the <i>output</i> parameter or the <tt>"&gt;G"</tt> graphics 
   stream redirection feature of the cl.
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   gkidir, gkiextract
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

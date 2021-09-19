@@ -1,5 +1,5 @@
-mtlocal — Magtape i/o for special NOAO format tapes
-===================================================
+mtlocal: Magtape i/o for special NOAO format tapes
+==================================================
 
 .. toctree:: :maxdepth: 1
 

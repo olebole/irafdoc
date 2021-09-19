@@ -1,56 +1,55 @@
 .. _detab:
 
-detab — Replace tabs with tabs and blanks
-=========================================
+detab: Replace tabs with tabs and blanks
+========================================
 
 **Package: utilities**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   detab -- remove tab characters from a file or files
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   detab files
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>files</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='files' Line='files'>
-  <DD>Template specifying files to be processed e.g. "<TT>file1</TT>" or "<TT>file*</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>tablist = "<TT>9 +8</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='tablist' Line='tablist = "9 +8"'>
-  <DD>String containing a list of tabstops separated by blanks or commas.
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>files</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='files' Line='files' -->
+  <dd>Template specifying files to be processed e.g. <tt>"file1"</tt> or <tt>"file*"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>tablist = <tt>"9 +8"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='tablist' Line='tablist = "9 +8"' -->
+  <dd>String containing a list of tabstops separated by blanks or commas.
   Alternatively a two element string of the form m +n will set
   tabstops every n columns beginning in column m.  A null string will
-  default to "<TT>9 +8</TT>".
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Example</H3>
-  <! BeginSection: 'EXAMPLE'>
-  <UL>
-  Remove the tabs from file "<TT>cubspl.f</TT>", using the default tab stops.
-  <P>
-  <PRE>
+  default to <tt>"9 +8"</tt>.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Example</h3>
+  <!-- BeginSection: 'EXAMPLE' -->
+  <p>
+  Remove the tabs from file <tt>"cubspl.f"</tt>, using the default tab stops.
+  </p>
+  <pre>
   	cl&gt; detab cubspl.f &gt; temp
   	cl&gt; delete cubspl.f
   	cl&gt; rename temp cubspl.f
-  </PRE>
-  </UL>
-  <! EndSection:    'EXAMPLE'>
+  </pre>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'EXAMPLE'  >
+  <!-- EndSection:    'EXAMPLE' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'EXAMPLE'  -->
   

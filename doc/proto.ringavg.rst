@@ -1,65 +1,64 @@
 .. _ringavg:
 
-ringavg — Compute pixel averages in concentric rings about given center
-=======================================================================
+ringavg: Compute pixel averages in concentric rings about given center
+======================================================================
 
 **Package: proto**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   ringavg -- compute pixel averages in concentric rings about given center
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   ringavg image xc yc
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>image</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='image' Line='image'>
-  <DD>Image to be used.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>xc, yc</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='xc' Line='xc, yc'>
-  <DD>Pixel coordinate for center of rings.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>r1 = 0, r2 = 10, dr = 1</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='r1' Line='r1 = 0, r2 = 10, dr = 1'>
-  <DD>Rings to be measured.  <I>r1</I> is the inner radius of the first ring,
-  <I>r2</I> is the outer radius of the last bin, and <I>dr</I> is the widths
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>image</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image' -->
+  <dd>Image to be used.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>xc, yc</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='xc' Line='xc, yc' -->
+  <dd>Pixel coordinate for center of rings.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>r1 = 0, r2 = 10, dr = 1</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='r1' Line='r1 = 0, r2 = 10, dr = 1' -->
+  <dd>Rings to be measured.  <i>r1</i> is the inner radius of the first ring,
+  <i>r2</i> is the outer radius of the last bin, and <i>dr</i> is the widths
   of the rings.  The values are in units of pixels.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>labels = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='labels' Line='labels = yes'>
-  <DD>Print column labels for the output?
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>vebar = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='vebar' Line='vebar = no'>
-  <DD>If <I>vebar</I> is yes then the standard deviation and standard error will
-  be printed as negative values for use with <B>graph</B>.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>labels = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='labels' Line='labels = yes' -->
+  <dd>Print column labels for the output?
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>vebar = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='vebar' Line='vebar = no' -->
+  <dd>If <i>vebar</i> is yes then the standard deviation and standard error will
+  be printed as negative values for use with <b>graph</b>.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   Pixels are binned into a series of concentric rings centered on a given
   position in the input image.  The rings are defined by an inner radius
   for the first ring, an outer radius for the last ring, and the width
@@ -67,24 +66,26 @@ ringavg — Compute pixel averages in concentric rings about given center
   computed and list to the standard output.  The output lines consist
   of the inner and outer ring radii, the number of pixels, the average value,
   the standard deviation of the value (corrected for population size), and
-  the standard error.  The parameter <I>label</I> selects whether to include
+  the standard error.  The parameter <i>label</i> selects whether to include
   column labels.
-  <P>
-  If the ring average are to be plotted with the task <B>graph</B> using
+  </p>
+  <p>
+  If the ring average are to be plotted with the task <b>graph</b> using
   the option to plot error bars based on the standard deviation or standard
-  error then the <I>vebar</I> parameter may be set to write the values as
+  error then the <i>vebar</i> parameter may be set to write the values as
   negative values are required by that task.
-  <P>
+  </p>
+  <p>
   This task is a script and so users may copy it and modify it as desired.
   Because it is a script it will be very slow if r2 becomes large.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Compute the ring averages with labels and output to the terminal.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; ringavg pwimage 17 17
       #  R min    R max     Npix    Average    Std Dev    Std Err
   	0.00     1.00        5      7.336       9.16      4.096
@@ -97,30 +98,29 @@ ringavg — Compute pixel averages in concentric rings about given center
   	7.00     8.00       48    0.06731    0.05373   0.007755
   	8.00     9.00       56    0.06146    0.07601    0.01016
   	9.00    10.00       64    0.05626    0.05846   0.007308
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2.  Plot the ring averages with standard errors used for error bars.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; ringavg pwimage 17 17 label- vebar+ | fields STDIN 2,4,6 |
       &gt;&gt;&gt; graph point+ marker=vebar
-  </PRE>
-  <P>
+  </pre>
+  <p>
   3.  Plot ring averages for galaxy in dev$pix.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; ringavg dev$pix 256 256 r2=100 dr=5 label- | fields STDIN 2,4 |
       &gt;&gt;&gt; graph logy+
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   pradprof, psfmeasure, radprof
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

@@ -1,5 +1,5 @@
-immatch — Image matching and combining package
-==============================================
+immatch: Image matching and combining package
+=============================================
 
 .. toctree:: :maxdepth: 1
 

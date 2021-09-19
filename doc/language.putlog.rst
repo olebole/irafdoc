@@ -1,55 +1,55 @@
 .. _putlog:
 
-putlog — Put a message to the logfile
-=====================================
+putlog: Put a message to the logfile
+====================================
 
 **Package: language**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   putlog -- put a message to the logfile
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   putlog logmsg
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>logmsg</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='logmsg' Line='logmsg'>
-  <DD>A message to append to the logfile.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <I>Putlog</I> is used to add user messages to the logfile.  The CL parameter
-  <I>keeplog</I> must be set to `yes' for this to take effect.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  For executable tasks, the only way to call <I>putlog</I> currently is via
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>logmsg</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='logmsg' Line='logmsg' -->
+  <dd>A message to append to the logfile.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  <i>Putlog</i> is used to add user messages to the logfile.  The CL parameter
+  <i>keeplog</i> must be set to `yes' for this to take effect.
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <p>
+  For executable tasks, the only way to call <i>putlog</i> currently is via
   the low-level CLIO routine clcmd().
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   cl, logging
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'BUGS' 'SEE ALSO'  -->
   

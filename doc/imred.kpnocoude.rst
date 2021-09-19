@@ -1,5 +1,5 @@
-kpnocoude — KPNO coude reduction package (slit and 3 fiber)
-===========================================================
+kpnocoude: KPNO coude reduction package (slit and 3 fiber)
+==========================================================
 
 .. toctree:: :maxdepth: 1
 

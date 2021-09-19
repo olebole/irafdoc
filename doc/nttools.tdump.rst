@@ -1,31 +1,33 @@
 .. _tdump:
 
-tdump — Dump the contents of a table to an ASCII file.
-======================================================
+tdump: Dump the contents of a table to an ASCII file.
+=====================================================
 
 **Package: nttools**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   tdump -- Convert an STSDAS table to ASCII format.
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   tdump table
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   This task converts an STSDAS table to ASCII format.
   The output does not include row numbers or column names;
   use the 'tprint' task for more readable output.
-  <P>
+  </p>
+  <p>
   The two primary uses for 'tdump' are to allow editing that would be
   difficult or impossible with 'tedit' (such as global substitutions)
   and copying a table over a network to another computer.
@@ -40,10 +42,12 @@ tdump — Dump the contents of a table to an ASCII file.
   A character value with multiple words is printed with enclosing quotes
   to make it clear that it is the value for a single column
   and also for compatibility with 'tcreate'.
-  <P>
+  </p>
+  <p>
   All rows and columns of the table are dumped by default,
   but ranges of rows and individual columns may be specified.
-  <P>
+  </p>
+  <p>
   The order of printing the data is as follows.
   The first column of the first row is printed,
   then the second column of the first row is printed,
@@ -59,146 +63,144 @@ tdump — Dump the contents of a table to an ASCII file.
   Note that this can be different from 'tprint',
   which prints all rows for those columns that will fit on a page,
   then prints all rows for the next set of columns.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>table [file name]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='table' Line='table [file name]'>
-  <DD>The name of the STSDAS table to be dumped.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(cdfile = STDOUT) [file name]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(cdfile = STDOUT) [file name]'>
-  <DD>If 'cdfile' is not null (i.e., it is not passed a value of "<TT></TT>")
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>table [file name]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='table' Line='table [file name]' -->
+  <dd>The name of the STSDAS table to be dumped.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(cdfile = STDOUT) [file name]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(cdfile = STDOUT) [file name]' -->
+  <dd>If 'cdfile' is not null (i.e., it is not passed a value of <tt>""</tt>)
   then the column definitions will be written
   to an output file having the name passed to 'cdfile'.
   (Note:  A space is not null.)  The column definitions consist of
-  the column name, data type ("<TT>R</TT>" for real,
-  "<TT>D</TT>" for double, "<TT>I</TT>" for integer, "<TT>B</TT>" for boolean,
-  or "<TT>CH*n</TT>" for character strings of length n), print format, and units.
+  the column name, data type (<tt>"R"</tt> for real,
+  <tt>"D"</tt> for double, <tt>"I"</tt> for integer, <tt>"B"</tt> for boolean,
+  or <tt>"CH*n"</tt> for character strings of length n), print format, and units.
   For columns of arrays,
   the array size is shown in square brackets appended to the data type.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(pfile = STDOUT) [file name]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(pfile = STDOUT) [file name]'>
-  <DD>If 'pfile' is not null (i.e., it is not passed a value of "<TT></TT>") 
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(pfile = STDOUT) [file name]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(pfile = STDOUT) [file name]' -->
+  <dd>If 'pfile' is not null (i.e., it is not passed a value of <tt>""</tt>) 
   then the header parameters will be written
   to an output file with the name passed to 'pfile'.
   This file will not be created
   if there are no header parameters in the input file.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(datafile = STDOUT) [file name]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(datafile = STDOUT) [file name]'>
-  <DD>If 'datafile' is not null (i.e., it is not passed a value of "<TT></TT>") then 
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(datafile = STDOUT) [file name]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(datafile = STDOUT) [file name]' -->
+  <dd>If 'datafile' is not null (i.e., it is not passed a value of <tt>""</tt>) then 
   the table data will be written
   to an output file with the name passed to 'datafile'.
   This file will not be created if the input table is empty.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(columns = "<TT></TT>") [string]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(columns = "") [string]'>
-  <DD>The names of the columns to be printed.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(columns = <tt>""</tt>) [string]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(columns = "") [string]' -->
+  <dd>The names of the columns to be printed.
   A null value causes all columns to be printed.
   A column template consists of a list
   of either column names or column name templates that include wildcards.
   Individual column names or templates are separated by commas or white space.
   This list of column names can be placed in a list file and 'column'
-  will then be passed the file name preceded by a "<TT>@</TT>" character.
+  will then be passed the file name preceded by a <tt>"@"</tt> character.
   If the first non-white character in the column template
-  is the negation character (either "<TT>~</TT>" or "<TT>!</TT>")
+  is the negation character (either <tt>"~"</tt> or <tt>"!"</tt>)
   the columns NOT named in the template will be printed.
-  <P>
   The 'tlcol' task (with the 'nlist' parameter set to 1) may be used 
   to generate a list of column names so there is no question about spelling.
   This list may be edited to rearrange or delete columns.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(rows = "<TT>-</TT>") [string]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(rows = "-") [string]'>
-  <DD>The range of rows to be printed.
-  The default of "<TT>-</TT>" means print all rows.
-  The first ten rows could be specified as 'rows="<TT>1-10</TT>"'.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(rows = <tt>"-"</tt>) [string]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(rows = "-") [string]' -->
+  <dd>The range of rows to be printed.
+  The default of <tt>"-"</tt> means print all rows.
+  The first ten rows could be specified as 'rows=<tt>"1-10"</tt>'.
   To print the first ten rows and all rows from 900 through
-  the last (inclusive), use 'rows="<TT>1-10,900-</TT>"'.
-  Setting 'rows="<TT>1,3,7,23</TT>"' will print only those four rows.
+  the last (inclusive), use 'rows=<tt>"1-10,900-"</tt>'.
+  Setting 'rows=<tt>"1,3,7,23"</tt>' will print only those four rows.
   It is not an error to specify rows larger than the largest row number;
   they will simply be ignored.
-  Type "<TT>help xtools.ranges</TT>" for more information.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(pwidth = -1) [integer, min=-1, max=INDEF]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(pwidth = -1) [integer, min=-1, max=INDEF]'>
-  <DD>Width of the output for printing the table data.
+  Type <tt>"help xtools.ranges"</tt> for more information.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(pwidth = -1) [integer, min=-1, max=INDEF]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(pwidth = -1) [integer, min=-1, max=INDEF]' -->
+  <dd>Width of the output for printing the table data.
   The default value of -1 means that
   checking the width should be disabled,
   and each table row will be written to one line in the output file.
-  <P>
   If any column to be printed is wider than 'pwidth',
   a warning message will be displayed,
   and the data will overflow the page width.
   The width of each character column is
   increased by two to allow space for a pair of enclosing quotes,
   which will be used if the value to be printed includes a blank or tab.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  1.  Dump the table "<TT>junk.tab</TT>" to STDOUT:
-  <PRE>
-  <P>
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
+  1.  Dump the table <tt>"junk.tab"</tt> to STDOUT:
+  </p>
+  <pre>
+  
        tt&gt; tdump junk.tab cdfile=STDOUT pfile=STDOUT datafile=STDOUT
-  <P>
-  </PRE>
-  2.  Dump "<TT>junk.tab</TT>", but with the order of the columns rearranged:
-  <PRE>
-  <P>
+  
+  </pre>
+  <p>
+  2.  Dump <tt>"junk.tab"</tt>, but with the order of the columns rearranged:
+  </p>
+  <pre>
+  
        tt&gt; tlcol junk.tab nlist=1 &gt; colnames.lis
        tt&gt; edit colnames.lis
           (Rearrange the column names and perhaps delete some of them.)
        tt&gt; tdump junk.tab columns=@colnames.lis
-  </PRE>
-  <P>
-  3.  Dump only the first 100 rows of the file "<TT>big.fits</TT>":
-  <P>
-  <PRE>
+  </pre>
+  <p>
+  3.  Dump only the first 100 rows of the file <tt>"big.fits"</tt>:
+  </p>
+  <pre>
   	tt&gt; tdump big.fits rows="1-100"
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>References</H3>
-  <! BeginSection: 'REFERENCES'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <!-- EndSection:   'BUGS' -->
+  <h3>References</h3>
+  <!-- BeginSection: 'REFERENCES' -->
+  <p>
   This task was written by Phil Hodge.
-  </UL>
-  <! EndSection:   'REFERENCES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'REFERENCES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   tprint, tlcol, tcreate, ranges
-  <P>
-  Type "<TT>help tables opt=sys</TT>" for a higher-level description of the 'tables' 
+  </p>
+  <p>
+  Type <tt>"help tables opt=sys"</tt> for a higher-level description of the 'tables' 
   package.
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

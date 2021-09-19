@@ -1,5 +1,5 @@
-astutil — Astronomical utilities package
-========================================
+astutil: Astronomical utilities package
+=======================================
 
 .. toctree:: :maxdepth: 1
 

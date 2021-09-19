@@ -1,178 +1,178 @@
 .. _radprof:
 
-radprof — Compute the stellar radial profile of a list of stars
-===============================================================
+radprof: Compute the stellar radial profile of a list of stars
+==============================================================
 
 **Package: apphot**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   radprof -- compute the radial profile of an object
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   radprof image radius step
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>image</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='image' Line='image'>
-  <DD>The name of the image containing the objects to be measured.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>radius, step</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='radius' Line='radius, step'>
-  <DD>The size and resolution of the computed radial profile in scale units which is
-  equal to radius * <I>scale</I>  and step * <I>scale</I> in pixels.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>coords = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='coords' Line='coords = ""'>
-  <DD>The list of text files containing initial coordinates for the objects to
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>image</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image' -->
+  <dd>The name of the image containing the objects to be measured.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>radius, step</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='radius' Line='radius, step' -->
+  <dd>The size and resolution of the computed radial profile in scale units which is
+  equal to radius * <i>scale</i>  and step * <i>scale</i> in pixels.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>coords = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='coords' Line='coords = ""' -->
+  <dd>The list of text files containing initial coordinates for the objects to
   be centered. Objects are listed in coords one object per line with the
   initial coordinate values in columns one and two. The number of coordinate
   files must be zero, one, or equal to the number of images.  If coords is
-  "<TT>default</TT>", "<TT>dir$default</TT>", or a directory specification then a coords file name
+  <tt>"default"</tt>, <tt>"dir$default"</tt>, or a directory specification then a coords file name
   of the form dir$root.extension.version is constructed and searched for,
-  where dir is the directory, root is the root image name, extension is "<TT>prf</TT>"
+  where dir is the directory, root is the root image name, extension is <tt>"prf"</tt>
   and version is the next available version number for the file.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output' Line='output = ""'>
-  <DD>The name of the results file or results directory.
-  If output is "<TT>default</TT>", "<TT>dir$default</TT>" or a directory specification then an
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
+  <dd>The name of the results file or results directory.
+  If output is <tt>"default"</tt>, <tt>"dir$default"</tt> or a directory specification then an
   output file name of the form dir$root.extension.version is constructed, where
-  dir is the directory, root is the root image name, extension is "<TT>prf</TT>" and
+  dir is the directory, root is the root image name, extension is <tt>"prf"</tt> and
   version is the next available version of the file. If output is undefined,
   then no output file is created. If output is defined, the number of output files
   is either 1 or the same as the number of input images.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>plotfile = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='plotfile' Line='plotfile = ""'>
-  <DD>The name of the file containing radial profile plots of the stars written
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>plotfile = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='plotfile' Line='plotfile = ""' -->
+  <dd>The name of the file containing radial profile plots of the stars written
   to the output file. If plotfile is defined then a radial profile plot
-  is written to plotfile every time a record is written to <I>output</I>.
+  is written to plotfile every time a record is written to <i>output</i>.
   The user should be aware that this can be a time consuming operation.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>datapars = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='datapars' Line='datapars = ""'>
-  <DD>The name of the file containing the data dependent parameters. The critical
-  parameters <I>fwhmpsf</I> and <I>sigma</I> are located here. If <I>datapars</I>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>datapars = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='datapars' Line='datapars = ""' -->
+  <dd>The name of the file containing the data dependent parameters. The critical
+  parameters <i>fwhmpsf</i> and <i>sigma</i> are located here. If <i>datapars</i>
   is undefined then the default parameter set in uparm directory is used.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>centerpars = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='centerpars' Line='centerpars = ""'>
-  <DD>The name of the file containing the centering parameters. The critical
-  parameters <I>calgorithm</I> and <I>cbox</I> are located here.
-  If <I>centerpars</I> is undefined then the default parameter set in
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>centerpars = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='centerpars' Line='centerpars = ""' -->
+  <dd>The name of the file containing the centering parameters. The critical
+  parameters <i>calgorithm</i> and <i>cbox</i> are located here.
+  If <i>centerpars</i> is undefined then the default parameter set in
   uparm directory is used.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>fitskypars = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='fitskypars' Line='fitskypars = ""'>
-  <DD>The name of the text file containing the sky fitting parameters. The critical
-  parameters <I>salgorithm</I>, <I>annulus</I>, and <I>dannulus</I> are located here.
-  If <I>fitskypars</I> is undefined then the default parameter set in uparm
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>fitskypars = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='fitskypars' Line='fitskypars = ""' -->
+  <dd>The name of the text file containing the sky fitting parameters. The critical
+  parameters <i>salgorithm</i>, <i>annulus</i>, and <i>dannulus</i> are located here.
+  If <i>fitskypars</i> is undefined then the default parameter set in uparm
   directory is used.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>photpars = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='photpars' Line='photpars = ""'>
-  <DD>The name of the file containing the photometry parameters. The critical
-  parameter <I>apertures</I> is located here.  If <I>photpars</I> is undefined
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>photpars = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='photpars' Line='photpars = ""' -->
+  <dd>The name of the file containing the photometry parameters. The critical
+  parameter <i>apertures</i> is located here.  If <i>photpars</i> is undefined
   then the default parameter set in uparm directory is used.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>order = 5</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='order' Line='order = 5'>
-  <DD>The number of pieces in the spline fit.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>nreject = 1</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='nreject' Line='nreject = 1'>
-  <DD>The maximum number of rejection cycles.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>kreject = 3.0</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='kreject' Line='kreject = 3.0'>
-  <DD>The k-sigma rejection limit for the radial profile fit.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>interactive = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes'>
-  <DD>Run the task interactively ?
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>radplots = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='radplots' Line='radplots = yes'>
-  <DD>If <I>radplots</I> is "<TT>yes</TT>" and RADPROF  is run in interactive mode, a radial
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>order = 5</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='order' Line='order = 5' -->
+  <dd>The number of pieces in the spline fit.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>nreject = 1</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='nreject' Line='nreject = 1' -->
+  <dd>The maximum number of rejection cycles.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>kreject = 3.0</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='kreject' Line='kreject = 3.0' -->
+  <dd>The k-sigma rejection limit for the radial profile fit.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>interactive = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes' -->
+  <dd>Run the task interactively ?
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>radplots = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='radplots' Line='radplots = yes' -->
+  <dd>If <i>radplots</i> is <tt>"yes"</tt> and RADPROF  is run in interactive mode, a radial
   profile of each star is plotted on the screen after the star is measured.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>icommands = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""'>
-  <DD>The image cursor or image cursor command file.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>gcommands = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""'>
-  <DD>The graphics cursor or graphics cursor command file.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>wcsin = "<TT>)_.wcsin</TT>", wcsout = "<TT>)_.wcsout</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='wcsin' Line='wcsin = ")_.wcsin", wcsout = ")_.wcsout"'>
-  <DD>The coordinate system of the input coordinates read from <I>coords</I> and
-  of the output coordinates written to <I>output</I> respectively. The image
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>icommands = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""' -->
+  <dd>The image cursor or image cursor command file.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>gcommands = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""' -->
+  <dd>The graphics cursor or graphics cursor command file.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>wcsin = <tt>")_.wcsin"</tt>, wcsout = <tt>")_.wcsout"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='wcsin' Line='wcsin = ")_.wcsin", wcsout = ")_.wcsout"' -->
+  <dd>The coordinate system of the input coordinates read from <i>coords</i> and
+  of the output coordinates written to <i>output</i> respectively. The image
   header coordinate system is used to transform from the input coordinate
-  system to the "<TT>logical</TT>" pixel coordinate system used internally,
-  and from the internal "<TT>logical</TT>" pixel coordinate system to the output
-  coordinate system. The input coordinate system options are "<TT>logical</TT>", "<TT>tv</TT>",
-  "<TT>physical</TT>", and "<TT>world</TT>". The output coordinate system options are "<TT>logical</TT>",
-  "<TT>tv</TT>", and "<TT>physical</TT>". The image cursor coordinate system is assumed to
-  be the "<TT>tv</TT>" system.
-  <DL>
-  <DT><B>logical</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='logical' Line='logical'>
-  <DD>Logical coordinates are pixel coordinates relative to the current image.
+  system to the <tt>"logical"</tt> pixel coordinate system used internally,
+  and from the internal <tt>"logical"</tt> pixel coordinate system to the output
+  coordinate system. The input coordinate system options are <tt>"logical"</tt>, <tt>"tv"</tt>,
+  <tt>"physical"</tt>, and <tt>"world"</tt>. The output coordinate system options are <tt>"logical"</tt>,
+  <tt>"tv"</tt>, and <tt>"physical"</tt>. The image cursor coordinate system is assumed to
+  be the <tt>"tv"</tt> system.
+  <dl>
+  <dt><b>logical</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='logical' Line='logical' -->
+  <dd>Logical coordinates are pixel coordinates relative to the current image.
   The  logical coordinate system is the coordinate system used by the image
   input/output routines to access the image data on disk. In the logical
   coordinate system the coordinates of the first pixel of a  2D image, e.g.
   dev$ypix  and a 2D image section, e.g. dev$ypix[200:300,200:300] are
   always (1,1).
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>tv</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='tv' Line='tv'>
-  <DD>Tv coordinates are the pixel coordinates used by the display servers. Tv
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>tv</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='tv' Line='tv' -->
+  <dd>Tv coordinates are the pixel coordinates used by the display servers. Tv
   coordinates  include  the effects of any input image section, but do not
   include the effects of previous linear transformations. If the input
   image name does not include an image section, then tv coordinates are
@@ -182,12 +182,12 @@ radprof — Compute the stellar radial profile of a list of stars
   In the tv coordinate system the coordinates of the first pixel of a
   2D image, e.g. dev$ypix and a 2D image section, e.g. dev$ypix[200:300,200:300]
   are (1,1) and (200,200) respectively.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>physical</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='physical' Line='physical'>
-  <DD>Physical coordinates are pixel coordinates invariant  with respect to linear
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>physical</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='physical' Line='physical' -->
+  <dd>Physical coordinates are pixel coordinates invariant  with respect to linear
   transformations of the physical image data.  For example, if the current image
   was created by extracting a section of another image,  the  physical
   coordinates of an object in the current image will be equal to the physical
@@ -196,105 +196,102 @@ radprof — Compute the stellar radial profile of a list of stars
   coordinates of the first pixel of a 2D image, e.g. dev$ypix and a 2D
   image section, e.g. dev$ypix[200:300,200:300] are (1,1) and (200,200)
   respectively.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>world</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='world' Line='world'>
-  <DD>World coordinates are image coordinates in any units which are invariant
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>world</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='world' Line='world' -->
+  <dd>World coordinates are image coordinates in any units which are invariant
   with respect to linear transformations of the physical image data. For
   example, the ra and dec of an object will always be the same no matter
   how the image is linearly transformed. The units of input world coordinates
   must be the same as those expected by the image header wcs, e. g.
   degrees and degrees for celestial coordinate systems.
-  </DD>
-  </DL>
+  </dd>
+  </dl>
   The wcsin and wcsout parameters default to the values of the package
   parameters of the same name. The default values of the package parameters
-  wcsin and wcsout are "<TT>logical</TT>" and "<TT>logical</TT>" respectively.
-  </DD>
-  </DL>
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>cache = "<TT>)_.cache</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=-1 Label='cache' Line='cache = ")_.cache"'>
-  <DD>Cache the image pixels in memory. Cache may be set to the value of the apphot
-  package parameter (the default), "<TT>yes</TT>", or "<TT>no</TT>". By default cacheing is 
+  wcsin and wcsout are <tt>"logical"</tt> and <tt>"logical"</tt> respectively.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>cache = <tt>")_.cache"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='cache' Line='cache = ")_.cache"' -->
+  <dd>Cache the image pixels in memory. Cache may be set to the value of the apphot
+  package parameter (the default), <tt>"yes"</tt>, or <tt>"no"</tt>. By default cacheing is 
   disabled.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verify = "<TT>)_.verify</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=-1 Label='verify' Line='verify = ")_.verify"'>
-  <DD>Verify the critical parameters in non-interactive mode ? Verify may be set to
-  the apphot package parameter value (the default), "<TT>yes</TT>", or "<TT>no</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>update = "<TT>)_.update</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=-1 Label='update' Line='update = ")_.update"'>
-  <DD>Update the critical parameter in non-interactive mode if verify is yes ?
-  Update may be set to the apphot package parameter value (the default), "<TT>yes</TT>",
-  or "<TT>no</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verbose = "<TT>)_.verbose</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=-1 Label='verbose' Line='verbose = ")_.verbose"'>
-  <DD>Print messages on the screen in non-interactive mode ? Verbose may be set
-  to the apphot package parameter value (the default), "<TT>yes</TT>", or "<TT>no</TT>".
-  <P>
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>graphics = "<TT>)_.graphics</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=-1 Label='graphics' Line='graphics = ")_.graphics"'>
-  <DD>The default graphics device.  Graphics may be set to the apphot package
-  parameter value (the default), "<TT>yes</TT>", or "<TT>no.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>display = </TT>")_.display"<TT></B></DT>
-  <! Sec='PARAMETERS' Level=-1 Label='display' Line='display = ")_.display"'>
-  <DD>The default display device. Display may be set to the apphot package
-  parameter value (the default), </TT>"yes"<TT>, or </TT>"no. By default graphics overlay
-  is disabled.  Setting display to one of "<TT>imdr</TT>", "<TT>imdg</TT>", "<TT>imdb</TT>", or "<TT>imdy</TT>"
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verify = <tt>")_.verify"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verify' Line='verify = ")_.verify"' -->
+  <dd>Verify the critical parameters in non-interactive mode ? Verify may be set to
+  the apphot package parameter value (the default), <tt>"yes"</tt>, or <tt>"no"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>update = <tt>")_.update"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='update' Line='update = ")_.update"' -->
+  <dd>Update the critical parameter in non-interactive mode if verify is yes ?
+  Update may be set to the apphot package parameter value (the default), <tt>"yes"</tt>,
+  or <tt>"no"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verbose = <tt>")_.verbose"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = ")_.verbose"' -->
+  <dd>Print messages on the screen in non-interactive mode ? Verbose may be set
+  to the apphot package parameter value (the default), <tt>"yes"</tt>, or <tt>"no"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>graphics = <tt>")_.graphics"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = ")_.graphics"' -->
+  <dd>The default graphics device.  Graphics may be set to the apphot package
+  parameter value (the default), <tt>"yes"</tt>, or <tt>"no"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>display = <tt>")_.display"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='display' Line='display = ")_.display"' -->
+  <dd>The default display device. Display may be set to the apphot package
+  parameter value (the default), <tt>"yes"</tt>, or <tt>"no"</tt>. By default graphics overlay
+  is disabled.  Setting display to one of <tt>"imdr"</tt>, <tt>"imdg"</tt>, <tt>"imdb"</tt>, or <tt>"imdy"</tt>
   enables graphics overlay with the IMD graphics kernel.  Setting display to
-  "<TT>stdgraph</TT>" enables RADPROF to work interactively from a contour plot.
-  </DD>
-  </DL>
-  <P>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <P>
-  The radial profiles of objects in the image <I>image</I> are computed
-  the object center out to the radius <I>radius * scale</I>, in steps of
-  <I>step * scale</I> pixels, and plotted. The initial positions are
-  read from the image cursor or the text file <I>coords</I>.
-  <P>
-  The coordinates read from <I>coords</I> are assumed to be in coordinate
-  system defined by <I>wcsin</I>. The options are "<TT>logical</TT>", "<TT>tv</TT>", "<TT>physical</TT>",
-  and "<TT>world</TT>" and the transformation from the input coordinate system to
-  the internal "<TT>logical</TT>" system is defined by the image coordinate system.
-  The simplest default is the "<TT>logical</TT>" pixel system. Users working on with
+  <tt>"stdgraph"</tt> enables RADPROF to work interactively from a contour plot.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  The radial profiles of objects in the image <i>image</i> are computed
+  the object center out to the radius <i>radius * scale</i>, in steps of
+  <i>step * scale</i> pixels, and plotted. The initial positions are
+  read from the image cursor or the text file <i>coords</i>.
+  </p>
+  <p>
+  The coordinates read from <i>coords</i> are assumed to be in coordinate
+  system defined by <i>wcsin</i>. The options are <tt>"logical"</tt>, <tt>"tv"</tt>, <tt>"physical"</tt>,
+  and <tt>"world"</tt> and the transformation from the input coordinate system to
+  the internal <tt>"logical"</tt> system is defined by the image coordinate system.
+  The simplest default is the <tt>"logical"</tt> pixel system. Users working on with
   image sections but importing pixel coordinate lists generated from the parent
-  image must use the "<TT>tv</TT>" or "<TT>physical</TT>" input coordinate systems.
+  image must use the <tt>"tv"</tt> or <tt>"physical"</tt> input coordinate systems.
   Users importing coordinate lists in world coordinates, e.g. ra and dec,
-  must use the "<TT>world</TT>" coordinate system and may need to convert their
+  must use the <tt>"world"</tt> coordinate system and may need to convert their
   equatorial coordinate units from hours and degrees to degrees and degrees first.
-  <P>
-  The coordinates written to <I>output</I> are in the coordinate
-  system defined by <I>wcsout</I>. The options are "<TT>logical</TT>", "<TT>tv</TT>",
-  and "<TT>physical</TT>". The simplest default is the "<TT>logical</TT>" system. Users
+  </p>
+  <p>
+  The coordinates written to <i>output</i> are in the coordinate
+  system defined by <i>wcsout</i>. The options are <tt>"logical"</tt>, <tt>"tv"</tt>,
+  and <tt>"physical"</tt>. The simplest default is the <tt>"logical"</tt> system. Users
   wishing to correlate the output coordinates of objects measured in
   image sections or mosaic pieces with coordinates in the parent
-  image must use the "<TT>tv</TT>" or "<TT>physical</TT>" coordinate systems.
-  <P>
-  If <I>cache</I> is yes and the host machine physical memory and working set size
+  image must use the <tt>"tv"</tt> or <tt>"physical"</tt> coordinate systems.
+  </p>
+  <p>
+  If <i>cache</i> is yes and the host machine physical memory and working set size
   are large enough, the input image pixels are cached in memory. If cacheing
   is enabled and RADPROF is run interactively the first measurement will appear
   to take a long time as the entire image must be read in before the measurement
@@ -309,27 +306,26 @@ radprof — Compute the stellar radial profile of a list of stars
   is doubled by converting it to a real image with the chpixtype task then the
   effect of cacheing in interactive is can be quite noticeable if measurements
   of objects in the top and bottom halfs of the image are alternated.
-  <P>
+  </p>
+  <p>
   RADPROF can be run either interactively or in batch mode by setting the
   interactive switch to yes. In interactive mode starting x and y coordinates
   can either be read directly from the image cursor or read from the text
-  file specified by <I>coords</I>. In interactive mode the results are
+  file specified by <i>coords</i>. In interactive mode the results are
   plotted on the terminal. In batch mode the estimated positions
-  are read from the text file <I>coords</I> or the image cursor parameter
-  <I>icommands</I> is redirected to a text file containing a list of cursor
+  are read from the text file <i>coords</i> or the image cursor parameter
+  <i>icommands</i> is redirected to a text file containing a list of cursor
   commands.
-  <P>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Cursor commands</H3>
-  <! BeginSection: 'CURSOR COMMANDS'>
-  <UL>
-  <P>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Cursor commands</h3>
+  <!-- BeginSection: 'CURSOR COMMANDS' -->
+  <p>
   The RADPROF cursor commands are listed below.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	Interactive Keystroke Commands
-  <P>
+  
   ?	Print help
   :	Colon commands
   v	Verify the critical parameters
@@ -350,42 +346,42 @@ radprof — Compute the stellar radial profile of a list of stars
   r	Rewind the coordinate list
   e	Print error messages
   q	Exit task
-  <P>
-  <P>
+  
+  
   	Colon Commands
-  <P>
+  
   :show	[data/center/sky/fit]	List the parameters
   :m [n]	Move to next [nth] object in coordinate list
   :n [n]	Fit next [nth] object in coordinate list, output results
-  <P>
-  <P>
+  
+  
   	Colon Parameter Editing Commands
-  <P>
+  
   # Image and file name parameters
-  <P>
+  
   :image		[string]	Image name
   :coords		[string]	Coordinate file name
   :output		[string]	Output file name
-  <P>
+  
   # Data dependent parameters
-  <P>
+  
   :scale		[value]		Image scale (units per pixel)
   :fwhmpsf	[value]		Full-width half-maximum of psf (scale units)
   :emission	[y/n]		Emission features (y), absorption (n)
   :sigma		[value]		Standard deviation of sky (counts)
   :datamin	[value]		Minimum good pixel value (counts)
   :datamax	[value]		Maximum good pixel value (counts)
-  <P>
+  
   # Noise parameters
-  <P>
+  
   :noise		[string]	Noise model (constant|poisson)
   :gain		[string]	Gain image header keyword
   :ccdread	[string]	Readout noise image header keyword
   :epadu		[value]		Gain (electrons per adu)
   :readnoise	[value]		Readout noise (electrons)
-  <P>
+  
   # Observing parameters
-  <P>
+  
   :exposure	[value]		Exposure time image header keyword
   :airmass	[string]	Airmass image header keyword
   :filter		[string]	Filter image header keyword
@@ -394,9 +390,9 @@ radprof — Compute the stellar radial profile of a list of stars
   :xairmass	[value]		Airmass value (number)
   :ifilter	[string]	Filter id string
   :otime		[string]	Time of observation (time units)
-  <P>
+  
   # Centering algorithm parameters
-  <P>
+  
   :calgorithm	[string]	Centering algorithm
   :cbox		[value]		Width of the centering box (scale units)
   :cthreshold	[value]		Centering intensity threshold (sigma)
@@ -407,9 +403,9 @@ radprof — Compute the stellar radial profile of a list of stars
   :rclean		[value]		Cleaning radius (scale units)
   :rclip		[value]		Clipping radius (scale units)
   :kclean		[value]		Clean K-sigma rejection limit (sigma)
-  <P>
+  
   # Sky fitting algorithm parameters
-  <P>
+  
   :salgorithm	[string]	Sky fitting algorithm
   :skyvalue	[value]		User supplied sky value (counts)
   :annulus	[value]		Inner radius of sky annulus (scale units)
@@ -424,79 +420,75 @@ radprof — Compute the stellar radial profile of a list of stars
   :sloreject	[value]		Low-side pixel rejection limits (sky sigma)
   :shireject	[value]		High-side pixel rejection limits (sky sigma)
   :rgrow		[value]		Region growing radius (scale units)
-  <P>
+  
   # Photometry parameters
-  <P>
+  
   :apertures	[string]	List of apertures (scale units)
   :zmag		[value]		Zero point of magnitude scale
-  <P>
+  
   # Profile fitting parameters
-  <P>
+  
   :radius		[value]		Maximum profile radius (scale units)
   :step		[value]		Step size for computed profile (scale units)
   :order		[value]		Number of spline pieces in fit
   :kreject	[value]		K-sigma rejection for fit (fit sigma)
   :nreject	[value]		Maximum number of rejection cycles
-  <P>
+  
   # Marking and plotting parameters
-  <P>
+  
   :mkcenter	[y/n]		Mark computed centers on display
   :mksky		[y/n]		Mark the sky annuli on the display
   :mkapert	[y/n]		Mark apertures on the display
   :radplot	[y/n]		Plot the radial profile
-  <P>
-  <P>
-  <P>
+  
+  
+  
   The following commands are available from inside the interactive setup menu.
-  <P>
-  <P>
+  
+  
                       Interactive Radprof Setup Menu
-  <P>
+  
   	v	Mark and verify the critical parameters (f,c,s,a,d,r,w,x)
-  <P>
+  
   	f	Mark and verify the psf full-width half-maximum
   	s	Mark and verify the standard deviation of the background
   	l	Mark and verify the minimum good data value
   	u	Mark and verify the maximum good data value
-  <P>
+  
   	c	Mark and verify the centering box width
   	n	Mark and verify the cleaning radius
   	p	Mark and verify the clipping radius
-  <P>
+  
   	a	Mark and verify the inner radius of the sky annulus
   	d	Mark and verify the width of the sky annulus
   	g	Mark and verify the region growing radius
-  <P>
+  
   	r	Mark and verify the photometry aperture radii
   	w	Mark and verify the radius of the radial profile
   	x	Mark and verify the step size of radial profile
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'CURSOR COMMANDS'>
-  <H3>Algorithms</H3>
-  <! BeginSection: 'ALGORITHMS'>
-  <UL>
-  <P>
+  </pre>
+  <!-- EndSection:   'CURSOR COMMANDS' -->
+  <h3>Algorithms</h3>
+  <!-- BeginSection: 'ALGORITHMS' -->
+  <p>
   Prior to computing the radial profile of the star, RADPROF computes the
   center, estimates a sky value, and does aperture photometry on the star
   using the parameters in the DATAPARS, CENTERPARS, FITSKYPARS, and
   PHOTPARS tasks.
-  <P>
+  </p>
+  <p>
   Next the radial and intensity coordinates of all the pixels inside
-  <I>radius * scale</I> are computed using the calculated center and sky
-  values and fit to a least squares cubic spline of order <I>order</I> with
+  <i>radius * scale</i> are computed using the calculated center and sky
+  values and fit to a least squares cubic spline of order <i>order</i> with
   optional bad data rejection.  The fit is interpolated at intervals of
-  <I>step_size * scale</I> to derive the output profile and estimate the
+  <i>step_size * scale</i> to derive the output profile and estimate the
   full width at half maximum of the object. The fit noise model parameters
   are defined in DATAPARS.
-  <P>
-  </UL>
-  <! EndSection:   'ALGORITHMS'>
-  <H3>Output</H3>
-  <! BeginSection: 'OUTPUT'>
-  <UL>
-  <P>
+  </p>
+  <!-- EndSection:   'ALGORITHMS' -->
+  <h3>Output</h3>
+  <!-- BeginSection: 'OUTPUT' -->
+  <p>
   In interactive mode the following quantities are printed on the standard
   output as each object is measured.  Error is a simple string which
   indicates whether an error was encountered in the
@@ -506,18 +498,18 @@ radprof — Compute the stellar radial profile of a list of stars
   aperture N and xcenter, ycenter and msky are the
   x and y centers and the sky value respectively.
   Pfwhm is the fitted full width half maximum of the fitted radial profile.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       image  xcenter  ycenter  msky  pfwhm  mag[N]  merr[N] iers
-  </PRE>
-  <P>
+  </pre>
+  <p>
   In both interactive and batch mode full output is written to the text file
-  <I>output</I>. At the beginning of each file is a header listing the
+  <i>output</i>. At the beginning of each file is a header listing the
   current values of the parameters when the first stellar record was written.
   These parameters can be subsequently altered. For each star measured the
   following record is written
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	image  xinit  yinit  id  coords  lid
   	   xcenter  ycenter  xshift  yshift  xerr  yerr  cier error
   	   msky  stdev  sskew  nsky  nsrej  sier  serror
@@ -525,64 +517,64 @@ radprof — Compute the stellar radial profile of a list of stars
   	   rapert  sum  area  flux mag  merr  pier  perr
   	   pfwhm  inorm  tinorm  rier  rerror
   	   pradius  intensity  tintensity
-  </PRE>
-  <P>
+  </pre>
+  <p>
   Image and coords are the name of the image and coordinate file respectively.
   Id and lid are the sequence numbers of stars in the output and coordinate
   files respectively. Cier and cerror are the error code and accompanying
   error message respectively.  Xinit, yinit, xcenter, ycenter, xshift, yshift,
   and xerr, yerr are self explanatory and output in pixel units. The sense of
   the xshift and yshift definitions is the following.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	xshift = xcenter - xinit
   	yshift = ycenter - yinit
-  </PRE>
-  <P>
+  </pre>
+  <p>
   Sier and serror are the error code and accompanying error message respectively.
   Msky, stdev and sskew are the best estimate of the sky value (per pixel),
   standard deviation and skew respectively. Nsky and nsrej are the number of
   sky pixels and the number of sky pixels rejected respectively.
-  <P>
+  </p>
+  <p>
   Itime is the exposure time, xairmass is self-evident, filter is an id
   string specifying the filter used during the observation and otime is
   a string containing the time of observation in whatever units the user
   has defined.
-  <P>
+  </p>
+  <p>
   Rapert, sum, area and flux are the radius of the aperture in pixels, the total
   number of counts including sky in the aperture, the area of the aperture in
   square pixels, and the total number of counts in the aperture excluding sky.
   Mag and merr are the magnitude and error in the magnitude in the aperture
   (see below).
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	flux = sum - area * msky
   	 mag = zmag - 2.5 * log10 (flux) + 2.5 * log10 (itime)
   	merr = 1.0857 * error / flux
          error = sqrt (flux / epadu + area * stdev**2 +
   	       area**2 * stdev**2 / nsky)
-  </PRE>
-  <P>
+  </pre>
+  <p>
   Pier and perror are photometry error code and accompanying error message.
-  <P>
+  </p>
+  <p>
   Pfwhm is the full width at half intensity of the fitted profile. Inorm and
   tinorm are the normalization factors for the fitted radial profile and the
   fitted total intensity profile respectively. Rier and rerror are the spline
   fitting error code and accompanying error message. Pradius, intensity
   and tintensity are the computed radii, intensity and total intensity
   values at each radial step.
-  <P>
-  <P>
-  </UL>
-  <! EndSection:   'OUTPUT'>
-  <H3>Errors</H3>
-  <! BeginSection: 'ERRORS'>
-  <UL>
-  <P>
+  </p>
+  <!-- EndSection:   'OUTPUT' -->
+  <h3>Errors</h3>
+  <!-- BeginSection: 'ERRORS' -->
+  <p>
   If the object centering was error free then the field cier will be zero.
   Non-zero values of cier flag the following error conditions.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	0        # No error
   	101      # The centering box is off image
   	102      # The centering box is partially off the image
@@ -592,12 +584,12 @@ radprof — Compute the stellar radial profile of a list of stars
   	106      # The x or y center fit did not converge
   	107      # The x or y center shift is greater than maxshift
   	108      # There is bad data in the centering box
-  </PRE>
-  <P>
+  </pre>
+  <p>
   If all goes well during the sky fitting process then the error code sier
   will be 0. Non-zero values of sier flag the following error conditions.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	0         # No error
   	201       # There are no sky pixels in the sky annulus
   	202       # Sky annulus is partially off the image
@@ -611,50 +603,47 @@ radprof — Compute the stellar radial profile of a list of stars
   	210       # The sky file is at EOF
   	211       # Cannot read the sky value correctly
   	212       # The best fit parameter are non-physical
-  </PRE>
-  <P>
+  </pre>
+  <p>
   If no error occurs during the measurement of the magnitudes then pier is
   0. Non-zero values of pier flag the following error conditions.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	0        # No error
   	301      # The aperture is off the image
   	302      # The aperture is partially off the image
   	303      # The sky value is undefined
   	305      # There is bad data in the aperture
-  </PRE>
-  <P>
+  </pre>
+  <p>
   If no error occurs during the profile fitting then rier is 0.
   Non-zero values of rier flag the following error conditions.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	0       # No error
   	901     # The profile region is off the image
   	902     # The profile region is partially off the image
   	903	# There are too few points in the profile
   	904	# The fit is singular
   	905     # The sky value is undefined
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'ERRORS'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
+  </pre>
+  <!-- EndSection:   'ERRORS' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Compute the radial profiles for a few  stars in dev$ypix using the
   display and the image cursor. Setup the task parameters using the
   interactive setup menu defined by the i key command.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	ap&gt; display dev$ypix 1 fi+
-  <P>
+  
   	... display the image
-  <P>
+  
   	ap&gt; radprof dev$ypix 7.0 0.5 
-  <P>
+  
   	... type ? to print a short help page
-  <P>
+  
   	... move the image cursor to a star
   	... type i to enter the interactive setup menu
   	... enter maximum radius in pixels of the radial profile or
@@ -665,51 +654,51 @@ radprof — Compute the stellar radial profile of a list of stars
   	    plot
   	... typing &lt;CR&gt; leaves everything at the default value
   	... type q to quit the setup menu
-  <P>
+  
   	... type the v key to verify the parameters
-  <P>
+  
   	... type the w key to save the parameters in the parameter files
-  <P>
+  
   	... move the image cursor to the star of interest and tap
   	    the space bar
-  <P>
+  
   	... type :order 3 to change the spline order and see if the
   	     fit improves, if it does type w
-  <P>
+  
   	... a radial profile plot will appear on the graphics terminal
-  <P>
+  
   	... type q to quit and q to confirm the quit
-  <P>
+  
   	... by default radprof does not create an output file
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. Compute the radial profiles for a few  stars in dev$ypix using a contour
   plot and the graphics cursor. Setup the task parameters using the interactive
   setup menu defined by the i key command. This option is only useful for
   those users (now very few) who do not have access to an image display server
   but do have access to a graphics terminal. 
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	ap&gt; show stdimcur
-  <P>
+  
   	... determine the default value of stdimcur
-  <P>
+  
   	ap&gt; set stdimcur = stdgraph
-  <P>
+  
   	... define the image cursor to be the graphics cursor
-  <P>
+  
   	ap&gt; contour dev$ypix 
-  <P>
+  
   	... make a contour plot of dev$ypix
-  <P>
+  
   	ap&gt; contour dev$ypix  &gt;G ypix.plot1
-  <P>
+  
   	... store the contour plot of dev$ypix in ypix.plot1
-  <P>
+  
   	ap&gt; radprof dev$ypix 7.0 0.5
-  <P>
+  
   	... type ? to print the help page
-  <P>
+  
   	... move graphics cursor to a star
   	... type i to enter the interactive setup menu
   	... enter maximum radius in pixels of the radial profile or
@@ -719,142 +708,140 @@ radprof — Compute the stellar radial profile of a list of stars
   	    graphics cursor and the stellar radial profile plot
   	... typing &lt;CR&gt; leaves everything at the default value
   	... type q to quit the setup menu
-  <P>
+  
   	... type the v key to verify the parameters
-  <P>
+  
   	... type the w key to save the parameters in the parameter files
-  <P>
+  
   	... type :.read ypix.plot1 to reload the contour plot
-  <P>
+  
   	... move the graphics cursor to the star of interest and tap
   	    the space bar
-  <P>
+  
   	... a radial profile plot will appear on the graphics terminal
-  <P>
+  
   	... repeat the above sequence for each additional star
-  <P>
+  
   	... type q to quit and q to confirm the quit
-  <P>
+  
   	... by default radprof does not create an output file
-  </PRE>
-  <P>
+  </pre>
+  <p>
   3. Setup and run RADPROF interactively on a list of objects temporarily
   overriding the fwhmpsf, sigma, cbox, annulus, dannulus, apertures,
   radius, and step  parameters determined in examples 1 or 2.
-  <P>
-  <PRE>
+  </p>
+  <pre>
           ap&gt; daofind dev$ypix fwhmpsf=2.6 sigma=25.0 verify-
-  <P>
+  
           ... make a coordinate list
-  <P>
+  
           ... the output will appear in the text file ypix.coo.1
-  <P>
-          ap&gt; radprof dev$ypix 7.0 0.5 fwhmpsf=2.6 sigma=5.0 cbox=7.0 \<BR>
+  
+          ap&gt; radprof dev$ypix 7.0 0.5 fwhmpsf=2.6 sigma=5.0 cbox=7.0 \<br>
               annulus=10.0 dannulus=5.0 apertures=5.0 coords=ypix.coo.1
-  <P>
+  
           ... type ? for optional help
-  <P>
-  <P>
+  
+  
           ... move the graphics cursor to the stars and tap space bar
-  <P>
+  
                                   or
-  <P>
+  
           ... select stars from the input coordinate list with m / :m #
               and measure with spbar
-  <P>
+  
           ... measure stars selected from the input coordinate list
               with n / n #
-  <P>
+  
           ... a one line summary of results will appear on the standard output
               for each star measured
-  <P>
+  
           ... type q to quit and q again to confirm the quit
-  <P>
+  
           ... by default radprof does not create an output file
-  </PRE>
-  <P>
+  </pre>
+  <p>
   4. Display and fit some stars in an image section and write the output
   coordinates in the coordinate system of the parent image.
-  <P>
-  <PRE>
+  </p>
+  <pre>
           ap&gt; display dev$ypix[150:450,150:450] 1
-  <P>
+  
           ... display the image section
-  <P>
-          ap&gt; radprof dev$ypix[150:450,150:450] 7.0 0.5 output=default \<BR>
+  
+          ap&gt; radprof dev$ypix[150:450,150:450] 7.0 0.5 output=default \<br>
               wcsout=tv 
-  <P>
+  
           ... move cursor to stars and type spbar
-  <P>
+  
           ... type q to quit and q again to confirm quit
-  <P>
+  
           ... output will appear in ypix.prf.1
-  <P>
+  
           ap&gt; pdump ypix.prf.1 xc,yc yes | tvmark 1 STDIN col=204
-  </PRE>
-  <P>
-  <P>
+  </pre>
+  <p>
   5. Run RADPROF in batch mode using the coordinate file and the previously
   saved parameters. Save the text and plot output. 
-  <P>
-  <PRE>
-  	ap&gt; radprof dev$ypix 7. 0.5 coords=ypix.coo.1 output="default" \<BR>
+  </p>
+  <pre>
+  	ap&gt; radprof dev$ypix 7. 0.5 coords=ypix.coo.1 output="default" \<br>
   	    plotfile=ypix.rplots inter- verify-
-  <P>
+  
   	... output will appear in m92.prf.2 and ypix.rplots
-  <P>
+  
   	ap&gt; gkidir ypix.rplots
-  <P>
+  
   	... get a listing of the plots in ypix.rplots
-  <P>
+  
   	ap&gt; gkiextract ypix.rplots 1-3 | stdplot dev=lw16
-  <P>
+  
   	... extract plots 1-3 and plot them on device lw16
-  </PRE>
-  <P>
+  </pre>
+  <p>
   6. Repeat example 5 but assume that the input coordinates are ra and dec
   in degrees and degrees, turn off verification, and submit the task to to
   the background.
-  <P>
-  <PRE>
+  </p>
+  <pre>
           ap&gt; display dev$ypix 1
-  <P>
+  
           ap&gt; rimcursor wcs=world &gt; radec.coo
-  <P>
+  
           ... move to selected stars and type any key
-  <P>
+  
           ... type ^Z to quit
-  <P>
-          ap&gt; radprof dev$ypix 7.0 0.5 coords=radec.coo output=default \<BR>
+  
+          ap&gt; radprof dev$ypix 7.0 0.5 coords=radec.coo output=default \<br>
               plotfile=ypix.rplots2 wcsin=world verify- inter- &amp;
-  <P>
+  
           ... output will appear in ypix.prf.3, plots will appear in
               ypix.rplots2
-  <P>
+  
           ap&gt; pdump ypix.prf.3 xc,yc yes | tvmark 1 STDIN col=204
-  <P>
+  
           ... mark the stars on the display
-  </PRE>
-  <P>
-  <P>
+  </pre>
+  <p>
   7. Run RADPROF interactively without using the image display.
-  <P>
-  <PRE>
+  </p>
+  <pre>
           ap&gt; show stdimcur
-  <P>
+  
           ... record the default value of stdimcur
-  <P>
+  
           ap&gt; set stdimcur = text
-  <P>
+  
           ... set the image cursor to the standard input
-  <P>
+  
           ap&gt; radprof dev$ypix 7.0 0.5 coords=ypix.coo.1
-  <P>
+  
           ... type ? for optional help
-  <P>
+  
           ... type :m 3 to set the initial coordinates to those of the
               third star in the list
-  <P>
+  
           ... type i to enter the interactive setup menu
           ... enter the maximum radius in pixels for the radial profile or
               accept the default with a CR
@@ -865,29 +852,29 @@ radprof — Compute the stellar radial profile of a list of stars
           ... typing &lt;CR&gt; after the prompt leaves the parameter at its default
               value
           ... type q to quit the setup menu
-  <P>
+  
           ... type r to rewind the coordinate list
-  <P>
+  
           ... type n to measure the next star
-  <P>
+  
           ... a one line summary of the answers will appear on the standard
               output for each star measured
-  <P>
+  
           ... type q to quit followed by q to confirm the quit
-  <P>
+  
   	... by default no output file is written
-  <P>
+  
           ap&gt; set stdimcur = &lt;default&gt;
-  <P>
+  
           ... reset the value of stdimcur
-  </PRE>
-  <P>
+  </pre>
+  <p>
   8. Use a image cursor command file to drive the RADPROF task. The cursor
   command file shown below sets the cbox, annulus, dannulus, and apertures
   parameters computes the centers, sky values, magnitudes, and readial profiles
   for 3 stars, updates the parameter files, and quits the task.
-  <P>
-  <PRE>
+  </p>
+  <pre>
           ap&gt; type cmdfile
           : cbox 9.0
           : annulus 12.0
@@ -898,41 +885,38 @@ radprof — Compute the stellar radial profile of a list of stars
           225 131 101 \040
           w
           q
-  <P>
-          ap&gt; radprof dev$ypix 7.0 0.5 icommands=cmdfile  \<BR>
+  
+          ap&gt; radprof dev$ypix 7.0 0.5 icommands=cmdfile  \<br>
   	    plotfile=ypix.rplots3 verify-
-  <P>
+  
           ... by default no output file is written, plots will appear in
   	    ypix.rplots3
-  </PRE>
-  <P>
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  <P>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <p>
   It is currently the responsibility of the user to make sure that the
   image displayed in the frame is the same as that specified by the image
   parameter.
-  <P>
+  </p>
+  <p>
   Commands which draw to the image display are disabled by default.
   To enable graphics overlay on the image display, set the display
-  parameter to "<TT>imdr</TT>", "<TT>imdg</TT>", "<TT>imdb</TT>", or "<TT>imdy</TT>" to get red, green,
+  parameter to <tt>"imdr"</tt>, <tt>"imdg"</tt>, <tt>"imdb"</tt>, or <tt>"imdy"</tt> to get red, green,
   blue or yellow overlays and set the centerpars mkcenter switch to
-  "<TT>yes</TT>", the fitskypars mksky switch to"<TT>yes</TT>", or the photpars mkapert
-  witch to "<TT>yes</TT>". It may be necessary to run gflush and to redisplay the image
+  <tt>"yes"</tt>, the fitskypars mksky switch to<tt>"yes"</tt>, or the photpars mkapert
+  witch to <tt>"yes"</tt>. It may be necessary to run gflush and to redisplay the image
   to get the overlays position correctly.
-  <P>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   datapars, centerpars, fitskypars, photpars
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'CURSOR COMMANDS' 'ALGORITHMS' 'OUTPUT' 'ERRORS' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'CURSOR COMMANDS' 'ALGORITHMS' 'OUTPUT' 'ERRORS' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

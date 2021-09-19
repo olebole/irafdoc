@@ -1,128 +1,131 @@
 .. _hpctran:
 
-hpctran — Convert between HEALPix row and spherical coordinate
-==============================================================
+hpctran: Convert between HEALPix row and spherical coordinate
+=============================================================
 
 **Package: imcoords**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   hpctran -- Convert between HEALPix row and spherical coordinate
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   hpctran lng=xxx lat=xxx
-  <BR>
+  <br>
   hpctran row=xxx
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>row     </B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='row' Line='row     '>
-  <DD>HEALPix table row (1 indexed).
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>row     </b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='row' Line='row     ' -->
+  <dd>HEALPix table row (1 indexed).
   This is used as input if the direction
-  is "<TT>row2ang</TT>" or is used to store the value if the direction is
-  "<TT>ang2row</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>lng, lat</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='lng' Line='lng, lat'>
-  <DD>Spherical coordinate consisting of a longitude and latitude.
+  is <tt>"row2ang"</tt> or is used to store the value if the direction is
+  <tt>"ang2row"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>lng, lat</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='lng' Line='lng, lat' -->
+  <dd>Spherical coordinate consisting of a longitude and latitude.
   These are used as input if the direction
-  is "<TT>ang2row</TT>" or is used to store the value if the direction is
-  "<TT>row2ang</TT>".  The units are interpreted as selected by the <I>cunits</I>
+  is <tt>"ang2row"</tt> or is used to store the value if the direction is
+  <tt>"row2ang"</tt>.  The units are interpreted as selected by the <i>cunits</i>
   parameter.  The type of coordinates appropriate for a particular map
   is defined by the map provider.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>nside = 512</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='nside' Line='nside = 512'>
-  <DD>The number of pixels per face side.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>cunits = "<TT>degrees</TT>" (degrees|hourdegree|radians)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='cunits' Line='cunits = "degrees" (degrees|hourdegree|radians)'>
-  <DD>The units of the longitude and latitude.  The "<TT>hourdegree</TT>" is for
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>nside = 512</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='nside' Line='nside = 512' -->
+  <dd>The number of pixels per face side.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>cunits = <tt>"degrees"</tt> (degrees|hourdegree|radians)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='cunits' Line='cunits = "degrees" (degrees|hourdegree|radians)' -->
+  <dd>The units of the longitude and latitude.  The <tt>"hourdegree"</tt> is for
   longitude in hours and latitude in degrees.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>maptype = "<TT>nest</TT>" (nest|ring)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='maptype' Line='maptype = "nest" (nest|ring)'>
-  <DD>The map pixelization type which may be "<TT>nest</TT>" or "<TT>ring</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>direction = "<TT>ang2row</TT>" (ang2row|row2ang)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='direction' Line='direction = "ang2row" (ang2row|row2ang)'>
-  <DD>The conversion direction.  "<TT>ang2row</TT>" converts a spherical coordinate
-  to a map row or pixel number.  "<TT>row2ang</TT>" converts a map row or pixel
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>maptype = <tt>"nest"</tt> (nest|ring)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='maptype' Line='maptype = "nest" (nest|ring)' -->
+  <dd>The map pixelization type which may be <tt>"nest"</tt> or <tt>"ring"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>direction = <tt>"ang2row"</tt> (ang2row|row2ang)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='direction' Line='direction = "ang2row" (ang2row|row2ang)' -->
+  <dd>The conversion direction.  <tt>"ang2row"</tt> converts a spherical coordinate
+  to a map row or pixel number.  <tt>"row2ang"</tt> converts a map row or pixel
   number to a spherical coordinate.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   HEALPix is an acronym for Hierarchical Equal Area isoLatitude Pixelization
   of a sphere.  See the reference section for a technical description of the
   pixelization and mathematics.  As suggested in the name, this pixelization,
   or tiling, produces a subdivision of a spherical surface in which each
-  "<TT>pixel</TT>" covers the same surface area as every other pixel.  A HEALPix FITS
-  "<TT>map</TT>" is a table where each row contains "<TT>pixel</TT>" data for a region on the
+  <tt>"pixel"</tt> covers the same surface area as every other pixel.  A HEALPix FITS
+  <tt>"map"</tt> is a table where each row contains <tt>"pixel"</tt> data for a region on the
   sphere.  It is a table because the pixels don't form a raster as in an
   image.
-  <P>
+  </p>
+  <p>
   The pixelization is defined by a resolution parameter which may be expressed
   in various ways.  This task uses the number of pixels along a side of one of
   the 12 basic faces.  The number of pixels/rows is 12 * nside * nside.  The
   pixelization has two forms supported by this task.  These are called
-  "<TT>nested</TT>" and "<TT>ring</TT>".
-  <P>
-  The HEALPix WCS task, <B>hpctran</B>, provides a translation between
+  <tt>"nested"</tt> and <tt>"ring"</tt>.
+  </p>
+  <p>
+  The HEALPix WCS task, <b>hpctran</b>, provides a translation between
   the table row number and a spherical coordinate.  It is up to the
   creator of the table to choose the spherical coordinate system.  This
   might be an equatorial, galactic, or super-galactic system.  There may
   be a keyword specifying the system.  This is the case with WMAP data.
-  <P>
-  This task only provides the conversion.  Access to the "<TT>pixel</TT>" data
-  requires other tools.  For binary tables the <B>tables</B> may be used.
-  <P>
+  </p>
+  <p>
+  This task only provides the conversion.  Access to the <tt>"pixel"</tt> data
+  requires other tools.  For binary tables the <b>tables</b> may be used.
+  </p>
+  <p>
   This task allows the spherical coordinates to be input and output in three
   forms, as hours and degrees (e.g. RA/DEC), as degrees (e.g.  l/b), and as
   radians.  On input one may use sexagesimal since IRAF automatically converts
   this to decimal.  On output the values are produced in decimal form.
-  <P>
+  </p>
+  <p>
   The output is provide in two ways to provide flexibility in scripting.  One
   is writing the results to the task parameters.  Note that it is recommended
-  that tasks which write to there parameter be "<TT>cached</TT>" with the <B>cache</B>
+  that tasks which write to there parameter be <tt>"cached"</tt> with the <b>cache</b>
   command to avoid problems with background submission or multiple scripts
   running in parallel.  The other output is printed to the standard output.
   Regardless of the direction of conversion the printed output is in the same
   order of row number, longitude, and latitude.
-  <P>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   A CMB WMAP file is obtained and one wants the temperature at a particular
-  point on the sky.  Note that the WMAP format is "<TT>nested</TT>" and
+  point on the sky.  Note that the WMAP format is <tt>"nested"</tt> and
   coordinate system is galactic.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   cl&gt; hpctran lng=50.12 lat=-33.45
   2298092 50.12 -33.45000000000001
   cl&gt; = hpctran.row
@@ -130,32 +133,31 @@ hpctran — Convert between HEALPix row and spherical coordinate
   cl&gt; tdump wmap_iqusmap_r9_5yr_K1_v3.fits col=TEMPERATURE row=2298092
   cl&gt; tdump ("wmap_iqusmap_r9_5yr_K1_v3.fits", col="TEMPERATURE",
   &gt;&gt;&gt; row=hpctran.row)
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Reference</H3>
-  <! BeginSection: 'REFERENCE'>
-  <UL>
-  <I>HEALPIX - a Framework for High Resolution Discretization, and Fast
-  Analysis of Data Distributed on the Sphere</I>,
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Reference</h3>
+  <!-- BeginSection: 'REFERENCE' -->
+  <p>
+  <i>HEALPIX - a Framework for High Resolution Discretization, and Fast
+  Analysis of Data Distributed on the Sphere</i>,
   by K.M. Gorski, Eric Hivon, A.J. Banday, B.D. Wandelt, F.K. Hansen, M.
   Reinecke, M. Bartelmann, 2005, ApJ 622, 759.
-  </UL>
-  <! EndSection:   'REFERENCE'>
-  <H3>Credit</H3>
-  <! BeginSection: 'CREDIT'>
-  <UL>
+  </p>
+  <!-- EndSection:   'REFERENCE' -->
+  <h3>Credit</h3>
+  <!-- BeginSection: 'CREDIT' -->
+  <p>
   Some code from the HEALPix distribution at http://healpix.jpl.nasa.gov
   was translated to SPP for use in this routine.
-  </UL>
-  <! EndSection:   'CREDIT'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'CREDIT' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   ttools
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REFERENCE' 'CREDIT' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REFERENCE' 'CREDIT' 'SEE ALSO'  -->
   

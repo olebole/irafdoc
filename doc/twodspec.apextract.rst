@@ -1,5 +1,5 @@
-apextract — Aperture Extraction Package
-=======================================
+apextract: Aperture Extraction Package
+======================================
 
 .. toctree:: :maxdepth: 1
 

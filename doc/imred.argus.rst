@@ -1,5 +1,5 @@
-argus — CTIO ARGUS reduction package
-====================================
+argus: CTIO ARGUS reduction package
+===================================
 
 .. toctree:: :maxdepth: 1
 

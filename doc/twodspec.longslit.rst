@@ -1,5 +1,5 @@
-longslit — Longslit Package
-===========================
+longslit: Longslit Package
+==========================
 
 .. toctree:: :maxdepth: 1
 

@@ -1,160 +1,161 @@
 .. _imdkern:
 
-imdkern — Image display device (IMD) graphics kernel
-====================================================
+imdkern: Image display device (IMD) graphics kernel
+===================================================
 
 **Package: plot**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   imdkern -- image display device graphics kernel
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   imdkern input
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
-  <DD>The list of input metacode files.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>device = "<TT>stdimage</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdimage"'>
-  <DD>The output device.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>generic = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='generic' Line='generic = no'>
-  <DD>The remaining parameters are ignored when <B>generic</B> = yes (as when
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
+  <dd>The list of input metacode files.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>device = <tt>"stdimage"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdimage"' -->
+  <dd>The output device.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>generic = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='generic' Line='generic = no' -->
+  <dd>The remaining parameters are ignored when <b>generic</b> = yes (as when
   the kernel is called automatically by the system during plotting).
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>frame = 0</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='frame' Line='frame = 0'>
-  <DD>The display frame to be drawn into.  If the value given is less than or
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>frame = 0</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='frame' Line='frame = 0' -->
+  <dd>The display frame to be drawn into.  If the value given is less than or
   equal to zero, the plot is drawn into the frame currently being displayed.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>color = 205</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='color' Line='color = 205'>
-  <DD>The pixel value to be used for graphics.  The value required to generate
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>color = 205</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='color' Line='color = 205' -->
+  <dd>The pixel value to be used for graphics.  The value required to generate
   a given color is device dependent.  For IMTOOL and compatible display servers
   (such as SAOIMAGE) black=202, white=203, red=204, green=205, blue=206,
-  yellow=207, and so on through 217.  (The <I>tvmark</I> help page contains
+  yellow=207, and so on through 217.  (The <i>tvmark</i> help page contains
   a full listing of the available colors).
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>debug = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='debug' Line='debug = no'>
-  <DD>If <B>debug</B> = yes, the graphics instructions are decoded and printed
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>debug = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='debug' Line='debug = no' -->
+  <dd>If <b>debug</b> = yes, the graphics instructions are decoded and printed
   during processing.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verbose = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
-  <DD>If <B>verbose</B> = yes, the elements of polylines, cell arrays, etc. will
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verbose = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
+  <dd>If <b>verbose</b> = yes, the elements of polylines, cell arrays, etc. will
   be printed in debug mode.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>gkiunits = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='gkiunits' Line='gkiunits = no'>
-  <DD>By default, coordinates are printed in NDC rather than GKI units.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  The <I>imdkern</I> graphics kernel is used to draw graphics into the image
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>gkiunits = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='gkiunits' Line='gkiunits = no' -->
+  <dd>By default, coordinates are printed in NDC rather than GKI units.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  The <i>imdkern</i> graphics kernel is used to draw graphics into the image
   display.  To overlay a plot on a displayed image, one first displays the
-  image, then runs <I>imdkern</I> to overlay the graphics on the displayed image.
-  <I>imdkern</I> always overlays a plot on whatever is currently in the display
-  frame buffer.  To erase the graphics drawn by <I>imdkern</I>, one must
-  redisplay the frame using <I>display</I> or a similar program, or erase the
-  frame entirely using <I>tv.erase</I>.
-  <P>
-  Like all IRAF graphics kernels, <I>imdkern</I> may be called either explicitly
+  image, then runs <i>imdkern</i> to overlay the graphics on the displayed image.
+  <i>imdkern</i> always overlays a plot on whatever is currently in the display
+  frame buffer.  To erase the graphics drawn by <i>imdkern</i>, one must
+  redisplay the frame using <i>display</i> or a similar program, or erase the
+  frame entirely using <i>tv.erase</i>.
+  </p>
+  <p>
+  Like all IRAF graphics kernels, <i>imdkern</i> may be called either explicitly
   as a task, to plot a graphics metacode file, or implicitly when the output
   of a graphics task is directed to a device which uses the IMD kernel.
-  The standard IRAF <I>graphcap</I> file defines the following logical IMD
+  The standard IRAF <i>graphcap</i> file defines the following logical IMD
   graphics devices:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	imd|imdkern	same as imdg
   	imdw		output to stdimage, frame=0, color=white
   	imdr		output to stdimage, frame=0, color=red
   	imdg		output to stdimage, frame=0, color=green
   	imdb		output to stdimage, frame=0, color=blue
   	imdy		output to stdimage, frame=0, color=yellow
-  </PRE>
-  <P>
-  As noted earlier, <I>frame=0</I> causes the graph to be plotted in the
+  </pre>
+  <p>
+  As noted earlier, <i>frame=0</i> causes the graph to be plotted in the
   currently displayed image display frame.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  1. Capture the output of the <I>prow</I> task in a metacode file and
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
+  1. Capture the output of the <i>prow</i> task in a metacode file and
   plot in image display frame 2.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; prow dev$pix 101 &gt;G mc
       cl&gt; imdkern mc frame=2
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. Display dev$pix in image display frame 1 and overlay a contour plot,
   drawing the contour plot overlaid on the image in green.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; display dev$pix 1
-      cl&gt; contour dev$pix \<BR>
+      cl&gt; contour dev$pix \<br>
       &gt;&gt;&gt; xres=256 yres=256 perim- fill+ label- ceil=500 dev=imdg
-  </PRE>
-  <P>
+  </pre>
+  <p>
   Note that a higher than normal resolution contour plot is generated to
   avoid the contour placement errors that occur when a large block averaging
   factor is used to generate the contour map (this can make contours drawn
   around objects such as stars appear to not be centered on the object).
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <p>
   The IMD interface, used by this task to draw the graphics, requires that the
   display frame buffer be read and edited in the client address space, hence
   drawing is slow compared to having the display server draw the graphics.
   This effect is especially noticeable when the display is accessed remotely
   over the network.  Also, because the graph is drawn in the client
-  (i.e., in <I>imdkern</I>) the GIO fonts must be used for character drawing,
+  (i.e., in <i>imdkern</i>) the GIO fonts must be used for character drawing,
   so characters will not be as well formed as when display server character
   generation is used.
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   tvmark, display
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

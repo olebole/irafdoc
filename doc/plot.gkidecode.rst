@@ -1,91 +1,97 @@
 .. _gkidecode:
 
-gkidecode — Decode metacode on the standard output
-==================================================
+gkidecode: Decode metacode on the standard output
+=================================================
 
 **Package: plot**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   gkidecode -- decode one or more GKI metacode files
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   gkidecode input
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
-  <DD>The input metacode, which can be read from a list of files or
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
+  <dd>The input metacode, which can be read from a list of files or
   redirected from the standard input.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>generic = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='generic' Line='generic = no'>
-  <DD>The remaining parameters are ignored when <B>generic</B> = yes.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verbose = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
-  <DD>If <B>verbose</B> = yes, the elements of polylines, cell arrays, etc. will
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>generic = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='generic' Line='generic = no' -->
+  <dd>The remaining parameters are ignored when <b>generic</b> = yes.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verbose = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
+  <dd>If <b>verbose</b> = yes, the elements of polylines, cell arrays, etc. will
   be printed.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>gkiunits = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='gkiunits' Line='gkiunits = no'>
-  <DD>By default, coordinates are printed in NDC rather than GKI units.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  Task <B>gkidecode</B> is a debugging tool used to decode GKI metacode
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>gkiunits = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='gkiunits' Line='gkiunits = no' -->
+  <dd>By default, coordinates are printed in NDC rather than GKI units.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  Task <b>gkidecode</b> is a debugging tool used to decode GKI metacode
   files.  The plotting instructions are decoded and printed in readable 
   form on the standard output.  The input metacode can be read from one
   or more files or redirected from the standard input.
-  <P>
-  If <B>verbose</B> = yes, elements of polyline and cell array calls are
+  </p>
+  <p>
+  If <b>verbose</b> = yes, elements of polyline and cell array calls are
   printed in addition to the default output.
   Coordinates can be printed in either GKI (0 - 32767) or NDC (0.0 - 1.0)
   units.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Decode the metacode instructions in file crtpict.mc in verbose mode.
-  <P>
+  </p>
+  <p>
       cl&gt; gkidecode crtpict.mc verbose+
-  <P>
+  </p>
+  <p>
   2. Print a shorter listing of the same file on the versatec.
-  <P>
+  </p>
+  <p>
       cl&gt; gkidecode crtpict.mc | lprint dev=ver
-  <P>
-  3. Decode the third frame in metacode file "<TT>oned.mc</TT>".
-  <P>
+  </p>
+  <p>
+  3. Decode the third frame in metacode file <tt>"oned.mc"</tt>.
+  </p>
+  <p>
       cl&gt; gkiextract oned.mc 3 | gkidecode
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   stdgraph stdplot 
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

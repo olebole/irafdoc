@@ -1,5 +1,5 @@
-photcal — Photometric Calibration Package
-=========================================
+photcal: Photometric Calibration Package
+========================================
 
 .. toctree:: :maxdepth: 1
 

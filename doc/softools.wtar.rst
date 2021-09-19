@@ -1,136 +1,146 @@
 .. _wtar:
 
-wtar — Write a TAR format archive file
-======================================
+wtar: Write a TAR format archive file
+=====================================
 
 **Package: softools**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   wtar -- write TAR format archive file
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   wtar [-flags] [-f archive] [files]
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Arguments</H3>
-  <! BeginSection: 'ARGUMENTS'>
-  <UL>
-  <DL>
-  <DT><B>-d</B></DT>
-  <! Sec='ARGUMENTS' Level=0 Label='' Line='-d'>
-  <DD>Print debug messages.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>-o</B></DT>
-  <! Sec='ARGUMENTS' Level=0 Label='' Line='-o'>
-  <DD>Omit binary files.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>-t</B></DT>
-  <! Sec='ARGUMENTS' Level=0 Label='' Line='-t'>
-  <DD>Print the name of each file as it is written or omitted.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>-v</B></DT>
-  <! Sec='ARGUMENTS' Level=0 Label='' Line='-v'>
-  <DD>Verbose mode; print more information about each file.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>-f archive</B></DT>
-  <! Sec='ARGUMENTS' Level=0 Label='' Line='-f archive'>
-  <DD>The tar format file to be written, i.e., "<TT>stdout</TT>", a host magtape device
-  name (e.g., "/dev/nrmt8"<TT> or </TT>"MSA0"<TT>), or the IRAF virtual filename of a disk
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Arguments</h3>
+  <!-- BeginSection: 'ARGUMENTS' -->
+  <dl>
+  <dt><b>-d</b></dt>
+  <!-- Sec='ARGUMENTS' Level=0 Label='' Line='-d' -->
+  <dd>Print debug messages.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>-o</b></dt>
+  <!-- Sec='ARGUMENTS' Level=0 Label='' Line='-o' -->
+  <dd>Omit binary files.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>-t</b></dt>
+  <!-- Sec='ARGUMENTS' Level=0 Label='' Line='-t' -->
+  <dd>Print the name of each file as it is written or omitted.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>-v</b></dt>
+  <!-- Sec='ARGUMENTS' Level=0 Label='' Line='-v' -->
+  <dd>Verbose mode; print more information about each file.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>-f archive</b></dt>
+  <!-- Sec='ARGUMENTS' Level=0 Label='' Line='-f archive' -->
+  <dd>The tar format file to be written, i.e., <tt>"stdout"</tt>, a host magtape device
+  name (e.g., <tt>"/dev/nrmt8"</tt> or <tt>"MSA0"</tt>), or the IRAF virtual filename of a disk
   file.  The default is the standard output.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>files</B></DT>
-  <! Sec='ARGUMENTS' Level=0 Label='files' Line='files'>
-  <DD>The names of the files or root directories of directory trees to be written
-  to the archive file.  If no files are specified </TT>"."<TT> (the directory tree
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>files</b></dt>
+  <!-- Sec='ARGUMENTS' Level=0 Label='files' Line='files' -->
+  <dd>The names of the files or root directories of directory trees to be written
+  to the archive file.  If no files are specified <tt>"."</tt> (the directory tree
   rooted at the current directory) is assumed.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'ARGUMENTS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </dd>
+  </dl>
+  <!-- EndSection:   'ARGUMENTS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   The named files and directories are written to the indicated
-  UNIX </TT>"tar"<TT> format output file.  Any directories in the file list are
+  UNIX <tt>"tar"</tt> format output file.  Any directories in the file list are
   recursively descended.  The named directories should be subdirectories of
-  the current directory when <I>wtar</I> is called.  Binary files may be
+  the current directory when <i>wtar</i> is called.  Binary files may be
   omitted if desired, e.g., when transporting software to a different host, or
   when making a backup of a large system which would otherwise exceed the
   capacity of a single reel of tape.  All file, directory, and magtape names
   conform to the IRAF standard.
-  <P>
+  </p>
+  <p>
   The output file is normally either a disk file (e.g., if the transport
   medium is an electronic network), or a magtape file.  If the output file is
   a magtape multiple files, i.e., wtar archives, may be written on the tape.
   The blocking factor is fixed at 10240 bytes per record.
-  <P>
-  The TAR format file written by <I>wtar</I> conforms to the UNIX standard except
+  </p>
+  <p>
+  The TAR format file written by <i>wtar</i> conforms to the UNIX standard except
   that [1] no link information is preserved, [2] the user and group numbers
-  may not be preserved (they are preserved in the UNIX version of <I>wtar</I>),
-  and [3] some versions of <I>wtar</I> (e.g., VMS) pad text files at the end
+  may not be preserved (they are preserved in the UNIX version of <i>wtar</i>),
+  and [3] some versions of <i>wtar</i> (e.g., VMS) pad text files at the end
   with extra blank lines.
-  <P>
-  All <I>wtar</I> filename arguments are IRAF virtual filenames (or host
+  </p>
+  <p>
+  All <i>wtar</i> filename arguments are IRAF virtual filenames (or host
   filenames).  Magtape devices should be specified by their host (not IRAF)
-  device name, e.g., "/dev/nrmt8"<TT> or </TT>"MSA0"<TT>.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  device name, e.g., <tt>"/dev/nrmt8"</tt> or <tt>"MSA0"</tt>.
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Make a source-only archive of the IRAF system on the UNIX device
   /dev/nrmt8.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; cd iraf
   	cl&gt; wtar -of /dev/nrmt8
-  </PRE>
-  <P>
-  2. Archive the </TT>"uparm"<TT> directory to the VMS logical device MSA0:.
-  <P>
+  </pre>
+  <p>
+  2. Archive the <tt>"uparm"</tt> directory to the VMS logical device MSA0:.
+  </p>
+  <p>
   	cl&gt; wtar -f msa0 uparm
-  <P>
+  </p>
+  <p>
   3. Make a disk archive of the LIB and PKG directory trees in your home
   directory.
-  <P>
+  </p>
+  <p>
   	cl&gt; wtar -f home$archive.tar lib pkg 
-  <P>
+  </p>
+  <p>
   4. Examine the resultant file to make sure everything worked correctly.
-  <P>
+  </p>
+  <p>
   	cl&gt; rtar -tvf home$archive.tar
-  <P>
-  <P>
+  </p>
+  <p>
   5. Make a disk archive, using a host filename for the output file.
-  <P>
+  </p>
+  <p>
   	cl&gt; wtar -f /tmp2/arc lib pkg sys
-  <P>
-  IRAF magtape commands such as <I>rewind</I> may be used with <I>wtar</I>,
+  </p>
+  <p>
+  IRAF magtape commands such as <i>rewind</i> may be used with <i>wtar</i>,
   but switching between IRAF and host device names can be confusing.
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   rtar, rmbin
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'ARGUMENTS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'ARGUMENTS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

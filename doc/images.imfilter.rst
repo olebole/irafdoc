@@ -1,5 +1,5 @@
-imfilter — Image filtering package
-==================================
+imfilter: Image filtering package
+=================================
 
 .. toctree:: :maxdepth: 1
 

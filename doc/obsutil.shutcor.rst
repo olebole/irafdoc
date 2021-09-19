@@ -1,123 +1,124 @@
 .. _shutcor:
 
-shutcor — Shutter correction from images of varying exposure times
-==================================================================
+shutcor: Shutter correction from images of varying exposure times
+=================================================================
 
 **Package: obsutil**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   shutcor -- shutter correction from images of varying exposure
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Synopsis</H3>
-  <! BeginSection: 'SYNOPSIS'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Synopsis</h3>
+  <!-- BeginSection: 'SYNOPSIS' -->
+  <p>
   SHUTCOR calculate the shutter correction for a detector given a
   sequence of overscan corrected images of varying durations.  Typically
   these would be flat field exposures.  The shutter correction is the
   intercept on a plot of exposure duration versus exposure level.
-  </UL>
-  <! EndSection:   'SYNOPSIS'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'SYNOPSIS' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   shutcor images
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>images</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
-  <DD>List of overscan corrected images.  These would usually be flat
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>images</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
+  <dd>List of overscan corrected images.  These would usually be flat
   field exposures.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>section = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='section' Line='section = ""'>
-  <DD>The selected image section for the statistics.  This should be chosen
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>section = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='section' Line='section = ""' -->
+  <dd>The selected image section for the statistics.  This should be chosen
   to exclude bad columns or rows, cosmic rays, and other non-linear
   features.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>center = "<TT>mode</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='center' Line='center = "mode"'>
-  <DD>The statistical measure of central tendency that is used to estimate
-  the data level of each image.  This can have the values:  <B>mean</B>,
-  <B>midpt</B>, or <B>mode</B>.  These are calculated using the same
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>center = <tt>"mode"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='center' Line='center = "mode"' -->
+  <dd>The statistical measure of central tendency that is used to estimate
+  the data level of each image.  This can have the values:  <b>mean</b>,
+  <b>midpt</b>, or <b>mode</b>.  These are calculated using the same
   algorithm as the IMSTATISTICS task.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>nclip = 3</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='nclip' Line='nclip = 3'>
-  <DD>Number of sigma clipping iterations.  If the value is zero then no clipping
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>nclip = 3</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='nclip' Line='nclip = 3' -->
+  <dd>Number of sigma clipping iterations.  If the value is zero then no clipping
   is performed.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>lsigma = 4, usigma = 4</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='lsigma' Line='lsigma = 4, usigma = 4'>
-  <DD>Lower and upper sigma clipping factors used with the mean value and
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>lsigma = 4, usigma = 4</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='lsigma' Line='lsigma = 4, usigma = 4' -->
+  <dd>Lower and upper sigma clipping factors used with the mean value and
   standard deviation to eliminate cosmic rays.
-  Since <B>findgain</B> is sensitive to the statistics of the data the
+  Since <b>findgain</b> is sensitive to the statistics of the data the
   clipping factors should be symmetric (the same both above and below the
   mean).
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>exposure = "<TT>exptime</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='exposure' Line='exposure = "exptime"'>
-  <DD>Keyword giving the exposure time.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verbose = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
-  <DD>Verbose output?
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>exposure = <tt>"exptime"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='exposure' Line='exposure = "exptime"' -->
+  <dd>Keyword giving the exposure time.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verbose = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
+  <dd>Verbose output?
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   SHUTCOR calculate the shutter correction for a detector given a
   sequence of overscan corrected images of varying durations.  Typically
   these would be flat field exposures.  The shutter correction is the
   intercept on a plot of exposure duration versus exposure level.
-  <P>
+  </p>
+  <p>
   The images must contain the keyword OVERSCAN otherwise and error will
   be given.
-  <P>
+  </p>
+  <p>
   Bad pixels should be eliminated to avoid affecting the statistics.
   This can be done with sigma clipping and/or an image section.
   The sigma clipping should not significantly affect the assumed gaussian
   distribution while eliminating outlyers due to cosmic rays and
   unmasked bad pixels.  This means that clipping factors should be
   symmetric.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   A sequence of flat fields with varying exposure times are taken and
   processed to subtract the overscan.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; shutcor flat*
-  <P>
+  
       Shutter correction = 0.538 +/- 0.043 seconds
-  <P>
+  
       Information about the mode versus exptime fit:
-  <P>
+  
   	   intercept        slope     (and errors)
   	    5.347105      9.933618
   	   0.4288701    0.01519613
@@ -130,17 +131,15 @@ shutcor — Shutter correction from images of varying exposure times
   	    12.     124.551     125.015          0.
   	    27.     273.555     273.778          0.
   	    48.     482.161     481.949          0.
-  </PRE>
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   imstatistics
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'SYNOPSIS' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'SYNOPSIS' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

@@ -1,201 +1,195 @@
 .. _objmasks:
 
-objmasks — Detect objects in images and make masks
-==================================================
+objmasks: Detect objects in images and make masks
+=================================================
 
 **Package: nproto**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   objmasks -- detect objects in images and create masks and sky maps
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Synopsis</H3>
-  <! BeginSection: 'SYNOPSIS'>
-  <UL>
-  </UL>
-  <! EndSection:   'SYNOPSIS'>
-  <H3>Usage	</H3>
-  <! BeginSection: 'USAGE	'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Synopsis</h3>
+  <!-- BeginSection: 'SYNOPSIS' -->
+  <!-- EndSection:   'SYNOPSIS' -->
+  <h3>Usage	</h3>
+  <!-- BeginSection: 'USAGE	' -->
+  <p>
   objmasks images objmasks skys
-  </UL>
-  <! EndSection:   'USAGE	'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>images</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
-  <DD>List of images or multiextension files for which object masks are desired.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>objmasks</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='objmasks' Line='objmasks'>
-  <DD>List of object masks to be created.  This list must match the input list.
+  </p>
+  <!-- EndSection:   'USAGE	' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>images</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
+  <dd>List of images or multiextension files for which object masks are desired.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>objmasks</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='objmasks' Line='objmasks' -->
+  <dd>List of object masks to be created.  This list must match the input list.
   Multiextension input files will produce multiextension mask files.  If the
   input image is writable, the name of the created mask will recorded in the
   image header.  Note that it is possible to specify a null image to
   not produce an output mask.  This might be done if the background sky
   or sky sigma maps are desired or to just see the log information.
-  </DD>
-  </DL>
-  <P>
-  <DL>
-  <DT><B>omtype = "<TT>numbers</TT>" (boolean|numbers|colors|all)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='omtype' Line='omtype = "numbers" (boolean|numbers|colors|all)'>
-  <DD>The type of encoding for the object mask values.  In all cases non-object pixels
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>omtype = <tt>"numbers"</tt> (boolean|numbers|colors|all)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='omtype' Line='omtype = "numbers" (boolean|numbers|colors|all)' -->
+  <dd>The type of encoding for the object mask values.  In all cases non-object pixels
   (that is background) have mask values of zero.  The choices for the mask
-  values are "<TT>boolean</TT>", "<TT>numbers</TT>", "<TT>colors</TT>", and "<TT>all</TT>".  These are described
-  in the <I>Output Data</I> section.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>skys = "<TT></TT>", sigmas = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='skys' Line='skys = "", sigmas = ""'>
-  <DD>Optional lists of input or output sky and sigma maps.  Maps are either
+  values are <tt>"boolean"</tt>, <tt>"numbers"</tt>, <tt>"colors"</tt>, and <tt>"all"</tt>.  These are described
+  in the <i>Output Data</i> section.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>skys = <tt>""</tt>, sigmas = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='skys' Line='skys = "", sigmas = ""' -->
+  <dd>Optional lists of input or output sky and sigma maps.  Maps are either
   constant values or images which are interpolated to the size of the input
-  images.  If a list is given it must match the input <I>images</I> list.
+  images.  If a list is given it must match the input <i>images</i> list.
   If constant values or existing maps are specified then those are used
   without change.  If a new filename is given then an output file is created
   with the values computed by the task.  Multiextension input images create
   or apply the same extension names to the specified sky or sigma files.
   Constant input values apply to all extensions.  The sigma values are
   per single input image pixel.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>masks = "<TT>!BPM</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='masks' Line='masks = "!BPM"'>
-  <DD>List of bad pixel masks for the input images.  Non-zero masks values are
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>masks = <tt>"!BPM"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='masks' Line='masks = "!BPM"' -->
+  <dd>List of bad pixel masks for the input images.  Non-zero masks values are
   ignored in the object detection and are passed on to the output object
-  masks based on the <I>omtype</I> parameter.  An empty list applies no bad
+  masks based on the <i>omtype</i> parameter.  An empty list applies no bad
   pixel mask, a single mask applies to all input images, and a matching
   list matches the masks with the input image.  A mask is specified by a
   filename or by reference to a filename given by the value of a header
   keyword in the input image.  A header keyword reference is made with the
-  syntax "<TT>!&lt;keyword&gt;</TT>" where &lt;keyword&gt; is the desired keyword with case
+  syntax <tt>"!&lt;keyword&gt;"</tt> where &lt;keyword&gt; is the desired keyword with case
   ignored.  For multiextension files the input masks may be either a
   multiextension file with matching extension names or a directory of
   pixel list files with the extension names as filenames.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>extnames = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='extnames' Line='extnames = ""'>
-  <DD>Extensions to select from multiextension files.  A null string matches all
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>extnames = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='extnames' Line='extnames = ""' -->
+  <dd>Extensions to select from multiextension files.  A null string matches all
   extension names.  Otherwise the parameter is a comma separated list of
   patterns that match the entire extension name.  Thus, an explicit list of
-  extension names may be specified or the pattern matching characters <TT>'?'</TT> for
+  extension names may be specified or the pattern matching characters <tt>'?'</tt> for
   any character or '[]' for a set of characters may be used.  The set may
   include ranges in ascii order by using hyphens; i.e. 1-3 matches the
   characters 1, 2, and 3.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>logfiles = "<TT>STDOUT</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='logfiles' Line='logfiles = "STDOUT"'>
-  <DD>List of output log files.  If no list is given then no output log information
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>logfiles = <tt>"STDOUT"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='logfiles' Line='logfiles = "STDOUT"' -->
+  <dd>List of output log files.  If no list is given then no output log information
   will be produced.  If only one file is specified it applies to all input
   images otherwise the list of files must match the images list.  Note that
-  the special name "<TT>STDOUT</TT>" corresponds to terminal output.
-  </DD>
-  </DL>
-  <P>
-  <DL>
-  <DT><B>blkstep = 1</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='blkstep' Line='blkstep = 1'>
-  <DD>The mean and sigma of the background or sky pixels are determined in a
-  first pass through the image.  If <I>blkstep</I> is one all lines are used.
+  the special name <tt>"STDOUT"</tt> corresponds to terminal output.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>blkstep = 1</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='blkstep' Line='blkstep = 1' -->
+  <dd>The mean and sigma of the background or sky pixels are determined in a
+  first pass through the image.  If <i>blkstep</i> is one all lines are used.
   To skip lines in order to speed up this computation, the parameter may be
   set to a larger value to define the increment between lines.  However, the
   task will enforce a preset minimum number to insure a sufficient sample.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>blksize = -10</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='blksize' Line='blksize = -10'>
-  <DD>The background mean sky and sky sigma are determined in a set of square
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>blksize = -10</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='blksize' Line='blksize = -10' -->
+  <dd>The background mean sky and sky sigma are determined in a set of square
   blocks from which the values are linearly interpolated to each point in the
   input image.  The size of the blocks may be specified as a number of blocks
   spanning the smaller image dimension by using a negative integer value.
   Or the size may be specified as the number of pixels across a block.
   The task will enforce a preset minimum number of pixels per block which may
   require using bigger blocks than specified.  The background determination
-  algorithm is described further in the "<TT>Background Determination</TT>" section.
-  </DD>
-  </DL>
-  <P>
-  <DL>
-  <DT><B>convolve = "<TT>block 3 3</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='convolve' Line='convolve = "block 3 3"'>
-  <DD>Convolution filter to be applied prior to threshold detection.  The
+  algorithm is described further in the <tt>"Background Determination"</tt> section.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>convolve = <tt>"block 3 3"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='convolve' Line='convolve = "block 3 3"' -->
+  <dd>Convolution filter to be applied prior to threshold detection.  The
   convolution filter is defined by a set of weights in a 2D array.  These
   may be specified in files or with certain forms given by special strings.
-  The options are described in the "<TT>Convolution Filter</TT>" section.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>hsigma = 3., lsigma = 10.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='hsigma' Line='hsigma = 3., lsigma = 10.'>
-  <DD>Object pixels are identified by sigma thresholds about the mean background
+  The options are described in the <tt>"Convolution Filter"</tt> section.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>hsigma = 3., lsigma = 10.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='hsigma' Line='hsigma = 3., lsigma = 10.' -->
+  <dd>Object pixels are identified by sigma thresholds about the mean background
   based on the estimated background sigma at each point in the image.
-  The sigma factors are specified in terms of the "<TT>per pixel</TT>" sigma before
-  convolution.  The <I>hsigma</I> value is the "<TT>high</TT>" or above background
-  limit and the <I>lsigma</I> value is the "<TT>low</TT>" or below background limit.
+  The sigma factors are specified in terms of the <tt>"per pixel"</tt> sigma before
+  convolution.  The <i>hsigma</i> value is the <tt>"high"</tt> or above background
+  limit and the <i>lsigma</i> value is the <tt>"low"</tt> or below background limit.
   Typically detections are one-sided, such as detecting objects above
   the background, and so the thresholds need not be equal.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>hdetect = yes, ldetect = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='hdetect' Line='hdetect = yes, ldetect = no'>
-  <DD>Identify objects as pixels which are above the background (<I>hdetect</I>)
-  and below the background (<I>ldetect</I>)?  If objects are detected but the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>hdetect = yes, ldetect = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='hdetect' Line='hdetect = yes, ldetect = no' -->
+  <dd>Identify objects as pixels which are above the background (<i>hdetect</i>)
+  and below the background (<i>ldetect</i>)?  If objects are detected but the
   corresponding parameter is no then the output mask will not include those
   objects.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>neighbors = "<TT>8</TT>" (8|4)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='neighbors' Line='neighbors = "8" (8|4)'>
-  <DD>The threshold selected pixels are associated with other neighboring pixels to
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>neighbors = <tt>"8"</tt> (8|4)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='neighbors' Line='neighbors = "8" (8|4)' -->
+  <dd>The threshold selected pixels are associated with other neighboring pixels to
   form an object.  The criterion for a neighbor being part of the
-  same object is defined by this parameter.  The choices are "<TT>8</TT>" for
-  pixels touching in any of the 8 directions or "<TT>4</TT>" to identify neighbors
+  same object is defined by this parameter.  The choices are <tt>"8"</tt> for
+  pixels touching in any of the 8 directions or <tt>"4"</tt> to identify neighbors
   as only horizontal or vertically adjacent.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>minpix = 6</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='minpix' Line='minpix = 6'>
-  <DD>The minimum number of neighboring pixels which define an acceptable object.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>ngrow = 2, agrow = 2.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='ngrow' Line='ngrow = 2, agrow = 2.'>
-  <DD>After an object is identified as a set of threshold detected pixels,
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>minpix = 6</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='minpix' Line='minpix = 6' -->
+  <dd>The minimum number of neighboring pixels which define an acceptable object.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>ngrow = 2, agrow = 2.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='ngrow' Line='ngrow = 2, agrow = 2.' -->
+  <dd>After an object is identified as a set of threshold detected pixels,
   additional neighboring pixels may be added to the object.  This allows
   expanding the object into the faint wings of the light distribution.  The
   additional pixels are those which touch the boundary pixels.  Pixels are
   added in multiple passes, each time extending the previous boundary.  The
-  parameter <I>ngrow</I> (an integer value) defines the maximum number of
-  boundary extensions.  The parameter <I>agrow</I> (a real value) specifies
+  parameter <i>ngrow</i> (an integer value) defines the maximum number of
+  boundary extensions.  The parameter <i>agrow</i> (a real value) specifies
   the maximum increase in area (number of pixels) from the original
   detection.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <B>OBJMASKS</B> is a task for creating masks covering objects in images.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  <b>OBJMASKS</b> is a task for creating masks covering objects in images.
   An optional secondary product of this task is to produce background
   and sigma maps.  Objects are identified by threshold sigma detection.
   These object masks may be used by other applications to exclude the object
@@ -207,109 +201,121 @@ objmasks — Detect objects in images and make masks
   applying a minimum number of pixels test to the objects, and growing
   objects to extend into the wings of the object light distribution.
   The last step is writing out the identified object pixels as a mask.
-  <P>
+  </p>
+  <p>
   1. Input Data
-  <P>
+  </p>
+  <p>
   The input data consists of one or more 2D images.  The images are assumed
   to  contain a moderately smooth background and multiple sources or
   objects.  This task is most useful for images with large numbers of small
   sources rather than one large object such as a nearby galaxy.  The input
-  images, specified by the <I>images</I> parameter, may be individual images
+  images, specified by the <i>images</i> parameter, may be individual images
   (which includes images selected from multiextension files as explicit
   image extensions) or multiextension files specified by a root filename.  In
-  the latter case the image extension names selected by the <I>extnames</I>
+  the latter case the image extension names selected by the <i>extnames</i>
   parameter are used.
-  <P>
+  </p>
+  <p>
   Background means and sigmas (specified per image pixels) may be specified
-  by "<TT>maps</TT>".  These may be constant numerical values or images.  The map
+  by <tt>"maps"</tt>.  These may be constant numerical values or images.  The map
   images will be linearly interpolated to the size of the input images.
   For multi-extension input data, constant map values apply to all extensions
   and maps are also multiextension files with map images having the same
   extension names.
-  <P>
+  </p>
+  <p>
   Bad pixel masks may be associated with the input images to
   exclude pixels from the background and object determinations.  These
   bad pixels are also included in the output object masks.  The bad pixel
-  masks are specified by the <I>masks</I> parameter.  This parameter may
+  masks are specified by the <i>masks</i> parameter.  This parameter may
   identify a mask by a filename or a keyword.  A single mask may be
   specified to apply to all images or a matching list of masks may be
   given.
-  <P>
+  </p>
+  <p>
   The masks are in one of the supported mask formats.  As of IRAF V2.12 this
-  includes pixel list (.pl) files and FITS "<TT>type=mask</TT>" extensions.  When the
+  includes pixel list (.pl) files and FITS <tt>"type=mask"</tt> extensions.  When the
   input files are multiextension files, the selected extension names are
   appended to the specified mask filename to select masks with the same
-  extension name.  If a mask file of the form "<TT>name[ext]</TT>" is not found
+  extension name.  If a mask file of the form <tt>"name[ext]"</tt> is not found
   the task will treat the filename as a directory of pixel list files and
-  select the pixel list file with the extension name; i.e. "<TT>name/ext.pl</TT>".
-  <P>
+  select the pixel list file with the extension name; i.e. <tt>"name/ext.pl"</tt>.
+  </p>
+  <p>
   2. Output Data
-  <P>
+  </p>
+  <p>
   The output of this task are object masks, sky maps, sigma maps, and log
   information.  The output object masks default to mask type extensions.  If an
   extension name is not specified explicitly the default extension name
-  "<TT>pl</TT>" is created.  To select a pixel list output format an explicit "<TT>.pl</TT>"
+  <tt>"pl"</tt> is created.  To select a pixel list output format an explicit <tt>".pl"</tt>
   extension must be used.
-  <P>
+  </p>
+  <p>
   When the input data are multiextension files, the output masks, mean sky
   maps, and sky sigma maps will be multiextension files with the specified
   rootnames and the same extension name as the input.
-  <P>
+  </p>
+  <p>
   The output mask values identify non-object pixels with zero.  The non-zero
-  values are encoded as selected by the <I>omtype</I> parameter.  The choices
+  values are encoded as selected by the <i>omtype</i> parameter.  The choices
   are:
-  <P>
-  <DL>
-  <DT><B>"<TT>boolean</TT>"</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='' Line='"boolean"'>
-  <DD>All object and bad pixels have a mask value of one; i.e. the output masks
+  </p>
+  <dl>
+  <dt><b><tt>"boolean"</tt></b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='' Line='"boolean"' -->
+  <dd>All object and bad pixels have a mask value of one; i.e. the output masks
   consists only of the values 0 and 1.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>"<TT>numbers</TT>"</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='' Line='"numbers"'>
-  <DD>Input bad pixels values between 1 and 10 preserve their value and all
+  </dd>
+  </dl>
+  <dl>
+  <dt><b><tt>"numbers"</tt></b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='' Line='"numbers"' -->
+  <dd>Input bad pixels values between 1 and 10 preserve their value and all
   other input mask values are mapped to 10.  The object mask pixels have
   object numbers starting with 11.  The object numbers are assigned by
   the task (roughly in order from the first line to the last line) and
   all pixels from a single object have the same unique object number.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>"<TT>colors</TT>"</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='' Line='"colors"'>
-  <DD>Input bad pixels are mapped to output values of one.  The object numbers
+  </dd>
+  </dl>
+  <dl>
+  <dt><b><tt>"colors"</tt></b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='' Line='"colors"' -->
+  <dd>Input bad pixels are mapped to output values of one.  The object numbers
   are modulo 8 plus 2; i.e. values between 2 and 9.  The purpose of this
   numbering is to allow mapping to the nine standard display colors for an
-  interesting overlay with the <B>display</B> task and "<TT>ocolors='+203'</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>"<TT>all</TT>"</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='' Line='"all"'>
-  <DD>This is the same as "<TT>numbers</TT>" except that bits 24 to 27 in the mask values
+  interesting overlay with the <b>display</b> task and <tt>"ocolors='+203'"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b><tt>"all"</tt></b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='' Line='"all"' -->
+  <dd>This is the same as <tt>"numbers"</tt> except that bits 24 to 27 in the mask values
   are used for various purposes.  In particular bit 24 is set for the boundary
   pixels.  This numbering will be used in the future by special tasks.
-  </DD>
-  </DL>
-  <P>
+  </dd>
+  </dl>
+  <p>
   Output mean sky and sky sigma maps consist of the mean and sigma values
-  in blocks as described in the "<TT>Background Determination</TT>" section.
+  in blocks as described in the <tt>"Background Determination"</tt> section.
   Therefore, the size of the map images are smaller than the input data images.
   These maps need to be interpolated to the size of the input image
   to obtain the values used for particular pixels in the data images.
   This interpolation expansion is done automatically by some tasks such
-  as <B>mscred.rmfringe</B>.
-  <P>
+  as <b>mscred.rmfringe</b>.
+  </p>
+  <p>
   The log output provides information about the files, the phase of the
   processing, some of the parameters, and the convolution filter weights.
   The output begins with the task identifier ACE.  This is because this
   prototype task is a first release piece of a major package called ACE
   (Astronomical Cataloging Environment), which is under development.
-  <P>
+  </p>
+  <p>
   3. Background Determination
-  <P>
+  </p>
+  <p>
   Detection of sources in an image begins with determining the background.
   By this we mean estimating the probability distribution of the background
   pixel values at every pixel in the image.  In practice we only estimate
@@ -317,21 +323,24 @@ objmasks — Detect objects in images and make masks
   the significance of deviations from the central value.  Since we normally
   won't have a sample of values at each pixel the distribution is
   determined from a sample of nearby pixels.
-  <P>
+  </p>
+  <p>
   In this discussion the central value of a distribution is denoted by &lt;I&gt;.
   It is estimated by the mean or mode of the sample.  The width of the
   distribution about &lt;I&gt; is denoted by &lt;S&gt; and is estimated by the absolute
   mean residual converted to the standard deviation of a normal distribution
   with the same absolute mean residual.  The normal deviation of a value I
   from the distribution is defined as R = (I - &lt;I&gt;) / &lt;S&gt;.
-  <P>
+  </p>
+  <p>
   The background may be specified by input maps for one or both of the
   background quantities.  The maps may be constant values which apply
   to all pixels or a grid of values given in an image which are linearly
   interpolated to the full size of the input data.  For those quantities
   which are not input the following algorithm is used for computing
   a map.  The maps may be output and used as a product of this task.
-  <P>
+  </p>
+  <p>
   The background and/or sigma are estimated in two initial passes through the
   data.  The first pass algorithm fits linear functions to a subsample of
   lines using sigma clipping iteration to eliminate objects.  The subsample
@@ -342,7 +351,8 @@ objmasks — Detect objects in images and make masks
   in each block average after elimination of bad pixels specified by the
   user in a bad pixel mask.  The absolute values of the residuals are also
   fit to produce a constant function for &lt;S&gt;.
-  <P>
+  </p>
+  <p>
   To exclude objects from affecting these estimates the fitting is iterated
   using sigma clipping rejection on the normal deviations R.  In the
   first iteration the fitting function for &lt;S&gt; is a constant and in
@@ -350,19 +360,21 @@ objmasks — Detect objects in images and make masks
   rejects no more data, the remaining block averages, absolute residuals, and
   weights are used to fit a 2D plane for both &lt;I&gt; and &lt;S&gt;.  The &lt;S&gt; surface
   is a constant in order to avoid potential negative sigma values.
-  <P>
+  </p>
+  <p>
   This first pass algorithm is fast and produces good estimates for the
   planar approximation to the background.  The second pass divides the image
-  into large, equal sized blocks, as specified by the <I>blksize</I>
+  into large, equal sized blocks, as specified by the <i>blksize</i>
   parameter, and estimates &lt;I&gt; and &lt;S&gt; in each block.  The size of the blocks
   needs to be large enough to give good estimates of the statistics though
   small enough to handle the scale of variations in the sky.  Each block is
   divided into four subblocks for independent estimates which are then
   combined into a final value for the block.  As with the first pass, the
   second pass can be speeded up by using a subsample of lines (parameter
-  <B>blkstep</B>) provided some minimum number of lines per subblock is
+  <b>blkstep</b>) provided some minimum number of lines per subblock is
   maintained.
-  <P>
+  </p>
+  <p>
   The background estimates in each subblock are made using histograms of the
   normal deviations R computed relative to the first pass estimates of &lt;I&gt;
   and &lt;S&gt;.  When pixels are added into the histogram the &lt;I&gt; and &lt;S&gt; used to
@@ -373,7 +385,8 @@ objmasks — Detect objects in images and make masks
   number of pixels in the block.  Typically the bin population is of order
   500.  The histogram truncation is essentially an object-background
   discrimination.
-  <P>
+  </p>
+  <p>
   When all the pixels in a subblock have been accumulated, new estimates of
   &lt;I&gt; and &lt;S&gt; are computed.  If the number of pixels in the histogram is
   less than two-thirds of the subblock pixels the estimates are set to be
@@ -381,14 +394,16 @@ objmasks — Detect objects in images and make masks
   used.  All subblock neighbors, which may cross the full block boundaries,
   are also rejected to minimize contamination by the wings of big galaxies
   and very bright stars.
-  <P>
+  </p>
+  <p>
   If the histogram has enough pixels, the bin populations are squared to
   emphasize the peak of the distribution and reduce the effects of the
   truncated edges of the histogram.  Because of noise and the fine binning of
   the histogram, a simple mode cannot be used and squaring the bin numbers
   helps to approach the mode with a centroid.  Squaring the bin values and
   then computing the centroid can also be thought of as a weighted centroid.
-  <P>
+  </p>
+  <p>
   Generally a mode is considered the best estimate to use for the central
   value &lt;I&gt; of the sky distribution.  But it is unclear how to best estimate
   the mode without an infinite number of pixels.  One could do something like
@@ -397,7 +412,8 @@ objmasks — Detect objects in images and make masks
   &lt;I&gt;=mean-3*(mean-median).  The mean is the weighted centroid and the median
   is obtained numerically from the histogram using linear interpolation to
   get a subbin value.
-  <P>
+  </p>
+  <p>
   The &lt;S&gt; values are obtained from the absolute mean residual of the
   unweighted histogram about the previously derived central value &lt;I&gt; of the
   histogram.  The conversion to a standard deviation is made by computing the
@@ -405,18 +421,21 @@ objmasks — Detect objects in images and make masks
   Gaussian distribution.  The standard value over the entire distribution
   cannot be used because the histogram is truncated.  However, it is easy to
   numerically compute the ratio with the same truncation.
-  <P>
+  </p>
+  <p>
   Once &lt;I&gt; and &lt;S&gt; are obtained in bin numbers it is converted to data
   values by using the mean and sigma of the input pixel values used
   to create the histogram.
-  <P>
+  </p>
+  <p>
   The averages of the subblock &lt;I&gt; and &lt;S&gt; values which are not indeterminate
   in each block are computed.  If any of the full blocks are indeterminate
   when all the subblocks have been eliminated as contaminated, values are
   obtained for them by interpolation from nearby blocks.  The block values
   are then linearly interpolated to get background values for every
   pixel in the input image.
-  <P>
+  </p>
+  <p>
   Note that the background pixels used in the block algorithm before
   detection are derived by simple sigma clipping of the histogram values
   around the planar background.  If an output map for either the mean
@@ -426,48 +445,53 @@ objmasks — Detect objects in images and make masks
   of sky pixels since convolution filtering can exclude pixels from faint
   objects and the wings of all objects.  The new set of sky pixels are
   accumulated and used in the same way as described earlier.
-  <P>
+  </p>
+  <p>
   4. Convolution Filters
-  <P>
+  </p>
+  <p>
   In order to improve the detection of faint sources dominated by the
   background noise, the input data may be convolved to produce filtered
   values in which the noise has been suppressed.  The threshold detection
   is then performed on the filtered data values.
-  <P>
-  The convolution detection filter is specified with the <I>convolve</I>
+  </p>
+  <p>
+  The convolution detection filter is specified with the <i>convolve</i>
   parameter.  There is only one convolution that can be specified and it
-  applies to all input images in a list.  If a null string ("<TT></TT>") is specified
+  applies to all input images in a list.  If a null string (<tt>""</tt>) is specified
   then no convolution is performed.  The task has been optimizations for this
   case to avoid treating this as a 1x1 convolution and to avoid extra memory
   allocations required when a convolution is done.
-  <P>
+  </p>
+  <p>
   The convolved value at pixel (i,j), denoted I'(i,j), is defined by
-  <P>
-  <PRE>
+  </p>
+  <pre>
       I'(i,j) = sum_kl{I(m,n)*W(k,l)} / sum_kl{W(k,l)}
-  </PRE>
-  <P>
+  </pre>
+  <p>
   where I(m,n) is the unconvolved value at pixel (m,n), W(k,l) are the NX x
   NY (both must be odd) convolution weights, sum_kl is the double sum over k
   and l, and
-  <P>
-  <PRE>
+  </p>
+  <pre>
       m' = i + k - (NX+1)/2	for k = 1 to NX
       n' = j + l - (NY+1)/2	for l = 1 to NY
-  <P>
+  
       m = m' (1&lt;=m'&lt;=C)	m = 1-m' (m'&lt;1)	  m = 2C-m' (m'&gt;C)
       n = n' (1&lt;=n'&lt;=L)	n = 1-n' (n'&lt;1)	  n = 2L-n' (m'&gt;L)
-  </PRE>
-  <P>
+  </pre>
+  <p>
   The size of the image is C x L.  The last two lines represent boundary
   reflection at the edges of the image.
-  <P>
+  </p>
+  <p>
   The sky sigma of a convolved pixel is approximated by
-  <P>
-  <PRE>
+  </p>
+  <pre>
       sigma'(i,j) = sigma(i,j) / sum_kl{W(k,l)}
-  </PRE>
-  <P>
+  </pre>
+  <p>
   In the presence of bad pixels specified in the bad pixel mask the
   convolution weight applied to a bad pixel is set to zero.  If the central
   pixel is bad then the convolved value is also considered to be bad.  The
@@ -477,109 +501,113 @@ objmasks — Detect objects in images and make masks
   larger.  Since there is an overhead in checking for bad pixels the
   convolution has an optimization to avoid such checks in the case where no
   bad pixel mask is specified.
-  <P>
+  </p>
+  <p>
   A convolution can be computational slow, especially for larger convolution
   kernel sizes.  The implementation of the convolution has been optimized to
   recognize bilinear symmetries or lines which are scaled versions of other
   lines.  So if possible users should chose convolutions with such symmetries
-  to be most efficient.  The "<TT>block</TT>", "<TT>bilinear</TT>", and "<TT>gauss</TT>" special
+  to be most efficient.  The <tt>"block"</tt>, <tt>"bilinear"</tt>, and <tt>"gauss"</tt> special
   convolutions described below all have such symmetries.
-  <P>
-  The <I>convolve</I> parameter is a string with one of the following forms.
-  <P>
-  <DL>
-  <DT><B>"<TT></TT>"    </B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='' Line='""    '>
-  <DD>There is no convolution or, equivalently, NX=1, NY=1.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>@[filename]</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='' Line='@[filename]'>
-  <DD>The weights are given in the specified file.  The format consists of lines
+  </p>
+  <p>
+  The <i>convolve</i> parameter is a string with one of the following forms.
+  </p>
+  <dl>
+  <dt><b><tt>""</tt>    </b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='' Line='""    ' -->
+  <dd>There is no convolution or, equivalently, NX=1, NY=1.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>@[filename]</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='' Line='@[filename]' -->
+  <dd>The weights are given in the specified file.  The format consists of lines
   of whitespace separated values.  The number of values on each line must be
   the same and defines NX and the number of lines defines NY.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>block [NX] [NY]</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='block' Line='block [NX] [NY]'>
-  <DD>The weights are all the same and the convolution size is given by the
-  two numbers following the word "<TT>block</TT>".  This is a moving block average
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>block [NX] [NY]</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='block' Line='block [NX] [NY]' -->
+  <dd>The weights are all the same and the convolution size is given by the
+  two numbers following the word <tt>"block"</tt>.  This is a moving block average
   filter.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>bilinear [NX] [NY]</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='bilinear' Line='bilinear [NX] [NY]'>
-  <DD>The weights are the bilinear matrix product of triangular one dimensional
-  matrices of sizes given by the two numbers following the word "<TT>bilinear</TT>".
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>bilinear [NX] [NY]</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='bilinear' Line='bilinear [NX] [NY]' -->
+  <dd>The weights are the bilinear matrix product of triangular one dimensional
+  matrices of sizes given by the two numbers following the word <tt>"bilinear"</tt>.
   The weights are described by the matrix product relation 
-  <P>
-  <PRE>
+  <pre>
       [1 ... (NX+1)/2 ... 1] * Transpose{[1 ... (NY+2)/2 ... 1]}
-  </PRE>
-  <P>
+  </pre>
   For example for NX=5, and NY=3 the weights would be
-  <P>
-  <PRE>
+  <pre>
       1 2 3 2 1
       2 4 6 4 2
       1 2 3 2 1
-  </PRE>
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>gauss [NX] [NY] [SX] [SY]</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='gauss' Line='gauss [NX] [NY] [SX] [SY]'>
-  <DD>The weights are bidimensional gaussian values on a grid of size NX by NY
+  </pre>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>gauss [NX] [NY] [SX] [SY]</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='gauss' Line='gauss [NX] [NY] [SX] [SY]' -->
+  <dd>The weights are bidimensional gaussian values on a grid of size NX by NY
   with sigma values SX and SY (real numbers) in units of pixel spacing.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>[W(1,1)] ... [W(NX,1)], ..., [W(1,NY)] ... [W(NX,NY)]</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='' Line='[W(1,1)] ... [W(NX,1)], ..., [W(1,NY)] ... [W(NX,NY)]'>
-  <DD>The weights are specified as a string of real values.  The values are
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>[W(1,1)] ... [W(NX,1)], ..., [W(1,NY)] ... [W(NX,NY)]</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='' Line='[W(1,1)] ... [W(NX,1)], ..., [W(1,NY)] ... [W(NX,NY)]' -->
+  <dd>The weights are specified as a string of real values.  The values are
   whitespace separated within each line and the lines are delimited by
   comma.  For example
-  <P>
-  <PRE>
+  <pre>
                                  1 2 1
       1 2 1, 2 3 2, 1 2 1  ==&gt;   2 3 2
                                  1 2 1
-  </PRE>
-  </DD>
-  </DL>
-  <P>
+  </pre>
+  </dd>
+  </dl>
+  <p>
   When a logfile is defined the convolution weights are included in the
   output.
-  <P>
+  </p>
+  <p>
   5. Object Detection
-  <P>
+  </p>
+  <p>
   The detection of objects in an image is conceptually quite simple once the
   background is known.  If an input pixel, before any convolution, is
   identified in the bad pixel mask the output object mask pixel is also
   identified as bad.  Otherwise the input data is convolved as described
   previously.
-  <P>
+  </p>
+  <p>
   Each convolved pixel is compared against the expected background at that
   point and, if it is more that a specified number of convolution adjusted
-  background sigma above (<I>hsigma</I>) or below (<I>lsigma</I>) the
+  background sigma above (<i>hsigma</i>) or below (<i>lsigma</i>) the
   background, it is identified as a candidate object pixel.  Candidate object
   pixels, with the same sense of deviation, are grouped into objects on
   the basis of being connected along the four or eight neighboring directions
-  as specified by the <I>neighbor</I> parameter.  The candidate object is then
-  accepted if it satisfies the minimum number of pixels (<I>minpix</I>) in
-  an object and the <I>hdetect</I> or <I>ldetect</I> parameter selects that
+  as specified by the <i>neighbor</i> parameter.  The candidate object is then
+  accepted if it satisfies the minimum number of pixels (<i>minpix</i>) in
+  an object and the <i>hdetect</i> or <i>ldetect</i> parameter selects that
   type of object.  The accepted objects are assigned sequential numbers
   beginning with 11.  The object numbers are used, as described in the
   section on the output data, to set the output object mask values.
-  <P>
+  </p>
+  <p>
   If an output mean sky or sigma map is requested, the output is that
   updated by the sky pixels identified during the detection.
-  <P>
+  </p>
+  <p>
   6. Object Growing
-  <P>
+  </p>
+  <p>
   Astronomical objects do not have sharp edges but have light distributions
   that merge into the background.  This is due not only to the nature of
   extended sources but to the atmospheric and instrument point spread function
@@ -592,28 +620,30 @@ objmasks — Detect objects in images and make masks
   the eight directions.  Each pass can be thought of as adding a ring
   of new pixels following the boundary of the object from the previous
   pass.
-  <P>
+  </p>
+  <p>
   When a non-object pixel neighbors two or more object pixels it is
-  assigned to the object with the greater "<TT>flux</TT>".  The flux is the sum
+  assigned to the object with the greater <tt>"flux"</tt>.  The flux is the sum
   of the pixel value deviations from the background.
-  <P>
-  The parameter <I>ngrow</I> selects the maximum number of growing iterations.
-  The parameter <I>agrow</I> selects the maximum fractional increase in
+  </p>
+  <p>
+  The parameter <i>ngrow</i> selects the maximum number of growing iterations.
+  The parameter <i>agrow</i> selects the maximum fractional increase in
   the number  of original detected object pixels.  The number of pixels
-  is called the "<TT>area</TT>"  of the object.  The growing of an object stops
+  is called the <tt>"area"</tt>  of the object.  The growing of an object stops
   when either maximum is exceedd at the end of a growing iteration.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1.  The following is a test example with default parameters that can be run
   by anyone.  An artificial galaxy field image is generated with the task
-  <B>mkexample</B> (the <B>artdata</B> package is assumed to already be loaded)
-  and a mask is created with <B>objmasks</B>.  The image is displayed with
+  <b>mkexample</b> (the <b>artdata</b> package is assumed to already be loaded)
+  and a mask is created with <b>objmasks</b>.  The image is displayed with
   the object mask overlayed in colors.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       np&gt; mkexample galfield galfield
       Creating example galfield in image galfield ...
       np&gt; objmasks omtype=color
@@ -643,17 +673,17 @@ objmasks — Detect objects in images and make masks
       z1=371.5644 z2=455.8792
       np&gt; display galfield 2 overlay=gfmask[pl] ocolors="+203" 
       z1=371.5644 z2=455.8792
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2.  In the first example there was no input mask.  The next example
   creates a new object mask using the first object mask as an input
-  "<TT>bad pixel mask</TT>".  While this is not the usual usage of the bad pixel
+  <tt>"bad pixel mask"</tt>.  While this is not the usual usage of the bad pixel
   mask it does illustrate an interesting option.  Note that the mask
   values in the input mask are mapped to an output value of 1 in the
-  "<TT>colors</TT>" output.  In this example the output is forced to be a pl
+  <tt>"colors"</tt> output.  In this example the output is forced to be a pl
   file by using the explicit extension.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       np&gt; objmasks omtype=colors mask=gfmask[pl]
       List of images or MEF files (galfield): 
       List of output object masks (gfmask): gfmask1.pl
@@ -680,12 +710,12 @@ objmasks — Detect objects in images and make masks
         Write object mask: gfmask1.pl
       np&gt; display galfield 2 overlay=gfmask1 ocolors="+203" 
       z1=371.5644 z2=455.8792
-  </PRE>
-  <P>
+  </pre>
+  <p>
   3.  The next example illustrates use with a multiextension file.  The
   example is two realizations of the galfield artificial data.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       np&gt; mkexamples galfield mef.fits[im1]
       Creating example galfield in image mef[im1] ...
       np&gt; mkexamples galfield mef[im2,append] oseed=2
@@ -737,11 +767,11 @@ objmasks — Detect objects in images and make masks
       z1=371.5644 z2=455.8792
       np&gt; display mef[im2] 2 over=mefmask[im2]
       z1=371.5666 z2=455.7844
-  </PRE>
-  <P>
+  </pre>
+  <p>
   4.  This example shows outputing the sky information.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       np&gt; objmasks galfield gfmask2 sky=gfsky2
       ACE:
         Image: galfield - Example artificial galaxy field
@@ -768,13 +798,13 @@ objmasks — Detect objects in images and make masks
       np&gt; imstat gfsky2
       #               IMAGE      NPIX      MEAN    STDDEV       MIN       MAX
   		   gfsky2        25     401.1    0.4397     400.3     401.9
-  </PRE>
-  <P>
+  </pre>
+  <p>
   5.  This examples shows specifying the sky information as constant values.
   In this case we already know that the artificial image has a
   constant background of 400 and a sigma of 10.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       np&gt; objmasks galfield gfmask3 sky=400 sigma=10
       ACE:
         Image: galfield - Example artificial galaxy field
@@ -789,22 +819,9 @@ objmasks — Detect objects in images and make masks
   	432 objects detected
         Grow objects: ngrow = 2, agrow = 2.
         Write object mask: gfmask3[pl,append,type=mask]
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Revisions</H3>
-  <! BeginSection: 'REVISIONS'>
-  <UL>
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'REVISIONS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </pre>
   
-  <! Contents: 'NAME' 'SYNOPSIS' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
+  <!-- EndSection:    'EXAMPLES' -->
+  
+  <!-- Contents: 'NAME' 'SYNOPSIS' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES'  -->
   

@@ -1,125 +1,126 @@
 .. _imarith:
 
-imarith — Simple image arithmetic
-=================================
+imarith: Simple image arithmetic
+================================
 
 **Package: imutil**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   imarith -- binary image arithmetic
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage	</H3>
-  <! BeginSection: 'USAGE	'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage	</h3>
+  <!-- BeginSection: 'USAGE	' -->
+  <p>
   imarith operand1 op operand2 result
-  </UL>
-  <! EndSection:   'USAGE	'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>operand1, operand2</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='operand1' Line='operand1, operand2'>
-  <DD>Lists of images and constants to be used as operands.
+  </p>
+  <!-- EndSection:   'USAGE	' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>operand1, operand2</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='operand1' Line='operand1, operand2' -->
+  <dd>Lists of images and constants to be used as operands.
   Image templates and image sections are allowed.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>op    </B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='op' Line='op    '>
-  <DD>Operator to be applied to the operands.  The allowed operators
-  are "<TT>+</TT>", "<TT>-</TT>", "<TT>*</TT>", "/"<TT>, </TT>"min"<TT>, and </TT>"max"<TT>.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>result</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='result' Line='result'>
-  <DD>List of resultant images.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>title = </TT>""<TT></B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='title' Line='title = ""'>
-  <DD>Title for the resultant images.  If null (</TT>""<TT>) then the title is taken
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>op    </b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='op' Line='op    ' -->
+  <dd>Operator to be applied to the operands.  The allowed operators
+  are <tt>"+"</tt>, <tt>"-"</tt>, <tt>"*"</tt>, <tt>"/"</tt>, <tt>"min"</tt>, and <tt>"max"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>result</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='result' Line='result' -->
+  <dd>List of resultant images.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>title = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='title' Line='title = ""' -->
+  <dd>Title for the resultant images.  If null (<tt>""</tt>) then the title is taken
   from operand1 if operand1 is an image or from operand2 otherwise.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>divzero = 0.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='divzero' Line='divzero = 0.'>
-  <DD>Replacement value for division by zero.  When the denominator is zero
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>divzero = 0.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='divzero' Line='divzero = 0.' -->
+  <dd>Replacement value for division by zero.  When the denominator is zero
   or nearly zero the result is replaced by this value.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>hparams = </TT>""<TT></B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='hparams' Line='hparams = ""'>
-  <DD>List of header parameters to be operated upon.  This is primarily
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>hparams = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='hparams' Line='hparams = ""' -->
+  <dd>List of header parameters to be operated upon.  This is primarily
   used for adding exposure times when adding images.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>pixtype = </TT>""<TT>, calctype = </TT>""<TT></B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='pixtype' Line='pixtype = "", calctype = ""'>
-  <DD>Pixel datatype for the resultant image and the internal calculation datatype.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>pixtype = <tt>""</tt>, calctype = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='pixtype' Line='pixtype = "", calctype = ""' -->
+  <dd>Pixel datatype for the resultant image and the internal calculation datatype.
   The choices are given below.  They may be abbreviated to one character.
-  <DL>
-  <DT><B></TT>""<TT>    </B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='' Line='""    '>
-  <DD><I>Calctype</I> defaults to the highest precedence operand datatype.  If the
+  <dl>
+  <dt><b><tt>""</tt>    </b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='' Line='""    ' -->
+  <dd><i>Calctype</i> defaults to the highest precedence operand datatype.  If the
   highest precedence datatype is an integer type and the operation is
-  division then the calculation type will be "<TT>real</TT>".  If the highest
-  precedence operand is type "<TT>ushort</TT>", <I>calctype</I> will default to
-  "<TT>long</TT>".  <I>Pixtype</I> defaults to <I>calctype</I>. Users who want type
-  "<TT>ushort</TT>" images on output will need to set <I>pixtype</I> to "<TT>ushort</TT>"
+  division then the calculation type will be <tt>"real"</tt>.  If the highest
+  precedence operand is type <tt>"ushort"</tt>, <i>calctype</i> will default to
+  <tt>"long"</tt>.  <i>Pixtype</i> defaults to <i>calctype</i>. Users who want type
+  <tt>"ushort"</tt> images on output will need to set <i>pixtype</i> to <tt>"ushort"</tt>
   explicitly.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>"<TT>1</TT>", "<TT>2</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='' Line='"1", "2"'>
-  <DD>The pixel datatype of the first or second operand.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>"<TT>short</TT>", "<TT>ushort</TT>", "<TT>integer</TT>", "<TT>long</TT>", "<TT>real</TT>", "<TT>double</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='' Line='"short", "ushort", "integer", "long", "real", "double"'>
-  <DD>Allowed IRAF pixel datatypes.
-  </DD>
-  </DL>
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verbose = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
-  <DD>Print the operator, operands, calculation datatype, and the resultant image
+  </dd>
+  </dl>
+  <dl>
+  <dt><b><tt>"1"</tt>, <tt>"2"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='' Line='"1", "2"' -->
+  <dd>The pixel datatype of the first or second operand.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b><tt>"short"</tt>, <tt>"ushort"</tt>, <tt>"integer"</tt>, <tt>"long"</tt>, <tt>"real"</tt>, <tt>"double"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='' Line='"short", "ushort", "integer", "long", "real", "double"' -->
+  <dd>Allowed IRAF pixel datatypes.
+  </dd>
+  </dl>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verbose = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
+  <dd>Print the operator, operands, calculation datatype, and the resultant image
   name, title, and pixel datatype.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>noact = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='noact' Line='noact = no'>
-  <DD>Like the verbose option but the operations are not actually performed.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>noact = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='noact' Line='noact = no' -->
+  <dd>Like the verbose option but the operations are not actually performed.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   Binary image arithmetic is performed of the form:
-  <P>
+  </p>
+  <p>
   	operand1 op operand2 = result
-  <P>
+  </p>
+  <p>
   where the operators are addition, subtraction, multiplication,
   division, and minimum and maximum.  The division operator checks for
   nearly zero denominators and replaces the ratio by the value specified
-  by the parameter <I>divzero</I>.  The operands are lists of images and
+  by the parameter <i>divzero</i>.  The operands are lists of images and
   numerical constants and the result is a list of images.  The number of
   elements in an operand list must either be one or equal the number of
   elements in the resultant list.  If the number of elements is one then
@@ -132,23 +133,25 @@ imarith — Simple image arithmetic
   which case a temporary image is created and after the operation is
   successfully completed the image to be replaced is overwritten by the
   temporary image.
-  <P>
+  </p>
+  <p>
   If both operands are images the lengths of each axis for the common
   dimensions must be the same though the dimensions need not be the
   same.  The resultant image header will be a copy of the operand image
   with the greater dimension.  If the dimensions are the same then image
   header for the resultant image is copied from operand1.  The title of
-  the resultant image may be changed using the parameter <I>title</I>.
+  the resultant image may be changed using the parameter <i>title</i>.
   The pixel datatype for the resultant image may be set using the
-  parameter <I>pixtype</I>.  If no pixel datatype is specified then the
+  parameter <i>pixtype</i>.  If no pixel datatype is specified then the
   pixel datatype defaults to the calculation datatype given by the
-  parameter <I>calctype</I>.  The calculation datatype defaults to the
+  parameter <i>calctype</i>.  The calculation datatype defaults to the
   highest precedence datatype of the operand images or constants except
   that a division operation will default to real for integer images.
   The precedence of the datatypes, highest first, is double,
   real, long, integer, and short.  The datatype of a constant operand is
   either short integer or real.  A real constant has a decimal point.
-  <P>
+  </p>
+  <p>
   Arithmetic on images of unequal dimensions implies that the operation
   is repeated for each element of the higher dimensions.  For example
   subtracting a two dimensional image from a three dimensional image
@@ -157,126 +160,139 @@ imarith — Simple image arithmetic
   dimensions.  As an extreme example dividing a seven dimensional image
   by a one dimension image consists of dividing each line of each plane
   of each band ... by the one dimensional image.
-  <P>
+  </p>
+  <p>
   There are two points to emphasize when using images of unequal
   dimensions.  First, a one dimensional image operates on a line
   of a two or higher dimension image.  To apply a one dimensional image
   to the columns of a higher dimensional image increase the image
-  dimensionality with <B>imstack</B>, transpose the resultant image,
-  and then replicate the columns with <B>blkrep</B> (see the EXAMPLE
+  dimensionality with <b>imstack</b>, transpose the resultant image,
+  and then replicate the columns with <b>blkrep</b> (see the EXAMPLE
   section).  The second point of confusion is that an image with a
-  size given by <B>imheader</B> of [20,1] is a two dimensional image
+  size given by <b>imheader</b> of [20,1] is a two dimensional image
   while an image with size of [20] is a one dimensional image.  To
-  reduce the dimensionality of an image use <B>imcopy</B>.
-  <P>
+  reduce the dimensionality of an image use <b>imcopy</b>.
+  </p>
+  <p>
   In addition to operating on the image pixels the image header parameters
-  specified by the list <I>hparams</I> are also operated upon.  The operation
+  specified by the list <i>hparams</i> are also operated upon.  The operation
   is the same as performed on the pixels and the values are either the
   values associated with named header parameters or the operand constant
   values.  The primary purpose of this feature is to add exposure times
   when adding images.
-  <P>
+  </p>
+  <p>
   The verbose option is used to record the image arithmetic.  The output
   consists of the operator, the operand image names, the resultant image
   name and pixel datatype, and the calculation datatype.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. To add two images and the exposure times:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; imarith ccd1 + ccd2 sum
   	&gt;&gt;&gt; hparams="itime,otime,ttime,exposure"
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. To subtract a constant from an image and replace input image by the
   subtracted image:
-  <P>
+  </p>
+  <p>
   	cl&gt; imarith m31 - 223.2 m31
-  <P>
+  </p>
+  <p>
   Note that the final pixel datatype and the calculation datatype will be at
   least of type real because the constant operand is real.
-  <P>
+  </p>
+  <p>
   3. To scale two exposures, divide one by the other, and extract the central
   portion:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; imarith exp1[10:90,10:90] * 1.2 temp1
   	cl&gt; imarith exp2[10:90,10:90] * 0.9 temp2
   	cl&gt; imarith temp1 / temp2 final title='Ratio of exp1 and exp 2'
   	cl&gt; imdelete temp1,temp2
-  </PRE>
-  <P>
+  </pre>
+  <p>
   Note that in this example the images temp1, temp2, and final will be
   of real pixel datatype (or double if either exp1 or exp2 are of pixel
   datatype double) because the numerical constants are real numbers.
-  <P>
+  </p>
+  <p>
   4. To divide two images of arbitrary pixel datatype using real arithmetic
   and create a short pixel datatype resultant image:
-  <P>
-  <PRE>
-  	cl&gt; imarith image1 / image2 image3 pixtype=short  \<BR>
+  </p>
+  <pre>
+  	cl&gt; imarith image1 / image2 image3 pixtype=short  \<br>
   	&gt;&gt;&gt; calctype=real title="Ratio of image1 and image2"
-  </PRE>
-  <P>
+  </pre>
+  <p>
   5. To divide several images by calibration image using the image pixel type of
   the numerator images to determine the pixel type of the calibrated images
   and the calculation arithmetic type:
-  <P>
-  <PRE>
-  	cl&gt; imarith image1,image2,image3 / calibration \<BR>
+  </p>
+  <pre>
+  	cl&gt; imarith image1,image2,image3 / calibration \<br>
   	&gt;&gt;&gt; image1a,image2a,image3a pixtype=1 calctype=1
-  </PRE>
-  <P>
+  </pre>
+  <p>
   The same operation can be done in place with image template expansion by:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; imarith image* / calibration image* pixtype=1 calctype=1
-  </PRE>
-  <P>
+  </pre>
+  <p>
   6. To subtract a two dimensional bias from stacked observations (multiple
   two dimensional observations stacked to form a three dimensional image):
-  <P>
+  </p>
+  <p>
   	cl&gt; imarith obs* - bias obs*//b
-  <P>
+  </p>
+  <p>
   Note that the output observations obs101b, ..., will be three dimensional.
-  <P>
+  </p>
+  <p>
   7. To divide a 50 x 50 image by the average column:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; blkavg img avcol 50 1
   	cl&gt; blkrep avcol avcol 50 1
   	cl&gt; imarith img / avcol flat
-  </PRE>
-  <P>
+  </pre>
+  <p>
   8. To subtract a one dimensional image from the lines of a two dimensional
   image:
-  <P>
+  </p>
+  <p>
   	cl&gt; imarith im2d - im1d diff
-  <P>
+  </p>
+  <p>
   9. To subtract a one dimensional image from the columns of a two dimensional
   image:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; imstack im1d imcol
   	cl&gt; imtranspose imcol imcol
   	cl&gt; blkrep imcol imcol 100 1
   	cl&gt; imarith im2d - imcol diff
-  </PRE>
-  <P>
+  </pre>
+  <p>
   Note the need to make a two dimensional image with each column
   replicated since a one dimensional image will operate on the lines
   of a two dimensional image.
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   blkrep, imdivide, imfunction, imstack, imtranspose
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

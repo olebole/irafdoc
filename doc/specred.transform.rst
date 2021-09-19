@@ -1,165 +1,164 @@
 .. _transform:
 
-transform — Resample longslit spectra
-=====================================
+transform: Resample longslit spectra
+====================================
 
 **Package: specred**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   transform -- Transform longslit images to user coordinates
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   transform input output fitnames
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
-  <DD>List of input images to be transformed.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
-  <DD>List of output images.  The number of output images in the list must
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
+  <dd>List of input images to be transformed.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
+  <dd>List of output images.  The number of output images in the list must
   match the number of input images.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>minput = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='minput' Line='minput = ""'>
-  <DD>List of input masks or references.  This mask is used to create an output
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>minput = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='minput' Line='minput = ""' -->
+  <dd>List of input masks or references.  This mask is used to create an output
   mask and is currently not used in the calculation of the output pixel
   values.  The list may be empty, a single element to apply to all input
   images, or a list that matches the input list.  A element in the list
-  may be "<TT>BPM</TT>" to use the mask referenced by the standard bad pixel mask
-  keyword "<TT>BPM</TT>", "<TT>!&lt;keyword&gt;</TT>" to use another header keyword pointing to a
+  may be <tt>"BPM"</tt> to use the mask referenced by the standard bad pixel mask
+  keyword <tt>"BPM"</tt>, <tt>"!&lt;keyword&gt;"</tt> to use another header keyword pointing to a
   mask, or a mask filename.  The mask file is typically a pixel list file
   but it may also be an image.  The mask values are interpreted as zero and
   greater than zero with the actual values ignored.  The mask is assumed to
   be registered with the input and no coordinate system matching is used.
   The mask maybe smaller or larger than the input image with non-overlapping
   pixels ignored and missing pixels assumed to be zero valued.  The mask
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>moutput = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='moutput' Line='moutput = ""'>
-  <DD>List of output masks to be created.  The list may be empty or must match
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>moutput = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='moutput' Line='moutput = ""' -->
+  <dd>List of output masks to be created.  The list may be empty or must match
   the input list.  Output masks may be specified even if no input mask is
   specified, in which case the output mask will identify pixels which map
-  to regions outside the input images (also see the <I>blank</I> parameter).
+  to regions outside the input images (also see the <i>blank</i> parameter).
   If an explicit extension is not specified a FITS mask is extension is
-  created unless the environment variable "<TT>masktype</TT>" is set to "<TT>pl</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>fitnames  </B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='fitnames' Line='fitnames  '>
-  <DD>Names of the user coordinate maps in the database to be used in the transform.
-  If no names are specified, using the null string "<TT></TT>", the world coordinate
+  created unless the environment variable <tt>"masktype"</tt> is set to <tt>"pl"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>fitnames  </b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='fitnames' Line='fitnames  ' -->
+  <dd>Names of the user coordinate maps in the database to be used in the transform.
+  If no names are specified, using the null string <tt>""</tt>, the world coordinate
   system (WCS) of the image is used.  This latter case may be used to
   resample previously WCS calibrated images to a different linear range
   or sampling.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>database = "<TT>database</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"'>
-  <DD>Database containing the coordinate map to be used in transforming the images.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>interptype = "<TT>spline3</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='interptype' Line='interptype = "spline3"'>
-  <DD>Image interpolation type.  The allowed types are "<TT>nearest</TT>" (nearest neighbor),
-  "<TT>linear</TT>" (bilinear), "<TT>poly3</TT>" (bicubic polynomial), "<TT>poly5</TT>" (biquintic
-  polynomial), and "<TT>spline3</TT>" (bicubic polynomial).
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>flux = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='flux' Line='flux = yes'>
-  <DD>Conserve flux per pixel?  If "<TT>no</TT>" then each output pixel is simply interpolated
-  from the input image.  If "<TT>yes</TT>" the interpolated output pixel value is
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>database = <tt>"database"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"' -->
+  <dd>Database containing the coordinate map to be used in transforming the images.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>interptype = <tt>"spline3"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='interptype' Line='interptype = "spline3"' -->
+  <dd>Image interpolation type.  The allowed types are <tt>"nearest"</tt> (nearest neighbor),
+  <tt>"linear"</tt> (bilinear), <tt>"poly3"</tt> (bicubic polynomial), <tt>"poly5"</tt> (biquintic
+  polynomial), and <tt>"spline3"</tt> (bicubic polynomial).
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>flux = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='flux' Line='flux = yes' -->
+  <dd>Conserve flux per pixel?  If <tt>"no"</tt> then each output pixel is simply interpolated
+  from the input image.  If <tt>"yes"</tt> the interpolated output pixel value is
   multiplied by the Jacobean of the transformation (essentially the ratio of
   pixel areas between the output and input images).
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>x1 = INDEF, y1 = INDEF</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='x1' Line='x1 = INDEF, y1 = INDEF'>
-  <DD>User coordinates of the first output column and line.  If INDEF then the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>x1 = INDEF, y1 = INDEF</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='x1' Line='x1 = INDEF, y1 = INDEF' -->
+  <dd>User coordinates of the first output column and line.  If INDEF then the
   smallest value corresponding to a pixel from the image used to create the
   coordinate map is used.  These values are in user units regardless of whether
   logarithmic intervals are specified or not.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>x2 = INDEF, y2 = INDEF</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='x2' Line='x2 = INDEF, y2 = INDEF'>
-  <DD>User coordinates of the last output column and line.  If INDEF then the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>x2 = INDEF, y2 = INDEF</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='x2' Line='x2 = INDEF, y2 = INDEF' -->
+  <dd>User coordinates of the last output column and line.  If INDEF then the
   largest value corresponding to a pixel from the image used to create the
   coordinate map is used.  These values are in user units regardless of whether
   logarithmic intervals are specified or not.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>dx = INDEF, dy = INDEF</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='dx' Line='dx = INDEF, dy = INDEF'>
-  <DD>Output pixel intervals.  If INDEF then the interval is set to yield the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>dx = INDEF, dy = INDEF</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='dx' Line='dx = INDEF, dy = INDEF' -->
+  <dd>Output pixel intervals.  If INDEF then the interval is set to yield the
   specified number of pixels.  Note that for logarithmic intervals the
   interval must be specified as a base 10 logarithm (base 10) and not in
   user units.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>nx = INDEF, ny = INDEF</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='nx' Line='nx = INDEF, ny = INDEF'>
-  <DD>Number of output pixels.  If INDEF and if the pixel interval is also INDEF then
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>nx = INDEF, ny = INDEF</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='nx' Line='nx = INDEF, ny = INDEF' -->
+  <dd>Number of output pixels.  If INDEF and if the pixel interval is also INDEF then
   the number of output pixels is equal to the number of input pixels.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>xlog = no, ylog = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='xlog' Line='xlog = no, ylog = no'>
-  <DD>Convert to logarithmic intervals?  If "<TT>yes</TT>" the output pixel intervals
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>xlog = no, ylog = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='xlog' Line='xlog = no, ylog = no' -->
+  <dd>Convert to logarithmic intervals?  If <tt>"yes"</tt> the output pixel intervals
   are logarithmic.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>blank = INDEF</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='blank' Line='blank = INDEF'>
-  <DD>Value to put in the output transformed image when it transforms to regions
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>blank = INDEF</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='blank' Line='blank = INDEF' -->
+  <dd>Value to put in the output transformed image when it transforms to regions
   outside the input image.  The special value INDEF will use the nearest
   input pixel which is the behavior before the addition of this parameter.
   Using special blank values allows other software to identify such out
-  of input pixels.  See also the <I>moutput</I> parameter to identify
+  of input pixels.  See also the <i>moutput</i> parameter to identify
   out of input pixels in pixel masks.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>logfiles = "<TT>STDOUT,logfile</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='logfiles' Line='logfiles = "STDOUT,logfile"'>
-  <DD>List of files in which to keep a log.  If null, "<TT></TT>", then no log is kept.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  The coordinate maps U(X,Y) and V(X,Y), created by the task <B>fitcoords</B>,
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>logfiles = <tt>"STDOUT,logfile"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='logfiles' Line='logfiles = "STDOUT,logfile"' -->
+  <dd>List of files in which to keep a log.  If null, <tt>""</tt>, then no log is kept.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  The coordinate maps U(X,Y) and V(X,Y), created by the task <b>fitcoords</b>,
   are read from the specified database coordinate fits or from the
   world coordinate system (WCS) of the image.  X and Y are the original
   untransformed pixel coordinates and U and V are the desired output user or
@@ -173,10 +172,11 @@ transform — Resample longslit spectra
   every output point because this is quite slow and is not necessary since
   the coordinate surfaces are relatively slowly varying over the subsampling
   (every 10th output point).
-  <P>
+  </p>
+  <p>
   The type of image interpolation is
   selected by the user.  Note that the more accurate the interpolator the
-  longer the transformation time required.  The parameter <I>flux</I> selects
+  longer the transformation time required.  The parameter <i>flux</i> selects
   between direct image interpolation and a flux conserving interpolation.
   Flux conservation consists of multiplying the interpolated pixel value by
   the Jacobean of the transformation at that point.  This is essentially
@@ -185,31 +185,35 @@ transform — Resample longslit spectra
   However, it will be very close except when the output pixel size is much
   greater than the input pixel size.  A log describing the image transformations
   may be kept or printed on the standard output.
-  <P>
+  </p>
+  <p>
   The output coordinate grid may be defined by the user or allowed to
   default to an image of the same size as the input image spanning the
   full range of user coordinates in the coordinate transformation maps.
-  When the coordinate maps are created by the task <B>fitcoords</B> the
+  When the coordinate maps are created by the task <b>fitcoords</b> the
   user coordinates at the corners of the image are recorded in the
   database.  By default these values are used to set the limits of the
   output grid.  If a pixel interval is not specified then an interval
   yielding the specified number of pixels is used.  The default number of
   pixels is that of the input image.  Note that if a pixel interval is
   specified then it takes precedence over the number of pixels.
-  <P>
-  The pixel intervals may also be logarithmic if the parameter <I>xlog</I> or
-  <I>ylog</I> is "<TT>yes</TT>".  Generally, the number of output pixels is specified
+  </p>
+  <p>
+  The pixel intervals may also be logarithmic if the parameter <i>xlog</i> or
+  <i>ylog</i> is <tt>"yes"</tt>.  Generally, the number of output pixels is specified
   in this case .  However, if the interval is specified it must be a base
   10 logarithmic interval and not in units of the x and y limits which are
   specified in user units.
-  <P>
+  </p>
+  <p>
   The transformation from the desired output pixel to the input image may
   fall outside of the input image.  In this case the output pixel may be
   set to the nearest pixel value in the input image or to a particular value
-  using the <I>blank</I> parameter.  Also if an output mask is created this
+  using the <i>blank</i> parameter.  Also if an output mask is created this
   pixels will have a value of one in the mask.
-  <P>
-  The parameters <I>minput</I> and <I>moutput</I> provide for input and output
+  </p>
+  <p>
+  The parameters <i>minput</i> and <i>moutput</i> provide for input and output
   pixel masks.  An input mask is not used in calculating the transformed
   pixel value but is used to identify the output pixels in the output mask
   which make a significant contribution to the interpolated value.  The
@@ -225,43 +229,41 @@ transform — Resample longslit spectra
   of significant affected pixels.
   zero and
   is created with values of 100
-  <P>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   Arc calibration images were used to determine a two dimensional dispersion
   map called dispmap.  Stellar spectra were used to determine a two dimensional
   distortion map call distort.  These maps where made using the task
-  <B>fitcoords</B>. To transform a set of input images into linear wavelength
+  <b>fitcoords</b>. To transform a set of input images into linear wavelength
   between 3800 and 6400 Angstroms (the user coordinate units) with a dispersion
   of 3 Angstroms per pixel:
-  <P>
-  <PRE>
-  	cl&gt; transform obj001,obj002 out001,out002 dispmap,distort \<BR>
+  </p>
+  <pre>
+  	cl&gt; transform obj001,obj002 out001,out002 dispmap,distort \<br>
   	&gt;&gt;&gt; y1=3800 y2=6400 dy=3
-  </PRE>
-  <P>
+  </pre>
+  <p>
   To use logarithmic intervals in the wavelength to yield the same number of
   pixels in the output images as in the input images:
-  <P>
-  <PRE>
-  	cl&gt; transform obj001,obj002 out001,out002 dispmap,distort \<BR>
+  </p>
+  <pre>
+  	cl&gt; transform obj001,obj002 out001,out002 dispmap,distort \<br>
   	&gt;&gt;&gt; y1=3800 y2=6400 ylog=yes
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Timings</H3>
-  <! BeginSection: 'TIMINGS'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Timings</h3>
+  <!-- BeginSection: 'TIMINGS' -->
+  <p>
   The following timings were obtained for transforming a 511x512 real
   image to another 511x512 real image using two Chebyshev transformation
-  surface functions (one for the dispersion axis, "<TT>henear</TT>", and one in
-  spatial axis, "<TT>object</TT>") of order 6 in both dimensions created with the
-  task <B>fitcoords</B>.  The times are for a UNIX/VAX 11/750.
-  <P>
-  <PRE>
+  surface functions (one for the dispersion axis, <tt>"henear"</tt>, and one in
+  spatial axis, <tt>"object"</tt>) of order 6 in both dimensions created with the
+  task <b>fitcoords</b>.  The times are for a UNIX/VAX 11/750.
+  </p>
+  <pre>
   cl&gt; $transform input output henear,object interp=linear
   TIME (transform)  173.73  5:13  55%
   cl&gt; $transform input output henear,object interp=poly3
@@ -276,31 +278,30 @@ transform — Resample longslit spectra
   TIME (transform)  303.40  12:17  41%
   cl&gt; $transform input output henear,object interp=spline3 flux=no
   TIME (transform)  262.42  10:42  40%
-  </PRE>
-  <P>
+  </pre>
+  <p>
   The majority of the time is due to the image interpolation and not evaluating
   the transformation functions as indicated by the last three examples.
-  </UL>
-  <! EndSection:   'TIMINGS'>
-  <H3>Notes</H3>
-  <! BeginSection: 'NOTES'>
-  <UL>
-  <DL>
-  <DT><B>TRANSFORM: V2.12.2</B></DT>
-  <! Sec='NOTES' Level=0 Label='TRANSFORM' Line='TRANSFORM: V2.12.2'>
-  <DD>The use of bad pixel masks, a specified "<TT>blank</TT>" value, and use of a WCS
+  </p>
+  <!-- EndSection:   'TIMINGS' -->
+  <h3>Notes</h3>
+  <!-- BeginSection: 'NOTES' -->
+  <dl>
+  <dt><b>TRANSFORM: V2.12.2</b></dt>
+  <!-- Sec='NOTES' Level=0 Label='TRANSFORM' Line='TRANSFORM: V2.12.2' -->
+  <dd>The use of bad pixel masks, a specified <tt>"blank"</tt> value, and use of a WCS
   to resample a WCS calibrated image was added.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>TRANSFORM: V2.6</B></DT>
-  <! Sec='NOTES' Level=0 Label='TRANSFORM' Line='TRANSFORM: V2.6'>
-  <DD>With Version 2.6 of IRAF the algorithm used to invert the user
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>TRANSFORM: V2.6</b></dt>
+  <!-- Sec='NOTES' Level=0 Label='TRANSFORM' Line='TRANSFORM: V2.6' -->
+  <dd>With Version 2.6 of IRAF the algorithm used to invert the user
   coordinate surfaces, U(X,Y) and V(X,Y) to X(U,V) and Y(U,V), has been
   changed.  Previously surfaces of comparable order to the original
   surfaces were fit to a grid of points, i.e. (U(X,Y), V(X,Y), X) and
   (U(X,Y), V(X,Y), Y), with the same surface fitting routines used in
-  <B>fitcoords</B> to obtain the input user coordinate surfaces.  This
+  <b>fitcoords</b> to obtain the input user coordinate surfaces.  This
   method of inversion worked well in all cases in which reasonable
   distortions and dispersions were used.  It was selected because it was
   relatively fast.  However, it cannot be proved to work in all cases; in
@@ -310,16 +311,16 @@ transform — Resample longslit spectra
   correct inversion to within a set error (0.05 of a pixel in X and Y).
   It is slightly slower than the previous algorithm but it is still not
   as major a factor as the image interpolation itself.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'NOTES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </dd>
+  </dl>
+  <!-- EndSection:   'NOTES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   fitcoords
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIMINGS' 'NOTES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIMINGS' 'NOTES' 'SEE ALSO'  -->
   

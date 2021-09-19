@@ -1,5 +1,5 @@
-nttools — NOAO version of TTOOLS package
-========================================
+nttools: NOAO version of TTOOLS package
+=======================================
 
 .. toctree:: :maxdepth: 1
 

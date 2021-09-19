@@ -1,73 +1,73 @@
 .. _rgb:
 
-rgb — Select true color mode (red, green, and blue frames)
-==========================================================
+rgb: Select true color mode (red, green, and blue frames)
+=========================================================
 
 **Package: iis**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   rgb - select true color mode (red, green, and blue frames)
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   rgb red_frame green_frame blue_frame
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>red_frame</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='red_frame' Line='red_frame'>
-  <DD>Frame to use for the red component.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>green_frame</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='green_frame' Line='green_frame'>
-  <DD>Frame to use for the green component.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>blue_frame</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='blue_frame' Line='blue_frame'>
-  <DD>Frame to use for the blue component.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>window = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='window' Line='window = no'>
-  <DD>Window the rgb lookup tables?
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>red_frame</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='red_frame' Line='red_frame' -->
+  <dd>Frame to use for the red component.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>green_frame</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='green_frame' Line='green_frame' -->
+  <dd>Frame to use for the green component.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>blue_frame</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='blue_frame' Line='blue_frame' -->
+  <dd>Frame to use for the blue component.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>window = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='window' Line='window = no' -->
+  <dd>Window the rgb lookup tables?
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   Set the display monitor to display rgb colors by using three frames to
   drive the red, green, and blue guns of the color display monitor.
   Optionally, window the rgb lookup tables.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   	cl&gt; rgb 1 2 3
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   cv
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

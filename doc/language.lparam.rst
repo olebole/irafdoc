@@ -1,66 +1,68 @@
 .. _lparam:
 
-lparam — List the parameters of a task
-======================================
+lparam: List the parameters of a task
+=====================================
 
 **Package: language**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   lparam -- list the parameters of a task or pset
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   lparam pset [pset ...]
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>pset</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='pset' Line='pset'>
-  <DD>The name of the parameter set to be listed.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <I>Lparam</I> lists one or more parameter sets.  Psets are specified either by
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>pset</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='pset' Line='pset' -->
+  <dd>The name of the parameter set to be listed.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  <i>Lparam</i> lists one or more parameter sets.  Psets are specified either by
   the name of the task with which the pset is associated, or by filename (pset
-  files have the "<TT>.par</TT>" extension).  If a file type pset is listed the extension
+  files have the <tt>".par"</tt> extension).  If a file type pset is listed the extension
   must be included, since it is the presence or absence of the filename
-  extension which <B>lparam</B> uses to distinguish between task-psets and named
+  extension which <b>lparam</b> uses to distinguish between task-psets and named
   (file) psets.
-  <P>
+  </p>
+  <p>
   Each parameter is listed on a single line with the following format:
-  <P>
+  </p>
+  <p>
   	param = value		prompt string
-  <P>
-  Here "<TT>param</TT>" is the name of the parameter, "<TT>value</TT>" is the current value of
-  the parameter (blank if undefined), and "<TT>prompt string</TT>" is the prompt for
+  </p>
+  <p>
+  Here <tt>"param"</tt> is the name of the parameter, <tt>"value"</tt> is the current value of
+  the parameter (blank if undefined), and <tt>"prompt string"</tt> is the prompt for
   the parameter, if any.  If the parameter is hidden, then the line is enclosed
   in parentheses.  For arrays, instead of the values, a list of the
-  dimensionalities is given.  The <I>eparam</I> task may be used to examine
+  dimensionalities is given.  The <i>eparam</i> task may be used to examine
   or edit the contents of an array.  When more than one task is listed the
   task name is prefixed to the list of each tasks parameters.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  1. List the parameter for the task <I>delete</I>.  Note that the positional
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
+  1. List the parameter for the task <i>delete</i>.  Note that the positional
   parameters are listed first, in the order in which they must be specified
   on the command line, followed by the hidden parameters.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   cl&gt; lparam delete
           files = "temp"          list of files to be deleted
        go_ahead = yes              ?
@@ -69,30 +71,31 @@ lparam — List the parameters of a task
    (allversions = yes)            delete all versions of each file
       (subfiles = yes)            delete any subfiles of each file
           (mode = "ql")           
-  </PRE>
-  <P>
-  2. List the contents of the file pset "<TT>delete.par</TT>".  Named psets such as this
-  are most commonly produced using the <B>":w filename"</B> colon command in
-  <B>eparam</B>, e.g., to prepare several different versions of the parameter
+  </pre>
+  <p>
+  2. List the contents of the file pset <tt>"delete.par"</tt>.  Named psets such as this
+  are most commonly produced using the <b>":w filename"</b> colon command in
+  <b>eparam</b>, e.g., to prepare several different versions of the parameter
   set for a task.
-  <P>
+  </p>
+  <p>
   	cl&gt; lparam delete.par
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <p>
   You cannot list the parameters of a task that does not have a parameter
   file (e.g., all builtin tasks).
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   eparam, dparam, cache
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

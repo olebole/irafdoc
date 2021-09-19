@@ -1,5 +1,5 @@
-artdata — Artificial data generation package
-============================================
+artdata: Artificial data generation package
+===========================================
 
 .. toctree:: :maxdepth: 1
 

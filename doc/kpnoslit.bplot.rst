@@ -1,191 +1,196 @@
 .. _bplot:
 
-bplot — Batch plot of spectra with SPLOT
-========================================
+bplot: Batch plot of spectra with SPLOT
+=======================================
 
 **Package: kpnoslit**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   bplot -- Plot spectra noninteractively using SPLOT
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   bplot images [records]
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>images</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
-  <DD>List of images to be plotted.  These may be one dimensional, multiaperture,
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>images</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
+  <dd>List of images to be plotted.  These may be one dimensional, multiaperture,
   long slit, or nonspectral images.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>records (imred.irs and imred.iids only)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='records' Line='records (imred.irs and imred.iids only)'>
-  <DD>List of records to be appended to the input image root names when
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>records (imred.irs and imred.iids only)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='records' Line='records (imred.irs and imred.iids only)' -->
+  <dd>List of records to be appended to the input image root names when
   using record number extension format.  The syntax of this list is comma
   separated record numbers or ranges of record numbers.  A range consists of
   two numbers separated by a hyphen.  A null list may be used if no record
   number extensions are desired.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>apertures = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""'>
-  <DD>List of apertures/lines/columns to be plotted in each image.  If
-  <I>apertures</I> is null all of the apertures/lines/columns will be plotted.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>band = 1</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='band' Line='band = 1'>
-  <DD>The band or plane of a three dimensional image to be plotted in each image.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>graphics = "<TT>stdgraph</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"'>
-  <DD>Output graphics device.  This may be one of "<TT>stdgraph</TT>", "<TT>stdplot</TT>",
-  "<TT>stdvdm</TT>", or the actual device name.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>cursor = "<TT>onedspec$gcurval.dat</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = "onedspec$gcurval.dat"'>
-  <DD>File(s) containing cursor commands for the SPLOT task.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>apertures = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
+  <dd>List of apertures/lines/columns to be plotted in each image.  If
+  <i>apertures</i> is null all of the apertures/lines/columns will be plotted.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>band = 1</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='band' Line='band = 1' -->
+  <dd>The band or plane of a three dimensional image to be plotted in each image.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>graphics = <tt>"stdgraph"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
+  <dd>Output graphics device.  This may be one of <tt>"stdgraph"</tt>, <tt>"stdplot"</tt>,
+  <tt>"stdvdm"</tt>, or the actual device name.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>cursor = <tt>"onedspec$gcurval.dat"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = "onedspec$gcurval.dat"' -->
+  <dd>File(s) containing cursor commands for the SPLOT task.
   The files will be cycled sequentially.  If there is more than one file
   usually the number of files will agree with the number of apertures
   for each image since otherwise different cursor/aperture pairings will
   occur.  The default is a file containing only the (q)uit command.
-  </DD>
-  </DL>
-  <P>
+  </dd>
+  </dl>
+  <p>
   The following parameters are used in response to particular keystrokes.
-  In <B>splot</B> they are query parameters but in <B>bplot</B> they are hidden
+  In <b>splot</b> they are query parameters but in <b>bplot</b> they are hidden
   parameters.
-  <DL>
-  <DT><B>next_image = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='next_image' Line='next_image = ""'>
-  <DD>In response to <TT>'g'</TT> (get next image) this parameter specifies the image.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>new_image = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='new_image' Line='new_image = ""'>
-  <DD>In response to <TT>'i'</TT> (write current spectrum) this parameter specifies the
+  </p>
+  <dl>
+  <dt><b>next_image = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='next_image' Line='next_image = ""' -->
+  <dd>In response to <tt>'g'</tt> (get next image) this parameter specifies the image.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>new_image = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='new_image' Line='new_image = ""' -->
+  <dd>In response to <tt>'i'</tt> (write current spectrum) this parameter specifies the
   name of a new image to create or existing image to overwrite.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>overwrite = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='overwrite' Line='overwrite = yes'>
-  <DD>Overwrite an existing output image?  If set to yes it is possible to write
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>overwrite = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='overwrite' Line='overwrite = yes' -->
+  <dd>Overwrite an existing output image?  If set to yes it is possible to write
   back into the input spectrum or to some other existing image.  Otherwise
   the user is queried again for a new image name.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>spec2 = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='spec2' Line='spec2 = ""'>
-  <DD>When adding, subtracting, multiplying, or dividing by a second spectrum
-  (<TT>'+'</TT>, <TT>'-'</TT>, <TT>'*'</TT>, <TT>'/'</TT> keys in the <TT>'f'</TT> mode) this parameter is used to get
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>spec2 = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='spec2' Line='spec2 = ""' -->
+  <dd>When adding, subtracting, multiplying, or dividing by a second spectrum
+  (<tt>'+'</tt>, <tt>'-'</tt>, <tt>'*'</tt>, <tt>'/'</tt> keys in the <tt>'f'</tt> mode) this parameter is used to get
   the name of the second spectrum.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>constant = 0.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.'>
-  <DD>When adding or multiplying by a constant (<TT>'p'</TT> or <TT>'m'</TT> keys in the <TT>'f'</TT> mode)
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>constant = 0.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.' -->
+  <dd>When adding or multiplying by a constant (<tt>'p'</tt> or <tt>'m'</tt> keys in the <tt>'f'</tt> mode)
   the parameter is used to get the constant.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>wavelength = 0.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='wavelength' Line='wavelength = 0.'>
-  <DD>This parameter is used to get a dispersion coordinate value during deblending or
-  when changing the dispersion coordinates with <TT>'u'</TT>.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>linelist = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='linelist' Line='linelist = ""'>
-  <DD>During deblending this parameter is used to get a list of line positions
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>wavelength = 0.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='wavelength' Line='wavelength = 0.' -->
+  <dd>This parameter is used to get a dispersion coordinate value during deblending or
+  when changing the dispersion coordinates with <tt>'u'</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>linelist = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='linelist' Line='linelist = ""' -->
+  <dd>During deblending this parameter is used to get a list of line positions
   and widths.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>wstart = 0., wend = 0., dw = 0.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='wstart' Line='wstart = 0., wend = 0., dw = 0.'>
-  <DD>In response to <TT>'p'</TT> (convert to a linear wavelength scale) these parameter
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>wstart = 0., wend = 0., dw = 0.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='wstart' Line='wstart = 0., wend = 0., dw = 0.' -->
+  <dd>In response to <tt>'p'</tt> (convert to a linear wavelength scale) these parameter
   specify the starting wavelength, ending wavelength, and wavelength per pixel.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>boxsize = 2</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='boxsize' Line='boxsize = 2'>
-  <DD>In response to <TT>'s'</TT> (smooth) this parameter specifies the box size in pixels
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>boxsize = 2</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='boxsize' Line='boxsize = 2' -->
+  <dd>In response to <tt>'s'</tt> (smooth) this parameter specifies the box size in pixels
   to be used for the boxcar smooth
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   The spectra in the input image list are successively processed by the task
-  <B>splot</B> with input supplied by the cursor parameter and the output sent
+  <b>splot</b> with input supplied by the cursor parameter and the output sent
   to the specified graphics device.  The range of apertures and bands
-  specified by <I>apertures</I> and <I>bands</I> will be processed for each
-  image.  In the <B>iids/irs</B> packages the record extension syntax is used
+  specified by <i>apertures</i> and <i>bands</i> will be processed for each
+  image.  In the <b>iids/irs</b> packages the record extension syntax is used
   with input root names and a record number list.  The hidden parameters from
-  <B>splot</B> apply to this task.
-  <P>
+  <b>splot</b> apply to this task.
+  </p>
+  <p>
   The cursor file(s) consists of line(s) of the form:
-  <P>
+  </p>
+  <p>
   	[x y 1] key [command]
-  <P>
+  </p>
+  <p>
   where x and y are the position of the cursor (may be zero or absent if the
   cursor position is irrelevant) and key is one of the keystrokes understood
-  by <B>splot</B>.  If the key is "<TT>:</TT>" then the <I>colon</I> command string follows.
+  by <b>splot</b>.  If the key is <tt>":"</tt> then the <i>colon</i> command string follows.
   The default cursor file consists of the single line:
-  <P>
+  </p>
+  <p>
   	0 0 1 q
-  <P>
+  </p>
+  <p>
   If more than one cursor file is specified they are sequentially assigned to
   each aperture and the list is repeated as needed.  This allows the aperture
   to be manipulated in differing ways.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. To plot all of apertures of the multiaperture spectra indicated by the file
-  "<TT>nite1.lst</TT>" on the default plotter and run in the background:
-  <P>
-  <PRE>
+  <tt>"nite1.lst"</tt> on the default plotter and run in the background:
+  </p>
+  <pre>
       cl&gt; bplot @nite1.lst graphics=stdplot &amp;
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. To preview the plots:
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; bplot @nite1.lst graphics=stdgraph
-  </PRE>
-  <P>
+  </pre>
+  <p>
   3.  To produce a histogram type plot about Balmer alpha for aperture 5 of
   each spectrum with the IRAF banner suppressed:
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; type curfile
       6555 0 1 a
       6570 0 1 a
@@ -194,67 +199,67 @@ bplot — Batch plot of spectra with SPLOT
       cl&gt; splot.xmin=6555
       cl&gt; splot.xmax=6570
       cl&gt; bplot @nite1.lst apertures=5 cursor=curfile
-  </PRE>
-  <P>
+  </pre>
+  <p>
   4. To produce plots with four spectra per page:
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; bplot @nite1.lst ... &gt;G nite1.mc
       cl&gt; gkimosaic nite1.mc dev=stdplot
-  </PRE>
-  <P>
+  </pre>
+  <p>
   The first command redirects the output of the graphics to the metacode
-  file nite1.mc.  The task <B>gkimosaic</B> is used to make multiple plots
-  per page.  Other tasks in the <B>plot</B> package may be used to
+  file nite1.mc.  The task <b>gkimosaic</b> is used to make multiple plots
+  per page.  Other tasks in the <b>plot</b> package may be used to
   manipulate and redisplay the contents of the metacode file.
-  <P>
+  </p>
+  <p>
   5. To plot a list of apertures with a different cursor file for each aperture:
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; bplot @nite1.lst apertures=3,9,14 cursor=@nite1.cur
-  </PRE>
-  <P>
-  In this case the file "<TT>nite1.cur</TT>" is assumed to be a list of
+  </pre>
+  <p>
+  In this case the file <tt>"nite1.cur"</tt> is assumed to be a list of
   individual cursor file names, for instance:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cur.03
   	cur.09
   	cur.14
-  </PRE>
-  <P>
+  </pre>
+  <p>
   that are in one to one correspondence with the range of apertures.
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Revisions</H3>
-  <! BeginSection: 'REVISIONS'>
-  <UL>
-  <DL>
-  <DT><B>BPLOT V2.10.3</B></DT>
-  <! Sec='REVISIONS' Level=0 Label='BPLOT' Line='BPLOT V2.10.3'>
-  <DD>The query parameters from SPLOT were added as hidden parameters in BPLOT
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Revisions</h3>
+  <!-- BeginSection: 'REVISIONS' -->
+  <dl>
+  <dt><b>BPLOT V2.10.3</b></dt>
+  <!-- Sec='REVISIONS' Level=0 Label='BPLOT' Line='BPLOT V2.10.3' -->
+  <dd>The query parameters from SPLOT were added as hidden parameters in BPLOT
   to allow use of those keys in a batch way.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>BPLOT V2.10</B></DT>
-  <! Sec='REVISIONS' Level=0 Label='BPLOT' Line='BPLOT V2.10'>
-  <DD>The <I>apertures</I> and <I>band</I> parameters been added to select
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>BPLOT V2.10</b></dt>
+  <!-- Sec='REVISIONS' Level=0 Label='BPLOT' Line='BPLOT V2.10' -->
+  <dd>The <i>apertures</i> and <i>band</i> parameters been added to select
   apertures from multiple spectra and long slit images, and bands from 3D
-  images.  Since the task is a script calling <B>splot</B>, the many revisions
-  to that task also apply.  The version in the <B>irs/iids</B> packages
+  images.  Since the task is a script calling <b>splot</b>, the many revisions
+  to that task also apply.  The version in the <b>irs/iids</b> packages
   selects spectra using the record number extension syntax.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'REVISIONS'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
+  </dd>
+  </dl>
+  <!-- EndSection:   'REVISIONS' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <p>
   The cursor file command keystrokes cannot include any of the cursor
   mode (CAPITALIZED) keys.  This results from the implementation of
   the cursor mode commands as external to both BPLOT and SPLOT.
-  <P>
+  </p>
+  <p>
   When first entered, SPLOT will always display an initial plot.  BPLOT
   calls SPLOT once for each aperture in each image and thus produces
   N(apertures)*N(images) initial plots.  The plots are not optional because
@@ -263,24 +268,25 @@ bplot — Batch plot of spectra with SPLOT
   graphics stream.  This can be done as follows, by directing the
   graphics output of BPLOT to a metacode file and then using GKIEXTRACT
   to remove only the desired plots from the metacode file:
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; bplot @nite1.lst cursor=curfile &gt;G nite1.mc
       cl&gt; gkiextract nite1.mc 2x2 | gkimosaic dev=stdplot
-  </PRE>
-  <P>
+  </pre>
+  <p>
   This assumes that curfile is designed to produce only one plot in
   addition to the non-optional initial plot.  In this case there will be
   two plots per aperture per image and we extract every other plot starting
-  with the second (as encoded in the range string:  "<TT>2x2</TT>").
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  with the second (as encoded in the range string:  <tt>"2x2"</tt>).
+  </p>
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   splot, specplot, slist, gkiextract, gkimosaic, implot, graph, ranges
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'BUGS' 'SEE ALSO'  -->
   

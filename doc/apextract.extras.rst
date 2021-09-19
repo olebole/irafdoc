@@ -1,58 +1,61 @@
 .. _extras:
 
-extras — Information about the extra information in 3D images
-=============================================================
+extras: Information about the extra information in 3D images
+============================================================
 
 **Package: apextract**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   extras -- Information about the extra bands in 3D output
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   When one dimensional spectra are extracted by the tasks in the
-  <B>apextract</B> package the user may specify that additional
+  <b>apextract</b> package the user may specify that additional
   extra associated information be extracted at the same time.  This
-  information is produced when the <I>extras</I> parameter is "<TT>yes</TT>".
-  <P>
-  The associated information is recorded as additional "<TT>bands</TT>" (the IRAF term
+  information is produced when the <i>extras</i> parameter is <tt>"yes"</tt>.
+  </p>
+  <p>
+  The associated information is recorded as additional <tt>"bands"</tt> (the IRAF term
   for the third dimension of a three dimensional image) of the output
   extracted spectral image.  Extracted spectra are currently stored as IRAF
   images with dispersion information given in the image header.  The
   image axes for such images are:
-  <P>
-  <PRE>
+  </p>
+  <pre>
       1 (columns) - dispersion axis
       2 (lines)   - spectrum axis (each line is a separate spectrum)
       3 (bands)   - extras axis (each band is associated data)
-  </PRE>
-  <P>
+  </pre>
+  <p>
   The lengths of the second and third axes, that is the number of
   lines and bands, may be one or more.  If there is only one band
   the image will be two dimensional and if there is only one line
   and one band the image will be one dimensional.  Note that the
-  <I>format</I> parameter controls whether multiple apertures are
+  <i>format</i> parameter controls whether multiple apertures are
   written to separate images or to a single image.  Thus, if
-  the format is "<TT>onedspec</TT>" this means that the second dimension
-  will always be of length one and, if the <I>extras</I> parameter
+  the format is <tt>"onedspec"</tt> this means that the second dimension
+  will always be of length one and, if the <i>extras</i> parameter
   is no, the output images will be one dimensional.
-  <P>
+  </p>
+  <p>
   The associated data in the image bands depends on which extraction
   options are performed.  The various types of data are:
-  <P>
-  <PRE>
+  </p>
+  <pre>
       The primary spectrum flux values.
       Simple aperture sum if variance weighting or cleaning was done.
       Background spectrum if background subtraction was done.
       Sigma spectrum if variance weighting or cleaning was done.
-  </PRE>
-  <P>
+  </pre>
+  <p>
   The primary spectrum is always the first band and will be the cleaned
   and/or variance weighted and/or background subtracted spectrum.  The
   simple aperture sum spectrum allows comparing against the results of the
@@ -61,20 +64,23 @@ extras — Information about the extra information in 3D images
   one of the bands.  When variance weighting or pixel rejection is
   performed the software generates an estimate of the uncertainty
   in the extracted flux as a sigma.
-  <P>
+  </p>
+  <p>
   The identity of the various bands is given by the image header
   keywords BANDIDn (where n is the band number).  This also serves
   to document which extraction options were used.
-  <P>
-  For more information get help under the topic "<TT>apextract.package</TT>".
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <p>
+  For more information get help under the topic <tt>"apextract.package"</tt>.
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   apextract.package
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'DESCRIPTION' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'DESCRIPTION' 'SEE ALSO'  -->
   

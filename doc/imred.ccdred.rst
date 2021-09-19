@@ -1,5 +1,5 @@
-ccdred — Generic CCD reductions
-===============================
+ccdred: Generic CCD reductions
+==============================
 
 .. toctree:: :maxdepth: 1
 

@@ -1,34 +1,37 @@
 .. _quadformat:
 
-quadformat — Format for multi-amplifier CCD images
-==================================================
+quadformat: Format for multi-amplifier CCD images
+=================================================
 
 **Package: quadred**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   quadformat - Description of the special multi-amplifier CCD format
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   CCDs may be readout from multiple amplifiers at the same time to increase
   the readout speed.  This produces multiple images of rectangular regions in
   the full CCD exposure.  The amplifier readout images may be recorded in
   various ways.  One way is as extensions in a multiextension FITS file.
   This type of format can be reduced using the MSCRED package.
-  <P>
+  </p>
+  <p>
   Another way is to paste the regions into a single two-dimensional image.
   This, along with specific keywords to describe the locations of the
-  regions, constitutes the <I>quadformat</I> format described here and used by the
-  QUADRED package.  The term "<TT>quad</TT>" originates from the possibility of using
+  regions, constitutes the <i>quadformat</i> format described here and used by the
+  QUADRED package.  The term <tt>"quad"</tt> originates from the possibility of using
   four amplifiers in quadrants but the format also includes any other
   number of amplifiers.
-  <P>
+  </p>
+  <p>
   It is important to realize that this is a special format only as long as
   the overscan or prescan data is included in the image data.  Once this
   information is used and removed as part of the processing the resulting
@@ -36,22 +39,24 @@ quadformat — Format for multi-amplifier CCD images
   However, the image can still contain the format keywords allowing the
   regions from the different amplifiers to be identified and extracted as
   needed.
-  <P>
-  The <I>quadformat</I> consists of a single 2D image for a single CCD
+  </p>
+  <p>
+  The <i>quadformat</i> consists of a single 2D image for a single CCD
   exposure.  The image storage format may be any standard image type such
   as imh or fits.  Within the image are regions containing the CCD
   pixel data and regions containing overscan or prescan, which we will
-  call bias regions, for each amplifier.  The <I>quadformat</I> requires
+  call bias regions, for each amplifier.  The <i>quadformat</i> requires
   the bias regions to be attached to the CCD regions such that a single
   rectangular region contains both.
-  <P>
+  </p>
+  <p>
   Generally the rectangular regions are of equal size in order to sequence
   the amplifiers simultaneously.  However, it is possible for the regions
   to be unequal in cases of subregion readouts with certain CCD controllers.
-  The figure below illustrates a "<TT>dual</TT>" and "<TT>quad</TT>" readout with equal
+  The figure below illustrates a <tt>"dual"</tt> and <tt>"quad"</tt> readout with equal
   size regions.
-  <P>
-  <PRE>
+  </p>
+  <pre>
           +-----+-+-+-----+   +-----+-+-+-----+   +----------+-+
           |  D  !B|B!  D  |   |  D  !B|B!  D  |   |     D    !B|
           |  3  !3|4!  4  |   |  1  !1|2!  2  |   |     2    !2|
@@ -61,101 +66,103 @@ quadformat — Format for multi-amplifier CCD images
           |  1  !1|2!  2  |   |     ! | !     |   |     1    !1|
           |     ! | !     |   |     ! | !     |   |          ! |
           +-----+-+-+-----+   +-----+-+-+-----+   +----------+-+
-  </PRE>
-  <P>
+  </pre>
+  <p>
   The areas labeled D are the data sections and those labeled B are the
   bias sections.  The data and biases are match by the amplifier labels
   which are 1-4 in these examples.  The combination of the data and
   bias sections are called the amplifier sections.
-  <P>
+  </p>
+  <p>
   The regions are identified in the header by various keywords.  There is
   a header translation facility which allows for alternative keyword names.
   Below we describe the default keyword names in the absence of a translation.
   The number of regions and the amplifier labels are described by the
   string keyword AMPLIST.  The value is a string of space separated
   amplifier labels.  For the above four amplifier example it would be
-  <P>
-  <PRE>
+  </p>
+  <pre>
       AMPLIST = '1 2 3 4'
-  </PRE>
-  <P>
+  </pre>
+  <p>
   For CTIO data the labels are '11  12 21 22'.   Note that the labels
   are appended to rootnames so they should be relatively short. 
-  <P>
+  </p>
+  <p>
   The amplifier labels are appended to various root names.  The important
-  ones define "<TT>section</TT>" keywords.  The values are image sections that
+  ones define <tt>"section"</tt> keywords.  The values are image sections that
   describe regions in an raster such as the image or the CCD.  The format
-  of a section follows the standard IRAF notation "<TT>[c1:c2,l1:l2]</TT>" where
+  of a section follows the standard IRAF notation <tt>"[c1:c2,l1:l2]"</tt> where
   c1 and c2 are inclusive column endpoints and l1 and l2 are inclusive
   line endpoints.
-  <P>
+  </p>
+  <p>
   The various sections are defined below.  The labels again show the default
   untranslated keyword roots.
-  <P>
-  <DL>
-  <DT><B>ASEC</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='ASEC' Line='ASEC'>
-  <DD>The section of the image containing the amplifier readout.  This is the
+  </p>
+  <dl>
+  <dt><b>ASEC</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='ASEC' Line='ASEC' -->
+  <dd>The section of the image containing the amplifier readout.  This is the
   combination of the data and bias regions as shown in the figures.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>DSEC</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='DSEC' Line='DSEC'>
-  <DD>The section of the image containing the actual CCD data exclusive of
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>DSEC</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='DSEC' Line='DSEC' -->
+  <dd>The section of the image containing the actual CCD data exclusive of
   bias data.  In the figures these are the D regions.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>BSEC</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='BSEC' Line='BSEC'>
-  <DD>The section of the image containing the bias data.  In the figures these
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>BSEC</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='BSEC' Line='BSEC' -->
+  <dd>The section of the image containing the bias data.  In the figures these
   are the B regions.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>TSEC</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='TSEC' Line='TSEC'>
-  <DD>The second of the image containing the useful CCD data.  This defines
-  a "<TT>trimming</TT>" area and lies within the data section.  It may also be
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>TSEC</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='TSEC' Line='TSEC' -->
+  <dd>The second of the image containing the useful CCD data.  This defines
+  a <tt>"trimming"</tt> area and lies within the data section.  It may also be
   the same as the data region.  During trimming the final image will only
   include the regions in the trim sections.  Note that it generally does
   not make sense to trim between amplifier regions but does make sense to
   trim regions at the edges of the CCD.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>CSEC</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='CSEC' Line='CSEC'>
-  <DD>The section of the CCD corresponding to the data section in the image.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>CSEC</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='CSEC' Line='CSEC' -->
+  <dd>The section of the CCD corresponding to the data section in the image.
   The CCD is considered an ideal raster (without bias regions) and a
   section corresponds to the pixels in the CCD.  The CCD section must be
   the same size as the data section.  It is the CCD sections that define
   how the amplifiers will be pieced together to form a single image
   after trimming the bias region.
-  </DD>
-  </DL>
-  <P>
+  </dd>
+  </dl>
+  <p>
   There may be other keyword root names for things such as gains which
   have the amplifier labels appended.  However, none of these are used
   by the current software.  Example image headers are given
   in the EXAMPLES section.
-  <P>
+  </p>
+  <p>
   There is a limitation in the current software that the regions be recorded
   without horizontal or vertical flips.  In other words, where amplifiers
   from opposite corners are used some of them must be flipped by the
-  data acquisition system before recording then in this <B>quadformat</B>.
-  <P>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
+  data acquisition system before recording then in this <b>quadformat</b>.
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1.  The following is an example of a full 2048x2048 CCD readout with
   four amplifiers at CTIO.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   qu&gt; imhad quad0020
   quad0020[2196,2048][ushort]: IC 1257 5290 180s
   No bad pixels, min=435., max=61973.
@@ -240,13 +247,13 @@ quadformat — Format for multi-amplifier CCD images
   XPIXSIZE=                0.432 / Pixel size in X (arcsec/pix)
   YPIXSIZE=                0.432 / Pixel size in Y (arcsec/pix)
   RECID   = 'ct60.990707.011817' / NOAO Archive record ID
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2.  The following is a more complex readout of a region where the
   full 2Kx2K CCD is not readout and where even the regions are not the
   same size.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   qu&gt; imhead quad0013
   quad0013[1686,1538][ushort]: R sky flat 7s
   No bad pixels, min=393., max=65535.
@@ -324,22 +331,22 @@ quadformat — Format for multi-amplifier CCD images
   INSTRUME= 'cfccd'              / cassegrain direct imager
   FILTER1 = 'dia'                / Filter in wheel one
   FNAME1  = 'diaphragm'          / Full name of filter in  wheel1
-  FILTER2 = <TT>'r'</TT>                  / Filter in wheel two
-  FNAME2  = <TT>'R'</TT>                  / Full name of filter in  wheel2
+  FILTER2 = <tt>'r'</tt>                  / Filter in wheel two
+  FNAME2  = <tt>'R'</tt>                  / Full name of filter in  wheel2
   FILTERS = 'dia r'              / Filter positions
   TELFOCUS=                    0 / Telescope focus
   XPIXSIZE=                0.432 / Pixel size in X (arcsec/pix)
   YPIXSIZE=                0.432 / Pixel size in Y (arcsec/pix)
   RECID   = 'ct60.990706.222551' / NOAO Archive record ID
-  </PRE>
-  <P>
+  </pre>
+  <p>
   3.  The following is for the raw image of example 2 after it has been
   processed by CCDPROC.  Note that the various bias, trim, and CCD sections are
   removed.  The AMPLIST and ASEC keywords remain and may be used to split
   or evaluate the individual amplifier regions with tasks such as QUADSECTIONS,
   QUADSPLIT, and QSTATISTICS.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   qu&gt; imhead quad0013
   quad0013[1280,1280][real]: R sky flat 7s
   No bad pixels, min=unknown, max=unknown
@@ -402,8 +409,8 @@ quadformat — Format for multi-amplifier CCD images
   INSTRUME= 'cfccd'              / cassegrain direct imager
   FILTER1 = 'dia'                / Filter in wheel one
   FNAME1  = 'diaphragm'          / Full name of filter in  wheel1
-  FILTER2 = <TT>'r'</TT>                  / Filter in wheel two
-  FNAME2  = <TT>'R'</TT>                  / Full name of filter in  wheel2
+  FILTER2 = <tt>'r'</tt>                  / Filter in wheel two
+  FNAME2  = <tt>'R'</tt>                  / Full name of filter in  wheel2
   FILTERS = 'dia r'              / Filter positions
   TELFOCUS=                    0 / Telescope focus
   XPIXSIZE=                0.432 / Pixel size in X (arcsec/pix)
@@ -418,9 +425,9 @@ quadformat — Format for multi-amplifier CCD images
   CCDMEAN =             9727.605
   CCDMEANT=            683126983
   CCDPROC = 'Aug 24 13:29 CCD processing done'
-  </PRE>
-  </UL>
-  <! EndSection:    'EXAMPLES'>
+  </pre>
   
-  <! Contents: 'NAME' 'DESCRIPTION' 'EXAMPLES'  >
+  <!-- EndSection:    'EXAMPLES' -->
+  
+  <!-- Contents: 'NAME' 'DESCRIPTION' 'EXAMPLES'  -->
   

@@ -1,238 +1,239 @@
 .. _mk1dspec:
 
-mk1dspec — Make/add artificial 1D spectra
-=========================================
+mk1dspec: Make/add artificial 1D spectra
+========================================
 
 **Package: artdata**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   mk1dspec -- Make/add artificial 1D spectra
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   mk1dspec input
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
-  <DD>Spectra to create or modify.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output' Line='output = ""'>
-  <DD>Output spectra when modifying input spectra.  If no output spectra are
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
+  <dd>Spectra to create or modify.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
+  <dd>Output spectra when modifying input spectra.  If no output spectra are
   given then existing spectra in the input list are modified directly.
   If an output list is given then it must match in number the input list.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>ap = 1</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='ap' Line='ap = 1'>
-  <DD>Image line to be created or modified in images of dimension greater than 1.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>rv = 0.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='rv' Line='rv = 0.'>
-  <DD>Radial velocity (km/s) or redshift, as selected by the parameter <I>z</I>,
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>ap = 1</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='ap' Line='ap = 1' -->
+  <dd>Image line to be created or modified in images of dimension greater than 1.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>rv = 0.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='rv' Line='rv = 0.' -->
+  <dd>Radial velocity (km/s) or redshift, as selected by the parameter <i>z</i>,
   applied to line positions and continuum.  Velocities are converted to
   redshift using the relativistic relation 1+z = sqrt ((1+rv/c)/(1-rv/c)).
   Note the shift is not a shift in the dispersion parameters but in the
   underlying artificial spectrum.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>z = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='z' Line='z = no'>
-  <DD>Is the velocity parameter a radial velocity or a redshift?
-  </DD>
-  </DL>
-  <P>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>z = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='z' Line='z = no' -->
+  <dd>Is the velocity parameter a radial velocity or a redshift?
+  </dd>
+  </dl>
+  <p>
   WHEN CREATING NEW SPECTRA
-  <DL>
-  <DT><B>title = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='title' Line='title = ""'>
-  <DD>Image title to be given to the spectra.  Maximum of 79 characters.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>ncols = 512</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='ncols' Line='ncols = 512'>
-  <DD>Number of columns.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>naps = 1</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='naps' Line='naps = 1'>
-  <DD>Number of lines or apertures.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>header = "<TT>artdata$stdheader.dat</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='header' Line='header = "artdata$stdheader.dat"'>
-  <DD>Image or header keyword data file.  If an image is given then the image header
+  </p>
+  <dl>
+  <dt><b>title = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='title' Line='title = ""' -->
+  <dd>Image title to be given to the spectra.  Maximum of 79 characters.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>ncols = 512</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='ncols' Line='ncols = 512' -->
+  <dd>Number of columns.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>naps = 1</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='naps' Line='naps = 1' -->
+  <dd>Number of lines or apertures.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>header = <tt>"artdata$stdheader.dat"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='header' Line='header = "artdata$stdheader.dat"' -->
+  <dd>Image or header keyword data file.  If an image is given then the image header
   is copied.  If a file is given then the FITS format cards are copied.
   This only applies to new images.   The data file consists of lines
   in FITS format with leading whitespace ignored.  A FITS card must begin
   with an uppercase/numeric keyword.  Lines not beginning with a FITS
   keyword such as comments or lower case are ignored.  The user keyword
-  output of <B>imheader</B> is an acceptable data file.  See <B>mkheader</B>
+  output of <b>imheader</b> is an acceptable data file.  See <b>mkheader</b>
   for further information.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>wstart = 4000., wend = 8000.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='wstart' Line='wstart = 4000., wend = 8000.'>
-  <DD>Starting and ending wavelengths in Angstroms.  The dispersion is
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>wstart = 4000., wend = 8000.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='wstart' Line='wstart = 4000., wend = 8000.' -->
+  <dd>Starting and ending wavelengths in Angstroms.  The dispersion is
   determined by these values and the number of columns.
-  </DD>
-  </DL>
-  <P>
+  </dd>
+  </dl>
+  <p>
   CONTINUUM PARAMETERS
-  <DL>
-  <DT><B>continuum = 1000., slope = 0.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='continuum' Line='continuum = 1000., slope = 0.'>
-  <DD>Continuum of the starting wavelength at rest and the slope of the continuum.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>temperature = 5700.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='temperature' Line='temperature = 5700.'>
-  <DD>Blackbody continuum temperature in Kelvin.  A value of 0 is used if
+  </p>
+  <dl>
+  <dt><b>continuum = 1000., slope = 0.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='continuum' Line='continuum = 1000., slope = 0.' -->
+  <dd>Continuum of the starting wavelength at rest and the slope of the continuum.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>temperature = 5700.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='temperature' Line='temperature = 5700.' -->
+  <dd>Blackbody continuum temperature in Kelvin.  A value of 0 is used if
   no blackbody continuum is desired.  The intensity level is set by
   scaling to the continuum level of the starting wavelength at rest.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>fnu = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='fnu' Line='fnu = no'>
-  <DD>Compute the continuum as flux per unit frequency (F-nu) if yes or flux per
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>fnu = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='fnu' Line='fnu = no' -->
+  <dd>Compute the continuum as flux per unit frequency (F-nu) if yes or flux per
   unit wavelength (F-lambda) if no.
-  </DD>
-  </DL>
-  <P>
-  <P>
+  </dd>
+  </dl>
+  <p>
   LINE PARAMETERS
-  <DL>
-  <DT><B>lines = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='lines' Line='lines = ""'>
-  <DD>List of spectral line files.  Spectral line files contain lines of rest
+  </p>
+  <dl>
+  <dt><b>lines = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='lines' Line='lines = ""' -->
+  <dd>List of spectral line files.  Spectral line files contain lines of rest
   wavelength, peak, profile type, and widths (see the DESCRIPTION
   section).  The latter parameters may be missing or INDEF in which case they
-  default to the task <I>peak</I>, <I>profile</I>, <I>gfwhm</I>, and <I>lfwhm</I>
-  parameters (note that the <I>peak</I> parameter is not a constant but the
+  default to the task <i>peak</i>, <i>profile</i>, <i>gfwhm</i>, and <i>lfwhm</i>
+  parameters (note that the <i>peak</i> parameter is not a constant but the
   random number scaling).  If no file or a new (nonexistent) file is
-  specified then a number of random lines given by the parameter <I>nlines</I>
+  specified then a number of random lines given by the parameter <i>nlines</i>
   is generated.  If a new file name is specified then the lines generated are
   recorded in the file.  If the list of spectral line files is shorter than
   the list of input spectra, the last spectral line list file is reused.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>nlines = 0</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='nlines' Line='nlines = 0'>
-  <DD>If no spectral line file or a new file is specified then the task will
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>nlines = 0</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='nlines' Line='nlines = 0' -->
+  <dd>If no spectral line file or a new file is specified then the task will
   generate this number of random spectral lines.  The rest wavelengths are
   uniformly random within the limits of the spectrum, the peaks are uniformly
-  random between zero and the value of the <I>peak</I> parameter, the profile
-  type is given by <I>profile</I>, and the widths are fixed at the values of
-  the <I>gfhwm</I> ad <I>lfwhm</I> parameters.  If a redshift is applied the
+  random between zero and the value of the <i>peak</i> parameter, the profile
+  type is given by <i>profile</i>, and the widths are fixed at the values of
+  the <i>gfhwm</i> ad <i>lfwhm</i> parameters.  If a redshift is applied the
   rest wavelengths are shifted and repeated periodically.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>profile = "<TT>gaussian</TT>" (gaussian|lorentzian|voigt)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='profile' Line='profile = "gaussian" (gaussian|lorentzian|voigt)'>
-  <DD>The default profile type for random lines or when not specified in the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>profile = <tt>"gaussian"</tt> (gaussian|lorentzian|voigt)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='profile' Line='profile = "gaussian" (gaussian|lorentzian|voigt)' -->
+  <dd>The default profile type for random lines or when not specified in the
   spectral line file.  The profile types are:
-  <P>
-  <PRE>
+  <pre>
         gaussian - Gaussian profile
       lorentzian - Lorentzian profile
            voigt - Voigt profile
-  </PRE>
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>peak = -0.5</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='peak' Line='peak = -0.5'>
-  <DD>The maximum spectral line peak value when generating random lines or
+  </pre>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>peak = -0.5</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='peak' Line='peak = -0.5' -->
+  <dd>The maximum spectral line peak value when generating random lines or
   when the peak is missing from the spectral line file.
   This value is relative to the continuum unless the continuum is zero.
   Negative values are absorption lines and positive values are emission lines.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>gfwhm = 20., lfwhm = 20.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='gfwhm' Line='gfwhm = 20., lfwhm = 20.'>
-  <DD>The default gaussian and lorentzian full widths at half maximum (FWHM), in
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>gfwhm = 20., lfwhm = 20.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='gfwhm' Line='gfwhm = 20., lfwhm = 20.' -->
+  <dd>The default gaussian and lorentzian full widths at half maximum (FWHM), in
   Angstroms, used when generating random lines or when the widths are missing
   from the spectral line file.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>seed = 1</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='seed' Line='seed = 1'>
-  <DD>Random number seed.  If a value of "<TT>INDEF</TT>" is given then the clock
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>seed = 1</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='seed' Line='seed = 1' -->
+  <dd>Random number seed.  If a value of <tt>"INDEF"</tt> is given then the clock
   time (integer seconds since 1980) is used as the seed yielding
   different random numbers for each execution.
-  </DD>
-  </DL>
-  <P>
-  <DL>
-  <DT><B>comments = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='comments' Line='comments = yes'>
-  <DD>Include comments recording task parameters in the image header?
-  </DD>
-  </DL>
-  <P>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>comments = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='comments' Line='comments = yes' -->
+  <dd>Include comments recording task parameters in the image header?
+  </dd>
+  </dl>
+  <p>
   PACKAGE PARAMETERS
-  <DL>
-  <DT><B>nxsub = 10</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='nxsub' Line='nxsub = 10'>
-  <DD>Number of pixel subsamples used in computing the gaussian spectral line
+  </p>
+  <dl>
+  <dt><b>nxsub = 10</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='nxsub' Line='nxsub = 10' -->
+  <dd>Number of pixel subsamples used in computing the gaussian spectral line
   profiles.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>dynrange = 100000.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='dynrange' Line='dynrange = 100000.'>
-  <DD>The gaussian line profiles extend to infinity so a dynamic range, the ratio
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>dynrange = 100000.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='dynrange' Line='dynrange = 100000.' -->
+  <dd>The gaussian line profiles extend to infinity so a dynamic range, the ratio
   of the peak intensity to the cutoff intensity, is imposed to cutoff
   the profiles.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   This task creates or modifies one dimensional spectra.  with a combination
   of blackbody and linear sloped continuum and emission and absorption
   spectral lines.  The spectral lines may be gaussian, lorentzian, or voigt
   profiles.  A velocity shift may be applied to the underlying artificial
   spectrum which is shifted into the specified observed wavelength region.
-  No noise is included but may be added with the task <B>mknoise</B>.  New
+  No noise is included but may be added with the task <b>mknoise</b>.  New
   spectra are created with the specified number of pixels, wavelength range,
-  and real datatype.  When <I>nlines</I> is greater than 1 then an image with
+  and real datatype.  When <i>nlines</i> is greater than 1 then an image with
   the specified number of lines is created though only the line given by the
-  <I>ap</I> is will have a spectrum.  Existing spectra may be modified in
+  <i>ap</i> is will have a spectrum.  Existing spectra may be modified in
   place or new spectra output.  Spectra are modified by adding the continuum
   and lines defined by the parameters.
-  <P>
+  </p>
+  <p>
   For new images a set of header keywords may be added by specifying an image
-  or data file with the <I>header</I> parameter (see also <B>mkheader</B>).  If
+  or data file with the <i>header</i> parameter (see also <b>mkheader</b>).  If
   a data file is specified lines beginning with FITS keywords are entered in
   the image header.  Leading whitespace is ignored and any lines beginning
   with words having lowercase and nonvalid FITS keyword characters are
@@ -240,20 +241,23 @@ mk1dspec — Make/add artificial 1D spectra
   wavelength coordinates are defined.  Finally, comments may be added to the
   image header recording the task parameters and any information from the
   line file which are not line definitions.
-  <P>
+  </p>
+  <p>
   Initially all spectra are created without a dispersion function; i.e.
   pixel coordinates.  For multiple spectra in an image this task must be
   executed for each image line to set the dispersion function and add data.
   When an image line is selected if it has a defined dispersion function that
   is used otherwise the task wavelength parameters are used.
-  <P>
+  </p>
+  <p>
   A continuum is defined by the value at the starting wavelength at rest, a
   slope, and a blackbody function of a given temperature.  The blackbody
   function is scaled to have the specified continuum value at the starting
   wavelength at rest.  The blackbody flux units are per unit wavelength
   (F-lambda).  A zero continuum value or a zero temperature will not produce a
   blackbody continuum.
-  <P>
+  </p>
+  <p>
   Spectral lines are modeled by gaussian, lorentzian, or voigt profiles of
   specified wavelength, peak, and widths.  The lines are defined in a
   spectral line file or generated randomly.  A spectral line file consists of
@@ -264,8 +268,8 @@ mk1dspec — Make/add artificial 1D spectra
   peak,  gfwhm, and lfwhm are values of wavelength, peak, gaussian FWHM, and
   lorentzian FWHM.  The profile types are as shown though they may be
   abbreviated to one character.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	wavelength
   	wavelength peak
   	wavelength peak gaussian
@@ -278,25 +282,27 @@ mk1dspec — Make/add artificial 1D spectra
   	wavelength peak voigt gfwhm
   	wavelength peak voigt gfwhm lfwhm
   	wavelength peak voigt gfwhm lfwhm
-  </PRE>
-  <P>
+  </pre>
+  <p>
   When a field is missing or INDEF the values given by the parameters
-  <I>peak</I>, <I>profile</I>, <I>gfwhm</I>, and <I>lfwhm</I> are used.  If a
-  peak value is missing, random values between zero and the <I>peak</I> value
+  <i>peak</i>, <i>profile</i>, <i>gfwhm</i>, and <i>lfwhm</i> are used.  If a
+  peak value is missing, random values between zero and the <i>peak</i> value
   are generated.  Note that to get random line intensities with some
   specified profile type and widths the value INDEF would be used for
   the peak field.
-  <P>
+  </p>
+  <p>
   If no spectral line file is specified or a new (nonexistent) file is named
-  then the number of random lines given by the parameter <I>nlines</I> is
+  then the number of random lines given by the parameter <i>nlines</i> is
   generated.  The rest wavelengths are uniformly random within the wavelength
   range of the spectrum and extend periodically outside this range in the
   case of an applied velocity shift, the peaks are uniformly random between
-  zero and the <I>peak</I> parameter, and the profile type and widths are
-  given by the <I>profile</I>, <I>gfwhm</I>, and <I>lfwhm</I> parameters.  If a
+  zero and the <i>peak</i> parameter, and the profile type and widths are
+  given by the <i>profile</i>, <i>gfwhm</i>, and <i>lfwhm</i> parameters.  If a
   new file is named then the parameters of the generated lines will be
   output.
-  <P>
+  </p>
+  <p>
   The peak values are taken relative to a positive continuum.  In other
   words the generated line profile is multiplied by the continuum (with a
   minimum of zero for fully saturated absorption lines).  If the
@@ -305,7 +311,8 @@ mk1dspec — Make/add artificial 1D spectra
   values are absolute intensities.  Positive peak values produce emission
   lines and negative values produce absorption lines.  Odd results will
   occur if the continuum has both positive and zero or negative values.
-  <P>
+  </p>
+  <p>
   The underlying rest spectrum may be shifted.  This is used primarily for
   testing radial velocity measuring algorithms and is not intended as a
   complete model of redshift effects.  The starting and ending wavelengths
@@ -317,65 +324,67 @@ mk1dspec — Make/add artificial 1D spectra
   modified by a redshift.  As an example, if the redshift is 1 the
   lines will appear broader by a factor of 2 and the peaks will be down
   by a factor of 2 in order to maintain the same flux.
-  <P>
+  </p>
+  <p>
   The random line generation is difficult in that one wants to have the
   same set of lines (for a given seed) observed at different redshifts.
   What is done is that the specified number of random lines is generated
   within the observed wavelength interval taken at rest.  This set is
   then repeated periodical over all wavelengths.  A redshift will then
   shift these rest lines in to or out of the observed spectrum.  If the
-  lines are output, they are given at rest.  <B>Note that this
+  lines are output, they are given at rest.  <b>Note that this
   periodicity may be important in interpreting cross correlation redshift
-  tests for large shifts between template and object spectra.</B>
-  <P>
+  tests for large shifts between template and object spectra.</b>
+  </p>
+  <p>
   The definitions of the continuum are also affected by a redshift.
   The reference point for the continuum level, slope, and blackbody
   continuum is the starting wavelength taken at rest.  Shifts will then
   modify the continuum level at the first pixel appropriately.  In
   particular a large redshift will shift the blackbody in such a way that
-  the flux is still given by the <I>continuum</I> parameter at the starting
+  the flux is still given by the <i>continuum</i> parameter at the starting
   wavelength at rest.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Create a simple blackbody continuum between the default wavelengths.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; mk1dspec bb title=Blackbody
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. Create a random absorption spectrum on a blackbody continuum without
   saving the line list.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; mk1dspec bbab title=Absorption nlines=100
-  </PRE>
-  <P>
+  </pre>
+  <p>
   3. Create a random absorption spectrum with noise and cosmic rays.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; mk1dspec bbab title=Absorption nlines=100
   	cl&gt; mknoise bbab rdnoise=10 poisson+ ncos=5 energy=1000
-  </PRE>
-  <P>
+  </pre>
+  <p>
   4. Create a random emission spectrum on a blackbody continuum and save
   the line list.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; mk1dspec bbem title=Emission nl=30 peak=0.6 lines=bbem.dat
-  </PRE>
-  <P>
+  </pre>
+  <p>
   5. Create an artificial random arc line spectrum.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; mk1dspec arc title="Arc lines" cont=0 peak=500 nl=30
-  </PRE>
-  <P>
+  </pre>
+  <p>
   6. Create a test spectrum with a line list.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; type linelist
   	4100 -.1 g 20
   	4200 -2. g 20
@@ -390,72 +399,71 @@ mk1dspec — Make/add artificial 1D spectra
   	7800 .2 g 20
   	7900 .1 g 20
   	cl&gt; mk1dspec testspec title=Test cont=500 temp=0 lines=linelist
-  </PRE>
-  <P>
+  </pre>
+  <p>
   7. Add absorption lines to a spectrum.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; mk1dspec bb out=artspec cont=0 lines=STDIN
   	4300 -60
   	5000 -200
   	[EOF]
-  </PRE>
-  <P>
+  </pre>
+  <p>
   Normally the input spectrum would be a real spectrum.
-  <P>
+  </p>
+  <p>
   8. Make two spectra taken from the same set of random lines but differing
   in redshift.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; mk1dspec restspec nl=30
   	cl&gt; mk1dspec redspec rv=3000 nl=30
   	cl&gt; mk1dspec bluespec rv=-.01 z+ nl=30
-  </PRE>
-  <P>
+  </pre>
+  <p>
   9. Make a multispec image with 5 apertures and a range of redshifts.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; mk1dspec spec.ms ap=1 nl=30 rv=0 naps=5
   	cl&gt; mk1dspec spec.ms ap=2 nl=30 rv=1000
   	cl&gt; mk1dspec spec.ms ap=3 nl=30 rv=2000
   	cl&gt; mk1dspec spec.ms ap=4 nl=30 rv=3000
   	cl&gt; mk1dspec spec.ms ap=5 nl=30 rv=4000
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Revisions</H3>
-  <! BeginSection: 'REVISIONS'>
-  <UL>
-  <DL>
-  <DT><B>MK1DSPEC V2.11+</B></DT>
-  <! Sec='REVISIONS' Level=0 Label='MK1DSPEC' Line='MK1DSPEC V2.11+'>
-  <DD>The random number seed can be set from the clock time by using the value
-  "<TT>INDEF</TT>" to yield different random numbers for each execution.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>MK1DSPEC V2.11</B></DT>
-  <! Sec='REVISIONS' Level=0 Label='MK1DSPEC' Line='MK1DSPEC V2.11'>
-  <DD>Lorentzian and Voigt profiles were added and the parameters and input
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Revisions</h3>
+  <!-- BeginSection: 'REVISIONS' -->
+  <dl>
+  <dt><b>MK1DSPEC V2.11+</b></dt>
+  <!-- Sec='REVISIONS' Level=0 Label='MK1DSPEC' Line='MK1DSPEC V2.11+' -->
+  <dd>The random number seed can be set from the clock time by using the value
+  <tt>"INDEF"</tt> to yield different random numbers for each execution.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>MK1DSPEC V2.11</b></dt>
+  <!-- Sec='REVISIONS' Level=0 Label='MK1DSPEC' Line='MK1DSPEC V2.11' -->
+  <dd>Lorentzian and Voigt profiles were added and the parameters and input
   line list format were changed.  The widths are now FWHM instead of
   gaussian sigmas.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>MK1DSPEC V2.10.3</B></DT>
-  <! Sec='REVISIONS' Level=0 Label='MK1DSPEC' Line='MK1DSPEC V2.10.3'>
-  <DD>The format parameter was eliminated and the task updated to produce the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>MK1DSPEC V2.10.3</b></dt>
+  <!-- Sec='REVISIONS' Level=0 Label='MK1DSPEC' Line='MK1DSPEC V2.10.3' -->
+  <dd>The format parameter was eliminated and the task updated to produce the
   current coordinate system format.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'REVISIONS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </dd>
+  </dl>
+  <!-- EndSection:   'REVISIONS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   mknoise, mk2dspec, mkheader, onedspec.sinterp
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

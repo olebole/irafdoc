@@ -1,221 +1,218 @@
 .. _gtpar:
 
-gtpar — Pset to specify graph parameters for 'gtedit' task.
-===========================================================
+gtpar: Pset to specify graph parameters for 'gtedit' task.
+==========================================================
 
 **Package: nttools**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   pltpar -- Parameters describing plot attributes.
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   pltpar
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   Parameters in the 'gtpar' pset specify the attributes of plots drawn with the
   'gtedit' task.
-  <P>
+  </p>
+  <p>
   Note that this is a pset, not an executable task.  Invoking the pset by name
   runs 'eparam', enabling the parameters to be interactively edited. 
   Parameters can also be modified on the
   CL command line by specifying the pset name and parameter name,
-  for example, "<TT>gtpar.box = no</TT>").
+  for example, <tt>"gtpar.box = no"</tt>).
   The pset name will also appear as one of
   the task parameters in the 'gtedit' task;
   to change values in the pset,
-  position the cursor to the 'gtpar' pset name and type "<TT>:e</TT>" to invoke 'eparam'.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>(wx1 = 0) [real]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(wx1 = 0) [real]'>
-  <DD>Left world X-coordinate (if autoscaling is not used).
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(wx2 = 0.) [real]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(wx2 = 0.) [real]'>
-  <DD>Right world X-coordinate (if autoscaling is not used).
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(wy1 = 0.) [real]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(wy1 = 0.) [real]'>
-  <DD>Lower world Y-coordinate (if no autoscaling is used).
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(wy2 = 0.) [real]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(wy2 = 0.) [real]'>
-  <DD>Upper world Y-coord (if not autoscaling).
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(marker = box) [string, allowed values:  point | box | plus | </B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(marker = box) [string, allowed values:  point | box | plus | '>
-  <DD>cross | circle | diamond | hline | vline | hebar | vebar]
-  <P>
+  position the cursor to the 'gtpar' pset name and type <tt>":e"</tt> to invoke 'eparam'.
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>(wx1 = 0) [real]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(wx1 = 0) [real]' -->
+  <dd>Left world X-coordinate (if autoscaling is not used).
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(wx2 = 0.) [real]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(wx2 = 0.) [real]' -->
+  <dd>Right world X-coordinate (if autoscaling is not used).
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(wy1 = 0.) [real]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(wy1 = 0.) [real]' -->
+  <dd>Lower world Y-coordinate (if no autoscaling is used).
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(wy2 = 0.) [real]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(wy2 = 0.) [real]' -->
+  <dd>Upper world Y-coord (if not autoscaling).
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(marker = box) [string, allowed values:  point | box | plus | </b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(marker = box) [string, allowed values:  point | box | plus | ' -->
+  <dd>cross | circle | diamond | hline | vline | hebar | vebar]
   The name of the style of marker plotted at each point if 'pointmode=yes'.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(szmarker = 0.005) [real]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(szmarker = 0.005) [real]'>
-  <DD>The size of the markers if 'pointmode = yes'.  If this parameter is greater 
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(szmarker = 0.005) [real]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(szmarker = 0.005) [real]' -->
+  <dd>The size of the markers if 'pointmode = yes'.  If this parameter is greater 
   than 0, its value represents the marker size in world coordinates (WC).  If it 
   is less than zero, the absolute value will be used, representing size in 
   normalized device coordinates (NDC).  If it is set to exactly zero, and the
   input is from a list file,
   then the third column in the input data is used as the marker size.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(logx = no) [boolean]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(logx = no) [boolean]'>
-  <DD>Scale the X axis logarithmically?
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(logy = no) [boolean]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(logy = no) [boolean]'>
-  <DD>Scale the Y axis logarithmically?
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(box = yes) [boolean]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(box = yes) [boolean]'>
-  <DD>Draw the box containing the axes and labels around periphery of the 
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(logx = no) [boolean]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(logx = no) [boolean]' -->
+  <dd>Scale the X axis logarithmically?
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(logy = no) [boolean]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(logy = no) [boolean]' -->
+  <dd>Scale the Y axis logarithmically?
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(box = yes) [boolean]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(box = yes) [boolean]' -->
+  <dd>Draw the box containing the axes and labels around periphery of the 
   window?
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(ticklabels = yes) [boolean]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(ticklabels = yes) [boolean]'>
-  <DD>Label major tick marks?
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(grid = no) [boolean]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(grid = no) [boolean]'>
-  <DD>Draw grid lines on plot?
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(xlabel) [string]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(xlabel) [string]'>
-  <DD>X-axis label.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(ylabel) [string]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(ylabel) [string]'>
-  <DD>Y-axis label.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(title = imtitle)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(title = imtitle)'>
-  <DD>The plot title consists of a standard system-supplied string containing
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(ticklabels = yes) [boolean]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(ticklabels = yes) [boolean]' -->
+  <dd>Label major tick marks?
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(grid = no) [boolean]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(grid = no) [boolean]' -->
+  <dd>Draw grid lines on plot?
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(xlabel) [string]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(xlabel) [string]' -->
+  <dd>X-axis label.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(ylabel) [string]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(ylabel) [string]' -->
+  <dd>Y-axis label.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(title = imtitle)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(title = imtitle)' -->
+  <dd>The plot title consists of a standard system-supplied string containing
   the user's name, date, etc.  If the 'title' parameter contains the string
-  "<TT>imtitle</TT>" (the default), then the plot title will contain a second line
+  <tt>"imtitle"</tt> (the default), then the plot title will contain a second line
   made up from the input file or table name.  Otherwise, the title will
   contain the string value.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(vx1 = 0.) [real, min = 0, max = 1]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(vx1 = 0.) [real, min = 0, max = 1]'>
-  <DD>Left limit of device viewport.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(vx2 = 0.) [real, min = 0, max = 1]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(vx2 = 0.) [real, min = 0, max = 1]'>
-  <DD>Right limit of device viewport.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(vy1 = 0.) [real, min = 0, max = 1]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(vy1 = 0.) [real, min = 0, max = 1]'>
-  <DD>Bottom limit of device viewport.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(vy2 = 0.) [real], min = 0, max = 1]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(vy2 = 0.) [real], min = 0, max = 1]'>
-  <DD>Upper limit of device viewport.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(majrx = 5) [integer]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(majrx = 5) [integer]'>
-  <DD>Number of major divisions along the X grid.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(minrx = 5) [integer]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(minrx = 5) [integer]'>
-  <DD>Number of minor divisions along the X grid.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(majry = 5) [integer]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(majry = 5) [integer]'>
-  <DD>Number of major divisions along the Y grid.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(minry = 5) [integer]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(minry = 5) [integer]'>
-  <DD>Number of minor divisions along the Y grid.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(round = no) [boolean]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(round = no) [boolean]'>
-  <DD>Round axes to nice values?
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(fill = yes) [boolean]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(fill = yes) [boolean]'>
-  <DD>Fill the viewport rather than enforcing unity aspect ratio?
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(vx1 = 0.) [real, min = 0, max = 1]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(vx1 = 0.) [real, min = 0, max = 1]' -->
+  <dd>Left limit of device viewport.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(vx2 = 0.) [real, min = 0, max = 1]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(vx2 = 0.) [real, min = 0, max = 1]' -->
+  <dd>Right limit of device viewport.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(vy1 = 0.) [real, min = 0, max = 1]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(vy1 = 0.) [real, min = 0, max = 1]' -->
+  <dd>Bottom limit of device viewport.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(vy2 = 0.) [real], min = 0, max = 1]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(vy2 = 0.) [real], min = 0, max = 1]' -->
+  <dd>Upper limit of device viewport.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(majrx = 5) [integer]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(majrx = 5) [integer]' -->
+  <dd>Number of major divisions along the X grid.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(minrx = 5) [integer]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(minrx = 5) [integer]' -->
+  <dd>Number of minor divisions along the X grid.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(majry = 5) [integer]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(majry = 5) [integer]' -->
+  <dd>Number of major divisions along the Y grid.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(minry = 5) [integer]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(minry = 5) [integer]' -->
+  <dd>Number of minor divisions along the Y grid.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(round = no) [boolean]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(round = no) [boolean]' -->
+  <dd>Round axes to nice values?
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(fill = yes) [boolean]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(fill = yes) [boolean]' -->
+  <dd>Fill the viewport rather than enforcing unity aspect ratio?
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   sgraph
-  <P>
-  Type "<TT>help tables opt=sys</TT>" for a higher-level description of the 'tables' 
+  </p>
+  <p>
+  Type <tt>"help tables opt=sys"</tt> for a higher-level description of the 'tables' 
   package.
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

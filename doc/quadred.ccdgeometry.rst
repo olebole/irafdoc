@@ -1,43 +1,44 @@
 .. _ccdgeometry:
 
-ccdgeometry — Discussion of CCD coordinate/geometry keywords
-============================================================
+ccdgeometry: Discussion of CCD coordinate/geometry keywords
+===========================================================
 
 **Package: quadred**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   ccdgeometry - Discussion of CCD geometry and header parameters
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  The <B>ccdred</B> package maintains and updates certain geometry
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  The <b>ccdred</b> package maintains and updates certain geometry
   information about the images.  This geometry is described by four image
   header parameters which may be present.  These are defined below by the
   parameter names used in the package.  Note that these names may be
   different in the image header using the image header translation
   feature of the package.
-  <P>
-  <DL>
-  <DT><B>DATASEC</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='DATASEC' Line='DATASEC'>
-  <DD>The section of the image containing the CCD data.  If absent the
+  </p>
+  <dl>
+  <dt><b>DATASEC</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='DATASEC' Line='DATASEC' -->
+  <dd>The section of the image containing the CCD data.  If absent the
   entire image is assumed to be data.  Only the pixels within the
   data section are modified during processing.  Therefore, there may be
   additional calibration or observation information in the image.
   If after processing, the data section is the entire image it is
   not recorded in the image header.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>CCDSEC</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='CCDSEC' Line='CCDSEC'>
-  <DD>The section of the CCD to corresponding to the data section.  This
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>CCDSEC</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='CCDSEC' Line='CCDSEC' -->
+  <dd>The section of the CCD to corresponding to the data section.  This
   refers to the physical format, columns and lines, of the detector.  This is
   the coordinate system used during processing to relate calibration
   data to the image data; i.e. image data pixels are calibrated by
@@ -46,39 +47,39 @@ ccdgeometry — Discussion of CCD coordinate/geometry keywords
   taking and calibrating with calibration frames covering some or all of
   the CCD.  The CCD section is maintained during trimming operations.
   Note that changing the format of the images by image operators outside
-  of the <B>ccdred</B> package will invalidate this coordinate system.
+  of the <b>ccdred</b> package will invalidate this coordinate system.
   The size of the CCD section must agree with that of the data section.
   If a CCD section is absent then it defaults to the data section such
   that the first pixel of the data section has CCD coordinate (1,1).
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>BIASSEC</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='BIASSEC' Line='BIASSEC'>
-  <DD>The section of the image containing prescan or overscan bias information.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>BIASSEC</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='BIASSEC' Line='BIASSEC' -->
+  <dd>The section of the image containing prescan or overscan bias information.
   It consists of a strip perpendicular to the readout axis.  There may be
   both a prescan and overscan but the package currently only uses one.
   This parameter may be overridden during processing by the parameter
-  <I>ccdproc.biassec</I>.  Only the part of the bias section along the
+  <i>ccdproc.biassec</i>.  Only the part of the bias section along the
   readout is used and the length of the bias region is determined by
   the trim section.  If one wants to limit the region of the bias
-  strip used in the fit then the <I>sample</I> parameter should be used.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>TRIMSEC</B></DT>
-  <! Sec='DESCRIPTION' Level=0 Label='TRIMSEC' Line='TRIMSEC'>
-  <DD>The section of the image extracted during processing when the trim
-  operation is selected (<I>ccdproc.trim</I>).  If absent when the trim
+  strip used in the fit then the <i>sample</i> parameter should be used.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>TRIMSEC</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='TRIMSEC' Line='TRIMSEC' -->
+  <dd>The section of the image extracted during processing when the trim
+  operation is selected (<i>ccdproc.trim</i>).  If absent when the trim
   operation is selected it defaults to the data section; i.e. the processed
   image consists only of the data section.  This parameter may be overridden
-  during processing by the parameter <I>ccdproc.trimsec</I>.  After trimming
+  during processing by the parameter <i>ccdproc.trimsec</i>.  After trimming
   this parameter, if present, is removed from the image header.  The
   CCD section, data section, and bias section parameters are also modified
   by trimming.
-  </DD>
-  </DL>
-  <P>
+  </dd>
+  </dl>
+  <p>
   The geometry is as follows.  When a CCD image is recorded it consists
   of a data section corresponding to part or all of the CCD detector.
   Regions outside of the data section may contain additional information
@@ -89,13 +90,15 @@ ccdgeometry — Discussion of CCD coordinate/geometry keywords
   trimming operation updates the CCD coordinate information.  If the
   images include the data section, bias section, trim section, and ccd
   section the processing may be performed entirely automatically.
-  <P>
+  </p>
+  <p>
   The sections are specified using the notation [c1:c2,l1:l2] where c1
   and c2 are the first and last columns and l1 and l2 are the first and
   last lines.  Currently c1 and l1 must be less than c2 and l2
   respectively and no subsampling is allowed.  This may be added later.
-  </UL>
-  <! EndSection:    'DESCRIPTION'>
+  </p>
   
-  <! Contents: 'NAME' 'DESCRIPTION'  >
+  <!-- EndSection:    'DESCRIPTION' -->
+  
+  <!-- Contents: 'NAME' 'DESCRIPTION'  -->
   

@@ -1,97 +1,89 @@
 .. _tbrenumber:
 
-tbrenumber — Renumber a list of  apphot/daophot tables databases
-================================================================
+tbrenumber: Renumber a list of  apphot/daophot tables databases
+===============================================================
 
 **Package: ptools**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   tbrenumber -- renumber a list of APPHOT/DAOPHOT STSDAS table database(s)
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   tbrenumber tables
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>tables</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='tables' Line='tables'>
-  <DD>The list of APPHOT/DAOPHOT STSDAS table databases to be renumbered.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>idoffset = 0</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='idoffset' Line='idoffset = 0'>
-  <DD>An integer offset  to be added to the id numbers of the stars in
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>tables</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='tables' Line='tables' -->
+  <dd>The list of APPHOT/DAOPHOT STSDAS table databases to be renumbered.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>idoffset = 0</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='idoffset' Line='idoffset = 0' -->
+  <dd>An integer offset  to be added to the id numbers of the stars in
   the output renumbered photometry file. If idoffset is &gt; 0, the output
   id numbers will run from 1 + idoffset to N + idoffset instead of from 1 to N.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>id = "<TT>ID</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='id' Line='id = "ID"'>
-  <DD>The name of the keyword whose value is the sequence number of the object
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>id = <tt>"ID"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='id' Line='id = "ID"' -->
+  <dd>The name of the keyword whose value is the sequence number of the object
   in the database.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   TBRENUMBER is a simple script task which accepts an APPHOT/DAOPHOT STSDAS
   table database and renumbers the objects from 1 + idoffset to N + idoffset,
   where N is the number
   of objects in the database. TBRENUMBER calls the TABLES package TCALC task
   to actually do the work.
-  <P>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Renumber a concatenated NSTAR photometry file that has been written with
   TBCONCAT.
-  <P>
-  <PRE>
+  </p>
+  <pre>
      pt&gt; tbrenumber m92r.nst
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. Renumber a PHOT photometry file of extra stars so as to ensure the
   stars' id numbers are  greater than 4000.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       pt&gt; tbrenumber m92r.mag.extra idoffset=4000
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Time requirements</H3>
-  <! BeginSection: 'TIME REQUIREMENTS'>
-  <UL>
-  </UL>
-  <! EndSection:   'TIME REQUIREMENTS'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Time requirements</h3>
+  <!-- BeginSection: 'TIME REQUIREMENTS' -->
+  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   ptools.txrenumber,ptools.prenumber,tables.tcalc
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

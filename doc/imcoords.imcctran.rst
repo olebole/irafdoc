@@ -1,58 +1,58 @@
 .. _imcctran:
 
-imcctran — Transform image header from one celestial wcs to another
-===================================================================
+imcctran: Transform image header from one celestial wcs to another
+==================================================================
 
 **Package: imcoords**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   imcctran -- convert between image celestial coordinate systems 
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   imcctran image outsystem
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>image</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='image' Line='image'>
-  <DD>The list of images whose celestial coordinate systems are to be converted. The
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>image</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image' -->
+  <dd>The list of images whose celestial coordinate systems are to be converted. The
   image celestial coordinate system must be one of the standard FITS celestial
   coordinate systems: equatorial (FK4, FK4-NO-E, FK5, ICRS, or GAPPT), ecliptic,
   galactic, or supergalactic.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>outsystem</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='outsystem' Line='outsystem'>
-  <DD>The input and output celestial coordinate systems. The options are
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>outsystem</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='outsystem' Line='outsystem' -->
+  <dd>The input and output celestial coordinate systems. The options are
   the following:
-  <DL>
-  <DT><B>&lt;imagename&gt; [wcs]</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='' Line='&lt;imagename&gt; [wcs]'>
-  <DD>The celestial coordinate system is the world coordinate system of the image
+  <dl>
+  <dt><b>&lt;imagename&gt; [wcs]</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='' Line='&lt;imagename&gt; [wcs]' -->
+  <dd>The celestial coordinate system is the world coordinate system of the image
   &lt;imagename&gt; and the input or output pixel coordinates may be in the
-  "<TT>logical</TT>", "<TT>tv</TT>", "<TT>physical</TT>" or "<TT>world</TT>" coordinate systems. If wcs is not
-  specified "<TT>logical</TT>" is assumed, unless the input coordinates are read from the
-  image cursor, in which case "<TT>tv</TT>" is assumed. The image celestial coordinate
+  <tt>"logical"</tt>, <tt>"tv"</tt>, <tt>"physical"</tt> or <tt>"world"</tt> coordinate systems. If wcs is not
+  specified <tt>"logical"</tt> is assumed, unless the input coordinates are read from the
+  image cursor, in which case <tt>"tv"</tt> is assumed. The image celestial coordinate
   system must be one of the valid FITS celestial coordinate systems:
   equatorial (FK4, FK4-NO-E, FK5, or GAPPT), ecliptic, galactic, or
   supergalactic.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>equinox [epoch]</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='equinox' Line='equinox [epoch]'>
-  <DD>The equatorial mean place post-IAU 1976 (FK5) system if equinox is a
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>equinox [epoch]</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='equinox' Line='equinox [epoch]' -->
+  <dd>The equatorial mean place post-IAU 1976 (FK5) system if equinox is a
   Julian epoch, e.g. J2000.0 or 2000.0, or the equatorial mean place
   pre-IAU 1976 system (FK4) if equinox is a Besselian epoch, e.g. B1950.0
   or 1950.0. Julian equinoxes are prefixed by a J or j, Besselian equinoxes
@@ -64,12 +64,12 @@ imcctran — Transform image header from one celestial wcs to another
   Epochs without the J / j or B / b prefix default to the epoch type of
   equinox if the epoch value &lt;= 3000.0, otherwise epoch is interpreted as
   a Julian date.  If undefined epoch defaults to equinox.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>icrs [equinox] [epoch]</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='icrs' Line='icrs [equinox] [epoch]'>
-  <DD>The International Celestial Reference System where equinox is
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>icrs [equinox] [epoch]</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='icrs' Line='icrs [equinox] [epoch]' -->
+  <dd>The International Celestial Reference System where equinox is
   a Julian or Besselian epoch e.g. J2000.0  or B1980.0.
   Equinoxes without the J / j or B / b prefix are treated as Julian epochs.
   The default value of equinox is J2000.0.
@@ -78,12 +78,12 @@ imcctran — Transform image header from one celestial wcs to another
   Epochs without the J / j or B / b prefix default to Julian epochs
   if the epoch value &lt;= 3000.0, otherwise epoch is interpreted as
   a Julian date.  If undefined epoch defaults to equinox.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>fk5 [equinox] [epoch] </B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='fk5' Line='fk5 [equinox] [epoch] '>
-  <DD>The equatorial mean place post-IAU 1976 (FK5) system where equinox is
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>fk5 [equinox] [epoch] </b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='fk5' Line='fk5 [equinox] [epoch] ' -->
+  <dd>The equatorial mean place post-IAU 1976 (FK5) system where equinox is
   a Julian or Besselian epoch e.g. J2000.0  or B1980.0.
   Equinoxes without the J / j or B / b prefix are treated as Julian epochs.
   The default value of equinox is J2000.0.
@@ -92,12 +92,12 @@ imcctran — Transform image header from one celestial wcs to another
   Epochs without the J / j or B / b prefix default to Julian epochs
   if the epoch value &lt;= 3000.0, otherwise epoch is interpreted as
   a Julian date.  If undefined epoch defaults to equinox.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>fk4 [equinox] [epoch]</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='fk4' Line='fk4 [equinox] [epoch]'>
-  <DD>The equatorial mean place pre-IAU 1976 (FK4) system where equinox is a
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>fk4 [equinox] [epoch]</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='fk4' Line='fk4 [equinox] [epoch]' -->
+  <dd>The equatorial mean place pre-IAU 1976 (FK4) system where equinox is a
   Besselian or Julian epoch e.g. B1950.0  or J2000.0,
   and epoch is the Besselian epoch, the Julian epoch, or the Julian date of the
   observation.
@@ -108,12 +108,12 @@ imcctran — Transform image header from one celestial wcs to another
   Epochs without the J / j or B / b prefix default to Besselian epochs
   if the epoch value &lt;= 3000.0, otherwise epoch is interpreted as
   a Julian date.  If undefined epoch defaults to equinox.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>noefk4 [equinox] [epoch]</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='noefk4' Line='noefk4 [equinox] [epoch]'>
-  <DD>The equatorial mean place pre-IAU 1976 (FK4) system but without the E-terms
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>noefk4 [equinox] [epoch]</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='noefk4' Line='noefk4 [equinox] [epoch]' -->
+  <dd>The equatorial mean place pre-IAU 1976 (FK4) system but without the E-terms
   where equinox is a Besselian or Julian epoch e.g. B1950.0 or J2000.0,
   and epoch is the Besselian epoch, the Julian epoch, or the Julian date of the
   observation.
@@ -124,12 +124,12 @@ imcctran — Transform image header from one celestial wcs to another
   Epochs without the J / j or B / b prefix default to Besselian epochs
   if the epoch value &lt;= 3000.0, otherwise epoch is interpreted as
   a Julian day.  If undefined epoch defaults to equinox.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>apparent epoch </B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='apparent' Line='apparent epoch '>
-  <DD>The equatorial geocentric apparent place post-IAU 1976 system where
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>apparent epoch </b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='apparent' Line='apparent epoch ' -->
+  <dd>The equatorial geocentric apparent place post-IAU 1976 system where
   epoch is the epoch of observation.
   Epoch is a Besselian epoch, a Julian epoch or a Julian date.
   Julian epochs are prefixed by a J or j, Besselian epochs by a B or b.
@@ -137,96 +137,93 @@ imcctran — Transform image header from one celestial wcs to another
   epochs if the epoch value &lt; 1984.0, Julian epochs
   if the epoch value &lt;= 3000.0, otherwise epoch is interpreted as
   a Julian date.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>ecliptic epoch</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='ecliptic' Line='ecliptic epoch'>
-  <DD>The ecliptic coordinate system where epoch is the epoch of observation.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>ecliptic epoch</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='ecliptic' Line='ecliptic epoch' -->
+  <dd>The ecliptic coordinate system where epoch is the epoch of observation.
   Epoch is a Besselian epoch, a Julian epoch, or a Julian date.
   Julian epochs are prefixed by a J or j, Besselian epochs by a B or b.
   Epochs without the J / j or B / b prefix default to Besselian epochs
   if the epoch values &lt; 1984.0, Julian epochs
   if the epoch value &lt;= 3000.0, otherwise epoch is interpreted as
   a Julian day.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>galactic [epoch]</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='galactic' Line='galactic [epoch]'>
-  <DD>The IAU 1958 galactic coordinate system.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>galactic [epoch]</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='galactic' Line='galactic [epoch]' -->
+  <dd>The IAU 1958 galactic coordinate system.
   Epoch is a Besselian epoch, a Julian epoch or a Julian date.
   Julian epochs are prefixed by a J or j, Besselian epochs by a B or b.
   Epochs without the J / j or B / b prefix default to Besselian
   epochs if the epoch value &lt; 1984.0, Julian epochs
   if the epoch value &lt;= 3000.0, otherwise epoch is interpreted as
   a Julian date. The default value of epoch is B1950.0.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>supergalactic [epoch]</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='supergalactic' Line='supergalactic [epoch]'>
-  <DD>The deVaucouleurs supergalactic coordinate system.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>supergalactic [epoch]</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='supergalactic' Line='supergalactic [epoch]' -->
+  <dd>The deVaucouleurs supergalactic coordinate system.
   Epoch is a Besselian epoch, a Julian epoch or a Julian date.
   Julian epochs are prefixed by a J or j, Besselian epochs by a B or b.
   Epochs without the J / j or B / b prefix default to Besselian
   epochs if the epoch value &lt; 1984.0, Julian epochs
   if the epoch value &lt;= 3000.0, otherwise epoch is interpreted as
   a Julian date. The default value of epoch is B1950.0.
-  </DD>
-  </DL>
-  <P>
+  </dd>
+  </dl>
   In all the above cases fields in [] are optional with the defaults as
   described. The epoch field for the fk5, icrs, galactic, and supergalactic
   coordinate systems is required only if the input coordinates are in the
   equatorial fk4, noefk4, fk5, or icrs systems and proper motions are defined.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>nx = 10, ny = 10</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='nx' Line='nx = 10, ny = 10'>
-  <DD>The dimensions of the coordinate grid used to compute the rotation angle and,
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>nx = 10, ny = 10</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='nx' Line='nx = 10, ny = 10' -->
+  <dd>The dimensions of the coordinate grid used to compute the rotation angle and,
   optionally, the x and y magnification factors required to transform the input
   image celestial coordinate system to the output celestial coordinate system.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>longpole = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='longpole' Line='longpole = no'>
-  <DD>If longpole = yes the zenithal projections ARC, SIN, STG, TAN, and ZEA
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>longpole = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='longpole' Line='longpole = no' -->
+  <dd>If longpole = yes the zenithal projections ARC, SIN, STG, TAN, and ZEA
   will be transformed by updating the longpole and latpole parameters instead
   of rotating the CD matrix in the usual manner.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verbose = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
-  <DD>Print messages about actions taken by the task on the standard output ?
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>update = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='update' Line='update = yes'>
-  <DD>Update the image celestial coordinate system ?
-  </DD>
-  </DL>
-  <P>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <P>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verbose = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
+  <dd>Print messages about actions taken by the task on the standard output ?
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>update = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='update' Line='update = yes' -->
+  <dd>Update the image celestial coordinate system ?
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   IMCCTRAN converts the celestial coordinate system stored in the headers of the
-  input images <I>image</I> to the celestial coordinate system specified by
-  <I>outsystem</I>, and updates the input image header appropriately. The input
+  input images <i>image</i> to the celestial coordinate system specified by
+  <i>outsystem</i>, and updates the input image header appropriately. The input
   and output celestial coordinate systems must be one of the following:
   equatorial, ecliptic, galactic, or supergalactic. The equatorial coordinate
   systems must be one of: 1) FK4, the mean place pre-IAU 1976 system, 2) FK4-NO-E,
   the same as FK4 but without the E-terms, 3) FK5, the mean place post-IAU 1976
   system, 4), ICRS, the International Celestial Reference System, 5) GAPPT,
   the geocentric apparent place in the post-IAU 1976 system. 
-  <P>
+  </p>
+  <p>
   The input celestial coordinate system is read from the input image header.
   IMCCTRAN assumes that the celestial coordinate system is specified by the FITS
   keywords CTYPE, CRPIX, CRVAL, CD (or alternatively CDELT / CROTA), RADECSYS,
@@ -234,14 +231,16 @@ imcctran — Transform image header from one celestial wcs to another
   THAT MJD-WCS IS CURRENTLY NEITHER A STANDARD OR A PROPOSED FITS STANDARD
   KEYWORD. HOWEVER IT OR SOMETHING SIMILAR, IS REQUIRED TO SPECIFY THE EPOCH OF
   THE COORDINATE SYSTEM WHICH MAY BE DIFFERENT FROM THE EPOCH OF THE OBSERVATION.
-  <P>
+  </p>
+  <p>
   The first four characters of the values of the ra / longitude and dec / latitude
   axis CTYPE keywords specify the celestial coordinate system.  The currently
   permitted values of CTYPE[1:4] are RA-- / DEC- for equatorial coordinate
   systems, ELON / ELAT for the ecliptic coordinate system, GLON / GLAT for the
   galactic coordinate system, and SLON / SLAT for the supergalactic coordinate
   system.
-  <P>
+  </p>
+  <p>
   The second four characters of the values of the ra / longitude and dec /
   latitude axis CTYPE keywords specify the sky projection geometry. IRAF
   currently supports the AIT, ARC, CAR, CSC, GLS, MER, PAR, PCO, QSC,
@@ -249,7 +248,8 @@ imcctran — Transform image header from one celestial wcs to another
   geometries TNX, and ZPX. Consequently the currently permitted values of
   CTYPE[5:8] are -AIT, -ARC, -CAR, -CSC, -GLS, -MER, -PAR, -PCO, -QSC,
   -SIN, -STG, -TAN, -TSC, -ZEA as well as -ZPX and -TNX. 
-  <P>
+  </p>
+  <p>
   If the input image celestial coordinate system is equatorial, the value of the
   RADECSYS keyword specifies which fundamental equatorial system is to be
   considered. The permitted values of RADECSYS are FK4, FK4-NO-E, FK5, ICRS,
@@ -279,32 +279,37 @@ imcctran — Transform image header from one celestial wcs to another
   of the epoch of observation which is supplied via the MJD-WCS, MJD-OBS,
   or DATE-OBS keywords (in that order of precedence) as for the FK4 and
   FK4-NO-E system.
-  <P>
+  </p>
+  <p>
   If the input image celestial coordinate system is ecliptic the mean ecliptic
   and equinox of date are required. These are supplied via the MJD-WCS, MJD-OBS,
   or DATE-OBS keywords (in that order or precedence) as for the equatorial FK4,
   FK4-NO-E, and GAPPT systems.
-  <P>
-  The output coordinate system is specified by the <I>outsystem</I> parameter
+  </p>
+  <p>
+  The output coordinate system is specified by the <i>outsystem</i> parameter
   as described in the PARAMETERS section.
-  <P>
+  </p>
+  <p>
   If an error is encountered when decoding the input or output world coordinate
-  systems, an error message is printed on the standard output (if <I>verbose</I>
-  is "<TT>yes</TT>"), and the input image left unmodified.
-  <P>
+  systems, an error message is printed on the standard output (if <i>verbose</i>
+  is <tt>"yes"</tt>), and the input image left unmodified.
+  </p>
+  <p>
   If the input projection is one of the zenithal projections TAN, SIN, STG,
   ARC, or ZEA, then the header coordinate transformation can be preformed by
   transforming the CRVAL parameters and rotating the CD matrix as described in 
   detail below. Otherwise the CRVAL values are transformed, the CD matrix is
   left unmodified, and the LONGPOLE and LATPOLE parameters required to perform
-  the rotation are computed. If <I>longpole</I> is yes then the zenithal
+  the rotation are computed. If <i>longpole</i> is yes then the zenithal
   coordinate systems will also be transformed using LONGPOLE and LATPOLE. At
   present IRAF looks for longpole and latpole parameters in the appropriate
   WATN_* keywords. If these are undefined the appropriate default values for
   each projection are assumed and new values are written to the WATN_* keywords.
-  <P>
+  </p>
+  <p>
   The new image celestial coordinate system is computed as follows.  First a
-  grid of <I>nx</I> by <I>ny</I> pixel and celestial coordinates, evenly spaced
+  grid of <i>nx</i> by <i>ny</i> pixel and celestial coordinates, evenly spaced
   over the input image, is generated using the input image celestial coordinate
   system.  Next these input celestial coordinates are transformed to coordinates
   in the output celestial coordinate system. Next the input celestial coordinates
@@ -316,31 +321,33 @@ imcctran — Transform image header from one celestial wcs to another
   compute the x and y axis rotation angles and the x and y magnification factors
   required to transform the original CD matrix to the correct new CD matrix.
   The process is shown schematically below.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   1.       x,y(input grid) -&gt; ra,dec(input grid)
-  <P>
+  
   2.    ra,dec(input grid) -&gt; ra,dec(output grid)
-  <P>
+  
   3. ra_ref,dec_ref(input) -&gt; ra_ref,dec_ref(output)
-  <P>
+  
   4.   ra,dec(output grid) -&gt; x,y(predicted grid)
-  <P>
+  
   5.      x,y(input  grid) -&gt; F -&gt; x,y(predicted grid)
-  <P>
+  
   6.      cd matrix(input) -&gt; F -&gt; cd matrix(output)
-  </PRE>
-  <P>
+  </pre>
+  <p>
   F is the fitted function of the x and y axis rotation angles and the
   x and y scaling factors required to match the input x and y values to the
   predicted x and y values.
-  <P>
+  </p>
+  <p>
   For most celestial coordinate transformations the fitted x and y scale factors
   will be very close to 1.0 and the x and y rotation angles will be almost
   identical. However small deviations from unity scale factors and identical 
   x and y axis rotation angles do occur when transforming coordinates systems
   with the skewed axes.
-  <P>
+  </p>
+  <p>
   The precision of the transformations is usually very high, on the order
   of 10E-10 to 10E-11 in most cases.  However conversions to and from the FK4
   equatorial system are less precise as these transformations
@@ -351,74 +358,76 @@ imcctran — Transform image header from one celestial wcs to another
   however are not corrected for, and their absence does diminish the precision
   of the transformation coordinate transformation. For most practical purposes
   this loss of precision is insignificant.
-  <P>
+  </p>
+  <p>
   After the fit is completed, the celestial coordinates of the reference point
   in dd:mm:ss.s in the old and new systems, the rotation angle in degrees, the x
   and y scaling factors, and an estimate of the rms error of the x and y
   coordinate transformation are printed on the standard output. 
-  <P>
-  If <I>update</I> is yes, then the image header parameters CRVAL, CD,
+  </p>
+  <p>
+  If <i>update</i> is yes, then the image header parameters CRVAL, CD,
   CTYPE, RADECSYS, EQUINOX, EPOCH, and MJD-WCS are modified, deleted, or
   added as appropriate. The position of the reference pixel in the
   image (stored in the CRPIX keywords), and the sky projection geometry, e.g.
   TAN, SIN, ARC, ETC are unchanged.
-  <P>
+  </p>
+  <p>
   USERS NEED TO BE AWARE THAT THE IRAF IMAGE WORLD COORDINATE SYSTEM
   CURRENTLY (IRAF VERSIONS 2.10.4 PATCH 2 AND EARLIER) SUPPORTS ONLY THE
-  EQUATORIAL SYSTEM (CTYPE (ra axis) = "<TT>RA--XXXX</TT>" CTYPE (dec axis) = "<TT>DEC-XXXX</TT>")
+  EQUATORIAL SYSTEM (CTYPE (ra axis) = <tt>"RA--XXXX"</tt> CTYPE (dec axis) = <tt>"DEC-XXXX"</tt>)
   WHERE XXXX IS THE PROJECTION TYPE, EVEN THOUGH THE IMCCTRAN TASK 
   SUPPORTS GALACTIC, ECLIPTIC, AND SUPERGALACTIC COORDINATES. IMCCTRAN will
   update the image correctly for non-equatorial systems, but IRAF will
   not be able to read these transformed image coordinate systems correctly.
-  <P>
+  </p>
+  <p>
   USERS SHOULD ALSO REALIZE THAT IMAGE WORLD COORDINATE SYSTEM REPRESENTATION
   IN FITS IS STILL IN THE DRAFT STAGE. ALTHOUGH IMCCTRAN TRIES TO CONFORM TO
   THE CURRENT DRAFT PROPOSAL AS MUCH AS POSSIBLE, WHERE NO ADOPTED STANDARDS
   CURRENTLY EXIST, THE FINAL FITS STANDARD MAY DIFFER FROM THE ONE ADOPTED HERE.
-  <P>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>References</H3>
-  <! BeginSection: 'REFERENCES'>
-  <UL>
-  <P>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>References</h3>
+  <!-- BeginSection: 'REFERENCES' -->
+  <p>
   Additional information on the IRAF world coordinate systems can be found in
   the help pages for the WCSEDIT and WCRESET tasks.
   Detailed documentation for the IRAF world coordinate system interface MWCS
-  can be found in the file "<TT>iraf$sys/mwcs/MWCS.hlp</TT>". This file can be
-  formatted and printed with the command "<TT>help iraf$sys/mwcs/MWCS.hlp fi+ |
-  lprint</TT>".
-  <P>
+  can be found in the file <tt>"iraf$sys/mwcs/MWCS.hlp"</tt>. This file can be
+  formatted and printed with the command <tt>"help iraf$sys/mwcs/MWCS.hlp fi+ |
+  lprint"</tt>.
+  </p>
+  <p>
   Details of the FITS header world coordinate system interface can
-  be found in the draft paper "<TT>World Coordinate Systems Representations Within the
-  FITS Format</TT>" by Hanisch and Wells, available from the iraf anonymous ftp
-  archive and the draft paper which supersedes it "<TT>Representations of Celestial
-  Coordinates in FITS</TT>" by Greisen and Calabretta available from the NRAO
+  be found in the draft paper <tt>"World Coordinate Systems Representations Within the
+  FITS Format"</tt> by Hanisch and Wells, available from the iraf anonymous ftp
+  archive and the draft paper which supersedes it <tt>"Representations of Celestial
+  Coordinates in FITS"</tt> by Greisen and Calabretta available from the NRAO
   anonymous ftp archives.
-  <P>
+  </p>
+  <p>
   The spherical astronomy routines employed here are derived from the Starlink
   SLALIB library provided courtesy of Patrick Wallace. These routines
   are very well documented internally with extensive references provided
   where appropriate. Interested users are encouraged to examine the routines
-  for this information. Type "<TT>help slalib</TT>" to get a listing of the SLALIB
-  routines, "<TT>help slalib opt=sys</TT>" to get a concise summary of the library,
-  and "<TT>help &lt;routine&gt;</TT>" to get a description of each routine's calling sequence,
+  for this information. Type <tt>"help slalib"</tt> to get a listing of the SLALIB
+  routines, <tt>"help slalib opt=sys"</tt> to get a concise summary of the library,
+  and <tt>"help &lt;routine&gt;"</tt> to get a description of each routine's calling sequence,
   required input and output, etc. An overview of the library can be found in the
-  paper "<TT>SLALIB - A Library of Subprograms</TT>", Starlink User Note 67.7
+  paper <tt>"SLALIB - A Library of Subprograms"</tt>, Starlink User Note 67.7
   by P.T. Wallace, available from the Starlink archives.
-  <P>
-  </UL>
-  <! EndSection:   'REFERENCES'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
+  </p>
+  <!-- EndSection:   'REFERENCES' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   [1]. Precess the equatorial FK5 J2000 celestial coordinate system of the
   input 512 by 512 pixel square input image to J1975.0.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   cl&gt; imcctran image j1975.0 
-  <P>
+  
   INPUT IMAGE: image
   Insystem: image logical  Projection: TAN  Ra/Dec axes: 1/2
       Coordinates: equatorial FK5 Equinox: J2000.000
@@ -428,11 +437,11 @@ imcctran — Transform image header from one celestial wcs to another
   Crval1,2: 201:56:43.5, 47:27:16.0 -&gt; 201:40:53.8, 47:35:01.2 dd:mm:ss.s
       Scaling: Xmag: 1.000000 Ymag: 1.000000 Xrot: 359.923 Yrot: 359.923 degrees
       Rms: X fit: 8.465123E-11 pixels  Y fit: 5.204446E-11 pixels
-  </PRE>
-  <P>
+  </pre>
+  <p>
   Before the transformation the image coordinate system looked like the following.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       ...
       EPOCH   =                 2000
       DATE-OBS= '05/04/87'          
@@ -445,11 +454,11 @@ imcctran — Transform image header from one celestial wcs to another
       CTYPE1  = 'RA---TAN'
       CTYPE2  = 'DEC--TAN'
       ...
-  </PRE>
-  <P>
+  </pre>
+  <p>
   After the transformation the header looks like the following.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       ...
       DATE-OBS= '05/04/87'          
       CRPIX1  =               257.75
@@ -472,17 +481,17 @@ imcctran — Transform image header from one celestial wcs to another
       WAT1_001= 'wtype=tan axtype=ra'
       WAT2_001= 'wtype=tan axtype=dec'
       ...
-  </PRE>
-  <P>
+  </pre>
+  <p>
   Note the rms of the x and y fits is on the order 10.0e-10 to 10.0e-11 which
   is the expected numerical precision of the transformation.
-  <P>
-  <P>
+  </p>
+  <p>
   [2]. Convert the input image used in example 1 to the BFK4 1950.0 system. 
-  <P>
-  <PRE>
+  </p>
+  <pre>
   cl&gt; imcctran image B1950.0
-  <P>
+  
   INPUT IMAGE: image
   Insystem: image logical  Projection: TAN  Ra/Dec axes: 1/2
       Coordinates: equatorial FK5 Equinox: J2000.000
@@ -492,17 +501,18 @@ imcctran — Transform image header from one celestial wcs to another
   Crval1,2: 201:56:43.5, 47:27:16.0 -&gt; 201:25:02.3, 47:42:47.1 dd:mm:ss.s
       Scaling: Xmag: 0.999999 Ymag: 0.999999 Xrot: 359.848 Yrot: 359.848 degrees
       Rms: X fit: 1.302837E-7 pixels  Y fit: 8.545616E-8 pixels
-  <P>
-  </PRE>
-  <P>
+  
+  </pre>
+  <p>
   Note that precision of the transformation is still good but is significantly
   less that the precision of the previous example. This is due to the fact
   that the quadratic terms in the E-term computation are not included in the
   transformation. 
-  <P>
+  </p>
+  <p>
   The transformed image header in this case looks like the following.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       ...
       DATE-OBS= '05/04/87'          
       CRPIX1  =               257.75
@@ -525,15 +535,14 @@ imcctran — Transform image header from one celestial wcs to another
       WAT1_001= 'wtype=tan axtype=ra'
       WAT2_001= 'wtype=tan axtype=dec'
       ...
-  </PRE>
-  <P>
-  <P>
+  </pre>
+  <p>
   [3].  Transform the celestial coordinate system of the input image used in
   examples 1 and 2 to the galactic coordinate system.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   cl&gt; imcctran image galactic
-  <P>
+  
   INPUT IMAGE: image
   Insystem: image logical  Projection: TAN  Ra/Dec axes: 1/2
       Coordinates: equatorial FK5 Equinox: J2000.000
@@ -543,11 +552,11 @@ imcctran — Transform image header from one celestial wcs to another
   rval1,2: 201:56:43.5, 47:27:16.0 -&gt; 106:01:19.4, 68:27:46.1 dd:mm:ss.s
       Scaling: Xmag: 1.000000 Ymag: 1.000000 Xrot: 202.510 Yrot: 202.510 degrees
       Rms: X fit: 9.087450E-11 pixels  Y fit: 3.815443E-11 pixels
-  </PRE>
-  <P>
+  </pre>
+  <p>
   The transformed header looks like the following.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       ...
       DATE-OBS= '05/04/87'          
       CRPIX1  =               257.75
@@ -568,116 +577,112 @@ imcctran — Transform image header from one celestial wcs to another
       WAT1_001= 'wtype=tan axtype=glon'
       WAT2_001= 'wtype=tan axtype=glat'
       ...
-  </PRE>
-  <P>
+  </pre>
+  <p>
   Users should not that although imcctran can write a legal galactic coordinate
   system to the image header, it and other iraf tasks cannot currently
   read this coordinate system.
-  <P>
+  </p>
+  <p>
   [4]. Repeat the previous example but don't update the image header.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   cl&gt; imcctran image galactic update-
-  <P>
+  
   INPUT IMAGE: image
   Insystem: image logical  Projection: TAN  Ra/Dec axes: 1/2
       Coordinates: equatorial FK5 Equinox: J2000.000
       Epoch: J1987.25667351 MJD: 46890.00000
   Outsystem: galactic  Coordinates: galactic
       MJD: 33281.92346 Epoch: J1949.99979044 B1950.00000000
-  <P>
+  
   Current wcs
       Axis            1           2  
       Crval    201.9454     47.4544  
       Crpix      257.75      258.93  
       Cd 1    -2.128E-4          0.  
       Cd 2           0.    2.128E-4  
-  <P>
+  
   New wcs
       Axis            1           2  
       Crval    106.0220     68.4628  
       Crpix      257.75      258.93  
       Cd 1     1.966E-4    8.146E-5  
       Cd 2     8.146E-5   -1.966E-4  
-  <P>
+  
   Crval1,2: 201:56:43.5, 47:27:16.0 -&gt; 106:01:19.4, 68:27:46.1 dd:mm:ss.s
       Scaling: Xmag: 1.000000 Ymag: 1.000000 Xrot: 202.510 Yrot: 202.510 degrees
       Rms: X fit: 9.087450E-11 pixels  Y fit: 3.815443E-11 pixels
-  </PRE>
-  <P>
+  </pre>
+  <p>
   [5]. Repeat example 1 and check the accuracy of the results by using the
   skyctran task on the original image and on the transformed image.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   cl&gt; type coords
     1.0   1.0
   512.0   1.0
   512.0 512.0
     1.0 512.0
-  <P>
+  
   cl&gt; skyctran coords STDOUT "image logical" J1975.0
-  <P>
+  
   Insystem: image logical  Projection: TAN  Ra/Dec axes: 1/2
       Coordinates: equatorial FK5 Equinox: J2000.000
       Epoch: J1987.25667351 MJD: 46890.00000
   Outsystem: j1975  Coordinates: equatorial FK5
       Equinox: J1975.000 Epoch: J1975.00000000 MJD: 42413.25000
-  <P>
+  
   Input file: coords  Output file: STDOUT
-  <P>
+  
     1.0   1.0  13:27:02.9797 47:31:43.269
   512.0   1.0  13:26:24.3330 47:31:43.793
   512.0 512.0  13:26:24.3448 47:38:15.219
     1.0 512.0  13:27:03.0718 47:38:14.693
-  <P>
+  
   cl&gt; imcctran image j1975.0
-  <P>
+  
   cl&gt; skyctran coords STDOUT "image logical" "image world"
-  <P>
+  
   Insystem: image logical  Projection: TAN  Ra/Dec axes: 1/2
       Coordinates: equatorial FK5 Equinox: J1975.000
       Epoch: J1975.00000000 MJD: 42413.25000
   Outsystem: image world  Projection: TAN  Ra/Dec axes: 1/2
       Coordinates: equatorial FK5 Equinox: J1975.000
       Epoch: J1975.00000000 MJD: 42413.25000
-  <P>
+  
   Input file: coords  Output file: STDOUT
-  <P>
+  
     1.0   1.0  13:27:02.9797 47:31:43.269
   512.0   1.0  13:26:24.3330 47:31:43.793
   512.0 512.0  13:26:24.3448 47:38:15.219
     1.0 512.0  13:27:03.0718 47:38:14.693
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Time requirements</H3>
-  <! BeginSection: 'TIME REQUIREMENTS'>
-  <UL>
-  <P>
-  </UL>
-  <! EndSection:   'TIME REQUIREMENTS'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  <P>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Time requirements</h3>
+  <!-- BeginSection: 'TIME REQUIREMENTS' -->
+  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <p>
   At present IRAF requires that the LONGPOLE and or LATPOLE keywords be
   defined in the appropriate WAT_* keywords, e.g. WAT1_* and WAT2_* for
   a 2D image. If these are not present then default values are assumed.
   The new values are computed and added to the WAT1_* and WAT2_* keywords.
-  <P>
+  </p>
+  <p>
   At present the experimental TNX and ZPX projections cannot be transformed
   with precision. Users should use the SKYCTRAN task to transform individual
   coordinate pairs.
-  <P>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   setjd,precess,galactic,xray.xspatial.skypix,stsdas.toolbox.tools.tprecess
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'REFERENCES' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'REFERENCES' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

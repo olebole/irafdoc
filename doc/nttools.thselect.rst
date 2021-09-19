@@ -1,132 +1,127 @@
 .. _thselect:
 
-thselect — Select tables satisfying an expression; print keywords.
-==================================================================
+thselect: Select tables satisfying an expression; print keywords.
+=================================================================
 
 **Package: nttools**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   thselect -- Print table keyword values.
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   thselect table keywords expr
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   This task was based on 'hselect',
   and it behaves in a very similar manner,
   except that it works on tables rather than images.
-  <P>
+  </p>
+  <p>
   Keyword values will be printed to the standard output,
   one line per input table,
   with the values separated by tabs.
   String values that contain whitespace will be enclosed in quotes.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>table [file name template]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='table' Line='table [file name template]'>
-  <DD>A list of tables for which keywords are to be printed.
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>table [file name template]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='table' Line='table [file name template]' -->
+  <dd>A list of tables for which keywords are to be printed.
   These will be opened read-only and will not be modified.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>keywords [string]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='keywords' Line='keywords [string]'>
-  <DD>One or more keywords, separated by commas and/or blanks.
-  The special keywords such as "<TT>i_table</TT>"
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>keywords [string]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='keywords' Line='keywords [string]' -->
+  <dd>One or more keywords, separated by commas and/or blanks.
+  The special keywords such as <tt>"i_table"</tt>
   that are supported by 'thedit' can also be used with 'thselect'.
-  <P>
   For each input table,
   the values of these keywords in the current input table will be printed,
   if 'expr' is a true expression for the current table.
   Any keyword that is not found will be silently ignored.
-  <P>
   Wildcards are supported; however,
-  the "<TT>@filename</TT>" syntax is not supported.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>expr = "<TT>yes</TT>" [string]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='expr' Line='expr = "yes" [string]'>
-  <DD>This is a boolean expression
+  the <tt>"@filename"</tt> syntax is not supported.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>expr = <tt>"yes"</tt> [string]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='expr' Line='expr = "yes" [string]' -->
+  <dd>This is a boolean expression
   to be evaluated for each table in the list.
   The default value may be used to unconditionally print keyword values.
-  <P>
   The expression may include constants and/or keyword names.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1.  Compare 'thselect' with 'thedit' for displaying a single keyword value.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       tt&gt; thselect timetag.fits[events,7] rootname yes
-  <P>
+  
       O57P03030
-  <P>
+  
       tt&gt; thedit timetag.fits[events,7] rootname .
-  <P>
+  
       timetag.fits[events,7],ROOTNAME = O57P03030 / rootname of the obser
       vation set
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2.  Compare i_file with i_table for a FITS table
   ($I and i_table are equivalent).
-  <P>
-  <PRE>
+  </p>
+  <pre>
       tt&gt; thselect timetag.fits[events,7] i_file,i_table yes   
-  <P>
+  
       timetag.fits      timetag.fits[EVENTS,7]
-  </PRE>
-  <P>
+  </pre>
+  <p>
   3.  Find all FITS files with DETECTOR = 'CCD' in the primary header.
   Since the primary header of a FITS file can be opened
   either as an image or as a table,
   either 'hselect' or 'thselect' could be used for this example.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       tt&gt; thselect *.fits[0] $I "detector == 'CCD'"
-  <P>
+  
       h1v11148o_1dx.fits[0]
       h4s13500o_1dx.fits[0]
       i1c1615po_1dx.fits[0]
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>References</H3>
-  <! BeginSection: 'REFERENCES'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <!-- EndSection:   'BUGS' -->
+  <h3>References</h3>
+  <!-- BeginSection: 'REFERENCES' -->
+  <p>
   This task was written by Phil Hodge,
   based on 'hselect'.
-  </UL>
-  <! EndSection:   'REFERENCES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'REFERENCES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   hselect, thedit
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

@@ -1,5 +1,5 @@
-dtoi — Density to Intensity reductions for photographic plates
-==============================================================
+dtoi: Density to Intensity reductions for photographic plates
+=============================================================
 
 .. toctree:: :maxdepth: 1
 

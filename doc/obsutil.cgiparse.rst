@@ -1,64 +1,66 @@
 .. _cgiparse:
 
-cgiparse — Parse STRING_QUERY environment variable into task parameters
-=======================================================================
+cgiparse: Parse STRING_QUERY environment variable into task parameters
+======================================================================
 
 **Package: obsutil**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   cgiparse -- parse STRING_QUERY environment var. into parameters
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Synopsis</H3>
-  <! BeginSection: 'SYNOPSIS'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Synopsis</h3>
+  <!-- BeginSection: 'SYNOPSIS' -->
+  <p>
   CGIPARSE parses the STRING_QUERY environment varabile and sets parameters.
   The string format is a list of task.param=value pairs which includes the
-  standard QUERY string special characters <TT>'&'</TT>, <TT>'+'</TT>, and <TT>'%'</TT>.  This is
+  standard QUERY string special characters <tt>'&amp;'</tt>, <tt>'+'</tt>, and <tt>'%'</tt>.  This is
   intended to parse a query from a CGI script.
-  </UL>
-  <! EndSection:   'SYNOPSIS'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'SYNOPSIS' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   cgiparse
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <p>
   There are no parameters.  The input is the value of the QUERY_STRING
   environment variable.
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </p>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   CGIPARSE parses the STRING_QUERY environment varabile and sets parameters.
   The string format is a list of task.param=value pairs which includes the
-  standard QUERY string special characters <TT>'&'</TT>, <TT>'+'</TT>, and <TT>'%'</TT>.  This is
+  standard QUERY string special characters <tt>'&amp;'</tt>, <tt>'+'</tt>, and <tt>'%'</tt>.  This is
   intended to parse a query from a CGI script.
-  <P>
+  </p>
+  <p>
   The only input is the STRING_QUERY variable.  If it is undefined the
   task simply does nothing.  The string will normally use the standard
   parameters for this type of string.  The data fields are task.param=value
   strings.  As each is parsed the values will be set for the task.  This
   assumes the tasks are defined.  Theere is no error checking for
   undefined tasks or parameters.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1.  A CGI script calls a CL script with the STRING_QUERY string set.
-  The string has "<TT>imheader.longheader=yes</TT>".  CGIPARSE is called and
+  The string has <tt>"imheader.longheader=yes"</tt>.  CGIPARSE is called and
   when it completes the parameter value is set.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; lpar imhead
       cl&gt; lpar imheader
              images =                 image names
@@ -73,42 +75,43 @@ cgiparse — Parse STRING_QUERY environment variable into task parameters
         (longheader = yes)            print header in multi-line format
         (userfields = yes)            print the user fields ...
               (mode = "ql")           
-  </PRE>
-  <P>
-  Note that when running this in a "<TT>#!cl</TT>" script where the "<TT>login.cl</TT>" is
+  </pre>
+  <p>
+  Note that when running this in a <tt>"#!cl"</tt> script where the <tt>"login.cl"</tt> is
   not used that you must be careful to have all tasks referenced by the
   query string defined.
-  <P>
-  2.  Below is a "<TT>#!cl</TT>" type script that uses CGIPARSE.  It is used for
+  </p>
+  <p>
+  2.  Below is a <tt>"#!cl"</tt> type script that uses CGIPARSE.  It is used for
   a spectral exposure time calculator based on OBSUTIL.SPTIME though many
   aspects are fairly generic for this type of application.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   #!/iraf/iraf/bin.freebsd/cl.e -f
-  <P>
+  
   file	urldir
-  <P>
+  
   # The following must be set for different hosts.
   # The home directory and the urldir are the same but in different syntax.
   # The home directory must have a world writable tmp subdirectory.
-  <P>
+  
   set arch = ".freebsd"
   set (home = osfn ("/www/htdocs/noao/staff/brooke/gsmt/"))
   urldir = "/noao/staff/brooke/gsmt/"
-  <P>
+  
   # The uparm is a unique temporary directory.
   s1 = mktemp ("uparm") // "/"
   set (uparm = "home$/tmp/" // s1)
   mkdir uparm$
   cd uparm
   printf ("!/bin/chmod a+rw %s\n", osfn("uparm$")) | cl
-  <P>
+  
   # The URL directory is the same as uparm.
   urldir = urldir // "tmp/" // s1
-  <P>
+  
   # A private graphcap is required to give an path for sgidispatch.
   set graphcap = home$graphcap
-  <P>
+  
   # Load packages.
   dataio
   proto
@@ -116,12 +119,12 @@ cgiparse — Parse STRING_QUERY environment variable into task parameters
   onedspec
   spectime
   gsmt
-  <P>
+  
   # Parse the CGI string and set parameters.
   cgiparse
-  <P>
+  
   # Create the output.
-  <P>
+  
   # Start HTML.
   printf ("Content-Type: text/html\n\n")
   printf ("&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;\n")
@@ -131,34 +134,34 @@ cgiparse — Parse STRING_QUERY environment variable into task parameters
   else
       printf ("&lt;center&gt;&lt;h2&gt;%s&lt;/h2&gt;&lt;/center&gt;\n", cl.line)
   printf ("&lt;pre&gt;\n")
-  <P>
+  
   # Execute task(s).
   #show QUERY_STRING
-  <P>
+  
   setup interactive=no mode=h
   printf ("&lt;/pre&gt;\n")
   printf ("&lt;A Href='http://www.noao.edu/noao/staff/brooke/gsmt/gsmt.php?stage=1'&gt;Back to form&lt;/A&gt;")
   printf ("&lt;pre&gt;\n")
-  <P>
+  
   sptime output="counts,snr" graphics="g-gif" interactive=no mode=h
-  <P>
+  
   printf ("&lt;/pre&gt;\n")
   printf ("&lt;A Href='http://www.noao.edu/noao/staff/brooke/gsmt/gsmt.php?stage=1'&gt;Back to form&lt;/A&gt;\n")
-  <P>
+  
   printf ("&lt;pre&gt;\n")
-  <P>
+  
   # Add any gifs created.  We have to wait for them to be created.
-  <P>
+  
   gflush
-  <P>
+  
   i = 0; j = 1
   while (i != j) {
       sleep 2
       j = i
       files *.gif | count STDIN | scan (i)
   }
-  <P>
-  <P>
+  
+  
   if (i &gt; 0) {
       printf ("&lt;br&gt;&lt;p&gt;&lt;em&gt;Note: DN and S/N are per-pixel&lt;/em&gt;&lt;br&gt;\n")
   	
@@ -171,27 +174,25 @@ cgiparse — Parse STRING_QUERY environment variable into task parameters
       list = ""
       ## delete ("uparm$gifs", verify-)
   }
-  <P>
+  
   printf ("&lt;/pre&gt;\n")
-  <P>
+  
   # Finish HTML.
-  <P>
+  
   printf ("&lt;A Href='http://www.noao.edu/noao/staff/brooke/gsmt/gsmt.php?stage=1'&gt;Back to form&lt;/A&gt;")
-  <P>
+  
   printf ("&lt;/body&gt;&lt;/html&gt;\n")
-  <P>
+  
   # Clean up.
   ## delete ("*[^g][^i][^f]", verify-)
-  <P>
-  logout
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
-  </UL>
-  <! EndSection:    'SEE ALSO'>
   
-  <! Contents: 'NAME' 'SYNOPSIS' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  logout
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'SYNOPSIS' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

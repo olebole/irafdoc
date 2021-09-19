@@ -1,90 +1,90 @@
 .. _velvect:
 
-velvect — Plot representation of a velocity field
-=================================================
+velvect: Plot representation of a velocity field
+================================================
 
 **Package: plot**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   velvect -- two dimensional velocity field plot
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   velvect uimage vimage
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>uimage</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='uimage' Line='uimage'>
-  <DD>Name of image containing u components of the velocity field.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>vimage </B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='vimage' Line='vimage '>
-  <DD>Name of image containing v components of the velocity field.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>device = stdgraph</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='device' Line='device = stdgraph'>
-  <DD>Output device for plot.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>title = "<TT>imtitle</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='title' Line='title = "imtitle"'>
-  <DD>Title to be centered over the plot.  By default, it will be the title
-  from the image header of the <B>uimage</B>.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>append = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='append' Line='append = no'>
-  <DD>Append to an old plot?
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verbose = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
-  <DD>Print warning messages?
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  Task <I>velvect</I> draws a representation of a two-dimensional velocity
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>uimage</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='uimage' Line='uimage' -->
+  <dd>Name of image containing u components of the velocity field.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>vimage </b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='vimage' Line='vimage ' -->
+  <dd>Name of image containing v components of the velocity field.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>device = stdgraph</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = stdgraph' -->
+  <dd>Output device for plot.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>title = <tt>"imtitle"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='title' Line='title = "imtitle"' -->
+  <dd>Title to be centered over the plot.  By default, it will be the title
+  from the image header of the <b>uimage</b>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>append = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='append' Line='append = no' -->
+  <dd>Append to an old plot?
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verbose = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
+  <dd>Print warning messages?
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  Task <i>velvect</i> draws a representation of a two-dimensional velocity
   field by drawing arrows from each data location.  The length of the arrow
   is proportional to the strength of the field at that location and the direction
   of the arrow indicates the direction of the flow at that location.  The
-  two images <I>uimage</I> and <I>vimage</I> contain the velocity field to be
+  two images <i>uimage</i> and <i>vimage</i> contain the velocity field to be
   plotted.  The vector at the point (i,j) has:
-  <P>
-  <PRE>
+  </p>
+  <pre>
       magnitude = sqrt (uimage(i,j)**2 + vimage(i,j)**2)
       direction = atan2 (vimage(i,j), uimage(i,j))
-  </PRE>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  1. Make a vector plot from the two images "<TT>crab.blue</TT>" and "<TT>crab.red</TT>".
-  <P>
+  </pre>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
+  1. Make a vector plot from the two images <tt>"crab.blue"</tt> and <tt>"crab.red"</tt>.
+  </p>
+  <p>
       cl&gt; velvect crab.blue crab.red
-  </UL>
-  <! EndSection:    'EXAMPLES'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES'  >
+  <!-- EndSection:    'EXAMPLES' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES'  -->
   

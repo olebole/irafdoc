@@ -1,5 +1,5 @@
-tv — Image display utilities package
-====================================
+tv: Image display utilities package
+===================================
 
 .. toctree:: :maxdepth: 1
 

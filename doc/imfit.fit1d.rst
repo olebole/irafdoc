@@ -1,202 +1,204 @@
 .. _fit1d:
 
-fit1d — Fit a function to image lines or columns
-================================================
+fit1d: Fit a function to image lines or columns
+===============================================
 
 **Package: imfit**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   fit1d -- fit a function to image lines
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage	</H3>
-  <! BeginSection: 'USAGE	'>
-  <UL>
-  <PRE>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage	</h3>
+  <!-- BeginSection: 'USAGE	' -->
+  <pre>
   fit1d input output type
-  </PRE>
-  </UL>
-  <! EndSection:   'USAGE	'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
-  <DD>Images to be fit.  The images may contain image sections.  Only the region
+  </pre>
+  <!-- EndSection:   'USAGE	' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
+  <dd>Images to be fit.  The images may contain image sections.  Only the region
   covered by the section will be modified in the output image.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
-  <DD>Output images to be created or modified.  The number of output images
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
+  <dd>Output images to be created or modified.  The number of output images
   must match the number of input images.  If an output image does not exist
-  it is first created and initialized to zero for fit types "<TT>fit</TT>" and
-  "<TT>difference</TT>" and to one for fit type "<TT>ratio</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>type</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='type' Line='type'>
-  <DD>Type of output.  The choices are:
-  <DL>
-  <DT><B>fit      </B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='fit' Line='fit      '>
-  <DD>An image created from the function fits to the image lines.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>difference</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='difference' Line='difference'>
-  <DD>The difference between the image and the fit (i.e. residuals).
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>ratio</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='ratio' Line='ratio'>
-  <DD>The ratio of the image and fit.
-  </DD>
-  </DL>
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>bpm = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='bpm' Line='bpm = ""'>
-  <DD>List of bad pixel masks.  This may be a null string to not use a
+  it is first created and initialized to zero for fit types <tt>"fit"</tt> and
+  <tt>"difference"</tt> and to one for fit type <tt>"ratio"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>type</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='type' Line='type' -->
+  <dd>Type of output.  The choices are:
+  <dl>
+  <dt><b>fit      </b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='fit' Line='fit      ' -->
+  <dd>An image created from the function fits to the image lines.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>difference</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='difference' Line='difference' -->
+  <dd>The difference between the image and the fit (i.e. residuals).
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>ratio</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='ratio' Line='ratio' -->
+  <dd>The ratio of the image and fit.
+  </dd>
+  </dl>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>bpm = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='bpm' Line='bpm = ""' -->
+  <dd>List of bad pixel masks.  This may be a null string to not use a
   bad pixel mask, a single mask that applies to all input images, or
   a matching list.  The value may also be !&lt;keyword&gt; to specify a keyword whose
   value is the mask to use.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>axis = 1</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='axis' Line='axis = 1'>
-  <DD>Axis along which the one dimensional fitting is done.  Axis 1 corresponds
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>axis = 1</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='axis' Line='axis = 1' -->
+  <dd>Axis along which the one dimensional fitting is done.  Axis 1 corresponds
   to fitting the image lines and axis 2 corresponds to fitting the columns.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>interactive = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes'>
-  <DD>If <B>interactive</B> is set to yes, a plot of the fit is drawn and the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>interactive = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes' -->
+  <dd>If <b>interactive</b> is set to yes, a plot of the fit is drawn and the
   cursor is available for interactively examining and adjusting the fit.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>sample = "<TT>*</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"'>
-  <DD>Lines or columns to be used in the fits.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>naverage = 1</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='naverage' Line='naverage = 1'>
-  <DD>Number of sample points to combined to create a fitting point.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>sample = <tt>"*"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"' -->
+  <dd>Lines or columns to be used in the fits.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>naverage = 1</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='naverage' Line='naverage = 1' -->
+  <dd>Number of sample points to combined to create a fitting point.
   A positive value specifies an average and a negative value specifies
   a median.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>function = spline3</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='function' Line='function = spline3'>
-  <DD>Function to be fit to the image lines or columns.  The functions are
-  "<TT>legendre</TT>" (legendre polynomial), "<TT>chebyshev</TT>" (chebyshev polynomial),
-  "<TT>spline1</TT>" (linear spline), and "<TT>spline3</TT>" (cubic spline).  The functions
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>function = spline3</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = spline3' -->
+  <dd>Function to be fit to the image lines or columns.  The functions are
+  <tt>"legendre"</tt> (legendre polynomial), <tt>"chebyshev"</tt> (chebyshev polynomial),
+  <tt>"spline1"</tt> (linear spline), and <tt>"spline3"</tt> (cubic spline).  The functions
   may be abbreviated.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>order = 1</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='order' Line='order = 1'>
-  <DD>The order of the polynomials or the number of spline pieces.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>low_reject = 0., high_reject = 0.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='low_reject' Line='low_reject = 0., high_reject = 0.'>
-  <DD>Rejection limits below and above the fit in units of the residual sigma.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>niterate = 1</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='niterate' Line='niterate = 1'>
-  <DD>Number of rejection iterations.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>grow = 0.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='grow' Line='grow = 0.'>
-  <DD>When a pixel is rejected, pixels within this distance of the rejected pixel
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>order = 1</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='order' Line='order = 1' -->
+  <dd>The order of the polynomials or the number of spline pieces.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>low_reject = 0., high_reject = 0.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='low_reject' Line='low_reject = 0., high_reject = 0.' -->
+  <dd>Rejection limits below and above the fit in units of the residual sigma.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>niterate = 1</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='niterate' Line='niterate = 1' -->
+  <dd>Number of rejection iterations.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>grow = 0.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='grow' Line='grow = 0.' -->
+  <dd>When a pixel is rejected, pixels within this distance of the rejected pixel
   are also rejected.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>graphics = "<TT>stdgraph</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"'>
-  <DD>Graphics output device for interactive graphics.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>cursor = "<TT>stdgcur</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = "stdgcur"'>
-  <DD>Graphics cursor input.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>graphics = <tt>"stdgraph"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
+  <dd>Graphics output device for interactive graphics.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>cursor = <tt>"stdgcur"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = "stdgcur"' -->
+  <dd>Graphics cursor input.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   A one dimensional function is fit to each line or column of the input images.
   The function may be a legendre polynomial, chebyshev polynomial,
   linear spline, or cubic spline of a given order or number of spline pieces.
   The output image is of pixel type real and is formed from the fitted
   function values, the difference or residuals of the fit (pixel value -
   fitted value), or the ratio between the pixel values and the fitted values.
-  <P>
+  </p>
+  <p>
   The output image may exist in which case a section in the input image is
   applied to the output image.  Thus, a section on the input image causes only
   that part of the output image to be changed.  If the output image does not
   exist it is first created with a size given by the full (without a section)
   input image and initialized to zero for fit and difference output types
   and one for ratio output types.
-  <P>
+  </p>
+  <p>
   A bad pixel mask may be specified to exclude data from the fitting.  Any
   non-zero value in the mask is excluded.   It appears in the interactive
   fitting in the same way as manually deleted points.  The mask is matched to
-  the input image(s) as described by <B>pmmatch</B>.  The default is matching
+  the input image(s) as described by <b>pmmatch</b>.  The default is matching
   in physical coordinates.
-  <P>
+  </p>
+  <p>
   The points fit are determined by selecting a sample of lines or columns
-  specified by the parameter <I>sample</I> and taking either the average or
-  median of the number of points specified by the parameter <I>naverage</I>.
+  specified by the parameter <i>sample</i> and taking either the average or
+  median of the number of points specified by the parameter <i>naverage</i>.
   The type of averaging is selected by the sign of the parameter and the number
   of points is selected by the absolute value of the parameter.
   The sample points are specified relative to any image sections.
-  <P>
-  If <I>low_reject</I> and/or <I>high_reject</I> are greater than zero the sigma
+  </p>
+  <p>
+  If <i>low_reject</i> and/or <i>high_reject</i> are greater than zero the sigma
   of the residuals between the fitted points and the fitted function is computed
-  and those points whose residuals are less than <I>-low_reject</I> * sigma
-  and greater than <I>high_reject</I> * sigma are excluded from the fit.
-  Points within a distance of <I>grow</I> pixels of a rejected pixel are also
+  and those points whose residuals are less than <i>-low_reject</i> * sigma
+  and greater than <i>high_reject</i> * sigma are excluded from the fit.
+  Points within a distance of <i>grow</i> pixels of a rejected pixel are also
   excluded from the fit.  The function is then refit without the rejected points.
   This rejection procedure may be iterated a number of times given by the
-  parameter <I>niterate</I>.
-  <P>
-  The fitting parameters (<I>sample, naverage, function, order, low_reject,
-  high_reject, niterate, grow</I>)
-  may be adjusted interactively if the parameter <I>interactive</I> is yes.
-  Lines or columns from the image are selected to be fit with the <B>icfit</B>
+  parameter <i>niterate</i>.
+  </p>
+  <p>
+  The fitting parameters (<i>sample, naverage, function, order, low_reject,
+  high_reject, niterate, grow</i>)
+  may be adjusted interactively if the parameter <i>interactive</i> is yes.
+  Lines or columns from the image are selected to be fit with the <b>icfit</b>
   package.  A single column or line may be chosen or a blank-separated range
   may be averaged.  Note that the averaging applies only to the graphed
   data used to set the fitting parameters.  The actual image lines and columns
   are fit individually.  The interactive cursor mode commands for this package
-  are described in a separate help entry under "<TT>icfit</TT>".  Line 1 is automatically
+  are described in a separate help entry under <tt>"icfit"</tt>.  Line 1 is automatically
   selected for one dimensional images and any number of lines or columns may be
   selected for two dimensional images.  Note that the lines or columns are
   relative to the input image section; for example line 1 is the first line of
@@ -204,56 +206,65 @@ fit1d — Fit a function to image lines or columns
   no line(s) or column(s) are given then the last selected fitting parameters
   are used on each line or column of the image.  This step is repeated for
   each image in the input list.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1.  To create a smoothed version of an image by fitting the image lines:
-  <P>
+  </p>
+  <p>
       cl&gt; fit1d image fitimage fit
-  <P>
+  </p>
+  <p>
   If the interactive flag is set and the image is two dimensional then a prompt
   for an image line is printed:
-  <P>
+  </p>
+  <p>
       image: Fit line = 100 200
-  <P>
+  </p>
+  <p>
   The selected lines are averaged, graphed, and the interactive options for
-  setting and fitting the line are used.  Exiting with <TT>'q'</TT> or return prompts for
+  setting and fitting the line are used.  Exiting with <tt>'q'</tt> or return prompts for
   another line if the image is two dimensional.  When the fitting parameters
   are suitably set then respond with end-of-file or return to fit all the lines
   of the image and create the output image.
-  <P>
+  </p>
+  <p>
   2.  To subtract a linear function fit to columns 10 to 20 and 80 to 100 from
   columns 10 to 100 and to subtract another linear function fit to lines
   110 to 120 and 180 to 200 from columns 110 to 200:
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; fit1d image1[10:100,*] output diff axis=2 sample="1:11,71:91"
       cl&gt; fit1d image1[110:200,*] output diff axis=2 sample="1:11,71:91"
-  </PRE>
-  <P>
+  </pre>
+  <p>
   Pixels outside columns 10 to 100 and 110 to 200 are not affected.  Note that the
   sample points are specified relative to the image sections.  The script
-  <B>background</B> is available in other packages for doing background
+  <b>background</b> is available in other packages for doing background
   subtractions.
-  <P>
+  </p>
+  <p>
   3.  To determine a small scale response image:
-  <P>
+  </p>
+  <p>
       cl&gt; fit1d image1 flat ratio
-  <P>
-  The task <B>imred.generic.flat1d</B> is available for making flat field images
+  </p>
+  <p>
+  The task <b>imred.generic.flat1d</b> is available for making flat field images
   by this method with the addition of an extra parameter to limit the data values
   for which the ratio is computed.
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   imred.generic.background, imred.generic.flat1d
   xtools.icfit, lineclean, imsurfit
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

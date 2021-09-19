@@ -1,50 +1,49 @@
 .. _imcopy:
 
-imcopy — Copy an image
-======================
+imcopy: Copy an image
+=====================
 
 **Package: imutil**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   imcopy -- copy images
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage	</H3>
-  <! BeginSection: 'USAGE	'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage	</h3>
+  <!-- BeginSection: 'USAGE	' -->
+  <p>
   imcopy input output
-  </UL>
-  <! EndSection:   'USAGE	'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
-  <DD>Images to be copied.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
-  <DD>Output images or directory.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verbose = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
-  <DD>Print each operation as it takes place?
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </p>
+  <!-- EndSection:   'USAGE	' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
+  <dd>Images to be copied.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
+  <dd>Output images or directory.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verbose = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
+  <dd>Print each operation as it takes place?
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   Each of the input images, which may be given as a general image template
   including sections, is copied to the corresponding output image list,
   which may also be given as an image template, or the output directory.
@@ -60,69 +59,81 @@ imcopy — Copy an image
   is not equal to the input image name or a subsection of an existing image
   and the file already exists then a clobber error will occur if
   clobber checking is in effect.
-  <P>
+  </p>
+  <p>
   The verbose options prints for each copy lines of the form:
-  <PRE>
-  <P>
+  </p>
+  <pre>
+  
   input image -&gt; output image
-  </PRE>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. For a simple copy of an image:
-  <P>
+  </p>
+  <p>
   	cl&gt; imcopy image imagecopy
-  <P>
+  </p>
+  <p>
   2. To copy a portion of an image:
-  <P>
+  </p>
+  <p>
   	cl&gt; imcopy image[10:20,*] subimage
-  <P>
+  </p>
+  <p>
   3. To copy several images:
-  <P>
+  </p>
+  <p>
   	cl&gt; imcopy image1,image2,frame10 a,b,c
-  <P>
+  </p>
+  <p>
   4. To trim an image:
-  <P>
+  </p>
+  <p>
   	cl&gt; imcopy image[10:20,*] image
-  <P>
+  </p>
+  <p>
   In the above example the specified section of the input image replaces the
   original input image.  To trim several images using an image template:
-  <P>
+  </p>
+  <p>
   	cl&gt; imcopy frame*[1:512,1:512] frame*
-  <P>
-  In this example all images beginning with "<TT>frame</TT>" are trimmed to 512 x 512.
-  <P>
+  </p>
+  <p>
+  In this example all images beginning with <tt>"frame"</tt> are trimmed to 512 x 512.
+  </p>
+  <p>
   5. To copy a set of images to a new directory:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; imcopy image* directory
   			or
   	cl&gt; imcopy image* directory$
   			or
   	cl&gt; imcopy image* osdirectory
-  </PRE>
-  <P>
-  where "<TT>osdirectory</TT>" is an operating system directory name (i.e. /user/me
+  </pre>
+  <p>
+  where <tt>"osdirectory"</tt> is an operating system directory name (i.e. /user/me
   in UNIX).
-  <P>
+  </p>
+  <p>
   6. To copy a section of an image in an already existing image of
      sufficient size to contain the input section.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; imcopy image[1:512,1:512] outimage[257:768,257:768]
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <p>
   The distinction between copying to a section of an existing image
   and overwriting a input image is rather inobvious.
-  </UL>
-  <! EndSection:    'BUGS'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS'  >
+  <!-- EndSection:    'BUGS' -->
+  
+  <!-- Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS'  -->
   

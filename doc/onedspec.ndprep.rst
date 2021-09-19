@@ -1,179 +1,183 @@
 .. _ndprep:
 
-ndprep — Make neutral density filter calibration image
-======================================================
+ndprep: Make neutral density filter calibration image
+=====================================================
 
 **Package: onedspec**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   ndprep -- Make a neutral density filter calibration image
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   ndprep filter_curve output
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>filter_curve</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='filter_curve' Line='filter_curve'>
-  <DD>Neutral density filter curve.  The directory specified by the parameter
-  <I>directory</I> is prepended to this name so if a directory is specified
-  then it should not be given here.  If <TT>'?'</TT> a list of filter curves
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>filter_curve</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='filter_curve' Line='filter_curve' -->
+  <dd>Neutral density filter curve.  The directory specified by the parameter
+  <i>directory</i> is prepended to this name so if a directory is specified
+  then it should not be given here.  If <tt>'?'</tt> a list of filter curves
   in the specified directory is typed.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
-  <DD>Output neutral density filter image.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>w0   </B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='w0' Line='w0   '>
-  <DD>Starting wavelength for the output image in Angstroms.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>dw   </B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='dw' Line='dw   '>
-  <DD>Wavelength increment for the output image in Angstroms.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>nw   </B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='nw' Line='nw   '>
-  <DD>Number of wavelength points for the output image (i.e. the size of the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
+  <dd>Output neutral density filter image.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>w0   </b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='w0' Line='w0   ' -->
+  <dd>Starting wavelength for the output image in Angstroms.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>dw   </b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='dw' Line='dw   ' -->
+  <dd>Wavelength increment for the output image in Angstroms.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>nw   </b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='nw' Line='nw   ' -->
+  <dd>Number of wavelength points for the output image (i.e. the size of the
   output image).
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>nspace = 0</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='nspace' Line='nspace = 0'>
-  <DD>Number of spatial points for a two dimensional image.  If the value is
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>nspace = 0</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='nspace' Line='nspace = 0' -->
+  <dd>Number of spatial points for a two dimensional image.  If the value is
   zero then a one dimensional image is created.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>logarithm = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='logarithm' Line='logarithm = no'>
-  <DD>Use logarithmic wavelengths and intervals?  If yes then the wavelengths
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>logarithm = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='logarithm' Line='logarithm = no' -->
+  <dd>Use logarithmic wavelengths and intervals?  If yes then the wavelengths
   will have the same starting and ending points and number of pixels but
   the wavelength intervals will be logarithmic.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>flux = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='flux' Line='flux = yes'>
-  <DD>Conserve flux when rebinning to logarithmic wavelength intervals?
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>dispaxis = 1</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='dispaxis' Line='dispaxis = 1'>
-  <DD>Dispersion axis for two dimensional images.  Dispersion along the lines
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>flux = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='flux' Line='flux = yes' -->
+  <dd>Conserve flux when rebinning to logarithmic wavelength intervals?
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>dispaxis = 1</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='dispaxis' Line='dispaxis = 1' -->
+  <dd>Dispersion axis for two dimensional images.  Dispersion along the lines
   is 1 and dispersion along the columns is 2.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>directory = "<TT>onedstds$ctio/</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='directory' Line='directory = "onedstds$ctio/"'>
-  <DD>Directory containing neutral density filter curves.  This directory is
-  prepended to the specified fiter curve file (and so must end with <TT>'/'</TT>
-  or <TT>'$'</TT>).
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>directory = <tt>"onedstds$ctio/"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='directory' Line='directory = "onedstds$ctio/"' -->
+  <dd>Directory containing neutral density filter curves.  This directory is
+  prepended to the specified fiter curve file (and so must end with <tt>'/'</tt>
+  or <tt>'$'</tt>).
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   A neutral density (ND) filter curve is converted to a calibration image
   with the same size and wavelength range as the images to be calibrated.
   A list of standard neutral density curves is typed if the filter
-  curve name is given as <TT>'?'</TT>.  The ND curves are text files containing
-  wavelength and filter transmission pairs.  Comments begin with <TT>'#'</TT>.
-  A plot of the ND curve can be obtained using <B>graph</B>.
-  <P>
+  curve name is given as <tt>'?'</tt>.  The ND curves are text files containing
+  wavelength and filter transmission pairs.  Comments begin with <tt>'#'</tt>.
+  A plot of the ND curve can be obtained using <b>graph</b>.
+  </p>
+  <p>
   The ND curve is first interpolated to a one dimensional image of
-  <I>nw</I> wavelength points with starting wavelength <I>wO</I> and
-  wavelength increment <I>dw</I> using the task <B>sinterp</B>.  The
+  <i>nw</i> wavelength points with starting wavelength <i>wO</i> and
+  wavelength increment <i>dw</i> using the task <b>sinterp</b>.  The
   wavelength parameters must be in the same units as the filter curves
   (currently Angstroms) even if the final calibration image is to be in
   logarithmic wavelength intervals.  If logarithmic wavelength format
   is specified the image is rebinned over the same wavelength range with
-  the same number of points using the task <B>dispcor</B>.  The rebinning
+  the same number of points using the task <b>dispcor</b>.  The rebinning
   may include flux conservation to account for the changing size of
   pixels or simply interpolate.  Note that flux conservation will
   change the apparent shape of the ND curve.
-  <P>
-  If the number of points across the dispersion, <I>nspace</I> is zero then
+  </p>
+  <p>
+  If the number of points across the dispersion, <i>nspace</i> is zero then
   the final calibration image is one dimensional.  If it is greater than
   zero the one dimensional ND image is expanded to the specified number
   of spatial points with the dispersion axis specified by the parameter
-  <I>dispaxis</I> (1 = dispersion along the lines, 2 = dispersion along
+  <i>dispaxis</i> (1 = dispersion along the lines, 2 = dispersion along
   the columns).
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   To get a list of standard ND filter curves:
-  <P>
+  </p>
+  <p>
   	cl&gt; ndprep ?
-  <P>
+  </p>
+  <p>
   To graph the ND filter curve:
-  <P>
+  </p>
+  <p>
   	cl&gt; graph onedstds$ctio/nd1m.100mag.dat
-  <P>
+  </p>
+  <p>
   Naturally, if a calibration image is made then the image plotting tasks
-  such as <B>graph</B>, <B>implot</B>, and <B>splot</B> may also be used.
-  <P>
+  such as <b>graph</b>, <b>implot</b>, and <b>splot</b> may also be used.
+  </p>
+  <p>
   To make a one dimensional ND calibration spectrum:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; ndprep w0=4000 dw=1.2 nw=512
   	Input ND filter curve:  onedstds$ctio/nd1m.100mag.dat
   	Output calibration image: NDimage
-  </PRE>
-  <P>
+  </pre>
+  <p>
   To make a two dimensional ND calibration spectrum in logarithmic wavelength:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; ndprep w0=4000 dw=1.2 nw=512 nspace=200 log+
   	Input ND filter curve:  onedstds$ctio/nd4m.u000mag.dat
   	Output calibration image: NDimage
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Revisions</H3>
-  <! BeginSection: 'REVISIONS'>
-  <UL>
-  <DL>
-  <DT><B>NDPREP V2.10</B></DT>
-  <! Sec='REVISIONS' Level=0 Label='NDPREP' Line='NDPREP V2.10'>
-  <DD>This task was moved from the <B>proto</B> package.  It was originally
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Revisions</h3>
+  <!-- BeginSection: 'REVISIONS' -->
+  <dl>
+  <dt><b>NDPREP V2.10</b></dt>
+  <!-- Sec='REVISIONS' Level=0 Label='NDPREP' Line='NDPREP V2.10' -->
+  <dd>This task was moved from the <b>proto</b> package.  It was originally
   written at CTIO for CTIO data.  It's functionality is largely unchanged
-  though it has been updated for changes in the <B>onedspec</B> package.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'REVISIONS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  though it has been updated for changes in the <b>onedspec</b> package.
+  </dd>
+  </dl>
+  <!-- EndSection:   'REVISIONS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   sinterp, dispcor
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

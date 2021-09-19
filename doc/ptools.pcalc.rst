@@ -1,77 +1,76 @@
 .. _pcalc:
 
-pcalc — Do arithmetic on a list of apphot/daophot tables databases
-==================================================================
+pcalc: Do arithmetic on a list of apphot/daophot tables databases
+=================================================================
 
 **Package: ptools**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   pcalc - perform an arithmetic operation on a field in a list of apphot/daophot
   databases
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   pcalc infiles field value
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>infiles</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='infiles' Line='infiles'>
-  <DD>The APPHOT/DAOPHOT database(s) containing the field to be recomputed.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>field </B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='field' Line='field '>
-  <DD>The field to be recomputed. Field must be an integer or real field
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>infiles</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='infiles' Line='infiles' -->
+  <dd>The APPHOT/DAOPHOT database(s) containing the field to be recomputed.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>field </b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='field' Line='field ' -->
+  <dd>The field to be recomputed. Field must be an integer or real field
   in the input file(s).
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>value</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='value' Line='value'>
-  <DD>The arithmetic expression used to recompute the specified field.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>value</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='value' Line='value' -->
+  <dd>The arithmetic expression used to recompute the specified field.
   Value may be an integer or real expression but must match the data
   type of field. The functions real and int may be used to do type
   conversions.
-  </DD>
-  </DL>
-  <P>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <P>
-  PCALC reads in the values of the <I>field</I> keyword 
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  PCALC reads in the values of the <i>field</i> keyword 
   from a set of  APPHOT/DAOPHOT databases, replaces the old values
-  with new values equal to the value of the arithmetic expression <I>value</I>,
+  with new values equal to the value of the arithmetic expression <i>value</i>,
   and updates the databases(s).
-  <P>
+  </p>
+  <p>
   PCALC is script task which calls TXCALC is the input file is an
   APPHOT/DAOPHOT text database or TBCLAC if APPHOT/DAOPHOT is a tables
   database.
-  If the input file is a text database, the expression <I>value</I> consists
+  If the input file is a text database, the expression <i>value</i> consists
   of variables which are the field names
   specified by the #N keywords or the parameters specified by the
   #K keywords in the APPHOT/DAOPHOT text databases.
   Only keywords beginning with #N can actually be replaced.
-  If the input file is an ST tables database, the expression <I>value</I>
+  If the input file is an ST tables database, the expression <i>value</i>
   consists of the table column names.
-  <P>
+  </p>
+  <p>
   The supported
   arithmetic operators and functions are briefly described below.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   addition		+		subtraction		-
   multiplication		*		division		/
   negation		-		exponentiation		**
@@ -84,43 +83,38 @@ pcalc — Do arithmetic on a list of apphot/daophot tables databases
   minimum			min(x,y)	maximum			max(x,y)
   convert to integer	int(x)		convert to real		real(x)
   nearest integer		nint(x)		modulo			mod(x)
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
+  </pre>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Change the XCENTER and YCENTER fields to XCENTER + 5.4 and YCENTER + 10.3
   respectively in a file produced by the apphot package center task.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	pt&gt; pcalc m92.ctr.1 xcenter "xcenter+5.4"
   	pt&gt; pcalc m92.ctr.1 ycenter "ycenter+10.3"
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2.  Add a constant to the computed magnitudes produced by nstar.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	pt&gt; pcalc n4147.nst.2 mag "mag+3.457"
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <p>
   TXCALC does not allow arrays in the expression field.
-  <P>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   ptools.tbcalc,tables.tcalc,ptools.pcalc
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

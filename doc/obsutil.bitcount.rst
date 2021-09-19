@@ -1,108 +1,109 @@
 .. _bitcount:
 
-bitcount — Accumulate the bit statistics for a list of images
-=============================================================
+bitcount: Accumulate the bit statistics for a list of images
+============================================================
 
 **Package: obsutil**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   bitcount - accumulate the bit statistics for a list of images
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   bitcount images
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>images</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
-  <DD>A list of image names whose bit statistics will be counted.  The
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>images</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
+  <dd>A list of image names whose bit statistics will be counted.  The
   statistics can either be reported for each individual image (the
   default) or as a grand total over all the images.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>grandtotal = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='grandtotal' Line='grandtotal = no'>
-  <DD>If <I>grandtotal</I> = yes, accumulate a grand total over all the
-  images.  If <I>grandtotal</I> = no (the default), report the statistics
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>grandtotal = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='grandtotal' Line='grandtotal = no' -->
+  <dd>If <i>grandtotal</i> = yes, accumulate a grand total over all the
+  images.  If <i>grandtotal</i> = no (the default), report the statistics
   individually for each image in turn.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>leftzeroes = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='leftzeroes' Line='leftzeroes = yes'>
-  <DD>If <I>leftzeroes</I> = yes, leftmost zeroes are counted into the
-  statistics (the default).  If <I>leftzeroes</I> = no, leftmost zeroes
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>leftzeroes = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='leftzeroes' Line='leftzeroes = yes' -->
+  <dd>If <i>leftzeroes</i> = yes, leftmost zeroes are counted into the
+  statistics (the default).  If <i>leftzeroes</i> = no, leftmost zeroes
   (those past the most significant digit for each individual pixel)
   are omitted from the statistics.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verbose = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
-  <DD>If <I>verbose</I> = no, only the raw bit counts will be reported.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <I>Bitcount</I> will report the absolute and relative proportions
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verbose = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
+  <dd>If <i>verbose</i> = no, only the raw bit counts will be reported.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  <i>Bitcount</i> will report the absolute and relative proportions
   of zeroes and ones populating each bit plane of a list of images.
   This is useful for diagnosing problems with a CCD's A/D converter,
   especially when an input image is supplied that contains a linear
   ramp in exposure across the range of the A/D.
-  <P>
+  </p>
+  <p>
   The statistics for the list of images can be accumulated either
   individually for each image, or as a grand total over all of the
-  images depending on the value of the <I>grandtotal</I> parameter.
+  images depending on the value of the <i>grandtotal</i> parameter.
   A single linear exposure ramp can be mimiced by a grand total
   over a list of progressively more exposed images.  Care should
   be taken to arrange that the exposures sample all parts of the
   A/D's range.
-  <P>
-  The <I>leftzeroes</I> parameter is used to correct a problem seen
+  </p>
+  <p>
+  The <i>leftzeroes</i> parameter is used to correct a problem seen
   with the ctio.bitstat task.  Bitstat under-reports zeroes for the
   more significant bits since only pixels with values greater than
   the bit being currently counted participate in that count.  The
   severity and precise nature of this problem depends on the exposure
-  level of a particular test image.  <I>Leftzeroes</I> may be set to
-  "<TT>no</TT>" if there is some reason to restore this behavior.
-  <P>
-  The <I>verbose</I> parameter may be set to "<TT>no</TT>" in order to pass
+  level of a particular test image.  <i>Leftzeroes</i> may be set to
+  <tt>"no"</tt> if there is some reason to restore this behavior.
+  </p>
+  <p>
+  The <i>verbose</i> parameter may be set to <tt>"no"</tt> in order to pass
   the raw bit counts on to some other task.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   To report the bit statistics for a test exposure ramp:
-  <P>
-  <PRE>
+  </p>
+  <pre>
       nl&gt; bitcount testramp
-  </PRE>
-  <P>
+  </pre>
+  <p>
   To accumulate a grand total over a list of images:
-  <P>
-  <PRE>
+  </p>
+  <pre>
       nl&gt; bitcount a001*.imh grandtotal+
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <p>
   A warning will be issued when accumulating a grand total over a list
   of images whose datatypes vary.  In this case, the totals for each bit
   will be correct - to the extent that some images may not populate some
@@ -110,14 +111,15 @@ bitcount — Accumulate the bit statistics for a list of images
   range of bitplanes included in the output report.  The interpretation
   of the most significant bit as a sign bit will also depend on the
   datatype of this final image.
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   imstatistics, ctio.bitstat
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

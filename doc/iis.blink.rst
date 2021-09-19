@@ -1,92 +1,95 @@
 .. _blink:
 
-blink — Blink two frames
-========================
+blink: Blink two frames
+=======================
 
 **Package: iis**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   blink -- Blink frames in the image display
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   blink frame1 frame2 [frame3 [frame4]]
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>frame1</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='frame1' Line='frame1'>
-  <DD>First frame in blink sequence.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>frame2</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='frame2' Line='frame2'>
-  <DD>Second frame in blink sequence.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>frame3</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='frame3' Line='frame3'>
-  <DD>Third frame in blink sequence.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>frame4</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='frame4' Line='frame4'>
-  <DD>Fourth frame in blink sequence.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>rate = 1.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='rate' Line='rate = 1.'>
-  <DD>Blink rate in seconds per frame.  May be any fraction of a second.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>frame1</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='frame1' Line='frame1' -->
+  <dd>First frame in blink sequence.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>frame2</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='frame2' Line='frame2' -->
+  <dd>Second frame in blink sequence.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>frame3</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='frame3' Line='frame3' -->
+  <dd>Third frame in blink sequence.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>frame4</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='frame4' Line='frame4' -->
+  <dd>Fourth frame in blink sequence.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>rate = 1.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='rate' Line='rate = 1.' -->
+  <dd>Blink rate in seconds per frame.  May be any fraction of a second.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   Two or more frames are alternately displayed on the image display monitor
-  ("<TT>stdimage</TT>") at a specified rate per frame.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  (<tt>"stdimage"</tt>) at a specified rate per frame.
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   To blink two frames:
-  <P>
+  </p>
+  <p>
   	cl&gt; blink 1 2
-  <P>
+  </p>
+  <p>
   To blink three frames at a rate of 2 seconds per frame:
-  <P>
+  </p>
+  <p>
   	cl&gt; blink 3 1 2 rate=2
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <p>
   The blink rate is measured in
   software and, therefore, will not be exactly even in a time sharing
   environment.
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   cv
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

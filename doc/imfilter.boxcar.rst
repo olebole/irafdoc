@@ -1,131 +1,120 @@
 .. _boxcar:
 
-boxcar — Boxcar smooth a list of 1 or 2-D images
-================================================
+boxcar: Boxcar smooth a list of 1 or 2-D images
+===============================================
 
 **Package: imfilter**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   boxcar -- boxcar smooth a list of images
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   boxcar input output xwindow ywindow
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
-  <DD>List of images to be smoothed.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
-  <DD>List of output images. The number of output images must equal the number of
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
+  <dd>List of images to be smoothed.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
+  <dd>List of output images. The number of output images must equal the number of
   input images. If the input images name equals the output image name the
   smoothed image will replace the input image.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>xwindow, ywindow</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='xwindow' Line='xwindow, ywindow'>
-  <DD>The size of the smoothing window.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>boundary = "<TT>nearest</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"'>
-  <DD>The boundary extension options are:
-  <DL>
-  <DT><B>nearest</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest'>
-  <DD>Use the value of the nearest boundary pixel.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>constant</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='constant' Line='constant'>
-  <DD>Use a constant value.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>reflect</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='reflect' Line='reflect'>
-  <DD>Generate a value by reflecting around the boundary.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>wrap</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='wrap' Line='wrap'>
-  <DD>Generate a value by wrapping around to the opposite side of the image.
-  </DD>
-  </DL>
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>constant = 0.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.'>
-  <DD>The constant for constant-valued boundary extension.
-  </DD>
-  </DL>
-  <P>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <P>
-  BOXCAR smooths the list of images specified by <I>input</I> with a
-  flat-topped rectangular kernel of dimensions <I>xwindow</I> by <I>ywindow</I>
-  and places the smoothed images in <I>output</I>. The type of boundary
-  extension is optional and set by the <I>boundary</I> parameter.
-  <P>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>xwindow, ywindow</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='xwindow' Line='xwindow, ywindow' -->
+  <dd>The size of the smoothing window.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>boundary = <tt>"nearest"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"' -->
+  <dd>The boundary extension options are:
+  <dl>
+  <dt><b>nearest</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest' -->
+  <dd>Use the value of the nearest boundary pixel.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>constant</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='constant' Line='constant' -->
+  <dd>Use a constant value.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>reflect</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='reflect' Line='reflect' -->
+  <dd>Generate a value by reflecting around the boundary.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>wrap</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='wrap' Line='wrap' -->
+  <dd>Generate a value by wrapping around to the opposite side of the image.
+  </dd>
+  </dl>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>constant = 0.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.' -->
+  <dd>The constant for constant-valued boundary extension.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  BOXCAR smooths the list of images specified by <i>input</i> with a
+  flat-topped rectangular kernel of dimensions <i>xwindow</i> by <i>ywindow</i>
+  and places the smoothed images in <i>output</i>. The type of boundary
+  extension is optional and set by the <i>boundary</i> parameter.
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Smooth an image using a 3 by 3 smoothing box and nearest neighbor boundary
      extension.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; boxcar m82 m82.box 3 3
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Time requirements</H3>
-  <! BeginSection: 'TIME REQUIREMENTS'>
-  <UL>
-  <P>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Time requirements</h3>
+  <!-- BeginSection: 'TIME REQUIREMENTS' -->
+  <p>
   BOXCAR requires approximately 30 cpu seconds to smooth a
   512 square real image with a  5 by 5 kernel (VAX 11/750 with fpa).
-  <P>
-  </UL>
-  <! EndSection:   'TIME REQUIREMENTS'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  <P>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   convolve, gauss, laplace, gradient
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

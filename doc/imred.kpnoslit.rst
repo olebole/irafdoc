@@ -1,5 +1,5 @@
-kpnoslit — KPNO low/moderate dispersion slits (Goldcam, RCspec, Whitecam)
-=========================================================================
+kpnoslit: KPNO low/moderate dispersion slits (Goldcam, RCspec, Whitecam)
+========================================================================
 
 .. toctree:: :maxdepth: 1
 

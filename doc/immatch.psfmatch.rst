@@ -1,439 +1,446 @@
 .. _psfmatch:
 
-psfmatch — Match the point-spread functions of 1-D or 2-D images
-================================================================
+psfmatch: Match the point-spread functions of 1-D or 2-D images
+===============================================================
 
 **Package: immatch**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   psfmatch -- match the point spread functions of 1 and 2D images
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   psfmatch input reference psfdata kernel 
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
-  <DD>The list of input images to be matched.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>reference</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='reference' Line='reference'>
-  <DD>The list of reference images to which the input images are to be matched if
-  <I>convolution</I> = "<TT>image</TT>", or the list of reference image psfs if 
-  <I>convolution</I> = "<TT>psf</TT>". The reference image psf must be broader than the
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
+  <dd>The list of input images to be matched.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>reference</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='reference' Line='reference' -->
+  <dd>The list of reference images to which the input images are to be matched if
+  <i>convolution</i> = <tt>"image"</tt>, or the list of reference image psfs if 
+  <i>convolution</i> = <tt>"psf"</tt>. The reference image psf must be broader than the
   input image psf in at least one dimension.
   The number of reference images/psfs must be one or equal to the number of
   input images.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>psfdata</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='psfdata' Line='psfdata'>
-  <DD>The list of objects used to compute the psf matching function if
-  <I>convolution</I> is "<TT>image</TT>", or the list of input image psfs if 
-  <I>convolution</I> is "<TT>psf</TT>". In the former case <I>psfdata</I> may be:
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>psfdata</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='psfdata' Line='psfdata' -->
+  <dd>The list of objects used to compute the psf matching function if
+  <i>convolution</i> is <tt>"image"</tt>, or the list of input image psfs if 
+  <i>convolution</i> is <tt>"psf"</tt>. In the former case <i>psfdata</i> may be:
   1) a string containing the x and y coordinates of a single object,
-  e.g. "<TT>51.0 105.0</TT>" or 2) the name of a text file containing a list of
+  e.g. <tt>"51.0 105.0"</tt> or 2) the name of a text file containing a list of
   objects, and the number of objects
   files must equal the number of reference images. In the latter case
   the number of input psf images must equal the number of input images.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>kernel</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='kernel' Line='kernel'>
-  <DD>The list of input/output psf matching function images to be convolved with the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>kernel</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='kernel' Line='kernel' -->
+  <dd>The list of input/output psf matching function images to be convolved with the
   input images to produce the output images. The number of kernel images
   must equal the number of input images.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output' Line='output = ""'>
-  <DD>The list of output matched images. If <I>output</I> is the NULL string
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
+  <dd>The list of output matched images. If <i>output</i> is the NULL string
   then the psf matching function is computed for each input image and written to
-  <I>kernel</I> but no output images are written. If <I>output</I> is not NULL
+  <i>kernel</i> but no output images are written. If <i>output</i> is not NULL
   then the number of output images must equal the number of input images.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>convolution = "<TT>image</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='convolution' Line='convolution = "image"'>
-  <DD>The algorithm used to compute the psf matching function. The options are:
-  <DL>
-  <DT><B>image</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='image' Line='image'>
-  <DD>The psf matching function is computed directly from the reference and input
-  image data using the objects specified in <I>psfdata</I>, the data
-  regions specified by <I>dnx</I>, <I>dny</I>, <I>pnx</I>, and <I>pny</I>,
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>convolution = <tt>"image"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='convolution' Line='convolution = "image"' -->
+  <dd>The algorithm used to compute the psf matching function. The options are:
+  <dl>
+  <dt><b>image</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='image' Line='image' -->
+  <dd>The psf matching function is computed directly from the reference and input
+  image data using the objects specified in <i>psfdata</i>, the data
+  regions specified by <i>dnx</i>, <i>dny</i>, <i>pnx</i>, and <i>pny</i>,
   and the convolution theorem.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>psf   </B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='psf' Line='psf   '>
-  <DD>The psf matching function is computed directly from pre-computed
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>psf   </b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='psf' Line='psf   ' -->
+  <dd>The psf matching function is computed directly from pre-computed
   reference and input image psfs using the convolution theorem.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>kernel</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='kernel' Line='kernel'>
-  <DD>No psf matching function is computed. Instead the psf matching function
-  is  read from the input image <I>kernel</I>.
-  </DD>
-  </DL>
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>dnx = 31, ls dny = 31</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='dnx' Line='dnx = 31, ls dny = 31'>
-  <DD>The x and y width of the data region to be extracted around each object. The
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>kernel</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='kernel' Line='kernel' -->
+  <dd>No psf matching function is computed. Instead the psf matching function
+  is  read from the input image <i>kernel</i>.
+  </dd>
+  </dl>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>dnx = 31, ls dny = 31</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='dnx' Line='dnx = 31, ls dny = 31' -->
+  <dd>The x and y width of the data region to be extracted around each object. The
   data region should be big enough to include both object and sky data.
-  <I>Dnx</I> and <I>dny</I> are not used if <I>convolution</I> is "<TT>psf</TT>" or
-  "<TT>kernel</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>pnx = 15, pny = 15</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='pnx' Line='pnx = 15, pny = 15'>
-  <DD>The x and y width of the psf matching function to be computed which must be
-  less than <I>dnx</I> and <I>dny</I> respectively. The psf
+  <i>Dnx</i> and <i>dny</i> are not used if <i>convolution</i> is <tt>"psf"</tt> or
+  <tt>"kernel"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>pnx = 15, pny = 15</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='pnx' Line='pnx = 15, pny = 15' -->
+  <dd>The x and y width of the psf matching function to be computed which must be
+  less than <i>dnx</i> and <i>dny</i> respectively. The psf
   matching function should be kept as small as possible to minimize
   the time required to compute the output image.
-  <I>Pnx</I> and <I>Pny</I> are not used if <I>convolution</I> is "<TT>psf</TT>" or
-  "<TT>kernel</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>center = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='center' Line='center = yes'>
-  <DD>Center the objects in <I>psfdata</I> before extracting the data from the
+  <i>Pnx</i> and <i>Pny</i> are not used if <i>convolution</i> is <tt>"psf"</tt> or
+  <tt>"kernel"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>center = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='center' Line='center = yes' -->
+  <dd>Center the objects in <i>psfdata</i> before extracting the data from the
   input and reference images. Centering should be turned off if the objects
   are non-stellar and do not have well-defined centers.
-  Centering is turned off if <I>convolution</I> is "<TT>psf</TT>" or
-  "<TT>kernel</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>background = median</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='background' Line='background = median'>
-  <DD>The default background function to be subtracted from the input
+  Centering is turned off if <i>convolution</i> is <tt>"psf"</tt> or
+  <tt>"kernel"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>background = median</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='background' Line='background = median' -->
+  <dd>The default background function to be subtracted from the input
   and reference image data in each object region before the
   psf matching function is computed. The background is computed using
-  data inside the data extraction region defined by <I>dnx</I> and <I>dny</I>
-  but outside the kernel region defined by <I>pnx</I> and <I>pny</I>.
-  Background fitting is turned off if <I>convolution</I> is "<TT>psf</TT>" or
-  "<TT>kernel</TT>".
+  data inside the data extraction region defined by <i>dnx</i> and <i>dny</i>
+  but outside the kernel region defined by <i>pnx</i> and <i>pny</i>.
+  Background fitting is turned off if <i>convolution</i> is <tt>"psf"</tt> or
+  <tt>"kernel"</tt>.
   The options are:
-  <DL>
-  <DT><B>none</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='none' Line='none'>
-  <DD>no background subtraction is done.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>"<TT>insky refsky</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='' Line='"insky refsky"'>
-  <DD>the numerical values of insky and refsky are subtracted from the
+  <dl>
+  <dt><b>none</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='none' Line='none' -->
+  <dd>no background subtraction is done.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b><tt>"insky refsky"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='' Line='"insky refsky"' -->
+  <dd>the numerical values of insky and refsky are subtracted from the
   input and reference image respectively.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>mean</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='mean' Line='mean'>
-  <DD>the mean of the input and reference image region is computed and subtracted
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>mean</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='mean' Line='mean' -->
+  <dd>the mean of the input and reference image region is computed and subtracted
   from the image data.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>median</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='median' Line='median'>
-  <DD>the median of the input and reference image region is computed and subtracted
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>median</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='median' Line='median' -->
+  <dd>the median of the input and reference image region is computed and subtracted
   from the data.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>plane</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='plane' Line='plane'>
-  <DD>a plane is fit to the input and reference image region and subtracted
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>plane</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='plane' Line='plane' -->
+  <dd>a plane is fit to the input and reference image region and subtracted
   from the data.
-  </DD>
-  </DL>
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>loreject = INDEF, ls hireject = INDEF</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='loreject' Line='loreject = INDEF, ls hireject = INDEF'>
-  <DD>The k-sigma rejection limits for removing the effects of bad data from the
+  </dd>
+  </dl>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>loreject = INDEF, ls hireject = INDEF</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='loreject' Line='loreject = INDEF, ls hireject = INDEF' -->
+  <dd>The k-sigma rejection limits for removing the effects of bad data from the
   background fit.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>apodize = 0.0</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='apodize' Line='apodize = 0.0'>
-  <DD>The fraction of the input and reference image data endpoints in x and y
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>apodize = 0.0</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='apodize' Line='apodize = 0.0' -->
+  <dd>The fraction of the input and reference image data endpoints in x and y
   to apodize with a
   cosine bell function before the psf matching function is computed.
-  Apodizing is turned off if <I>convolution</I> is "<TT>psf</TT>" or
-  "<TT>kernel</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>fluxratio = INDEF</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='fluxratio' Line='fluxratio = INDEF'>
-  <DD>The ratio of the integrated flux of the reference objects to the integrated
+  Apodizing is turned off if <i>convolution</i> is <tt>"psf"</tt> or
+  <tt>"kernel"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>fluxratio = INDEF</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='fluxratio' Line='fluxratio = INDEF' -->
+  <dd>The ratio of the integrated flux of the reference objects to the integrated
   flux of the input objects.
-  By default <I>fluxratio</I> is computed directly from the input data.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>filter = "<TT>replace</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='filter' Line='filter = "replace"'>
-  <DD>The filter used to remove high frequency noise from the psf
-  matching function. Filtering is not performed if <I>convolution</I>
-  is "<TT>kernel</TT>". The options are:
-  <DL>
-  <DT><B>cosbell</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='cosbell' Line='cosbell'>
-  <DD>apply a cosine bell taper to the psf matching function in frequency space. 
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>replace</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='replace' Line='replace'>
-  <DD>replace the high-frequency low signal-to-noise components of the psf matching
+  By default <i>fluxratio</i> is computed directly from the input data.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>filter = <tt>"replace"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='filter' Line='filter = "replace"' -->
+  <dd>The filter used to remove high frequency noise from the psf
+  matching function. Filtering is not performed if <i>convolution</i>
+  is <tt>"kernel"</tt>. The options are:
+  <dl>
+  <dt><b>cosbell</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='cosbell' Line='cosbell' -->
+  <dd>apply a cosine bell taper to the psf matching function in frequency space. 
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>replace</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='replace' Line='replace' -->
+  <dd>replace the high-frequency low signal-to-noise components of the psf matching
   function with a gaussian model computed from the low frequency
   high signal-to-noise components of the matching function.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>model</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='model' Line='model'>
-  <DD>replace the entire psf matching function with a gaussian model fit to the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>model</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='model' Line='model' -->
+  <dd>replace the entire psf matching function with a gaussian model fit to the
   low frequency high signal-to-noise components of the matching function.
-  </DD>
-  </DL>
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>sx1 = INDEF, sx2 = INDEF, sy1 = INDEF, sy2 = INDEF</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='sx1' Line='sx1 = INDEF, sx2 = INDEF, sy1 = INDEF, sy2 = INDEF'>
-  <DD>The limits of the cosine bell taper in frequency space. Frequency components
+  </dd>
+  </dl>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>sx1 = INDEF, sx2 = INDEF, sy1 = INDEF, sy2 = INDEF</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='sx1' Line='sx1 = INDEF, sx2 = INDEF, sy1 = INDEF, sy2 = INDEF' -->
+  <dd>The limits of the cosine bell taper in frequency space. Frequency components
   inside sx1 and sy1 are unaltered. Frequency components outside sx2 and sy2
   are set to 0.0. By default sx1 and sy1 are set to 0.0,
   and sx2 and sy2 are set to the largest frequency present in the data.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>radsym = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='radsym' Line='radsym = no'>
-  <DD>Compute a radially symmetric cosine bell function ?
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>threshold = 0.2</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 0.2'>
-  <DD>The low frequency cutoff in fraction of the total input image spectrum
-  power for the filtering options "<TT>replace</TT>" and "<TT>model</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>normfactor = 1.0</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='normfactor' Line='normfactor = 1.0'>
-  <DD>The total power in the computed psf matching function <I>kernel</I>. By default
-  the psf matching function is normalized.  If <I>normfactor</I>
-  is set to INDEF, then the total power is set to <I>fluxratio</I>.
-  <I>Normfactor</I> is not used if <I>convolution</I> is set "<TT>kernel</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>boundary_type = "<TT>nearest</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='boundary_type' Line='boundary_type = "nearest"'>
-  <DD>The boundary extension algorithm used to compute the output matched
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>radsym = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='radsym' Line='radsym = no' -->
+  <dd>Compute a radially symmetric cosine bell function ?
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>threshold = 0.2</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 0.2' -->
+  <dd>The low frequency cutoff in fraction of the total input image spectrum
+  power for the filtering options <tt>"replace"</tt> and <tt>"model"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>normfactor = 1.0</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='normfactor' Line='normfactor = 1.0' -->
+  <dd>The total power in the computed psf matching function <i>kernel</i>. By default
+  the psf matching function is normalized.  If <i>normfactor</i>
+  is set to INDEF, then the total power is set to <i>fluxratio</i>.
+  <i>Normfactor</i> is not used if <i>convolution</i> is set <tt>"kernel"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>boundary_type = <tt>"nearest"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='boundary_type' Line='boundary_type = "nearest"' -->
+  <dd>The boundary extension algorithm used to compute the output matched
   image.  The options are:
-  <DL>
-  <DT><B>nearest</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest'>
-  <DD>use the value of the nearest boundary pixel.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>constant</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='constant' Line='constant'>
-  <DD>use a constant value.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>reflect</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='reflect' Line='reflect'>
-  <DD>generate a value by reflecting about the boundary.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>wrap</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='wrap' Line='wrap'>
-  <DD>generate a value by wrapping around to the opposite side of the image.
-  </DD>
-  </DL>
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>constant = 0.0</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.0'>
-  <DD>The default constant for constant boundary extension.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>interactive = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = no'>
-  <DD>Compute the psf matching function for each image
+  <dl>
+  <dt><b>nearest</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest' -->
+  <dd>use the value of the nearest boundary pixel.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>constant</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='constant' Line='constant' -->
+  <dd>use a constant value.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>reflect</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='reflect' Line='reflect' -->
+  <dd>generate a value by reflecting about the boundary.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>wrap</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='wrap' Line='wrap' -->
+  <dd>generate a value by wrapping around to the opposite side of the image.
+  </dd>
+  </dl>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>constant = 0.0</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.0' -->
+  <dd>The default constant for constant boundary extension.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>interactive = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = no' -->
+  <dd>Compute the psf matching function for each image
   interactively using graphics cursor and, optionally, image cursor input.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verbose</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose'>
-  <DD>Print messages about the progress of the task in non-interactive mode.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>graphics = "<TT>stdgraph</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"'>
-  <DD>The default graphics device.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>display = "<TT>stdimage</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='display' Line='display = "stdimage"'>
-  <DD>The default image display device.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>gcommands = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""'>
-  <DD>The default graphics cursor.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>icommands = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""'>
-  <DD>The default image display cursor.
-  </DD>
-  </DL>
-  <P>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <P>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verbose</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose' -->
+  <dd>Print messages about the progress of the task in non-interactive mode.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>graphics = <tt>"stdgraph"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
+  <dd>The default graphics device.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>display = <tt>"stdimage"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='display' Line='display = "stdimage"' -->
+  <dd>The default image display device.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>gcommands = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""' -->
+  <dd>The default graphics cursor.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>icommands = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""' -->
+  <dd>The default image display cursor.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   PSFMATCH computes the convolution kernel required to match the
   point-spread functions
-  of the input images <I>input</I> to the point-spread functions of
-  the reference images <I>reference</I> using either the image data 
+  of the input images <i>input</i> to the point-spread functions of
+  the reference images <i>reference</i> using either the image data 
   or pre-computed psfs and the convolution theorem.
-  The computed psf matching functions are stored in the <I>kernel</I> images.
-  If a non-NULL list of output images <I>output</I> is
+  The computed psf matching functions are stored in the <i>kernel</i> images.
+  If a non-NULL list of output images <i>output</i> is
   specified the input images are
   convolved with the kernel images to produce a list of psf matched output
   images. PSFMATCH requires
   that the input and reference images be spatially registered
   and that the reference images have poorer resolution (broader PSF)
   than the input images in at least one dimension.
-  <P>
-  If <I>convolution</I> = "<TT>image</TT>", the matching function is computed directly
+  </p>
+  <p>
+  If <i>convolution</i> = <tt>"image"</tt>, the matching function is computed directly
   from the input and reference image data using the objects listed in
-  <I>psfdata</I> and the convolution theorem as described in the ALGORITHMS
-  section. <I>psfdata</I> is interpreted as either: 1) a
-  string defining the coordinates of a single object e.g. "<TT>103.3 189.2</TT>" or 2)
+  <i>psfdata</i> and the convolution theorem as described in the ALGORITHMS
+  section. <i>psfdata</i> is interpreted as either: 1) a
+  string defining the coordinates of a single object e.g. <tt>"103.3 189.2"</tt> or 2)
   the name of a text file containing the coordinates of one or 
   more objects, one object per line, with the x and y coordinates
   in columns 1 and 2 respectively.  The object coordinates, the
-  size of the data region to be extracted <I>dnx</I>
-  by <I>dny</I>, and the size of the kernel to be computed <I>pnx</I> and
-  <I>pny</I>, determine 
+  size of the data region to be extracted <i>dnx</i>
+  by <i>dny</i>, and the size of the kernel to be computed <i>pnx</i> and
+  <i>pny</i>, determine 
   the input and reference image regions used to compute the psf matching
   function.
   These image regions should be selected with care. Ideal regions 
   contain a single high signal-to-noise unsaturated star which has no close
   neighbors and is well centered on a pixel.
-  <P>
-  If <I>center</I> is "<TT>yes</TT>" and <I>convolution</I> is "<TT>image</TT>", the objects
-  in <I>psfdata</I> are centered before
+  </p>
+  <p>
+  If <i>center</i> is <tt>"yes"</tt> and <i>convolution</i> is <tt>"image"</tt>, the objects
+  in <i>psfdata</i> are centered before
   the data region is extracted.  Centering should be on if the objects
   are stellar, particularly if their coordinates were read from the image
   display cursor. Centering should be off if the objects are non-stellar and
   do not have well-defined centers.
-  <P>
-  If the <I>background</I> fitting algorithm is other than "<TT>none</TT>" and
-  <I>convolution</I> is "<TT>image</TT>", the background for each object is fit using 
+  </p>
+  <p>
+  If the <i>background</i> fitting algorithm is other than <tt>"none"</tt> and
+  <i>convolution</i> is <tt>"image"</tt>, the background for each object is fit using 
   data inside the region defined by
-  <I>dnx</I> and <I>dny</I> but outside the region defined by
-  <I>pnx</I> by <I>pny</I>. Bad data can be removed from the
-  background fit by setting the parameters <I>loreject</I> and <I>hireject</I>.
+  <i>dnx</i> and <i>dny</i> but outside the region defined by
+  <i>pnx</i> by <i>pny</i>. Bad data can be removed from the
+  background fit by setting the parameters <i>loreject</i> and <i>hireject</i>.
   A cosine bell function is applied to the edges of the data region
   after background fitting but before computing the psf matching function
-  if the <I>apodize</I> parameter is &gt; 0.0.
-  <P>
-  If <I>psfdata</I> contains more than one object, the extracted image data
+  if the <i>apodize</i> parameter is &gt; 0.0.
+  </p>
+  <p>
+  If <i>psfdata</i> contains more than one object, the extracted image data
   is weighted by the total intensity in the extracted region after
   background subtraction, and averaged to produce a single smoothed
   data region for each reference and input image.
-  <P>
-  If <I>convolution</I> = "<TT>psf</TT>",
+  </p>
+  <p>
+  If <i>convolution</i> = <tt>"psf"</tt>,
   the psf matching function is computed directly from the input image
   and reference
   image point-spread functions
   using the convolution theorem as described in the ALGORITHMS section.
-  In this case  <I>psfdata</I> is the list of input image psfs  and
-  <I>reference</I> are the corresponding reference image psfs written by
+  In this case  <i>psfdata</i> is the list of input image psfs  and
+  <i>reference</i> are the corresponding reference image psfs written by
   by some external psf modeling task. 
-  If <I>convolution</I> is "<TT>psf</TT>",
+  If <i>convolution</i> is <tt>"psf"</tt>,
   centering and background fitting
   are assumed to have been performed by the psf modeling task and are not
   performed by PSFMATCH.
-  <P>
+  </p>
+  <p>
   PSFMATCH requires that the total power in the psf matching function
   before normalization be the ratio
   of the integrated flux of the reference image/psf over the integrated
-  flux of the input image/psf. If <I>fluxratio</I> is INDEF, PSFMATCH
+  flux of the input image/psf. If <i>fluxratio</i> is INDEF, PSFMATCH
   estimates this number internally as described in the ALGORITHMS section,
-  otherwise the <I>fluxratio</I> is set to the value supplied by the user.
-  <P>
-  If <I>convolution</I> is "<TT>kernel</TT>", PSFMATCH reads the psf matching function
-  from the images in <I>kernel</I>  which were either
+  otherwise the <i>fluxratio</i> is set to the value supplied by the user.
+  </p>
+  <p>
+  If <i>convolution</i> is <tt>"kernel"</tt>, PSFMATCH reads the psf matching function
+  from the images in <i>kernel</i>  which were either
   created during a previous run of PSFMATCH or by a separate task.
-  <P>
+  </p>
+  <p>
   PSFMATCH provides several options for filtering out the ill-behaved
   noise-dominated high frequency components of the psf matching function
   that are produced when the ratio of reference / input image of psf
   fourier transforms is taken.
-  <P>
-  If <I>filter</I> is set to "<TT>cosbell</TT>", a cosine bell function
-  with a taper defined by <I>sx1</I>, <I>sx2</I>, <I>sy1</I>, and <I>sy2</I> and
+  </p>
+  <p>
+  If <i>filter</i> is set to <tt>"cosbell"</tt>, a cosine bell function
+  with a taper defined by <i>sx1</i>, <i>sx2</i>, <i>sy1</i>, and <i>sy2</i> and
   symmetry defined by radsym is applied to
   the psf matching function in frequency space. This filter
-  sets all the frequency components greater than <I>sx2</I> and <I>sy2</I>
-  to 0.0 and leaves all frequency components inside <I>sx1</I> and <I>sy1</I>
+  sets all the frequency components greater than <i>sx2</i> and <i>sy2</i>
+  to 0.0 and leaves all frequency components inside <i>sx1</i> and <i>sy1</i>
   unaltered. Users should exercise this option with caution as the effect
   of the filtering process can be to significantly
   broaden the computed psf matching function as described in the ALGORITHMS
   section.
-  <P>
+  </p>
+  <p>
   An alternative approach to dealing with the noisy
   high frequency components of the psf
   matching function it is to replace them with a reasonable guess. If the
@@ -442,15 +449,16 @@ psfmatch — Match the point-spread functions of 1-D or 2-D images
   reliably with an elliptical gaussian function. The model derived from the low
   frequency components of the matching can then be used to replace the high
   frequency components.
-  If <I>filter</I> is set to "<TT>replace</TT>", those high frequency components
+  If <i>filter</i> is set to <tt>"replace"</tt>, those high frequency components
   of the matching function  which have less than a fraction
-  <I>threshold</I> of their total power in the equivalent high frequency
+  <i>threshold</i> of their total power in the equivalent high frequency
   components of the divisor or input image transform,
   are replaced by a model computed by fitting a gaussian to the low frequency
   components of the matching function, as described in the ALGORITHMS section.
-  If <I>filter</I> = "<TT>model</TT>" then the entire psf matching function
+  If <i>filter</i> = <tt>"model"</tt> then the entire psf matching function
   is replaced with the best fitting gaussian model.
-  <P>
+  </p>
+  <p>
   Another problem can arise during the computation of the psf matching
   function . Occasionally it is not possible by means of a single execution
   of PSFMATCH to match the reference and input image psfs. An example
@@ -470,43 +478,45 @@ psfmatch — Match the point-spread functions of 1-D or 2-D images
   along this axis. PSFMATCH avoids this situation by internally limiting
   the psf matching function to a maximum value of fluxratio computed as described
   above. 
-  <P>
+  </p>
+  <p>
   By default the psf matching function is normalized to unit power before 
   output. This may not be what is desired since if carefully computed the
   internally computed quantity a contains information about differences
-  in exposure time, transparency, etc. If <I>normfactor</I> is set to
+  in exposure time, transparency, etc. If <i>normfactor</i> is set to
   a number of INDEF, the total power of the psf matching function will be
-  set to that value of <I>fluxratio</I> respectively.
-  <P>
+  set to that value of <i>fluxratio</i> respectively.
+  </p>
+  <p>
   If a list of output images names has been supplied then the computed
   psf matching function is applied to the input images to produce
   the output images using the boundary extension algorithm
-  defined by <I>boundary</I> and <I>constant</I>.
-  <P>
+  defined by <i>boundary</i> and <i>constant</i>.
+  </p>
+  <p>
   In non-interactive mode the parameters are set at task startup time and
-  the input images are processed sequentially. If the <I>verbose</I> flag
+  the input images are processed sequentially. If the <i>verbose</i> flag
   is set messages about the progress of the task are printed on he 
   screen as the task is running.
-  <P>
+  </p>
+  <p>
   In interactive mode the user can mark the regions to be used to compute
   the psf matching function on the image display, show/set the data
   and algorithm parameters, compute, recompute, and plot the psf matching
   function and its accompanying fourier spectrum, and experiment with the
   various filtering and modeling options.
-  <P>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Cursor commands</H3>
-  <! BeginSection: 'CURSOR COMMANDS'>
-  <UL>
-  <P>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Cursor commands</h3>
+  <!-- BeginSection: 'CURSOR COMMANDS' -->
+  <p>
   The following graphics cursor commands are currently available in
   PSFMATCH.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	Interactive Keystroke Commands
-  <P>
-  <P>
+  
+  
   ?	Print help 
   :	Colon commands
   k	Draw a contour plot of the psf matching kernel
@@ -517,25 +527,25 @@ psfmatch — Match the point-spread functions of 1-D or 2-D images
   f	Recompute the psf matching kernel
   w	Update the task parameters
   q	Exit
-  <P>
-  <P>
+  
+  
   	Colon Commands
-  <P>
-  <P>
+  
+  
   :mark	[file]		Mark objects on the display
   :show			Show current values of the parameters
-  <P>
-  <P>
+  
+  
   	Show/Set Parameters
-  <P>
-  <P>
+  
+  
   :input	    [string]	    Show/set the current input image name
   :reference  [string]	    Show/set the current reference image/psf name
   :psf	    [file/string]   Show/set the objects/input psf list
   :psfimage   [string]	    Show/set the current input psf name
   :kernel	    [string]	    Show/set the current psf matching kernel name
   :output     [string]	    Show/set the current output image name
-  <P>
+  
   :dnx	    [value]	    Show/set x width of data region(s) to extract
   :dny	    [value]	    Show/set y width of data region(s) to extract
   :pnx	    [value]	    Show/set x width of psf matching kernel
@@ -545,7 +555,7 @@ psfmatch — Match the point-spread functions of 1-D or 2-D images
   :loreject   [value]	    Show/set low side k-sigma rejection parameter
   :hireject   [value]	    Show/set high side k-sigma rejection parameter
   :apodize    [value]	    Show/set percent of endpoints to apodize
-  <P>
+  
   :filter	    [string]	    Show/set the filtering algorithm
   :fluxratio  [value]	    Show/set the reference/input psf flux ratio
   :sx1	    [value]	    Show/set inner x frequency for cosbell filter
@@ -555,14 +565,11 @@ psfmatch — Match the point-spread functions of 1-D or 2-D images
   :radsym	    [yes/no]        Show/set radial symmetry for cosbell filter
   :threshold  [value]	    Show/set %threshold for replace/modeling filter
   :normfactor [value]	    Show/set the kernel normalization factor
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'CURSOR COMMANDS'>
-  <H3>Algorithms</H3>
-  <! BeginSection: 'ALGORITHMS'>
-  <UL>
-  <P>
+  </pre>
+  <!-- EndSection:   'CURSOR COMMANDS' -->
+  <h3>Algorithms</h3>
+  <!-- BeginSection: 'ALGORITHMS' -->
+  <p>
   The problem of computing the psf matching function can expressed
   via the convolution theorem as shown below.
   In the following expressions r is the reference
@@ -572,26 +579,27 @@ psfmatch — Match the point-spread functions of 1-D or 2-D images
   a is a scale factor specifying the ratio of the total
   power in the reference data or psf to the total power in the input data or
   psf, * is the convolution operator, and FT is the fourier transform operator.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	r = ak * d
   	R = FT (r)
   	I = FT (i)
   	aK = R / I
   	ak = FT (aK)
-  </PRE>
-  <P>
+  </pre>
+  <p>
   The quantity ak is the desired psf matching function and aK is its fourier
   transform.
-  <P>
+  </p>
+  <p>
   If the background was accurately removed from the image or psf data before the
   psf matching function was computed, the quantity a is simply the central
   frequency component of the computed psf matching function aK as shown below.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	aK[0,0] = a = sum(r) / sum(i)
-  </PRE>
-  <P>
+  </pre>
+  <p>
   If the background was not removed from the image or psf data before the
   psf matching function was computed the previous expression is not valid.
   The computed aK[0,0] will include an offset and a must be estimated
@@ -600,159 +608,153 @@ psfmatch — Match the point-spread functions of 1-D or 2-D images
   of R and I along the x and y axes independently, average the fitted x and y
   amplitudes, and set aK[0,0] to the ratio of the resulting fitted amplitudes
   as shown below.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	      a = amplitude (R) / amplitude (I)
   	        = (sum(r) - sum(skyr)) / (sum(i) - sum(skyi))  
   	      aK[0,0] = a
-  </PRE>
-  <P>
+  </pre>
+  <p>
   This approach will work well as long as the image data or psf is reasonably
   gaussian but may not work well in arbitrary image regions. If the user is
   dissatisfied with either of the techniques described above they can
   set aK[0,0] to a pre-determined value of their own.
-  <P>
+  </p>
+  <p>
   If a filter is applied to the computed psf matching function in frequency
   space then instead of computing
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	       ak = FT (aK)
-  </PRE>
-  <P>
+  </pre>
+  <p>
   PSFMATCH actually computes
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	       ak' = FT (aKF) = ak * f
-  </PRE>
-  <P>
+  </pre>
+  <p>
   where F is the applied filter in frequency space and f is its
   fourier transform. Care should be taken in applying any filter.
   For example if F is the step function, then ak' will be the desired kernel
   ak convolved with f, a sinc function of frequency 2 * PI / hwidth where
   hwidth is the half-width of the step function, and the resulting k'
   will be too broad.
-  <P>
+  </p>
+  <p>
   If the user chooses to replace the high frequency components of the psf
   matching function with a best guess, PSFMATCH performs the following
   steps:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   1) fits an elliptical gaussian to those frequency components of the fourier
   spectrum of aK for which for which the amplitude of I is greater
   than threshold * I[0,0] to determine the geometry of the ellipse
-  <P>
+  
   2) uses the fourier shift theorem to preserve the phase information in the
   model and solve for any x and y shifts
-  <P>
+  
   3) replace those frequency components of aK for which the fourier spectrum
   of I is less than threshold * I[0,0] with the model values
-  <P>
+  
   		or alternatively
-  <P>
+  
   replace all of aK with the model values
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'ALGORITHMS'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
+  </pre>
+  <!-- EndSection:   'ALGORITHMS' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Psf match a list of input images taken at different epochs with variable
   seeing conditions to a reference image with the poorest seeing by marking
   several high signal-to-noise isolated stars on the displayed reference image
   and computing the psf matching function directly from the input and reference
   image data. User makes two runs with psfmatch one to compute and check the
   kernel images and one to match the images.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; display refimage 1 fi+
-  <P>
+  
   	cl&gt; rimcursor &gt; objects
-  <P>
-  	cl&gt; psfmatch @inimlist refimage objects @kernels dnx=31 \<BR>
+  
+  	cl&gt; psfmatch @inimlist refimage objects @kernels dnx=31 \<br>
   	    dny=31 pnx=15 pny=15
-  <P>
+  
   	cl&gt; imstat @kernels
-  <P>
-  	cl&gt; psfmatch @inlist refimage objects @kernels          \<BR>
+  
+  	cl&gt; psfmatch @inlist refimage objects @kernels          \<br>
   	    output=@outlist convolution="kernel"
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. Psf match two spectra using a high signal-to-noise portion of the
   data in the middle of the spectrum. Since the spectra are registered
   spatially and there is little data available for background fitting the
   user chooses to turn centering off and set the backgrounds manually.
-  <P>
-  <PRE>
-  	cl&gt; psfmatch inspec refspec "303.0 1.0" kernel         \<BR>
-  	    output=outspec dnx=31 dny=31 pnx=15 pny=15 center- \<BR>
+  </p>
+  <pre>
+  	cl&gt; psfmatch inspec refspec "303.0 1.0" kernel         \<br>
+  	    output=outspec dnx=31 dny=31 pnx=15 pny=15 center- \<br>
   	    back="403.6 452.0"
-  </PRE>
-  <P>
+  </pre>
+  <p>
   3. Psf match two images using psf functions inpsf and refpsf computed with
   the daophot package phot/psf/seepsf tasks. Since the kernel is fairly
   large use the stsdas fourier package task fconvolve to do the actual
   convolution. The boundary extension algorithm in fconvolve is equivalent
   to setting the psfmatch boundary extension parameters boundary and
-  constant to "<TT>constant</TT>" and "<TT>0.0</TT>" respectively.
-  <P>
-  <PRE>
+  constant to <tt>"constant"</tt> and <tt>"0.0"</tt> respectively.
+  </p>
+  <pre>
   	cl&gt; psfmatch inimage refpsf inpsf kernel convolution=psf
-  <P>
+  
   	cl&gt; fconvolve inimage kernel outimage
-  </PRE>
-  <P>
+  </pre>
+  <p>
   4. Psf match two images interactively using the image data itself to
   compute the psf matching function.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; psfmatch inimage refimage objects kernel interactive+
-  <P>
+  
   	    ... a contour plot of the psf matching function appears
   		with the graphics cursor ready to accept commands
-  <P>
+  
               ... type x and y to get line and column plots of the psf
                   matching function at various points and k to return
                   to the default contour plot
-  <P>
+  
   	    ... type ? to get a list of the available commands
-  <P>
+  
   	    ... type :mark to define a new set of objects
-  <P>
+  
   	    ... type f to recompute the psf matching function using
                   the new objects
-  <P>
+  
    	    ... increase the data window to 63 pixels in x and y
                   with the :dnx 63 and :dny 63 commands, at the
                   same time increase the psf function size to 31 with
   		the colon commands :pnx 31 and :pny 31
-  <P>
+  
   	    ... type f to recompute the psf matching function using
                   the new data and kernel windows
-  <P>
+  
   	    ... type q to quit the task, and q again to verify the previous
                   q command
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Time requirements</H3>
-  <! BeginSection: 'TIME REQUIREMENTS'>
-  <UL>
-  </UL>
-  <! EndSection:   'TIME REQUIREMENTS'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Time requirements</h3>
+  <!-- BeginSection: 'TIME REQUIREMENTS' -->
+  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   convolve, gauss, stsdas.fconvolve, digiphot.daophot.psf
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'CURSOR COMMANDS' 'ALGORITHMS' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'CURSOR COMMANDS' 'ALGORITHMS' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

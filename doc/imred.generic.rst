@@ -1,5 +1,5 @@
-generic — Generic image reductions tools
-========================================
+generic: Generic image reductions tools
+=======================================
 
 .. toctree:: :maxdepth: 1
 

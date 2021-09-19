@@ -1,141 +1,146 @@
 .. _rdumpf:
 
-rdumpf — Convert IPPS rasters from a DUMPF tape to IRAF images
-==============================================================
+rdumpf: Convert IPPS rasters from a DUMPF tape to IRAF images
+=============================================================
 
 **Package: mtlocal**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   rdumpf -- convert IPPS rasters from DUMPF tapes to IRAF images
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   rdumpf dumpf_file file_list iraf_file
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>dumpf_file</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='dumpf_file' Line='dumpf_file'>
-  <DD>The dumpf data source, i.e., the name of a magtape device.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>file_list</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='file_list' Line='file_list'>
-  <DD>A string listing the permanent files to be read from the DUMPF tape.  
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>iraf_file</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='iraf_file' Line='iraf_file'>
-  <DD>The IRAF file which will receive the image data if the <I>make_image</I>
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>dumpf_file</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='dumpf_file' Line='dumpf_file' -->
+  <dd>The dumpf data source, i.e., the name of a magtape device.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>file_list</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='file_list' Line='file_list' -->
+  <dd>A string listing the permanent files to be read from the DUMPF tape.  
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>iraf_file</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='iraf_file' Line='iraf_file' -->
+  <dd>The IRAF file which will receive the image data if the <i>make_image</i>
   parameter
   is set.  If more then one raster is being read, the output
-  filename is concatenated from the <I>iraf_file</I> parameter, the tape
+  filename is concatenated from the <i>iraf_file</i> parameter, the tape
   file number and the raster sequence number.  That is, reading rasters 1 - 3
-  from files 3 and 4 with iraf_file = <I>pic</I> would generate a sequence of 
+  from files 3 and 4 with iraf_file = <i>pic</i> would generate a sequence of 
   files:
   pic3.001, pic3.002, pic3.003, pic4.001, pic4.002, pic4.003.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>raster_list = "<TT>1-999</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='raster_list' Line='raster_list = "1-999"'>
-  <DD>A string listing the IPPS rasters to be read from each file specified by
-  the <I>file_list</I> parameter.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>make_image = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='make_image' Line='make_image = yes'>
-  <DD>This switch determines whether the IPPS rasters are converted to IRAF images.
-  When this switch is set to <I>no</I>, only a listing of the IPPS rasters is 
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>raster_list = <tt>"1-999"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='raster_list' Line='raster_list = "1-999"' -->
+  <dd>A string listing the IPPS rasters to be read from each file specified by
+  the <i>file_list</i> parameter.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>make_image = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='make_image' Line='make_image = yes' -->
+  <dd>This switch determines whether the IPPS rasters are converted to IRAF images.
+  When this switch is set to <i>no</i>, only a listing of the IPPS rasters is 
   produced, no output image is written.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>print_header = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='print_header' Line='print_header = yes'>
-  <DD>This switch determines if the IPPS header information will be listed for those
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>print_header = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='print_header' Line='print_header = yes' -->
+  <dd>This switch determines if the IPPS header information will be listed for those
   rasters being read.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>data_type = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='data_type' Line='data_type = ""'>
-  <DD>The data type of the output IRAF image.  If an incorrect data_type or null
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>data_type = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='data_type' Line='data_type = ""' -->
+  <dd>The data type of the output IRAF image.  If an incorrect data_type or null
   string is entered, the default data type used is determined by the number
   of bits per pixel in the IPPS raster.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   IPPS rasters stored in DUMPF format are read and optionally converted to
   IRAF images.  The IPPS ID and other header information is printed.
   The rasters to be converted are specified by both a file
   number and then a raster number within that file.  It may be helpful to
-  first run task <B>ldumpf</B> to list the contents of the DUMPF tape; only
+  first run task <b>ldumpf</b> to list the contents of the DUMPF tape; only
   IPPS rasters can be converted.  
-  <BR>
+  <br>
   Some dumpf volumes are written on more than one tape.
-  Task <I>rdumpf</I> cannot recover a file that is split across two tapes on 
-  a "<TT>multi-volume-set</TT>" dumpf tape.  It is, however, possible to read the files
+  Task <i>rdumpf</i> cannot recover a file that is split across two tapes on 
+  a <tt>"multi-volume-set"</tt> dumpf tape.  It is, however, possible to read the files
   beyond the leading partial file; this is done by incrementing the 
-  <B>file_list</B> parameter by 1.  For example, the first complete file 
-  on the second tape of a multi-volume-set is indicated by <B>file_list</B> = 2.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  <b>file_list</b> parameter by 1.  For example, the first complete file 
+  on the second tape of a multi-volume-set is indicated by <b>file_list</b> = 2.
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   [1] Convert all rasters in the 3rd permanent file on tape:
-  <P>
+  </p>
+  <p>
   	cl&gt; rdumpf mta 3 ipps
-  <P>
+  </p>
+  <p>
   [2] Convert all rasters in all permanent files:
-  <P>
+  </p>
+  <p>
   	cl&gt; rdumpf mta 1-999 ipps
-  <P>
+  </p>
+  <p>
   [3] List the first 10 IPPS rasters of the first permanent file:
-  <P>
+  </p>
+  <p>
   	cl&gt; rdumpf mta 1 raster_list=1-10 make_image=no
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  The Cyber format readers, including <I>rdumpf</I>, have not been implemented
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <p>
+  The Cyber format readers, including <i>rdumpf</i>, have not been implemented
   on SUN/IRAF and AOS/IRAF.
-  <P>
+  </p>
+  <p>
   The current version of IRAF magtape I/O does not read beyond the first
-  volume of a multivolume tape.  As described above, <I>rdumpf</I> cannot
+  volume of a multivolume tape.  As described above, <i>rdumpf</i> cannot
   read a file split across two tapes.
-  <BR>
+  <br>
   The record structure of a DUMPF tape is used to
   filter out noise records and extraneous bits that fill out a tape byte;
   this tape structure information is lost when the tape is copied to disk,
-  and so <B>rdumpf</B> may not be able to convert some DUMPF format disk files.
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  and so <b>rdumpf</b> may not be able to convert some DUMPF format disk files.
+  </p>
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   ldumpf
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

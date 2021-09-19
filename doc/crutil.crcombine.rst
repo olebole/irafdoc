@@ -1,63 +1,63 @@
 .. _crcombine:
 
-crcombine — Combine multiple exposures to eliminate cosmic rays
-===============================================================
+crcombine: Combine multiple exposures to eliminate cosmic rays
+==============================================================
 
 **Package: crutil**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   crcombine -- combine multiple exposures to eliminate cosmic rays
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage	</H3>
-  <! BeginSection: 'USAGE	'>
-  <UL>
-  <PRE>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage	</h3>
+  <!-- BeginSection: 'USAGE	' -->
+  <pre>
   crcombine input output
-  </PRE>
-  </UL>
-  <! EndSection:   'USAGE	'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  See parameters for <B>imcombine</B>.
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  This task is a version of <B>imcombine</B>.  See the help for that task
+  </pre>
+  <!-- EndSection:   'USAGE	' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <p>
+  See parameters for <b>imcombine</b>.
+  </p>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  This task is a version of <b>imcombine</b>.  See the help for that task
   for a description of the parameters and algorithms.
-  <P>
+  </p>
+  <p>
   For the purpose of removing cosmic rays the most useful options
-  are the "<TT>crreject</TT>" algorithm and/or combining with a median.  Many other
+  are the <tt>"crreject"</tt> algorithm and/or combining with a median.  Many other
   options may work as well.  The best use of this task depends on the
   number of images available.  If there are more than a few images the
-  images should be combined with an "<TT>average</TT>" and using a rejection
+  images should be combined with an <tt>"average"</tt> and using a rejection
   algorithm.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1.  To combine two images using the gain and read noise parameters in
   the image header:
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; crcombine obj012,obj013 abc gain=gain rdnoise=rdnoise 
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   imcombine
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

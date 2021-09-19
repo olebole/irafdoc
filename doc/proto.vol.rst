@@ -1,5 +1,5 @@
-vol — Prototype volume rendering package
-========================================
+vol: Prototype volume rendering package
+=======================================
 
 .. toctree:: :maxdepth: 1
 

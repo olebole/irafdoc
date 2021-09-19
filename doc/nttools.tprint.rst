@@ -1,27 +1,28 @@
 .. _tprint:
 
-tprint — Print tables--both headers and data.
-=============================================
+tprint: Print tables--both headers and data.
+============================================
 
 **Package: nttools**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   tprint -- Convert an STSDAS table to a readable ASCII file.
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   tprint table
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   This task is similar to the 'tdump' task in that it takes an STSDAS
   table and produces a file in ASCII format;
   however, this task offers more control over the appearance
@@ -29,7 +30,8 @@ tprint — Print tables--both headers and data.
   Formatting options are available
   to control the width and length of a page,
   and to produce the output in HTML, TeX or LaTeX format.
-  <P>
+  </p>
+  <p>
   By default, all rows and columns in the input tables will be printed,
   but the 'rows' and 'columns' parameters can be used
   to limit the range of rows and columns, respectively, that will be used.
@@ -45,84 +47,79 @@ tprint — Print tables--both headers and data.
   with columns kept together on a page--lines will not wrap.
   If different columns for each row are printed on separate pages,
   the row number will appear on each page, if 'showrow = yes'.
-  <P>
+  </p>
+  <p>
   The output will be printed to the standard output.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>table [file name template]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='table' Line='table [file name template]'>
-  <DD>The file names of tables to be printed.
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>table [file name template]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='table' Line='table [file name template]' -->
+  <dd>The file names of tables to be printed.
   This parameter will accept a general file name template,
   containing wildcard characters,
   individual file names with each file name separated by a comma,
-  or the name of a list file (preceded by the "<TT>@</TT>" character)
+  or the name of a list file (preceded by the <tt>"@"</tt> character)
   containing the file names of all tables to be processed.
   If more than one table is to be processed,
   a blank line will be printed between tables.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(prparam = no) [boolean]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(prparam = no) [boolean]'>
-  <DD>Should the header parameters be printed?
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(prdata = yes) [boolean]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(prdata = yes) [boolean]'>
-  <DD>Should the table data be printed?
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(pwidth = 80) [integer, min=40, max=INDEF]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(pwidth = 80) [integer, min=40, max=INDEF]'>
-  <DD>If the output is redirected,
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(prparam = no) [boolean]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(prparam = no) [boolean]' -->
+  <dd>Should the header parameters be printed?
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(prdata = yes) [boolean]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(prdata = yes) [boolean]' -->
+  <dd>Should the table data be printed?
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(pwidth = 80) [integer, min=40, max=INDEF]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(pwidth = 80) [integer, min=40, max=INDEF]' -->
+  <dd>If the output is redirected,
   'pwidth' specifies the width of the output page;
   otherwise, the screen size is taken from the environment variable 'ttyncols'.
   Columns that are too wide to fit within this page size
   (allowing also for the row number) will be truncated.
-  <P>
-  This parameter is not used if option = "<TT>html</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(plength = 0) [integer, min=0, max=INDEF]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(plength = 0) [integer, min=0, max=INDEF]'>
-  <DD>Lines of data per page.
+  This parameter is not used if option = <tt>"html"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(plength = 0) [integer, min=0, max=INDEF]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(plength = 0) [integer, min=0, max=INDEF]' -->
+  <dd>Lines of data per page.
   This is the number of rows from the table to be printed on each page;
   it does not include the line of column names.
   It does, however, include any blank lines inserted in the data
   because the user specified a value for 'lgroup'.
   The default of zero gives no page breaks.
-  <P>
-  This parameter is not used if option = "<TT>html</TT>".
-  <P>
+  This parameter is not used if option = <tt>"html"</tt>.
   If the 'sp_col' parameter is not null
   or if the 'lgroup' parameter is greater than zero,
   the blank lines between groups are included in the count of lines per page.
   Thus 'lgroup = 50' and 'plength = 51' would be consistent
   and would give the same result as 'lgroup = 0', 'plength = 50'.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(showrow = yes) [boolean]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(showrow = yes) [boolean]'>
-  <DD>Print the number of each row?
-  <P>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(showrow = yes) [boolean]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(showrow = yes) [boolean]' -->
+  <dd>Print the number of each row?
   If more than one page is needed in order to print all the columns specified,
   then the row numbers will be printed on each page.
   If 'showrow = no' then row numbers are not printed.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(orig_row = yes) [boolean]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(orig_row = yes) [boolean]'>
-  <DD>Print row numbers of the underlying table?
-  <P>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(orig_row = yes) [boolean]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(orig_row = yes) [boolean]' -->
+  <dd>Print row numbers of the underlying table?
   This parameter only has an effect if a row selector expression
   was included with the table name,
   in which case the table appears to have fewer rows
@@ -133,48 +130,45 @@ tprint — Print tables--both headers and data.
   when 'orig_row' is no,
   the selected rows are numbered sequentially starting with one,
   as if those were the only rows in the table.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(showhdr = yes) [boolean]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(showhdr = yes) [boolean]'>
-  <DD>Print header information?
-  <P>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(showhdr = yes) [boolean]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(showhdr = yes) [boolean]' -->
+  <dd>Print header information?
   The table name, date of last modification,
   and column names are printed only if 'showhdr = yes'.
-  If the 'option' parameter (see below) is set to either "<TT>latex</TT>" or "<TT>tex</TT>",
+  If the 'option' parameter (see below) is set to either <tt>"latex"</tt> or <tt>"tex"</tt>,
   then 'showhdr' will affect the printing of
   the default macro definitions for column separators
   and the end-of-line string as well as the begin-table string
-  (i.e., "<TT>\begin{tabular}...</TT>" or "<TT>\halign...</TT>").
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(showunits = yes) [boolean]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(showunits = yes) [boolean]'>
-  <DD>Print the units for each column?  If 'showunits = yes'
+  (i.e., <tt>"\begin{tabular}..."</tt> or <tt>"\halign..."</tt>).
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(showunits = yes) [boolean]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(showunits = yes) [boolean]' -->
+  <dd>Print the units for each column?  If 'showunits = yes'
   then the column units will be printed on the line below the column names.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(columns = "<TT></TT>") [string]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(columns = "") [string]'>
-  <DD>The names of the columns to be printed.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(columns = <tt>""</tt>) [string]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(columns = "") [string]' -->
+  <dd>The names of the columns to be printed.
   An alternative way to do this
   is to use a column selector with the table name
-  (type "<TT>help selectors</TT>" for more information).
-  <P>
+  (type <tt>"help selectors"</tt> for more information).
   A null or blank string means print all columns.
   This parameter is a column template--that is,
   either a list of column names
   or a template that can contain wildcard characters.
   The column names should be separated by commas or white space.
   The list of column names can be placed in a file
-  and the name of the file preceded by "<TT>@</TT>" passed to 'columns'.
+  and the name of the file preceded by <tt>"@"</tt> passed to 'columns'.
   If the first character in the column template
-  is the negation character (either "<TT>~</TT>" or "<TT>!</TT>"),
+  is the negation character (either <tt>"~"</tt> or <tt>"!"</tt>),
   all columns NOT named will be printed.
-  <P>
   If you want to use a list file for this parameter,
   the 'tlcol' task can be used to make the list
   (be sure to set the 'nlist' parameter to 1).
@@ -183,66 +177,63 @@ tprint — Print tables--both headers and data.
   The list produced by 'tlcol' can also be edited to
   rearrange column names (to change the order for printing)
   or to delete unwanted columns.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(rows = "<TT>-</TT>") [string]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(rows = "-") [string]'>
-  <DD>The range of rows which are to be printed.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(rows = <tt>"-"</tt>) [string]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(rows = "-") [string]' -->
+  <dd>The range of rows which are to be printed.
   An alternative way to do this
   is to use a row selector with the table name
-  (type "<TT>help selectors</TT>" for more information).
-  <P>
+  (type <tt>"help selectors"</tt> for more information).
   This parameter takes a character string
   defining either specific rows to be printed,
   a range of rows, or upper or lower limits on row numbers.
-  The default value "<TT>-</TT>" means print all rows.
-  The first ten rows could be specified as rows="<TT>1-10</TT>" or just rows="<TT>-10</TT>".
+  The default value <tt>"-"</tt> means print all rows.
+  The first ten rows could be specified as rows=<tt>"1-10"</tt> or just rows=<tt>"-10"</tt>.
   To print the first ten rows
-  and all rows from 900 through the last (inclusive), use rows="<TT>-10,900-</TT>".
-  Setting rows="<TT>1,3,7,23</TT>" will print only those four rows.
+  and all rows from 900 through the last (inclusive), use rows=<tt>"-10,900-"</tt>.
+  Setting rows=<tt>"1,3,7,23"</tt> will print only those four rows.
   It is not an error to specify rows larger than the largest row number;
   excess row numbers will simply be ignored.
-  (For more information type "<TT>help ranges</TT>".)
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(option = "<TT>plain</TT>") [string, allowed values: plain | html | latex | tex]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(option = "plain") [string, allowed values: plain | html | latex | tex]'>
-  <DD>The format in which output will be produced.
-  If option = "<TT>plain</TT>", the output will be ordinary ASCII text which may
+  (For more information type <tt>"help ranges"</tt>.)
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(option = <tt>"plain"</tt>) [string, allowed values: plain | html | latex | tex]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(option = "plain") [string, allowed values: plain | html | latex | tex]' -->
+  <dd>The format in which output will be produced.
+  If option = <tt>"plain"</tt>, the output will be ordinary ASCII text which may
   be read or printed directly.
   (See also the 'align' parameter, below.)
-  <P>
-  If option = "<TT>html</TT>",
+  If option = <tt>"html"</tt>,
   the output will be formatted with HTML tags,
-  and the output should be redirected to a file having the extension "<TT>.html</TT>".
-  <P>
-  If option = "<TT>latex</TT>",
+  and the output should be redirected to a file having the extension <tt>".html"</tt>.
+  If option = <tt>"latex"</tt>,
   the output will be formatted for use as input to LaTeX,
-  and if option = "<TT>tex</TT>",
+  and if option = <tt>"tex"</tt>,
   the output will be formatted for use as input to TeX.
   In these two cases the output should be redirected to a file having
-  the extension "<TT>.tex</TT>".
+  the extension <tt>".tex"</tt>.
   Each value in each row will be preceded by a column-separator of the
-  form "<TT>\cola</TT>" through "<TT>\colz</TT>", "<TT>\colA</TT>" through "<TT>\colZ</TT>".
+  form <tt>"\cola"</tt> through <tt>"\colz"</tt>, <tt>"\colA"</tt> through <tt>"\colZ"</tt>.
   (Yes, there
   is a limit of 52 columns to be printed on one page.)  If the row number
   is printed (i.e., by using the 'showrow' parameter) it will
-  be preceded by the string "<TT>\colzero</TT>"; the string "<TT>\cola</TT>" always
+  be preceded by the string <tt>"\colzero"</tt>; the string <tt>"\cola"</tt> always
   precedes the first column from the table.
-  The default definitions assign "<TT>\null</TT>" to the first of these
-  (either "<TT>\colzero</TT>" or "<TT>\cola</TT>") and assign "<TT>&amp;</TT>" to all the rest.
-  Each row may span several physical rows and is terminated by "<TT>\eol</TT>",
-  which has the default definition of "<TT>\\</TT>" or "<TT>\cr</TT>" as appropriate.
+  The default definitions assign <tt>"\null"</tt> to the first of these
+  (either <tt>"\colzero"</tt> or <tt>"\cola"</tt>) and assign <tt>"&amp;"</tt> to all the rest.
+  Each row may span several physical rows and is terminated by <tt>"\eol"</tt>,
+  which has the default definition of <tt>"\\"</tt> or <tt>"\cr"</tt> as appropriate.
   (See also the description of the parameter 'showhdr').
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(align = yes) [boolean]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(align = yes) [boolean]'>
-  <DD>Increase column width to align with header?  This parameter is only useful
-  when option = "<TT>plain</TT>".
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(align = yes) [boolean]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(align = yes) [boolean]' -->
+  <dd>Increase column width to align with header?  This parameter is only useful
+  when option = <tt>"plain"</tt>.
   If 'align = no', the print format stored in the table for each column
   will be used without modification.
   This can cause a problem in that some
@@ -254,12 +245,12 @@ tprint — Print tables--both headers and data.
   Note that you can set 'showhdr = no' but 'align = yes', in which case the
   column names will not be printed, but the columns will be spaced the
   same as if the names were printed.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(sp_col = "<TT></TT>") [string]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(sp_col = "") [string]'>
-  <DD>This is the name of a column in the table.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(sp_col = <tt>""</tt>) [string]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(sp_col = "") [string]' -->
+  <dd>This is the name of a column in the table.
   If it is specified (non-null),
   and if the column is found in the input table,
   a blank line will be printed
@@ -267,19 +258,18 @@ tprint — Print tables--both headers and data.
   from the value in the preceding row
   (or from the preceding element,
   if 'sp_col' contains arrays).
-  <P>
   The equality test is made on formatted
   values in the column so that the user has more control over spacing
   when the data type of 'sp_col' is either real or double.
   The print format may be changed using either the 'tedit' or 'tchcol' tasks.
   Both 'sp_col' and 'lgroup' may be used together,
   which may be useful if the 'sp_col' column does not change very often.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(lgroup = 0) [integer, min=0, max=INDEF]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(lgroup = 0) [integer, min=0, max=INDEF]'>
-  <DD>Print a blank line after each 'lgroup' lines.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(lgroup = 0) [integer, min=0, max=INDEF]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(lgroup = 0) [integer, min=0, max=INDEF]' -->
+  <dd>Print a blank line after each 'lgroup' lines.
   If 'lgroup' is greater than zero,
   a blank line will be printed between each block of 'lgroup' lines.
   These blank lines are included in the count for 'plength' (page length).
@@ -290,65 +280,61 @@ tprint — Print tables--both headers and data.
   The count of lines for these groups is reset at the beginning of each page,
   so even if lgroup+1 does not divide into 'plength',
   the first group on each page will have 'lgroup' lines.
-  <P>
   If any column that is being printed contains array elements
   rather than just scalar values,
   grouping by 'lgroup' will be applied to array elements
   rather than to row numbers.
-  If option = "<TT>plain</TT>"
+  If option = <tt>"plain"</tt>
   and the window width (or 'pwidth' if output is redirected)
   is not large enough for all the columns,
   the spacing can be by row number on some pages
   and element number on other pages,
   depending on which columns fit on those pages
   (i.e. whether the columns contain arrays).
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1.  Print all tables in the default directory.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	tt&gt; tprint *.tab
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2.  Print 'junk.tab', but rearrange the columns.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	tt&gt; tlcol junk nlist=1 &gt;colnames.lis
   	tt&gt; edit colnames.lis
           (Rearrange the column names and perhaps delete some of them.)
   	tt&gt; tprint junk columns=@colnames.lis
-  </PRE>
-  <P>
+  </pre>
+  <p>
   3.  After using the 'tinfo' task to find that 'big.tab' has 100000 rows,
   print the first five and last five rows.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	tt&gt; tprint big rows="1-5,99996-"
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>References</H3>
-  <! BeginSection: 'REFERENCES'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <!-- EndSection:   'BUGS' -->
+  <h3>References</h3>
+  <!-- BeginSection: 'REFERENCES' -->
+  <p>
   This task was written by Phil Hodge.
-  </UL>
-  <! EndSection:   'REFERENCES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'REFERENCES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   tdump, ranges
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

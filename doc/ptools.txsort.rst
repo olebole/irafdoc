@@ -1,104 +1,98 @@
 .. _txsort:
 
-txsort — Sort a list of apphot/daophot text databases
-=====================================================
+txsort: Sort a list of apphot/daophot text databases
+====================================================
 
 **Package: ptools**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   txsort -- sort a list of APPHOT/DAOPHOT text database file(s)
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   txsort textfile field
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>textfiles </B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='textfiles' Line='textfiles '>
-  <DD>The input APPHOT/DAOPHOT text database(s) to be sorted.
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>textfiles </b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='textfiles' Line='textfiles ' -->
+  <dd>The input APPHOT/DAOPHOT text database(s) to be sorted.
   The sort is performed in place.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>field</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='field' Line='field'>
-  <DD>The field to be sorted on. <I>Field</I> may be any quantity defined by
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>field</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='field' Line='field' -->
+  <dd>The field to be sorted on. <i>Field</i> may be any quantity defined by
   the APPHOT/DAOPHOT #K and #N keywords. The keywords may be
   of type integer or real, in which case a numeric sort is performed,
-  boolean, in which case the boolean constant "<TT>no</TT>" has a smaller value
-  than "<TT>yes</TT>", or character in which case an alphabetic sort is performed.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>ascend = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='ascend' Line='ascend = yes'>
-  <DD>Sort in increasing value order.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  boolean, in which case the boolean constant <tt>"no"</tt> has a smaller value
+  than <tt>"yes"</tt>, or character in which case an alphabetic sort is performed.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>ascend = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='ascend' Line='ascend = yes' -->
+  <dd>Sort in increasing value order.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   TXSORT is a simple task which accepts a list of APPHOT/DAOPHOT text
   database files
   and sorts them in place based on the value of the selected field
-  specifier <I>field</I>. By default the sort is performed in increasing order
+  specifier <i>field</i>. By default the sort is performed in increasing order
   of the value
-  of <I>field</I>, but a reverse sort can be performed by 
-  setting <I>ascend</I> = "<TT>no</TT>".
-  <P>
-  If <I>field</I> is a real or integer quantity the sort is numeric; if boolean
-  the boolean constant "<TT>no</TT>" is assumed to have a smaller value than "<TT>yes</TT>"; if
+  of <i>field</i>, but a reverse sort can be performed by 
+  setting <i>ascend</i> = <tt>"no"</tt>.
+  </p>
+  <p>
+  If <i>field</i> is a real or integer quantity the sort is numeric; if boolean
+  the boolean constant <tt>"no"</tt> is assumed to have a smaller value than <tt>"yes"</tt>; if
   character the sort is alphabetic.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1.  Sort the output of the APPHOT task PHOT in increasing order of
   the y position.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       pt&gt; txsort m92.mag.1 YCENTER
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. Sort the output of the DAOPHOT task ALLSTAR in increasing order of
      magnitude.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       pt&gt; txsort m92.al.1 MAG
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Time requirements</H3>
-  <! BeginSection: 'TIME REQUIREMENTS'>
-  <UL>
-  </UL>
-  <! EndSection:   'TIME REQUIREMENTS'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Time requirements</h3>
+  <!-- BeginSection: 'TIME REQUIREMENTS' -->
+  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   ptools.tbsort,tables.tsort,ptools.psort,sort
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

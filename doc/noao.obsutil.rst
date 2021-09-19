@@ -1,5 +1,5 @@
-obsutil — Observing utilities (planning or evaluation)
-======================================================
+obsutil: Observing utilities (planning or evaluation)
+=====================================================
 
 .. toctree:: :maxdepth: 1
 

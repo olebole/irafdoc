@@ -1,5 +1,5 @@
-dataio — Data format conversion package (RFITS, etc.)
-=====================================================
+dataio: Data format conversion package (RFITS, etc.)
+====================================================
 
 .. toctree:: :maxdepth: 1
 

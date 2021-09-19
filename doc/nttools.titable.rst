@@ -1,27 +1,28 @@
 .. _titable:
 
-titable — Insert 2-D tables into rows of a 3-D table.
-=====================================================
+titable: Insert 2-D tables into rows of a 3-D table.
+====================================================
 
 **Package: nttools**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   titable -- Inserts 2-D tables into rows of a 3-D table.
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   titable intable outtable
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   This task performs the inverse operation of task txtable: it inserts one or 
   more 2-D tables into rows of a 3-D table  The input may be a filename 
   template, including wildcard characters, or the name of a file (preceded by 
@@ -29,121 +30,124 @@ titable — Insert 2-D tables into rows of a 3-D table.
   If the output table exists, insertion will be done in place. If the output 
   table does not exist, it will be created. The input and output tables must 
   not be the same.
-  <P>
+  </p>
+  <p>
   This task supports row/column selectors in the input table names. These
   may be used to select subsets of both rows and columns from the input table.
   If no selectors are used, all columns and rows will be processed, 
   Type 'help selectors' to see a description of the selector syntax. 
-  <P>
+  </p>
+  <p>
   When creating a new output table, the information describing its columns
   can be taken from two sources. If parameter 'template' has the name of an
   existing 3-D table, the column descriptions, including maximum array sizes,
-  will be taken from that table. If 'template' has an invalid or null ("<TT></TT>")
+  will be taken from that table. If 'template' has an invalid or null (<tt>""</tt>)
   value, the column-defining information will be take from the first table 
   in the input list, where its number of rows will define the maximum array
   size allowed in the table being created. Column selectors are allowed in
   the template table.
-  <P>
+  </p>
+  <p>
   NOTE: Both the output and template table names must always be supplied 
   complete, including their extension. Otherwise the task may get confused 
   on the existence of an already existing table.
-  <P>
+  </p>
+  <p>
   Insertion is performed by first verifying if column names in both input
   and output tables match. If a match is found, values taken from that column
   and all selected rows from the input table will be stored as a 1-dimensional 
   array in a single cell in the corresponding column in the output 3-D table. 
   The row in this table where the insertion takes place is selected by the 
-  "<TT>row</TT>" task parameter. It points to the row where the first table in the input 
+  <tt>"row"</tt> task parameter. It points to the row where the first table in the input 
   list will be inserted, subsequent tables in the list will be inserted into 
-  subsequent rows. This mechanism is superseded if the "<TT>row</TT>" parameter is set 
-  to INDEF or a negative value, and the keyword "<TT>ORIG_ROW</TT>" is found in the 
+  subsequent rows. This mechanism is superseded if the <tt>"row"</tt> parameter is set 
+  to INDEF or a negative value, and the keyword <tt>"ORIG_ROW"</tt> is found in the 
   header of the input table. This keyword is created by task txtable and its 
   value supersedes the row counter in the task.
-  <P>
+  </p>
+  <p>
   If the maximum array size in a target column in the output 3-D table is
   larger than the number of selected input rows, the array will be filled 
   up starting from its first element, and the empty elements at the end will 
-  be set to INDEF (or "<TT></TT>" if it is a character string column). If the maximum 
+  be set to INDEF (or <tt>""</tt> if it is a character string column). If the maximum 
   array size is smaller than the number of selected rows, insertion begins by
   the first selected row up to the maximum allowable size, the remaining rows
   being ignored.
-  <P>
+  </p>
+  <p>
   This task correctly handles scalars stored in the input table header
   by task txtable. Since the selector mechanism does not work with these
   scalars, the task will always insert them into the output table, provided
   there is a match in column names.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>intable [file name list/template]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='intable' Line='intable [file name list/template]'>
-  <DD>A list of one or more tables to be inserted. Row/column selectors are supported.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>outtable [table name]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable [table name]'>
-  <DD>Name of 3-D output table, including extension. No support exists for 
-  "<TT>STDOUT</TT>" (ASCII output).
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(template = "<TT></TT>") [table name]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(template = "") [table name]'>
-  <DD>Name of 3-D table to be used as template when creating a new output table.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(row = INDEF) [int]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(row = INDEF) [int]'>
-  <DD>Row where insertion begins. If set to INDEF or a negative value, the row
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>intable [file name list/template]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='intable' Line='intable [file name list/template]' -->
+  <dd>A list of one or more tables to be inserted. Row/column selectors are supported.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>outtable [table name]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable [table name]' -->
+  <dd>Name of 3-D output table, including extension. No support exists for 
+  <tt>"STDOUT"</tt> (ASCII output).
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(template = <tt>""</tt>) [table name]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(template = "") [table name]' -->
+  <dd>Name of 3-D table to be used as template when creating a new output table.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(row = INDEF) [int]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(row = INDEF) [int]' -->
+  <dd>Row where insertion begins. If set to INDEF or a negative value, the row
   number will be looked for in the input table header.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(verbose = yes) [boolean]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(verbose = yes) [boolean]'>
-  <DD>Display names of input and output tables as files are processed ?
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(verbose = yes) [boolean]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(verbose = yes) [boolean]' -->
+  <dd>Display names of input and output tables as files are processed ?
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   Insert columns named FLUX and WAVELENGTH from input tables into a 3-D table:
-  <P>
-  <PRE>
+  </p>
+  <pre>
   cl&gt; titable "itable*.tab[c:FLUX,WAVELENGTH]" otable.tab
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <p>
   The output and template table names must be supplied in full, including 
-  the extension (e.g. "<TT>.tab</TT>"). If the output table name is not typed in full, 
+  the extension (e.g. <tt>".tab"</tt>). If the output table name is not typed in full, 
   the task will create a new table in place of the existing one, with only the 
   rows actually inserted. This behavior relates to the way the underlying 
-  "<TT>access</TT>" routine in IRAF's fio library works.
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>References</H3>
-  <! BeginSection: 'REFERENCES'>
-  <UL>
+  <tt>"access"</tt> routine in IRAF's fio library works.
+  </p>
+  <!-- EndSection:   'BUGS' -->
+  <h3>References</h3>
+  <!-- BeginSection: 'REFERENCES' -->
+  <p>
   This task was written by I. Busko.
-  </UL>
-  <! EndSection:   'REFERENCES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'REFERENCES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   txtable, selectors
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

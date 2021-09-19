@@ -1,5 +1,5 @@
-imcoords — Image coordinates package
-====================================
+imcoords: Image coordinates package
+===================================
 
 .. toctree:: :maxdepth: 1
 

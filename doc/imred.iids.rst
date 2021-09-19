@@ -1,5 +1,5 @@
-iids — KPNO IIDS spectral reductions
-====================================
+iids: KPNO IIDS spectral reductions
+===================================
 
 .. toctree:: :maxdepth: 1
 

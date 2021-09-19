@@ -1,27 +1,28 @@
 .. _tinfo:
 
-tinfo — Display table size information.
-=======================================
+tinfo: Display table size information.
+======================================
 
 **Package: nttools**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   tinfo -- Display information about a table.
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   tinfo table
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   This task is used to display information about a table.
   This information includes
   such things as the number of rows and columns.
@@ -30,65 +31,64 @@ tinfo — Display table size information.
   name preceded by a # sign.
   The values for the last table in the list are also put into parameters
   for the 'tinfo' task so that other tasks in a script may use the values.
-  <P>
+  </p>
+  <p>
   The parameters 'nrows', 'ncols', 'npar', 'rowlen', 'rowused', 'allrows',
   'maxpar', 'maxcols', 'tbltype', 'subtype' and 'tblversion'
   are output parameters.
   Since they are set rather than read by 'tinfo',
   any value assigned by the user will be overwritten.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>table [file name template]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='table' Line='table [file name template]'>
-  <DD>A list of tables for which size information is to be produced.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(ttout = yes) [boolean]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(ttout = yes) [boolean]'>
-  <DD>Display information on the terminal screen as it is being placed into
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>table [file name template]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='table' Line='table [file name template]' -->
+  <dd>A list of tables for which size information is to be produced.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(ttout = yes) [boolean]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(ttout = yes) [boolean]' -->
+  <dd>Display information on the terminal screen as it is being placed into
   parameters?  Setting 'ttout = no' will cause information to be placed
   only into task parameters.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(nrows) [integer]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(nrows) [integer]'>
-  <DD>The number of rows written to the table.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(nrows) [integer]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(nrows) [integer]' -->
+  <dd>The number of rows written to the table.
   This and all subsequent parameters are output task parameters;
   that is, they are written by the 'tinfo' task.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(ncols) [integer]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(ncols) [integer]'>
-  <DD>The number of columns in the table.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(npar) [integer]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(npar) [integer]'>
-  <DD>The number of header parameters in the table.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(rowlen) [real]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(rowlen) [real]'>
-  <DD>For a row-ordered table,
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(ncols) [integer]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(ncols) [integer]' -->
+  <dd>The number of columns in the table.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(npar) [integer]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(npar) [integer]' -->
+  <dd>The number of header parameters in the table.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(rowlen) [real]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(rowlen) [real]' -->
+  <dd>For a row-ordered table,
   'rowlen' is the amount of space allocated for each row in the table file.
   The unit of 'rowlen' is the size of a single-precision real number.
-  <P>
   This is only relevant for row-ordered STSDAS format tables.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(rowused) [real]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(rowused) [real]'>
-  <DD>'rowused' is the amount of the row length ('rowlen')
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(rowused) [real]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(rowused) [real]' -->
+  <dd>'rowused' is the amount of the row length ('rowlen')
   that has actually been used
   by the columns that have been defined,
   in units of the size of a real number.
@@ -97,60 +97,59 @@ tinfo — Display table size information.
   then 'rowused' would be four.
   If the table contains only one column of data type short,
   then 'rowused' would be 0.5.
-  <P>
   This is only relevant for row-ordered STSDAS format tables.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(allrows) [integer]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(allrows) [integer]'>
-  <DD>The number of allocated rows.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(allrows) [integer]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(allrows) [integer]' -->
+  <dd>The number of allocated rows.
   This is relevant only for column-ordered STSDAS format tables.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(maxpar) [integer]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(maxpar) [integer]'>
-  <DD>The space allocated for header parameters.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(maxcols) [integer]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(maxcols) [integer]'>
-  <DD>The space allocated for column descriptors.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(tbltype) [string]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(tbltype) [string]'>
-  <DD>The table type, currently either "<TT>stsdas</TT>", "<TT>fits</TT>" or "<TT>text</TT>".
-  "<TT>stsdas</TT>" is a machine dependent binary format,
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(maxpar) [integer]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(maxpar) [integer]' -->
+  <dd>The space allocated for header parameters.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(maxcols) [integer]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(maxcols) [integer]' -->
+  <dd>The space allocated for column descriptors.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(tbltype) [string]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(tbltype) [string]' -->
+  <dd>The table type, currently either <tt>"stsdas"</tt>, <tt>"fits"</tt> or <tt>"text"</tt>.
+  <tt>"stsdas"</tt> is a machine dependent binary format,
   the default .tab format.
-  "<TT>fits</TT>" means that the table is a TABLE or BINTABLE extension
+  <tt>"fits"</tt> means that the table is a TABLE or BINTABLE extension
   in a FITS file.
-  "<TT>text</TT>" is an ASCII file in tabular format.
+  <tt>"text"</tt> is an ASCII file in tabular format.
   See also 'subtype'.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(subtype) [string]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(subtype) [string]'>
-  <DD>For FITS tables the subtype can be either
-  "<TT>ascii</TT>" (a TABLE extension) or "<TT>binary</TT>" (a BINTABLE extension).
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(subtype) [string]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(subtype) [string]' -->
+  <dd>For FITS tables the subtype can be either
+  <tt>"ascii"</tt> (a TABLE extension) or <tt>"binary"</tt> (a BINTABLE extension).
   For text tables the subtype can be either
-  "<TT>simple</TT>" or "<TT>explicit column definitions</TT>".
+  <tt>"simple"</tt> or <tt>"explicit column definitions"</tt>.
   The latter subtype means there are column definition lines in the file,
-  in the format:  "<TT>#c column_name datatype print_format units</TT>".
+  in the format:  <tt>"#c column_name datatype print_format units"</tt>.
   A simple text table has column names c1, c2, etc., and no units.
   For STSDAS format tables
-  the subtype will be either "<TT>row ordered</TT>" or "<TT>column ordered</TT>",
+  the subtype will be either <tt>"row ordered"</tt> or <tt>"column ordered"</tt>,
   which indicates the way the elements are stored in the table file.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>(tblversion) [integer]</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='' Line='(tblversion) [integer]'>
-  <DD>The version code is an integer that identifies the version of
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>(tblversion) [integer]</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(tblversion) [integer]' -->
+  <dd>The version code is an integer that identifies the version of
   the tables package that created or last modified the table.
   For STSDAS tables, the version code is stored in the table file;
   for other formats this parameter is just
@@ -159,39 +158,36 @@ tinfo — Display table size information.
   the number is one for versions 1.3 through 1.3.3,
   the number is two beginning 1995 March 6,
   and the number is three beginning 1998 April 14.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Get size information about the file 'm87pol.tab',
   but do not print the information to STDOUT,
   just put the values into parameters.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	tt&gt; tinfo m87pol ttout=no
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>References</H3>
-  <! BeginSection: 'REFERENCES'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <!-- EndSection:   'BUGS' -->
+  <h3>References</h3>
+  <!-- BeginSection: 'REFERENCES' -->
+  <p>
   This task was written by Phil Hodge.
-  </UL>
-  <! EndSection:   'REFERENCES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'REFERENCES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   tlcol
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

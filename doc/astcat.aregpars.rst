@@ -1,150 +1,147 @@
 .. _aregpars:
 
-aregpars — Default region parameter set
-=======================================
+aregpars: Default region parameter set
+======================================
 
 **Package: astcat**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   aregpars -- edit the region extraction parameters
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   aregpars
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>rcra = "<TT>00:00:00.0</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='rcra' Line='rcra = "00:00:00.0"'>
-  <DD>The right ascension / longitude of the center of the region to be extracted.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>rcdec = "<TT>+00:00.00</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='rcdec' Line='rcdec = "+00:00.00"'>
-  <DD>The declination / latitude of the center of the region to be extracted.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>rrawidth = 10.0</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='rrawidth' Line='rrawidth = 10.0'>
-  <DD>The right ascension / longitude width in minutes of arc of the region to
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>rcra = <tt>"00:00:00.0"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='rcra' Line='rcra = "00:00:00.0"' -->
+  <dd>The right ascension / longitude of the center of the region to be extracted.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>rcdec = <tt>"+00:00.00"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='rcdec' Line='rcdec = "+00:00.00"' -->
+  <dd>The declination / latitude of the center of the region to be extracted.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>rrawidth = 10.0</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='rrawidth' Line='rrawidth = 10.0' -->
+  <dd>The right ascension / longitude width in minutes of arc of the region to
   be extracted.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>rdecwidth = 10.0</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='rdecwidth' Line='rdecwidth = 10.0'>
-  <DD>The declination / latitude width in minutes of arc of the region to
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>rdecwidth = 10.0</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='rdecwidth' Line='rdecwidth = 10.0' -->
+  <dd>The declination / latitude width in minutes of arc of the region to
   be extracted.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>rcsystem = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='rcsystem' Line='rcsystem = ""'>
-  <DD>The input celestial coordinate system. This is the celestial coordinate system
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>rcsystem = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='rcsystem' Line='rcsystem = ""' -->
+  <dd>The input celestial coordinate system. This is the celestial coordinate system
   of the region center. If the input celestial coordinate system is undefined it
   defaults to the query celestial coordinate system. Popular options are
-  "<TT>icrs</TT>", "<TT>j2000.0</TT>", and "<TT>b1950.0</TT>". The full set of options can be examined
-  by typing "<TT>help ccsystems</TT>".
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>rcraunits = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='rcraunits' Line='rcraunits = ""'>
-  <DD>The units of rcra. Permitted values are "<TT>hours</TT>", "<TT>degrees</TT>", and radians. If
+  <tt>"icrs"</tt>, <tt>"j2000.0"</tt>, and <tt>"b1950.0"</tt>. The full set of options can be examined
+  by typing <tt>"help ccsystems"</tt>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>rcraunits = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='rcraunits' Line='rcraunits = ""' -->
+  <dd>The units of rcra. Permitted values are <tt>"hours"</tt>, <tt>"degrees"</tt>, and radians. If
   rcraunits is undefined it defaults to the preferred units of the
   input celestial coordinate system, e.g. hours for equatorial coordinate
   system, degrees for ecliptic, galactic, and super-galactic coordinate
   systems.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>rcdecunits = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='rcdecunits' Line='rcdecunits = ""'>
-  <DD>The units of rcdec. Permitted values are "<TT>degrees</TT>" and "<TT>radians</TT>". If rcdecunits
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>rcdecunits = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='rcdecunits' Line='rcdecunits = ""' -->
+  <dd>The units of rcdec. Permitted values are <tt>"degrees"</tt> and <tt>"radians"</tt>. If rcdecunits
   is undefined it defaults to the preferred units of the input celestial
   coordinate system, e.g. degrees for all systems.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   The region to extracted from the selected astrometric catalog or image survey
-  is defined by the aregpars parameters <I>rcra</I>, <I>rcdec</I>, <I>rcrawidth</I>,
-  and <I>rcdecwidth</I>.
-  <P>
-  <I>rcra</I> and <I>rcdec</I> are defined in the input celestial coordinate system
-  specified by <I>rcsystem</I>.  If <I>rcsystem</I> is undefined it defaults to the
+  is defined by the aregpars parameters <i>rcra</i>, <i>rcdec</i>, <i>rcrawidth</i>,
+  and <i>rcdecwidth</i>.
+  </p>
+  <p>
+  <i>rcra</i> and <i>rcdec</i> are defined in the input celestial coordinate system
+  specified by <i>rcsystem</i>.  If <i>rcsystem</i> is undefined it defaults to the
   query celestial coordinate system defined by the qsystem query parameter in
   the catalog configuration file.
-  <P>
-  <I>rcra</I> and <I>rcdec</I> are expressed in the units specified by 
-  <I>rcraunits</I>, and <I>rcdecunits</I>.  If undefined <I>rcraunits</I> and
-  <I>rcdecunits</I> are expressed in the preferred units of the input
+  </p>
+  <p>
+  <i>rcra</i> and <i>rcdec</i> are expressed in the units specified by 
+  <i>rcraunits</i>, and <i>rcdecunits</i>.  If undefined <i>rcraunits</i> and
+  <i>rcdecunits</i> are expressed in the preferred units of the input
   celestial coordinate system, e.g. hours and degrees for equatorial coordinate
   systems, and degrees and degrees for ecliptic, galactic,
   and super-galactic coordinate systems.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. List the region extraction parameters.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   cl&gt; lpar aregpars
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2. Edit the region extraction parameters.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   cl&gt; aregpars
-  </PRE>
-  <P>
+  </pre>
+  <p>
   3. Edit the region extraction parameters from the agetcat task.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   cl&gt; epar agetcat
-  </PRE>
-  <P>
+  </pre>
+  <p>
   4. Save the current aregpars parameter values in a text file called
   areg1.par.  Use the saved parameter set in the next call to the agetcat 
   task.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   cl&gt; epar aregpars
   cl&gt; agetcat ... aregpars=areg1.par ...
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Time requirements</H3>
-  <! BeginSection: 'TIME REQUIREMENTS'>
-  <UL>
-  </UL>
-  <! EndSection:   'TIME REQUIREMENTS'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Time requirements</h3>
+  <!-- BeginSection: 'TIME REQUIREMENTS' -->
+  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   agetcat, agetim, help ccsystems
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

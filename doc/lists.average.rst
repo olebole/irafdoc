@@ -1,80 +1,83 @@
 .. _average:
 
-average — Compute the mean and standard deviation of a list
-===========================================================
+average: Compute the mean and standard deviation of a list
+==========================================================
 
 **Package: lists**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   average -- compute the average and standard deviation
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   average option
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>option</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='option' Line='option'>
-  <DD>Chosen from "<TT>add</TT>", "<TT>subtract</TT>" or "<TT>new_sample</TT>", 
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>option</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='option' Line='option' -->
+  <dd>Chosen from <tt>"add"</tt>, <tt>"subtract"</tt> or <tt>"new_sample"</tt>, 
   in which case the numbers averaged are those in STDIN.
-  If no argument is given on the command line, "<TT>new_sample</TT>" is assumed.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  Task <I>average</I> computes the average and standard deviation of a list
+  If no argument is given on the command line, <tt>"new_sample"</tt> is assumed.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  Task <i>average</i> computes the average and standard deviation of a list
   of numbers.  Numeric input is read from STDIN with one number per line.
   The mean, sigma and number of samples are written to the standard
   output.
-  <P>
+  </p>
+  <p>
   By default, the sample is taken to be
-  the set of numbers in the standard input when <I>average</I> is run. 
+  the set of numbers in the standard input when <i>average</i> is run. 
   Additional points can be added to or deleted from the sample by rerunning
-  <I>average</I> with <B>option</B> equal to one of the following:
-  <PRE>
-  <P>
+  <i>average</i> with <b>option</b> equal to one of the following:
+  </p>
+  <pre>
+  
   	add -- add points to the sample, recalculate mean and sigma
   	sub -- subtract points from the sample
-  </PRE>
-  <P>
-  The sample is reinitialized by setting <B>option</B> = "<TT>new_sample</TT>".
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  Run <I>average</I> on the list of numbers in file "<TT>numbers</TT>".
-  <PRE>
+  </pre>
+  <p>
+  The sample is reinitialized by setting <b>option</b> = <tt>"new_sample"</tt>.
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
+  Run <i>average</i> on the list of numbers in file <tt>"numbers"</tt>.
+  </p>
+  <pre>
   	
   	cl&gt; type numbers | average
-  </PRE>
-  <P>
-  Add in to the sample the list of numbers in file "<TT>numbers.2</TT>".
-  <PRE>
-  <P>
-  	cl&gt; average add &lt; numbers.2
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
-  lintran
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </pre>
+  <p>
+  Add in to the sample the list of numbers in file <tt>"numbers.2"</tt>.
+  </p>
+  <pre>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  	cl&gt; average add &lt; numbers.2
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
+  lintran
+  </p>
+  
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

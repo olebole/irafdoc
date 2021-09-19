@@ -1,5 +1,5 @@
-irs — KPNO IRS spectral reductions
-==================================
+irs: KPNO IRS spectral reductions
+=================================
 
 .. toctree:: :maxdepth: 1
 

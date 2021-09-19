@@ -1,59 +1,60 @@
 .. _gripes:
 
-gripes — Send suggestions, complaints, etc. to the system
-=========================================================
+gripes: Send suggestions, complaints, etc. to the system
+========================================================
 
 **Package: system**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   gripes -- send gripes or suggestions to the system
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   gripes subject
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>subject</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='subject' Line='subject'>
-  <DD>The subject of the gripe; any string, usually the name of package or task
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>subject</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='subject' Line='subject' -->
+  <dd>The subject of the gripe; any string, usually the name of package or task
   to which the gripe refers.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verbose = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes'>
-  <DD>Print instructions on how to enter text whenever <I>gripes</I> is run.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  The <B>gripes</B> task is used to post complaints, suggestions, or any other
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verbose = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
+  <dd>Print instructions on how to enter text whenever <i>gripes</i> is run.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  The <b>gripes</b> task is used to post complaints, suggestions, or any other
   formal or informal comments regarding the IRAF system.  Each gripe is
-  appended to the system gripesfile "<TT>hlib$gripesfile</TT>", a public file which
-  can be read by anyone by simply typing "<TT>page hlib$gripesfile</TT>" within IRAF.
-  Use <B>tail</B> instead of <B>page</B> to read only the most recent gripes.
+  appended to the system gripesfile <tt>"hlib$gripesfile"</tt>, a public file which
+  can be read by anyone by simply typing <tt>"page hlib$gripesfile"</tt> within IRAF.
+  Use <b>tail</b> instead of <b>page</b> to read only the most recent gripes.
   A copy of each gripe is also sent immediately to one or members of the IRAF
   group via electronic mail, to insure that the gripe gets read promptly (this
   feature is not available on all host systems).
-  <P>
+  </p>
+  <p>
   Gripe text is read from the standard input.  A line containing only a period
   terminates the gripe, as does the end of file character (e.g., &lt;ctrl/z&gt;).
-  If the line containing only "<TT>~e</TT>" is entered a text editor will be called up
+  If the line containing only <tt>"~e"</tt> is entered a text editor will be called up
   to edit the text of the gripe.
-  <P>
+  </p>
+  <p>
   Users are encouraged to use the gripe facility at will.  Be assured that
   someone will at least read the gripe, although there is no guarantee that
   any action will be taken.  In many cases there will be no response from the
@@ -62,43 +63,42 @@ gripes — Send suggestions, complaints, etc. to the system
   fear that you do not understand something about the system; if enough users
   find some aspect of the system or a program confusing then that is more
   than sufficient reason for a gripe.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
-  1.  The user has discovered some nasty features of the <I>imdelete</I> task
-  and enters the following gripe.  Note the use of the "<TT>.</TT>" to terminate
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
+  1.  The user has discovered some nasty features of the <i>imdelete</i> task
+  and enters the following gripe.  Note the use of the <tt>"."</tt> to terminate
   the text.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	cl&gt; gripe
   	Subject: image deletion
-  	Enter text of gripe.  Type &lt;eof&gt; or <TT>'.'</TT> to quit:
-  <P>
+  	Enter text of gripe.  Type &lt;eof&gt; or <tt>'.'</tt> to quit:
+  
   	IMDEL * will delete non image files as well as images!
   	It should be possible to delete images with the normal
   	DELETE command.
   	.
   	cl&gt;
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <p>
   There is currently no provision for communicating gripes from a remote site
   back to the site that wrote the software, unless some person manually mails
   a gripe (or the accumulated gripesfile).
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   news
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

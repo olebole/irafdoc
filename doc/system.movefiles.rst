@@ -1,75 +1,77 @@
 .. _movefiles:
 
-movefiles — Move files to a directory
-=====================================
+movefiles: Move files to a directory
+====================================
 
 **Package: system**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   movefiles -- move files to a directory
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   movefiles files directory
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>files</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='files' Line='files'>
-  <DD>A template specifying the file or files to be moved.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>directory</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='directory' Line='directory'>
-  <DD>The directory to which the files are to be moved.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>verbose = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no'>
-  <DD>If set to "<TT>yes</TT>", tell user as each file is moved.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>files</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='files' Line='files' -->
+  <dd>A template specifying the file or files to be moved.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>directory</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='directory' Line='directory' -->
+  <dd>The directory to which the files are to be moved.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>verbose = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
+  <dd>If set to <tt>"yes"</tt>, tell user as each file is moved.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   This routine moves the specified files to the named directory.
   If a subdirectory and a logical directory both exist with the same
   name as the destination directory, the subdirectory is used.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Move all files whose names start with `im' and end with `ab' to
-  the directory `dir'.  Since "<TT>verbose</TT>" defaults to "<TT>no</TT>", do the work silently.
-  <P>
+  the directory `dir'.  Since <tt>"verbose"</tt> defaults to <tt>"no"</tt>, do the work silently.
+  </p>
+  <p>
   	cl&gt; movefiles im*ab dir
-  <P>
+  </p>
+  <p>
   2. Move all files in the current directory into the directory one level up.
-  <P>
+  </p>
+  <p>
   	cl&gt; move * ..
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   copy, rename
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

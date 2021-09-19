@@ -1,71 +1,70 @@
 .. _qhistogram:
 
-qhistogram — Make histogram of multi-amplifier CCD image
-========================================================
+qhistogram: Make histogram of multi-amplifier CCD image
+=======================================================
 
 **Package: quadred**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   qhistogram -- Compute and print histogram for multi-amp data
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   qhistogram images
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>images</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='images' Line='images'>
-  <DD>List of image names in <B>quadformat</B>.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>window = "<TT>datasec</TT>" (datasec|trimsec|biassec)</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='window' Line='window = "datasec" (datasec|trimsec|biassec)'>
-  <DD>Type of section to use for histogram.  The choices are "<TT>datasec</TT>" for the
-  amplifier section which includes the bias if any is present, "<TT>trimsec</TT>" for
-  the trim section, and "<TT>biassec</TT>" for the bias section.
-  </DD>
-  </DL>
-  <P>
-  The remaining parameters come from the <B>imhistogram</B> task.
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  This script tasks uses the <B>quadsections</B> task to break the
-  <B>quadformat</B> data into separate sections and runs the <B>imhistogram</B>
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>images</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
+  <dd>List of image names in <b>quadformat</b>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>window = <tt>"datasec"</tt> (datasec|trimsec|biassec)</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='window' Line='window = "datasec" (datasec|trimsec|biassec)' -->
+  <dd>Type of section to use for histogram.  The choices are <tt>"datasec"</tt> for the
+  amplifier section which includes the bias if any is present, <tt>"trimsec"</tt> for
+  the trim section, and <tt>"biassec"</tt> for the bias section.
+  </dd>
+  </dl>
+  <p>
+  The remaining parameters come from the <b>imhistogram</b> task.
+  </p>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  This script tasks uses the <b>quadsections</b> task to break the
+  <b>quadformat</b> data into separate sections and runs the <b>imhistogram</b>
   task on the sections.  The graphics is collected onto a single page.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. To graph the histograms (default behavior).
-  <P>
-  <PRE>
+  </p>
+  <pre>
       qu&gt; qhist quad0072
       [graph appears]
-  </PRE>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   quadformat, quadsections, imhistogram
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

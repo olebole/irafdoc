@@ -1,100 +1,100 @@
 .. _wtextimage:
 
-wtextimage — Convert an IRAF image to a text file
-=================================================
+wtextimage: Convert an IRAF image to a text file
+================================================
 
 **Package: dataio**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   wtextimage -- convert an IRAF image to a text file
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   wtextimage input output
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
-  <DD>An IRAF image file name or template of file names to be converted.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
-  <DD>Name or root_name of output text file.  If more than one IRAF image
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
+  <dd>An IRAF image file name or template of file names to be converted.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
+  <dd>Name or root_name of output text file.  If more than one IRAF image
   is being converted, the ordinal of the file in the input file list
-  is appended to <I>output</I> to generate a unique output file name.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>header = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='header' Line='header = yes'>
-  <DD>This parameter determines whether or not a descriptive header precedes
-  the pixels written to the text file.  When <I>header = no</I>, only
+  is appended to <i>output</i> to generate a unique output file name.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>header = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='header' Line='header = yes' -->
+  <dd>This parameter determines whether or not a descriptive header precedes
+  the pixels written to the text file.  When <i>header = no</i>, only
   pixels values are converted; no header information is included in the
   output.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>pixels = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='pixels' Line='pixels = yes'>
-  <DD>This parameter determines whether or not to write the pixels to the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>pixels = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='pixels' Line='pixels = yes' -->
+  <dd>This parameter determines whether or not to write the pixels to the
   text file.  This can be set to no to only write out the header.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>format = "<TT></TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='format' Line='format = ""'>
-  <DD>Output format for each pixel.  If not set by the user, the appropriate output 
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>format = <tt>""</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='format' Line='format = ""' -->
+  <dd>Output format for each pixel.  If not set by the user, the appropriate output 
   pixel format is determined by the image data type.
-  Acceptable formats are chosen from "<TT>W.D[defgz]</TT>" where w is the field width and 
+  Acceptable formats are chosen from <tt>"W.D[defgz]"</tt> where w is the field width and 
   d specifies the precision.  Fortran formats of the form [iefgz]W.D are also
   acceptable.  If a field width of 0 is specified, (e.g., 0.6g),
   output will be free format with each output line containing as many pixels as
   will fit on the line.  This is the most space efficient format but requires
   that the reader program be able to handle free format (list directed) input.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>maxlinelen = 80</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='maxlinelen' Line='maxlinelen = 80'>
-  <DD>The maximum number of characters output per line of text; <B>maxlinelen</B>
-  must not exceed 322 characters.  (Note that tasks <I>rtextimage</I> and
-  <I>wcardimage</I> cannot read lines of text greater than 161 characters.)
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  IRAF images are converted to text files with procedure <B>wtextimage</B>.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>maxlinelen = 80</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='maxlinelen' Line='maxlinelen = 80' -->
+  <dd>The maximum number of characters output per line of text; <b>maxlinelen</b>
+  must not exceed 322 characters.  (Note that tasks <i>rtextimage</i> and
+  <i>wcardimage</i> cannot read lines of text greater than 161 characters.)
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  IRAF images are converted to text files with procedure <b>wtextimage</b>.
   The text file written consists of an optional header optionally followed by
   the pixel values.  The pixels are output in FITS order, that is, the
   leftmost subscript varies most rapidly.  The image header is written in the
-  "<TT>keyword = value  / comment</TT>" format of FITS.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  <tt>"keyword = value  / comment"</tt> format of FITS.
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Write a text file from an image section of dev$pix.  The default maximum
   linelength of 80 is used; an output format is specified.  The header portion 
   of the output text is as follows:
-  <DL>
-  <DT><B></B></DT>
-  <! Sec='EXAMPLES' Level=0 Label='' Line=' '>
-  <DD><PRE>
+  </p>
+  <dl>
+  <dt><b></b></dt>
+  <!-- Sec='EXAMPLES' Level=0 Label='' Line=' ' -->
+  <dd><pre>
   BITPIX  =                    8  /  8-bit ASCII characters
   NAXIS   =                    2  /  Number of Image Dimensions
   NAXIS1  =                   10  /  Length of axis
@@ -124,29 +124,32 @@ wtextimage — Convert an IRAF image to a text file
   F1POS   =                    2  / filter bolt I position
   F2POS   =                    0  / filter bolt II position
   END     
-  </PRE>
-  </DD>
-  </DL>
+  </pre>
+  </dd>
+  </dl>
+  <p>
                                                                                   
   2. Write a series of text files from the IRAF images having root name
-  "<TT>reduced</TT>".  One text file is written for each image. 
-  <P>
+  <tt>"reduced"</tt>.  One text file is written for each image. 
+  </p>
+  <p>
       cl&gt; wtext reduced.* txt 
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Time requirements</H3>
-  <! BeginSection: 'TIME REQUIREMENTS'>
-  <UL>
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Time requirements</h3>
+  <!-- BeginSection: 'TIME REQUIREMENTS' -->
+  <p>
   It takes almost 10 cpu minutes to convert a 512 square image of real pixels.
   A 512 square image of integer pixels takes about 3 cpu minutes.
-  </UL>
-  <! EndSection:   'TIME REQUIREMENTS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   wcardimage, rtextimage, noao.onedspec.wspectext
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'SEE ALSO'  -->
   

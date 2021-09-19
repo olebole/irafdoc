@@ -1,5 +1,5 @@
-imutil — Image utilities package
-================================
+imutil: Image utilities package
+===============================
 
 .. toctree:: :maxdepth: 1
 

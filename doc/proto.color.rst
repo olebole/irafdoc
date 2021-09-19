@@ -1,5 +1,5 @@
-color — Prototype color image display/conversion package
-========================================================
+color: Prototype color image display/conversion package
+=======================================================
 
 .. toctree:: :maxdepth: 1
 

@@ -1,121 +1,124 @@
 .. _linpol:
 
-linpol — Calculate polarization frames and Stoke's parameters
-=============================================================
+linpol: Calculate polarization frames and Stoke's parameters
+============================================================
 
 **Package: nproto**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   linpol -- Calculate linear polarization, angle, and Stokes images
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   linpol input output
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
-  <DD>A list of input images.  There must be either three or four input
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
+  <dd>A list of input images.  There must be either three or four input
   images taken with the polarizer at even multiples of a 45 degree
   position angle.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
-  <DD>The output data cube which will contain as separate bands the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
+  <dd>The output data cube which will contain as separate bands the
   fractional linear polarization and angle frames, and optionally the
   Stokes parameter frames.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>degrees = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='degrees' Line='degrees = yes'>
-  <DD>Report the polarization angle in degrees?  If <B>degrees</B> = no, the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>degrees = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='degrees' Line='degrees = yes' -->
+  <dd>Report the polarization angle in degrees?  If <b>degrees</b> = no, the
   polarization angle will be reported in radians.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>stokes = yes</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='stokes' Line='stokes = yes'>
-  <DD>Output the Stokes parameter images?  If <B>stokes</B> = yes, the three
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>stokes = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='stokes' Line='stokes = yes' -->
+  <dd>Output the Stokes parameter images?  If <b>stokes</b> = yes, the three
   linear Stokes parameters, I, Q, and U, will be included in the
-  <B>output</B> data cube as separate bands.  If <B>stokes</B> = no, only
+  <b>output</b> data cube as separate bands.  If <b>stokes</b> = no, only
   the fractional linear polarization and angle frames will appear in the
   output.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>normalize = no</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='normalize' Line='normalize = no'>
-  <DD>Normalize the Q and U frames?  This is appropriate when using a tool
-  such as VELVECT to plot the polarization vectors.  If <B>normalize</B> =
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>normalize = no</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='normalize' Line='normalize = no' -->
+  <dd>Normalize the Q and U frames?  This is appropriate when using a tool
+  such as VELVECT to plot the polarization vectors.  If <b>normalize</b> =
   yes, the Q and U Stokes parameter frames will be normalized by dividing
   by the I parameter frame.  This parameter has no effect on either the
   fractional polarization or angle frames.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>keyword = "<TT>polangle</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='keyword' Line='keyword = "polangle"'>
-  <DD>This must be set to the name of a header keyword that contains the
-  polarizer angle for each of the <B>input</B> images.  LINPOL will only
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>keyword = <tt>"polangle"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='keyword' Line='keyword = "polangle"' -->
+  <dd>This must be set to the name of a header keyword that contains the
+  polarizer angle for each of the <b>input</b> images.  LINPOL will only
   accept polarizer angles at even 45 degree separations.  Either four such
   frames, at 0-45-90-135 degrees, or three frames with any one of the
   0-45-90-135 degree frames omitted, may be specified.
-  </DD>
-  </DL>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
   LINPOL calculates the pixel-by-pixel fractional linear polarization and
   polarization angle for a set of either three or four images taken with
   polarizer set at even multiples of a 45 degree position angle.  At least
-  three different frames with the header <B>keyword</B> set to one of
-  0, 45, 90, or 135 degrees must be specified in the <B>input</B> list.
-  <P>
-  If <B>degrees</B> = yes, the output polarization angle band of the image
-  will be in units of degrees, if <B>degrees</B> = no, the angle will be
-  reported as radians.  If <B>stokes</B> = yes, the output image
+  three different frames with the header <b>keyword</b> set to one of
+  0, 45, 90, or 135 degrees must be specified in the <b>input</b> list.
+  </p>
+  <p>
+  If <b>degrees</b> = yes, the output polarization angle band of the image
+  will be in units of degrees, if <b>degrees</b> = no, the angle will be
+  reported as radians.  If <b>stokes</b> = yes, the output image
   will consist of five separate bands, one each for the pixel-by-pixel
   fractional linear polarization and the corresponding polarization angle,
   and one for each of the I, Q, and U pixel-by-pixel Stokes parameters.
-  If <B>stokes</B> = no, only the fractional polarization and the polarization
+  If <b>stokes</b> = no, only the fractional polarization and the polarization
   angle will be saved in the output.
-  <P>
-  The <B>normalize</B> parameter is useful for plotting purposes.
-  If <B>normalize</B> = yes, the Q and U Stokes parameter frames will be
+  </p>
+  <p>
+  The <b>normalize</b> parameter is useful for plotting purposes.
+  If <b>normalize</b> = yes, the Q and U Stokes parameter frames will be
   normalized by dividing by the I parameter frame.  This may be appropriate
   when using a tool such as VELVECT to plot the polarization vectors.
   This parameter has no effect on either the fractional polarization or
   angle frames.
-  <P>
+  </p>
+  <p>
   Each input image must contain the corresponding polarizer angle
-  in the header keyword specified by the parameter <B>keyword</B>
+  in the header keyword specified by the parameter <b>keyword</b>
   Linpol will only accept polarizer angles at even 45 degree separations.
   Either four such frames, at 0-45-90-135 degrees, or three frames with
   any one of the 0-45-90-135 degree frames omitted, may be specified.
-  <P>
+  </p>
+  <p>
   The output image header will include information describing the particular
   input images that went into its generation and the particular nature of
   each band of the output.
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   An observer obtained four exposures of a particular field through a
   polarizer set at a position angle of 0-45-90-135 degrees.  The first
   step in producing a good map of the polarized light from (extended
@@ -123,51 +126,54 @@ linpol — Calculate polarization frames and Stoke's parameters
   very precisely.  A slight mismatch in the positioning of each pixel
   relative to the shoulders of nearby sources or extended emission will
   result in large errors in the determination of the polarization quantities.
-  <P>
+  </p>
+  <p>
   Another preprocessing step that may be desirable is to match the PSFs
   (Point Spread Functions) of the various frames.  Ideally, these are
   stable in the raw data (i.e., the seeing at the telescope was constant),
   but if not they must be matched to avoid the same errors as above.  Note
-  that it may also be a good idea to "<TT>smooth</TT>" the raw images before
+  that it may also be a good idea to <tt>"smooth"</tt> the raw images before
   applying linpol to increase the signal-to-noise of the output.
-  <P>
+  </p>
+  <p>
   After guaranteeing the integrity of the input images, the image header
-  <B>keyword</B> must be created to contain the position angle.  The hedit
+  <b>keyword</b> must be created to contain the position angle.  The hedit
   task can be used to do this:
-  <P>
-  <PRE>
+  </p>
+  <pre>
       hedit im.00 polangle 0 add+
       hedit im.45 polangle 45 add+
       hedit im.90 polangle 90 add+
       hedit im.135 polangle 135 add+
-  </PRE>
-  <P>
+  </pre>
+  <p>
   At this point, the input images are ready to be processed by linpol.
-  <P>
+  </p>
+  <p>
   To generate an output image containing the fractional linear
   polarization and polarization angle in separate bands, along with the
   pixel-by-pixel Stokes parameter frames:
-  <P>
-  <PRE>
+  </p>
+  <pre>
       np&gt; linpol im.*.imh polar
-  </PRE>
-  <P>
+  </pre>
+  <p>
   To omit the Stokes parameter frames:
-  <P>
-  <PRE>
+  </p>
+  <pre>
       np&gt; linpol im.*.imh polar stokes-
-  </PRE>
-  <P>
+  </pre>
+  <p>
   To represent the pixel-by-pixel polarization angle in radians, rather
   than degrees:
-  <P>
-  <PRE>
+  </p>
+  <pre>
       np&gt; linpol im.*.imh polar degrees-
-  </PRE>
-  <P>
+  </pre>
+  <p>
   To normalize the Q and U Stokes frames and plot the result with velvect:
-  <P>
-  <PRE>
+  </p>
+  <pre>
       np&gt; linpol im.*.imh polar normalize+
       np&gt; imhead polar lo+
       polar[100,100,5][short]: Linear polarization image
@@ -176,7 +182,7 @@ linpol — Calculate polarization frames and Stoke's parameters
   	Created Wed 10:15:05 29-Apr-92, Last modified Wed 10:15:05 29-Apr-92
   	Pixel file 'ursa!/ursa/scr3/iraf/seaman/polar.pix' [ok]
   	...
-  <P>
+  
   	POL0    = 'im.00.imh'
   	POL45   = 'im.45.imh'
   	POL90   = 'im.90.imh'
@@ -187,24 +193,25 @@ linpol — Calculate polarization frames and Stoke's parameters
   	Q-STOKES= 'Band 4 is the normalized Stokes Q parameter'
   	U-STOKES= 'Band 5 is the normalized Stokes U parameter'
       np&gt; velvect polar[*,*,4] polar[*,*,5]
-  </PRE>
-  <P>
+  </pre>
+  <p>
   Note that the current version of the velvect task is not particularly
   appropriate for this use.  It has no support for reducing the pixel
   resolution of the output plot:  each pixel will generate a plotted vector
-  so that to produce an uncrowded (and low "<TT>noise</TT>") plot, the input images
+  so that to produce an uncrowded (and low <tt>"noise"</tt>) plot, the input images
   or output bands must be manually block averaged or otherwise smoothed.
   In addition, the plotted vectors are directed (little arrows) not
   undirected line segments, and the length of the vectors are not easily
   adjusted.
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   velvect, imalign, hedit
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

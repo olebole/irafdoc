@@ -1,5 +1,5 @@
-proto — Prototype or interim tasks
-==================================
+proto: Prototype or interim tasks
+=================================
 
 .. toctree:: :maxdepth: 1
 

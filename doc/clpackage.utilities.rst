@@ -1,5 +1,5 @@
-utilities — Miscellaneous utilities package
-===========================================
+utilities: Miscellaneous utilities package
+==========================================
 
 .. toctree:: :maxdepth: 1
 

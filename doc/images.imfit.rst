@@ -1,5 +1,5 @@
-imfit — Image fitting package
-=============================
+imfit: Image fitting package
+============================
 
 .. toctree:: :maxdepth: 1
 

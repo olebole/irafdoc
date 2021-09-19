@@ -1,243 +1,233 @@
 .. _gradient:
 
-gradient — Convolve a list of 1 or 2-D images with a gradient operator
-======================================================================
+gradient: Convolve a list of 1 or 2-D images with a gradient operator
+=====================================================================
 
 **Package: imfilter**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   gradient -- convolve a list of images with the gradient filter
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   gradient input output gradient
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>input</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='input' Line='input'>
-  <DD>List of images for which gradient images are to be calculated.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>output</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='output' Line='output'>
-  <DD>List of output images. The number of output images must equal the number of
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>input</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
+  <dd>List of images for which gradient images are to be calculated.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>output</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
+  <dd>List of output images. The number of output images must equal the number of
   input images. If the input image name equals the output image name the
   convolved image will replace the input image.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>gradient</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='gradient' Line='gradient'>
-  <DD>The gradient filters are a set of 8 three by three kernels identified by the
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>gradient</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='gradient' Line='gradient' -->
+  <dd>The gradient filters are a set of 8 three by three kernels identified by the
   angle of maximum response as measured counter-clockwise to the x axis. The
   kernels approximate the gradient operator, which is defined as the slope of
   the intensity distribution in an image.  The eight supported gradient
   operators are listed below.
-  <DL>
-  <DT><B>"<TT>0</TT>", "<TT>180</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='' Line='"0", "180"'>
-  <DD>Calculate the gradient image along a 0 or 180 degree angle.
+  <dl>
+  <dt><b><tt>"0"</tt>, <tt>"180"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='' Line='"0", "180"' -->
+  <dd>Calculate the gradient image along a 0 or 180 degree angle.
   These options approximate the d/dx operator.
-  Option "<TT>0</TT>" produces a maximum response for pixel values which
-  increase with increasing x, whereas option "<TT>180</TT>" produces a maximum
+  Option <tt>"0"</tt> produces a maximum response for pixel values which
+  increase with increasing x, whereas option <tt>"180"</tt> produces a maximum
   response for pixel values which decrease with increasing x. 
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>"<TT>90</TT>", "<TT>270</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='' Line='"90", "270"'>
-  <DD>Calculate the gradient image along a 90 or 270 degree angle.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b><tt>"90"</tt>, <tt>"270"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='' Line='"90", "270"' -->
+  <dd>Calculate the gradient image along a 90 or 270 degree angle.
   These options approximate the d/dy operator.
-  Option "<TT>90</TT>" produces a maximum response for pixel values which
-  increase with increasing y, whereas option "<TT>270</TT>" produces a maximum
+  Option <tt>"90"</tt> produces a maximum response for pixel values which
+  increase with increasing y, whereas option <tt>"270"</tt> produces a maximum
   response for pixel values which decrease with increasing y.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>"<TT>45</TT>", "<TT>225</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='' Line='"45", "225"'>
-  <DD>Calculate the gradient image along a 45 or 225 degree angle.
-  Option "<TT>45</TT>" produces a maximum response for pixel values which increase
+  </dd>
+  </dl>
+  <dl>
+  <dt><b><tt>"45"</tt>, <tt>"225"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='' Line='"45", "225"' -->
+  <dd>Calculate the gradient image along a 45 or 225 degree angle.
+  Option <tt>"45"</tt> produces a maximum response for pixel values which increase
   along a line at 45 degrees counter-clockwise to the x axis.
-  Option "<TT>225</TT>" produces
+  Option <tt>"225"</tt> produces
   a maximum response for pixel values which increase along a line at 225
   degrees to the x axis.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>"<TT>135</TT>", "<TT>315</TT>" </B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='' Line='"135", "315" '>
-  <DD>Calculate the gradient image along a 135 or 315 degree angle.
-  Option "<TT>135</TT>" produces a maximum response for pixel values which increase
+  </dd>
+  </dl>
+  <dl>
+  <dt><b><tt>"135"</tt>, <tt>"315"</tt> </b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='' Line='"135", "315" ' -->
+  <dd>Calculate the gradient image along a 135 or 315 degree angle.
+  Option <tt>"135"</tt> produces a maximum response for pixel values which increase
   along a line at 135 degrees counter-clockwise to the x axis.
-  Option "<TT>315</TT>" produces
+  Option <tt>"315"</tt> produces
   a maximum response for pixel values which increase along a line at 315
   degrees to the x axis.
-  </DD>
-  </DL>
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>boundary = "<TT>nearest</TT>"</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"'>
-  <DD>The algorithm used to compute the values of out of bounds pixels. The 
+  </dd>
+  </dl>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>boundary = <tt>"nearest"</tt></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"' -->
+  <dd>The algorithm used to compute the values of out of bounds pixels. The 
   options are:
-  <DL>
-  <DT><B>nearest</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest'>
-  <DD>Use the value of the nearest boundary pixel.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>constant</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='constant' Line='constant'>
-  <DD>Use a constant value.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>reflect</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='reflect' Line='reflect'>
-  <DD>Generate a value by reflecting around the boundary.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>wrap</B></DT>
-  <! Sec='PARAMETERS' Level=1 Label='wrap' Line='wrap'>
-  <DD>Generate a value by wrapping around to the opposite side of the image.
-  </DD>
-  </DL>
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>constant = 0.</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.'>
-  <DD>The constant for constant-valued boundary extension.
-  </DD>
-  </DL>
-  <P>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <P>
-  GRADIENT convolves the list of images specified by <I>input</I> with one of
-  eight three by three gradient kernels specified by <I>gradient</I> 
-  and places the output images in <I>output</I>.
-  If the image names in <I>output</I> equal the image names in <I>input</I> the
+  <dl>
+  <dt><b>nearest</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='nearest' Line='nearest' -->
+  <dd>Use the value of the nearest boundary pixel.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>constant</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='constant' Line='constant' -->
+  <dd>Use a constant value.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>reflect</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='reflect' Line='reflect' -->
+  <dd>Generate a value by reflecting around the boundary.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>wrap</b></dt>
+  <!-- Sec='PARAMETERS' Level=1 Label='wrap' Line='wrap' -->
+  <dd>Generate a value by wrapping around to the opposite side of the image.
+  </dd>
+  </dl>
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>constant = 0.</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.' -->
+  <dd>The constant for constant-valued boundary extension.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  GRADIENT convolves the list of images specified by <i>input</i> with one of
+  eight three by three gradient kernels specified by <i>gradient</i> 
+  and places the output images in <i>output</i>.
+  If the image names in <i>output</i> equal the image names in <i>input</i> the
   gradient operation is performed in place and the original images are
   overwritten. Out of bounds pixels are computed using the algorithm
-  specified by <I>boundary</I>.
-  <P>
+  specified by <i>boundary</i>.
+  </p>
+  <p>
   GRADIENT acts like a simple edge detector or high pass filter which is sensitive
   to both the magnitude and direction of changes in intensity in an image.
   For example, if an image's pixel values are specified by the sum of their
   x and y coordinates (z = x + y) and boundary extension effects are ignored,
-  the "<TT>0</TT>", "<TT>45</TT>", "<TT>90</TT>", "<TT>135</TT>", "<TT>180</TT>", "<TT>225</TT>", "<TT>270</TT>", and "<TT>315</TT>" gradient kernels
+  the <tt>"0"</tt>, <tt>"45"</tt>, <tt>"90"</tt>, <tt>"135"</tt>, <tt>"180"</tt>, <tt>"225"</tt>, <tt>"270"</tt>, and <tt>"315"</tt> gradient kernels
   will each produce a constant image containing the numbers 1, sqrt (2), 1, 0,
   -1, -sqrt (2), -1, and 0 respectively. 
-  <P>
+  </p>
+  <p>
   The eight gradient filters are listed below. The I[*,*] are the elements of
   the input image and the O[*,*] are elements of the output image.
-  <P>
-  <PRE>
+  </p>
+  <pre>
                            0
-  <P>
+  
   	    - I[-1,1]          + 0*I[0,1]  + I[1,1]
      O[0,0] = - I[-1,0]*sqrt(2)  + 0*I[0,0]  + I[1,0] * sqrt(2)  
   	    - I[-1,-1]         + 0*I[0,-1] + I[-1,-1]
-  <P>
+  
   			45
   	     
   	    + I[-1,1]*0          + I[0,1]   + I[1,1]/2/sqrt(2)
      O[0,0] = - I[-1,0]            + I[0,0]*0 + I[1,0] 
               - I[-1,-1]/2/sqrt(2) - I[0,-1]  + I[1,-1]*0 
-  <P>
+  
   			90
   	     
   	    + I[-1,1]    + I[0,1]*sqrt(2)  + I[1,1]
      O[0,0] = + I[-1,0]*0  + I[0,0]*0        + I[1,0]
   	    - I[-1,-1]   - I[0,-1]*sqrt(2) - I[-1,-1]
-  <P>
+  
   		       135
-  <P>
+  
   	    + I[-1,1]/2/sqrt(2) + I[0,1]   + I[1,1]*0
      O[0,0] = + I[-1,0]           + I[0,0]*0 - I[1,0]
               + I[-1,-1]*0        - I[0,-1]  - I[1,-1]/2/sqrt(2) 
-  <P>
+  
   			180
-  <P>
+  
   	    + I[-1,1]          + 0*I[0,1]  - I[1,1]
      O[0,0] = + I[-1,0]*sqrt(2)  + 0*I[0,0]  - I[1,0]*sqrt(2)
   	    + I[-1,-1]         + 0*I[0,-1] - I[-1,-1]
-  <P>
+  
   		       225
-  <P>
+  
   	    + I[-1,1]*0          - I[0,1]   - I[1,1]/2/sqrt(2)
      O[0,0] = + I[-1,0]            + I[0,0]*0 - I[1,0]
               + I[-1,-1]/2/sqrt(2) + I[0,-1]  + I[1,-1]*0 
-  <P>
+  
   		       270
-  <P>
+  
   	    - I[-1,1]    - I[0,1]*sqrt(2)  - I[1,1]
      O[0,0] = + I[-1,0]*0  + I[0,0]*0        + I[1,0]*0
   	    + I[-1,-1]   + I[0,-1]*sqrt(2) + I[-1,-1]
-  <P>
+  
   		      315
-  <P>
+  
   	    - I[-1,1]/2/sqrt(2) - I[0,1]   + I[1,1]*0
      O[0,0] = - I[-1,0]           + I[0,0]*0 + I[1,0]
               + I[-1,-1]*0        + I[0,-1]  + I[1,-1]/2/sqrt(2) 
-  <P>
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
+  
+  </pre>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Calculate the gradient in the 180 degree direction using nearest neighbor
      boundary extension.
-  <P>
-  <PRE>
+  </p>
+  <pre>
       cl&gt; gradient m83 m83.odeg 180
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Time requirements</H3>
-  <! BeginSection: 'TIME REQUIREMENTS'>
-  <UL>
-  <P>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Time requirements</h3>
+  <!-- BeginSection: 'TIME REQUIREMENTS' -->
+  <p>
   GRADIENT requires approximately 2.0 cpu seconds to convolve a
   512 square real image with a 3 by 3 gradient kernel on a Sparc Station 1.
-  <P>
-  </UL>
-  <! EndSection:   'TIME REQUIREMENTS'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
-  <P>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   convolve, gauss, laplace, boxcar
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

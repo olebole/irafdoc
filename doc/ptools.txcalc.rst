@@ -1,71 +1,70 @@
 .. _txcalc:
 
-txcalc — Do arithmetic on a list of apphot/daophot text databases
-=================================================================
+txcalc: Do arithmetic on a list of apphot/daophot text databases
+================================================================
 
 **Package: ptools**
 
 .. raw:: html
 
-  <H3>Name</H3>
-  <! BeginSection: 'NAME'>
-  <UL>
+  </tr></table><p>
+  <h3>Name</h3>
+  <!-- BeginSection: 'NAME' -->
+  <p>
   txcalc - perform an arithmetic operation on a field in a list of apphot/daophot
   	 text databases
-  </UL>
-  <! EndSection:   'NAME'>
-  <H3>Usage</H3>
-  <! BeginSection: 'USAGE'>
-  <UL>
+  </p>
+  <!-- EndSection:   'NAME' -->
+  <h3>Usage</h3>
+  <!-- BeginSection: 'USAGE' -->
+  <p>
   txcalc textfiles field value
-  </UL>
-  <! EndSection:   'USAGE'>
-  <H3>Parameters</H3>
-  <! BeginSection: 'PARAMETERS'>
-  <UL>
-  <DL>
-  <DT><B>textfiles</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='textfiles' Line='textfiles'>
-  <DD>The APPHOT/DAOPHOT text database(s) containing the field to be recomputed.
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>field </B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='field' Line='field '>
-  <DD>The field to be recomputed. Field must be an integer or real field
+  </p>
+  <!-- EndSection:   'USAGE' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>textfiles</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='textfiles' Line='textfiles' -->
+  <dd>The APPHOT/DAOPHOT text database(s) containing the field to be recomputed.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>field </b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='field' Line='field ' -->
+  <dd>The field to be recomputed. Field must be an integer or real field
   in the input file(s).
-  </DD>
-  </DL>
-  <DL>
-  <DT><B>value</B></DT>
-  <! Sec='PARAMETERS' Level=0 Label='value' Line='value'>
-  <DD>The arithmetic expression used to recompute the specified field.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>value</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='value' Line='value' -->
+  <dd>The arithmetic expression used to recompute the specified field.
   Value may be an integer or real expression but must match the data
   type of field. The functions real and int may be used to do type
   conversions.
-  </DD>
-  </DL>
-  <P>
-  </UL>
-  <! EndSection:   'PARAMETERS'>
-  <H3>Description</H3>
-  <! BeginSection: 'DESCRIPTION'>
-  <UL>
-  <P>
-  TXCALC reads in the values of the <I>field</I> keyword 
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  TXCALC reads in the values of the <i>field</i> keyword 
   from a set of  APPHOT/DAOPHOT text databases, replaces the old values
-  with new values equal to the value of the arithmetic expression <I>value</I>,
+  with new values equal to the value of the arithmetic expression <i>value</i>,
   and updates the text databases(s).
-  <P>
-  The expression <I>value</I> consists of variables which are the field names
+  </p>
+  <p>
+  The expression <i>value</i> consists of variables which are the field names
   specified by the #N keywords or the parameters specified by the
   #K keywords in the APPHOT/DAOPHOT text databases.
   Only keywords beginning with #N can actually be replaced.
-  <P>
+  </p>
+  <p>
   The supported
   arithmetic operators and functions are briefly described below.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   addition		+		subtraction		-
   multiplication		*		division		/
   negation		-		exponentiation		**
@@ -78,43 +77,38 @@ txcalc — Do arithmetic on a list of apphot/daophot text databases
   minimum			min(x,y)	maximum			max(x,y)
   convert to integer	int(x)		convert to real		real(x)
   nearest integer		nint(x)		modulo			mod(x)
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'DESCRIPTION'>
-  <H3>Examples</H3>
-  <! BeginSection: 'EXAMPLES'>
-  <UL>
-  <P>
+  </pre>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Change the XCENTER and YCENTER fields to XCENTER + 5.4 and YCENTER + 10.3
   respectively in a file produced by the apphot package center task.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	pt&gt; txcalc m92.ctr.1 xcenter "xcenter+5.4"
   	pt&gt; txcalc m92.ctr.1 ycenter "ycenter+10.3"
-  </PRE>
-  <P>
+  </pre>
+  <p>
   2.  Add a constant to the computed magnitudes produced by nstar.
-  <P>
-  <PRE>
+  </p>
+  <pre>
   	pt&gt; txcalc n4147.nst.2 mag "mag+3.457"
-  </PRE>
-  <P>
-  </UL>
-  <! EndSection:   'EXAMPLES'>
-  <H3>Bugs</H3>
-  <! BeginSection: 'BUGS'>
-  <UL>
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <p>
   TXCALC does not allow arrays in the expression field.
-  <P>
-  </UL>
-  <! EndSection:   'BUGS'>
-  <H3>See also</H3>
-  <! BeginSection: 'SEE ALSO'>
-  <UL>
+  </p>
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   ptools.tbcalc,tables.tcalc,ptools.pcalc
-  </UL>
-  <! EndSection:    'SEE ALSO'>
+  </p>
   
-  <! Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  >
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

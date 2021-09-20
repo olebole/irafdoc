@@ -1,0 +1,65 @@
+language: The command language itself
+=====================================
+
+.. toctree:: :maxdepth: 1
+
+   language/intro
+   language/commands
+   language/cursors
+   language/declarations
+   language/logging
+   language/parameters
+   language/access
+   language/back
+   language/beep
+   language/bye
+   language/cache
+   language/cd
+   language/chdir
+   language/cl
+   language/clbye
+   language/clear
+   language/defpac
+   language/defpar
+   language/deftask
+   language/defvar
+   language/dparam
+   language/edit
+   language/ehistory
+   language/envget
+   language/eparam
+   language/error
+   language/flprcache
+   language/gflush
+   language/hidetask
+   language/history
+   language/imaccess
+   language/jobs
+   language/keep
+   language/kill
+   language/logout
+   language/lparam
+   language/mathfcns
+   language/mktemp
+   language/osfn
+   language/package
+   language/prcache
+   language/print
+   language/printf
+   language/putlog
+   language/radix
+   language/redefine
+   language/reset
+   language/service
+   language/set
+   language/show
+   language/sleep
+   language/strings
+   language/stty
+   language/task
+   language/time
+   language/unlearn
+   language/update
+   language/wait
+   language/whereis
+   language/which

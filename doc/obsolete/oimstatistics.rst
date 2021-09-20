@@ -1,0 +1,146 @@
+.. _oimstatistics:
+
+oimstatistics: IMSTATISTICS from V2.11.3
+========================================
+
+**Package: obsolete**
+
+.. raw:: html
+
+  <h3>Usage	</h3>
+  <!-- BeginSection: 'USAGE	' -->
+  <p>
+  oimstatistics images
+  </p>
+  <!-- EndSection:   'USAGE	' -->
+  <h3>Parameters</h3>
+  <!-- BeginSection: 'PARAMETERS' -->
+  <dl>
+  <dt><b>images</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
+  <dd>Images for which pixel statistics are to be computed.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>fields = <span style="font-family: monospace;">"image,npix,mean,stddev,min,max"</span></b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='fields' Line='fields = "image,npix,mean,stddev,min,max"' -->
+  <dd>The statistical quantities to be computed and printed.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>lower = INDEF</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='lower' Line='lower = INDEF' -->
+  <dd>Use only pixels with values greater than or equal to this limit.
+  All pixels are above the default value of INDEF.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>upper = INDEF</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='upper' Line='upper = INDEF' -->
+  <dd>Use only pixels with values less than or equal to this limit.
+  All pixels are below the default value of INDEF.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>binwidth = 0.1</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='binwidth' Line='binwidth = 0.1' -->
+  <dd>The width of the histogram bins used for computing the midpoint (estimate
+  of the median) and the mode.
+  The units are in sigma.
+  </dd>
+  </dl>
+  <dl>
+  <dt><b>format = yes</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='format' Line='format = yes' -->
+  <dd>Label the output columns and print the result in fixed format. If format
+  is <span style="font-family: monospace;">"no"</span> no column labels are printed and the output is in free format.
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
+  <h3>Description</h3>
+  <!-- BeginSection: 'DESCRIPTION' -->
+  <p>
+  The statistical quantities specified by the parameter <i>fields</i> are
+  computed and printed for each image in the list specified by <i>images</i>.
+  The results are printed in tabular form with the fields listed in the order
+  they are specified in the fields parameter. The available fields are the
+  following.
+  </p>
+  <pre>
+  	 image - the image name
+  	  npix - the number of pixels used to do the statistics
+  	  mean - the mean of the pixel distribution
+  	 midpt - estimate of the median of the pixel distribution
+  	  mode - the mode of the pixel distribution
+  	stddev - the standard deviation of the pixel distribution
+  	  skew - the skew of the pixel distribution
+        kurtosis - the kurtosis of the pixel distribution
+  	   min - the minimum pixel value
+  	   max - the maximum pixel value
+  </pre>
+  <p>
+  The mean, standard deviation, skew, kurtosis, min and max are computed in a
+  single pass through the image using the expressions listed below.
+  Only the quantities selected by the fields parameter are actually computed.
+  </p>
+  <pre>
+            mean = sum (x1,...,xN) / N
+  	     y = x - mean
+        variance = sum (y1 ** 2,...,yN ** 2) / (N-1)
+          stddev = sqrt (variance)
+            skew = sum ((y1 / stddev) ** 3,...,(yN / stddev) ** 3) / (N-1)
+        kurtosis = sum ((y1 / stddev) ** 4,...,(yN / stddev) ** 4) / (N-1) - 3
+  </pre>
+  <p>
+  The midpoint and mode are computed in two passes through the image. In the
+  first pass the standard deviation of the pixels is calculated and used
+  with the <i>binwidth</i> parameter to compute the resolution of the data
+  histogram. The midpoint is estimated by integrating the histogram and
+  computing by interpolation the data value at which exactly half the
+  pixels are below that data value and half are above it. The mode is
+  computed by locating the maximum of the data histogram and fitting the
+  peak by parabolic interpolation.
+  </p>
+  <!-- EndSection:   'DESCRIPTION' -->
+  <h3>Examples</h3>
+  <!-- BeginSection: 'EXAMPLES' -->
+  <p>
+  1. To find the number of pixels, mean, standard deviation and the minimum
+  and maximum pixel value of a bias region in an image.
+  </p>
+  <pre>
+      cl&gt; oimstat flat*[*,1]
+      #      IMAGE      NPIX      MEAN    STDDEV       MIN       MAX
+        flat1[*,1]       800     999.5     14.09      941.     1062.
+        flat2[*,1]       800     999.4     28.87      918.     1413.
+  </pre>
+  <p>
+  The string <span style="font-family: monospace;">"flat*"</span> uses a wildcard to select all images beginning with the
+  word flat.  The string <span style="font-family: monospace;">"[*,1]"</span> is an image section selecting row 1.
+  </p>
+  <p>
+  2. Compute the mean, midpoint, mode and standard deviation of a pixel
+  distribution.
+  </p>
+  <pre>
+      cl&gt; oimstat m51 fields="image,mean,midpt,mode,stddev"
+      #      IMAGE    PIXELS      MEAN     MIDPT     MODE     STDDEV
+  	     M51    262144     108.3     88.75    49.4       131.3
+  </pre>
+  <!-- EndSection:   'EXAMPLES' -->
+  <h3>Bugs</h3>
+  <!-- BeginSection: 'BUGS' -->
+  <p>
+  When using a very large number of pixels the accumulation of the sums
+  of the pixel values to the various powers may
+  encounter roundoff error.  This is significant when the true standard
+  deviation is small compared to the mean.
+  </p>
+  <!-- EndSection:   'BUGS' -->
+  <h3>See also</h3>
+  <!-- BeginSection: 'SEE ALSO' -->
+  
+  <!-- EndSection:    'SEE ALSO' -->
+  
+  <!-- Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
+  

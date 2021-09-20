@@ -46,7 +46,7 @@ illumination: Determine illumination calibration
   </dd>
   </dl>
   <dl>
-  <dt><b>bins = <tt>""</tt></b></dt>
+  <dt><b>bins = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='bins' Line='bins = ""' -->
   <dd>Range string defining the dispersions bins within which the slit profiles
   are determined.  If the range string is null then the dispersion
@@ -62,7 +62,7 @@ illumination: Determine illumination calibration
   </dd>
   </dl>
   <dl>
-  <dt><b>sample = <tt>"*"</tt></b></dt>
+  <dt><b>sample = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"' -->
   <dd>Sample of points to use in fitting each slit profile.
   The sample is selected with a range string.
@@ -79,10 +79,10 @@ illumination: Determine illumination calibration
   </dd>
   </dl>
   <dl>
-  <dt><b>function = <tt>"spline3"</tt></b></dt>
+  <dt><b>function = <span style="font-family: monospace;">"spline3"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "spline3"' -->
   <dd>Function to fit to each dispersion bin to form the illumination function.
-  The options are <tt>"spline1"</tt>, <tt>"spline3"</tt>, <tt>"legendre"</tt>, and <tt>"chebyshev"</tt>.
+  The options are <span style="font-family: monospace;">"spline1"</span>, <span style="font-family: monospace;">"spline3"</span>, <span style="font-family: monospace;">"legendre"</span>, and <span style="font-family: monospace;">"chebyshev"</span>.
   </dd>
   </dl>
   <dl>
@@ -111,21 +111,21 @@ illumination: Determine illumination calibration
   </dd>
   </dl>
   <dl>
-  <dt><b>interpolator = <tt>"poly3"</tt></b></dt>
+  <dt><b>interpolator = <span style="font-family: monospace;">"poly3"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interpolator' Line='interpolator = "poly3"' -->
-  <dd>Interpolation type.  One of <tt>"nearest"</tt>, <tt>"linear"</tt>, <tt>"poly3"</tt>, <tt>"poly5"</tt>, or
-  <tt>"spline3"</tt>.
+  <dd>Interpolation type.  One of <span style="font-family: monospace;">"nearest"</span>, <span style="font-family: monospace;">"linear"</span>, <span style="font-family: monospace;">"poly3"</span>, <span style="font-family: monospace;">"poly5"</span>, or
+  <span style="font-family: monospace;">"spline3"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
-  <dd>Graphics output device.  May be one of the standard devices <tt>"stdgraph"</tt>,
-  <tt>"stdplot"</tt>, or <tt>"stdvdm"</tt> or an explicit device.
+  <dd>Graphics output device.  May be one of the standard devices <span style="font-family: monospace;">"stdgraph"</span>,
+  <span style="font-family: monospace;">"stdplot"</span>, or <span style="font-family: monospace;">"stdvdm"</span> or an explicit device.
   </dd>
   </dl>
   <dl>
-  <dt><b>cursor = <tt>""</tt></b></dt>
+  <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Graphics input device.  May be either null for the standard graphics cursor
   or a file containing cursor commands.
@@ -137,7 +137,7 @@ illumination: Determine illumination calibration
   <p>
   The interactive curve fitting package <b>icfit</b> is used to fit a function
   to the average calibration spectrum.  Additional help on using this package
-  and the cursor keys is available under the name <tt>"icfit"</tt>.
+  and the cursor keys is available under the name <span style="font-family: monospace;">"icfit"</span>.
   </p>
   <p>
   When the dispersion bins are set graphically the following cursor keys are
@@ -246,11 +246,11 @@ illumination: Determine illumination calibration
   The fitted functions may be examined and modified interactively when the
   parameter <i>interactive</i> is set.  The user is asked before each dispersion
   bin whether to perform the fit interactively.  The possible response are
-  <tt>"no"</tt>, <tt>"yes"</tt>, <tt>"NO"</tt>, and <tt>"YES"</tt>.  The lower case responses only affect the
+  <span style="font-family: monospace;">"no"</span>, <span style="font-family: monospace;">"yes"</span>, <span style="font-family: monospace;">"NO"</span>, and <span style="font-family: monospace;">"YES"</span>.  The lower case responses only affect the
   specified dispersion bin while the upper case responses affect all following
-  dispersion bins for the current image.  Thus, if the response is <tt>"NO"</tt> then
+  dispersion bins for the current image.  Thus, if the response is <span style="font-family: monospace;">"NO"</span> then
   no further prompts or interactive curve fitting need be performed while if
-  the response is <tt>"YES"</tt> there are no further prompts but the slit profile
+  the response is <span style="font-family: monospace;">"YES"</span> there are no further prompts but the slit profile
   for each dispersion bin must be graphed and exited with (q)uit.
   Changes to the fitting parameters remain in effect until they are next
   changed.  This allows the fitting parameters to be selected from only the first
@@ -265,7 +265,7 @@ illumination: Determine illumination calibration
   The cursor keys and colon commands are used to change the values
   of the fitting parameters, delete points, and window and expand the
   graph.  When the fitted function is satisfactory exit with
-  with a carriage return or <tt>'q'</tt>.  The prompt for the next dispersion bin will
+  with a carriage return or <span style="font-family: monospace;">'q'</span>.  The prompt for the next dispersion bin will
   then be given until the last dispersion bin has been fit.  The illumination
   calibration image is then created.
   </p>

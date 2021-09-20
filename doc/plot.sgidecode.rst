@@ -64,7 +64,7 @@ sgidecode: Decode an SGI format metacode file
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. Decode the metacode in file <tt>"home$vdm.sgi"</tt>.
+  1. Decode the metacode in file <span style="font-family: monospace;">"home$vdm.sgi"</span>.
   </p>
   <p>
       cl&gt; sgidecode home$vdm.sgi

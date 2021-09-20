@@ -112,20 +112,20 @@ curfit: Fit data with Chebyshev, Legendre or spline curve
   </dd>
   </dl>
   <dl>
-  <dt><b>calctype = <tt>"double"</tt></b></dt>
+  <dt><b>calctype = <span style="font-family: monospace;">"double"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='calctype' Line='calctype = "double"' -->
-  <dd>Calculation datatype.  The two datatypes are <tt>"real"</tt> (single precision) and
-  <tt>"double"</tt> (double precision).
+  <dd>Calculation datatype.  The two datatypes are <span style="font-family: monospace;">"real"</span> (single precision) and
+  <span style="font-family: monospace;">"double"</span> (double precision).
   </dd>
   </dl>
   <dl>
-  <dt><b>device = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>device = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdgraph"' -->
   <dd>The output device for interactive graphics.
   </dd>
   </dl>
   <dl>
-  <dt><b>cursor = <tt>"stdgcur"</tt></b></dt>
+  <dt><b>cursor = <span style="font-family: monospace;">"stdgcur"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = "stdgcur"' -->
   <dd>The source of graphics cursor input.
   </dd>
@@ -224,7 +224,7 @@ curfit: Fit data with Chebyshev, Legendre or spline curve
   
   </pre>
   <p>
-  2.  Fit a cubic spline to the last 12 columns of image <tt>"m74"</tt>.
+  2.  Fit a cubic spline to the last 12 columns of image <span style="font-family: monospace;">"m74"</span>.
   </p>
   <p>
      cl&gt; curfit m74[501:512,1:512] axis=2 func=spline3 order=5
@@ -236,8 +236,8 @@ curfit: Fit data with Chebyshev, Legendre or spline curve
   <b>curfit</b> is turned off.
   </p>
   <p>
-     cl&gt; graph points.list point+ mark=box wx1=.13 xlab=<tt>"X VALUES"</tt>\<br>
-     &gt;&gt;&gt; ylab=<tt>"Y VALUES"</tt> title=<tt>"Legendre fit to points.list"</tt>
+     cl&gt; graph points.list point+ mark=box wx1=.13 xlab=<span style="font-family: monospace;">"X VALUES"</span>\<br>
+     &gt;&gt;&gt; ylab=<span style="font-family: monospace;">"Y VALUES"</span> title=<span style="font-family: monospace;">"Legendre fit to points.list"</span>
   </p>
   <p>
      cl&gt; type points.list | curfit list+ inter- | graph append+

@@ -28,14 +28,14 @@ astcalc: Astronomical calculator
   <dd>A file of commands using the simple syntax given in the DESCRIPTION.  If no
   file name is given then the commands are read interactively from the
   standard input with a prompt given by the <i>prompt</i> parameter.  The
-  command input ends with either EOF or <tt>"quit"</tt>.  If a list of images and/or a
+  command input ends with either EOF or <span style="font-family: monospace;">"quit"</span>.  If a list of images and/or a
   table is specified the commands are repeated for each image or until the
-  end of the table is reached.  Comments beginning with <tt>'#'</tt>, blank lines, and
+  end of the table is reached.  Comments beginning with <span style="font-family: monospace;">'#'</span>, blank lines, and
   escaped newlines are allowed.
   </dd>
   </dl>
   <dl>
-  <dt><b>images = <tt>""</tt></b></dt>
+  <dt><b>images = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images = ""' -->
   <dd>Optional list of images.  The command input is repeated for each image.
   Image header keyword values may be read and used as variables and
@@ -44,7 +44,7 @@ astcalc: Astronomical calculator
   </dd>
   </dl>
   <dl>
-  <dt><b>table = <tt>""</tt></b></dt>
+  <dt><b>table = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='table' Line='table = ""' -->
   <dd>Optional text file containing columns of values.  The table consists of
   one or more lines of whitespace separated columns of values.  Note that a
@@ -55,12 +55,12 @@ astcalc: Astronomical calculator
   </dd>
   </dl>
   <dl>
-  <dt><b>prompt = <tt>"astcalc&gt; "</tt></b></dt>
+  <dt><b>prompt = <span style="font-family: monospace;">"astcalc&gt; "</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='prompt' Line='prompt = "astcalc&gt; "' -->
   <dd>When no command file is specified the input commands are read from the
   standard input (the terminal) and the value of the <i>prompt</i> string is
   printed as a prompt.  Note that if the input command file is specified as
-  <tt>"STDIN"</tt> there will be no prompt even though commands will also be read from
+  <span style="font-family: monospace;">"STDIN"</span> there will be no prompt even though commands will also be read from
   the standard input.
   </dd>
   </dl>
@@ -84,9 +84,9 @@ astcalc: Astronomical calculator
   This task may be used interactively or with input from a command file
   (<i>commands</i>).  If no command file is specified a prompt (<i>prompt</i>)
   is printed and commands are entered interactively.  The input is terminated
-  with either the end-of-file character (EOF) or the command <tt>"quit"</tt>.  Input
+  with either the end-of-file character (EOF) or the command <span style="font-family: monospace;">"quit"</span>.  Input
   command files simply contain the same input in a file and end with the end
-  of the file or <tt>"quit"</tt>.  The input commands, either those entered
+  of the file or <span style="font-family: monospace;">"quit"</span>.  The input commands, either those entered
   interactively or from a file, are repeated for each image in the image list
   and until the end of the input text table is reached, whichever comes
   first.  The image list and the table are optional and if neither is
@@ -96,7 +96,7 @@ astcalc: Astronomical calculator
   The command input consists of statements with each statement on a
   line by itself.  However long statements may be broken up with
   escaped newlines using the back-slash as the escape character;
-  i.e. \&lt;newline&gt;.  Comments beginning with <tt>'#'</tt>, blank lines,
+  i.e. \&lt;newline&gt;.  Comments beginning with <span style="font-family: monospace;">'#'</span>, blank lines,
   and whitespace are ignored.
   </p>
   <p>
@@ -112,19 +112,19 @@ astcalc: Astronomical calculator
   </p>
   <p>
   A variable is an arbitrary identifier which must begin with an alphabetic
-  character or <tt>'$'</tt> followed by an alphabetic character and may use alphabetic
-  characters, digits, or the characters <tt>'_'</tt>, <tt>'$'</tt>, or <tt>'.'</tt>.  Other special
+  character or <span style="font-family: monospace;">'$'</span> followed by an alphabetic character and may use alphabetic
+  characters, digits, or the characters <span style="font-family: monospace;">'_'</span>, <span style="font-family: monospace;">'$'</span>, or <span style="font-family: monospace;">'.'</span>.  Other special
   characters may be used but they must be set and referenced with the
-  special <tt>'@'</tt> operator described below.  Lower and upper
+  special <span style="font-family: monospace;">'@'</span> operator described below.  Lower and upper
   case characters may be used and are considered different characters; i.e.
   identifiers are case sensitive (as are function names).
   </p>
   <p>
-  There are a few special predefined variables: <tt>"$D"</tt> contains the current
-  local date (in new FITS YYYY-MM-DD), <tt>"$T"</tt> contains the current local
-  time, <tt>"$GMD"</tt> contains the current Greenwich meridian date (in FITS
-  YYYY-MM-DD format), <tt>"$GMT"</tt> contains the current Greenwich meridian time,
-  and <tt>"$GMDT"</tt> contains the current date and time in FITS YYYY-MM-DDTHH:MM:SS
+  There are a few special predefined variables: <span style="font-family: monospace;">"$D"</span> contains the current
+  local date (in new FITS YYYY-MM-DD), <span style="font-family: monospace;">"$T"</span> contains the current local
+  time, <span style="font-family: monospace;">"$GMD"</span> contains the current Greenwich meridian date (in FITS
+  YYYY-MM-DD format), <span style="font-family: monospace;">"$GMT"</span> contains the current Greenwich meridian time,
+  and <span style="font-family: monospace;">"$GMDT"</span> contains the current date and time in FITS YYYY-MM-DDTHH:MM:SS
   format.
   </p>
   <p>
@@ -149,7 +149,7 @@ astcalc: Astronomical calculator
   </p>
   <p>
   The following gives a more formal description of the statement syntax
-  and the special words <tt>"if"</tt>, <tt>"else"</tt>, <tt>"endif"</tt>, and <tt>"quit"</tt>.
+  and the special words <span style="font-family: monospace;">"if"</span>, <span style="font-family: monospace;">"else"</span>, <span style="font-family: monospace;">"endif"</span>, and <span style="font-family: monospace;">"quit"</span>.
   </p>
   <pre>
           &lt;variable&gt; = &lt;expression&gt;
@@ -165,9 +165,9 @@ astcalc: Astronomical calculator
           quit
   </pre>
   <p>
-  The result of the expression in the <tt>"if"</tt> statement is normally a logical
+  The result of the expression in the <span style="font-family: monospace;">"if"</span> statement is normally a logical
   value.  However, a numeric value of 0 is false while any other value is
-  true and any string beginning with either <tt>"y"</tt> or <tt>"Y"</tt> is true with
+  true and any string beginning with either <span style="font-family: monospace;">"y"</span> or <span style="font-family: monospace;">"Y"</span> is true with
   any other value being false; i.e. string values of yes and no may be used.
   </p>
   <p>
@@ -184,7 +184,7 @@ astcalc: Astronomical calculator
   ASCII range of characters, and * indicates zero or more occurrences.
   Stated in words, a variable must begin with an alphabetic character (ignoring
   an option leading $) and may be followed by any combinations of
-  alphabetic, digit, or <tt>'.'</tt>, <tt>'_'</tt>, and <tt>'$'</tt> characters.
+  alphabetic, digit, or <span style="font-family: monospace;">'.'</span>, <span style="font-family: monospace;">'_'</span>, and <span style="font-family: monospace;">'$'</span> characters.
   </p>
   <p>
   There are a few predefined variables which may be referenced in
@@ -200,8 +200,8 @@ astcalc: Astronomical calculator
   </p>
   <p>
   Though not recommended it is possible to use any set of characters
-  for a variable provided the variable is referenced as @<tt>"&lt;name&gt;"</tt>.
-  For example one could use @<tt>"date-obs"</tt> to include the character <tt>'-'</tt>.
+  for a variable provided the variable is referenced as @<span style="font-family: monospace;">"&lt;name&gt;"</span>.
+  For example one could use @<span style="font-family: monospace;">"date-obs"</span> to include the character <span style="font-family: monospace;">'-'</span>.
   </p>
   <p>
   EXPRESSIONS
@@ -217,8 +217,8 @@ astcalc: Astronomical calculator
   <p>
   Additional information may be found in the help for <b>hedit</b> except that
   all unquoted nonnumeric strings are considered to be variables and so the
-  <tt>'('</tt>, <tt>')'</tt> operators are not used.  The <tt>"field"</tt> references are not needed so
-  the references <tt>"."</tt> and  <tt>"$"</tt> are not used and are not legal variable
+  <span style="font-family: monospace;">'('</span>, <span style="font-family: monospace;">')'</span> operators are not used.  The <span style="font-family: monospace;">"field"</span> references are not needed so
+  the references <span style="font-family: monospace;">"."</span> and  <span style="font-family: monospace;">"$"</span> are not used and are not legal variable
   names in this task.
   </p>
   <p>
@@ -226,7 +226,7 @@ astcalc: Astronomical calculator
   </p>
   <p>
   The following operators are recognized in expressions.  With the exception
-  of the operators <tt>"?"</tt> and <tt>"?="</tt>, the operator set is equivalent to that
+  of the operators <span style="font-family: monospace;">"?"</span> and <span style="font-family: monospace;">"?="</span>, the operator set is equivalent to that
   available in the CL and SPP languages.
   </p>
   <pre>
@@ -241,7 +241,7 @@ astcalc: Astronomical calculator
   	@			reference a variable
   </pre>
   <p>
-  The operators <tt>"=="</tt>, <tt>"&amp;&amp;"</tt>, and <tt>"||"</tt> may be abbreviated as <tt>"="</tt>, <tt>"&amp;"</tt>, and <tt>"|"</tt>
+  The operators <span style="font-family: monospace;">"=="</span>, <span style="font-family: monospace;">"&amp;&amp;"</span>, and <span style="font-family: monospace;">"||"</span> may be abbreviated as <span style="font-family: monospace;">"="</span>, <span style="font-family: monospace;">"&amp;"</span>, and <span style="font-family: monospace;">"|"</span>
   if desired.  The ?= operator performs pattern matching upon strings.
   </p>
   <p>
@@ -274,9 +274,9 @@ astcalc: Astronomical calculator
   A function call may take either of the following forms:
   </p>
   <pre>
-          &lt;identifier&gt; <tt>'('</tt> arglist <tt>')'</tt>
+          &lt;identifier&gt; <span style="font-family: monospace;">'('</span> arglist <span style="font-family: monospace;">')'</span>
   or
-          &lt;string_expr&gt; <tt>'('</tt> arglist <tt>')'</tt>
+          &lt;string_expr&gt; <span style="font-family: monospace;">'('</span> arglist <span style="font-family: monospace;">')'</span>
   </pre>
   <p>
   The first form is the conventional form found in all programming languages.
@@ -317,7 +317,7 @@ astcalc: Astronomical calculator
   format DD/MM/YY, YYYY-MM-DD, or YYYY-MM-DDTHH:MM:SS.
   Typically this argument will be the standard FITS
   keyword DATE-OBS.  Because of possible confusion of the hyphen with
-  subtraction this keyword would be specified as @<tt>"date-obs"</tt>.  The time
+  subtraction this keyword would be specified as @<span style="font-family: monospace;">"date-obs"</span>.  The time
   argument is optional.  If it is not given the time from the date
   string will be used and if absent a time of 0h is used.
   </dd>
@@ -391,7 +391,7 @@ astcalc: Astronomical calculator
   <dl>
   <dt><b>eairmass (ra, dec, st, exptime, latitude)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='eairmass' Line='eairmass (ra, dec, st, exptime, latitude)' -->
-  <dd>Compute an <tt>"effective"</tt> airmass given right ascension in hours, declination
+  <dd>Compute an <span style="font-family: monospace;">"effective"</span> airmass given right ascension in hours, declination
   in degrees, beginning sidereal time in hours, exposure time in seconds, and
   latitude in degrees.  The The latitude is often specified using the
   observatory database function as shown in the examples.  The effective
@@ -408,10 +408,10 @@ astcalc: Astronomical calculator
   <!-- Sec='DESCRIPTION' Level=0 Label='obsdb' Line='obsdb (observatory, parameter)' -->
   <dd>Return a value from the observatory database.  The observatory parameter is
   a observatory identification string as defined in the database.  Another
-  special value is <tt>"observatory"</tt> which then follows a name resolution
+  special value is <span style="font-family: monospace;">"observatory"</span> which then follows a name resolution
   scheme.  The observatory database mechanism is described by the help topic
   <b>observatory</b>.  The parameter is a string given the quantity desired.
-  Typically this would be <tt>"longitude"</tt> or <tt>"latitude"</tt> but there are other
+  Typically this would be <span style="font-family: monospace;">"longitude"</span> or <span style="font-family: monospace;">"latitude"</span> but there are other
   possible parameters.
   </dd>
   </dl>
@@ -450,15 +450,15 @@ astcalc: Astronomical calculator
   <dd>Print a list of arguments using the formatting syntax described later.
   Parameters to be formatted are given by the % fields and the values are
   passed as further arguments in the order in which they are referenced.
-  There is no automatic newline so the format must include <tt>"\n"</tt> to
+  There is no automatic newline so the format must include <span style="font-family: monospace;">"\n"</span> to
   produce newlines.
   </dd>
   </dl>
   <dl>
   <dt><b>error (message)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='error' Line='error (message)' -->
-  <dd>Print the <tt>"message"</tt>, which can be any string variable such as might
-  be produced by <tt>"format"</tt>, and abort the task.  This is useful in
+  <dd>Print the <span style="font-family: monospace;">"message"</span>, which can be any string variable such as might
+  be produced by <span style="font-family: monospace;">"format"</span>, and abort the task.  This is useful in
   conjunction with the conditional operator to abort if a variable
   takes an inappropriate value.
   </dd>
@@ -475,7 +475,7 @@ astcalc: Astronomical calculator
   <!-- Sec='DESCRIPTION' Level=0 Label='clput' Line='clput (parameter, value)' -->
   <dd>Put a value into a CL parameter.  The parameter argument must be a
   string and the value can be anything.  The function returns a string
-  of the form <tt>"clput: parameter = value"</tt> where parameter and value are
+  of the form <span style="font-family: monospace;">"clput: parameter = value"</span> where parameter and value are
   the actual values.
   </dd>
   </dl>
@@ -509,8 +509,8 @@ astcalc: Astronomical calculator
   <dd>Put a value into an image header keyword for the current image.  The
   parameter argument must be a string and the value can be anything.  If the
   keyword exists it will be modified and if it does not exist it will be
-  added.  The function returns a string of the form <tt>"imput: parameter =
-  value"</tt> for new keywords or <tt>"imput: parameter = old_value -&gt; value"</tt> for
+  added.  The function returns a string of the form <span style="font-family: monospace;">"imput: parameter =
+  value"</span> for new keywords or <span style="font-family: monospace;">"imput: parameter = old_value -&gt; value"</span> for
   modified keywords where parameter and value are the actual values.
   </dd>
   </dl>
@@ -518,8 +518,8 @@ astcalc: Astronomical calculator
   <dt><b>imdel (parameter)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='imdel' Line='imdel (parameter)' -->
   <dd>Delete an image header keyword.  The parameter argument must be a string.
-  The returned values are the strings <tt>"imdel: parameter not found"</tt>
-  or <tt>"imdel: parameter = value (DELETED)"</tt> where parameter is the parameter
+  The returned values are the strings <span style="font-family: monospace;">"imdel: parameter not found"</span>
+  or <span style="font-family: monospace;">"imdel: parameter = value (DELETED)"</span> where parameter is the parameter
   name and value is the old value.
   </dd>
   </dl>
@@ -527,10 +527,10 @@ astcalc: Astronomical calculator
   <h3>Formats</h3>
   <!-- BeginSection: 'FORMATS' -->
   <p>
-  A  format  specification has the form <tt>"%w.dCn"</tt>, where w is the field
+  A  format  specification has the form <span style="font-family: monospace;">"%w.dCn"</span>, where w is the field
   width, d is the number of decimal places or the number of digits  of
   precision,  C  is  the  format  code,  and  n is radix character for
-  format code <tt>"r"</tt> only.  The w and d fields are optional.  The  format
+  format code <span style="font-family: monospace;">"r"</span> only.  The w and d fields are optional.  The  format
   codes C are as follows:
       
   </p>

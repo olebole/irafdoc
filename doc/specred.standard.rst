@@ -79,7 +79,7 @@ standard: Tabulate standard star counts and fluxes
   </dd>
   </dl>
   <dl>
-  <dt><b>apertures = <tt>""</tt></b></dt>
+  <dt><b>apertures = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
   <dd>List of apertures to be selected from the input list of spectra.  If no list
   is specified then all apertures are selected.  The syntax is the same as the
@@ -126,30 +126,30 @@ standard: Tabulate standard star counts and fluxes
   </dd>
   </dl>
   <dl>
-  <dt><b>caldir = <tt>")_.caldir"</tt></b></dt>
+  <dt><b>caldir = <span style="font-family: monospace;">")_.caldir"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='caldir' Line='caldir = ")_.caldir"' -->
   <dd>Calibration directory containing standard star data.  The
-  default value of <tt>")_.caldir"</tt> means to use the package parameter <tt>"caldir"</tt>.
+  default value of <span style="font-family: monospace;">")_.caldir"</span> means to use the package parameter <span style="font-family: monospace;">"caldir"</span>.
   A list of standard calibration directories may be obtained by listing the
-  file <tt>"onedstds$README"</tt>; for example:
+  file <span style="font-family: monospace;">"onedstds$README"</span>; for example:
   <pre>
       cl&gt; page onedstds$README
   </pre>
   The user may copy or create their own calibration files and specify the
-  directory.  The directory <tt>""</tt> refers to the current working directory.  The
+  directory.  The directory <span style="font-family: monospace;">""</span> refers to the current working directory.  The
   standard calibration directory for blackbody curves is
-  <tt>"onedstds$blackbody/"</tt>.
+  <span style="font-family: monospace;">"onedstds$blackbody/"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>observatory = <tt>")_.observatory"</tt></b></dt>
+  <dt><b>observatory = <span style="font-family: monospace;">")_.observatory"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory = ")_.observatory"' -->
   <dd>Observatory at which the spectra were obtained if not specified in the
   image header by the keyword OBSERVAT.  The default is a redirection to look
   in the parameters for the parent package for a value.  The observatory may
-  be one of the observatories in the observatory database, <tt>"observatory"</tt> to
-  select the observatory defined by the environment variable <tt>"observatory"</tt> or
-  the parameter <b>observatory.observatory</b>, or <tt>"obspars"</tt> to select the
+  be one of the observatories in the observatory database, <span style="font-family: monospace;">"observatory"</span> to
+  select the observatory defined by the environment variable <span style="font-family: monospace;">"observatory"</span> or
+  the parameter <b>observatory.observatory</b>, or <span style="font-family: monospace;">"obspars"</span> to select the
   current parameters set in the <b>observatory</b> task.  See help for
   <b>observatory</b> for additional information.
   </dd>
@@ -165,14 +165,14 @@ standard: Tabulate standard star counts and fluxes
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>Graphics output device for use with the interactive mode.  Normally this is
   the user's graphics terminal.
   </dd>
   </dl>
   <dl>
-  <dt><b>cursor = <tt>""</tt></b></dt>
+  <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Graphics cursor input for use with the interactive mode.  When null the
   standard graphics cursor is used otherwise the specified file is used.
@@ -182,7 +182,7 @@ standard: Tabulate standard star counts and fluxes
   <dt><b>star_name</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='star_name' Line='star_name' -->
   <dd>The name of the star observed in the current series of spectra.  Calibration
-  data for the star must be in the specified calibration directory <tt>"caldir"</tt>.
+  data for the star must be in the specified calibration directory <span style="font-family: monospace;">"caldir"</span>.
   This is normally a interactive query parameter and should not be specified on
   the command line unless all spectra are of the same standard star.
   </dd>
@@ -197,7 +197,7 @@ standard: Tabulate standard star counts and fluxes
   <dd>The magnitude of the observed star in the band given by the
   <i>magband</i> parameter.  If the magnitude is not in the same band as
   the blackbody calibration file then the magnitude may be converted to
-  the calibration band provided the <tt>"params.dat"</tt> file containing relative
+  the calibration band provided the <span style="font-family: monospace;">"params.dat"</span> file containing relative
   magnitudes between the two bands is in the calibration directory
   </dd>
   </dl>
@@ -213,9 +213,9 @@ standard: Tabulate standard star counts and fluxes
   <dt><b>teff</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='teff' Line='teff' -->
   <dd>The effective temperature (deg K) or the spectral type of the star being
-  calibrated.  If a spectral type is specified a <tt>"params.dat"</tt> file must exist
+  calibrated.  If a spectral type is specified a <span style="font-family: monospace;">"params.dat"</span> file must exist
   in the calibration directory.  The spectral types are specified in the same
-  form as in the <tt>"params.dat"</tt> file.  For the standard blackbody calibration
+  form as in the <span style="font-family: monospace;">"params.dat"</span> file.  For the standard blackbody calibration
   directory the spectral types are specified as A0I, A0III, or A0V, where A
   can be any letter OBAFGKM, the single digit subclass is between 0 and 9,
   and the luminousity class is one of I, III, or V.  If no luminousity class
@@ -253,7 +253,7 @@ standard: Tabulate standard star counts and fluxes
   d  Delete band nearest the cursor in wavelength
   r  Redraw current plot
   q  Quit with current bandpass definitions
-  w  Window plot  (follow with <tt>'?'</tt> for help)
+  w  Window plot  (follow with <span style="font-family: monospace;">'?'</span> for help)
   I  Interrupt task immediately
   
   :show	Show current bandpass data
@@ -269,7 +269,7 @@ standard: Tabulate standard star counts and fluxes
   the magnitude and spectral type of the star.  The output data is used by
   the task <b>sensfunc</b> to determine the detector sensitivity function and
   possibly the extinction.  The spectra are required to be dispersion
-  corrected.  The input spectra may be in either <tt>"onedspec"</tt> or <tt>"echelle"</tt>
+  corrected.  The input spectra may be in either <span style="font-family: monospace;">"onedspec"</span> or <span style="font-family: monospace;">"echelle"</span>
   format and may have many different observation apertures.  The spectra may
   also be beam switched and use the a record number extension format.
   </p>
@@ -299,28 +299,28 @@ standard: Tabulate standard star counts and fluxes
   a blackbody calibration.  The latter generally have a star name consisting
   of just the standard bandpass identifier.  If the standard star name is not
   recognized a menu of the available standard stars in the calibration
-  directory, the file <tt>"standards.men"</tt>, is printed and then the query is
+  directory, the file <span style="font-family: monospace;">"standards.men"</span>, is printed and then the query is
   repeated.  Thus, to get a list you can type ?  or help.
   </p>
   <p>
   The standard star names must map to a file containing tabulated
   calibration data.  The calibration filename is formed from the star
-  name with blanks, <tt>"+"</tt>, and <tt>"-"</tt> removed, converted to lower case, and
-  the extension <tt>".dat"</tt> added.  This name is appended to a calibration
+  name with blanks, <span style="font-family: monospace;">"+"</span>, and <span style="font-family: monospace;">"-"</span> removed, converted to lower case, and
+  the extension <span style="font-family: monospace;">".dat"</span> added.  This name is appended to a calibration
   directory, so the directory name must have an appropriate directory
-  delimiter such as <tt>"$"</tt> or <tt>"/"</tt>.  Generally one of the system calibration
+  delimiter such as <span style="font-family: monospace;">"$"</span> or <span style="font-family: monospace;">"/"</span>.  Generally one of the system calibration
   directories is used but one may copy and modify or create new
   calibration files in a personal directory.  For the current working
-  directory the calibration directory is either null or <tt>"./"</tt>.
+  directory the calibration directory is either null or <span style="font-family: monospace;">"./"</span>.
   </p>
   <p>
   The calibration files may include comment parameter information consisting
-  of the comment character <tt>'#'</tt>, a parameter name, and the parameter value.
+  of the comment character <span style="font-family: monospace;">'#'</span>, a parameter name, and the parameter value.
   These elements are separated by whitespace.  Any other comment where the
   first word does not match one of the allowed parameter names is ignored by
-  the program.  The parameter names are <tt>"type"</tt> identifying the type of
-  calibration file, <tt>"units"</tt> identifying wavelength units, <tt>"band"</tt> identifying
-  the band for magnitudes, and <tt>"weff"</tt> identifying the effective wavelength of
+  the program.  The parameter names are <span style="font-family: monospace;">"type"</span> identifying the type of
+  calibration file, <span style="font-family: monospace;">"units"</span> identifying wavelength units, <span style="font-family: monospace;">"band"</span> identifying
+  the band for magnitudes, and <span style="font-family: monospace;">"weff"</span> identifying the effective wavelength of
   the band.
   </p>
   <p>
@@ -330,9 +330,9 @@ standard: Tabulate standard star counts and fluxes
   <dl>
   <dt><b>STANDARD STAR CALIBRATION FILES</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='STANDARD' Line='STANDARD STAR CALIBRATION FILES' -->
-  <dd>This type of file is any file that does not contain the parameter <tt>"type"</tt>
-  with a value of <tt>"blackbody"</tt>.  The only other parameter used by this type of
-  calibration file is the <tt>"units"</tt> parameter for the wavelength units.  If the
+  <dd>This type of file is any file that does not contain the parameter <span style="font-family: monospace;">"type"</span>
+  with a value of <span style="font-family: monospace;">"blackbody"</span>.  The only other parameter used by this type of
+  calibration file is the <span style="font-family: monospace;">"units"</span> parameter for the wavelength units.  If the
   units are not specified then the wavelengths default to Angstroms.  All
   older calibration files will have no parameter information so they are
   interpreted as standard star calibration files with wavelengths in
@@ -358,9 +358,9 @@ standard: Tabulate standard star counts and fluxes
   <dl>
   <dt><b>BLACKBODY CALIBRATION FILES</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='BLACKBODY' Line='BLACKBODY CALIBRATION FILES' -->
-  <dd>This type of file has the comment parameter <tt>"type"</tt> with a value of
-  <tt>"blackbody"</tt>.  It must also include the <tt>"band"</tt> and <tt>"weff"</tt>
-  comment parameters.  If no <tt>"units"</tt> comment parameter is given then
+  <dd>This type of file has the comment parameter <span style="font-family: monospace;">"type"</span> with a value of
+  <span style="font-family: monospace;">"blackbody"</span>.  It must also include the <span style="font-family: monospace;">"band"</span> and <span style="font-family: monospace;">"weff"</span>
+  comment parameters.  If no <span style="font-family: monospace;">"units"</span> comment parameter is given then
   the default units are Angstroms.
   The rest of the file consists of lines with wavelengths, m_AB of a zero
   magnitude star (in that band magnitude system), and the bandpass widths.
@@ -463,10 +463,10 @@ standard: Tabulate standard star counts and fluxes
   <p>
   The setting and editing of the bandpasses may be performed
   interactively if the <i>interact</i> flag is set.  In this case the user
-  is queried for each spectrum.  The answers to this query may be <tt>"no"</tt> or
-  <tt>"yes"</tt> to skip editing or edit the bandpasses for this spectrum, <tt>"NO"</tt> or
-  <tt>"YES"</tt> to skip or not skip editing all spectra of the same aperture with
-  no further queries for this aperture, and <tt>"NO!"</tt> or <tt>"YES!"</tt> to skip
+  is queried for each spectrum.  The answers to this query may be <span style="font-family: monospace;">"no"</span> or
+  <span style="font-family: monospace;">"yes"</span> to skip editing or edit the bandpasses for this spectrum, <span style="font-family: monospace;">"NO"</span> or
+  <span style="font-family: monospace;">"YES"</span> to skip or not skip editing all spectra of the same aperture with
+  no further queries for this aperture, and <span style="font-family: monospace;">"NO!"</span> or <span style="font-family: monospace;">"YES!"</span> to skip
   editing or edit all spectra with no further queries.
   </p>
   <p>
@@ -476,9 +476,9 @@ standard: Tabulate standard star counts and fluxes
   Basically bandpasses may be added or deleted and the current bandpass
   data may be examined.  Additional keys allow the usual windowing and
   cursor mode operations.  When satisfied with the bandpasses exit with
-  <tt>'q'</tt>.  The edited bandpasses for that aperture remain in effect until
+  <span style="font-family: monospace;">'q'</span>.  The edited bandpasses for that aperture remain in effect until
   changed again by the user.  Thus if there are many spectra from the
-  same aperture one may reply with <tt>"NO"</tt> to queries for the next spectra
+  same aperture one may reply with <span style="font-family: monospace;">"NO"</span> to queries for the next spectra
   to accept the current bandpasses for all other spectra of the same
   aperture.
   </p>
@@ -487,20 +487,20 @@ standard: Tabulate standard star counts and fluxes
   </p>
   <p>
   When a blackbody calibration is selected (the calibration file selected by
-  the <i>star_name</i> parameter has <tt>"# type blackbody"</tt>) there are two
+  the <i>star_name</i> parameter has <span style="font-family: monospace;">"# type blackbody"</span>) there are two
   quantities needed to scale the blackbody to the observation.  These are the
   magnitude of the star in the same band as the observation and the effective
   temperature.  The magnitude is used for the flux scaling and the effective
   temperature for the shape of the flux distribution.  The values are
   obtained or derived from the user specified parameters <i>mag</i>,
   <i>magband</i>, and <i>teff</i>.  This section describes how the the
-  values are derived from other parameters using the data file <tt>"params.dat"</tt>
+  values are derived from other parameters using the data file <span style="font-family: monospace;">"params.dat"</span>
   in the calibration directory.
   </p>
   <p>
   The effective temperature in degrees Kelvin may be specified directly or it
   may be derived from a spectral type for the star.  In the latter case the
-  file <tt>"params.dat"</tt> is searched for the effective temperature.  The file
+  file <span style="font-family: monospace;">"params.dat"</span> is searched for the effective temperature.  The file
   consists of lines with the first value being the spectral type and the
   second the effective temperature.  Other columns are described later.  The
   spectral type can be any string without whitespace that matches what is in
@@ -510,7 +510,7 @@ standard: Tabulate standard star counts and fluxes
   or A0V, where A can be any spectral type letter OBAFGKM, the single digit
   subtype is between 0 and 9, and the luminousity class is one of I, III, or
   V.  The two character match selects the last spectral type independent of
-  the luminosity class.  The standard file <tt>"onedstds$blackbody/params.dat"</tt>
+  the luminosity class.  The standard file <span style="font-family: monospace;">"onedstds$blackbody/params.dat"</span>
   uses these spectral type identifiers with the dwarf class acting as the
   default.
   </p>
@@ -519,17 +519,17 @@ standard: Tabulate standard star counts and fluxes
   band is the same as the calibration band given in the calibration file then
   no further transformation is required.  However if the magnitude is
   specified in a different band, a conversion is performed using information
-  from the <tt>"params.dat"</tt> file based on the spectral type of the star.
+  from the <span style="font-family: monospace;">"params.dat"</span> file based on the spectral type of the star.
   </p>
   <p>
   When an effective temperature is specified rather and a spectral type then
-  the nearest tabulated temperature for the spectral types that have <tt>"V"</tt> as
+  the nearest tabulated temperature for the spectral types that have <span style="font-family: monospace;">"V"</span> as
   the third character is used.  For the standard spectral type designations
   this means that when an effective temperature is specified the dwarf
   spectral type is used for the magnitude transformation.
   </p>
   <p>
-  As mentioned previously, the <tt>"params.dat"</tt> data file has additional columns
+  As mentioned previously, the <span style="font-family: monospace;">"params.dat"</span> data file has additional columns
   following the spectral type and effective temperature.  These columns are
   relative magnitudes in various bands.  The standard file has V magnitudes
   of zero so in this case the columns are also the X-V colors (where X is the
@@ -541,7 +541,7 @@ standard: Tabulate standard star counts and fluxes
       m_calibration = m_input + m_1 - m_2
   </pre>
   <p>
-  If one of the magnitudes is missing,  given as <tt>"INDEF"</tt> because the
+  If one of the magnitudes is missing,  given as <span style="font-family: monospace;">"INDEF"</span> because the
   transformation is not available for the spectral type, the last spectral
   type matching the first two characters which does specify the two
   magnitudes will be used.  For example if there is no information for a
@@ -550,7 +550,7 @@ standard: Tabulate standard star counts and fluxes
   <p>
   In order for the program to determine the bands for each column in the data
   file there must be a comment before the data with the column names.  It must
-  begin with <tt>"# Type Teff"</tt> and then be followed by the same band identifiers
+  begin with <span style="font-family: monospace;">"# Type Teff"</span> and then be followed by the same band identifiers
   used in the blackbody calibration files and as specified by the
   <i>magband</i> parameter.  Any amount whitespace (space or tab) is used to
   separate the various fields in the comment and in the fields of the table.
@@ -584,13 +584,13 @@ standard: Tabulate standard star counts and fluxes
       	...
   </pre>
   <p>
-  This will create a file <tt>"std"</tt> which will contain sensitivity measurements
+  This will create a file <span style="font-family: monospace;">"std"</span> which will contain sensitivity measurements
   from the beam-switched observations of the three standard stars given.
   Note that <b>standard</b> is run separately for each standard star.
   </p>
   <p>
   The spectra will be from the images: nite1.1001, nite.1002 ... nite1.1024,
-  and the default calibration file, <tt>"onedstds$irscal.dat"</tt> will be used.
+  and the default calibration file, <span style="font-family: monospace;">"onedstds$irscal.dat"</span> will be used.
   </p>
   <p>
   2.  For echelle spectra all apertures, the orders, are of the same star and

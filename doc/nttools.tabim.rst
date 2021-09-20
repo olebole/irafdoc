@@ -35,13 +35,13 @@ tabim: Copy a table column to an image.
   <h3>Parameters</h3>
   <!-- BeginSection: 'PARAMETERS' -->
   <dl>
-  <dt><b>intable = <tt>""</tt> [file name template]</b></dt>
+  <dt><b>intable = <span style="font-family: monospace;">""</span> [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='intable' Line='intable = "" [file name template]' -->
   <dd>The names of the input tables.
   </dd>
   </dl>
   <dl>
-  <dt><b>output = <tt>""</tt> [file name template]</b></dt>
+  <dt><b>output = <span style="font-family: monospace;">""</span> [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = "" [file name template]' -->
   <dd>The names of the output images.
   If an output image does not exist it will be created.
@@ -51,7 +51,7 @@ tabim: Copy a table column to an image.
   </dd>
   </dl>
   <dl>
-  <dt><b>colname = <tt>""</tt> [string]</b></dt>
+  <dt><b>colname = <span style="font-family: monospace;">""</span> [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='colname' Line='colname = "" [string]' -->
   <dd>The name of the column in 'intable' that is to be written to the image.
   The same column name is used for all input tables.
@@ -119,15 +119,15 @@ tabim: Copy a table column to an image.
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1.  Copy column <tt>"flux"</tt> from table <tt>"hr465.tab"</tt> to
-  the 1-D image <tt>"hr465_flux.imh"</tt>:
+  1.  Copy column <span style="font-family: monospace;">"flux"</span> from table <span style="font-family: monospace;">"hr465.tab"</span> to
+  the 1-D image <span style="font-family: monospace;">"hr465_flux.imh"</span>:
   </p>
   <pre>
   	ta&gt; tabim hr465.tab hr465_flux.imh flux 1
   </pre>
   <p>
-  2.  Create a three-dimensional image <tt>"ir27.imh"</tt> of size 62 x 64 x 4.
-  Read the values from column <tt>"v1"</tt> of table <tt>"t18_30.tab"</tt>,
+  2.  Create a three-dimensional image <span style="font-family: monospace;">"ir27.imh"</span> of size 62 x 64 x 4.
+  Read the values from column <span style="font-family: monospace;">"v1"</span> of table <span style="font-family: monospace;">"t18_30.tab"</span>,
   which has 62*64*4 rows.
   </p>
   <pre>
@@ -149,7 +149,7 @@ tabim: Copy a table column to an image.
   The 'imtab' task copies an image to a column of a table.
   </p>
   <p>
-  Type <tt>"help tables option=sys"</tt> for a higher-level description of
+  Type <span style="font-family: monospace;">"help tables option=sys"</span> for a higher-level description of
   the tables package.
   </p>
   

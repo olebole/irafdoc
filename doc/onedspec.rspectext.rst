@@ -41,7 +41,7 @@ rspectext: Convert ascii text spectra to image spectra
   with the data.
   </p>
   <dl>
-  <dt><b>title = <tt>""</tt></b></dt>
+  <dt><b>title = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='title' Line='title = ""' -->
   <dd>Title to be assigned to the spectra.
   </dd>
@@ -54,7 +54,7 @@ rspectext: Convert ascii text spectra to image spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>dtype = <tt>"linear"</tt> (none|linear|log|nonlinear|interp)</b></dt>
+  <dt><b>dtype = <span style="font-family: monospace;">"linear"</span> (none|linear|log|nonlinear|interp)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dtype' Line='dtype = "linear" (none|linear|log|nonlinear|interp)' -->
   <dd>Type of dispersion to assign to the spectra.  The options are:
   <dl>
@@ -70,7 +70,7 @@ rspectext: Convert ascii text spectra to image spectra
   in the image header.  The wavelength values are ignored.  This may
   be used if the wavelength values are known to be linear but one wants
   to avoid possible roundoff and resampling errors introduced by the
-  <tt>"interp"</tt> option.
+  <span style="font-family: monospace;">"interp"</span> option.
   </dd>
   </dl>
   <dl>
@@ -80,7 +80,7 @@ rspectext: Convert ascii text spectra to image spectra
   the image header.  The wavelength values are ignored.  This may be used if
   the wavelength values are known to be linear in the log of the wavelength
   but one wants to avoid possible roundoff and resampling errors introduced
-  by the <tt>"interp"</tt> option.
+  by the <span style="font-family: monospace;">"interp"</span> option.
   </dd>
   </dl>
   <dl>

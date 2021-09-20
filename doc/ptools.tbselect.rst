@@ -42,7 +42,7 @@ tbselect: Select records from a list of apphot/daophot tables databases
   <!-- Sec='PARAMETERS' Level=0 Label='expr' Line='expr' -->
   <dd>The boolean expression which determines which rows are copied to the new
   table. <i>Expr</i> is evaluated once for each input row of data.
-  If <i>expr</i> is <tt>"yes"</tt> a copy is made of the old input table.
+  If <i>expr</i> is <span style="font-family: monospace;">"yes"</span> a copy is made of the old input table.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->

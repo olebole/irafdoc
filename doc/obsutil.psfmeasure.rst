@@ -29,24 +29,24 @@ psfmeasure: Measure PSF sizes from stellar images
   </dd>
   </dl>
   <dl>
-  <dt><b>coords = <tt>"mark1"</tt> (center|mark1|markall)</b></dt>
+  <dt><b>coords = <span style="font-family: monospace;">"mark1"</span> (center|mark1|markall)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coords' Line='coords = "mark1" (center|mark1|markall)' -->
   <dd>Method by which the coordinates of objects to be measured are specified.
-  If <tt>"center"</tt> then a single object at the center of each image is measured.
-  If <tt>"mark1"</tt> then the <i>imagecur</i> parameter, typically the interactive
+  If <span style="font-family: monospace;">"center"</span> then a single object at the center of each image is measured.
+  If <span style="font-family: monospace;">"mark1"</span> then the <i>imagecur</i> parameter, typically the interactive
   image display cursor, defines the coordinates of one or more objects in the
-  first image ending with a <tt>'q'</tt> key value and then the same coordinates are
-  automatically used in subsequent images.  If <tt>"markall"</tt> then the
+  first image ending with a <span style="font-family: monospace;">'q'</span> key value and then the same coordinates are
+  automatically used in subsequent images.  If <span style="font-family: monospace;">"markall"</span> then the
   <i>imagecur</i> parameter defines the coordinates for objects in each image
-  ending with a <tt>'q'</tt> key value.
+  ending with a <span style="font-family: monospace;">'q'</span> key value.
   </dd>
   </dl>
   <dl>
-  <dt><b>wcs = <tt>"logical"</tt> (logical|physical|world)</b></dt>
+  <dt><b>wcs = <span style="font-family: monospace;">"logical"</span> (logical|physical|world)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcs' Line='wcs = "logical" (logical|physical|world)' -->
   <dd>Coordinate system for input coordinates.  When using image cursor input
-  this will always be <tt>"logical"</tt>.  When using cursor input from a file this
-  could be <tt>"physical"</tt> or <tt>"world"</tt>.
+  this will always be <span style="font-family: monospace;">"logical"</span>.  When using cursor input from a file this
+  could be <span style="font-family: monospace;">"physical"</span> or <span style="font-family: monospace;">"world"</span>.
   </dd>
   </dl>
   <dl>
@@ -71,7 +71,7 @@ psfmeasure: Measure PSF sizes from stellar images
   </dd>
   </dl>
   <dl>
-  <dt><b>size = <tt>"FWHM"</tt> (Radius|FWHM|GFWHM|MFWHM)</b></dt>
+  <dt><b>size = <span style="font-family: monospace;">"FWHM"</span> (Radius|FWHM|GFWHM|MFWHM)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='size' Line='size = "FWHM" (Radius|FWHM|GFWHM|MFWHM)' -->
   <dd>There are four ways the PSF size may be shown in graphs and given in
   the output.  These are:
@@ -145,25 +145,25 @@ psfmeasure: Measure PSF sizes from stellar images
   </dd>
   </dl>
   <dl>
-  <dt><b>logfile = <tt>"logfile"</tt></b></dt>
+  <dt><b>logfile = <span style="font-family: monospace;">"logfile"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "logfile"' -->
   <dd>File in which to record the final results.  If no log file is desired a
   null string may be specified.
   </dd>
   </dl>
   <dl>
-  <dt><b>imagecur = <tt>""</tt></b></dt>
+  <dt><b>imagecur = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='imagecur' Line='imagecur = ""' -->
-  <dd>Image cursor input for the <tt>"mark1"</tt> and <tt>"markall"</tt> options.  If null then the
+  <dd>Image cursor input for the <span style="font-family: monospace;">"mark1"</span> and <span style="font-family: monospace;">"markall"</span> options.  If null then the
   image dispaly cursor is used interactively.  If a file name is specified
   then the coordinates come from this file.  The format of the file are lines
   of x, y, id, and key.  Values of x an y alone may be used to select objects
-  and the single character <tt>'q'</tt> (or the end of the file) may be used to end
+  and the single character <span style="font-family: monospace;">'q'</span> (or the end of the file) may be used to end
   the list.
   </dd>
   </dl>
   <dl>
-  <dt><b>graphcur = <tt>""</tt></b></dt>
+  <dt><b>graphcur = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphcur' Line='graphcur = ""' -->
   <dd>Graphics cursor input.  If null then the standard graphics cursor
   is used otherwise a standard cursor format file may be specified.
@@ -245,17 +245,17 @@ psfmeasure: Measure PSF sizes from stellar images
   consist of explicit image names, wildcard templates, and @ files.
   Identifying the object or objects to be measured may be accomplished in
   several ways.  If a single object near the center of the image is to be
-  measured then the <i>coords</i> parameter takes the value <tt>"center"</tt>.  When
-  the <tt>"center"</tt> option is used the <i>display</i> and <i>imagecur</i> parameters
+  measured then the <i>coords</i> parameter takes the value <span style="font-family: monospace;">"center"</span>.  When
+  the <span style="font-family: monospace;">"center"</span> option is used the <i>display</i> and <i>imagecur</i> parameters
   are ignored.
   </p>
   <p>
   If there are multiple objects or the desired object is not at the center of
   the frame the object coordinates are entered with the <i>imagecur</i>
   parameter.  This type of coordinate input is selected by specifying either
-  <tt>"mark1"</tt> or <tt>"markall"</tt> for the <i>coords</i> parameter.  If the value is
-  <tt>"mark1"</tt> then the coordinates are entered for the first image and the same
-  values are automatically used for subsequent images.  If <tt>"markall"</tt> is
+  <span style="font-family: monospace;">"mark1"</span> or <span style="font-family: monospace;">"markall"</span> for the <i>coords</i> parameter.  If the value is
+  <span style="font-family: monospace;">"mark1"</span> then the coordinates are entered for the first image and the same
+  values are automatically used for subsequent images.  If <span style="font-family: monospace;">"markall"</span> is
   specified then the objects in each image are marked.
   </p>
   <p>
@@ -271,20 +271,20 @@ psfmeasure: Measure PSF sizes from stellar images
   <p>
   If one wants to enter a coordinate list rather than use the interactive
   image cursor the list can consist of just the column and line coordinates
-  since the key will default to <tt>'m'</tt>.  To finish the list either the end
-  of file may be encountered or a single <tt>'q'</tt> may be given since the
-  coordinates are irrelevant.  For the <tt>"markall"</tt> option with multiple
-  images there would need to be a <tt>'q'</tt> at the end of each object except
+  since the key will default to <span style="font-family: monospace;">'m'</span>.  To finish the list either the end
+  of file may be encountered or a single <span style="font-family: monospace;">'q'</span> may be given since the
+  coordinates are irrelevant.  For the <span style="font-family: monospace;">"markall"</span> option with multiple
+  images there would need to be a <span style="font-family: monospace;">'q'</span> at the end of each object except
   possibly the last.
   </p>
   <p>
   When objects are marked interactively with the image cursor there
   are a four keys which may be used as shown in the CURSOR COMMAND section.
-  The important distinction is between <tt>'m'</tt> to mark and measure an
-  object and <tt>'g'</tt> to mark, measure, and graph the results.  The former
+  The important distinction is between <span style="font-family: monospace;">'m'</span> to mark and measure an
+  object and <span style="font-family: monospace;">'g'</span> to mark, measure, and graph the results.  The former
   accumulates the results until the end while the latter can give an
   immediate result to be examined.  Unless only one object is marked
-  the <tt>'g'</tt> key also accumulates the results for later graphical analysis.
+  the <span style="font-family: monospace;">'g'</span> key also accumulates the results for later graphical analysis.
   It is important to note that the measurements are done as each
   object is marked so there can be a significant delay before the
   next object may be marked.
@@ -298,7 +298,7 @@ psfmeasure: Measure PSF sizes from stellar images
   <p>
   When the task exits it prints the results to the terminal (STDOUT) and also
   to the <i>logfile</i> if one is specified.  The results may also be
-  previewed during the execution of the task with the <tt>":show"</tt> command.  The
+  previewed during the execution of the task with the <span style="font-family: monospace;">":show"</span> command.  The
   results begin with a banner and the overall estimate of the PSF size.
   Following this the individual measurements are given.  The columns give the
   image name, the column and line position, the relative magnitude, the PSF
@@ -403,8 +403,8 @@ psfmeasure: Measure PSF sizes from stellar images
   Cubic spline interpolation functions are fit to the normalized enclosed
   flux profile and the intensity profile.  These are used to find the radius
   enclosing any specified fraction of the flux and to find the direct FWHM of
-  the intensity profile.  These are output when <i>size</i> is <tt>"Radius"</tt> or
-  <tt>"FWHM"</tt> respectively.
+  the intensity profile.  These are output when <i>size</i> is <span style="font-family: monospace;">"Radius"</span> or
+  <span style="font-family: monospace;">"FWHM"</span> respectively.
   </p>
   <p>
   In addition to enclosed flux radius and direct FWHM size measurements
@@ -415,7 +415,7 @@ psfmeasure: Measure PSF sizes from stellar images
   profile fit be representative of the core of the PSF profile.  These profiles
   are fit whether or not the selected <i>size</i> requires it.  This is done
   for simplicity and to allow quickly changing the size estimate with the
-  <tt>":size"</tt> command.
+  <span style="font-family: monospace;">":size"</span> command.
   </p>
   <p>
   The intensity profile functions (with unit peak) are:
@@ -512,7 +512,7 @@ psfmeasure: Measure PSF sizes from stellar images
   	  sqrt ((1-level)**(1/(1-beta))-1)		   Moffat
   </pre>
   <p>
-  where r(level) is the radius that encloses <tt>"level"</tt> fraction of the total
+  where r(level) is the radius that encloses <span style="font-family: monospace;">"level"</span> fraction of the total
   flux.  ln is the natural logarithm and sqrt is the square root.  The beta
   value is either the user specified value or the value determined by fitting
   the enclosed flux profile.
@@ -542,7 +542,7 @@ psfmeasure: Measure PSF sizes from stellar images
   </pre>
   <p>
   If there is only one object the only available plot is
-  the <tt>'z'</tt> or zoom plot.  This has three graphs; a graph of the normalized
+  the <span style="font-family: monospace;">'z'</span> or zoom plot.  This has three graphs; a graph of the normalized
   enclosed flux verses scaled radius, a graph of the intensity profile verses
   scaled radius, and equivalent Moffat/Gaussian full width at half maximum verses
   enclosed flux fraction.  The latter two graphs are derived from the
@@ -557,24 +557,24 @@ psfmeasure: Measure PSF sizes from stellar images
   </p>
   <p>
   The zoom plot is always available from any other plot.  The cursor position
-  when the <tt>'z'</tt> key is typed selects a particular object measurement.
-  This plot is also the one presented with the <tt>'g'</tt> key when marking objects for
+  when the <span style="font-family: monospace;">'z'</span> key is typed selects a particular object measurement.
+  This plot is also the one presented with the <span style="font-family: monospace;">'g'</span> key when marking objects for
   single exposure images.  In that case the graphs are drawn followed by
   a return to image cursor mode.
   </p>
   <p>
   There are two types of symbol plots showing the measured PSF size (either
   enclosed flux radius or FWHM) and ellipticity.  These plot the measurements
-  verses relative magnitude (<tt>'m'</tt> key) and radius from the field center (<tt>'t'</tt>
+  verses relative magnitude (<span style="font-family: monospace;">'m'</span> key) and radius from the field center (<span style="font-family: monospace;">'t'</span>
   key).  These plots are only available when there are multiple stars
   measured.  The magnitude plot is the initial plot in this case.  The field
   center for the field radius graph may be changed interactively using the
-  <tt>":xcenter"</tt> and <tt>":ycenter"</tt> commands.
+  <span style="font-family: monospace;">":xcenter"</span> and <span style="font-family: monospace;">":ycenter"</span> commands.
   </p>
   <p>
   Grids of enclosed flux vs. radius, intensity profile vs. radius, and
-  FWHM vs. enclosed flux fraction are shown with the <tt>'e'</tt>, <tt>'p'</tt>, and
-  <tt>'g'</tt> keys respectively when there is more than one star.  The grid shows
+  FWHM vs. enclosed flux fraction are shown with the <span style="font-family: monospace;">'e'</span>, <span style="font-family: monospace;">'p'</span>, and
+  <span style="font-family: monospace;">'g'</span> keys respectively when there is more than one star.  The grid shows
   a profile for each star.  The profiles in the grid have no axis labels or
   ticks.  Within each box are the coordinates of the object
   and the PSF size.  Below the grid is shown a graph of a single objects
@@ -584,7 +584,7 @@ psfmeasure: Measure PSF sizes from stellar images
   In the grid there is one profile which is highlighted (by a second box or
   by a color border).  This is the profile shown in the lower graph.  To
   change the star in the lower graph on can type the space bar to advance to
-  the next star or use the cursor and the <tt>'e'</tt>, <tt>'p'</tt>, or <tt>'g'</tt> key again.  Other
+  the next star or use the cursor and the <span style="font-family: monospace;">'e'</span>, <span style="font-family: monospace;">'p'</span>, or <span style="font-family: monospace;">'g'</span> key again.  Other
   keys will select another plot using the star nearest the cursor to select a
   measurement.
   </p>
@@ -593,17 +593,17 @@ psfmeasure: Measure PSF sizes from stellar images
   have the profiles of the object with the smallest size overplotted.  The
   overplot has a dashed line, a different color on color graphics devices,
   and no symbols marking the measurement points.  The overplots may be
-  enabled or disabled with the <tt>":overplot"</tt> command.  Initially it is
+  enabled or disabled with the <span style="font-family: monospace;">":overplot"</span> command.  Initially it is
   disabled.
   </p>
   <p>
-  The final plot, the <tt>'a'</tt> key, gives a spatial representation.  This requires
+  The final plot, the <span style="font-family: monospace;">'a'</span> key, gives a spatial representation.  This requires
   more than one star.  This plot has a central graph of column and line
   coordinates with symbols indicating the position of an object.  The objects
   are marked with a circle (when plotted at unit aspect ratio) whose size is
   proportional to the measured PSF size.  In addition an optional asterisk
   symbol with size proportional to the relative brightness of the object may
-  be plotted.  This symbol is toggled with the <tt>'s'</tt> key.  On color displays
+  be plotted.  This symbol is toggled with the <span style="font-family: monospace;">'s'</span> key.  On color displays
   the circles may have two colors, one if object size is above the average
   best size and the other if the size is below the best size.  The purpose of
   this is to look for a spatial pattern in the PSF sizes.
@@ -633,20 +633,20 @@ psfmeasure: Measure PSF sizes from stellar images
   </pre>
   <p>
   The help, redraw, and quit keys are provide the standard functions.
-  The <tt>'s'</tt> and space keys were described previously.  The <tt>'i'</tt> key
+  The <span style="font-family: monospace;">'s'</span> and space keys were described previously.  The <span style="font-family: monospace;">'i'</span> key
   locates the nearest object to the cursor in whatever plot is shown and
   prints one line of information about the object on the graphics device
   status area.
   </p>
   <p>
-  The <tt>'d'</tt> key deletes the star nearest the cursor in whatever plot is
+  The <span style="font-family: monospace;">'d'</span> key deletes the star nearest the cursor in whatever plot is
   currently displayed.  To delete all objects from an image, all
-  values for one star (the same as <tt>'d'</tt>), or a
-  single measurement, the <tt>'x'</tt> key is used.  Typing this key produces a query
-  for which type of deletion and the user responds with <tt>'i'</tt>, <tt>'s'</tt>, or
-  <tt>'p'</tt>.  Deleted measurements do not appear in any subsequent
+  values for one star (the same as <span style="font-family: monospace;">'d'</span>), or a
+  single measurement, the <span style="font-family: monospace;">'x'</span> key is used.  Typing this key produces a query
+  for which type of deletion and the user responds with <span style="font-family: monospace;">'i'</span>, <span style="font-family: monospace;">'s'</span>, or
+  <span style="font-family: monospace;">'p'</span>.  Deleted measurements do not appear in any subsequent
   graphics, are excluded from all computations, and are not output in the
-  results.  The <tt>'u'</tt> key allows one to recover deleted measurements.  This
+  results.  The <span style="font-family: monospace;">'u'</span> key allows one to recover deleted measurements.  This
   undeletes all previously deleted data.
   </p>
   <p>
@@ -655,18 +655,18 @@ psfmeasure: Measure PSF sizes from stellar images
   decreases beyond some point (overestimated sky) or linearly
   increases with radius (underestimated sky).  This affects the size
   measurement by raising or lowering the normalization and altering
-  the shape of the enclosed flux profile.  The <tt>'n'</tt> and <tt>'o'</tt> keys allow
+  the shape of the enclosed flux profile.  The <span style="font-family: monospace;">'n'</span> and <span style="font-family: monospace;">'o'</span> keys allow
   fudging the enclosed flux profiles.  These keys apply only in
-  the zoom plot or <tt>'e'</tt> key plot of the enclosed flux profile.
+  the zoom plot or <span style="font-family: monospace;">'e'</span> key plot of the enclosed flux profile.
   </p>
   <p>
-  The <tt>'n'</tt> key normalizes the enclosed flux profile at the point
-  set by the x position of the cursor.  The <tt>'o'</tt> key increases or
+  The <span style="font-family: monospace;">'n'</span> key normalizes the enclosed flux profile at the point
+  set by the x position of the cursor.  The <span style="font-family: monospace;">'o'</span> key increases or
   decreases the background estimate to bring curve up or down to
   the point specified by the cursor.  The effect of this is to
   add or subtract a quadratic function since the number of pixels
   at a particular radius varies as the square of the radius.
-  To restore the original profile, type <tt>'n'</tt> or <tt>'o'</tt> at a radius
+  To restore the original profile, type <span style="font-family: monospace;">'n'</span> or <span style="font-family: monospace;">'o'</span> at a radius
   less than zero.
   </p>
   <p>
@@ -710,10 +710,10 @@ psfmeasure: Measure PSF sizes from stellar images
   cl&gt; psfmeasure field1
   &lt;The image is displayed and the image cursor activated&gt;
   &lt;A number of brighter stars are marked&gt;
-  &lt;Marking is finished with <tt>'q'</tt>&gt;
+  &lt;Marking is finished with <span style="font-family: monospace;">'q'</span>&gt;
   &lt;Graph of FWHM and ellipticity vs relative magnitude are shown&gt;
   &lt;A couple of bad measurements due to blending are deleted&gt;
-  &lt;Exit with <tt>'q'</tt>&gt;
+  &lt;Exit with <span style="font-family: monospace;">'q'</span>&gt;
   NOAO/IRAF IRAFV2.10.3 valdes@puppis Tue 18:22:36 06-Jul-93
     Average full width at half maximum of 4.5722
   

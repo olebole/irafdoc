@@ -36,7 +36,7 @@ gkidir: Directory listing of metacode file
   the plots contained in each input file.  Each plot is listed with its
   size and an identifying title string.  The title string is the MFTITLE
   string if given, or else the longest GTEXT string found (hopefully the
-  plot title), or else the string <tt>"(no title)"</tt>.  The output format is as
+  plot title), or else the string <span style="font-family: monospace;">"(no title)"</span>.  The output format is as
   follows:
   </p>
   <pre>
@@ -56,7 +56,7 @@ gkidir: Directory listing of metacode file
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. List the plots in the GKI metacode file <tt>"file"</tt>:
+  1. List the plots in the GKI metacode file <span style="font-family: monospace;">"file"</span>:
   </p>
   <p>
       cl&gt; gkidir file

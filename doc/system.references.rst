@@ -30,7 +30,7 @@ references: Find all help database references for a given topic
   </dd>
   </dl>
   <dl>
-  <dt><b>quickref = <tt>"uparm$quick.ref"</tt></b></dt>
+  <dt><b>quickref = <span style="font-family: monospace;">"uparm$quick.ref"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='quickref' Line='quickref = "uparm$quick.ref"' -->
   <dd>The name of the optional quick-reference file.
   </dd>
@@ -59,7 +59,7 @@ references: Find all help database references for a given topic
   or other help modules pertaining to the given topic, where <i>topic</i> may be
   a keyword, phrase, or any general pattern as would be input to the <i>match</i>
   task.  By default the full help database will be searched.  If desired,
-  the <tt>"one-liner"</tt> information used for topic searching may be extracted and
+  the <span style="font-family: monospace;">"one-liner"</span> information used for topic searching may be extracted and
   used to prepare a quick-reference file to speed further searches.
   This is not done by default because the help database is too dynamic, e.g., 
   new external packages may be installed at any time, by any user, or new
@@ -77,7 +77,7 @@ references: Find all help database references for a given topic
   get <i>help</i> on the named <i>keyword</i> and the pathname will be seen at
   the top of the help screen, followed by additional information about the
   referenced object.  If there are multiple objects with the same name,
-  a <tt>"help &lt;keyword&gt; all+"</tt> may be required to locate a particular one.
+  a <span style="font-family: monospace;">"help &lt;keyword&gt; all+"</span> may be required to locate a particular one.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Examples</h3>

@@ -52,10 +52,10 @@ imcntr: Locate the center of a stellar image
   <p>
   Given the approximate coordinates of the center of an object, (x_init, y_init),
   IMCNTR will compute a more accurate center using the algorithms described in
-  the Kitt Peak publication <tt>"Stellar Magnitudes from Digital Images"</tt> under
+  the Kitt Peak publication <span style="font-family: monospace;">"Stellar Magnitudes from Digital Images"</span> under
   the Mountain Photometry Code section. Briefly, this algorithm computes
   the sum of all the rows and the sum of all the columns in the extraction
-  box. These are called <tt>"marginal distributions"</tt>. The center in x (column
+  box. These are called <span style="font-family: monospace;">"marginal distributions"</span>. The center in x (column
   value) is then the center of gravity of the row marginal, and the center
   in y is the center of gravity of the column marginal.
   If the resultant x or y center value deviates from the original input

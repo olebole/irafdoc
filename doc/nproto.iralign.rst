@@ -43,7 +43,7 @@ iralign: Align the mosaiced image produced by irmosaic
   <dl>
   <dt><b>coords</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coords' Line='coords' -->
-  <dd>If <i>alignment</i> = <tt>"coords"</tt>, then <b>coords</b> is
+  <dd>If <i>alignment</i> = <span style="font-family: monospace;">"coords"</span>, then <b>coords</b> is
   a text file containing the x and y coordinates, measured in the input
   mosaiced image, of reference objects common
   to adjacent subrasters in the input mosaiced
@@ -53,7 +53,7 @@ iralign: Align the mosaiced image produced by irmosaic
   line 3) the x and y coordinates of another object in the any subraster,
   line 4) the x and y coordinates of the same object in any adjacent subraster,
   etc.
-  If <i>alignment</i> = <tt>"file"</tt>, then <b>coords</b> is a text file containing
+  If <i>alignment</i> = <span style="font-family: monospace;">"file"</span>, then <b>coords</b> is a text file containing
   the x and y shifts in columns 1 and 2 respectively,
   of each subraster relative to the reference subraster, in the order
   in which the subrasters were written into the mosaiced input image.
@@ -65,17 +65,17 @@ iralign: Align the mosaiced image produced by irmosaic
   <dl>
   <dt><b>xshift</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xshift' Line='xshift' -->
-  <dd>The x shift in pixels used if <i>alignment</i> = <tt>"shifts"</tt>.
+  <dd>The x shift in pixels used if <i>alignment</i> = <span style="font-family: monospace;">"shifts"</span>.
   </dd>
   </dl>
   <dl>
   <dt><b>yshift</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='yshift' Line='yshift' -->
-  <dd>The y shift in pixels used if <i>alignment</i> = <tt>"shifts"</tt>.
+  <dd>The y shift in pixels used if <i>alignment</i> = <span style="font-family: monospace;">"shifts"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>alignment = <tt>"coords"</tt></b></dt>
+  <dt><b>alignment = <span style="font-family: monospace;">"coords"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='alignment' Line='alignment = "coords"' -->
   <dd>The method of aligning the subraster.
   <dl>
@@ -120,7 +120,7 @@ iralign: Align the mosaiced image produced by irmosaic
   </dd>
   </dl>
   <dl>
-  <dt><b>trimlimits = <tt>"[1:1,1:1]"</tt></b></dt>
+  <dt><b>trimlimits = <span style="font-family: monospace;">"[1:1,1:1]"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='trimlimits' Line='trimlimits = "[1:1,1:1]"' -->
   <dd>The number of columns or rows to trim off each edge of each input subraster
   before inserting it in the output image, specified in image section notation.
@@ -195,7 +195,7 @@ iralign: Align the mosaiced image produced by irmosaic
   with respect to a reference subraster.
   </p>
   <p>
-  If <i>alignment</i> = <tt>"coords"</tt>, IRALIGN accumulates the relative shifts
+  If <i>alignment</i> = <span style="font-family: monospace;">"coords"</span>, IRALIGN accumulates the relative shifts
   between adjacent subrasters defined by the data in <i>coords</i>,
   into a total shift for each subraster with respect to the reference subraster.
   Relative shifts defined for non-adjacent subrasters are ignored.
@@ -204,13 +204,13 @@ iralign: Align the mosaiced image produced by irmosaic
   based on the relative x andy shifts of nearby subrasters
   which do have relative shift information.  If the x and y shifts
   are sufficiently uniform over the whole input image the user may set
-  <i>alignment</i> to  <tt>"shifts"</tt> and supply values for
+  <i>alignment</i> to  <span style="font-family: monospace;">"shifts"</span> and supply values for
   <i>xshift</i> and <i>yshift</i>.
   Alternatively the total shifts may be read directly from the  file <i>coords</i>
-  if <i>alignment</i> = <tt>"file"</tt>.
+  if <i>alignment</i> = <span style="font-family: monospace;">"file"</span>.
   </p>
   <p>
-  Coordinate lists for the <i>alignment</i> = <tt>"coords"</tt> option,
+  Coordinate lists for the <i>alignment</i> = <span style="font-family: monospace;">"coords"</span> option,
   may be generated interactively using the RIMCURSOR, 
   or APPHOT package CENTER and APSELECT tasks. For example a coordinate list
   written by RIMCURSOR for a 

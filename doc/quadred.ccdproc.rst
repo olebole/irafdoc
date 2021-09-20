@@ -37,7 +37,7 @@ ccdproc: Process CCD images (including quadformat data)
   </dd>
   </dl>
   <dl>
-  <dt><b>output = <tt>""</tt></b></dt>
+  <dt><b>output = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
   <dd>List of output images.  If no list is given then the processing will replace
   the input images with the processed images.  If a list is given it must
@@ -46,7 +46,7 @@ ccdproc: Process CCD images (including quadformat data)
   </dd>
   </dl>
   <dl>
-  <dt><b>ccdtype = <tt>""</tt></b></dt>
+  <dt><b>ccdtype = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ccdtype' Line='ccdtype = ""' -->
   <dd>CCD image type to select from the input image list.  If no type is given
   then all input images will be selected.  The recognized types are described
@@ -144,18 +144,18 @@ ccdproc: Process CCD images (including quadformat data)
   
   </p>
   <dl>
-  <dt><b>readaxis = <tt>"line"</tt></b></dt>
+  <dt><b>readaxis = <span style="font-family: monospace;">"line"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='readaxis' Line='readaxis = "line"' -->
-  <dd>Read out axis specified as <tt>"line"</tt> or <tt>"column"</tt>.
+  <dd>Read out axis specified as <span style="font-family: monospace;">"line"</span> or <span style="font-family: monospace;">"column"</span>.
   </dd>
   </dl>
   <dl>
   <dt><b>fixfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fixfile' Line='fixfile' -->
-  <dd>Bad pixel mask, image, or file.  If <tt>"image"</tt> is specified then the name is
-  specified in the image header or instrument translation file.  If <tt>"BPM"</tt> is
+  <dd>Bad pixel mask, image, or file.  If <span style="font-family: monospace;">"image"</span> is specified then the name is
+  specified in the image header or instrument translation file.  If <span style="font-family: monospace;">"BPM"</span> is
   specified then the standard BPM image header keyword defines a bad pixel
-  mask.  A bad pixel mask is a compact format (<tt>".pl"</tt> extension) with zero
+  mask.  A bad pixel mask is a compact format (<span style="font-family: monospace;">".pl"</span> extension) with zero
   values indicating good pixels and non-zero values indicating bad pixels.  A
   bad pixel image is a regular image in which zero values are good pixels and
   non-zero values are bad pixels.  A bad pixel file specifies bad pixels or
@@ -168,7 +168,7 @@ ccdproc: Process CCD images (including quadformat data)
   <dl>
   <dt><b>biassec</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='biassec' Line='biassec' -->
-  <dd>Overscan bias strip image section.  If <tt>"image"</tt> is specified then the overscan
+  <dd>Overscan bias strip image section.  If <span style="font-family: monospace;">"image"</span> is specified then the overscan
   bias section is specified in the image header or instrument translation file.
   Only the part of the bias section along the readout axis is used.  The
   length of the bias region fit is defined by the trim section.  If one
@@ -181,14 +181,14 @@ ccdproc: Process CCD images (including quadformat data)
   <dl>
   <dt><b>trimsec</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='trimsec' Line='trimsec' -->
-  <dd>Image section for trimming.  If <tt>"image"</tt> is specified then the trim image
+  <dd>Image section for trimming.  If <span style="font-family: monospace;">"image"</span> is specified then the trim image
   section is specified in the image header or instrument translation file.
   However, for <i>quadformat</i> data this parameter is not used and the trim
   sections are assumed to be in the image header.
   </dd>
   </dl>
   <dl>
-  <dt><b>zero = <tt>""</tt></b></dt>
+  <dt><b>zero = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='zero' Line='zero = ""' -->
   <dd>Zero level calibration image.  The zero level image may be one or two
   dimensional.  The CCD image type and subset are not checked for these
@@ -197,7 +197,7 @@ ccdproc: Process CCD images (including quadformat data)
   </dd>
   </dl>
   <dl>
-  <dt><b>dark = <tt>""</tt></b></dt>
+  <dt><b>dark = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dark' Line='dark = ""' -->
   <dd>Dark count calibration image.  The CCD image type and subset are not checked
   for these images and they take precedence over any dark count calibration
@@ -205,7 +205,7 @@ ccdproc: Process CCD images (including quadformat data)
   </dd>
   </dl>
   <dl>
-  <dt><b>flat = <tt>""</tt></b></dt>
+  <dt><b>flat = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='flat' Line='flat = ""' -->
   <dd>Flat field calibration images.  The flat field images may be one or
   two dimensional.  The CCD image type is not checked for these
@@ -215,7 +215,7 @@ ccdproc: Process CCD images (including quadformat data)
   </dd>
   </dl>
   <dl>
-  <dt><b>illum = <tt>""</tt></b></dt>
+  <dt><b>illum = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='illum' Line='illum = ""' -->
   <dd>Iillumination correction images.  The CCD image type is not checked for these
   images and they take precedence over any iillumination correction images given
@@ -224,7 +224,7 @@ ccdproc: Process CCD images (including quadformat data)
   </dd>
   </dl>
   <dl>
-  <dt><b>fringe = <tt>""</tt></b></dt>
+  <dt><b>fringe = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fringe' Line='fringe = ""' -->
   <dd>Fringe correction images.  The CCD image type is not checked for these
   images and they take precedence over any fringe correction images given
@@ -243,11 +243,11 @@ ccdproc: Process CCD images (including quadformat data)
   </dd>
   </dl>
   <dl>
-  <dt><b>scantype = <tt>"shortscan"</tt></b></dt>
+  <dt><b>scantype = <span style="font-family: monospace;">"shortscan"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='scantype' Line='scantype = "shortscan"' -->
   <dd>Type of scan format used in creating the CCD images.  The modes are:
   <dl>
-  <dt><b><tt>"shortscan"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"shortscan"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"shortscan"' -->
   <dd>The CCD is scanned over a number of lines and then read out as a regular
   two dimensional image.  In this mode unscanned zero level, dark count and
@@ -256,7 +256,7 @@ ccdproc: Process CCD images (including quadformat data)
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"longscan"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"longscan"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"longscan"' -->
   <dd>In this mode the CCD is clocked and read out continuously to form a long
   strip.  Flat fields are averaged across the readout axis to
@@ -271,7 +271,7 @@ ccdproc: Process CCD images (including quadformat data)
   <dt><b>nscan</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nscan' Line='nscan' -->
   <dd>Number of object scan readout lines used in short scan mode.  This parameter
-  is used when the scan type is <tt>"shortscan"</tt> and the number of scan lines
+  is used when the scan type is <span style="font-family: monospace;">"shortscan"</span> and the number of scan lines
   cannot be determined from the object image header (using the keyword
   nscanrows or it's translation).
   </dd>
@@ -290,7 +290,7 @@ ccdproc: Process CCD images (including quadformat data)
   the following parameters.
   </p>
   <dl>
-  <dt><b>function = <tt>"legendre"</tt></b></dt>
+  <dt><b>function = <span style="font-family: monospace;">"legendre"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "legendre"' -->
   <dd>Line-by-line determination of the overscan is specified by:
   <pre>
@@ -314,9 +314,9 @@ ccdproc: Process CCD images (including quadformat data)
   </dd>
   </dl>
   <dl>
-  <dt><b>sample = <tt>"*"</tt></b></dt>
+  <dt><b>sample = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"' -->
-  <dd>Sample points to use in the overscan fit.  The string <tt>"*"</tt> specified all
+  <dd>Sample points to use in the overscan fit.  The string <span style="font-family: monospace;">"*"</span> specified all
   points otherwise an <b>icfit</b> range string is used.
   </dd>
   </dl>
@@ -360,7 +360,7 @@ ccdproc: Process CCD images (including quadformat data)
   The parameters <i>verbose</i>, <i>logfile</i>, and <i>backup</i> default to
   the package parameters but may be specified to override the package
   values.  This is used by the <b>quadproc</b> script task.  These parameters
-  are described in the help topic <tt>"quadred.package"</tt>.
+  are described in the help topic <span style="font-family: monospace;">"quadred.package"</span>.
   </p>
   <!-- EndSection:   'PARAMETERS' -->
   <h3>Description</h3>
@@ -389,7 +389,7 @@ ccdproc: Process CCD images (including quadformat data)
   Previously processed images are ignored and calibration images are
   recognized, provided the CCD image types are in the image header (see
   <b>instruments</b> and <b>ccdtypes</b>).  Therefore it is permissible to
-  use simple image templates such as <tt>"*.imh"</tt>.  The <i>ccdtype</i> parameter
+  use simple image templates such as <span style="font-family: monospace;">"*.imh"</span>.  The <i>ccdtype</i> parameter
   may be used to select only certain types of CCD images to process
   (see <b>ccdtypes</b>).
   </p>
@@ -432,9 +432,9 @@ ccdproc: Process CCD images (including quadformat data)
   count images.  If no calibration image is specified by task parameter
   then calibration images in the input image list are identified and
   used.  This requires that the images have CCD image types recognized
-  by the package.  This method is useful if one may simply say <tt>"*.imh"</tt>
+  by the package.  This method is useful if one may simply say <span style="font-family: monospace;">"*.imh"</span>
   as the image list to process all images or if the images are broken
-  up into groups, in <tt>"@"</tt> files for example, each with their own calibration
+  up into groups, in <span style="font-family: monospace;">"@"</span> files for example, each with their own calibration
   frames.
   </p>
   <p>
@@ -501,7 +501,7 @@ ccdproc: Process CCD images (including quadformat data)
   The text file consists of lines with four fields, the starting and
   ending columns and the starting and ending lines.  Any number of
   regions may be specified.  Comment lines beginning with the character
-  <tt>'#'</tt> may be included.  The description applies directly to the input
+  <span style="font-family: monospace;">'#'</span> may be included.  The description applies directly to the input
   image (before trimming) so different files are needed for previously
   trimmed or subsection readouts.  The data in this file is internally
   turned into the same description as a bad pixel mask with values of
@@ -517,7 +517,7 @@ ccdproc: Process CCD images (including quadformat data)
   </p>
   <p>
   The bad pixel description may be specified explicitly with the parameter
-  <i>fixfile</i> or indirectly if the parameter has the value <tt>"image"</tt>.  In the
+  <i>fixfile</i> or indirectly if the parameter has the value <span style="font-family: monospace;">"image"</span>.  In the
   latter case the instrument file must contain the name of the file.
   </p>
   <!-- EndSection:   '1. Fixpix' -->
@@ -709,11 +709,11 @@ ccdproc: Process CCD images (including quadformat data)
   integrates one point in the sky or spectrum.  However, the design of most CCD's
   allows the sky to be scanned across the CCD while shifting the
   accumulating signal at the same rate.  <b>Ccdproc</b> provides for two
-  scanning modes called <tt>"shortscan"</tt> and <tt>"longscan"</tt>.  The type of scan
+  scanning modes called <span style="font-family: monospace;">"shortscan"</span> and <span style="font-family: monospace;">"longscan"</span>.  The type of scan
   mode is set with the parameter <i>scanmode</i>.
   </p>
   <p>
-  In <tt>"shortscan"</tt> mode the detector is scanned over a specified number of
+  In <span style="font-family: monospace;">"shortscan"</span> mode the detector is scanned over a specified number of
   lines (not necessarily at sideral rates).  The lines that scroll off the
   detector during the integration are thrown away.  At the end of the
   integration the detector is read out in the same way as an unscanned
@@ -743,11 +743,11 @@ ccdproc: Process CCD images (including quadformat data)
   with a digital scanning of 32 lines.
   </p>
   <p>
-  In <tt>"longscan"</tt> mode the detector is continuously read out to produce an
+  In <span style="font-family: monospace;">"longscan"</span> mode the detector is continuously read out to produce an
   arbitrarily long strip.  Provided data which has not passed over the entire
   detector is thrown away, the zero level, dark count, and flat field
   corrections will be one dimensional.  If <i>scancor</i> is specified and the
-  scan mode is <tt>"longscan"</tt> then a one dimensional zero level, dark count, and
+  scan mode is <span style="font-family: monospace;">"longscan"</span> then a one dimensional zero level, dark count, and
   flat field correction will be applied.
   </p>
   <!-- EndSection:   '10. Scancor' -->
@@ -786,7 +786,7 @@ ccdproc: Process CCD images (including quadformat data)
   previously, the bad pixel file is determined either from the task
   parameter or the instrument translation file.  The bad pixel regions
   are read.  If the image has been trimmed previously and the bad pixel
-  file contains the word <tt>"untrimmed"</tt> then the bad pixel coordinates are
+  file contains the word <span style="font-family: monospace;">"untrimmed"</span> then the bad pixel coordinates are
   translated to those of the trimmed image.
   </dd>
   </dl>
@@ -855,7 +855,7 @@ ccdproc: Process CCD images (including quadformat data)
   <dd>If the image is an iillumination image go to processing step 12.  If an
   iillumination correction is desired and this correction has not been performed,
   find the iillumination calibration image of the appropriate subset.
-  The iillumination image must have the <tt>"mkillum"</tt> processing flag or the
+  The iillumination image must have the <span style="font-family: monospace;">"mkillum"</span> processing flag or the
   <b>ccdproc</b> will abort with an error.  The mean of the image
   is determined from the image header to be used for scaling.  If no
   mean is found then a unit scaling is used.  The processed calibration
@@ -869,7 +869,7 @@ ccdproc: Process CCD images (including quadformat data)
   <dd>If the image is a fringe image go to processing step 12.  If a fringe
   correction is desired and this correction has not been performed,
   find the fringe calibration image of the appropriate subset.
-  The iillumination image must have the <tt>"mkfringe"</tt> processing flag or the
+  The iillumination image must have the <span style="font-family: monospace;">"mkfringe"</span> processing flag or the
   <b>ccdproc</b> will abort with an error.  The ratio of the input
   image exposure time to the fringe image exposure time is determined.
   If there is a fringe scaling in the image header then this factor
@@ -995,7 +995,7 @@ ccdproc: Process CCD images (including quadformat data)
   <p>
   The second way is to specify the processing operations more explicitly
   than is needed when the header information is present.  The parameter
-  <i>ccdtype</i> is set to <tt>""</tt> or to <tt>"none"</tt>.  The calibration images are
+  <i>ccdtype</i> is set to <span style="font-family: monospace;">""</span> or to <span style="font-family: monospace;">"none"</span>.  The calibration images are
   specified explicitly by task parameter since they cannot be recognized
   in the input list.  Only one subset at a time may be processed.
   </p>

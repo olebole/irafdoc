@@ -29,56 +29,56 @@ apall: Extract 1D spectra (all parameters in one task)
   </dd>
   </dl>
   <dl>
-  <dt><b>output = <tt>""</tt></b></dt>
+  <dt><b>output = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
   <dd>List of output root names for extracted spectra.  If the null
   string is given or the end of the output list is reached before the end
   of the input list then the input image name is used as the output root name.
   This will not conflict with the input image since an aperture number
-  extension is added for onedspec format, the extension <tt>".ms"</tt> for multispec
-  format, or the extension <tt>".ec"</tt> for echelle format.
+  extension is added for onedspec format, the extension <span style="font-family: monospace;">".ms"</span> for multispec
+  format, or the extension <span style="font-family: monospace;">".ec"</span> for echelle format.
   </dd>
   </dl>
   <dl>
-  <dt><b>apertures = <tt>""</tt></b></dt>
+  <dt><b>apertures = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
   <dd>Apertures to recenter, resize, trace, and extract.  This only applies
   to apertures read from the input or reference database.  Any new
   apertures defined with the automatic finding algorithm or interactively
   are always selected.  The syntax is a list comma separated ranges
   where a range can be a single aperture number, a hyphen separated
-  range of aperture numbers, or a range with a step specified by <tt>"x&lt;step&gt;"</tt>;
-  for example, <tt>"1,3-5,9-12x2"</tt>.
+  range of aperture numbers, or a range with a step specified by <span style="font-family: monospace;">"x&lt;step&gt;"</span>;
+  for example, <span style="font-family: monospace;">"1,3-5,9-12x2"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>format = <tt>"multispec"</tt> (onedspec|multispec|echelle|strip)</b></dt>
+  <dt><b>format = <span style="font-family: monospace;">"multispec"</span> (onedspec|multispec|echelle|strip)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='format' Line='format = "multispec" (onedspec|multispec|echelle|strip)' -->
-  <dd>Format for output extracted spectra.  <tt>"Onedspec"</tt> format extracts each
-  aperture to a separate image while <tt>"multispec"</tt> and <tt>"echelle"</tt> extract
+  <dd>Format for output extracted spectra.  <span style="font-family: monospace;">"Onedspec"</span> format extracts each
+  aperture to a separate image while <span style="font-family: monospace;">"multispec"</span> and <span style="font-family: monospace;">"echelle"</span> extract
   multiple apertures for the same image to a single output image.
-  The <tt>"multispec"</tt> and <tt>"echelle"</tt> format selections differ only in the
-  extension added.  The <tt>"strip"</tt> format produces a separate 2D image in
+  The <span style="font-family: monospace;">"multispec"</span> and <span style="font-family: monospace;">"echelle"</span> format selections differ only in the
+  extension added.  The <span style="font-family: monospace;">"strip"</span> format produces a separate 2D image in
   which each column or line along the dispersion axis is shifted to
   exactly align the aperture based on the trace information.
   </dd>
   </dl>
   <dl>
-  <dt><b>references = <tt>""</tt></b></dt>
+  <dt><b>references = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='references' Line='references = ""' -->
   <dd>List of reference images to be used to define apertures for the input
   images.  When a reference image is given it supersedes apertures
-  previously defined for the input image. The list may be null, <tt>""</tt>, or
+  previously defined for the input image. The list may be null, <span style="font-family: monospace;">""</span>, or
   any number of images less than or equal to the list of input images.
   There are three special words which may be used in place of an image
-  name.  The word <tt>"last"</tt> refers to the last set of apertures written to
-  the database.  The word <tt>"OLD"</tt> requires that an entry exist
-  and the word <tt>"NEW"</tt> requires that the entry not exist for each input image.
+  name.  The word <span style="font-family: monospace;">"last"</span> refers to the last set of apertures written to
+  the database.  The word <span style="font-family: monospace;">"OLD"</span> requires that an entry exist
+  and the word <span style="font-family: monospace;">"NEW"</span> requires that the entry not exist for each input image.
   Input images without/with a database entry are skipped silently.
   </dd>
   </dl>
   <dl>
-  <dt><b>profiles = <tt>""</tt></b></dt>
+  <dt><b>profiles = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='profiles' Line='profiles = ""' -->
   <dd>List of profile images for variance weighting or cleanning.   If variance
   weighting or cleanning a profile of each aperture is computed from the
@@ -186,7 +186,7 @@ apall: Extract 1D spectra (all parameters in one task)
   </dd>
   </dl>
   <dl>
-  <dt><b>apidtable = <tt>""</tt></b></dt>
+  <dt><b>apidtable = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apidtable' Line='apidtable = ""' -->
   <dd>Aperture identification table.  This may be either a text file or an
   image.  A text file consisting of lines with an aperture number, beam
@@ -201,11 +201,11 @@ apall: Extract 1D spectra (all parameters in one task)
   
   </p>
   <dl>
-  <dt><b>b_function = <tt>"chebyshev"</tt></b></dt>
+  <dt><b>b_function = <span style="font-family: monospace;">"chebyshev"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='b_function' Line='b_function = "chebyshev"' -->
   <dd>Default background fitting function.  The fitting function types are
-  <tt>"chebyshev"</tt> polynomial, <tt>"legendre"</tt> polynomial, <tt>"spline1"</tt> linear spline, and
-  <tt>"spline3"</tt> cubic spline.
+  <span style="font-family: monospace;">"chebyshev"</span> polynomial, <span style="font-family: monospace;">"legendre"</span> polynomial, <span style="font-family: monospace;">"spline1"</span> linear spline, and
+  <span style="font-family: monospace;">"spline3"</span> cubic spline.
   </dd>
   </dl>
   <dl>
@@ -217,10 +217,10 @@ apall: Extract 1D spectra (all parameters in one task)
   </dd>
   </dl>
   <dl>
-  <dt><b>b_sample = <tt>"-10:-6,6:10"</tt></b></dt>
+  <dt><b>b_sample = <span style="font-family: monospace;">"-10:-6,6:10"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='b_sample' Line='b_sample = "-10:-6,6:10"' -->
   <dd>Default background sample.  The sample is given by a set of colon separated
-  ranges each separated by either whitespace or commas.  The string <tt>"*"</tt> refers
+  ranges each separated by either whitespace or commas.  The string <span style="font-family: monospace;">"*"</span> refers
   to all points.  Note that the background coordinates are relative to the
   aperture center and not image pixel coordinates so the endpoints need not
   be integer.
@@ -311,10 +311,10 @@ apall: Extract 1D spectra (all parameters in one task)
   </dd>
   </dl>
   <dl>
-  <dt><b>order = <tt>"increasing"</tt></b></dt>
+  <dt><b>order = <span style="font-family: monospace;">"increasing"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='order' Line='order = "increasing"' -->
-  <dd>When assigning aperture identifications order the spectra <tt>"increasing"</tt>
-  or <tt>"decreasing"</tt> with increasing pixel position (left-to-right or
+  <dd>When assigning aperture identifications order the spectra <span style="font-family: monospace;">"increasing"</span>
+  or <span style="font-family: monospace;">"decreasing"</span> with increasing pixel position (left-to-right or
   right-to-left in a cross-section plot of the image).
   </dd>
   </dl>
@@ -322,7 +322,7 @@ apall: Extract 1D spectra (all parameters in one task)
   
   </p>
   <dl>
-  <dt><b>aprecenter = <tt>""</tt></b></dt>
+  <dt><b>aprecenter = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='aprecenter' Line='aprecenter = ""' -->
   <dd>List of apertures to be used in shift calculation.
   </dd>
@@ -422,11 +422,11 @@ apall: Extract 1D spectra (all parameters in one task)
   </dd>
   </dl>
   <dl>
-  <dt><b>t_function = <tt>"legendre"</tt></b></dt>
+  <dt><b>t_function = <span style="font-family: monospace;">"legendre"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='t_function' Line='t_function = "legendre"' -->
   <dd>Default trace fitting function.  The fitting function types are
-  <tt>"chebyshev"</tt> polynomial, <tt>"legendre"</tt> polynomial, <tt>"spline1"</tt> linear spline, and
-  <tt>"spline3"</tt> cubic spline.
+  <span style="font-family: monospace;">"chebyshev"</span> polynomial, <span style="font-family: monospace;">"legendre"</span> polynomial, <span style="font-family: monospace;">"spline1"</span> linear spline, and
+  <span style="font-family: monospace;">"spline3"</span> cubic spline.
   </dd>
   </dl>
   <dl>
@@ -438,10 +438,10 @@ apall: Extract 1D spectra (all parameters in one task)
   </dd>
   </dl>
   <dl>
-  <dt><b>t_sample = <tt>"*"</tt></b></dt>
+  <dt><b>t_sample = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='t_sample' Line='t_sample = "*"' -->
   <dd>Default fitting sample.  The sample is given by a set of colon separated
-  ranges each separated by either whitespace or commas.  The string <tt>"*"</tt> refers
+  ranges each separated by either whitespace or commas.  The string <span style="font-family: monospace;">"*"</span> refers
   to all points.
   </dd>
   </dl>
@@ -481,14 +481,14 @@ apall: Extract 1D spectra (all parameters in one task)
   
   </p>
   <dl>
-  <dt><b>background = <tt>"none"</tt> (none|average|median|minimum|fit)</b></dt>
+  <dt><b>background = <span style="font-family: monospace;">"none"</span> (none|average|median|minimum|fit)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='background' Line='background = "none" (none|average|median|minimum|fit)' -->
-  <dd>Type of background subtraction.  The choices are <tt>"none"</tt> for no background
-  subtraction, <tt>"average"</tt> to average the background within the background
-  regions, <tt>"median"</tt> to use the median in the background regions, <tt>"minimum"</tt> to
-  use the minimum in the background regions, or <tt>"fit"</tt> to fit across the
+  <dd>Type of background subtraction.  The choices are <span style="font-family: monospace;">"none"</span> for no background
+  subtraction, <span style="font-family: monospace;">"average"</span> to average the background within the background
+  regions, <span style="font-family: monospace;">"median"</span> to use the median in the background regions, <span style="font-family: monospace;">"minimum"</span> to
+  use the minimum in the background regions, or <span style="font-family: monospace;">"fit"</span> to fit across the
   dispersion using the background within the background regions.  Note that
-  the <tt>"average"</tt> option does not do any medianing or bad pixel checking,
+  the <span style="font-family: monospace;">"average"</span> option does not do any medianing or bad pixel checking,
   something which is recommended.  The fitting option is slower than the
   other options and requires additional fitting parameter.
   </dd>
@@ -505,20 +505,20 @@ apall: Extract 1D spectra (all parameters in one task)
   </dd>
   </dl>
   <dl>
-  <dt><b>weights = <tt>"none"</tt> (none|variance)</b></dt>
+  <dt><b>weights = <span style="font-family: monospace;">"none"</span> (none|variance)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='weights' Line='weights = "none" (none|variance)' -->
   <dd>Type of extraction weighting.  Note that if the <i>clean</i> parameter is
-  set then the weights used are <tt>"variance"</tt> regardless of the weights
+  set then the weights used are <span style="font-family: monospace;">"variance"</span> regardless of the weights
   specified by this parameter.  The choices are:
   <dl>
-  <dt><b><tt>"none"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"none"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"none"' -->
   <dd>The pixels are summed without weights except for partial pixels at the
   ends.
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"variance"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"variance"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"variance"' -->
   <dd>The extraction is weighted by the variance based on the data values
   and a poisson/ccd model using the <i>gain</i> and <i>readnoise</i>
@@ -528,15 +528,15 @@ apall: Extract 1D spectra (all parameters in one task)
   </dd>
   </dl>
   <dl>
-  <dt><b>pfit = <tt>"fit1d"</tt> (fit1d|fit2d)</b></dt>
+  <dt><b>pfit = <span style="font-family: monospace;">"fit1d"</span> (fit1d|fit2d)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pfit' Line='pfit = "fit1d" (fit1d|fit2d)' -->
   <dd>Profile fitting algorithm to use with variance weighting or cleaning.
   When determining a profile the two dimensional spectrum is divided by
   an estimate of the one dimensional spectrum to form a normalized two
   dimensional spectrum profile.  This profile is then smoothed by fitting
-  one dimensional functions, <tt>"fit1d"</tt>, along the lines or columns most closely
+  one dimensional functions, <span style="font-family: monospace;">"fit1d"</span>, along the lines or columns most closely
   corresponding to the dispersion axis or a special two dimensional
-  function, <tt>"fit2d"</tt>, described by Marsh (see <b>approfile</b>).
+  function, <span style="font-family: monospace;">"fit2d"</span>, described by Marsh (see <b>approfile</b>).
   </dd>
   </dl>
   <dl>
@@ -715,11 +715,11 @@ apall: Extract 1D spectra (all parameters in one task)
     Resizing apertures ...
     Jul 31 16:55: RESIZE - 4 apertures resized for apdemo2d.
     Edit apertures for apdemo2d?  (yes):
-    # Get a list of commands with <tt>'?'</tt>
+    # Get a list of commands with <span style="font-family: monospace;">'?'</span>
     # See all the parameters settings with :par
-    # Try deleting and marking a spectrum with <tt>'d'</tt> and <tt>'m'</tt>
-    # Look at the background fitting parameters with <tt>'b'</tt> (exit with <tt>'q'</tt>)
-    # Exit with <tt>'q'</tt>
+    # Try deleting and marking a spectrum with <span style="font-family: monospace;">'d'</span> and <span style="font-family: monospace;">'m'</span>
+    # Look at the background fitting parameters with <span style="font-family: monospace;">'b'</span> (exit with <span style="font-family: monospace;">'q'</span>)
+    # Exit with <span style="font-family: monospace;">'q'</span>
     Trace apertures for apdemo2d?  (yes): 
     Fit traced positions for apdemo2d interactively?  (yes):
     Tracing apertures ...
@@ -735,7 +735,7 @@ apall: Extract 1D spectra (all parameters in one task)
     Review extracted spectra from apdemo2d?  (yes):
     Extracting apertures ...
     Review extracted spectrum for aperture 1 from apdemo2d?  (yes):
-    # Type <tt>'q'</tt> to quit
+    # Type <span style="font-family: monospace;">'q'</span> to quit
     Jul 31 16:56: EXTRACT - Aperture 1 from apdemo2d --&gt; apdemo2d.ms
     Review extracted spectrum for aperture 2 from apdemo2d?  (yes): N
     Jul 31 16:56: EXTRACT - Aperture 2 from apdemo2d --&gt; apdemo2d.ms
@@ -761,13 +761,13 @@ apall: Extract 1D spectra (all parameters in one task)
   <dl>
   <dt><b>APALL V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='APALL' Line='APALL V2.11' -->
-  <dd>The <tt>"apertures"</tt> parameter can be used to select apertures for resizing,
+  <dd>The <span style="font-family: monospace;">"apertures"</span> parameter can be used to select apertures for resizing,
   recentering, tracing, and extraction.  This parameter name was previously
   used for selecting apertures in the recentering algorithm.  The new
-  parameter name for this is now <tt>"aprecenter"</tt>.
+  parameter name for this is now <span style="font-family: monospace;">"aprecenter"</span>.
   The aperture ID table information may now be contained in the
   image header under the keywords SLFIBnnn.
-  The <tt>"nsubaps"</tt> parameter now allows onedspec and echelle output formats.
+  The <span style="font-family: monospace;">"nsubaps"</span> parameter now allows onedspec and echelle output formats.
   The echelle format is appropriate for treating each subaperture as
   a full echelle extraction.
   </dd>
@@ -779,7 +779,7 @@ apall: Extract 1D spectra (all parameters in one task)
   As a final step when computing a weighted/cleaned spectrum the total
   fluxes from the weighted spectrum and the simple unweighted spectrum
   (excluding any deviant and saturated pixels) are computed and a
-  <tt>"bias"</tt> factor of the ratio of the two fluxes is multiplied into
+  <span style="font-family: monospace;">"bias"</span> factor of the ratio of the two fluxes is multiplied into
   the weighted spectrum and the sigma estimate.  This makes the total
   fluxes the same.  In this version the bias factor is recorded in the logfile
   if one is kept.  Also a check is made for unusual bias factors.

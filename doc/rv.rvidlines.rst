@@ -30,12 +30,12 @@ rvidlines: Measure radial velocities from spectral lines
   </dd>
   </dl>
   <dl>
-  <dt><b>section = <tt>"middle line"</tt></b></dt>
+  <dt><b>section = <span style="font-family: monospace;">"middle line"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='section' Line='section = "middle line"' -->
   <dd>If an image is not one dimensional or given as a one dimensional image
   section then the image section given by this parameter is used.  The
   section is used to define the initial vector and the direction (columns,
-  lines, or <tt>"z"</tt>) of the image vectors to be fit.  The image is still considered
+  lines, or <span style="font-family: monospace;">"z"</span>) of the image vectors to be fit.  The image is still considered
   to be two or three dimensional and it is possible to change the data vector
   within the program.
   The section parameter may be specified directly as an image section or
@@ -48,17 +48,17 @@ rvidlines: Measure radial velocities from spectral lines
   which is an integer number.  The field in [] is a second designator
   which is used with 3D data.  See the example section for examples of
   this syntax.  Abbreviations are allowed though beware
-  that <tt>'l'</tt> is not a sufficient abbreviation.
+  that <span style="font-family: monospace;">'l'</span> is not a sufficient abbreviation.
   </dd>
   </dl>
   <dl>
-  <dt><b>database = <tt>"database"</tt></b></dt>
+  <dt><b>database = <span style="font-family: monospace;">"database"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"' -->
   <dd>Database in which the feature data and redshifts are recorded.
   </dd>
   </dl>
   <dl>
-  <dt><b>coordlist = <tt>""</tt></b></dt>
+  <dt><b>coordlist = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coordlist' Line='coordlist = ""' -->
   <dd>User coordinate list consisting of an ordered list of rest spectral line
   coordinates.  If a line list is defined lines from the list may be
@@ -66,7 +66,7 @@ rvidlines: Measure radial velocities from spectral lines
   </dd>
   </dl>
   <dl>
-  <dt><b>nsum = <tt>"10"</tt></b></dt>
+  <dt><b>nsum = <span style="font-family: monospace;">"10"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nsum' Line='nsum = "10"' -->
   <dd>Number of lines, columns, or bands across the designated vector axis to be
   summed when the image is a two or three dimensional spatial spectrum.
@@ -89,23 +89,23 @@ rvidlines: Measure radial velocities from spectral lines
   <dt><b>maxfeatures = 50</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maxfeatures' Line='maxfeatures = 50' -->
   <dd>Maximum number of the strongest features to be selected automatically from
-  the coordinate list (function <tt>'l'</tt>) or from the image data (function <tt>'y'</tt>).
+  the coordinate list (function <span style="font-family: monospace;">'l'</span>) or from the image data (function <span style="font-family: monospace;">'y'</span>).
   </dd>
   </dl>
   <dl>
   <dt><b>zwidth = 100.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='zwidth' Line='zwidth = 100.' -->
-  <dd>Width of graphs, in user coordinates, when in zoom mode (function <tt>'z'</tt>).
+  <dd>Width of graphs, in user coordinates, when in zoom mode (function <span style="font-family: monospace;">'z'</span>).
   </dd>
   </dl>
   <p>
   The following parameters are used in determining feature positions.
   </p>
   <dl>
-  <dt><b>ftype = <tt>"absorption"</tt> (emission|absorption|gemission|gabsorption)</b></dt>
+  <dt><b>ftype = <span style="font-family: monospace;">"absorption"</span> (emission|absorption|gemission|gabsorption)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ftype' Line='ftype = "absorption" (emission|absorption|gemission|gabsorption)' -->
   <dd>Type of features to be identified.  The possibly abbreviated choices are
-  <tt>"emission"</tt>, <tt>"absorption"</tt>, <tt>"gemission"</tt>, and <tt>"gabsorption"</tt>.  The first two
+  <span style="font-family: monospace;">"emission"</span>, <span style="font-family: monospace;">"absorption"</span>, <span style="font-family: monospace;">"gemission"</span>, and <span style="font-family: monospace;">"gabsorption"</span>.  The first two
   select the <b>center1d</b> centering algorithm while the last two
   select the Gaussian fitting centering algorithm.
   </dd>
@@ -141,11 +141,11 @@ rvidlines: Measure radial velocities from spectral lines
   The following parameters control the input and output.
   </p>
   <dl>
-  <dt><b>logfile = <tt>"logfile"</tt></b></dt>
+  <dt><b>logfile = <span style="font-family: monospace;">"logfile"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "logfile"' -->
   <dd>Log file for recording the results of the velocity measurements.  The
   results are written when exiting or changing input images.  The
-  results can be previewed with the <tt>":features"</tt> command.  If no log file
+  results can be previewed with the <span style="font-family: monospace;">":features"</span> command.  If no log file
   is specified then the results are not saved.
   </dd>
   </dl>
@@ -160,7 +160,7 @@ rvidlines: Measure radial velocities from spectral lines
   </dd>
   </dl>
   <dl>
-  <dt><b>keywpars = <tt>""</tt></b></dt>
+  <dt><b>keywpars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='keywpars' Line='keywpars = ""' -->
   <dd>The image header keyword translation table as described in 
   the <i>keywpars</i> named pset.  This defines the header keywords used
@@ -169,14 +169,14 @@ rvidlines: Measure radial velocities from spectral lines
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>Graphics device.  The default is the standard graphics device which is
   generally a graphics terminal.
   </dd>
   </dl>
   <dl>
-  <dt><b>cursor = <tt>""</tt></b></dt>
+  <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Cursor input file.  If a cursor file is not given then the standard graphics
   cursor is read.
@@ -190,7 +190,7 @@ rvidlines: Measure radial velocities from spectral lines
   if possible.  This requires determining various parameters about the
   observation.  The latitude, longitude, and altitude of the observation
   are determined from the observatory database.  The observatory is
-  defined by either the OBSERVAT image header keyword or the <tt>"observatory"</tt>
+  defined by either the OBSERVAT image header keyword or the <span style="font-family: monospace;">"observatory"</span>
   package parameter in that order.  See the help for <b>observatory</b>
   for additional information.
   </p>
@@ -198,18 +198,18 @@ rvidlines: Measure radial velocities from spectral lines
   The date, universal time, right ascension, declination, and coordinate epoch
   for the observation are obtained from the image header.  The keywords
   for these parameters are defined in the <b>keywpars</b> parameter set.
-  Note that the parameters used are <tt>"ra"</tt>, <tt>"dec"</tt>, <tt>"ut"</tt>, and <tt>"date-obs"</tt>.
-  The <tt>"utmiddle"</tt> parameter is not used so if you have a keyword for the
+  Note that the parameters used are <span style="font-family: monospace;">"ra"</span>, <span style="font-family: monospace;">"dec"</span>, <span style="font-family: monospace;">"ut"</span>, and <span style="font-family: monospace;">"date-obs"</span>.
+  The <span style="font-family: monospace;">"utmiddle"</span> parameter is not used so if you have a keyword for the
   middle of the exposure that you want to use then you must set the
-  <tt>"ut"</tt> parameter to reference that keyword.
+  <span style="font-family: monospace;">"ut"</span> parameter to reference that keyword.
   </p>
   <p>
   Before IRAF V2.12, if the date keyword included a time then that time was
-  used and the <tt>"ut"</tt> keyword was not used.  In V2.12 this was changed and the
-  time is always taken from the keyword specified by <tt>"ut"</tt>.  However, the
+  used and the <span style="font-family: monospace;">"ut"</span> keyword was not used.  In V2.12 this was changed and the
+  time is always taken from the keyword specified by <span style="font-family: monospace;">"ut"</span>.  However, the
   value can be in either a single time or a date/time string.  So if you
   want to use both the date and time from the same keyword, say DATE-OBS,
-  then point the <tt>"date_obs"</tt> and <tt>"ut"</tt> parameters in KEYWPARS to the same
+  then point the <span style="font-family: monospace;">"date_obs"</span> and <span style="font-family: monospace;">"ut"</span> parameters in KEYWPARS to the same
   keyword.
   </p>
   <!-- EndSection:   'ADDTIONAL PARAMETERS' -->
@@ -234,7 +234,7 @@ rvidlines: Measure radial velocities from spectral lines
   r  (R)edraw the graph
   t  Reset the position of a feature without centering
   u  Enter a new (u)ser coordinate and label for the current feature
-  w  (W)indow the graph.  Use <tt>'?'</tt> to window prompt for more help.
+  w  (W)indow the graph.  Use <span style="font-family: monospace;">'?'</span> to window prompt for more help.
   y  Automatically find strongest peaks and identify them
   z  (Z)oom on the feature nearest the cursor
   +  Move the cursor or zoom to the next feature
@@ -303,25 +303,25 @@ rvidlines: Measure radial velocities from spectral lines
   the image name, spectrum title, and the current velocity and redshift if
   one has been determined.  An initial feature list is read from the database
   if an entry exists.  The features are marked on the graph by tick marks.
-  The features may also be labeled using the <tt>":label"</tt> option.  The graph has
+  The features may also be labeled using the <span style="font-family: monospace;">":label"</span> option.  The graph has
   the observed wavelength scale along the bottom and the rest wavelength
   scale along the top (if a velocity has been determined).  The status line
   gives the pixel coordinate, observed wavelength, rest wavelength (as
   computed by the last velocity computation), the true rest wavelength, the
-  velocity residual, and an optional identification string for the <tt>"current"</tt>
+  velocity residual, and an optional identification string for the <span style="font-family: monospace;">"current"</span>
   feature.
   </p>
   <p>
   The graphics cursor is used to select features and perform various
   functions.  A menu of the keystroke options and functions is printed with
-  the key <tt>'?'</tt>.  The cursor keys and their functions are defined in the CURSOR
+  the key <span style="font-family: monospace;">'?'</span>.  The cursor keys and their functions are defined in the CURSOR
   KEYS section and described further below.  The standard cursor mode keys
   are also available to window and redraw the graph and to produce hardcopy
-  <tt>"snaps"</tt>.
+  <span style="font-family: monospace;">"snaps"</span>.
   </p>
   <p>
   There are two types of feature selection functions;  defining new
-  features and selecting previously defined features.  The <tt>'m'</tt> key marks
+  features and selecting previously defined features.  The <span style="font-family: monospace;">'m'</span> key marks
   a new feature near the cursor position.  The feature position is
   determined by a centering algorithm.  There are two algorithms;
   a flux bisecting algorithm called <b>center1d</b> and a gaussian
@@ -354,11 +354,11 @@ rvidlines: Measure radial velocities from spectral lines
   <p>
   For a more critical setting of the background in the gaussian algorithm or
   for the simultaneous solution of multiple gaussian components (deblending)
-  the <tt>'b'</tt> key is available.  The <tt>'b'</tt> key is used to mark the initial
-  positions of up to ten features.  The feature marking ends with <tt>'q'</tt>.  The
+  the <span style="font-family: monospace;">'b'</span> key is available.  The <span style="font-family: monospace;">'b'</span> key is used to mark the initial
+  positions of up to ten features.  The feature marking ends with <span style="font-family: monospace;">'q'</span>.  The
   user is then queried to mark two points for the linear background.  After
   doing the simultaneous fitting the user is queried sequentially for the
-  rest wavelengths of each line.  Note that the <tt>'b'</tt> key will do the gaussian
+  rest wavelengths of each line.  Note that the <span style="font-family: monospace;">'b'</span> key will do the gaussian
   fitting regardless of whether the <i>ftype</i> setting is for a gaussian
   or not and can be used for fitting just a single line.
   </p>
@@ -382,12 +382,12 @@ rvidlines: Measure radial velocities from spectral lines
   the user may override.  The new feature is marked on the graph and it
   becomes the current feature.  The redefinition of a feature which is within
   the minimum separation may be used to set the user coordinate from the
-  coordinate list.  The <tt>'t'</tt> key allows setting the position of a feature to
+  coordinate list.  The <span style="font-family: monospace;">'t'</span> key allows setting the position of a feature to
   other than that found by the centering algorithms.
   </p>
   <p>
   If at least one feature is marked with it's rest wavelength specified then
-  the <tt>'l'</tt> key may be used to identify additional features from a coordinate
+  the <span style="font-family: monospace;">'l'</span> key may be used to identify additional features from a coordinate
   list of rest wavelengths.  First a velocity is computed from the initial
   features.  Then each coordinate in the list is corrected to the
   observed velocity and a feature is sought in the data at that point.
@@ -396,22 +396,22 @@ rvidlines: Measure radial velocities from spectral lines
   located features.
   </p>
   <p>
-  The <tt>'y'</tt> key provides another way to add features.  Rather than look for
+  The <span style="font-family: monospace;">'y'</span> key provides another way to add features.  Rather than look for
   features at the coordinates of a list, a peak finding algorithm is used to
   find features up to the specified maximum number.  If there are more
   peaks only the strongest are kept.  The peaks are then matched against the
   coordinate list to find user coordinate values.
   </p>
   <p>
-  To select a different feature as the current feature the keys <tt>'.'</tt>, <tt>'n'</tt>,
-  <tt>'+'</tt>, and <tt>'-'</tt> are used.  The <tt>'.'</tt> selects the feature nearest the cursor, the
-  <tt>'n'</tt> and <tt>'+'</tt> select the next feature, and the <tt>'-'</tt> selects the previous
+  To select a different feature as the current feature the keys <span style="font-family: monospace;">'.'</span>, <span style="font-family: monospace;">'n'</span>,
+  <span style="font-family: monospace;">'+'</span>, and <span style="font-family: monospace;">'-'</span> are used.  The <span style="font-family: monospace;">'.'</span> selects the feature nearest the cursor, the
+  <span style="font-family: monospace;">'n'</span> and <span style="font-family: monospace;">'+'</span> select the next feature, and the <span style="font-family: monospace;">'-'</span> selects the previous
   feature relative to the current feature in the feature list as ordered by
   pixel coordinate.  These keys are useful when redefining the user
-  coordinate with the <tt>'u'</tt> key and when examining features in zoom mode.
+  coordinate with the <span style="font-family: monospace;">'u'</span> key and when examining features in zoom mode.
   </p>
   <p>
-  The key <tt>'f'</tt> computes (<tt>"fits"</tt>) a velocity to the defined features.
+  The key <span style="font-family: monospace;">'f'</span> computes (<span style="font-family: monospace;">"fits"</span>) a velocity to the defined features.
   This is done by taking a weighted average of the redshifts,
   </p>
   <pre>
@@ -419,14 +419,14 @@ rvidlines: Measure radial velocities from spectral lines
   </pre>
   <p>
   of the individual lines.  The default weights are always one but a different
-  weight may be entered with the <tt>'u'</tt> key.  The average redshift is
+  weight may be entered with the <span style="font-family: monospace;">'u'</span> key.  The average redshift is
   converted to a Cz velocity (redshift times the speed of light) and
   corrected to a heliocentric frame if possible.
   </p>
   <p>
   The heliocentric correction requires observatory and observation information.
   The observatory is determined either from the OBSERVAT keyword in the
-  image header or by the <tt>"rv.observatory"</tt> package parameter.  For a
+  image header or by the <span style="font-family: monospace;">"rv.observatory"</span> package parameter.  For a
   discussion of how an observatory is defined and used see the help
   for <b>observatory</b>.  In addition to the observatory the right
   ascension, declination, coordinate epoch, and date and time of the
@@ -439,35 +439,35 @@ rvidlines: Measure radial velocities from spectral lines
   identifiers such as Vobs and Vhelio.
   </p>
   <p>
-  Note that a new velocity is only computed after typing <tt>'f'</tt>, <tt>'l'</tt>,
-  <tt>":features"</tt>, or when exiting and writing the results to the database.
+  Note that a new velocity is only computed after typing <span style="font-family: monospace;">'f'</span>, <span style="font-family: monospace;">'l'</span>,
+  <span style="font-family: monospace;">":features"</span>, or when exiting and writing the results to the database.
   In other words, adding new features or deleting existing features
   does not automatically update the velocity determination.
   </p>
   <p>
-  Features may be deleted with the key <tt>'d'</tt>.  All features are deleted
-  when the <tt>'a'</tt> key immediately precedes the delete key.  Deleting the
-  features does not reset the velocity.  The <tt>'i'</tt> key initializes
+  Features may be deleted with the key <span style="font-family: monospace;">'d'</span>.  All features are deleted
+  when the <span style="font-family: monospace;">'a'</span> key immediately precedes the delete key.  Deleting the
+  features does not reset the velocity.  The <span style="font-family: monospace;">'i'</span> key initializes
   everything by removing all features and reseting the velocity.
   </p>
   <p>
   It is common to transfer the feature identifications and velocities
   from one image to another.  When a new image without a database entry
   is examined, such as when going to the next image in the input list,
-  changing image lines or columns with <tt>'j'</tt>, <tt>'k'</tt> and <tt>'o'</tt>, or selecting
-  a new image with the <tt>":image"</tt> command, the current feature list and
+  changing image lines or columns with <span style="font-family: monospace;">'j'</span>, <span style="font-family: monospace;">'k'</span> and <span style="font-family: monospace;">'o'</span>, or selecting
+  a new image with the <span style="font-family: monospace;">":image"</span> command, the current feature list and
   velocity are kept.  Alternatively, a database record from a different
-  image may be read with the <tt>":read"</tt> command.  When transferring feature
+  image may be read with the <span style="font-family: monospace;">":read"</span> command.  When transferring feature
   identifications between images the feature coordinates will not agree exactly
   with the new image feature positions and several options are available to
-  reregister the feature positions.  The key <tt>'c'</tt> centers the feature nearest
+  reregister the feature positions.  The key <span style="font-family: monospace;">'c'</span> centers the feature nearest
   the cursor using the current position as the starting point.  When preceded
-  with the <tt>'a'</tt> key all the features are recentered (the user must refit
+  with the <span style="font-family: monospace;">'a'</span> key all the features are recentered (the user must refit
   the coordinate function if desired).  As an aside, the recentering
   function is also useful when the parameters governing the feature
-  centering algorithm are changed.  An additional options is the <tt>":add"</tt>
+  centering algorithm are changed.  An additional options is the <span style="font-family: monospace;">":add"</span>
   command to add features from a database record.  This does not overwrite
-  previous features as does <tt>":read"</tt>.
+  previous features as does <span style="font-family: monospace;">":read"</span>.
   </p>
   <p>
   Note that when a set of spectra all have the same features in nearly
@@ -476,25 +476,25 @@ rvidlines: Measure radial velocities from spectral lines
   </p>
   <p>
   In addition to the single keystroke commands there are commands initiated
-  by the key <tt>':'</tt> (colon commands).  As with the keystroke commands there are
-  a number of standard graphics features available beginning with <tt>":."</tt> (type
-  <tt>":.help"</tt> for these commands).  The rvidlines colon commands allow the task
+  by the key <span style="font-family: monospace;">':'</span> (colon commands).  As with the keystroke commands there are
+  a number of standard graphics features available beginning with <span style="font-family: monospace;">":."</span> (type
+  <span style="font-family: monospace;">":.help"</span> for these commands).  The rvidlines colon commands allow the task
   parameter values to be listed and to be reset within the task.  A parameter
-  is listed by typing its name.  The colon command <tt>":show"</tt> lists all the
+  is listed by typing its name.  The colon command <span style="font-family: monospace;">":show"</span> lists all the
   parameters.  A parameter value is reset by typing the parameter name
-  followed by the new value; for example <tt>":match 10"</tt>.  Other colon commands
+  followed by the new value; for example <span style="font-family: monospace;">":match 10"</span>.  Other colon commands
   display the feature list and velocities (:features), control reading and
   writing records to the database (:read and :write), and set the graph
   display format.
   </p>
   <p>
-  The feature identification process for an image is completed by typing <tt>'q'</tt>
+  The feature identification process for an image is completed by typing <span style="font-family: monospace;">'q'</span>
   to quit.  Attempting to quit an image without explicitly logging the
   results or recording changes in the feature database produces a warning
   message unless the <i>autowrite</i> parameter is set.  If this parameter is
   not set prompts are given asking whether to save the results to the log
   file and the database, otherwise the results are automatically saved.  As
-  an immediate exit the <tt>'I'</tt> interrupt key may be used.  This does not save
+  an immediate exit the <span style="font-family: monospace;">'I'</span> interrupt key may be used.  This does not save
   the feature information and may leave the graphics in a confused state.
   </p>
   <p>
@@ -524,10 +524,10 @@ rvidlines: Measure radial velocities from spectral lines
   simple text files.  The text files have names beginning with 'id' followed
   by the entry name, usually the name of the image.  The database text files
   consist of a number of records.  A record begins with a line starting with the
-  keyword <tt>"begin"</tt>.  The rest of the line is the record identifier.  Records
-  read and written by <b>rvidlines</b> have <tt>"identify"</tt> as the first word of the
+  keyword <span style="font-family: monospace;">"begin"</span>.  The rest of the line is the record identifier.  Records
+  read and written by <b>rvidlines</b> have <span style="font-family: monospace;">"identify"</span> as the first word of the
   identifier.  Following this is a name which may be specified following the
-  <tt>":read"</tt> or <tt>":write"</tt> commands.  If no name is specified then the image name
+  <span style="font-family: monospace;">":read"</span> or <span style="font-family: monospace;">":write"</span> commands.  If no name is specified then the image name
   is used.  For 1D spectra the database entry includes the aperture number
   and so to read a solution from a aperture different than the current image
   and aperture number must be specified.  For 2D/3D images the entry name
@@ -536,7 +536,7 @@ rvidlines: Measure radial velocities from spectral lines
   the feature information and redshift (without heliocentric correction).
   </p>
   <p>
-  The database files have the name <tt>"identify"</tt> and the prefix <tt>"id"</tt> because
+  The database files have the name <span style="font-family: monospace;">"identify"</span> and the prefix <span style="font-family: monospace;">"id"</span> because
   these files may also be read by the <b>identify</b> task for changing
   the dispersion function based on the rest wavelengths.
   </p>
@@ -551,22 +551,22 @@ rvidlines: Measure radial velocities from spectral lines
   <pre>
       cl&gt; rvidlines kstar1 coord=klines.dat
   	a. The spectrum is drawn
-  	b. A line is marked with <tt>'m'</tt>
+  	b. A line is marked with <span style="font-family: monospace;">'m'</span>
   	c. Enter the rest wavelength
-  	d. Compute a velocity with <tt>'f'</tt>
-  	e. Find other lines in the list with <tt>'l'</tt>
-  	f. Exit with <tt>'q'</tt>
+  	d. Compute a velocity with <span style="font-family: monospace;">'f'</span>
+  	e. Find other lines in the list with <span style="font-family: monospace;">'l'</span>
+  	f. Exit with <span style="font-family: monospace;">'q'</span>
       Write velocity data to the logfile (yes)? y
       Write feature data to the database (yes)? y
       cl&gt; match Vhelio logfile
       kstar1 1 : Vhelio = 25.1 km/s, Mean err = 1.123 km/s, Lines = 10
   </pre>
   <p>
-  2.  For echelle or multispec spectra the keys <tt>'o'</tt>, <tt>'j'</tt>, and <tt>'k'</tt> may
+  2.  For echelle or multispec spectra the keys <span style="font-family: monospace;">'o'</span>, <span style="font-family: monospace;">'j'</span>, and <span style="font-family: monospace;">'k'</span> may
   be used to switch between spectra.  Note that the inheritance of features
-  in echelle orders is not very useful.  So the <tt>'i'</tt> can be used to
-  initialize.  For similar spectra the <tt>'a'</tt><tt>'c'</tt> key combination may
-  be used to recenter all lines and the a new <tt>'f'</tt> fit can be done.
+  in echelle orders is not very useful.  So the <span style="font-family: monospace;">'i'</span> can be used to
+  initialize.  For similar spectra the <span style="font-family: monospace;">'a'</span><span style="font-family: monospace;">'c'</span> key combination may
+  be used to recenter all lines and the a new <span style="font-family: monospace;">'f'</span> fit can be done.
   </p>
   <p>
   3.  For images which are two or three dimensional it is necessary to
@@ -580,8 +580,8 @@ rvidlines: Measure radial velocities from spectral lines
   </pre>
   <p>
   The alternative is to use the section parameter.  Below are some examples
-  of the section parameter syntax for an image <tt>"im2d"</tt> which is 100x200
-  and <tt>"im3d"</tt> which is 100x200x50.  On the left is the section string syntax
+  of the section parameter syntax for an image <span style="font-family: monospace;">"im2d"</span> which is 100x200
+  and <span style="font-family: monospace;">"im3d"</span> which is 100x200x50.  On the left is the section string syntax
   and on the right is the image section
   </p>
   <pre>
@@ -602,7 +602,7 @@ rvidlines: Measure radial velocities from spectral lines
       z middle          |  im3d[50,100,*]     |  Middle of image
   </pre>
   <p>
-  The most common usage should be <tt>"middle line"</tt>, <tt>"middle column"</tt> or <tt>"middle z"</tt>.
+  The most common usage should be <span style="font-family: monospace;">"middle line"</span>, <span style="font-family: monospace;">"middle column"</span> or <span style="font-family: monospace;">"middle z"</span>.
   </p>
   <p>
   The summing factors apply to the axes across the specified vector.  For

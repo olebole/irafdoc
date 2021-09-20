@@ -67,7 +67,7 @@ directory: List the files in a directory
   <dl>
   <dt><b>all = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='all' Line='all = no' -->
-  <dd>List all files, including the hidden (<tt>"."</tt> prefixed) files, and files with
+  <dd>List all files, including the hidden (<span style="font-family: monospace;">"."</span> prefixed) files, and files with
   reserved filename extensions used internally by the VOS.
   </dd>
   </dl>
@@ -77,7 +77,7 @@ directory: List the files in a directory
   <p>
   The <b>directory</b> task lists or prints information describing some subset
   of the files in a directory or directories.  If no name template is given,
-  <tt>"."</tt> is assumed, i.e., all files in the current directory are listed.
+  <span style="font-family: monospace;">"."</span> is assumed, i.e., all files in the current directory are listed.
   </p>
   <p>
   The long format listing gives a file type string, followed by
@@ -143,8 +143,8 @@ directory: List the files in a directory
           -t-rwr-r- iraf         633 Jan 19 22:01 x_system.x
   </pre>
   <p>
-  3. Print a single column listing of all the files with extension <tt>".h"</tt>
-  in the logical directory <tt>"lib$"</tt>.
+  3. Print a single column listing of all the files with extension <span style="font-family: monospace;">".h"</span>
+  in the logical directory <span style="font-family: monospace;">"lib$"</span>.
   </p>
   <pre>
   	cl&gt; dir lib$*.h l+
@@ -154,15 +154,15 @@ directory: List the files in a directory
   	    (etc)
   </pre>
   <p>
-  4. While in the <tt>"system"</tt> directory, print the contents of the parallel
-  directory <tt>"dataio"</tt>.
+  4. While in the <span style="font-family: monospace;">"system"</span> directory, print the contents of the parallel
+  directory <span style="font-family: monospace;">"dataio"</span>.
   </p>
   <pre>
   	cl&gt; cd pkg$system
   	cl&gt; dir ../dataio
   </pre>
   <p>
-  5. Test if the file <tt>"alpha"</tt> exists in the current directory.  In the example,
+  5. Test if the file <span style="font-family: monospace;">"alpha"</span> exists in the current directory.  In the example,
   the output given indicates that the file was not found.
   </p>
   <pre>
@@ -171,7 +171,7 @@ directory: List the files in a directory
   </pre>
   <p>
   6. Print the contents of the directory USR$2:[IRAF.LOCAL] on the remote VMS
-  node <tt>"draco"</tt> (requires IRAF network access to the remote node).
+  node <span style="font-family: monospace;">"draco"</span> (requires IRAF network access to the remote node).
   </p>
   <pre>
   	cl&gt; dir draco!usr\$2:\[iraf.local]
@@ -180,7 +180,7 @@ directory: List the files in a directory
   <h3>Bugs</h3>
   <!-- BeginSection: 'BUGS' -->
   <p>
-  There is no provision for wildcarding directories, e.g., <tt>"dir */*.x"</tt>.
+  There is no provision for wildcarding directories, e.g., <span style="font-family: monospace;">"dir */*.x"</span>.
   The long format listing can currently only be sorted by filename (although
   the <i>sort</i> program may be used in a pipe).  The file existence test will
   not be performed if individual files are named as list elements within

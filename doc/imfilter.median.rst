@@ -52,7 +52,7 @@ median: Median box filter a list of 1D or 2D images
   </dd>
   </dl>
   <dl>
-  <dt><b>boundary = <tt>"nearest"</tt></b></dt>
+  <dt><b>boundary = <span style="font-family: monospace;">"nearest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"' -->
   <dd>The type of boundary extension. The options are:
   <dl>

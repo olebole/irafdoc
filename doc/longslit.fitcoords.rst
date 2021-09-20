@@ -32,7 +32,7 @@ fitcoords: Fit user coordinates to image coordinates
   </dd>
   </dl>
   <dl>
-  <dt><b>fitname = <tt>""</tt> </b></dt>
+  <dt><b>fitname = <span style="font-family: monospace;">""</span> </b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fitname' Line='fitname = "" ' -->
   <dd>If the input images are combined and fit by a single function then the fit
   is stored under this name.  If the images are not combined then the
@@ -55,14 +55,14 @@ fitcoords: Fit user coordinates to image coordinates
   </dd>
   </dl>
   <dl>
-  <dt><b>database = <tt>"database"</tt></b></dt>
+  <dt><b>database = <span style="font-family: monospace;">"database"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"' -->
   <dd>Database containing the feature coordinate information used in fitting the
   coordinates and in which the coordinate fit is recorded.
   </dd>
   </dl>
   <dl>
-  <dt><b>deletions = <tt>"deletions.db"</tt></b></dt>
+  <dt><b>deletions = <span style="font-family: monospace;">"deletions.db"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='deletions' Line='deletions = "deletions.db"' -->
   <dd>Deletion list file.  If not null then points whose coordinates match those in
   this file (if it exists) are initially deleted from the fit.
@@ -72,10 +72,10 @@ fitcoords: Fit user coordinates to image coordinates
   </dd>
   </dl>
   <dl>
-  <dt><b>function = <tt>"chebyshev"</tt></b></dt>
+  <dt><b>function = <span style="font-family: monospace;">"chebyshev"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "chebyshev"' -->
   <dd>Type of two dimensional function to use in fitting the user coordinates.
-  The choices are <tt>"chebyshev"</tt> polynomial and <tt>"legendre"</tt> polynomial.
+  The choices are <span style="font-family: monospace;">"chebyshev"</span> polynomial and <span style="font-family: monospace;">"legendre"</span> polynomial.
   The function may be abbreviated.  If the task is interactive then
   the user may change the function later.
   </dd>
@@ -97,14 +97,14 @@ fitcoords: Fit user coordinates to image coordinates
   </dd>
   </dl>
   <dl>
-  <dt><b>logfiles = <tt>"STDOUT,logfile"</tt></b></dt>
+  <dt><b>logfiles = <span style="font-family: monospace;">"STDOUT,logfile"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfiles' Line='logfiles = "STDOUT,logfile"' -->
   <dd>List of files in which to keep logs containing information about
   the coordinate fit.  If null then no log is kept.
   </dd>
   </dl>
   <dl>
-  <dt><b>plotfile = <tt>"plotfile"</tt></b></dt>
+  <dt><b>plotfile = <span style="font-family: monospace;">"plotfile"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='plotfile' Line='plotfile = "plotfile"' -->
   <dd>Name of file to contain metacode for log plots.  If null then no log plots
   are kept.  When the fitting is interactive the last graph is recorded in
@@ -112,13 +112,13 @@ fitcoords: Fit user coordinates to image coordinates
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>Graphics output device.
   </dd>
   </dl>
   <dl>
-  <dt><b>cursor = <tt>""</tt></b></dt>
+  <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Graphics cursor input.  If null the standard graphics cursor is used.
   </dd>
@@ -139,7 +139,7 @@ fitcoords: Fit user coordinates to image coordinates
   r  Redraw a graph
   u  Undelete the point or set of points with constant x, y, or z
   	nearest the cursor (p, x, y, z,)
-  w  Window the graph.  Type <tt>'?'</tt> to the "window:" prompt for more help.
+  w  Window the graph.  Type <span style="font-family: monospace;">'?'</span> to the "window:" prompt for more help.
   x  Select data for the x axis (x, y, z, s, r)
   y  Select data for the y axis (x, y, z, s, r)
   z  Zoom on the set of points with constant x, y, or z (x, y, z)
@@ -176,7 +176,7 @@ fitcoords: Fit user coordinates to image coordinates
   </p>
   <p>
   When the task is interactive the user is first queried whether to perform
-  the fitting interactively.  The user may answer <tt>"yes"</tt>, <tt>"no"</tt>, <tt>"YES"</tt>, or <tt>"NO"</tt>
+  the fitting interactively.  The user may answer <span style="font-family: monospace;">"yes"</span>, <span style="font-family: monospace;">"no"</span>, <span style="font-family: monospace;">"YES"</span>, or <span style="font-family: monospace;">"NO"</span>
   to the query.  The lowercase responses apply only to the current fit
   and the uppercase responses apply to all remaining fits.  When the
   fitting is done interactively the user may change the fitted function and
@@ -222,23 +222,23 @@ fitcoords: Fit user coordinates to image coordinates
   </p>
   <p>
   The FITCOORDS fits are stored in text files in the subdirectory given by
-  the <tt>"database"</tt> parameter.  The name of the file is fc&lt;fitname&gt; where
+  the <span style="font-family: monospace;">"database"</span> parameter.  The name of the file is fc&lt;fitname&gt; where
   &lt;fitname&gt; is the specified fit name.  The database text file contains
   blocks of lines beginning with a time stamp followed by line with the
-  <tt>"begin"</tt> keyword.  The value following <tt>"begin"</tt> is the fit name, which is
+  <span style="font-family: monospace;">"begin"</span> keyword.  The value following <span style="font-family: monospace;">"begin"</span> is the fit name, which is
   often the name of the image used for the fit.  If there is more than one
   block with the same fit name then the last one is used.
   </p>
   <p>
-  The <tt>"task"</tt> keyword will has the value <tt>"fitcoords"</tt> and the <tt>"axis"</tt> keyword
+  The <span style="font-family: monospace;">"task"</span> keyword will has the value <span style="font-family: monospace;">"fitcoords"</span> and the <span style="font-family: monospace;">"axis"</span> keyword
   identifies the axis to which the surface fit applies.  An axis of 1 refers
   to the first or x axis (the first dimension of the image) and 2 refers to
   the second or y axis.
   </p>
   <p>
-  The <tt>"surface"</tt> keyword specifies the number of coefficients for the surface
+  The <span style="font-family: monospace;">"surface"</span> keyword specifies the number of coefficients for the surface
   fit given in the following lines .  The surface fit is produced by an IRAF
-  math package called <tt>"gsurfit"</tt>.  The coefficients recorded in the database
+  math package called <span style="font-family: monospace;">"gsurfit"</span>.  The coefficients recorded in the database
   are intented to be internal to that package.  However the following
   describes how to interpret the coefficients.
   </p>
@@ -320,7 +320,7 @@ fitcoords: Fit user coordinates to image coordinates
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
   A number of strong arc lines are identified along one column of an arc
-  calibration image <tt>"arc001"</tt>.  The arc lines are then reidentified at every
+  calibration image <span style="font-family: monospace;">"arc001"</span>.  The arc lines are then reidentified at every
   20th column.  A two dimensional dispersion solution is determined as follows:
   </p>
   <p>

@@ -37,7 +37,7 @@ mkfringecor: Make fringe correction images from sky images
   </dd>
   </dl>
   <dl>
-  <dt><b>ccdtype = <tt>""</tt></b></dt>
+  <dt><b>ccdtype = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ccdtype' Line='ccdtype = ""' -->
   <dd>CCD image type to select from the input images.  If none is specified
   then all types are used.
@@ -86,7 +86,7 @@ mkfringecor: Make fringe correction images from sky images
   the fringe pattern caused by the sky emission lines.  These fringe images
   are then scaled and subtracted from the observations by <b>ccdproc</b>.
   The background is determined by heavily smoothing the image using a
-  moving <tt>"boxcar"</tt> average.  The effects of the objects and fringes in the
+  moving <span style="font-family: monospace;">"boxcar"</span> average.  The effects of the objects and fringes in the
   image is minimized by using a sigma clipping algorithm to detect and
   exclude them from the average.  Note, however, that objects left in the
   fringe image will affect the fringe corrected observations.  Any objects
@@ -119,7 +119,7 @@ mkfringecor: Make fringe correction images from sky images
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. The two examples below make an fringe correction image from a blank
-  sky image, <tt>"sky017"</tt>.  In the first example a separate fringe
+  sky image, <span style="font-family: monospace;">"sky017"</span>.  In the first example a separate fringe
   image is created and in the second the fringe image replaces the
   sky image.
   </p>

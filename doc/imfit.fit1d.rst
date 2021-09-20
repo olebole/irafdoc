@@ -34,8 +34,8 @@ fit1d: Fit a function to image lines or columns
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>Output images to be created or modified.  The number of output images
   must match the number of input images.  If an output image does not exist
-  it is first created and initialized to zero for fit types <tt>"fit"</tt> and
-  <tt>"difference"</tt> and to one for fit type <tt>"ratio"</tt>.
+  it is first created and initialized to zero for fit types <span style="font-family: monospace;">"fit"</span> and
+  <span style="font-family: monospace;">"difference"</span> and to one for fit type <span style="font-family: monospace;">"ratio"</span>.
   </dd>
   </dl>
   <dl>
@@ -63,7 +63,7 @@ fit1d: Fit a function to image lines or columns
   </dd>
   </dl>
   <dl>
-  <dt><b>bpm = <tt>""</tt></b></dt>
+  <dt><b>bpm = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='bpm' Line='bpm = ""' -->
   <dd>List of bad pixel masks.  This may be a null string to not use a
   bad pixel mask, a single mask that applies to all input images, or
@@ -86,7 +86,7 @@ fit1d: Fit a function to image lines or columns
   </dd>
   </dl>
   <dl>
-  <dt><b>sample = <tt>"*"</tt></b></dt>
+  <dt><b>sample = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"' -->
   <dd>Lines or columns to be used in the fits.
   </dd>
@@ -103,8 +103,8 @@ fit1d: Fit a function to image lines or columns
   <dt><b>function = spline3</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = spline3' -->
   <dd>Function to be fit to the image lines or columns.  The functions are
-  <tt>"legendre"</tt> (legendre polynomial), <tt>"chebyshev"</tt> (chebyshev polynomial),
-  <tt>"spline1"</tt> (linear spline), and <tt>"spline3"</tt> (cubic spline).  The functions
+  <span style="font-family: monospace;">"legendre"</span> (legendre polynomial), <span style="font-family: monospace;">"chebyshev"</span> (chebyshev polynomial),
+  <span style="font-family: monospace;">"spline1"</span> (linear spline), and <span style="font-family: monospace;">"spline3"</span> (cubic spline).  The functions
   may be abbreviated.
   </dd>
   </dl>
@@ -134,13 +134,13 @@ fit1d: Fit a function to image lines or columns
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>Graphics output device for interactive graphics.
   </dd>
   </dl>
   <dl>
-  <dt><b>cursor = <tt>"stdgcur"</tt></b></dt>
+  <dt><b>cursor = <span style="font-family: monospace;">"stdgcur"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = "stdgcur"' -->
   <dd>Graphics cursor input.
   </dd>
@@ -198,7 +198,7 @@ fit1d: Fit a function to image lines or columns
   may be averaged.  Note that the averaging applies only to the graphed
   data used to set the fitting parameters.  The actual image lines and columns
   are fit individually.  The interactive cursor mode commands for this package
-  are described in a separate help entry under <tt>"icfit"</tt>.  Line 1 is automatically
+  are described in a separate help entry under <span style="font-family: monospace;">"icfit"</span>.  Line 1 is automatically
   selected for one dimensional images and any number of lines or columns may be
   selected for two dimensional images.  Note that the lines or columns are
   relative to the input image section; for example line 1 is the first line of
@@ -225,7 +225,7 @@ fit1d: Fit a function to image lines or columns
   </p>
   <p>
   The selected lines are averaged, graphed, and the interactive options for
-  setting and fitting the line are used.  Exiting with <tt>'q'</tt> or return prompts for
+  setting and fitting the line are used.  Exiting with <span style="font-family: monospace;">'q'</span> or return prompts for
   another line if the image is two dimensional.  When the fitting parameters
   are suitably set then respond with end-of-file or return to fit all the lines
   of the image and create the output image.

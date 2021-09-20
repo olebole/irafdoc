@@ -82,7 +82,7 @@ fmode: Quantize and box modal filter a list of 1D or 2D images
   </dd>
   </dl>
   <dl>
-  <dt><b>boundary = <tt>"nearest"</tt></b></dt>
+  <dt><b>boundary = <span style="font-family: monospace;">"nearest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"' -->
   <dd>The type of boundary extension. The options are:
   <dl>
@@ -169,13 +169,13 @@ fmode: Quantize and box modal filter a list of 1D or 2D images
   <!-- BeginSection: 'REFERENCES' -->
   <p>
   A description of the fast median algorithm used here can be found in
-  <tt>"Topics in Applied Physics: Two-Dimensional Digital Signal Processing II:
-  Transforms and Median Filters"</tt>, Volume 43, 1981, Springer-Verlag, edited by
+  <span style="font-family: monospace;">"Topics in Applied Physics: Two-Dimensional Digital Signal Processing II:
+  Transforms and Median Filters"</span>, Volume 43, 1981, Springer-Verlag, edited by
   T.S. Huang, page 209.
   </p>
   <p>
   A derivation of the expression for the mode used here can be found in 
-  <tt>"Statistics in Theory and Practice"</tt>, Robert Lupton, 1993, Princeton
+  <span style="font-family: monospace;">"Statistics in Theory and Practice"</span>, Robert Lupton, 1993, Princeton
   University Press, problem 2.
   </p>
   <!-- EndSection:   'REFERENCES' -->

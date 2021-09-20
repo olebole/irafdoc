@@ -49,7 +49,7 @@ geomap: Compute geometric transforms using matched coordinate lists
   </dd>
   </dl>
   <dl>
-  <dt><b>transforms = <tt>""</tt></b></dt>
+  <dt><b>transforms = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='transforms' Line='transforms = ""' -->
   <dd>An optional list of transform record names. If transforms is undefined 
   the database record(s) are assigned the names of the
@@ -57,17 +57,17 @@ geomap: Compute geometric transforms using matched coordinate lists
   </dd>
   </dl>
   <dl>
-  <dt><b>results = <tt>""</tt></b></dt>
+  <dt><b>results = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='results' Line='results = ""' -->
   <dd>Optional output files containing a summary of the results including a
   description of the transform geometry and a listing of the input coordinates,
   the fitted coordinates, and the fit residuals. The number of results files
-  must be one or equal to the number of input files. If results is <tt>"STDOUT"</tt> the
+  must be one or equal to the number of input files. If results is <span style="font-family: monospace;">"STDOUT"</span> the
    results summary is printed on the standard output.
   </dd>
   </dl>
   <dl>
-  <dt><b>fitgeometry = <tt>"general"</tt></b></dt>
+  <dt><b>fitgeometry = <span style="font-family: monospace;">"general"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fitgeometry' Line='fitgeometry = "general"' -->
   <dd>The fitting geometry to be used. The options are the following.
   <dl>
@@ -114,15 +114,15 @@ geomap: Compute geometric transforms using matched coordinate lists
   distortion term is set to zero.
   </dd>
   </dl>
-  For all the fitting geometries except <tt>"general"</tt> no distortion term is fit,
+  For all the fitting geometries except <span style="font-family: monospace;">"general"</span> no distortion term is fit,
   i.e. the x and y polynomial orders are assumed to be 2 and the cross term
-  switches are assumed to be <tt>"none"</tt>, regardless of the values of the
+  switches are assumed to be <span style="font-family: monospace;">"none"</span>, regardless of the values of the
   <i>xxorder</i>, <i>xyorder</i>, <i>xxterms</i>, <i>yxorder</i>, <i>yyorder</i> and
   <i>yxterms</i> parameters set by the user.
   </dd>
   </dl>
   <dl>
-  <dt><b>function = <tt>"polynomial"</tt></b></dt>
+  <dt><b>function = <span style="font-family: monospace;">"polynomial"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "polynomial"' -->
   <dd>The type of analytic surface to be fit. The options are the following.
   <dl>
@@ -151,16 +151,16 @@ geomap: Compute geometric transforms using matched coordinate lists
   <dd>The order of the polynomials in x and y for the x and y fits respectively.
   The default order and cross term settings define the linear term in x
   and y, where the 6 coefficients can be interpreted in terms of an x and y shift,
-  an x and y scale change, and rotations of the x and y axes. The <tt>"shift"</tt>,
-  <tt>"xyscale"</tt>, <tt>"rotation"</tt>, <tt>"rscale"</tt>, and <tt>"rxyscale"</tt>, fitting geometries
+  an x and y scale change, and rotations of the x and y axes. The <span style="font-family: monospace;">"shift"</span>,
+  <span style="font-family: monospace;">"xyscale"</span>, <span style="font-family: monospace;">"rotation"</span>, <span style="font-family: monospace;">"rscale"</span>, and <span style="font-family: monospace;">"rxyscale"</span>, fitting geometries
   assume that the polynomial order parameters are 2 regardless of the values
   set by the user. If any of the order parameters are higher than 2 and
-  <i>fitgeometry</i> is <tt>"general"</tt>, then a distortion surface is fit to the
+  <i>fitgeometry</i> is <span style="font-family: monospace;">"general"</span>, then a distortion surface is fit to the
   residuals from the linear portion of the fit.
   </dd>
   </dl>
   <dl>
-  <dt><b>xxterms = <tt>"half"</tt>, yxterms = <tt>"half"</tt></b></dt>
+  <dt><b>xxterms = <span style="font-family: monospace;">"half"</span>, yxterms = <span style="font-family: monospace;">"half"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xxterms' Line='xxterms = "half", yxterms = "half"' -->
   <dd>The options are:
   <dl>
@@ -186,10 +186,10 @@ geomap: Compute geometric transforms using matched coordinate lists
   max (yxorder - 1, yyorder - 1) for the y fit.
   </dd>
   </dl>
-  The <tt>"shift"</tt>, <tt>"xyscale"</tt>, <tt>"rotation"</tt>, <tt>"rscale"</tt>, and <tt>"rxyscale"</tt> fitting
-  geometries, assume that the cross term switches are set to <tt>"none"</tt>
+  The <span style="font-family: monospace;">"shift"</span>, <span style="font-family: monospace;">"xyscale"</span>, <span style="font-family: monospace;">"rotation"</span>, <span style="font-family: monospace;">"rscale"</span>, and <span style="font-family: monospace;">"rxyscale"</span> fitting
+  geometries, assume that the cross term switches are set to <span style="font-family: monospace;">"none"</span>
   regardless of the values set by the user.  If either of the cross terms
-  parameters are set to <tt>"half"</tt> or <tt>"full"</tt> and <i>fitgeometry</i> is <tt>"general"</tt>
+  parameters are set to <span style="font-family: monospace;">"half"</span> or <span style="font-family: monospace;">"full"</span> and <i>fitgeometry</i> is <span style="font-family: monospace;">"general"</span>
   then a distortion surface is fit to the residuals from the linear
   portion of the fit.
   </dd>
@@ -207,7 +207,7 @@ geomap: Compute geometric transforms using matched coordinate lists
   </dd>
   </dl>
   <dl>
-  <dt><b>calctype = <tt>"real"</tt></b></dt>
+  <dt><b>calctype = <span style="font-family: monospace;">"real"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='calctype' Line='calctype = "real"' -->
   <dd>The precision of the coordinate transformation calculations. The options are
   real and double.
@@ -227,13 +227,13 @@ geomap: Compute geometric transforms using matched coordinate lists
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>The graphics device.
   </dd>
   </dl>
   <dl>
-  <dt><b>cursor = <tt>""</tt></b></dt>
+  <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>The graphics cursor.
   </dd>
@@ -245,7 +245,7 @@ geomap: Compute geometric transforms using matched coordinate lists
   GEOMAP computes the transformation required to map the reference coordinate
   system to the input coordinate system.  The coordinates of points in common
   to the two systems are listed in the input text file(s) <i>input</i>
-  one per line in the following format: <tt>"xref yref xin yin"</tt>.
+  one per line in the following format: <span style="font-family: monospace;">"xref yref xin yin"</span>.
   </p>
   <p>
   The computed transforms are stored in the text database file <i>database</i>
@@ -276,8 +276,8 @@ geomap: Compute geometric transforms using matched coordinate lists
   and <i>yxorder</i> and <i>yyorder</i> in y.
   </p>
   <p>
-  Several polynomial cross terms options are available. Options <tt>"none"</tt>,
-  <tt>"half"</tt>, and <tt>"full"</tt> are illustrated below for a quadratic polynomial in
+  Several polynomial cross terms options are available. Options <span style="font-family: monospace;">"none"</span>,
+  <span style="font-family: monospace;">"half"</span>, and <span style="font-family: monospace;">"full"</span> are illustrated below for a quadratic polynomial in
   x and y.
   </p>
   <pre>
@@ -310,9 +310,9 @@ geomap: Compute geometric transforms using matched coordinate lists
            a33' * xref ** 2 * yref ** 2
   </pre>
   <p>
-  If the <b>fitgeometry</b> parameter is anything other than <tt>"general"</tt>, the  order
+  If the <b>fitgeometry</b> parameter is anything other than <span style="font-family: monospace;">"general"</span>, the  order
   parameters assume the value 2 and the cross terms switches assume the value
-  <tt>"none"</tt>, regardless of the values set by the user. The computation can be done in
+  <span style="font-family: monospace;">"none"</span>, regardless of the values set by the user. The computation can be done in
   either real or double precision by setting <i>calctype</i>. Automatic pixel
   rejection may be enabled by setting axiter &gt; 0 and <i>reject</i> to some
   number greater than 0.
@@ -365,13 +365,13 @@ geomap: Compute geometric transforms using matched coordinate lists
   by the GREGISTER or GEOTRAN tasks.
   </p>
   <p>
-  If <i>verbose</i>  is <tt>"yes"</tt>, various pieces of useful information are printed
+  If <i>verbose</i>  is <span style="font-family: monospace;">"yes"</span>, various pieces of useful information are printed
   to the terminal as the task proceeds. If <i>results</i> is set to a file name
   then the input coordinates, the fitted coordinates, and the residuals of
   the fit are written to that file.
   </p>
   <p>
-  The transformation computed by the <tt>"general"</tt> fitting geometry is arbitrary
+  The transformation computed by the <span style="font-family: monospace;">"general"</span> fitting geometry is arbitrary
   and does not correspond to a physically meaningful model. However the computed
   coefficients for the linear term can be given a simple geometrical geometric
   interpretation for all the fitting geometries as shown below.
@@ -469,16 +469,16 @@ geomap: Compute geometric transforms using matched coordinate lists
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Compute the linear transformation between coordinate systems.
-     A record called <tt>"m51.coo"</tt> will be written in the database
-     file <tt>"database"</tt>.
+     A record called <span style="font-family: monospace;">"m51.coo"</span> will be written in the database
+     file <span style="font-family: monospace;">"database"</span>.
   </p>
   <pre>
   	cl&gt; geomap m51.coo database 1. 512. 1. 512.
   </pre>
   <p>
   2. Compute the 3rd order transformation in x and y between two
-     coordinate systems.  A record called <tt>"m51.coo"</tt> will be written in
-     the database file <tt>"database"</tt>. This record supersedes the one
+     coordinate systems.  A record called <span style="font-family: monospace;">"m51.coo"</span> will be written in
+     the database file <span style="font-family: monospace;">"database"</span>. This record supersedes the one
      of the same name written in example 1.
   </p>
   <pre>
@@ -529,8 +529,8 @@ geomap: Compute geometric transforms using matched coordinate lists
   <h3>Bugs</h3>
   <!-- BeginSection: 'BUGS' -->
   <p>
-  The user should be aware that for high order fits the <tt>"polynomial"</tt> basis
-  functions become very unstable. Switching to the <tt>"legendre"</tt> or <tt>"chebyshev"</tt>
+  The user should be aware that for high order fits the <span style="font-family: monospace;">"polynomial"</span> basis
+  functions become very unstable. Switching to the <span style="font-family: monospace;">"legendre"</span> or <span style="font-family: monospace;">"chebyshev"</span>
   polynomials and/or going to double precision will usually cure the problem.
   </p>
   <!-- EndSection:   'BUGS' -->

@@ -42,7 +42,7 @@ shiftlines: Shift the lines of a list of N-D images
   </dd>
   </dl>
   <dl>
-  <dt><b>interp_type = <tt>"linear"</tt></b></dt>
+  <dt><b>interp_type = <span style="font-family: monospace;">"linear"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interp_type' Line='interp_type = "linear"' -->
   <dd>The interpolant type use to computed the output shifted image.
   The choices are the following:
@@ -99,30 +99,30 @@ shiftlines: Shift the lines of a list of N-D images
   </dd>
   </dl>
   <dl>
-  <dt><b>boundary_type = <tt>"nearest"</tt></b></dt>
+  <dt><b>boundary_type = <span style="font-family: monospace;">"nearest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boundary_type' Line='boundary_type = "nearest"' -->
   <dd>Boundary condition for shifts outside the input image.
   The minimum match abbreviated choices are:
   <dl>
-  <dt><b><tt>"nearest"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"nearest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"nearest"' -->
   <dd>Use the values of the nearest boundary pixel.
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"wrap"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"wrap"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"wrap"' -->
   <dd>Generate a value by wrapping around to the opposite boundary.
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"reflect"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"reflect"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"reflect"' -->
   <dd>Generate a value by reflecting around the boundary
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"constant"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"constant"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"constant"' -->
   <dd>Use a user supplied constant pixel value.
   </dd>
@@ -130,7 +130,7 @@ shiftlines: Shift the lines of a list of N-D images
   </dd>
   </dl>
   <dl>
-  <dt><b>constant = <tt>"0.0"</tt></b></dt>
+  <dt><b>constant = <span style="font-family: monospace;">"0.0"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='constant' Line='constant = "0.0"' -->
   <dd>The constant for constant boundary extension.
   </dd>

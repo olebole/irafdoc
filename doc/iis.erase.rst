@@ -32,7 +32,7 @@ erase: Erase an image frame
   <h3>Description</h3>
   <!-- BeginSection: 'DESCRIPTION' -->
   <p>
-  The specified frame in the image display (<tt>"stdimage"</tt>) is erased.
+  The specified frame in the image display (<span style="font-family: monospace;">"stdimage"</span>) is erased.
   Note that the erased frame can be different than the frame currently
   being displayed on the monitor.  The graphics frame is not erased.
   </p>

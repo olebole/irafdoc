@@ -27,12 +27,12 @@ imextensions: Make a list of image extensions
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of input files containing image extensions to be listed.  This list
   may not contain any image kernel but it can contain an image section.  The
-  image filename extension, such as <tt>".fits"</tt>, is optional in the same way as
+  image filename extension, such as <span style="font-family: monospace;">".fits"</span>, is optional in the same way as
   with other IRAF image tasks.
   </dd>
   </dl>
   <dl>
-  <dt><b>output = <tt>"file"</tt> (none|list|file)</b></dt>
+  <dt><b>output = <span style="font-family: monospace;">"file"</span> (none|list|file)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = "file" (none|list|file)' -->
   <dd>Output type for the list of image extensions.  The choices are:
   <pre>
@@ -40,16 +40,16 @@ imextensions: Make a list of image extensions
       list - a list as a single line
       file - a list of one image extension per line
   </pre>
-  The <tt>"none"</tt> output is used to just set the number of image extensions in the
-  <i>nimages</i> parameter.  The <tt>"list"</tt> output is used for a short list that
-  can be scanned into a CL variable.  The <tt>"file"</tt> output is used for a long
-  list and to be redirected to a file for use as an <tt>"@file"</tt>.  If <tt>"list"</tt>
+  The <span style="font-family: monospace;">"none"</span> output is used to just set the number of image extensions in the
+  <i>nimages</i> parameter.  The <span style="font-family: monospace;">"list"</span> output is used for a short list that
+  can be scanned into a CL variable.  The <span style="font-family: monospace;">"file"</span> output is used for a long
+  list and to be redirected to a file for use as an <span style="font-family: monospace;">"@file"</span>.  If <span style="font-family: monospace;">"list"</span>
   output is selected and the list length exceeds 255 characters (the
   size of a CL string) the task will abort with an error.
   </dd>
   </dl>
   <dl>
-  <dt><b>index = <tt>"1-"</tt></b></dt>
+  <dt><b>index = <span style="font-family: monospace;">"1-"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='index' Line='index = "1-"' -->
   <dd>Extension index range list.  The range list syntax is specified under the
   help topic <b>ranges</b>.  Note that the range list may be specified that
@@ -57,7 +57,7 @@ imextensions: Make a list of image extensions
   </dd>
   </dl>
   <dl>
-  <dt><b>extname = <tt>""</tt></b></dt>
+  <dt><b>extname = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='extname' Line='extname = ""' -->
   <dd>Extension name pattern.  If a null string is specified then there is
   no check on the extension name.  If a pattern is specified then only
@@ -66,7 +66,7 @@ imextensions: Make a list of image extensions
   </dd>
   </dl>
   <dl>
-  <dt><b>extver = <tt>""</tt></b></dt>
+  <dt><b>extver = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='extver' Line='extver = ""' -->
   <dd>Extension version range list.  If a null list is specified then there is
   no check on the extension version.  If a list is given then only image
@@ -78,7 +78,7 @@ imextensions: Make a list of image extensions
   <dt><b>lindex = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lindex' Line='lindex = yes' -->
   <dd>List the image extensions with the extension index?  If the value is
-  <tt>"no"</tt> then the extension index will not be listed if the extension
+  <span style="font-family: monospace;">"no"</span> then the extension index will not be listed if the extension
   name and/or the extension version is listed.  If there is no
   extension name or extension version then the extension index is
   always listed regardless of the value of this parameter.
@@ -97,7 +97,7 @@ imextensions: Make a list of image extensions
   </dd>
   </dl>
   <dl>
-  <dt><b>ikparams = <tt>""</tt></b></dt>
+  <dt><b>ikparams = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ikparams' Line='ikparams = ""' -->
   <dd>Include the specified image kernel parameters in the image extension
   names.  The image kernel parameters are specific to the various
@@ -112,7 +112,7 @@ imextensions: Make a list of image extensions
   is run as a background job this parameter will not be set in the
   disk parameter file though it can be made available in a background
   script using this task by caching the parameter set; i.e. 
-  include the command <tt>"cache imextensions"</tt> at the beginning of the script.
+  include the command <span style="font-family: monospace;">"cache imextensions"</span> at the beginning of the script.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -126,8 +126,8 @@ imextensions: Make a list of image extensions
   The output format type may be a one line list, a list of one image
   extension name per line, or no output.  These options allow capturing
   the expanded list in a CL string variable, in a file for use as
-  an <tt>"@file"</tt>, or to simply count the number of image extensions matching
-  the selection criteria.  Note that if the <tt>"list"</tt> output type is selected
+  an <span style="font-family: monospace;">"@file"</span>, or to simply count the number of image extensions matching
+  the selection criteria.  Note that if the <span style="font-family: monospace;">"list"</span> output type is selected
   and the list of image extensions exceeds 255 characters (the limit
   for a CL string) then the task aborts with an error.
   </p>
@@ -153,7 +153,7 @@ imextensions: Make a list of image extensions
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  Get a list of image extensions in a CL string and use it to select
-  header keywords.  This illustrates the use of the <tt>"list"</tt> output and
+  header keywords.  This illustrates the use of the <span style="font-family: monospace;">"list"</span> output and
   a CL variable.
   </p>
   <pre>
@@ -167,7 +167,7 @@ imextensions: Make a list of image extensions
       obj001[3]   Gamma Leo
   </pre>
   <p>
-  2.  Do the same thing as in the first example using an <tt>"@file"</tt>.
+  2.  Do the same thing as in the first example using an <span style="font-family: monospace;">"@file"</span>.
   </p>
   <pre>
       cl&gt; imext obj001 output=file &gt; list.dat
@@ -207,7 +207,7 @@ imextensions: Make a list of image extensions
   </pre>
   <p>
   5.  Use this task in a script to test on the existence of extension name
-  <tt>"joy"</tt>.  This example shows the use of the pattern matching and of the
+  <span style="font-family: monospace;">"joy"</span>.  This example shows the use of the pattern matching and of the
   <b>cache</b> command to insure the script works as a background task.
   </p>
   <pre>
@@ -246,7 +246,7 @@ imextensions: Make a list of image extensions
       obj.fits[nojoy]
   </pre>
   <p>
-  The first example matches <tt>"joy"</tt> anywhere in the extension name, the
+  The first example matches <span style="font-family: monospace;">"joy"</span> anywhere in the extension name, the
   second requires an exact match with the begin and end string characters,
   and the last example ignores the case and requires the name end with
   joy.

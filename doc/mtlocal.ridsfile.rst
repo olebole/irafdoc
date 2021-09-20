@@ -42,12 +42,12 @@ ridsfile: Convert IDSFILES from a DUMPF tape to IRAF images
   <dd>The IRAF file which will receive the data if the <i>make_image</i> parameter
   is set.  If multiple records are being read, the output
   filename is concatenated from this parameter and the IDS record number.
-  That is, images with these names would be created if <i>iraf_file</i> = <tt>"ids"</tt>:
+  That is, images with these names would be created if <i>iraf_file</i> = <span style="font-family: monospace;">"ids"</span>:
   ids.1001, ids.1002, ids.1003, ..., ids.2001, ids.2002, ..., ids.3001 ....
   </dd>
   </dl>
   <dl>
-  <dt><b>record_numbers = <tt>"1001-9999"</tt></b></dt>
+  <dt><b>record_numbers = <span style="font-family: monospace;">"1001-9999"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='record_numbers' Line='record_numbers = "1001-9999"' -->
   <dd>A string listing the IDS records to be read from the IDSFILE.  
   </dd>
@@ -78,7 +78,7 @@ ridsfile: Convert IDSFILES from a DUMPF tape to IRAF images
   </dd>
   </dl>
   <dl>
-  <dt><b>data_type = <tt>"r"</tt></b></dt>
+  <dt><b>data_type = <span style="font-family: monospace;">"r"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='data_type' Line='data_type = "r"' -->
   <dd>The data type of the output IRAF image.  If an incorrect data_type or null
   string is entered, the default data type <i>real</i> is used.
@@ -99,7 +99,7 @@ ridsfile: Convert IDSFILES from a DUMPF tape to IRAF images
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
   [1] Convert all records in the IDSFILE to IRAF images, with the root image name
-  being <tt>"aug83"</tt>.  From running task LDUMPF, it is known that the IDSFILE is the 
+  being <span style="font-family: monospace;">"aug83"</span>.  From running task LDUMPF, it is known that the IDSFILE is the 
   fourth permanent file on the DUMPF tape.  The DUMPF tape is mounted on mtb.
   	
   	cl&gt; ridsfile mtb 4 aug83

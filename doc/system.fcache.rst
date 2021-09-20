@@ -29,27 +29,27 @@ fcache: List, clean or manipulate the file cache
   </dd>
   </dl>
   <dl>
-  <dt><b>pattern = <tt>"*"</tt></b></dt>
+  <dt><b>pattern = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pattern' Line='pattern = "*"' -->
   <dd>Filename substring pattern to match when initializing the cache with
   the <i>init</i> command.
   </dd>
   </dl>
   <dl>
-  <dt><b>src = <tt>""</tt></b></dt>
+  <dt><b>src = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='src' Line='src = ""' -->
   <dd>Source string used to generate the cache filename.  This is typically
   the full path to a local file being cached or a URL.
   </dd>
   </dl>
   <dl>
-  <dt><b>fname = <tt>""</tt></b></dt>
+  <dt><b>fname = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fname' Line='fname = ""' -->
   <dd>Name of the file in the cache.
   </dd>
   </dl>
   <dl>
-  <dt><b>extn = <tt>""</tt></b></dt>
+  <dt><b>extn = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='extn' Line='extn = ""' -->
   <dd>Cache filename extension.
   </dd>
@@ -78,7 +78,7 @@ fcache: List, clean or manipulate the file cache
   </dd>
   </dl>
   <dl>
-  <dt><b>cache = <tt>"cache$"</tt></b></dt>
+  <dt><b>cache = <span style="font-family: monospace;">"cache$"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cache' Line='cache = "cache$"' -->
   <dd>Cache directory to be used.
   </dd>
@@ -128,7 +128,7 @@ fcache: List, clean or manipulate the file cache
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. Remove all <tt>"url"</tt> files from the cache.
+  1. Remove all <span style="font-family: monospace;">"url"</span> files from the cache.
   </p>
   <pre>
       cl&gt; fcache init pattern="url"

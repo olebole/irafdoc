@@ -39,7 +39,7 @@ jobs: Display status of background jobs
   <p>
   Here 2 is the job number of the job; 0:14 is the clock time in minutes and
   seconds since the job was submitted; `Running' indicates that the task is
-  currently running while the <tt>`+'</tt> indicates that this was the last background
+  currently running while the <span style="font-family: monospace;">`+'</span> indicates that this was the last background
   job started.   The remainder of the line is a copy of the actual command
   used to start the job.
   </p>

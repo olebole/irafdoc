@@ -32,7 +32,7 @@ mimstatistics: Do image statistics through a mask
   </dd>
   </dl>
   <dl>
-  <dt><b>imasks = <tt>""</tt></b></dt>
+  <dt><b>imasks = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='imasks' Line='imasks = ""' -->
   <dd>The list of input masks or input mask sections associated with <i>images</i>.
   Good and bad data values are assumed to be presented by mask values of 0 and
@@ -42,7 +42,7 @@ mimstatistics: Do image statistics through a mask
   </dd>
   </dl>
   <dl>
-  <dt><b>omasks = <tt>""</tt> </b></dt>
+  <dt><b>omasks = <span style="font-family: monospace;">""</span> </b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='omasks' Line='omasks = "" ' -->
   <dd>The list of output masks which are a combination of the input mask if any
   and pixels rejected using the good data limits and / or iterative clipping.
@@ -52,7 +52,7 @@ mimstatistics: Do image statistics through a mask
   </dd>
   </dl>
   <dl>
-  <dt><b>fields = <tt>"image,npix,mean,stddev,min,max"</tt></b></dt>
+  <dt><b>fields = <span style="font-family: monospace;">"image,npix,mean,stddev,min,max"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fields' Line='fields = "image,npix,mean,stddev,min,max"' -->
   <dd>The statistical quantities to be computed and printed.
   </dd>
@@ -99,7 +99,7 @@ mimstatistics: Do image statistics through a mask
   <dt><b>format = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='format' Line='format = yes' -->
   <dd>Label the output columns and print the results in fixed format ? If format
-  is <tt>"no"</tt> no column labels are printed and the output is in free format.
+  is <span style="font-family: monospace;">"no"</span> no column labels are printed and the output is in free format.
   </dd>
   </dl>
   <dl>
@@ -176,7 +176,7 @@ mimstatistics: Do image statistics through a mask
   <p>
   In all cases the mask values are assumed to be 0 in good data regions and 
   non-zero in rejected data regions. The input masks may in pixel list, e.g.
-  <tt>".pl"</tt> format, or integer images format, e.g. <tt>".imh"</tt>, <tt>".fits"</tt>, etc.
+  <span style="font-family: monospace;">".pl"</span> format, or integer images format, e.g. <span style="font-family: monospace;">".imh"</span>, <span style="font-family: monospace;">".fits"</span>, etc.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Examples</h3>
@@ -192,8 +192,8 @@ mimstatistics: Do image statistics through a mask
         flat2[*,1]       800     999.4     28.87      918.     1413.
   </pre>
   <p>
-  The string <tt>"flat*"</tt> uses a wildcard to select all images beginning with the
-  word flat.  The string <tt>"[*,1]"</tt> is an image section selecting row 1.
+  The string <span style="font-family: monospace;">"flat*"</span> uses a wildcard to select all images beginning with the
+  word flat.  The string <span style="font-family: monospace;">"[*,1]"</span> is an image section selecting row 1.
   </p>
   <p>
   2. Compute the mean, midpoint, mode and standard deviation of a pixel

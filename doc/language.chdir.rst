@@ -26,7 +26,7 @@ chdir: Change directory
   <dt><b>newdir</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='newdir' Line='newdir' -->
   <dd>The new working directory.
-  The special name <tt>"."</tt> refers to the current directory; <tt>".."</tt> refers to the next
+  The special name <span style="font-family: monospace;">"."</span> refers to the current directory; <span style="font-family: monospace;">".."</span> refers to the next
   higher directory.
   </dd>
   </dl>
@@ -36,7 +36,7 @@ chdir: Change directory
   <p>
   <i>Chdir</i> is used to change the current working directory.
   When called without any arguments, <i>chdir</i> sets the default directory
-  to <tt>"home$"</tt>, the users home directory.
+  to <span style="font-family: monospace;">"home$"</span>, the users home directory.
   The new directory can be specified as an IRAF logical name,
   as a sub-directory of the current directory,
   as a path from either a logical directory or the current directory,
@@ -57,25 +57,25 @@ chdir: Change directory
   	cl&gt; cd
   </p>
   <p>
-  2. Go to the package logical directory <tt>"pkg$"</tt>.
+  2. Go to the package logical directory <span style="font-family: monospace;">"pkg$"</span>.
   </p>
   <p>
   	cl&gt; chdir pkg
   </p>
   <p>
-  3. Go down one level to the directory <tt>"dataio"</tt>, a subdirectory of <tt>"pkg"</tt>.
+  3. Go down one level to the directory <span style="font-family: monospace;">"dataio"</span>, a subdirectory of <span style="font-family: monospace;">"pkg"</span>.
   </p>
   <p>
   	cl&gt; cd dataio
   </p>
   <p>
-  4. From <tt>"dataio"</tt>, go back up to <tt>"pkg"</tt> and down into <tt>"images"</tt>.
+  4. From <span style="font-family: monospace;">"dataio"</span>, go back up to <span style="font-family: monospace;">"pkg"</span> and down into <span style="font-family: monospace;">"images"</span>.
   </p>
   <p>
   	cl&gt; cd ../images
   </p>
   <p>
-  5. Go to the <tt>"tv"</tt> directory, a subdirectory of <tt>"images"</tt>, regardless of the
+  5. Go to the <span style="font-family: monospace;">"tv"</span> directory, a subdirectory of <span style="font-family: monospace;">"images"</span>, regardless of the
   current directory
   </p>
   <p>

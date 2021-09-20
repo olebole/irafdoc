@@ -40,16 +40,16 @@ scoords: Set spectral coordinates as a pixel array (1D spectra only)
   </dd>
   </dl>
   <dl>
-  <dt><b>label = <tt>""</tt></b></dt>
+  <dt><b>label = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='label' Line='label = ""' -->
-  <dd>Optional coordinate axis label.  A typical value is <tt>"Wavelength"</tt>
+  <dd>Optional coordinate axis label.  A typical value is <span style="font-family: monospace;">"Wavelength"</span>
   for wavelength coordinates.
   </dd>
   </dl>
   <dl>
-  <dt><b>units = <tt>""</tt></b></dt>
+  <dt><b>units = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='units' Line='units = ""' -->
-  <dd>Optional coordinate axis units.  A typical value is <tt>"Angstroms"</tt>.  In
+  <dd>Optional coordinate axis units.  A typical value is <span style="font-family: monospace;">"Angstroms"</span>.  In
   order to allow coordinate conversions by other IRAF spectra tasks
   the value should be specified as one of the known units
   (see units description in <b>onedspec.package</b>).
@@ -78,16 +78,16 @@ scoords: Set spectral coordinates as a pixel array (1D spectra only)
   be specified or a single coordinate file for all images may be used.
   </p>
   <p>
-  The coordinate system set in the header is an example of the <tt>"multispec"</tt>
+  The coordinate system set in the header is an example of the <span style="font-family: monospace;">"multispec"</span>
   world coordinate system.  This is understood by all the standard
-  IRAF tasks.  It is described under the help topic <tt>"onedspec.specwcs"</tt>.
+  IRAF tasks.  It is described under the help topic <span style="font-family: monospace;">"onedspec.specwcs"</span>.
   Once the coordinates are set one may resample the spectrum to a
   more compact linear description using the task <b>dispcor</b>.
   </p>
   <p>
   Since the coordinate values are stored in the header (double
   precision numbers) the header can become quite large if the spectrum
-  is long.  Be sure the environment variable <tt>"min_lenuserarea"</tt> which
+  is long.  Be sure the environment variable <span style="font-family: monospace;">"min_lenuserarea"</span> which
   defines the maximum size of the image header in number of characters
   is large enough to hold all the coordinates.
   </p>

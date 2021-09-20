@@ -29,30 +29,30 @@ apedit: Edit apertures interactively
   </dd>
   </dl>
   <dl>
-  <dt><b>apertures = <tt>""</tt></b></dt>
+  <dt><b>apertures = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
   <dd>Apertures to recenter, resize, trace, and extract.  This only applies
   to apertures read from the input or reference database.  Any new
   apertures defined with the automatic finding algorithm or interactively
   are always selected.  The syntax is a list comma separated ranges
   where a range can be a single aperture number, a hyphen separated
-  range of aperture numbers, or a range with a step specified by <tt>"x&lt;step&gt;"</tt>;
-  for example, <tt>"1,3-5,9-12x2"</tt>.
+  range of aperture numbers, or a range with a step specified by <span style="font-family: monospace;">"x&lt;step&gt;"</span>;
+  for example, <span style="font-family: monospace;">"1,3-5,9-12x2"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>references = <tt>""</tt></b></dt>
+  <dt><b>references = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='references' Line='references = ""' -->
   <dd>List of reference images to be used to define apertures for the input
   images.  When a reference image is given it supersedes apertures
-  previously defined for the input image. The list may be null, <tt>""</tt>, or
+  previously defined for the input image. The list may be null, <span style="font-family: monospace;">""</span>, or
   any number of images less than or equal to the list of input images.
   If the reference image list is shorter than the input image list the
   last reference image is used for the remaining input images.
   There are three special words which may be used in place of an image
-  name.  The word <tt>"last"</tt> refers to the last set of apertures written to
-  the database.  The word <tt>"OLD"</tt> requires that an entry exist
-  and the word <tt>"NEW"</tt> requires that the entry not exist for each input image.
+  name.  The word <span style="font-family: monospace;">"last"</span> refers to the last set of apertures written to
+  the database.  The word <span style="font-family: monospace;">"OLD"</span> requires that an entry exist
+  and the word <span style="font-family: monospace;">"NEW"</span> requires that the entry not exist for each input image.
   </dd>
   </dl>
   <dl>
@@ -222,7 +222,7 @@ apedit: Edit apertures interactively
   interactively.  The aperture editor is invoked when the parameters
   <i>interactive</i> and <i>edit</i> are both yes.  When this is the case
   the task will query whether to edit each image.  The responses are
-  <tt>"yes"</tt>, <tt>"no"</tt>, <tt>"YES"</tt>, and <tt>"NO"</tt>, where the upper case responses suppress
+  <span style="font-family: monospace;">"yes"</span>, <span style="font-family: monospace;">"no"</span>, <span style="font-family: monospace;">"YES"</span>, and <span style="font-family: monospace;">"NO"</span>, where the upper case responses suppress
   queries for all following images.
   </p>
   <p>
@@ -237,12 +237,12 @@ apedit: Edit apertures interactively
   signal in the profiles of weaker spectra.  Once the graph is drawn an
   interactive cursor loop is entered.  The set of cursor keys and colon
   commands is given above and may be printed when the task is running using
-  the <tt>'?'</tt> key.  The CURSOR MODE keys and graph formatting options are also
+  the <span style="font-family: monospace;">'?'</span> key.  The CURSOR MODE keys and graph formatting options are also
   available (see <b>cursor</b> and <b>gtools</b>).
   </p>
   <p>
   A status line, usually at the bottom of the graphics terminal,
-  indicates the current aperture and shows the ALL flag, <tt>'a'</tt> key, if set.  The
+  indicates the current aperture and shows the ALL flag, <span style="font-family: monospace;">'a'</span> key, if set.  The
   concept of the current aperture is used by several of the aperture
   editing commands.  Other commands operate on the aperture whose center
   is nearest the cursor.  It is important to know which commands operate
@@ -260,14 +260,14 @@ apedit: Edit apertures interactively
   aperture then a copy of its parameters are made.
   </p>
   <p>
-  The keys for creating a new aperture are <tt>'m'</tt> and <tt>'n'</tt> and <tt>'f'</tt>.  The key
-  <tt>'m'</tt> marks a new aperture and centers the aperture on the profile
+  The keys for creating a new aperture are <span style="font-family: monospace;">'m'</span> and <span style="font-family: monospace;">'n'</span> and <span style="font-family: monospace;">'f'</span>.  The key
+  <span style="font-family: monospace;">'m'</span> marks a new aperture and centers the aperture on the profile
   nearest the cursor.  The centering algorithm is described under the
   help topic <b>center1d</b> and the parameters controlling the centering are
-  <i>width</i>, <i>radius</i>, and <i>threshold</i>.  The key <tt>'n'</tt> defines a
+  <i>width</i>, <i>radius</i>, and <i>threshold</i>.  The key <span style="font-family: monospace;">'n'</span> defines a
   new aperture at the position of the cursor without centering.  This is
   used if there is no spectrum profile such as when defining sky apertures
-  or when defining apertures in extended profiles.  The <tt>'f'</tt> key finds new
+  or when defining apertures in extended profiles.  The <span style="font-family: monospace;">'f'</span> key finds new
   apertures using the algorithm described in the task <b>apfind</b>.  The
   number of apertures found in this way is limited by the parameter
   <b>nfind</b> and the number includes any previously defined
@@ -276,12 +276,12 @@ apedit: Edit apertures interactively
   </p>
   <p>
   The aperture number for the aperture <i>nearest</i> the cursor is changed
-  with the <tt>'j'</tt> key and the beam number is changed with the <tt>'k'</tt> key.  The
+  with the <span style="font-family: monospace;">'j'</span> key and the beam number is changed with the <span style="font-family: monospace;">'k'</span> key.  The
   user is prompted for a new aperture number or beam number.  The
   aperture title may be set or changed with the :title colon command.
   </p>
   <p>
-  The <tt>'o'</tt> key may be used to reorder or correct the aperture
+  The <span style="font-family: monospace;">'o'</span> key may be used to reorder or correct the aperture
   identifications and beam numbers.  This is useful if the aperture
   numbers become disordered due to deletions and additions or if the
   first spectrum is missing when using the automatic identification
@@ -295,18 +295,18 @@ apedit: Edit apertures interactively
   </p>
   <p>
   After defining a new aperture it becomes the current aperture.  The
-  current aperture is indicated on the status line and the <tt>'.'</tt>, <tt>'+'</tt>, and
-  <tt>'-'</tt> keys are used to select a new current aperture.
+  current aperture is indicated on the status line and the <span style="font-family: monospace;">'.'</span>, <span style="font-family: monospace;">'+'</span>, and
+  <span style="font-family: monospace;">'-'</span> keys are used to select a new current aperture.
   </p>
   <p>
-  Apertures are deleted with <tt>'d'</tt> key.  The aperture <i>nearest</i> the
+  Apertures are deleted with <span style="font-family: monospace;">'d'</span> key.  The aperture <i>nearest</i> the
   cursor is deleted.
   </p>
   <p>
-  The aperture center may be changed with the <tt>'c'</tt>, <tt>'s'</tt>, and <tt>'g'</tt> keys and the
-  <tt>":center value"</tt> colon command.  The <tt>'c'</tt> key applies the centering algorithm
-  to the aperture <i>nearest</i> the colon.  The <tt>'s'</tt> key shifts the center
-  of the <i>current</i> aperture to the position of the cursor.  The <tt>'g'</tt>
+  The aperture center may be changed with the <span style="font-family: monospace;">'c'</span>, <span style="font-family: monospace;">'s'</span>, and <span style="font-family: monospace;">'g'</span> keys and the
+  <span style="font-family: monospace;">":center value"</span> colon command.  The <span style="font-family: monospace;">'c'</span> key applies the centering algorithm
+  to the aperture <i>nearest</i> the colon.  The <span style="font-family: monospace;">'s'</span> key shifts the center
+  of the <i>current</i> aperture to the position of the cursor.  The <span style="font-family: monospace;">'g'</span>
   applies the <b>aprecenter</b> algorithm.  The :center command sets the
   center of the <i>current</i> aperture to the value specified.  Except
   for the last option these commands may be applied to all apertures
@@ -314,25 +314,25 @@ apedit: Edit apertures interactively
   </p>
   <p>
   The aperture limits are defined relative to the aperture center.  The
-  limits may be changed with the <tt>'l'</tt>, <tt>'u'</tt>, <tt>'y'</tt>, and <tt>'z'</tt> keys and with the
-  <tt>":lower value"</tt> and <tt>":upper value"</tt> commands.  The <tt>'l'</tt> and <tt>'u'</tt> keys set
+  limits may be changed with the <span style="font-family: monospace;">'l'</span>, <span style="font-family: monospace;">'u'</span>, <span style="font-family: monospace;">'y'</span>, and <span style="font-family: monospace;">'z'</span> keys and with the
+  <span style="font-family: monospace;">":lower value"</span> and <span style="font-family: monospace;">":upper value"</span> commands.  The <span style="font-family: monospace;">'l'</span> and <span style="font-family: monospace;">'u'</span> keys set
   the lower and upper limits of the <i>current</i> aperture at the position
   of the cursor.  The colon commands allow setting the limits explicitly.
-  The <tt>'y'</tt> key defines both limits for the <i>nearest</i> aperture as
+  The <span style="font-family: monospace;">'y'</span> key defines both limits for the <i>nearest</i> aperture as
   points at which the y cursor position intercepts the data profile.
   This requires that the aperture include a spectrum profile and that
-  the y cursor value lie below the peak of the profile.  The <tt>'z'</tt>
+  the y cursor value lie below the peak of the profile.  The <span style="font-family: monospace;">'z'</span>
   key applies the <b>apresize</b> algorithm.  Except for the colon
   commands these commands may be applied to all apertures if the ALL
   flag is set.
   </p>
   <p>
-  The key <tt>'b'</tt> modifies the background fitting parameters for the aperture
+  The key <span style="font-family: monospace;">'b'</span> modifies the background fitting parameters for the aperture
   <i>nearest</i> the cursor.  The default background parameters are
   specified by the task <b>apdefault</b>.  Note that even though
   background parameters are defined, background subtraction is not
   performed during extraction unless specified.
-  When the <tt>'b'</tt> key is used the <b>icfit</b> graphical interface is entered
+  When the <span style="font-family: monospace;">'b'</span> key is used the <b>icfit</b> graphical interface is entered
   showing the background regions and function fit for the current image
   line.  Note that the background regions are specified relative to
   the aperture center and follows changes in the aperture position.
@@ -357,8 +357,8 @@ apedit: Edit apertures interactively
   </p>
   <p>
   The algorithms used in the tasks <b>apfind, aprecenter, apresize, aptrace</b>,
-  and <b>apsum</b> are available from the editor with the keys <tt>'f'</tt>, <tt>'g'</tt>, <tt>'z'</tt>,
-  <tt>'t'</tt>, and <tt>'e'</tt>
+  and <b>apsum</b> are available from the editor with the keys <span style="font-family: monospace;">'f'</span>, <span style="font-family: monospace;">'g'</span>, <span style="font-family: monospace;">'z'</span>,
+  <span style="font-family: monospace;">'t'</span>, and <span style="font-family: monospace;">'e'</span>
   respectively.  Excluding finding, if the ALL flag is not set then the
   nearest aperture
   to the cursor is used.  This allows selective recentering, resizing,
@@ -367,20 +367,20 @@ apedit: Edit apertures interactively
   When extracting the output, rootname and profile name are queried.
   </p>
   <p>
-  Some general purpose keys window the graph <tt>'w'</tt> using the <b>gtools</b>
-  commands, redraw the graph <tt>'r'</tt>, and quit <tt>'q'</tt>.
+  Some general purpose keys window the graph <span style="font-family: monospace;">'w'</span> using the <b>gtools</b>
+  commands, redraw the graph <span style="font-family: monospace;">'r'</span>, and quit <span style="font-family: monospace;">'q'</span>.
   </p>
   <p>
-  The final cursor key is the <tt>'a'</tt> key.  The cursor keys which modify the
+  The final cursor key is the <span style="font-family: monospace;">'a'</span> key.  The cursor keys which modify the
   apertures were defined as operating on either the aperture nearest the
-  cursor or the current aperture.  The <tt>'a'</tt> key allows these keys to
-  affect all the apertures simultaneously.  The <tt>'a'</tt> key sets a flag which
+  cursor or the current aperture.  The <span style="font-family: monospace;">'a'</span> key allows these keys to
+  affect all the apertures simultaneously.  The <span style="font-family: monospace;">'a'</span> key sets a flag which
   is shown on the status line when it is set.  When set, the operation on
   one aperture is duplicated on the remaining apertures.  The operations
-  which apply to all apertures are set background <tt>'b'</tt>, center <tt>'c'</tt>, delete
-  <tt>'d'</tt>, extract <tt>'e'</tt>, recenter <tt>'g'</tt>, set lower limit <tt>'l'</tt>, shift <tt>'s'</tt>, trace
-  <tt>'t'</tt>, set upper limit <tt>'u'</tt>, set limits at the y cursor <tt>'y'</tt>, and resize
-  <tt>'z'</tt>.  The <tt>'b'</tt>, <tt>'l'</tt>, <tt>'s'</tt>, and <tt>'u'</tt> keys first set the background,
+  which apply to all apertures are set background <span style="font-family: monospace;">'b'</span>, center <span style="font-family: monospace;">'c'</span>, delete
+  <span style="font-family: monospace;">'d'</span>, extract <span style="font-family: monospace;">'e'</span>, recenter <span style="font-family: monospace;">'g'</span>, set lower limit <span style="font-family: monospace;">'l'</span>, shift <span style="font-family: monospace;">'s'</span>, trace
+  <span style="font-family: monospace;">'t'</span>, set upper limit <span style="font-family: monospace;">'u'</span>, set limits at the y cursor <span style="font-family: monospace;">'y'</span>, and resize
+  <span style="font-family: monospace;">'z'</span>.  The <span style="font-family: monospace;">'b'</span>, <span style="font-family: monospace;">'l'</span>, <span style="font-family: monospace;">'s'</span>, and <span style="font-family: monospace;">'u'</span> keys first set the background,
   aperture limits, or shift for the appropriate aperture and then are
   applied to the other apertures relative to their centers.
   </p>
@@ -412,7 +412,7 @@ apedit: Edit apertures interactively
   give some simple examples.
   </p>
   <p>
-  1.  To define and edit apertures for image <tt>"n1.001"</tt>:
+  1.  To define and edit apertures for image <span style="font-family: monospace;">"n1.001"</span>:
   </p>
   <p>
   	cl&gt; apedit n1.001
@@ -427,16 +427,16 @@ apedit: Edit apertures interactively
   	Edit apertures for n1.002? (yes) NO
   </pre>
   <p>
-  Answer <tt>"yes"</tt> to the first query for editing n1.001.  To
-  the next query (for n1.002) respond with <tt>"NO"</tt>.  The remaining
+  Answer <span style="font-family: monospace;">"yes"</span> to the first query for editing n1.001.  To
+  the next query (for n1.002) respond with <span style="font-family: monospace;">"NO"</span>.  The remaining
   images then will not be edited interactively.  Note that after
   defining the apertures for n1.001 they are recorded in the database
   and subsequent images will be able to use them as reference apertures.
   </p>
   <p>
-  3.  Using the <tt>":image name"</tt> and <tt>":read image"</tt> colon commands and the
-  <tt>'f'</tt>, <tt>'g'</tt>, <tt>'z'</tt>, <tt>'t'</tt> and <tt>'e'</tt> keys the user can perform all the functions
-  available in the package without ever leaving the editor.  The <tt>'a'</tt> key
+  3.  Using the <span style="font-family: monospace;">":image name"</span> and <span style="font-family: monospace;">":read image"</span> colon commands and the
+  <span style="font-family: monospace;">'f'</span>, <span style="font-family: monospace;">'g'</span>, <span style="font-family: monospace;">'z'</span>, <span style="font-family: monospace;">'t'</span> and <span style="font-family: monospace;">'e'</span> keys the user can perform all the functions
+  available in the package without ever leaving the editor.  The <span style="font-family: monospace;">'a'</span> key
   to set the ALL flag is very useful when dealing with many spectra in a
   single image.
   </p>
@@ -446,10 +446,10 @@ apedit: Edit apertures interactively
   <dl>
   <dt><b>APEDIT V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='APEDIT' Line='APEDIT V2.11' -->
-  <dd>The <tt>"apertures"</tt> parameter can be used to select apertures for resizing,
+  <dd>The <span style="font-family: monospace;">"apertures"</span> parameter can be used to select apertures for resizing,
   recentering, tracing, and extraction.  This parameter name was previously
   used for selecting apertures in the recentering algorithm.  The new
-  parameter name for this is now <tt>"aprecenter"</tt>.
+  parameter name for this is now <span style="font-family: monospace;">"aprecenter"</span>.
   The aperture ID table information may now be contained in the
   image header under the keywords SLFIBnnn.
   </dd>

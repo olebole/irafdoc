@@ -23,94 +23,94 @@ aimpars: Default image data parameters
   <h3>Parameters</h3>
   <!-- BeginSection: 'PARAMETERS' -->
   <dl>
-  <dt><b>observat = <tt>"OBSERVAT"</tt></b></dt>
+  <dt><b>observat = <span style="font-family: monospace;">"OBSERVAT"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='observat' Line='observat = "OBSERVAT"' -->
   <dd>The image header keyword defining the observatory at which the data
   was taken or the name of the observatory. If the observatory is defined then
-  the keyword <tt>"OBSERVAT"</tt> is written to the image header if it does not
+  the keyword <span style="font-family: monospace;">"OBSERVAT"</span> is written to the image header if it does not
   already exist. 
   </dd>
   </dl>
   <dl>
-  <dt><b>esitelng = <tt>"INDEF"</tt>, esitelat = <tt>"INDEF"</tt></b></dt>
+  <dt><b>esitelng = <span style="font-family: monospace;">"INDEF"</span>, esitelat = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='esitelng' Line='esitelng = "INDEF", esitelat = "INDEF"' -->
   <dd>The image header keywords defining the longitude and latitude of the
   observatory in degrees or the longitude and latitude values in degrees.
-  If the longitude and latitude are defined the keywords <tt>"ESITELNG"</tt> and
-  <tt>"ESITELAT"</tt> are written to the image header if they do not already exist.
+  If the longitude and latitude are defined the keywords <span style="font-family: monospace;">"ESITELNG"</span> and
+  <span style="font-family: monospace;">"ESITELAT"</span> are written to the image header if they do not already exist.
   </dd>
   </dl>
   <dl>
-  <dt><b>esitealt = <tt>"INDEF"</tt></b></dt>
+  <dt><b>esitealt = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='esitealt' Line='esitealt = "INDEF"' -->
   <dd>The image header keyword defining the altitude of the observatory in meters
   or the altitude itself in meters. If the altitude is defined the keyword
-  <tt>"ESITEALT"</tt> is written to the image header if it does not already exist.
+  <span style="font-family: monospace;">"ESITEALT"</span> is written to the image header if it does not already exist.
   </dd>
   </dl>
   <dl>
-  <dt><b>esitetz = <tt>"INDEF"</tt></b></dt>
+  <dt><b>esitetz = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='esitetz' Line='esitetz = "INDEF"' -->
   <dd>The image header keyword defining the timezone of the observatory 
   in hours from the Greenwich meridian or the timezone value 
   in hours from the Greenwich meridian. Positive values correspond to time
   zones west of the meridian. If the time zone is defined the keyword
-  <tt>"ESITETZ"</tt> is written to the image header if it does not already exist.
+  <span style="font-family: monospace;">"ESITETZ"</span> is written to the image header if it does not already exist.
   </dd>
   </dl>
   <dl>
-  <dt><b>emjdobs = <tt>"MJD-OBS"</tt></b></dt>
+  <dt><b>emjdobs = <span style="font-family: monospace;">"MJD-OBS"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='emjdobs' Line='emjdobs = "MJD-OBS"' -->
   <dd>The image header keyword defining the effective MJD of the observation
   or the MJD. MJD-OBS normally defines the time of the beginning
   of the observation. Users may wish to change this value to represent
   the MJD at mid-exposure.  If the effective MJD is defined the keyword
-  <tt>"EMJDOBS"</tt> is written to the image header if it does not already exist.
+  <span style="font-family: monospace;">"EMJDOBS"</span> is written to the image header if it does not already exist.
   </dd>
   </dl>
   <dl>
-  <dt><b>edatamin = <tt>"INDEF"</tt>, edatamax = <tt>"INDEF"</tt></b></dt>
+  <dt><b>edatamin = <span style="font-family: monospace;">"INDEF"</span>, edatamax = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='edatamin' Line='edatamin = "INDEF", edatamax = "INDEF"' -->
   <dd>The image header keywords defining the minimum and maximum good data
   limits in ADU or the minimum and maximum good data values in ADU.
-  If these limits are defined the keywords <tt>"EDATAMIN"</tt> and <tt>"EDATAMAX"</tt> 
+  If these limits are defined the keywords <span style="font-family: monospace;">"EDATAMIN"</span> and <span style="font-family: monospace;">"EDATAMAX"</span> 
   are written to the image header if they do not already exist.
   </dd>
   </dl>
   <dl>
-  <dt><b>egain = <tt>"GAIN"</tt>, erdnoise = <tt>"RDNOISE"</tt></b></dt>
+  <dt><b>egain = <span style="font-family: monospace;">"GAIN"</span>, erdnoise = <span style="font-family: monospace;">"RDNOISE"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='egain' Line='egain = "GAIN", erdnoise = "RDNOISE"' -->
   <dd>The image header keywords defining the effective gain in electrons per ADU 
   and readout noise in electrons or the gain and readout noise values in 
   electrons per ADU and electrons. If the gain and readout noise are defined
-  the keywords <tt>"EGAIN"</tt> and <tt>"ERDNOISE"</tt> are written to the image header if they do
+  the keywords <span style="font-family: monospace;">"EGAIN"</span> and <span style="font-family: monospace;">"ERDNOISE"</span> are written to the image header if they do
   not already exist.
   </dd>
   </dl>
   <dl>
-  <dt><b>ewavlen = <tt>"INDEF"</tt></b></dt>
+  <dt><b>ewavlen = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ewavlen' Line='ewavlen = "INDEF"' -->
   <dd>The image header keyword defining the effective wavelength in microns or
   the effective wavelength value in microns. If the effective wavelength is
-  defined the keyword <tt>"EWAVLEN"</tt> is written to the image header if it does
+  defined the keyword <span style="font-family: monospace;">"EWAVLEN"</span> is written to the image header if it does
   not already exist.
   </dd>
   </dl>
   <dl>
-  <dt><b>etemp = <tt>"INDEF"</tt></b></dt>
+  <dt><b>etemp = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='etemp' Line='etemp = "INDEF"' -->
   <dd>The image header keyword defining the effective temperature in degrees
   or the effective temperature values in degrees. If the effective wavelength
-  is defined the keyword <tt>"ETEMP"</tt> is written to the image header it does
+  is defined the keyword <span style="font-family: monospace;">"ETEMP"</span> is written to the image header it does
   not already exist.
   </dd>
   </dl>
   <dl>
-  <dt><b>epress = <tt>"INDEF"</tt></b></dt>
+  <dt><b>epress = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='epress' Line='epress = "INDEF"' -->
   <dd>The image header keyword defining the effective pressure in millibars or
   the effective pressure values in millibars. If the effective pressure is
-  defined the keyword <tt>"EPRESS"</tt> is written to the image header if it does
+  defined the keyword <span style="font-family: monospace;">"EPRESS"</span> is written to the image header if it does
   not already exist.
   </dd>
   </dl>

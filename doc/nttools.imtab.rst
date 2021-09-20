@@ -35,7 +35,7 @@ imtab: Copy an image to a table column.
   <p>
   The number of names in the 'input' list must be the same as
   the number of names in the 'outtable' list,
-  unless 'outtable' is <tt>"STDOUT"</tt>.
+  unless 'outtable' is <span style="font-family: monospace;">"STDOUT"</span>.
   </p>
   <p>
   Information about the image dimension and axis lengths will not be kept
@@ -56,16 +56,16 @@ imtab: Copy an image to a table column.
   <h3>Parameters</h3>
   <!-- BeginSection: 'PARAMETERS' -->
   <dl>
-  <dt><b>input = <tt>""</tt> [file name template]</b></dt>
+  <dt><b>input = <span style="font-family: monospace;">""</span> [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input = "" [file name template]' -->
   <dd>The names of the images to be written to the tables.
   </dd>
   </dl>
   <dl>
-  <dt><b>outtable = <tt>""</tt> [file name template]</b></dt>
+  <dt><b>outtable = <span style="font-family: monospace;">""</span> [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable = "" [file name template]' -->
   <dd>The names of the output tables.
-  If outtable = <tt>"STDOUT"</tt> or if the output has been redirected,
+  If outtable = <span style="font-family: monospace;">"STDOUT"</span> or if the output has been redirected,
   the values will be written to the standard output.
   If the output table is of type text (e.g. STDOUT),
   the data values will be in the first column.
@@ -74,7 +74,7 @@ imtab: Copy an image to a table column.
   </dd>
   </dl>
   <dl>
-  <dt><b>colname = <tt>""</tt> [string]</b></dt>
+  <dt><b>colname = <span style="font-family: monospace;">""</span> [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='colname' Line='colname = "" [string]' -->
   <dd>A column of this name will be created in the output table,
   and the values of the image will be written to this column.
@@ -82,7 +82,7 @@ imtab: Copy an image to a table column.
   </dd>
   </dl>
   <dl>
-  <dt><b>(pname = <tt>""</tt>) [string]</b></dt>
+  <dt><b>(pname = <span style="font-family: monospace;">""</span>) [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(pname = "") [string]' -->
   <dd>If 'pname' is not null,
   the pixel coordinates will also be written to columns of the table.
@@ -97,28 +97,28 @@ imtab: Copy an image to a table column.
   </dd>
   </dl>
   <dl>
-  <dt><b>(wcs = <tt>"logical"</tt>) [string, allowed values:  logical | physical | world]</b></dt>
+  <dt><b>(wcs = <span style="font-family: monospace;">"logical"</span>) [string, allowed values:  logical | physical | world]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(wcs = "logical") [string, allowed values:  logical | physical | world]' -->
   <dd>This parameter is only gotten if 'pname' is not null.
   In this case, the user has the option of which coordinate system
   should be used when writing pixel coordinates to the table.
-  The <tt>"logical"</tt> coordinates are simply the pixel numbers
+  The <span style="font-family: monospace;">"logical"</span> coordinates are simply the pixel numbers
   of the image or image section.
-  The <tt>"physical"</tt> coordinates are also pixel numbers,
+  The <span style="font-family: monospace;">"physical"</span> coordinates are also pixel numbers,
   but they can differ from logical coordinates
   if an image section has been taken.
   Physical coordinates have the same origin and sampling as the original image.
-  The <tt>"world"</tt> coordinates are coordinates such as wavelength, time,
+  The <span style="font-family: monospace;">"world"</span> coordinates are coordinates such as wavelength, time,
   or right ascension and declination.
   The translation from logical to world coordinates is given by
   header keywords CRVAL1, CRPIX1, CD1_1, CTYPE1, etc.
   The number of pixel coordinates written by 'imtab' differs from
-  the number written by 'listpixels' when wcs = <tt>"physical"</tt> or <tt>"world"</tt>
+  the number written by 'listpixels' when wcs = <span style="font-family: monospace;">"physical"</span> or <span style="font-family: monospace;">"world"</span>
   and an image section was used that reduces the dimension of the image.
   'imtab' gives one pixel coordinate column for each dimension
   of the original image, while 'listpixels' gives one pixel coordinate
   for each dimension of the image section.
-  Type <tt>"help mwcs$MWCS.hlp fi+"</tt> for extensive information on coordinate systems.
+  Type <span style="font-family: monospace;">"help mwcs$MWCS.hlp fi+"</span> for extensive information on coordinate systems.
   </dd>
   </dl>
   <dl>
@@ -136,45 +136,45 @@ imtab: Copy an image to a table column.
   </dd>
   </dl>
   <dl>
-  <dt><b>(tbltype = <tt>"default"</tt>) [string, allowed values: default | row |</b></dt>
+  <dt><b>(tbltype = <span style="font-family: monospace;">"default"</span>) [string, allowed values: default | row |</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(tbltype = "default") [string, allowed values: default | row |' -->
   <dd>column | text ]
   If the output table does not already exist,
   you can specify whether the table should be created in row or column
   ordered format.
   As an alternative to a binary table,
-  tbltype = <tt>"text"</tt> means the output will be a plain text file.
+  tbltype = <span style="font-family: monospace;">"text"</span> means the output will be a plain text file.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1.  Copy image <tt>"hr465_flux.imh"</tt> to table <tt>"hr465.tab"</tt>, column <tt>"flux"</tt>:
+  1.  Copy image <span style="font-family: monospace;">"hr465_flux.imh"</span> to table <span style="font-family: monospace;">"hr465.tab"</span>, column <span style="font-family: monospace;">"flux"</span>:
   </p>
   <pre>
   	tt&gt; imtab hr465_flux.imh hr465.tab flux
   </pre>
   <p>
-  2.  Copy the 2-D image <tt>"ir27.hhh"</tt> to column <tt>"ir27"</tt> of table <tt>"map.tab"</tt>,
-  saving the pixel numbers in columns <tt>"pix1"</tt> and <tt>"pix2"</tt>:
+  2.  Copy the 2-D image <span style="font-family: monospace;">"ir27.hhh"</span> to column <span style="font-family: monospace;">"ir27"</span> of table <span style="font-family: monospace;">"map.tab"</span>,
+  saving the pixel numbers in columns <span style="font-family: monospace;">"pix1"</span> and <span style="font-family: monospace;">"pix2"</span>:
   </p>
   <pre>
   	tt&gt; imtab ir27.hhh map.tab ir27 pname="pix"
   </pre>
   <p>
   3.  Copy the 1-D section [257:257,129:384] of
-  x0y70206t.d0h to column <tt>"x0y70206"</tt> of table <tt>"focus.tab"</tt>.
+  x0y70206t.d0h to column <span style="font-family: monospace;">"x0y70206"</span> of table <span style="font-family: monospace;">"focus.tab"</span>.
   Also write the right ascension and declination
-  (<tt>"world"</tt> coordinates) to columns <tt>"p1"</tt> and <tt>"p2"</tt> respectively
+  (<span style="font-family: monospace;">"world"</span> coordinates) to columns <span style="font-family: monospace;">"p1"</span> and <span style="font-family: monospace;">"p2"</span> respectively
   using HH:MM:SS.d and DD:MM:SS.d formats.
-  We use <tt>"%12.1H"</tt> for right ascension and <tt>"%12.1h"</tt> for declination.
-  The capital <tt>"H"</tt> in the format means that the values will be divided by 15
+  We use <span style="font-family: monospace;">"%12.1H"</span> for right ascension and <span style="font-family: monospace;">"%12.1h"</span> for declination.
+  The capital <span style="font-family: monospace;">"H"</span> in the format means that the values will be divided by 15
   to convert from degrees to hours before formatting in sexagesimal.
   Note that we get two columns of pixel coordinates even though
   the image section is only 1-D.
   Physical or world coordinates will be 2-D in this case
-  because the original image <tt>"x0y70206t.d0h"</tt> is 2-D.
+  because the original image <span style="font-family: monospace;">"x0y70206t.d0h"</span> is 2-D.
   </p>
   <pre>
   	tt&gt; imtab x0y70206t.d0h[257:257,129:384] focus.tab x0y70206 \<br>
@@ -206,10 +206,10 @@ imtab: Copy an image to a table column.
   pixel coordinates to the standard output.
   The parameters 'wcs' and 'formats' are the same in 'imtab' and 'listpixels'.
   For detailed information on the distinction between logical, physical and
-  world coordinates, type <tt>"help mwcs$MWCS.hlp fi+"</tt>.
+  world coordinates, type <span style="font-family: monospace;">"help mwcs$MWCS.hlp fi+"</span>.
   </p>
   <p>
-  Type <tt>"help tables option=sys"</tt> for a higher-level description of
+  Type <span style="font-family: monospace;">"help tables option=sys"</span> for a higher-level description of
   the tables package.
   </p>
   

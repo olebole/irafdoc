@@ -26,7 +26,7 @@ tdelete: Delete tables.
   This task deletes tables.
   The input may be a general filename template,
   including wildcard characters, or the name of a list file
-  (preceded by the <tt>"@"</tt> character) containing table names.
+  (preceded by the <span style="font-family: monospace;">"@"</span> character) containing table names.
   </p>
   <p>
   The task checks that the file to be deleted really is a table
@@ -47,14 +47,14 @@ tdelete: Delete tables.
   <dt><b>(verify = no) [boolean]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(verify = no) [boolean]' -->
   <dd>Prompt for confirmation before deleting?  It is possible to delete
-  text tables using 'tdelete' if 'verify' is set to <tt>"yes"</tt>.
+  text tables using 'tdelete' if 'verify' is set to <span style="font-family: monospace;">"yes"</span>.
   </dd>
   </dl>
   <dl>
   <dt><b>(default_action = yes) [boolean]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(default_action = yes) [boolean]' -->
   <dd>Default action for the verify query.  If 'default_action = yes', then the
-  prompt will come back with <tt>"yes?"</tt> and striking return will proceed with
+  prompt will come back with <span style="font-family: monospace;">"yes?"</span> and striking return will proceed with
   the delete.
   </dd>
   </dl>
@@ -85,7 +85,7 @@ tdelete: Delete tables.
   </pre>
   <p>
   In the latter case, the extension is given explicitly because there may be
-  other files beginning with <tt>"tab"</tt> that are not tables.
+  other files beginning with <span style="font-family: monospace;">"tab"</span> that are not tables.
   </p>
   <p>
   3. Delete a list of tables using verify.

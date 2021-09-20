@@ -52,7 +52,7 @@ commands: A discussion of the syntax of IRAF commands
   left is set equal to the value of the expression on the right.
   Keyword equals value assignments must follow any positional arguments.
   To save typing, boolean (yes/no) parameters may be set with a trailing
-  + or -, e.g., <tt>"verbose+"</tt> is the same as <tt>"verbose=yes"</tt>.
+  + or -, e.g., <span style="font-family: monospace;">"verbose+"</span> is the same as <span style="font-family: monospace;">"verbose=yes"</span>.
   </dd>
   </dl>
   <dl>
@@ -89,7 +89,7 @@ commands: A discussion of the syntax of IRAF commands
   In compute mode arguments are delimited by commas, all strings must be
   quoted, and all CL arithmetic and other operators are recognized.
   Command mode is the default everywhere, except within parenthesis, on the
-  right hand side of a <tt>"= expr"</tt> (inspect statement), or within procedures.
+  right hand side of a <span style="font-family: monospace;">"= expr"</span> (inspect statement), or within procedures.
   The sequence #{ &lt;statements&gt; #} may be used to force interpretation of a
   series of statements in compute mode.
   </p>
@@ -121,8 +121,8 @@ commands: A discussion of the syntax of IRAF commands
   	i+3
   </p>
   <p>
-  is equivalent to the string <tt>"i+3"</tt>, while in compute mode this would
-  evaluate to the sum of the <i>value</i> of the parameter <tt>"i"</tt> plus 3.
+  is equivalent to the string <span style="font-family: monospace;">"i+3"</span>, while in compute mode this would
+  evaluate to the sum of the <i>value</i> of the parameter <span style="font-family: monospace;">"i"</span> plus 3.
   To force evaluation of a string like i+3 as a arithmetic expression,
   enclose it in parenthesis.
   </p>
@@ -152,7 +152,7 @@ commands: A discussion of the syntax of IRAF commands
   <p>
   where <i>param</i> is the name of the task's parameter, and <i>expr</i> is
   any legal CL expression.  If the parameter is boolean an alternative syntax
-  called the <tt>"switch"</tt> syntax is available:
+  called the <span style="font-family: monospace;">"switch"</span> syntax is available:
   </p>
   <pre>
   	param+		# same as param=yes
@@ -174,8 +174,8 @@ commands: A discussion of the syntax of IRAF commands
   	&gt; file
   </p>
   <p>
-  sends output to a file with the name <tt>"file"</tt> in command mode, but uses
-  the <i>value</i> of the parameter <tt>"file"</tt> as the filename in compute mode.
+  sends output to a file with the name <span style="font-family: monospace;">"file"</span> in command mode, but uses
+  the <i>value</i> of the parameter <span style="font-family: monospace;">"file"</span> as the filename in compute mode.
   </p>
   <p>
   The output from one command may also be directed to the input of another
@@ -196,9 +196,9 @@ commands: A discussion of the syntax of IRAF commands
   <p>
   Once two commands have been joined by a pipe they function effectively
   as a single command, and the combined command may be joined by
-  pipe to further commands.  The resulting <tt>"command block"</tt> is executed
+  pipe to further commands.  The resulting <span style="font-family: monospace;">"command block"</span> is executed
   as a unit, and may be submitted as a background job by following the
-  command block with an <tt>"&amp;"</tt>.
+  command block with an <span style="font-family: monospace;">"&amp;"</span>.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Examples</h3>
@@ -213,10 +213,10 @@ commands: A discussion of the syntax of IRAF commands
   2. Simple positional arguments only (compute mode).
   </p>
   <p>
-  	cl&gt; copy (<tt>"file1"</tt>, <tt>"file2"</tt>)
+  	cl&gt; copy (<span style="font-family: monospace;">"file1"</span>, <span style="font-family: monospace;">"file2"</span>)
   </p>
   <p>
-  3. One positional argument, i.e., the string <tt>"file1,file"</tt>, and one keyword=value
+  3. One positional argument, i.e., the string <span style="font-family: monospace;">"file1,file"</span>, and one keyword=value
   type argument.  Note that string need not be quoted even though it contains
   the comma, provided there are no spaces in the string.
   </p>
@@ -227,7 +227,7 @@ commands: A discussion of the syntax of IRAF commands
   4. Syntax for i/o redirection in compute mode, as in a script.
   </p>
   <p>
-  	type (<tt>"*.x"</tt>, &gt; <tt>"spool"</tt>)
+  	type (<span style="font-family: monospace;">"*.x"</span>, &gt; <span style="font-family: monospace;">"spool"</span>)
   </p>
   <p>
   5. The same command in command mode.
@@ -238,7 +238,7 @@ commands: A discussion of the syntax of IRAF commands
   <p>
   6. Use of an arithmetic expression in command mode; the scalar value of the
   expression given as the third positional argument is added to the value
-  of every pixel in image <tt>"pix1"</tt>, writing a new image <tt>"pix2"</tt> as output.
+  of every pixel in image <span style="font-family: monospace;">"pix1"</span>, writing a new image <span style="font-family: monospace;">"pix2"</span> as output.
   </p>
   <p>
   	cl&gt; imarith pix1 + (log(4.2)+10) pix2

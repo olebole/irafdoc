@@ -42,7 +42,7 @@ tail: Print the last few lines of a file
   For each file in the input file list, <i>tail</i> copies the last <i>nlines</i>
   of the file to the standard output.  If there is more than one file in the
   input file list, as one line header is printed before each file.
-  If <tt>"nlines"</tt> is negative, then abs(nlines) lines are skipped, and the rest
+  If <span style="font-family: monospace;">"nlines"</span> is negative, then abs(nlines) lines are skipped, and the rest
   of the file is printed, i.e., the tail of the file is still printed, but
   the offset is measured from the beginning of the file rather than the end.
   </p>
@@ -62,9 +62,9 @@ tail: Print the last few lines of a file
   	cl&gt; tail *.hlp nl=1
   </p>
   <p>
-  3. Prints the third through fifth lines of <tt>"file"</tt>.  The same thing
-  might be done (at least conceptually) by <tt>"head file,nlines=5"</tt>
-  piped into <tt>"tail ,nlines=3"</tt>.  However, <i>tail</i> does not work on STDIN.
+  3. Prints the third through fifth lines of <span style="font-family: monospace;">"file"</span>.  The same thing
+  might be done (at least conceptually) by <span style="font-family: monospace;">"head file,nlines=5"</span>
+  piped into <span style="font-family: monospace;">"tail ,nlines=3"</span>.  However, <i>tail</i> does not work on STDIN.
   </p>
   <pre>
   	cl&gt; tail file nl=-2 | head nl=3

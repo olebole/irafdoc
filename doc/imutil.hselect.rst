@@ -33,7 +33,7 @@ hselect: Select a subset of images satisfying a boolean expression
   <!-- Sec='PARAMETERS' Level=0 Label='fields' Line='fields' -->
   <dd>Comma separated list of keywords or keyword patterns to be extracted
   from each selected image.  The list elements are matched against the
-  set of keywords in the header except for those beginning with <tt>"$"</tt> which
+  set of keywords in the header except for those beginning with <span style="font-family: monospace;">"$"</span> which
   are special values or explicit checks for keywords that might be missing.
   </dd>
   </dl>
@@ -45,10 +45,10 @@ hselect: Select a subset of images satisfying a boolean expression
   </dd>
   </dl>
   <dl>
-  <dt><b>missing = <tt>"INDEF"</tt></b></dt>
+  <dt><b>missing = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='missing' Line='missing = "INDEF"' -->
   <dd>Output value for missing keywords.  Note that this will only occur when the
-  fields are specified with leading <tt>"$"</tt>.
+  fields are specified with leading <span style="font-family: monospace;">"$"</span>.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -79,7 +79,7 @@ hselect: Select a subset of images satisfying a boolean expression
   </p>
   <p>
   In addition to escaping the keyword matching, the leading $ character is
-  also used to select special values such as <tt>"$I"</tt> for the name of the current
+  also used to select special values such as <span style="font-family: monospace;">"$I"</span> for the name of the current
   image.  See <b>hedit</b> for more on the special values and pattern syntax.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
@@ -87,7 +87,7 @@ hselect: Select a subset of images satisfying a boolean expression
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Compute the mean exposure time for all the images in a database.  Note that
-  the argument <tt>"yes"</tt> is a trivial case of a general boolean expression and
+  the argument <span style="font-family: monospace;">"yes"</span> is a trivial case of a general boolean expression and
   hence need not be quoted.
   </p>
   <p>
@@ -106,15 +106,15 @@ hselect: Select a subset of images satisfying a boolean expression
   </pre>
   <p>
   3. Produce an image name list for use to drive another task.  The selection
-  criterion is all images for which the value of the parameter <tt>"q-flag"</tt>
+  criterion is all images for which the value of the parameter <span style="font-family: monospace;">"q-flag"</span>
   has the value 1.  Note carefully the use of quotes.  If the @ operator
   is unfamiliar read the manual page for <i>hedit</i>.
   </p>
   <p>
-  	cl&gt; hselect n1.* $I '@<tt>"q-flag"</tt> == 1' &gt; imlist
+  	cl&gt; hselect n1.* $I '@<span style="font-family: monospace;">"q-flag"</span> == 1' &gt; imlist
   </p>
   <p>
-  If the parameter <tt>"q-flag"</tt> were instead named <tt>"qflag"</tt>, the following
+  If the parameter <span style="font-family: monospace;">"q-flag"</span> were instead named <span style="font-family: monospace;">"qflag"</span>, the following
   simpler expression would suffice.
   </p>
   <p>
@@ -130,7 +130,7 @@ hselect: Select a subset of images satisfying a boolean expression
   <p>
   Note that when checking for missing values the missing value must be
   of the appropriate type or else you need to use string variables or
-  nscan to check.  The default missing value is <tt>"INDEF"</tt> which can be
+  nscan to check.  The default missing value is <span style="font-family: monospace;">"INDEF"</span> which can be
   scanned into both string and numerical variables.
   </p>
   <!-- EndSection:   'EXAMPLES' -->

@@ -35,7 +35,7 @@ fields: Extract specified fields from a list
   </dd>
   </dl>
   <dl>
-  <dt><b>lines = <tt>"1-"</tt></b></dt>
+  <dt><b>lines = <span style="font-family: monospace;">"1-"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lines' Line='lines = "1-"' -->
   <dd>The lines from which the fields are to be extracted.  If multiple files are 
   being extracted, the same lines apply to each file.
@@ -77,14 +77,14 @@ fields: Extract specified fields from a list
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. Reverse the order of the 5 columns in list file <tt>"list"</tt>.
+  1. Reverse the order of the 5 columns in list file <span style="font-family: monospace;">"list"</span>.
   </p>
   <pre>
   
   	cl&gt; fields list 5-1 &gt; newlist
   </pre>
   <p>
-  2. Extract columns 1 and 3 from file <tt>"newlist"</tt> and pipe them to task
+  2. Extract columns 1 and 3 from file <span style="font-family: monospace;">"newlist"</span> and pipe them to task
   <i>graph</i>.
   </p>
   <pre>

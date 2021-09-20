@@ -29,26 +29,26 @@ center: Compute accurate centers for a list of objects
   </dd>
   </dl>
   <dl>
-  <dt><b>coords = <tt>""</tt></b></dt>
+  <dt><b>coords = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coords' Line='coords = ""' -->
   <dd>The list of text files containing initial coordinates for the objects to
   be centered. Objects are listed in coords one object per line with the
   initial coordinate values in columns one and two. The number of coordinate
   files must be zero, one, or equal to the number of images.
-  If coords is <tt>"default"</tt>, <tt>"dir$default"</tt>, or a directory specification then an
+  If coords is <span style="font-family: monospace;">"default"</span>, <span style="font-family: monospace;">"dir$default"</span>, or a directory specification then an
   coords file name of the form dir$root.extension.version is constructed and
   searched for, where dir is the directory, root is the root image name,
-  extension is <tt>"coo"</tt> and version is the next available version number for the
+  extension is <span style="font-family: monospace;">"coo"</span> and version is the next available version number for the
   file.
   </dd>
   </dl>
   <dl>
-  <dt><b>output = <tt>"default"</tt></b></dt>
+  <dt><b>output = <span style="font-family: monospace;">"default"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = "default"' -->
   <dd>The name of the results file or results directory. If output is
-  <tt>"default"</tt>, <tt>"dir$default"</tt>, or a directory specification then an output file name
+  <span style="font-family: monospace;">"default"</span>, <span style="font-family: monospace;">"dir$default"</span>, or a directory specification then an output file name
   of the form dir$root.extension.version is constructed, where dir is the
-  directory, root is the root image name, extension is <tt>"ctr"</tt> and version is
+  directory, root is the root image name, extension is <span style="font-family: monospace;">"ctr"</span> and version is
   the next available version number for the file. The number of output files
   must be zero, one, or equal to the number of image files.  In both interactive
   and batch mode full output is written to output. In interactive mode
@@ -56,7 +56,7 @@ center: Compute accurate centers for a list of objects
   </dd>
   </dl>
   <dl>
-  <dt><b>plotfile = <tt>""</tt></b></dt>
+  <dt><b>plotfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='plotfile' Line='plotfile = ""' -->
   <dd>The name of the file containing radial profile plots of the stars written
   to the output file. If plotfile is defined then a radial profile plot
@@ -65,7 +65,7 @@ center: Compute accurate centers for a list of objects
   </dd>
   </dl>
   <dl>
-  <dt><b>datapars = <tt>""</tt></b></dt>
+  <dt><b>datapars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='datapars' Line='datapars = ""' -->
   <dd>The name of the file containing the data dependent parameters.
   The critical parameters <i>fwhmpsf</i> and <i>sigma</i> are located in
@@ -74,7 +74,7 @@ center: Compute accurate centers for a list of objects
   </dd>
   </dl>
   <dl>
-  <dt><b>centerpars = <tt>""</tt></b></dt>
+  <dt><b>centerpars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='centerpars' Line='centerpars = ""' -->
   <dd>The name of the file containing the centering algorithm parameters.
   The critical parameters <i>calgorithm</i> and <i>cbox</i> are located in
@@ -91,34 +91,34 @@ center: Compute accurate centers for a list of objects
   <dl>
   <dt><b>radplots = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='radplots' Line='radplots = no' -->
-  <dd>If <i>radplots</i> is <tt>"yes"</tt> and CENTER is run in interactive mode, a radial
+  <dd>If <i>radplots</i> is <span style="font-family: monospace;">"yes"</span> and CENTER is run in interactive mode, a radial
   profile of each star is plotted on the screen after the center is fit.
   </dd>
   </dl>
   <dl>
-  <dt><b>icommands = <tt>""</tt></b></dt>
+  <dt><b>icommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""' -->
   <dd>The image display cursor or image cursor command file. 
   </dd>
   </dl>
   <dl>
-  <dt><b>gcommands = <tt>""</tt></b></dt>
+  <dt><b>gcommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""' -->
   <dd>The graphics cursor or graphics cursor command file.
   </dd>
   </dl>
   <dl>
-  <dt><b>wcsin = <tt>"logical"</tt>, wcsout = <tt>"logical"</tt></b></dt>
+  <dt><b>wcsin = <span style="font-family: monospace;">"logical"</span>, wcsout = <span style="font-family: monospace;">"logical"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcsin' Line='wcsin = "logical", wcsout = "logical"' -->
   <dd>The coordinate system of the input coordinates read from <i>coords</i> and
   of the output coordinates written to <i>output</i> respectively. The image
   header coordinate system is used to transform from the input coordinate
-  system to the <tt>"logical"</tt> pixel coordinate system used internally,
-  and from the internal <tt>"logical"</tt> pixel coordinate system to the output
-  coordinate system. The input coordinate system options are <tt>"logical"</tt>, <tt>"tv"</tt>,
-  <tt>"physical"</tt>, and <tt>"world"</tt>. The output coordinate system options are <tt>"logical"</tt>,
-  <tt>"tv"</tt>, and <tt>"physical"</tt>. The image cursor coordinate system is assumed to
-  be the <tt>"tv"</tt> system.
+  system to the <span style="font-family: monospace;">"logical"</span> pixel coordinate system used internally,
+  and from the internal <span style="font-family: monospace;">"logical"</span> pixel coordinate system to the output
+  coordinate system. The input coordinate system options are <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"tv"</span>,
+  <span style="font-family: monospace;">"physical"</span>, and <span style="font-family: monospace;">"world"</span>. The output coordinate system options are <span style="font-family: monospace;">"logical"</span>,
+  <span style="font-family: monospace;">"tv"</span>, and <span style="font-family: monospace;">"physical"</span>. The image cursor coordinate system is assumed to
+  be the <span style="font-family: monospace;">"tv"</span> system.
   <dl>
   <dt><b>logical</b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='logical' Line='logical' -->
@@ -172,13 +172,13 @@ center: Compute accurate centers for a list of objects
   </dl>
   The wcsin and wcsout parameters default to the values of the package
   parameters of the same name. The default values of the package parameters
-  wcsin and wcsout are <tt>"logical"</tt> and <tt>"logical"</tt> respectively. 
+  wcsin and wcsout are <span style="font-family: monospace;">"logical"</span> and <span style="font-family: monospace;">"logical"</span> respectively. 
   </dd>
   </dl>
   <dl>
   <dt><b>cache = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cache' Line='cache = no' -->
-  <dd>Cache the image pixels in memory. Cache may be set to <tt>"yes"</tt>, or <tt>"no"</tt>.
+  <dd>Cache the image pixels in memory. Cache may be set to <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   By default cacheing is 
   disabled.
   </dd>
@@ -187,39 +187,39 @@ center: Compute accurate centers for a list of objects
   <dt><b>verify = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verify' Line='verify = yes' -->
   <dd>Verify the critical parameters in non-interactive mode ? Verify may be set to
-  or <tt>"no"</tt>.
+  or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <dl>
   <dt><b>update = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='update' Line='update = no' -->
   <dd>Update the critical parameters in non-interactive mode if <i>verify</i> is
-  set to yes? Update may be set to <tt>"yes"</tt> or <tt>"no"</tt>.
+  set to yes? Update may be set to <span style="font-family: monospace;">"yes"</span> or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <dl>
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Print messages on the terminal in non-interactive mode ? Verbose may be set
-  to <tt>"yes"</tt> or <tt>"no"</tt>.
+  to <span style="font-family: monospace;">"yes"</span> or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>")_.graphics"</tt></b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">")_.graphics"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = ")_.graphics"' -->
   <dd>The default graphics device.
-  Graphics may be set to the apphot package parameter value (the default), <tt>"yes"</tt>,
-  or <tt>"no"</tt>.
+  Graphics may be set to the apphot package parameter value (the default), <span style="font-family: monospace;">"yes"</span>,
+  or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>display = <tt>")_.display"</tt></b></dt>
+  <dt><b>display = <span style="font-family: monospace;">")_.display"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='display' Line='display = ")_.display"' -->
   <dd>The default display device.  Display may be set to the apphot package
-  parameter value (the default), <tt>"yes"</tt>, or <tt>"no"</tt>. By default graphics overlay
-  is disabled.  Setting display to one of <tt>"imdr"</tt>, <tt>"imdg"</tt>, <tt>"imdb"</tt>, or <tt>"imdy"</tt>
+  parameter value (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>. By default graphics overlay
+  is disabled.  Setting display to one of <span style="font-family: monospace;">"imdr"</span>, <span style="font-family: monospace;">"imdg"</span>, <span style="font-family: monospace;">"imdb"</span>, or <span style="font-family: monospace;">"imdy"</span>
   enables graphics overlay with the IMD graphics kernel.  Setting display to
-  <tt>"stdgraph"</tt> enables CENTER to work interactively from a contour plot.
+  <span style="font-family: monospace;">"stdgraph"</span> enables CENTER to work interactively from a contour plot.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -234,23 +234,23 @@ center: Compute accurate centers for a list of objects
   </p>
   <p>
   The coordinates read from <i>coords</i> are assumed to be in coordinate
-  system defined by <i>wcsin</i>. The options are <tt>"logical"</tt>, <tt>"tv"</tt>, <tt>"physical"</tt>,
-  and <tt>"world"</tt> and the transformation from the input coordinate system to
-  the internal <tt>"logical"</tt> system is defined by the image coordinate system.
-  The simplest default is the <tt>"logical"</tt> pixel system. Users working on with
+  system defined by <i>wcsin</i>. The options are <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"tv"</span>, <span style="font-family: monospace;">"physical"</span>,
+  and <span style="font-family: monospace;">"world"</span> and the transformation from the input coordinate system to
+  the internal <span style="font-family: monospace;">"logical"</span> system is defined by the image coordinate system.
+  The simplest default is the <span style="font-family: monospace;">"logical"</span> pixel system. Users working on with
   image sections but importing pixel coordinate lists generated from the parent
-  image must use the <tt>"tv"</tt> or <tt>"physical"</tt> input coordinate systems.
+  image must use the <span style="font-family: monospace;">"tv"</span> or <span style="font-family: monospace;">"physical"</span> input coordinate systems.
   Users importing coordinate lists in world coordinates, e.g. ra and dec,
-  must use the <tt>"world"</tt> coordinate system and may need to convert their
+  must use the <span style="font-family: monospace;">"world"</span> coordinate system and may need to convert their
   equatorial coordinate units from hours and degrees to degrees and degrees first.
   </p>
   <p>
   The coordinates written to <i>output</i> are in the coordinate
-  system defined by <i>wcsout</i>. The options are <tt>"logical"</tt>, <tt>"tv"</tt>,
-  and <tt>"physical"</tt>. The simplest default is the <tt>"logical"</tt> system. Users
+  system defined by <i>wcsout</i>. The options are <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"tv"</span>,
+  and <span style="font-family: monospace;">"physical"</span>. The simplest default is the <span style="font-family: monospace;">"logical"</span> system. Users
   wishing to correlate the output coordinates of objects measured in
   image sections or mosaic pieces with coordinates in the parent
-  image must use the <tt>"tv"</tt> or <tt>"physical"</tt> coordinate systems.
+  image must use the <span style="font-family: monospace;">"tv"</span> or <span style="font-family: monospace;">"physical"</span> coordinate systems.
   </p>
   <p>
   If <i>cache</i> is yes and the host machine physical memory and working set size
@@ -430,7 +430,7 @@ center: Compute accurate centers for a list of objects
   </pre>
   <p>
   In interactive mode a radial profile of each measured object is plotted
-  in the graphics window if <i>radplots</i> is <tt>"yes"</tt>.
+  in the graphics window if <i>radplots</i> is <span style="font-family: monospace;">"yes"</span>.
   </p>
   <p>
   In interactive and batchmode a radial profile plot is written to
@@ -709,9 +709,9 @@ center: Compute accurate centers for a list of objects
   <p>
   Commands which draw to the image display are disabled by default.
   To enable graphics overlay on the image display, set the display
-  parameter to <tt>"imdr"</tt>, <tt>"imdg"</tt>, <tt>"imdb"</tt>, or <tt>"imdy"</tt> to get red, green,
+  parameter to <span style="font-family: monospace;">"imdr"</span>, <span style="font-family: monospace;">"imdg"</span>, <span style="font-family: monospace;">"imdb"</span>, or <span style="font-family: monospace;">"imdy"</span> to get red, green,
   blue or yellow overlays and set the centerpars mkcenter switch to
-  <tt>"yes"</tt>. It may be necessary to run gflush and to redisplay the image
+  <span style="font-family: monospace;">"yes"</span>. It may be necessary to run gflush and to redisplay the image
   to get the overlays position correctly. 
   </p>
   <!-- EndSection:   'BUGS' -->

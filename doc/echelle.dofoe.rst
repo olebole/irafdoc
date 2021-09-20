@@ -46,21 +46,21 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>apref = <tt>""</tt></b></dt>
+  <dt><b>apref = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apref' Line='apref = ""' -->
   <dd>Aperture reference spectrum.  This spectrum is used to define the basic
   extraction apertures and is typically a flat field spectrum.
   </dd>
   </dl>
   <dl>
-  <dt><b>flat = <tt>""</tt> (optional)</b></dt>
+  <dt><b>flat = <span style="font-family: monospace;">""</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='flat' Line='flat = "" (optional)' -->
   <dd>Flat field spectrum.  If specified the one dimensional flat field spectrum
   is extracted and used to make flat field calibrations.
   </dd>
   </dl>
   <dl>
-  <dt><b>arcs = <tt>""</tt> (at least one if dispersion correcting)</b></dt>
+  <dt><b>arcs = <span style="font-family: monospace;">""</span> (at least one if dispersion correcting)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='arcs' Line='arcs = "" (at least one if dispersion correcting)' -->
   <dd>List of arc spectra.  The first arc in the list is used to create a
   dispersion solution interactively.  All other arc spectra will be
@@ -68,7 +68,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>arctable = <tt>""</tt> (optional) (refspectra)</b></dt>
+  <dt><b>arctable = <span style="font-family: monospace;">""</span> (optional) (refspectra)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='arctable' Line='arctable = "" (optional) (refspectra)' -->
   <dd>Table defining arc spectra to be assigned to object spectra (see
   <b>refspectra</b>).  If not specified an assignment based on a header
@@ -76,7 +76,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>readnoise = <tt>"0."</tt> (apsum)</b></dt>
+  <dt><b>readnoise = <span style="font-family: monospace;">"0."</span> (apsum)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='readnoise' Line='readnoise = "0." (apsum)' -->
   <dd>Read out noise in photons.  This parameter defines the minimum noise
   sigma.  It is defined in terms of photons (or electrons) and scales
@@ -85,7 +85,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>gain = <tt>"1."</tt> (apsum)</b></dt>
+  <dt><b>gain = <span style="font-family: monospace;">"1."</span> (apsum)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gain' Line='gain = "1." (apsum)' -->
   <dd>Detector gain or conversion factor between photons/electrons and
   data values.  It is specified as the number of photons per data value.
@@ -128,9 +128,9 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>arcaps = <tt>"2x2"</tt></b></dt>
+  <dt><b>arcaps = <span style="font-family: monospace;">"2x2"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='arcaps' Line='arcaps = "2x2"' -->
-  <dd>When there is only a single fiber set this parameter to <tt>""</tt>.  When there is
+  <dd>When there is only a single fiber set this parameter to <span style="font-family: monospace;">""</span>.  When there is
   a second fiber used to create simultaneous arcs during the object exposures
   this parameter specifies a list of aperture numbers for the arc fibers.
   Since the object and arc fiber orders are paired the default setting
@@ -151,19 +151,19 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>background = <tt>"none"</tt> (apsum, apscatter)</b></dt>
+  <dt><b>background = <span style="font-family: monospace;">"none"</span> (apsum, apscatter)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='background' Line='background = "none" (apsum, apscatter)' -->
-  <dd>Type of background light subtraction.  The choices are <tt>"none"</tt> for no
-  background subtraction, <tt>"scattered"</tt> for a global scattered light
-  subtraction, <tt>"average"</tt> to average the background within background regions,
-  <tt>"median"</tt> to use the median in background regions, <tt>"minimum"</tt> to use the
-  minimum in background regions, or <tt>"fit"</tt> to fit across the dispersion using
+  <dd>Type of background light subtraction.  The choices are <span style="font-family: monospace;">"none"</span> for no
+  background subtraction, <span style="font-family: monospace;">"scattered"</span> for a global scattered light
+  subtraction, <span style="font-family: monospace;">"average"</span> to average the background within background regions,
+  <span style="font-family: monospace;">"median"</span> to use the median in background regions, <span style="font-family: monospace;">"minimum"</span> to use the
+  minimum in background regions, or <span style="font-family: monospace;">"fit"</span> to fit across the dispersion using
   the background within background regions.  The scattered light option fits
   and subtracts a smooth global background and modifies the input images.
   This is a slow operation and so is NOT performed in quicklook mode.  The
   other background options are local to each aperture at each point along the
-  dispersion.  The <tt>"fit"</tt> option uses additional fitting parameters from
-  <b>params</b> and the <tt>"scattered"</tt> option uses parameters from <b>apscat1</b>
+  dispersion.  The <span style="font-family: monospace;">"fit"</span> option uses additional fitting parameters from
+  <b>params</b> and the <span style="font-family: monospace;">"scattered"</span> option uses parameters from <b>apscat1</b>
   and <b>apscat2</b>.
   </dd>
   </dl>
@@ -212,11 +212,11 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>params = <tt>""</tt> (pset)</b></dt>
+  <dt><b>params = <span style="font-family: monospace;">""</span> (pset)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='params' Line='params = "" (pset)' -->
   <dd>Name of parameter set containing additional processing parameters.  The
   default is parameter set <b>params</b>.  The parameter set may be examined
-  and modified in the usual ways (typically with <tt>"epar params"</tt> or <tt>":e params"</tt>
+  and modified in the usual ways (typically with <span style="font-family: monospace;">"epar params"</span> or <span style="font-family: monospace;">":e params"</span>
   from the parameter editor).  Note that using a different parameter file
   is not allowed.  The parameters are described below.
   </dd>
@@ -229,17 +229,17 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   package.  This is also true of <b>dofoe</b>.
   </p>
   <dl>
-  <dt><b>observatory = <tt>"observatory"</tt></b></dt>
+  <dt><b>observatory = <span style="font-family: monospace;">"observatory"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory = "observatory"' -->
   <dd>Observatory at which the spectra were obtained if not specified in the
   image header by the keyword OBSERVAT.  For FOE data the image headers
-  identify the observatory as <tt>"kpno"</tt> so this parameter is not used.
+  identify the observatory as <span style="font-family: monospace;">"kpno"</span> so this parameter is not used.
   For data from other observatories this parameter may be used
   as describe in <b>observatory</b>.
   </dd>
   </dl>
   <dl>
-  <dt><b>interp = <tt>"poly5"</tt> (nearest|linear|poly3|poly5|spline3|sinc)</b></dt>
+  <dt><b>interp = <span style="font-family: monospace;">"poly5"</span> (nearest|linear|poly3|poly5|spline3|sinc)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interp' Line='interp = "poly5" (nearest|linear|poly3|poly5|spline3|sinc)' -->
   <dd>Spectrum interpolation type used when spectra are resampled.  The choices are:
   <pre>
@@ -262,7 +262,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>database = <tt>"database"</tt></b></dt>
+  <dt><b>database = <span style="font-family: monospace;">"database"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"' -->
   <dd>Database (directory) used for storing aperture and dispersion information.
   </dd>
@@ -274,7 +274,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>logfile = <tt>"logfile"</tt>, plotfile = <tt>""</tt></b></dt>
+  <dt><b>logfile = <span style="font-family: monospace;">"logfile"</span>, plotfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "logfile", plotfile = ""' -->
   <dd>Text and plot log files.  If a filename is not specified then no log is
   kept.  The plot file contains IRAF graphics metacode which may be examined
@@ -282,13 +282,13 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>records = <tt>""</tt></b></dt>
+  <dt><b>records = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='records' Line='records = ""' -->
   <dd>Dummy parameter to be ignored.
   </dd>
   </dl>
   <dl>
-  <dt><b>version = <tt>"ECHELLE: ..."</tt></b></dt>
+  <dt><b>version = <span style="font-family: monospace;">"ECHELLE: ..."</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='version' Line='version = "ECHELLE: ..."' -->
   <dd>Version of the package.
   </dd>
@@ -355,11 +355,11 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>t_function = <tt>"spline3"</tt>, t_order = 2 (aptrace)</b></dt>
+  <dt><b>t_function = <span style="font-family: monospace;">"spline3"</span>, t_order = 2 (aptrace)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='t_function' Line='t_function = "spline3", t_order = 2 (aptrace)' -->
   <dd>Default trace fitting function and order.  The fitting function types are
-  <tt>"chebyshev"</tt> polynomial, <tt>"legendre"</tt> polynomial, <tt>"spline1"</tt> linear spline, and
-  <tt>"spline3"</tt> cubic spline.  The order refers to the number of
+  <span style="font-family: monospace;">"chebyshev"</span> polynomial, <span style="font-family: monospace;">"legendre"</span> polynomial, <span style="font-family: monospace;">"spline1"</span> linear spline, and
+  <span style="font-family: monospace;">"spline3"</span> cubic spline.  The order refers to the number of
   terms in the polynomial functions or the number of spline pieces in the spline
   functions.
   </dd>
@@ -382,7 +382,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>apscat1 = <tt>""</tt>, apscat2 = <tt>""</tt> (apscatter)</b></dt>
+  <dt><b>apscat1 = <span style="font-family: monospace;">""</span>, apscat2 = <span style="font-family: monospace;">""</span> (apscatter)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apscat1' Line='apscat1 = "", apscat2 = "" (apscatter)' -->
   <dd>Parameter sets for the fitting functions across and along the dispersion.
   These parameters are those used by <b>icfit</b>.  These parameters are
@@ -390,11 +390,11 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>b_function = <tt>"legendre"</tt>, b_order = 1 (apsum)</b></dt>
+  <dt><b>b_function = <span style="font-family: monospace;">"legendre"</span>, b_order = 1 (apsum)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='b_function' Line='b_function = "legendre", b_order = 1 (apsum)' -->
   <dd>Default background fitting function and order.  The fitting function types are
-  <tt>"chebyshev"</tt> polynomial, <tt>"legendre"</tt> polynomial, <tt>"spline1"</tt> linear spline, and
-  <tt>"spline3"</tt> cubic spline.  The order refers to the number of
+  <span style="font-family: monospace;">"chebyshev"</span> polynomial, <span style="font-family: monospace;">"legendre"</span> polynomial, <span style="font-family: monospace;">"spline1"</span> linear spline, and
+  <span style="font-family: monospace;">"spline3"</span> cubic spline.  The order refers to the number of
   terms in the polynomial functions or the number of spline pieces in the spline
   functions.
   </dd>
@@ -438,20 +438,20 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   
   </p>
   <dl>
-  <dt><b>weights = <tt>"none"</tt> (apsum)</b></dt>
+  <dt><b>weights = <span style="font-family: monospace;">"none"</span> (apsum)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='weights' Line='weights = "none" (apsum)' -->
   <dd>Type of extraction weighting.  Note that if the <i>clean</i> parameter is
-  set then the weights used are <tt>"variance"</tt> regardless of the weights
+  set then the weights used are <span style="font-family: monospace;">"variance"</span> regardless of the weights
   specified by this parameter.  The choices are:
   <dl>
-  <dt><b><tt>"none"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"none"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"none"' -->
   <dd>The pixels are summed without weights except for partial pixels at the
   ends.
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"variance"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"variance"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"variance"' -->
   <dd>The extraction is weighted by the variance based on the data values
   and a poisson/ccd model using the <i>gain</i> and <i>readnoise</i>
@@ -461,7 +461,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>pfit = <tt>"fit1d"</tt> (apsum) (fit1d|fit2d)</b></dt>
+  <dt><b>pfit = <span style="font-family: monospace;">"fit1d"</span> (apsum) (fit1d|fit2d)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pfit' Line='pfit = "fit1d" (apsum) (fit1d|fit2d)' -->
   <dd>Profile fitting algorithm for cleaning and variance weighted extractions.
   The default is generally appropriate for FOE data but users
@@ -487,11 +487,11 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>f_function = <tt>"spline3"</tt>, f_order = 20 (fit1d)</b></dt>
+  <dt><b>f_function = <span style="font-family: monospace;">"spline3"</span>, f_order = 20 (fit1d)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='f_function' Line='f_function = "spline3", f_order = 20 (fit1d)' -->
   <dd>Function and order used to fit the composite one dimensional flat field
-  spectrum.  The functions are <tt>"legendre"</tt>, <tt>"chebyshev"</tt>, <tt>"spline1"</tt>, and
-  <tt>"spline3"</tt>.  The spline functions are linear and cubic splines with the
+  spectrum.  The functions are <span style="font-family: monospace;">"legendre"</span>, <span style="font-family: monospace;">"chebyshev"</span>, <span style="font-family: monospace;">"spline1"</span>, and
+  <span style="font-family: monospace;">"spline3"</span>.  The spline functions are linear and cubic splines with the
   order specifying the number of pieces.
   </dd>
   </dl>
@@ -506,10 +506,10 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>coordlist = <tt>"linelist$thar.dat"</tt> (ecidentify)</b></dt>
+  <dt><b>coordlist = <span style="font-family: monospace;">"linelist$thar.dat"</span> (ecidentify)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coordlist' Line='coordlist = "linelist$thar.dat" (ecidentify)' -->
   <dd>Arc line list consisting of an ordered list of wavelengths.
-  Some standard line lists are available in the directory <tt>"linelist$"</tt>.
+  Some standard line lists are available in the directory <span style="font-family: monospace;">"linelist$"</span>.
   </dd>
   </dl>
   <dl>
@@ -532,11 +532,11 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>i_function = <tt>"chebyshev"</tt>, i_xorder = 3, i_yorder = 3 (ecidentify)</b></dt>
+  <dt><b>i_function = <span style="font-family: monospace;">"chebyshev"</span>, i_xorder = 3, i_yorder = 3 (ecidentify)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='i_function' Line='i_function = "chebyshev", i_xorder = 3, i_yorder = 3 (ecidentify)' -->
   <dd>The default function, function order for the pixel position dependence, and
   function order for the aperture number dependence to be fit to the arc
-  wavelengths.  The functions choices are <tt>"chebyshev"</tt> or <tt>"legendre"</tt>.
+  wavelengths.  The functions choices are <span style="font-family: monospace;">"chebyshev"</span> or <span style="font-family: monospace;">"legendre"</span>.
   </dd>
   </dl>
   <dl>
@@ -561,7 +561,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   
   </p>
   <dl>
-  <dt><b>select = <tt>"interp"</tt> (refspectra)</b></dt>
+  <dt><b>select = <span style="font-family: monospace;">"interp"</span> (refspectra)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='select' Line='select = "interp" (refspectra)' -->
   <dd>Selection method for assigning wavelength calibration spectra.
   Note that an arc assignment table may be used to override the selection
@@ -620,11 +620,11 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>sort = <tt>"jd"</tt>, group = <tt>"ljd"</tt> (refspectra)</b></dt>
+  <dt><b>sort = <span style="font-family: monospace;">"jd"</span>, group = <span style="font-family: monospace;">"ljd"</span> (refspectra)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sort' Line='sort = "jd", group = "ljd" (refspectra)' -->
   <dd>Image header keywords to be used as the sorting parameter for selection
   based on order and to group spectra.
-  A null string, <tt>""</tt>, or the word <tt>"none"</tt> may be use to disable the sorting
+  A null string, <span style="font-family: monospace;">""</span>, or the word <span style="font-family: monospace;">"none"</span> may be use to disable the sorting
   or grouping parameters.
   The sorting parameter
   must be numeric but otherwise may be anything.  The grouping parameter
@@ -684,7 +684,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   The environment parameter <i>imtype</i> is used to determine the extension
   of the images to be processed and created.  This allows use with any
   supported image extension.  For STF images the extension has to be exact;
-  for example <tt>"d1h"</tt>.
+  for example <span style="font-family: monospace;">"d1h"</span>.
   </p>
   <!-- EndSection:   'ENVIRONMENT PARAMETERS' -->
   <h3>Description</h3>
@@ -695,7 +695,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   Optic Echelle (FOE) spectra.  There may be one fiber or two fibers where
   the second fiber is illuminated by an arc calibration during arc and object
   exposures and a flat field during flat field exposures.  When there is
-  just one fiber the parameter <i>arcaps</i> is set to <tt>""</tt> and when there are
+  just one fiber the parameter <i>arcaps</i> is set to <span style="font-family: monospace;">""</span> and when there are
   two fibers the parameter is used to select which of the defined
   apertures are the orders from the simultaneous arc fiber.
   </p>
@@ -740,7 +740,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   <dd>Set the <b>dofoe</b> parameters with <b>eparam</b>.  Specify the object
   images to be processed, the flat field image as the aperture reference and
   the flat field, and one or more arc images.  If there are many
-  object or arc spectra per setup you might want to prepare <tt>"@ files"</tt>.
+  object or arc spectra per setup you might want to prepare <span style="font-family: monospace;">"@ files"</span>.
   Verify and set the format parameters, particularly the number of orders to be
   extracted and processed.  The processing parameters are set
   for simple extraction and dispersion correction but dispersion correction
@@ -755,7 +755,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   observations and the task will generally only do the setup steps
   once and only process new images.  Queries presented during the
   execution for various interactive operations may be answered with
-  <tt>"yes"</tt>, <tt>"no"</tt>, <tt>"YES"</tt>, or <tt>"NO"</tt>.  The lower case responses apply just
+  <span style="font-family: monospace;">"yes"</span>, <span style="font-family: monospace;">"no"</span>, <span style="font-family: monospace;">"YES"</span>, or <span style="font-family: monospace;">"NO"</span>.  The lower case responses apply just
   to that query while the upper case responses apply to all further
   such queries during the execution and no further queries of that
   type will be made.
@@ -781,11 +781,11 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   fiber orders are properly paired with the arc fibers having even aperture
   numbers and the object fibers having odd aperture numbers.  It is also
   required that no orders be skipped in the region of interest.  Missing
-  orders are added with the <tt>'m'</tt> key.  Once all orders have been marked the
-  aperture numbers are resequenced with <tt>'o'</tt>.  If local background subtraction
-  is selected the background regions should be checked with the <tt>'b'</tt> key.
-  Preceding this with the <tt>'a'</tt> key allows any changes to the background
-  regions to be applied to all orders.  To exit type <tt>'q'</tt>.
+  orders are added with the <span style="font-family: monospace;">'m'</span> key.  Once all orders have been marked the
+  aperture numbers are resequenced with <span style="font-family: monospace;">'o'</span>.  If local background subtraction
+  is selected the background regions should be checked with the <span style="font-family: monospace;">'b'</span> key.
+  Preceding this with the <span style="font-family: monospace;">'a'</span> key allows any changes to the background
+  regions to be applied to all orders.  To exit type <span style="font-family: monospace;">'q'</span>.
   </dd>
   </dl>
   <dl>
@@ -793,9 +793,9 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   <!-- Sec='DESCRIPTION' Level=0 Label='' Line='[6]' -->
   <dd>The order positions at a series of points along the dispersion are measured
   and a function is fit to these positions.  This may be done interactively to
-  adjust the fitting parameters.  Not all orders need be examined and the <tt>"NO"</tt>
+  adjust the fitting parameters.  Not all orders need be examined and the <span style="font-family: monospace;">"NO"</span>
   response will quit the interactive fitting.  To exit the interactive
-  fitting type <tt>'q'</tt>.
+  fitting type <span style="font-family: monospace;">'q'</span>.
   </dd>
   </dl>
   <dl>
@@ -826,10 +826,10 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   <dd>If dispersion correction is selected the first arc in the arc list is
   extracted.  One fiber is used to identify the arc lines and define the
   dispersion function using the task <b>ecidentify</b>.  Identify a few arc
-  lines in a few orders with <tt>'m'</tt> and <tt>'k'</tt> or <tt>'o'</tt>, use the <tt>'l'</tt> line list
+  lines in a few orders with <span style="font-family: monospace;">'m'</span> and <span style="font-family: monospace;">'k'</span> or <span style="font-family: monospace;">'o'</span>, use the <span style="font-family: monospace;">'l'</span> line list
   identification command to automatically add additional lines and fit the
   dispersion function.  Check the quality of the dispersion function fit
-  with <tt>'f'</tt>.  When satisfied exit with <tt>'q'</tt>.
+  with <span style="font-family: monospace;">'f'</span>.  When satisfied exit with <span style="font-family: monospace;">'q'</span>.
   </dd>
   </dl>
   <dl>
@@ -865,7 +865,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   <dt><b>[13]</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='' Line='[13]' -->
   <dd>The final spectra will have the same name as the original 2D images
-  with a <tt>".ec"</tt> extension added.
+  with a <span style="font-family: monospace;">".ec"</span> extension added.
   </dd>
   </dl>
   <p>
@@ -896,7 +896,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   <p>
   The final reduced spectra are recorded in two or three dimensional IRAF
   images.  The images have the same name as the original images with an added
-  <tt>".ec"</tt> extension.  Each line in the reduced image is a one dimensional
+  <span style="font-family: monospace;">".ec"</span> extension.  Each line in the reduced image is a one dimensional
   spectrum (an echelle order) with associated aperture and wavelength
   information.  When the <i>extras</i> parameter is set the lines in the
   third dimension contain additional information (see
@@ -915,7 +915,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   in the package.  Some of the parameters are not applicable to the
   <b>dofoe</b> task.  The observatory parameter is only required for data
   without an OBSERVAT header parameter (currently included in NOAO data).
-  The spectrum interpolation type might be changed to <tt>"sinc"</tt> but with the
+  The spectrum interpolation type might be changed to <span style="font-family: monospace;">"sinc"</span> but with the
   cautions given in <b>onedspec.package</b>.  The dispersion axis parameter is
   only needed if a DISPAXIS image header parameter is not defined.  The other
   parameters define the standard I/O functions.  The verbose parameter
@@ -951,7 +951,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   </p>
   <p>
   The number of orders selects the number of orders for a single
-  fiber and <tt>"pairs"</tt> of object and arc
+  fiber and <span style="font-family: monospace;">"pairs"</span> of object and arc
   fiber profiles for dual fibers.   The number specified will be
   automatically found based on the strongest peaks.
   In the  dual fiber case it is important that both elements of a pair be found,
@@ -974,7 +974,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   </p>
   <p>
   The <i>background</i> option selects the type of correction for background or
-  scattered light.  If the type is <tt>"scattered"</tt> a global scattered light is
+  scattered light.  If the type is <span style="font-family: monospace;">"scattered"</span> a global scattered light is
   fit to the data between the apertures  and subtracted from the images.
   <i>Note that the input images are modified by this operation</i>.  This
   option is slow.  Alternatively, a local background may be subtracted using
@@ -1069,7 +1069,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   there is a second fiber.  Apertures
   are assigned with a limits set by the <i>lower</i> and
   <i>upper</i> parameter and numbered sequentially.  A query is then
-  given allowing the aperture limits to be <tt>"resized"</tt> based on the profile
+  given allowing the aperture limits to be <span style="font-family: monospace;">"resized"</span> based on the profile
   itself (see <b>apresize</b>).
   </p>
   <p>
@@ -1081,29 +1081,29 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   aperture number must also be skipped.
   </p>
   <p>
-  For dual fibers all <tt>"pairs"</tt> of object and arc orders in the region of
+  For dual fibers all <span style="font-family: monospace;">"pairs"</span> of object and arc orders in the region of
   interest must be defined without skipping any orders.  The orders must
   also be numbered sequentially (though the direction does not matter)
   so that the arc apertures are either all even or all odd as defined
   by the <i>arcaps</i> parameter (the default is even numbers for the
-  arc apertures).  The <tt>'o'</tt> key will provide the necessary reordering.
+  arc apertures).  The <span style="font-family: monospace;">'o'</span> key will provide the necessary reordering.
   </p>
   <p>
   If local background subtraction is used the background regions should
-  also be checked with the <tt>'b'</tt> key.  Typically one adjusts all
+  also be checked with the <span style="font-family: monospace;">'b'</span> key.  Typically one adjusts all
   the background regions at the same time by selecting all apertures with
-  the <tt>'a'</tt> key first.  To exit the background and aperture editing steps type
-  <tt>'q'</tt>.
+  the <span style="font-family: monospace;">'a'</span> key first.  To exit the background and aperture editing steps type
+  <span style="font-family: monospace;">'q'</span>.
   </p>
   <p>
   Next the positions of the orders at various points along the dispersion are
-  measured and <tt>"trace functions"</tt> are fit.  The user is asked whether to fit
+  measured and <span style="font-family: monospace;">"trace functions"</span> are fit.  The user is asked whether to fit
   each trace function interactively.  This is selected to adjust the fitting
   parameters such as function type and order.  When interactively fitting a
   query is given for each aperture.  After the first aperture one may skip
-  reviewing the other traces by responding with <tt>"NO"</tt>.  Queries made by
-  <b>dofoe</b> generally may be answered with either lower case <tt>"yes"</tt> or <tt>"no"</tt>
-  or with upper case <tt>"YES"</tt> or <tt>"NO"</tt>.  The upper case responses apply to all
+  reviewing the other traces by responding with <span style="font-family: monospace;">"NO"</span>.  Queries made by
+  <b>dofoe</b> generally may be answered with either lower case <span style="font-family: monospace;">"yes"</span> or <span style="font-family: monospace;">"no"</span>
+  or with upper case <span style="font-family: monospace;">"YES"</span> or <span style="font-family: monospace;">"NO"</span>.  The upper case responses apply to all
   further queries and so are used to eliminate further queries of that kind.
   </p>
   <p>
@@ -1166,7 +1166,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   rejection of deviant points, and a choice of function types and orders.
   Note that it is important to use a method which rejects cosmic rays such as
   using either medians over all the background regions (<i>background</i> =
-  <tt>"median"</tt>) or median samples during fitting (<i>b_naverage</i> &lt; -1).
+  <span style="font-family: monospace;">"median"</span>) or median samples during fitting (<i>b_naverage</i> &lt; -1).
   The background smoothing parameter <i>b_smooth</i> is may be used
   to provide some additional local smoothing of the background light.
   The background subtraction algorithm and options are described in greater
@@ -1207,7 +1207,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   <p>
   Flat field corrections may be made during the basic CCD processing; i.e.
   direct division by the two dimensional flat field observation.  In that
-  case do not specify a flat field spectrum; use the null string <tt>""</tt>.  The
+  case do not specify a flat field spectrum; use the null string <span style="font-family: monospace;">""</span>.  The
   <b>dofoe</b> task provides an alternative flat field response correction
   based on division of the extracted object spectra by the extracted flat field
   spectra.  A discussion of the theory and merits of flat fielding directly
@@ -1224,7 +1224,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   spectra are fit by smooth functions and the ratio of the flat field spectra
   to the smooth functions define the response spectra.  The default fitting
   function and order are given by the parameters <i>f_function</i> and
-  <i>f_order</i>.  If the parameter <i>f_interactive</i> is <tt>"yes"</tt> then the
+  <i>f_order</i>.  If the parameter <i>f_interactive</i> is <span style="font-family: monospace;">"yes"</span> then the
   fitting is done interactively using the <b>fit1d</b> task which uses the
   <b>icfit</b> interactive fitting commands.
   </p>
@@ -1364,7 +1364,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   <p>
   1.  The following example uses artificial data and may be executed
   at the terminal (with IRAF V2.10).  This is also the sequence performed
-  by the test procedure <tt>"demos dofoe"</tt>.  Because the images are small the
+  by the test procedure <span style="font-family: monospace;">"demos dofoe"</span>.  Because the images are small the
   dispersion solution is somewhat simplistic.
   </p>
   <pre>
@@ -1382,11 +1382,11 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   Resize apertures for demoflat?  (yes):
   Resizing apertures ...
   Mar  4  9:39: RESIZE - 6 apertures resized for demoflat
-  &lt;Review aperture assignments.  Exit with <tt>'q'</tt>&gt;
+  &lt;Review aperture assignments.  Exit with <span style="font-family: monospace;">'q'</span>&gt;
   Fit traced positions for demoflat interactively?  (yes):
   Tracing apertures ...
   Fit curve to aperture 1 of demoflat interactively  (yes):
-  &lt;Review trace and fit. Exit with <tt>'q'</tt>&gt;
+  &lt;Review trace and fit. Exit with <span style="font-family: monospace;">'q'</span>&gt;
   Fit curve to aperture 2 of demoflat interactively  (yes): N
   Mar  4  9:39: TRACE - 6 apertures traced in demoflat.
   Mar  4  9:39: DATABASE - 6 apertures for demoflat written to database
@@ -1416,19 +1416,19 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   Mar  4  9:40: EXTRACT - Aperture 5 from demoarc --&gt; demoarc.ec
   Mar  4  9:40: EXTRACT - Aperture 6 from demoarc --&gt; demoarc.ec
   Determine dispersion solution for demoarc
-  &lt;Mark lines with <tt>'m'</tt> and change orders with <tt>'k'</tt>
-  &lt;<tt>'m'</tt> line at pixel 78 and assign 4965.
-  &lt;<tt>'k'</tt> to order 2
-  &lt;<tt>'m'</tt> line at pixel 78 and assign 5009
-  &lt;<tt>'m'</tt> line at pixel 78 and assign 5020
-  &lt;<tt>'k'</tt> to order 3
-  &lt;<tt>'m'</tt> line at pixel 78 and assign 5049.8
-  &lt;<tt>'m'</tt> line at pixel 78 and assign 5050.8
-  &lt;<tt>'m'</tt> line at pixel 78 and assign 5055.3
-  &lt;<tt>'m'</tt> line at pixel 78 and assign 5062
-  &lt;<tt>'m'</tt> line at pixel 78 and assign 5064.9
-  &lt;<tt>'f'</tt> to fit
-  &lt;<tt>'q'</tt> to quit fit and <tt>'q'</tt> to quit ECIDENTIFY
+  &lt;Mark lines with <span style="font-family: monospace;">'m'</span> and change orders with <span style="font-family: monospace;">'k'</span>
+  &lt;<span style="font-family: monospace;">'m'</span> line at pixel 78 and assign 4965.
+  &lt;<span style="font-family: monospace;">'k'</span> to order 2
+  &lt;<span style="font-family: monospace;">'m'</span> line at pixel 78 and assign 5009
+  &lt;<span style="font-family: monospace;">'m'</span> line at pixel 78 and assign 5020
+  &lt;<span style="font-family: monospace;">'k'</span> to order 3
+  &lt;<span style="font-family: monospace;">'m'</span> line at pixel 78 and assign 5049.8
+  &lt;<span style="font-family: monospace;">'m'</span> line at pixel 78 and assign 5050.8
+  &lt;<span style="font-family: monospace;">'m'</span> line at pixel 78 and assign 5055.3
+  &lt;<span style="font-family: monospace;">'m'</span> line at pixel 78 and assign 5062
+  &lt;<span style="font-family: monospace;">'m'</span> line at pixel 78 and assign 5064.9
+  &lt;<span style="font-family: monospace;">'f'</span> to fit
+  &lt;<span style="font-family: monospace;">'q'</span> to quit fit and <span style="font-family: monospace;">'q'</span> to quit ECIDENTIFY
   
   ECREIDENTIFY: NOAO/IRAF V2.10BETA valdes@puppis Wed 09:54:16 04-Mar-92
     Reference image = demoarc.ec, Refit = yes

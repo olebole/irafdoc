@@ -46,8 +46,8 @@ flatdiv: Divide spectra by flat field
   <dl>
   <dt><b>start_rec</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='start_rec' Line='start_rec' -->
-  <dd>Each new spectrum created as <tt>"output"</tt> has its root name and a 
-  trailing number appended starting with <tt>"start_rec"</tt>. Subsequent
+  <dd>Each new spectrum created as <span style="font-family: monospace;">"output"</span> has its root name and a 
+  trailing number appended starting with <span style="font-family: monospace;">"start_rec"</span>. Subsequent
   output images will have an incremented trailing number.
   Note that even if an output image is not created because the input
   image has already been flattened or the input image is not found the
@@ -60,7 +60,7 @@ flatdiv: Divide spectra by flat field
   <dd>The root name for the sensitivity spectra as produced by FLATFIT.
   Normally with multi-aperture instruments, FLATFIT will produce a
   spectrum appropriate to each aperture and the file name will have
-  <tt>"flat_file"</tt> as the file name root and the aperture number appended.
+  <span style="font-family: monospace;">"flat_file"</span> as the file name root and the aperture number appended.
   </dd>
   </dl>
   <dl>
@@ -73,7 +73,7 @@ flatdiv: Divide spectra by flat field
   <dt><b>ccmode = )_.ccmode</b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='ccmode' Line='ccmode = )_.ccmode' -->
   <dd>The mode by which the coincidence correction is to be performed.
-  This may be <tt>"iids"</tt> or <tt>"photo"</tt>.
+  This may be <span style="font-family: monospace;">"iids"</span> or <span style="font-family: monospace;">"photo"</span>.
   </dd>
   </dl>
   <dl>

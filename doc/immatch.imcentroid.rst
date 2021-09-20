@@ -34,7 +34,7 @@ imcentroid: Compute and print relative shifts for a list of 2-D images
   </dd>
   </dl>
   <dl>
-  <dt><b>reference = <tt>""</tt></b></dt>
+  <dt><b>reference = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='reference' Line='reference = ""' -->
   <dd>The reference image to which the input images will be aligned.  If
   a reference image is specified the mean X and Y shifts between each of
@@ -52,7 +52,7 @@ imcentroid: Compute and print relative shifts for a list of 2-D images
   </dd>
   </dl>
   <dl>
-  <dt><b>shifts = <tt>""</tt></b></dt>
+  <dt><b>shifts = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='shifts' Line='shifts = ""' -->
   <dd>A text file containing the initial estimate for each image of the
   shift in each axis relative to the reference image.  These
@@ -256,7 +256,7 @@ imcentroid: Compute and print relative shifts for a list of 2-D images
   <h3>Centering algorithm</h3>
   <!-- BeginSection: 'CENTERING ALGORITHM' -->
   <p>
-  The algorithm is a <tt>"marginal"</tt> centroid in which the fit for each axis
+  The algorithm is a <span style="font-family: monospace;">"marginal"</span> centroid in which the fit for each axis
   is performed separately upon a vector created by collapsing the
   centering box perpendicular to that axis.  The centroid is calculated
   with respect to the level specified by <i>background</i>.  If
@@ -286,14 +286,14 @@ imcentroid: Compute and print relative shifts for a list of 2-D images
   <p>
   1. Calculate the shifts between three images using the first image
   as a reference image and the list of registration star coordinates in
-  the file <tt>"x1.coords"</tt>.
+  the file <span style="font-family: monospace;">"x1.coords"</span>.
   </p>
   <pre>
       cl&gt; imcentroid x1,x2,x3 x1 x1.coords
   </pre>
   <p>
   2. Calculate the shifts between a list of images contained in the file
-  <tt>"imlist"</tt>:
+  <span style="font-family: monospace;">"imlist"</span>:
   </p>
   <pre>
       pr&gt; imcentroid @imlist x1 x1.coords

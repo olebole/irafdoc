@@ -35,16 +35,16 @@ thedit: Edit or print table header keywords.
   then it will be added
   (equivalent to add=yes in 'hedit').
   If a keyword does not exist,
-  and the value expression is <tt>"."</tt>,
+  and the value expression is <span style="font-family: monospace;">"."</span>,
   a warning will be printed
   ('hedit' is silent in this case).
   </p>
   <p>
   Such parameters as the number of rows or columns in the table
   are stored differently in FITS, STSDAS, and text tables.
-  The following special <tt>"keywords"</tt> can be used
+  The following special <span style="font-family: monospace;">"keywords"</span> can be used
   to reference such information regardless of table type.
-  These may be used in the 'keywords' parameter when value=<tt>"."</tt>,
+  These may be used in the 'keywords' parameter when value=<span style="font-family: monospace;">"."</span>,
   or they can be used in the 'value' parameter as part of an expression.
   </p>
   <pre>
@@ -58,12 +58,12 @@ thedit: Edit or print table header keywords.
   </pre>
   <p>
   'thedit' supports two of the special operands
-  that are available in 'hedit':  <tt>"$"</tt> and <tt>"$I"</tt>.
+  that are available in 'hedit':  <span style="font-family: monospace;">"$"</span> and <span style="font-family: monospace;">"$I"</span>.
   When 'value' is an expression,
-  <tt>"$"</tt> gives the value of the current keyword.
-  <tt>"$I"</tt> is equivalent to <tt>"i_table"</tt>,
+  <span style="font-family: monospace;">"$"</span> gives the value of the current keyword.
+  <span style="font-family: monospace;">"$I"</span> is equivalent to <span style="font-family: monospace;">"i_table"</span>,
   the name of the current table.
-  <tt>"$I"</tt> can be used as a keyword or as part of an expression.
+  <span style="font-family: monospace;">"$I"</span> can be used as a keyword or as part of an expression.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Parameters</h3>
@@ -72,7 +72,7 @@ thedit: Edit or print table header keywords.
   <dt><b>table [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='table' Line='table [file name template]' -->
   <dd>A list of tables for which keywords are to be edited or printed.
-  If 'value' is <tt>"."</tt>, each table will be opened read-only;
+  If 'value' is <span style="font-family: monospace;">"."</span>, each table will be opened read-only;
   otherwise, each table will be opened read-write.
   </dd>
   </dl>
@@ -81,30 +81,30 @@ thedit: Edit or print table header keywords.
   <!-- Sec='PARAMETERS' Level=0 Label='keywords' Line='keywords [string]' -->
   <dd>One or more keywords, separated by commas and/or blanks,
   which are to be added, modified, or printed.
-  If the value expression (see 'value') is not <tt>"."</tt>,
+  If the value expression (see 'value') is not <span style="font-family: monospace;">"."</span>,
   any keyword in 'keywords' that is not already present
   will be added to the header.
   Wildcards are supported; however,
-  the <tt>"@filename"</tt> syntax is not supported.
+  the <span style="font-family: monospace;">"@filename"</span> syntax is not supported.
   Do not use wildcard or other special characters
   if a keyword is to be added to the header.
   </dd>
   </dl>
   <dl>
-  <dt><b>value = <tt>"."</tt> [string]</b></dt>
+  <dt><b>value = <span style="font-family: monospace;">"."</span> [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='value' Line='value = "." [string]' -->
   <dd>This is the value to be assigned to each keyword in 'keywords'.
-  The special value <tt>"."</tt> means that
+  The special value <span style="font-family: monospace;">"."</span> means that
   the keywords should be printed rather than edited,
   and in this case the table will be opened read-only.
-  If 'value' is not equal to <tt>"."</tt>,
+  If 'value' is not equal to <span style="font-family: monospace;">"."</span>,
   the same value will be assigned to all the keywords
   matching the template 'keywords'.
-  In order to set a keyword value to <tt>"."</tt> or <tt>","</tt>,
-  specify the value as <tt>"\."</tt> or <tt>"\,"</tt> respectively.
+  In order to set a keyword value to <span style="font-family: monospace;">"."</span> or <span style="font-family: monospace;">","</span>,
+  specify the value as <span style="font-family: monospace;">"\."</span> or <span style="font-family: monospace;">"\,"</span> respectively.
   (Note that if given on the command line,
-  the quotes are required in this case.)  Requiring <tt>","</tt> to be escaped
-  was added as protection against accidentally typing <tt>","</tt> instead of <tt>"."</tt>.
+  the quotes are required in this case.)  Requiring <span style="font-family: monospace;">","</span> to be escaped
+  was added as protection against accidentally typing <span style="font-family: monospace;">","</span> instead of <span style="font-family: monospace;">"."</span>.
   As with 'hedit',
   a general expression may be given for 'value'
   by enclosing the expression in parentheses.
@@ -131,13 +131,13 @@ thedit: Edit or print table header keywords.
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1.  Display all the header keywords (except blank) in <tt>"example.tab"</tt>.
+  1.  Display all the header keywords (except blank) in <span style="font-family: monospace;">"example.tab"</span>.
   </p>
   <pre>
       tt&gt; thedit example.tab * .
   </pre>
   <p>
-  2.  Display only the special keywords for <tt>"timetag.fits[events]"</tt>.
+  2.  Display only the special keywords for <span style="font-family: monospace;">"timetag.fits[events]"</span>.
   </p>
   <pre>
       tt&gt; thedit timetag.fits[events] i_* .
@@ -151,13 +151,13 @@ thedit: Edit or print table header keywords.
       timetag.fits[events],i_type = "fits, binary"
   </pre>
   <p>
-  3.  Print all HISTORY keywords in <tt>"example.txt"</tt>.
+  3.  Print all HISTORY keywords in <span style="font-family: monospace;">"example.txt"</span>.
   </p>
   <pre>
       tt&gt; thedit example.txt history .
   </pre>
   <p>
-  4.  Add a new HISTORY keyword to <tt>"example.tab"</tt>.
+  4.  Add a new HISTORY keyword to <span style="font-family: monospace;">"example.tab"</span>.
   </p>
   <pre>
       tt&gt; thedit example.tab history \<br>
@@ -170,7 +170,7 @@ thedit: Edit or print table header keywords.
       tt&gt; thedit example.tab count "($ + 1)"
   </pre>
   <p>
-  6.  Delete all HISTORY and COMMENT keywords in <tt>"example.fits[1]"</tt>.
+  6.  Delete all HISTORY and COMMENT keywords in <span style="font-family: monospace;">"example.fits[1]"</span>.
   </p>
   <pre>
       tt&gt; thedit example.fits history,comment delete+
@@ -190,7 +190,7 @@ thedit: Edit or print table header keywords.
   deleting the old keyword.
   Note that while this procedure does copy the value,
   the comment will be lost.
-  (The <tt>"k"</tt> instruction in 'tupar' can also be used to rename a keyword.)
+  (The <span style="font-family: monospace;">"k"</span> instruction in 'tupar' can also be used to rename a keyword.)
   </p>
   <pre>
       tt&gt; thedit example.tab newkey "(oldkey)"
@@ -210,7 +210,7 @@ thedit: Edit or print table header keywords.
   <pre>
       tt&gt; thedit abc.fits[1] * ,
   
-      ERROR: In order to set a keyword value to <tt>','</tt> you must use value='\,'
+      ERROR: In order to set a keyword value to <span style="font-family: monospace;">','</span> you must use value='\,'
   </pre>
   <!-- EndSection:   'EXAMPLES' -->
   <h3>Bugs</h3>
@@ -229,11 +229,11 @@ thedit: Edit or print table header keywords.
   when writing the value to the table.
   This can fail when a value appears to be a number
   but really should be treated as a string.
-  For example, a date and time could be written as <tt>"19940531:11515000"</tt>.
+  For example, a date and time could be written as <span style="font-family: monospace;">"19940531:11515000"</span>.
   'thedit' would interpret this as hours and minutes (HH:MMss)
   and convert the value to 1994053. + 11515000./60.
   A workaround for this case is to use 'tupar' instead of 'thedit';
-  use the <tt>"pt"</tt> instruction, meaning put a keyword of type text.
+  use the <span style="font-family: monospace;">"pt"</span> instruction, meaning put a keyword of type text.
   </p>
   <!-- EndSection:   'BUGS' -->
   <h3>References</h3>

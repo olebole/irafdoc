@@ -31,19 +31,19 @@ chkupdate: Check for an available IRAF update
   </dd>
   </dl>
   <dl>
-  <dt><b>ref_file = <tt>"iraf$.release_date"</tt></b></dt>
+  <dt><b>ref_file = <span style="font-family: monospace;">"iraf$.release_date"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ref_file' Line='ref_file = "iraf$.release_date"' -->
   <dd></dd>
   </dl>
   <dl>
-  <dt><b>release = <tt>")_.release"</tt></b></dt>
+  <dt><b>release = <span style="font-family: monospace;">")_.release"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='release' Line='release = ")_.release"' -->
   <dd>Current IRAF release version.  This value is inherited from the CL 'release'
   parameter by default.
   </dd>
   </dl>
   <dl>
-  <dt><b>baseurl = <tt>"http://iraf.noao.edu/ftp"</tt></b></dt>
+  <dt><b>baseurl = <span style="font-family: monospace;">"http://iraf.noao.edu/ftp"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='baseurl' Line='baseurl = "http://iraf.noao.edu/ftp"' -->
   <dd>Base URL to the IRAF release timestamp directory.
   </dd>

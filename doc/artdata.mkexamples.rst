@@ -112,7 +112,7 @@ mkexamples: Make artificial data examples
   exhaustive.  The only adjustable parameters are variations of the
   random number seeds.  Varying the noise seed allows several observations
   of the same example while varying the object seed allows several observations
-  of different <tt>"fields"</tt>, spectral lines, or number of apertures/orders.
+  of different <span style="font-family: monospace;">"fields"</span>, spectral lines, or number of apertures/orders.
   </p>
   <p>
   If the example name is not given on the command line a menu of example
@@ -137,7 +137,7 @@ mkexamples: Make artificial data examples
   <p>
   This task is a procedure script which selects and lists or executes
   any file in the mkexamples$ logical directory with the example name and the
-  extension <tt>".cl"</tt>.  Thus, to add additional examples create a simple
+  extension <span style="font-family: monospace;">".cl"</span>.  Thus, to add additional examples create a simple
   command script (not a procedure script) and place it in the mkexamples
   directory along with an entry in the menu file mkexamples$mkexamples.men.
   </p>

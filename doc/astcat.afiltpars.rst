@@ -23,12 +23,12 @@ afiltpars: Default astrometry file filtering parameters
   <h3>Parameters</h3>
   <!-- BeginSection: 'PARAMETERS' -->
   <dl>
-  <dt><b>fsort = <tt>""</tt></b></dt>
+  <dt><b>fsort = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fsort' Line='fsort = ""' -->
   <dd>The field or field expression on which to sort the catalog / file records.
   The sort may be numeric or character. Sort fields may be expressed by name,
-  e.g. <tt>"mag1"</tt> or field number, e.g. <tt>"f3"</tt>. Sort expressions must be a combination
-  of existing fields, e. g. <tt>"mag2 - mag1"</tt> or <tt>"f4 - f3"</tt>. By default the records
+  e.g. <span style="font-family: monospace;">"mag1"</span> or field number, e.g. <span style="font-family: monospace;">"f3"</span>. Sort expressions must be a combination
+  of existing fields, e. g. <span style="font-family: monospace;">"mag2 - mag1"</span> or <span style="font-family: monospace;">"f4 - f3"</span>. By default the records
   are not sorted.
   </dd>
   </dl>
@@ -44,81 +44,81 @@ afiltpars: Default astrometry file filtering parameters
   <dd>The boolean record selection expression. By default all catalog / file records
   are selected, otherwise only records matching the selection expression
   are selected. Selection expressions must be combination of existing fields
-  and field expressions, e.g. <tt>"mag1 &lt; 16.0"</tt>, or <tt>"(f4 - f3) &lt; 1.5"</tt>.
+  and field expressions, e.g. <span style="font-family: monospace;">"mag1 &lt; 16.0"</span>, or <span style="font-family: monospace;">"(f4 - f3) &lt; 1.5"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>fields = <tt>"f[*]"</tt></b></dt>
+  <dt><b>fields = <span style="font-family: monospace;">"f[*]"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fields' Line='fields = "f[*]"' -->
   <dd>The list of output fields and field expressions. By default the sorted and
   selected records are output as is. Output fields may be field names, e.g.
-  <tt>"mag1"</tt>, field numbers e.g. <tt>"f3"</tt>, or field ranges e.g. <tt>"f[1-4]"</tt>. Output field
-  expressions must be a combination of existing fields, e.g. <tt>"mag2 - mag1"</tt>,
-  or <tt>"f4 - f3"</tt>.
+  <span style="font-family: monospace;">"mag1"</span>, field numbers e.g. <span style="font-family: monospace;">"f3"</span>, or field ranges e.g. <span style="font-family: monospace;">"f[1-4]"</span>. Output field
+  expressions must be a combination of existing fields, e.g. <span style="font-family: monospace;">"mag2 - mag1"</span>,
+  or <span style="font-family: monospace;">"f4 - f3"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>fnames = <tt>""</tt></b></dt>
+  <dt><b>fnames = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fnames' Line='fnames = ""' -->
   <dd>The list of new field names separated by commas. By default new fields, e.g.
   fields that are expressions of existing fields are assigned names of the form
-  <tt>"f#"</tt> where # is the field sequence number. Field names must be valid tokens,
+  <span style="font-family: monospace;">"f#"</span> where # is the field sequence number. Field names must be valid tokens,
   i.e. they cannot be expressions or contain embedded blanks.
   </dd>
   </dl>
   <dl>
-  <dt><b>fntypes = <tt>""</tt></b></dt>
+  <dt><b>fntypes = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fntypes' Line='fntypes = ""' -->
   <dd>The list of new field types separated by commas. By default new fields are
-  assigned type real. Permitted field types are <tt>"s"</tt> for string, <tt>"i"</tt> for
-  integer, <tt>"r"</tt> for real, or <tt>"d"</tt> for double.
+  assigned type real. Permitted field types are <span style="font-family: monospace;">"s"</span> for string, <span style="font-family: monospace;">"i"</span> for
+  integer, <span style="font-family: monospace;">"r"</span> for real, or <span style="font-family: monospace;">"d"</span> for double.
   </dd>
   </dl>
   <dl>
-  <dt><b>fnunits = <tt>""</tt></b></dt>
+  <dt><b>fnunits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fnunits' Line='fnunits = ""' -->
   <dd>The list of new field units separated by commas. By default new fields are
   assigned units of INDEF. Units specifications may not contain embedded blanks.
   </dd>
   </dl>
   <dl>
-  <dt><b>fnformats = <tt>""</tt></b></dt>
+  <dt><b>fnformats = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fnformats' Line='fnformats = ""' -->
   <dd>The list of new field formats. By default string, integer, and floating
-  point fields are assigned formats of <tt>"%10s"</tt>, <tt>"%10d"</tt>, and <tt>"%10g"</tt> respectively.
+  point fields are assigned formats of <span style="font-family: monospace;">"%10s"</span>, <span style="font-family: monospace;">"%10d"</span>, and <span style="font-family: monospace;">"%10g"</span> respectively.
   </dd>
   </dl>
   <dl>
-  <dt><b>fosystem = <tt>""</tt></b></dt>
+  <dt><b>fosystem = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fosystem' Line='fosystem = ""' -->
   <dd>The output celestial coordinate system. If fosystem is undefined
   it defaults to the catalog celestial coordinate system. Popular options
-  are <tt>"icrs"</tt>, <tt>"j2000.0"</tt>, <tt>"b1950.0"</tt>. The full set of options can be examined
-  by typing <tt>"help ccsystems"</tt>.
+  are <span style="font-family: monospace;">"icrs"</span>, <span style="font-family: monospace;">"j2000.0"</span>, <span style="font-family: monospace;">"b1950.0"</span>. The full set of options can be examined
+  by typing <span style="font-family: monospace;">"help ccsystems"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>fira = <tt>"ra"</tt></b></dt>
+  <dt><b>fira = <span style="font-family: monospace;">"ra"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fira' Line='fira = "ra"' -->
   <dd>The name of the catalog field containing the right ascension / longitude
-  of an object. Most users should leave fira set to <tt>"ra"</tt>. If the user knows
+  of an object. Most users should leave fira set to <span style="font-family: monospace;">"ra"</span>. If the user knows
   the number of the right ascension / longitude field the generic field name
-  <tt>"f#"</tt>, e.g. <tt>"f1"</tt> can be used.
+  <span style="font-family: monospace;">"f#"</span>, e.g. <span style="font-family: monospace;">"f1"</span> can be used.
   </dd>
   </dl>
   <dl>
-  <dt><b>fidec = <tt>"dec"</tt></b></dt>
+  <dt><b>fidec = <span style="font-family: monospace;">"dec"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fidec' Line='fidec = "dec"' -->
   <dd>The name of the catalog field containing the declination / latitude
-  of an object. Most users should leave fidec set to <tt>"dec"</tt>. If the user knows
-  the number of the declination / latitude field the generic field name <tt>"f#"</tt>,
-  e.g. <tt>"f2"</tt> can be used.
+  of an object. Most users should leave fidec set to <span style="font-family: monospace;">"dec"</span>. If the user knows
+  the number of the declination / latitude field the generic field name <span style="font-family: monospace;">"f#"</span>,
+  e.g. <span style="font-family: monospace;">"f2"</span> can be used.
   </dd>
   </dl>
   <dl>
-  <dt><b>foraunits = <tt>""</tt></b></dt>
+  <dt><b>foraunits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='foraunits' Line='foraunits = ""' -->
-  <dd>The units of fira. Permitted values are <tt>"hours"</tt>, <tt>"degrees"</tt>, and <tt>"radians"</tt>. If
+  <dd>The units of fira. Permitted values are <span style="font-family: monospace;">"hours"</span>, <span style="font-family: monospace;">"degrees"</span>, and <span style="font-family: monospace;">"radians"</span>. If
   foraunits is undefined it defaults to the preferred units of the
   output celestial coordinate system fosystem, e.g. hours for equatorial
   coordinate systems and degrees for ecliptic, galactic, and super-galactic
@@ -126,71 +126,71 @@ afiltpars: Default astrometry file filtering parameters
   </dd>
   </dl>
   <dl>
-  <dt><b>fodecunits = <tt>""</tt></b></dt>
+  <dt><b>fodecunits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fodecunits' Line='fodecunits = ""' -->
-  <dd>The units of fidec. Permitted values are <tt>"degrees"</tt> and <tt>"radians"</tt>. If 
+  <dd>The units of fidec. Permitted values are <span style="font-family: monospace;">"degrees"</span> and <span style="font-family: monospace;">"radians"</span>. If 
   fodecunits is undefined it defaults to the preferred units of the
   output celestial coordinate system fosystem, e.g. degrees for all systems.
   </dd>
   </dl>
   <dl>
-  <dt><b>foraformat = <tt>""</tt></b></dt>
+  <dt><b>foraformat = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='foraformat' Line='foraformat = ""' -->
   <dd>The format of fira. If undefined foraformat defaults to the equivalent catalog
   format.
   </dd>
   </dl>
   <dl>
-  <dt><b>fodecformat = <tt>""</tt></b></dt>
+  <dt><b>fodecformat = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fodecformat' Line='fodecformat = ""' -->
   <dd>The format of fidec. If undefined fodecformat defaults to the equivalent
   catalog format.
   </dd>
   </dl>
   <dl>
-  <dt><b>fixp = <tt>"xp"</tt></b></dt>
+  <dt><b>fixp = <span style="font-family: monospace;">"xp"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fixp' Line='fixp = "xp"' -->
   <dd>The name of the catalog field containing the predicted x coordinate
-  of an object. Most users should leave fixp set to <tt>"xp"</tt>. If the user knows
+  of an object. Most users should leave fixp set to <span style="font-family: monospace;">"xp"</span>. If the user knows
   the number of the predicted x coordinate field the generic field name
-  <tt>"f#"</tt>, e.g. <tt>"f1"</tt> can be used.
+  <span style="font-family: monospace;">"f#"</span>, e.g. <span style="font-family: monospace;">"f1"</span> can be used.
   </dd>
   </dl>
   <dl>
-  <dt><b>fiyp = <tt>"yp"</tt></b></dt>
+  <dt><b>fiyp = <span style="font-family: monospace;">"yp"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fiyp' Line='fiyp = "yp"' -->
   <dd>The name of the catalog field containing the predicted y coordinate
-  of an object. Most users should leave fiyp set to <tt>"yp"</tt>. If the user knows
+  of an object. Most users should leave fiyp set to <span style="font-family: monospace;">"yp"</span>. If the user knows
   the number of the predicted y coordinate field the generic field name
-  <tt>"f#"</tt>, e.g. <tt>"f2"</tt> can be used.
+  <span style="font-family: monospace;">"f#"</span>, e.g. <span style="font-family: monospace;">"f2"</span> can be used.
   </dd>
   </dl>
   <dl>
-  <dt><b>fixc = <tt>"xc"</tt></b></dt>
+  <dt><b>fixc = <span style="font-family: monospace;">"xc"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fixc' Line='fixc = "xc"' -->
   <dd>The name of the catalog field containing the centered x coordinate
-  of an object. Most users should leave fixc set to <tt>"xc"</tt>. If the user knows
+  of an object. Most users should leave fixc set to <span style="font-family: monospace;">"xc"</span>. If the user knows
   the number of the centered x coordinate field the generic field name
-  <tt>"f#"</tt>, e.g. <tt>"f1"</tt> can be used.
+  <span style="font-family: monospace;">"f#"</span>, e.g. <span style="font-family: monospace;">"f1"</span> can be used.
   </dd>
   </dl>
   <dl>
-  <dt><b>fiyc = <tt>"yc"</tt></b></dt>
+  <dt><b>fiyc = <span style="font-family: monospace;">"yc"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fiyc' Line='fiyc = "yc"' -->
   <dd>The name of the catalog field containing the centered y coordinate
-  of an object. Most users should leave fiyc set to <tt>"yc"</tt>. If the user knows
+  of an object. Most users should leave fiyc set to <span style="font-family: monospace;">"yc"</span>. If the user knows
   the number of the centered y coordinate field the generic field name
-  <tt>"f#"</tt>, e.g. <tt>"f2"</tt> can be used.
+  <span style="font-family: monospace;">"f#"</span>, e.g. <span style="font-family: monospace;">"f2"</span> can be used.
   </dd>
   </dl>
   <dl>
-  <dt><b>foxformat = <tt>"%10.3f"</tt></b></dt>
+  <dt><b>foxformat = <span style="font-family: monospace;">"%10.3f"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='foxformat' Line='foxformat = "%10.3f"' -->
   <dd>The format of fixp and fixc. 
   </dd>
   </dl>
   <dl>
-  <dt><b>foyformat = <tt>"%10.3f"</tt></b></dt>
+  <dt><b>foyformat = <span style="font-family: monospace;">"%10.3f"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='foyformat' Line='foyformat = "%10.3f"' -->
   <dd>The format of fiyp and fiyc.
   </dd>
@@ -211,14 +211,14 @@ afiltpars: Default astrometry file filtering parameters
   <p>
   <i>fsort</i> and <i>freverse</i> define the sort field or field expression and
   the sort order. Sort fields may be field names or field numbers, e.g.
-  <tt>"mag1"</tt> or <tt>"f3"</tt>. By default the sort order is ascending.
+  <span style="font-family: monospace;">"mag1"</span> or <span style="font-family: monospace;">"f3"</span>. By default the sort order is ascending.
   </p>
   <p>
   Records are selected or rejected based on the value of the boolean expression
   <i>fexpr</i>. By default all catalog / file records are selected. The boolean 
   selection expression must be function of existing catalog fields, e.g.
-  the expression <tt>"mag1 &lt;= 16.0"</tt> will select all records for which the mag1
-  field is &lt;= 16.0, and the expression <tt>"(f4 - f3) &gt;= 0.0 &amp;&amp; (f4 - f3) &lt;= 1.0"</tt>
+  the expression <span style="font-family: monospace;">"mag1 &lt;= 16.0"</span> will select all records for which the mag1
+  field is &lt;= 16.0, and the expression <span style="font-family: monospace;">"(f4 - f3) &gt;= 0.0 &amp;&amp; (f4 - f3) &lt;= 1.0"</span>
   will select all records for which the difference between fields 4 and 3
   is &gt;= 0.0 but &lt;= 1.0.
   </p>
@@ -228,13 +228,13 @@ afiltpars: Default astrometry file filtering parameters
   input fields are output. By setting <i>fields</i> appropriately the user
   can select a subset of the input fields for output, rearrange the order
   of the input fields, and compute new fields. For example setting
-  fields to <tt>"f[2-5]"</tt> selects fields 2 to 5 for output; setting fields
-  to <tt>"f[2-3],f5,f4"</tt> select fields 2 to 5 but reverses the order of fields
-  4 and 5; setting fields to <tt>"f[2-5],f5-f4"</tt> selects fields 2 to 5 and
+  fields to <span style="font-family: monospace;">"f[2-5]"</span> selects fields 2 to 5 for output; setting fields
+  to <span style="font-family: monospace;">"f[2-3],f5,f4"</span> select fields 2 to 5 but reverses the order of fields
+  4 and 5; setting fields to <span style="font-family: monospace;">"f[2-5],f5-f4"</span> selects fields 2 to 5 and
   adds a new field which is the difference between fields 5 and 4.
   </p>
   <p>
-  By default new fields are assigned names of the form <tt>"f#"</tt> where # is the field
+  By default new fields are assigned names of the form <span style="font-family: monospace;">"f#"</span> where # is the field
   number, a data type of real, units of INDEF, and formats of %10s, %10d, or
   %10g if they are character, integer, or real respectively. Users can define
   names, data types, units, and formats for the new fields by  setting
@@ -246,16 +246,16 @@ afiltpars: Default astrometry file filtering parameters
   be changed by setting one or more of the <i>fosystem</i>, <i>foraunits</i>,
   <i>fodecunits</i>, <i>foraformat</i>, <i>fodecformat</i>. By default the
   filtering code expects the input coordinates to be located in fields
-  called <tt>"ra"</tt> and <tt>"dec"</tt>. If these fields do not have valid names then
-  generic field names of the form <tt>"f#"</tt> can be substituted.
+  called <span style="font-family: monospace;">"ra"</span> and <span style="font-family: monospace;">"dec"</span>. If these fields do not have valid names then
+  generic field names of the form <span style="font-family: monospace;">"f#"</span> can be substituted.
   </p>
   <p>
   The names and format of any newly computed pixel coordinate fields may
   be specified by setting one or more of the <i>fixp</i>, <i>fiyp</i>,
   <i>fixc</i>, <i>fiyc</i>, <i>foxformat</i>, or <i>foyformat</i> parameters.
   By default the filtering code expects the pixel coordinates to be located
-  in fields called <tt>"xp"</tt>, <tt>"yp"</tt>, <tt>"xc"</tt>, and <tt>"yc"</tt>. If these fields do not have
-  standard names then generic field names of the form <tt>"f#"</tt> can be substituted.
+  in fields called <span style="font-family: monospace;">"xp"</span>, <span style="font-family: monospace;">"yp"</span>, <span style="font-family: monospace;">"xc"</span>, and <span style="font-family: monospace;">"yc"</span>. If these fields do not have
+  standard names then generic field names of the form <span style="font-family: monospace;">"f#"</span> can be substituted.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Expressions</h3>
@@ -324,10 +324,10 @@ afiltpars: Default astrometry file filtering parameters
   <h3>Formats</h3>
   <!-- BeginSection: 'FORMATS' -->
   <p>
-  A format  specification has the form <tt>"%w.dCn"</tt>, where w is the field
+  A format  specification has the form <span style="font-family: monospace;">"%w.dCn"</span>, where w is the field
   width, d is the number of decimal places or the number of digits  of
   precision,  C  is  the  format  code,  and  n is radix character for
-  format code <tt>"r"</tt> only.  The w and d fields are optional.  The  format
+  format code <span style="font-family: monospace;">"r"</span> only.  The w and d fields are optional.  The  format
   codes C are as follows:
   </p>
   <pre>

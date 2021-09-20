@@ -91,7 +91,7 @@ xc: Compile and/or link a program
   ones to include.  These must be either on the current
   directory, or in an IRAF system library (lib$ or hlib$).
   The library specification must be immediately after the option as in
-  <tt>"-lxtools"</tt>.  No other option may follow the <tt>'l'</tt> option in the same
+  <span style="font-family: monospace;">"-lxtools"</span>.  No other option may follow the <span style="font-family: monospace;">'l'</span> option in the same
   argument as in -lxtoolsO.	
   </dd>
   </dl>
@@ -110,7 +110,7 @@ xc: Compile and/or link a program
   <dl>
   <dt><b>-n</b></dt>
   <!-- Sec='FLAGS' Level=0 Label='' Line='-n' -->
-  <dd>Not really supported under VMS since <tt>"normal"</tt> users
+  <dd>Not really supported under VMS since <span style="font-family: monospace;">"normal"</span> users
   cannot install images.  In Unix this is just a link
   option to make a shareable image.
   </dd>
@@ -150,7 +150,7 @@ xc: Compile and/or link a program
   <dt><b>-p pkgname</b></dt>
   <!-- Sec='FLAGS' Level=0 Label='' Line='-p pkgname' -->
   <dd>Load the package environment for the named external package, e.g.,
-  <tt>"xc -c -p noao file.x"</tt>.  If the same package is always specified
+  <span style="font-family: monospace;">"xc -c -p noao file.x"</span>.  If the same package is always specified
   the environment variable or logical name PKGENV may be defined at the
   host level to accomplish the same thing.  The package name <i>must</i>
   be specified when doing software development in an external or layered
@@ -254,23 +254,23 @@ xc: Compile and/or link a program
   <p>
   Any upper case flags in the following examples must be doubly quoted in
   the CL, singly quoted in VMS, to make it to XC without VMS mapping
-  everything to one case.  Omit the <tt>"-x"</tt> flag on a UNIX system.
+  everything to one case.  Omit the <span style="font-family: monospace;">"-x"</span> flag on a UNIX system.
   </p>
   <p>
-  1. Compile and link the source file <tt>"mytask.x"</tt> to produce the executable
-  <tt>"mytask.e"</tt>.
+  1. Compile and link the source file <span style="font-family: monospace;">"mytask.x"</span> to produce the executable
+  <span style="font-family: monospace;">"mytask.e"</span>.
   </p>
   <p>
   	cl&gt; xc mytask.x
   </p>
   <p>
-  2. Translate the file <tt>"file.x"</tt> into Fortran.
+  2. Translate the file <span style="font-family: monospace;">"file.x"</span> into Fortran.
   </p>
   <p>
   	cl&gt; xc -f file.x
   </p>
   <p>
-  3. Compile but do not link <tt>"mytask.x"</tt> and the support file <tt>"util.x"</tt>.
+  3. Compile but do not link <span style="font-family: monospace;">"mytask.x"</span> and the support file <span style="font-family: monospace;">"util.x"</span>.
   </p>
   <p>
   	cl&gt; xc -c file.x util.x

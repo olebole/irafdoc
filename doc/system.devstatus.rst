@@ -61,7 +61,7 @@ devstatus: Print the status of a device (mta, mtb, ...)
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. Get status information for the logical tape drive <tt>"mta"</tt>, which we have
+  1. Get status information for the logical tape drive <span style="font-family: monospace;">"mta"</span>, which we have
   just allocated.  Note that the tape position is printed only if we are the
   owner of the drive.
   </p>

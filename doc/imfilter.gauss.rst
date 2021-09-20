@@ -71,12 +71,12 @@ gauss: Convolve a list of 1 or 2-D images with an elliptical Gaussian
   <!-- Sec='PARAMETERS' Level=0 Label='bilinear' Line='bilinear = yes' -->
   <dd>Use the fact that the Gaussian function is separable (bilinear) in x and y if
   <i>theta</i> = 0, 90, or 180, to compute the 2D convolution more efficiently?
-  <i>Bilinear</i> is always set to <tt>"no"</tt> internally, if the position angle of
+  <i>Bilinear</i> is always set to <span style="font-family: monospace;">"no"</span> internally, if the position angle of
   the major axis of the Gaussian is other than 0, 90 or 180 degrees.
   </dd>
   </dl>
   <dl>
-  <dt><b>boundary = <tt>"nearest"</tt></b></dt>
+  <dt><b>boundary = <span style="font-family: monospace;">"nearest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"' -->
   <dd>The algorithm used to compute the values of the out of bounds pixels. The
   options are:
@@ -125,7 +125,7 @@ gauss: Convolve a list of 1 or 2-D images with an elliptical Gaussian
   specified by <i>boundary</i>.
   </p>
   <p>
-  If <i>bilinear</i> is <tt>"yes"</tt> and the major axis of the Gaussian kernel
+  If <i>bilinear</i> is <span style="font-family: monospace;">"yes"</span> and the major axis of the Gaussian kernel
   is aligned along either the x or y axis, GAUSS uses the fact that
   the Gaussian function is mathematically separable (bilinear) in x and y
   to speed up the convolution process. A bilinear 2D convolution kernel

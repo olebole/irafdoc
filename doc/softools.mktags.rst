@@ -23,9 +23,9 @@ mktags: Tag all procedure declarations in a set of files
   <h3>Parameters</h3>
   <!-- BeginSection: 'PARAMETERS' -->
   <dl>
-  <dt><b>files = <tt>"*.x"</tt></b></dt>
+  <dt><b>files = <span style="font-family: monospace;">"*.x"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='files' Line='files = "*.x"' -->
-  <dd>The files to be tagged, e.g., <tt>"*.x"</tt>.
+  <dd>The files to be tagged, e.g., <span style="font-family: monospace;">"*.x"</span>.
   </dd>
   </dl>
   <dl>
@@ -39,7 +39,7 @@ mktags: Tag all procedure declarations in a set of files
   <dl>
   <dt><b>tags = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='tags' Line='tags = yes' -->
-  <dd>If this switch is enabled a <tt>"tags"</tt> file will be written in the current
+  <dd>If this switch is enabled a <span style="font-family: monospace;">"tags"</span> file will be written in the current
   directory for use with the VI editor.
   </dd>
   </dl>
@@ -66,10 +66,10 @@ mktags: Tag all procedure declarations in a set of files
   <dl>
   <dt><b>[2]</b></dt>
   <!-- Sec='DESCRIPTION' Level=1 Label='' Line='[2]' -->
-  <dd>A <tt>"tags"</tt> format database file (a text file) may be written.  This file is
-  read by the VI editor when a command of the form <tt>":ta tag"</tt> is entered.
+  <dd>A <span style="font-family: monospace;">"tags"</span> format database file (a text file) may be written.  This file is
+  read by the VI editor when a command of the form <span style="font-family: monospace;">":ta tag"</span> is entered.
   This command is used to edit procedures regardless of the file in which they
-  reside.  For example, to edit procedure <tt>"maxmin"</tt>, enter command <tt>":ta maxmin"</tt>
+  reside.  For example, to edit procedure <span style="font-family: monospace;">"maxmin"</span>, enter command <span style="font-family: monospace;">":ta maxmin"</span>
   when in VI.
   </dd>
   </dl>

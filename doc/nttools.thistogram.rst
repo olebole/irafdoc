@@ -29,7 +29,7 @@ thistogram: Make a histogram of a column in a table.
   is generated for each table.
   If there is more than one input table and the histogram of the values
   in all the tables combined is needed, then the tables should first be
-  merged using the 'tmerge' task with the 'option' parameter set to <tt>"append"</tt>.
+  merged using the 'tmerge' task with the 'option' parameter set to <span style="font-family: monospace;">"append"</span>.
   </p>
   <p>
   If x1 and x2 are the lower and upper limits of a particular bin,
@@ -73,9 +73,9 @@ thistogram: Make a histogram of a column in a table.
   <dt><b>outtable = STDOUT [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable = STDOUT [file name template]' -->
   <dd>Output tables or STDOUT.
-  If the value of this parameter is <tt>"STDOUT"</tt>
+  If the value of this parameter is <span style="font-family: monospace;">"STDOUT"</span>
   then the histogram will be written to the standard output
-  preceded by a header line (beginning with <tt>"#"</tt>)
+  preceded by a header line (beginning with <span style="font-family: monospace;">"#"</span>)
   that gives the number of rows included in the histogram
   and the name of the table.
   If 'outtable' is passed a file name,
@@ -141,8 +141,8 @@ thistogram: Make a histogram of a column in a table.
   <dt><b>(rows = -) [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(rows = -) [string]' -->
   <dd>Range of rows to use for generating the histogram.
-  The default <tt>"-"</tt> means that all rows are used.
-  (Type <tt>"help xtools.ranges"</tt> for more information.)
+  The default <span style="font-family: monospace;">"-"</span> means that all rows are used.
+  (Type <span style="font-family: monospace;">"help xtools.ranges"</span> for more information.)
   </dd>
   </dl>
   <dl>
@@ -168,7 +168,7 @@ thistogram: Make a histogram of a column in a table.
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  Generate a histogram of the values in the 'flux' column in every table
-  whose name begins with <tt>"hr"</tt>; put all the histograms in the ASCII file
+  whose name begins with <span style="font-family: monospace;">"hr"</span>; put all the histograms in the ASCII file
   'hist.lis'.
   </p>
   <pre>
@@ -184,7 +184,7 @@ thistogram: Make a histogram of a column in a table.
   	tt&gt; thistogram hr*.tab hr*%%h%.tab flux
   </pre>
   <p>
-  3.  Plot the histogram of column <tt>'V'</tt> in 'bs.tab':
+  3.  Plot the histogram of column <span style="font-family: monospace;">'V'</span> in 'bs.tab':
   </p>
   <pre>
   	tt&gt; thistogram bs STDOUT V | sgraph (crvstyle="pseudohist")

@@ -39,7 +39,7 @@ help: Print online documentation
   template, and all help blocks found in the named files are output.  The help
   database is not searched, hence manual pages can be printed or documents
   may be formatted without entering the files into a help database.
-  In other words, <tt>"help file.hlp fi+"</tt> makes it possible to use <i>help</i> as
+  In other words, <span style="font-family: monospace;">"help file.hlp fi+"</span> makes it possible to use <i>help</i> as
   a conventional text formatter.
   </dd>
   </dl>
@@ -51,17 +51,17 @@ help: Print online documentation
   </dd>
   </dl>
   <dl>
-  <dt><b>parameter = <tt>"all"</tt></b></dt>
+  <dt><b>parameter = <span style="font-family: monospace;">"all"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='parameter' Line='parameter = "all"' -->
-  <dd>If the value of this parameter is not <tt>"all"</tt>, only the help text
+  <dd>If the value of this parameter is not <span style="font-family: monospace;">"all"</span>, only the help text
   for the given parameter will be printed.
   </dd>
   </dl>
   <dl>
-  <dt><b>section = <tt>"all"</tt></b></dt>
+  <dt><b>section = <span style="font-family: monospace;">"all"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='section' Line='section = "all"' -->
-  <dd>If the value of this parameter is not <tt>"all"</tt>, only the help text for the
-  given section (e.g. <tt>"usage"</tt>, <tt>"description"</tt>, <tt>"examples"</tt>) will be printed.
+  <dd>If the value of this parameter is not <span style="font-family: monospace;">"all"</span>, only the help text for the
+  given section (e.g. <span style="font-family: monospace;">"usage"</span>, <span style="font-family: monospace;">"description"</span>, <span style="font-family: monospace;">"examples"</span>) will be printed.
   </dd>
   </dl>
   <dl>
@@ -155,7 +155,7 @@ help: Print online documentation
   </dd>
   </dl>
   <dl>
-  <dt><b>home = <tt>""</tt></b></dt>
+  <dt><b>home = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='home' Line='home = ""' -->
   <dd>The home page for the task.  If not set and no 
   <a href="#l_template">template</A>
@@ -168,10 +168,10 @@ help: Print online documentation
   </dd>
   </dl>
   <dl>
-  <dt><b>printer = <tt>"printer"</tt></b></dt>
+  <dt><b>printer = <span style="font-family: monospace;">"printer"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='printer' Line='printer = "printer"' -->
   <dd>Default hardcopy printer name. If the <i>value</i> of the parameter is the
-  reserved string <tt>"printer"</tt>, the actual device is the value of the CL
+  reserved string <span style="font-family: monospace;">"printer"</span>, the actual device is the value of the CL
   environment variable <i>printer</i>.
   </dd>
   </dl>
@@ -182,7 +182,7 @@ help: Print online documentation
   </dd>
   </dl>
   <dl>
-  <dt><b>quickref = <tt>"uparm$quick.ref"</tt></b></dt>
+  <dt><b>quickref = <span style="font-family: monospace;">"uparm$quick.ref"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='quickref' Line='quickref = "uparm$quick.ref"' -->
   <dd>Name of the quick-reference file used for searching.  This file is created
   the first time the task is run in GUI mode or whenever it doesn't exist, 
@@ -190,7 +190,7 @@ help: Print online documentation
   </dd>
   </dl>
   <dl>
-  <dt><b>uifname = <tt>"lib$scr/help.gui"</tt></b></dt>
+  <dt><b>uifname = <span style="font-family: monospace;">"lib$scr/help.gui"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='uifname' Line='uifname = "lib$scr/help.gui"' -->
   <dd>The user interface file.   This file is what defines the look and behavior
   of all the graphical user interface elements.   Experts may create variants
@@ -198,15 +198,15 @@ help: Print online documentation
   </dd>
   </dl>
   <dl>
-  <dt><b>helpdb = <tt>"helpdb"</tt></b></dt>
+  <dt><b>helpdb = <span style="font-family: monospace;">"helpdb"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='helpdb' Line='helpdb = "helpdb"' -->
   <dd>The filename of the help database to be searched.  If the <i>value</i> of the
-  parameter is the reserved string <tt>"helpdb"</tt>, the actual filename is the value
+  parameter is the reserved string <span style="font-family: monospace;">"helpdb"</span>, the actual filename is the value
   of the CL environment variable <i>helpdb</i>.
   </dd>
   </dl>
   <dl>
-  <dt><b>device = <tt>"terminal"</tt></b></dt>
+  <dt><b>device = <span style="font-family: monospace;">"terminal"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "terminal"' -->
   <dd>Output device if the standard output is not redirected.  Allowable values
   include:
@@ -214,7 +214,7 @@ help: Print online documentation
   <dt><b>terminal</b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='terminal' Line='terminal' -->
   <dd>If the <i>value</i> of
-  the parameter is the reserved string <tt>"terminal"</tt>,  the actual device name is
+  the parameter is the reserved string <span style="font-family: monospace;">"terminal"</span>,  the actual device name is
   the value of the CL environment variable <i>terminal</i>.  
   </dd>
   </dl>
@@ -300,7 +300,7 @@ help: Print online documentation
   is a list of patterns delimited by commas, i.e.,
   </p>
   <p>
-  	<tt>"pattern1, pattern2, ..., patternN"</tt>
+  	<span style="font-family: monospace;">"pattern1, pattern2, ..., patternN"</span>
   </p>
   <p>
   The form of a pattern is
@@ -309,8 +309,8 @@ help: Print online documentation
   	package_pattern.module_pattern
   </p>
   <p>
-  If the <tt>"."</tt> is omitted <i>module_pattern</i> is assumed.  The standard pattern
-  matching meta-characters, i.e., <tt>"*?[]"</tt>, are permitted in patterns.
+  If the <span style="font-family: monospace;">"."</span> is omitted <i>module_pattern</i> is assumed.  The standard pattern
+  matching meta-characters, i.e., <span style="font-family: monospace;">"*?[]"</span>, are permitted in patterns.
   Simple patterns are assumed to be abbreviations.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
@@ -462,7 +462,7 @@ help: Print online documentation
   defined but the file does not exist, the options button will display a yellow
   diamond icon even if the button is insensitive, a green icon indicates the
   currently selected option.  This feature may be disabled by selecting the
-  <tt>"Show missing files"</tt> item from the main menubar <b>Options</b> menu.
+  <span style="font-family: monospace;">"Show missing files"</span> item from the main menubar <b>Options</b> menu.
   </p>
   <!-- EndSection:   'BROWSING A HELP DOCUMENT' -->
   <h3>Searching</h3>
@@ -482,10 +482,10 @@ help: Print online documentation
   </p>
   <p>
   By default the exact phrase entered in the topic window will be used for the
-  search.  This can be relaxed by toggling the  <tt>"Require exact match"</tt> button
+  search.  This can be relaxed by toggling the  <span style="font-family: monospace;">"Require exact match"</span> button
   at the top of the panel.  For example,  to search for all tasks matching
-  <i>either</i> the keyword <tt>"flat"</tt> or <tt>"field"</tt> turn off the exact match
-  toggle and the search will return not only tasks matching <tt>"flat field"</tt> but 
+  <i>either</i> the keyword <span style="font-family: monospace;">"flat"</span> or <span style="font-family: monospace;">"field"</span> turn off the exact match
+  toggle and the search will return not only tasks matching <span style="font-family: monospace;">"flat field"</span> but 
   also any task description containing only one of the words such as the
   VELVECT task which plots velocity <i>field</i>s.
   </p>
@@ -588,7 +588,7 @@ help: Print online documentation
   panel.  If the printer name is set to the special value <i>"printer"</i> then
   the device named by the CL <i>printer</i> environment variable will be used.
   When saving to disk files the default action is to save to a filename whose
-  name is the task name plus a <tt>".ps"</tt> extension.  Either of these are changeable
+  name is the task name plus a <span style="font-family: monospace;">".ps"</span> extension.  Either of these are changeable
   within the GUI as is the default page size to be used when generating the
   PostScript.
   </p>
@@ -618,7 +618,7 @@ help: Print online documentation
   <p>
   where <i>&lt;name&gt;</i> is the destination name of an internal link, <i>&lt;link&gt;</i>
   is the URL of the link to be created, and <i>&lt;text&gt;</i> is the text to be
-  displayed in the HTML.  The URL syntax is either a <tt>'#'</tt> character followed
+  displayed in the HTML.  The URL syntax is either a <span style="font-family: monospace;">'#'</span> character followed
   by a destination name, a simple <i>task</i> name or <i>package</i> name,
   or a <i>package.task</i> pair giving a more precise task.  For internal links
   the current document is repositioned so the name is at the top of the display,
@@ -691,7 +691,7 @@ help: Print online documentation
   </pre>
   <p>
   5. Print a directory of all help blocks in the packages <b>clpackage</b>
-  and <b>clio</b> (and any others whose names begin with the string <tt>"cl"</tt>):
+  and <b>clio</b> (and any others whose names begin with the string <span style="font-family: monospace;">"cl"</span>):
   </p>
   <pre>
   

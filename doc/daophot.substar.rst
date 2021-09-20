@@ -32,7 +32,7 @@ substar: Subtract the fitted stars from the original image
   <dt><b>photfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='photfile' Line='photfile' -->
   <dd>The list of PSF fitted photometry files. There must be one photometry file
-  for every input image. If photfile is <tt>"default"</tt>, <tt>"dir$default"</tt>, or a directory
+  for every input image. If photfile is <span style="font-family: monospace;">"default"</span>, <span style="font-family: monospace;">"dir$default"</span>, or a directory
   specification, SUBSTAR will look for a file called image.nst.? where the
   question mark stands for the highest existing version number. Photfile is
   usually the output of the NSTAR task but may also be the output of the PEAK
@@ -45,7 +45,7 @@ substar: Subtract the fitted stars from the original image
   <!-- Sec='PARAMETERS' Level=0 Label='exfile' Line='exfile' -->
   <dd>The list of photometry files containing the ids of stars to be excluded
   from the subtraction. Exfile must be undefined or contain one exclude file
-  for every input image. If exfile is <tt>"default"</tt>, <tt>"dir$default"</tt>, or a directory
+  for every input image. If exfile is <span style="font-family: monospace;">"default"</span>, <span style="font-family: monospace;">"dir$default"</span>, or a directory
   specification, SUBSTAR will look for a file called image.pst.? where the ?
   mark stands for the highest existing version number. Exfile is usually the
   output of the PSTSELECT task but may also be the output of the PEAK, NSTAR and
@@ -58,7 +58,7 @@ substar: Subtract the fitted stars from the original image
   <!-- Sec='PARAMETERS' Level=0 Label='psfimage' Line='psfimage' -->
   <dd>The list of images containing the PSF models computed by the DAOPHOT PSF task.
   The number of PSF images must be equal to the number of input images.  If
-  psfimage is <tt>"default"</tt>, <tt>"dir$default"</tt>, or a directory specification,
+  psfimage is <span style="font-family: monospace;">"default"</span>, <span style="font-family: monospace;">"dir$default"</span>, or a directory specification,
   then PEAK will look for an image with the name image.psf.?, where
   ? is the highest existing version number.
   </dd>
@@ -67,13 +67,13 @@ substar: Subtract the fitted stars from the original image
   <dt><b>subimage</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='subimage' Line='subimage' -->
   <dd>The list of output subtracted images. There must be one output subtracted
-  image for every input image.  If subimage is <tt>"default"</tt>, <tt>"dir$default"</tt>, or a
+  image for every input image.  If subimage is <span style="font-family: monospace;">"default"</span>, <span style="font-family: monospace;">"dir$default"</span>, or a
   directory specification, then SUBSTAR will write an image called image.sub.?
   where question mark stands for the next available version number. 
   </dd>
   </dl>
   <dl>
-  <dt><b>datapars = <tt>""</tt></b></dt>
+  <dt><b>datapars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='datapars' Line='datapars = ""' -->
   <dd>The name of the file containing the data dependent parameters. The parameters
   <i>scale</i>, <i>datamin</i>, and <i>datamax</i> are located here. If datapars
@@ -81,7 +81,7 @@ substar: Subtract the fitted stars from the original image
   </dd>
   </dl>
   <dl>
-  <dt><b>daopars = <tt>""</tt></b></dt>
+  <dt><b>daopars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='daopars' Line='daopars = ""' -->
   <dd>The name of the file containing the daophot fitting parameters. The parameters
   <i>psfrad</i> and <i>fitrad</i> are located here. If <i>daopars</i> is undefined
@@ -89,18 +89,18 @@ substar: Subtract the fitted stars from the original image
   </dd>
   </dl>
   <dl>
-  <dt><b>wcsin = <tt>")_.wcsin"</tt>, wcsout = <tt>")_.wcsout"</tt>, wcspsf = <tt>")_.wcspsf"</tt></b></dt>
+  <dt><b>wcsin = <span style="font-family: monospace;">")_.wcsin"</span>, wcsout = <span style="font-family: monospace;">")_.wcsout"</span>, wcspsf = <span style="font-family: monospace;">")_.wcspsf"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcsin' Line='wcsin = ")_.wcsin", wcsout = ")_.wcsout", wcspsf = ")_.wcspsf"' -->
   <dd>The coordinate system of the input coordinates read from <i>photfile</i>, of the
   psf model <i>psfimage</i>, and of the output coordinates written to
-  the standard output if <i>verbose</i> = <tt>"yes"</tt>. The image header coordinate
-  system is used to transform from the input coordinate system to the <tt>"logical"</tt>
+  the standard output if <i>verbose</i> = <span style="font-family: monospace;">"yes"</span>. The image header coordinate
+  system is used to transform from the input coordinate system to the <span style="font-family: monospace;">"logical"</span>
   pixel coordinate system used internally, from the internal logical system to
-  the PSF model system, and from the internal <tt>"logical"</tt> pixel coordinate system
+  the PSF model system, and from the internal <span style="font-family: monospace;">"logical"</span> pixel coordinate system
   to the output coordinate system. The input coordinate system options are
-  <tt>"logical"</tt>, <tt>"tv"</tt>, <tt>"physical"</tt>, and <tt>"world"</tt>. The PSF model and output coordinate
-  system options are <tt>"logical"</tt>, <tt>"tv"</tt>, and <tt>"physical"</tt>. The image cursor coordinate
-  system is assumed to be the <tt>"tv"</tt> system.
+  <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"tv"</span>, <span style="font-family: monospace;">"physical"</span>, and <span style="font-family: monospace;">"world"</span>. The PSF model and output coordinate
+  system options are <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"tv"</span>, and <span style="font-family: monospace;">"physical"</span>. The image cursor coordinate
+  system is assumed to be the <span style="font-family: monospace;">"tv"</span> system.
   <dl>
   <dt><b>logical</b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='logical' Line='logical' -->
@@ -154,36 +154,36 @@ substar: Subtract the fitted stars from the original image
   </dl>
   The wcsin, wcspsf, and wcsout parameters default to the values of the package
   parameters of the same name. The default values of the package parameters
-  wcsin, wcspsf,  and wcsout are <tt>"logical"</tt>, <tt>"physical"</tt> and <tt>"logical"</tt> respectively.
+  wcsin, wcspsf,  and wcsout are <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"physical"</span> and <span style="font-family: monospace;">"logical"</span> respectively.
   </dd>
   </dl>
   <dl>
-  <dt><b>cache = <tt>")_.cache"</tt></b></dt>
+  <dt><b>cache = <span style="font-family: monospace;">")_.cache"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cache' Line='cache = ")_.cache"' -->
   <dd>Cache the image pixels in memory. Cache may be set to the value of the apphot
-  package parameter (the default), <tt>"yes"</tt>, or <tt>"no"</tt>. By default caching is
+  package parameter (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>. By default caching is
   disabled.
   </dd>
   </dl>
   <dl>
-  <dt><b>verify = <tt>")_.verify"</tt></b></dt>
+  <dt><b>verify = <span style="font-family: monospace;">")_.verify"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verify' Line='verify = ")_.verify"' -->
   <dd>Verify the critical SUBSTAR task parameters? Verify can be set to the DAOPHOT
-  package parameter value (the default), <tt>"yes"</tt>, or <tt>"no"</tt>.
+  package parameter value (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>update = <tt>")_update"</tt></b></dt>
+  <dt><b>update = <span style="font-family: monospace;">")_update"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='update' Line='update = ")_update"' -->
-  <dd>Update the SUBSTAR task parameters if <i>verify</i> is <tt>"yes"</tt>? Update can be
-  set to the default daophot package parameter value, <tt>"yes"</tt>, or <tt>"no"</tt>.
+  <dd>Update the SUBSTAR task parameters if <i>verify</i> is <span style="font-family: monospace;">"yes"</span>? Update can be
+  set to the default daophot package parameter value, <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>verbose = <tt>")_.verbose"</tt></b></dt>
+  <dt><b>verbose = <span style="font-family: monospace;">")_.verbose"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = ")_.verbose"' -->
   <dd>Print messages about the progress of the task ? Verbose can be set to the
-  DAOPHOT package parameter value (the default), <tt>"yes"</tt>, or <tt>"no"</tt>.
+  DAOPHOT package parameter value (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -209,27 +209,27 @@ substar: Subtract the fitted stars from the original image
   </p>
   <p>
   The coordinates read from <i>photfile</i> are assumed to be in coordinate
-  system defined by <i>wcsin</i>. The options are <tt>"logical"</tt>, <tt>"tv"</tt>, <tt>"physical"</tt>,
-  and <tt>"world"</tt> and the transformation from the input coordinate system to the
-  internal <tt>"logical"</tt> system is defined by the image coordinate system. The
-  simplest default is the <tt>"logical"</tt> pixel system. Users working on with image
+  system defined by <i>wcsin</i>. The options are <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"tv"</span>, <span style="font-family: monospace;">"physical"</span>,
+  and <span style="font-family: monospace;">"world"</span> and the transformation from the input coordinate system to the
+  internal <span style="font-family: monospace;">"logical"</span> system is defined by the image coordinate system. The
+  simplest default is the <span style="font-family: monospace;">"logical"</span> pixel system. Users working on with image
   sections but importing pixel coordinate lists generated from the parent image
-  must use the <tt>"tv"</tt> or <tt>"physical"</tt> input coordinate systems.
+  must use the <span style="font-family: monospace;">"tv"</span> or <span style="font-family: monospace;">"physical"</span> input coordinate systems.
   </p>
   <p>
   The coordinate system of the PSF model is the coordinate system defined by the
   <i>wcspsf</i> parameter. Normally the PSF model was derived from the input image
-  and this parameter default to <tt>"logical"</tt>. However if the PSF model was derived
-  from a larger image which is a <tt>"parent"</tt> of the input image, then wcspsf should
-  be set to <tt>"tv"</tt> or <tt>"physical"</tt> depending on the circumstances.
+  and this parameter default to <span style="font-family: monospace;">"logical"</span>. However if the PSF model was derived
+  from a larger image which is a <span style="font-family: monospace;">"parent"</span> of the input image, then wcspsf should
+  be set to <span style="font-family: monospace;">"tv"</span> or <span style="font-family: monospace;">"physical"</span> depending on the circumstances.
   </p>
   <p>
   The coordinates written to the standard output if <i>verbose</i> = yes are in the
-  coordinate system defined by <i>wcsout</i>. The options are <tt>"logical"</tt>, <tt>"tv"</tt>,
-  and <tt>"physical"</tt>. The simplest default is the <tt>"logical"</tt> system. Users wishing to
+  coordinate system defined by <i>wcsout</i>. The options are <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"tv"</span>,
+  and <span style="font-family: monospace;">"physical"</span>. The simplest default is the <span style="font-family: monospace;">"logical"</span> system. Users wishing to
   correlate the output coordinates of objects measured in image sections or
-  mosaic pieces with coordinates in the parent image must use the <tt>"tv"</tt> or
-  <tt>"physical"</tt> coordinate systems.
+  mosaic pieces with coordinates in the parent image must use the <span style="font-family: monospace;">"tv"</span> or
+  <span style="font-family: monospace;">"physical"</span> coordinate systems.
   </p>
   <p>
   If <i>cache</i> is yes and the host machine physical memory and working set size

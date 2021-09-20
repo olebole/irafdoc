@@ -33,7 +33,7 @@ allstar: Group and fit psf to multiple stars simultaneously
   <!-- Sec='PARAMETERS' Level=0 Label='photfile' Line='photfile' -->
   <dd>The input photometry files containing the initial estimates of the positions,
   sky values, and magnitudes of the stars to be fit. There must be one input
-  photometry file for every input image.  If photfile is <tt>"default"</tt>, <tt>"dir$default"</tt>,
+  photometry file for every input image.  If photfile is <span style="font-family: monospace;">"default"</span>, <span style="font-family: monospace;">"dir$default"</span>,
   or a directory specification, then ALLSTAR looks for a file with the name
   image.mag.? where ? is the highest existing version number. Photfile is usually
   the output of the DAOPHOT PHOT task but may also be the output of the PSF, PEAK
@@ -45,7 +45,7 @@ allstar: Group and fit psf to multiple stars simultaneously
   <!-- Sec='PARAMETERS' Level=0 Label='psfimage' Line='psfimage' -->
   <dd>The list of images containing the PSF models computed by the DAOPHOT PSF task.
   The number of PSF images must be equal to the number of input images. If
-  psfimage is <tt>"default"</tt>, <tt>"dir$default"</tt>, or a directory specification, then PEAK
+  psfimage is <span style="font-family: monospace;">"default"</span>, <span style="font-family: monospace;">"dir$default"</span>, or a directory specification, then PEAK
   will look for an image with the name image.psf.?, where ? is the highest
   existing version number.
   </dd>
@@ -54,11 +54,11 @@ allstar: Group and fit psf to multiple stars simultaneously
   <dt><b>allstarfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='allstarfile' Line='allstarfile' -->
   <dd>The list of output photometry files. There must be one output photometry
-  file for every input image.  If allstarfile is <tt>"default"</tt>, <tt>"dir$default"</tt>, or a
+  file for every input image.  If allstarfile is <span style="font-family: monospace;">"default"</span>, <span style="font-family: monospace;">"dir$default"</span>, or a
   directory specification, then ALLSTAR will write an output file with the name
   image.als.? where ? is the next available version number. Allstarfile is a text
-  database if the DAOPHOT package parameter text is <tt>"yes"</tt>, an STSDAS table
-  database if it is <tt>"no"</tt>.
+  database if the DAOPHOT package parameter text is <span style="font-family: monospace;">"yes"</span>, an STSDAS table
+  database if it is <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <dl>
@@ -68,26 +68,26 @@ allstar: Group and fit psf to multiple stars simultaneously
   values of stars that could not be fit. If rejfile is undefined, results for all
   the stars in photfile are written to <i>allstarfile</i>, otherwise only the stars
   which were successfully fit are written to <i>allstarfile</i> and the remainder
-  are written to rejfile. If rejfile is <tt>"default"</tt>, <tt>"dir$default"</tt>, or a directory
+  are written to rejfile. If rejfile is <span style="font-family: monospace;">"default"</span>, <span style="font-family: monospace;">"dir$default"</span>, or a directory
   specification ALLSTAR writes an output file with the name image.als.? where ? is
   the next available version number. Otherwise rejfile must specify one output
   photometry file for every input image. Rejfile is a text database if the
-  DAOPHOT package parameter <i>text</i> is <tt>"yes"</tt>, an STSDAS binary table database
-  if it is <tt>"no"</tt>.
+  DAOPHOT package parameter <i>text</i> is <span style="font-family: monospace;">"yes"</span>, an STSDAS binary table database
+  if it is <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <dl>
   <dt><b>subimage</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='subimage' Line='subimage' -->
   <dd>The list of output images with the fitted stars subtracted. There must be one
-  subtracted image for every input image. If subimage is <tt>"default"</tt>, <tt>"dir$default"</tt>,
+  subtracted image for every input image. If subimage is <span style="font-family: monospace;">"default"</span>, <span style="font-family: monospace;">"dir$default"</span>,
   or a directory specification, then ALLSTAR will create an image with the name
   image.sub.? where ? is the next available version number. Otherwise
   <i>subimage</i> must specify one output image for every image in <i>image</i>.
   </dd>
   </dl>
   <dl>
-  <dt><b>datapars = <tt>""</tt></b></dt>
+  <dt><b>datapars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='datapars' Line='datapars = ""' -->
   <dd>The name of the file containing the data dependent parameters. The parameters
   <i>scale</i>, <i>datamin</i>, and <i>datamax</i> are located here. If datapars
@@ -95,7 +95,7 @@ allstar: Group and fit psf to multiple stars simultaneously
   </dd>
   </dl>
   <dl>
-  <dt><b>daopars = <tt>""</tt></b></dt>
+  <dt><b>daopars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='daopars' Line='daopars = ""' -->
   <dd>The name of the file containing the daophot fitting parameters. The parameters
   <i>psfrad</i> and <i>fitrad</i> are located here. If <i>daopars</i> is undefined
@@ -103,18 +103,18 @@ allstar: Group and fit psf to multiple stars simultaneously
   </dd>
   </dl>
   <dl>
-  <dt><b>wcsin = <tt>")_.wcsin"</tt>, wcsout = <tt>")_.wcsout"</tt>, wcspsf = <tt>")_.wcspsf"</tt></b></dt>
+  <dt><b>wcsin = <span style="font-family: monospace;">")_.wcsin"</span>, wcsout = <span style="font-family: monospace;">")_.wcsout"</span>, wcspsf = <span style="font-family: monospace;">")_.wcspsf"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcsin' Line='wcsin = ")_.wcsin", wcsout = ")_.wcsout", wcspsf = ")_.wcspsf"' -->
   <dd>The coordinate system of the input coordinates read from <i>photfile</i>, of the
   psf model <i>psfimage</i>, and of the output coordinates written to
   <i>allstarfile</i> and <i>rejfile</i> respectively. The image header coordinate
-  system is used to transform from the input coordinate system to the <tt>"logical"</tt>
+  system is used to transform from the input coordinate system to the <span style="font-family: monospace;">"logical"</span>
   pixel coordinate system used internally, from the internal logical system to
-  the PSF model system, and from the internal <tt>"logical"</tt> pixel coordinate system
+  the PSF model system, and from the internal <span style="font-family: monospace;">"logical"</span> pixel coordinate system
   to the output coordinate system. The input coordinate system options are
-  <tt>"logical"</tt>, <tt>"tv"</tt>, <tt>"physical"</tt>, and <tt>"world"</tt>. The PSF model and output coordinate
-  system options are <tt>"logical"</tt>, <tt>"tv"</tt>, and <tt>"physical"</tt>. The image cursor coordinate
-  system is assumed to be the <tt>"tv"</tt> system.
+  <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"tv"</span>, <span style="font-family: monospace;">"physical"</span>, and <span style="font-family: monospace;">"world"</span>. The PSF model and output coordinate
+  system options are <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"tv"</span>, and <span style="font-family: monospace;">"physical"</span>. The image cursor coordinate
+  system is assumed to be the <span style="font-family: monospace;">"tv"</span> system.
   <dl>
   <dt><b>logical</b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='logical' Line='logical' -->
@@ -168,18 +168,18 @@ allstar: Group and fit psf to multiple stars simultaneously
   </dl>
   The wcsin, wcspsf, and wcsout parameters default to the values of the package
   parameters of the same name. The default values of the package parameters
-  wcsin, wcspsf,  and wcsout are <tt>"logical"</tt>, <tt>"physical"</tt> and <tt>"logical"</tt> respectively.
+  wcsin, wcspsf,  and wcsout are <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"physical"</span> and <span style="font-family: monospace;">"logical"</span> respectively.
   </dd>
   </dl>
   <dl>
   <dt><b>cache = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cache' Line='cache = yes' -->
-  <dd>Cache all the data in memory ? If <i>cache</i> is <tt>"yes"</tt>, then ALLSTAR attempts
+  <dd>Cache all the data in memory ? If <i>cache</i> is <span style="font-family: monospace;">"yes"</span>, then ALLSTAR attempts
   to preallocate sufficient space to store the input image plus the two
   image-sized working arrays it requires, plus space for the starlist, in memory.
   This can significantly reduce the total execution time. Users should however
   beware of creating a situation where excessive paging occurs.  If <i>cache</i> =
-  <tt>"no"</tt>, ALLSTAR operates on subrasters containing the group currently being
+  <span style="font-family: monospace;">"no"</span>, ALLSTAR operates on subrasters containing the group currently being
   reduced, and writes the intermediate results to temporary scratch images. This
   option will work on any-sized image (unless a single group becomes the size of
   the entire image!) but can become slow of there are a large number of disk
@@ -188,25 +188,25 @@ allstar: Group and fit psf to multiple stars simultaneously
   </dd>
   </dl>
   <dl>
-  <dt><b>verbose = <tt>")_.verbose"</tt></b></dt>
+  <dt><b>verbose = <span style="font-family: monospace;">")_.verbose"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = ")_.verbose"' -->
   <dd>Print messages about the progress of the task ? Verbose can be set to the
-  DAOPHOT package parameter value (the default), <tt>"yes"</tt>, or <tt>"no"</tt>.
+  DAOPHOT package parameter value (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>verify = <tt>")_.verify"</tt></b></dt>
+  <dt><b>verify = <span style="font-family: monospace;">")_.verify"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verify' Line='verify = ")_.verify"' -->
   <dd>Verify the critical ALLSTAR task parameters. Verify can be set to the daophot
-  package parameter value (the default), <tt>"yes"</tt>, or <tt>"no"</tt>.
+  package parameter value (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>update = <tt>")_.update"</tt></b></dt>
+  <dt><b>update = <span style="font-family: monospace;">")_.update"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='update' Line='update = ")_.update"' -->
-  <dd>Update the critical ALLSTAR task parameters if <i>verify</i> = <tt>"yes"</tt>.  Update
-  can be set to the daophot package parameter value (the default), <tt>"yes"</tt>, or
-  <tt>"no"</tt>.
+  <dd>Update the critical ALLSTAR task parameters if <i>verify</i> = <span style="font-family: monospace;">"yes"</span>.  Update
+  can be set to the daophot package parameter value (the default), <span style="font-family: monospace;">"yes"</span>, or
+  <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -221,42 +221,42 @@ allstar: Group and fit psf to multiple stars simultaneously
   The new computed centers, sky values, and magnitudes are written to
   <i>allstarfile</i> along with the number of iterations it took to fit the
   star, the goodness of fit statistic chi, and the image sharpness statistic
-  sharp. If <i>rejfile</i> is not null (<tt>""</tt>), only stars that are successfully fit
+  sharp. If <i>rejfile</i> is not null (<span style="font-family: monospace;">""</span>), only stars that are successfully fit
   are written to <i>allstarfile</i>, and the remainder are written to
   <i>rejfile</i>. Otherwise all the stars are written to <i>allstarfile</i>.
   <i>Allstarfile</i> and <i>rejfile</i> are text databases if the DAOPHOT package
-  parameter <i>text</i> is <tt>"yes"</tt>, STSDAS table databases if it is <tt>"no"</tt>. An image
+  parameter <i>text</i> is <span style="font-family: monospace;">"yes"</span>, STSDAS table databases if it is <span style="font-family: monospace;">"no"</span>. An image
   with all the fitted stars subtracted out is written to <i>subimage</i>. In
   effect ALLSTAR performs the combined operations of GROUP, GRPSELECT, NSTAR,
   and SUBSTAR.
   </p>
   <p>
   The coordinates read from <i>photfile</i> are assumed to be in coordinate
-  system defined by <i>wcsin</i>. The options are <tt>"logical"</tt>, <tt>"tv"</tt>, <tt>"physical"</tt>,
-  and <tt>"world"</tt> and the transformation from the input coordinate system to the
-  internal <tt>"logical"</tt> system is defined by the image coordinate system. The
-  simplest default is the <tt>"logical"</tt> pixel system. Users working on with image
+  system defined by <i>wcsin</i>. The options are <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"tv"</span>, <span style="font-family: monospace;">"physical"</span>,
+  and <span style="font-family: monospace;">"world"</span> and the transformation from the input coordinate system to the
+  internal <span style="font-family: monospace;">"logical"</span> system is defined by the image coordinate system. The
+  simplest default is the <span style="font-family: monospace;">"logical"</span> pixel system. Users working on with image
   sections but importing pixel coordinate lists generated from the parent image
-  must use the <tt>"tv"</tt> or <tt>"physical"</tt> input coordinate systems.
+  must use the <span style="font-family: monospace;">"tv"</span> or <span style="font-family: monospace;">"physical"</span> input coordinate systems.
   </p>
   <p>
   The coordinate system of the PSF model is the coordinate system defined by the
   <i>wcspsf</i> parameter. Normally the PSF model was derived from the input image
-  and this parameter default to <tt>"logical"</tt>. However if the PSF model was derived
-  from a larger image which is a <tt>"parent"</tt> of the input image, then wcspsf should
-  be set to <tt>"tv"</tt> or <tt>"physical"</tt> depending on the circumstances.
+  and this parameter default to <span style="font-family: monospace;">"logical"</span>. However if the PSF model was derived
+  from a larger image which is a <span style="font-family: monospace;">"parent"</span> of the input image, then wcspsf should
+  be set to <span style="font-family: monospace;">"tv"</span> or <span style="font-family: monospace;">"physical"</span> depending on the circumstances.
   </p>
   <p>
   The coordinates written to <i>allstarfile</i> and <i>rejfile</i> are in the
-  coordinate system defined by <i>wcsout</i>. The options are <tt>"logical"</tt>, <tt>"tv"</tt>, and
-  <tt>"physical"</tt>. The simplest default is the <tt>"logical"</tt> system.  Users wishing to
+  coordinate system defined by <i>wcsout</i>. The options are <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"tv"</span>, and
+  <span style="font-family: monospace;">"physical"</span>. The simplest default is the <span style="font-family: monospace;">"logical"</span> system.  Users wishing to
   correlate the output coordinates of objects measured in image sections or
-  mosaic pieces with coordinates in the parent image must use the <tt>"tv"</tt> or
-  <tt>"physical"</tt> coordinate systems.
+  mosaic pieces with coordinates in the parent image must use the <span style="font-family: monospace;">"tv"</span> or
+  <span style="font-family: monospace;">"physical"</span> coordinate systems.
   </p>
   <p>
   By default ALLSTAR computes new centers for all the stars in <i>photfile</i>.
-  However if the DAOPARS parameter <i>recenter</i> is <tt>"no"</tt>, ALLSTAR assumes that
+  However if the DAOPARS parameter <i>recenter</i> is <span style="font-family: monospace;">"no"</span>, ALLSTAR assumes that
   the x and y centers in <i>photfile</i> are the true centers and does not refit
   them. This option can be quite useful in cases where accurate center values
   have been derived from an image that has been through some non-linear image
@@ -264,12 +264,12 @@ allstar: Group and fit psf to multiple stars simultaneously
   unrestored image.
   </p>
   <p>
-  By default (<i>groupsky</i> = <tt>"yes"</tt>) ALLSTAR computes the sky value for each
+  By default (<i>groupsky</i> = <span style="font-family: monospace;">"yes"</span>) ALLSTAR computes the sky value for each
   group by averaging the individual sky values in <i>photfile</i> for all the
-  stars in the group. If <i>groupsky</i> = <tt>"no"</tt>, the sky value for each pixel
+  stars in the group. If <i>groupsky</i> = <span style="font-family: monospace;">"no"</span>, the sky value for each pixel
   which contributes to the group fit is set equal to the mean of the sky values
   for those stars for which the pixel falls within one fitting radius.  If the
-  DAOPARS parameter <i>fitksy</i> is <tt>"yes"</tt>, then ALLSTAR recomputes the individual
+  DAOPARS parameter <i>fitksy</i> is <span style="font-family: monospace;">"yes"</span>, then ALLSTAR recomputes the individual
   sky values before averaging over the group, by, every third iteration,
   subtracting off the current best fit for the star and using the pixel values in
   the annulus defined by the DAOPARS parameters <i>sannulus</i> and <i>wsannulus</i>
@@ -324,13 +324,13 @@ allstar: Group and fit psf to multiple stars simultaneously
   of the stars in the group. <i>Fitrad</i> is the fitting radius specified in the
   DAOPARS task. <i>Scale</i> is the image scale specified by the DATAPARS task.
   <i>Fitrad</i> may be less than or equal to but can never exceed the value of the
-  image header parameter <tt>"PSFRAD"</tt> in <i>psfimage</i>.
+  image header parameter <span style="font-family: monospace;">"PSFRAD"</span> in <i>psfimage</i>.
   </p>
   <p>
-  If the <i>cache</i> parameter is set to <tt>"yes"</tt> then ALLSTAR attempts to store all
+  If the <i>cache</i> parameter is set to <span style="font-family: monospace;">"yes"</span> then ALLSTAR attempts to store all
   the vectors and arrays in memory.  This can significantly reduce the system
   overhead but may cause excessive paging on machines with a small amount of
-  memory. For large images it may be necessary to set <i>cache</i> to <tt>"no"</tt>, and
+  memory. For large images it may be necessary to set <i>cache</i> to <span style="font-family: monospace;">"no"</span>, and
   use the disk for scratch storage. Users should experiment to see what suits
   them best.
   </p>

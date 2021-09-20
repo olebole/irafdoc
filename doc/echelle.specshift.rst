@@ -36,12 +36,12 @@ specshift: Shift spectral dispersion coordinate systems
   </dd>
   </dl>
   <dl>
-  <dt><b>apertures = <tt>""</tt></b></dt>
+  <dt><b>apertures = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
   <dd>List of apertures to be modified.  The null list
   selects all apertures.  A list consists of comma separated
   numbers and ranges of numbers.  A range is specified by a hyphen.  An
-  optional step size may be given by using the <tt>'x'</tt> followed by a number.
+  optional step size may be given by using the <span style="font-family: monospace;">'x'</span> followed by a number.
   See <b>xtools.ranges</b> for more information.  This parameter is ignored
   for N-dimensional spatial spectra such as long slit and Fabry-Perot.
   </dd>
@@ -67,8 +67,8 @@ specshift: Shift spectral dispersion coordinate systems
   <p>
   The specified shift is added to the existing world coordinates.  For linear
   coordinate systems this has the effect of modifying CRVAL1, for linear
-  <tt>"multispec"</tt> coordinate systems this modifies the dispersion coordinate of
-  the first physical pixel, and for nonlinear <tt>"multispec"</tt> coordinate systems
+  <span style="font-family: monospace;">"multispec"</span> coordinate systems this modifies the dispersion coordinate of
+  the first physical pixel, and for nonlinear <span style="font-family: monospace;">"multispec"</span> coordinate systems
   this modifies the shift coefficient(s).
   </p>
   <p>
@@ -86,7 +86,7 @@ specshift: Shift spectral dispersion coordinate systems
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  To add 1.23 Angstroms to the coordinates of all apertures in the
-  image <tt>"ngc456.ms"</tt>:
+  image <span style="font-family: monospace;">"ngc456.ms"</span>:
   </p>
   <pre>
   	cl&gt; specshift ngc456.ms 1.23

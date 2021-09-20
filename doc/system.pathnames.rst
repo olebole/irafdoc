@@ -56,7 +56,7 @@ pathnames: Expand a file template into a list of OS pathnames
   	draco!DRB1:[IRAF.SYS.FIO]
   </pre>
   <p>
-  2. Translate the file <tt>"vfiles"</tt>, containing a list of virtual filenames, into
+  2. Translate the file <span style="font-family: monospace;">"vfiles"</span>, containing a list of virtual filenames, into
   the equivalent list of host system filenames, e.g., for use as input to a
   foreign task.
   </p>

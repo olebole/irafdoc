@@ -25,7 +25,7 @@ fceval: Evaluate coordinates using the FITSCOORDS solutions
   <dl>
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
-  <dd>Input text file of pixel coordinates.  This may be <tt>"STDIN"</tt> to read
+  <dd>Input text file of pixel coordinates.  This may be <span style="font-family: monospace;">"STDIN"</span> to read
   coordinates from the terminal or pipe.
   </dd>
   </dl>
@@ -33,7 +33,7 @@ fceval: Evaluate coordinates using the FITSCOORDS solutions
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>Output text file of pixel coordinates and fitted coordinates.  This may
-  be <tt>"STDOUT"</tt> to write coordinates to the terminal or pipe.
+  be <span style="font-family: monospace;">"STDOUT"</span> to write coordinates to the terminal or pipe.
   </dd>
   </dl>
   <dl>
@@ -43,7 +43,7 @@ fceval: Evaluate coordinates using the FITSCOORDS solutions
   </dd>
   </dl>
   <dl>
-  <dt><b>database = <tt>"database"</tt></b></dt>
+  <dt><b>database = <span style="font-family: monospace;">"database"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"' -->
   <dd>Database containing the coordinate maps.
   </dd>
@@ -108,7 +108,7 @@ fceval: Evaluate coordinates using the FITSCOORDS solutions
   <p>
   This example uses pipes to eliminate intermediate files.  But these
   files can be useful for understanding the process.  LIXTPIX is used to
-  generate a grid of points with some subsampling.  Be sure to use <tt>"physical"</tt>
+  generate a grid of points with some subsampling.  Be sure to use <span style="font-family: monospace;">"physical"</span>
   for the coordinate system otherwise the grid of x and y values will be
   for the subsection.  The order of the columns will be appropriate for
   GEOMAP to compute the inverse transformation.  By reversing the order

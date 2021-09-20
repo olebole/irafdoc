@@ -34,14 +34,14 @@ tvmark: Mark objects on the image display
   <dd>The text file containing the coordinates of objects to be
   marked, one object per line with x and y in columns 1 and 2 respectively.
   An optional label may be read out of the third column.
-  If <i>coords</i> = <tt>""</tt>, the coordinate file is undefined.
+  If <i>coords</i> = <span style="font-family: monospace;">""</span>, the coordinate file is undefined.
   </dd>
   </dl>
   <dl>
-  <dt><b>logfile = <tt>""</tt></b></dt>
+  <dt><b>logfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = ""' -->
   <dd>The text file in which image cursor commands typed in interactive mode
-  are logged. If <i>logfile</i> = <tt>""</tt> no commands are logged.
+  are logged. If <i>logfile</i> = <span style="font-family: monospace;">""</span> no commands are logged.
   If automatic logging is enabled, all cursor commands
   are logged, otherwise the user must use the interactive keep keystroke
   command to select specific cursor commands for logging.
@@ -55,49 +55,49 @@ tvmark: Mark objects on the image display
   </dd>
   </dl>
   <dl>
-  <dt><b>outimage = <tt>""</tt></b></dt>
+  <dt><b>outimage = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outimage' Line='outimage = ""' -->
   <dd>The name of the output snapshot image.
   If tvmark is run in non-interactive mode and no command file is specified,
   a copy of the frame buffer
   is automatically written to the IRAF image <i>outimage</i> after tvmark
   terminates execution.
-  If <i>outimage</i> = <tt>""</tt> no output image is written.
+  If <i>outimage</i> = <span style="font-family: monospace;">""</span> no output image is written.
   In interactive mode or in non-interactive mode if a command file
   is specified, the user can make snapshots of the frame buffer
   with the interactive colon  write command.  In this case the name of the output
   snapped image will be in order of priority, the name specified
-  by the user in the colon write ommand,  <tt>"outimage.snap.version"</tt>,  or,
-  <tt>"imagename.snap.version"</tt>.
+  by the user in the colon write ommand,  <span style="font-family: monospace;">"outimage.snap.version"</span>,  or,
+  <span style="font-family: monospace;">"imagename.snap.version"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>deletions = <tt>""</tt></b></dt>
+  <dt><b>deletions = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='deletions' Line='deletions = ""' -->
   <dd>The extension of the output file containing objects which were deleted
   from the coordinate file in interactive or command file mode.
   By default no output deletions file is written.
-  If <i>deletions</i> is not equal to the null string (<tt>""</tt>), then deleted
+  If <i>deletions</i> is not equal to the null string (<span style="font-family: monospace;">""</span>), then deleted
   objects are written to a file called <i>coords.deletions</i>. For
-  example if <i>coords</i> = <tt>"nite1"</tt> and <i>deletions</i> = <tt>"del"</tt>, then the
-  deletions file will be called <tt>"nite1.del"</tt>.
+  example if <i>coords</i> = <span style="font-family: monospace;">"nite1"</span> and <i>deletions</i> = <span style="font-family: monospace;">"del"</span>, then the
+  deletions file will be called <span style="font-family: monospace;">"nite1.del"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>commands = <tt>""</tt></b></dt>
+  <dt><b>commands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='commands' Line='commands = ""' -->
   <dd>The text file containing the marking commands.
-  In interactive mode if <i>commands</i> = <tt>""</tt>, 
+  In interactive mode if <i>commands</i> = <span style="font-family: monospace;">""</span>, 
   <i>commands</i> is the image cursor.  In non-interactive mode
   cursor commands may be read from a text file, by setting <i>commands</i> =
-  <tt>"textfile"</tt>.  This file may be a user
+  <span style="font-family: monospace;">"textfile"</span>.  This file may be a user
   created command file, or the <i>logfile</i> from a previous run of tvmark.
-  If <i>commands</i> = <tt>""</tt> in non-interactive mode, the default mark is drawn
+  If <i>commands</i> = <span style="font-family: monospace;">""</span> in non-interactive mode, the default mark is drawn
   on the display at the positions of all the objects in <i>coords</i>.
   </dd>
   </dl>
   <dl>
-  <dt><b>mark = <tt>"point"</tt></b></dt>
+  <dt><b>mark = <span style="font-family: monospace;">"point"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='mark' Line='mark = "point"' -->
   <dd>The default mark type.  The options are:
   <dl>
@@ -142,23 +142,23 @@ tvmark: Mark objects on the image display
   </dd>
   </dl>
   <dl>
-  <dt><b>radii = <tt>"0"</tt></b></dt>
+  <dt><b>radii = <span style="font-family: monospace;">"0"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='radii' Line='radii = "0"' -->
-  <dd>If the default mark type is <tt>"circle"</tt> than concentric circles of radii
-  <tt>"r1,r2,...rN"</tt> are drawn around each selected point.
+  <dd>If the default mark type is <span style="font-family: monospace;">"circle"</span> than concentric circles of radii
+  <span style="font-family: monospace;">"r1,r2,...rN"</span> are drawn around each selected point.
   </dd>
   </dl>
   <dl>
-  <dt><b>lengths = <tt>"0"</tt></b></dt>
+  <dt><b>lengths = <span style="font-family: monospace;">"0"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lengths' Line='lengths = "0"' -->
-  <dd>if the default mark type is <tt>"rectangle"</tt> then concentric rectangles of
-  length and width / length ratio <tt>"l1,l2,...lN ratio"</tt> are drawn around
+  <dd>if the default mark type is <span style="font-family: monospace;">"rectangle"</span> then concentric rectangles of
+  length and width / length ratio <span style="font-family: monospace;">"l1,l2,...lN ratio"</span> are drawn around
   each selected point.  If ratio is not supplied, it defaults to 1.0
   and squares are drawn.
   </dd>
   </dl>
   <dl>
-  <dt><b>font = <tt>"raster"</tt></b></dt>
+  <dt><b>font = <span style="font-family: monospace;">"raster"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='font' Line='font = "raster"' -->
   <dd>The name of the font.  At present only a simple raster font is supported.
   </dd>
@@ -199,7 +199,7 @@ tvmark: Mark objects on the image display
   <dl>
   <dt><b>pointsize = 3</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pointsize' Line='pointsize = 3' -->
-  <dd>The size of the default mark type <tt>"point"</tt>. Point size will be rounded up
+  <dd>The size of the default mark type <span style="font-family: monospace;">"point"</span>. Point size will be rounded up
   to the nearest odd number.
   </dd>
   </dl>
@@ -261,11 +261,11 @@ tvmark: Mark objects on the image display
   interactive keep keystroke.
   </p>
   <p>
-  The default mark type are currently <tt>"none"</tt>, <tt>"point"</tt>, <tt>"plus"</tt>, <tt>"cross"</tt>,
-  <tt>"circle"</tt>, a
-  list of concentric circles, and <tt>"rectangles"</tt>, a list of concentric rectangles.
-  The size of the <tt>"point"</tt> mark is set using the parameter <i>pointsize</i>
-  while the sizes of the <tt>"plus"</tt> and <tt>"cross"</tt> mark types are set by the
+  The default mark type are currently <span style="font-family: monospace;">"none"</span>, <span style="font-family: monospace;">"point"</span>, <span style="font-family: monospace;">"plus"</span>, <span style="font-family: monospace;">"cross"</span>,
+  <span style="font-family: monospace;">"circle"</span>, a
+  list of concentric circles, and <span style="font-family: monospace;">"rectangles"</span>, a list of concentric rectangles.
+  The size of the <span style="font-family: monospace;">"point"</span> mark is set using the parameter <i>pointsize</i>
+  while the sizes of the <span style="font-family: monospace;">"plus"</span> and <span style="font-family: monospace;">"cross"</span> mark types are set by the
   <i>txsize</i> parameter.  Txsize is in font units which for the simple raster
   font currently implemented is six display pixels in x and seven display 
   pixels in y.
@@ -286,7 +286,7 @@ tvmark: Mark objects on the image display
   current frame buffer with the erase keystroke command.
   Finally a snapshot of the frame buffer can be saved permanently by
   using the write command. These snapped images can be redisplayed
-  by setting the display task parameter <i>ztrans</i> = <tt>"none"</tt>.
+  by setting the display task parameter <i>ztrans</i> = <span style="font-family: monospace;">"none"</span>.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Cursor commands</h3>

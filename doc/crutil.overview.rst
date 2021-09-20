@@ -40,7 +40,7 @@ overview: Overview of the package
   An average of the pixels remaining after some rejection operation is better.
   If the noise characteristics of the data can be described by a gain and
   read noise then cosmic rays can be optimally rejected using the
-  <tt>"crreject"</tt> algorithm.  This works on two or more images.  There are
+  <span style="font-family: monospace;">"crreject"</span> algorithm.  This works on two or more images.  There are
   a number of other rejection algorithms which can be used as described in
   the task help.
   </p>

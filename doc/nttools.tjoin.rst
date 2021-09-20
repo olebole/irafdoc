@@ -30,7 +30,7 @@ tjoin: Perform a relational join of two tables.
   rows in the other input table, all combinations of the rows are placed
   in the output table. Null table elements are never matched.  Tables
   can be joined on row number as well as on column by setting the column
-  name to <tt>"row"</tt>.
+  name to <span style="font-family: monospace;">"row"</span>.
   </p>
   <p>
   This task has three hidden parameters, 'extrarows', 'tolerance', and
@@ -61,8 +61,8 @@ tjoin: Perform a relational join of two tables.
   'tolerance' is zero, the output table will contain a single join column,
   as both values are identical. If a column name in the first input
   table is the same as a column name in the second input table, this
-  task tries to create a unique name by appending <tt>"_1"</tt> to the first name
-  and <tt>"_2"</tt> to the second name. If the task cannot create a unique name
+  task tries to create a unique name by appending <span style="font-family: monospace;">"_1"</span> to the first name
+  and <span style="font-family: monospace;">"_2"</span> to the second name. If the task cannot create a unique name
   in this way, it stops with an error.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
@@ -91,8 +91,8 @@ tjoin: Perform a relational join of two tables.
   <!-- Sec='PARAMETERS' Level=0 Label='column1' Line='column1 [string]' -->
   <dd>Names of the common columns in the first table. If there is more than
   one column name, the names should be separated by commas. If a column
-  name is <tt>"row"</tt>, the join is done on row number instead of the value of
-  a column. This only works if there is not column named <tt>"row"</tt> in the
+  name is <span style="font-family: monospace;">"row"</span>, the join is done on row number instead of the value of
+  a column. This only works if there is not column named <span style="font-family: monospace;">"row"</span> in the
   table.
   </dd>
   </dl>
@@ -101,11 +101,11 @@ tjoin: Perform a relational join of two tables.
   <!-- Sec='PARAMETERS' Level=0 Label='column2' Line='column2 [string]' -->
   <dd>Comma separated list of names of the common columns in the second
   table. The number of names must match the number of names in column1.
-  The name may be <tt>"row"</tt>, in which case the join is done on row number.
+  The name may be <span style="font-family: monospace;">"row"</span>, in which case the join is done on row number.
   </dd>
   </dl>
   <dl>
-  <dt><b>(extrarows = <tt>"neither"</tt>) [string, allowed values: neither|first|both]</b></dt>
+  <dt><b>(extrarows = <span style="font-family: monospace;">"neither"</span>) [string, allowed values: neither|first|both]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(extrarows = "neither") [string, allowed values: neither|first|both]' -->
   <dd>This parameter controls whether unmatched rows are added to the output 
   table. If it is set to 'neither', unmatched rows are not added. If it
@@ -116,7 +116,7 @@ tjoin: Perform a relational join of two tables.
   </dd>
   </dl>
   <dl>
-  <dt><b>(tolerance = <tt>"0.0"</tt>) [string]</b></dt>
+  <dt><b>(tolerance = <span style="font-family: monospace;">"0.0"</span>) [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(tolerance = "0.0") [string]' -->
   <dd>Tolerance used in testing for equality between common columns. The
   values must be greater than or equal to zero. If there is more than
@@ -130,7 +130,7 @@ tjoin: Perform a relational join of two tables.
   <dt><b>(casesens = yes) [boolean]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(casesens = yes) [boolean]' -->
   <dd>Is case important in testing equality of strings?
-  If set to <tt>"yes"</tt>, the test for equality is case sensitive.
+  If set to <span style="font-family: monospace;">"yes"</span>, the test for equality is case sensitive.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -152,7 +152,7 @@ tjoin: Perform a relational join of two tables.
   </pre>
   <p>
   3. Combine a phone list with an address list where the name is stored
-  in two columns, <tt>"last"</tt> and <tt>"first"</tt>. 
+  in two columns, <span style="font-family: monospace;">"last"</span> and <span style="font-family: monospace;">"first"</span>. 
   </p>
   <pre>
   tt&gt; tjoin phone.tab address.tab output.tab LAST,FIRST LAST,FIRST

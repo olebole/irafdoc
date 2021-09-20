@@ -25,7 +25,7 @@ wfits: Convert a list of IRAF images into FITS image data
   <dl>
   <dt><b>iraf_files</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='iraf_files' Line='iraf_files' -->
-  <dd>The input IRAF image file(s), e.g.  <tt>"image.imh"</tt> or <tt>"*.imh"</tt>.
+  <dd>The input IRAF image file(s), e.g.  <span style="font-family: monospace;">"image.imh"</span> or <span style="font-family: monospace;">"*.imh"</span>.
   </dd>
   </dl>
   <dl>
@@ -33,9 +33,9 @@ wfits: Convert a list of IRAF images into FITS image data
   <!-- Sec='PARAMETERS' Level=0 Label='fits_files' Line='fits_files' -->
   <dd>The output FITS files.
   Magnetic tape output is assumed if the first two characters of fits_files
-  are <tt>"mt"</tt>, otherwise the disk output is assumed.  Tape output will begin
+  are <span style="font-family: monospace;">"mt"</span>, otherwise the disk output is assumed.  Tape output will begin
   at the file number specified in fits_files, e.g. file 5 if fits_files =
-  <tt>"mtb1600[5]"</tt>, and the data in file 5 and succeeding files will be overwritten.
+  <span style="font-family: monospace;">"mtb1600[5]"</span>, and the data in file 5 and succeeding files will be overwritten.
   If no tape file number is specified in fits_files, the newtape parameter
   is queried, and tape output will begin at BOT (beginning of tape) if
   newtape = yes, otherwise at EOT (end of tape, after the double EOF).
@@ -52,7 +52,7 @@ wfits: Convert a list of IRAF images into FITS image data
   <!-- Sec='PARAMETERS' Level=0 Label='newtape' Line='newtape' -->
   <dd>Boolean parameter specifying whether an output tape is blank or already
   contains data. Newtape is requested only if no tape file number is specified in
-  fits_files, e.g. fits_files = <tt>"mtb1600"</tt>.
+  fits_files, e.g. fits_files = <span style="font-family: monospace;">"mtb1600"</span>.
   </dd>
   </dl>
   <dl>
@@ -73,10 +73,10 @@ wfits: Convert a list of IRAF images into FITS image data
   </dd>
   </dl>
   <dl>
-  <dt><b>fextn = <tt>"fits"</tt></b></dt>
+  <dt><b>fextn = <span style="font-family: monospace;">"fits"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fextn' Line='fextn = "fits"' -->
   <dd>The output fits file extension. If fextn is defined, an extension of
-  the form <tt>".fextn"</tt>, e.g. <tt>".fits"</tt> is added to the output fits file name.
+  the form <span style="font-family: monospace;">".fextn"</span>, e.g. <span style="font-family: monospace;">".fits"</span> is added to the output fits file name.
   Fextn should be chosen to be compatible with one of the permitted fits
   kernel extensions.
   </dd>
@@ -85,18 +85,18 @@ wfits: Convert a list of IRAF images into FITS image data
   <dt><b>extensions = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='extensions' Line='extensions = no' -->
   <dd>By default wfits writes each input image to a separate disk or tape FITS
-  file.  If <i>extensions</i> is <tt>"yes"</tt>, then wfits will write all the images in
+  file.  If <i>extensions</i> is <span style="font-family: monospace;">"yes"</span>, then wfits will write all the images in
   the input image list to a single disk or tape FITS file using the FITS
   standard IMAGE extension to write images other than the first. Extension
   numbering is 0 indexed. The first image will be written to extension 1 if
-  <i>global_header</i> is <tt>"yes"</tt>, or to extension 0 if <i>global_hdr</i> is <tt>"no"</tt>.
+  <i>global_header</i> is <span style="font-family: monospace;">"yes"</span>, or to extension 0 if <i>global_hdr</i> is <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <dl>
   <dt><b>global_hdr = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='global_hdr' Line='global_hdr = yes' -->
   <dd>Write a short global header to the 0th extension of the output FITS file
-  if <i>extensions</i> is <tt>"yes"</tt>.
+  if <i>extensions</i> is <span style="font-family: monospace;">"yes"</span>.
   </dd>
   </dl>
   <dl>
@@ -147,14 +147,14 @@ wfits: Convert a list of IRAF images into FITS image data
   Wfits normally writes <i>blocking_factor</i> * 2880 byte records,
   where <i>blocking_factor</i> is an integer from 1 to 10.
   If <i>blocking_factor</i> = 0, wfits uses the default FITS blocking
-  factor specified for the device  by the <tt>"fb"</tt> parameter in the
-  file dev$tapecap, or 1 if the <tt>"fb"</tt> parameter is not present. For
+  factor specified for the device  by the <span style="font-family: monospace;">"fb"</span> parameter in the
+  file dev$tapecap, or 1 if the <span style="font-family: monospace;">"fb"</span> parameter is not present. For
   devices which support variable block sizes, e.g. 9-track tapes, exabytes
-  and dats, <tt>"fb"</tt> is normally set to 10.
+  and dats, <span style="font-family: monospace;">"fb"</span> is normally set to 10.
   The user may override this value by setting <i>blocking_factor</i>
   &gt;= 1 or &lt;= 10. If the device does not support variable block sizes, e.g.
   various types of cartridge drives, blocks of the size defined for the
-  device by the <tt>"bs"</tt> parameter in the dev$tapecap file are written
+  device by the <span style="font-family: monospace;">"bs"</span> parameter in the dev$tapecap file are written
   and <i>blocking_factor</i> is ignored.
   </dd>
   </dl>
@@ -285,7 +285,7 @@ wfits: Convert a list of IRAF images into FITS image data
   detected, WFITS issues an error message and attempts to write a double
   EOF at the end of the last good record. In this case the last file on
   the tape will be a partial file. IF WFITS is not successful in writing
-  the double EOF, the message <tt>"Cannot close magtape file (name)"</tt> will be
+  the double EOF, the message <span style="font-family: monospace;">"Cannot close magtape file (name)"</span> will be
   issued. Problems occur as some drives permit the double EOF to be
   written after the physical end of tape and some do not. Similarly
   some drives can read a double EOF after end of tape and some cannot. Depending

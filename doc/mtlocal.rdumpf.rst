@@ -48,7 +48,7 @@ rdumpf: Convert IPPS rasters from a DUMPF tape to IRAF images
   </dd>
   </dl>
   <dl>
-  <dt><b>raster_list = <tt>"1-999"</tt></b></dt>
+  <dt><b>raster_list = <span style="font-family: monospace;">"1-999"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='raster_list' Line='raster_list = "1-999"' -->
   <dd>A string listing the IPPS rasters to be read from each file specified by
   the <i>file_list</i> parameter.
@@ -70,7 +70,7 @@ rdumpf: Convert IPPS rasters from a DUMPF tape to IRAF images
   </dd>
   </dl>
   <dl>
-  <dt><b>data_type = <tt>""</tt></b></dt>
+  <dt><b>data_type = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='data_type' Line='data_type = ""' -->
   <dd>The data type of the output IRAF image.  If an incorrect data_type or null
   string is entered, the default data type used is determined by the number
@@ -90,7 +90,7 @@ rdumpf: Convert IPPS rasters from a DUMPF tape to IRAF images
   <br>
   Some dumpf volumes are written on more than one tape.
   Task <i>rdumpf</i> cannot recover a file that is split across two tapes on 
-  a <tt>"multi-volume-set"</tt> dumpf tape.  It is, however, possible to read the files
+  a <span style="font-family: monospace;">"multi-volume-set"</span> dumpf tape.  It is, however, possible to read the files
   beyond the leading partial file; this is done by incrementing the 
   <b>file_list</b> parameter by 1.  For example, the first complete file 
   on the second tape of a multi-volume-set is indicated by <b>file_list</b> = 2.

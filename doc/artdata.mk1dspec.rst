@@ -29,7 +29,7 @@ mk1dspec: Make/add artificial 1D spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>output = <tt>""</tt></b></dt>
+  <dt><b>output = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
   <dd>Output spectra when modifying input spectra.  If no output spectra are
   given then existing spectra in the input list are modified directly.
@@ -62,7 +62,7 @@ mk1dspec: Make/add artificial 1D spectra
   WHEN CREATING NEW SPECTRA
   </p>
   <dl>
-  <dt><b>title = <tt>""</tt></b></dt>
+  <dt><b>title = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='title' Line='title = ""' -->
   <dd>Image title to be given to the spectra.  Maximum of 79 characters.
   </dd>
@@ -80,7 +80,7 @@ mk1dspec: Make/add artificial 1D spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>header = <tt>"artdata$stdheader.dat"</tt></b></dt>
+  <dt><b>header = <span style="font-family: monospace;">"artdata$stdheader.dat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='header' Line='header = "artdata$stdheader.dat"' -->
   <dd>Image or header keyword data file.  If an image is given then the image header
   is copied.  If a file is given then the FITS format cards are copied.
@@ -127,7 +127,7 @@ mk1dspec: Make/add artificial 1D spectra
   LINE PARAMETERS
   </p>
   <dl>
-  <dt><b>lines = <tt>""</tt></b></dt>
+  <dt><b>lines = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lines' Line='lines = ""' -->
   <dd>List of spectral line files.  Spectral line files contain lines of rest
   wavelength, peak, profile type, and widths (see the DESCRIPTION
@@ -154,7 +154,7 @@ mk1dspec: Make/add artificial 1D spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>profile = <tt>"gaussian"</tt> (gaussian|lorentzian|voigt)</b></dt>
+  <dt><b>profile = <span style="font-family: monospace;">"gaussian"</span> (gaussian|lorentzian|voigt)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='profile' Line='profile = "gaussian" (gaussian|lorentzian|voigt)' -->
   <dd>The default profile type for random lines or when not specified in the
   spectral line file.  The profile types are:
@@ -185,7 +185,7 @@ mk1dspec: Make/add artificial 1D spectra
   <dl>
   <dt><b>seed = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='seed' Line='seed = 1' -->
-  <dd>Random number seed.  If a value of <tt>"INDEF"</tt> is given then the clock
+  <dd>Random number seed.  If a value of <span style="font-family: monospace;">"INDEF"</span> is given then the clock
   time (integer seconds since 1980) is used as the seed yielding
   different random numbers for each execution.
   </dd>
@@ -438,7 +438,7 @@ mk1dspec: Make/add artificial 1D spectra
   <dt><b>MK1DSPEC V2.11+</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='MK1DSPEC' Line='MK1DSPEC V2.11+' -->
   <dd>The random number seed can be set from the clock time by using the value
-  <tt>"INDEF"</tt> to yield different random numbers for each execution.
+  <span style="font-family: monospace;">"INDEF"</span> to yield different random numbers for each execution.
   </dd>
   </dl>
   <dl>

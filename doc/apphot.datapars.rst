@@ -37,7 +37,7 @@ datapars: Edit the data dependent parameters
   <dt><b>fwhmpsf = 2.5 (scale units)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fwhmpsf' Line='fwhmpsf = 2.5 (scale units)' -->
   <dd>The full-width at half-maximum of the point spread function in scale units.
-  The DAOFIND, FITPSF and WPHOT tasks and the <tt>"gauss"</tt> and <tt>"ofilter"</tt> centering
+  The DAOFIND, FITPSF and WPHOT tasks and the <span style="font-family: monospace;">"gauss"</span> and <span style="font-family: monospace;">"ofilter"</span> centering
   algorithms depend on the value of fwhmpsf. APPHOT users can either determine
   a value for fwhmpsf using an external task such as IMEXAMINE, or make use of
   the interactive capabilities of the APPHOT tasks to set and store it.
@@ -54,7 +54,7 @@ datapars: Edit the data dependent parameters
   <dl>
   <dt><b>sigma = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sigma' Line='sigma = INDEF' -->
-  <dd>The standard deviation of the sky pixels. The DAOFIND task and the <tt>"constant"</tt>
+  <dd>The standard deviation of the sky pixels. The DAOFIND task and the <span style="font-family: monospace;">"constant"</span>
   sky fitting algorithm error estimate depend on the value of sigma. APPHOT
   users should set sigma to a value which is representative of the noise
   in the sky background.
@@ -81,7 +81,7 @@ datapars: Edit the data dependent parameters
   </dd>
   </dl>
   <dl>
-  <dt><b>noise = <tt>"poisson"</tt></b></dt>
+  <dt><b>noise = <span style="font-family: monospace;">"poisson"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='noise' Line='noise = "poisson"' -->
   <dd>The noise model used to estimate the uncertainties in the computed APPHOT
   magnitudes. The options are the following:
@@ -110,14 +110,14 @@ datapars: Edit the data dependent parameters
   </dd>
   </dl>
   <dl>
-  <dt><b>ccdread = <tt>""</tt></b></dt>
+  <dt><b>ccdread = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ccdread' Line='ccdread = ""' -->
   <dd>The image header keyword defining the readout noise parameter whose units are
   assumed to be electrons.
   </dd>
   </dl>
   <dl>
-  <dt><b>gain = <tt>""</tt></b></dt>
+  <dt><b>gain = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gain' Line='gain = ""' -->
   <dd>The image header keyword defining the gain parameter whose units are assumed
   to be electrons per adu.
@@ -140,7 +140,7 @@ datapars: Edit the data dependent parameters
   </dd>
   </dl>
   <dl>
-  <dt><b>exposure = <tt>""</tt></b></dt>
+  <dt><b>exposure = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='exposure' Line='exposure = ""' -->
   <dd>The image header exposure time keyword. The time units are arbitrary but
   must be consistent for any list of images whose magnitudes are to be compared.
@@ -150,7 +150,7 @@ datapars: Edit the data dependent parameters
   </dd>
   </dl>
   <dl>
-  <dt><b>airmass = <tt>""</tt></b></dt>
+  <dt><b>airmass = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='airmass' Line='airmass = ""' -->
   <dd>The image header airmass keyword.  The airmass parameter is not used
   directly by APPHOT but the airmass value is stored in the output file
@@ -158,7 +158,7 @@ datapars: Edit the data dependent parameters
   </dd>
   </dl>
   <dl>
-  <dt><b>filter = <tt>""</tt></b></dt>
+  <dt><b>filter = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='filter' Line='filter = ""' -->
   <dd>The image header filter id keyword.  The filter parameter is not used
   directly by APPHOT but the filter id is stored in the output file
@@ -166,7 +166,7 @@ datapars: Edit the data dependent parameters
   </dd>
   </dl>
   <dl>
-  <dt><b>obstime = <tt>""</tt></b></dt>
+  <dt><b>obstime = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='obstime' Line='obstime = ""' -->
   <dd>The image header time of observation keyword. The obstime parameter is not used
   directly by APPHOT but the obstime value is stored in the output file
@@ -190,7 +190,7 @@ datapars: Edit the data dependent parameters
   </dd>
   </dl>
   <dl>
-  <dt><b>ifilter = <tt>"INDEF"</tt></b></dt>
+  <dt><b>ifilter = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ifilter' Line='ifilter = "INDEF"' -->
   <dd>The filter id string. The filter id is read from the image header if filter
   is defined otherwise from ifilter. The filter id is stored in the APPHOT
@@ -198,7 +198,7 @@ datapars: Edit the data dependent parameters
   </dd>
   </dl>
   <dl>
-  <dt><b>otime = <tt>"INDEF"</tt></b></dt>
+  <dt><b>otime = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='otime' Line='otime = "INDEF"' -->
   <dd>The value of the time of observation. The time of observation is read from
   the image header if obstime is defined otherwise from otime. The time of
@@ -231,7 +231,7 @@ datapars: Edit the data dependent parameters
   The parameter <i>fwhmpsf</i> defines the full-width at half-maximum of the
   stellar point spread function.  Most APPHOT tasks and algorithms do not 
   require this parameter. The exceptions are the DAOFIND task, the centering
-  algorithms <tt>"gauss"</tt> and <tt>"ofilter"</tt>, the FITPSF task, and the WPHOT task.
+  algorithms <span style="font-family: monospace;">"gauss"</span> and <span style="font-family: monospace;">"ofilter"</span>, the FITPSF task, and the WPHOT task.
   </p>
   <p>
   By setting the <i>scale</i> and <i>fwhmpsf</i> appropriately the aperture
@@ -247,10 +247,10 @@ datapars: Edit the data dependent parameters
   executing an APPHOT task on a new image.
   </p>
   <p>
-  If  <i>emission</i> is <tt>"yes"</tt>, the features to be measured are assumed to be
+  If  <i>emission</i> is <span style="font-family: monospace;">"yes"</span>, the features to be measured are assumed to be
   above sky. By default the APPHOT package considers all measurements to
   be measurements of emission features. In most cases APPHOT users should
-  leave emission set to <tt>"yes"</tt>.
+  leave emission set to <span style="font-family: monospace;">"yes"</span>.
   </p>
   <p>
   The parameter <i>sigma</i> estimates the standard deviation of the sky
@@ -275,7 +275,7 @@ datapars: Edit the data dependent parameters
   to appropriate values before running the APPHOT tasks.
   </p>
   <p>
-  Two noise models are available <tt>"constant"</tt> and <tt>"poisson"</tt>. If <i>noise</i> =
+  Two noise models are available <span style="font-family: monospace;">"constant"</span> and <span style="font-family: monospace;">"poisson"</span>. If <i>noise</i> =
   constant, the total noise is assumed to be due to noise in the sky background
   alone. If <i>noise</i> = poisson, the total noise includes Poisson noise from
   the object and the sky noise. 

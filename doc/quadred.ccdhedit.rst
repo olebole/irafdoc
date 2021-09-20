@@ -38,17 +38,17 @@ ccdhedit: CCD image header editor
   <dl>
   <dt><b>value</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='value' Line='value' -->
-  <dd>The parameter value.  If the null string (<tt>""</tt>) is specified then the
+  <dd>The parameter value.  If the null string (<span style="font-family: monospace;">""</span>) is specified then the
   parameter is deleted from the image header, otherwise it is added or
-  modified.  If the parameter is <tt>"imagetyp"</tt> then the value string giving
+  modified.  If the parameter is <span style="font-family: monospace;">"imagetyp"</span> then the value string giving
   the CCD image type is translated from the package CCD type to the
   instrument specific string.
   </dd>
   </dl>
   <dl>
-  <dt><b>type = <tt>"string"</tt></b></dt>
+  <dt><b>type = <span style="font-family: monospace;">"string"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='type' Line='type = "string"' -->
-  <dd>The parameter type.  The parameter types are <tt>"string"</tt>, <tt>"real"</tt>, or <tt>"integer"</tt>.
+  <dd>The parameter type.  The parameter types are <span style="font-family: monospace;">"string"</span>, <span style="font-family: monospace;">"real"</span>, or <span style="font-family: monospace;">"integer"</span>.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -60,14 +60,14 @@ ccdhedit: CCD image header editor
   package.  The parameter name is translated to an image header parameter by the
   instrument translation file (see <b>instruments</b>) if a translation is
   given.  Otherwise the parameter is that in the image header.  If the parameter
-  is <tt>"imagetyp"</tt> the parameter value for the CCD image type may be that
+  is <span style="font-family: monospace;">"imagetyp"</span> the parameter value for the CCD image type may be that
   used by the package; i.e. dark, object, flat, etc.  The value string will be
   translated to the instrument image string in this case.  The translation
   facility allows use of this task in an instrument independent way.
   </p>
   <p>
   The value string is used to determine whether to delete or modify the
-  image parameter.  If the null string, <tt>""</tt>, is given the specified parameter
+  image parameter.  If the null string, <span style="font-family: monospace;">""</span>, is given the specified parameter
   is deleted.  If parameters are added the header type must be specified
   as a string, real, or integer parameter.  The numeric types convert the
   value string to a number.
@@ -135,7 +135,7 @@ ccdhedit: CCD image header editor
   10. To delete processing flags:
   </p>
   <p>
-      cl&gt; ccdhedit obj042 flatcor <tt>""</tt>
+      cl&gt; ccdhedit obj042 flatcor <span style="font-family: monospace;">""</span>
   </p>
   <!-- EndSection:   'EXAMPLES' -->
   <h3>See also</h3>

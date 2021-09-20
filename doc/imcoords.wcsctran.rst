@@ -27,7 +27,7 @@ wcsctran: Transform coordinates from one iraf image wcs to another
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>The list of input coordinate files. The number of input coordinate
   files must be one or equal to the number of input images. Coordinates
-  may be entered by hand by setting input to <tt>"STDIN"</tt>.
+  may be entered by hand by setting input to <span style="font-family: monospace;">"STDIN"</span>.
   </dd>
   </dl>
   <dl>
@@ -35,7 +35,7 @@ wcsctran: Transform coordinates from one iraf image wcs to another
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>The list of output coordinate files. The number of coordinate files
   must be one or equal to the number of input images. Results may be printed
-  on the terminal by setting output to <tt>"STDOUT"</tt>.
+  on the terminal by setting output to <span style="font-family: monospace;">"STDOUT"</span>.
   </dd>
   </dl>
   <dl>
@@ -90,17 +90,17 @@ wcsctran: Transform coordinates from one iraf image wcs to another
   respect to linear transformations of the physical image data. For example, 
   the ra and dec of an object will always be the same no matter how the image
   is linearly transformed. The default world coordinate
-  system is either 1) the value of the environment variable <tt>"defwcs"</tt> if
+  system is either 1) the value of the environment variable <span style="font-family: monospace;">"defwcs"</span> if
   set in the user's IRAF environment (normally it is undefined) and present
-  in the image header, 2) the value of the <tt>"system"</tt>
+  in the image header, 2) the value of the <span style="font-family: monospace;">"system"</span>
   attribute in the image header keyword WAT0_001 if present in the
-  image header or, 3) the <tt>"physical"</tt> coordinate system.
+  image header or, 3) the <span style="font-family: monospace;">"physical"</span> coordinate system.
   </dd>
   </dl>
   </dd>
   </dl>
   <dl>
-  <dt><b>columns = <tt>"1 2 3 4 5 6 7"</tt></b></dt>
+  <dt><b>columns = <span style="font-family: monospace;">"1 2 3 4 5 6 7"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='columns' Line='columns = "1 2 3 4 5 6 7"' -->
   <dd>The list of columns separated by whitespace or commas in the input coordinate
   file containing the coordinate values.
@@ -110,7 +110,7 @@ wcsctran: Transform coordinates from one iraf image wcs to another
   </dd>
   </dl>
   <dl>
-  <dt><b>units = <tt>""</tt></b></dt>
+  <dt><b>units = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='units' Line='units = ""' -->
   <dd>The units of the input coordinate values, normally degrees for the sky
   projection coordinate systems and angstroms for spectral coordinate
@@ -130,15 +130,15 @@ wcsctran: Transform coordinates from one iraf image wcs to another
   are performed.
   </dd>
   </dl>
-  Units conversions are performed only if the input wcs is <tt>"world"</tt>.
+  Units conversions are performed only if the input wcs is <span style="font-family: monospace;">"world"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>formats = <tt>""</tt></b></dt>
+  <dt><b>formats = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='formats' Line='formats = ""' -->
   <dd>The format for the computed output coordinates. If the formats
   parameter is undefined then: 1) the value of the wcs format attribute
-  is used if the output wcs is <tt>"world"</tt> and the attribute is defined, 2)
+  is used if the output wcs is <span style="font-family: monospace;">"world"</span> and the attribute is defined, 2)
   %g format is used with the precision set to the maximum of the precision of
   the input coordinates and the value of the min_sigdigits parameter.
   </dd>
@@ -147,7 +147,7 @@ wcsctran: Transform coordinates from one iraf image wcs to another
   <dt><b>min_sigdigits = 7</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='min_sigdigits' Line='min_sigdigits = 7' -->
   <dd>The minimum precision of the output coordinates if, the formats parameter
-  is undefined, and the output coordinate system is <tt>"world"</tt> but the wcs
+  is undefined, and the output coordinate system is <span style="font-family: monospace;">"world"</span> but the wcs
   format attribute is undefined.
   </dd>
   </dl>
@@ -181,15 +181,15 @@ wcsctran: Transform coordinates from one iraf image wcs to another
   The format of the output units can be set using the
   <i>formats</i> parameter. If the  output formats are unspecified then the
   output coordinates are written using, 1) the value of wcs format attribute if
-  outwcs = <tt>"world"</tt> and the attribute is defined, or, 2) the %g format and a 
+  outwcs = <span style="font-family: monospace;">"world"</span> and the attribute is defined, or, 2) the %g format and a 
   precision which is the maximum of the precision of the input coordinates
   and the value of the <i>min_sigdigits</i> parameter. All remaining
   fields in the input file are copied to the output file without modification.
   </p>
   <p>
   WCSCTRAN transforms coordinates from one builtin IRAF coordinate system
-  to another.  The builtin coordinate systems are <tt>"logical"</tt>, <tt>"physical"</tt>, and
-  <tt>"world"</tt>. For convenience WCSCTRAN also supports the <tt>"tv"</tt> coordinate system
+  to another.  The builtin coordinate systems are <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"physical"</span>, and
+  <span style="font-family: monospace;">"world"</span>. For convenience WCSCTRAN also supports the <span style="font-family: monospace;">"tv"</span> coordinate system
   which is not a builtin IRAF system, but is used by the display server tasks
   XIMTOOL, SAOIMAGE, and IMTOOL.
   </p>
@@ -227,7 +227,7 @@ wcsctran: Transform coordinates from one iraf image wcs to another
   <p>
   The <i>world coordinate system</i> is the default coordinate system for the
   image. The default world coordinate system is the one named by the
-  environment variable <tt>"defwcs"</tt> if defined in the user environment (initially
+  environment variable <span style="font-family: monospace;">"defwcs"</span> if defined in the user environment (initially
   it is undefined) and present in the image header; else it is the first
   world coordinate system
   defined for the image (the .imh and .hhh image format support only one wcs
@@ -241,10 +241,10 @@ wcsctran: Transform coordinates from one iraf image wcs to another
   less than the number of input coordinates. This situation occurs
   if the input image has been dimensionally-reduced, i.e. is a section
   of a higher-dimensioned parent image, and the input coordinate system
-  or the output coordinate system but not both is <tt>"logical"</tt> or <tt>"tv"</tt>.
+  or the output coordinate system but not both is <span style="font-family: monospace;">"logical"</span> or <span style="font-family: monospace;">"tv"</span>.
   For example, if the input image is a 1D line extracted from a 2D parent
   image with a sky projection world coordinate system, and the user
-  specifies a transformation from the <tt>"logical"</tt> to <tt>"world"</tt> systems, 
+  specifies a transformation from the <span style="font-family: monospace;">"logical"</span> to <span style="font-family: monospace;">"world"</span> systems, 
   only one input coordinate (column number) is required, but two output
   coordinates (ra and dec) are produced. If the input and output coordinate
   systems are reversed, then two input coordinates (ra and dec) are required,
@@ -258,10 +258,10 @@ wcsctran: Transform coordinates from one iraf image wcs to another
   <h3>Formats</h3>
   <!-- BeginSection: 'FORMATS' -->
   <p>
-  A  format  specification has the form <tt>"%w.dCn"</tt>, where w is the field
+  A  format  specification has the form <span style="font-family: monospace;">"%w.dCn"</span>, where w is the field
   width, d is the number of decimal places or the number of digits  of
   precision,  C  is  the  format  code,  and  n is radix character for
-  format code <tt>"r"</tt> only.  The w and d fields are optional.  The  format
+  format code <span style="font-family: monospace;">"r"</span> only.  The w and d fields are optional.  The  format
   codes C are as follows:
     
   </p>
@@ -339,11 +339,11 @@ wcsctran: Transform coordinates from one iraf image wcs to another
   Additional information on IRAF world coordinate systems can be found in
   the help pages for the WCSEDIT and WCRESET tasks.
   Detailed documentation for the IRAF world coordinate system interface MWCS
-  can be found in the file <tt>"iraf$sys/mwcs/MWCS.hlp"</tt>. This file can be
-  formatted and printed with the command <tt>"help iraf$sys/mwcs/MWCS.hlp fi+ |
-  lprint"</tt>.  Details of the FITS header world coordinate system interface can
-  be found in the document <tt>"World Coordinate Systems Representations Within the
-  FITS Format"</tt> by Hanisch and Wells, available from our anonymous ftp
+  can be found in the file <span style="font-family: monospace;">"iraf$sys/mwcs/MWCS.hlp"</span>. This file can be
+  formatted and printed with the command <span style="font-family: monospace;">"help iraf$sys/mwcs/MWCS.hlp fi+ |
+  lprint"</span>.  Details of the FITS header world coordinate system interface can
+  be found in the document <span style="font-family: monospace;">"World Coordinate Systems Representations Within the
+  FITS Format"</span> by Hanisch and Wells, available from our anonymous ftp
   archive.
   </p>
   <!-- EndSection:   'REFERENCES' -->

@@ -41,7 +41,7 @@ identify: Identify arc lines and determine a dispersion function
   </dd>
   </dl>
   <dl>
-  <dt><b>section = <tt>"middle line"</tt></b></dt>
+  <dt><b>section = <span style="font-family: monospace;">"middle line"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='section' Line='section = "middle line"' -->
   <dd>If an image is not one dimensional or specified as a one dimensional image
   section then the image section given by this parameter is used.  The
@@ -57,29 +57,29 @@ identify: Identify arc lines and determine a dispersion function
   where each field can be one of the strings separated by | except for #
   which is an integer number.  The field in [] is a second designator
   which is used with three dimensional data.  See the example section for
-  examples of this syntax.  Abbreviations are allowed though beware that <tt>'l'</tt>
+  examples of this syntax.  Abbreviations are allowed though beware that <span style="font-family: monospace;">'l'</span>
   is not a sufficient abbreviation.
   </dd>
   </dl>
   <dl>
-  <dt><b>database = <tt>"database"</tt></b></dt>
+  <dt><b>database = <span style="font-family: monospace;">"database"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"' -->
   <dd>Database in which the feature data and coordinate functions are recorded.
   </dd>
   </dl>
   <dl>
-  <dt><b>coordlist = <tt>"linelists$idhenear.dat"</tt></b></dt>
+  <dt><b>coordlist = <span style="font-family: monospace;">"linelists$idhenear.dat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coordlist' Line='coordlist = "linelists$idhenear.dat"' -->
   <dd>User coordinate list consisting of an list of line coordinates.  A
-  comment line of the form <tt>"# units &lt;units&gt;"</tt>, where &lt;units&gt; is one of the
+  comment line of the form <span style="font-family: monospace;">"# units &lt;units&gt;"</span>, where &lt;units&gt; is one of the
   understood units names, defines the units of the line list.  If no units
   are specified then Angstroms are assumed.  Some standard line lists are
-  available in the directory <tt>"linelists$"</tt>.  The standard line lists are
+  available in the directory <span style="font-family: monospace;">"linelists$"</span>.  The standard line lists are
   described under the topic <i>linelists</i>.
   </dd>
   </dl>
   <dl>
-  <dt><b>units = <tt>""</tt></b></dt>
+  <dt><b>units = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='units' Line='units = ""' -->
   <dd>The units to use if no database entry exists.  The units are specified as
   described in
@@ -92,7 +92,7 @@ identify: Identify arc lines and determine a dispersion function
   </dd>
   </dl>
   <dl>
-  <dt><b>nsum = <tt>"10"</tt></b></dt>
+  <dt><b>nsum = <span style="font-family: monospace;">"10"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nsum' Line='nsum = "10"' -->
   <dd>Number of lines, columns, or bands across the designated vector axis to be
   summed when the image is a two or three dimensional spatial spectrum.
@@ -115,23 +115,23 @@ identify: Identify arc lines and determine a dispersion function
   <dt><b>maxfeatures = 50</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maxfeatures' Line='maxfeatures = 50' -->
   <dd>Maximum number of the strongest features to be selected automatically from
-  the coordinate list (function <tt>'l'</tt>) or from the image data (function <tt>'y'</tt>).
+  the coordinate list (function <span style="font-family: monospace;">'l'</span>) or from the image data (function <span style="font-family: monospace;">'y'</span>).
   </dd>
   </dl>
   <dl>
   <dt><b>zwidth = 100.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='zwidth' Line='zwidth = 100.' -->
-  <dd>Width of graphs, in user coordinates, when in zoom mode (function <tt>'z'</tt>).
+  <dd>Width of graphs, in user coordinates, when in zoom mode (function <span style="font-family: monospace;">'z'</span>).
   </dd>
   </dl>
   <p>
   The following parameters are used in determining feature positions.
   </p>
   <dl>
-  <dt><b>ftype = <tt>"emission"</tt></b></dt>
+  <dt><b>ftype = <span style="font-family: monospace;">"emission"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ftype' Line='ftype = "emission"' -->
   <dd>Type of features to be identified.  The possibly abbreviated choices are
-  <tt>"emission"</tt> and <tt>"absorption"</tt>.
+  <span style="font-family: monospace;">"emission"</span> and <span style="font-family: monospace;">"absorption"</span>.
   </dd>
   </dl>
   <dl>
@@ -167,10 +167,10 @@ identify: Identify arc lines and determine a dispersion function
   may be found under that package.
   </p>
   <dl>
-  <dt><b>function = <tt>"spline3"</tt></b></dt>
+  <dt><b>function = <span style="font-family: monospace;">"spline3"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "spline3"' -->
   <dd>The function to be fit to the user coordinates as a function of the pixel
-  coordinate.  The choices are <tt>"chebyshev"</tt>, <tt>"legendre"</tt>, <tt>"spline1"</tt>, or <tt>"spline3"</tt>.
+  coordinate.  The choices are <span style="font-family: monospace;">"chebyshev"</span>, <span style="font-family: monospace;">"legendre"</span>, <span style="font-family: monospace;">"spline1"</span>, or <span style="font-family: monospace;">"spline3"</span>.
   </dd>
   </dl>
   <dl>
@@ -181,7 +181,7 @@ identify: Identify arc lines and determine a dispersion function
   </dd>
   </dl>
   <dl>
-  <dt><b>sample = <tt>"*"</tt></b></dt>
+  <dt><b>sample = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"' -->
   <dd>Sample regions for fitting. This is in pixel coordinates and not the user
   coordinates.
@@ -212,36 +212,36 @@ identify: Identify arc lines and determine a dispersion function
   <dl>
   <dt><b>autowrite = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='autowrite' Line='autowrite = no' -->
-  <dd>Automatically write or update the database?  If <tt>"no"</tt> then when exiting the
+  <dd>Automatically write or update the database?  If <span style="font-family: monospace;">"no"</span> then when exiting the
   program a query is given if the feature data and fit have been modified.
-  The query is answered with <tt>"yes"</tt> or <tt>"no"</tt> to save or not save the results.
-  If <i>autowrite</i> is <tt>"yes"</tt> exiting the program automatically updates the
+  The query is answered with <span style="font-family: monospace;">"yes"</span> or <span style="font-family: monospace;">"no"</span> to save or not save the results.
+  If <i>autowrite</i> is <span style="font-family: monospace;">"yes"</span> exiting the program automatically updates the
   database.
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>Graphics device.  The default is the standard graphics device which is
   generally a graphics terminal.
   </dd>
   </dl>
   <dl>
-  <dt><b>cursor = <tt>""</tt></b></dt>
+  <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Cursor input file.  If a cursor file is not given then the standard graphics
   cursor is read.
   </dd>
   </dl>
   <p>
-  The following parameters are queried when the <tt>'b'</tt> key is used.
+  The following parameters are queried when the <span style="font-family: monospace;">'b'</span> key is used.
   </p>
   <dl>
   <dt><b>crval, cdelt</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='crval' Line='crval, cdelt' -->
   <dd>These parameters specify an approximate coordinate value and coordinate
   interval per pixel when the automatic line identification
-  algorithm (<tt>'b'</tt> key) is used.  The coordinate value is for the
+  algorithm (<span style="font-family: monospace;">'b'</span> key) is used.  The coordinate value is for the
   pixel specified by the <i>crpix</i> parameter in the <b>aidpars</b>
   parameter set.  The default value of <i>crpix</i> is INDEF which then
   refers the coordinate value to the middle of the spectrum.  By default
@@ -252,7 +252,7 @@ identify: Identify arc lines and determine a dispersion function
   </dd>
   </dl>
   <dl>
-  <dt><b>aidpars = <tt>""</tt> (parameter set)</b></dt>
+  <dt><b>aidpars = <span style="font-family: monospace;">""</span> (parameter set)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='aidpars' Line='aidpars = "" (parameter set)' -->
   <dd>This parameter points to a parameter set for the automatic line
   identification algorithm.  See <i>aidpars</i> for further information.
@@ -298,7 +298,7 @@ identify: Identify arc lines and determine a dispersion function
   <dt><b>e</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='e' Line='e' -->
   <dd>Find features from a coordinate list without doing any fitting.  This is
-  like the <tt>'l'</tt> key without any fitting.
+  like the <span style="font-family: monospace;">'l'</span> key without any fitting.
   </dd>
   </dl>
   <dl>
@@ -417,7 +417,7 @@ identify: Identify arc lines and determine a dispersion function
   <dt><b>w</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='w' Line='w' -->
   <dd>(W)indow the graph.  A window prompt is given and a number of windowing
-  options may be given.  For more help type <tt>'?'</tt> to the window prompt or
+  options may be given.  For more help type <span style="font-family: monospace;">'?'</span> to the window prompt or
   see help under <i>gtools</i>.
   </dd>
   </dl>
@@ -464,7 +464,7 @@ identify: Identify arc lines and determine a dispersion function
   </dd>
   </dl>
   <p>
-  Parameters are shown or set with the following <tt>"colon commands"</tt>, which may be
+  Parameters are shown or set with the following <span style="font-family: monospace;">"colon commands"</span>, which may be
   abbreviated.  To show the value of a parameter type the parameter name alone
   and to set a new value follow the parameter name by the value.
   </p>
@@ -589,7 +589,7 @@ identify: Identify arc lines and determine a dispersion function
   <dl>
   <dt><b>:/help</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='' Line=':/help' -->
-  <dd>Print additional help for formatting graphs.  See help under <tt>"gtools"</tt>.
+  <dd>Print additional help for formatting graphs.  See help under <span style="font-family: monospace;">"gtools"</span>.
   </dd>
   </dl>
   <!-- EndSection:   'CURSOR KEYS' -->
@@ -597,7 +597,7 @@ identify: Identify arc lines and determine a dispersion function
   <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Features in the input images are identified interactively and assigned
-  user coordinates.  A <tt>"coordinate function"</tt> mapping pixel coordinates to
+  user coordinates.  A <span style="font-family: monospace;">"coordinate function"</span> mapping pixel coordinates to
   user coordinates may be determined from the identified features.  A
   user coordinate list may be defined to automatically identify additional
   features.  This task is used to measure positions of features,
@@ -627,10 +627,10 @@ identify: Identify arc lines and determine a dispersion function
   <p>
   The graphics cursor is used to select features and perform various
   functions.  A menu of the keystroke options and functions is printed
-  with the key <tt>'?'</tt>.  The cursor keys and their functions are defined in
+  with the key <span style="font-family: monospace;">'?'</span>.  The cursor keys and their functions are defined in
   the CURSOR KEYS section and described further below.  The standard
   cursor mode keys are also available to window and redraw the graph and
-  to produce hardcopy <tt>"snaps"</tt>.
+  to produce hardcopy <span style="font-family: monospace;">"snaps"</span>.
   </p>
   <p>
   There are a number of ways of defining features.  They fall into
@@ -638,8 +638,8 @@ identify: Identify arc lines and determine a dispersion function
   and using automatic algorithms.
   </p>
   <p>
-  The <tt>'m'</tt> key is the principle interactive feature marking method.  Typing
-  <tt>'m'</tt> near the position of a feature applies a feature centering algorithm
+  The <span style="font-family: monospace;">'m'</span> key is the principle interactive feature marking method.  Typing
+  <span style="font-family: monospace;">'m'</span> near the position of a feature applies a feature centering algorithm
   (see <b>center1d</b>) and, if a center is found, the feature is entered in
   the feature list and marked on the spectrum.  If the new position is within
   a distance given by the parameter <i>minsep</i> of a previous feature it is
@@ -651,12 +651,12 @@ identify: Identify arc lines and determine a dispersion function
   user may override.  The new feature is marked on the graph and it becomes
   the current feature.  The redefinition of a feature which is within the
   minimum separation may be used to set the user coordinate from the
-  coordinate list.  The <tt>'t'</tt> key allows setting the position of a feature to
+  coordinate list.  The <span style="font-family: monospace;">'t'</span> key allows setting the position of a feature to
   other than that found by the centering algorithm.
   </p>
   <p>
   The principle automatic feature identification algorithm is executed
-  with the <tt>'b'</tt> key.  The user is queried for an approximate coordinate
+  with the <span style="font-family: monospace;">'b'</span> key.  The user is queried for an approximate coordinate
   value and coordinate interval per pixel.  The coordinate value
   is for the center of the spectrum by default though this may be changed
   with the <b>aidpars</b> parameters.  Only the magnitude of the
@@ -668,13 +668,13 @@ identify: Identify arc lines and determine a dispersion function
   in the documentation for <b>aidpars</b>.
   </p>
   <p>
-  The <tt>'b'</tt> key works with no predefined dispersion solution or features.  If
-  two or more features are identified, with <tt>'m'</tt>, spanning the range of the
+  The <span style="font-family: monospace;">'b'</span> key works with no predefined dispersion solution or features.  If
+  two or more features are identified, with <span style="font-family: monospace;">'m'</span>, spanning the range of the
   data or if a coordinate function is defined, from a previous solution, then
-  the <tt>'e'</tt>, <tt>'l'</tt>, and <tt>'y'</tt> keys may be used to identify additional features from
-  a coordinate list.  The <tt>'e'</tt> key only adds features at the coordinates of
+  the <span style="font-family: monospace;">'e'</span>, <span style="font-family: monospace;">'l'</span>, and <span style="font-family: monospace;">'y'</span> keys may be used to identify additional features from
+  a coordinate list.  The <span style="font-family: monospace;">'e'</span> key only adds features at the coordinates of
   the line lists if the centering algorithm finds a feature at that
-  wavelength (as described below).  The <tt>'y'</tt> key works in reverse by finding
+  wavelength (as described below).  The <span style="font-family: monospace;">'y'</span> key works in reverse by finding
   the prominent features using a peak finding algorithm and then looking in
   the coordinate list for entries near the estimated position.  Up to a
   maximum number of features (<i>maxfeatures</i>) will be selected.  If there
@@ -682,7 +682,7 @@ identify: Identify arc lines and determine a dispersion function
   is no automatic fitting and refitting of the dispersion function.
   </p>
   <p>
-  The <tt>'l'</tt> key combines automatic fits with locating lines from the coordinate
+  The <span style="font-family: monospace;">'l'</span> key combines automatic fits with locating lines from the coordinate
   list.  If two or more features are defined an initial fit is made.  Then
   for each coordinate value in the coordinate list the pixel coordinate is
   determined and a search for a feature at that point is made.  If a feature
@@ -697,12 +697,12 @@ identify: Identify arc lines and determine a dispersion function
   with the additional features found from the coordinate list marked.
   </p>
   <p>
-  A minimum of two features must be defined for the <tt>'l'</tt> key algorithm to
+  A minimum of two features must be defined for the <span style="font-family: monospace;">'l'</span> key algorithm to
   work.  However, three or more features are preferable to determine changes
   in the dispersion as a function of position.
   </p>
   <p>
-  The <tt>'f'</tt> key fits a function of the pixel coordinates to the user
+  The <span style="font-family: monospace;">'f'</span> key fits a function of the pixel coordinates to the user
   coordinates.  The type of function, order and other fitting parameters
   are initially set with the parameters <i>function, order, sample,
   niterate, low_reject, high_reject</i> and <i>grow</i>..  The value of the
@@ -717,7 +717,7 @@ identify: Identify arc lines and determine a dispersion function
   <p>
   If a zero point shift is desired without changing the coordinate function
   the user may specify the coordinate of a point in the spectrum with
-  the <tt>'s'</tt> key from which a shift is determined.  The <tt>'g'</tt> key also
+  the <span style="font-family: monospace;">'s'</span> key from which a shift is determined.  The <span style="font-family: monospace;">'g'</span> key also
   determines a shift by minimizing the difference between the user
   coordinates and the fitted coordinates.  This is used when a previously
   determined coordinate function is applied to a new spectrum having
@@ -729,17 +729,17 @@ identify: Identify arc lines and determine a dispersion function
   </p>
   <p>
   One a set of features is defined one may select features for various
-  operations.  To select feature as the current feature the keys <tt>'.'</tt>, <tt>'n'</tt>,
-  <tt>'+'</tt>, and <tt>'-'</tt> are used.  The <tt>'.'</tt> selects the feature nearest the cursor, the
-  <tt>'n'</tt> and <tt>'+'</tt> select the next feature, and the <tt>'-'</tt> selects the previous
+  operations.  To select feature as the current feature the keys <span style="font-family: monospace;">'.'</span>, <span style="font-family: monospace;">'n'</span>,
+  <span style="font-family: monospace;">'+'</span>, and <span style="font-family: monospace;">'-'</span> are used.  The <span style="font-family: monospace;">'.'</span> selects the feature nearest the cursor, the
+  <span style="font-family: monospace;">'n'</span> and <span style="font-family: monospace;">'+'</span> select the next feature, and the <span style="font-family: monospace;">'-'</span> selects the previous
   feature relative to the current feature in the feature list as ordered by
   pixel coordinate.  These keys are useful when redefining the user
-  coordinate with the <tt>'u'</tt> key, changing the fitting weight of a feature with
-  <tt>'v'</tt>, and when examining features in zoom mode.
+  coordinate with the <span style="font-family: monospace;">'u'</span> key, changing the fitting weight of a feature with
+  <span style="font-family: monospace;">'v'</span>, and when examining features in zoom mode.
   </p>
   <p>
-  Features may be deleted with the key <tt>'d'</tt>.  All features are deleted
-  when the <tt>'a'</tt> key immediately precedes the delete key.  Deleting the
+  Features may be deleted with the key <span style="font-family: monospace;">'d'</span>.  All features are deleted
+  when the <span style="font-family: monospace;">'a'</span> key immediately precedes the delete key.  Deleting the
   features does not delete the coordinate function.  Features deleted in the
   curve fitting package also are removed from the feature list upon
   exiting the curve fitting package.
@@ -748,35 +748,35 @@ identify: Identify arc lines and determine a dispersion function
   It is common to transfer the feature identifications and coordinate function
   from one image to another.  When a new image without a database entry
   is examined, such as when going to the next image in the input list,
-  changing image lines or columns with <tt>'j'</tt>, <tt>'k'</tt> and <tt>'o'</tt>, or selecting
-  a new image with the <tt>":image"</tt> command, the current feature list and coordinate
+  changing image lines or columns with <span style="font-family: monospace;">'j'</span>, <span style="font-family: monospace;">'k'</span> and <span style="font-family: monospace;">'o'</span>, or selecting
+  a new image with the <span style="font-family: monospace;">":image"</span> command, the current feature list and coordinate
   function are kept.  Alternatively, a database record from a different
-  image may be read with the <tt>":read"</tt> command.  When transferring feature
+  image may be read with the <span style="font-family: monospace;">":read"</span> command.  When transferring feature
   identifications between images the feature coordinates will not agree exactly
   with the new image feature positions and several options are available to
-  reregister the feature positions.  The key <tt>'c'</tt> centers the feature nearest
+  reregister the feature positions.  The key <span style="font-family: monospace;">'c'</span> centers the feature nearest
   the cursor using the current position as the starting point.  When preceded
-  with the <tt>'a'</tt> key all the features are recentered (the user must refit
+  with the <span style="font-family: monospace;">'a'</span> key all the features are recentered (the user must refit
   the coordinate function if desired).  As an aside, the recentering
   function is also useful when the parameters governing the feature
-  centering algorithm are changed.  An additional options is the <tt>":add"</tt>
+  centering algorithm are changed.  An additional options is the <span style="font-family: monospace;">":add"</span>
   command to add features from a database record.  This does not overwrite
-  previous features (or the fitting functions) as does <tt>":read"</tt>.
+  previous features (or the fitting functions) as does <span style="font-family: monospace;">":read"</span>.
   </p>
   <p>
   The (c)entering function is applicable when the shift between the current
   and true feature positions is small.  Larger shifts may be determined
-  automatically with the <tt>'s'</tt> or <tt>'x'</tt> keys.
+  automatically with the <span style="font-family: monospace;">'s'</span> or <span style="font-family: monospace;">'x'</span> keys.
   </p>
   <p>
-  A zero point shift is specified interactively with the <tt>'s'</tt> key by using the
+  A zero point shift is specified interactively with the <span style="font-family: monospace;">'s'</span> key by using the
   cursor to indicate the coordinate of a point in the spectrum.  If there are
   no features then the shift is exactly as marked by the cursor.  If there
   are features the specified shift is applied, the features are recentered,
   and the mean shift for all the features is determined.
   </p>
   <p>
-  The <tt>'x'</tt> key uses the automatic line identification algorithm (see
+  The <span style="font-family: monospace;">'x'</span> key uses the automatic line identification algorithm (see
   <b>aidpars</b>) with the constraint that the dispersion is nearly the
   same and the is primarily a shift in the coordinate zero point.  If
   features are defined, normally by inheritance from another spectrum, then a
@@ -790,27 +790,27 @@ identify: Identify arc lines and determine a dispersion function
   </p>
   <p>
   In addition to the single keystroke commands there are commands initiated
-  by the key <tt>':'</tt> (colon commands).  As with the keystroke commands there are
-  a number of standard graphics features available beginning with <tt>":."</tt>
-  (type <tt>":.help"</tt> for these commands).  The identify colon commands
+  by the key <span style="font-family: monospace;">':'</span> (colon commands).  As with the keystroke commands there are
+  a number of standard graphics features available beginning with <span style="font-family: monospace;">":."</span>
+  (type <span style="font-family: monospace;">":.help"</span> for these commands).  The identify colon commands
   allow the task parameter values to be listed and to be reset
   within the task.  A parameter is listed by typing its name.  The colon command
-  <tt>":show"</tt> lists all the parameters.  A parameter value is reset by
+  <span style="font-family: monospace;">":show"</span> lists all the parameters.  A parameter value is reset by
   typing the parameter name followed by the new value; for example
-  <tt>":match 10"</tt>.  Other colon commands display the feature list (:features),
+  <span style="font-family: monospace;">":match 10"</span>.  Other colon commands display the feature list (:features),
   control reading and writing records to the database (:read and :write),
   and set the graph display format.
   </p>
   <p>
   The feature identification process for an image is completed by typing
-  <tt>'q'</tt> to quit.  Attempting to quit an image without explicitly
+  <span style="font-family: monospace;">'q'</span> to quit.  Attempting to quit an image without explicitly
   recording changes in the feature database produces a warning message
   unless the <i>autowrite</i> parameter is set.  If this parameter is
   not set a prompt is given asking whether to save the results otherwise
   the results are automatically saved.  Also
   the reference spectrum keyword REFSPEC is added to the image header at
   this time.  This is used by <b>refspectra</b> and <b>dispcor</b>.
-  As an immediate exit the <tt>'I'</tt> interrupt key may be used.  This does not save
+  As an immediate exit the <span style="font-family: monospace;">'I'</span> interrupt key may be used.  This does not save
   the feature information and may leave the graphics in a confused state.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
@@ -821,10 +821,10 @@ identify: Identify arc lines and determine a dispersion function
   simple text files.  The text files have names beginning with 'id' followed
   by the entry name, usually the name of the image.  The database text files
   consist of a number of records.  A record begins with a line starting with the
-  keyword <tt>"begin"</tt>.  The rest of the line is the record identifier.  Records
-  read and written by <b>identify</b> have <tt>"identify"</tt> as the first word of the
+  keyword <span style="font-family: monospace;">"begin"</span>.  The rest of the line is the record identifier.  Records
+  read and written by <b>identify</b> have <span style="font-family: monospace;">"identify"</span> as the first word of the
   identifier.  Following this is a name which may be specified following the
-  <tt>":read"</tt> or <tt>":write"</tt> commands.  If no name is specified then the image name
+  <span style="font-family: monospace;">":read"</span> or <span style="font-family: monospace;">":write"</span> commands.  If no name is specified then the image name
   is used.  For 1D spectra the database entry includes the aperture number
   and so to read a solution from a aperture different than the current image
   and aperture number must be specified.  For 2D/3D images the entry name
@@ -835,7 +835,7 @@ identify: Identify arc lines and determine a dispersion function
   <p>
   The dispersion function is saved in the database as a series of
   coefficients.  The section containing the coefficients starts with the
-  keyword <tt>"coefficients"</tt> and the number of coefficients.
+  keyword <span style="font-family: monospace;">"coefficients"</span> and the number of coefficients.
   </p>
   <p>
   The first four coefficients define the type of function, the order
@@ -1008,8 +1008,8 @@ identify: Identify arc lines and determine a dispersion function
   </pre>
   <p>
   The alternative is to use the section parameter.  Below are some examples
-  of the section parameter syntax for an image <tt>"im2d"</tt> which is 100x200
-  and <tt>"im3d"</tt> which is 100x200x50.  On the left is the section string syntax
+  of the section parameter syntax for an image <span style="font-family: monospace;">"im2d"</span> which is 100x200
+  and <span style="font-family: monospace;">"im3d"</span> which is 100x200x50.  On the left is the section string syntax
   and on the right is the image section
   </p>
   <pre>
@@ -1030,7 +1030,7 @@ identify: Identify arc lines and determine a dispersion function
       z middle          |  im3d[50,100,*]     |  Middle of image
   </pre>
   <p>
-  The most common usage should be <tt>"middle line"</tt>, <tt>"middle column"</tt> or <tt>"middle z"</tt>.
+  The most common usage should be <span style="font-family: monospace;">"middle line"</span>, <span style="font-family: monospace;">"middle column"</span> or <span style="font-family: monospace;">"middle z"</span>.
   </p>
   <p>
   The summing factors apply to the axes across the specified vector.  For
@@ -1053,12 +1053,12 @@ identify: Identify arc lines and determine a dispersion function
   <!-- Sec='REVISIONS' Level=0 Label='IDENTIFY' Line='IDENTIFY V2.11' -->
   <dd>The dispersion units are now determined from a user parameter,
   the coordinate list, or the database entry.
-  A new key, <tt>'e'</tt>, has been added to add features from a line list without
-  doing any fits.  This is like the <tt>'l'</tt> but without the automatic
+  A new key, <span style="font-family: monospace;">'e'</span>, has been added to add features from a line list without
+  doing any fits.  This is like the <span style="font-family: monospace;">'l'</span> but without the automatic
   fitting before and after adding new features.
-  A new key, <tt>'b'</tt>, has been added to apply an automatic line identification
+  A new key, <span style="font-family: monospace;">'b'</span>, has been added to apply an automatic line identification
   algorithm.
-  The <tt>'x'</tt> key has been changed to use the automatic line identification
+  The <span style="font-family: monospace;">'x'</span> key has been changed to use the automatic line identification
   algorithm.  The allows finding much larger shifts.
   The match parameter may now be specified either in user coordinates or
   in pixels.  The default is now 3 pixels.
@@ -1070,7 +1070,7 @@ identify: Identify arc lines and determine a dispersion function
   <!-- Sec='REVISIONS' Level=0 Label='IDENTIFY' Line='IDENTIFY V2.10.3' -->
   <dd>The section and nsum parameter syntax was extended to apply to 3D
   images.  The previous values and defaults may still be used.
-  The <tt>'v'</tt> key was added to allow assigning weights to features.
+  The <span style="font-family: monospace;">'v'</span> key was added to allow assigning weights to features.
   </dd>
   </dl>
   <dl>
@@ -1083,7 +1083,7 @@ identify: Identify arc lines and determine a dispersion function
   with image sections.  Thus, IDENTIFY solutions are not tied to specific
   image lines in this case.  There is a new autowrite parameter which may
   be set to eliminate the save to database query upon exiting.  The new
-  colon command <tt>"add"</tt> may be used to add features based on some other
+  colon command <span style="font-family: monospace;">"add"</span> may be used to add features based on some other
   spectrum or arc type and then apply the fit to the combined set of features.
   </dd>
   </dl>

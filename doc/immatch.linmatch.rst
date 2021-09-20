@@ -32,9 +32,9 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   <dt><b>reference</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='reference' Line='reference' -->
   <dd>The list of reference images to which the input images are to be matched
-  if <i>scaling</i>  is one of the <tt>"mean"</tt>, <tt>"median"</tt>, <tt>"mode"</tt>, or <tt>"fit"</tt>
+  if <i>scaling</i>  is one of the <span style="font-family: monospace;">"mean"</span>, <span style="font-family: monospace;">"median"</span>, <span style="font-family: monospace;">"mode"</span>, or <span style="font-family: monospace;">"fit"</span>
   algorithms, or the list of reference photometry files if <i>scaling</i>
-  specifies the <tt>"photometry"</tt> algorithm. The number of reference images or
+  specifies the <span style="font-family: monospace;">"photometry"</span> algorithm. The number of reference images or
   reference photometry files must be one or equal to the number of input
   images.
   </dd>
@@ -43,14 +43,14 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   <dt><b>regions</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='regions' Line='regions' -->
   <dd>The list of image regions used to compute the intensity 
-  matching function if <i>scaling</i> is one of the <tt>"mean"</tt>, <tt>"median"</tt>, <tt>"mode"</tt>,
-  or <tt>"fit"</tt> algorithms, or a list of the input photometry files if
-  <i>scaling</i> specifies the <tt>"photometry"</tt> algorithm. In the former
-  case <i>regions</i> may be: 1) a string of the form <tt>"grid nx ny"</tt> defining
+  matching function if <i>scaling</i> is one of the <span style="font-family: monospace;">"mean"</span>, <span style="font-family: monospace;">"median"</span>, <span style="font-family: monospace;">"mode"</span>,
+  or <span style="font-family: monospace;">"fit"</span> algorithms, or a list of the input photometry files if
+  <i>scaling</i> specifies the <span style="font-family: monospace;">"photometry"</span> algorithm. In the former
+  case <i>regions</i> may be: 1) a string of the form <span style="font-family: monospace;">"grid nx ny"</span> defining
   a grid of nx by ny equally spaced and sized image regions spanning the
   entire image, 2) a list of object coordinates separated by commas e.g.
-  <tt>"303 401, 131 202"</tt>, 3) a list of image sections separated by whitespace
-  e.g <tt>"[101:200,101:200] [301:400,301:400]"</tt>,
+  <span style="font-family: monospace;">"303 401, 131 202"</span>, 3) a list of image sections separated by whitespace
+  e.g <span style="font-family: monospace;">"[101:200,101:200] [301:400,301:400]"</span>,
   4) the name of a text file containing a list of object coordinates separated
   by newlines, and 5) the name of a text file containing a list of image
   sections separated by whitespace and/or newlines.
@@ -60,17 +60,17 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   <dt><b>lintransform</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lintransform' Line='lintransform' -->
   <dd>The name of the text file where the computed scaling factors are written.
-  If <i>databasefmt</i> is <tt>"yes"</tt>, a single record containing the computed
+  If <i>databasefmt</i> is <span style="font-family: monospace;">"yes"</span>, a single record containing the computed
   bscale and bzero factors for each image region or object, and the
   average bscale and bzero, is written to the text database
-  file for each input image. If <i>databasefmt</i> = <tt>"no"</tt>, a single line
+  file for each input image. If <i>databasefmt</i> = <span style="font-family: monospace;">"no"</span>, a single line
   containing the input image name, bscale factor, bzero factor, error
   in bscale, and error in bzero is written to a simple text file for
   each image.
   </dd>
   </dl>
   <dl>
-  <dt><b>output = <tt>""</tt></b></dt>
+  <dt><b>output = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
   <dd>The list of output matched images. If <i>output</i> is the NULL string
   then bscale  and bzero are computed for each input image and written to
@@ -82,13 +82,13 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   <dl>
   <dt><b>databasefmt = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='databasefmt' Line='databasefmt = yes' -->
-  <dd>If <i>databasefmt</i> is <tt>"yes"</tt> the computed bscale and bzero factors
+  <dd>If <i>databasefmt</i> is <span style="font-family: monospace;">"yes"</span> the computed bscale and bzero factors
   are written to a text database file, otherwise they are written to a
   simple text file.
   </dd>
   </dl>
   <dl>
-  <dt><b>records = <tt>""</tt></b></dt>
+  <dt><b>records = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='records' Line='records = ""' -->
   <dd>The list of records to be written to or read from <i>lintransform</i> one
   input image. If <i>records</i> is NULL then the output or input record names
@@ -101,7 +101,7 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   factors to the original unprocessed images. If more than one record
   with the same name exists in <i>lintransform</i> then the most recently written
   record takes precedence. The records parameter is ignored if
-  <i>databasefmt</i> is <tt>"no"</tt>.
+  <i>databasefmt</i> is <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <dl>
@@ -109,11 +109,11 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   <!-- Sec='PARAMETERS' Level=0 Label='append' Line='append = yes' -->
   <dd>Append new records to an existing <i>lintransform</i> file or start a new 
   file for each execution of LINMATCH? The append parameter is
-  ignored if <i>databasefmt</i> is <tt>"no"</tt>.
+  ignored if <i>databasefmt</i> is <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>shifts = <tt>""</tt></b></dt>
+  <dt><b>shifts = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='shifts' Line='shifts = ""' -->
   <dd>An optional list of shifts files containing the x and y shifts to be applied
   to the reference regions to determine their positions in
@@ -124,7 +124,7 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   in the shifts file than there are input images, the extra input
   images will be assigned x and y shifts of <i>xshift</i> and <i>yshift</i>
   respectively. The shifts parameter is ignored if the <i>scaling</i>
-  parameter is set to <tt>"photometry"</tt>.
+  parameter is set to <span style="font-family: monospace;">"photometry"</span>.
   </dd>
   </dl>
   <dl>
@@ -134,17 +134,17 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   or objects to compute their positions in the input image.
   Values in <i>shifts</i> take precedence over the values of <i>xshift</i> and
   <i>yshift</i>. xshift and yshift are ignored if the <i>scaling</i> parameter
-  is set to <tt>"photometry"</tt>.
+  is set to <span style="font-family: monospace;">"photometry"</span>.
   </dd>
   </dl>
   <dl>
   <dt><b>dnx = 31 dny = 31</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dnx' Line='dnx = 31 dny = 31' -->
   <dd>The default size of a single image region used to compute the bscale
-  and bzero factors if <i>scaling</i> is one of the <tt>"mean"</tt>, <tt>"median"</tt>, <tt>"mode"</tt>,
-  or <tt>"fit"</tt> algorithms and <i>regions</i> is a coordinate list rather than
+  and bzero factors if <i>scaling</i> is one of the <span style="font-family: monospace;">"mean"</span>, <span style="font-family: monospace;">"median"</span>, <span style="font-family: monospace;">"mode"</span>,
+  or <span style="font-family: monospace;">"fit"</span> algorithms and <i>regions</i> is a coordinate list rather than
   a sections list.  dnx and dny are ignored if the <i>scaling</i> parameter
-  is set to <tt>"photometry"</tt>.
+  is set to <span style="font-family: monospace;">"photometry"</span>.
   </dd>
   </dl>
   <dl>
@@ -155,20 +155,20 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   </dd>
   </dl>
   <dl>
-  <dt><b>scaling = <tt>"mean mean"</tt></b></dt>
+  <dt><b>scaling = <span style="font-family: monospace;">"mean mean"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='scaling' Line='scaling = "mean mean"' -->
   <dd>The algorithms used to compute the bscale and bzero factors respectively.
   The options are:
   <dl>
   <dt><b>mean median mode</b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='mean' Line='mean median mode' -->
-  <dd>Bscale or bzero are computed using the <tt>"mean"</tt>, <tt>"median"</tt>, or <tt>"mode"</tt> statistic
+  <dd>Bscale or bzero are computed using the <span style="font-family: monospace;">"mean"</span>, <span style="font-family: monospace;">"median"</span>, or <span style="font-family: monospace;">"mode"</span> statistic
   for each input and reference region individually. If one of the bscale or
   bzero fitting
-  algorithms is set to <tt>"mean"</tt>, <tt>"median"</tt>, or <tt>"mode"</tt>, the remaining factor
-  must be set to <tt>"mean"</tt>, <tt>"median"</tt> or <tt>"mode"</tt> or  a numerical constant,
-  e.g. <tt>"mean mean"</tt>, <tt>"mean -100.0"</tt> or <tt>"2.63 mode"</tt>.
-  If both algorithms are set to <tt>"mean"</tt>, <tt>"median"</tt>, or <tt>"mode"</tt> bscale will be
+  algorithms is set to <span style="font-family: monospace;">"mean"</span>, <span style="font-family: monospace;">"median"</span>, or <span style="font-family: monospace;">"mode"</span>, the remaining factor
+  must be set to <span style="font-family: monospace;">"mean"</span>, <span style="font-family: monospace;">"median"</span> or <span style="font-family: monospace;">"mode"</span> or  a numerical constant,
+  e.g. <span style="font-family: monospace;">"mean mean"</span>, <span style="font-family: monospace;">"mean -100.0"</span> or <span style="font-family: monospace;">"2.63 mode"</span>.
+  If both algorithms are set to <span style="font-family: monospace;">"mean"</span>, <span style="font-family: monospace;">"median"</span>, or <span style="font-family: monospace;">"mode"</span> bscale will be
   computed using the specified statistic and bzero will be set to 0.0
   If more than one input region is defined then a weighted least squares
   fit of the reference statistics to the input image statistics  
@@ -184,9 +184,9 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   the final bscale and bzero factors are computed by averaging,
   weighted by their signal-to-noise ratios, the individual bscale and bzero
   values.  If one of the bscale or bzero fitting
-  algorithms is set to <tt>"fit"</tt>, the remaining factor must either also
-  be computed with the <tt>"fit"</tt> algorithm  or set to a numerical constant,
-  e.g. <tt>"fit fit"</tt>, <tt>"fit -100.0"</tt>, or <tt>"2.63 fit"</tt>.
+  algorithms is set to <span style="font-family: monospace;">"fit"</span>, the remaining factor must either also
+  be computed with the <span style="font-family: monospace;">"fit"</span> algorithm  or set to a numerical constant,
+  e.g. <span style="font-family: monospace;">"fit fit"</span>, <span style="font-family: monospace;">"fit -100.0"</span>, or <span style="font-family: monospace;">"2.63 fit"</span>.
   </dd>
   </dl>
   <dl>
@@ -198,28 +198,28 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   the final bscale and bzero factors are computed by averaging,
   weighted by their signal-to-noise ratios, the individual bscale and bzero
   values.  If one of the bscale or bzero fitting
-  algorithms is set to <tt>"photometry"</tt>, the remaining factor must either also
-  be computed with the <tt>"photometry"</tt> algorithm or set to a numerical
-  constant, e.g. <tt>"photometry photometry"</tt>, <tt>"photometry -100.0"</tt>, or
-  <tt>"2.63 photometry"</tt>.
+  algorithms is set to <span style="font-family: monospace;">"photometry"</span>, the remaining factor must either also
+  be computed with the <span style="font-family: monospace;">"photometry"</span> algorithm or set to a numerical
+  constant, e.g. <span style="font-family: monospace;">"photometry photometry"</span>, <span style="font-family: monospace;">"photometry -100.0"</span>, or
+  <span style="font-family: monospace;">"2.63 photometry"</span>.
   </dd>
   </dl>
   <dl>
   <dt><b>number</b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='number' Line='number' -->
   <dd>Bscale and/or bzero are set to user defined numerical constants,
-  e.g. <tt>"2.62 -55.0"</tt> or  <tt>"2.62 median"</tt>. If both bscale and bzero are numerical
+  e.g. <span style="font-family: monospace;">"2.62 -55.0"</span> or  <span style="font-family: monospace;">"2.62 median"</span>. If both bscale and bzero are numerical
   constants, LINMATCH must be run in non-interactive mode. If only one of bscale
-  or bzero is a numerical constant, any of the <tt>"mean"</tt>, <tt>"median"</tt>, <tt>"mode"</tt>, <tt>"fit"</tt>,
-  or <tt>"photometry"</tt> algorithms may be used to compute the remaining factor.
+  or bzero is a numerical constant, any of the <span style="font-family: monospace;">"mean"</span>, <span style="font-family: monospace;">"median"</span>, <span style="font-family: monospace;">"mode"</span>, <span style="font-family: monospace;">"fit"</span>,
+  or <span style="font-family: monospace;">"photometry"</span> algorithms may be used to compute the remaining factor.
   </dd>
   </dl>
   <dl>
   <dt><b>file</b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='file' Line='file' -->
   <dd>Bscale and bzero are not computed but instead read from record <i>record</i> in
-  the text database file <i>lintransform</i> if <i>databasefmt</i> is <tt>"yes"</tt>,
-  or the next line of a simple text file if <i>databasefmt</i> is <tt>"no"</tt>.
+  the text database file <i>lintransform</i> if <i>databasefmt</i> is <span style="font-family: monospace;">"yes"</span>,
+  or the next line of a simple text file if <i>databasefmt</i> is <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   Further description of the matching algorithms can be found in the ALGORITHMS
@@ -230,8 +230,8 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   <dt><b>datamin = INDEF datamax = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='datamin' Line='datamin = INDEF datamax = INDEF' -->
   <dd>The minimum and maximum good data values. Datamin and datamax are used by
-  the <tt>"mean"</tt>, <tt>"median"</tt>, and <tt>"mode"</tt> scaling algorithms to reject entire
-  image regions from the final fit, and by the <tt>"fit"</tt> algorithm to reject
+  the <span style="font-family: monospace;">"mean"</span>, <span style="font-family: monospace;">"median"</span>, and <span style="font-family: monospace;">"mode"</span> scaling algorithms to reject entire
+  image regions from the final fit, and by the <span style="font-family: monospace;">"fit"</span> algorithm to reject
   individual bad pixels from the least squares fits for the individual
   regions.
   </dd>
@@ -247,29 +247,29 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   <dt><b>nreject = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nreject' Line='nreject = 0' -->
   <dd>The maximum number of rejection cycles used to detect and reject bad pixels
-  from the fit if the scaling algorithm is <tt>"fit"</tt> or bad regions / objects
-  from the fit if the scaling algorithm is <tt>"mean"</tt>, <tt>"median"</tt>, <tt>"mode"</tt>, <tt>"fit"</tt>,
-  or <tt>"photometry"</tt>.
+  from the fit if the scaling algorithm is <span style="font-family: monospace;">"fit"</span> or bad regions / objects
+  from the fit if the scaling algorithm is <span style="font-family: monospace;">"mean"</span>, <span style="font-family: monospace;">"median"</span>, <span style="font-family: monospace;">"mode"</span>, <span style="font-family: monospace;">"fit"</span>,
+  or <span style="font-family: monospace;">"photometry"</span>.
   </dd>
   </dl>
   <dl>
   <dt><b>loreject = INDEF hireject = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='loreject' Line='loreject = INDEF hireject = INDEF' -->
   <dd>The high- and low-side bad data rejection limits used to detect and reject
-  deviant pixels from the fit if the scaling algorithm is <tt>"fit"</tt> or bad
-  regions / objects from the fit if the scaling algorithm is <tt>"mean"</tt>, <tt>"median"</tt>,
-  <tt>"mode"</tt>, <tt>"fit"</tt>, or <tt>"photometry"</tt>.
+  deviant pixels from the fit if the scaling algorithm is <span style="font-family: monospace;">"fit"</span> or bad
+  regions / objects from the fit if the scaling algorithm is <span style="font-family: monospace;">"mean"</span>, <span style="font-family: monospace;">"median"</span>,
+  <span style="font-family: monospace;">"mode"</span>, <span style="font-family: monospace;">"fit"</span>, or <span style="font-family: monospace;">"photometry"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>gain = <tt>"1.0 1.0"</tt> readnoise = <tt>"0.0 0.0"</tt></b></dt>
+  <dt><b>gain = <span style="font-family: monospace;">"1.0 1.0"</span> readnoise = <span style="font-family: monospace;">"0.0 0.0"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gain' Line='gain = "1.0 1.0" readnoise = "0.0 0.0"' -->
   <dd>The reference and input image gain and readout noise in e-/ADU and
   e- respectively. Gain and readout may be numerical constants or the
   image header keyword containing the actual gain and/or readout noise
-  value. Gain and readnoise are used by the <tt>"mean"</tt>, <tt>"median"</tt>, <tt>"mode"</tt>,
-  and <tt>"fit"</tt> algorithms to estimate the expected errors in the computed
-  <tt>"mean"</tt>, <tt>"median"</tt>, or <tt>"mode"</tt> statistics,  and by the <tt>"fit"</tt> algorithm
+  value. Gain and readnoise are used by the <span style="font-family: monospace;">"mean"</span>, <span style="font-family: monospace;">"median"</span>, <span style="font-family: monospace;">"mode"</span>,
+  and <span style="font-family: monospace;">"fit"</span> algorithms to estimate the expected errors in the computed
+  <span style="font-family: monospace;">"mean"</span>, <span style="font-family: monospace;">"median"</span>, or <span style="font-family: monospace;">"mode"</span> statistics,  and by the <span style="font-family: monospace;">"fit"</span> algorithm
   to compute the per pixel errors values.
   </dd>
   </dl>
@@ -288,25 +288,25 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>The default graphics device.
   </dd>
   </dl>
   <dl>
-  <dt><b>display = <tt>"stdimage"</tt></b></dt>
+  <dt><b>display = <span style="font-family: monospace;">"stdimage"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='display' Line='display = "stdimage"' -->
   <dd>The default image display device.
   </dd>
   </dl>
   <dl>
-  <dt><b>gcommands = <tt>""</tt></b></dt>
+  <dt><b>gcommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""' -->
   <dd>The default graphics cursor.
   </dd>
   </dl>
   <dl>
-  <dt><b>icommands = <tt>""</tt></b></dt>
+  <dt><b>icommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""' -->
   <dd>The default image cursor.
   </dd>
@@ -327,8 +327,8 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   <p>
   The computed bscale and bzero factors are stored
   in the text file <i>lintransform</i>, in the record <i>records</i> if
-  <i>databasefmt</i> is <tt>"yes"</tt>, or a single line of a simple text file
-  if <i>databasefmt</i> is <tt>"no"</tt>. One record is written to the output file
+  <i>databasefmt</i> is <span style="font-family: monospace;">"yes"</span>, or a single line of a simple text file
+  if <i>databasefmt</i> is <span style="font-family: monospace;">"no"</span>. One record is written to the output file
   file for each input image. If a non NULL list of output images
   <i>output</i> is supplied, a scaled output image is written for
   each input image. LINMATCH is intended to solve 1D and 2D image intensity
@@ -341,7 +341,7 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   intensity matching functions.
   </p>
   <p>
-  If <i>scaling</i> = <tt>"mean"</tt>, <tt>"median"</tt>, <tt>"mode"</tt>, or <tt>"fit"</tt> bscale and bzero
+  If <i>scaling</i> = <span style="font-family: monospace;">"mean"</span>, <span style="font-family: monospace;">"median"</span>, <span style="font-family: monospace;">"mode"</span>, or <span style="font-family: monospace;">"fit"</span> bscale and bzero
   are computed directly from the input and reference image data using the
   image sections specified in the <i>regions</i> and one of the above fitting
   techniques as described in the ALGORITHMS section. All four algorithms
@@ -353,11 +353,11 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   </p>
   <p>
   <i>Regions</i> is interpreted as either: 1) a string of
-  the form <tt>"grid nx ny"</tt> specifying a list of nx by ny image sections
+  the form <span style="font-family: monospace;">"grid nx ny"</span> specifying a list of nx by ny image sections
   spanning the entire image, 2) a string defining the coordinates of a list
   of objects separated by commas e.g.
-  <tt>"103.3 189.2, 204.4 389.7"</tt>, 3) a string containing a list of image
-  sections separated by whitespace, e.g <tt>"[100:203,200:300] [400:500,400:500]"</tt>
+  <span style="font-family: monospace;">"103.3 189.2, 204.4 389.7"</span>, 3) a string containing a list of image
+  sections separated by whitespace, e.g <span style="font-family: monospace;">"[100:203,200:300] [400:500,400:500]"</span>
   4) the name of a text file containing the coordinates of one or
   more objects, one object per line, with the x and y coordinates
   in columns 1 and 2 respectively, 5) the name of a text
@@ -371,7 +371,7 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   data. 
   </p>
   <p>
-  If <i>scaling</i> = <tt>"photometry"</tt>, the bscale and bzero factors
+  If <i>scaling</i> = <span style="font-family: monospace;">"photometry"</span>, the bscale and bzero factors
   are computed directly from data in the input and reference image photometry
   files using the technique described in the ALGORITHMS section.
   In this case <i>regions</i> is a list of the input image photometry
@@ -385,14 +385,14 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   An image region is rejected from the fit if it contains data outside the
   limits specified by the <i>datamin</i> and <i>datamax</i> parameters
   and <i>scaling</i> =
-  <tt>"mean"</tt>, <tt>"median"</tt>, or <tt>"mode"</tt>. A pixel is rejected from the fit for an
+  <span style="font-family: monospace;">"mean"</span>, <span style="font-family: monospace;">"median"</span>, or <span style="font-family: monospace;">"mode"</span>. A pixel is rejected from the fit for an
   individual region if the pixel value is outside the limits specified
-  by datamin and datamax, and the scaling algorithm is <tt>"fit"</tt>. The datamin
-  and datamax parameters are not used by the <tt>"photometry"</tt> scaling algorithm .
+  by datamin and datamax, and the scaling algorithm is <span style="font-family: monospace;">"fit"</span>. The datamin
+  and datamax parameters are not used by the <span style="font-family: monospace;">"photometry"</span> scaling algorithm .
   </p>
   <p>
   Deviant pixels can be rejected from the fits to individual image regions
-  if <i>scaling</i> = <tt>"fit"</tt>, and <i>nreject</i>, <i>loreject</i>, and
+  if <i>scaling</i> = <span style="font-family: monospace;">"fit"</span>, and <i>nreject</i>, <i>loreject</i>, and
   <i>hireject</i> are set appropriately. Nreject, loreject and reject
   are also be used by all the scaling algorithms  to reject image regions
   which contribute deviant bscale and bzero values.
@@ -401,10 +401,10 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   The computed bscale and bzero value for each region and the final bscale 
   and bzero value for each input image are written to the linear
   transformation file <i>lintransform</i>.
-  If <i>databasefmt</i> is <tt>"yes"</tt> each result is written to a record whose name
+  If <i>databasefmt</i> is <span style="font-family: monospace;">"yes"</span> each result is written to a record whose name
   is either identical to the name of the input
   image or supplied by the user via the <i>records</i> parameter .
-  If <i>databasefmt</i> is <tt>"no"</tt>, then a single line containing the input image
+  If <i>databasefmt</i> is <span style="font-family: monospace;">"no"</span>, then a single line containing the input image
   name and the computed bscale and bzero values and their errors
   is written to the output shifts file.
   </p>
@@ -413,7 +413,7 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   bzero values will be applied to the input images to compute the output images.
   </p>
   <p>
-  If the <i>scaling</i> parameter is set to <tt>"file"</tt> then the shifts
+  If the <i>scaling</i> parameter is set to <span style="font-family: monospace;">"file"</span> then the shifts
   computed in a previous run of LINMATCH will be read from the <i>lintransform</i>
   file and applied to the input images to compute the output images.
   If no record list is supplied by the user LINMATCH will
@@ -676,10 +676,10 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   <!-- BeginSection: 'REFERENCES' -->
   <p>
   A review of doubly weighted linear regression problems in
-  astronomy can be found in the paper <tt>"Linear Regression in Astronomy. II"</tt>
+  astronomy can be found in the paper <span style="font-family: monospace;">"Linear Regression in Astronomy. II"</span>
   by (Feigelson and Babu (1992 Ap.J. 397, 55). A detailed derivation of the
   particular solution used by LINMATCH can be found in the article
-  <tt>"The Techniques of Least Squares and Stellar Photometry with CCDs"</tt>
+  <span style="font-family: monospace;">"The Techniques of Least Squares and Stellar Photometry with CCDs"</span>
   by Stetson (1989 Proceeding of the V Advanced School of Astrophysics,
   p 51).
   </p>
@@ -689,7 +689,7 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   <p>
   1. Match the intensity scales of a list of images to a reference
   image using a list of stars on the displayed reference image with
-  the image cursor and the <tt>"mean"</tt> scaling algorithm. Assume that none
+  the image cursor and the <span style="font-family: monospace;">"mean"</span> scaling algorithm. Assume that none
   of the stars are saturated and that a radius of 31 pixels is sufficient
   to include all the flux from the stars plus some background flux.
   Make sure that the correct gain and readout noise values are in the
@@ -732,7 +732,7 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   </pre>
   <p>
   4. Match the intensity of an input image which has been spatially
-  registered and psfmatched to the reference image using the <tt>"fit"</tt> algorithm
+  registered and psfmatched to the reference image using the <span style="font-family: monospace;">"fit"</span> algorithm
   and a single reference image region. Remove the effects of saturated
   pixels by setting datamax to 28000 counts, and the effects of any deviant pixels
   by setting nreject, loreject, and hireject to appropriate values.

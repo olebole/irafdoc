@@ -27,7 +27,7 @@ wcsedit: Edit an image wcs parameter
   <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image' -->
   <dd>The list of images for which the WCS is to be edited.  Image sections are
   ignored.  If the image does not exist a data-less image header is first
-  created with the default WCS of dimensionality given by the <tt>"wcsdim"</tt>
+  created with the default WCS of dimensionality given by the <span style="font-family: monospace;">"wcsdim"</span>
   parameter.
   </dd>
   </dl>
@@ -54,8 +54,8 @@ wcsedit: Edit an image wcs parameter
   <!-- Sec='PARAMETERS' Level=0 Label='axes1' Line='axes1' -->
   <dd>The list of principal axes for which <i>parameter</i> is to be edited.
   Axes1 can
-  be entered as a list of numbers separated by commas, e.g. <tt>"1,2"</tt> or as a
-  range, e.g. <tt>"1-2"</tt>.
+  be entered as a list of numbers separated by commas, e.g. <span style="font-family: monospace;">"1,2"</span> or as a
+  range, e.g. <span style="font-family: monospace;">"1-2"</span>.
   </dd>
   </dl>
   <dl>
@@ -63,36 +63,36 @@ wcsedit: Edit an image wcs parameter
   <!-- Sec='PARAMETERS' Level=0 Label='axes2' Line='axes2' -->
   <dd>The list of dependent axes for which <i>parameter</i> is to be edited.
   Axes2 can
-  be entered as a list of numbers separated by commas, e.g. <tt>"1,2"</tt> or as a
-  range, e.g. <tt>"1-2"</tt>. The axes2 parameter is only required if
-  <i>parameter</i> is <tt>"cd"</tt> or <tt>"ltm"</tt>.
+  be entered as a list of numbers separated by commas, e.g. <span style="font-family: monospace;">"1,2"</span> or as a
+  range, e.g. <span style="font-family: monospace;">"1-2"</span>. The axes2 parameter is only required if
+  <i>parameter</i> is <span style="font-family: monospace;">"cd"</span> or <span style="font-family: monospace;">"ltm"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>wcs = <tt>"world"</tt></b></dt>
+  <dt><b>wcs = <span style="font-family: monospace;">"world"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcs' Line='wcs = "world"' -->
-  <dd>The WCS to be edited.  The options are: the builtin systems <tt>"world"</tt> or
-  <tt>"physical"</tt>, or a named system, e.g. <tt>"image"</tt> or <tt>"multispec"</tt>. The builtin system
-  <tt>"logical"</tt> may not be edited.
+  <dd>The WCS to be edited.  The options are: the builtin systems <span style="font-family: monospace;">"world"</span> or
+  <span style="font-family: monospace;">"physical"</span>, or a named system, e.g. <span style="font-family: monospace;">"image"</span> or <span style="font-family: monospace;">"multispec"</span>. The builtin system
+  <span style="font-family: monospace;">"logical"</span> may not be edited.
   <dl>
   <dt><b>world</b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='world' Line='world' -->
-  <dd>If <i>wcs</i> is <tt>"world"</tt> the default WCS is edited. The default WCS
-  is either 1) the value of the environment variable <tt>"defwcs"</tt> if
+  <dd>If <i>wcs</i> is <span style="font-family: monospace;">"world"</span> the default WCS is edited. The default WCS
+  is either 1) the value of the environment variable <span style="font-family: monospace;">"defwcs"</span> if
   set in the user's IRAF environment (normally it is undefined) and present
   in the image header,
-  2) the value of the <tt>"system"</tt>
+  2) the value of the <span style="font-family: monospace;">"system"</span>
   attribute in the image header keyword WAT0_001 if present in the
-  image header or, 3) the <tt>"physical"</tt> coordinate system.
+  image header or, 3) the <span style="font-family: monospace;">"physical"</span> coordinate system.
   </dd>
   </dl>
   <dl>
   <dt><b>physical</b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='physical' Line='physical' -->
-  <dd>If <i>wcs</i> is <tt>"physical"</tt>, WCS is the pixel coordinate system of
+  <dd>If <i>wcs</i> is <span style="font-family: monospace;">"physical"</span>, WCS is the pixel coordinate system of
   the original image, which may be different from the pixel coordinate system
   of the current image, if the current image is the result of an
-  imcopy or other geometric transformation operation. In the <tt>"physical"</tt>
+  imcopy or other geometric transformation operation. In the <span style="font-family: monospace;">"physical"</span>
   coordinate system the ltv, ltm and the axis attribute
   parameters wtype, axtype, units, label, and format may be edited, but the FITS
   parameters crval, crpix, and cd cannot.
@@ -123,7 +123,7 @@ wcsedit: Edit an image wcs parameter
   </dd>
   </dl>
   <dl>
-  <dt><b>commands = <tt>""</tt></b></dt>
+  <dt><b>commands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='commands' Line='commands = ""' -->
   <dd>The interactive editing command prompt.
   </dd>
@@ -152,8 +152,8 @@ wcsedit: Edit an image wcs parameter
   In non-interactive mode WCSEDIT replaces the current value of the WCS
   parameter <i>parameter</i> with the new value <i>value</i> in the headers of
   <i>images</i> and prints a summary of the new WCS on the terminal.  If
-  <i>verbose</i> is <tt>"no"</tt> the summary is not printed.  If <i>verbose</i> is
-  <tt>"yes"</tt> and <i>update</i> is <tt>"no"</tt>, the result of the editing operation
+  <i>verbose</i> is <span style="font-family: monospace;">"no"</span> the summary is not printed.  If <i>verbose</i> is
+  <span style="font-family: monospace;">"yes"</span> and <i>update</i> is <span style="font-family: monospace;">"no"</span>, the result of the editing operation
   is printed on the terminal but the header is not modified.
   </p>
   <p>
@@ -165,7 +165,7 @@ wcsedit: Edit an image wcs parameter
   range of axes values. The WCS matrix parameters cd and ltm may be edited for
   more than one axis at a time by setting both <i>axes1</i> and <i>axes2</i> to
   a range of values. In this case, if no <i>axes2</i> values are entered,
-  <i>axes2</i> = <tt>""</tt>, the
+  <i>axes2</i> = <span style="font-family: monospace;">""</span>, the
   diagonal elements of the cd and ltm matrices specified by <i>axes1</i> are
   edited. A single non-diagonal element of the cd or ltm matrices can be
   edited by setting <i>axis1</i> and <i>axis2</i> to a single number.
@@ -180,7 +180,7 @@ wcsedit: Edit an image wcs parameter
   </p>
   <p>
   In interactive mode, WCSEDIT displays the current WCS
-  on the terminal if <i>verbose</i> = <tt>"yes"</tt>, and prompts the user for 
+  on the terminal if <i>verbose</i> = <span style="font-family: monospace;">"yes"</span>, and prompts the user for 
   an editing command.  The supported editing commands are shown below.
   </p>
   <pre>
@@ -268,14 +268,14 @@ wcsedit: Edit an image wcs parameter
   axis attributes which are encoded under these keywords (wtype, axtype,
   units, label, and format) may be edited.
   The IRAF WCS code currently
-  recognizes the following values for <tt>"wtype"</tt>: <tt>"linear"</tt>, <tt>"tan"</tt>, <tt>"sin"</tt>,
-  <tt>"arc"</tt>, and <tt>"multispec"</tt>.  If <tt>"wtype"</tt> is not defined or cannot
-  be decoded by the WCS code <tt>"linear"</tt> is assumed.
-  Axtype should be <tt>"ra"</tt> or <tt>"dec"</tt> if wtype is one of the sky projections
-  <tt>"tan"</tt>, <tt>"sin"</tt> or <tt>"arc"</tt>, otherwise it should be undefined.
-  WCSEDIT will combine the values of <tt>"wtype"</tt> and <tt>"axtype"</tt> on output to
+  recognizes the following values for <span style="font-family: monospace;">"wtype"</span>: <span style="font-family: monospace;">"linear"</span>, <span style="font-family: monospace;">"tan"</span>, <span style="font-family: monospace;">"sin"</span>,
+  <span style="font-family: monospace;">"arc"</span>, and <span style="font-family: monospace;">"multispec"</span>.  If <span style="font-family: monospace;">"wtype"</span> is not defined or cannot
+  be decoded by the WCS code <span style="font-family: monospace;">"linear"</span> is assumed.
+  Axtype should be <span style="font-family: monospace;">"ra"</span> or <span style="font-family: monospace;">"dec"</span> if wtype is one of the sky projections
+  <span style="font-family: monospace;">"tan"</span>, <span style="font-family: monospace;">"sin"</span> or <span style="font-family: monospace;">"arc"</span>, otherwise it should be undefined.
+  WCSEDIT will combine the values of <span style="font-family: monospace;">"wtype"</span> and <span style="font-family: monospace;">"axtype"</span> on output to
   produce the correct value of the FITS keyword CTYPE.
-  The <tt>"label"</tt> and <tt>"units"</tt> parameter may be set to any string constant.
+  The <span style="font-family: monospace;">"label"</span> and <span style="font-family: monospace;">"units"</span> parameter may be set to any string constant.
   Format must be set to a legal IRAF format as described in the section
   below.
   </p>
@@ -283,10 +283,10 @@ wcsedit: Edit an image wcs parameter
   <h3>Formats</h3>
   <!-- BeginSection: 'FORMATS' -->
   <p>
-  A  format  specification has the form <tt>"%w.dCn"</tt>, where w is the field
+  A  format  specification has the form <span style="font-family: monospace;">"%w.dCn"</span>, where w is the field
   width, d is the number of decimal places or the number of digits  of
   precision,  C  is  the  format  code,  and  n is radix character for
-  format code <tt>"r"</tt> only.  The w and d fields are optional.  The  format
+  format code <span style="font-family: monospace;">"r"</span> only.  The w and d fields are optional.  The  format
   codes C are as follows:
       
   </p>
@@ -363,11 +363,11 @@ wcsedit: Edit an image wcs parameter
   <!-- BeginSection: 'REFERENCES' -->
   <p>
   Detailed documentation for the IRAF world coordinate system interface MWCS
-  can be found in the file <tt>"iraf$sys/mwcs/MWCS.hlp"</tt>. This file can be
-  formatted and printed with the command <tt>"help iraf$sys/mwcs/MWCS.hlp fi+ |
-  lprint"</tt>.  Details of the FITS header world coordinate system interface can
-  be found in the document <tt>"World Coordinate Systems Representations Within the
-  FITS Format"</tt> by Hanisch and Wells, available from our anonymous ftp
+  can be found in the file <span style="font-family: monospace;">"iraf$sys/mwcs/MWCS.hlp"</span>. This file can be
+  formatted and printed with the command <span style="font-family: monospace;">"help iraf$sys/mwcs/MWCS.hlp fi+ |
+  lprint"</span>.  Details of the FITS header world coordinate system interface can
+  be found in the document <span style="font-family: monospace;">"World Coordinate Systems Representations Within the
+  FITS Format"</span> by Hanisch and Wells, available from our anonymous ftp
   archive.
   </p>
   <!-- EndSection:   'REFERENCES' -->
@@ -390,7 +390,7 @@ wcsedit: Edit an image wcs parameter
   <p>
   2. Change the default sky projection for an image with a defined tangent
   plane projection to one with a sin projection.  Note that wtype for both
-  axis1 and axis2 must be changed to <tt>"sin"</tt>. Check the results first before
+  axis1 and axis2 must be changed to <span style="font-family: monospace;">"sin"</span>. Check the results first before
   doing the actual update.
   </p>
   <pre>
@@ -459,7 +459,7 @@ wcsedit: Edit an image wcs parameter
   </pre>
   <p>
   8. Open and edit a new WCS for an image. Any pre-existing WCS will
-  be destroyed, assuming that the default wcs is not <tt>"newwcs"</tt>.
+  be destroyed, assuming that the default wcs is not <span style="font-family: monospace;">"newwcs"</span>.
   </p>
   <pre>
   	cl&gt; wcsedit image wcs=newwcs intera+
@@ -489,8 +489,8 @@ wcsedit: Edit an image wcs parameter
   <p>
   WCSEDIT does not permit the user to edit any parameters encoded in the
   WATi_jjj keywords other than the five listed: wtype, axtype, units, label,
-  and format. For example WCSEDIT cannot be used to edit the <tt>"speci"</tt> parameters
-  used by the IRAF spectral reductions code <tt>"multispec"</tt> format. The spectral
+  and format. For example WCSEDIT cannot be used to edit the <span style="font-family: monospace;">"speci"</span> parameters
+  used by the IRAF spectral reductions code <span style="font-family: monospace;">"multispec"</span> format. The spectral
   reduction code itself should be used to do this, although hfix can
   be used to fix a serious problem should it arise.
   </p>

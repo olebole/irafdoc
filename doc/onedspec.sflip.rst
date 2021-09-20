@@ -71,14 +71,14 @@ sflip: Flip data and/or dispersion coordinates in spectra
   dimensional images, collections of spectra in multispec format, and two and
   three dimensional spatial spectra in which one axis is dispersion.  In all
   cases the flipping affects only the dispersion axis of the image as
-  specified by the DISPAXIS header keyword or the <tt>"dispaxis"</tt> parameter.  The
+  specified by the DISPAXIS header keyword or the <span style="font-family: monospace;">"dispaxis"</span> parameter.  The
   parameters <i>coord_flip</i> and <i>data_flip</i> select whether the
   coordinate system and data are flipped.  If neither operation is selected
   then the output spectra will simply be copies of the input spectra.
   </p>
   <p>
   Flipping of the coordinate system means that the relation between
-  <tt>"logical"</tt> pixel coordinates (the index system of the image array)
+  <span style="font-family: monospace;">"logical"</span> pixel coordinates (the index system of the image array)
   and the dispersion and physical coordinate systems is reversed.
   The dispersion coordinate of the first pixel in the flipped spectrum
   will be the same as the dispersion coordinate of the last pixel

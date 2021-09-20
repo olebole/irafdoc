@@ -86,7 +86,7 @@ powercor: Apply power law correction to mountain reduced spectra
   nonlinear correction have been applied.
   </p>
   <p>
-  This task is a script calling <b>coincor</b> with <i>ccmode</i> = <tt>"iids"</tt>.
+  This task is a script calling <b>coincor</b> with <i>ccmode</i> = <span style="font-family: monospace;">"iids"</span>.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Examples</h3>

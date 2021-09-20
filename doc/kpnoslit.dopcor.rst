@@ -45,7 +45,7 @@ dopcor: Doppler correct spectra
   velocity are shifted to shorter wavelengths and vice-versa.  This parameter
   may be either a number or an image header keyword with the desired redshift
   or velocity value.  An image header keyword may also have an initial minus
-  sign, <tt>'-'</tt>, to specify the negative of a velocity or the redshift complement
+  sign, <span style="font-family: monospace;">'-'</span>, to specify the negative of a velocity or the redshift complement
   (1/(1+z)-1) of a redshift.  The choice between a redshift and a velocity is
   made with the <i>isvelocity</i> parameter.
   </dd>
@@ -63,7 +63,7 @@ dopcor: Doppler correct spectra
   <dl>
   <dt><b>add = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='add' Line='add = no' -->
-  <dd>Add doppler correction to existing correction in <tt>"multispec"</tt> spectra?
+  <dd>Add doppler correction to existing correction in <span style="font-family: monospace;">"multispec"</span> spectra?
   </dd>
   </dl>
   <dl>
@@ -85,12 +85,12 @@ dopcor: Doppler correct spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>apertures = <tt>""</tt></b></dt>
+  <dt><b>apertures = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
   <dd>List of apertures to be corrected.  If none are specified then all apertures
   are corrected.  An aperture list consists of comma separated aperture
   number or aperture number ranges.  A range is hypen separated and may
-  include an interval step following the character <tt>'x'</tt>.  See <b>ranges</b>
+  include an interval step following the character <span style="font-family: monospace;">'x'</span>.  See <b>ranges</b>
   for further information.  For N-dimensional spatial spectra such as
   long slit and Fabry-Perot spectra this parameter is ignored.
   </dd>
@@ -118,12 +118,12 @@ dopcor: Doppler correct spectra
   There are two common usages.  One is to take spectra with high doppler
   velocities, such as cosmological sources, and correct them to rest with
   respect to the earth.  In this case the measured redshift or velocity is
-  specified to <tt>"remove"</tt> this component.  The other usage is to correct
+  specified to <span style="font-family: monospace;">"remove"</span> this component.  The other usage is to correct
   spectra to heliocentric or local standard of rest.  The heliocentric or LSR
   velocities can be computed and entered in the image header with the task
   <b>rvcorrect</b>.  In this case it is tempting to again think you are
-  <tt>"removing"</tt> the velocity so that you specify the velocity as given in the
-  header.  But actually what is needed is to <tt>"add"</tt> the computed standard of
+  <span style="font-family: monospace;">"removing"</span> the velocity so that you specify the velocity as given in the
+  header.  But actually what is needed is to <span style="font-family: monospace;">"add"</span> the computed standard of
   rest velocity to the observed spectrum taken with respect to the telescope
   to place the dispersion in the desired center of rest.  Thus, in this case
   you specify the opposite of the computed heliocentric or LSR velocity; i.e.
@@ -147,7 +147,7 @@ dopcor: Doppler correct spectra
   	lambda_new = lamda_old * sqrt((1 + v/c)/(1 - v/c))
   </p>
   <p>
-  where v is the value of <tt>"redshift"</tt>.  If isvelocity=no, <i>redshift</i> is
+  where v is the value of <span style="font-family: monospace;">"redshift"</span>.  If isvelocity=no, <i>redshift</i> is
   interpreted as a cosmological redshift and the header dispersion solution
   is modified to give:
   </p>
@@ -155,10 +155,10 @@ dopcor: Doppler correct spectra
   	lambda_new = lamda_old * z
   </p>
   <p>
-  where z is the value of <tt>"redshift"</tt>
+  where z is the value of <span style="font-family: monospace;">"redshift"</span>
   </p>
   <p>
-  If the <i>add</i> parameter is used and the image uses a <tt>"multispec"</tt>
+  If the <i>add</i> parameter is used and the image uses a <span style="font-family: monospace;">"multispec"</span>
   format where the previous doppler factor is stored separately
   then the new doppler factor is:
   </p>

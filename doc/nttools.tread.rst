@@ -51,7 +51,7 @@ tread: Browse through a table.
   argument it will also display a default value for the argument.
   Pressing the return key gets the default value. Some command names are 
   two
-  words long, for example, <tt>"find forward"</tt>. Usually the second word is
+  words long, for example, <span style="font-family: monospace;">"find forward"</span>. Usually the second word is
   optional and modifies the meaning of the first.  If the second word is
   not optional and you omit it, the editor will prompt you for it. All
   command names can be abbreviated to one or more letters. If the
@@ -77,8 +77,8 @@ tread: Browse through a table.
   expression, read the help for the 'tselect' task. The direction of the search 
   depends 
   upon previous find commands. By default the search direction is forward;
-  however, if a <tt>"find backwards"</tt> command has been executed previously, 
-  searches will be done in a backwards direction until a <tt>"find forward"</tt>
+  however, if a <span style="font-family: monospace;">"find backwards"</span> command has been executed previously, 
+  searches will be done in a backwards direction until a <span style="font-family: monospace;">"find forward"</span>
   command is executed.
   </dd>
   </dl>
@@ -172,7 +172,7 @@ tread: Browse through a table.
   </dd>
   </dl>
   <dl>
-  <dt><b>(columns = <tt>""</tt>) [string]</b></dt>
+  <dt><b>(columns = <span style="font-family: monospace;">""</span>) [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(columns = "") [string]' -->
   <dd>Names of the columns to be edited.
   A null or blank string means edit all columns.
@@ -180,14 +180,14 @@ tread: Browse through a table.
   column names or column patterns containing the usual pattern matching
   meta-characters.  The names or patterns are separated by commas or
   white space.  The list can be placed in a file and the name of the
-  file preceded by an <tt>"@"</tt> character.
+  file preceded by an <span style="font-family: monospace;">"@"</span> character.
   If the first character in the column template is a bang (!),
   all columns NOT named will be displayed.
   The 'tlcol' task (with the 'nlist' parameter set to 1) may be used to generate a 
   list of
   column names so there is no question about spelling.  This list may be
   edited to rearrange (or delete) the names, and then pass the list to this task 
-  by preceding the its file name with an <tt>"@"</tt>, for example,  
+  by preceding the its file name with an <span style="font-family: monospace;">"@"</span>, for example,  
   tt&gt; tedit junk columns=@colnames.lis
   </dd>
   </dl>
@@ -223,7 +223,7 @@ tread: Browse through a table.
   tedit, tprint, tselect, stty
   </p>
   <p>
-  Type <tt>"help tables opt=sys"</tt> for a description of the 'tables' package.
+  Type <span style="font-family: monospace;">"help tables opt=sys"</span> for a description of the 'tables' package.
   </p>
   
   <!-- EndSection:    'SEE ALSO ' -->

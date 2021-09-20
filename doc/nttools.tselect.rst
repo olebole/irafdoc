@@ -41,7 +41,7 @@ tselect: Create a new table from selected rows of a table.
   <p>
   The pattern match operator (?=) has no corresponding Fortran form.  It takes a
   string expression as its first argument and a pattern as its second argument.
-  The result is <tt>"yes"</tt> if the pattern is contained in the string expression.
+  The result is <span style="font-family: monospace;">"yes"</span> if the pattern is contained in the string expression.
   Patterns are strings which may contain meta-characters (i.e., wildcard 
   characters used in pattern matching).
   The meta-characters themselves can be matched by preceeding them with the escape
@@ -127,7 +127,7 @@ tselect: Create a new table from selected rows of a table.
   <!-- Sec='PARAMETERS' Level=0 Label='expr' Line='expr [string]' -->
   <dd>The boolean expression which determines which rows are copied to the new
   table.  The expression may be placed in a list file and the name of the file
-  passed to this parameter (preceded by the <tt>"@"</tt> character).
+  passed to this parameter (preceded by the <span style="font-family: monospace;">"@"</span> character).
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -142,7 +142,7 @@ tselect: Create a new table from selected rows of a table.
   <p>
   2. Create a new set of spectra where all measurements with errors greater
   than ten percent are excluded. Use file name editing to create new tables
-  with the extension <tt>".tbl"</tt> instead of <tt>".tab"</tt>:
+  with the extension <span style="font-family: monospace;">".tbl"</span> instead of <span style="font-family: monospace;">".tab"</span>:
   </p>
   <pre>
   tt&gt; tselect  *.tab  *.%tab%tbl%  "ERROR / (FLUX + .001) &lt; .1"
@@ -181,7 +181,7 @@ tselect: Create a new table from selected rows of a table.
   tproject, tjoin, tproduct
   </p>
   <p>
-  Type <tt>"help tables opt=sys"</tt> for a higher-level description of the 'tables' 
+  Type <span style="font-family: monospace;">"help tables opt=sys"</span> for a higher-level description of the 'tables' 
   package.
   </p>
   

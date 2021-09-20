@@ -40,16 +40,16 @@ concatenate: Concatenate a list of files
   <dl>
   <dt><b>out_type = in_type</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='out_type' Line='out_type = in_type' -->
-  <dd>The output file type is forced if this parameter is defined as <tt>"binary"</tt>
-  or <tt>"text"</tt>.  If <tt>"out_type"</tt> does not begin with a <tt>"b"</tt> (or <tt>"B"</tt>), or a
-  <tt>"t"</tt> (<tt>"T"</tt>), then the output type is either <tt>"text"</tt>, if the output file is
+  <dd>The output file type is forced if this parameter is defined as <span style="font-family: monospace;">"binary"</span>
+  or <span style="font-family: monospace;">"text"</span>.  If <span style="font-family: monospace;">"out_type"</span> does not begin with a <span style="font-family: monospace;">"b"</span> (or <span style="font-family: monospace;">"B"</span>), or a
+  <span style="font-family: monospace;">"t"</span> (<span style="font-family: monospace;">"T"</span>), then the output type is either <span style="font-family: monospace;">"text"</span>, if the output file is
   the standard output, or is determined from the type of the first input file.
   </dd>
   </dl>
   <dl>
   <dt><b>append = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='append' Line='append = no' -->
-  <dd>If set to <tt>"yes"</tt>, <tt>"files"</tt> are appended to <tt>"output_file"</tt>.
+  <dd>If set to <span style="font-family: monospace;">"yes"</span>, <span style="font-family: monospace;">"files"</span> are appended to <span style="font-family: monospace;">"output_file"</span>.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -57,7 +57,7 @@ concatenate: Concatenate a list of files
   <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Each file in the input file list is appended to the output file.
-  If <tt>"output_file"</tt> is not the standard output, and if output redirection (<tt>"&gt;"</tt>)
+  If <span style="font-family: monospace;">"output_file"</span> is not the standard output, and if output redirection (<span style="font-family: monospace;">"&gt;"</span>)
   was not specified on the command line, the resulting stream of data is placed
   in a file.  The input can be STDIN, which makes for an easy way to enter a
   few lines of text into a file (but <i>type</i> is usually more convenient).
@@ -75,7 +75,7 @@ concatenate: Concatenate a list of files
   	cl&gt; concatenate file1,file2
   </pre>
   <p>
-  2. Write out files file1 and file2 into the new file <tt>"outfile"</tt>.
+  2. Write out files file1 and file2 into the new file <span style="font-family: monospace;">"outfile"</span>.
   </p>
   <pre>
   	cl&gt; concatenate file1,file2 outfile
@@ -87,30 +87,30 @@ concatenate: Concatenate a list of files
   	cl&gt; concatenate STDIN junk
   </pre>
   <p>
-  4. Write out the contents of each of the files whose names are given in <tt>"list"</tt>,
-  one per line, and append this data to <tt>"junk"</tt>.
+  4. Write out the contents of each of the files whose names are given in <span style="font-family: monospace;">"list"</span>,
+  one per line, and append this data to <span style="font-family: monospace;">"junk"</span>.
   </p>
   <pre>
   	cl&gt; concatenate @list junk append+
   </pre>
   <p>
   5. Concatenation is also possible using <i>type</i>, e.g., the following
-  command will append the contents of <tt>"file"</tt> to the file <tt>"outfile"</tt>, which will
+  command will append the contents of <span style="font-family: monospace;">"file"</span> to the file <span style="font-family: monospace;">"outfile"</span>, which will
   be created if it does not already exist.
   </p>
   <p>
   	cl&gt; type file &gt;&gt; outfile
   </p>
   <p>
-  The redirect-append operator <tt>"&gt;&gt;"</tt> may be used to append the output of any
+  The redirect-append operator <span style="font-family: monospace;">"&gt;&gt;"</span> may be used to append the output of any
   task to a file.
   </p>
   <!-- EndSection:   'EXAMPLES' -->
   <h3>Notes</h3>
   <!-- BeginSection: 'NOTES' -->
   <p>
-  All input files should be of the same type, either all <tt>"text"</tt> or all
-  <tt>"binary"</tt>.
+  All input files should be of the same type, either all <span style="font-family: monospace;">"text"</span> or all
+  <span style="font-family: monospace;">"binary"</span>.
   </p>
   <!-- EndSection:   'NOTES' -->
   <h3>See also</h3>

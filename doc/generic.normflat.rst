@@ -50,7 +50,7 @@ normflat: Create a flat field by normalizing and replacing low values
   </dd>
   </dl>
   <dl>
-  <dt><b>sample_section = <tt>"[]"</tt></b></dt>
+  <dt><b>sample_section = <span style="font-family: monospace;">"[]"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sample_section' Line='sample_section = "[]"' -->
   <dd>Section of the image to be sampled in determining the normalization if
   norm = INDEF.
@@ -72,7 +72,7 @@ normflat: Create a flat field by normalizing and replacing low values
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  To create a flat field from a calibration image <tt>"quartz"</tt> using pixels
+  To create a flat field from a calibration image <span style="font-family: monospace;">"quartz"</span> using pixels
   above 1000 and selecting the normalization to be 3500:
   </p>
   <p>

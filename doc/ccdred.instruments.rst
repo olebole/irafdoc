@@ -21,7 +21,7 @@ instruments: Instrument specific data files
   instruments, detectors, and observatories.  This is done by having
   instrument specific data files.  Note that by instrument we mean a
   combination of detector, instrument, application, and observatory, so
-  there might be several <tt>"instruments"</tt> associated with a particular CCD
+  there might be several <span style="font-family: monospace;">"instruments"</span> associated with a particular CCD
   detector.  Creating and maintaining the instrument files is generally
   the responsibility of the support staff, though the user may create or
   copy and modify his/her own instrument/application specific files.  The
@@ -37,7 +37,7 @@ instruments: Instrument specific data files
   default task parameters, and a bad pixel file identifying the cosmic
   bad pixels in the detector.  These files are generally stored in a
   system data directory which is a subdirectory of the logical
-  directory <tt>"ccddb$"</tt>.  Each file has a root name which identifies the
+  directory <span style="font-family: monospace;">"ccddb$"</span>.  Each file has a root name which identifies the
   instrument.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
@@ -51,27 +51,27 @@ instruments: Instrument specific data files
   <b>setinstrument</b> sets this parameter, though it can be set
   explicitly like any other parameter.  For the standard instrument
   translation file the root name is the instrument identification and the
-  extension is <tt>"dat"</tt> (<tt>"*.dat"</tt> files are protected from being removed in a
-  <tt>"stripped"</tt> system, i.e. when all nonessential files are removed).
+  extension is <span style="font-family: monospace;">"dat"</span> (<span style="font-family: monospace;">"*.dat"</span> files are protected from being removed in a
+  <span style="font-family: monospace;">"stripped"</span> system, i.e. when all nonessential files are removed).
   Private instrument files may be given any name desired.
   </p>
   <p>
   The instrument translation proceeds as follows.  When a package task needs
-  a parameter for an image, for example <tt>"imagetyp"</tt>, it looks in the instrument
+  a parameter for an image, for example <span style="font-family: monospace;">"imagetyp"</span>, it looks in the instrument
   translation file.  If the file is not found or none is specified then the
   image header keyword that is requested has the same name.  If an
   instrument translation file is defined then the requested
   parameter is translated to an image header keyword, provided a translation
   entry is given.  If no translation is given the package name is used.  For
-  example the package parameter <tt>"imagetyp"</tt> might be translated to <tt>"data-typ"</tt>
+  example the package parameter <span style="font-family: monospace;">"imagetyp"</span> might be translated to <span style="font-family: monospace;">"data-typ"</span>
   (the old NOAO CCD keyword).  If the parameter is not found then the default
   value specified in the translation file, if present, is returned.  For recording
   parameter information in the header, such as processing flags, the
   translation is also used.  The default value has no meaning in this case.
   For example, if the flag specifying that the image has been corrected
-  by a flat field is to be set then the package parameter name <tt>"flatcor"</tt>
-  might be translated to <tt>"ff-flag"</tt>.  If no translation is given then the
-  new image header parameter is entered as <tt>"flatcor"</tt>.
+  by a flat field is to be set then the package parameter name <span style="font-family: monospace;">"flatcor"</span>
+  might be translated to <span style="font-family: monospace;">"ff-flag"</span>.  If no translation is given then the
+  new image header parameter is entered as <span style="font-family: monospace;">"flatcor"</span>.
   </p>
   <p>
   The format of the translation file are lines consisting of the package
@@ -216,7 +216,7 @@ instruments: Instrument specific data files
   instrument.  The overscan bias and trim data sections show an alternate
   method of setting these instrument specific parameters.  They may be
   set in the setup script in which case they are given explicitly in the
-  user parameter list for <b>ccdproc</b>.  If the value is <tt>"image"</tt> then
+  user parameter list for <b>ccdproc</b>.  If the value is <span style="font-family: monospace;">"image"</span> then
   the parameters may be determined either through the default value in
   the instrument translation file, as illustrated in the previous
   section, or from the image header itself.
@@ -259,7 +259,7 @@ instruments: Instrument specific data files
   	245 246 312 315
   </pre>
   <p>
-  If there is a comment line in the file containing the word <tt>"untrimmed"</tt>
+  If there is a comment line in the file containing the word <span style="font-family: monospace;">"untrimmed"</span>
   then the coordinates of the bad pixel regions apply to the original CCD
   detector coordinates.
   If the image has been trimmed and the bad pixels are replaced at a later
@@ -268,7 +268,7 @@ instruments: Instrument specific data files
   CCD pixel coordinates.  Note that if a subraster readout is used the
   coordinates must still refer to the original CCD coordinates and
   not the raw, untrimmed readout image.  If the word
-  <tt>"untrimmed"</tt> does not appear then the coordinates are assumed to apply to
+  <span style="font-family: monospace;">"untrimmed"</span> does not appear then the coordinates are assumed to apply to
   the image directly; i.e. the trimmed coordinates if the image has been
   trimmed or the original coordinates if the image has not been trimmed.
   The standard bad pixel files should always refer to the original, untrimmed

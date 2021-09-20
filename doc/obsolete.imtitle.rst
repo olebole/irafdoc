@@ -44,7 +44,7 @@ imtitle: Change the title of an image (noao.proto V2.9)
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-      cl&gt; imtitle m1 <tt>"M1 U Band"</tt>
+      cl&gt; imtitle m1 <span style="font-family: monospace;">"M1 U Band"</span>
   </p>
   <!-- EndSection:   'EXAMPLES' -->
   <h3>Use instead</h3>

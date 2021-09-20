@@ -32,10 +32,10 @@ sptime: Spectroscopic exposure time calculator
   specified as spectrograph table parameters of the same name.  Some
   parameters may also be specified in other tables.  The tables in which the
   paramters may be specified are shown in brackets.  Table values are used
-  only if a string parameter is <tt>""</tt> or a numeric parameter is INDEF.
+  only if a string parameter is <span style="font-family: monospace;">""</span> or a numeric parameter is INDEF.
   Therefore parameter set values override values in the tables.  To override
   a table specified in the spectrograph file by no file the special value
-  <tt>"none"</tt> is used.  This task also uses default values, shown below in
+  <span style="font-family: monospace;">"none"</span> is used.  This task also uses default values, shown below in
   parenthesis, for parameters that have no value specified either in the
   parameter set or in a table.
   </dd>
@@ -78,7 +78,7 @@ sptime: Spectroscopic exposure time calculator
   spectra.
   </p>
   <dl>
-  <dt><b>spectrum = <tt>"blackbody"</tt></b></dt>
+  <dt><b>spectrum = <span style="font-family: monospace;">"blackbody"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='spectrum' Line='spectrum = "blackbody"' -->
   <dd>Source spectrum.  This may be a table or one of the following  special words:
   <dl>
@@ -107,7 +107,7 @@ sptime: Spectroscopic exposure time calculator
   </dd>
   </dl>
   <dl>
-  <dt><b>spectitle = <tt>""</tt> [spectrum|spectrograph]</b></dt>
+  <dt><b>spectitle = <span style="font-family: monospace;">""</span> [spectrum|spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='spectitle' Line='spectitle = "" [spectrum|spectrograph]' -->
   <dd>Spectrum title.
   </dd>
@@ -129,7 +129,7 @@ sptime: Spectroscopic exposure time calculator
   </dd>
   </dl>
   <dl>
-  <dt><b>sky = <tt>""</tt> (<tt>"none"</tt>) [spectrograph]</b></dt>
+  <dt><b>sky = <span style="font-family: monospace;">""</span> (<span style="font-family: monospace;">"none"</span>) [spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sky' Line='sky = "" ("none") [spectrograph]' -->
   <dd>Sky or background table.  The table is a two or three column text file
   consisting of wavelength in Angstroms, optional moon phase between 0 (new
@@ -137,20 +137,20 @@ sptime: Spectroscopic exposure time calculator
   </dd>
   </dl>
   <dl>
-  <dt><b>skytitle = <tt>""</tt> [sky|spectrograph]</b></dt>
+  <dt><b>skytitle = <span style="font-family: monospace;">""</span> [sky|spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='skytitle' Line='skytitle = "" [sky|spectrograph]' -->
   <dd>Sky title.
   </dd>
   </dl>
   <dl>
-  <dt><b>extinction = <tt>""</tt> (<tt>"none"</tt>) [spectrograph]</b></dt>
+  <dt><b>extinction = <span style="font-family: monospace;">""</span> (<span style="font-family: monospace;">"none"</span>) [spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='extinction' Line='extinction = "" ("none") [spectrograph]' -->
   <dd>Extinction table.  The table is a two column text file consisting of
   wavelength in Angstroms and extinction in magnitudes per airmass.
   </dd>
   </dl>
   <dl>
-  <dt><b>exttitle = <tt>""</tt> [spectrograph]</b></dt>
+  <dt><b>exttitle = <span style="font-family: monospace;">""</span> [spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='exttitle' Line='exttitle = "" [spectrograph]' -->
   <dd>Extinction title.
   </dd>
@@ -176,10 +176,10 @@ sptime: Spectroscopic exposure time calculator
   </dd>
   </dl>
   <dl>
-  <dt><b>funits = <tt>"AB"</tt> (<tt>"AB"</tt>) [spectrograph]</b></dt>
+  <dt><b>funits = <span style="font-family: monospace;">"AB"</span> (<span style="font-family: monospace;">"AB"</span>) [spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='funits' Line='funits = "AB" ("AB") [spectrograph]' -->
-  <dd>Flux units for the reference flux.  The values are <tt>"AB"</tt> for monochromatic
-  magnitude, <tt>"F_lambda"</tt> for ergs/s/cm^2/A, <tt>"F_nu"</tt> for ergs/s/cm^2/Hz,
+  <dd>Flux units for the reference flux.  The values are <span style="font-family: monospace;">"AB"</span> for monochromatic
+  magnitude, <span style="font-family: monospace;">"F_lambda"</span> for ergs/s/cm^2/A, <span style="font-family: monospace;">"F_nu"</span> for ergs/s/cm^2/Hz,
   and standard bandpasses of U, B, V, R, I, J, H, Ks, K, L, L' and M.
   </dd>
   </dl>
@@ -294,7 +294,7 @@ sptime: Spectroscopic exposure time calculator
   The following parameters a miscellaneous parameters for the task.
   </p>
   <dl>
-  <dt><b>search = <tt>"spectimedb$"</tt></b></dt>
+  <dt><b>search = <span style="font-family: monospace;">"spectimedb$"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='search' Line='search = "spectimedb$"' -->
   <dd>List of directories to search for the various table files.  The current
   direction is always searched first and the directory sptimelib$ is searched
@@ -322,32 +322,32 @@ sptime: Spectroscopic exposure time calculator
   </dd>
   </dl>
   <dl>
-  <dt><b>units = <tt>"Angstroms"</tt> (<tt>"Angstroms"</tt>) [spectrograph]</b></dt>
+  <dt><b>units = <span style="font-family: monospace;">"Angstroms"</span> (<span style="font-family: monospace;">"Angstroms"</span>) [spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='units' Line='units = "Angstroms" ("Angstroms") [spectrograph]' -->
   <dd>Dispersion units for input and output dispersion coordinates.  The
   units syntax is described in the UNITS section.  The most common units
-  are <tt>"Angstroms"</tt>, <tt>"nm"</tt>, <tt>"micron"</tt>, and <tt>"wn"</tt>.  Note that this does not
+  are <span style="font-family: monospace;">"Angstroms"</span>, <span style="font-family: monospace;">"nm"</span>, <span style="font-family: monospace;">"micron"</span>, and <span style="font-family: monospace;">"wn"</span>.  Note that this does not
   apply to the dispersion units in the tables which are always in Angstroms.
   </dd>
   </dl>
   <dl>
-  <dt><b>skysub = <tt>""</tt> (default based on context) [spectrograph]</b></dt>
+  <dt><b>skysub = <span style="font-family: monospace;">""</span> (default based on context) [spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='skysub' Line='skysub = "" (default based on context) [spectrograph]' -->
-  <dd>Type of sky and background subtraction.  The values are <tt>"none"</tt> for no
-  background subtraction, <tt>"longslit"</tt> for subtraction using pixels in the
-  aperture, <tt>"multiap"</tt> for background determined from a number of other
-  apertures, and <tt>"shuffle"</tt> for shuffled observations.  The multiap case is
+  <dd>Type of sky and background subtraction.  The values are <span style="font-family: monospace;">"none"</span> for no
+  background subtraction, <span style="font-family: monospace;">"longslit"</span> for subtraction using pixels in the
+  aperture, <span style="font-family: monospace;">"multiap"</span> for background determined from a number of other
+  apertures, and <span style="font-family: monospace;">"shuffle"</span> for shuffled observations.  The multiap case is
   typical for fiber spectrographs.  For shuffle the duty cycle is 50% and the
   exposure times are the sum of both sky and object.  If no sky or thermal
-  background is specified then the default is <tt>"none"</tt>.  If a fiber table or
-  circular aperture is specified the default is <tt>"multiap"</tt> otherwise the
-  default is <tt>"longslit"</tt>.
+  background is specified then the default is <span style="font-family: monospace;">"none"</span>.  If a fiber table or
+  circular aperture is specified the default is <span style="font-family: monospace;">"multiap"</span> otherwise the
+  default is <span style="font-family: monospace;">"longslit"</span>.
   </dd>
   </dl>
   <dl>
   <dt><b>nskyaps = 10  (10) [spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nskyaps' Line='nskyaps = 10  (10) [spectrograph]' -->
-  <dd>Number of sky apertures when using <tt>"multiap"</tt> sky subtraction.
+  <dd>Number of sky apertures when using <span style="font-family: monospace;">"multiap"</span> sky subtraction.
   </dd>
   </dl>
   <dl>
@@ -363,7 +363,7 @@ sptime: Spectroscopic exposure time calculator
   </dd>
   </dl>
   <dl>
-  <dt><b>sensfunc = <tt>""</tt> [spectrograph]</b></dt>
+  <dt><b>sensfunc = <span style="font-family: monospace;">""</span> [spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sensfunc' Line='sensfunc = "" [spectrograph]' -->
   <dd>Sensitivity function table.  This is a two column text file consisting
   of wavelength in Angstroms and sensitivity defined as
@@ -381,7 +381,7 @@ sptime: Spectroscopic exposure time calculator
   points across the size of the detector.
   </p>
   <dl>
-  <dt><b>output = <tt>"object"</tt> (<tt>""</tt>) [spectrograph]</b></dt>
+  <dt><b>output = <span style="font-family: monospace;">"object"</span> (<span style="font-family: monospace;">""</span>) [spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = "object" ("") [spectrograph]' -->
   <dd>List of quantities to output as graphs and/or in a text file.  These are
   given as a function of dispersion (as specified by units parameters)
@@ -542,37 +542,37 @@ sptime: Spectroscopic exposure time calculator
   </dd>
   </dl>
   <dl>
-  <dt><b>list = <tt>""</tt> [spectrograph]</b></dt>
+  <dt><b>list = <span style="font-family: monospace;">""</span> [spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='list' Line='list = "" [spectrograph]' -->
   <dd>Filename for list output of the selected quantities.  The output
   will be appended if the file already exists.
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>"stdgraph"</tt> (<tt>"stdgraph"</tt>) [spectrograph]</b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span> (<span style="font-family: monospace;">"stdgraph"</span>) [spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph" ("stdgraph") [spectrograph]' -->
   <dd>Graphics output device for graphs of the output quantities.
   </dd>
   </dl>
   <dl>
-  <dt><b>interactive = <tt>"yes"</tt> (<tt>"yes"</tt>) [spectrograph]</b></dt>
+  <dt><b>interactive = <span style="font-family: monospace;">"yes"</span> (<span style="font-family: monospace;">"yes"</span>) [spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = "yes" ("yes") [spectrograph]' -->
-  <dd>Interactive pause after each graph?  If <tt>"yes"</tt> then cursor input is
+  <dd>Interactive pause after each graph?  If <span style="font-family: monospace;">"yes"</span> then cursor input is
   enabled after each graph otherwise all the graphs will be drawn without
-  pause.  When viewing the graphs interactively this should be <tt>"yes"</tt> otherwise
+  pause.  When viewing the graphs interactively this should be <span style="font-family: monospace;">"yes"</span> otherwise
   the graphs will flash by rapidly leaving the last graph on the screen.
   When outputing only one graph or when redirecting the graphs to a
-  printer or file then setting this parameter to <tt>"no"</tt> is suggested.
+  printer or file then setting this parameter to <span style="font-family: monospace;">"no"</span> is suggested.
   </dd>
   </dl>
   <p>
-  The last parameter is a <tt>"parameter set"</tt> (<tt>"pset"</tt>) containing all the
+  The last parameter is a <span style="font-family: monospace;">"parameter set"</span> (<span style="font-family: monospace;">"pset"</span>) containing all the
   spectrograph parameters.
   </p>
   <dl>
-  <dt><b>specpars = <tt>""</tt></b></dt>
+  <dt><b>specpars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='specpars' Line='specpars = ""' -->
-  <dd>Spectrograph parameter set.  If <tt>""</tt> then the default pset <b>specpars</b>
+  <dd>Spectrograph parameter set.  If <span style="font-family: monospace;">""</span> then the default pset <b>specpars</b>
   is used otherwise the named pset is used.
   </dd>
   </dl>
@@ -580,7 +580,7 @@ sptime: Spectroscopic exposure time calculator
   SPECPARS PARAMETERS
   </p>
   <dl>
-  <dt><b>spectrograph = <tt>""</tt></b></dt>
+  <dt><b>spectrograph = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='spectrograph' Line='spectrograph = ""' -->
   <dd>Spectrograph efficiency table.  This text file may contain parameters and an
   efficiency table.  The table consists of two columns containing
@@ -589,7 +589,7 @@ sptime: Spectroscopic exposure time calculator
   </dd>
   </dl>
   <dl>
-  <dt><b>title = <tt>""</tt> [spectrograph]</b></dt>
+  <dt><b>title = <span style="font-family: monospace;">""</span> [spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='title' Line='title = "" [spectrograph]' -->
   <dd>Title for the spectrograph.
   </dd>
@@ -624,13 +624,13 @@ sptime: Spectroscopic exposure time calculator
   </dd>
   </dl>
   <dl>
-  <dt><b>telescope = <tt>""</tt> [spectrograph]</b></dt>
+  <dt><b>telescope = <span style="font-family: monospace;">""</span> [spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='telescope' Line='telescope = "" [spectrograph]' -->
   <dd>Telescope efficiency table as a function of wavelength.  
   </dd>
   </dl>
   <dl>
-  <dt><b>teltitle = <tt>""</tt> [telescope|spectrograph]</b></dt>
+  <dt><b>teltitle = <span style="font-family: monospace;">""</span> [telescope|spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='teltitle' Line='teltitle = "" [telescope|spectrograph]' -->
   <dd>Telescope title.
   </dd>
@@ -650,7 +650,7 @@ sptime: Spectroscopic exposure time calculator
   </dd>
   </dl>
   <dl>
-  <dt><b>emissivity = <tt>""</tt> [telescope|spectrograph]</b></dt>
+  <dt><b>emissivity = <span style="font-family: monospace;">""</span> [telescope|spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='emissivity' Line='emissivity = "" [telescope|spectrograph]' -->
   <dd>Emissivity table.  The emissivity is for all elements in the telescope
   and spectrograph.  If an emissivity is specified and an the <i>thermal</i>
@@ -659,53 +659,53 @@ sptime: Spectroscopic exposure time calculator
   </dd>
   </dl>
   <dl>
-  <dt><b>emistitle = <tt>""</tt> [emissivity|spectrograph]</b></dt>
+  <dt><b>emistitle = <span style="font-family: monospace;">""</span> [emissivity|spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='emistitle' Line='emistitle = "" [emissivity|spectrograph]' -->
   <dd>Title for the emissivity table used.
   </dd>
   </dl>
   <dl>
-  <dt><b>corrector = <tt>""</tt> [spectrograph]</b></dt>
+  <dt><b>corrector = <span style="font-family: monospace;">""</span> [spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='corrector' Line='corrector = "" [spectrograph]' -->
   <dd>Efficiency table for one or more correctors.
   </dd>
   </dl>
   <dl>
-  <dt><b>cortitle = <tt>""</tt> [corrector|spectrograph]</b></dt>
+  <dt><b>cortitle = <span style="font-family: monospace;">""</span> [corrector|spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cortitle' Line='cortitle = "" [corrector|spectrograph]' -->
   <dd>Title for corrector table used.
   </dd>
   </dl>
   <dl>
-  <dt><b>adc = <tt>""</tt> [spectrograph]</b></dt>
+  <dt><b>adc = <span style="font-family: monospace;">""</span> [spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='adc' Line='adc = "" [spectrograph]' -->
   <dd>Efficiency table for atmospheric dispersion compensator.
   </dd>
   </dl>
   <dl>
-  <dt><b>adctitle = <tt>""</tt> [adc|spectrograph]</b></dt>
+  <dt><b>adctitle = <span style="font-family: monospace;">""</span> [adc|spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='adctitle' Line='adctitle = "" [adc|spectrograph]' -->
   <dd>Title for ADC table used.
   </dd>
   </dl>
   <dl>
-  <dt><b>disperser = <tt>""</tt> [spectrograph]</b></dt>
+  <dt><b>disperser = <span style="font-family: monospace;">""</span> [spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='disperser' Line='disperser = "" [spectrograph]' -->
   <dd>Disperser table.  If this file contains an efficiency table it applies
   only to first order.  An alternate first order table and tables for
-  other orders are given by table parameters <tt>"effN"</tt>, where N is the order.
+  other orders are given by table parameters <span style="font-family: monospace;">"effN"</span>, where N is the order.
   </dd>
   </dl>
   <dl>
-  <dt><b>disptitle = <tt>""</tt> [disperser|spectrograph]</b></dt>
+  <dt><b>disptitle = <span style="font-family: monospace;">""</span> [disperser|spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='disptitle' Line='disptitle = "" [disperser|spectrograph]' -->
   <dd>Title for disperser.
   </dd>
   </dl>
   <dl>
-  <dt><b>disptype = <tt>""</tt> (<tt>"grating"</tt>) [disperser|spectrograph]</b></dt>
+  <dt><b>disptype = <span style="font-family: monospace;">""</span> (<span style="font-family: monospace;">"grating"</span>) [disperser|spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='disptype' Line='disptype = "" ("grating") [disperser|spectrograph]' -->
-  <dd>Type of disperser element.  The chocies are <tt>"grating"</tt>, <tt>"grism"</tt>, or <tt>"generic"</tt>.
+  <dd>Type of disperser element.  The chocies are <span style="font-family: monospace;">"grating"</span>, <span style="font-family: monospace;">"grism"</span>, or <span style="font-family: monospace;">"generic"</span>.
   The generic setting will simply use the desired central wavelength and
   dispersion without a grating or grism model.  One effect of this is that
   the mapping between detector pixel and wavelength is linear; i.e. a constant
@@ -770,24 +770,24 @@ sptime: Spectroscopic exposure time calculator
   </dd>
   </dl>
   <dl>
-  <dt><b>xdisperser = <tt>""</tt> [spectrograph]</b></dt>
+  <dt><b>xdisperser = <span style="font-family: monospace;">""</span> [spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xdisperser' Line='xdisperser = "" [spectrograph]' -->
   <dd>Crossdisperser table.  If this file contains an efficiency table it applies
   only to first order.  An alternate first order table and tables for
-  other orders are given by table parameters <tt>"xeffN"</tt>, where N is the order.
+  other orders are given by table parameters <span style="font-family: monospace;">"xeffN"</span>, where N is the order.
   </dd>
   </dl>
   <dl>
-  <dt><b>xdisptitle = <tt>""</tt> [xdisperser|spectrograph]</b></dt>
+  <dt><b>xdisptitle = <span style="font-family: monospace;">""</span> [xdisperser|spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xdisptitle' Line='xdisptitle = "" [xdisperser|spectrograph]' -->
   <dd>Title for crossdisperser.
   </dd>
   </dl>
   <dl>
-  <dt><b>disptype = <tt>""</tt> (<tt>"grating"</tt>) [xdisperser|spectrograph]</b></dt>
+  <dt><b>disptype = <span style="font-family: monospace;">""</span> (<span style="font-family: monospace;">"grating"</span>) [xdisperser|spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='disptype' Line='disptype = "" ("grating") [xdisperser|spectrograph]' -->
-  <dd>Type of crossdisperser element.  The chocies are <tt>""</tt>, <tt>"grating"</tt>, <tt>"grism"</tt>,
-  or <tt>"generic"</tt>.  The empty string eliminates use of a cross disperser.
+  <dd>Type of crossdisperser element.  The chocies are <span style="font-family: monospace;">""</span>, <span style="font-family: monospace;">"grating"</span>, <span style="font-family: monospace;">"grism"</span>,
+  or <span style="font-family: monospace;">"generic"</span>.  The empty string eliminates use of a cross disperser.
   The generic setting will simply use the desired central wavelength and
   dispersion without a grating or grism model.  One effect of this is that
   the mapping between detector pixel and wavelength is linear; i.e. a constant
@@ -849,35 +849,35 @@ sptime: Spectroscopic exposure time calculator
   </dd>
   </dl>
   <dl>
-  <dt><b>aperture = <tt>""</tt> (default based on context) [spectrograph]</b></dt>
+  <dt><b>aperture = <span style="font-family: monospace;">""</span> (default based on context) [spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='aperture' Line='aperture = "" (default based on context) [spectrograph]' -->
   <dd>Aperture table.  The text file gives aperture thruput as a function of the
   aperture size in units of seeing FWHM.  For rectangular apertures there are
   two independent variables corresponding to the width and length while for
   circular apertures there is one independent variable corresponding to the
   diameter.  If not specified a default table is supplied.  If a fiber table
-  or a diameter is specified then the table <tt>"circle"</tt> is used otherwise the
-  table <tt>"slit"</tt> is used.  Because <tt>"sptimelib$"</tt> is the last directory searched
+  or a diameter is specified then the table <span style="font-family: monospace;">"circle"</span> is used otherwise the
+  table <span style="font-family: monospace;">"slit"</span> is used.  Because <span style="font-family: monospace;">"sptimelib$"</span> is the last directory searched
   there are default files with these names in this directory for Gaussian
   seeing profiles passing through a circular or slit aperture.
   </dd>
   </dl>
   <dl>
-  <dt><b>aptitle = <tt>""</tt> [aperture|spectrograph]</b></dt>
+  <dt><b>aptitle = <span style="font-family: monospace;">""</span> [aperture|spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='aptitle' Line='aptitle = "" [aperture|spectrograph]' -->
   <dd>Title for aperture used.
   </dd>
   </dl>
   <dl>
-  <dt><b>aptype = <tt>""</tt> (default based on context) [aperture|spectrograph]</b></dt>
+  <dt><b>aptype = <span style="font-family: monospace;">""</span> (default based on context) [aperture|spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='aptype' Line='aptype = "" (default based on context) [aperture|spectrograph]' -->
-  <dd>The aperture types are <tt>"rectangular"</tt> or <tt>"circular"</tt>.  If the
+  <dd>The aperture types are <span style="font-family: monospace;">"rectangular"</span> or <span style="font-family: monospace;">"circular"</span>.  If the
   parameter is not specified then if the aperture table has two columns the
-  type is <tt>"circular"</tt> otherwise it is <tt>"rectangular"</tt>.
+  type is <span style="font-family: monospace;">"circular"</span> otherwise it is <span style="font-family: monospace;">"rectangular"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>fiber = <tt>""</tt> [spectrograph]</b></dt>
+  <dt><b>fiber = <span style="font-family: monospace;">""</span> [spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fiber' Line='fiber = "" [spectrograph]' -->
   <dd>Fiber transmission table.  The transmission is a function of wavelength
   in Angstroms.  If no fiber transmission is specified then no fiber
@@ -885,13 +885,13 @@ sptime: Spectroscopic exposure time calculator
   </dd>
   </dl>
   <dl>
-  <dt><b>fibtitle = <tt>""</tt> [fiber|spectrograph]</b></dt>
+  <dt><b>fibtitle = <span style="font-family: monospace;">""</span> [fiber|spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fibtitle' Line='fibtitle = "" [fiber|spectrograph]' -->
   <dd>Title for fiber transmission used.
   </dd>
   </dl>
   <dl>
-  <dt><b>filter = <tt>""</tt> [spectrograph]</b></dt>
+  <dt><b>filter = <span style="font-family: monospace;">""</span> [spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='filter' Line='filter = "" [spectrograph]' -->
   <dd>Filter transmission table.  The transmission is a function of wavelength
   in Angstroms.  If no filter transmission is specified then no filter
@@ -899,13 +899,13 @@ sptime: Spectroscopic exposure time calculator
   </dd>
   </dl>
   <dl>
-  <dt><b>ftitle = <tt>""</tt> [filter|spectrograph]</b></dt>
+  <dt><b>ftitle = <span style="font-family: monospace;">""</span> [filter|spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ftitle' Line='ftitle = "" [filter|spectrograph]' -->
   <dd>Title for filter transmission used.
   </dd>
   </dl>
   <dl>
-  <dt><b>filter2 = <tt>""</tt> [spectrograph]</b></dt>
+  <dt><b>filter2 = <span style="font-family: monospace;">""</span> [spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='filter2' Line='filter2 = "" [spectrograph]' -->
   <dd>Filter transmission table.  The transmission is a function of wavelength
   in Angstroms.  If no filter transmission is specified then no filter
@@ -913,19 +913,19 @@ sptime: Spectroscopic exposure time calculator
   </dd>
   </dl>
   <dl>
-  <dt><b>f2title = <tt>""</tt> [filter|spectrograph]</b></dt>
+  <dt><b>f2title = <span style="font-family: monospace;">""</span> [filter|spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='f2title' Line='f2title = "" [filter|spectrograph]' -->
   <dd>Title for filter transmission used.
   </dd>
   </dl>
   <dl>
-  <dt><b>block = <tt>""</tt> (<tt>"no"</tt>) [filter|spectrograph]</b></dt>
+  <dt><b>block = <span style="font-family: monospace;">""</span> (<span style="font-family: monospace;">"no"</span>) [filter|spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='block' Line='block = "" ("no") [filter|spectrograph]' -->
-  <dd>If <tt>"yes"</tt> then no check will be made for other orders.
+  <dd>If <span style="font-family: monospace;">"yes"</span> then no check will be made for other orders.
   </dd>
   </dl>
   <dl>
-  <dt><b>collimator = <tt>""</tt> (1.) [spectrograph]</b></dt>
+  <dt><b>collimator = <span style="font-family: monospace;">""</span> (1.) [spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='collimator' Line='collimator = "" (1.) [spectrograph]' -->
   <dd>Collimator transmission table.  The transmission is a function of
   wavelength in Angstroms.  If no collimator is specified then a unit
@@ -933,7 +933,7 @@ sptime: Spectroscopic exposure time calculator
   </dd>
   </dl>
   <dl>
-  <dt><b>coltitle = <tt>""</tt> [collimator|spectrograph]</b></dt>
+  <dt><b>coltitle = <span style="font-family: monospace;">""</span> [collimator|spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coltitle' Line='coltitle = "" [collimator|spectrograph]' -->
   <dd>Title for collimator.
   </dd>
@@ -947,7 +947,7 @@ sptime: Spectroscopic exposure time calculator
   </dd>
   </dl>
   <dl>
-  <dt><b>camera = <tt>""</tt> (1.) [spectrograph]</b></dt>
+  <dt><b>camera = <span style="font-family: monospace;">""</span> (1.) [spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='camera' Line='camera = "" (1.) [spectrograph]' -->
   <dd>Camera transmission table.  The transmission is a function of wavelength
   in Angstroms.  If no camera is specified then a unit transmission
@@ -955,13 +955,13 @@ sptime: Spectroscopic exposure time calculator
   </dd>
   </dl>
   <dl>
-  <dt><b>camtitle = <tt>""</tt> [camera|spectrograph]</b></dt>
+  <dt><b>camtitle = <span style="font-family: monospace;">""</span> [camera|spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='camtitle' Line='camtitle = "" [camera|spectrograph]' -->
   <dd>Title for camera.
   </dd>
   </dl>
   <dl>
-  <dt><b>camfl = <tt>""</tt> (1.) [camera|spectrograph]</b></dt>
+  <dt><b>camfl = <span style="font-family: monospace;">""</span> (1.) [camera|spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='camfl' Line='camfl = "" (1.) [camera|spectrograph]' -->
   <dd>Camera focal length in meters.  The ratio of the collimator to
   camera focal lengths determines the magnification between the aperture
@@ -970,13 +970,13 @@ sptime: Spectroscopic exposure time calculator
   </dd>
   </dl>
   <dl>
-  <dt><b>resolution = <tt>""</tt> (2 pixels) [camera|spectrograph]</b></dt>
+  <dt><b>resolution = <span style="font-family: monospace;">""</span> (2 pixels) [camera|spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='resolution' Line='resolution = "" (2 pixels) [camera|spectrograph]' -->
   <dd>Camera resolution on the detector in mm.
   </dd>
   </dl>
   <dl>
-  <dt><b>vignetting = <tt>""</tt> (1.) [camera|spectrograph]</b></dt>
+  <dt><b>vignetting = <span style="font-family: monospace;">""</span> (1.) [camera|spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='vignetting' Line='vignetting = "" (1.) [camera|spectrograph]' -->
   <dd>Vignetting table.  The independent variable is distance from the center
   of the detector in mm.  The value is the fraction the light transmitted.
@@ -984,13 +984,13 @@ sptime: Spectroscopic exposure time calculator
   </dd>
   </dl>
   <dl>
-  <dt><b>detector = <tt>""</tt> (1.) [spectrograph]</b></dt>
+  <dt><b>detector = <span style="font-family: monospace;">""</span> (1.) [spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='detector' Line='detector = "" (1.) [spectrograph]' -->
   <dd>Detector DQE table.  The DQE is a function of wavelength in Angstroms.
   </dd>
   </dl>
   <dl>
-  <dt><b>dettitle = <tt>""</tt> [detector|spectrograph]</b></dt>
+  <dt><b>dettitle = <span style="font-family: monospace;">""</span> [detector|spectrograph]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dettitle' Line='dettitle = "" [detector|spectrograph]' -->
   <dd>Title for detector.
   </dd>
@@ -1075,7 +1075,7 @@ sptime: Spectroscopic exposure time calculator
   </p>
   <p>
   <b>SPTIME</b> takes an input source spectrum (either a reference blackbody,
-  a power law, or a user spectrum), a background <tt>"sky"</tt> spectrum and a
+  a power law, or a user spectrum), a background <span style="font-family: monospace;">"sky"</span> spectrum and a
   instrumental thermal background, reddening to apply to the spectrum,
   observing parameters such as exposure time, central wavelength, seeing,
   airmass, and moon phase, instrument parameters such as aperture sizes and
@@ -1148,7 +1148,7 @@ sptime: Spectroscopic exposure time calculator
   by various parameters.  All the parameters are described in the PARAMETERS
   section.  For flexibility parameters may be defined either in the
   parameter set or in one or more table files.  In all cases the parameter
-  set values have precedence.   But if the values are <tt>""</tt> for string  parameters
+  set values have precedence.   But if the values are <span style="font-family: monospace;">""</span> for string  parameters
   or INDEF for numeric parameters the values are found either in the
   spectrograph table or in a table that is associated with the parameter.
   </p>
@@ -1160,10 +1160,10 @@ sptime: Spectroscopic exposure time calculator
   </p>
   <p>
   There is also another way to maintain a separate file for different
-  instruments.  The <i>specpars</i> parameter is a <tt>"parameter set"</tt> or <tt>"pset"</tt>.
-  The default value of <tt>""</tt> corresponds to the pset task <b>specpars</b>.
+  instruments.  The <i>specpars</i> parameter is a <span style="font-family: monospace;">"parameter set"</span> or <span style="font-family: monospace;">"pset"</span>.
+  The default value of <span style="font-family: monospace;">""</span> corresponds to the pset task <b>specpars</b>.
   However, using <b>eparam</b> one can edit this pset and then save the
-  parameters to a named parameter file with <tt>":e &lt;name&gt;.par"</tt>.  This
+  parameters to a named parameter file with <span style="font-family: monospace;">":e &lt;name&gt;.par"</span>.  This
   pset can be edited with <b>eparam</b> and specified in the
   <i>specpars</i> parameter.  One other point about pset parameters is that
   they can also be included as command line arguments just as any other
@@ -1195,7 +1195,7 @@ sptime: Spectroscopic exposure time calculator
   tables.  The files may contain comments, parameters, and tables.
   </p>
   <p>
-  Comment lines begin with <tt>'#'</tt> and may contain any text.  They can occur
+  Comment lines begin with <span style="font-family: monospace;">'#'</span> and may contain any text.  They can occur
   anywhere in the file, though normally they are at the beginning of the file.
   </p>
   <p>
@@ -1231,7 +1231,7 @@ sptime: Spectroscopic exposure time calculator
   <p>
   Normally the table values, the dependent variable in the last column, are
   in fractional transmission or DQE.  There is a special parameter,
-  <tt>"tablescale"</tt>, which may be specified to multiply the dependent variable
+  <span style="font-family: monospace;">"tablescale"</span>, which may be specified to multiply the dependent variable
   column.  This would mainly be used to provide tables in percent rather
   than fraction.
   </p>
@@ -1267,12 +1267,12 @@ sptime: Spectroscopic exposure time calculator
   </pre>
   <p>
   The disperser and crossdisperser files have an additional feature to allow
-  for efficiency curves at different orders.  The parameter <tt>"effN"</tt> (or <tt>"xeffN"</tt>
+  for efficiency curves at different orders.  The parameter <span style="font-family: monospace;">"effN"</span> (or <span style="font-family: monospace;">"xeffN"</span>
   for crossdispersers), where N is the order, may be specified whose value is
-  a separate table (or constant).  If there is no <tt>"eff1/xeff1"</tt> (efficiency in
+  a separate table (or constant).  If there is no <span style="font-family: monospace;">"eff1/xeff1"</span> (efficiency in
   first order) then any efficiency table in the disperser table is used.  In
   other words, any table in the disperser file applies only to first order
-  and only if there is no <tt>"eff1/xeff1"</tt> parameter defining a separate first
+  and only if there is no <span style="font-family: monospace;">"eff1/xeff1"</span> parameter defining a separate first
   order efficiency file.
   </p>
   <p>
@@ -1286,10 +1286,10 @@ sptime: Spectroscopic exposure time calculator
   </p>
   <p>
   The dispersion units are specified by strings having a unit type from the
-  list below along with the possible preceding modifiers, <tt>"inverse"</tt>, to
-  select the inverse of the unit and <tt>"log"</tt> to select logarithmic units. For
-  example <tt>"log angstroms"</tt> to select the logarithm of wavelength in Angstroms
-  and <tt>"inv microns"</tt> to select inverse microns.  The various identifiers may
+  list below along with the possible preceding modifiers, <span style="font-family: monospace;">"inverse"</span>, to
+  select the inverse of the unit and <span style="font-family: monospace;">"log"</span> to select logarithmic units. For
+  example <span style="font-family: monospace;">"log angstroms"</span> to select the logarithm of wavelength in Angstroms
+  and <span style="font-family: monospace;">"inv microns"</span> to select inverse microns.  The various identifiers may
   be abbreviated as words but the syntax is not sophisticated enough to
   recognize standard scientific abbreviations except for those given
   explicitly below.
@@ -1453,7 +1453,7 @@ sptime: Spectroscopic exposure time calculator
   </p>
   <p>
   The last magnification factor is given by the spectrograph parameters
-  <tt>"apmagdisp"</tt> and <tt>"apxmagdisp"</tt>.  These define magnifications of the aperture
+  <span style="font-family: monospace;">"apmagdisp"</span> and <span style="font-family: monospace;">"apxmagdisp"</span>.  These define magnifications of the aperture
   along and across the dispersion apart from the other two magnifications.
   These parameters are often missing which means no additional
   magnifications.
@@ -1540,7 +1540,7 @@ sptime: Spectroscopic exposure time calculator
   </p>
   <p>
   The number of sky pixels depends on the type of sky subtraction.
-  For <tt>"longslit"</tt> sky subtraction the number of sky pixels is given
+  For <span style="font-family: monospace;">"longslit"</span> sky subtraction the number of sky pixels is given
   by the difference of the number of aperture pixels and the number of
   object pixels.  For circular apertures this always comes out to zero so
   it does not make sense to use longslit sky subtraction.  For rectangular
@@ -1549,7 +1549,7 @@ sptime: Spectroscopic exposure time calculator
   zero a warning is printed.
   </p>
   <p>
-  For <tt>"multiap"</tt> sky subtraction the number of sky pixels is the
+  For <span style="font-family: monospace;">"multiap"</span> sky subtraction the number of sky pixels is the
   number of sky apertures times the number of pixels per aperture.
   </p>
   <p>

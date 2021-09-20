@@ -29,28 +29,28 @@ apnoise: Compute and examine noise characteristics of spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>apertures = <tt>""</tt></b></dt>
+  <dt><b>apertures = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
   <dd>Apertures to recenter, resize, trace, and extract.  This only applies
   to apertures read from the input or reference database.  Any new
   apertures defined with the automatic finding algorithm or interactively
   are always selected.  The syntax is a list comma separated ranges
   where a range can be a single aperture number, a hyphen separated
-  range of aperture numbers, or a range with a step specified by <tt>"x&lt;step&gt;"</tt>;
-  for example, <tt>"1,3-5,9-12x2"</tt>.
+  range of aperture numbers, or a range with a step specified by <span style="font-family: monospace;">"x&lt;step&gt;"</span>;
+  for example, <span style="font-family: monospace;">"1,3-5,9-12x2"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>references = <tt>""</tt></b></dt>
+  <dt><b>references = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='references' Line='references = ""' -->
   <dd>List of reference images to be used to define apertures for the input
   images.  When a reference image is given it supersedes apertures
-  previously defined for the input image. The list may be null, <tt>""</tt>, or
+  previously defined for the input image. The list may be null, <span style="font-family: monospace;">""</span>, or
   any number of images less than or equal to the list of input images.
   There are three special words which may be used in place of an image
-  name.  The word <tt>"last"</tt> refers to the last set of apertures written to
-  the database.  The word <tt>"OLD"</tt> requires that an entry exist
-  and the word <tt>"NEW"</tt> requires that the entry not exist for each input image.
+  name.  The word <span style="font-family: monospace;">"last"</span> refers to the last set of apertures written to
+  the database.  The word <span style="font-family: monospace;">"OLD"</span> requires that an entry exist
+  and the word <span style="font-family: monospace;">"NEW"</span> requires that the entry not exist for each input image.
   </dd>
   </dl>
   <dl>
@@ -132,28 +132,28 @@ apnoise: Compute and examine noise characteristics of spectra
   The following parameters control the profile and spectrum fitting.
   </p>
   <dl>
-  <dt><b>background = <tt>"none"</tt></b></dt>
+  <dt><b>background = <span style="font-family: monospace;">"none"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='background' Line='background = "none"' -->
-  <dd>Type of background subtraction.  The choices are <tt>"none"</tt> for no
-  background subtraction, <tt>"average"</tt> to average the background within the
-  background regions, or <tt>"fit"</tt> to fit across the dispersion using the
-  background within the background regions.  Note that the <tt>"average"</tt>
+  <dd>Type of background subtraction.  The choices are <span style="font-family: monospace;">"none"</span> for no
+  background subtraction, <span style="font-family: monospace;">"average"</span> to average the background within the
+  background regions, or <span style="font-family: monospace;">"fit"</span> to fit across the dispersion using the
+  background within the background regions.  Note that the <span style="font-family: monospace;">"average"</span>
   option does not do any medianing or bad pixel checking; it is faster
   than fitting however.  Background subtraction also requires that the
-  background fitting parameters are properly defined.  For the <tt>"average"</tt>
+  background fitting parameters are properly defined.  For the <span style="font-family: monospace;">"average"</span>
   option only the background sample regions parameter is used.
   </dd>
   </dl>
   <dl>
-  <dt><b>pfit = <tt>"fit1d"</tt> (fit1d|fit2d)</b></dt>
+  <dt><b>pfit = <span style="font-family: monospace;">"fit1d"</span> (fit1d|fit2d)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pfit' Line='pfit = "fit1d" (fit1d|fit2d)' -->
   <dd>Profile fitting algorithm to use with variance weighting or cleaning.
   When determining a profile the two dimensional spectrum is divided by
   an estimate of the one dimensional spectrum to form a normalized two
   dimensional spectrum profile.  This profile is then smoothed by fitting
-  one dimensional functions, <tt>"fit1d"</tt>, along the lines or columns most closely
+  one dimensional functions, <span style="font-family: monospace;">"fit1d"</span>, along the lines or columns most closely
   corresponding to the dispersion axis or a special two dimensional
-  function, <tt>"fit2d"</tt>, described by Marsh (see <b>approfile</b>).
+  function, <span style="font-family: monospace;">"fit2d"</span>, described by Marsh (see <b>approfile</b>).
   </dd>
   </dl>
   <dl>
@@ -182,7 +182,7 @@ apnoise: Compute and examine noise characteristics of spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>readnoise = <tt>"0."</tt></b></dt>
+  <dt><b>readnoise = <span style="font-family: monospace;">"0."</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='readnoise' Line='readnoise = "0."' -->
   <dd>Read out noise in photons.  This parameter defines the minimum noise
   sigma.  It is defined in terms of photons (or electrons) and scales
@@ -191,7 +191,7 @@ apnoise: Compute and examine noise characteristics of spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>gain = <tt>"1."</tt></b></dt>
+  <dt><b>gain = <span style="font-family: monospace;">"1."</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gain' Line='gain = "1."' -->
   <dd>Detector gain or conversion factor between photons/electrons and
   data values.  It is specified as the number of photons per data value.
@@ -263,7 +263,7 @@ apnoise: Compute and examine noise characteristics of spectra
   steps can be skipped.  Once the apertures are defined the apertures
   are internally extracted using the profile modeling (see <b>approfile</b>)
   with the optional background subtraction, cleanning, and choices of
-  profile fitting algorithm, <tt>"fit1d"</tt> or <tt>"fit2d"</tt>.  But rather than
+  profile fitting algorithm, <span style="font-family: monospace;">"fit1d"</span> or <span style="font-family: monospace;">"fit2d"</span>.  But rather than
   outputing the extracted spectrum as in <b>apsum</b> or <b>apall</b>
   or various functions of the data and profile model as in <b>apfit</b>,
   <b>apnormalize</b>, or <b>apflatten</b>, the task computes the
@@ -302,7 +302,7 @@ apnoise: Compute and examine noise characteristics of spectra
   	    data numbers is given with a line showing the
   	    expected value for the current read noise and gain.
   	    The read noise and gain may be varied if desired.
-  	    Exit with <tt>'q'</tt>
+  	    Exit with <span style="font-family: monospace;">'q'</span>
   </pre>
   <!-- EndSection:   'EXAMPLES' -->
   <h3>Revisions</h3>
@@ -310,10 +310,10 @@ apnoise: Compute and examine noise characteristics of spectra
   <dl>
   <dt><b>APNOISE V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='APNOISE' Line='APNOISE V2.11' -->
-  <dd>The <tt>"apertures"</tt> parameter can be used to select apertures for resizing,
+  <dd>The <span style="font-family: monospace;">"apertures"</span> parameter can be used to select apertures for resizing,
   recentering, tracing, and extraction.  This parameter name was previously
   used for selecting apertures in the recentering algorithm.  The new
-  parameter name for this is now <tt>"aprecenter"</tt>.
+  parameter name for this is now <span style="font-family: monospace;">"aprecenter"</span>.
   </dd>
   </dl>
   <!-- EndSection:   'REVISIONS' -->

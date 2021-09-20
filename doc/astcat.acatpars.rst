@@ -23,7 +23,7 @@ acatpars: Default astrometry file format parameter set
   <h3>Parameters</h3>
   <!-- BeginSection: 'PARAMETERS' -->
   <dl>
-  <dt><b>ftype = <tt>"stext"</tt></b></dt>
+  <dt><b>ftype = <span style="font-family: monospace;">"stext"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ftype' Line='ftype = "stext"' -->
   <dd>The astrometry file format. The current options are:
   <dl>
@@ -42,12 +42,12 @@ acatpars: Default astrometry file format parameter set
   </dd>
   </dl>
   <dl>
-  <dt><b>ccsystem = <tt>"j2000"</tt></b></dt>
+  <dt><b>ccsystem = <span style="font-family: monospace;">"j2000"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ccsystem' Line='ccsystem = "j2000"' -->
   <dd>The default celestial coordinate system. The coordinate systems of most
-  interest to users are <tt>"icrs"</tt>, <tt>"j2000"</tt>, and <tt>"b1950"</tt>. For more detailed
+  interest to users are <span style="font-family: monospace;">"icrs"</span>, <span style="font-family: monospace;">"j2000"</span>, and <span style="font-family: monospace;">"b1950"</span>. For more detailed
   information on all the celestial coordinate system options type
-  <tt>"help ccsystems"</tt>.
+  <span style="font-family: monospace;">"help ccsystems"</span>.
   </dd>
   </dl>
   <dl>
@@ -63,213 +63,213 @@ acatpars: Default astrometry file format parameter set
   in either the original catalog or the astrometry file produced by a
   catalog query.
   <br>
-  The format of the standard fields is <tt>"fieldno [units [format]]"</tt> for simple
-  text files and <tt>"foffset fsize [units [format]]"</tt> for blocked text files
-  where the quantities in <tt>"[]"</tt> are optional. Standard fields with <tt>""</tt> valued
+  The format of the standard fields is <span style="font-family: monospace;">"fieldno [units [format]]"</span> for simple
+  text files and <span style="font-family: monospace;">"foffset fsize [units [format]]"</span> for blocked text files
+  where the quantities in <span style="font-family: monospace;">"[]"</span> are optional. Standard fields with <span style="font-family: monospace;">""</span> valued
   field descriptions are assumed to be undefined.
   <br>
   <dl>
-  <dt><b>id = <tt>""</tt></b></dt>
+  <dt><b>id = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='id' Line='id = ""' -->
   <dd>The standard id field. The data type is character. The default units and
-  format values are <tt>"INDEF"</tt> and <tt>"%20s"</tt>.
+  format values are <span style="font-family: monospace;">"INDEF"</span> and <span style="font-family: monospace;">"%20s"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b> ra = <tt>"1 hours"</tt></b></dt>
+  <dt><b> ra = <span style="font-family: monospace;">"1 hours"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line=' ra = "1 hours"' -->
   <dd>The standard right ascension / longitude field. The data type is double. The
-  default units and format values are <tt>"hours"</tt>and <tt>"%11.2h"</tt>.
+  default units and format values are <span style="font-family: monospace;">"hours"</span>and <span style="font-family: monospace;">"%11.2h"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b> dec = <tt>"2 degrees"</tt></b></dt>
+  <dt><b> dec = <span style="font-family: monospace;">"2 degrees"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line=' dec = "2 degrees"' -->
   <dd>The standard declination / latitude field. The data type is double. The default
-  units and format values are <tt>"degrees"</tt>and <tt>"%11.1h"</tt>.
+  units and format values are <span style="font-family: monospace;">"degrees"</span>and <span style="font-family: monospace;">"%11.1h"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b> era = <tt>""</tt></b></dt>
+  <dt><b> era = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line=' era = ""' -->
   <dd>The standard right ascension / longitude error field. The data type is double.
-  The default units and format values are <tt>"asecs"</tt> and <tt>"%6.3f"</tt>.
+  The default units and format values are <span style="font-family: monospace;">"asecs"</span> and <span style="font-family: monospace;">"%6.3f"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b> edec = <tt>""</tt></b></dt>
+  <dt><b> edec = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line=' edec = ""' -->
   <dd>The standard declination / latitude error field. The data type is double.
-  The default units and format values are <tt>"asecs"</tt> and <tt>"%6.3f"</tt>.
+  The default units and format values are <span style="font-family: monospace;">"asecs"</span> and <span style="font-family: monospace;">"%6.3f"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b> pmra = <tt>""</tt></b></dt>
+  <dt><b> pmra = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line=' pmra = ""' -->
   <dd>The standard right ascension / longitude proper motion field. The data type
-  is double. The default units and format values are <tt>"masecs/yr"</tt> and <tt>"%7.3f"</tt>.
+  is double. The default units and format values are <span style="font-family: monospace;">"masecs/yr"</span> and <span style="font-family: monospace;">"%7.3f"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b> pmdec = <tt>""</tt></b></dt>
+  <dt><b> pmdec = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line=' pmdec = ""' -->
   <dd>The standard declination / latitude proper motion field. The data type
-  is double. The default units and format values are <tt>"masecs/yr"</tt> and <tt>"%7.3f"</tt>.
+  is double. The default units and format values are <span style="font-family: monospace;">"masecs/yr"</span> and <span style="font-family: monospace;">"%7.3f"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b> epmra = <tt>""</tt></b></dt>
+  <dt><b> epmra = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line=' epmra = ""' -->
   <dd>The standard right ascension / longitude proper motion error field. The data
-  type is double. The default units and format values are <tt>"masecs/yr"</tt> and <tt>"%7.3f"</tt>.
+  type is double. The default units and format values are <span style="font-family: monospace;">"masecs/yr"</span> and <span style="font-family: monospace;">"%7.3f"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b> epmdec = <tt>""</tt></b></dt>
+  <dt><b> epmdec = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line=' epmdec = ""' -->
   <dd>The standard declination / latitude proper motion error field. The data
-  type is double. The default units and format values are <tt>"masecs/yr"</tt> and <tt>"%7.3f"</tt>.
+  type is double. The default units and format values are <span style="font-family: monospace;">"masecs/yr"</span> and <span style="font-family: monospace;">"%7.3f"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>catsystem = <tt>""</tt></b></dt>
+  <dt><b>catsystem = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='catsystem' Line='catsystem = ""' -->
   <dd>The standard celestial coordinate system field. The data type is character.
-  The default units and format field values are <tt>"INDEF"</tt> and <tt>"%15s"</tt>. If defined
+  The default units and format field values are <span style="font-family: monospace;">"INDEF"</span> and <span style="font-family: monospace;">"%15s"</span>. If defined
   the value of this field overrides the coordinate system defined by the
-  <i>csystem</i> parameter. Supported values of catsystem are <tt>"icrs"</tt>, <tt>"fk5"</tt>,
-  <tt>"fk4"</tt>, <tt>"fk4-noe"</tt>, <tt>"ecliptic"</tt>, <tt>"galactic"</tt>, and <tt>"supergalactic"</tt>.
+  <i>csystem</i> parameter. Supported values of catsystem are <span style="font-family: monospace;">"icrs"</span>, <span style="font-family: monospace;">"fk5"</span>,
+  <span style="font-family: monospace;">"fk4"</span>, <span style="font-family: monospace;">"fk4-noe"</span>, <span style="font-family: monospace;">"ecliptic"</span>, <span style="font-family: monospace;">"galactic"</span>, and <span style="font-family: monospace;">"supergalactic"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>equinox = <tt>""</tt></b></dt>
+  <dt><b>equinox = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='equinox' Line='equinox = ""' -->
   <dd>The standard celestial coordinate system equinox field. The data type is
-  character. The default units and format field values are <tt>"INDEF"</tt> and
-  <tt>"%15s"</tt>. Equinoxes are typical expressed as Julian epochs e.g. <tt>"J2000.0"</tt>,
-  Besselian epochs e.g. <tt>"B1950.0"</tt>, or years <tt>"2000.0"</tt>.
+  character. The default units and format field values are <span style="font-family: monospace;">"INDEF"</span> and
+  <span style="font-family: monospace;">"%15s"</span>. Equinoxes are typical expressed as Julian epochs e.g. <span style="font-family: monospace;">"J2000.0"</span>,
+  Besselian epochs e.g. <span style="font-family: monospace;">"B1950.0"</span>, or years <span style="font-family: monospace;">"2000.0"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>epoch = <tt>""</tt></b></dt>
+  <dt><b>epoch = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='epoch' Line='epoch = ""' -->
   <dd>The standard celestial coordinate system epoch field. The data type is
-  character. The default units and format field values are <tt>"INDEF"</tt> and
-  <tt>"%15s"</tt>. Epochs are typical expressed as Julian epochs e.g. <tt>"J2000.0"</tt>,
-  Besselian epochs e.g. <tt>"B1950.0"</tt>, years <tt>"2000.0"</tt>, or Julian date if the
+  character. The default units and format field values are <span style="font-family: monospace;">"INDEF"</span> and
+  <span style="font-family: monospace;">"%15s"</span>. Epochs are typical expressed as Julian epochs e.g. <span style="font-family: monospace;">"J2000.0"</span>,
+  Besselian epochs e.g. <span style="font-family: monospace;">"B1950.0"</span>, years <span style="font-family: monospace;">"2000.0"</span>, or Julian date if the
   epoch value &gt; 3000.0.
   </dd>
   </dl>
   <dl>
-  <dt><b>px = <tt>""</tt></b></dt>
+  <dt><b>px = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='px' Line='px = ""' -->
   <dd>The standard parallax field. The data type is double. The default units
-  and format values are <tt>"msecs"</tt> and <tt>"%6.3f"</tt>.
+  and format values are <span style="font-family: monospace;">"msecs"</span> and <span style="font-family: monospace;">"%6.3f"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>rv = <tt>""</tt></b></dt>
+  <dt><b>rv = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='rv' Line='rv = ""' -->
   <dd>The standard radial velocity field. The data type is double. The default units
-  and format values are <tt>"km/sec"</tt> and <tt>"%6.3f"</tt>.
+  and format values are <span style="font-family: monospace;">"km/sec"</span> and <span style="font-family: monospace;">"%6.3f"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>epx = <tt>""</tt></b></dt>
+  <dt><b>epx = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='epx' Line='epx = ""' -->
   <dd>The standard parallax error field. The data type is double. The default units
-  and format values are <tt>"msecs"</tt> and <tt>"%6.3f"</tt>.
+  and format values are <span style="font-family: monospace;">"msecs"</span> and <span style="font-family: monospace;">"%6.3f"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>erv = <tt>""</tt></b></dt>
+  <dt><b>erv = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='erv' Line='erv = ""' -->
   <dd>The standard radial velocity error field. The data type is double. The default
-  units and format values are <tt>"km/sec"</tt> and <tt>"%6.3f"</tt>.
+  units and format values are <span style="font-family: monospace;">"km/sec"</span> and <span style="font-family: monospace;">"%6.3f"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>mag = <tt>""</tt></b></dt>
+  <dt><b>mag = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='mag' Line='mag = ""' -->
   <dd>The standard magnitude field. The  data type is real. The default units
-  and format field values are <tt>"mags"</tt> and <tt>"%8.3f"</tt>.
+  and format field values are <span style="font-family: monospace;">"mags"</span> and <span style="font-family: monospace;">"%8.3f"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>color = <tt>""</tt></b></dt>
+  <dt><b>color = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='color' Line='color = ""' -->
   <dd>The standard color field. The  data type is real. The default units
-  and format field values are <tt>"mags"</tt> and <tt>"%8.3f"</tt>.
+  and format field values are <span style="font-family: monospace;">"mags"</span> and <span style="font-family: monospace;">"%8.3f"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>emag = <tt>""</tt></b></dt>
+  <dt><b>emag = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='emag' Line='emag = ""' -->
   <dd>The standard magnitude error field. The  data type is real. The default units
-  and format field values are <tt>"mags"</tt> and <tt>"%8.3f"</tt>.
+  and format field values are <span style="font-family: monospace;">"mags"</span> and <span style="font-family: monospace;">"%8.3f"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>ecolor = <tt>""</tt></b></dt>
+  <dt><b>ecolor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='ecolor' Line='ecolor = ""' -->
   <dd>The standard color error field. The  data type is real. The default units
-  and format field values are <tt>"mags"</tt> and <tt>"%8.3f"</tt>.
+  and format field values are <span style="font-family: monospace;">"mags"</span> and <span style="font-family: monospace;">"%8.3f"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>xp = <tt>""</tt></b></dt>
+  <dt><b>xp = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='xp' Line='xp = ""' -->
   <dd>The predicted x coordinate field. The data type is double. The default units
-  and format field values are <tt>"pixels"</tt> and <tt>"%9.3f"</tt>.
+  and format field values are <span style="font-family: monospace;">"pixels"</span> and <span style="font-family: monospace;">"%9.3f"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>yp = <tt>""</tt></b></dt>
+  <dt><b>yp = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='yp' Line='yp = ""' -->
   <dd>The predicted y coordinate field. The data type is double. The default units
-  and format field values are <tt>"pixels"</tt> and <tt>"%9.3f"</tt>.
+  and format field values are <span style="font-family: monospace;">"pixels"</span> and <span style="font-family: monospace;">"%9.3f"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>xc = <tt>""</tt></b></dt>
+  <dt><b>xc = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='xc' Line='xc = ""' -->
   <dd>The centered x coordinate field. The data type is double. The default units
-  and format field values are <tt>"pixels"</tt> and <tt>"%9.3f"</tt>.
+  and format field values are <span style="font-family: monospace;">"pixels"</span> and <span style="font-family: monospace;">"%9.3f"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>yc = <tt>""</tt></b></dt>
+  <dt><b>yc = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='yc' Line='yc = ""' -->
   <dd>The centered y coordinate field. The data type is double. The default units
-  and format field values are <tt>"pixels"</tt> and <tt>"%9.3f"</tt>.
+  and format field values are <span style="font-family: monospace;">"pixels"</span> and <span style="font-family: monospace;">"%9.3f"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>exc = <tt>""</tt></b></dt>
+  <dt><b>exc = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='exc' Line='exc = ""' -->
   <dd>The centered x coordinate error field. The data type is double. The default
-  units and format field values are <tt>"pixels"</tt> and <tt>"%9.3f"</tt>.
+  units and format field values are <span style="font-family: monospace;">"pixels"</span> and <span style="font-family: monospace;">"%9.3f"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>eyc = <tt>""</tt></b></dt>
+  <dt><b>eyc = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='eyc' Line='eyc = ""' -->
   <dd>The centered y coordinate error field. The data type is double. The default
-  units and format field values are <tt>"pixels"</tt> and <tt>"%9.3f"</tt>.
+  units and format field values are <span style="font-family: monospace;">"pixels"</span> and <span style="font-family: monospace;">"%9.3f"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>imag = <tt>""</tt></b></dt>
+  <dt><b>imag = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='imag' Line='imag = ""' -->
   <dd>The standard instrumental magnitude field. The data type is real. The default
-  units and format values are <tt>"mags"</tt> and <tt>"8.3f"</tt>.
+  units and format values are <span style="font-family: monospace;">"mags"</span> and <span style="font-family: monospace;">"8.3f"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>eimag = <tt>""</tt></b></dt>
+  <dt><b>eimag = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='eimag' Line='eimag = ""' -->
   <dd>The standard instrumental magnitude error field. The data type is real. The
-  default units and format values are <tt>"mags"</tt> and <tt>"8.3f"</tt>.
+  default units and format values are <span style="font-family: monospace;">"mags"</span> and <span style="font-family: monospace;">"8.3f"</span>.
   </dd>
   </dl>
   </dd>
@@ -287,7 +287,7 @@ acatpars: Default astrometry file format parameter set
   </p>
   <p>
   By default acatpars assumes that the input astrometry file is a
-  simple text file, <i>ftype</i> = <tt>"stext"</tt>, with newline delimited records
+  simple text file, <i>ftype</i> = <span style="font-family: monospace;">"stext"</span>, with newline delimited records
   and whitespace delimited fields. In this case users can define
   the fields by setting the appropriate standard file parameters
   to a string with the following format, e.g.
@@ -308,7 +308,7 @@ acatpars: Default astrometry file format parameter set
   modify it in some way and rewrite it.
   </p>
   <p>
-  If <i>ftype</i> is set to <tt>"btext"</tt> for blocked text the input astrometry file
+  If <i>ftype</i> is set to <span style="font-family: monospace;">"btext"</span> for blocked text the input astrometry file
   is assumed to be a text file with newline delimited records and fixed size
   fields. This format can be used to describe astrometry files with
   fields containing embedded blanks such as id fields. In this case users
@@ -327,7 +327,7 @@ acatpars: Default astrometry file format parameter set
   <p>
   The fundamental coordinate system of the astrometry file is set by
   the <i>csystem</i> parameter. This is a global parameter applying to the
-  entire astrometry file . Its value is overwritten if the <tt>"catsystem"</tt> standard
+  entire astrometry file . Its value is overwritten if the <span style="font-family: monospace;">"catsystem"</span> standard
   field is defined, in which case the astrometry file may contain entries in
   many different fundamental coordinate systems.
   </p>

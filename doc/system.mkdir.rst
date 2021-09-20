@@ -40,21 +40,21 @@ mkdir: Create a new directory
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. Make a subdirectory named <tt>"sub1"</tt>.
+  1. Make a subdirectory named <span style="font-family: monospace;">"sub1"</span>.
   </p>
   <p>
   	cl&gt; mkdir sub1
   </p>
   <p>
-  2. Make a subdirectory <tt>"sub2"</tt> below <tt>"sub1"</tt>.  The subdirectory <tt>"sub1"</tt> must
+  2. Make a subdirectory <span style="font-family: monospace;">"sub2"</span> below <span style="font-family: monospace;">"sub1"</span>.  The subdirectory <span style="font-family: monospace;">"sub1"</span> must
   already exist.
   </p>
   <p>
   	cl&gt; mkdir sub1/sub2
   </p>
   <p>
-  3. Make a directory <tt>"blue"</tt> at the same level in the directory hierarchy as
-  the current directory (<tt>".."</tt> is a synonym for the previous directory).
+  3. Make a directory <span style="font-family: monospace;">"blue"</span> at the same level in the directory hierarchy as
+  the current directory (<span style="font-family: monospace;">".."</span> is a synonym for the previous directory).
   </p>
   <p>
   	cl&gt; mkdir ../blue

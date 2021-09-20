@@ -41,7 +41,7 @@ titable: Insert 2-D tables into rows of a 3-D table.
   When creating a new output table, the information describing its columns
   can be taken from two sources. If parameter 'template' has the name of an
   existing 3-D table, the column descriptions, including maximum array sizes,
-  will be taken from that table. If 'template' has an invalid or null (<tt>""</tt>)
+  will be taken from that table. If 'template' has an invalid or null (<span style="font-family: monospace;">""</span>)
   value, the column-defining information will be take from the first table 
   in the input list, where its number of rows will define the maximum array
   size allowed in the table being created. Column selectors are allowed in
@@ -58,10 +58,10 @@ titable: Insert 2-D tables into rows of a 3-D table.
   and all selected rows from the input table will be stored as a 1-dimensional 
   array in a single cell in the corresponding column in the output 3-D table. 
   The row in this table where the insertion takes place is selected by the 
-  <tt>"row"</tt> task parameter. It points to the row where the first table in the input 
+  <span style="font-family: monospace;">"row"</span> task parameter. It points to the row where the first table in the input 
   list will be inserted, subsequent tables in the list will be inserted into 
-  subsequent rows. This mechanism is superseded if the <tt>"row"</tt> parameter is set 
-  to INDEF or a negative value, and the keyword <tt>"ORIG_ROW"</tt> is found in the 
+  subsequent rows. This mechanism is superseded if the <span style="font-family: monospace;">"row"</span> parameter is set 
+  to INDEF or a negative value, and the keyword <span style="font-family: monospace;">"ORIG_ROW"</span> is found in the 
   header of the input table. This keyword is created by task txtable and its 
   value supersedes the row counter in the task.
   </p>
@@ -69,7 +69,7 @@ titable: Insert 2-D tables into rows of a 3-D table.
   If the maximum array size in a target column in the output 3-D table is
   larger than the number of selected input rows, the array will be filled 
   up starting from its first element, and the empty elements at the end will 
-  be set to INDEF (or <tt>""</tt> if it is a character string column). If the maximum 
+  be set to INDEF (or <span style="font-family: monospace;">""</span> if it is a character string column). If the maximum 
   array size is smaller than the number of selected rows, insertion begins by
   the first selected row up to the maximum allowable size, the remaining rows
   being ignored.
@@ -93,11 +93,11 @@ titable: Insert 2-D tables into rows of a 3-D table.
   <dt><b>outtable [table name]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable [table name]' -->
   <dd>Name of 3-D output table, including extension. No support exists for 
-  <tt>"STDOUT"</tt> (ASCII output).
+  <span style="font-family: monospace;">"STDOUT"</span> (ASCII output).
   </dd>
   </dl>
   <dl>
-  <dt><b>(template = <tt>""</tt>) [table name]</b></dt>
+  <dt><b>(template = <span style="font-family: monospace;">""</span>) [table name]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(template = "") [table name]' -->
   <dd>Name of 3-D table to be used as template when creating a new output table.
   </dd>
@@ -129,10 +129,10 @@ titable: Insert 2-D tables into rows of a 3-D table.
   <!-- BeginSection: 'BUGS' -->
   <p>
   The output and template table names must be supplied in full, including 
-  the extension (e.g. <tt>".tab"</tt>). If the output table name is not typed in full, 
+  the extension (e.g. <span style="font-family: monospace;">".tab"</span>). If the output table name is not typed in full, 
   the task will create a new table in place of the existing one, with only the 
   rows actually inserted. This behavior relates to the way the underlying 
-  <tt>"access"</tt> routine in IRAF's fio library works.
+  <span style="font-family: monospace;">"access"</span> routine in IRAF's fio library works.
   </p>
   <!-- EndSection:   'BUGS' -->
   <h3>References</h3>

@@ -40,7 +40,7 @@ rename: Rename a file
   <dl>
   <dt><b>field = all</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='field' Line='field = all' -->
-  <dd>If set to <tt>"all"</tt> the file name remains unchanged and the <i>newname</i> is
+  <dd>If set to <span style="font-family: monospace;">"all"</span> the file name remains unchanged and the <i>newname</i> is
   assumed to be a destination directory in the case of multiple input files,
   or the new filename (which may contain a new directory path) in the case of
   a single input file.  If set to <i>ldir</i> the <i>newname</i> value is taken
@@ -54,47 +54,47 @@ rename: Rename a file
   <h3>Description</h3>
   <!-- BeginSection: 'DESCRIPTION' -->
   <p>
-  <i>Rename</i> renames either a single file to <tt>"newname"</tt>, or a set of files,
+  <i>Rename</i> renames either a single file to <span style="font-family: monospace;">"newname"</span>, or a set of files,
   changing either the ldir, root or the extension part of each name.  
-  If <i>newname</i> is a directory or  <i>field</i> is <tt>"ldir"</tt> the input files
+  If <i>newname</i> is a directory or  <i>field</i> is <span style="font-family: monospace;">"ldir"</span> the input files
   are moved to this directory and the filenames remain the same.  When
   modifying the root or extension part of the filename <i>newname</i> is the
   new root or extension name for the input files, an extension will be added
   to the file name if it doesn't already exist and the extension field is being
   modified.  For multiple input files it is assumed
-  that <i>newname</i> is a directory if the value of <i>field</i> is <tt>"all"</tt>, 
+  that <i>newname</i> is a directory if the value of <i>field</i> is <span style="font-family: monospace;">"all"</span>, 
   otherwise an error is generated to prevent overwriting files.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. Rename file <tt>"fred"</tt> to <tt>"jay"</tt>.
+  1. Rename file <span style="font-family: monospace;">"fred"</span> to <span style="font-family: monospace;">"jay"</span>.
   </p>
   <p>
       cl&gt; rename fred jay
   </p>
   <p>
-  2. Change the root name of a set of files from <tt>"out"</tt> to <tt>"pkout"</tt>.
+  2. Change the root name of a set of files from <span style="font-family: monospace;">"out"</span> to <span style="font-family: monospace;">"pkout"</span>.
   </p>
   <p>
       cl&gt; rename out.x,out.o,out.par pkout field=root
   </p>
   <p>
-  3. Change the extension of all <tt>".f77"</tt> files from <tt>".f77"</tt> to <tt>".f"</tt>.
+  3. Change the extension of all <span style="font-family: monospace;">".f77"</span> files from <span style="font-family: monospace;">".f77"</span> to <span style="font-family: monospace;">".f"</span>.
   </p>
   <p>
       cl&gt; rename *.f77 f field=extn
   </p>
   <p>
-  4. Move all files with a <tt>".dat"</tt> extension to a new directory.
+  4. Move all files with a <span style="font-family: monospace;">".dat"</span> extension to a new directory.
   </p>
   <p>
       cl&gt; rename *.dat data$
       cl&gt; rename *.dat /data/user
   </p>
   <p>
-  5. Add a <tt>".fits"</tt> extension to all files in a directory.
+  5. Add a <span style="font-family: monospace;">".fits"</span> extension to all files in a directory.
   </p>
   <p>
       cl&gt; rename im00* fits field=extn

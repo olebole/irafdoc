@@ -66,11 +66,11 @@ imhistogram: Compute and plot or print an image histogram
   </dd>
   </dl>
   <dl>
-  <dt><b>hist_type = <tt>"normal"</tt></b></dt>
+  <dt><b>hist_type = <span style="font-family: monospace;">"normal"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='hist_type' Line='hist_type = "normal"' -->
-  <dd>The type of histogram to plot or list.  The choices are <tt>"normal"</tt>,
-  <tt>"cumulative"</tt>, <tt>"difference"</tt>, or <tt>"second_difference"</tt>.  The two
-  <tt>"difference"</tt> options are calculated as forward differences, i.e.,
+  <dd>The type of histogram to plot or list.  The choices are <span style="font-family: monospace;">"normal"</span>,
+  <span style="font-family: monospace;">"cumulative"</span>, <span style="font-family: monospace;">"difference"</span>, or <span style="font-family: monospace;">"second_difference"</span>.  The two
+  <span style="font-family: monospace;">"difference"</span> options are calculated as forward differences, i.e.,
   diff[n] = hist[n+1] - hist[n].
   </dd>
   </dl>
@@ -81,9 +81,9 @@ imhistogram: Compute and plot or print an image histogram
   </dd>
   </dl>
   <dl>
-  <dt><b>plot_type = <tt>"line"</tt></b></dt>
+  <dt><b>plot_type = <span style="font-family: monospace;">"line"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='plot_type' Line='plot_type = "line"' -->
-  <dd>The plot vector type. The options are <tt>"line"</tt> and <tt>"box"</tt>.
+  <dd>The plot vector type. The options are <span style="font-family: monospace;">"line"</span> and <span style="font-family: monospace;">"box"</span>.
   </dd>
   </dl>
   <dl>
@@ -93,7 +93,7 @@ imhistogram: Compute and plot or print an image histogram
   </dd>
   </dl>
   <dl>
-  <dt><b>device = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>device = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdgraph"' -->
   <dd>The output graphics device.
   </dd>
@@ -112,10 +112,10 @@ imhistogram: Compute and plot or print an image histogram
   standard output.
   </p>
   <p>
-  In addition to producing the <tt>"normal"</tt> histogram, the task will also
+  In addition to producing the <span style="font-family: monospace;">"normal"</span> histogram, the task will also
   calculate cumulative and marginal (forward difference) histograms
   depending on the choice of the <i>hist_type</i> parameter (choices
-  are:  <tt>"normal"</tt>, <tt>"cumulative"</tt>, <tt>"difference"</tt>, and <tt>"second_difference"</tt>).
+  are:  <span style="font-family: monospace;">"normal"</span>, <span style="font-family: monospace;">"cumulative"</span>, <span style="font-family: monospace;">"difference"</span>, and <span style="font-family: monospace;">"second_difference"</span>).
   The plot will be labeled by the type of histogram as well as the image
   name and title and the binning parameters.
   </p>
@@ -150,7 +150,7 @@ imhistogram: Compute and plot or print an image histogram
   </p>
   <p>
   4. Plot the cumulative histogram.  This is most useful for images with
-  fairly flat <tt>"normal"</tt> histograms.
+  fairly flat <span style="font-family: monospace;">"normal"</span> histograms.
   </p>
   <p>
       cl&gt; imhist R50.imh hist=cum

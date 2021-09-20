@@ -25,9 +25,9 @@ average: Compute the mean and standard deviation of a list
   <dl>
   <dt><b>option</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='option' Line='option' -->
-  <dd>Chosen from <tt>"add"</tt>, <tt>"subtract"</tt> or <tt>"new_sample"</tt>, 
+  <dd>Chosen from <span style="font-family: monospace;">"add"</span>, <span style="font-family: monospace;">"subtract"</span> or <span style="font-family: monospace;">"new_sample"</span>, 
   in which case the numbers averaged are those in STDIN.
-  If no argument is given on the command line, <tt>"new_sample"</tt> is assumed.
+  If no argument is given on the command line, <span style="font-family: monospace;">"new_sample"</span> is assumed.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -51,20 +51,20 @@ average: Compute the mean and standard deviation of a list
   	sub -- subtract points from the sample
   </pre>
   <p>
-  The sample is reinitialized by setting <b>option</b> = <tt>"new_sample"</tt>.
+  The sample is reinitialized by setting <b>option</b> = <span style="font-family: monospace;">"new_sample"</span>.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  Run <i>average</i> on the list of numbers in file <tt>"numbers"</tt>.
+  Run <i>average</i> on the list of numbers in file <span style="font-family: monospace;">"numbers"</span>.
   </p>
   <pre>
   	
   	cl&gt; type numbers | average
   </pre>
   <p>
-  Add in to the sample the list of numbers in file <tt>"numbers.2"</tt>.
+  Add in to the sample the list of numbers in file <span style="font-family: monospace;">"numbers.2"</span>.
   </p>
   <pre>
   

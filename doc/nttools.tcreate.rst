@@ -40,11 +40,11 @@ tcreate: Create a STSDAS table from an ASCII descriptor table.
   Undefined values require a place holder in the data file.
   The word INDEF should be used as the place holder
   for undefined (indefinite) numerical values,
-  the word <tt>"no"</tt> for boolean values,
-  and a pair of adjacent quotes (<tt>""</tt>) for undefined character strings.
+  the word <span style="font-family: monospace;">"no"</span> for boolean values,
+  and a pair of adjacent quotes (<span style="font-family: monospace;">""</span>) for undefined character strings.
   If a value for a character string contains one or more blanks,
   or the comment character (#),
-  then the entire value must be enclosed in quotes, e.g., <tt>"R CrB"</tt>.
+  then the entire value must be enclosed in quotes, e.g., <span style="font-family: monospace;">"R CrB"</span>.
   </p>
   <p>
   This task can also read a file containing header parameters for the table.
@@ -82,7 +82,7 @@ tcreate: Create a STSDAS table from an ASCII descriptor table.
   The format is not used for internal representation of the data and
   is ignored when reading data---it is used only for display purposes,
   for example, by tasks such as 'tedit', 'tread', and 'tprint'.
-  Type <tt>"help ttools opt=sysdoc"</tt> for detailed information about print formats.
+  Type <span style="font-family: monospace;">"help ttools opt=sysdoc"</span> for detailed information about print formats.
   Comment lines may be included in this file
   by beginning the line with the comment symbol (#).
   The following data types are recognized by this parameter
@@ -121,8 +121,8 @@ tcreate: Create a STSDAS table from an ASCII descriptor table.
   that is expected for 'tcreate.cdfile'.
   The syntax is also the same as
   for column definitions in text tables,
-  except for the leading <tt>"#c "</tt> in text tables.
-  If cdfile = <tt>"STDIN"</tt> and the input is not redirected,
+  except for the leading <span style="font-family: monospace;">"#c "</span> in text tables.
+  If cdfile = <span style="font-family: monospace;">"STDIN"</span> and the input is not redirected,
   the task prints a prompt asking for input.
   Press Control-Z (or Control-D, i.e. your EOF character)
   to terminate the list of column definitions;
@@ -131,12 +131,12 @@ tcreate: Create a STSDAS table from an ASCII descriptor table.
   </dd>
   </dl>
   <dl>
-  <dt><b>datafile = <tt>"STDIN"</tt> [file name]</b></dt>
+  <dt><b>datafile = <span style="font-family: monospace;">"STDIN"</span> [file name]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='datafile' Line='datafile = "STDIN" [file name]' -->
   <dd>The name of the input ASCII data file.
   The values in the file must be in the order of the columns
   as given in the column-definitions file 'cdfile'.
-  Undefined values should have INDEF or <tt>""</tt> as place holders
+  Undefined values should have INDEF or <span style="font-family: monospace;">""</span> as place holders
   for numerical or character values, respectively.
   Each row for the table must begin with a new line in 'datafile',
   but there can be multiple lines in 'datafile' for each table row
@@ -145,12 +145,12 @@ tcreate: Create a STSDAS table from an ASCII descriptor table.
   but there are additional data on the line,
   or if there is a data type mismatch,
   the following warning will be
-  printed:  <tt>"out of synch or extra data in line &lt;number&gt;"</tt>.
+  printed:  <span style="font-family: monospace;">"out of synch or extra data in line &lt;number&gt;"</span>.
   Lines in the input data file are limited to 8196 characters,
   including the newline at the end of each line.
   If a longer line is encountered, the task will stop with an error.
   As with 'cdfile',
-  if datafile = <tt>"STDIN"</tt> and the input is not redirected,
+  if datafile = <span style="font-family: monospace;">"STDIN"</span> and the input is not redirected,
   the task prints a prompt asking for input.
   Enter a carriage return before ending the last line
   and then press Control-Z (or Control-D, i.e. EOF) to close the file.
@@ -174,11 +174,11 @@ tcreate: Create a STSDAS table from an ASCII descriptor table.
   will be interpreted as a comment.
   Note that the syntax is not the same as
   for header keywords in text tables.
-  The latter uses the much more reasonable <tt>"#k keyword = value comment"</tt>.
+  The latter uses the much more reasonable <span style="font-family: monospace;">"#k keyword = value comment"</span>.
   The datatype shouldn't need to be specified,
   since keywords are stored in the table as text strings anyway;
   the current syntax has been retained for backward compatibility.
-  It is possible, though not recommended, to set uparfile = <tt>"STDIN"</tt>.
+  It is possible, though not recommended, to set uparfile = <span style="font-family: monospace;">"STDIN"</span>.
   The problem is that it is read twice,
   once just to count the number of entries, and once to read the values,
   so you would have to type in the values twice.
@@ -246,16 +246,16 @@ tcreate: Create a STSDAS table from an ASCII descriptor table.
   </dd>
   </dl>
   <dl>
-  <dt><b>(tbltype = <tt>"default"</tt>) [string, allowed values:  default | row | </b></dt>
+  <dt><b>(tbltype = <span style="font-family: monospace;">"default"</span>) [string, allowed values:  default | row | </b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(tbltype = "default") [string, allowed values:  default | row | ' -->
   <dd>column | text]
   Type of table to create.
   The default is row-ordered stsdas format.
   To create a FITS table,
-  use tbltype = <tt>"default"</tt>
+  use tbltype = <span style="font-family: monospace;">"default"</span>
   and specify a table name ('table')
-  with filename extension <tt>".fits"</tt>, <tt>".fit"</tt>, or <tt>".??f"</tt>
-  (<tt>'?'</tt> is any single character).
+  with filename extension <span style="font-family: monospace;">".fits"</span>, <span style="font-family: monospace;">".fit"</span>, or <span style="font-family: monospace;">".??f"</span>
+  (<span style="font-family: monospace;">'?'</span> is any single character).
   </dd>
   </dl>
   <dl>
@@ -279,8 +279,8 @@ tcreate: Create a STSDAS table from an ASCII descriptor table.
   1.  Wait for the user to type in column definitions and data,
   each of which will be terminated by a Control-Z (or Control-D, i.e. EOF).
   The prompts are printed by the 'tcreate' task;
-  these are the lines beginning with <tt>"Give column definitions"</tt>
-  and <tt>"Give table data"</tt>.
+  these are the lines beginning with <span style="font-family: monospace;">"Give column definitions"</span>
+  and <span style="font-family: monospace;">"Give table data"</span>.
   The table will have 4 columns and 2 rows.
   </p>
   <pre>
@@ -302,14 +302,14 @@ tcreate: Create a STSDAS table from an ASCII descriptor table.
   
   </pre>
   <p>
-  2. Create a table called <tt>"outfile.tab"</tt> using the columns specified
-  in <tt>"columns.cd"</tt> and the data in <tt>"data.dat"</tt>.
+  2. Create a table called <span style="font-family: monospace;">"outfile.tab"</span> using the columns specified
+  in <span style="font-family: monospace;">"columns.cd"</span> and the data in <span style="font-family: monospace;">"data.dat"</span>.
   </p>
   <p>
   tt&gt; tcreate outfile columns.cd data.dat nskip=3
   </p>
   <p>
-  <tt>"columns.cd"</tt> may contain just the following:
+  <span style="font-family: monospace;">"columns.cd"</span> may contain just the following:
   <br>
   </p>
   <pre>
@@ -328,7 +328,7 @@ tcreate: Create a STSDAS table from an ASCII descriptor table.
   the display format is expected.
   </p>
   <p>
-  The file <tt>"data.dat"</tt> may contain (if 'nskip=3', 'nlines=2'):
+  The file <span style="font-family: monospace;">"data.dat"</span> may contain (if 'nskip=3', 'nlines=2'):
   <br>
   </p>
   <pre>
@@ -427,9 +427,9 @@ tcreate: Create a STSDAS table from an ASCII descriptor table.
   <h3>See also</h3>
   <!-- BeginSection: 'SEE ALSO' -->
   <p>
-  Type <tt>"help ttools opt=sysdoc"</tt> for a higher-level description of the 'ttools'
+  Type <span style="font-family: monospace;">"help ttools opt=sysdoc"</span> for a higher-level description of the 'ttools'
   package.
-  See also the files in <tt>"tables$doc/"</tt>.
+  See also the files in <span style="font-family: monospace;">"tables$doc/"</span>.
   </p>
   
   <!-- EndSection:    'SEE ALSO' -->

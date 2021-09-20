@@ -30,7 +30,7 @@ mkpattern: Make/add patterns to images
   </dd>
   </dl>
   <dl>
-  <dt><b>output = <tt>""</tt></b></dt>
+  <dt><b>output = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
   <dd>Output images when modifying input images.  If no output images are
   given then existing images in the input list are modified directly.
@@ -39,7 +39,7 @@ mkpattern: Make/add patterns to images
   </dd>
   </dl>
   <dl>
-  <dt><b>pattern = <tt>"constant"</tt></b></dt>
+  <dt><b>pattern = <span style="font-family: monospace;">"constant"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pattern' Line='pattern = "constant"' -->
   <dd>Pattern to be used.  The patterns are:
   <dl>
@@ -87,7 +87,7 @@ mkpattern: Make/add patterns to images
   </dd>
   </dl>
   <dl>
-  <dt><b>option = <tt>"replace"</tt></b></dt>
+  <dt><b>option = <span style="font-family: monospace;">"replace"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='option' Line='option = "replace"' -->
   <dd>Editing option when modifying existing images.  Often this is used
   in conjunction with image sections to modify a part of an image.
@@ -115,13 +115,13 @@ mkpattern: Make/add patterns to images
   WHEN CREATING NEW IMAGES
   </p>
   <dl>
-  <dt><b>title = <tt>""</tt></b></dt>
+  <dt><b>title = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='title' Line='title = ""' -->
   <dd>Image title to be given to the images.  Maximum of 79 characters.
   </dd>
   </dl>
   <dl>
-  <dt><b>pixtype = <tt>"real"</tt></b></dt>
+  <dt><b>pixtype = <span style="font-family: monospace;">"real"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pixtype' Line='pixtype = "real"' -->
   <dd>Pixel datatype of new images; one of ushort, short, integer, real, double,
   or complex.
@@ -146,7 +146,7 @@ mkpattern: Make/add patterns to images
   </dd>
   </dl>
   <dl>
-  <dt><b>header = <tt>"artdata$stdheader.dat"</tt></b></dt>
+  <dt><b>header = <span style="font-family: monospace;">"artdata$stdheader.dat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='header' Line='header = "artdata$stdheader.dat"' -->
   <dd>Image or header keyword data file.  If an image is given then the image header
   is copied.  If a file is given then the FITS format cards are copied.

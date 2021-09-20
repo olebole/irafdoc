@@ -61,18 +61,18 @@ wcscopy: Copy the wcs from one image to another
   <!-- BeginSection: 'REFERENCES' -->
   <p>
   Information  on  IRAF  world  coordinate  systems including
-  more detailed descriptions of the <tt>"logical"</tt>, <tt>"physical"</tt>, and <tt>"world"</tt>
+  more detailed descriptions of the <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"physical"</span>, and <span style="font-family: monospace;">"world"</span>
   coordinate systems can be
   found  in  the  help  pages  for  the  WCSEDIT  and  WCRESET  tasks. 
   Detailed   documentation   for  the  IRAF  world  coordinate  system 
-  interface MWCS can be found in  the  file  <tt>"iraf$sys/mwcs/MWCS.hlp"</tt>.
-  This  file  can  be  formatted  and  printed  with the command <tt>"help
-  iraf$sys/mwcs/MWCS.hlp fi+ | lprint"</tt>.  Information on the spectral
+  interface MWCS can be found in  the  file  <span style="font-family: monospace;">"iraf$sys/mwcs/MWCS.hlp"</span>.
+  This  file  can  be  formatted  and  printed  with the command <span style="font-family: monospace;">"help
+  iraf$sys/mwcs/MWCS.hlp fi+ | lprint"</span>.  Information on the spectral
   coordinates systems and their suitability for use with WCSXYMATCH
-  can be obtained by typing <tt>"help specwcs | lprint"</tt>.
+  can be obtained by typing <span style="font-family: monospace;">"help specwcs | lprint"</span>.
   Details of  the  FITS  header
   world  coordinate  system  interface  can  be  found in the document
-  <tt>"World Coordinate Systems Representations Within  the  FITS  Format"</tt>
+  <span style="font-family: monospace;">"World Coordinate Systems Representations Within  the  FITS  Format"</span>
   by Hanisch and Wells, available from our anonymous ftp archive.
       
   </p>

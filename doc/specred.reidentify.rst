@@ -64,7 +64,7 @@ reidentify: Automatically reidentify features in spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>section = <tt>"middle line"</tt></b></dt>
+  <dt><b>section = <span style="font-family: monospace;">"middle line"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='section' Line='section = "middle line"' -->
   <dd>If the reference image is not one dimensional or specified as a one dimensional
   image section then this parameter selects the master reference image
@@ -82,7 +82,7 @@ reidentify: Automatically reidentify features in spectra
   which is an integer number.  The field in [] is a second designator which
   is used with three dimensional data.  See the example section for
   <b>identify</b> for examples of this syntax.  Abbreviations are allowed
-  though beware that <tt>'l'</tt> is not a sufficient abbreviation.
+  though beware that <span style="font-family: monospace;">'l'</span> is not a sufficient abbreviation.
   </dd>
   </dl>
   <dl>
@@ -129,7 +129,7 @@ reidentify: Automatically reidentify features in spectra
   <i>step</i> parameter.  When <i>trace</i> is no the master reference line or
   column is used for each new reference vector.  When this parameter is yes
   then as the reidentifications step across the image the last reidentified
-  features are used as the reference.  This <tt>"tracing"</tt> is useful if there is a
+  features are used as the reference.  This <span style="font-family: monospace;">"tracing"</span> is useful if there is a
   coherent shift in the features such as with long slit spectra.  However,
   any features lost during the tracing will be lost for all subsequent lines
   or columns while not using tracing always starts with the initial set of
@@ -137,7 +137,7 @@ reidentify: Automatically reidentify features in spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>step = <tt>"10"</tt></b></dt>
+  <dt><b>step = <span style="font-family: monospace;">"10"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='step' Line='step = "10"' -->
   <dd>The step from the reference line, column, or band used for selecting and/or
   reidentifying additional lines, columns, or bands in a two or three
@@ -152,7 +152,7 @@ reidentify: Automatically reidentify features in spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>nsum = <tt>"10"</tt></b></dt>
+  <dt><b>nsum = <span style="font-family: monospace;">"10"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nsum' Line='nsum = "10"' -->
   <dd>Number of lines, columns, or bands across the designated vector axis to be
   summed when the image is a two or three dimensional spatial spectrum.
@@ -165,7 +165,7 @@ reidentify: Automatically reidentify features in spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>shift = <tt>"0"</tt></b></dt>
+  <dt><b>shift = <span style="font-family: monospace;">"0"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='shift' Line='shift = "0"' -->
   <dd>Shift in user coordinates to be added to the reference features before
   centering.  If the image is three dimensional then two numbers may be
@@ -238,10 +238,10 @@ reidentify: Automatically reidentify features in spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>coordlist = <tt>"linelists$idhenear.dat"</tt></b></dt>
+  <dt><b>coordlist = <span style="font-family: monospace;">"linelists$idhenear.dat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coordlist' Line='coordlist = "linelists$idhenear.dat"' -->
   <dd>User coordinate list consisting of a list of line coordinates.
-  Some standard line lists are available in the directory <tt>"linelists$"</tt>.
+  Some standard line lists are available in the directory <span style="font-family: monospace;">"linelists$"</span>.
   The standard line lists are described under the topic <i>linelists</i>.
   </dd>
   </dl>
@@ -271,21 +271,21 @@ reidentify: Automatically reidentify features in spectra
   The following parameters determine the input and output of the task.
   </p>
   <dl>
-  <dt><b>database = <tt>"database"</tt></b></dt>
+  <dt><b>database = <span style="font-family: monospace;">"database"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"' -->
   <dd>Database containing the feature data for the reference image and in which
   the features for the reidentified images are recorded.
   </dd>
   </dl>
   <dl>
-  <dt><b>logfiles = <tt>"logfile"</tt></b></dt>
+  <dt><b>logfiles = <span style="font-family: monospace;">"logfile"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfiles' Line='logfiles = "logfile"' -->
-  <dd>List of files in which to keep a processing log.  If a null file, <tt>""</tt>,
+  <dd>List of files in which to keep a processing log.  If a null file, <span style="font-family: monospace;">""</span>,
   is given then no log is kept.
   </dd>
   </dl>
   <dl>
-  <dt><b>plotfile = <tt>""</tt></b></dt>
+  <dt><b>plotfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='plotfile' Line='plotfile = ""' -->
   <dd>Optional file to contain metacode plots of the residuals.
   </dd>
@@ -297,21 +297,21 @@ reidentify: Automatically reidentify features in spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>Graphics device.  The default is the standard graphics device which is
   generally a graphics terminal.
   </dd>
   </dl>
   <dl>
-  <dt><b>cursor = <tt>""</tt></b></dt>
+  <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Cursor input file.  If a cursor file is not given then the standard graphics
   cursor is read.
   </dd>
   </dl>
   <p>
-  The following parameters are queried when the <tt>'b'</tt> key is used in the
+  The following parameters are queried when the <span style="font-family: monospace;">'b'</span> key is used in the
   interactive review.
   </p>
   <dl>
@@ -319,7 +319,7 @@ reidentify: Automatically reidentify features in spectra
   <!-- Sec='PARAMETERS' Level=0 Label='crval' Line='crval, cdelt' -->
   <dd>These parameters specify an approximate coordinate value and coordinate
   interval per pixel when the automatic line identification
-  algorithm (<tt>'b'</tt> key) is used.  The coordinate value is for the
+  algorithm (<span style="font-family: monospace;">'b'</span> key) is used.  The coordinate value is for the
   pixel specified by the <i>crpix</i> parameter in the <b>aidpars</b>
   parameter set.  The default value of <i>crpix</i> is INDEF which then
   refers the coordinate value to the middle of the spectrum.  By default
@@ -330,7 +330,7 @@ reidentify: Automatically reidentify features in spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>aidpars = <tt>""</tt> (parameter set)</b></dt>
+  <dt><b>aidpars = <span style="font-family: monospace;">""</span> (parameter set)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='aidpars' Line='aidpars = "" (parameter set)' -->
   <dd>This parameter points to a parameter set for the automatic line
   identification algorithm.  See <i>aidpars</i> for further information.
@@ -442,7 +442,7 @@ reidentify: Automatically reidentify features in spectra
   When tracing a 2D/3D reference spectrum the shift is applied to the
   previous reidentified spectrum rather than the initial reference spectrum.
   The shift is added for increasing line or column values and subtracted for
-  decreasing line or column values.  This allows <tt>"tracing"</tt> when there is a
+  decreasing line or column values.  This allows <span style="font-family: monospace;">"tracing"</span> when there is a
   rotation or tilt of the 2D or 3D spectrum.  When not tracing the shift is
   always added to the reference spectrum features as described previously.
   </p>
@@ -553,13 +553,13 @@ reidentify: Automatically reidentify features in spectra
   If an accessible file name is given for the plot file then a residual plot
   of the reidentified lines is recorded in this file.  The plot file can
   be viewed with <b>gkimosaic, stdgraph</b> or reading the file
-  with <tt>".read"</tt> when in cursor mode (for example with <tt>"=gcur"</tt>).
+  with <span style="font-family: monospace;">".read"</span> when in cursor mode (for example with <span style="font-family: monospace;">"=gcur"</span>).
   </p>
   <p>
   The reidentification results for this task are recorded in a
   <i>database</i>.  Currently the database is a directory and entries
   in the database are text files with filenames formed by adding
-  the prefix <tt>"id"</tt> to the image name without an image extension.
+  the prefix <span style="font-family: monospace;">"id"</span> to the image name without an image extension.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Examples</h3>

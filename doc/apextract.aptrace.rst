@@ -29,28 +29,28 @@ aptrace: Trace positions of spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>apertures = <tt>""</tt></b></dt>
+  <dt><b>apertures = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
   <dd>Apertures to recenter, resize, trace, and extract.  This only applies
   to apertures read from the input or reference database.  Any new
   apertures defined with the automatic finding algorithm or interactively
   are always selected.  The syntax is a list comma separated ranges
   where a range can be a single aperture number, a hyphen separated
-  range of aperture numbers, or a range with a step specified by <tt>"x&lt;step&gt;"</tt>;
-  for example, <tt>"1,3-5,9-12x2"</tt>.
+  range of aperture numbers, or a range with a step specified by <span style="font-family: monospace;">"x&lt;step&gt;"</span>;
+  for example, <span style="font-family: monospace;">"1,3-5,9-12x2"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>references = <tt>""</tt></b></dt>
+  <dt><b>references = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='references' Line='references = ""' -->
   <dd>List of reference images to be used to define apertures for the input
   images.  When a reference image is given it supersedes apertures
-  previously defined for the input image. The list may be null, <tt>""</tt>, or
+  previously defined for the input image. The list may be null, <span style="font-family: monospace;">""</span>, or
   any number of images less than or equal to the list of input images.
   There are three special words which may be used in place of an image
-  name.  The word <tt>"last"</tt> refers to the last set of apertures written to
-  the database.  The word <tt>"OLD"</tt> requires that an entry exist
-  and the word <tt>"NEW"</tt> requires that the entry not exist for each input image.
+  name.  The word <span style="font-family: monospace;">"last"</span> refers to the last set of apertures written to
+  the database.  The word <span style="font-family: monospace;">"OLD"</span> requires that an entry exist
+  and the word <span style="font-family: monospace;">"NEW"</span> requires that the entry not exist for each input image.
   </dd>
   </dl>
   <dl>
@@ -135,11 +135,11 @@ aptrace: Trace positions of spectra
   the ICFIT package.
   </p>
   <dl>
-  <dt><b>function = <tt>"legendre"</tt></b></dt>
+  <dt><b>function = <span style="font-family: monospace;">"legendre"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "legendre"' -->
   <dd>Default trace fitting function.  The fitting function types are
-  <tt>"chebyshev"</tt> polynomial, <tt>"legendre"</tt> polynomial, <tt>"spline1"</tt> linear spline, and
-  <tt>"spline3"</tt> cubic spline.
+  <span style="font-family: monospace;">"chebyshev"</span> polynomial, <span style="font-family: monospace;">"legendre"</span> polynomial, <span style="font-family: monospace;">"spline1"</span> linear spline, and
+  <span style="font-family: monospace;">"spline3"</span> cubic spline.
   </dd>
   </dl>
   <dl>
@@ -151,10 +151,10 @@ aptrace: Trace positions of spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>sample = <tt>"*"</tt></b></dt>
+  <dt><b>sample = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"' -->
   <dd>Default fitting sample.  The sample is given by a set of colon separated
-  ranges each separated by either whitespace or commas.  The string <tt>"*"</tt> refers
+  ranges each separated by either whitespace or commas.  The string <span style="font-family: monospace;">"*"</span> refers
   to all points.
   </dd>
   </dl>
@@ -221,8 +221,8 @@ aptrace: Trace positions of spectra
   tracing (see <b>apedit</b>).  Tracing is selected with the parameter
   <i>trace</i>.  If the tracing is done interactively (the
   <i>interactive</i> parameter set to yes) then the user is queried
-  whether or not to trace each image.  The responses are <tt>"yes"</tt>, <tt>"no"</tt>,
-  <tt>"YES"</tt>, or <tt>"NO"</tt>, where the upper case queries suppress this query
+  whether or not to trace each image.  The responses are <span style="font-family: monospace;">"yes"</span>, <span style="font-family: monospace;">"no"</span>,
+  <span style="font-family: monospace;">"YES"</span>, or <span style="font-family: monospace;">"NO"</span>, where the upper case queries suppress this query
   for the following images.
   </p>
   <p>
@@ -289,20 +289,20 @@ aptrace: Trace positions of spectra
   two levels of queries when fitting the spectrum positions
   interactively; prompts for each image and prompts for each aperture in
   an image.  These prompts may be answered individually with the lower
-  case responses <tt>"yes"</tt> or <tt>"no"</tt> or answered for all further prompts with
-  the responses <tt>"YES"</tt> or <tt>"NO"</tt>.  Responding with <tt>"yes"</tt> or <tt>"YES"</tt> to the
+  case responses <span style="font-family: monospace;">"yes"</span> or <span style="font-family: monospace;">"no"</span> or answered for all further prompts with
+  the responses <span style="font-family: monospace;">"YES"</span> or <span style="font-family: monospace;">"NO"</span>.  Responding with <span style="font-family: monospace;">"yes"</span> or <span style="font-family: monospace;">"YES"</span> to the
   image prompt allows interactive fitting of the traced positions for the
   spectra.  Prompts are then given for each aperture in the image.  When
   an spectrum is not fit interactively the last set of fitting parameters
   are used (initially the default function and order given by the task
-  parameters).  Note that answering <tt>"YES"</tt> or <tt>"NO"</tt> to a aperture prompt
+  parameters).  Note that answering <span style="font-family: monospace;">"YES"</span> or <span style="font-family: monospace;">"NO"</span> to a aperture prompt
   applies to all further aperture in the current image only.  Responding
-  with <tt>"no"</tt> or <tt>"NO"</tt> to the image prompt fits the spectrum positions for
+  with <span style="font-family: monospace;">"no"</span> or <span style="font-family: monospace;">"NO"</span> to the image prompt fits the spectrum positions for
   all apertures in all images with the last set of fitting parameters.
   </p>
   <p>
   The tracing may also be done from the interactive aperture editor with
-  the <tt>'t'</tt> key.  The aperture tracing algorithm may be selected from many
+  the <span style="font-family: monospace;">'t'</span> key.  The aperture tracing algorithm may be selected from many
   of the tasks in the package with the <i>trace</i> parameter.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
@@ -313,7 +313,7 @@ aptrace: Trace positions of spectra
   offset relative to the aperture center as stored under the database keyword
   center.  The function is saved in the database as a series of
   coefficients.  The section containing the coefficients starts with the
-  keyword <tt>"curve"</tt> and the number of coefficients.
+  keyword <span style="font-family: monospace;">"curve"</span> and the number of coefficients.
   </p>
   <p>
   The first four coefficients define the type of function, the order
@@ -443,10 +443,10 @@ aptrace: Trace positions of spectra
   <dl>
   <dt><b>APTRACE V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='APTRACE' Line='APTRACE V2.11' -->
-  <dd>The <tt>"apertures"</tt> parameter can be used to select apertures for resizing,
+  <dd>The <span style="font-family: monospace;">"apertures"</span> parameter can be used to select apertures for resizing,
   recentering, tracing, and extraction.  This parameter name was previously
   used for selecting apertures in the recentering algorithm.  The new
-  parameter name for this is now <tt>"aprecenter"</tt>.
+  parameter name for this is now <span style="font-family: monospace;">"aprecenter"</span>.
   </dd>
   </dl>
   <!-- EndSection:   'REVISIONS' -->

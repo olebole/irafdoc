@@ -29,7 +29,7 @@ slist: List spectrum header parameters
   </dd>
   </dl>
   <dl>
-  <dt><b>apertures = <tt>""</tt></b></dt>
+  <dt><b>apertures = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
   <dd>List of apertures to be selected from the images for listing.  A null
   list selects all apertures.  See <b>ranges</b> for the syntax of

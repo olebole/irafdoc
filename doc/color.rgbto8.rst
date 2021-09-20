@@ -33,17 +33,17 @@ rgbto8: Create an 8-bit RGB image with special color map
   <dt><b>rgb</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rgb' Line='rgb' -->
   <dd>Output image name for the RGB 8-bit image.  A color map with the same
-  image name but the extension <tt>".sao"</tt> or <tt>".imt"</tt> will also be created.
+  image name but the extension <span style="font-family: monospace;">".sao"</span> or <span style="font-family: monospace;">".imt"</span> will also be created.
   </dd>
   </dl>
   <dl>
-  <dt><b>maptype = <tt>"saoimage"</tt> (saoimage|imtool|ximtool)</b></dt>
+  <dt><b>maptype = <span style="font-family: monospace;">"saoimage"</span> (saoimage|imtool|ximtool)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maptype' Line='maptype = "saoimage" (saoimage|imtool|ximtool)' -->
   <dd>This parameter selects the type of color map file to be produced.  The
-  choices are <tt>"saoimage"</tt> to produce a map for SAOimage, <tt>"imtool"</tt> to produce a
-  map for IMTOOL, and <tt>"ximtool"</tt> to produce a map for XIMTOOL.  The filenames
-  are derived from the output image name with the extension <tt>".sao"</tt>, <tt>".imt"</tt>,
-  or <tt>".xim"</tt>.
+  choices are <span style="font-family: monospace;">"saoimage"</span> to produce a map for SAOimage, <span style="font-family: monospace;">"imtool"</span> to produce a
+  map for IMTOOL, and <span style="font-family: monospace;">"ximtool"</span> to produce a map for XIMTOOL.  The filenames
+  are derived from the output image name with the extension <span style="font-family: monospace;">".sao"</span>, <span style="font-family: monospace;">".imt"</span>,
+  or <span style="font-family: monospace;">".xim"</span>.
   </dd>
   </dl>
   <dl>
@@ -89,19 +89,19 @@ rgbto8: Create an 8-bit RGB image with special color map
   produced by the <b>rgbto8</b> for a particular image must also be loaded
   into the display server manually.  With IMTOOL use the setup panel and set
   the file name in the user1 or user2 field and then select the appropriate
-  map.  With SAOimage you select the <tt>"color"</tt> main menu function, and then the
-  <tt>"cmap"</tt> submenu function, and then the <tt>"read"</tt> button.  Note that usually a
+  map.  With SAOimage you select the <span style="font-family: monospace;">"color"</span> main menu function, and then the
+  <span style="font-family: monospace;">"cmap"</span> submenu function, and then the <span style="font-family: monospace;">"read"</span> button.  Note that usually a
   full pathname is required since the server is usually started from the
-  login directory.  For XIMTOOL the <tt>"XImtool*cmapDir1"</tt> resource must be
+  login directory.  For XIMTOOL the <span style="font-family: monospace;">"XImtool*cmapDir1"</span> resource must be
   set to the directory containing the color map and XIMTOOL must be
   restarted to cause the directory to be searched for color map files.
   </p>
   <p>
   The display server must be setup in it's default contrast mapping (with
-  IMTOOL you can use the RESET option, with XIMTOOL the <tt>"normalize"</tt> option is
+  IMTOOL you can use the RESET option, with XIMTOOL the <span style="font-family: monospace;">"normalize"</span> option is
   used, and with SAOimage you must restart) and the contrast mapping must not
   be changed.  There are no adjustments that can be made in IMTOOL or XIMTOOL
-  but with SAOimage you can adjust the colors using the <tt>"gamma"</tt> selections
+  but with SAOimage you can adjust the colors using the <span style="font-family: monospace;">"gamma"</span> selections
   and the mouse.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->

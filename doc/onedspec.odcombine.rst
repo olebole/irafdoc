@@ -37,10 +37,10 @@ odcombine: Combine spectra having different wavelength ranges (new)
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>List of output images to be created containing the combined spectra.  If
-  the grouping option is <tt>"all"</tt> then only one output image is created with the
-  specified name.  If the grouping option is <tt>"images"</tt> then there will be one
+  the grouping option is <span style="font-family: monospace;">"all"</span> then only one output image is created with the
+  specified name.  If the grouping option is <span style="font-family: monospace;">"images"</span> then there will be one
   output image for each input image and the output list must match the input
-  list in number.  If the grouping option is <tt>"apertures"</tt> then only one output
+  list in number.  If the grouping option is <span style="font-family: monospace;">"apertures"</span> then only one output
   root name is specified and there will be one output image for each selected
   aperture.  In this case the output images will have a name formed from the
   root name and a four digit aperture number extension.  In all cases the
@@ -55,14 +55,14 @@ odcombine: Combine spectra having different wavelength ranges (new)
   is specified.
   </p>
   <dl>
-  <dt><b>headers = <tt>""</tt> (optional)</b></dt>
+  <dt><b>headers = <span style="font-family: monospace;">""</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='headers' Line='headers = "" (optional)' -->
   <dd>Optional output multiextension FITS file(s).  The extensions are dataless
   headers from each input image.
   </dd>
   </dl>
   <dl>
-  <dt><b>bpmasks = <tt>""</tt> (optional)</b></dt>
+  <dt><b>bpmasks = <span style="font-family: monospace;">""</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='bpmasks' Line='bpmasks = "" (optional)' -->
   <dd>Optional output bad pixel mask(s) with good values of 0 and bad values of
   1.  Output pixels are marked as bad when no input pixels contributed to the
@@ -71,7 +71,7 @@ odcombine: Combine spectra having different wavelength ranges (new)
   </dd>
   </dl>
   <dl>
-  <dt><b>rejmask = <tt>""</tt> (optional)</b></dt>
+  <dt><b>rejmask = <span style="font-family: monospace;">""</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rejmask' Line='rejmask = "" (optional)' -->
   <dd>Optional output mask file(s) identifying rejected or excluded pixels.  The
   pixel mask is the size of the output image but there is one extra dimension
@@ -85,14 +85,14 @@ odcombine: Combine spectra having different wavelength ranges (new)
   </dd>
   </dl>
   <dl>
-  <dt><b>nrejmasks = <tt>""</tt> (optional)</b></dt>
+  <dt><b>nrejmasks = <span style="font-family: monospace;">""</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nrejmasks' Line='nrejmasks = "" (optional)' -->
   <dd>Optional output pixel mask(s) giving the number of input pixels rejected or
   excluded from the input images.
   </dd>
   </dl>
   <dl>
-  <dt><b>expmasks = <tt>""</tt> (optional)</b></dt>
+  <dt><b>expmasks = <span style="font-family: monospace;">""</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='expmasks' Line='expmasks = "" (optional)' -->
   <dd>Optional output exposure mask(s) giving the sum of the exposure values of
   the input images with non-zero weights that contributed to that pixel.
@@ -105,7 +105,7 @@ odcombine: Combine spectra having different wavelength ranges (new)
   </dd>
   </dl>
   <dl>
-  <dt><b>sigma = <tt>""</tt> (optional)</b></dt>
+  <dt><b>sigma = <span style="font-family: monospace;">""</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sigma' Line='sigma = "" (optional)' -->
   <dd>Optional output sigma image(s).  The sigma is the standard deviation,
   corrected for a finite population, of the input pixel values (excluding
@@ -113,10 +113,10 @@ odcombine: Combine spectra having different wavelength ranges (new)
   </dd>
   </dl>
   <dl>
-  <dt><b>logfile = <tt>"STDOUT"</tt> (optional)</b></dt>
+  <dt><b>logfile = <span style="font-family: monospace;">"STDOUT"</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "STDOUT" (optional)' -->
   <dd>Optional output log file.  If no file is specified then no log information is
-  produced.  The special filename <tt>"STDOUT"</tt> prints log information to the
+  produced.  The special filename <span style="font-family: monospace;">"STDOUT"</span> prints log information to the
   terminal.
   </dd>
   </dl>
@@ -124,7 +124,7 @@ odcombine: Combine spectra having different wavelength ranges (new)
   
   </p>
   <dl>
-  <dt><b>apertures = <tt>""</tt></b></dt>
+  <dt><b>apertures = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
   <dd>List of apertures to be selected for combining.  If none is specified
   then all apertures are selected.  The syntax is a blank or comma separated
@@ -132,26 +132,26 @@ odcombine: Combine spectra having different wavelength ranges (new)
   </dd>
   </dl>
   <dl>
-  <dt><b>group = <tt>"apertures"</tt> (all|images|apertures)</b></dt>
+  <dt><b>group = <span style="font-family: monospace;">"apertures"</span> (all|images|apertures)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='group' Line='group = "apertures" (all|images|apertures)' -->
   <dd>Option for grouping input spectra for combining (after selection by aperture)
   from one or more input images.  The options are:
   <dl>
-  <dt><b><tt>"all"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"all"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"all"' -->
   <dd>Combine all spectra from all images in the input list into a single output
   spectrum.
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"images"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"images"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"images"' -->
   <dd>Combine all spectra in each input image into a single spectrum in
   separate output images.
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"apertures"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"apertures"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"apertures"' -->
   <dd>Combine all spectra of the same aperture from all input images and put it
   into an output image with specified root name and a four digit aperture
@@ -191,11 +191,11 @@ odcombine: Combine spectra having different wavelength ranges (new)
   
   </p>
   <dl>
-  <dt><b>combine = <tt>"average"</tt> (average|median|sum)</b></dt>
+  <dt><b>combine = <span style="font-family: monospace;">"average"</span> (average|median|sum)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='combine' Line='combine = "average" (average|median|sum)' -->
   <dd>Type of combining operation performed on the final set of pixels (after
   offsetting, masking, thresholding, and rejection).  The choices are
-  <tt>"average"</tt>, <tt>"median"</tt>, or <tt>"sum"</tt>.  The median uses the average of the two central
+  <span style="font-family: monospace;">"average"</span>, <span style="font-family: monospace;">"median"</span>, or <span style="font-family: monospace;">"sum"</span>.  The median uses the average of the two central
   values when the number of pixels is even.  For the average and sum, the
   pixel values are multiplied by the weights (1 if no weighting is used)
   and summed.  The average is computed by dividing by the sum of the weights.
@@ -203,7 +203,7 @@ odcombine: Combine spectra having different wavelength ranges (new)
   </dd>
   </dl>
   <dl>
-  <dt><b>reject = <tt>"none"</tt> (none|minmax|ccdclip|crreject|sigclip|avsigclip|pclip)</b></dt>
+  <dt><b>reject = <span style="font-family: monospace;">"none"</span> (none|minmax|ccdclip|crreject|sigclip|avsigclip|pclip)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='reject' Line='reject = "none" (none|minmax|ccdclip|crreject|sigclip|avsigclip|pclip)' -->
   <dd>Type of rejection operation performed on the pixels remaining after offsetting,
   masking and thresholding.  The algorithms are described in the
@@ -220,18 +220,18 @@ odcombine: Combine spectra having different wavelength ranges (new)
   </dd>
   </dl>
   <dl>
-  <dt><b>outtype = <tt>"real"</tt> (none|short|ushort|integer|long|real|double)</b></dt>
+  <dt><b>outtype = <span style="font-family: monospace;">"real"</span> (none|short|ushort|integer|long|real|double)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtype' Line='outtype = "real" (none|short|ushort|integer|long|real|double)' -->
-  <dd>Output image pixel datatype.  The pixel datatypes are <tt>"double"</tt>, <tt>"real"</tt>,
-  <tt>"long"</tt>, <tt>"integer"</tt>, unsigned short <tt>"ushort"</tt>, and <tt>"short"</tt> with highest
-  precedence first.  If <tt>"none"</tt> is specified then the highest precedence
+  <dd>Output image pixel datatype.  The pixel datatypes are <span style="font-family: monospace;">"double"</span>, <span style="font-family: monospace;">"real"</span>,
+  <span style="font-family: monospace;">"long"</span>, <span style="font-family: monospace;">"integer"</span>, unsigned short <span style="font-family: monospace;">"ushort"</span>, and <span style="font-family: monospace;">"short"</span> with highest
+  precedence first.  If <span style="font-family: monospace;">"none"</span> is specified then the highest precedence
   datatype of the input images is used.  When there is a mixture of
   short and unsigned short images the highest precedence become integer.
   The datatypes may be abbreviated to a single character.
   </dd>
   </dl>
   <dl>
-  <dt><b>outlimits = <tt>""</tt></b></dt>
+  <dt><b>outlimits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outlimits' Line='outlimits = ""' -->
   <dd>Output region limits specified as a pair of whitespace separated pixel
   values.
@@ -241,14 +241,14 @@ odcombine: Combine spectra having different wavelength ranges (new)
   
   </p>
   <dl>
-  <dt><b>smaskformat = <tt>"bpmspectrum"</tt> (bpmspectrum|bpmpixel)</b></dt>
+  <dt><b>smaskformat = <span style="font-family: monospace;">"bpmspectrum"</span> (bpmspectrum|bpmpixel)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='smaskformat' Line='smaskformat = "bpmspectrum" (bpmspectrum|bpmpixel)' -->
   <dd>When a mask is applied it must be matched to the input spectrum.  If the
-  value of this parameter is <tt>"bpmspectrum"</tt> the mask file is assumed to have a
+  value of this parameter is <span style="font-family: monospace;">"bpmspectrum"</span> the mask file is assumed to have a
   spectral file structure with aperture and dispersion information.  The mask
   spectrum is matched to the input spectrum by aperture number and is
   rebinned from its dispersion to match the rebinned dispersion of the input
-  spectrum.  If the value is <tt>"bpmpixel"</tt> the mask file is assumed to have
+  spectrum.  If the value is <span style="font-family: monospace;">"bpmpixel"</span> the mask file is assumed to have
   minimal header information and the pixel information is matched to the
   input image pixels.  This means the mask pixels are extracted from the same
   line as the input spectrum and the mask pixels are resampled in the same
@@ -256,17 +256,17 @@ odcombine: Combine spectra having different wavelength ranges (new)
   </dd>
   </dl>
   <dl>
-  <dt><b>smasktype = <tt>"none"</tt> (none|goodvalue|badvalue|goodbits|badbit)</b></dt>
+  <dt><b>smasktype = <span style="font-family: monospace;">"none"</span> (none|goodvalue|badvalue|goodbits|badbit)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='smasktype' Line='smasktype = "none" (none|goodvalue|badvalue|goodbits|badbit)' -->
-  <dd>Type of pixel masking to use.  If <tt>"none"</tt> or <tt>""</tt> then no pixel masking is
+  <dd>Type of pixel masking to use.  If <span style="font-family: monospace;">"none"</span> or <span style="font-family: monospace;">""</span> then no pixel masking is
   done even if an image has an associated  pixel mask.  The other choices are
   to select the value in the pixel mask to be treated as good (goodvalue) or
   bad (badvalue) or the bits (specified as a value) to be treated as good
   (goodbits) or bad (badbits).  The pixel mask filename is specified by the
-  image header keyword <tt>"BPM"</tt>.  Note that if the input image contains
+  image header keyword <span style="font-family: monospace;">"BPM"</span>.  Note that if the input image contains
   multiple spectra then the mask file must also contain at least the
-  selected apertures if the mask format is <tt>"bpmspectrum"</tt> or matching
-  image dimensions if the mask format is <tt>"bpmpixel"</tt>.
+  selected apertures if the mask format is <span style="font-family: monospace;">"bpmspectrum"</span> or matching
+  image dimensions if the mask format is <span style="font-family: monospace;">"bpmpixel"</span>.
   </dd>
   </dl>
   <dl>
@@ -301,12 +301,12 @@ odcombine: Combine spectra having different wavelength ranges (new)
   be matched in the order of the input images.  Note that if an image does
   not contain a specified aperture the ordering will be wrong.  If the
   grouping is by image then the file will be matched to the spectra in the
-  order of the apertures in the image.  And if the grouping is <tt>"all"</tt> then the
+  order of the apertures in the image.  And if the grouping is <span style="font-family: monospace;">"all"</span> then the
   list is matched in the order of the images and apertures within the
   images with the apertures in an image varying first.
   </p>
   <dl>
-  <dt><b>scale = <tt>"none"</tt> (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)</b></dt>
+  <dt><b>scale = <span style="font-family: monospace;">"none"</span> (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='scale' Line='scale = "none" (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)' -->
   <dd>Multiplicative image scaling to be applied.  The choices are none, multiply
   by the reciprocal of the mode, median, or mean of the specified statistics
@@ -317,7 +317,7 @@ odcombine: Combine spectra having different wavelength ranges (new)
   </dd>
   </dl>
   <dl>
-  <dt><b>zero = <tt>"none"</tt> (none|mode|median|mean|@&lt;file&gt;|!&lt;keyword&gt;)</b></dt>
+  <dt><b>zero = <span style="font-family: monospace;">"none"</span> (none|mode|median|mean|@&lt;file&gt;|!&lt;keyword&gt;)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='zero' Line='zero = "none" (none|mode|median|mean|@&lt;file&gt;|!&lt;keyword&gt;)' -->
   <dd>Additive zero level image shifts to be applied.  The choices are none, add
   the negative of the mode, median, or mean of the specified statistics
@@ -328,7 +328,7 @@ odcombine: Combine spectra having different wavelength ranges (new)
   </dd>
   </dl>
   <dl>
-  <dt><b>weight = <tt>"none"</tt> (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)</b></dt>
+  <dt><b>weight = <span style="font-family: monospace;">"none"</span> (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='weight' Line='weight = "none" (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)' -->
   <dd>Weights to be applied during the final averaging.  The choices are none,
   the mode, median, or mean of the specified statistics section, the exposure
@@ -341,13 +341,13 @@ odcombine: Combine spectra having different wavelength ranges (new)
   </dd>
   </dl>
   <dl>
-  <dt><b>statsec = <tt>""</tt></b></dt>
+  <dt><b>statsec = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='statsec' Line='statsec = ""' -->
   <dd>Section of images to use in computing image statistics for scaling and
   weighting.  If no section is given then the entire region of the input is
   sampled (for efficiency the images are sampled if they are big enough).
   When the images are offset relative to each other one can precede the image
-  section with one of the modifiers <tt>"input"</tt>, <tt>"output"</tt>, <tt>"overlap"</tt>.  The first
+  section with one of the modifiers <span style="font-family: monospace;">"input"</span>, <span style="font-family: monospace;">"output"</span>, <span style="font-family: monospace;">"overlap"</span>.  The first
   interprets the section relative to the input image (which is equivalent to
   not specifying a modifier), the second interprets the section relative to
   the output image, and the last selects the common overlap and any following
@@ -355,7 +355,7 @@ odcombine: Combine spectra having different wavelength ranges (new)
   </dd>
   </dl>
   <dl>
-  <dt><b> expname = <tt>""</tt></b></dt>
+  <dt><b> expname = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line=' expname = ""' -->
   <dd>Image header keyword to be used with the exposure scaling and weighting
   options.  Also if an exposure keyword is specified that keyword will be
@@ -377,7 +377,7 @@ odcombine: Combine spectra having different wavelength ranges (new)
   <dl>
   <dt><b>nlow = 1,  nhigh = 1 (minmax)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nlow' Line='nlow = 1,  nhigh = 1 (minmax)' -->
-  <dd>The number of low and high pixels to be rejected by the <tt>"minmax"</tt> algorithm.
+  <dd>The number of low and high pixels to be rejected by the <span style="font-family: monospace;">"minmax"</span> algorithm.
   These numbers are converted to fractions of the total number of input images
   so that if no rejections have taken place the specified number of pixels
   are rejected while if pixels have been rejected by masking, thresholding,
@@ -400,8 +400,8 @@ odcombine: Combine spectra having different wavelength ranges (new)
   <dt><b>mclip = yes (ccdclip, crreject, sigclip, avsigcliip)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='mclip' Line='mclip = yes (ccdclip, crreject, sigclip, avsigcliip)' -->
   <dd>Use the median as the estimate for the true intensity rather than the
-  average with high and low values excluded in the <tt>"ccdclip"</tt>, <tt>"crreject"</tt>,
-  <tt>"sigclip"</tt>, and <tt>"avsigclip"</tt> algorithms?  The median is a better estimator
+  average with high and low values excluded in the <span style="font-family: monospace;">"ccdclip"</span>, <span style="font-family: monospace;">"crreject"</span>,
+  <span style="font-family: monospace;">"sigclip"</span>, and <span style="font-family: monospace;">"avsigclip"</span> algorithms?  The median is a better estimator
   in the presence of data which one wants to reject than the average.
   However, computing the median is slower than the average.
   </dd>
@@ -409,18 +409,18 @@ odcombine: Combine spectra having different wavelength ranges (new)
   <dl>
   <dt><b>lsigma = 3., hsigma = 3. (ccdclip, crreject, sigclip, avsigclip, pclip)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lsigma' Line='lsigma = 3., hsigma = 3. (ccdclip, crreject, sigclip, avsigclip, pclip)' -->
-  <dd>Low and high sigma clipping factors for the <tt>"ccdclip"</tt>, <tt>"crreject"</tt>, <tt>"sigclip"</tt>,
-  <tt>"avsigclip"</tt>, and <tt>"pclip"</tt> algorithms.  They multiply a <tt>"sigma"</tt> factor
+  <dd>Low and high sigma clipping factors for the <span style="font-family: monospace;">"ccdclip"</span>, <span style="font-family: monospace;">"crreject"</span>, <span style="font-family: monospace;">"sigclip"</span>,
+  <span style="font-family: monospace;">"avsigclip"</span>, and <span style="font-family: monospace;">"pclip"</span> algorithms.  They multiply a <span style="font-family: monospace;">"sigma"</span> factor
   produced by the algorithm to select a point below and above the average or
   median value for rejecting pixels.  The lower sigma is ignored for the
-  <tt>"crreject"</tt> algorithm.
+  <span style="font-family: monospace;">"crreject"</span> algorithm.
   </dd>
   </dl>
   <dl>
-  <dt><b>rdnoise = <tt>"0."</tt>, gain = <tt>"1."</tt>, snoise = <tt>"0."</tt> (ccdclip, crreject)</b></dt>
+  <dt><b>rdnoise = <span style="font-family: monospace;">"0."</span>, gain = <span style="font-family: monospace;">"1."</span>, snoise = <span style="font-family: monospace;">"0."</span> (ccdclip, crreject)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rdnoise' Line='rdnoise = "0.", gain = "1.", snoise = "0." (ccdclip, crreject)' -->
   <dd>CCD readout noise in electrons, gain in electrons/DN, and sensitivity noise
-  as a fraction.  These parameters are used with the <tt>"ccdclip"</tt> and <tt>"crreject"</tt>
+  as a fraction.  These parameters are used with the <span style="font-family: monospace;">"ccdclip"</span> and <span style="font-family: monospace;">"crreject"</span>
   algorithms.  The values may be either numeric or an image header keyword
   which contains the value.  The noise model for a pixel is:
   <pre>
@@ -482,7 +482,7 @@ odcombine: Combine spectra having different wavelength ranges (new)
   <dt><b>&lt;package&gt;.interp</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='&lt;package&gt;.interp' -->
   <dd>When the spectra have to be interpolated to a common pixel sampling
-  the <tt>"interp"</tt> parameter from the package from which ODCOMBINE is used
+  the <span style="font-family: monospace;">"interp"</span> parameter from the package from which ODCOMBINE is used
   will be used.
   </dd>
   </dl>
@@ -495,7 +495,7 @@ odcombine: Combine spectra having different wavelength ranges (new)
   and high thresholds or identified as bad in a bad pixel mask, scaling them
   in various ways, applying a rejection algorithm based on known or empirical
   noise statistics, and computing the sum, weighted average, or median of the
-  remaining pixels.  Note that the <tt>"sum"</tt> option is the direct summation of
+  remaining pixels.  Note that the <span style="font-family: monospace;">"sum"</span> option is the direct summation of
   the pixels and does not perform any rejection or scaling of the data
   regardless of the parameter settings.
   </p>
@@ -526,8 +526,8 @@ odcombine: Combine spectra having different wavelength ranges (new)
   spectra in counts are not corrected in the interpolation for changes in
   pixel widths.  The default interpolation function is a 5th order
   polynomial.  The choice of interpolation type is made with the package
-  parameter <tt>"interp"</tt>.  It may be set to <tt>"nearest"</tt>, <tt>"linear"</tt>, <tt>"spline3"</tt>,
-  <tt>"poly5"</tt>, or <tt>"sinc"</tt>.  Remember that this applies to all tasks which might
+  parameter <span style="font-family: monospace;">"interp"</span>.  It may be set to <span style="font-family: monospace;">"nearest"</span>, <span style="font-family: monospace;">"linear"</span>, <span style="font-family: monospace;">"spline3"</span>,
+  <span style="font-family: monospace;">"poly5"</span>, or <span style="font-family: monospace;">"sinc"</span>.  Remember that this applies to all tasks which might
   need to interpolate spectra in the <b>onedspec</b> and associated packages.
   For a discussion of interpolation types see <b>onedspec</b>.
   </p>
@@ -555,7 +555,7 @@ odcombine: Combine spectra having different wavelength ranges (new)
   the input, resampled to a common dispersion, and the resulting spectra
   written to temporary images, one per spectrum.  The temporary images
   are written to the current working directory with names begining with
-  <tt>"tmp"</tt>.  The same is done with any bad pixel masks.  Then the list of
+  <span style="font-family: monospace;">"tmp"</span>.  The same is done with any bad pixel masks.  Then the list of
   images are combined using the IMCOMBINE algorithms.  When the combining
   is completed the temporary images are removed.  If ODCOMBINE aborts
   for some reason these file may be left behind and the user may delete
@@ -607,19 +607,15 @@ odcombine: Combine spectra having different wavelength ranges (new)
   <dl>
   <dt><b></b></dt>
   <!-- Sec='REVISIONS' Level=1 Label='' Line='' -->
-  <dd>The <tt>"first"</tt> option does not allow rebinning to a non-linear dispersion.
+  <dd>The <span style="font-family: monospace;">"first"</span> option does not allow rebinning to a non-linear dispersion.
   Instead, it rebins to the nearest linear dispersion matching the first
   spectrum.
-  </dd>
-  </dl>
   </dd>
   </dl>
   <!-- EndSection:   'REVISIONS' -->
   <h3>See also</h3>
   <!-- BeginSection: 'SEE ALSO' -->
-  <p>
   imcombine, scombine, scopy, sarith, lscombine
-  </p>
   
   <!-- EndSection:    'SEE ALSO' -->
   

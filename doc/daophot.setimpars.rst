@@ -31,9 +31,9 @@ setimpars: Save/restore parameter sets for a particular image
   <dl>
   <dt><b>restore</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='restore' Line='restore' -->
-  <dd>If restore = yes, parfile is <tt>""</tt>, and the file <tt>"image.pars"</tt> exists, SETIMPARS
-  sets the current algorithm parameters by reading in the file <tt>"image.pars"</tt>. If
-  parfile is not <tt>""</tt>, then restore is automatically assumed to be yes.
+  <dd>If restore = yes, parfile is <span style="font-family: monospace;">""</span>, and the file <span style="font-family: monospace;">"image.pars"</span> exists, SETIMPARS
+  sets the current algorithm parameters by reading in the file <span style="font-family: monospace;">"image.pars"</span>. If
+  parfile is not <span style="font-family: monospace;">""</span>, then restore is automatically assumed to be yes.
   </dd>
   </dl>
   <dl>
@@ -56,7 +56,7 @@ setimpars: Save/restore parameter sets for a particular image
   <!-- Sec='PARAMETERS' Level=0 Label='parfile' Line='parfile' -->
   <dd>The name of the input file containing the values of the DAOPHOT algorithm
   parameters to be restored. If defined <i>parfile</i> must have been written
-  by SETIMPARS.  If parfile is null (<tt>""</tt>), SETIMPARS searches for a file named
+  by SETIMPARS.  If parfile is null (<span style="font-family: monospace;">""</span>), SETIMPARS searches for a file named
   <i>image.pars</i> in the user's current directory. If no file is found, the
   DAOPHOT algorithm parameters are restored from the files <i>datapars</i>,
   <i>findpars</i>, <i>centerpars</i>, <i>fitskypars</i>, <i>photpars</i>, and
@@ -64,62 +64,62 @@ setimpars: Save/restore parameter sets for a particular image
   </dd>
   </dl>
   <dl>
-  <dt><b>datapars = <tt>""</tt></b></dt>
+  <dt><b>datapars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='datapars' Line='datapars = ""' -->
   <dd>The name of the file containing the DATAPARS parameter values. Datapars must be
-  a named DATAPARS parameter set file written by the EPAR task, or <tt>""</tt> in which
+  a named DATAPARS parameter set file written by the EPAR task, or <span style="font-family: monospace;">""</span> in which
   case the default DATAPARS parameter set in the user's uparm directory is used.
-  If the parameter <i>unlearn</i> is <tt>"yes"</tt> and datapars is <tt>""</tt>, DATAPARS is
+  If the parameter <i>unlearn</i> is <span style="font-family: monospace;">"yes"</span> and datapars is <span style="font-family: monospace;">""</span>, DATAPARS is
   unlearned.
   </dd>
   </dl>
   <dl>
-  <dt><b>findpars = <tt>""</tt></b></dt>
+  <dt><b>findpars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='findpars' Line='findpars = ""' -->
   <dd>The name of the file containing the FINDPARS parameter values. Findpars
-  must be a named FINDPARS parameter set file written by the EPAR task, or <tt>""</tt>
+  must be a named FINDPARS parameter set file written by the EPAR task, or <span style="font-family: monospace;">""</span>
   in which case the default FINDPARS parameter set in the user's uparm
-  directory is used. If the parameter <i>unlearn</i> is <tt>"yes"</tt> and findpars
-  is <tt>""</tt>, FINDPARS is unlearned.
+  directory is used. If the parameter <i>unlearn</i> is <span style="font-family: monospace;">"yes"</span> and findpars
+  is <span style="font-family: monospace;">""</span>, FINDPARS is unlearned.
   </dd>
   </dl>
   <dl>
-  <dt><b>centerpars = <tt>""</tt></b></dt>
+  <dt><b>centerpars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='centerpars' Line='centerpars = ""' -->
   <dd>The name of the file containing the CENTERPARS parameter values.  Centerpars
-  must be a named CENTERPARS parameter set file written by the EPAR task, or <tt>""</tt>
+  must be a named CENTERPARS parameter set file written by the EPAR task, or <span style="font-family: monospace;">""</span>
   in which case the default CENTERPARS parameter set in the user's uparm
-  directory is used. If the parameter <i>unlearn</i> is <tt>"yes"</tt> and centerpars
-  is <tt>""</tt>, CENTERPARS is unlearned.
+  directory is used. If the parameter <i>unlearn</i> is <span style="font-family: monospace;">"yes"</span> and centerpars
+  is <span style="font-family: monospace;">""</span>, CENTERPARS is unlearned.
   </dd>
   </dl>
   <dl>
-  <dt><b>fitskypars = <tt>""</tt></b></dt>
+  <dt><b>fitskypars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fitskypars' Line='fitskypars = ""' -->
   <dd>The name of the file containing the FITSKYPARS parameter values. Fitskypars
-  must be a named FITSKYPARS parameter set file written by the EPAR task, or <tt>""</tt>
+  must be a named FITSKYPARS parameter set file written by the EPAR task, or <span style="font-family: monospace;">""</span>
   in which case the default FITSKYPARS parameter set in the user's uparm
-  directory is used. If the parameter <i>unlearn</i> is <tt>"yes"</tt> and fitskypars
-  is <tt>""</tt>, FITSKYPARS is unlearned.
+  directory is used. If the parameter <i>unlearn</i> is <span style="font-family: monospace;">"yes"</span> and fitskypars
+  is <span style="font-family: monospace;">""</span>, FITSKYPARS is unlearned.
   </dd>
   </dl>
   <dl>
-  <dt><b>photpars = <tt>""</tt></b></dt>
+  <dt><b>photpars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='photpars' Line='photpars = ""' -->
   <dd>The name of the file containing the PHOTPARS parameter values. Photpars must be
-  a named PHOTPARS parameter set file written by the EPAR task, or <tt>""</tt> in which
+  a named PHOTPARS parameter set file written by the EPAR task, or <span style="font-family: monospace;">""</span> in which
   case the default PHOTPARS parameter set in the user's uparm directory is used.
-  If the parameter <i>unlearn</i> is <tt>"yes"</tt> and photpars is <tt>""</tt>, PHOTPARS is
+  If the parameter <i>unlearn</i> is <span style="font-family: monospace;">"yes"</span> and photpars is <span style="font-family: monospace;">""</span>, PHOTPARS is
   unlearned.
   </dd>
   </dl>
   <dl>
-  <dt><b>daopars = <tt>""</tt></b></dt>
+  <dt><b>daopars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='daopars' Line='daopars = ""' -->
   <dd>The name of the file containing the DAOPARS parameter values. Daopars must be a
-  named DAOPARS parameter set file written by the EPAR task, or <tt>""</tt> in which case
+  named DAOPARS parameter set file written by the EPAR task, or <span style="font-family: monospace;">""</span> in which case
   the default DAOPARS parameter set in the user's uparm directory is used. If the
-  parameter <i>unlearn</i> is <tt>"yes"</tt> and daopars is <tt>""</tt>, DAOPARS is unlearned.
+  parameter <i>unlearn</i> is <span style="font-family: monospace;">"yes"</span> and daopars is <span style="font-family: monospace;">""</span>, DAOPARS is unlearned.
   </dd>
   </dl>
   <dl>
@@ -139,19 +139,19 @@ setimpars: Save/restore parameter sets for a particular image
   and input and output plot files to their default values or <i>image</i> whichever
   is appropriate. Next SETIMPARS reads in the values of the algorithm parameters
   from <i>parfile</i> if it is defined, or from the file <i>image.pars</i> if it
-  exists and <i>restore</i> is <tt>"yes"</tt>, or from the named parameter set files
+  exists and <i>restore</i> is <span style="font-family: monospace;">"yes"</span>, or from the named parameter set files
   <i>datapars</i>, <i>findpars</i>, <i>centerpars</i>, <i>fitskypars</i>,
   <i>photpars</i>, and <i>daopars</i> if they exist, or from the default parameters
-  sets in the user's uparm directory. If <i>unlearn</i> is <tt>"yes"</tt>, these default
+  sets in the user's uparm directory. If <i>unlearn</i> is <span style="font-family: monospace;">"yes"</span>, these default
   parameter sets are unlearned.
   </p>
   <p>
-  If <i>review</i> is <tt>"yes"</tt>, the user can review and or edit the newly set
+  If <i>review</i> is <span style="font-family: monospace;">"yes"</span>, the user can review and or edit the newly set
   algorithm parameters in DATAPARS, FINDPARS, CENTERPARS, FITSKYPARS, PHOTPARS,
   and DAOPARS using the IRAF EPAR task.
   </p>
   <p>
-  If <i>update</i> is <tt>"yes"</tt>, SETIMPARS saves the new current values of the DAOPHOT
+  If <i>update</i> is <span style="font-family: monospace;">"yes"</span>, SETIMPARS saves the new current values of the DAOPHOT
   algorithm parameters DATAPARS, FINDPARS, CENTERPARS, FITSKYPARS, PHOTPARS, and
   DAOPARS in the file <i>image.pars</i>. Any previously existing file of the same
   name is overwritten.

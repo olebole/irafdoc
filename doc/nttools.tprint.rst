@@ -61,7 +61,7 @@ tprint: Print tables--both headers and data.
   This parameter will accept a general file name template,
   containing wildcard characters,
   individual file names with each file name separated by a comma,
-  or the name of a list file (preceded by the <tt>"@"</tt> character)
+  or the name of a list file (preceded by the <span style="font-family: monospace;">"@"</span> character)
   containing the file names of all tables to be processed.
   If more than one table is to be processed,
   a blank line will be printed between tables.
@@ -87,7 +87,7 @@ tprint: Print tables--both headers and data.
   otherwise, the screen size is taken from the environment variable 'ttyncols'.
   Columns that are too wide to fit within this page size
   (allowing also for the row number) will be truncated.
-  This parameter is not used if option = <tt>"html"</tt>.
+  This parameter is not used if option = <span style="font-family: monospace;">"html"</span>.
   </dd>
   </dl>
   <dl>
@@ -99,7 +99,7 @@ tprint: Print tables--both headers and data.
   It does, however, include any blank lines inserted in the data
   because the user specified a value for 'lgroup'.
   The default of zero gives no page breaks.
-  This parameter is not used if option = <tt>"html"</tt>.
+  This parameter is not used if option = <span style="font-family: monospace;">"html"</span>.
   If the 'sp_col' parameter is not null
   or if the 'lgroup' parameter is greater than zero,
   the blank lines between groups are included in the count of lines per page.
@@ -138,11 +138,11 @@ tprint: Print tables--both headers and data.
   <dd>Print header information?
   The table name, date of last modification,
   and column names are printed only if 'showhdr = yes'.
-  If the 'option' parameter (see below) is set to either <tt>"latex"</tt> or <tt>"tex"</tt>,
+  If the 'option' parameter (see below) is set to either <span style="font-family: monospace;">"latex"</span> or <span style="font-family: monospace;">"tex"</span>,
   then 'showhdr' will affect the printing of
   the default macro definitions for column separators
   and the end-of-line string as well as the begin-table string
-  (i.e., <tt>"\begin{tabular}..."</tt> or <tt>"\halign..."</tt>).
+  (i.e., <span style="font-family: monospace;">"\begin{tabular}..."</span> or <span style="font-family: monospace;">"\halign..."</span>).
   </dd>
   </dl>
   <dl>
@@ -153,21 +153,21 @@ tprint: Print tables--both headers and data.
   </dd>
   </dl>
   <dl>
-  <dt><b>(columns = <tt>""</tt>) [string]</b></dt>
+  <dt><b>(columns = <span style="font-family: monospace;">""</span>) [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(columns = "") [string]' -->
   <dd>The names of the columns to be printed.
   An alternative way to do this
   is to use a column selector with the table name
-  (type <tt>"help selectors"</tt> for more information).
+  (type <span style="font-family: monospace;">"help selectors"</span> for more information).
   A null or blank string means print all columns.
   This parameter is a column template--that is,
   either a list of column names
   or a template that can contain wildcard characters.
   The column names should be separated by commas or white space.
   The list of column names can be placed in a file
-  and the name of the file preceded by <tt>"@"</tt> passed to 'columns'.
+  and the name of the file preceded by <span style="font-family: monospace;">"@"</span> passed to 'columns'.
   If the first character in the column template
-  is the negation character (either <tt>"~"</tt> or <tt>"!"</tt>),
+  is the negation character (either <span style="font-family: monospace;">"~"</span> or <span style="font-family: monospace;">"!"</span>),
   all columns NOT named will be printed.
   If you want to use a list file for this parameter,
   the 'tlcol' task can be used to make the list
@@ -180,52 +180,52 @@ tprint: Print tables--both headers and data.
   </dd>
   </dl>
   <dl>
-  <dt><b>(rows = <tt>"-"</tt>) [string]</b></dt>
+  <dt><b>(rows = <span style="font-family: monospace;">"-"</span>) [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(rows = "-") [string]' -->
   <dd>The range of rows which are to be printed.
   An alternative way to do this
   is to use a row selector with the table name
-  (type <tt>"help selectors"</tt> for more information).
+  (type <span style="font-family: monospace;">"help selectors"</span> for more information).
   This parameter takes a character string
   defining either specific rows to be printed,
   a range of rows, or upper or lower limits on row numbers.
-  The default value <tt>"-"</tt> means print all rows.
-  The first ten rows could be specified as rows=<tt>"1-10"</tt> or just rows=<tt>"-10"</tt>.
+  The default value <span style="font-family: monospace;">"-"</span> means print all rows.
+  The first ten rows could be specified as rows=<span style="font-family: monospace;">"1-10"</span> or just rows=<span style="font-family: monospace;">"-10"</span>.
   To print the first ten rows
-  and all rows from 900 through the last (inclusive), use rows=<tt>"-10,900-"</tt>.
-  Setting rows=<tt>"1,3,7,23"</tt> will print only those four rows.
+  and all rows from 900 through the last (inclusive), use rows=<span style="font-family: monospace;">"-10,900-"</span>.
+  Setting rows=<span style="font-family: monospace;">"1,3,7,23"</span> will print only those four rows.
   It is not an error to specify rows larger than the largest row number;
   excess row numbers will simply be ignored.
-  (For more information type <tt>"help ranges"</tt>.)
+  (For more information type <span style="font-family: monospace;">"help ranges"</span>.)
   </dd>
   </dl>
   <dl>
-  <dt><b>(option = <tt>"plain"</tt>) [string, allowed values: plain | html | latex | tex]</b></dt>
+  <dt><b>(option = <span style="font-family: monospace;">"plain"</span>) [string, allowed values: plain | html | latex | tex]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(option = "plain") [string, allowed values: plain | html | latex | tex]' -->
   <dd>The format in which output will be produced.
-  If option = <tt>"plain"</tt>, the output will be ordinary ASCII text which may
+  If option = <span style="font-family: monospace;">"plain"</span>, the output will be ordinary ASCII text which may
   be read or printed directly.
   (See also the 'align' parameter, below.)
-  If option = <tt>"html"</tt>,
+  If option = <span style="font-family: monospace;">"html"</span>,
   the output will be formatted with HTML tags,
-  and the output should be redirected to a file having the extension <tt>".html"</tt>.
-  If option = <tt>"latex"</tt>,
+  and the output should be redirected to a file having the extension <span style="font-family: monospace;">".html"</span>.
+  If option = <span style="font-family: monospace;">"latex"</span>,
   the output will be formatted for use as input to LaTeX,
-  and if option = <tt>"tex"</tt>,
+  and if option = <span style="font-family: monospace;">"tex"</span>,
   the output will be formatted for use as input to TeX.
   In these two cases the output should be redirected to a file having
-  the extension <tt>".tex"</tt>.
+  the extension <span style="font-family: monospace;">".tex"</span>.
   Each value in each row will be preceded by a column-separator of the
-  form <tt>"\cola"</tt> through <tt>"\colz"</tt>, <tt>"\colA"</tt> through <tt>"\colZ"</tt>.
+  form <span style="font-family: monospace;">"\cola"</span> through <span style="font-family: monospace;">"\colz"</span>, <span style="font-family: monospace;">"\colA"</span> through <span style="font-family: monospace;">"\colZ"</span>.
   (Yes, there
   is a limit of 52 columns to be printed on one page.)  If the row number
   is printed (i.e., by using the 'showrow' parameter) it will
-  be preceded by the string <tt>"\colzero"</tt>; the string <tt>"\cola"</tt> always
+  be preceded by the string <span style="font-family: monospace;">"\colzero"</span>; the string <span style="font-family: monospace;">"\cola"</span> always
   precedes the first column from the table.
-  The default definitions assign <tt>"\null"</tt> to the first of these
-  (either <tt>"\colzero"</tt> or <tt>"\cola"</tt>) and assign <tt>"&amp;"</tt> to all the rest.
-  Each row may span several physical rows and is terminated by <tt>"\eol"</tt>,
-  which has the default definition of <tt>"\\"</tt> or <tt>"\cr"</tt> as appropriate.
+  The default definitions assign <span style="font-family: monospace;">"\null"</span> to the first of these
+  (either <span style="font-family: monospace;">"\colzero"</span> or <span style="font-family: monospace;">"\cola"</span>) and assign <span style="font-family: monospace;">"&amp;"</span> to all the rest.
+  Each row may span several physical rows and is terminated by <span style="font-family: monospace;">"\eol"</span>,
+  which has the default definition of <span style="font-family: monospace;">"\\"</span> or <span style="font-family: monospace;">"\cr"</span> as appropriate.
   (See also the description of the parameter 'showhdr').
   </dd>
   </dl>
@@ -233,7 +233,7 @@ tprint: Print tables--both headers and data.
   <dt><b>(align = yes) [boolean]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(align = yes) [boolean]' -->
   <dd>Increase column width to align with header?  This parameter is only useful
-  when option = <tt>"plain"</tt>.
+  when option = <span style="font-family: monospace;">"plain"</span>.
   If 'align = no', the print format stored in the table for each column
   will be used without modification.
   This can cause a problem in that some
@@ -248,7 +248,7 @@ tprint: Print tables--both headers and data.
   </dd>
   </dl>
   <dl>
-  <dt><b>(sp_col = <tt>""</tt>) [string]</b></dt>
+  <dt><b>(sp_col = <span style="font-family: monospace;">""</span>) [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(sp_col = "") [string]' -->
   <dd>This is the name of a column in the table.
   If it is specified (non-null),
@@ -284,7 +284,7 @@ tprint: Print tables--both headers and data.
   rather than just scalar values,
   grouping by 'lgroup' will be applied to array elements
   rather than to row numbers.
-  If option = <tt>"plain"</tt>
+  If option = <span style="font-family: monospace;">"plain"</span>
   and the window width (or 'pwidth' if output is redirected)
   is not large enough for all the columns,
   the spacing can be by row number on some pages

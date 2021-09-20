@@ -32,7 +32,7 @@ page: Page through a file
   <dt><b>map_cc = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='map_cc' Line='map_cc = yes' -->
   <dd>Map non-printing control characters into printable form, e.g., BEL
-  (ctrl/G, ASCII 7) is printed as <tt>"^G"</tt>.
+  (ctrl/G, ASCII 7) is printed as <span style="font-family: monospace;">"^G"</span>.
   </dd>
   </dl>
   <dl>
@@ -49,14 +49,14 @@ page: Page through a file
   </dd>
   </dl>
   <dl>
-  <dt><b>prompt = <tt>""</tt></b></dt>
+  <dt><b>prompt = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='prompt' Line='prompt = ""' -->
   <dd>Optional prompt string for the end-of-page prompt.  If no prompt string is
   given the name of the file being paged is used.
   </dd>
   </dl>
   <dl>
-  <dt><b>device = <tt>"terminal"</tt></b></dt>
+  <dt><b>device = <span style="font-family: monospace;">"terminal"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "terminal"' -->
   <dd>The output device.  The special device <i>text</i> may be specified to
   represent standout mode with upper case rather than reverse video characters.
@@ -115,8 +115,8 @@ page: Page through a file
   </pre>
   <p>
   The <i>:clcmd</i> facility is used to send commands to the CL from within
-  the context of the pager.  For example, <tt>":!cl"</tt> will temporarily suspend the
-  pager, allowing CL commands to be entered until the command <tt>"bye"</tt> is entered,
+  the context of the pager.  For example, <span style="font-family: monospace;">":!cl"</span> will temporarily suspend the
+  pager, allowing CL commands to be entered until the command <span style="font-family: monospace;">"bye"</span> is entered,
   causing execution of the pager to resume.  Note that since the <i>page</i>
   task resides in the system process <i>x_system.e</i>, it will be necessary
   for the CL to connect a second system process if the command issued calls
@@ -126,19 +126,19 @@ page: Page through a file
   <i>flprcache</i> if desired, after exiting the original <i>page</i> task.
   </p>
   <p>
-  The sequence <tt>":/"</tt> followed by a pattern will cause the current input stream
+  The sequence <span style="font-family: monospace;">":/"</span> followed by a pattern will cause the current input stream
   to be searched for the next occurrence of the pattern given.  A pattern once
   entered is retained indefinitely and may be used in subsequent searches by
-  typing the single keystroke <tt>`n'</tt>, without need to reenter the pattern.
-  Searching stops at the end of the current file, requiring a <tt>`.'</tt> to wrap back
-  around to the beginning of the file, or a <tt>`N'</tt> to advance to the next file.
+  typing the single keystroke <span style="font-family: monospace;">`n'</span>, without need to reenter the pattern.
+  Searching stops at the end of the current file, requiring a <span style="font-family: monospace;">`.'</span> to wrap back
+  around to the beginning of the file, or a <span style="font-family: monospace;">`N'</span> to advance to the next file.
   </p>
   <p>
   The <i>:file</i> command is used to change the current position within the
   file list specified by <i>files</i>, and may not be used to page a file not
   specified in the initial template.  Note that the filename may be abbreviated,
   and that searching stops with the first file lexically greater than or equal
-  to the given string (hence <tt>":file x"</tt> might return file <tt>"y"</tt>).
+  to the given string (hence <span style="font-family: monospace;">":file x"</span> might return file <span style="font-family: monospace;">"y"</span>).
   </p>
   <p>
   The <i>:line N</i> command may be used to randomly position to the indicated line
@@ -158,14 +158,14 @@ page: Page through a file
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. Page through all of the files in the directory <tt>"lib"</tt> which have
-  the extension <tt>".h"</tt>.
+  1. Page through all of the files in the directory <span style="font-family: monospace;">"lib"</span> which have
+  the extension <span style="font-family: monospace;">".h"</span>.
   </p>
   <p>
   	cl&gt; page lib$*.h
   </p>
   <p>
-  2. Use <i>help</i> to format the text in the file <tt>"doc$spp.hlp"</tt>, displaying
+  2. Use <i>help</i> to format the text in the file <span style="font-family: monospace;">"doc$spp.hlp"</span>, displaying
   the formatted document beginning on page 5 (the entire document has to be
   formatted first so it takes a minute or so to get any output).
   </p>

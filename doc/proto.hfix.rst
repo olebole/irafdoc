@@ -30,14 +30,14 @@ hfix: Fix image headers with a user specified command
   </dd>
   </dl>
   <dl>
-  <dt><b>command = <tt>"edit $fname"</tt></b></dt>
+  <dt><b>command = <span style="font-family: monospace;">"edit $fname"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='command' Line='command = "edit $fname"' -->
   <dd>Command to be applied to a file containing the image header.  The command
   may be any CL command which includes escapes to host commands.  The file
   containing the header in text form is specified by the special string
-  <tt>"$fname"</tt>.  The command should modify this file to the desired form.  The
+  <span style="font-family: monospace;">"$fname"</span>.  The command should modify this file to the desired form.  The
   default is to invoke a text editor but there are many other possibilities.
-  The image name may also be specified with <tt>"$image"</tt>.  See the EXAMPLES
+  The image name may also be specified with <span style="font-family: monospace;">"$image"</span>.  See the EXAMPLES
   section for some ideas.
   </dd>
   </dl>
@@ -55,7 +55,7 @@ hfix: Fix image headers with a user specified command
   modify this file with a specified command, and update the image header
   with the modified file.  The command to be applied is specified with
   the <i>command</i> parameter.  In this command the text file containing
-  the header to be acted upon is referenced with the string <tt>"$fname"</tt>.
+  the header to be acted upon is referenced with the string <span style="font-family: monospace;">"$fname"</span>.
   If it is desired to update the image header with the modified file
   the <i>update</i> switch must be set.  You must have write permission
   to update the image headers.
@@ -69,7 +69,7 @@ hfix: Fix image headers with a user specified command
   <p>
   This task does very little processing on the header after you are finished
   editing.  It checks for legal FITS characters in the first 8 columns and if
-  there is an <tt>'='</tt> in column 9 then there must be a <tt>' '</tt> (blank) in column 10.
+  there is an <span style="font-family: monospace;">'='</span> in column 9 then there must be a <span style="font-family: monospace;">' '</span> (blank) in column 10.
   Lines violating these checks are skipped.  It also sets each line in the
   header to the correct length.  Because you have total freedom to change the
   header parameters while in the text editor, you must make sure that the

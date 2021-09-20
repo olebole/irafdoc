@@ -29,7 +29,7 @@ crtpict: Generate greyscale plots of IRAF images
   </dd>
   </dl>
   <dl>
-  <dt><b>device = <tt>"dicomed"</tt></b></dt>
+  <dt><b>device = <span style="font-family: monospace;">"dicomed"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "dicomed"' -->
   <dd>The output device.
   </dd>
@@ -66,7 +66,7 @@ crtpict: Generate greyscale plots of IRAF images
   </dd>
   </dl>
   <dl>
-  <dt><b>ztrans = <tt>"auto"</tt></b></dt>
+  <dt><b>ztrans = <span style="font-family: monospace;">"auto"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ztrans' Line='ztrans = "auto"' -->
   <dd>This parameter specifies how the image intensities are mapped into the 
   greyscale values of the output device.  Intensity z1 maps to black, z2 to white.
@@ -81,7 +81,7 @@ crtpict: Generate greyscale plots of IRAF images
   </dd>
   </dl>
   <dl>
-  <dt><b>lutfile = <tt>""</tt></b></dt>
+  <dt><b>lutfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lutfile' Line='lutfile = ""' -->
   <dd>Name of text file containing the look up table when <i>ztrans</i> = user. 
   The table should contain two columns per line; column 1 contains the 
@@ -106,7 +106,7 @@ crtpict: Generate greyscale plots of IRAF images
   <dl>
   <dt><b>z1 = 0.0, z2 = 0.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='z1' Line='z1 = 0.0, z2 = 0.0' -->
-  <dd>These parameters are used when <i>ztrans</i> = <tt>"min_max"</tt>, to specify which
+  <dd>These parameters are used when <i>ztrans</i> = <span style="font-family: monospace;">"min_max"</span>, to specify which
   pixel values map to black and white.  
   </dd>
   </dl>
@@ -137,10 +137,10 @@ crtpict: Generate greyscale plots of IRAF images
   </dd>
   </dl>
   <dl>
-  <dt><b>output = <tt>""</tt></b></dt>
+  <dt><b>output = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
   <dd>Output metacode is appended to this file.
-  By naming an output file, the metacode can be <tt>"trapped"</tt>, and the normal
+  By naming an output file, the metacode can be <span style="font-family: monospace;">"trapped"</span>, and the normal
   spooling process intercepted.
   </dd>
   </dl>
@@ -164,14 +164,14 @@ crtpict: Generate greyscale plots of IRAF images
   </p>
   <p>
   Four methods of determining the greyscale transformation are available.
-  When <i>ztrans</i> = <tt>"none"</tt>, no transformation between intensity and 
+  When <i>ztrans</i> = <span style="font-family: monospace;">"none"</span>, no transformation between intensity and 
   greyscale level occurs, the intensities are simply copied, which will most
   likely result in truncation.  With this method, the lowest bits of each pixel, 
   the lowest level variations, are always shown, regardless of the dynamic 
   range of the image.
   </p>
   <p>
-  When <i>ztrans</i> = <tt>"auto"</tt>,
+  When <i>ztrans</i> = <span style="font-family: monospace;">"auto"</span>,
   the greyscale levels are automatically centered on the median of the image 
   pixels.  The window of intensities spanned by the greyscale is controlled 
   by parameter <i>contrast</i>, which is divided into the calculated slope of 
@@ -181,16 +181,16 @@ crtpict: Generate greyscale plots of IRAF images
   <i>nsample_lines</i>.
   </p>
   <p>
-  When <b>ztrans</b> = <tt>"min_max"</tt>, intensity <b>z1</b> maps to the minimum
+  When <b>ztrans</b> = <span style="font-family: monospace;">"min_max"</span>, intensity <b>z1</b> maps to the minimum
   greyscale level (black), <b>z2</b> maps to the maximum greyscale level
   (white) and the transfer function is linear in between these two endpoints.
   If <i>z1</i> = <i>z2</i>, the image min and max map to black and white, modified
   by <b>contrast</b>.  (NOTE:  When running <i>crtpict</i> on an image created with 
-  <i>snap</i>, <b>ztrans</b> should be set to <tt>"min_max"</tt>, with <b>z1</b> = 0 and
+  <i>snap</i>, <b>ztrans</b> should be set to <span style="font-family: monospace;">"min_max"</span>, with <b>z1</b> = 0 and
   <b>z2</b> = 1023, the maximum output value possible from the IIS.)
   </p>
   <p>
-  When <b>ztrans</b> = <tt>"user"</tt>, a look up table of intensity values and their
+  When <b>ztrans</b> = <span style="font-family: monospace;">"user"</span>, a look up table of intensity values and their
   corresponding greyscale levels is read from the file specified by the
   <b>lutfile</b> parameter.  From this information, 
   <i>crtpict</i> constructs a piecewise linear look up table containing

@@ -29,7 +29,7 @@ oimstatistics: IMSTATISTICS from V2.11.3
   </dd>
   </dl>
   <dl>
-  <dt><b>fields = <tt>"image,npix,mean,stddev,min,max"</tt></b></dt>
+  <dt><b>fields = <span style="font-family: monospace;">"image,npix,mean,stddev,min,max"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fields' Line='fields = "image,npix,mean,stddev,min,max"' -->
   <dd>The statistical quantities to be computed and printed.
   </dd>
@@ -60,7 +60,7 @@ oimstatistics: IMSTATISTICS from V2.11.3
   <dt><b>format = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='format' Line='format = yes' -->
   <dd>Label the output columns and print the result in fixed format. If format
-  is <tt>"no"</tt> no column labels are printed and the output is in free format.
+  is <span style="font-family: monospace;">"no"</span> no column labels are printed and the output is in free format.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -122,8 +122,8 @@ oimstatistics: IMSTATISTICS from V2.11.3
         flat2[*,1]       800     999.4     28.87      918.     1413.
   </pre>
   <p>
-  The string <tt>"flat*"</tt> uses a wildcard to select all images beginning with the
-  word flat.  The string <tt>"[*,1]"</tt> is an image section selecting row 1.
+  The string <span style="font-family: monospace;">"flat*"</span> uses a wildcard to select all images beginning with the
+  word flat.  The string <span style="font-family: monospace;">"[*,1]"</span> is an image section selecting row 1.
   </p>
   <p>
   2. Compute the mean, midpoint, mode and standard deviation of a pixel

@@ -41,7 +41,7 @@ orfits: Convert a FITS image into an IRAF image (dataio V2.10.4)
   string can consist of any sequence of file numbers separated by
   at least one of comma, or dash.
   A dash specifies a range of files.  For example the string
-  	<tt>"1,2,3-5,8-6"</tt>
+  	<span style="font-family: monospace;">"1,2,3-5,8-6"</span>
   will convert the files 1 through 8.
   </dd>
   </dl>
@@ -54,9 +54,9 @@ orfits: Convert a FITS image into an IRAF image (dataio V2.10.4)
   must be specified for every input file. In the latter case iraf_file is
   a root output image name to which the input file sequence number or tape
   file number is appended if the number of input files &gt; 1. For example
-  reading files 1 and 3 from a FITS tape with a value of iraf_file of <tt>"data"</tt>
+  reading files 1 and 3 from a FITS tape with a value of iraf_file of <span style="font-family: monospace;">"data"</span>
   will produce the files data0001 and data0003, whereas reading the same
-  two files with a value of iraf_file of <tt>"data1,data2"</tt> will produce the files
+  two files with a value of iraf_file of <span style="font-family: monospace;">"data1,data2"</span> will produce the files
   data1 and data2.
   </dd>
   </dl>
@@ -122,9 +122,9 @@ orfits: Convert a FITS image into an IRAF image (dataio V2.10.4)
   <dt><b>offset = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='offset' Line='offset = 0' -->
   <dd>Offset is an integer parameter specifying the offset to the current tape file
-  number. For example if offset = 100, iraf_file = <tt>"fits"</tt> and file_list = <tt>"1-3"</tt>
-  then the output file names will be <tt>"fits0101"</tt>, <tt>"fits0102"</tt> and <tt>"fits0103"</tt>
-  respectively rather than <tt>"fits0001"</tt>, <tt>"fits0002"</tt> and <tt>"fits0003"</tt>.
+  number. For example if offset = 100, iraf_file = <span style="font-family: monospace;">"fits"</span> and file_list = <span style="font-family: monospace;">"1-3"</span>
+  then the output file names will be <span style="font-family: monospace;">"fits0101"</span>, <span style="font-family: monospace;">"fits0102"</span> and <span style="font-family: monospace;">"fits0103"</span>
+  respectively rather than <span style="font-family: monospace;">"fits0001"</span>, <span style="font-family: monospace;">"fits0002"</span> and <span style="font-family: monospace;">"fits0003"</span>.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->

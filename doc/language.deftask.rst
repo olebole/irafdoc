@@ -37,21 +37,21 @@ deftask: Test if a task is defined
   <dl>
   <dt><b>taskname</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='taskname' Line='taskname' -->
-  <dd>An IRAF taskname.  It may be specified as <tt>"taskname"</tt> or as
-  <tt>"packagename.taskname"</tt>.
+  <dd>An IRAF taskname.  It may be specified as <span style="font-family: monospace;">"taskname"</span> or as
+  <span style="font-family: monospace;">"packagename.taskname"</span>.
   </dd>
   </dl>
   <dl>
   <dt><b>param</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='param' Line='param' -->
-  <dd>An IRAF parameter name.  It may be specified as <tt>"paramname"</tt>,
-  <tt>"taskname.paramname"</tt> or <tt>"packagename.taskname.paramname"</tt>.
+  <dd>An IRAF parameter name.  It may be specified as <span style="font-family: monospace;">"paramname"</span>,
+  <span style="font-family: monospace;">"taskname.paramname"</span> or <span style="font-family: monospace;">"packagename.taskname.paramname"</span>.
   </dd>
   </dl>
   <dl>
   <dt><b>variable</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='variable' Line='variable' -->
-  <dd>An environment variable name.  It may be specified as <tt>"varname"</tt>.
+  <dd>An environment variable name.  It may be specified as <span style="font-family: monospace;">"varname"</span>.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -60,7 +60,7 @@ deftask: Test if a task is defined
   <p>
   These routines return a boolean value indicating whether the
   relevant parameter, task or package has been defined.
-  A task becomes defined when the package to which it belongs is <tt>"loaded"</tt>
+  A task becomes defined when the package to which it belongs is <span style="font-family: monospace;">"loaded"</span>
   by entering the name of the package as a command, or whenever a <i>task</i>
   declaration is input to the CL.  A parameter becomes defined when the
   task to which it belongs is defined; the task need not be currently

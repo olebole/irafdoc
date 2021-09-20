@@ -38,9 +38,9 @@ skysep: Compute arc separation of two RA/Dec values
   </dd>
   </dl>
   <dl>
-  <dt><b>raunit = <tt>"hr"</tt></b></dt>
+  <dt><b>raunit = <span style="font-family: monospace;">"hr"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='raunit' Line='raunit = "hr"' -->
-  <dd>Units for right ascension.  The value <tt>"hr"</tt> selects hours and <tt>"deg"</tt>
+  <dd>Units for right ascension.  The value <span style="font-family: monospace;">"hr"</span> selects hours and <span style="font-family: monospace;">"deg"</span>
   selects degrees.
   </dd>
   </dl>

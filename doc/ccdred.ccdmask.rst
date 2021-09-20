@@ -163,7 +163,7 @@ ccdmask: Create bad pixel mask from CCD flat field images
   In addition to this task, pixel mask images may be made in a variety of
   ways.  Any task which produces and modifies image values may be used.  Some
   useful tasks are <b>imexpr, imreplace, imcopy, text2mask</b> and
-  <b>mkpattern</b>.  If a new image is specified with an explicit <tt>".pl"</tt>
+  <b>mkpattern</b>.  If a new image is specified with an explicit <span style="font-family: monospace;">".pl"</span>
   extension then the pixel mask format is produced.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->

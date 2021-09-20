@@ -40,7 +40,7 @@ bplot: Batch plot of spectra with SPLOT
   </dd>
   </dl>
   <dl>
-  <dt><b>apertures = <tt>""</tt></b></dt>
+  <dt><b>apertures = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
   <dd>List of apertures/lines/columns to be plotted in each image.  If
   <i>apertures</i> is null all of the apertures/lines/columns will be plotted.
@@ -53,14 +53,14 @@ bplot: Batch plot of spectra with SPLOT
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
-  <dd>Output graphics device.  This may be one of <tt>"stdgraph"</tt>, <tt>"stdplot"</tt>,
-  <tt>"stdvdm"</tt>, or the actual device name.
+  <dd>Output graphics device.  This may be one of <span style="font-family: monospace;">"stdgraph"</span>, <span style="font-family: monospace;">"stdplot"</span>,
+  <span style="font-family: monospace;">"stdvdm"</span>, or the actual device name.
   </dd>
   </dl>
   <dl>
-  <dt><b>cursor = <tt>"onedspec$gcurval.dat"</tt></b></dt>
+  <dt><b>cursor = <span style="font-family: monospace;">"onedspec$gcurval.dat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = "onedspec$gcurval.dat"' -->
   <dd>File(s) containing cursor commands for the SPLOT task.
   The files will be cycled sequentially.  If there is more than one file
@@ -75,15 +75,15 @@ bplot: Batch plot of spectra with SPLOT
   parameters.
   </p>
   <dl>
-  <dt><b>next_image = <tt>""</tt></b></dt>
+  <dt><b>next_image = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='next_image' Line='next_image = ""' -->
-  <dd>In response to <tt>'g'</tt> (get next image) this parameter specifies the image.
+  <dd>In response to <span style="font-family: monospace;">'g'</span> (get next image) this parameter specifies the image.
   </dd>
   </dl>
   <dl>
-  <dt><b>new_image = <tt>""</tt></b></dt>
+  <dt><b>new_image = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='new_image' Line='new_image = ""' -->
-  <dd>In response to <tt>'i'</tt> (write current spectrum) this parameter specifies the
+  <dd>In response to <span style="font-family: monospace;">'i'</span> (write current spectrum) this parameter specifies the
   name of a new image to create or existing image to overwrite.
   </dd>
   </dl>
@@ -96,17 +96,17 @@ bplot: Batch plot of spectra with SPLOT
   </dd>
   </dl>
   <dl>
-  <dt><b>spec2 = <tt>""</tt></b></dt>
+  <dt><b>spec2 = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='spec2' Line='spec2 = ""' -->
   <dd>When adding, subtracting, multiplying, or dividing by a second spectrum
-  (<tt>'+'</tt>, <tt>'-'</tt>, <tt>'*'</tt>, <tt>'/'</tt> keys in the <tt>'f'</tt> mode) this parameter is used to get
+  (<span style="font-family: monospace;">'+'</span>, <span style="font-family: monospace;">'-'</span>, <span style="font-family: monospace;">'*'</span>, <span style="font-family: monospace;">'/'</span> keys in the <span style="font-family: monospace;">'f'</span> mode) this parameter is used to get
   the name of the second spectrum.
   </dd>
   </dl>
   <dl>
   <dt><b>constant = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.' -->
-  <dd>When adding or multiplying by a constant (<tt>'p'</tt> or <tt>'m'</tt> keys in the <tt>'f'</tt> mode)
+  <dd>When adding or multiplying by a constant (<span style="font-family: monospace;">'p'</span> or <span style="font-family: monospace;">'m'</span> keys in the <span style="font-family: monospace;">'f'</span> mode)
   the parameter is used to get the constant.
   </dd>
   </dl>
@@ -114,11 +114,11 @@ bplot: Batch plot of spectra with SPLOT
   <dt><b>wavelength = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wavelength' Line='wavelength = 0.' -->
   <dd>This parameter is used to get a dispersion coordinate value during deblending or
-  when changing the dispersion coordinates with <tt>'u'</tt>.
+  when changing the dispersion coordinates with <span style="font-family: monospace;">'u'</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>linelist = <tt>""</tt></b></dt>
+  <dt><b>linelist = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='linelist' Line='linelist = ""' -->
   <dd>During deblending this parameter is used to get a list of line positions
   and widths.
@@ -127,14 +127,14 @@ bplot: Batch plot of spectra with SPLOT
   <dl>
   <dt><b>wstart = 0., wend = 0., dw = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wstart' Line='wstart = 0., wend = 0., dw = 0.' -->
-  <dd>In response to <tt>'p'</tt> (convert to a linear wavelength scale) these parameter
+  <dd>In response to <span style="font-family: monospace;">'p'</span> (convert to a linear wavelength scale) these parameter
   specify the starting wavelength, ending wavelength, and wavelength per pixel.
   </dd>
   </dl>
   <dl>
   <dt><b>boxsize = 2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boxsize' Line='boxsize = 2' -->
-  <dd>In response to <tt>'s'</tt> (smooth) this parameter specifies the box size in pixels
+  <dd>In response to <span style="font-family: monospace;">'s'</span> (smooth) this parameter specifies the box size in pixels
   to be used for the boxcar smooth
   </dd>
   </dl>
@@ -159,7 +159,7 @@ bplot: Batch plot of spectra with SPLOT
   <p>
   where x and y are the position of the cursor (may be zero or absent if the
   cursor position is irrelevant) and key is one of the keystrokes understood
-  by <b>splot</b>.  If the key is <tt>":"</tt> then the <i>colon</i> command string follows.
+  by <b>splot</b>.  If the key is <span style="font-family: monospace;">":"</span> then the <i>colon</i> command string follows.
   The default cursor file consists of the single line:
   </p>
   <p>
@@ -175,7 +175,7 @@ bplot: Batch plot of spectra with SPLOT
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. To plot all of apertures of the multiaperture spectra indicated by the file
-  <tt>"nite1.lst"</tt> on the default plotter and run in the background:
+  <span style="font-family: monospace;">"nite1.lst"</span> on the default plotter and run in the background:
   </p>
   <pre>
       cl&gt; bplot @nite1.lst graphics=stdplot &amp;
@@ -220,7 +220,7 @@ bplot: Batch plot of spectra with SPLOT
       cl&gt; bplot @nite1.lst apertures=3,9,14 cursor=@nite1.cur
   </pre>
   <p>
-  In this case the file <tt>"nite1.cur"</tt> is assumed to be a list of
+  In this case the file <span style="font-family: monospace;">"nite1.cur"</span> is assumed to be a list of
   individual cursor file names, for instance:
   </p>
   <pre>
@@ -277,7 +277,7 @@ bplot: Batch plot of spectra with SPLOT
   This assumes that curfile is designed to produce only one plot in
   addition to the non-optional initial plot.  In this case there will be
   two plots per aperture per image and we extract every other plot starting
-  with the second (as encoded in the range string:  <tt>"2x2"</tt>).
+  with the second (as encoded in the range string:  <span style="font-family: monospace;">"2x2"</span>).
   </p>
   <!-- EndSection:   'BUGS' -->
   <h3>See also</h3>

@@ -86,7 +86,7 @@ taextract: Copy an array entry to a column of scalars in another table.
   </dd>
   </dl>
   <dl>
-  <dt><b>outcolumn = <tt>""</tt> [string]</b></dt>
+  <dt><b>outcolumn = <span style="font-family: monospace;">""</span> [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outcolumn' Line='outcolumn = "" [string]' -->
   <dd>If 'outcolumn' is specified,
   that name will be used for the output table;
@@ -101,21 +101,21 @@ taextract: Copy an array entry to a column of scalars in another table.
   </dd>
   </dl>
   <dl>
-  <dt><b>(datatype = <tt>""</tt>) [string]</b></dt>
+  <dt><b>(datatype = <span style="font-family: monospace;">""</span>) [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(datatype = "") [string]' -->
   <dd>When creating a new column in the output table,
   the default is to use the same data type as the column in the input table.
   However, if 'datatype' is specified (i.e. not null or blank),
   this will be used as the data type when creating the new column.
   For numeric and boolean columns, only the first character is used:
-  <tt>"r"</tt> and <tt>"d"</tt> for single and double precision floating point,
-  <tt>"s"</tt> and <tt>"i"</tt> for short integer and integer,
-  <tt>"b"</tt> for boolean.
-  For a character string of maximum length 12 (for example), use <tt>"ch*12"</tt>.
+  <span style="font-family: monospace;">"r"</span> and <span style="font-family: monospace;">"d"</span> for single and double precision floating point,
+  <span style="font-family: monospace;">"s"</span> and <span style="font-family: monospace;">"i"</span> for short integer and integer,
+  <span style="font-family: monospace;">"b"</span> for boolean.
+  For a character string of maximum length 12 (for example), use <span style="font-family: monospace;">"ch*12"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>(colunits = <tt>""</tt>) [string]</b></dt>
+  <dt><b>(colunits = <span style="font-family: monospace;">""</span>) [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(colunits = "") [string]' -->
   <dd>When creating a new column in the output table,
   the units will be set to 'colunits' if it has been specified;
@@ -123,7 +123,7 @@ taextract: Copy an array entry to a column of scalars in another table.
   </dd>
   </dl>
   <dl>
-  <dt><b>(colfmt = <tt>""</tt>) [string]</b></dt>
+  <dt><b>(colfmt = <span style="font-family: monospace;">""</span>) [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(colfmt = "") [string]' -->
   <dd>When creating a new column in the output table,
   the print format will be set to 'colfmt' if it has been specified;
@@ -134,8 +134,8 @@ taextract: Copy an array entry to a column of scalars in another table.
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. Extract the array from row 5, column <tt>"polar"</tt>, from table <tt>"array.tab"</tt>,
-  putting the values in column <tt>"polar"</tt> of table <tt>"scalar.tab"</tt>.
+  1. Extract the array from row 5, column <span style="font-family: monospace;">"polar"</span>, from table <span style="font-family: monospace;">"array.tab"</span>,
+  putting the values in column <span style="font-family: monospace;">"polar"</span> of table <span style="font-family: monospace;">"scalar.tab"</span>.
   </p>
   <pre>
   at&gt; taextract array.tab scalar.tab 5 polar
@@ -156,7 +156,7 @@ taextract: Copy an array entry to a column of scalars in another table.
   tainsert
   </p>
   <p>
-  Type <tt>"help ttools opt=sysdoc"</tt> for a higher-level description of the 'ttools'
+  Type <span style="font-family: monospace;">"help ttools opt=sysdoc"</span> for a higher-level description of the 'ttools'
   package.
   </p>
   

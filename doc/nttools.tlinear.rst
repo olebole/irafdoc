@@ -39,7 +39,7 @@ tlinear: Use linear regression to fit one or two table columns.
   where the names in parentheses are the headings in
   the output printed to STDOUT.
   If any row has a weight that is exactly zero,
-  that row will not be counted in the <tt>"pts in fit"</tt> value.
+  that row will not be counted in the <span style="font-family: monospace;">"pts in fit"</span> value.
   The weights will NOT be used when computing
   the RMS of the residuals and mean of the residuals
   (residual rms, residual mean);
@@ -62,10 +62,10 @@ tlinear: Use linear regression to fit one or two table columns.
   <dt><b>outtable = STDOUT [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable = STDOUT [file name template]' -->
   <dd>File names for creating output files, or STDOUT to send output to the screen.
-  If the value of this parameter is <tt>"STDOUT"</tt> then the parameters of the fit will
+  If the value of this parameter is <span style="font-family: monospace;">"STDOUT"</span> then the parameters of the fit will
   be written to STDOUT preceded by a header line (beginning with #) in tabular
   form.
-  If 'outtable' is not <tt>"STDOUT"</tt> then the number of file
+  If 'outtable' is not <span style="font-family: monospace;">"STDOUT"</span> then the number of file
   names must match the number
   of names in 'intable', and the fitted Y values and residuals will be written
   to an output table with the specified name.  The parameters of the fit will
@@ -115,15 +115,15 @@ tlinear: Use linear regression to fit one or two table columns.
   </dd>
   </dl>
   <dl>
-  <dt><b>(rows = <tt>"-"</tt>) [string]</b></dt>
+  <dt><b>(rows = <span style="font-family: monospace;">"-"</span>) [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(rows = "-") [string]' -->
   <dd>Range of rows to use for fitting the data.
-  The default <tt>"-"</tt> means that all rows are used.
-  (Type <tt>"help xtools.ranges"</tt> for more information.)
+  The default <span style="font-family: monospace;">"-"</span> means that all rows are used.
+  (Type <span style="font-family: monospace;">"help xtools.ranges"</span> for more information.)
   </dd>
   </dl>
   <dl>
-  <dt><b>(outcoly = <tt>"yfit"</tt>) [string]</b></dt>
+  <dt><b>(outcoly = <span style="font-family: monospace;">"yfit"</span>) [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(outcoly = "yfit") [string]' -->
   <dd>Column name for fitted Y values.
   This parameter is not used if 'outtable' = STDOUT.
@@ -131,7 +131,7 @@ tlinear: Use linear regression to fit one or two table columns.
   </dd>
   </dl>
   <dl>
-  <dt><b>(outcolr = <tt>"yres"</tt>) [string]</b></dt>
+  <dt><b>(outcolr = <span style="font-family: monospace;">"yres"</span>) [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(outcolr = "yres") [string]' -->
   <dd>Name of the column to contain residuals.
   This parameter is ignored if 'outtable' = STDOUT.
@@ -142,8 +142,8 @@ tlinear: Use linear regression to fit one or two table columns.
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. Fit the values in the <tt>"flux"</tt> column in every table whose name begins with
-  <tt>"hr"</tt>; put all parameters of the fits in the ASCII file <tt>"fit.lis"</tt>.
+  1. Fit the values in the <span style="font-family: monospace;">"flux"</span> column in every table whose name begins with
+  <span style="font-family: monospace;">"hr"</span>; put all parameters of the fits in the ASCII file <span style="font-family: monospace;">"fit.lis"</span>.
   </p>
   <pre>
     tt&gt; tlinear hr*.tab STDOUT "" flux &gt; fit.lis
@@ -152,14 +152,14 @@ tlinear: Use linear regression to fit one or two table columns.
   2. Generate the same fits as in the previous example, but put the
   results in tables, one output for each input table.  For example,
   the fitted Y values and
-  residuals for an input table named <tt>"hr465.tab"</tt> would be put in <tt>"hr465h.tab"</tt>.
+  residuals for an input table named <span style="font-family: monospace;">"hr465.tab"</span> would be put in <span style="font-family: monospace;">"hr465h.tab"</span>.
   </p>
   <pre>
     tt&gt; tlinear hr*.tab hr*%%h%.tab "" flux
   </pre>
   <p>
-  3. Fit the values in the <tt>"flux"</tt> column as a function of the values in the
-  <tt>"wavelength"</tt> column and write all the parameters of the fit to STDOUT.
+  3. Fit the values in the <span style="font-family: monospace;">"flux"</span> column as a function of the values in the
+  <span style="font-family: monospace;">"wavelength"</span> column and write all the parameters of the fit to STDOUT.
   </p>
   <pre>
     tt&gt; tlinear hr*.tab STDOUT wavelength flux

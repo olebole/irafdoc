@@ -96,7 +96,7 @@ frmode: Quantize and ring modal filter a list of 1D or 2D images
   </dd>
   </dl>
   <dl>
-  <dt><b>boundary = <tt>"nearest"</tt></b></dt>
+  <dt><b>boundary = <span style="font-family: monospace;">"nearest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"' -->
   <dd>The type of boundary extension. The options are:
   <dl>
@@ -190,14 +190,14 @@ frmode: Quantize and ring modal filter a list of 1D or 2D images
   <!-- BeginSection: 'REFERENCES' -->
   <p>
   A description of the fast median algorithm used here can be found in
-  <tt>"Topics in Applied Physics: Two-Dimensional Digital Signal Processing II:
-  Transforms and Median Filters"</tt>, Volume 43, 1981, Springer-Verlag,
+  <span style="font-family: monospace;">"Topics in Applied Physics: Two-Dimensional Digital Signal Processing II:
+  Transforms and Median Filters"</span>, Volume 43, 1981, Springer-Verlag,
   edited by T.S. Huang, page 209.
   </p>
   <p>
   The properties of the ring median filter and its application to
   astronomical data analysis problems is summarized in the
-  article <tt>"A Ring Median Filter  for Digital Images"</tt> (Secker, J., 1995,
+  article <span style="font-family: monospace;">"A Ring Median Filter  for Digital Images"</span> (Secker, J., 1995,
   PASP, 107, 496-501) and references therein.
   </p>
   <!-- EndSection:   'REFERENCES' -->

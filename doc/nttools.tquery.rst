@@ -64,10 +64,10 @@ tquery: Create a new table from selected rows and columns in a table.
   <!-- Sec='PARAMETERS' Level=0 Label='expr' Line='expr [string]' -->
   <dd>The boolean expression which determines which rows are copied to the new
   table.  The expression may be placed in a file and the name of the file
-  preceeded by a <tt>'@'</tt> can be given in its place.  If the expression is null
+  preceeded by a <span style="font-family: monospace;">'@'</span> can be given in its place.  If the expression is null
   or blank, all rows are selected.  The syntax and method used to define
   this boolean expression is explained in detail in the help file for the
-  'tselect' task (type <tt>"help tselect"</tt> for more information).
+  'tselect' task (type <span style="font-family: monospace;">"help tselect"</span> for more information).
   </dd>
   </dl>
   <dl>
@@ -79,8 +79,8 @@ tquery: Create a new table from selected rows and columns in a table.
   The column names, or patterns, are separated by commas or white space.
   The list of columns can be placed in a file and then
   the name of that file passed to 'columns' (preceded by
-  the <tt>"@"</tt> character).  If the first non-white character in the template
-  is the negation character (either <tt>"~"</tt> or <tt>"!"</tt>),
+  the <span style="font-family: monospace;">"@"</span> character).  If the first non-white character in the template
+  is the negation character (either <span style="font-family: monospace;">"~"</span> or <span style="font-family: monospace;">"!"</span>),
   the new table will contain those columns
   that do NOT match the column template. If the column template
   is null or blank, all columns will be selected.
@@ -99,7 +99,7 @@ tquery: Create a new table from selected rows and columns in a table.
   <dt><b>(uniq = no) [boolean]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(uniq = no) [boolean]' -->
   <dd>Make sure all rows are unique in a table?
-  If 'unique' is set to <tt>"yes"</tt>, only one of each set of duplicate rows is included
+  If 'unique' is set to <span style="font-family: monospace;">"yes"</span>, only one of each set of duplicate rows is included
   in the output table.  All columns in the output table must be identical for
   the row to be removed.  String comparisons are case sensitive.  Care should
   be used in setting this option for large tables, as it significantly increases
@@ -136,9 +136,9 @@ tquery: Create a new table from selected rows and columns in a table.
   </pre>
   <p>
   2. Remove duplicate rows from a set of tables. Otherwise, leave the tables
-  unchanged. Using file name editing (i.e., the <tt>"%"</tt> characters to delineate
-  old strings and new strings), change the file name extensions from <tt>".tab"</tt>
-  to <tt>".tbl"</tt>.
+  unchanged. Using file name editing (i.e., the <span style="font-family: monospace;">"%"</span> characters to delineate
+  old strings and new strings), change the file name extensions from <span style="font-family: monospace;">".tab"</span>
+  to <span style="font-family: monospace;">".tbl"</span>.
   </p>
   <pre>
   tt&gt; tquery *.tab *.%tab%tbl% "" "" "" uniq+

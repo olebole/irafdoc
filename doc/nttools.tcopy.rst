@@ -32,16 +32,16 @@ tcopy: Copy tables.
   The input and output tables must not be the same.
   This task will convert the format of the table
   if the output filename extension indicates it.
-  For example, if the output filename extension is <tt>".fits"</tt>,
+  For example, if the output filename extension is <span style="font-family: monospace;">".fits"</span>,
   the output table will be a fits file.
   If the output is redirected or piped,
   it will be written to a text table.
   </p>
   <p>
   NOTE: Be careful when using a wildcard for the extension.
-  If you have the files <tt>"table.tab"</tt> and <tt>"table.lis"</tt> in the current directory,
-  for example, then the command <tt>"tcopy tab* test/"</tt> would copy both files
-  to the subdirectory <tt>"test"</tt>.
+  If you have the files <span style="font-family: monospace;">"table.tab"</span> and <span style="font-family: monospace;">"table.lis"</span> in the current directory,
+  for example, then the command <span style="font-family: monospace;">"tcopy tab* test/"</span> would copy both files
+  to the subdirectory <span style="font-family: monospace;">"test"</span>.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Parameters</h3>
@@ -59,7 +59,7 @@ tcopy: Copy tables.
   If 'outtable' is not a directory,
   the number of input tables and output tables must be the same.
   An exception to this rule is that if 'outtable' is a FITS file
-  (i.e. an existing FITS file, or the name ends in <tt>".fits"</tt>)
+  (i.e. an existing FITS file, or the name ends in <span style="font-family: monospace;">".fits"</span>)
   then multiple input tables can be copied to one output file.
   </dd>
   </dl>
@@ -89,8 +89,8 @@ tcopy: Copy tables.
   <p>
   The number of input and output tables must be the same.
   In the third case,
-  <tt>"a.txt"</tt> will be a text file because
-  the output table name was <tt>"STDOUT"</tt>
+  <span style="font-family: monospace;">"a.txt"</span> will be a text file because
+  the output table name was <span style="font-family: monospace;">"STDOUT"</span>
   (the name was implicitly set, in this case,
   because the output was redirected.)
   </p>
@@ -105,9 +105,9 @@ tcopy: Copy tables.
       tt&gt; tcopy table*.tab osdirectory
   </pre>
   <p>
-  where <tt>"directory"</tt> is an IRAF environment variable for a directory name,
-  and <tt>"osdirectory"</tt> is an operating system directory name
-  (e.g., <tt>"/user/me/"</tt> in UNIX).
+  where <span style="font-family: monospace;">"directory"</span> is an IRAF environment variable for a directory name,
+  and <span style="font-family: monospace;">"osdirectory"</span> is an operating system directory name
+  (e.g., <span style="font-family: monospace;">"/user/me/"</span> in UNIX).
   </p>
   <p>
   4.  To copy only specified extensions of a FITS file:
@@ -116,7 +116,7 @@ tcopy: Copy tables.
       tt&gt; tcopy xyz.fits[3],xyz.fits[5] b.fits
   </pre>
   <p>
-  If <tt>"b.fits"</tt> did not already exist,
+  If <span style="font-family: monospace;">"b.fits"</span> did not already exist,
   it would be created and would then contain two table extensions.
   If it did already exist,
   the two extensions would be appended.
@@ -131,8 +131,8 @@ tcopy: Copy tables.
       tt&gt; dir l+ | tproject columns=c7,c3 | tcopy dir.tab &gt; verbose.lis
   </pre>
   <p>
-  <tt>"verbose.lis"</tt> contains just the one line <tt>"# STDIN -&gt; dir.tab"</tt>,
-  and <tt>"dir.tab"</tt> has the output of 'tproject', the file names and sizes.
+  <span style="font-family: monospace;">"verbose.lis"</span> contains just the one line <span style="font-family: monospace;">"# STDIN -&gt; dir.tab"</span>,
+  and <span style="font-family: monospace;">"dir.tab"</span> has the output of 'tproject', the file names and sizes.
   </p>
   <!-- EndSection:   'EXAMPLES' -->
   <h3>Bugs</h3>

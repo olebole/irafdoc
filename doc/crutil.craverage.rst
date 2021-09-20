@@ -47,7 +47,7 @@ craverage: Detect CRs against average and avoid objects
   </dd>
   </dl>
   <dl>
-  <dt><b>crmask = <tt>""</tt></b></dt>
+  <dt><b>crmask = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='crmask' Line='crmask = ""' -->
   <dd>List of input and output cosmic ray and object masks.  If the mask exists
   then the mask values are used to exclude data pixels from the calculations
@@ -58,14 +58,14 @@ craverage: Detect CRs against average and avoid objects
   </dd>
   </dl>
   <dl>
-  <dt><b>average = <tt>""</tt></b></dt>
+  <dt><b>average = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='average' Line='average = ""' -->
   <dd>List of output block average filtered images.  If no image name is given
   then no image will be created.
   </dd>
   </dl>
   <dl>
-  <dt><b>sigma = <tt>""</tt></b></dt>
+  <dt><b>sigma = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sigma' Line='sigma = ""' -->
   <dd>List of output sigma images.  If no image name is given then no image
   will be created.

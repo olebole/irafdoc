@@ -55,11 +55,11 @@ skygroup: Group a list containing RA and Dec into spatial sublists
   </dd>
   </dl>
   <dl>
-  <dt><b>extn = <tt>""</tt></b></dt>
+  <dt><b>extn = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='extn' Line='extn = ""' -->
   <dd>Optional output extension.  This string is appended to the output files
   noted previously.  Note that an period must be given explicitly if a
-  <tt>".XXX"</tt> style extension is desired.
+  <span style="font-family: monospace;">".XXX"</span> style extension is desired.
   </dd>
   </dl>
   <dl>
@@ -70,9 +70,9 @@ skygroup: Group a list containing RA and Dec into spatial sublists
   </dd>
   </dl>
   <dl>
-  <dt><b>raunit = <tt>"hr"</tt> (hr|deg)</b></dt>
+  <dt><b>raunit = <span style="font-family: monospace;">"hr"</span> (hr|deg)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='raunit' Line='raunit = "hr" (hr|deg)' -->
-  <dd>The input RA unit where <tt>"hr"</tt> is hours and <tt>"deg"</tt> is degrees.
+  <dd>The input RA unit where <span style="font-family: monospace;">"hr"</span> is hours and <span style="font-family: monospace;">"deg"</span> is degrees.
   </dd>
   </dl>
   <dl>
@@ -85,7 +85,7 @@ skygroup: Group a list containing RA and Dec into spatial sublists
   </dd>
   </dl>
   <dl>
-  <dt><b>raformat = <tt>"%.2h"</tt>, decformat = <tt>"%.1h"</tt></b></dt>
+  <dt><b>raformat = <span style="font-family: monospace;">"%.2h"</span>, decformat = <span style="font-family: monospace;">"%.1h"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='raformat' Line='raformat = "%.2h", decformat = "%.1h"' -->
   <dd>The format for printing the RA and Dec in the output lists if
   <i>keepcoords</i> is yes.  See the help for <b>printf</b> for the formats.

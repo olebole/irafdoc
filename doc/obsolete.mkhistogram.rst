@@ -48,7 +48,7 @@ mkhistogram: List or plot the histogram of a data stream (noao.proto V2.9)
   </dd>
   </dl>
   <dl>
-  <dt><b>device = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>device = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdgraph"' -->
   <dd>The output graphics device.
   </dd>

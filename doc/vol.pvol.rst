@@ -156,7 +156,7 @@ pvol: Project volume image (generates 'rotating' volume images)
   </dd>
   </dl>
   <dl>
-  <dt><b>title = <tt>""</tt></b></dt>
+  <dt><b>title = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='title' Line='title = ""' -->
   <dd>Output datacube title for rotation sequence.
   </dd>
@@ -188,7 +188,7 @@ pvol: Project volume image (generates 'rotating' volume images)
   <p>
   PVOL is used for visualizing the interiors of three-dimensional images.
   Opacity and intensity information is used to construct projected 2d images
-  approximating an <tt>"xray"</tt> view through the original <tt>"solid"</tt>, with varying
+  approximating an <span style="font-family: monospace;">"xray"</span> view through the original <span style="font-family: monospace;">"solid"</span>, with varying
   amounts of apparent translucency.  Playing the resulting 2d images back
   rapidly as a filmloop generates the impression of a rotating translucent
   datacube inside of which you can view much of the original information with
@@ -293,7 +293,7 @@ pvol: Project volume image (generates 'rotating' volume images)
   seeing into the interiors of high-contrast datacubes.  Rather than using each
   voxel value along the projection column, only certain voxel values contribute,
   based on the <b>modn</b> parameter (sometimes it is necessary to artificially
-  <tt>"thin out"</tt> the data to see far enough into or through it).
+  <span style="font-family: monospace;">"thin out"</span> the data to see far enough into or through it).
   </p>
   <pre>
   	<b>ptype</b> = 5 (modular distance weighting):
@@ -319,7 +319,7 @@ pvol: Project volume image (generates 'rotating' volume images)
   case are considered to represent a degree of opacity, and a column of light
   will be attenuated by each voxel according to a function of its opacity value
   as the ray proceeds through the volume.  The <b>izero</b> parameter provides
-  the initial incident <tt>"light"</tt> intensity before any attenuation.  The
+  the initial incident <span style="font-family: monospace;">"light"</span> intensity before any attenuation.  The
   amount of remaining light after projection through the datacube is very
   sensitive to the voxel opacities and the number of voxels in each projection
   column.  Consequently, the <b>oscale</b> parameter is supplied to enable

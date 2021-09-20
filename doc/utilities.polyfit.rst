@@ -101,7 +101,7 @@ polyfit: Fit polynomial to list of X,Y data
   </p>
   <br>
   <p>
-  and the coefficients have uncertainties (<tt>"sigmas"</tt>) s0 - sN.
+  and the coefficients have uncertainties (<span style="font-family: monospace;">"sigmas"</span>) s0 - sN.
   </p>
   <p>
   If verbose is set to yes, the following additional information is

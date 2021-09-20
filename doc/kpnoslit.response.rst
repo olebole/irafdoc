@@ -61,7 +61,7 @@ response: Determine response calibration
   </dd>
   </dl>
   <dl>
-  <dt><b>sample = <tt>"*"</tt></b></dt>
+  <dt><b>sample = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"' -->
   <dd>Sample of points to use in fitting the average calibration spectrum.
   The sample is selected with a range string.
@@ -78,10 +78,10 @@ response: Determine response calibration
   </dd>
   </dl>
   <dl>
-  <dt><b>function = <tt>"spline3"</tt></b></dt>
+  <dt><b>function = <span style="font-family: monospace;">"spline3"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "spline3"' -->
   <dd>Function to fit to the average image spectrum to form the normalization
-  spectrum.  The options are <tt>"spline1"</tt>, <tt>"spline3"</tt>, <tt>"legendre"</tt>, and <tt>"chebyshev"</tt>.
+  spectrum.  The options are <span style="font-family: monospace;">"spline1"</span>, <span style="font-family: monospace;">"spline3"</span>, <span style="font-family: monospace;">"legendre"</span>, and <span style="font-family: monospace;">"chebyshev"</span>.
   </dd>
   </dl>
   <dl>
@@ -115,7 +115,7 @@ response: Determine response calibration
   <p>
   The interactive curve fitting package <b>icfit</b> is used to fit a function
   to the average calibration spectrum.  Help for this package is found
-  under the name <tt>"icfit"</tt>.
+  under the name <span style="font-family: monospace;">"icfit"</span>.
   </p>
   <!-- EndSection:   'CURSOR KEYS' -->
   <h3>Description</h3>
@@ -199,7 +199,7 @@ response: Determine response calibration
   The cursor keys and colon commands are used to change the values
   of the fitting parameters, delete points, and window and expand the
   graph.  When the fitted function is satisfactory exit with a carriage
-  return or <tt>'q'</tt> and the calibration image will be created.  Changes in
+  return or <span style="font-family: monospace;">'q'</span> and the calibration image will be created.  Changes in
   the fitted parameters are remembered from image to image within the
   task but not outside the task.
   </p>

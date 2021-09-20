@@ -44,19 +44,19 @@ wcsmap: Compute geometric transforms using the image wcs
   </dd>
   </dl>
   <dl>
-  <dt><b>transforms = <tt>""</tt></b></dt>
+  <dt><b>transforms = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='transforms' Line='transforms = ""' -->
   <dd>An optional list of transform names. If transforms is undefined the
   transforms are assigned record names identical to the names of the input images.
   </dd>
   </dl>
   <dl>
-  <dt><b>results = <tt>""</tt></b></dt>
+  <dt><b>results = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='results' Line='results = ""' -->
   <dd>Optional output files containing a summary of the results including a
   description of the transform geometry and a listing of the input coordinates,
   the fitted coordinates, and the fit residuals. The number of results files
-  must be one or equal to the number of input files. If results is <tt>"STDOUT"</tt> the
+  must be one or equal to the number of input files. If results is <span style="font-family: monospace;">"STDOUT"</span> the
   results summary is printed on the standard output.
   </dd>
   </dl>
@@ -77,7 +77,7 @@ wcsmap: Compute geometric transforms using the image wcs
   </dd>
   </dl>
   <dl>
-  <dt><b>wcs = <tt>"world"</tt></b></dt>
+  <dt><b>wcs = <span style="font-family: monospace;">"world"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcs' Line='wcs = "world"' -->
   <dd>The world coordinate system of the coordinates.  The options are:
   <dl>
@@ -102,11 +102,11 @@ wcsmap: Compute geometric transforms using the image wcs
   wcs is correct the ra and dec or wavelength and position of an object
   should remain the same not matter how the image
   is linearly transformed. The default world coordinate
-  system is either 1) the value of the environment variable <tt>"defwcs"</tt> if
+  system is either 1) the value of the environment variable <span style="font-family: monospace;">"defwcs"</span> if
   set in the user's IRAF environment (normally it is undefined) and present
-  in the image header, 2) the value of the <tt>"system"</tt>
+  in the image header, 2) the value of the <span style="font-family: monospace;">"system"</span>
   attribute in the image header keyword WAT0_001 if present in the
-  image header or, 3) the <tt>"physical"</tt> coordinate system.
+  image header or, 3) the <span style="font-family: monospace;">"physical"</span> coordinate system.
   Care must be taken that the wcs of the input and
   reference images are compatible, e.g. it makes no sense to
   match the coordinates of a 2D sky projection and a 2D spectral wcs.
@@ -125,7 +125,7 @@ wcsmap: Compute geometric transforms using the image wcs
   </dd>
   </dl>
   <dl>
-  <dt><b>xformat = <tt>"%10.3f"</tt>, yformat = <tt>"%10.3f"</tt></b></dt>
+  <dt><b>xformat = <span style="font-family: monospace;">"%10.3f"</span>, yformat = <span style="font-family: monospace;">"%10.3f"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xformat' Line='xformat = "%10.3f", yformat = "%10.3f"' -->
   <dd>The format of the output logical x and y reference and input pixel
   coordinates in columns 1 and 2 and 3 and 4 respectively. By default the
@@ -134,7 +134,7 @@ wcsmap: Compute geometric transforms using the image wcs
   </dd>
   </dl>
   <dl>
-  <dt><b>wxformat = <tt>""</tt>, wyformat = <tt>""</tt></b></dt>
+  <dt><b>wxformat = <span style="font-family: monospace;">""</span>, wyformat = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wxformat' Line='wxformat = "", wyformat = ""' -->
   <dd>The format of the output world x and y reference and input image coordinates
   in columns 5 and 6 respectively. The internal default formats will give
@@ -143,7 +143,7 @@ wcsmap: Compute geometric transforms using the image wcs
   </dd>
   </dl>
   <dl>
-  <dt><b>fitgeometry = <tt>"general"</tt></b></dt>
+  <dt><b>fitgeometry = <span style="font-family: monospace;">"general"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fitgeometry' Line='fitgeometry = "general"' -->
   <dd>The fitting geometry to be used. The options are the following.
   <dl>
@@ -190,15 +190,15 @@ wcsmap: Compute geometric transforms using the image wcs
   distortion terms is set to zero.
   </dd>
   </dl>
-  For all the fitting geometries except <tt>"general"</tt> no distortion term is fit,
+  For all the fitting geometries except <span style="font-family: monospace;">"general"</span> no distortion term is fit,
   i.e. the x and y polynomial orders are assumed to be 2 and the cross term
-  switches are set to <tt>"none"</tt>, regardless of the values of the <i>xxorder</i>,
+  switches are set to <span style="font-family: monospace;">"none"</span>, regardless of the values of the <i>xxorder</i>,
   <i>xyorder</i>, <i>xxterms</i>, <i>yxorder</i>, <i>yyorder</i> and <i>yxterms</i>
   parameters set by the user.
   </dd>
   </dl>
   <dl>
-  <dt><b>function = <tt>"polynomial"</tt></b></dt>
+  <dt><b>function = <span style="font-family: monospace;">"polynomial"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "polynomial"' -->
   <dd>The type of analytic coordinate surfaces to be fit. The options are the
   following.
@@ -228,16 +228,16 @@ wcsmap: Compute geometric transforms using the image wcs
   <dd>The order of the polynomials in x and y for the x and y fits respectively.
   The default order and cross term settings define the linear term in x
   and y, where the 6 coefficients can be interpreted in terms of an x and y shift,
-  an x and y scale change, and rotations of the x and y axes. The <tt>"shift"</tt>,
-  <tt>"xyscale"</tt>, <tt>"rotation"</tt>, <tt>"rscale"</tt>, and <tt>"rxyscale"</tt>, fitting geometries
+  an x and y scale change, and rotations of the x and y axes. The <span style="font-family: monospace;">"shift"</span>,
+  <span style="font-family: monospace;">"xyscale"</span>, <span style="font-family: monospace;">"rotation"</span>, <span style="font-family: monospace;">"rscale"</span>, and <span style="font-family: monospace;">"rxyscale"</span>, fitting geometries
   assume that the polynomial order parameters are 2 regardless of the values
   set by the user. If any of the order parameters are higher than 2 and
-  <i>fitgeometry</i> is <tt>"general"</tt>, then a distortion surface is fit to the
+  <i>fitgeometry</i> is <span style="font-family: monospace;">"general"</span>, then a distortion surface is fit to the
   residuals from the linear portion of the fit.
   </dd>
   </dl>
   <dl>
-  <dt><b>xxterms = <tt>"half"</tt>, yxterms = <tt>"half"</tt></b></dt>
+  <dt><b>xxterms = <span style="font-family: monospace;">"half"</span>, yxterms = <span style="font-family: monospace;">"half"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xxterms' Line='xxterms = "half", yxterms = "half"' -->
   <dd>The options are:
   <dl>
@@ -263,10 +263,10 @@ wcsmap: Compute geometric transforms using the image wcs
   MAX (yxorder - 1 + yyorder - 1) for the y fit.
   </dd>
   </dl>
-  The <tt>"shift"</tt>, <tt>"xyscale"</tt>, <tt>"rotation"</tt>, <tt>"rscale"</tt>, and <tt>"rxyscale"</tt> fitting
-  geometries, assume that the cross term switches are set to <tt>"none"</tt>regardless
+  The <span style="font-family: monospace;">"shift"</span>, <span style="font-family: monospace;">"xyscale"</span>, <span style="font-family: monospace;">"rotation"</span>, <span style="font-family: monospace;">"rscale"</span>, and <span style="font-family: monospace;">"rxyscale"</span> fitting
+  geometries, assume that the cross term switches are set to <span style="font-family: monospace;">"none"</span>regardless
   of the values set by the user.  If either of the cross terms parameters is
-  set to <tt>"half"</tt> or <tt>"full"</tt> and <i>fitgeometry</i> is <tt>"general"</tt> then a distortion
+  set to <span style="font-family: monospace;">"half"</span> or <span style="font-family: monospace;">"full"</span> and <i>fitgeometry</i> is <span style="font-family: monospace;">"general"</span> then a distortion
   surface is fit to the residuals from the linear portion of the fit.
   </dd>
   </dl>
@@ -277,10 +277,10 @@ wcsmap: Compute geometric transforms using the image wcs
   </dd>
   </dl>
   <dl>
-  <dt><b>calctype = <tt>"real"</tt></b></dt>
+  <dt><b>calctype = <span style="font-family: monospace;">"real"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='calctype' Line='calctype = "real"' -->
-  <dd>The precision of coordinate transformation calculations. The options are <tt>"real"</tt>
-  and <tt>"double"</tt>.
+  <dd>The precision of coordinate transformation calculations. The options are <span style="font-family: monospace;">"real"</span>
+  and <span style="font-family: monospace;">"double"</span>.
   </dd>
   </dl>
   <dl>
@@ -298,13 +298,13 @@ wcsmap: Compute geometric transforms using the image wcs
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>The graphics device.
   </dd>
   </dl>
   <dl>
-  <dt><b>gcommands = <tt>""</tt></b></dt>
+  <dt><b>gcommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""' -->
   <dd>The graphics cursor.
   </dd>
@@ -368,8 +368,8 @@ wcsmap: Compute geometric transforms using the image wcs
   x and <i>yxorder</i> and <i>yyorder</i> in y.  Cross terms are optional.
   </p>
   <p>
-  Several polynomial cross terms options are available. Options <tt>"none"</tt>,
-  <tt>"half"</tt>, and <tt>"full"</tt> are illustrated below for a quadratic polynomial in
+  Several polynomial cross terms options are available. Options <span style="font-family: monospace;">"none"</span>,
+  <span style="font-family: monospace;">"half"</span>, and <span style="font-family: monospace;">"full"</span> are illustrated below for a quadratic polynomial in
   x and y.
   </p>
   <pre>
@@ -403,15 +403,15 @@ wcsmap: Compute geometric transforms using the image wcs
   </pre>
   <p>
   If the <b>fitgeometry</b> parameter is anything
-  other than <tt>"general"</tt>, the  order parameters assume the value 2 and the
-  cross terms switches assume the value <tt>"none"</tt>, regardless of the values set
+  other than <span style="font-family: monospace;">"general"</span>, the  order parameters assume the value 2 and the
+  cross terms switches assume the value <span style="font-family: monospace;">"none"</span>, regardless of the values set
   by the user. The computation can be done in either real or
   double precision by setting the <i>calctype</i> parameter.
   Automatic pixel rejection may be enabled by setting the <i>reject</i>
   parameter to some number &gt; 0.0.
   </p>
   <p>
-  The transformation computed by the <tt>"general"</tt> fitting geometry is arbitrary
+  The transformation computed by the <span style="font-family: monospace;">"general"</span> fitting geometry is arbitrary
   and does not correspond to a physically meaningful model. However the computed
   coefficients for the linear term can be given a simple geometrical geometric
   interpretation for all the fitting geometries as shown below.
@@ -535,7 +535,7 @@ wcsmap: Compute geometric transforms using the image wcs
   the input image unchanged if applied by the REGISTER or GEOTRAN tasks.
   </p>
   <p>
-  If <i>verbose</i> is <tt>"yes"</tt> then messages about the progress of the task
+  If <i>verbose</i> is <span style="font-family: monospace;">"yes"</span> then messages about the progress of the task
   as well as warning messages indicating potential problems are written to
   the standard output. If <i>results</i> is set to a file name then the input
   coordinates, the fitted coordinates, and the residuals of the fit are
@@ -543,7 +543,7 @@ wcsmap: Compute geometric transforms using the image wcs
   </p>
   <p>
   WCSMAP may be run interactively by setting the <i>interactive</i>
-  parameter to <tt>"yes"</tt>.
+  parameter to <span style="font-family: monospace;">"yes"</span>.
   In interactive mode the user has the option of viewing the fit, changing the
   fit parameters, deleting and undeleting points, and replotting
   the data until a satisfactory
@@ -591,10 +591,10 @@ wcsmap: Compute geometric transforms using the image wcs
   <h3>Formats</h3>
   <!-- BeginSection: 'FORMATS' -->
   <p>
-  A  format  specification has the form <tt>"%w.dCn"</tt>, where w is the field
+  A  format  specification has the form <span style="font-family: monospace;">"%w.dCn"</span>, where w is the field
   width, d is the number of decimal places or the number of digits  of
   precision,  C  is  the  format  code,  and  n is radix character for
-  format code <tt>"r"</tt> only.  The w and d fields are optional.  The  format
+  format code <span style="font-family: monospace;">"r"</span> only.  The w and d fields are optional.  The  format
   codes C are as follows:
    
   </p>
@@ -671,18 +671,18 @@ wcsmap: Compute geometric transforms using the image wcs
   <!-- BeginSection: 'REFERENCES' -->
   <p>
   Additional  information  on  IRAF  world  coordinate  systems including
-  more detailed descriptions of the <tt>"logical"</tt>, <tt>"physical"</tt>, and <tt>"world"</tt>
+  more detailed descriptions of the <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"physical"</span>, and <span style="font-family: monospace;">"world"</span>
   coordinate systems can be
   found  in  the  help  pages  for  the  WCSEDIT  and  WCRESET  tasks. 
   Detailed   documentation   for  the  IRAF  world  coordinate  system 
-  interface MWCS can be found in  the  file  <tt>"iraf$sys/mwcs/MWCS.hlp"</tt>.
-  This  file  can  be  formatted  and  printed  with the command <tt>"help
-  iraf$sys/mwcs/MWCS.hlp fi+ | lprint"</tt>.  Information on the spectral
+  interface MWCS can be found in  the  file  <span style="font-family: monospace;">"iraf$sys/mwcs/MWCS.hlp"</span>.
+  This  file  can  be  formatted  and  printed  with the command <span style="font-family: monospace;">"help
+  iraf$sys/mwcs/MWCS.hlp fi+ | lprint"</span>.  Information on the spectral
   coordinates systems and their suitability for use with WCSXYMATCH
-  can be obtained by typing <tt>"help specwcs | lprint"</tt>.
+  can be obtained by typing <span style="font-family: monospace;">"help specwcs | lprint"</span>.
   Details of  the  FITS  header
   world  coordinate  system  interface  can  be  found in the document
-  <tt>"World Coordinate Systems Representations Within  the  FITS  Format"</tt>
+  <span style="font-family: monospace;">"World Coordinate Systems Representations Within  the  FITS  Format"</span>
   by Hanisch and Wells, available from our anonymous ftp archive.
       
   </p>

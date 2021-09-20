@@ -27,7 +27,7 @@ asthedit: Astronomical header editor
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>List of images to be used.  The image header keywords are used in this task
   as variables which are read, modified, created, or deleted.  If the images
-  do not have write permission or the <i>update</i> parameter is <tt>"no"</tt> then the
+  do not have write permission or the <i>update</i> parameter is <span style="font-family: monospace;">"no"</span> then the
   image headers will not be modified.  If no images are specified then this
   task can be used as a calculator (though see <b>astcalc</b>).
   </dd>
@@ -38,14 +38,14 @@ asthedit: Astronomical header editor
   <dd>A file of commands using the simple syntax given in the DESCRIPTION.  If no
   file name is given then the commands are read interactively from the
   standard input with a prompt given by the <i>prompt</i> parameter.  The
-  command input ends with either EOF or <tt>"quit"</tt>.  If a list of images and/or a
+  command input ends with either EOF or <span style="font-family: monospace;">"quit"</span>.  If a list of images and/or a
   table is specified the commands are repeated for each image or until the
-  end of the table is reached.  Comments beginning with <tt>'#'</tt>, blank lines, and
+  end of the table is reached.  Comments beginning with <span style="font-family: monospace;">'#'</span>, blank lines, and
   escaped newlines are allowed.
   </dd>
   </dl>
   <dl>
-  <dt><b>table = <tt>""</tt></b></dt>
+  <dt><b>table = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='table' Line='table = ""' -->
   <dd>Optional text file containing columns of values.  The table consists of
   one or more lines of whitespace separated columns of values.  Note that a
@@ -55,22 +55,22 @@ asthedit: Astronomical header editor
   </dd>
   </dl>
   <dl>
-  <dt><b>colnames = <tt>""</tt></b></dt>
+  <dt><b>colnames = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='colnames' Line='colnames = ""' -->
   <dd>List of whitespace separated column names.  These are the names referenced
-  in the command file by $&lt;name&gt;.  The leading <tt>'$'</tt> is not included in the
+  in the command file by $&lt;name&gt;.  The leading <span style="font-family: monospace;">'$'</span> is not included in the
   column name specification.  There may be fewer columns than the number of
   columns in the table.  Dummy names must be used if some columns occur
   before a column to be referenced.
   </dd>
   </dl>
   <dl>
-  <dt><b>prompt = <tt>"asthedit&gt; "</tt></b></dt>
+  <dt><b>prompt = <span style="font-family: monospace;">"asthedit&gt; "</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='prompt' Line='prompt = "asthedit&gt; "' -->
   <dd>When no command file is specified the input commands are read from the
   standard input (the terminal) and the value of the <i>prompt</i> string is
   printed as a prompt.  Note that if the input command file is specified as
-  <tt>"STDIN"</tt> there will be no prompt even though commands will also be read from
+  <span style="font-family: monospace;">"STDIN"</span> there will be no prompt even though commands will also be read from
   the standard input.
   </dd>
   </dl>
@@ -116,9 +116,9 @@ asthedit: Astronomical header editor
   This task may be used interactively or with input from a command file
   (<i>commands</i>).  If no command file is specified a prompt (<i>prompt</i>)
   is printed and commands are entered interactively.  The input is terminated
-  with either the end-of-file character (EOF) or the command <tt>"quit"</tt>.  Input
+  with either the end-of-file character (EOF) or the command <span style="font-family: monospace;">"quit"</span>.  Input
   command files simply contain the same input in a file and end with the end
-  of the file or <tt>"quit"</tt>.  The input commands, either those entered
+  of the file or <span style="font-family: monospace;">"quit"</span>.  The input commands, either those entered
   interactively or from a file, are repeated for each image in the image list
   and until the end of the input text table is reached, whichever comes
   first.  Generally this task is used on one or more images but if no
@@ -129,7 +129,7 @@ asthedit: Astronomical header editor
   The command input consists of statements with each statement on a
   line by itself.  However long statements may be broken up with
   escaped newlines using the back-slash as the escape character;
-  i.e. \&lt;newline&gt;.  Comments beginning with <tt>'#'</tt>, blank lines,
+  i.e. \&lt;newline&gt;.  Comments beginning with <span style="font-family: monospace;">'#'</span>, blank lines,
   and whitespace are ignored.
   </p>
   <p>
@@ -159,20 +159,20 @@ asthedit: Astronomical header editor
   </p>
   <p>
   An image header keyword name is an arbitrary identifier which must begin
-  with an alphabetic character or <tt>'$'</tt> followed by an alphabetic character and
-  may use alphabetic characters, digits, or the characters <tt>'_'</tt>, <tt>'$'</tt>, or <tt>'.'</tt>.
+  with an alphabetic character or <span style="font-family: monospace;">'$'</span> followed by an alphabetic character and
+  may use alphabetic characters, digits, or the characters <span style="font-family: monospace;">'_'</span>, <span style="font-family: monospace;">'$'</span>, or <span style="font-family: monospace;">'.'</span>.
   Keyword names are case insensitive.  Because some additional characters are
   allowed in the FITS definition of keyword names, such names may be
-  referenced with the special <tt>'@'</tt> operator described below.
+  referenced with the special <span style="font-family: monospace;">'@'</span> operator described below.
   </p>
   <p>
   One may also use internal variables which have the same identifier rules
-  but begin with <tt>'$'</tt>.  Note that these variables are case sensitive (as are
-  function names).  There are a few special predefined variables: <tt>"$I"</tt>
-  contains the current image name, <tt>"$D"</tt> contains the current local date (in
-  old FITS DD/MM/YY format), <tt>"$T"</tt> contains the current local time, <tt>"$GMD"</tt>
+  but begin with <span style="font-family: monospace;">'$'</span>.  Note that these variables are case sensitive (as are
+  function names).  There are a few special predefined variables: <span style="font-family: monospace;">"$I"</span>
+  contains the current image name, <span style="font-family: monospace;">"$D"</span> contains the current local date (in
+  old FITS DD/MM/YY format), <span style="font-family: monospace;">"$T"</span> contains the current local time, <span style="font-family: monospace;">"$GMD"</span>
   contains the current Greenwich meridian date (in FITS YYYY-MM-DD format),
-  <tt>"$GMT"</tt> contains the current Greenwich meridian time, and <tt>"$GMDT"</tt> contains
+  <span style="font-family: monospace;">"$GMT"</span> contains the current Greenwich meridian time, and <span style="font-family: monospace;">"$GMDT"</span> contains
   the current date and time in FITS YYYY-MM-DDTHH:MM:SS format.
   </p>
   <p>
@@ -181,8 +181,8 @@ asthedit: Astronomical header editor
   <i>table</i> parameter.  The line is scanned and the values of each
   column are stored in the variable names specified by the <i>colnames</i>
   parameter.  The values may be referenced in expressions by the
-  specified column name preceded with <tt>'$'</tt>.  Note that additional lines
-  may be scanned with the <tt>"fscan"</tt> function.  The user is then responsible
+  specified column name preceded with <span style="font-family: monospace;">'$'</span>.  Note that additional lines
+  may be scanned with the <span style="font-family: monospace;">"fscan"</span> function.  The user is then responsible
   for the table containing the correct sequence of lines when there
   are multiple images.
   </p>
@@ -198,7 +198,7 @@ asthedit: Astronomical header editor
   </p>
   <p>
   The following gives a more formal description of the statement syntax
-  and the special words <tt>"if"</tt>, <tt>"else"</tt>, <tt>"endif"</tt>, and <tt>"quit"</tt>.
+  and the special words <span style="font-family: monospace;">"if"</span>, <span style="font-family: monospace;">"else"</span>, <span style="font-family: monospace;">"endif"</span>, and <span style="font-family: monospace;">"quit"</span>.
   </p>
   <pre>
   	&lt;keyword&gt;
@@ -216,9 +216,9 @@ asthedit: Astronomical header editor
           quit
   </pre>
   <p>
-  The result of the expression in the <tt>"if"</tt> statement is normally a logical
+  The result of the expression in the <span style="font-family: monospace;">"if"</span> statement is normally a logical
   value.  However, a numeric value of 0 is false while any other value is
-  true and any string beginning with either <tt>"y"</tt> or <tt>"Y"</tt> is true with
+  true and any string beginning with either <span style="font-family: monospace;">"y"</span> or <span style="font-family: monospace;">"Y"</span> is true with
   any other value being false; i.e. string values of yes and no may be used.
   </p>
   <p>
@@ -258,8 +258,8 @@ asthedit: Astronomical header editor
   where [] indicate optional, {} indicates a class, - indicates an ASCII
   range of characters, and * indicates zero or more occurrences.  In words, a
   keyword must begin with an alphabetic character, a variable or text file
-  column name begins with <tt>'$'</tt> and an alphabetic character, and both may be
-  followed by any combinations of alphabetic, digit, or <tt>'.'</tt>, <tt>'_'</tt>, and <tt>'$'</tt>
+  column name begins with <span style="font-family: monospace;">'$'</span> and an alphabetic character, and both may be
+  followed by any combinations of alphabetic, digit, or <span style="font-family: monospace;">'.'</span>, <span style="font-family: monospace;">'_'</span>, and <span style="font-family: monospace;">'$'</span>
   characters.
   </p>
   <p>
@@ -276,9 +276,9 @@ asthedit: Astronomical header editor
   </p>
   <p>
   Though not recommended it is possible to use any set of characters
-  for a variable provided the variable is referenced as @<tt>"&lt;name&gt;"</tt>.
-  For example one could use @<tt>"date-obs"</tt> to include the character <tt>'-'</tt>.
-  This option is primarily used for FITS keywords that use <tt>'-'</tt> as
+  for a variable provided the variable is referenced as @<span style="font-family: monospace;">"&lt;name&gt;"</span>.
+  For example one could use @<span style="font-family: monospace;">"date-obs"</span> to include the character <span style="font-family: monospace;">'-'</span>.
+  This option is primarily used for FITS keywords that use <span style="font-family: monospace;">'-'</span> as
   a hyphen character and must be escaped from interpretation as the
   an arithmetic subtraction operator.
   </p>
@@ -296,8 +296,8 @@ asthedit: Astronomical header editor
   <p>
   Additional information may be found in the help for <b>hedit</b> except that
   all unquoted nonnumeric strings are considered to be keywords or variables
-   and so the <tt>'('</tt>, <tt>')'</tt> operators are not used.  The <tt>"field"</tt> references are
-  not needed so the references <tt>"."</tt> and  <tt>"$"</tt> are not used and are not legal
+   and so the <span style="font-family: monospace;">'('</span>, <span style="font-family: monospace;">')'</span> operators are not used.  The <span style="font-family: monospace;">"field"</span> references are
+  not needed so the references <span style="font-family: monospace;">"."</span> and  <span style="font-family: monospace;">"$"</span> are not used and are not legal
   variable names in this task.
   </p>
   <p>
@@ -305,7 +305,7 @@ asthedit: Astronomical header editor
   </p>
   <p>
   The following operators are recognized in expressions.  With the exception
-  of the operators <tt>"?"</tt>, <tt>"?="</tt>, and <tt>"@"</tt>, the operator set is equivalent to that
+  of the operators <span style="font-family: monospace;">"?"</span>, <span style="font-family: monospace;">"?="</span>, and <span style="font-family: monospace;">"@"</span>, the operator set is equivalent to that
   available in the CL and SPP languages.
   </p>
   <pre>
@@ -320,13 +320,13 @@ asthedit: Astronomical header editor
           @                       reference a variable
   </pre>
   <p>
-  The operators <tt>"=="</tt>, <tt>"&amp;&amp;"</tt>, and <tt>"||"</tt> may be abbreviated as <tt>"="</tt>, <tt>"&amp;"</tt>, and <tt>"|"</tt>
+  The operators <span style="font-family: monospace;">"=="</span>, <span style="font-family: monospace;">"&amp;&amp;"</span>, and <span style="font-family: monospace;">"||"</span> may be abbreviated as <span style="font-family: monospace;">"="</span>, <span style="font-family: monospace;">"&amp;"</span>, and <span style="font-family: monospace;">"|"</span>
   if desired.  The ?= operator performs pattern matching upon strings.
   The @ operator is required to reference keywords with
   one of the operator characters.  This is most like to be used as:
   </p>
   <p>
-          @<tt>"date-obs"</tt>
+          @<span style="font-family: monospace;">"date-obs"</span>
   </p>
   <p>
   A point to be aware of is that in the ?: conditional expression both
@@ -358,9 +358,9 @@ asthedit: Astronomical header editor
   A function call may take either of the following forms:
   </p>
   <pre>
-          &lt;identifier&gt; <tt>'('</tt> arglist <tt>')'</tt>
+          &lt;identifier&gt; <span style="font-family: monospace;">'('</span> arglist <span style="font-family: monospace;">')'</span>
   or
-          &lt;string_expr&gt; <tt>'('</tt> arglist <tt>')'</tt>
+          &lt;string_expr&gt; <span style="font-family: monospace;">'('</span> arglist <span style="font-family: monospace;">')'</span>
   </pre>
   <p>
   The first form is the conventional form found in all programming languages.
@@ -401,7 +401,7 @@ asthedit: Astronomical header editor
   format DD/MM/YY, YYYY-MM-DD, or YYYY-MM-DDTHH:MM:SS.
   Typically this argument will be the standard FITS
   keyword DATE-OBS.  Because of possible confusion of the hyphen with
-  subtraction this keyword would be specified as @<tt>"date-obs"</tt>.  The time
+  subtraction this keyword would be specified as @<span style="font-family: monospace;">"date-obs"</span>.  The time
   argument is optional.  If it is not given the time from the date
   string will be used and if absent a time of 0h is used.
   </dd>
@@ -475,7 +475,7 @@ asthedit: Astronomical header editor
   <dl>
   <dt><b>eairmass (ra, dec, st, exptime, latitude)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='eairmass' Line='eairmass (ra, dec, st, exptime, latitude)' -->
-  <dd>Compute an <tt>"effective"</tt> airmass given right ascension in hours, declination
+  <dd>Compute an <span style="font-family: monospace;">"effective"</span> airmass given right ascension in hours, declination
   in degrees, beginning sidereal time in hours, exposure time in seconds, and
   latitude in degrees.  The The latitude is often specified using the
   observatory database function as shown in the examples.  The effective
@@ -493,10 +493,10 @@ asthedit: Astronomical header editor
   <dd>Return a value from the observatory database.  The observatory parameter is
   a observatory identification string as defined in the database.  Often this
   is the value stored in the OBSERVAT keyword.  Another special value is
-  <tt>"observatory"</tt> which then follows a name resolution scheme.  The observatory
+  <span style="font-family: monospace;">"observatory"</span> which then follows a name resolution scheme.  The observatory
   database mechanism is described by the help topic <b>observatory</b>.  The
   parameter is a string given the quantity desired.  Typically this would be
-  <tt>"longitude"</tt> or <tt>"latitude"</tt> but there are other possible parameters.
+  <span style="font-family: monospace;">"longitude"</span> or <span style="font-family: monospace;">"latitude"</span> but there are other possible parameters.
   </dd>
   </dl>
   <p>
@@ -538,15 +538,15 @@ asthedit: Astronomical header editor
   <dd>Print a list of arguments using the formatting syntax described later.
   Parameters to be formatted are given by the % fields and the values are
   passed as further arguments in the order in which they are referenced.
-  There is no automatic newline so the format must include <tt>"\n"</tt> to
+  There is no automatic newline so the format must include <span style="font-family: monospace;">"\n"</span> to
   produce newlines.
   </dd>
   </dl>
   <dl>
   <dt><b>error (message)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='error' Line='error (message)' -->
-  <dd>Print the <tt>"message"</tt>, which can be any string variable such as might
-  be produced by <tt>"format"</tt>, and abort the task.  This is useful in
+  <dd>Print the <span style="font-family: monospace;">"message"</span>, which can be any string variable such as might
+  be produced by <span style="font-family: monospace;">"format"</span>, and abort the task.  This is useful in
   conjunction with the conditional operator to abort if a variable
   takes an inappropriate value.
   </dd>
@@ -563,7 +563,7 @@ asthedit: Astronomical header editor
   <!-- Sec='DESCRIPTION' Level=0 Label='clput' Line='clput (parameter, value)' -->
   <dd>Put a value into a CL parameter.  The parameter argument must be a
   string and the value can be anything.  The function returns a string
-  of the form <tt>"clput: parameter = value"</tt> where parameter and value are
+  of the form <span style="font-family: monospace;">"clput: parameter = value"</span> where parameter and value are
   the actual values.
   </dd>
   </dl>
@@ -597,8 +597,8 @@ asthedit: Astronomical header editor
   <dd>Put a value into an image header keyword for the current image.  The
   parameter argument must be a string and the value can be anything.  If the
   keyword exists it will be modified and if it does not exist it will be
-  added.  The function returns a string of the form <tt>"imput: parameter =
-  value"</tt> for new keywords or <tt>"imput: parameter = old_value -&gt; value"</tt> for
+  added.  The function returns a string of the form <span style="font-family: monospace;">"imput: parameter =
+  value"</span> for new keywords or <span style="font-family: monospace;">"imput: parameter = old_value -&gt; value"</span> for
   modified keywords where parameter and value are the actual values.
   </dd>
   </dl>
@@ -606,8 +606,8 @@ asthedit: Astronomical header editor
   <dt><b>imdel (parameter)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='imdel' Line='imdel (parameter)' -->
   <dd>Delete an image header keyword.  The parameter argument must be a string.
-  The returned values are the strings <tt>"imdel: parameter not found"</tt>
-  or <tt>"imdel: parameter = value (DELETED)"</tt> where parameter is the parameter
+  The returned values are the strings <span style="font-family: monospace;">"imdel: parameter not found"</span>
+  or <span style="font-family: monospace;">"imdel: parameter = value (DELETED)"</span> where parameter is the parameter
   name and value is the old value.
   </dd>
   </dl>
@@ -615,10 +615,10 @@ asthedit: Astronomical header editor
   <h3>Formats</h3>
   <!-- BeginSection: 'FORMATS' -->
   <p>
-  A  format  specification has the form <tt>"%w.dCn"</tt>, where w is the field
+  A  format  specification has the form <span style="font-family: monospace;">"%w.dCn"</span>, where w is the field
   width, d is the number of decimal places or the number of digits  of
   precision,  C  is  the  format  code,  and  n is radix character for
-  format code <tt>"r"</tt> only.  The w and d fields are optional.  The  format
+  format code <span style="font-family: monospace;">"r"</span> only.  The w and d fields are optional.  The  format
   codes C are as follows:
       
   </p>
@@ -906,10 +906,10 @@ asthedit: Astronomical header editor
   <dt><b>ASTHEDIT V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='ASTHEDIT' Line='ASTHEDIT V2.11' -->
   <dd>There are new astronomical functions and input/output functions.
-  The command syntax may now use <tt>"="</tt> as a delimiter as well as the whitespace.
-  A new parameter <tt>"update"</tt> allows protecting images and accessing read-only
+  The command syntax may now use <span style="font-family: monospace;">"="</span> as a delimiter as well as the whitespace.
+  A new parameter <span style="font-family: monospace;">"update"</span> allows protecting images and accessing read-only
   images for the purpose of calculating and printing quantities.
-  The special variable name <tt>"$I"</tt> has the value of the image name, $D
+  The special variable name <span style="font-family: monospace;">"$I"</span> has the value of the image name, $D
   the current date, and $T the current time.
   The case of no image name creates and deletes a temporary image so the
   task can be used purely as a calculator (but see <b>astcalc</b>).

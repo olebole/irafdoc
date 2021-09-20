@@ -26,7 +26,7 @@ keypar: Copy an image or table header keyword to an IRAF parameter.
   This task reads a header keyword from an image or table file. The
   keyword is written to the IRAF parameter 'value' as a character
   string. If the header keyword is boolean, the value of 'value' will
-  either be <tt>"yes"</tt> or <tt>"no"</tt>.  If the header keyword is not found, 'value'
+  either be <span style="font-family: monospace;">"yes"</span> or <span style="font-family: monospace;">"no"</span>.  If the header keyword is not found, 'value'
   will be set to a null string.  String parameters, such as 'value', can
   be converted to numeric data types with the built in functions real()
   and int().

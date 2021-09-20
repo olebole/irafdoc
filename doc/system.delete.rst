@@ -38,8 +38,8 @@ delete: Delete a file or files (use IMDELETE to delete imagefiles)
   <dl>
   <dt><b>default_action = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='default_action' Line='default_action = yes' -->
-  <dd>This is the default action to take when operating in <tt>"verify"</tt> mode.
-  For example, if the default action is <tt>"yes"</tt>, one need only type RETURN in
+  <dd>This is the default action to take when operating in <span style="font-family: monospace;">"verify"</span> mode.
+  For example, if the default action is <span style="font-family: monospace;">"yes"</span>, one need only type RETURN in
   response to the verify prompt to delete the file.
   </dd>
   </dl>
@@ -74,7 +74,7 @@ delete: Delete a file or files (use IMDELETE to delete imagefiles)
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. Delete all files with extension <tt>".x"</tt>, verifying each file deletion before
+  1. Delete all files with extension <span style="font-family: monospace;">".x"</span>, verifying each file deletion before
   it is performed.
   </p>
   <p>
@@ -82,8 +82,8 @@ delete: Delete a file or files (use IMDELETE to delete imagefiles)
   </p>
   <p>
   2. List all files in the current directory, deleting only those files for
-  which the user responds to the verify prompt with <tt>"yes"</tt> or <tt>"y"</tt>.  Note that
-  <tt>"delete *"</tt> is a very dangerous operation.
+  which the user responds to the verify prompt with <span style="font-family: monospace;">"yes"</span> or <span style="font-family: monospace;">"y"</span>.  Note that
+  <span style="font-family: monospace;">"delete *"</span> is a very dangerous operation.
   </p>
   <p>
   	cl&gt; delete * ver+ def=no

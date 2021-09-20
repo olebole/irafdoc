@@ -46,11 +46,11 @@ export: Convert IRAF images to some other format
   
   </p>
   <dl>
-  <dt><b>format = <tt>"raw"</tt></b></dt>
+  <dt><b>format = <span style="font-family: monospace;">"raw"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='format' Line='format = "raw"' -->
-  <dd>The type of binary file to write.  If the value is <tt>"raw"</tt> then the input
+  <dd>The type of binary file to write.  If the value is <span style="font-family: monospace;">"raw"</span> then the input
   images are converted directly to a raw binary raster using the task 
-  parameters.  If the value is <tt>"list"</tt> the pixel values will be written
+  parameters.  If the value is <span style="font-family: monospace;">"list"</span> the pixel values will be written
   to the standard output after evaluation of the <i>outbands</i> parameter in
   the same format as would appear from the <i>LISTPIX</i> task.  Finally,
   the value may include any of the currently supported specific builtin formats:
@@ -71,7 +71,7 @@ export: Convert IRAF images to some other format
   </dd>
   </dl>
   <dl>
-  <dt><b>outbands = <tt>""</tt></b></dt>
+  <dt><b>outbands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outbands' Line='outbands = ""' -->
   <dd>Output image band expressions to write.  This is a comma-delimited list of 
   expressions or an @-file containing the expressions.  Evaluated expressions 
@@ -92,10 +92,10 @@ export: Convert IRAF images to some other format
   <dt><b>header = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='header' Line='header = yes' -->
   <dd>For raw binary file output only, prepend a header describing how the data 
-  are stored?  If set to <tt>"no"</tt> then no header will be written.  If set to <tt>"yes"</tt>, 
+  are stored?  If set to <span style="font-family: monospace;">"no"</span> then no header will be written.  If set to <span style="font-family: monospace;">"yes"</span>, 
   a standard text header describing how the data were written will be 
   prepended to the output file.  Setting the <i>header</i> parameter to the 
-  reserved string <tt>"long"</tt> will write the image headers from the IRAF images
+  reserved string <span style="font-family: monospace;">"long"</span> will write the image headers from the IRAF images
   making up the output file in the standard header.  The parameter may also
   be set to a filename that will be prepended to the output file.  This
   parameter is ignored for builtin format output. See below for a description 
@@ -103,9 +103,9 @@ export: Convert IRAF images to some other format
   </dd>
   </dl>
   <dl>
-  <dt><b>outtype = <tt>""</tt></b></dt>
+  <dt><b>outtype = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtype' Line='outtype = ""' -->
-  <dd>Output pixel type if <i>format</i> is set to <tt>"raw"</tt> or <tt>"list"</tt>.  This is a 
+  <dd>Output pixel type if <i>format</i> is set to <span style="font-family: monospace;">"raw"</span> or <span style="font-family: monospace;">"list"</span>.  This is a 
   string giving the type and size of each pixel, the syntax for the outtype 
   entry is
   <pre>
@@ -122,7 +122,7 @@ export: Convert IRAF images to some other format
   
   </pre>
   If no value for <i>nbytes</i> is given the smallest size for the given type
-  (i.e. 1 byte for <tt>'b'</tt>, 2 bytes for ints, 4 bytes for floating point) will
+  (i.e. 1 byte for <span style="font-family: monospace;">'b'</span>, 2 bytes for ints, 4 bytes for floating point) will
   be used.  If no value is entered at all the type of the input image is used, 
   for multiple images used to create a single binary file the type of the first 
   image is used.  This parameter is ignored for builtin format output options.
@@ -142,11 +142,11 @@ export: Convert IRAF images to some other format
   </dd>
   </dl>
   <dl>
-  <dt><b>bswap = <tt>"no"</tt></b></dt>
+  <dt><b>bswap = <span style="font-family: monospace;">"no"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='bswap' Line='bswap = "no"' -->
   <dd>Type of byte-swapping to perform on output. The default is bswap=no which
-  may be abbreviated <tt>"bswap-"</tt> (similarly a value of 'yes' can be abbreviated
-  <tt>"bswap+"</tt>).  If disabled no byte-swapping is performed, if set all integers
+  may be abbreviated <span style="font-family: monospace;">"bswap-"</span> (similarly a value of 'yes' can be abbreviated
+  <span style="font-family: monospace;">"bswap+"</span>).  If disabled no byte-swapping is performed, if set all integers
   are swapped on output relative to the current machine's byte ordering.
   Values of 'i2' or 'i4' will swap only two or four byte integers respectively,
   floating point values remain unswapped.  This parameter may be used by some
@@ -191,16 +191,16 @@ export: Convert IRAF images to some other format
   If <i>outbands</i> is the null string, all pixels in a single input image 
   will be written to a single output file.
   Error checking is done to make sure the combination of these 
-  parameters is correct.  If the <i>header</i> parameter is <tt>"yes"</tt> a text header
+  parameters is correct.  If the <i>header</i> parameter is <span style="font-family: monospace;">"yes"</span> a text header
   describing how the data were written will be prepended to the file, setting
-  the <i>header</i> parameter to the reserved string <tt>"long"</tt>
+  the <i>header</i> parameter to the reserved string <span style="font-family: monospace;">"long"</span>
   will cause the image header for each input image
   to be saved in the standard header.  The <i>header</i> parameter may also 
   be the name of a user-defined file to prepend to the output instead of the
   standard header.
   </p>
   <p>
-  	If the <i>format</i> parameter is set to <tt>"list"</tt> the pixels values 
+  	If the <i>format</i> parameter is set to <span style="font-family: monospace;">"list"</span> the pixels values 
   will be written to the screen as an ascii list of pixel coordinates 
   followed by the pixel value.   Pixel coordinates are determined using the
   same interleaving scheme as above, values are determined by evaluating
@@ -286,9 +286,9 @@ export: Convert IRAF images to some other format
   	constant	      	    # numeric constant
   </pre>
   <p>
-      The 'iN.param' and '@<tt>"param"</tt>' syntax allows an image header parameter 
+      The 'iN.param' and '@<span style="font-family: monospace;">"param"</span>' syntax allows an image header parameter 
   to be accessed.  For example 'i2.otime' refers to the 'otime' image 
-  header parameter in the second image of a list and '@<tt>"otime"</tt>' refers to the 
+  header parameter in the second image of a list and '@<span style="font-family: monospace;">"otime"</span>' refers to the 
   current image if the input list contains 3-D images.  They may
   be used in an outbands expression such as
   </p>
@@ -310,7 +310,7 @@ export: Convert IRAF images to some other format
   alpha channel of 255 could be written using
   </p>
   <p>
-      cl&gt; export rgbim file outtype=<tt>"b1"</tt> outbands=<tt>"b1,b2,b3,255"</tt>
+      cl&gt; export rgbim file outtype=<span style="font-family: monospace;">"b1"</span> outbands=<span style="font-family: monospace;">"b1,b2,b3,255"</span>
   </p>
   <p>
   <b>Operators</b>
@@ -349,7 +349,7 @@ export: Convert IRAF images to some other format
           	(i1 &lt;= 0) ? 0 : 1
   </p>
   <p>
-  has the constant value zero if <tt>"i1"</tt> is less than or equal to zero, 
+  has the constant value zero if <span style="font-family: monospace;">"i1"</span> is less than or equal to zero, 
   and one otherwise, effectively creating a pixel mask of positive pixels.
   Conditional expressions are general expressions and may be nested or used
   anywhere an expression is permitted.
@@ -383,7 +383,7 @@ export: Convert IRAF images to some other format
       These functions define how the output data are written. For builtin 
   formats whose normal orientation and storage format is known these functions 
   are ignored (except where noted).  These functions may not be used as arguments to other functions (except where noted) or as single operands
-  within expressions (e.g. <tt>"255 + flipx(i1)"</tt>), however their arguments may
+  within expressions (e.g. <span style="font-family: monospace;">"255 + flipx(i1)"</span>), however their arguments may
   be expressions or (perhaps output) functions themselves.
   </p>
   <dl>
@@ -435,7 +435,7 @@ export: Convert IRAF images to some other format
   <!-- Sec='MORE ON OUTBANDS EXPRESSIONS' Level=0 Label='block' Line='block (value, width, height)' -->
   <dd>Fill an area with a constant value.  This function can be used to fill a
   vertical area between images to provide padding of a constant value.  It
-  is similar to the <tt>"repl()"</tt> intrinsic function which replicates a data element
+  is similar to the <span style="font-family: monospace;">"repl()"</span> intrinsic function which replicates a data element
   a given number of times.
   </dd>
   </dl>
@@ -471,7 +471,7 @@ export: Convert IRAF images to some other format
   If the given value of z1 is greater than z2 the mappings will be inverted,
   i.e. larger pixel values will map to the lower bin numbers, smaller pixel
   values will map to larger bin numbers.  For example, to map the dev$pix
-  test image to 200 colors such that there are <tt>"black"</tt> stars on a <tt>"white"</tt>
+  test image to 200 colors such that there are <span style="font-family: monospace;">"black"</span> stars on a <span style="font-family: monospace;">"white"</span>
   background one could use
   <pre>
   
@@ -607,7 +607,7 @@ export: Convert IRAF images to some other format
   <!-- Sec='MORE ON OUTBANDS EXPRESSIONS' Level=0 Label='psdpi' Line='psdpi (args, dpi)' -->
   <dd>Specify the dots-per-inch resolution of the output image.  The default 
   resolution is 300dpi, this may need to be reset for some printers or if
-  the raster rendering produces <tt>"bands"</tt> in the output.  This function may
+  the raster rendering produces <span style="font-family: monospace;">"bands"</span> in the output.  This function may
   only be used as an argument to the <i>psscale()</i> function.
   </dd>
   </dl>
@@ -631,7 +631,7 @@ export: Convert IRAF images to some other format
   	The header prepended to the binary data is ascii text consisting of
   keyword-value pairs, one per line, terminated with a newline after the
   value, beginning with the magic string 
-  <tt>"format = EXPORT"</tt>.  Using an ascii header allows the file format to be
+  <span style="font-family: monospace;">"format = EXPORT"</span>.  Using an ascii header allows the file format to be
   easily determined by the user with a file pager or any program reading 
   the file.
   </p>
@@ -651,13 +651,13 @@ export: Convert IRAF images to some other format
   	image1 		    - image names used in creating file
   	  :
   	imageN	
-  	header1 <tt>'{'</tt> &lt;header&gt; <tt>'}'</tt>  - image headers of above
+  	header1 <span style="font-family: monospace;">'{'</span> &lt;header&gt; <span style="font-family: monospace;">'}'</span>  - image headers of above
   	  :
-  	headerN	<tt>'{'</tt> &lt;header&gt; <tt>'}'</tt>
+  	headerN	<span style="font-family: monospace;">'{'</span> &lt;header&gt; <span style="font-family: monospace;">'}'</span>
   	end		    - terminate header
   </pre>
   <p>
-  If the <i>header</i> parameter is set to <tt>"long"</tt> the image headers for 
+  If the <i>header</i> parameter is set to <span style="font-family: monospace;">"long"</span> the image headers for 
   each image used in creating the file is included in the output header, 
   otherwise only the image names are included.
   </p>
@@ -692,7 +692,7 @@ export: Convert IRAF images to some other format
   	While the task provides a way of writing general binary raster
   files there is still a need for converting to specific formats.  
   Implementing most formats is trivial since they usually follow the
-  data model and the only <tt>"builtin"</tt> knowledge of the format is the minimal
+  data model and the only <span style="font-family: monospace;">"builtin"</span> knowledge of the format is the minimal
   header required.  More complex formats such as GIF and EPS are implemented 
   as special cases.  Note that all of the builtin formats require 8-bit color
   index or 8-bits per color in RGB or RGBA files, users should be careful
@@ -749,9 +749,9 @@ export: Convert IRAF images to some other format
   appear on a 300dpi printer about the same size as displayed on a 72dpi 
   screen).  The output scale may be adjusted using 
   the <i>psscale()</i> function, e.g. to set the output for one image pixel
-  per 300 dpi printer pixel use <tt>"psscale(b1,0.25)"</tt> (one quarter the normal size
+  per 300 dpi printer pixel use <span style="font-family: monospace;">"psscale(b1,0.25)"</span> (one quarter the normal size
   on the page).  The output dpi resolution may be set explicitly with 
-  the <i>psdpi()</i> function, this is sometimes necessary if <tt>"bands"</tt> appear 
+  the <i>psdpi()</i> function, this is sometimes necessary if <span style="font-family: monospace;">"bands"</span> appear 
   in the final output image.  Color EPS files may be written as either RGB
   postscript or with a colormap applied to the data (using either the
   <i>cmap()</i> or <i>setcmap()</i> functions).
@@ -865,7 +865,7 @@ export: Convert IRAF images to some other format
   </pre>
   	The output file will be a Sun rasterfile.  The header values
   (long integers) may be byte swapped by setting the <i>bswap</i> parameter 
-  to <tt>"yes"</tt> or <tt>"i4"</tt>.  For 32-bit true-color rasterfiles the
+  to <span style="font-family: monospace;">"yes"</span> or <span style="font-family: monospace;">"i4"</span>.  For 32-bit true-color rasterfiles the
   alpha channel should be specified as the first expression.  The maximum 
   pixel value is assumed to be 255.
   </dd>
@@ -909,7 +909,7 @@ export: Convert IRAF images to some other format
   are specified a 24-to-8 bit conversion can be done using a Median Cut 
   Algorithm and Floyd-Steinberg dithering if the <i>cmap()</i> function is 
   specified.  Header values (long integers) may be byte swapped by setting the
-  task <i>bswap</i> parameter to <tt>"yes"</tt> or <tt>"i4"</tt>.  The maximum pixel value is 
+  task <i>bswap</i> parameter to <span style="font-family: monospace;">"yes"</span> or <span style="font-family: monospace;">"i4"</span>.  The maximum pixel value is 
   assumed to be 255.
   </dd>
   </dl>
@@ -925,26 +925,26 @@ export: Convert IRAF images to some other format
   the builtin formats which already support it.
   </p>
   <p>
-  	The simplest type of <tt>"color"</tt> image is the familiar grayscale image.
+  	The simplest type of <span style="font-family: monospace;">"color"</span> image is the familiar grayscale image.
   Pixel values represent the display gray level, although for some formats a CLT 
   (color lookup table) is required (e.g. GIF) and these pixel values are 
   actually indices into a grayscale colormap.  Most of the conversion done
-  with this task will produce a grayscale image of some sort.  For <tt>"color 
-  index"</tt> images the pixel values are indices into a colormap containing the 
+  with this task will produce a grayscale image of some sort.  For <span style="font-family: monospace;">"color 
+  index"</span> images the pixel values are indices into a colormap containing the 
   RGB components of the color for a pixel with that value.  Colormaps 
   usually permit at most 256 possible colors implying 8-bit pixels.
   In this task the colormap may be computed either with the <i>cmap()</i> (which 
   does a 24-to-8 bit mapping of the colors) or the <i>setcmap()</i> function 
   (which computes the colormap from a display lookup table of colors).  
-  <tt>"True color"</tt> images are those which have 24-bits of color (8-bit for each
+  <span style="font-family: monospace;">"True color"</span> images are those which have 24-bits of color (8-bit for each
   component) for each pixel, some true color images also contain an alpha 
   channel (an extra 8-bits of constant intensity) which may or may not be 
   used by the software displaying the image.
   </p>
   <p>
   	The <i>cmap()</i> function takes three images and computes a colormap
-  using Paul Heckbert's Median Cut Algorithm (<tt>"Color Image Quantization for
-  Frame Buffer Display"</tt>, SIGGRAPH '82 Proceedings, pg 297) and Floyd-Steinberg 
+  using Paul Heckbert's Median Cut Algorithm (<span style="font-family: monospace;">"Color Image Quantization for
+  Frame Buffer Display"</span>, SIGGRAPH '82 Proceedings, pg 297) and Floyd-Steinberg 
   dithering technique.  The computed colormap is written to the file header 
   and pixel values are converted to color indices.  By default 256 colors are 
   computed but fewer colors may be requested.  This function is most useful 
@@ -981,7 +981,7 @@ export: Convert IRAF images to some other format
   
   </pre>
   <p>
-  where the <tt>"aips0"</tt> is one of the builtin colormaps and the brightness and
+  where the <span style="font-family: monospace;">"aips0"</span> is one of the builtin colormaps and the brightness and
   contrast arguments are those from the ximtool display.  Similarly, the
   expression
   </p>
@@ -993,7 +993,7 @@ export: Convert IRAF images to some other format
   <p>
   will save the image with the same intensity scaling and color as would be see
   by displaying it to ximtool using the default DISPLAY task settings,
-  normalized XImtool brightness/contrast values and the <tt>"idl15.lut"</tt> LUT in the
+  normalized XImtool brightness/contrast values and the <span style="font-family: monospace;">"idl15.lut"</span> LUT in the
   current directory.
   </p>
   <!-- EndSection:   'COLOR OUTPUT IMAGES' -->
@@ -1180,12 +1180,12 @@ export: Convert IRAF images to some other format
   </pre>
   <p>
   Automatically scale an image ignoring data in a bad pixel mask (bpm), map the
-  result to the greyscale part of the <tt>"overlay"</tt> color map, and apply a
+  result to the greyscale part of the <span style="font-family: monospace;">"overlay"</span> color map, and apply a
   overlay pattern given by another mask (pattern).
   </p>
   <p>
     cl&gt; export dev$pix,bpm,pattern foo gif \<br>
-    &gt;&gt;&gt; outbands = <tt>"setcmap(i3==0?(zscalem(i1,i2==0)*200/255.):i3+203,'overlay')"</tt>
+    &gt;&gt;&gt; outbands = <span style="font-family: monospace;">"setcmap(i3==0?(zscalem(i1,i2==0)*200/255.):i3+203,'overlay')"</span>
   </p>
   <p>
   The pattern has values of 1 and 203 is added to get it into the color map

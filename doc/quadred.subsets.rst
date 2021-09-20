@@ -20,7 +20,7 @@ subsets: Description of CCD subsets
   The <b>ccdred</b> package groups observation into subsets.
   The image header parameter used to identify the subsets is defined
   in the instrument translation file (see help for <b>instruments</b>).
-  For example to select subsets by the header parameter <tt>"filters"</tt> the
+  For example to select subsets by the header parameter <span style="font-family: monospace;">"filters"</span> the
   instrument translation file would contain the line:
   </p>
   <p>
@@ -85,15 +85,15 @@ subsets: Description of CCD subsets
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. The subset file is <tt>"subsets"</tt> (the default).  The subset parameter is
-  translated to <tt>"f1pos"</tt> in the image header (the old NOAO CCD parameter)
+  1. The subset file is <span style="font-family: monospace;">"subsets"</span> (the default).  The subset parameter is
+  translated to <span style="font-family: monospace;">"f1pos"</span> in the image header (the old NOAO CCD parameter)
   which is an integer filter position.  After running a task, say
-  <tt>"ccdlist *.imh"</tt> to cause all filters to be checked, the subset file contains:
+  <span style="font-family: monospace;">"ccdlist *.imh"</span> to cause all filters to be checked, the subset file contains:
   </p>
   <pre>
-  	<tt>'2'</tt>	2
-  	<tt>'5'</tt>	5
-  	<tt>'3'</tt>	3
+  	<span style="font-family: monospace;">'2'</span>	2
+  	<span style="font-family: monospace;">'5'</span>	5
+  	<span style="font-family: monospace;">'3'</span>	3
   </pre>
   <p>
   The order reflects the order in which the filters were encountered.
@@ -102,15 +102,15 @@ subsets: Description of CCD subsets
   </p>
   <pre>
   	# Sample translation file.
-  	<tt>'2'</tt>	U
-  	<tt>'3'</tt>	B
-  	<tt>'4'</tt>	V
+  	<span style="font-family: monospace;">'2'</span>	U
+  	<span style="font-family: monospace;">'3'</span>	B
+  	<span style="font-family: monospace;">'4'</span>	V
   </pre>
   <p>
   (This is only an example and does not mean these are standard filters.)
   </p>
   <p>
-  2. As another example suppose the image header parameter is <tt>"filter"</tt> and
+  2. As another example suppose the image header parameter is <span style="font-family: monospace;">"filter"</span> and
   contains more descriptive strings.  The subset file might become:
   </p>
   <pre>

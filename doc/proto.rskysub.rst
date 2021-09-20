@@ -32,50 +32,50 @@ rskysub: Sky subtract images using running mean or median
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>The list of output sky subtracted images. The number of output images must
-  equal the number of input images.  If output is <tt>"default"</tt>, <tt>"dir$default"</tt>, or
-  <tt>"dir$"</tt> then for every input image an output image called <tt>"dir$image.sub.?"</tt>
-  is created, where <tt>"dir$"</tt> is the optional directory specification, <tt>"image"</tt> is
-  the root input image name, and <tt>"?"</tt> is the next available version number.
+  equal the number of input images.  If output is <span style="font-family: monospace;">"default"</span>, <span style="font-family: monospace;">"dir$default"</span>, or
+  <span style="font-family: monospace;">"dir$"</span> then for every input image an output image called <span style="font-family: monospace;">"dir$image.sub.?"</span>
+  is created, where <span style="font-family: monospace;">"dir$"</span> is the optional directory specification, <span style="font-family: monospace;">"image"</span> is
+  the root input image name, and <span style="font-family: monospace;">"?"</span> is the next available version number.
   </dd>
   </dl>
   <dl>
-  <dt><b>imasks = <tt>""</tt></b></dt>
+  <dt><b>imasks = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='imasks' Line='imasks = ""' -->
   <dd>The optional list of input image masks. The input image masks are assumed to
   consist of 0's in good pixel regions and &gt; 0 integer values elsewhere. The
   number of input images masks must be 0, 1, or equal to the number of input
-  images. If imasks is <tt>"default"</tt>, <tt>"dir$default"</tt>, or <tt>"dir$"</tt> then for every input
-  image a default input image mask called <tt>"dir$image.obm.?"</tt> is searched for,
-  where <tt>"dir$"</tt> is the optional directory specification, <tt>"image"</tt> is the root
-  input image name, and <tt>"?"</tt> is the highest available version number.
+  images. If imasks is <span style="font-family: monospace;">"default"</span>, <span style="font-family: monospace;">"dir$default"</span>, or <span style="font-family: monospace;">"dir$"</span> then for every input
+  image a default input image mask called <span style="font-family: monospace;">"dir$image.obm.?"</span> is searched for,
+  where <span style="font-family: monospace;">"dir$"</span> is the optional directory specification, <span style="font-family: monospace;">"image"</span> is the root
+  input image name, and <span style="font-family: monospace;">"?"</span> is the highest available version number.
   </dd>
   </dl>
   <dl>
-  <dt><b>omasks = <tt>""</tt></b></dt>
+  <dt><b>omasks = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='omasks' Line='omasks = ""' -->
   <dd>The optional list of output masks. If output masks are defined they are
   used to created the sky image in place of the input masks. The output masks
   are a combination of the original input mask and pixels masked during the
   input image scale factor computation and consist of 0's in good data regions
-  and 1's elsewhere. Output masks are only computed if <i>scale</i> = <tt>"median"</tt>.
+  and 1's elsewhere. Output masks are only computed if <i>scale</i> = <span style="font-family: monospace;">"median"</span>.
   The number of output masks must be 0 or equal to the number of input images.
-  If imasks is <tt>"default"</tt>, <tt>"dir$default"</tt>, or <tt>"dir$"</tt> then for every input image
-  an output mask image called <tt>"dir$image.skm.?"</tt> is created, where <tt>"dir$"</tt> is
-  the optional directory specification, <tt>"image"</tt> is the root input image name,
-  and <tt>"?"</tt> is the next available version number.
+  If imasks is <span style="font-family: monospace;">"default"</span>, <span style="font-family: monospace;">"dir$default"</span>, or <span style="font-family: monospace;">"dir$"</span> then for every input image
+  an output mask image called <span style="font-family: monospace;">"dir$image.skm.?"</span> is created, where <span style="font-family: monospace;">"dir$"</span> is
+  the optional directory specification, <span style="font-family: monospace;">"image"</span> is the root input image name,
+  and <span style="font-family: monospace;">"?"</span> is the next available version number.
   </dd>
   </dl>
   <dl>
-  <dt><b>hmasks = <tt>""</tt></b></dt>
+  <dt><b>hmasks = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='hmasks' Line='hmasks = ""' -->
   <dd>The list of output holes masks.  The holes masks defined bad pixels in the
   output images, i.e. those for which the underlying sky image was undefined.
   Holes masks are created only if <i>hmasks</i> is defined and there is at least
   1 undefined sky image pixel in the output image.  Holes masks contain 0's in
-  undefined sky regions and 1's elsewhere.  If hmasks is <tt>"default"</tt>, <tt>"dir$default"</tt>,
-  or <tt>"dir$"</tt> then for every input image an output mask image called
-  <tt>"dir$image.hom.?"</tt> is created, where <tt>"dir$"</tt> is the optional directory
-  specification, <tt>"image"</tt> is the root input image name, and <tt>"?"</tt> is the next
+  undefined sky regions and 1's elsewhere.  If hmasks is <span style="font-family: monospace;">"default"</span>, <span style="font-family: monospace;">"dir$default"</span>,
+  or <span style="font-family: monospace;">"dir$"</span> then for every input image an output mask image called
+  <span style="font-family: monospace;">"dir$image.hom.?"</span> is created, where <span style="font-family: monospace;">"dir$"</span> is the optional directory
+  specification, <span style="font-family: monospace;">"image"</span> is the root input image name, and <span style="font-family: monospace;">"?"</span> is the next
   available version number.
   </dd>
   </dl>
@@ -87,7 +87,7 @@ rskysub: Sky subtract images using running mean or median
   </dd>
   </dl>
   <dl>
-  <dt><b>scale = <tt>"median"</tt></b></dt>
+  <dt><b>scale = <span style="font-family: monospace;">"median"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='scale' Line='scale = "median"' -->
   <dd>The method used to compute the individual image scale factors. The options
   are:
@@ -123,14 +123,14 @@ rskysub: Sky subtract images using running mean or median
   </dd>
   </dl>
   <dl>
-  <dt><b>skyscale = <tt>"SKYSCALE"</tt></b></dt>
+  <dt><b>skyscale = <span style="font-family: monospace;">"SKYSCALE"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='skyscale' Line='skyscale = "SKYSCALE"' -->
   <dd>The image header keyword containing the computed scaling factor.
   <i>Skyscale</i> is written to both the input and output images.
   </dd>
   </dl>
   <dl>
-  <dt><b>statsec = <tt>""</tt></b></dt>
+  <dt><b>statsec = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='statsec' Line='statsec = ""' -->
   <dd>The input image section used to compute the individual image scaling factors.
   Statsec is independent of the input image section if any.
@@ -168,10 +168,10 @@ rskysub: Sky subtract images using running mean or median
   </dd>
   </dl>
   <dl>
-  <dt><b>combine = <tt>"average"</tt></b></dt>
+  <dt><b>combine = <span style="font-family: monospace;">"average"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='combine' Line='combine = "average"' -->
-  <dd>The method used to create the sky images. The options are <tt>"average"</tt> and
-  <tt>"median"</tt>.
+  <dd>The method used to create the sky images. The options are <span style="font-family: monospace;">"average"</span> and
+  <span style="font-family: monospace;">"median"</span>.
   </dd>
   </dl>
   <dl>
@@ -189,7 +189,7 @@ rskysub: Sky subtract images using running mean or median
   <dl>
   <dt><b>nlorej = 0, nhirej = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nlorej' Line='nlorej = 0, nhirej = 0' -->
-  <dd>The number of high and low side pixels to reject if <i>combine</i> is <tt>"average"</tt>.
+  <dd>The number of high and low side pixels to reject if <i>combine</i> is <span style="font-family: monospace;">"average"</span>.
   </dd>
   </dl>
   <dl>
@@ -200,14 +200,14 @@ rskysub: Sky subtract images using running mean or median
   </dd>
   </dl>
   <dl>
-  <dt><b>skysub = <tt>"SKYSUB"</tt></b></dt>
+  <dt><b>skysub = <span style="font-family: monospace;">"SKYSUB"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='skysub' Line='skysub = "SKYSUB"' -->
   <dd>The sky subtraction processing keyword which is written to the output
   image when processing is complete.
   </dd>
   </dl>
   <dl>
-  <dt><b>holes = <tt>"HOLES"</tt></b></dt>
+  <dt><b>holes = <span style="font-family: monospace;">"HOLES"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='holes' Line='holes = "HOLES"' -->
   <dd>The homes mask name keyword which is written to the output image if an output
   holes mask is created.
@@ -253,7 +253,7 @@ rskysub: Sky subtract images using running mean or median
   <p>
   In all cases the mask values are assumed to be 0 in good data regions and
   non-zero in rejected data regions. The input masks may in pixel list, e.g.
-  <tt>".pl"</tt> format, or any supported integer image format, e.g. <tt>".imh"</tt>, <tt>".fits"</tt>, etc.
+  <span style="font-family: monospace;">".pl"</span> format, or any supported integer image format, e.g. <span style="font-family: monospace;">".imh"</span>, <span style="font-family: monospace;">".fits"</span>, etc.
   </p>
   <p>
   The optional output pixel masks <i>omasks</i> are a combination of the
@@ -268,15 +268,15 @@ rskysub: Sky subtract images using running mean or median
   <p>
   Before beginning the sky subtraction step RSKYSUB computes a scaling factor for
   each individual input image in <i>inlist</i> and stores it in the input image
-  header keyword <i>skyscale</i>. If <i>scale</i> is <tt>"median"</tt> then the median of
+  header keyword <i>skyscale</i>. If <i>scale</i> is <span style="font-family: monospace;">"median"</span> then the median of
   the input image pixels is computed using the input image masks <i>imasks</i>,
   the good data limits <i>lower</i> and <i>upper</i>, the clipping factors
   <i>maxiter</i>, <i>lnsigrej</i>, and <i>unisgrej</i>, and the histogram
   resolution parameter <i>binwidth</i>. The scaling factor is set to 1 / median.
-  If <i>scale</i> is <tt>"none"</tt>, <tt>"!&lt;keyword&gt;"</tt>, or <tt>"@&lt;file&gt;"</tt> the individual
+  If <i>scale</i> is <span style="font-family: monospace;">"none"</span>, <span style="font-family: monospace;">"!&lt;keyword&gt;"</span>, or <span style="font-family: monospace;">"@&lt;file&gt;"</span> the individual
   scale factors are set to 1, read from the input image header keyword
   <i>&lt;keyword&gt;</i>, or from a file <i>@&lt;file&gt;</i> respectively. If <i>rescale</i> is
-  yes and <i>scale</i> is <tt>"median"</tt> then the scaling computation is  redone
+  yes and <i>scale</i> is <span style="font-family: monospace;">"median"</span> then the scaling computation is  redone
   regardless of whether or not the <i>skyscale</i> keyword is present in the
   input image header.
   </p>
@@ -298,7 +298,7 @@ rskysub: Sky subtract images using running mean or median
   <i>skysub</i> is written to the output image when sky subtraction is complete.
   </p>
   <p>
-  If <i>cache</i> is <tt>"yes"</tt> then RSKYSUB will attempt to buffer the active images
+  If <i>cache</i> is <span style="font-family: monospace;">"yes"</span> then RSKYSUB will attempt to buffer the active images
   in memory and will run significantly faster. If <i>verbose</i> = yes then
   the task prints messages about its actions as it goes along.
   </p>

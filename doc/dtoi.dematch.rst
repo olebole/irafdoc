@@ -29,13 +29,13 @@ dematch: Match a list of density values to exposure values
   </dd>
   </dl>
   <dl>
-  <dt><b>wedge = <tt>""</tt>, filter = <tt>""</tt>, emulsion = <tt>""</tt></b></dt>
+  <dt><b>wedge = <span style="font-family: monospace;">""</span>, filter = <span style="font-family: monospace;">""</span>, emulsion = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wedge' Line='wedge = "", filter = "", emulsion = ""' -->
   <dd>Information used to retrieve log exposure values from <b>wedgefile</b>.
   </dd>
   </dl>
   <dl>
-  <dt><b>wedgefile = <tt>"noao$lib/hdwedge.dat"</tt></b></dt>
+  <dt><b>wedgefile = <span style="font-family: monospace;">"noao$lib/hdwedge.dat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wedgefile' Line='wedgefile = "noao$lib/hdwedge.dat"' -->
   <dd>Name of file containing wedge intensity information.
   </dd>

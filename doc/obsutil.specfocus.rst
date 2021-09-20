@@ -31,7 +31,7 @@ specfocus: Determine spectral focus and alignment variations
   </dd>
   </dl>
   <dl>
-  <dt><b>focus = <tt>""</tt></b></dt>
+  <dt><b>focus = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='focus' Line='focus = ""' -->
   <dd>List of focus identification values to be associated with each input image
   or an image header keyword containing the values.  The list may be an
@@ -92,7 +92,7 @@ specfocus: Determine spectral focus and alignment variations
   </dd>
   </dl>
   <dl>
-  <dt><b>logfile = <tt>"logfile"</tt></b></dt>
+  <dt><b>logfile = <span style="font-family: monospace;">"logfile"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "logfile"' -->
   <dd>File in which to record the results.  If no file is specified no log
   output is produced.
@@ -126,7 +126,7 @@ specfocus: Determine spectral focus and alignment variations
   This task estimates the dispersion width of spectral lines in sequences of
   arc spectra taken at different focus settings (or with some other parameter
   varied).  The widths can be measured at different spatial and dispersion
-  positions, called <tt>"samples"</tt>, on the detector.  The width estimates are
+  positions, called <span style="font-family: monospace;">"samples"</span>, on the detector.  The width estimates are
   recorded and displayed graphically to investigate dependencies and
   determine appropriate settings for the spectrograph setup.  The task may
   also measure dispersion shifts when multiple spectral samples are
@@ -136,7 +136,7 @@ specfocus: Determine spectral focus and alignment variations
   <p>
   The input images are specified with an image template list.  The list may
   consist of explicit image names, wildcard templates, and @ files.  A
-  <tt>"focus"</tt> value is associated with each image.  This may be any numeric
+  <span style="font-family: monospace;">"focus"</span> value is associated with each image.  This may be any numeric
   quantity (integer or floating point).  The focus values may be specified in
   several ways.  If no value is given then index numbers are assigned to
   the images in the order in which they appear in the image list.  A range
@@ -144,7 +144,7 @@ specfocus: Determine spectral focus and alignment variations
   consists of individual values, ranges of values, a starting value and a
   step, and a range with a step.  The elements of the list are separated by
   commas, ranges are separated by hyphens, and a step is indicated by the
-  character <tt>'x'</tt>.  Long range lists, such as a list of individual focus
+  character <span style="font-family: monospace;">'x'</span>.  Long range lists, such as a list of individual focus
   values, may be placed in a file and specified with the @&lt;filename&gt;
   convention.  Finally, a parameter in the image header may be used for the
   focus values by simply specifying the parameter name.
@@ -171,7 +171,7 @@ specfocus: Determine spectral focus and alignment variations
   spectra.  If the two dimensional spectra have been extracted to one
   dimensional spectra in this way the task ignores the dispersion axis and
   number of spectra parameters.  The data limits (<i>slit1</i> and
-  <i>slit2</i>) are still used to select a range of lines in  <tt>"multispec"</tt>
+  <i>slit2</i>) are still used to select a range of lines in  <span style="font-family: monospace;">"multispec"</span>
   format images.  The <i>shifts</i> parameter also applies when there are
   multiple spectra per image.  However, it does not make sense in the case of
   echelle spectra and so it should be set to no in that case.
@@ -218,7 +218,7 @@ specfocus: Determine spectral focus and alignment variations
   </p>
   <p>
   Having computed the width and shift for each input image at each sample,
-  the <tt>"best focus"</tt> values (focus, width, and shift) are estimated for each
+  the <span style="font-family: monospace;">"best focus"</span> values (focus, width, and shift) are estimated for each
   sample.  As discussed later, it is possible to exclude some samples
   from this calculation by deleting them graphically.
   First the images with the smallest measured width at each distinct
@@ -229,15 +229,15 @@ specfocus: Determine spectral focus and alignment variations
   then the best focus, width, and shift are those measured for that image.
   If there are three or more focus values and the minimum width focus image
   is not an endpoint then parabolic interpolation is used to find the minimum
-  width.  The focus at this minimum width is the <tt>"best focus"</tt>.
+  width.  The focus at this minimum width is the <span style="font-family: monospace;">"best focus"</span>.
   The dispersion shift is the parabolic interpolation of the shifts at
-  the best focus.  The <tt>"average best focus"</tt> values are then the average of
-  the <tt>"best focus"</tt> values over all samples.
+  the best focus.  The <span style="font-family: monospace;">"average best focus"</span> values are then the average of
+  the <span style="font-family: monospace;">"best focus"</span> values over all samples.
   </p>
   <p>
   After computing the correlation profiles, the profile widths and shifts,
   and the best focus values, an interactive graphics mode is entered.  This
-  is described in detail below.  The graphics mode is exited with the <tt>'q'</tt>
+  is described in detail below.  The graphics mode is exited with the <span style="font-family: monospace;">'q'</span>
   key.  At this point the results are written to the standard output (usually
   the terminal) and to a logfile if one is specified.  The output begins with
   a banner identifying the task, version of IRAF, the user, and the date and
@@ -252,8 +252,8 @@ specfocus: Determine spectral focus and alignment variations
   INTERACTIVE GRAPHICS MODE
   </p>
   <p>
-  There are five types of plot formats which are selected with the <tt>'b'</tt>, <tt>'p'</tt>,
-  <tt>'s'</tt>, <tt>'w'</tt>, and <tt>'z'</tt> keys.  The available formats and their content are
+  There are five types of plot formats which are selected with the <span style="font-family: monospace;">'b'</span>, <span style="font-family: monospace;">'p'</span>,
+  <span style="font-family: monospace;">'s'</span>, <span style="font-family: monospace;">'w'</span>, and <span style="font-family: monospace;">'z'</span> keys.  The available formats and their content are
   modified depending on the number of images and the number of samples.  If
   there is only one image or one sample per image some of the plot formats
   are not available.  If there are a large number of images or a large number
@@ -268,7 +268,7 @@ specfocus: Determine spectral focus and alignment variations
   image and sample and typing a key.
   </p>
   <p>
-  The <tt>'b'</tt> key produces summary graphs of the best focus values (as described
+  The <span style="font-family: monospace;">'b'</span> key produces summary graphs of the best focus values (as described
   above) at each sample position.  There must be more than one image and more
   than one sample (either along or across the dispersion or both).  This is
   the initial plot shown when this condition is satisfied.  The central graph,
@@ -305,7 +305,7 @@ specfocus: Determine spectral focus and alignment variations
   focus closest to the best focus value of that sample.
   </p>
   <p>
-  The <tt>'w'</tt> key produces a graph showing the sample widths as a function of
+  The <span style="font-family: monospace;">'w'</span> key produces a graph showing the sample widths as a function of
   focus value.  There must be more than one image and more than one sample
   for this type of graph.  The top graph is a symbol plot of width verses
   focus.  The symbols are crosses except for the current image which is shown
@@ -315,7 +315,7 @@ specfocus: Determine spectral focus and alignment variations
   width.
   </p>
   <p>
-  The lower portion of the <tt>'w'</tt> key are graphs showing the
+  The lower portion of the <span style="font-family: monospace;">'w'</span> key are graphs showing the
   widths as circles with size proportional to the width and position
   corresponding to the spatial position of the sample in the image.  If there
   are more than 5 samples in either dimension the graph is for the current
@@ -327,7 +327,7 @@ specfocus: Determine spectral focus and alignment variations
   indicated by highlighting boxes.
   </p>
   <p>
-  The <tt>'p'</tt> key produces graphs of the autocorrelation profiles.  This also
+  The <span style="font-family: monospace;">'p'</span> key produces graphs of the autocorrelation profiles.  This also
   requires more than one image and more than one sample.  The top graph shows
   the profiles of all images at a particular sample and the bottom graph shows
   the profiles of all samples at a particular image.  The bottom sample boxes
@@ -345,37 +345,37 @@ specfocus: Determine spectral focus and alignment variations
   the boxes are labeled by the width, shift (if nonzero), and focus.
   </p>
   <p>
-  The <tt>'s'</tt> key plot is similar to the <tt>'p'</tt> key plot but shows the spectra
+  The <span style="font-family: monospace;">'s'</span> key plot is similar to the <span style="font-family: monospace;">'p'</span> key plot but shows the spectra
   rather than the profiles.  The top graphs are the spectra of each image at
   a particular sample and the bottom graphs are the spectra of each sample
   for a particular image.  The current image and sample are highlighted by a
   box.
   </p>
   <p>
-  The <tt>'z'</tt> key graphs the autocorrelation profile and the spectrum
+  The <span style="font-family: monospace;">'z'</span> key graphs the autocorrelation profile and the spectrum
   of a single sample.  This graph provides scales which are not
-  provided with the <tt>'p'</tt> and <tt>'s'</tt> graphs.  If there is only one image
+  provided with the <span style="font-family: monospace;">'p'</span> and <span style="font-family: monospace;">'s'</span> graphs.  If there is only one image
   and one sample then this is the only plot available.
   </p>
   <p>
   It is possible to exclude some of the samples from the calculation
   of the best focus and best average focus values.  This is done by
-  deleting them using the <tt>'d'</tt> key.  When using the <tt>'d'</tt> key you must
+  deleting them using the <span style="font-family: monospace;">'d'</span> key.  When using the <span style="font-family: monospace;">'d'</span> key you must
   specify the sample to be deleted in one of the graphs.  You are
   then asked if only that sample (point) is to be deleted, if all
   samples from that image are to be deleted, or if the same sample
   from all images is to be deleted.  The deleted data is no longer
   shown explicitly but the space occupied by the data is still present
-  so that the data may be included again by typing the <tt>'u'</tt> undelete
-  key.  When the task is exited with the <tt>'q'</tt> key the printed and
+  so that the data may be included again by typing the <span style="font-family: monospace;">'u'</span> undelete
+  key.  When the task is exited with the <span style="font-family: monospace;">'q'</span> key the printed and
   logged results will have the deleted data excluded.
   </p>
   <p>
-  The remaining cursor keys do the following.  The <tt>'?'</tt> key gives a
-  summary of the cursor keys.  The <tt>'r'</tt> key redraws the current plot.
+  The remaining cursor keys do the following.  The <span style="font-family: monospace;">'?'</span> key gives a
+  summary of the cursor keys.  The <span style="font-family: monospace;">'r'</span> key redraws the current plot.
   The space key prints information about the current sample.  This
   is mostly used when there are too many images or samples to annotate
-  the graphs with the focus, width, and shift.  Finally the <tt>'q'</tt>
+  the graphs with the focus, width, and shift.  Finally the <span style="font-family: monospace;">'q'</span>
   key quits the task.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
@@ -402,7 +402,7 @@ specfocus: Determine spectral focus and alignment variations
   	 (logfile = "logfile")      Logfile
   	    (mode = "ql")
       cl&gt; specfocus @imlist
-      &lt;Interactive graphics which is exited with the <tt>'q'</tt> key&gt;
+      &lt;Interactive graphics which is exited with the <span style="font-family: monospace;">'q'</span> key&gt;
       SPECFOCUS: NOAO/IRAF V2.10EXPORT valdes Thu 19:41:41 17-Sep-92
         Best avg focus at 206.6584 with avg width of 2.91 at 50% of peak
   

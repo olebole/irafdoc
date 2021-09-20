@@ -43,7 +43,7 @@ findgain: Estimate the gain and readnoise of a CCD
   </dd>
   </dl>
   <dl>
-  <dt><b>section = <tt>""</tt></b></dt>
+  <dt><b>section = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='section' Line='section = ""' -->
   <dd>The selected image section for the statistics.  This should be chosen
   to exclude bad columns or rows, cosmic rays and other blemishes, and
@@ -52,7 +52,7 @@ findgain: Estimate the gain and readnoise of a CCD
   </dd>
   </dl>
   <dl>
-  <dt><b>center = <tt>"mean"</tt></b></dt>
+  <dt><b>center = <span style="font-family: monospace;">"mean"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='center' Line='center = "mean"' -->
   <dd>The statistical measure of central tendency that is used to estimate
   the data level of each image.  This can have the values:  <b>mean</b>,
@@ -208,7 +208,7 @@ findgain: Estimate the gain and readnoise of a CCD
   processed.
   </p>
   <p>
-  There is no provision for finding the <tt>"best"</tt> values and their errors
+  There is no provision for finding the <span style="font-family: monospace;">"best"</span> values and their errors
   from several flats and zeros.
   </p>
   <!-- EndSection:   'BUGS' -->

@@ -32,7 +32,7 @@ scopy: Sum and extract spectra from long slit to 1D format
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>List of output image names or root names.  Image
-  sections are ignored and if the output format is <tt>"onedspec"</tt> then any record
+  sections are ignored and if the output format is <span style="font-family: monospace;">"onedspec"</span> then any record
   extensions are stripped to form the root name.  If no output list is
   specified then the input list is used and the input images are replaced by
   the copied output spectra.  If a single output name is specified then all
@@ -61,23 +61,23 @@ scopy: Sum and extract spectra from long slit to 1D format
   </dd>
   </dl>
   <dl>
-  <dt><b>apertures = <tt>""</tt>, beams = <tt>""</tt></b></dt>
+  <dt><b>apertures = <span style="font-family: monospace;">""</span>, beams = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = "", beams = ""' -->
   <dd>List of apertures and beams to be selected from the input spectra.  The
   logical intersection of the two lists is selected.  The null list
   selects all apertures or beams.  A list consists of comma separated
   numbers and ranges of numbers.  A range is specified by a hyphen.  An
-  optional step size may be given by <tt>'x'</tt> followed by a number.
+  optional step size may be given by <span style="font-family: monospace;">'x'</span> followed by a number.
   See <b>xtools.ranges</b> for more information.  If the first character
-  is <tt>"!"</tt> then the apertures/beams not in the list are selected.  Note
-  that a <tt>"!"</tt> in either of the lists complements the intersection of the
+  is <span style="font-family: monospace;">"!"</span> then the apertures/beams not in the list are selected.  Note
+  that a <span style="font-family: monospace;">"!"</span> in either of the lists complements the intersection of the
   two lists.  For longslit input spectra the aperture numbers
   selects the lines or columns to be extracted.  For 3D Fabry-Perot
   spectra the aperture numbers select the first spatial axis.
   </dd>
   </dl>
   <dl>
-  <dt><b>bands = <tt>""</tt></b></dt>
+  <dt><b>bands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='bands' Line='bands = ""' -->
   <dd>List of bands in 3D multispec.
   For 3D spatial spectra the band parameter applies to the second
@@ -96,12 +96,12 @@ scopy: Sum and extract spectra from long slit to 1D format
   </dd>
   </dl>
   <dl>
-  <dt><b>format = <tt>"multispec"</tt> (multispec|onedspec)</b></dt>
+  <dt><b>format = <span style="font-family: monospace;">"multispec"</span> (multispec|onedspec)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='format' Line='format = "multispec" (multispec|onedspec)' -->
-  <dd>Output image format and name syntax.  The <tt>"multispec"</tt> format consists of
-  one or more spectra in the same image file.  The <tt>"onedspec"</tt> format consists
+  <dd>Output image format and name syntax.  The <span style="font-family: monospace;">"multispec"</span> format consists of
+  one or more spectra in the same image file.  The <span style="font-family: monospace;">"onedspec"</span> format consists
   of a single spectrum per image with names having a root name and a four
-  digit aperture number extension.  Note that converting to <tt>"onedspec"</tt> format
+  digit aperture number extension.  Note that converting to <span style="font-family: monospace;">"onedspec"</span> format
   from three dimensional images where the third dimension contains associated
   spectra will not include data from the extra dimension.  Image sections may
   be used in that case.
@@ -208,7 +208,7 @@ scopy: Sum and extract spectra from long slit to 1D format
   In the case of many spectra each stored in separate one dimensional
   images, the image names may be such that they have a common root name
   and a four digit aperture number extension.  This name syntax is
-  called <tt>"onedspec"</tt> format.  Including such spectra in an
+  called <span style="font-family: monospace;">"onedspec"</span> format.  Including such spectra in an
   input list may be accomplished either with wildcard templates such as
   </p>
   <pre>
@@ -216,11 +216,11 @@ scopy: Sum and extract spectra from long slit to 1D format
   	name.????.imh
   </pre>
   <p>
-  where the image type extension <tt>".imh"</tt> must be given to complete the
+  where the image type extension <span style="font-family: monospace;">".imh"</span> must be given to complete the
   template but the actual extension could also be that for an STF type
   image, or using an @file prepared with the task <b>names</b>.
   To generate this syntax for output images the <i>format</i> parameter
-  is set to <tt>"onedspec"</tt> (this will be discussed further later).
+  is set to <span style="font-family: monospace;">"onedspec"</span> (this will be discussed further later).
   </p>
   <p>
   From the input images one may select a range of wavelengths with the
@@ -230,7 +230,7 @@ scopy: Sum and extract spectra from long slit to 1D format
   copied without any resampling.  If the aperture and beam lists are not
   specified, an empty list, then all apertures and beams are selected.  The
   lists may be those spectra desired or the complement obtained by prefixing
-  the list with <tt>'!'</tt>.  Only the selected wavelength range and spectra will
+  the list with <span style="font-family: monospace;">'!'</span>.  Only the selected wavelength range and spectra will
   be operated upon and passed on to the output images.
   </p>
   <p>
@@ -253,7 +253,7 @@ scopy: Sum and extract spectra from long slit to 1D format
   When summing it is often desired to start each aperture after the number of
   lines summed.  To do this specify a step size in the aperture/band list.  For
   example to extract columns 3 to 23 summing every 5 columns you would use an
-  aperture list of <tt>"3-23x5"</tt> and an <i>nsum</i> of 5.  If you do not use the
+  aperture list of <span style="font-family: monospace;">"3-23x5"</span> and an <i>nsum</i> of 5.  If you do not use the
   step in the aperture list you would extract the sum of columns 1 to 5, then
   columns 2 to 6, and so on.
   </p>
@@ -285,7 +285,7 @@ scopy: Sum and extract spectra from long slit to 1D format
   In the case of a matching list, spectra from different input images
   will go to different output images.  In the case of a single output
   image all spectra will go to the same output image.  Note that in
-  this discussion an output image when <tt>"onedspec"</tt> format is specified
+  this discussion an output image when <span style="font-family: monospace;">"onedspec"</span> format is specified
   is actually a root name for possibly many images.  However,
   it should be thought of as a single image from the point of view
   of image lists.
@@ -326,7 +326,7 @@ scopy: Sum and extract spectra from long slit to 1D format
   parameter may be set.  The syntax is the input image name followed
   by the aperture number in [].  An arrow then points to the output
   image name with the final aperture number also in [], except for
-  <tt>"onedspec"</tt> format where the image name extension gives the aperture
+  <span style="font-family: monospace;">"onedspec"</span> format where the image name extension gives the aperture
   number.  It is important to remember that it is the aperture numbers
   which are shown and not the image lines; there is not necessarily any
   relation between image lines and aperture numbers though often they
@@ -349,7 +349,7 @@ scopy: Sum and extract spectra from long slit to 1D format
   <p>
   The examples in this section deal with the default spectral format of
   one or more spectra in an image.  Note that the difference between
-  a <tt>"onedspec"</tt> image and a <tt>"multispec"</tt> image with one spectrum is purely
+  a <span style="font-family: monospace;">"onedspec"</span> image and a <span style="font-family: monospace;">"multispec"</span> image with one spectrum is purely
   the image naming syntax.
   </p>
   <p>
@@ -617,7 +617,7 @@ scopy: Sum and extract spectra from long slit to 1D format
   <dt><b>SCOPY V2.10.3</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='SCOPY' Line='SCOPY V2.10.3' -->
   <dd>Additional support for 3D multispec/equispec or spatial spectra has been
-  added.  The <tt>"bands"</tt> parameter allows selecting specific bands and
+  added.  The <span style="font-family: monospace;">"bands"</span> parameter allows selecting specific bands and
   the onedspec output format creates separate images for each selected
   aperture and band.
   </dd>

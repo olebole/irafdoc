@@ -29,7 +29,7 @@ stdplot: Plot metacode on the standard plotter device
   </dd>
   </dl>
   <dl>
-  <dt><b>device = <tt>"stdplot"</tt></b></dt>
+  <dt><b>device = <span style="font-family: monospace;">"stdplot"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdplot"' -->
   <dd>The type of plotting device.
   </dd>
@@ -81,13 +81,13 @@ stdplot: Plot metacode on the standard plotter device
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. Extract the fourth frame from metacode file <tt>"oned.mc"</tt> and plot it.
+  1. Extract the fourth frame from metacode file <span style="font-family: monospace;">"oned.mc"</span> and plot it.
   </p>
   <p>
       cl&gt; gkiextract oned.mc 4 | stdplot
   </p>
   <p>
-  2. Plot metacode frame <tt>"contour.demo"</tt> in debug mode, so the plotting
+  2. Plot metacode frame <span style="font-family: monospace;">"contour.demo"</span> in debug mode, so the plotting
   instructions can be read as they are processed.
   </p>
   <p>

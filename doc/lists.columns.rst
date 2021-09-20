@@ -35,7 +35,7 @@ columns: Convert multicolumn file to separate files
   </dd>
   </dl>
   <dl>
-  <dt><b>outroot = <tt>"col."</tt></b></dt>
+  <dt><b>outroot = <span style="font-family: monospace;">"col."</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outroot' Line='outroot = "col."' -->
   <dd>Root name of the output column files.
   </dd>
@@ -47,7 +47,7 @@ columns: Convert multicolumn file to separate files
   Task <i>columns</i> is used to reformat a multicolumn list file into separate
   files, such that one output file is created for each column in the input
   file.  It is used to break multicolumn tables into simple CL lists.
-  Comment lines beginning with  the character <tt>"#"</tt> are ignored.  All data
+  Comment lines beginning with  the character <span style="font-family: monospace;">"#"</span> are ignored.  All data
   is transferred as text.  One file <b>outroot</b>n is produced for each
   column in the input table.
   </p>

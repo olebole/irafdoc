@@ -24,14 +24,14 @@ parkey: Put an IRAF parameter into an image or table header keyword.
   <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task changes the value of a header keyword in either a table or an
-  image. If the value of the task parameter 'add' is <tt>"yes"</tt>, the task will
+  image. If the value of the task parameter 'add' is <span style="font-family: monospace;">"yes"</span>, the task will
   allow you to add a new keyword to the header, otherwise, adding a new
   keyword will cause an error. Type conversion is performed if the data type of
   the header keyword differs from the data type of the input parameter 'value'. 
   If a new
   keyword is added to the file, the type is determined 
   from the input value. The
-  strings <tt>"yes"</tt>, <tt>"y"</tt>, <tt>"no"</tt>, <tt>"n"</tt>, <tt>"true"</tt>, <tt>"t"</tt>, <tt>"false"</tt>, and <tt>"f"</tt>, in either
+  strings <span style="font-family: monospace;">"yes"</span>, <span style="font-family: monospace;">"y"</span>, <span style="font-family: monospace;">"no"</span>, <span style="font-family: monospace;">"n"</span>, <span style="font-family: monospace;">"true"</span>, <span style="font-family: monospace;">"t"</span>, <span style="font-family: monospace;">"false"</span>, and <span style="font-family: monospace;">"f"</span>, in either
   upper or lower case, are interpreted as boolean values.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
@@ -74,20 +74,20 @@ parkey: Put an IRAF parameter into an image or table header keyword.
   </pre>
   <p>
   2. Set the group parameter 'CTYPE1' in the second group of the same
-  file to <tt>"ANGSTROM"</tt>:
+  file to <span style="font-family: monospace;">"ANGSTROM"</span>:
   </p>
   <pre>
   tt&gt; parkey ANGSTROM image.hhh[2] ctype1
   </pre>
   <p>
   3. Set the header keyword 'YSTEP' to the value stored 
-  in the IRAF parameter <tt>'x'</tt>:
+  in the IRAF parameter <span style="font-family: monospace;">'x'</span>:
   </p>
   <pre>
   tt&gt; parkey (x) image.hhh ystep
   </pre>
   <p>
-  4. Add the keyword 'COMPNAME' to the table header and put the value <tt>"FILTER1"</tt>
+  4. Add the keyword 'COMPNAME' to the table header and put the value <span style="font-family: monospace;">"FILTER1"</span>
   in it:
   </p>
   <pre>

@@ -23,9 +23,9 @@ observatory: Examine and define observatory parameters
   <h3>Parameters</h3>
   <!-- BeginSection: 'PARAMETERS' -->
   <dl>
-  <dt><b>command = <tt>"list"</tt> (set|list|images)</b></dt>
+  <dt><b>command = <span style="font-family: monospace;">"list"</span> (set|list|images)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='command' Line='command = "list" (set|list|images)' -->
-  <dd>Command option which is one of <tt>"set"</tt>, <tt>"list"</tt>, or <tt>"images"</tt>.  The set command
+  <dd>Command option which is one of <span style="font-family: monospace;">"set"</span>, <span style="font-family: monospace;">"list"</span>, or <span style="font-family: monospace;">"images"</span>.  The set command
   sets the default observatory task parameters for the specified
   observatory.  The list command lists the observatory parameters for the
   specified observatory but does not modify the task parameters.  The images
@@ -35,20 +35,20 @@ observatory: Examine and define observatory parameters
   </dd>
   </dl>
   <dl>
-  <dt><b>obsid = <tt>"?"</tt></b></dt>
+  <dt><b>obsid = <span style="font-family: monospace;">"?"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='obsid' Line='obsid = "?"' -->
   <dd>Observatory identification to be set, listed, or used as the default for
   images without the OBSERVAT keyword.  The observatory ID is one of those in
-  the database (case ignored), the special string <tt>"observatory"</tt> to default to
-  the environment variable <tt>"observatory"</tt> or the <i>observatory.observatory</i>
-  parameter, <tt>"obspars"</tt> to select the parameters in the <b>observatory</b>
-  task, or <tt>"?"</tt> to list the observatories defined in the database.
+  the database (case ignored), the special string <span style="font-family: monospace;">"observatory"</span> to default to
+  the environment variable <span style="font-family: monospace;">"observatory"</span> or the <i>observatory.observatory</i>
+  parameter, <span style="font-family: monospace;">"obspars"</span> to select the parameters in the <b>observatory</b>
+  task, or <span style="font-family: monospace;">"?"</span> to list the observatories defined in the database.
   </dd>
   </dl>
   <dl>
   <dt><b>images</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
-  <dd>List of images to be examined with the <tt>"images"</tt> command.  The images are
+  <dd>List of images to be examined with the <span style="font-family: monospace;">"images"</span> command.  The images are
   checked for the OBSERVAT keyword to determine the observatory parameters
   to be listed, otherwise the observatory given by <i>obsid</i> is used.
   </dd>
@@ -66,9 +66,9 @@ observatory: Examine and define observatory parameters
   <dt><b>observatory</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory' -->
   <dd>The default observatory used by tasks which use the special
-  observatory identification <tt>"observatory"</tt>.  The value is one of the
+  observatory identification <span style="font-family: monospace;">"observatory"</span>.  The value is one of the
   observatory names in the observatory database (case ignored)
-  or the special value <tt>"obspars"</tt> to select the parameters defined in this
+  or the special value <span style="font-family: monospace;">"obspars"</span> to select the parameters defined in this
   task.  There is no default to force users to set it at least once.
   </dd>
   </dl>
@@ -119,7 +119,7 @@ observatory: Examine and define observatory parameters
   <dt><b>observatory</b></dt>
   <!-- Sec='ENVIRONMENT VARIABLES' Level=0 Label='observatory' Line='observatory' -->
   <dd>This variable selects the observatory entry whenever a task uses the
-  observatory name <tt>"observatory"</tt>.  If not defined the value of the task
+  observatory name <span style="font-family: monospace;">"observatory"</span>.  If not defined the value of the task
   parameter <i>observatory.observatory</i> is used.
   </dd>
   </dl>
@@ -174,7 +174,7 @@ observatory: Examine and define observatory parameters
   For image data which do not identify the observatory in this way
   and in tasks which do not operate on images (such as astronomical
   calculator tools), the observatory must be specified by the user.
-  Most tasks provide an <tt>"observatory"</tt> parameter which either directly
+  Most tasks provide an <span style="font-family: monospace;">"observatory"</span> parameter which either directly
   selects the observatory or use special values for defining the
   observatory with an environment variable or the parameters
   from the <b>observatory</b> task.
@@ -184,16 +184,16 @@ observatory: Examine and define observatory parameters
   observatory database.  The names in the database may be listed using
   the <b>observatory</b> task as described below.  If the desired observatory
   is not in the database a user may copy/create their own database and
-  select it with the environment variable <tt>"obsdb"</tt>, modify the standard
+  select it with the environment variable <span style="font-family: monospace;">"obsdb"</span>, modify the standard
   database if allowed (any changes to the distributed version should
   be forwarded to iraf$noao.edu), or use the special observatory name
-  <tt>"obspars"</tt>.  The last option directly uses the parameters in the
+  <span style="font-family: monospace;">"obspars"</span>.  The last option directly uses the parameters in the
   <b>observatory</b> task which can be set to any values using the normal
   parameter editing mechanism.
   </p>
   <p>
   The default value for the observatory parameter in a task is generally
-  <tt>"observatory"</tt>.  This special name directs the task to look first
+  <span style="font-family: monospace;">"observatory"</span>.  This special name directs the task to look first
   for the environment variable of the same name and then at the
   <i>observatory</i> parameter of the <b>observatory</b> task.  The environment
   variable allows users or sites to set the default observatory in their
@@ -203,16 +203,16 @@ observatory: Examine and define observatory parameters
   </p>
   <p>
   The observatory database is selected by the environment variable
-  <tt>"obsdb"</tt>.  The default when the variable is not defined is the
-  <b>noao</b> package library database file <tt>"noao$lib/obsdb.dat"</tt>.  The use
+  <span style="font-family: monospace;">"obsdb"</span>.  The default when the variable is not defined is the
+  <b>noao</b> package library database file <span style="font-family: monospace;">"noao$lib/obsdb.dat"</span>.  The use
   of an environment variable allows users to permanently change the
   default database in the OS environment (when IRAF has access to it such
   as in UNIX systems) or in the startup IRAF environment as set in the
-  <tt>"login.cl"</tt> or <tt>"loginuser.cl"</tt> files.  One can, of course, change it
+  <span style="font-family: monospace;">"login.cl"</span> or <span style="font-family: monospace;">"loginuser.cl"</span> files.  One can, of course, change it
   during a session with the set or reset commands.  For sites which want
   to customize the observatory mechanism the environment variables can
-  also be set and changed in the files <tt>"hlib$zzsetenv.def"</tt>,
-  <tt>"noao$lib/zzsetenv.def"</tt>, and the template login file <tt>"hlib$login.cl"</tt>.
+  also be set and changed in the files <span style="font-family: monospace;">"hlib$zzsetenv.def"</span>,
+  <span style="font-family: monospace;">"noao$lib/zzsetenv.def"</span>, and the template login file <span style="font-family: monospace;">"hlib$login.cl"</span>.
   </p>
   <p>
   An observatory database file consist of a simple list of keyword=value
@@ -243,9 +243,9 @@ observatory: Examine and define observatory parameters
   In summary, access to observatory parameters is now done by referencing
   the image header keyword OBSERVAT and, if not defined, determine the
   observatory name from a task parameter.  The environment variables
-  <tt>"observatory"</tt> and <tt>"obsdb"</tt> can be set by the user to select alternate
+  <span style="font-family: monospace;">"observatory"</span> and <span style="font-family: monospace;">"obsdb"</span> can be set by the user to select alternate
   observatories and observatory database files.  For data without an
-  observatory entry the observatory can be set to <tt>"obspars"</tt> or the user
+  observatory entry the observatory can be set to <span style="font-family: monospace;">"obspars"</span> or the user
   may make their own observatory database.
   </p>
   <p>
@@ -263,53 +263,53 @@ observatory: Examine and define observatory parameters
   observatory identification, and observatory parameters.
   </p>
   <p>
-  The <i>command</i> parameter takes the values <tt>"set"</tt>, <tt>"list"</tt>, or <tt>"images"</tt>.
+  The <i>command</i> parameter takes the values <span style="font-family: monospace;">"set"</span>, <span style="font-family: monospace;">"list"</span>, or <span style="font-family: monospace;">"images"</span>.
   The <i>obsid</i> parameter supplies the observatory identification and the
-  <i>images</i> parameter is used to specify a list of images for the <tt>"images"</tt>
+  <i>images</i> parameter is used to specify a list of images for the <span style="font-family: monospace;">"images"</span>
   command.  The parameters are query parameters and so may be either queried
   or simply typed on the command line.
   </p>
   <p>
-  The <tt>"set"</tt> command prints the observatory parameters for the specified
+  The <span style="font-family: monospace;">"set"</span> command prints the observatory parameters for the specified
   observatory and sets many of these in the <b>observatory</b> task
   parameters.  This command is used to set the default observatory parameters
   for tasks where images are not used, the images do not contain the
   observatory id, or direct references to specific parameters with parameter
-  redirection (for example <tt>")observatory.latitude"</tt>) are used.
+  redirection (for example <span style="font-family: monospace;">")observatory.latitude"</span>) are used.
   </p>
   <p>
-  The <tt>"list"</tt> command is similar to the <tt>"set"</tt> command except the task parameters
+  The <span style="font-family: monospace;">"list"</span> command is similar to the <span style="font-family: monospace;">"set"</span> command except the task parameters
   are not modified.  It is used to list observatory parameters.  It is also
   use with the special observatory identifications to list the entries in
   an observatory database and verify the observatory to be used by
-  tasks which do not operate on images.  The special value <tt>"?"</tt> lists
-  the entries in the database.  The special value <tt>"observatory"</tt> lists
-  the observatory defined by the <tt>"observatory"</tt> environment variable or
+  tasks which do not operate on images.  The special value <span style="font-family: monospace;">"?"</span> lists
+  the entries in the database.  The special value <span style="font-family: monospace;">"observatory"</span> lists
+  the observatory defined by the <span style="font-family: monospace;">"observatory"</span> environment variable or
   that given by the <i>observatory.observatory</i> parameter.  The special
-  value <tt>"obspars"</tt> simply lists the observatory task parameters.
+  value <span style="font-family: monospace;">"obspars"</span> simply lists the observatory task parameters.
   </p>
   <p>
-  The <tt>"images"</tt> command lists the observatory information applicable to
+  The <span style="font-family: monospace;">"images"</span> command lists the observatory information applicable to
   one or more images.  In particular, the observatory identification is
   first sought in OBSERVAT image header keyword and, if not found, the
   <i>obsid</i> parameter is used.  Often the default observatory is
-  <tt>"observatory"</tt> to follow the same search path used by other tasks.
+  <span style="font-family: monospace;">"observatory"</span> to follow the same search path used by other tasks.
   </p>
   <p>
   The <i>verbose</i> parameter prints additional detailed information.  It
   prints the database used and whether it is selected by default
-  (noao$lib/obsdb.dat) or by the <tt>"obsdb"</tt> environment variable.  When the
-  observatory is defined as <tt>"observatory"</tt> it indicates whether the
-  observatory is defined by the environment variable <tt>"observatory"</tt> or by the
+  (noao$lib/obsdb.dat) or by the <span style="font-family: monospace;">"obsdb"</span> environment variable.  When the
+  observatory is defined as <span style="font-family: monospace;">"observatory"</span> it indicates whether the
+  observatory is defined by the environment variable <span style="font-family: monospace;">"observatory"</span> or by the
   observatory task.  When listing images it prints the OBSERVAT keyword or
   the default observatory assigned.
   </p>
   <p>
   For observatories not in a database the name, latitude, longitude,
   altitude, and time zone parameters may be set using <b>eparam</b>.
-  The observatory id must be set to <tt>"obspars"</tt> in this case.
+  The observatory id must be set to <span style="font-family: monospace;">"obspars"</span> in this case.
   These parameters will then be referenced by other tasks in which
-  the observatory is specified as <tt>"obspars"</tt>.  This allows arbitrary
+  the observatory is specified as <span style="font-family: monospace;">"obspars"</span>.  This allows arbitrary
   observatory parameters to be set without creating or modifying
   an observatory database.  However, it is advisable to create a
   local database and also send the observatory information to the
@@ -360,7 +360,7 @@ observatory: Examine and define observatory parameters
   </pre>
   <p>
   3.  Set the observatory parameters to use the environment variable
-  <tt>"observatory"</tt> and verify it.
+  <span style="font-family: monospace;">"observatory"</span> and verify it.
   </p>
   <pre>
   	cl&gt; set observatory=cfht
@@ -403,7 +403,7 @@ observatory: Examine and define observatory parameters
   </pre>
   <p>
   5.  List the observatory assigned to some images with a default observatory
-  determined either by the <tt>"observatory"</tt> environment variable or that set
+  determined either by the <span style="font-family: monospace;">"observatory"</span> environment variable or that set
   in the observatory task.
   </p>
   <pre>

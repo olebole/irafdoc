@@ -29,55 +29,55 @@ apsum: Extract 1D spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>output = <tt>""</tt></b></dt>
+  <dt><b>output = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
   <dd>List of output rootnames for the extracted spectra.  If the null
   string is given or the end of the output list is reached before the end
   of the input list then the input image name is used as the output rootname.
   This will not conflict with the input image since an aperture number
-  extension is added for onedspec format, the extension <tt>".ms"</tt> for multispec
-  format, or the extension <tt>".ec"</tt> for echelle format.
+  extension is added for onedspec format, the extension <span style="font-family: monospace;">".ms"</span> for multispec
+  format, or the extension <span style="font-family: monospace;">".ec"</span> for echelle format.
   </dd>
   </dl>
   <dl>
-  <dt><b>apertures = <tt>""</tt></b></dt>
+  <dt><b>apertures = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
   <dd>Apertures to recenter, resize, trace, and extract.  This only applies
   to apertures read from the input or reference database.  Any new
   apertures defined with the automatic finding algorithm or interactively
   are always selected.  The syntax is a list comma separated ranges
   where a range can be a single aperture number, a hyphen separated
-  range of aperture numbers, or a range with a step specified by <tt>"x&lt;step&gt;"</tt>;
-  for example, <tt>"1,3-5,9-12x2"</tt>.
+  range of aperture numbers, or a range with a step specified by <span style="font-family: monospace;">"x&lt;step&gt;"</span>;
+  for example, <span style="font-family: monospace;">"1,3-5,9-12x2"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>format = <tt>"multispec"</tt> (onedspec|multispec|echelle|strip)</b></dt>
+  <dt><b>format = <span style="font-family: monospace;">"multispec"</span> (onedspec|multispec|echelle|strip)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='format' Line='format = "multispec" (onedspec|multispec|echelle|strip)' -->
-  <dd>Format for output extracted spectra.  <tt>"Onedspec"</tt> format extracts each
-  aperture to a separate image while <tt>"multispec"</tt> and <tt>"echelle"</tt> extract
+  <dd>Format for output extracted spectra.  <span style="font-family: monospace;">"Onedspec"</span> format extracts each
+  aperture to a separate image while <span style="font-family: monospace;">"multispec"</span> and <span style="font-family: monospace;">"echelle"</span> extract
   multiple apertures for the same image to a single output image.
-  The <tt>"multispec"</tt> and <tt>"echelle"</tt> format selections differ only in the
-  extension added.  The <tt>"strip"</tt> format produces a separate 2D image in
+  The <span style="font-family: monospace;">"multispec"</span> and <span style="font-family: monospace;">"echelle"</span> format selections differ only in the
+  extension added.  The <span style="font-family: monospace;">"strip"</span> format produces a separate 2D image in
   which each column or line along the dispersion axis is shifted to
   exactly align the aperture based on the trace information.
   </dd>
   </dl>
   <dl>
-  <dt><b>references = <tt>""</tt></b></dt>
+  <dt><b>references = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='references' Line='references = ""' -->
   <dd>List of reference images to be used to define apertures for the input
   images.  When a reference image is given it supersedes apertures
-  previously defined for the input image. The list may be null, <tt>""</tt>, or
+  previously defined for the input image. The list may be null, <span style="font-family: monospace;">""</span>, or
   any number of images less than or equal to the list of input images.
   There are three special words which may be used in place of an image
-  name.  The word <tt>"last"</tt> refers to the last set of apertures written to
-  the database.  The word <tt>"OLD"</tt> requires that an entry exist
-  and the word <tt>"NEW"</tt> requires that the entry not exist for each input image.
+  name.  The word <span style="font-family: monospace;">"last"</span> refers to the last set of apertures written to
+  the database.  The word <span style="font-family: monospace;">"OLD"</span> requires that an entry exist
+  and the word <span style="font-family: monospace;">"NEW"</span> requires that the entry not exist for each input image.
   </dd>
   </dl>
   <dl>
-  <dt><b>profiles = <tt>""</tt></b></dt>
+  <dt><b>profiles = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='profiles' Line='profiles = ""' -->
   <dd>List of profile images for variance weighting or cleanning.   If variance
   weighting or cleanning a profile of each aperture is computed from the
@@ -173,33 +173,33 @@ apsum: Extract 1D spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>background = <tt>"none"</tt> (none|average|median|minimum|fit)</b></dt>
+  <dt><b>background = <span style="font-family: monospace;">"none"</span> (none|average|median|minimum|fit)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='background' Line='background = "none" (none|average|median|minimum|fit)' -->
-  <dd>Type of background subtraction.  The choices are <tt>"none"</tt> for no background
-  subtraction, <tt>"average"</tt> to average the background within the background
-  regions, <tt>"median"</tt> to use the median in the background regions, <tt>"minimum"</tt> to
-  use the minimum in the background regions, or <tt>"fit"</tt> to fit across the
+  <dd>Type of background subtraction.  The choices are <span style="font-family: monospace;">"none"</span> for no background
+  subtraction, <span style="font-family: monospace;">"average"</span> to average the background within the background
+  regions, <span style="font-family: monospace;">"median"</span> to use the median in the background regions, <span style="font-family: monospace;">"minimum"</span> to
+  use the minimum in the background regions, or <span style="font-family: monospace;">"fit"</span> to fit across the
   dispersion using the background within the background regions.  Note that
-  the <tt>"average"</tt> option does not do any medianing or bad pixel checking,
+  the <span style="font-family: monospace;">"average"</span> option does not do any medianing or bad pixel checking,
   something which is recommended.  The fitting option is slower than the
   other options and requires additional fitting parameter.
   </dd>
   </dl>
   <dl>
-  <dt><b>weights = <tt>"none"</tt></b></dt>
+  <dt><b>weights = <span style="font-family: monospace;">"none"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='weights' Line='weights = "none"' -->
   <dd>Type of extraction weighting.  Note that if the <i>clean</i> parameter is
-  set then the weights used are <tt>"variance"</tt> regardless of the weights
+  set then the weights used are <span style="font-family: monospace;">"variance"</span> regardless of the weights
   specified by this parameter.  The choices are:
   <dl>
-  <dt><b><tt>"none"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"none"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"none"' -->
   <dd>The pixels are summed without weights except for partial pixels at the
   ends.
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"variance"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"variance"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"variance"' -->
   <dd>The extraction is weighted by the variance based on the data values
   and a poisson/ccd model using the <i>gain</i> and <i>readnoise</i>
@@ -209,15 +209,15 @@ apsum: Extract 1D spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>pfit = <tt>"fit1d"</tt> (fit1d|fit2d)</b></dt>
+  <dt><b>pfit = <span style="font-family: monospace;">"fit1d"</span> (fit1d|fit2d)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pfit' Line='pfit = "fit1d" (fit1d|fit2d)' -->
   <dd>Profile fitting algorithm to use with variance weighting or cleaning.
   When determining a profile the two dimensional spectrum is divided by
   an estimate of the one dimensional spectrum to form a normalized two
   dimensional spectrum profile.  This profile is then smoothed by fitting
-  one dimensional functions, <tt>"fit1d"</tt>, along the lines or columns most closely
+  one dimensional functions, <span style="font-family: monospace;">"fit1d"</span>, along the lines or columns most closely
   corresponding to the dispersion axis or a special two dimensional
-  function, <tt>"fit2d"</tt>, described by Marsh (see <b>approfile</b>).
+  function, <span style="font-family: monospace;">"fit2d"</span>, described by Marsh (see <b>approfile</b>).
   </dd>
   </dl>
   <dl>
@@ -328,7 +328,7 @@ apsum: Extract 1D spectra
   </p>
   <p>
   When the parameter <i>extras</i>=no only the extracted spectra are
-  output.  If the format parameter <i>format</i>=<tt>"onedspec"</tt> the output
+  output.  If the format parameter <i>format</i>=<span style="font-family: monospace;">"onedspec"</span> the output
   aperture extractions are one dimensional images with names formed from
   the output rootname and a numeric extension given by the aperture
   number; i.e. root.0001 for aperture 1.  Note that there will be as many
@@ -340,9 +340,9 @@ apsum: Extract 1D spectra
   the <b>onedspec</b> package.
   </p>
   <p>
-  If the format parameter is <tt>"echelle"</tt> or <tt>"multispec"</tt> the output aperture
+  If the format parameter is <span style="font-family: monospace;">"echelle"</span> or <span style="font-family: monospace;">"multispec"</span> the output aperture
   extractions are put into a two dimensional image with a name formed from
-  the output rootname and the extension <tt>".ech"</tt> or <tt>".ms"</tt>.  Each line in
+  the output rootname and the extension <span style="font-family: monospace;">".ech"</span> or <span style="font-family: monospace;">".ms"</span>.  Each line in
   the output image corresponds to one aperture.  Thus in this format
   there is one output image for each input image.  These are the preferred
   output formats for reasons of compactness and ease of handling.  These
@@ -375,7 +375,7 @@ apsum: Extract 1D spectra
   number of input images, the last reference image is used for all
   remaining input images.  Thus, a single reference image may be given
   for all the input images or different reference images may be given for
-  each input image.  The special reference name <tt>"last"</tt> may be used to
+  each input image.  The special reference name <span style="font-family: monospace;">"last"</span> may be used to
   select the last set apertures used in any of the <b>apextract</b> tasks.
   </p>
   <p>
@@ -400,13 +400,13 @@ apsum: Extract 1D spectra
   <p>
   Each function selection will produce a query for each input spectrum if
   the <i>interactive</i> parameter is set.  The queries are answered by
-  <tt>"yes"</tt>, <tt>"no"</tt>, <tt>"YES"</tt>, or <tt>"NO"</tt>, where the upper case responses suppress
+  <span style="font-family: monospace;">"yes"</span>, <span style="font-family: monospace;">"no"</span>, <span style="font-family: monospace;">"YES"</span>, or <span style="font-family: monospace;">"NO"</span>, where the upper case responses suppress
   the query for following images.  There are other queries associated
   with tracing and extracted spectrum review which first ask whether the
   operation is to be done interactively and, if yes, lead to queries for
   each aperture.  The cursor keys available during spectrum review are
   minimal, only the CURSOR MODE keys for expanding and adjusting the
-  graph are available and the quit key <tt>'q'</tt>.  If the <i>interactive</i>
+  graph are available and the quit key <span style="font-family: monospace;">'q'</span>.  If the <i>interactive</i>
   parameter is not set then aperture editing, interactive trace fitting,
   and spectrum review are ignored.
   </p>
@@ -424,7 +424,7 @@ apsum: Extract 1D spectra
   routines which include medians, iterative rejection of deviant points, and
   a choice of function types and orders.  Note that it is important to use a
   method which rejects cosmic rays such as using either medians over all the
-  background regions (<i>background</i> = <tt>"median"</tt>) or median samples during
+  background regions (<i>background</i> = <span style="font-family: monospace;">"median"</span>) or median samples during
   fitting (<i>b_naverage</i> &lt; -1).  The background subtraction algorithm and
   options are described in greater detail in <b>apsum</b> and
   <b>apbackground</b>.
@@ -451,14 +451,14 @@ apsum: Extract 1D spectra
   </p>
   <p>
   The pixels in the sum may be weighted as specified by the <i>weights</i>
-  parameter.  If the weights parameter is <tt>"none"</tt> and the <i>clean</i>
+  parameter.  If the weights parameter is <span style="font-family: monospace;">"none"</span> and the <i>clean</i>
   parameter is no then the simple sum of the pixels (with fractional
-  endpoints) is extracted.  If the weights parameter is <tt>"variance"</tt> or if
+  endpoints) is extracted.  If the weights parameter is <span style="font-family: monospace;">"variance"</span> or if
   the <b>clean</b> parameter is yes the pixels are weighted by their
   estimated variance derived from a noise model based on the <i>gain</i>
   and <i>readnoise</i> parameters and a smooth profile function.  Normally
   the profile function is determined from the data being extracted.
-  However, one may substitute a <tt>"profile"</tt> image as specified by the
+  However, one may substitute a <span style="font-family: monospace;">"profile"</span> image as specified by the
   <i>profiles</i> parameter for computing the profile.  This requires that
   the profile image have spectra of identical position and profile as
   the image being extracted.  For example, this would likely be the case
@@ -489,7 +489,7 @@ apsum: Extract 1D spectra
   The positions of the slits are defined using either automatic finding
   or with the aperture editor.  The positions of the slits are traced if
   necessary and then the apertures are extracted to the image
-  <tt>"multslit1.ms"</tt>.  The steps of defining the slit positions and tracing
+  <span style="font-family: monospace;">"multslit1.ms"</span>.  The steps of defining the slit positions and tracing
   can be done as part of this command or previously using the other tasks
   in the <b>apextract</b> package.
   </p>
@@ -499,18 +499,18 @@ apsum: Extract 1D spectra
   <dl>
   <dt><b>APSUM V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='APSUM' Line='APSUM V2.11' -->
-  <dd>The <tt>"apertures"</tt> parameter can be used to select apertures for resizing,
+  <dd>The <span style="font-family: monospace;">"apertures"</span> parameter can be used to select apertures for resizing,
   recentering, tracing, and extraction.  This parameter name was previously
   used for selecting apertures in the recentering algorithm.  The new
-  parameter name for this is now <tt>"aprecenter"</tt>.
-  The <tt>"nsubaps"</tt> parameter now allows onedspec and echelle output formats.
+  parameter name for this is now <span style="font-family: monospace;">"aprecenter"</span>.
+  The <span style="font-family: monospace;">"nsubaps"</span> parameter now allows onedspec and echelle output formats.
   The echelle format is appropriate for treating each subaperture as
   a full echelle extraction.
   The dispersion axis parameter was moved to purely a package parameter.
   As a final step when computing a weighted/cleaned spectrum the total
   fluxes from the weighted spectrum and the simple unweighted spectrum
   (excluding any deviant and saturated pixels) are computed and a
-  <tt>"bias"</tt> factor of the ratio of the two fluxes is multiplied into
+  <span style="font-family: monospace;">"bias"</span> factor of the ratio of the two fluxes is multiplied into
   the weighted spectrum and the sigma estimate.  This makes the total
   fluxes the same.  In this version the bias factor is recorded in the logfile
   if one is kept.  Also a check is made for unusual bias factors.

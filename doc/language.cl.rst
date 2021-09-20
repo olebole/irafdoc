@@ -18,13 +18,13 @@ cl: Execute commands from the standard input
   <h3>Parameters</h3>
   <!-- BeginSection: 'PARAMETERS' -->
   <dl>
-  <dt><b>gcur = <tt>""</tt></b></dt>
+  <dt><b>gcur = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gcur' Line='gcur = ""' -->
   <dd>Global graphics cursor.
   </dd>
   </dl>
   <dl>
-  <dt><b>imcur = <tt>""</tt></b></dt>
+  <dt><b>imcur = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='imcur' Line='imcur = ""' -->
   <dd>Global image cursor.
   </dd>
@@ -43,15 +43,15 @@ cl: Execute commands from the standard input
   </dd>
   </dl>
   <dl>
-  <dt><b>ehinit = <tt>"standout eol noverify"</tt></b></dt>
+  <dt><b>ehinit = <span style="font-family: monospace;">"standout eol noverify"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ehinit' Line='ehinit = "standout eol noverify"' -->
-  <dd>Ehistory options string.  (See <tt>"ehistory"</tt>)
+  <dd>Ehistory options string.  (See <span style="font-family: monospace;">"ehistory"</span>)
   </dd>
   </dl>
   <dl>
-  <dt><b>epinit = <tt>"standout noshowall"</tt></b></dt>
+  <dt><b>epinit = <span style="font-family: monospace;">"standout noshowall"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='epinit' Line='epinit = "standout noshowall"' -->
-  <dd>Eparam options string.  (See <tt>"eparam"</tt>)
+  <dd>Eparam options string.  (See <span style="font-family: monospace;">"eparam"</span>)
   </dd>
   </dl>
   <dl>
@@ -61,22 +61,22 @@ cl: Execute commands from the standard input
   </dd>
   </dl>
   <dl>
-  <dt><b>logfile = <tt>"uparm$logfile"</tt></b></dt>
+  <dt><b>logfile = <span style="font-family: monospace;">"uparm$logfile"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "uparm$logfile"' -->
   <dd>The name of the logfile, if command logging is enabled.
   </dd>
   </dl>
   <dl>
-  <dt><b>logmode = <tt>"commands nobackground noerrors notrace"</tt></b></dt>
+  <dt><b>logmode = <span style="font-family: monospace;">"commands nobackground noerrors notrace"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logmode' Line='logmode = "commands nobackground noerrors notrace"' -->
-  <dd>Logging mode control parameter.  (See <tt>"logging"</tt>)
+  <dd>Logging mode control parameter.  (See <span style="font-family: monospace;">"logging"</span>)
   </dd>
   </dl>
   <dl>
   <dt><b>lexmodes = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lexmodes' Line='lexmodes = yes' -->
-  <dd>Enable automatic mode switching between <tt>"command mode"</tt> (used when commands are
-  being entered interactively at the terminal), and <tt>"compute mode"</tt> (used to
+  <dd>Enable automatic mode switching between <span style="font-family: monospace;">"command mode"</span> (used when commands are
+  being entered interactively at the terminal), and <span style="font-family: monospace;">"compute mode"</span> (used to
   evaluate arithmetic expressions and argument lists).  If <i>lexmodes</i> is
   disabled command mode is disabled.  Command mode is always disabled within
   scripts and within parenthesis, i.e., expressions or formal argument lists.
@@ -90,16 +90,16 @@ cl: Execute commands from the standard input
   </dd>
   </dl>
   <dl>
-  <dt><b>mode = <tt>"ql"</tt></b></dt>
+  <dt><b>mode = <span style="font-family: monospace;">"ql"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='mode' Line='mode = "ql"' -->
   <dd>The parameter mode of the CL, and of any tasks run by the CL which do not
-  specify their own mode (i.e., which specify `auto' mode).  A <tt>"q"</tt> causes a
+  specify their own mode (i.e., which specify `auto' mode).  A <span style="font-family: monospace;">"q"</span> causes a
   query to be generated whenever a parameter is used which was not set explicitly
-  on the command line.  An <tt>"m"</tt> (menu mode) causes <i>eparam</i> to be called to
-  edit/check a task's parameters when the task is run interactively.  An <tt>"l"</tt>
+  on the command line.  An <span style="font-family: monospace;">"m"</span> (menu mode) causes <i>eparam</i> to be called to
+  edit/check a task's parameters when the task is run interactively.  An <span style="font-family: monospace;">"l"</span>
   causes the parameter file for a task to be updated on disk whenever the task
   is run interactively.  Note that changing the mode at the CL level will have
-  no affect on the operation of an individual task unless <tt>"auto"</tt> mode is set
+  no affect on the operation of an individual task unless <span style="font-family: monospace;">"auto"</span> mode is set
   at the package, task, and parameter level, causing the mode to defer to the
   global CL mode.
   </dd>
@@ -160,7 +160,7 @@ cl: Execute commands from the standard input
   2. Execute CL commands from a pipe.
   </p>
   <p>
-  	cl&gt; print (<tt>"!type "</tt>, fname) | cl
+  	cl&gt; print (<span style="font-family: monospace;">"!type "</span>, fname) | cl
   </p>
   <p>
   3. Execute <i>cl</i>, taking command input from the terminal.  Since command
@@ -176,8 +176,8 @@ cl: Execute commands from the standard input
   	cl&gt; bye
   </pre>
   <p>
-  In the example above, the declarations of the logical directory <tt>"pak"</tt> and the
-  task <tt>"mytask"</tt> are discarded when the <i>bye</i> is entered, terminating the
+  In the example above, the declarations of the logical directory <span style="font-family: monospace;">"pak"</span> and the
+  task <span style="font-family: monospace;">"mytask"</span> are discarded when the <i>bye</i> is entered, terminating the
   <i>cl</i>.
   </p>
   <!-- EndSection:   'EXAMPLES' -->

@@ -35,13 +35,13 @@ logging: Discussion of CL logging
   </pre>
   <p>
   All of these types of messages except the interactive commands will show up as
-  comments (i.e., starting with a <tt>'#'</tt>) in the logfile.  This facilitates using a
+  comments (i.e., starting with a <span style="font-family: monospace;">'#'</span>) in the logfile.  This facilitates using a
   previous logfile as input to the CL or as the basis for a script task. 
   </p>
   <p>
   The CL parameters discussed below are used to control the logging features.
-  These parameters can be set on the command line, in the <tt>"login.cl"</tt> file, or
-  with the command <tt>"eparam cl"</tt>. 
+  These parameters can be set on the command line, in the <span style="font-family: monospace;">"login.cl"</span> file, or
+  with the command <span style="font-family: monospace;">"eparam cl"</span>. 
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Parameters</h3>
@@ -56,13 +56,13 @@ logging: Discussion of CL logging
   </dd>
   </dl>
   <dl>
-  <dt><b>logfile = <tt>"home$logfile"</tt></b></dt>
+  <dt><b>logfile = <span style="font-family: monospace;">"home$logfile"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "home$logfile"' -->
   <dd>The name of the logfile.
   </dd>
   </dl>
   <dl>
-  <dt><b>logmode = <tt>"commands nobackground noerrors notrace"</tt></b></dt>
+  <dt><b>logmode = <span style="font-family: monospace;">"commands nobackground noerrors notrace"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logmode' Line='logmode = "commands nobackground noerrors notrace"' -->
   <dd><i>Logmode</i> controls what goes into the logfile.  The following options
   are currently available:
@@ -105,7 +105,7 @@ logging: Discussion of CL logging
   1. Turn all the logging features on except for background logging:
   </p>
   <p>
-  	cl&gt; logmode = <tt>"commands nobackground errors trace"</tt>
+  	cl&gt; logmode = <span style="font-family: monospace;">"commands nobackground errors trace"</span>
   </p>
   <!-- EndSection:   'EXAMPLES' -->
   <h3>Bugs</h3>

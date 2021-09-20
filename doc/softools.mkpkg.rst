@@ -26,8 +26,8 @@ mkpkg: Make or update an object library or package
   <dt><b><b>-d[ddd]</b></b></dt>
   <!-- Sec='ARGUMENTS' Level=0 Label='' Line='\fB-d[ddd]\fR' -->
   <dd>Debug mode.  Print detailed messages describing what <i>mkpkg</i> is doing.
-  There are four levels of debug messages, selected by repeating the <tt>"d"</tt>
-  character in the switch, e.g., <tt>"-d"</tt> is level one, <tt>"-dd"</tt> is level two, and
+  There are four levels of debug messages, selected by repeating the <span style="font-family: monospace;">"d"</span>
+  character in the switch, e.g., <span style="font-family: monospace;">"-d"</span> is level one, <span style="font-family: monospace;">"-dd"</span> is level two, and
   so on.  The debug messages get progressively more detailed as the debug level
   increases.  Debug mode automatically enables the verbose mode messages.
   </dd>
@@ -35,8 +35,8 @@ mkpkg: Make or update an object library or package
   <dl>
   <dt><b><b>-f file</b></b></dt>
   <!-- Sec='ARGUMENTS' Level=0 Label='' Line='\fB-f file\fR' -->
-  <dd>Set the name of the file to be interpreted (default: <tt>"mkpkg"</tt>).
-  The special value <tt>"stdin"</tt> (lower case) allows commands to be entered
+  <dd>Set the name of the file to be interpreted (default: <span style="font-family: monospace;">"mkpkg"</span>).
+  The special value <span style="font-family: monospace;">"stdin"</span> (lower case) allows commands to be entered
   interactively from the standard input, e.g., for debugging <i>mkpkg</i>.
   </dd>
   </dl>
@@ -51,7 +51,7 @@ mkpkg: Make or update an object library or package
   <dt><b><b>-n</b></b></dt>
   <!-- Sec='ARGUMENTS' Level=0 Label='' Line='\fB-n\fR' -->
   <dd>No execute.  Go through the motions, but do not touch any files.
-  No execute mode automatically enables verbose mode (flag <tt>"-v"</tt>).
+  No execute mode automatically enables verbose mode (flag <span style="font-family: monospace;">"-v"</span>).
   This switch should be used to verify new mkpkg files before execution.
   </dd>
   </dl>
@@ -59,7 +59,7 @@ mkpkg: Make or update an object library or package
   <dt><b><b>-p </b><i>pkgname</i></b></dt>
   <!-- Sec='ARGUMENTS' Level=0 Label='' Line='\fB-p \fIpkgname\fR' -->
   <dd>Load the package environment for the named external package, e.g.,
-  <tt>"mkpkg -p noao update"</tt>.  If the same package is always specified
+  <span style="font-family: monospace;">"mkpkg -p noao update"</span>.  If the same package is always specified
   the environment variable or logical name PKGENV may be defined at the
   host level to accomplish the same thing.  The package name <i>must</i>
   be specified when doing software development in an external or layered
@@ -76,7 +76,7 @@ mkpkg: Make or update an object library or package
   be recompiled.  By running <i>mkpkg</i> with the <i>-u</i> flag, one can update
   the library module dates without recompiling the associated files.  This is
   done by setting the date of each library module to be no older than the
-  file <i>hlib$iraf.h</i>, which should be <tt>"touched"</tt> after the system has fully
+  file <i>hlib$iraf.h</i>, which should be <span style="font-family: monospace;">"touched"</span> after the system has fully
   been restored to disk to mark the installation time.  Note that files which
   have been modified <i>since</i> the system was restored to disk will still
   cause the affected library modules to be updated, even when the <i>-u</i> flag
@@ -93,7 +93,7 @@ mkpkg: Make or update an object library or package
   <dl>
   <dt><b><b>module</b></b></dt>
   <!-- Sec='ARGUMENTS' Level=0 Label='' Line='\fBmodule\fR' -->
-  <dd>The names of the module or modules (named entries in the <tt>"mkpkg"</tt> file) to be
+  <dd>The names of the module or modules (named entries in the <span style="font-family: monospace;">"mkpkg"</span> file) to be
   executed.  If no module is named the first module encountered is executed,
   unless a <i>mkpkg</i> macro preprocessor directive at the beginning of the file
   specifies a different default action.
@@ -129,11 +129,11 @@ mkpkg: Make or update an object library or package
   replacement, conditional execution, and a number of builtin commands.
   The usefulness of these facilities is enhanced by the ability of <i>mkpkg</i>
   to update entire directory trees, or to enter the hierarchy of <i>mkpkg</i>
-  descriptors at any level.  For example, typing <tt>"mkpkg"</tt> in the root directory
-  of IRAF will make or update the entire system, whereas in the <tt>"iraf$sys"</tt>
+  descriptors at any level.  For example, typing <span style="font-family: monospace;">"mkpkg"</span> in the root directory
+  of IRAF will make or update the entire system, whereas in the <span style="font-family: monospace;">"iraf$sys"</span>
   directory <i>mkpkg</i> will update only the system libraries, and in the
-  <tt>"iraf$sys/fio"</tt> directory <i>mkpkg</i> will update only the FIO portion of the
-  system library <tt>"libsys.a"</tt>.
+  <span style="font-family: monospace;">"iraf$sys/fio"</span> directory <i>mkpkg</i> will update only the FIO portion of the
+  system library <span style="font-family: monospace;">"libsys.a"</span>.
   </p>
   <p>
   The <i>mkpkg</i> utility is quite simple to use to maintain small packages
@@ -192,17 +192,17 @@ mkpkg: Make or update an object library or package
   <p>
   All other directories should be referenced by giving the path from either the
   current directory or from one of the system logical directories shown above.
-  For example, <tt>"pkg$system/"</tt> is the root directory of the SYSTEM package,
-  and <tt>".."</tt> is the directory one level up from the current directory.
+  For example, <span style="font-family: monospace;">"pkg$system/"</span> is the root directory of the SYSTEM package,
+  and <span style="font-family: monospace;">".."</span> is the directory one level up from the current directory.
   </p>
   <p>
   3. <b>Maintaining Libraries with MKPKG</b>
   </p>
   <p>
-      Libraries are described by a <b>member list</b> module in the <tt>"mkpkg"</tt> file.
+      Libraries are described by a <b>member list</b> module in the <span style="font-family: monospace;">"mkpkg"</span> file.
   The syntax of a library member list module is shown below.  Note that the
   <b>mkpkg</b> module name for a library member list module is the same as the
-  name of the actual library, hence must end with the extension <tt>".a"</tt>.
+  name of the actual library, hence must end with the extension <span style="font-family: monospace;">".a"</span>.
   </p>
   <pre>
   	libname.a:
@@ -213,21 +213,21 @@ mkpkg: Make or update an object library or package
   		;
   </pre>
   <p>
-  Here, <tt>"libname.a"</tt> is the IRAF virtual filename of the library (regardless of
-  what directory it resides in), <tt>"memberN"</tt> is the name of a source file which
-  may contain any number of actual library object modules, and <tt>"depN"</tt> is the
+  Here, <span style="font-family: monospace;">"libname.a"</span> is the IRAF virtual filename of the library (regardless of
+  what directory it resides in), <span style="font-family: monospace;">"memberN"</span> is the name of a source file which
+  may contain any number of actual library object modules, and <span style="font-family: monospace;">"depN"</span> is the
   name of a file upon which the named member depends.  If any of the named
   dependency files is newer than the corresponding member source file, or if
   the member source file is newer than the compiled library object module,
   the source file is recompiled and replaced in the library.  Both source
   files and dependency files may reside in remote directories.  The names of
   dependency files in system libraries should be enclosed in &lt;&gt; delimiters,
-  e.g., <tt>"&lt;fset.h&gt;"</tt>.  Each member must be described on a separate line.
+  e.g., <span style="font-family: monospace;">"&lt;fset.h&gt;"</span>.  Each member must be described on a separate line.
   </p>
   <p>
   If the library being updated does not reside in the current directory
-  (directory from which the <tt>"mkpkg"</tt> command was entered) then the library must
-  be <tt>"checked out"</tt> of the remote directory before it can be updated, and checked
+  (directory from which the <span style="font-family: monospace;">"mkpkg"</span> command was entered) then the library must
+  be <span style="font-family: monospace;">"checked out"</span> of the remote directory before it can be updated, and checked
   back in when updating is complete.  These operations are performed by macro
   preprocessor directives, e.g.:
   </p>
@@ -251,9 +251,9 @@ mkpkg: Make or update an object library or package
   </pre>
   <p>
   Note that the checkout operation is required only in the directory from which
-  the <tt>"mkpkg"</tt> command was entered, since the library has already been checked
+  the <span style="font-family: monospace;">"mkpkg"</span> command was entered, since the library has already been checked
   out when the mkpkg-file in a subdirectory is called to update its portion
-  of the library (as in the <tt>"@symtab"</tt> in the example above).  The checkout
+  of the library (as in the <span style="font-family: monospace;">"@symtab"</span> in the example above).  The checkout
   commands should however be included in each mkpkg-file in a hierarchy in such
   a way that the library will be automatically checked out and back in if
   <i>mkpkg</i> is run from that directory.  The checkout commands are ignored
@@ -265,10 +265,10 @@ mkpkg: Make or update an object library or package
   Sometimes it is necessary or desirable to break the library member list up
   into separate modules within the same mkpkg-file, e.g., to temporarily
   change the value of the symbol XFLAGS when compiling certain modules.
-  To do this use the <tt>"@"</tt> indirection operator in the primary module list to
+  To do this use the <span style="font-family: monospace;">"@"</span> indirection operator in the primary module list to
   reference a named sublist, as in the example below.  Normal indirection
   cannot be used unless the sublist resides in a subdirectory or in a different
-  file in the current directory, e.g., <tt>"@./mki2"</tt>, since a single mkpkg-file
+  file in the current directory, e.g., <span style="font-family: monospace;">"@./mki2"</span>, since a single mkpkg-file
   cannot contain two modules with the same name.  The same restrictions apply
   to the <i>$update</i> operator.
   </p>
@@ -287,7 +287,7 @@ mkpkg: Make or update an object library or package
   </pre>
   <p>
   In the example above five object modules are to be updated in the library
-  <tt>"libpkg.a"</tt>.  The files listed in module <tt>"i2"</tt>, if out of date, will be compiled
+  <span style="font-family: monospace;">"libpkg.a"</span>.  The files listed in module <span style="font-family: monospace;">"i2"</span>, if out of date, will be compiled
   with the nonstandard XFLAGS (compiler flags) specified by the <i>$set</i>
   statement shown.
   </p>
@@ -322,17 +322,17 @@ mkpkg: Make or update an object library or package
   affect higher level modules.  A local symbol may redefine a previously
   defined symbol.  The IRAF and host system environment is treated as an
   extension of the <b>mkpkg</b> symbol table, i.e., a logical directory such
-  as <tt>"iraf"</tt> may be referenced like a locally defined symbol.
+  as <span style="font-family: monospace;">"iraf"</span> may be referenced like a locally defined symbol.
   </p>
   <p>
   Macro replacement occurs only when explicitly indicated in the input text,
   as in the following example, which prints the pathname of the
   <b>dev$graphcap</b> file on the <b>mkpkg</b> standard output.  The sequence
-  <tt>"$("</tt> triggers macro substitution.  The value of a symbol may be obtained
+  <span style="font-family: monospace;">"$("</span> triggers macro substitution.  The value of a symbol may be obtained
   interactively from the standard input by adding a question mark after the
-  left parenthesis, i.e., <tt>"$(?terminal)"</tt> (this does not work with the -f stdin
+  left parenthesis, i.e., <span style="font-family: monospace;">"$(?terminal)"</span> (this does not work with the -f stdin
   flag).  The contents of a file may be included using the notation
-  <tt>"$(@file)"</tt>.   Note that case is ignored in macro names; by convention,
+  <span style="font-family: monospace;">"$(@file)"</span>.   Note that case is ignored in macro names; by convention,
   logical directories are normally given in lower case, and locally defined
   symbols in upper case.
   </p>
@@ -363,8 +363,8 @@ mkpkg: Make or update an object library or package
   <!-- Sec='DESCRIPTION' Level=1 Label='' Line='\fB$include\fR filename' -->
   <dd>Read commands (e.g., <b>$set</b> directives) from the named include file.
   The include filename may be any legal virtual filename, but only the
-  major logical directories are recognized, e.g., <tt>"iraf$"</tt>, <tt>"host$"</tt>, <tt>"hlib$"</tt>,
-  <tt>"lib$"</tt>, <tt>"pkg$"</tt>, and so on.
+  major logical directories are recognized, e.g., <span style="font-family: monospace;">"iraf$"</span>, <span style="font-family: monospace;">"host$"</span>, <span style="font-family: monospace;">"hlib$"</span>,
+  <span style="font-family: monospace;">"lib$"</span>, <span style="font-family: monospace;">"pkg$"</span>, and so on.
   </dd>
   </dl>
   </dd>
@@ -373,7 +373,7 @@ mkpkg: Make or update an object library or package
   The use of the <b>$set</b> directive is illustrated in the example below.
   Note the doubling of the preprocessor meta-character to avoid macro expansion
   when entering the value of the GEN macro into the symbol table.  The sequence
-  <tt>"$$"</tt> is replaced by a single <tt>"$"</tt> whenever it is encountered in the input
+  <span style="font-family: monospace;">"$$"</span> is replaced by a single <span style="font-family: monospace;">"$"</span> whenever it is encountered in the input
   stream.
   </p>
   <pre>
@@ -387,9 +387,9 @@ mkpkg: Make or update an object library or package
   </p>
   <p>
       Conditional control flow is implemented by the <b>$if</b> directives
-  introduced in the last example and described below.  The character <tt>"n"</tt> may
-  be inserted after the <tt>"$if"</tt> prefix of any directive to negate the sense of
-  the test, e.g., <tt>"$ifndef"</tt> tests whether the named symbol does not exist.
+  introduced in the last example and described below.  The character <span style="font-family: monospace;">"n"</span> may
+  be inserted after the <span style="font-family: monospace;">"$if"</span> prefix of any directive to negate the sense of
+  the test, e.g., <span style="font-family: monospace;">"$ifndef"</span> tests whether the named symbol does not exist.
   Nesting is permitted.
   </p>
   <dl>
@@ -447,7 +447,7 @@ mkpkg: Make or update an object library or package
   <!-- Sec='DESCRIPTION' Level=1 Label='' Line='\fB$else\fR' -->
   <dd><br>
   Marks the <i>else</i> clause of an <i>if</i> statement.  The <i>else-if</i>
-  construct is implemented as <tt>"$else $if"</tt>, i.e., as a combination of the two
+  construct is implemented as <span style="font-family: monospace;">"$else $if"</span>, i.e., as a combination of the two
   more primitive constructs.
   </dd>
   </dl>
@@ -493,7 +493,7 @@ mkpkg: Make or update an object library or package
   <dd><br>
   Call the named mkpkg-file module as a subroutine.  In most cases the called
   module will be in the current mkpkg-file, but the full module name syntax
-  permits the module to be in any file of any subdirectory (<tt>"./file"</tt> references
+  permits the module to be in any file of any subdirectory (<span style="font-family: monospace;">"./file"</span> references
   a different file in the current directory).  Arguments may be passed to
   the called module using the symbol definition facility; any symbols
   defined in this fashion are available to any modules called in turn by
@@ -549,8 +549,8 @@ mkpkg: Make or update an object library or package
   makes the file accessible as if it were in the current directory; checkout
   is implemented either as a symbolic link or as a physical file copy depending
   upon the host system.  The referenced directory may be a logical directory,
-  e.g., <tt>"lib$"</tt>, or a path, e.g, <tt>"pkg$images/"</tt>.  Checkout is not disabled by
-  the <tt>"-n"</tt> flag.
+  e.g., <span style="font-family: monospace;">"lib$"</span>, or a path, e.g, <span style="font-family: monospace;">"pkg$images/"</span>.  Checkout is not disabled by
+  the <span style="font-family: monospace;">"-n"</span> flag.
   </dd>
   </dl>
   <dl>
@@ -559,7 +559,7 @@ mkpkg: Make or update an object library or package
   <dd><br>
   Check the named file back into the indicated directory.  The checkin operation
   is implemented either as a remove link or copy and delete depending upon the
-  host system.  Checkin is not disabled by the <tt>"-n"</tt> flag.
+  host system.  Checkin is not disabled by the <span style="font-family: monospace;">"-n"</span> flag.
   </dd>
   </dl>
   <dl>
@@ -568,7 +568,7 @@ mkpkg: Make or update an object library or package
   <dd><br>
   Make a copy <i>fileb</i> of the existing file <i>filea</i>.  On a UNIX host
   the copy operation will preserve the file modify date if the file is a library
-  (to avoid the <tt>"symbol table out of date"</tt> syndrome).
+  (to avoid the <span style="font-family: monospace;">"symbol table out of date"</span> syndrome).
   </dd>
   </dl>
   <dl>
@@ -593,7 +593,7 @@ mkpkg: Make or update an object library or package
   Call XC with the given argument list to link the indicated files and libraries.
   The value of the symbol LFLAGS (default value the null string) is automatically
   inserted at the beginning of the command line.  This is equivalent to
-  <tt>"!xc $(LFLAGS) ..."</tt>.
+  <span style="font-family: monospace;">"!xc $(LFLAGS) ..."</span>.
   </dd>
   </dl>
   <dl>
@@ -635,7 +635,7 @@ mkpkg: Make or update an object library or package
   The special file list makes it possible to flag arbitrary files for special
   processing, without having to modify the standard software distribution.
   In the IRAF system, the special file list is defined in the file
-  <tt>"hlib$mkpkg.sf"</tt> which is included automatically by <tt>"hlib$mkpkg.inc"</tt> whenever
+  <span style="font-family: monospace;">"hlib$mkpkg.sf"</span> which is included automatically by <span style="font-family: monospace;">"hlib$mkpkg.inc"</span> whenever
   <i>mkpkg</i> is run.
   The syntax of a <i>filelist</i> entry is as follows:
   	modname source_file mkobj_command
@@ -644,7 +644,7 @@ mkpkg: Make or update an object library or package
   pathname of the source file to be used in lieu of the standard portable
   source file <i>modname</i>, and <i>mkobj_command</i> is the <i>mkpkg</i> command
   (e.g., $xc or an OS escape) to be executed to compile the named module.
-  The character <tt>"&amp;"</tt> appearing in either the source file name or mkobj command
+  The character <span style="font-family: monospace;">"&amp;"</span> appearing in either the source file name or mkobj command
   is replaced by <i>modname</i>.  If the <i>mkobj_command</i> is omitted the
   specified source file will be compiled with $XC using the current value of
   XFLAGS.

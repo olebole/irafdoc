@@ -32,14 +32,14 @@ findthresh: Estimate a CCD's sky noise from the gain and readnoise
   </dd>
   </dl>
   <dl>
-  <dt><b>images = <tt>""</tt></b></dt>
+  <dt><b>images = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images = ""' -->
-  <dd>If not NULL (<tt>""</tt>) and if <b>data</b> is not specified, this is a list of
+  <dd>If not NULL (<span style="font-family: monospace;">""</span>) and if <b>data</b> is not specified, this is a list of
   images whose random background error per pixel is to be estimated.
   </dd>
   </dl>
   <dl>
-  <dt><b>section = <tt>"[*,*]"</tt></b></dt>
+  <dt><b>section = <span style="font-family: monospace;">"[*,*]"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='section' Line='section = "[*,*]"' -->
   <dd>The selected image section for the statistics.  This should be chosen
   to exclude bad columns or rows, cosmic rays, and other blemishes.
@@ -68,14 +68,14 @@ findthresh: Estimate a CCD's sky noise from the gain and readnoise
   </dd>
   </dl>
   <dl>
-  <dt><b>coaddtype = <tt>"average"</tt></b></dt>
+  <dt><b>coaddtype = <span style="font-family: monospace;">"average"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coaddtype' Line='coaddtype = "average"' -->
   <dd>For coadded frames (<b>nframes</b> &gt; 1) the type of combination
-  that was done, either <tt>"average"</tt> or <tt>"sum"</tt>.
+  that was done, either <span style="font-family: monospace;">"average"</span> or <span style="font-family: monospace;">"sum"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>center = <tt>"mean"</tt></b></dt>
+  <dt><b>center = <span style="font-family: monospace;">"mean"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='center' Line='center = "mean"' -->
   <dd>The statistical measure of central tendency that is used to estimate
   the data level of each image.  This can have the values:  <b>mean</b>,

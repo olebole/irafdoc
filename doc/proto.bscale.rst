@@ -36,24 +36,24 @@ bscale: Linearly transform the intensities of a list of images
   </dd>
   </dl>
   <dl>
-  <dt><b>bzero = <tt>"0."</tt></b></dt>
+  <dt><b>bzero = <span style="font-family: monospace;">"0."</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='bzero' Line='bzero = "0."' -->
   <dd>The zero point to be subtracted before applying the scale factor.
-  The options are a numerical value, <tt>"mean"</tt>, <tt>"median"</tt>, or <tt>"mode"</tt>.
+  The options are a numerical value, <span style="font-family: monospace;">"mean"</span>, <span style="font-family: monospace;">"median"</span>, or <span style="font-family: monospace;">"mode"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>bscale = <tt>"1."</tt></b></dt>
+  <dt><b>bscale = <span style="font-family: monospace;">"1."</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='bscale' Line='bscale = "1."' -->
   <dd>The scale factor to be applied.  The options are a numerical value,
-  <tt>"mean"</tt>, <tt>"median"</tt>, or <tt>"mode"</tt>.
+  <span style="font-family: monospace;">"mean"</span>, <span style="font-family: monospace;">"median"</span>, or <span style="font-family: monospace;">"mode"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>section = <tt>""</tt></b></dt>
+  <dt><b>section = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='section' Line='section = ""' -->
   <dd>The image section to be used for computing the image statistics.  If section
-  is <tt>""</tt>, <i>step</i> is used to define the default image section. <i>Section</i>
+  is <span style="font-family: monospace;">""</span>, <i>step</i> is used to define the default image section. <i>Section</i>
   is used to confine the computation of the mean, median, and mode
   to a specific region of the image.
   </dd>
@@ -71,13 +71,13 @@ bscale: Linearly transform the intensities of a list of images
   </dd>
   </dl>
   <dl>
-  <dt><b>upper = <tt>"INDEF"</tt></b></dt>
+  <dt><b>upper = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='upper' Line='upper = "INDEF"' -->
   <dd>Upper intensity limit to be used for computing the mean, median, and mode.
   </dd>
   </dl>
   <dl>
-  <dt><b>lower = <tt>"INDEF"</tt></b></dt>
+  <dt><b>lower = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lower' Line='lower = "INDEF"' -->
   <dd>Lower intensity limit to be used for computing the mean, median, and mode.
   </dd>

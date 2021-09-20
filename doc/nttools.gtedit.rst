@@ -36,7 +36,7 @@ gtedit: Graphically edit a table.
   <p>
   The rows that are plotted can be selected using the :x and :y
   commands to specify columns for the X and Y axes. Points that
-  are to be deleted will be marked with an <tt>"x"</tt> (this information
+  are to be deleted will be marked with an <span style="font-family: monospace;">"x"</span> (this information
   is retained if columns change).
   </p>
   <p>
@@ -48,7 +48,7 @@ gtedit: Graphically edit a table.
   3) Delete all points on one side of the cursor or line segment
   </pre>
   <p>
-  You can also toggle between <tt>"delete mode"</tt> and <tt>"undelete mode"</tt>. When
+  You can also toggle between <span style="font-family: monospace;">"delete mode"</span> and <span style="font-family: monospace;">"undelete mode"</span>. When
   you are in undelete mode, any previously-deleted points that you
   selected will be unmarked.
   </p>
@@ -73,7 +73,7 @@ gtedit: Graphically edit a table.
   h	print out the column names of the input table
   l	delete all points with X values less than the cursor X position
   p	replot the graph possibly using new data columns
-  q	quit and do not save changes made since the last <tt>'f'</tt>
+  q	quit and do not save changes made since the last <span style="font-family: monospace;">'f'</span>
   r	delete all points with X values greater than the cursor X position
   s	mark one end of a line segment
   t	delete all points with Y values greater than the cursor Y position
@@ -108,13 +108,13 @@ gtedit: Graphically edit a table.
   </dd>
   </dl>
   <dl>
-  <dt><b>(device = <tt>"stdgraph"</tt>)</b></dt>
+  <dt><b>(device = <span style="font-family: monospace;">"stdgraph"</span>)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(device = "stdgraph")' -->
   <dd>The standard graphics device.
   </dd>
   </dl>
   <dl>
-  <dt><b>(commands = <tt>""</tt>)</b></dt>
+  <dt><b>(commands = <span style="font-family: monospace;">""</span>)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(commands = "")' -->
   <dd>The graphics cursor.
   </dd>
@@ -127,34 +127,30 @@ gtedit: Graphically edit a table.
   </dd>
   </dl>
   <dl>
-  <dt><b>(output = <tt>""</tt>)</b></dt>
+  <dt><b>(output = <span style="font-family: monospace;">""</span>)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(output = "")' -->
   <dd>The name of the output table if the input table is not edited inplace. If
   inplace = no then output should be a valid filename.
   </dd>
   </dl>
   <dl>
-  <dt><b>(reject = <tt>""</tt>)</b></dt>
+  <dt><b>(reject = <span style="font-family: monospace;">""</span>)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(reject = "")' -->
   <dd>If this parameter contains a valid filename then this table will contain
   the points which were deleted using this task.
   </dd>
   </dl>
   <dl>
-  <dt><b>(gtpar = <tt>""</tt>) [pset]</b></dt>
+  <dt><b>(gtpar = <span style="font-family: monospace;">""</span>) [pset]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(gtpar = "") [pset]' -->
   <dd>The name of the pset containing the parameters which describe the plot
   attributes.
-  </dd>
-  </dl>
   <!-- EndSection:   'PARAMETERS' -->
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
-  <p>
   1. Edit a table containing the output photometry from DAOPHOT. 
   Initially plot the magnitude (MAG) versus the error in the magnitude (MAGERR)
   to decide which points to delete.
-  </p>
   <pre>
        st&gt; gtedit m31.mag MAG MERR
   </pre>
@@ -164,9 +160,7 @@ gtedit: Graphically edit a table.
   <!-- EndSection:   'BUGS' -->
   <h3>References</h3>
   <!-- BeginSection: 'REFERENCES' -->
-  <p>
   This task was written by Dennis Crabtree.
-  </p>
   <!-- EndSection:   'REFERENCES' -->
   <h3>See also</h3>
   <!-- BeginSection: 'SEE ALSO' -->

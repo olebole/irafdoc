@@ -88,7 +88,7 @@ rmfiles: Find/delete files in subdirectories
   <dl>
   <dt><b>extns</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='extns' Line='extns' -->
-  <dd>A list of filename extensions delimited by spaces, e.g., <tt>".a .o .e .hlp"</tt>.
+  <dd>A list of filename extensions delimited by spaces, e.g., <span style="font-family: monospace;">".a .o .e .hlp"</span>.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -98,7 +98,7 @@ rmfiles: Find/delete files in subdirectories
   The <i>rmfiles</i> utility is used to delete (or list) files in one or more
   directory trees.  If only one directory tree is to be pruned the necessary
   instructions can be entered on the command line, otherwise a program file
-  must be used.  When developing a program file, a dry run using the <tt>"-n"</tt>
+  must be used.  When developing a program file, a dry run using the <span style="font-family: monospace;">"-n"</span>
   switch is recommended to see what files will be deleted.
   </p>
   <p>
@@ -132,7 +132,7 @@ rmfiles: Find/delete files in subdirectories
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. Delete all .o, .e, .a, and .hd files in the directory <tt>"iraf$pkg"</tt>.
+  1. Delete all .o, .e, .a, and .hd files in the directory <span style="font-family: monospace;">"iraf$pkg"</span>.
   Print the names of the files as they are deleted.  Note that one must
   move to the directory containing the directory to be pruned before running
   <i>rmfiles</i>.
@@ -142,7 +142,7 @@ rmfiles: Find/delete files in subdirectories
   	cl&gt; rmfiles -v pkg .o .e .a .hd
   </pre>
   <p>
-  2. Strip the entire IRAF system, using the program in file <tt>"hlib$stripper"</tt>.
+  2. Strip the entire IRAF system, using the program in file <span style="font-family: monospace;">"hlib$stripper"</span>.
   The use of the $ in the filename here could cause problems on some systems
   since <i>rmfiles</i> is a foreign task.
   </p>

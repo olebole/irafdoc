@@ -29,7 +29,7 @@ listpixels: Convert an image section into a list of pixels
   </dd>
   </dl>
   <dl>
-  <dt><b>wcs = <tt>"logical"</tt></b></dt>
+  <dt><b>wcs = <span style="font-family: monospace;">"logical"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcs' Line='wcs = "logical"' -->
   <dd>The world coordinate system to be used for coordinate output. The following
   standard systems are defined.
@@ -71,7 +71,7 @@ listpixels: Convert an image section into a list of pixels
   </dd>
   </dl>
   <dl>
-  <dt><b>formats = <tt>""</tt></b></dt>
+  <dt><b>formats = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='formats' Line='formats = ""' -->
   <dd>The default output formats for the pixel coordinates, one format
   per axis, with the individual formats separated by whitespace .
@@ -100,10 +100,10 @@ listpixels: Convert an image section into a list of pixels
   <h3>Formats</h3>
   <!-- BeginSection: 'FORMATS' -->
   <p>
-  A  format  specification has the form <tt>"%w.dCn"</tt>, where w is the field
+  A  format  specification has the form <span style="font-family: monospace;">"%w.dCn"</span>, where w is the field
   width, d is the number of decimal places or the number of digits  of
   precision,  C  is  the  format  code,  and  n is radix character for
-  format code <tt>"r"</tt> only.  The w and d fields are optional.  The  format
+  format code <span style="font-family: monospace;">"r"</span> only.  The w and d fields are optional.  The  format
   codes C are as follows:
       
   </p>

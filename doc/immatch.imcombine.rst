@@ -25,14 +25,14 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   <dl>
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
-  <dd>List of input images to combine.  If the <i>project</i> parameter is <tt>"no"</tt>
+  <dd>List of input images to combine.  If the <i>project</i> parameter is <span style="font-family: monospace;">"no"</span>
   then all input images must have the same dimensionality though they may
   be of different sizes.  Otherwise each input image is handled separately
   and they may have different dimensionalities.
   </dd>
   </dl>
   <p>
-  When the <i>project</i> parameter is <tt>"no"</tt> all the input images are combined
+  When the <i>project</i> parameter is <span style="font-family: monospace;">"no"</span> all the input images are combined
   into a single output file.  In this case the following parameters specify
   only a single file name.  Otherwise each input image is combined by
   projecting (combining across) the highest dimension to produce a lower
@@ -47,14 +47,14 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   </dd>
   </dl>
   <dl>
-  <dt><b>headers = <tt>""</tt> (optional)</b></dt>
+  <dt><b>headers = <span style="font-family: monospace;">""</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='headers' Line='headers = "" (optional)' -->
   <dd>Optional output multiextension FITS file(s).  The extensions are dataless
   headers from each input image.
   </dd>
   </dl>
   <dl>
-  <dt><b>bpmasks = <tt>""</tt> (optional)</b></dt>
+  <dt><b>bpmasks = <span style="font-family: monospace;">""</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='bpmasks' Line='bpmasks = "" (optional)' -->
   <dd>Optional output bad pixel mask(s) with good values of 0 and bad values of
   1.  Output pixels are marked as bad when no input pixels contributed to the
@@ -63,7 +63,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   </dd>
   </dl>
   <dl>
-  <dt><b>rejmask = <tt>""</tt> (optional)</b></dt>
+  <dt><b>rejmask = <span style="font-family: monospace;">""</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rejmask' Line='rejmask = "" (optional)' -->
   <dd>Optional output mask file(s) identifying rejected or excluded pixels.  The
   pixel mask is the size of the output image but there is one extra dimension
@@ -77,14 +77,14 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   </dd>
   </dl>
   <dl>
-  <dt><b>nrejmasks = <tt>""</tt> (optional)</b></dt>
+  <dt><b>nrejmasks = <span style="font-family: monospace;">""</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nrejmasks' Line='nrejmasks = "" (optional)' -->
   <dd>Optional output pixel mask(s) giving the number of input pixels rejected or
   excluded from the input images.
   </dd>
   </dl>
   <dl>
-  <dt><b>expmasks = <tt>""</tt> (optional)</b></dt>
+  <dt><b>expmasks = <span style="font-family: monospace;">""</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='expmasks' Line='expmasks = "" (optional)' -->
   <dd>Optional output exposure mask(s) giving the sum of the exposure values of
   the input images with non-zero weights that contributed to that pixel.
@@ -97,7 +97,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   </dd>
   </dl>
   <dl>
-  <dt><b>sigma = <tt>""</tt> (optional)</b></dt>
+  <dt><b>sigma = <span style="font-family: monospace;">""</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sigma' Line='sigma = "" (optional)' -->
   <dd>Optional output sigma image(s).  The sigma is the standard deviation,
   corrected for a finite population, of the input pixel values (excluding
@@ -105,28 +105,28 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   </dd>
   </dl>
   <dl>
-  <dt><b>imcmb = <tt>"$I"</tt> (optional)</b></dt>
+  <dt><b>imcmb = <span style="font-family: monospace;">"$I"</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='imcmb' Line='imcmb = "$I" (optional)' -->
   <dd>A keyword in the input images that is copied
   to one of the IMCMBnnn keywords in the output image.  A null string
   does not set the IMCMBnnn keywords nor deletes any existing keywords.
   Any other value will delete existing keywords before creating new ones.
-  The special value <tt>"$I"</tt> specifies the basename of the input image name.
+  The special value <span style="font-family: monospace;">"$I"</span> specifies the basename of the input image name.
   If a keyword is specified that does not exist in the input image(s) then
   no ICMB keyword will be produced; it is not a error for the keyword to
   not exist.
   </dd>
   </dl>
   <dl>
-  <dt><b>logfile = <tt>"STDOUT"</tt> (optional)</b></dt>
+  <dt><b>logfile = <span style="font-family: monospace;">"STDOUT"</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "STDOUT" (optional)' -->
   <dd>Optional output log file.  If no file is specified then no log information is
-  produced.  The special filename <tt>"STDOUT"</tt> prints log information to the
+  produced.  The special filename <span style="font-family: monospace;">"STDOUT"</span> prints log information to the
   terminal.
   </dd>
   </dl>
   <dl>
-  <dt><b>combine = <tt>"average"</tt> (average|median|lmedian|sum|quadrature|nmodel)</b></dt>
+  <dt><b>combine = <span style="font-family: monospace;">"average"</span> (average|median|lmedian|sum|quadrature|nmodel)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='combine' Line='combine = "average" (average|median|lmedian|sum|quadrature|nmodel)' -->
   <dd>Type of combining operation performed on the final set of pixels (after
   offsetting, masking, thresholding, and rejection).  The choices are:
@@ -139,17 +139,17 @@ imcombine: Combine images pixel-by-pixel using various algorithms
        nmodel - weighted quadrature average of noise model values
   </pre>
   The details of each choice is given in the DESCRIPTION.
-  Note that if weights are used then the weighted <tt>"sum"</tt> is the same as
-  the weighted <tt>"average"</tt> since the weights are normalized to unit total weight.
-  The <tt>"lmedian"</tt> option is intended for minimizing the effects of cosmic rays
+  Note that if weights are used then the weighted <span style="font-family: monospace;">"sum"</span> is the same as
+  the weighted <span style="font-family: monospace;">"average"</span> since the weights are normalized to unit total weight.
+  The <span style="font-family: monospace;">"lmedian"</span> option is intended for minimizing the effects of cosmic rays
   when there are more than two images but some pixels may only have two
-  contributing images.  The <tt>"quadrature"</tt> and <tt>"nmodel"</tt> options are used
+  contributing images.  The <span style="font-family: monospace;">"quadrature"</span> and <span style="font-family: monospace;">"nmodel"</span> options are used
   for error propagation either with input sigma images (quadrature) or where the
   pixel sigmas may be computed by the noise model used by this task (nmodel).
   </dd>
   </dl>
   <dl>
-  <dt><b>reject = <tt>"none"</tt> (none|minmax|ccdclip|crreject|sigclip|avsigclip|pclip)</b></dt>
+  <dt><b>reject = <span style="font-family: monospace;">"none"</span> (none|minmax|ccdclip|crreject|sigclip|avsigclip|pclip)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='reject' Line='reject = "none" (none|minmax|ccdclip|crreject|sigclip|avsigclip|pclip)' -->
   <dd>Type of rejection operation performed on the pixels remaining after offsetting,
   masking and thresholding.  The algorithms are described in the
@@ -169,25 +169,25 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   <dt><b>project = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='project' Line='project = no' -->
   <dd>Project (combine) across the highest dimension of the input images?  If
-  <tt>"no"</tt> then all  the input images are combined to a single output image.  If
-  <tt>"yes"</tt> then the highest dimension elements of each input image are combined to
+  <span style="font-family: monospace;">"no"</span> then all  the input images are combined to a single output image.  If
+  <span style="font-family: monospace;">"yes"</span> then the highest dimension elements of each input image are combined to
   an output image and optional pixel list and sigma images.  Each element of
   the highest dimension may have a separate offset.
   </dd>
   </dl>
   <dl>
-  <dt><b>outtype = <tt>"real"</tt> (none|short|ushort|integer|long|real|double)</b></dt>
+  <dt><b>outtype = <span style="font-family: monospace;">"real"</span> (none|short|ushort|integer|long|real|double)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtype' Line='outtype = "real" (none|short|ushort|integer|long|real|double)' -->
-  <dd>Output image pixel datatype.  The pixel datatypes are <tt>"double"</tt>, <tt>"real"</tt>,
-  <tt>"long"</tt>, <tt>"integer"</tt>, unsigned short <tt>"ushort"</tt>, and <tt>"short"</tt> with highest
-  precedence first.  If <tt>"none"</tt> is specified then the highest precedence
+  <dd>Output image pixel datatype.  The pixel datatypes are <span style="font-family: monospace;">"double"</span>, <span style="font-family: monospace;">"real"</span>,
+  <span style="font-family: monospace;">"long"</span>, <span style="font-family: monospace;">"integer"</span>, unsigned short <span style="font-family: monospace;">"ushort"</span>, and <span style="font-family: monospace;">"short"</span> with highest
+  precedence first.  If <span style="font-family: monospace;">"none"</span> is specified then the highest precedence
   datatype of the input images is used.  When there is a mixture of
   short and unsigned short images the highest precedence become integer.
   The datatypes may be abbreviated to a single character.
   </dd>
   </dl>
   <dl>
-  <dt><b>outlimits = <tt>""</tt></b></dt>
+  <dt><b>outlimits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outlimits' Line='outlimits = ""' -->
   <dd>Output region limits specified as pairs of whitespace separated values.
   The first two numbers are the limits along the first output image dimension,
@@ -200,17 +200,17 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   </dd>
   </dl>
   <dl>
-  <dt><b>offsets = <tt>"none"</tt> (none|wcs|world|physical|grid|&lt;filename&gt;)</b></dt>
+  <dt><b>offsets = <span style="font-family: monospace;">"none"</span> (none|wcs|world|physical|grid|&lt;filename&gt;)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='offsets' Line='offsets = "none" (none|wcs|world|physical|grid|&lt;filename&gt;)' -->
   <dd>Integer offsets to add to each image axes.  The options are:
   <dl>
-  <dt><b><tt>"none"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"none"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"none"' -->
   <dd>No offsets are applied.
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"wcs"</tt> or <tt>"world"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"wcs"</span> or <span style="font-family: monospace;">"world"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"wcs" or "world"' -->
   <dd>The world coordinate system (wcs) in the image is used to derive the
   offsets.  The nearest integer offset that matches the world coordinate
@@ -218,21 +218,21 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"physical"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"physical"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"physical"' -->
   <dd>The physical coordinate system defined by the IRAF LTM/LTV keywords
   define the offsets.
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"grid"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"grid"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"grid"' -->
   <dd>A uniform grid of offsets is specified by a string of the form
   <pre>
   	grid [n1] [s1] [n2] [s2] ...
   </pre>
   where ni is the number of images in dimension i and si is the step
-  in dimension i.  For example <tt>"grid 5 100 5 100"</tt> specifies a 5x5
+  in dimension i.  For example <span style="font-family: monospace;">"grid 5 100 5 100"</span> specifies a 5x5
   grid with origins offset by 100 pixels.
   </dd>
   </dl>
@@ -247,7 +247,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   </dd>
   </dl>
   <dl>
-  <dt><b>masktype = <tt>"none"</tt></b></dt>
+  <dt><b>masktype = <span style="font-family: monospace;">"none"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='masktype' Line='masktype = "none"' -->
   <dd>Type of pixel masking to use.  The choices are
   <pre>
@@ -258,26 +258,26 @@ imcombine: Combine images pixel-by-pixel using various algorithms
        goodbits - good pixels defined by maskvalue parameter
         badbits - bad pixels defined by maskvalue parameter
   </pre>
-  Except for <tt>"none"</tt>, these choices use the mask specified by the header
+  Except for <span style="font-family: monospace;">"none"</span>, these choices use the mask specified by the header
   keyword BPM.  To use a different keyword to specify the mask the syntax
   is
   <pre>
     !&lt;keyword&gt; [goodvalue|badvalue|novalue|goodbits|badbits]
   </pre>
-  where if the optional second word is missing the default is <tt>"goodvalue"</tt>.
-  If <tt>"none"</tt> (or <tt>""</tt>) no pixel masking is done
+  where if the optional second word is missing the default is <span style="font-family: monospace;">"goodvalue"</span>.
+  If <span style="font-family: monospace;">"none"</span> (or <span style="font-family: monospace;">""</span>) no pixel masking is done
   even if an image has an associated  pixel mask.  The masking defines
   pixels to be used (good) and not used (bad).  The types use the
-  <tt>"maskvalue"</tt> parameter to define a single value (either as a number or
+  <span style="font-family: monospace;">"maskvalue"</span> parameter to define a single value (either as a number or
   set of bits) for good or bad and all other values are treated as the
   opposite; i.e. bad or good respectively.
-  The <tt>"novalue"</tt> choice uses 0 as the good value and all other values are
-  bad.  However, the <tt>"maskvalue"</tt> parameter defines a mask value for pixels
+  The <span style="font-family: monospace;">"novalue"</span> choice uses 0 as the good value and all other values are
+  bad.  However, the <span style="font-family: monospace;">"maskvalue"</span> parameter defines a mask value for pixels
   with no value such as occurs from rebinning at the edges or stacking where
   there is no overlap at all.  The distinction pixels is that when a final pixel
-  has no overlapping data because all input pixels have a <tt>"no value"</tt> flag
+  has no overlapping data because all input pixels have a <span style="font-family: monospace;">"no value"</span> flag
   the blank value is output while if there is no good data then pixels which
-  are have other than the <tt>"no value"</tt> flag are combined as if they were good
+  are have other than the <span style="font-family: monospace;">"no value"</span> flag are combined as if they were good
   to produce a representative output value.  An output mask will have a
   value of 0 for pixels where at least one good input value was present,
   a value of 1 when there was no overlapping data, and a value of 2 when
@@ -301,7 +301,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   </dd>
   </dl>
   <dl>
-  <dt><b>scale = <tt>"none"</tt> (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)</b></dt>
+  <dt><b>scale = <span style="font-family: monospace;">"none"</span> (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='scale' Line='scale = "none" (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)' -->
   <dd>Multiplicative image scaling to be applied.  The choices are none, multiply
   by the reciprocal of the mode, median, or mean of the specified statistics
@@ -312,7 +312,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   </dd>
   </dl>
   <dl>
-  <dt><b>zero = <tt>"none"</tt> (none|mode|median|mean|@&lt;file&gt;|!&lt;keyword&gt;)</b></dt>
+  <dt><b>zero = <span style="font-family: monospace;">"none"</span> (none|mode|median|mean|@&lt;file&gt;|!&lt;keyword&gt;)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='zero' Line='zero = "none" (none|mode|median|mean|@&lt;file&gt;|!&lt;keyword&gt;)' -->
   <dd>Additive zero level image shifts to be applied.  The choices are none, add
   the negative of the mode, median, or mean of the specified statistics
@@ -323,7 +323,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   </dd>
   </dl>
   <dl>
-  <dt><b>weight = <tt>"none"</tt> (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)</b></dt>
+  <dt><b>weight = <span style="font-family: monospace;">"none"</span> (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='weight' Line='weight = "none" (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)' -->
   <dd>Weights to be applied during the final averaging.  The choices are none,
   the mode, median, or mean of the specified statistics section, the exposure
@@ -336,13 +336,13 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   </dd>
   </dl>
   <dl>
-  <dt><b>statsec = <tt>""</tt></b></dt>
+  <dt><b>statsec = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='statsec' Line='statsec = ""' -->
   <dd>Section of images to use in computing image statistics for scaling and
   weighting.  If no section is given then the entire region of the input is
   sampled (for efficiency the images are sampled if they are big enough).
   When the images are offset relative to each other one can precede the image
-  section with one of the modifiers <tt>"input"</tt>, <tt>"output"</tt>, <tt>"overlap"</tt>.  The first
+  section with one of the modifiers <span style="font-family: monospace;">"input"</span>, <span style="font-family: monospace;">"output"</span>, <span style="font-family: monospace;">"overlap"</span>.  The first
   interprets the section relative to the input image (which is equivalent to
   not specifying a modifier), the second interprets the section relative to
   the output image, and the last selects the common overlap and any following
@@ -350,7 +350,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   </dd>
   </dl>
   <dl>
-  <dt><b> expname = <tt>""</tt></b></dt>
+  <dt><b> expname = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line=' expname = ""' -->
   <dd>Image header keyword to be used with the exposure scaling and weighting
   options.  Also if an exposure keyword is specified that keyword will be
@@ -372,7 +372,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   <dl>
   <dt><b>nlow = 1,  nhigh = 1 (minmax)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nlow' Line='nlow = 1,  nhigh = 1 (minmax)' -->
-  <dd>The number of low and high pixels to be rejected by the <tt>"minmax"</tt> algorithm.
+  <dd>The number of low and high pixels to be rejected by the <span style="font-family: monospace;">"minmax"</span> algorithm.
   These numbers are converted to fractions of the total number of input images
   so that if no rejections have taken place the specified number of pixels
   are rejected while if pixels have been rejected by masking, thresholding,
@@ -395,8 +395,8 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   <dt><b>mclip = yes (ccdclip, crreject, sigclip, avsigcliip)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='mclip' Line='mclip = yes (ccdclip, crreject, sigclip, avsigcliip)' -->
   <dd>Use the median as the estimate for the true intensity rather than the
-  average with high and low values excluded in the <tt>"ccdclip"</tt>, <tt>"crreject"</tt>,
-  <tt>"sigclip"</tt>, and <tt>"avsigclip"</tt> algorithms?  The median is a better estimator
+  average with high and low values excluded in the <span style="font-family: monospace;">"ccdclip"</span>, <span style="font-family: monospace;">"crreject"</span>,
+  <span style="font-family: monospace;">"sigclip"</span>, and <span style="font-family: monospace;">"avsigclip"</span> algorithms?  The median is a better estimator
   in the presence of data which one wants to reject than the average.
   However, computing the median is slower than the average.
   </dd>
@@ -404,19 +404,19 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   <dl>
   <dt><b>lsigma = 3., hsigma = 3. (ccdclip, crreject, sigclip, avsigclip, pclip)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lsigma' Line='lsigma = 3., hsigma = 3. (ccdclip, crreject, sigclip, avsigclip, pclip)' -->
-  <dd>Low and high sigma clipping factors for the <tt>"ccdclip"</tt>, <tt>"crreject"</tt>, <tt>"sigclip"</tt>,
-  <tt>"avsigclip"</tt>, and <tt>"pclip"</tt> algorithms.  They multiply a <tt>"sigma"</tt> factor
+  <dd>Low and high sigma clipping factors for the <span style="font-family: monospace;">"ccdclip"</span>, <span style="font-family: monospace;">"crreject"</span>, <span style="font-family: monospace;">"sigclip"</span>,
+  <span style="font-family: monospace;">"avsigclip"</span>, and <span style="font-family: monospace;">"pclip"</span> algorithms.  They multiply a <span style="font-family: monospace;">"sigma"</span> factor
   produced by the algorithm to select a point below and above the average or
   median value for rejecting pixels.  The lower sigma is ignored for the
-  <tt>"crreject"</tt> algorithm.
+  <span style="font-family: monospace;">"crreject"</span> algorithm.
   </dd>
   </dl>
   <dl>
-  <dt><b>rdnoise = <tt>"0."</tt>, gain = <tt>"1."</tt>, snoise = <tt>"0."</tt> (ccdclip, crreject)</b></dt>
+  <dt><b>rdnoise = <span style="font-family: monospace;">"0."</span>, gain = <span style="font-family: monospace;">"1."</span>, snoise = <span style="font-family: monospace;">"0."</span> (ccdclip, crreject)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rdnoise' Line='rdnoise = "0.", gain = "1.", snoise = "0." (ccdclip, crreject)' -->
   <dd>Readout noise in electrons, gain in electrons/DN, and sensitivity noise as
-  a fraction.  These parameters are used with the <tt>"ccdclip"</tt> and <tt>"crreject"</tt>
-  algorithms as well as with the <tt>"nmodel"</tt> combining option.  The values may
+  a fraction.  These parameters are used with the <span style="font-family: monospace;">"ccdclip"</span> and <span style="font-family: monospace;">"crreject"</span>
+  algorithms as well as with the <span style="font-family: monospace;">"nmodel"</span> combining option.  The values may
   be either numeric or an image header keyword which contains the value.
   The noise model for a pixel is:
   <pre>
@@ -513,17 +513,17 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   </p>
   <p>
   The input images to be combined are specified by a list.  If the
-  <b>project</b> parameter is <tt>"yes"</tt> then the highest dimension elements of
+  <b>project</b> parameter is <span style="font-family: monospace;">"yes"</span> then the highest dimension elements of
   each input image are combined to make an output image of one lower
   dimension.  There is no limit to the number of elements combined in this
-  case.  If <b>project</b> is <tt>"no"</tt> then the entire input list is combined to
+  case.  If <b>project</b> is <span style="font-family: monospace;">"no"</span> then the entire input list is combined to
   form a single output image.   In this case the images must all have the
   same dimensionality but they may have different sizes.  There is a software
   limit of approximately 4000 images which may be open
   simultaneously.  To combine more than this number the program may either
   create a temporary stacked image, requiring the images to be of the same
-  size, or repeatedly open and close the images.  See the <tt>"Environment
-  Variables"</tt> in the PARAMETERS section.
+  size, or repeatedly open and close the images.  See the <span style="font-family: monospace;">"Environment
+  Variables"</span> in the PARAMETERS section.
   </p>
   <p>
   The output image header is a copy of the first image in the combined set.
@@ -689,7 +689,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   <!-- Sec='DESCRIPTION' Level=0 Label='Output' Line='Output Log File' -->
   <dd>The <i>logfile</i> parameter produces an optional output log file.  If no
   file is specified then no log information is produced.  The special
-  filename <tt>"STDOUT"</tt> prints log information to the terminal.
+  filename <span style="font-family: monospace;">"STDOUT"</span> prints log information to the terminal.
   </dd>
   </dl>
   <p>
@@ -699,7 +699,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   The images to be combined need not be of the same size or overlap.  They
   do have to have the same dimensionality which will also be the dimensionality
   of the output image.  Any dimensional images supported by IRAF may be
-  used.  Note that if the <i>project</i> flag is <tt>"yes"</tt> then the input images
+  used.  Note that if the <i>project</i> flag is <span style="font-family: monospace;">"yes"</span> then the input images
   are the elements of the highest dimension; for example the planes of a
   three dimensional image.
   </p>
@@ -724,13 +724,13 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   </p>
   <p>
   The input image offsets are set using the <i>offset</i> parameter.  There
-  are four ways to specify the offsets.  If the word <tt>"none"</tt> or the empty
-  string <tt>""</tt> are used then all offsets will be zero and all pixels with the
+  are four ways to specify the offsets.  If the word <span style="font-family: monospace;">"none"</span> or the empty
+  string <span style="font-family: monospace;">""</span> are used then all offsets will be zero and all pixels with the
   same coordinates will be combined.  The output image size will be equal to
   the biggest dimensions of the input images.
   </p>
   <p>
-  If <tt>"wcs"</tt> offsets are specified then the world coordinate systems (wcs)
+  If <span style="font-family: monospace;">"wcs"</span> offsets are specified then the world coordinate systems (wcs)
   in the image headers are used to derived the offsets.  The world coordinate
   at the center of the first input image is evaluated.  Then integer pixel
   offsets are determined for each image to bring the same world coordinate
@@ -740,8 +740,8 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   </p>
   <p>
   If the input images have offsets in a regular grid or one wants to make
-  an output image in which the input images are <tt>"mosaiced"</tt> together in
-  a grid then the special offset string  beginning with the word <tt>"grid"</tt>
+  an output image in which the input images are <span style="font-family: monospace;">"mosaiced"</span> together in
+  a grid then the special offset string  beginning with the word <span style="font-family: monospace;">"grid"</span>
   is used.  The format is
   </p>
   <pre>
@@ -749,13 +749,13 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   </pre>
   <p>
   where ni is the number of images in dimension i and si is the step in
-  dimension i.  For example <tt>"grid 5 100 5 100"</tt> specifies a 5x5 grid with
+  dimension i.  For example <span style="font-family: monospace;">"grid 5 100 5 100"</span> specifies a 5x5 grid with
   origins offset by 100 pixels.  Note that one must insure that the input
   images are specified in the correct order.  This may best be accomplished
-  using a <tt>"@"</tt> list.  One useful application of the grid is to make a
+  using a <span style="font-family: monospace;">"@"</span> list.  One useful application of the grid is to make a
   non-overlapping mosaic of a number of images for display purposes.  Suppose
-  there are 16 images which are 100x100.  The offset string <tt>"grid 4 101 4
-  101"</tt> will produce a mosaic with a one pixel border having the value set
+  there are 16 images which are 100x100.  The offset string <span style="font-family: monospace;">"grid 4 101 4
+  101"</span> will produce a mosaic with a one pixel border having the value set
   by <i>blank</i> parameter between the images.
   </p>
   <p>
@@ -763,7 +763,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   in the <i>offset</i> parameter.  (Note that the special file name STDIN
   may be used to type in the values terminated by the end-of-file
   character).  The file consists of a line for each input image.  The lines
-  must be in the same order as the input images and so an <tt>"@"</tt> list may
+  must be in the same order as the input images and so an <span style="font-family: monospace;">"@"</span> list may
   be useful.  The lines consist of whitespace separated offsets one for
   each dimension of the images.  In the first example cited above the
   offset file might contain:
@@ -790,7 +790,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   </pre>
   <p>
   There may be cases where one doesn't want the minimum offsets reset
-  to zero.  If all the offsets are positive and the comment <tt>"# Absolute"</tt>
+  to zero.  If all the offsets are positive and the comment <span style="font-family: monospace;">"# Absolute"</span>
   appears in the offset file then the images will be combined with
   blank values between the first output pixel and the first overlapping
   input pixel.  Continuing with the above example, the file
@@ -803,7 +803,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   </pre>
   <p>
   will have the first pixel of the first image in the 11th pixel of the
-  output image.  Note that there is no way to <tt>"pad"</tt> the other side of
+  output image.  Note that there is no way to <span style="font-family: monospace;">"pad"</span> the other side of
   the output image.
   </p>
   <p>
@@ -824,8 +824,8 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   As an example, consider combining 10 images of size 1000x1000 with offsets
   of 0, 1, ..., 9 along the first dimension.  Because of the offsets the full
   output size is 1010x1000.  To output only the region [1:100,101:200]
-  of this full size the parameter value would be the string <tt>"1 100 101 200"</tt>.
-  Note that if the value was just <tt>"1 100"</tt> then the output region would
+  of this full size the parameter value would be the string <span style="font-family: monospace;">"1 100 101 200"</span>.
+  Note that if the value was just <span style="font-family: monospace;">"1 100"</span> then the output region would
   be [1:100,1:1000].
   </p>
   <p>
@@ -871,7 +871,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   wide which have no overlap.  The reason for wanting to create
   non-overlapping subregions is to simplify creation of the related masks,
   most importantly, the exposure masks.  The <i>outlimits</i> parameter would
-  have the values <tt>"1 5200"</tt>, <tt>"5201 10400"</tt>, <tt>"10401 15600"</tt>, and <tt>"15601 20800"</tt>.
+  have the values <span style="font-family: monospace;">"1 5200"</span>, <span style="font-family: monospace;">"5201 10400"</span>, <span style="font-family: monospace;">"10401 15600"</span>, and <span style="font-family: monospace;">"15601 20800"</span>.
   The second pair of limits is not specified to obtain the full size along
   the second dimension.  Note that the last block will actually be smaller
   than 5200 pixels since the survey is less than 20800 pixels.
@@ -893,17 +893,17 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   are two types of scaling available, a multiplicative intensity scale and an
   additive zero point shift.  The intensity scaling is defined by the
   <i>scale</i> parameter and the zero point shift by the <i>zero</i>
-  parameter.  These parameters may take the values <tt>"none"</tt> for no scaling,
-  <tt>"mode"</tt>, <tt>"median"</tt>, or <tt>"mean"</tt> to scale by statistics of the image pixels,
-  <tt>"exposure"</tt> (for intensity scaling only) to scale by the exposure time
+  parameter.  These parameters may take the values <span style="font-family: monospace;">"none"</span> for no scaling,
+  <span style="font-family: monospace;">"mode"</span>, <span style="font-family: monospace;">"median"</span>, or <span style="font-family: monospace;">"mean"</span> to scale by statistics of the image pixels,
+  <span style="font-family: monospace;">"exposure"</span> (for intensity scaling only) to scale by the exposure time
   keyword in the image header, any other image header keyword specified by
-  the keyword name prefixed by the character <tt>'!'</tt>, and the name of a file
+  the keyword name prefixed by the character <span style="font-family: monospace;">'!'</span>, and the name of a file
   containing the scale factors for the input image prefixed by the
-  character <tt>'@'</tt>.
+  character <span style="font-family: monospace;">'@'</span>.
   </p>
   <p>
   Examples of the possible parameter values are shown below where
-  <tt>"myval"</tt> is the name of an image header keyword and <tt>"scales.dat"</tt> is
+  <span style="font-family: monospace;">"myval"</span> is the name of an image header keyword and <span style="font-family: monospace;">"scales.dat"</span> is
   a text file containing a list of scale factors.
   </p>
   <pre>
@@ -924,11 +924,11 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   	[input|output|overlap] [image section]
   </pre>
   <p>
-  The initial modifier defaults to <tt>"input"</tt> if absent.  The modifiers are useful
-  if the input images have offsets.  In that case <tt>"input"</tt> specifies
-  that the image section refers to each input image, <tt>"output"</tt> specifies
+  The initial modifier defaults to <span style="font-family: monospace;">"input"</span> if absent.  The modifiers are useful
+  if the input images have offsets.  In that case <span style="font-family: monospace;">"input"</span> specifies
+  that the image section refers to each input image, <span style="font-family: monospace;">"output"</span> specifies
   that the image section refers to the output image coordinates, and
-  <tt>"overlap"</tt> specifies the mutually overlapping region of the input images.
+  <span style="font-family: monospace;">"overlap"</span> specifies the mutually overlapping region of the input images.
   In the latter case an image section is ignored.
   </p>
   <p>
@@ -939,7 +939,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   computations as well as during the rejection and combining operations.
   </p>
   <p>
-  The <tt>"exposure"</tt> option in the intensity scaling uses the value of the
+  The <span style="font-family: monospace;">"exposure"</span> option in the intensity scaling uses the value of the
   image header keyword specified by the <i>expname</i> keyword.  As implied
   by the parameter name, this is typically the image exposure time since
   intensity levels are linear with the exposure time in CCD detectors.
@@ -974,7 +974,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   is used as the template header for the combined output image.
   By scaling to this first image this means that flux related keywords,
   such as exposure time and airmass, are representative of the output
-  (except when the <tt>"sum"</tt> option is used).
+  (except when the <span style="font-family: monospace;">"sum"</span> option is used).
   </p>
   <p>
   Scaling affects not only the mean values between images but also the
@@ -988,7 +988,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   changes in the image noise characteristics.
   </p>
   <p>
-  In those algorithms it is possible to eliminate the <tt>"sigma correction"</tt>
+  In those algorithms it is possible to eliminate the <span style="font-family: monospace;">"sigma correction"</span>
   while still using scaling.  The reasons this might be desirable are 1) if
   the scalings are similar the corrections in computing the mean or median
   are important but the sigma corrections may not be important and 2) the
@@ -1006,7 +1006,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   all cases it is set to a very large number.
   </p>
   <p>
-  If the final combining operation is <tt>"average"</tt> then the images may be
+  If the final combining operation is <span style="font-family: monospace;">"average"</span> then the images may be
   weighted during the averaging.  The weights are specified in the same way
   as the scale factors.  In addition the NCOMBINE keyword, if present, will
   be used in the weights.  The weights, scaled to a unit sum, are printed in
@@ -1066,8 +1066,8 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   INPUT PIXEL MASKS
   </p>
   <p>
-  A pixel mask is a type of IRAF file having the extension <tt>".pl"</tt> or
-  a FITS extension of <tt>"type=mask"</tt> which
+  A pixel mask is a type of IRAF file having the extension <span style="font-family: monospace;">".pl"</span> or
+  a FITS extension of <span style="font-family: monospace;">"type=mask"</span> which
   identifies an integer value with each pixel of the images to which it is
   applied.  In future masks may also be stored as special FITS extensions.
   The integer values may denote regions, a weight, a good or bad
@@ -1092,19 +1092,19 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   </p>
   <p>
   If a pixel mask is associated with an image the mask is used when the
-  <i>masktype</i> parameter is set to a value other than <tt>"none"</tt> or <tt>""</tt>.  Note that
-  when it is set to <tt>"none"</tt>, mask information is not used even if it exists for
-  the image.  The values of <i>masktype</i> which apply masks are <tt>"goodvalue"</tt>,
-  <tt>"badvalue"</tt>, <tt>"novalue"</tt>, <tt>"goodbits"</tt>, <tt>"badbits"</tt>, and <tt>"!&lt;keyword&gt;"</tt>.  The last choice
+  <i>masktype</i> parameter is set to a value other than <span style="font-family: monospace;">"none"</span> or <span style="font-family: monospace;">""</span>.  Note that
+  when it is set to <span style="font-family: monospace;">"none"</span>, mask information is not used even if it exists for
+  the image.  The values of <i>masktype</i> which apply masks are <span style="font-family: monospace;">"goodvalue"</span>,
+  <span style="font-family: monospace;">"badvalue"</span>, <span style="font-family: monospace;">"novalue"</span>, <span style="font-family: monospace;">"goodbits"</span>, <span style="font-family: monospace;">"badbits"</span>, and <span style="font-family: monospace;">"!&lt;keyword&gt;"</span>.  The last choice
   allows specifying the keyword whose value is the mask to be used otherwise
-  the keyword <tt>"BPM"</tt> is used.
+  the keyword <span style="font-family: monospace;">"BPM"</span> is used.
   </p>
   <p>
   The <i>masktype</i> choices are used in conjunction with the
-  <i>maskvalue</i> parameter.  When the mask type is <tt>"goodvalue"</tt> or an
+  <i>maskvalue</i> parameter.  When the mask type is <span style="font-family: monospace;">"goodvalue"</span> or an
   explicit keyword is specified without a mask type, the pixels with mask
   values matching the specified value are included in combining and all
-  others are rejected.  For a mask type of <tt>"badvalue"</tt> the pixels with
+  others are rejected.  For a mask type of <span style="font-family: monospace;">"badvalue"</span> the pixels with
   mask values matching the specified value are rejected and all others
   are accepted.  The bit types are useful for selecting a combination of
   attributes in a mask consisting of bit flags.  The mask value is still
@@ -1112,7 +1112,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   the mask file.
   </p>
   <p>
-  The <tt>"novalue"</tt> option differs from the others in that there are three
+  The <span style="font-family: monospace;">"novalue"</span> option differs from the others in that there are three
   classes of mask values and any output pixel mask will have the three
   values 0 for good, 1 for no data, and 2 for bad.  The purpose of this
   option is to produce output values from the input values when there are
@@ -1135,7 +1135,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   </p>
   <p>
   When the number of input images exceeds the maximum number of open files
-  allowed by IRAF and the input images need to be <tt>"stacked"</tt> then the masks
+  allowed by IRAF and the input images need to be <span style="font-family: monospace;">"stacked"</span> then the masks
   are also stacked.  The stacking requires all the images to have the same size.
   </p>
   <p>
@@ -1157,7 +1157,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   <p>
   The <i>reject</i> parameter selects a type of rejection operation to
   be applied to pixels not masked or thresholded.  If no rejection
-  operation is desired the value <tt>"none"</tt> is specified.
+  operation is desired the value <span style="font-family: monospace;">"none"</span> is specified.
   </p>
   <p>
   MINMAX
@@ -1268,7 +1268,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   </p>
   <p>
   CRREJECT
-  This algorithm is identical to <tt>"ccdclip"</tt> except that only pixels above
+  This algorithm is identical to <span style="font-family: monospace;">"ccdclip"</span> except that only pixels above
   the average are rejected based on the <i>hsigma</i> parameter.  This
   is appropriate for rejecting cosmic ray events and works even with
   two images.
@@ -1362,7 +1362,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   This algorithm works well for even a few input images.  It works better if
   the median is used though this is slower than using the average.  Note that
   if the images have a known read out noise and gain (the proportionality
-  factor above) then the <tt>"ccdclip"</tt> algorithm is superior.  The two algorithms
+  factor above) then the <span style="font-family: monospace;">"ccdclip"</span> algorithm is superior.  The two algorithms
   are related in that the average sigma proportionality factor is an estimate
   of the gain.
   </p>
@@ -1381,7 +1381,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   median as the center of the distribution except that, instead of computing
   the sigma of the pixels from the CCD noise parameters or from the data
   values, the width of the distribution is characterized by the difference
-  between the median value and a specified <tt>"percentile"</tt> pixel value.  This
+  between the median value and a specified <span style="font-family: monospace;">"percentile"</span> pixel value.  This
   width is then multiplied by the scale factors <i>lsigma</i> and <i>hsigma</i>
   to define the clipping thresholds above and below the median.  The clipping
   is not iterated.
@@ -1493,7 +1493,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
       sqrt (sum {(wt * sigma)^2}) / sum {wt}
   </pre>
   <p>
-  This is used when the input pixel values represent <tt>"sigmas"</tt>.  This option
+  This is used when the input pixel values represent <span style="font-family: monospace;">"sigmas"</span>.  This option
   is usually a second pass after the input data has been combined.  It is
   important that the input is arranged such that the same scaling and
   pixel rejections are used.  This means that these cannot be given by
@@ -1572,16 +1572,16 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   <dt><b>IMCOMBINE V2.12</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='IMCOMBINE' Line='IMCOMBINE V2.12' -->
   <dd>A number of enhancements for dealing with large numbers of images were
-  made.  Also the masktype option <tt>"!&lt;keyword&gt;"</tt>, where &lt;keyword&gt; is a
+  made.  Also the masktype option <span style="font-family: monospace;">"!&lt;keyword&gt;"</span>, where &lt;keyword&gt; is a
   user specified keyword, was added.
-  The new parameters <tt>"headers"</tt>, <tt>"bpmasks"</tt>, <tt>"rejmasks"</tt>,  <tt>"nrejmasks"</tt>, and
-  <tt>"expmasks"</tt> provide additional types of output.  The old parameters
-  <tt>"rejmask"</tt> and <tt>"plfile"</tt> were removed.  The new <tt>"nrejmasks"</tt> corresponds
-  to the old <tt>"plfile"</tt> and the new <tt>"rejmasks"</tt> corresponds to the old
-  <tt>"rejmask"</tt>.
-  There is a new <tt>"combine"</tt> type <tt>"sum"</tt> for summing instead of averaging the
+  The new parameters <span style="font-family: monospace;">"headers"</span>, <span style="font-family: monospace;">"bpmasks"</span>, <span style="font-family: monospace;">"rejmasks"</span>,  <span style="font-family: monospace;">"nrejmasks"</span>, and
+  <span style="font-family: monospace;">"expmasks"</span> provide additional types of output.  The old parameters
+  <span style="font-family: monospace;">"rejmask"</span> and <span style="font-family: monospace;">"plfile"</span> were removed.  The new <span style="font-family: monospace;">"nrejmasks"</span> corresponds
+  to the old <span style="font-family: monospace;">"plfile"</span> and the new <span style="font-family: monospace;">"rejmasks"</span> corresponds to the old
+  <span style="font-family: monospace;">"rejmask"</span>.
+  There is a new <span style="font-family: monospace;">"combine"</span> type <span style="font-family: monospace;">"sum"</span> for summing instead of averaging the
   final set of offset, scaled, and weighted pixels.
-  there is a new parameter <tt>"outlimits"</tt> to allow output of a subregion of
+  there is a new parameter <span style="font-family: monospace;">"outlimits"</span> to allow output of a subregion of
   the full output.  This is useful for raster surveys with large numbers
   of images.
   Additional keywords may appear in the output headers.
@@ -1617,9 +1617,9 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   <dl>
   <dt><b>IMCOMBINE V2.14</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='IMCOMBINE' Line='IMCOMBINE V2.14' -->
-  <dd>The <tt>"masktype"</tt> parameter has been generalized to allow both using a
+  <dd>The <span style="font-family: monospace;">"masktype"</span> parameter has been generalized to allow both using a
   different keyword for the input mask and choosing the mask method.
-  The <tt>"novalue"</tt> masktype is new and is useful for maintaining a distinction
+  The <span style="font-family: monospace;">"novalue"</span> masktype is new and is useful for maintaining a distinction
   between no data and possibly marginally useful or cosmetically useful
   data.
   </dd>

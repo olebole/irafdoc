@@ -45,7 +45,7 @@ tchsize: Change allocated sizes of various sections of a table.
   <p>
   The input may be a general filename
   template, including wildcard characters or the name of a list file (preceded
-  by an <tt>"@"</tt> sign) containing table names.  The output may be null, a directory
+  by an <span style="font-family: monospace;">"@"</span> sign) containing table names.  The output may be null, a directory
   specification, or a list of table names.  If the output is a list of tables
   then there must be the same number of names in the input and output lists,
   and the names are taken in pairs, one from input and one from output.
@@ -55,7 +55,7 @@ tchsize: Change allocated sizes of various sections of a table.
   <p>
   NOTE: Be careful when using a wildcard for the extension.
   If you have the files 'table.tab' and 'table.lis' in the current directory,
-  for example, then <tt>"tchsize tab* test/"</tt> would crash when trying to open
+  for example, then <span style="font-family: monospace;">"tchsize tab* test/"</span> would crash when trying to open
   'table.lis' as a table.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
@@ -68,7 +68,7 @@ tchsize: Change allocated sizes of various sections of a table.
   </dd>
   </dl>
   <dl>
-  <dt><b>outtable = <tt>""</tt> [file name template]</b></dt>
+  <dt><b>outtable = <span style="font-family: monospace;">""</span> [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable = "" [file name template]' -->
   <dd>Either a null string, a directory name, or a list of output table names.
   </dd>

@@ -45,7 +45,7 @@ wspectext: Convert 1D image spectra to ascii text spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>wformat = <tt>""</tt></b></dt>
+  <dt><b>wformat = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wformat' Line='wformat = ""' -->
   <dd>The wavelength coordinate output format.  If it is undefined the formatting
   option stored with the WCS in the image header is used.  If the WCS
@@ -67,7 +67,7 @@ wspectext: Convert 1D image spectra to ascii text spectra
   </p>
   <p>
   Spectra which are not in 1D images such as multispec format or long slit
-  may first be converted to 1D images using <b>scopy</b> with format=<tt>"onedspec"</tt>.
+  may first be converted to 1D images using <b>scopy</b> with format=<span style="font-family: monospace;">"onedspec"</span>.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Examples</h3>

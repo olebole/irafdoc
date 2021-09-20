@@ -41,8 +41,8 @@ gripes: Send suggestions, complaints, etc. to the system
   <p>
   The <b>gripes</b> task is used to post complaints, suggestions, or any other
   formal or informal comments regarding the IRAF system.  Each gripe is
-  appended to the system gripesfile <tt>"hlib$gripesfile"</tt>, a public file which
-  can be read by anyone by simply typing <tt>"page hlib$gripesfile"</tt> within IRAF.
+  appended to the system gripesfile <span style="font-family: monospace;">"hlib$gripesfile"</span>, a public file which
+  can be read by anyone by simply typing <span style="font-family: monospace;">"page hlib$gripesfile"</span> within IRAF.
   Use <b>tail</b> instead of <b>page</b> to read only the most recent gripes.
   A copy of each gripe is also sent immediately to one or members of the IRAF
   group via electronic mail, to insure that the gripe gets read promptly (this
@@ -51,7 +51,7 @@ gripes: Send suggestions, complaints, etc. to the system
   <p>
   Gripe text is read from the standard input.  A line containing only a period
   terminates the gripe, as does the end of file character (e.g., &lt;ctrl/z&gt;).
-  If the line containing only <tt>"~e"</tt> is entered a text editor will be called up
+  If the line containing only <span style="font-family: monospace;">"~e"</span> is entered a text editor will be called up
   to edit the text of the gripe.
   </p>
   <p>
@@ -69,13 +69,13 @@ gripes: Send suggestions, complaints, etc. to the system
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  The user has discovered some nasty features of the <i>imdelete</i> task
-  and enters the following gripe.  Note the use of the <tt>"."</tt> to terminate
+  and enters the following gripe.  Note the use of the <span style="font-family: monospace;">"."</span> to terminate
   the text.
   </p>
   <pre>
   	cl&gt; gripe
   	Subject: image deletion
-  	Enter text of gripe.  Type &lt;eof&gt; or <tt>'.'</tt> to quit:
+  	Enter text of gripe.  Type &lt;eof&gt; or <span style="font-family: monospace;">'.'</span> to quit:
   
   	IMDEL * will delete non image files as well as images!
   	It should be possible to delete images with the normal

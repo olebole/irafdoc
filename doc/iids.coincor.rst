@@ -40,7 +40,7 @@ coincor: Correct spectra for detector count rates
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>This is the root file name for the corrected spectra.  If no root name
-  is specified (specified with the null string <tt>""</tt>) then the operation
+  is specified (specified with the null string <span style="font-family: monospace;">""</span>) then the operation
   is done in place.
   </dd>
   </dl>
@@ -58,7 +58,7 @@ coincor: Correct spectra for detector count rates
   In the following C(obs) is the observed count rate and C(cor) is the
   corrected count rate.
   <dl>
-  <dt><b><tt>"photo"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"photo"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"photo"' -->
   <dd>Photoelectric photometer with discriminator mode.  The count rate
   correction is
@@ -68,7 +68,7 @@ coincor: Correct spectra for detector count rates
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"iids"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"iids"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"iids"' -->
   <dd>IIDS correction given by
       C(cor) = (-ln(1-C(obs)*deadtime)/deadtime)**power
@@ -81,11 +81,11 @@ coincor: Correct spectra for detector count rates
   <dl>
   <dt><b>deadtime = )_.deadtime</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='deadtime' Line='deadtime = )_.deadtime' -->
-  <dd>For the <tt>"photo"</tt> mode this parameter is the period, in seconds, during
+  <dd>For the <span style="font-family: monospace;">"photo"</span> mode this parameter is the period, in seconds, during
   which no counts can be registered by the detector.  Note that this is
   based on a per pixel basis.  So if the discriminator dead period is of
   order 50 nanoseconds and 2000 pixels are observed per readout, the
-  effective deadtime is about 10E-4 seconds.  For the <tt>"iids"</tt> mode this
+  effective deadtime is about 10E-4 seconds.  For the <span style="font-family: monospace;">"iids"</span> mode this
   parameter defines the sweep time correction and has a value of 1.424E-3
   seconds.
   </dd>

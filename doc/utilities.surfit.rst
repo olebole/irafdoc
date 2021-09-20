@@ -31,7 +31,7 @@ surfit: Fit a surface, z=f(x,y), to a set of x, y, z points
   </dd>
   </dl>
   <dl>
-  <dt><b>image = <tt>""</tt></b></dt>
+  <dt><b>image = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image = ""' -->
   <dd>Optional image name in which to create an evenly sampled image of the
   fitted surface.  If no name is specified a image is not created.  If an
@@ -44,7 +44,7 @@ surfit: Fit a surface, z=f(x,y), to a set of x, y, z points
   </dd>
   </dl>
   <dl>
-  <dt><b>coordinates = <tt>""</tt>, fit = <tt>""</tt></b></dt>
+  <dt><b>coordinates = <span style="font-family: monospace;">""</span>, fit = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coordinates' Line='coordinates = "", fit = ""' -->
   <dd>The first two columns of the text file specified by the coordinates parameter
   are use to supply x and y values which are evaluated by the surface and
@@ -56,7 +56,7 @@ surfit: Fit a surface, z=f(x,y), to a set of x, y, z points
   </dd>
   </dl>
   <dl>
-  <dt><b>function = <tt>"polynomial"</tt> (chebyshev|legendre|polynomial)</b></dt>
+  <dt><b>function = <span style="font-family: monospace;">"polynomial"</span> (chebyshev|legendre|polynomial)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "polynomial" (chebyshev|legendre|polynomial)' -->
   <dd>Surface function type to fit.  The choices are a chebyshev, legendre,
   or simple power series bi-dimensional polynomial.
@@ -69,7 +69,7 @@ surfit: Fit a surface, z=f(x,y), to a set of x, y, z points
   </dd>
   </dl>
   <dl>
-  <dt><b>xterms = <tt>"full"</tt></b></dt>
+  <dt><b>xterms = <span style="font-family: monospace;">"full"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xterms' Line='xterms = "full"' -->
   <dd>The options are:
   <dl>
@@ -96,7 +96,7 @@ surfit: Fit a surface, z=f(x,y), to a set of x, y, z points
   </dd>
   </dl>
   <dl>
-  <dt><b>weighting = <tt>"user"</tt> (uniform|user|statistical|instrumental)</b></dt>
+  <dt><b>weighting = <span style="font-family: monospace;">"user"</span> (uniform|user|statistical|instrumental)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='weighting' Line='weighting = "user" (uniform|user|statistical|instrumental)' -->
   <dd>The type of weighting for the fit. The options are:
   <dl>
@@ -188,8 +188,8 @@ surfit: Fit a surface, z=f(x,y), to a set of x, y, z points
   All computations are done in double precision.
   </p>
   <p>
-  Several polynomial cross terms options are available. Options <tt>"none"</tt>,
-  <tt>"half"</tt>, and <tt>"full"</tt> are illustrated below for a quadratic polynomial in
+  Several polynomial cross terms options are available. Options <span style="font-family: monospace;">"none"</span>,
+  <span style="font-family: monospace;">"half"</span>, and <span style="font-family: monospace;">"full"</span> are illustrated below for a quadratic polynomial in
   x and y.
   </p>
   <pre>
@@ -253,7 +253,7 @@ surfit: Fit a surface, z=f(x,y), to a set of x, y, z points
   fit file are specified.  Note that the input data points are
   always evaluated as part of the standard output but the input
   data file may also be used as a coordinate file if desired.
-  Also the output data file may be specified as <tt>"STDOUT"</tt> to merge
+  Also the output data file may be specified as <span style="font-family: monospace;">"STDOUT"</span> to merge
   this output with the basic results output.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->

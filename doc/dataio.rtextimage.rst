@@ -38,7 +38,7 @@ rtextimage: Convert text files to IRAF images
   </dd>
   </dl>
   <dl>
-  <dt><b>otype = <tt>""</tt></b></dt>
+  <dt><b>otype = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='otype' Line='otype = ""' -->
   <dd>The data type of the output IRAF image pixels.  If left unset and the IRAFTYPE
   keyword is found in the FITS header, output pixels will be of type IRAFTYPE.
@@ -69,7 +69,7 @@ rtextimage: Convert text files to IRAF images
   </dd>
   </dl>
   <dl>
-  <dt><b>dim = <tt>""</tt></b></dt>
+  <dt><b>dim = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dim' Line='dim = ""' -->
   <dd>A string listing the dimension of each axis.  The number of dimensions listed
   equals the number of image dimensions.  This information must be entered unless
@@ -95,8 +95,8 @@ rtextimage: Convert text files to IRAF images
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. Read a file written by <i>wtextimage</i> from the magtape file <tt>"mta[1]"</tt> into
-  the IRAF image <tt>"picture"</tt>.
+  1. Read a file written by <i>wtextimage</i> from the magtape file <span style="font-family: monospace;">"mta[1]"</span> into
+  the IRAF image <span style="font-family: monospace;">"picture"</span>.
   </p>
   <p>
       cl&gt;  rcard mta[1] | rtext out=picture

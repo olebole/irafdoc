@@ -41,7 +41,7 @@ imjoin: N-dimensional image join along arbitrary axis
   </dd>
   </dl>
   <dl>
-  <dt><b>outtype = <tt>""</tt></b></dt>
+  <dt><b>outtype = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtype' Line='outtype = ""' -->
   <dd>Output image datatype.  If not specified, defaults to highest precedence
   input image datatype.

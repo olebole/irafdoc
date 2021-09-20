@@ -29,8 +29,8 @@ mkimsets: Prepare an image set file for input to (mk)(n)obsfile
   <dd>The file(s) containing all the image names and filter ids associated with
   the observations.
   <i>Imlist</i> is a list of APPHOT/DAOPHOT databases if <i>input</i> =
-  <tt>"photfiles"</tt>, a list of images if <i>input</i> = <tt>"images"</tt>, or the name
-  of a user text file if <i>input</i> = <tt>"user"</tt>.
+  <span style="font-family: monospace;">"photfiles"</span>, a list of images if <i>input</i> = <span style="font-family: monospace;">"images"</span>, or the name
+  of a user text file if <i>input</i> = <span style="font-family: monospace;">"user"</span>.
   The default input is a list of APPHOT/DAOPHOT databases.
   </dd>
   </dl>
@@ -54,14 +54,14 @@ mkimsets: Prepare an image set file for input to (mk)(n)obsfile
   </dd>
   </dl>
   <dl>
-  <dt><b>imobsparams = <tt>""</tt></b></dt>
+  <dt><b>imobsparams = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='imobsparams' Line='imobsparams = ""' -->
   <dd>The name of the output image list file containing the image name,
   the filter id,
   and the quantities specified by <i>fields</i>, for each
   unique image referenced in <i>imlist</i>.
   <i>Imobsparams</i> includes changes made by the user if <i>edit</i> is
-  <tt>"yes"</tt>. If <i>imobsparams</i> is <tt>""</tt> the output image list
+  <span style="font-family: monospace;">"yes"</span>. If <i>imobsparams</i> is <span style="font-family: monospace;">""</span> the output image list
   is not saved.
   </dd>
   </dl>
@@ -107,22 +107,22 @@ mkimsets: Prepare an image set file for input to (mk)(n)obsfile
   <dt><b>filter</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='filter' Line='filter' -->
   <dd>The filter id keyword.
-  <i>Filter</i> is always the APPHOT/DAOPHOT database keyword <tt>"IFILTER"</tt>
-  if <i>input</i> is <tt>"photfiles"</tt>,
+  <i>Filter</i> is always the APPHOT/DAOPHOT database keyword <span style="font-family: monospace;">"IFILTER"</span>
+  if <i>input</i> is <span style="font-family: monospace;">"photfiles"</span>,
   the image header keyword which defines the filter id if <i>input</i> is
-  <tt>"images"</tt>, or the number of the column
-  containing the filter id, if <i>input</i> is <tt>"user"</tt>.
+  <span style="font-family: monospace;">"images"</span>, or the number of the column
+  containing the filter id, if <i>input</i> is <span style="font-family: monospace;">"user"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>fields = <tt>""</tt></b></dt>
+  <dt><b>fields = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fields' Line='fields = ""' -->
   <dd>The list of additional fields, besides the image name and filter id,
   to be extracted from <i>imlist</i>, separated by whitespace or commas.
-  If <i>input</i> is <tt>"photfiles"</tt> <i>fields</i> is a list of APPHOT/DAOPHOT
-  keywords including <tt>"itime,xairmass"</tt>; if <i>input</i> is <tt>"images"</tt>
+  If <i>input</i> is <span style="font-family: monospace;">"photfiles"</span> <i>fields</i> is a list of APPHOT/DAOPHOT
+  keywords including <span style="font-family: monospace;">"itime,xairmass"</span>; if <i>input</i> is <span style="font-family: monospace;">"images"</span>
   <i>fields</i> is a list of image
-  header keywords; if <i>input</i> is <tt>"user"</tt> <i>fields</i> is a list of the
+  header keywords; if <i>input</i> is <span style="font-family: monospace;">"user"</span> <i>fields</i> is a list of the
   column numbers defining the fields to be extracted from the user file.
   <i>Fields</i> may include any quantities, for example airmass, image title, or
   the time of the observation, which aid the user in the interactive
@@ -130,13 +130,13 @@ mkimsets: Prepare an image set file for input to (mk)(n)obsfile
   </dd>
   </dl>
   <dl>
-  <dt><b>sort = <tt>""</tt></b></dt>
+  <dt><b>sort = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sort' Line='sort = ""' -->
   <dd>Sort the extracted image list in order of the value of the quantity <i>sort</i>.
   <i>Sort</i> must be one of the fields
   <i>"image"</i>, <i>filter</i>, or <i>fields</i> if <i>input</i>
-  is <tt>"images"</tt> or <tt>"photfiles"</tt>, or the column number in the user file of the
-  field to be sorted on if <i>input</i> is <tt>"user"</tt>.
+  is <span style="font-family: monospace;">"images"</span> or <span style="font-family: monospace;">"photfiles"</span>, or the column number in the user file of the
+  field to be sorted on if <i>input</i> is <span style="font-family: monospace;">"user"</span>.
   <i>Sort</i> is used to reorder the image list 
   before entering the editor.
   </dd>
@@ -149,7 +149,7 @@ mkimsets: Prepare an image set file for input to (mk)(n)obsfile
   and that the filter ids are present and match those in <i>idfilters</i>.
   For each observation there must be an image name for every filter
   in <i>idfilters</i>.
-  Missing set members must be assigned the image name <tt>"INDEF"</tt> for undefined
+  Missing set members must be assigned the image name <span style="font-family: monospace;">"INDEF"</span> for undefined
   and the filter id of the missing observation.
   </dd>
   </dl>
@@ -157,8 +157,8 @@ mkimsets: Prepare an image set file for input to (mk)(n)obsfile
   <dt><b>rename = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rename' Line='rename = yes' -->
   <dd>Enter new names for each observation of each field interactively.
-  If <i>rename</i> is <tt>"no"</tt>, default names
-  of the form <tt>"OBS1"</tt>, <tt>"OBS2"</tt>, ..., <tt>"OBSN"</tt> are assigned. If <i>rename</i> is <tt>"yes"</tt>,
+  If <i>rename</i> is <span style="font-family: monospace;">"no"</span>, default names
+  of the form <span style="font-family: monospace;">"OBS1"</span>, <span style="font-family: monospace;">"OBS2"</span>, ..., <span style="font-family: monospace;">"OBSN"</span> are assigned. If <i>rename</i> is <span style="font-family: monospace;">"yes"</span>,
   MKIMSETS prints each image set
   on the terminal and prompts the user for the new name.
   Images sets containing a single standard star observation should be assigned
@@ -185,9 +185,9 @@ mkimsets: Prepare an image set file for input to (mk)(n)obsfile
   individual digital photometry measurements, for example standard star
   measurements,
   into a single observations file. The source of the input image list is
-  a list of IRAF images if <i>input</i> is <tt>"images"</tt>,
-  a list of APPHOT or DAOPHOT database files if <i>input</i> is <tt>"photfiles"</tt>,
-  or a user supplied text file if <i>input</i> is <tt>"user"</tt>.
+  a list of IRAF images if <i>input</i> is <span style="font-family: monospace;">"images"</span>,
+  a list of APPHOT or DAOPHOT database files if <i>input</i> is <span style="font-family: monospace;">"photfiles"</span>,
+  or a user supplied text file if <i>input</i> is <span style="font-family: monospace;">"user"</span>.
   </p>
   <p>
   The output image set file <i>imsets</i> lists each observation of
@@ -221,12 +221,12 @@ mkimsets: Prepare an image set file for input to (mk)(n)obsfile
   </p>
   <p>
   If <i>sort</i> is one of the extracted
-  fields <tt>"image"</tt>, <i>filter</i>, or <i>fields</i>, MKIMSETS sorts the image
+  fields <span style="font-family: monospace;">"image"</span>, <i>filter</i>, or <i>fields</i>, MKIMSETS sorts the image
   list based on the values of <i>sort</i>, before writing the results to the
   the temporary image list file.
   </p>
   <p>
-  If <i>edit</i> is <tt>"yes"</tt>, the user enters the text editor and edits the
+  If <i>edit</i> is <span style="font-family: monospace;">"yes"</span>, the user enters the text editor and edits the
   temporary image list interactively.
   The image list must be arranged so that members of each image set are
   adjacent to each other in the image list.
@@ -234,10 +234,10 @@ mkimsets: Prepare an image set file for input to (mk)(n)obsfile
   an INDEF in column 1, the appropriate filter id in column 2, and
   INDEF in any other columns.
   The edit step is necessary if the image names are not in any logical
-  order in <i>imlist</i> for <i>input</i> = <tt>"images"</tt>,
+  order in <i>imlist</i> for <i>input</i> = <span style="font-family: monospace;">"images"</span>,
   do not occur in any logical order in the APPHOT/DAOPHOT 
-  databases for <i>input</i> = <tt>"photfiles"</tt>, or are not listed logically
-  in <i>imlist</i> for <i>input</i> = <tt>"user"</tt>.
+  databases for <i>input</i> = <span style="font-family: monospace;">"photfiles"</span>, or are not listed logically
+  in <i>imlist</i> for <i>input</i> = <span style="font-family: monospace;">"user"</span>.
   At this point MKIMSETS saves the temporary image list in the text file
   <i>imobsparams</i>, if <i>imobsparams</i> is defined.
   </p>
@@ -245,10 +245,10 @@ mkimsets: Prepare an image set file for input to (mk)(n)obsfile
   After the initial edit, MKIMSETS groups the images in the temporary image list,
   by using the filter ids in <i>idfilters</i>, and assuming that the image
   names are in logical order.
-  If <i>rename</i> is <tt>"yes"</tt>, MKIMSETS prompts the user for the name of each 
+  If <i>rename</i> is <span style="font-family: monospace;">"yes"</span>, MKIMSETS prompts the user for the name of each 
   image set. Otherwise the default names OBS1, OBS2, ..., OBSN are
   assigned.
-  If <i>review</i> is <tt>"yes"</tt>, MKIMSETS enters the editor, permitting the user
+  If <i>review</i> is <span style="font-family: monospace;">"yes"</span>, MKIMSETS enters the editor, permitting the user
   to review <i>imsets</i> and interactively
   correct any mistakes.
   Image sets are written to <i>imsets</i>, 1 set
@@ -262,7 +262,7 @@ mkimsets: Prepare an image set file for input to (mk)(n)obsfile
   <p>
   1. Create an image set file from a list of APPHOT databases which
   contain UBV observations of 5 standard stars. The UBV filters are
-  identified in the APPHOT databases by the filters ids <tt>"1"</tt>,<tt>"2"</tt>, <tt>"3"</tt> 
+  identified in the APPHOT databases by the filters ids <span style="font-family: monospace;">"1"</span>,<span style="font-family: monospace;">"2"</span>, <span style="font-family: monospace;">"3"</span> 
   respectively. There is one database file
   for each star measured. Since data for each of the stars was taken
   sequentially and the images were read sequentially off tape, the user
@@ -333,11 +333,11 @@ mkimsets: Prepare an image set file for input to (mk)(n)obsfile
   <p>
   2. Create the image set file from the list of IRAF images associated with
   the APPHOT databases in example 1.  The images contain the image
-  header keyword <tt>"f1pos"</tt> which specifies the filter id and which may assume
-  the values <tt>"1,2,3"</tt> where <tt>"1,2,3"</tt> stand for <tt>"U,B,V"</tt>. 
+  header keyword <span style="font-family: monospace;">"f1pos"</span> which specifies the filter id and which may assume
+  the values <span style="font-family: monospace;">"1,2,3"</span> where <span style="font-family: monospace;">"1,2,3"</span> stand for <span style="font-family: monospace;">"U,B,V"</span>. 
   Since the data for the individual stars was taken sequentially the user
   requests MKIMSETS to print out value of the sidereal time stored in the
-  image header keyword <tt>"ST"</tt>, and to sort on that
+  image header keyword <span style="font-family: monospace;">"ST"</span>, and to sort on that
   parameter. The image title is also printed out as an image grouping
   aid to the user. It is placed last in the fields parameter because  any
   internal blanks in the title would otherwise confuse the sorting routine.

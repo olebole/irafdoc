@@ -57,7 +57,7 @@ blink: Blink two frames
   <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Two or more frames are alternately displayed on the image display monitor
-  (<tt>"stdimage"</tt>) at a specified rate per frame.
+  (<span style="font-family: monospace;">"stdimage"</span>) at a specified rate per frame.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Examples</h3>

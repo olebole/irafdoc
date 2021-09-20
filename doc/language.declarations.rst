@@ -37,8 +37,8 @@ declarations: Parameter/variable declarations
   <dt><b>varname</b></dt>
   <!-- Sec='ELEMENTS' Level=0 Label='varname' Line='varname' -->
   <dd>The name of the variable or parameter.  The name must begin with
-  an alphabetic character or <tt>'_'</tt> and should be fewer than 64 characters
-  in length.  If the name is preceded by a <tt>'*'</tt>, then the variable
+  an alphabetic character or <span style="font-family: monospace;">'_'</span> and should be fewer than 64 characters
+  in length.  If the name is preceded by a <span style="font-family: monospace;">'*'</span>, then the variable
   is 'list-directed', meaning that a new value is taken from a list
   each time the parameter is read.
   </dd>
@@ -77,7 +77,7 @@ declarations: Parameter/variable declarations
   <!-- Sec='ELEMENTS' Level=1 Label='mode' Line='mode' -->
   <dd>Determines whether the parameter is queried for and whether
   it is learned after task execution.  The default mode for parameters
-  declared in the argument list of a CL procedure is <tt>"a"</tt>, and <tt>"h"</tt> otherwise.
+  declared in the argument list of a CL procedure is <span style="font-family: monospace;">"a"</span>, and <span style="font-family: monospace;">"h"</span> otherwise.
   </dd>
   </dl>
   <dl>
@@ -105,7 +105,7 @@ declarations: Parameter/variable declarations
   <dt><b>enum</b></dt>
   <!-- Sec='ELEMENTS' Level=1 Label='enum' Line='enum' -->
   <dd>The set of allowable string values for a string valued parameter.
-  The character <tt>'|'</tt> delimits successive enumerated strings.
+  The character <span style="font-family: monospace;">'|'</span> delimits successive enumerated strings.
   </dd>
   </dl>
   <dl>

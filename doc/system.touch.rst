@@ -50,7 +50,7 @@ touch: Change file access and modification times
   </dd>
   </dl>
   <dl>
-  <dt><b>time = <tt>""</tt></b></dt>
+  <dt><b>time = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='time' Line='time = ""' -->
   <dd>Time and date to set for the file.  The format of this string may be any
   of DD/MM/YY or CCYY-MM-DD (in which case time is assumed to be midnight of
@@ -60,7 +60,7 @@ touch: Change file access and modification times
   </dd>
   </dl>
   <dl>
-  <dt><b>ref_file = <tt>""</tt></b></dt>
+  <dt><b>ref_file = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ref_file' Line='ref_file = ""' -->
   <dd>Use the corresponding times of the specified file for modifying the
   times of the <i>input_files</i>.  If not specified, the current time is
@@ -104,7 +104,7 @@ touch: Change file access and modification times
   3.  Reset the file modification time to 2:33:45 pm on June 5, 2003:
   </p>
   <p>
-  	cl&gt; touch nite1.fits time=<tt>"2003-06-05T14:23:45"</tt>
+  	cl&gt; touch nite1.fits time=<span style="font-family: monospace;">"2003-06-05T14:23:45"</span>
   </p>
   <p>
   4.  Reset the file modification time to match dev$hosts:

@@ -23,14 +23,14 @@ rvcorrect: Compute radial velocity corrections
   <h3>Parameters</h3>
   <!-- BeginSection: 'PARAMETERS' -->
   <dl>
-  <dt><b>files = <tt>""</tt></b></dt>
+  <dt><b>files = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='files' Line='files = ""' -->
   <dd>List of files containing date, time, coordinates of observation, and possibly
   an observed radial velocity.
   </dd>
   </dl>
   <dl>
-  <dt><b>images = <tt>""</tt></b></dt>
+  <dt><b>images = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images = ""' -->
   <dd>List of images containing date, time, coordinates of observation, and possibly
   an observed radial velocity.
@@ -66,13 +66,13 @@ rvcorrect: Compute radial velocity corrections
   </dd>
   </dl>
   <dl>
-  <dt><b>observatory = <tt>")_.observatory"</tt></b></dt>
+  <dt><b>observatory = <span style="font-family: monospace;">")_.observatory"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory = ")_.observatory"' -->
   <dd>Observatory for  which corrections are to be computed.  The default is a
   redirection to look in the parameters for the parent package for a value.
   This may be one of the observatories in the observatory database,
-  <tt>"observatory"</tt> to select the observatory defined by the environment variable
-  <tt>"observatory"</tt> or the parameter <b>observatory.observatory</b>, or <tt>"obspars"</tt>
+  <span style="font-family: monospace;">"observatory"</span> to select the observatory defined by the environment variable
+  <span style="font-family: monospace;">"observatory"</span> or the parameter <b>observatory.observatory</b>, or <span style="font-family: monospace;">"obspars"</span>
   to select the current parameters set in the <b>observatory</b> task.  See
   help for <b>observatory</b> for additional information.  If the input
   consists of images then the observatory is defined by the OBSERVAT keyword
@@ -132,7 +132,7 @@ rvcorrect: Compute radial velocity corrections
   </dd>
   </dl>
   <dl>
-  <dt><b>keywpars = <tt>""</tt></b></dt>
+  <dt><b>keywpars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='keywpars' Line='keywpars = ""' -->
   <dd>The image header keyword translation table as described in
   the <i>keywpars</i> named pset.
@@ -184,7 +184,7 @@ rvcorrect: Compute radial velocity corrections
   and magnitude of the solar motion relative to some standard of rest, and
   the observed radial velocity.  In all cases years between 0 and 99 are
   treated as 20th century years.  The observatory for the observations
-  defaults to that specified by the environment variable <tt>"observatory"</tt> if
+  defaults to that specified by the environment variable <span style="font-family: monospace;">"observatory"</span> if
   defined or that set for the task <b>observatory</b>.  If the input consists
   of images the observatory is defined by the OBSERVAT image header parameter
   if present.  See <b>ovservatory</b> for additional information.  The solar

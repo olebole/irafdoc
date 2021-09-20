@@ -52,7 +52,7 @@ skyxymatch: Generate matched pixel lists using the image celestial wcs
   </dd>
   </dl>
   <dl>
-  <dt><b>coords = <tt>"grid"</tt></b></dt>
+  <dt><b>coords = <span style="font-family: monospace;">"grid"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coords' Line='coords = "grid"' -->
   <dd>The source of the coordinate list. The options are:
   <dl>
@@ -76,7 +76,7 @@ skyxymatch: Generate matched pixel lists using the image celestial wcs
   <dt><b>xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xmin' Line='xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF' -->
   <dd>The minimum and maximum logical x and logical y coordinates used to generate
-  the grid of control points if <i>coords</i> = <tt>"grid"</tt>. Xmin, xmax, ymin, and
+  the grid of control points if <i>coords</i> = <span style="font-family: monospace;">"grid"</span>. Xmin, xmax, ymin, and
   ymax default to 1, the number of columns in the reference image, 1, and the
   number of lines in the reference image, respectively.
   </dd>
@@ -85,11 +85,11 @@ skyxymatch: Generate matched pixel lists using the image celestial wcs
   <dt><b>nx = 10, ny = 10</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nx' Line='nx = 10, ny = 10' -->
   <dd>The number of points in x and y used to generate the coordinate grid
-  if <i>coords</i> = <tt>"grid"</tt>.
+  if <i>coords</i> = <span style="font-family: monospace;">"grid"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>wcs = <tt>"world"</tt></b></dt>
+  <dt><b>wcs = <span style="font-family: monospace;">"world"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcs' Line='wcs = "world"' -->
   <dd>The world coordinate system of the coordinates.  The options are:
   <dl>
@@ -113,11 +113,11 @@ skyxymatch: Generate matched pixel lists using the image celestial wcs
   wcs is correct the ra and dec of an object
   should remain the same no matter how the image
   is linearly transformed. The default world coordinate
-  system is either 1) the value of the environment variable <tt>"defwcs"</tt> if
+  system is either 1) the value of the environment variable <span style="font-family: monospace;">"defwcs"</span> if
   set in the user's IRAF environment (normally it is undefined) and present
-  in the image header, 2) the value of the <tt>"system"</tt>
+  in the image header, 2) the value of the <span style="font-family: monospace;">"system"</span>
   attribute in the image header keyword WAT0_001 if present in the
-  image header or, 3) the <tt>"physical"</tt> coordinate system.
+  image header or, 3) the <span style="font-family: monospace;">"physical"</span> coordinate system.
   Care must be taken that the wcs of the input and
   reference images are compatible, e.g. it makes no sense to
   match the coordinates of a 2D sky projection and a 2D spectral wcs.
@@ -133,7 +133,7 @@ skyxymatch: Generate matched pixel lists using the image celestial wcs
   </dd>
   </dl>
   <dl>
-  <dt><b>xunits = <tt>""</tt>, ls yunits = <tt>""</tt></b></dt>
+  <dt><b>xunits = <span style="font-family: monospace;">""</span>, ls yunits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xunits' Line='xunits = "", ls yunits = ""' -->
   <dd>The units of the x and y coordinates in the input coordinate list 
   if <i>coords</i> = &lt;filename&gt;, by default decimal degrees for celestial
@@ -153,11 +153,11 @@ skyxymatch: Generate matched pixel lists using the image celestial wcs
   are performed.
   </dd>
   </dl>
-  If the units are not specified the default is <tt>"native"</tt>.
+  If the units are not specified the default is <span style="font-family: monospace;">"native"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>xformat = <tt>"%10.3f"</tt>, yformat = <tt>"%10.3f"</tt></b></dt>
+  <dt><b>xformat = <span style="font-family: monospace;">"%10.3f"</span>, yformat = <span style="font-family: monospace;">"%10.3f"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xformat' Line='xformat = "%10.3f", yformat = "%10.3f"' -->
   <dd>The format of the output logical x and y reference and input pixel
   coordinates in columns 1 and 2 and 3 and 4 respectively. By default the
@@ -166,7 +166,7 @@ skyxymatch: Generate matched pixel lists using the image celestial wcs
   </dd>
   </dl>
   <dl>
-  <dt><b>rwxformat = <tt>""</tt>, rwyformat = <tt>""</tt></b></dt>
+  <dt><b>rwxformat = <span style="font-family: monospace;">""</span>, rwyformat = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rwxformat' Line='rwxformat = "", rwyformat = ""' -->
   <dd>The format of the output world x and y reference image coordinates
   in columns 5 and 6 respectively. The internal default formats will give
@@ -174,7 +174,7 @@ skyxymatch: Generate matched pixel lists using the image celestial wcs
   </dd>
   </dl>
   <dl>
-  <dt><b>wxformat = <tt>""</tt>, wyformat = <tt>""</tt></b></dt>
+  <dt><b>wxformat = <span style="font-family: monospace;">""</span>, wyformat = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wxformat' Line='wxformat = "", wyformat = ""' -->
   <dd>The format of the output world x and y input image coordinates
   in columns 7 and 8 respectively. The internal default formats will give
@@ -185,7 +185,7 @@ skyxymatch: Generate matched pixel lists using the image celestial wcs
   <dt><b>min_sigdigits = 7</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='min_sigdigits' Line='min_sigdigits = 7' -->
   <dd>The minimum precision of the output coordinates if, the formatting parameters
-  are undefined, or the output world coordinate system is <tt>"world"</tt> and the wcs
+  are undefined, or the output world coordinate system is <span style="font-family: monospace;">"world"</span> and the wcs
   cannot be decoded.
   </dd>
   </dl>
@@ -209,7 +209,7 @@ skyxymatch: Generate matched pixel lists using the image celestial wcs
   the same dimensionality.
   </p>
   <p>
-  If <i>coords</i> = <tt>"grid"</tt>, SKYXYMATCH computes a grid of <i>nx * ny</i> 
+  If <i>coords</i> = <span style="font-family: monospace;">"grid"</span>, SKYXYMATCH computes a grid of <i>nx * ny</i> 
   logical x and y pixel coordinates evenly distributed over the 
   logical pixel space of the reference image defined by the
   <i>xmin</i>, <i>xmax</i>, <i>ymin</i>, <i>ymax</i> parameters.
@@ -301,7 +301,7 @@ skyxymatch: Generate matched pixel lists using the image celestial wcs
   <p>
   USERS NEED TO BE AWARE THAT THE IRAF IMAGE WORLD COORDINATE SYSTEM
   CURRENTLY (IRAF VERSIONS 2.10.4 PATCH 2 AND EARLIER) SUPPORTS ONLY THE
-  EQUATORIAL SYSTEM (CTYPE&lt;lngax&gt; = <tt>"RA--XXXX"</tt> CTYPE&lt;latax&gt; = <tt>"DEC-XXXX"</tt>)
+  EQUATORIAL SYSTEM (CTYPE&lt;lngax&gt; = <span style="font-family: monospace;">"RA--XXXX"</span> CTYPE&lt;latax&gt; = <span style="font-family: monospace;">"DEC-XXXX"</span>)
   WHERE XXXX IS THE PROJECTION TYPE, EVEN THOUGH THE SKYXYMATCH TASK
   SUPPORTS GALACTIC, SUPERGALACTIC, AND ECLIPTIC coordinate systems.
   </p>
@@ -309,7 +309,7 @@ skyxymatch: Generate matched pixel lists using the image celestial wcs
   If <i>coords</i> is a file name, SKYXYMATCH reads a list of x and y 
   reference image world coordinates from columns <i>xcolumn</i> and <i>ycolumn</i>
   in the input coordinates file  and transforms these coordinates to
-  <tt>"native"</tt> coordinate units using the <i>xunits</i> and <i>yunits</i> parameters.
+  <span style="font-family: monospace;">"native"</span> coordinate units using the <i>xunits</i> and <i>yunits</i> parameters.
   The reference image world coordinates are
   transformed to logical reference and input image coordinates
   using the value of the <i>wcs</i> parameter and world coordinate
@@ -343,7 +343,7 @@ skyxymatch: Generate matched pixel lists using the image celestial wcs
   set to 1.
   </p>
   <p>
-  If <i>verbose</i> is <tt>"yes"</tt> then a title section is written to the output
+  If <i>verbose</i> is <span style="font-family: monospace;">"yes"</span> then a title section is written to the output
   file for each set of computed coordinates, along with messages about
   what if anything went wrong with the computation.
   </p>
@@ -351,10 +351,10 @@ skyxymatch: Generate matched pixel lists using the image celestial wcs
   <h3>Formats</h3>
   <!-- BeginSection: 'FORMATS' -->
   <p>
-  A  format  specification has the form <tt>"%w.dCn"</tt>, where w is the field
+  A  format  specification has the form <span style="font-family: monospace;">"%w.dCn"</span>, where w is the field
   width, d is the number of decimal places or the number of digits  of
   precision,  C  is  the  format  code,  and  n is radix character for
-  format code <tt>"r"</tt> only.  The w and d fields are optional.  The  format
+  format code <span style="font-family: monospace;">"r"</span> only.  The w and d fields are optional.  The  format
   codes C are as follows:
    
   </p>
@@ -431,19 +431,19 @@ skyxymatch: Generate matched pixel lists using the image celestial wcs
   <!-- BeginSection: 'REFERENCES' -->
   <p>
   Additional  information  on  IRAF  world  coordinate  systems including
-  more detailed descriptions of the <tt>"logical"</tt>, <tt>"physical"</tt>, and <tt>"world"</tt>
+  more detailed descriptions of the <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"physical"</span>, and <span style="font-family: monospace;">"world"</span>
   coordinate systems can be found  in  the  help  pages  for  the  WCSEDIT
   and  WCRESET  tasks. Detailed   documentation   for  the  IRAF  world 
   coordinate  system interface MWCS can be found in  the  file
-  <tt>"iraf$sys/mwcs/MWCS.hlp"</tt>.  This  file  can  be  formatted  and  printed
-  with the command <tt>"help iraf$sys/mwcs/MWCS.hlp fi+ | lprint"</tt>.
+  <span style="font-family: monospace;">"iraf$sys/mwcs/MWCS.hlp"</span>.  This  file  can  be  formatted  and  printed
+  with the command <span style="font-family: monospace;">"help iraf$sys/mwcs/MWCS.hlp fi+ | lprint"</span>.
   </p>
   <p>
   Details of the FITS header world coordinate system interface can
-  be found in the draft paper <tt>"World Coordinate Systems Representations Within the
-  FITS Format"</tt> by Hanisch and Wells, available from the iraf anonymous ftp
-  archive and the draft paper which supersedes it <tt>"Representations of Celestial
-  Coordinates in FITS"</tt> by Greisen and Calabretta available from the NRAO
+  be found in the draft paper <span style="font-family: monospace;">"World Coordinate Systems Representations Within the
+  FITS Format"</span> by Hanisch and Wells, available from the iraf anonymous ftp
+  archive and the draft paper which supersedes it <span style="font-family: monospace;">"Representations of Celestial
+  Coordinates in FITS"</span> by Greisen and Calabretta available from the NRAO
   anonymous ftp archives.
   </p>
   <p>
@@ -451,11 +451,11 @@ skyxymatch: Generate matched pixel lists using the image celestial wcs
   SLALIB library provided courtesy of Patrick Wallace. These routines
   are very well documented internally with extensive references provided
   where appropriate. Interested users are encouraged to examine the routines
-  for this information. Type <tt>"help slalib"</tt> to get a listing of the SLALIB
-  routines, <tt>"help slalib opt=sys"</tt> to get a concise summary of the library,
-  and <tt>"help &lt;routine&gt;"</tt> to get a description of each routine's calling sequence,
+  for this information. Type <span style="font-family: monospace;">"help slalib"</span> to get a listing of the SLALIB
+  routines, <span style="font-family: monospace;">"help slalib opt=sys"</span> to get a concise summary of the library,
+  and <span style="font-family: monospace;">"help &lt;routine&gt;"</span> to get a description of each routine's calling sequence,
   required input and output, etc. An overview of the library can be found in the
-  paper <tt>"SLALIB - A Library of Subprograms"</tt>, Starlink User Note 67.7
+  paper <span style="font-family: monospace;">"SLALIB - A Library of Subprograms"</span>, Starlink User Note 67.7
   by P.T. Wallace, available from the Starlink archives.
   </p>
   <!-- EndSection:   'REFERENCES' -->

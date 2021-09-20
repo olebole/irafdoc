@@ -78,9 +78,9 @@ tdiffer: Form a table which is the difference of two tables.
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. There are two tables, <tt>"targets.tab"</tt>, containing a list of targets
-  for observation, and <tt>"images.tab"</tt>, containing a list of targets which
-  have already been observed.  Create a table named <tt>"new.tab"</tt> containing
+  1. There are two tables, <span style="font-family: monospace;">"targets.tab"</span>, containing a list of targets
+  for observation, and <span style="font-family: monospace;">"images.tab"</span>, containing a list of targets which
+  have already been observed.  Create a table named <span style="font-family: monospace;">"new.tab"</span> containing
   those targets which have not previously been observed:
   </p>
   <pre>
@@ -102,7 +102,7 @@ tdiffer: Form a table which is the difference of two tables.
   tselect
   </p>
   <p>
-  Type <tt>"help tables opt=sys"</tt> for a higher-level description of the 'tables' 
+  Type <span style="font-family: monospace;">"help tables opt=sys"</span> for a higher-level description of the 'tables' 
   package.
   </p>
   

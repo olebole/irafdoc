@@ -68,7 +68,7 @@ rgbdisplay: Display an RGB image
   You must first determine where the special color maps are located.
   For the images produced by <b>rgbto8</b> the color map will be in
   the same directory as the image and have the same name with either
-  the extension <tt>".sao"</tt> or <tt>".imt"</tt> depending on the target display server.
+  the extension <span style="font-family: monospace;">".sao"</span> or <span style="font-family: monospace;">".imt"</span> depending on the target display server.
   Since the display servers are host programs they require host pathnames.
   </p>
   <p>

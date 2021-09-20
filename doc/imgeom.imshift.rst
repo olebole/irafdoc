@@ -42,7 +42,7 @@ imshift: Shift a list of 1-D or 2-D images
   </dd>
   </dl>
   <dl>
-  <dt><b>shifts_file = <tt>""</tt></b></dt>
+  <dt><b>shifts_file = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='shifts_file' Line='shifts_file = ""' -->
   <dd>The name of the text file containing the shifts for each input image. If no
   file name is supplied each input image is shifted by <i>xshift</i> and
@@ -52,7 +52,7 @@ imshift: Shift a list of 1-D or 2-D images
   </dd>
   </dl>
   <dl>
-  <dt><b>interp_type = <tt>"linear"</tt></b></dt>
+  <dt><b>interp_type = <span style="font-family: monospace;">"linear"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interp_type' Line='interp_type = "linear"' -->
   <dd>The interpolant type use to computed the output shifted image.
   The choices are the following:
@@ -109,7 +109,7 @@ imshift: Shift a list of 1-D or 2-D images
   </dd>
   </dl>
   <dl>
-  <dt><b>boundary_type = <tt>"nearest"</tt></b></dt>
+  <dt><b>boundary_type = <span style="font-family: monospace;">"nearest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boundary_type' Line='boundary_type = "nearest"' -->
   <dd>The choices are:
   <dl>
@@ -172,7 +172,7 @@ imshift: Shift a list of 1-D or 2-D images
      cl&gt; imshift ugc1040 ugc1040shift -6.0 1.2 bound=neare
   </p>
   <p>
-  3. Shift a set of images using shifts listed in the textfile <tt>"shifts"</tt>.
+  3. Shift a set of images using shifts listed in the textfile <span style="font-family: monospace;">"shifts"</span>.
   </p>
   <p>
      cl&gt; page shifts

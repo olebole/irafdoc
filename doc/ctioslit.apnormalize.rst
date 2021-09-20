@@ -33,32 +33,32 @@ apnormalize: Normalize 2D apertures by 1D functions
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>List of output image names for the normalized input images.  If no output
   name is given then the input name is used as a root with the extension
-  <tt>".norm"</tt> added.
+  <span style="font-family: monospace;">".norm"</span> added.
   </dd>
   </dl>
   <dl>
-  <dt><b>apertures = <tt>""</tt></b></dt>
+  <dt><b>apertures = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
   <dd>Apertures to recenter, resize, trace, and normalize.  This only applies
   to apertures read from the input or reference database.  Any new
   apertures defined with the automatic finding algorithm or interactively
   are always selected.  The syntax is a list comma separated ranges
   where a range can be a single aperture number, a hyphen separated
-  range of aperture numbers, or a range with a step specified by <tt>"x&lt;step&gt;"</tt>;
-  for example, <tt>"1,3-5,9-12x2"</tt>.
+  range of aperture numbers, or a range with a step specified by <span style="font-family: monospace;">"x&lt;step&gt;"</span>;
+  for example, <span style="font-family: monospace;">"1,3-5,9-12x2"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>references = <tt>""</tt></b></dt>
+  <dt><b>references = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='references' Line='references = ""' -->
   <dd>List of reference images to be used to define apertures for the input
   images.  When a reference image is given it supersedes apertures
-  previously defined for the input image. The list may be null, <tt>""</tt>, or
+  previously defined for the input image. The list may be null, <span style="font-family: monospace;">""</span>, or
   any number of images less than or equal to the list of input images.
   There are three special words which may be used in place of an image
-  name.  The word <tt>"last"</tt> refers to the last set of apertures written to
-  the database.  The word <tt>"OLD"</tt> requires that an entry exist
-  and the word <tt>"NEW"</tt> requires that the entry not exist for each input image.
+  name.  The word <span style="font-family: monospace;">"last"</span> refers to the last set of apertures written to
+  the database.  The word <span style="font-family: monospace;">"OLD"</span> requires that an entry exist
+  and the word <span style="font-family: monospace;">"NEW"</span> requires that the entry not exist for each input image.
   </dd>
   </dl>
   <dl>
@@ -151,33 +151,33 @@ apnormalize: Normalize 2D apertures by 1D functions
   The following parameters control the normalization spectrum extraction.
   </p>
   <dl>
-  <dt><b>background = <tt>"none"</tt></b></dt>
+  <dt><b>background = <span style="font-family: monospace;">"none"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='background' Line='background = "none"' -->
-  <dd>Type of background subtraction.  The choices are <tt>"none"</tt> for no
-  background subtraction, <tt>"average"</tt> to average the background within the
-  background regions, or <tt>"fit"</tt> to fit across the dispersion using the
-  background within the background regions.  Note that the <tt>"average"</tt>
+  <dd>Type of background subtraction.  The choices are <span style="font-family: monospace;">"none"</span> for no
+  background subtraction, <span style="font-family: monospace;">"average"</span> to average the background within the
+  background regions, or <span style="font-family: monospace;">"fit"</span> to fit across the dispersion using the
+  background within the background regions.  Note that the <span style="font-family: monospace;">"average"</span>
   option does not do any medianing or bad pixel checking; it is faster
   than fitting however.  Background subtraction also requires that the
-  background fitting parameters are properly defined.  For the <tt>"average"</tt>
+  background fitting parameters are properly defined.  For the <span style="font-family: monospace;">"average"</span>
   option only the background sample regions parameter is used.
   </dd>
   </dl>
   <dl>
-  <dt><b>weights = <tt>"none"</tt></b></dt>
+  <dt><b>weights = <span style="font-family: monospace;">"none"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='weights' Line='weights = "none"' -->
   <dd>Type of extraction weighting.  Note that if the <i>clean</i> parameter is
-  set then the weights used are <tt>"variance"</tt> regardless of the weights
+  set then the weights used are <span style="font-family: monospace;">"variance"</span> regardless of the weights
   specified by this parameter.  The choices are:
   <dl>
-  <dt><b><tt>"none"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"none"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"none"' -->
   <dd>The pixels are summed without weights except for partial pixels at the
   ends.
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"variance"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"variance"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"variance"' -->
   <dd>The extraction is weighted by estimated variances of the pixels using
   a poisson noise model.
@@ -186,15 +186,15 @@ apnormalize: Normalize 2D apertures by 1D functions
   </dd>
   </dl>
   <dl>
-  <dt><b>pfit = <tt>"fit1d"</tt> (fit1d|fit2d)</b></dt>
+  <dt><b>pfit = <span style="font-family: monospace;">"fit1d"</span> (fit1d|fit2d)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pfit' Line='pfit = "fit1d" (fit1d|fit2d)' -->
   <dd>Profile fitting algorithm to use with variance weighting or cleaning.
   When determining a profile the two dimensional spectrum is divided by
   an estimate of the one dimensional spectrum to form a normalized two
   dimensional spectrum profile.  This profile is then smoothed by fitting
-  one dimensional functions, <tt>"fit1d"</tt>, along the lines or columns most closely
+  one dimensional functions, <span style="font-family: monospace;">"fit1d"</span>, along the lines or columns most closely
   corresponding to the dispersion axis or a special two dimensional
-  function, <tt>"fit2d"</tt>, described by Marsh (see <b>approfile</b>).
+  function, <span style="font-family: monospace;">"fit2d"</span>, described by Marsh (see <b>approfile</b>).
   </dd>
   </dl>
   <dl>
@@ -252,11 +252,11 @@ apnormalize: Normalize 2D apertures by 1D functions
   the ICFIT routine.
   </p>
   <dl>
-  <dt><b>function = <tt>"legendre"</tt></b></dt>
+  <dt><b>function = <span style="font-family: monospace;">"legendre"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "legendre"' -->
-  <dd>Fitting function for the normalization spectra.  The choices are <tt>"legendre"</tt>
-  polynomial, <tt>"chebyshev"</tt> polynomial, linear spline (<tt>"spline1"</tt>), and
-  cubic spline (<tt>"spline3"</tt>).
+  <dd>Fitting function for the normalization spectra.  The choices are <span style="font-family: monospace;">"legendre"</span>
+  polynomial, <span style="font-family: monospace;">"chebyshev"</span> polynomial, linear spline (<span style="font-family: monospace;">"spline1"</span>), and
+  cubic spline (<span style="font-family: monospace;">"spline3"</span>).
   </dd>
   </dl>
   <dl>
@@ -266,10 +266,10 @@ apnormalize: Normalize 2D apertures by 1D functions
   </dd>
   </dl>
   <dl>
-  <dt><b>sample = <tt>"*"</tt></b></dt>
+  <dt><b>sample = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"' -->
-  <dd>Sample regions for fitting points.  Intervals are separated by <tt>","</tt> and an
-  interval may be one point or a range separated by <tt>":"</tt>.
+  <dd>Sample regions for fitting points.  Intervals are separated by <span style="font-family: monospace;">","</span> and an
+  interval may be one point or a range separated by <span style="font-family: monospace;">":"</span>.
   </dd>
   </dl>
   <dl>
@@ -392,7 +392,7 @@ apnormalize: Normalize 2D apertures by 1D functions
   input images, the last reference image is used for all remaining input
   images.  Thus, a single reference image may be given for all the input
   images or different reference images may be given for each input
-  image.  The special reference name <tt>"last"</tt> may be used to select the
+  image.  The special reference name <span style="font-family: monospace;">"last"</span> may be used to select the
   last set apertures used in any of the <b>apextract</b> tasks.
   </p>
   <p>
@@ -418,7 +418,7 @@ apnormalize: Normalize 2D apertures by 1D functions
   <p>
   Each function selection will produce a query for each input spectrum if
   the <i>interactive</i> parameter is set.  The queries are answered by
-  <tt>"yes"</tt>, <tt>"no"</tt>, <tt>"YES"</tt>, or <tt>"NO"</tt>, where the upper case responses suppress
+  <span style="font-family: monospace;">"yes"</span>, <span style="font-family: monospace;">"no"</span>, <span style="font-family: monospace;">"YES"</span>, or <span style="font-family: monospace;">"NO"</span>, where the upper case responses suppress
   the query for following images.  There are other queries associated
   with tracing which first ask whether the operation is to be done
   interactively and, if yes, lead to queries for each aperture.  If the
@@ -449,10 +449,10 @@ apnormalize: Normalize 2D apertures by 1D functions
   <dl>
   <dt><b>APNORMALIZE V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='APNORMALIZE' Line='APNORMALIZE V2.11' -->
-  <dd>The <tt>"apertures"</tt> parameter can be used to select apertures for resizing,
+  <dd>The <span style="font-family: monospace;">"apertures"</span> parameter can be used to select apertures for resizing,
   recentering, tracing, and extraction.  This parameter name was previously
   used for selecting apertures in the recentering algorithm.  The new
-  parameter name for this is now <tt>"aprecenter"</tt>.
+  parameter name for this is now <span style="font-family: monospace;">"aprecenter"</span>.
   </dd>
   </dl>
   <!-- EndSection:   'REVISIONS' -->

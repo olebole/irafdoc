@@ -50,9 +50,9 @@ background: Fit and subtract a line or column background
   </dd>
   </dl>
   <dl>
-  <dt><b>sample = <tt>"*"</tt></b></dt>
+  <dt><b>sample = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"' -->
-  <dd>Lines or columns to be used in the background fits.  The default <tt>"*"</tt> selects
+  <dd>Lines or columns to be used in the background fits.  The default <span style="font-family: monospace;">"*"</span> selects
   all lines or columns.
   </dd>
   </dl>
@@ -68,8 +68,8 @@ background: Fit and subtract a line or column background
   <dt><b>function = spline3</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = spline3' -->
   <dd>Function to be fit to the image lines or columns.  The functions are
-  <tt>"legendre"</tt> (legendre polynomial), <tt>"chebyshev"</tt> (chebyshev polynomial),
-  <tt>"spline1"</tt> (linear spline), and <tt>"spline3"</tt> (cubic spline).  The functions
+  <span style="font-family: monospace;">"legendre"</span> (legendre polynomial), <span style="font-family: monospace;">"chebyshev"</span> (chebyshev polynomial),
+  <span style="font-family: monospace;">"spline1"</span> (linear spline), and <span style="font-family: monospace;">"spline3"</span> (cubic spline).  The functions
   may be abbreviated.
   </dd>
   </dl>
@@ -99,13 +99,13 @@ background: Fit and subtract a line or column background
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>Graphics device for interactive graphics output.
   </dd>
   </dl>
   <dl>
-  <dt><b>cursor = <tt>""</tt></b></dt>
+  <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Graphics cursor input
   </dd>
@@ -129,14 +129,14 @@ background: Fit and subtract a line or column background
   subtract a constant background using columns 10 to 100 and 410 to 500:
   </p>
   <p>
-  	cl&gt; background image image sample=<tt>"10:100,410:500"</tt>
+  	cl&gt; background image image sample=<span style="font-family: monospace;">"10:100,410:500"</span>
   </p>
   <p>
   To subtract a quadratic background from the columns of an image in which
   the spectrum lies between lines 50 and 70:
   </p>
   <p>
-  	cl&gt; background image image axis=2 sample=<tt>"1:40,80:120"</tt> o=3
+  	cl&gt; background image image axis=2 sample=<span style="font-family: monospace;">"1:40,80:120"</span> o=3
   </p>
   <!-- EndSection:   'EXAMPLES' -->
   <h3>See also</h3>

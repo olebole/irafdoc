@@ -60,9 +60,9 @@ blkavg: Block average or sum a list of N-D images
   </dd>
   </dl>
   <dl>
-  <dt><b>option = <tt>"average"</tt></b></dt>
+  <dt><b>option = <span style="font-family: monospace;">"average"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='option' Line='option = "average"' -->
-  <dd>Type of block average.  The choices are <tt>"average"</tt> and <tt>"sum"</tt>.
+  <dd>Type of block average.  The choices are <span style="font-family: monospace;">"average"</span> and <span style="font-family: monospace;">"sum"</span>.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->

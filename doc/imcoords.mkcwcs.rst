@@ -30,7 +30,7 @@ mkcwcs: Make or update a simple celestial wcs
   </dd>
   </dl>
   <dl>
-  <dt><b>wcsref = <tt>""</tt></b></dt>
+  <dt><b>wcsref = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcsref' Line='wcsref = ""' -->
   <dd>Image whose WCS is first inherited and then updated.
   </dd>
@@ -75,9 +75,9 @@ mkcwcs: Make or update a simple celestial wcs
   </dd>
   </dl>
   <dl>
-  <dt><b>projection = <tt>"tan"</tt> (tan|sin|linear)</b></dt>
+  <dt><b>projection = <span style="font-family: monospace;">"tan"</span> (tan|sin|linear)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='projection' Line='projection = "tan" (tan|sin|linear)' -->
-  <dd>WCS projection function which may be <tt>"tan"</tt>, <tt>"sin"</tt>, or <tt>"linear"</tt>.
+  <dd>WCS projection function which may be <span style="font-family: monospace;">"tan"</span>, <span style="font-family: monospace;">"sin"</span>, or <span style="font-family: monospace;">"linear"</span>.
   </dd>
   </dl>
   <dl>

@@ -29,7 +29,7 @@ tproduct: Form the Cartesian product of two tables.
   is the product of the number of rows in the two input tables. The output table
   will contain all the columns from both input tables. If a column name in the
   first input table is the same as a column name in the second input table, this
-  task tries to create a unique name by appending <tt>"_1"</tt> to the first name and <tt>"_2"</tt>
+  task tries to create a unique name by appending <span style="font-family: monospace;">"_1"</span> to the first name and <span style="font-family: monospace;">"_2"</span>
   to the second name. If the task cannot create a unique name in this way, it
   stops with an error. 
   </p>

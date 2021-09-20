@@ -50,10 +50,10 @@ grpselect: Select groups of a specified size from a daophot database
   </dd>
   </dl>
   <dl>
-  <dt><b>verbose = <tt>")_.verbose"</tt></b></dt>
+  <dt><b>verbose = <span style="font-family: monospace;">")_.verbose"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = ")_.verbose"' -->
   <dd>Print messages about the progress of the task? Verbose may be set to the value
-  of the daophot package parameter (the default), <tt>"yes"</tt>, or <tt>"no"</tt>.
+  of the daophot package parameter (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->

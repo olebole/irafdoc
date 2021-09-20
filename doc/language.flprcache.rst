@@ -38,7 +38,7 @@ flprcache: Flush the process cache
   file as a subprocess and then runs the task.  When the task completes the
   process does not exit, rather it remains connected to the CL as a subprocess,
   but becomes idle waiting for another command from the CL.  The set of such
-  idle processes forms what is referred to as the CL <tt>"process cache"</tt>.
+  idle processes forms what is referred to as the CL <span style="font-family: monospace;">"process cache"</span>.
   The purpose of the process cache is to minimize the overhead required to
   run a task; the first time a task is called response is slow since the
   process has to be executed, but thereafter response is fast provided the
@@ -48,7 +48,7 @@ flprcache: Flush the process cache
   The <i>flprcache</i> command flushes the process cache, terminating
   the connected subprocesses therein.  If an argument is specified only the
   specific cache slot is cleared, otherwise all cache slots are flushed.
-  Processes which have been <tt>"locked"</tt> in the cache with <i>prcache</i> are
+  Processes which have been <span style="font-family: monospace;">"locked"</span> in the cache with <i>prcache</i> are
   not flushed unless explicitly named.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
@@ -68,7 +68,7 @@ flprcache: Flush the process cache
   	cl&gt; flpr
   </p>
   <p>
-  3. Flush the <tt>"x_system.e"</tt> process by naming the <tt>"directory"</tt> task, which
+  3. Flush the <span style="font-family: monospace;">"x_system.e"</span> process by naming the <span style="font-family: monospace;">"directory"</span> task, which
   is contained in that process.  Lock a fresh copy of the process in the cache.
   This initializes the process, and may be necessary if a system task is
   interrupted at the wrong time.

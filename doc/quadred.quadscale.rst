@@ -41,7 +41,7 @@ quadscale: Scale sections by gain factors
   </dd>
   </dl>
   <dl>
-  <dt><b>operation = <tt>"multiply"</tt> (multiply|divide)</b></dt>
+  <dt><b>operation = <span style="font-family: monospace;">"multiply"</span> (multiply|divide)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='operation' Line='operation = "multiply" (multiply|divide)' -->
   <dd>The operation to apply with the gains.
   </dd>

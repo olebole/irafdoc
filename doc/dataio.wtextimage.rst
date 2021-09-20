@@ -53,11 +53,11 @@ wtextimage: Convert an IRAF image to a text file
   </dd>
   </dl>
   <dl>
-  <dt><b>format = <tt>""</tt></b></dt>
+  <dt><b>format = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='format' Line='format = ""' -->
   <dd>Output format for each pixel.  If not set by the user, the appropriate output 
   pixel format is determined by the image data type.
-  Acceptable formats are chosen from <tt>"W.D[defgz]"</tt> where w is the field width and 
+  Acceptable formats are chosen from <span style="font-family: monospace;">"W.D[defgz]"</span> where w is the field width and 
   d specifies the precision.  Fortran formats of the form [iefgz]W.D are also
   acceptable.  If a field width of 0 is specified, (e.g., 0.6g),
   output will be free format with each output line containing as many pixels as
@@ -81,7 +81,7 @@ wtextimage: Convert an IRAF image to a text file
   The text file written consists of an optional header optionally followed by
   the pixel values.  The pixels are output in FITS order, that is, the
   leftmost subscript varies most rapidly.  The image header is written in the
-  <tt>"keyword = value  / comment"</tt> format of FITS.
+  <span style="font-family: monospace;">"keyword = value  / comment"</span> format of FITS.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Examples</h3>
@@ -130,7 +130,7 @@ wtextimage: Convert an IRAF image to a text file
   <p>
                                                                                   
   2. Write a series of text files from the IRAF images having root name
-  <tt>"reduced"</tt>.  One text file is written for each image. 
+  <span style="font-family: monospace;">"reduced"</span>.  One text file is written for each image. 
   </p>
   <p>
       cl&gt; wtext reduced.* txt 

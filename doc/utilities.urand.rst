@@ -49,7 +49,7 @@ urand: Uniform random number generator
   <dl>
   <dt><b>seed = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='seed' Line='seed = 1' -->
-  <dd>Seed for the random number generator.  If the value is <tt>"INDEF"</tt> then
+  <dd>Seed for the random number generator.  If the value is <span style="font-family: monospace;">"INDEF"</span> then
   the clock time (integer seconds since 1980) is used as the seed
   value giving different random numbers for different executions.
   </dd>

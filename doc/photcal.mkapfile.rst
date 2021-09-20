@@ -63,7 +63,7 @@ mkapfile: Prepare  aperture corrections file from apphot/daophot output
   </dd>
   </dl>
   <dl>
-  <dt><b>magfile = <tt>""</tt></b></dt>
+  <dt><b>magfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='magfile' Line='magfile = ""' -->
   <dd>The name of an optional output text file containing the magnitudes
   of all the stars in <i>photfiles</i>, corrected to the aperture <i>largeap</i>
@@ -72,24 +72,24 @@ mkapfile: Prepare  aperture corrections file from apphot/daophot output
   </dd>
   </dl>
   <dl>
-  <dt><b>logfile = <tt>""</tt></b></dt>
+  <dt><b>logfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = ""' -->
   <dd>The name of an optional output text file containing details of the curve
   of growth model fit for each image in <i>photfiles</i>. If <i>logfile</i> is
-  <tt>""</tt>, no file is written.  If <i>append</i> = <tt>"no"</tt> a new logfile is written, if
-  <tt>"yes"</tt> output is appended to an existing logfile.
+  <span style="font-family: monospace;">""</span>, no file is written.  If <i>append</i> = <span style="font-family: monospace;">"no"</span> a new logfile is written, if
+  <span style="font-family: monospace;">"yes"</span> output is appended to an existing logfile.
   </dd>
   </dl>
   <dl>
-  <dt><b>plotfile = <tt>""</tt></b></dt>
+  <dt><b>plotfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='plotfile' Line='plotfile = ""' -->
   <dd>The name of an optional output plot file containing plots of the
   curve of growth model fit, the fit residuals versus aperture radius,
   magnitude inside the first aperture, x coordinate, and y coordinate,
   and the aperture correction versus aperture radius for each image
-  in <i>photfiles</i>. If <i>plotfile</i> is <tt>""</tt>, no file is written.
-  If <i>append</i> = <tt>"no"</tt> a new plotfile is written, if
-  <tt>"yes"</tt> output is appended to an existing plotfile.
+  in <i>photfiles</i>. If <i>plotfile</i> is <span style="font-family: monospace;">""</span>, no file is written.
+  If <i>append</i> = <span style="font-family: monospace;">"no"</span> a new plotfile is written, if
+  <span style="font-family: monospace;">"yes"</span> output is appended to an existing plotfile.
   </dd>
   </dl>
   <dl>
@@ -99,7 +99,7 @@ mkapfile: Prepare  aperture corrections file from apphot/daophot output
   </dd>
   </dl>
   <dl>
-  <dt><b>obsparams = <tt>""</tt></b></dt>
+  <dt><b>obsparams = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='obsparams' Line='obsparams = ""' -->
   <dd>The name of an optional input text file containing the correct filter ids,
   exposure times, and airmasses for each image whose values are either
@@ -111,7 +111,7 @@ mkapfile: Prepare  aperture corrections file from apphot/daophot output
   </dd>
   </dl>
   <dl>
-  <dt><b>obscolumns = <tt>"2 3 4 5"</tt></b></dt>
+  <dt><b>obscolumns = <span style="font-family: monospace;">"2 3 4 5"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='obscolumns' Line='obscolumns = "2 3 4 5"' -->
   <dd>The list of numbers separated by commas or whitespace specifying which
   columns in the text file <i>obsparams</i> contain the correct filter ids,
@@ -119,7 +119,7 @@ mkapfile: Prepare  aperture corrections file from apphot/daophot output
   number 0 can be used as
   a place holder in the obscolumns string. For example to correct only
   the <i>photfiles</i> airmass values, <i>obscolumns</i> should be set to
-  <tt>"0 0 column 0"</tt>, where column is the airmass column number.
+  <span style="font-family: monospace;">"0 0 column 0"</span>, where column is the airmass column number.
   </dd>
   </dl>
   <dl>
@@ -195,13 +195,13 @@ mkapfile: Prepare  aperture corrections file from apphot/daophot output
   </dd>
   </dl>
   <dl>
-  <dt><b>gcommands = <tt>""</tt></b></dt>
+  <dt><b>gcommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""' -->
   <dd>The interactive graphics cursor.
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>The default graphics device.
   </dd>
@@ -265,7 +265,7 @@ mkapfile: Prepare  aperture corrections file from apphot/daophot output
   format specified by <i>obscolumns</i>.
   If no values are read from <i>photfiles</i> or <i>obsparams</i>, default values
   for the filter id, exposure time, airmass, and time of observation
-  of <tt>"INDEF"</tt>, 1.0, 1.25, and INDEF respectively will be assigned.
+  of <span style="font-family: monospace;">"INDEF"</span>, 1.0, 1.25, and INDEF respectively will be assigned.
   It must be emphasized that the airmass is actually used in the curve of
   growth analysis only if <i>nparams</i> is equal to
   5, and that the quantities filter id, exposure time, and time of observation
@@ -276,7 +276,7 @@ mkapfile: Prepare  aperture corrections file from apphot/daophot output
   these quantities in <i>magfile</i>. 
   </p>
   <p>
-  If <i>interactive</i> is <tt>"yes"</tt>, the user can interact with the curve of
+  If <i>interactive</i> is <span style="font-family: monospace;">"yes"</span>, the user can interact with the curve of
   growth fitting process by examining plots of the model fit, the residuals
   versus aperture radius, magnitude in the first aperture, x and y coordinates,
   and the aperture correction
@@ -298,7 +298,7 @@ mkapfile: Prepare  aperture corrections file from apphot/daophot output
   the MKNOBSILE, MKOBSFILE, or OBSFILE tasks.
   </p>
   <p>
-  If <i>magfile</i> is not <tt>""</tt>, a file containing the image name, x and y
+  If <i>magfile</i> is not <span style="font-family: monospace;">""</span>, a file containing the image name, x and y
   position, filter id, exposure time, airmass, time observation,
   magnitude corrected to
   <i>largeap</i> using the observed magnitude and computed correction at the
@@ -308,9 +308,9 @@ mkapfile: Prepare  aperture corrections file from apphot/daophot output
   <i>Magfile</i> is written in a form suitable for input to the OBSFILE task.
   </p>
   <p>
-  If <i>logfile</i> is not <tt>""</tt>, all the details and diagnostics of the
-  curve of growth fit are logged either to a new file, if <i>append</i> = <tt>"no"</tt>
-  or to a previously existing file, <i>append</i> = <tt>"yes"</tt>. The output
+  If <i>logfile</i> is not <span style="font-family: monospace;">""</span>, all the details and diagnostics of the
+  curve of growth fit are logged either to a new file, if <i>append</i> = <span style="font-family: monospace;">"no"</span>
+  or to a previously existing file, <i>append</i> = <span style="font-family: monospace;">"yes"</span>. The output
   consists of: 1) a banner listing
   the date, time, and <i>apercors</i> for which the entry is relevant, 2)
   a listing of the number of parameters <i>nparams</i> in the five parameter
@@ -332,7 +332,7 @@ mkapfile: Prepare  aperture corrections file from apphot/daophot output
   as a function of aperture radius.
   </p>
   <p>
-  If <i>plotfile</i> is not <tt>""</tt>, plots of the final curve of growth model fit,
+  If <i>plotfile</i> is not <span style="font-family: monospace;">""</span>, plots of the final curve of growth model fit,
   residuals as a function of aperture radius, magnitude, x, y, and the
   aperture correction to the largest aperture <i>largeap</i>
   for each image in <i>photfiles</i> are saved in the plot metacode file
@@ -473,7 +473,7 @@ mkapfile: Prepare  aperture corrections file from apphot/daophot output
   larger radii, while the error in the aperture correction grows
   rapidly toward smaller radii, the combined error for the star will
   have some minimum value, usually at an intermediate aperture. If
-  <i>magfile</i> is not <tt>""</tt>, the magnitudes corrected to <i>largeap</i>
+  <i>magfile</i> is not <span style="font-family: monospace;">""</span>, the magnitudes corrected to <i>largeap</i>
   using the observed magnitude and correction where the  error
   is lowest are written to <i>magfile</i>, along with the image id, x and y
   coordinates, filter ids, exposure times, airmasses, and errors in the
@@ -485,8 +485,8 @@ mkapfile: Prepare  aperture corrections file from apphot/daophot output
   <!-- BeginSection: 'REFERENCES' -->
   <p>
   A full description of the DAOGROW algorithm used by MKAPFILE can be
-  found in the article <tt>"On the Growth-Curve Method for Calibrating
-  Stellar Photometry with CCDs"</tt> by Peter Stetson in PASP 102, 932
+  found in the article <span style="font-family: monospace;">"On the Growth-Curve Method for Calibrating
+  Stellar Photometry with CCDs"</span> by Peter Stetson in PASP 102, 932
   (1990).
   </p>
   <!-- EndSection:   'REFERENCES' -->

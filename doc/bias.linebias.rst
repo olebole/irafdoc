@@ -37,14 +37,14 @@ linebias: Fit and subtract an average line bias
   </dd>
   </dl>
   <dl>
-  <dt><b>bias = <tt>"[]"</tt></b></dt>
+  <dt><b>bias = <span style="font-family: monospace;">"[]"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='bias' Line='bias = "[]"' -->
   <dd>Bias section appended to the input image to define the bias region.
   The default section or an empty string will use the full image.
   </dd>
   </dl>
   <dl>
-  <dt><b>trim = <tt>"[]"</tt></b></dt>
+  <dt><b>trim = <span style="font-family: monospace;">"[]"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='trim' Line='trim = "[]"' -->
   <dd>Trim section appended to the input image to define the region to be
   bias subtracted and output.  The default section or an empty string
@@ -58,10 +58,10 @@ linebias: Fit and subtract an average line bias
   </dd>
   </dl>
   <dl>
-  <dt><b>function = <tt>"spline3"</tt></b></dt>
+  <dt><b>function = <span style="font-family: monospace;">"spline3"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "spline3"' -->
-  <dd>The function fit to the average bias line.  The functions are <tt>"legendre"</tt>,
-  <tt>"chebyshev"</tt>, <tt>"spline1"</tt>, or <tt>"spline3"</tt>.  Abbreviations are allowed.
+  <dd>The function fit to the average bias line.  The functions are <span style="font-family: monospace;">"legendre"</span>,
+  <span style="font-family: monospace;">"chebyshev"</span>, <span style="font-family: monospace;">"spline1"</span>, or <span style="font-family: monospace;">"spline3"</span>.  Abbreviations are allowed.
   </dd>
   </dl>
   <dl>
@@ -95,25 +95,25 @@ linebias: Fit and subtract an average line bias
   </dd>
   </dl>
   <dl>
-  <dt><b>logfile = <tt>""</tt></b></dt>
+  <dt><b>logfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = ""' -->
   <dd>Name of a log file.  If no file name is given then no log file is kept.
   </dd>
   </dl>
   <dl>
-  <dt><b>logfiles = <tt>""</tt></b></dt>
+  <dt><b>logfiles = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfiles' Line='logfiles = ""' -->
   <dd>List of log files.  If no file name is given then no log file is kept.
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>Graphics output device for interactive graphics.
   </dd>
   </dl>
   <dl>
-  <dt><b>cursor = <tt>""</tt></b></dt>
+  <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Graphics cursor input
   </dd>
@@ -135,11 +135,11 @@ linebias: Fit and subtract an average line bias
   If the interactive flag is set then the user may interactively examine
   and fit the average bias line.  The interactive fitting is done using the
   interactive curve fitting routine (see icfit).  Before each image is
-  processed a prompt of the form <tt>"linebias image (yes)? "</tt> is given.
+  processed a prompt of the form <span style="font-family: monospace;">"linebias image (yes)? "</span> is given.
   A response of yes allows interactive fitting for the specified image
   while a response of no uses the last defined fitting parameters.
   The default value is accepted with a carriage return.  The possible
-  responses are <tt>"yes"</tt>, <tt>"no"</tt>, <tt>"YES"</tt>, or <tt>"NO"</tt>.  The capitalized responses
+  responses are <span style="font-family: monospace;">"yes"</span>, <span style="font-family: monospace;">"no"</span>, <span style="font-family: monospace;">"YES"</span>, or <span style="font-family: monospace;">"NO"</span>.  The capitalized responses
   permanently set the response to yes or no and the prompt is not
   issued again for the remaining images.  Thus, a response of NO processes
   the remaining images non-interactively while a response of YES processes

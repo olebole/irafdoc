@@ -30,7 +30,7 @@ quadsplit: Split quadformat data into individual single amplifier images
   </dd>
   </dl>
   <dl>
-  <dt><b>output = <tt>""</tt></b></dt>
+  <dt><b>output = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
   <dd>Output root name to which the AMPLIST amplifier identifiers will be
   appended to form the split images.  If no output name is given then
@@ -47,7 +47,7 @@ quadsplit: Split quadformat data into individual single amplifier images
   <h3>Description</h3>
   <!-- BeginSection: 'DESCRIPTION' -->
   <p>
-  Images in <tt>"quadformat"</tt> (see help topic <b>quadformat</b>) are separated
+  Images in <span style="font-family: monospace;">"quadformat"</span> (see help topic <b>quadformat</b>) are separated
   into images containing data from only one amplifier.  The output images
   have a common root name and then an extension given by the amplifier
   labels in the AMPLIST keyword.  The output root name may be specified

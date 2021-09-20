@@ -51,38 +51,38 @@ imtile: Tile same sized 2D images into a 2D mosaic
   </dd>
   </dl>
   <dl>
-  <dt><b>trim_section = <tt>"[*,*]"</tt></b></dt>
+  <dt><b>trim_section = <span style="font-family: monospace;">"[*,*]"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='trim_section' Line='trim_section = "[*,*]"' -->
   <dd>The section of the input image tiles to be inserted into the output image.
   Trim_section can be used to flip and / or trim the individual image tiles
   before adding them to the mosaic. For example if we want to flip each
   image tile around the y axis before adding it to the mosaic, then
-  <i>trim_section</i> should be set to <tt>"[*,-*]"</tt>.
+  <i>trim_section</i> should be set to <span style="font-family: monospace;">"[*,-*]"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>missing_input = <tt>""</tt></b></dt>
+  <dt><b>missing_input = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='missing_input' Line='missing_input = ""' -->
   <dd>The list of missing image tiles. For example if image tiles 3 to 5 and
   10 from a sequence of image tiles are missing then <i>missing_input</i> =
-  <tt>"3-5,10"</tt>. This parameter uses the IRAF ranges syntax. The number of missing
+  <span style="font-family: monospace;">"3-5,10"</span>. This parameter uses the IRAF ranges syntax. The number of missing
   image tiles plus the number of input image tiles must equal <i>nctile</i> *
   <i>nltile</i>.
   </dd>
   </dl>
   <dl>
-  <dt><b>start_tile = <tt>"ll"</tt></b></dt>
+  <dt><b>start_tile = <span style="font-family: monospace;">"ll"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='start_tile' Line='start_tile = "ll"' -->
   <dd>The position of the first input image tile placed in the output image mosaic.
-  The four options are <tt>"ll"</tt> for lower left corner, <tt>"lr"</tt> for lower right corner,
-  <tt>"ul"</tt> for upper left corner and <tt>"ur"</tt> for upper right corner.
+  The four options are <span style="font-family: monospace;">"ll"</span> for lower left corner, <span style="font-family: monospace;">"lr"</span> for lower right corner,
+  <span style="font-family: monospace;">"ul"</span> for upper left corner and <span style="font-family: monospace;">"ur"</span> for upper right corner.
   </dd>
   </dl>
   <dl>
   <dt><b>row_order = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='row_order' Line='row_order = yes' -->
   <dd>Add the input image tiles to the output image in row order. If row_order is
-  <tt>"no"</tt> then column order is used instead.
+  <span style="font-family: monospace;">"no"</span> then column order is used instead.
   </dd>
   </dl>
   <dl>
@@ -93,11 +93,11 @@ imtile: Tile same sized 2D images into a 2D mosaic
   </dd>
   </dl>
   <dl>
-  <dt><b>median_section = <tt>""</tt></b></dt>
+  <dt><b>median_section = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='median_section' Line='median_section = ""' -->
   <dd>The section of each input image tile used to compute the median value. If
   <i>median_section</i> is the null string then the medians are not computed.
-  If <i>median_section</i> is <tt>"[*,*]"</tt> the entire input image tile is used to
+  If <i>median_section</i> is <span style="font-family: monospace;">"[*,*]"</span> the entire input image tile is used to
   compute the median.
   </dd>
   </dl>
@@ -148,11 +148,11 @@ imtile: Tile same sized 2D images into a 2D mosaic
   </dd>
   </dl>
   <dl>
-  <dt><b>opixtype = <tt>"r"</tt></b></dt>
+  <dt><b>opixtype = <span style="font-family: monospace;">"r"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='opixtype' Line='opixtype = "r"' -->
-  <dd>The pixel type of the output image. The options are <tt>"s"</tt> (short integer),
-  <tt>"i"</tt> (integer), <tt>"u"</tt> (ushort), <tt>"l"</tt> (long integer), <tt>"r"</tt> (real) and
-  <tt>"d"</tt> for double precision.
+  <dd>The pixel type of the output image. The options are <span style="font-family: monospace;">"s"</span> (short integer),
+  <span style="font-family: monospace;">"i"</span> (integer), <span style="font-family: monospace;">"u"</span> (ushort), <span style="font-family: monospace;">"l"</span> (long integer), <span style="font-family: monospace;">"r"</span> (real) and
+  <span style="font-family: monospace;">"d"</span> for double precision.
   </dd>
   </dl>
   <dl>
@@ -184,7 +184,7 @@ imtile: Tile same sized 2D images into a 2D mosaic
   <p>
   The median of a section of each input image tile is computed by setting
   the <i>median_section</i> parameter,  and the computed median is subtracted
-  from the input image tiles if the <i>subtract</i> parameter is set to <tt>"yes"</tt>.
+  from the input image tiles if the <i>subtract</i> parameter is set to <span style="font-family: monospace;">"yes"</span>.
   Task action messages will be printed on the standard output
   if <i>verbose</i> is set to yes.
   </p>

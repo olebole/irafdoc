@@ -27,7 +27,7 @@ ndprep: Make neutral density filter calibration image
   <!-- Sec='PARAMETERS' Level=0 Label='filter_curve' Line='filter_curve' -->
   <dd>Neutral density filter curve.  The directory specified by the parameter
   <i>directory</i> is prepended to this name so if a directory is specified
-  then it should not be given here.  If <tt>'?'</tt> a list of filter curves
+  then it should not be given here.  If <span style="font-family: monospace;">'?'</span> a list of filter curves
   in the specified directory is typed.
   </dd>
   </dl>
@@ -85,11 +85,11 @@ ndprep: Make neutral density filter calibration image
   </dd>
   </dl>
   <dl>
-  <dt><b>directory = <tt>"onedstds$ctio/"</tt></b></dt>
+  <dt><b>directory = <span style="font-family: monospace;">"onedstds$ctio/"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='directory' Line='directory = "onedstds$ctio/"' -->
   <dd>Directory containing neutral density filter curves.  This directory is
-  prepended to the specified fiter curve file (and so must end with <tt>'/'</tt>
-  or <tt>'$'</tt>).
+  prepended to the specified fiter curve file (and so must end with <span style="font-family: monospace;">'/'</span>
+  or <span style="font-family: monospace;">'$'</span>).
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -99,8 +99,8 @@ ndprep: Make neutral density filter calibration image
   A neutral density (ND) filter curve is converted to a calibration image
   with the same size and wavelength range as the images to be calibrated.
   A list of standard neutral density curves is typed if the filter
-  curve name is given as <tt>'?'</tt>.  The ND curves are text files containing
-  wavelength and filter transmission pairs.  Comments begin with <tt>'#'</tt>.
+  curve name is given as <span style="font-family: monospace;">'?'</span>.  The ND curves are text files containing
+  wavelength and filter transmission pairs.  Comments begin with <span style="font-family: monospace;">'#'</span>.
   A plot of the ND curve can be obtained using <b>graph</b>.
   </p>
   <p>

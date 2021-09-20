@@ -34,7 +34,7 @@ lparam: List the parameters of a task
   <p>
   <i>Lparam</i> lists one or more parameter sets.  Psets are specified either by
   the name of the task with which the pset is associated, or by filename (pset
-  files have the <tt>".par"</tt> extension).  If a file type pset is listed the extension
+  files have the <span style="font-family: monospace;">".par"</span> extension).  If a file type pset is listed the extension
   must be included, since it is the presence or absence of the filename
   extension which <b>lparam</b> uses to distinguish between task-psets and named
   (file) psets.
@@ -46,8 +46,8 @@ lparam: List the parameters of a task
   	param = value		prompt string
   </p>
   <p>
-  Here <tt>"param"</tt> is the name of the parameter, <tt>"value"</tt> is the current value of
-  the parameter (blank if undefined), and <tt>"prompt string"</tt> is the prompt for
+  Here <span style="font-family: monospace;">"param"</span> is the name of the parameter, <span style="font-family: monospace;">"value"</span> is the current value of
+  the parameter (blank if undefined), and <span style="font-family: monospace;">"prompt string"</span> is the prompt for
   the parameter, if any.  If the parameter is hidden, then the line is enclosed
   in parentheses.  For arrays, instead of the values, a list of the
   dimensionalities is given.  The <i>eparam</i> task may be used to examine
@@ -73,7 +73,7 @@ lparam: List the parameters of a task
           (mode = "ql")           
   </pre>
   <p>
-  2. List the contents of the file pset <tt>"delete.par"</tt>.  Named psets such as this
+  2. List the contents of the file pset <span style="font-family: monospace;">"delete.par"</span>.  Named psets such as this
   are most commonly produced using the <b>":w filename"</b> colon command in
   <b>eparam</b>, e.g., to prepare several different versions of the parameter
   set for a task.

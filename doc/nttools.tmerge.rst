@@ -33,9 +33,9 @@ tmerge: Either merge or append tables.
   a boolean column or a narrow character column.
   </p>
   <p>
-  The <tt>"merge"</tt> option is normally used for tables containing few,
+  The <span style="font-family: monospace;">"merge"</span> option is normally used for tables containing few,
   if any, common columns.
-  When the user selects <tt>"merge"</tt>,
+  When the user selects <span style="font-family: monospace;">"merge"</span>,
   an output table is created containing as many columns
   as there are unique column names in all the input tables.
   (But see the description of the 'allcols' parameter.)
@@ -46,14 +46,14 @@ tmerge: Either merge or append tables.
   If different input tables have the same column names
   then the first values put into the output table
   will be overwritten by the later table values.
-  For example, if the two input tables both have the column name <tt>"X_VAL"</tt>,
+  For example, if the two input tables both have the column name <span style="font-family: monospace;">"X_VAL"</span>,
   then for each row number,
   the values written to the output table
   will be taken from the second input table.
   See below regarding text tables.
   </p>
   <p>
-  On the other hand, if the <tt>"append"</tt> option is selected, all rows of
+  On the other hand, if the <span style="font-family: monospace;">"append"</span> option is selected, all rows of
   the first input table are written to the output table, followed by all
   rows of the second table, and so on, until all input tables are written
   to the output table.
@@ -62,7 +62,7 @@ tmerge: Either merge or append tables.
   Columns with the same name in different
   input tables will be written into the same output column, but no data
   will be overwritten because they are put into different rows.
-  The <tt>"append"</tt> option would normally be used for tables that have all
+  The <span style="font-family: monospace;">"append"</span> option would normally be used for tables that have all
   the same columns.
   </p>
   <p>
@@ -105,11 +105,11 @@ tmerge: Either merge or append tables.
   <dd>Names of the tables to be merged or appended.  This parameter will take
   either a file name template describing several input tables, and may include
   wildcard characters, or it will take the name of a list file preceded by the
-  <tt>"@"</tt> character; in the latter case the list file contains a list of file names
+  <span style="font-family: monospace;">"@"</span> character; in the latter case the list file contains a list of file names
   with each file name on a separate line.  Wildcard characters should not be
   used for file name extensions because files other than tables will be
   processed, causing the program to crash.  For example, if the directory
-  contains files <tt>"table.tab"</tt> and <tt>"table.lis"</tt>, the command <tt>"tmerge tab*"</tt> would
+  contains files <span style="font-family: monospace;">"table.tab"</span> and <span style="font-family: monospace;">"table.lis"</span>, the command <span style="font-family: monospace;">"tmerge tab*"</span> would
   open both files.
   </dd>
   </dl>
@@ -120,7 +120,7 @@ tmerge: Either merge or append tables.
   </dd>
   </dl>
   <dl>
-  <dt><b>option = <tt>"merge"</tt> [string]</b></dt>
+  <dt><b>option = <span style="font-family: monospace;">"merge"</span> [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='option' Line='option = "merge" [string]' -->
   <dd>allowed values:  merge | append
   Either merge the columns in each row of each input table--overwriting
@@ -144,7 +144,7 @@ tmerge: Either merge or append tables.
   the 'allcols' parameter serves an additional function.
   When 'allcols = yes' the name of each column
   in a simple text table is changed
-  to be <tt>"c"</tt> followed by the column number in the output table.
+  to be <span style="font-family: monospace;">"c"</span> followed by the column number in the output table.
   This is intended to make the column names unique
   in order to allow merging text tables
   without having the columns overwrite previously written columns.
@@ -162,17 +162,17 @@ tmerge: Either merge or append tables.
   </dd>
   </dl>
   <dl>
-  <dt><b>(tbltype = <tt>"default"</tt>) [string, allowed values:  default | row | </b></dt>
+  <dt><b>(tbltype = <span style="font-family: monospace;">"default"</span>) [string, allowed values:  default | row | </b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(tbltype = "default") [string, allowed values:  default | row | ' -->
   <dd>column | text]
   This parameter specifies the table type.
-  Setting 'tbltype' to <tt>"row"</tt> or <tt>"column"</tt> results in an stsdas binary table,
+  Setting 'tbltype' to <span style="font-family: monospace;">"row"</span> or <span style="font-family: monospace;">"column"</span> results in an stsdas binary table,
   the contents of which may be either row ordered or column ordered;
   row order is recommended.
   You can also specify that the output be a text table.
-  The default ('tbltype = <tt>"default"</tt>') means that the type of the output table
+  The default ('tbltype = <span style="font-family: monospace;">"default"</span>') means that the type of the output table
   will be taken from the first input table.
-  If the extension of the output file name is <tt>".fits"</tt> or <tt>".??f"</tt>,
+  If the extension of the output file name is <span style="font-family: monospace;">".fits"</span> or <span style="font-family: monospace;">".??f"</span>,
   the table to be created will be a BINTABLE extension in a FITS file,
   regardless of how 'tbltype' is set.
   </dd>

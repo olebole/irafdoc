@@ -103,7 +103,7 @@ ofixpix: Fix bad pixels using text file (proto V2.10.4)
   31 31 35 50
   </pre>
   <p>
-  The set of images <tt>"image*"</tt> are fixed by:
+  The set of images <span style="font-family: monospace;">"image*"</span> are fixed by:
   </p>
   <p>
   	cl&gt; ofixpix image* badpixfile

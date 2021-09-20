@@ -41,22 +41,22 @@ hdtoi: Apply DTOI transformation to density image
   </dd>
   </dl>
   <dl>
-  <dt><b>fog = <tt>""</tt></b></dt>
+  <dt><b>fog = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fog' Line='fog = ""' -->
   <dd>Value of fog level, read from database if unspecified.
   </dd>
   </dl>
   <dl>
-  <dt><b>option = <tt>"mean"</tt></b></dt>
+  <dt><b>option = <span style="font-family: monospace;">"mean"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='option' Line='option = "mean"' -->
   <dd>Option for calculating fog density when <b>fog</b> is a file list, can be
-  either <tt>"mean"</tt> or <tt>"median"</tt>.
+  either <span style="font-family: monospace;">"mean"</span> or <span style="font-family: monospace;">"median"</span>.
   </dd>
   </dl>
   <dl>
   <dt><b>sigma = 3.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sigma' Line='sigma = 3.0' -->
-  <dd>If <b>fog</b> is a file name, and <b>option</b> = <tt>"mean"</tt>, the mean fog density
+  <dd>If <b>fog</b> is a file name, and <b>option</b> = <span style="font-family: monospace;">"mean"</span>, the mean fog density
   is iteratively calculated using this rejection criteria.
   </dd>
   </dl>
@@ -74,7 +74,7 @@ hdtoi: Apply DTOI transformation to density image
   </dd>
   </dl>
   <dl>
-  <dt><b>datatype = <tt>"r"</tt></b></dt>
+  <dt><b>datatype = <span style="font-family: monospace;">"r"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='datatype' Line='datatype = "r"' -->
   <dd>Datatype of output image pixels.
   </dd>
@@ -103,7 +103,7 @@ hdtoi: Apply DTOI transformation to density image
   case, the density of each file in the fog list is calculated and the 
   average of these values is subtracted from <b>input</b> before processing.
   The algorithm used to calculate the fog density is selected by the
-  <b>option</b> parameter, and is either a <tt>"mean"</tt> or <tt>"median"</tt> calculation.
+  <b>option</b> parameter, and is either a <span style="font-family: monospace;">"mean"</span> or <span style="font-family: monospace;">"median"</span> calculation.
   The fog density can be the mean value after pixels more than the specified
   number of sigma have been rejected, or the median value of all the fog spot
   pixels.

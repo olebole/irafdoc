@@ -45,8 +45,8 @@ tiimage: Insert images into rows of a 3-D table.
   If the output table exists, insertion may take place in two ways. If the
   output table name contains a column selector that selects a single column
   in the table, all input images will be inserted in that column, starting
-  at the row pointed by task parameter <tt>"row"</tt>. 
-  If <tt>"row"</tt> is negative or INDEF the task will look for the ORIG_ROW
+  at the row pointed by task parameter <span style="font-family: monospace;">"row"</span>. 
+  If <span style="font-family: monospace;">"row"</span> is negative or INDEF the task will look for the ORIG_ROW
   keyword in the image header and use that keyword value for row number.
   The second mode of insertion in an existing table is used if no matching
   column selector is found in the output table name. In this case the task
@@ -54,7 +54,7 @@ tiimage: Insert images into rows of a 3-D table.
   task tximage, and use that information to place the image in the proper 
   column. If no columnar information exists in the header, or if the column 
   name in there does not match any column in the output table, the image is 
-  skipped and the user warned. The <tt>"row"</tt> parameter processing works the same 
+  skipped and the user warned. The <span style="font-family: monospace;">"row"</span> parameter processing works the same 
   way in this second mode.
   </p>
   <p>
@@ -103,11 +103,11 @@ tiimage: Insert images into rows of a 3-D table.
   <dt><b>outtable [table name]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable [table name]' -->
   <dd>Name of 3-D output table, including extension. No support exists for 
-  <tt>"STDOUT"</tt> (ASCII output).
+  <span style="font-family: monospace;">"STDOUT"</span> (ASCII output).
   </dd>
   </dl>
   <dl>
-  <dt><b>(template = <tt>""</tt>) [table name]</b></dt>
+  <dt><b>(template = <span style="font-family: monospace;">""</span>) [table name]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(template = "") [table name]' -->
   <dd>Name of 3-D table to be used as template when creating a new output table.
   </dd>
@@ -139,10 +139,10 @@ tiimage: Insert images into rows of a 3-D table.
   <!-- BeginSection: 'BUGS' -->
   <p>
   The output and template table names must be supplied in full, including 
-  the extension (e.g. <tt>".tab"</tt>). If the output table name is not typed in full, 
+  the extension (e.g. <span style="font-family: monospace;">".tab"</span>). If the output table name is not typed in full, 
   the task will create a new table in place of the existing one, with only 
   the rows actually inserted. This behavior relates to the way the underlying 
-  <tt>"access"</tt> routine in IRAF's fio library works.
+  <span style="font-family: monospace;">"access"</span> routine in IRAF's fio library works.
   </p>
   <!-- EndSection:   'BUGS' -->
   <h3>References</h3>

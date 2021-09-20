@@ -25,7 +25,7 @@ owfits: Convert an IRAF image into a FITS image (dataio V2.10.4)
   <dl>
   <dt><b>iraf_files</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='iraf_files' Line='iraf_files' -->
-  <dd>String parameter specifying the input file(s), e.g. <tt>"file1"</tt> or <tt>"file*"</tt>.
+  <dd>String parameter specifying the input file(s), e.g. <span style="font-family: monospace;">"file1"</span> or <span style="font-family: monospace;">"file*"</span>.
   </dd>
   </dl>
   <dl>
@@ -33,10 +33,10 @@ owfits: Convert an IRAF image into a FITS image (dataio V2.10.4)
   <!-- Sec='PARAMETERS' Level=0 Label='fits_files' Line='fits_files' -->
   <dd>String parameter specifying the output destination.
   Magnetic tape output is assumed if the first two characters of fits_files
-  are <tt>"mt"</tt>, otherwise the output destination defaults to disk.
+  are <span style="font-family: monospace;">"mt"</span>, otherwise the output destination defaults to disk.
   Tape output will begin at the file
   number specified in fits_files, e.g. file 5 if fits_files =
-  <tt>"mtb1600[5]"</tt>. Data in file 5 and succeeding files will be overwritten.
+  <span style="font-family: monospace;">"mtb1600[5]"</span>. Data in file 5 and succeeding files will be overwritten.
   If no tape file number is specified in fits_files, the newtape parameter
   is requested. Tape output will begin at BOT (beginning of tape) if
   newtape = yes, otherwise at EOT (after the double EOF).
@@ -53,7 +53,7 @@ owfits: Convert an IRAF image into a FITS image (dataio V2.10.4)
   <!-- Sec='PARAMETERS' Level=0 Label='newtape' Line='newtape' -->
   <dd>Boolean parameter specifying whether an output tape is blank or contains
   data. Newtape is requested only if no tape file number is specified in
-  fits_files, e.g. fits_files = <tt>"mtb1600"</tt>.
+  fits_files, e.g. fits_files = <span style="font-family: monospace;">"mtb1600"</span>.
   </dd>
   </dl>
   <dl>
@@ -121,14 +121,14 @@ owfits: Convert an IRAF image into a FITS image (dataio V2.10.4)
   Wfits normally writes <i>blocking_factor</i> * 2880 byte records,
   where <i>blocking_factor</i> is an integer from 1 to 10.
   If <i>blocking_factor</i> = 0, owfits uses the default FITS blocking
-  factor specified for the device  by the <tt>"fb"</tt> parameter in the
-  file dev$tapecap, or 1 if the <tt>"fb"</tt> parameter is not present. For
+  factor specified for the device  by the <span style="font-family: monospace;">"fb"</span> parameter in the
+  file dev$tapecap, or 1 if the <span style="font-family: monospace;">"fb"</span> parameter is not present. For
   devices which support variable block sizes, e.g. 9-track tapes, exabytes
-  and dats, <tt>"fb"</tt> is normally set to 10.
+  and dats, <span style="font-family: monospace;">"fb"</span> is normally set to 10.
   The user may override this value by setting <i>blocking_factor</i>
   &gt;= 1 or &lt;= 10. If the device does not support variable block sizes, e.g.
   various types of cartridge drives, blocks of the size defined for the
-  device by the <tt>"bs"</tt> parameter in the dev$tapecap file are written
+  device by the <span style="font-family: monospace;">"bs"</span> parameter in the dev$tapecap file are written
   and <i>blocking_factor</i> is ignored.
   </dd>
   </dl>
@@ -245,7 +245,7 @@ owfits: Convert an IRAF image into a FITS image (dataio V2.10.4)
   detected, OWFITS issues an error message and attempts to write a double
   EOF at the end of the last good record. In this case the last file on
   the tape will be a partial file. IF OWFITS is not successful in writing
-  the double EOF, the message <tt>"Cannot close magtape file (name)"</tt> will be
+  the double EOF, the message <span style="font-family: monospace;">"Cannot close magtape file (name)"</span> will be
   issued. Problems occur as some drives permit the double EOF to be
   written after the physical end of tape and some do not. Similarly
   some drives can read a double EOF after end of tape and some cannot. Depending

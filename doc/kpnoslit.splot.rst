@@ -27,7 +27,7 @@ splot: Plot and analyze spectra
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>List of images (spectra) to plot.  If the image is 2D or 3D the line
   and band parameters are used.  Successive images are plotted
-  following each <tt>'q'</tt> cursor command.  One may use an image section
+  following each <span style="font-family: monospace;">'q'</span> cursor command.  One may use an image section
   to select a desired column, line, or band but the full image will
   be in memory and any updates to the spectrum will be part of the
   full image.
@@ -46,14 +46,14 @@ splot: Plot and analyze spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>units = <tt>""</tt></b></dt>
+  <dt><b>units = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='units' Line='units = ""' -->
   <dd>Dispersion coordinate units for the plot.  If the spectra have known units,
   currently this is generally Angstroms, the units may be converted
   to other units for plotting as specified by this task parameter.
   If this parameter is the null string and the world coordinate system
-  attribute <tt>"units_display"</tt> is defined then that will
-  be used.  If both this task parameters and <tt>"units_display"</tt> are not
+  attribute <span style="font-family: monospace;">"units_display"</span> is defined then that will
+  be used.  If both this task parameters and <span style="font-family: monospace;">"units_display"</span> are not
   given then the spectrum dispersion units will be used.
   The units
   may also be changed interactively.  See the units section of the
@@ -61,24 +61,24 @@ splot: Plot and analyze spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>options = <tt>"auto"</tt> [auto,zero,xydraw,histogram,nosysid,wcreset,flip,overplot]</b></dt>
+  <dt><b>options = <span style="font-family: monospace;">"auto"</span> [auto,zero,xydraw,histogram,nosysid,wcreset,flip,overplot]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='options' Line='options = "auto" [auto,zero,xydraw,histogram,nosysid,wcreset,flip,overplot]' -->
   <dd>A list of zero or more, possibly abbreviated, options.  The options can
   also be toggled with colon commands.  The currently defined options are
-  <tt>"auto"</tt>, <tt>"zero"</tt>, <tt>"xydraw"</tt>, <tt>"histogram"</tt>, <tt>"nosysid"</tt>, <tt>"wreset"</tt>, <tt>"flip"</tt>, and
-  <tt>"overplot"</tt>.  Option <tt>"auto"</tt> automatically replots the graph whenever changes
-  are made.  Otherwise the graph is replotted with keystrokes <tt>'c'</tt> or <tt>'r'</tt>.
-  Option <tt>"zero"</tt> makes the initial minimum y of the graphs occur at zero.
+  <span style="font-family: monospace;">"auto"</span>, <span style="font-family: monospace;">"zero"</span>, <span style="font-family: monospace;">"xydraw"</span>, <span style="font-family: monospace;">"histogram"</span>, <span style="font-family: monospace;">"nosysid"</span>, <span style="font-family: monospace;">"wreset"</span>, <span style="font-family: monospace;">"flip"</span>, and
+  <span style="font-family: monospace;">"overplot"</span>.  Option <span style="font-family: monospace;">"auto"</span> automatically replots the graph whenever changes
+  are made.  Otherwise the graph is replotted with keystrokes <span style="font-family: monospace;">'c'</span> or <span style="font-family: monospace;">'r'</span>.
+  Option <span style="font-family: monospace;">"zero"</span> makes the initial minimum y of the graphs occur at zero.
   Otherwise the limits are set automatically from the range of the data or
-  the <i>ymin</i> parameter.  Option <tt>"xydraw"</tt> changes the <tt>'x'</tt> draw key to use
+  the <i>ymin</i> parameter.  Option <span style="font-family: monospace;">"xydraw"</span> changes the <span style="font-family: monospace;">'x'</span> draw key to use
   both x and y cursor values for drawing rather than the nearest pixel value
-  for the y value.  Option <tt>"histogram"</tt> plots the spectra in a histogram style
-  rather than connecting the pixel centers.  Option <tt>"nosysid"</tt> excludes the
-  system banner from the graph title.  Option <tt>"wreset"</tt> resets the graph
+  for the y value.  Option <span style="font-family: monospace;">"histogram"</span> plots the spectra in a histogram style
+  rather than connecting the pixel centers.  Option <span style="font-family: monospace;">"nosysid"</span> excludes the
+  system banner from the graph title.  Option <span style="font-family: monospace;">"wreset"</span> resets the graph
   limits to those specified by the <i>xmin, xmax, ymin, ymax</i> parameters
-  whenever a new spectrum is plotted.  The <tt>"flip"</tt> option selects that
+  whenever a new spectrum is plotted.  The <span style="font-family: monospace;">"flip"</span> option selects that
   initially the spectra be plotted with decreasing wavelengths.  The options
-  may be queried and changed interactively.  The <tt>"overplot"</tt> options overplots
+  may be queried and changed interactively.  The <span style="font-family: monospace;">"overplot"</span> options overplots
   all graphs and a screen erase only occurs with the redraw key.
   </dd>
   </dl>
@@ -87,35 +87,35 @@ splot: Plot and analyze spectra
   <!-- Sec='PARAMETERS' Level=0 Label='xmin' Line='xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF' -->
   <dd>The default limits for the initial graph.  If INDEF then the limit is
   determined from the range of the data (autoscaling).  These values can
-  be changed interactively with <tt>'w'</tt> window key options or the cursor commands
-  <tt>":/xwindow"</tt> and <tt>":/ywindow"</tt> (see <b>gtools</b>).
+  be changed interactively with <span style="font-family: monospace;">'w'</span> window key options or the cursor commands
+  <span style="font-family: monospace;">":/xwindow"</span> and <span style="font-family: monospace;">":/ywindow"</span> (see <b>gtools</b>).
   </dd>
   </dl>
   <dl>
-  <dt><b>save_file = <tt>"splot.log"</tt></b></dt>
+  <dt><b>save_file = <span style="font-family: monospace;">"splot.log"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='save_file' Line='save_file = "splot.log"' -->
   <dd>The file to contain any results generated by the equivalent width or
   deblending functions.  Results are added to this file until the file is
-  deleted.  If the filename is null (<tt>""</tt>), then no results are saved.
+  deleted.  If the filename is null (<span style="font-family: monospace;">""</span>), then no results are saved.
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
-  <dd>Output graphics device: one of <tt>"stdgraph"</tt>, <tt>"stdplot"</tt>, <tt>"stdvdm"</tt>, or device
+  <dd>Output graphics device: one of <span style="font-family: monospace;">"stdgraph"</span>, <span style="font-family: monospace;">"stdplot"</span>, <span style="font-family: monospace;">"stdvdm"</span>, or device
   name.
   </dd>
   </dl>
   <dl>
-  <dt><b>cursor = <tt>""</tt></b></dt>
+  <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Graphics cursor input.  When null the standard cursor is used otherwise
   the specified file is used.
   </dd>
   </dl>
   <p>
-  The following parameters are used for error estimates in the <tt>'d'</tt>,
-  <tt>'k'</tt>, and <tt>'e'</tt> key measurements.  See the ERROR ESTIMATES section for a
+  The following parameters are used for error estimates in the <span style="font-family: monospace;">'d'</span>,
+  <span style="font-family: monospace;">'k'</span>, and <span style="font-family: monospace;">'e'</span> key measurements.  See the ERROR ESTIMATES section for a
   discussion of the error estimates.
   </p>
   <dl>
@@ -135,7 +135,7 @@ splot: Plot and analyze spectra
   <pre>
       sigma**2 = sigma0**2 + invgain * I
   </pre>
-  where I is the pixel value and <tt>"**2"</tt> means the square of the quantity.  If
+  where I is the pixel value and <span style="font-family: monospace;">"**2"</span> means the square of the quantity.  If
   either parameter is specified as INDEF or with a value less than zero then
   no sigma estimates are made and so no error estimates for the measured
   parameters are made.
@@ -143,16 +143,16 @@ splot: Plot and analyze spectra
   </dl>
   <p>
   The following parameters are for the interactive curve fitting function
-  entered with the <tt>'t'</tt> key.  This function is usually used for continuum
+  entered with the <span style="font-family: monospace;">'t'</span> key.  This function is usually used for continuum
   fitting.  The values of these parameters are updated during the fitting.
   See <b>icfit</b> for additional details on interactive curve fitting.
   </p>
   <dl>
-  <dt><b>function = <tt>"spline3"</tt></b></dt>
+  <dt><b>function = <span style="font-family: monospace;">"spline3"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "spline3"' -->
   <dd>Function to be fit to the spectra.  The functions are
-  <tt>"legendre"</tt> (legendre polynomial), <tt>"chebyshev"</tt> (chebyshev polynomial),
-  <tt>"spline1"</tt> (linear spline), and <tt>"spline3"</tt> (cubic spline).  The functions
+  <span style="font-family: monospace;">"legendre"</span> (legendre polynomial), <span style="font-family: monospace;">"chebyshev"</span> (chebyshev polynomial),
+  <span style="font-family: monospace;">"spline1"</span> (linear spline), and <span style="font-family: monospace;">"spline3"</span> (cubic spline).  The functions
   may be abbreviated.
   </dd>
   </dl>
@@ -192,13 +192,13 @@ splot: Plot and analyze spectra
   </dl>
   <p>
   The following parameters are used to overplot standard star fluxes with
-  the <tt>'y'</tt> key.  See <b>standard</b> for more information about these parameters.
+  the <span style="font-family: monospace;">'y'</span> key.  See <b>standard</b> for more information about these parameters.
   </p>
   <dl>
   <dt><b>star_name</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='star_name' Line='star_name' -->
   <dd>Query parameter for the standard star fluxes to be overplotted.
-  Unrecognized names or a <tt>"?"</tt> will print a list of the available stars
+  Unrecognized names or a <span style="font-family: monospace;">"?"</span> will print a list of the available stars
   in the specified calibration directory.
   </dd>
   </dl>
@@ -208,7 +208,7 @@ splot: Plot and analyze spectra
   <dd>The magnitude of the observed star in the band given by the
   <i>magband</i> parameter.  If the magnitude is not in the same band as
   the blackbody calibration file then the magnitude may be converted to
-  the calibration band provided the <tt>"params.dat"</tt> file containing relative
+  the calibration band provided the <span style="font-family: monospace;">"params.dat"</span> file containing relative
   magnitudes between the two bands is in the calibration directory
   </dd>
   </dl>
@@ -224,9 +224,9 @@ splot: Plot and analyze spectra
   <dt><b>teff</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='teff' Line='teff' -->
   <dd>The effective temperature (deg K) or the spectral type of the star being
-  calibrated.  If a spectral type is specified a <tt>"params.dat"</tt> file must exist
+  calibrated.  If a spectral type is specified a <span style="font-family: monospace;">"params.dat"</span> file must exist
   in the calibration directory.  The spectral types are specified in the same
-  form as in the <tt>"params.dat"</tt> file.  For the standard blackbody calibration
+  form as in the <span style="font-family: monospace;">"params.dat"</span> file.  For the standard blackbody calibration
   directory the spectral types are specified as A0I, A0III, or A0V, where A
   can be any letter OBAFGKM, the single digit subclass is between 0 and 9,
   and the luminousity class is one of I, III, or V.  If no luminousity class
@@ -234,7 +234,7 @@ splot: Plot and analyze spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>caldir = <tt>")_.caldir"</tt></b></dt>
+  <dt><b>caldir = <span style="font-family: monospace;">")_.caldir"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='caldir' Line='caldir = ")_.caldir"' -->
   <dd>The standard star calibration directory.  The default value redirects the
   value to the parameter of the same name in the package parameters.
@@ -254,13 +254,13 @@ splot: Plot and analyze spectra
   <dl>
   <dt><b>next_image</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='next_image' Line='next_image' -->
-  <dd>In response to <tt>'g'</tt> (get next image) this parameter specifies the image.
+  <dd>In response to <span style="font-family: monospace;">'g'</span> (get next image) this parameter specifies the image.
   </dd>
   </dl>
   <dl>
   <dt><b>new_image</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='new_image' Line='new_image' -->
-  <dd>In response to <tt>'i'</tt> (write current spectrum) this parameter specifies the
+  <dd>In response to <span style="font-family: monospace;">'i'</span> (write current spectrum) this parameter specifies the
   name of a new image to create or existing image to overwrite.
   </dd>
   </dl>
@@ -276,14 +276,14 @@ splot: Plot and analyze spectra
   <dt><b>spec2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='spec2' Line='spec2' -->
   <dd>When adding, subtracting, multiplying, or dividing by a second spectrum
-  (<tt>'+'</tt>, <tt>'-'</tt>, <tt>'*'</tt>, <tt>'/'</tt> keys in the <tt>'f'</tt> mode) this parameter is used to get
+  (<span style="font-family: monospace;">'+'</span>, <span style="font-family: monospace;">'-'</span>, <span style="font-family: monospace;">'*'</span>, <span style="font-family: monospace;">'/'</span> keys in the <span style="font-family: monospace;">'f'</span> mode) this parameter is used to get
   the name of the second spectrum.
   </dd>
   </dl>
   <dl>
   <dt><b>constant</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='constant' Line='constant' -->
-  <dd>When adding or multiplying by a constant (<tt>'p'</tt> or <tt>'m'</tt> keys in the <tt>'f'</tt> mode)
+  <dd>When adding or multiplying by a constant (<span style="font-family: monospace;">'p'</span> or <span style="font-family: monospace;">'m'</span> keys in the <span style="font-family: monospace;">'f'</span> mode)
   the parameter is used to get the constant.
   </dd>
   </dl>
@@ -291,7 +291,7 @@ splot: Plot and analyze spectra
   <dt><b>wavelength</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wavelength' Line='wavelength' -->
   <dd>This parameter is used to get a dispersion coordinate value during deblending or
-  when changing the dispersion coordinates with <tt>'u'</tt>.
+  when changing the dispersion coordinates with <span style="font-family: monospace;">'u'</span>.
   </dd>
   </dl>
   <dl>
@@ -304,14 +304,14 @@ splot: Plot and analyze spectra
   <dl>
   <dt><b>wstart, wend, dw</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wstart' Line='wstart, wend, dw' -->
-  <dd>In response to <tt>'p'</tt> (convert to a linear wavelength scale) these parameters
+  <dd>In response to <span style="font-family: monospace;">'p'</span> (convert to a linear wavelength scale) these parameters
   specify the starting wavelength, ending wavelength, and wavelength per pixel.
   </dd>
   </dl>
   <dl>
   <dt><b>boxsize</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boxsize' Line='boxsize' -->
-  <dd>In response to <tt>'s'</tt> (smooth) this parameter specifies the box size in pixels
+  <dd>In response to <span style="font-family: monospace;">'s'</span> (smooth) this parameter specifies the box size in pixels
   to be used for the boxcar smooth.  The value must be odd.  If an even
   value is specified the next larger odd value is actually used.
   </dd>
@@ -323,7 +323,7 @@ splot: Plot and analyze spectra
   <b>Splot</b> provides an interactive facility to display and analyze
   spectra.  See also <b>bplot</b> for a version of this task useful for making
   many plots noninteractively.  Each spectrum in the image list is displayed
-  successively.  To quit the current image and go on to the next the <tt>'q'</tt>
+  successively.  To quit the current image and go on to the next the <span style="font-family: monospace;">'q'</span>
   cursor command is used.  If an image is two-dimensional, such as with
   multiple aperture or long slit spectra, the aperture or image column/line
   to be displayed is needed.  If the image is three-dimensional, such as with
@@ -336,7 +336,7 @@ splot: Plot and analyze spectra
   The plots are made on the specfied graphics device which is usually to
   the graphics terminal.  The initial plot limits are set with the parameters
   <i>xmin, xmax, ymin</i>, and <i>ymax</i>.  If a limit is INDEF then that limit
-  is determined from the range of the data.  The <tt>"zero"</tt> option may also
+  is determined from the range of the data.  The <span style="font-family: monospace;">"zero"</span> option may also
   be set in the <i>options</i> parameter to set the lower intensity limit
   to zero.  Other options that may be set to control the initial plot
   are to exclude the system identification banner, and to select a
@@ -348,10 +348,10 @@ splot: Plot and analyze spectra
   <p>
   The <i>option</i> parameter, mentioned in the previous paragraph, is a
   a list of zero or more options.  As previously noted, some of the options
-  control the initial appearance of the plots.  The <tt>"auto"</tt> option determines
+  control the initial appearance of the plots.  The <span style="font-family: monospace;">"auto"</span> option determines
   how frequently plots are redrawn.  For slow terminals or via modems one
   might wish to minimize the redrawing.  The default, however, is to redraw
-  when changes are made.  The <tt>"xydraw"</tt> parameter is specific to the <tt>'x'</tt>
+  when changes are made.  The <span style="font-family: monospace;">"xydraw"</span> parameter is specific to the <span style="font-family: monospace;">'x'</span>
   key.
   </p>
   <p>
@@ -360,11 +360,11 @@ splot: Plot and analyze spectra
   the graphics device cursor is read.  The cursor loop takes single
   keystroke commands and typed in commands begun with a colon, called
   colon commands.  These commands are described below and a summary of
-  the commands may be produced interactively with the <tt>'?'</tt> key or
-  a scrolling help on the status line with the <tt>'/'</tt> key.
+  the commands may be produced interactively with the <span style="font-family: monospace;">'?'</span> key or
+  a scrolling help on the status line with the <span style="font-family: monospace;">'/'</span> key.
   </p>
   <p>
-  Modifications to the spectra being analyzed may be saved using the <tt>'i'</tt> key
+  Modifications to the spectra being analyzed may be saved using the <span style="font-family: monospace;">'i'</span> key
   in a new, the current, or other existing spectra.  A new image is created
   as a new copy of the current spectrum and so if the current spectrum is
   part of a multiple spectrum image (including a long slit spectrum) the
@@ -384,7 +384,7 @@ splot: Plot and analyze spectra
   </p>
   <p>
   The following keystrokes are active in addition to the normal IRAF
-  cursor facilities (available with <tt>":.help"</tt>):
+  cursor facilities (available with <span style="font-family: monospace;">":.help"</span>):
   </p>
   <dl>
   <dt><b>?</b></dt>
@@ -409,7 +409,7 @@ splot: Plot and analyze spectra
   <dt><b>a</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='a' Line='a' -->
   <dd>Expand and autoscale to the data range between two cursor positions.
-  See also <tt>'w'</tt>, and <tt>'z'</tt>.  Selecting no range, that is the two
+  See also <span style="font-family: monospace;">'w'</span>, and <span style="font-family: monospace;">'z'</span>.  Selecting no range, that is the two
   cursor positions the same, produces an autoscale of the whole spectrum.
   </dd>
   </dl>
@@ -423,7 +423,7 @@ splot: Plot and analyze spectra
   <dt><b>c</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='c' Line='c' -->
   <dd>Clear all windowing and redraw the full current spectrum.  This redraws the
-  spectrum and cancels any effects of the <tt>'a'</tt>, <tt>'z'</tt>, and <tt>'w'</tt> keys.  The <tt>'r'</tt>
+  spectrum and cancels any effects of the <span style="font-family: monospace;">'a'</span>, <span style="font-family: monospace;">'z'</span>, and <span style="font-family: monospace;">'w'</span> keys.  The <span style="font-family: monospace;">'r'</span>
   key is used to redraw the spectrum with the current windowing.
   </dd>
   </dl>
@@ -433,8 +433,8 @@ splot: Plot and analyze spectra
   <dd>Mark two continuum points and fit (deblend) multiple line profiles.
   The center, continuum at the center, core intensity, integrated flux,
   equivalent width, FWHMs for each profile are printed and saved
-  in the log file.  See <tt>'k'</tt> for fitting a single profile and
-  <tt>'-'</tt> to subtract the fitted profiles.
+  in the log file.  See <span style="font-family: monospace;">'k'</span> for fitting a single profile and
+  <span style="font-family: monospace;">'-'</span> to subtract the fitted profiles.
   </dd>
   </dl>
   <dl>
@@ -452,11 +452,11 @@ splot: Plot and analyze spectra
   <!-- Sec='DESCRIPTION' Level=0 Label='f' Line='f' -->
   <dd>Enter arithmetic function mode. This mode allows arithmetic functions to be
   applied to the spectrum. The pixel values are modified according to the
-  function request and may be saved as a new spectrum with the <tt>'i'</tt>
+  function request and may be saved as a new spectrum with the <span style="font-family: monospace;">'i'</span>
   command.  Operations with a second spectrum are done in wavelength
   space and the second spectrum is automatically resampled if necessary.
   If one spectrum is longer than the other, only the smaller number of
-  pixels are affected.  To exit this mode type <tt>'q'</tt>.
+  pixels are affected.  To exit this mode type <span style="font-family: monospace;">'q'</span>.
   The following keystrokes are available in the function mode.  Binary
   operations with a constant or a second spectrum produce a query for the
   constant value or spectrum name.
@@ -558,8 +558,8 @@ splot: Plot and analyze spectra
   <!-- Sec='DESCRIPTION' Level=0 Label='h' Line='h' -->
   <dd>Measure equivalent widths assuming a gaussian profile with the width
   measured at a specified point.  Note that this is not a gaussian fit (see
-  <tt>'k'</tt> to fit a gaussian)!  The gaussian profile determined here may be
-  subtracted with the <tt>'-'</tt> key.  A second cursor key is requested with one of
+  <span style="font-family: monospace;">'k'</span> to fit a gaussian)!  The gaussian profile determined here may be
+  subtracted with the <span style="font-family: monospace;">'-'</span> key.  A second cursor key is requested with one of
   the following values:
   <dl>
   <dt><b>a</b></dt>
@@ -625,15 +625,15 @@ splot: Plot and analyze spectra
   selects the type of profile: g for gaussian, l for lorentzian, and v for
   voigt.  Any other second key defaults to gaussian.  The center, continuum
   at the center, core intensity, integrated flux, equivalent width, and FWHMs
-  are printed and saved in the log file.  See <tt>'d'</tt> for fitting multiple
-  profiles and <tt>'-'</tt> to subtract the fit.
+  are printed and saved in the log file.  See <span style="font-family: monospace;">'d'</span> for fitting multiple
+  profiles and <span style="font-family: monospace;">'-'</span> to subtract the fit.
   </dd>
   </dl>
   <dl>
   <dt><b>l</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='l' Line='l' -->
   <dd>Convert to flux per unit wavelength (f-lambda). The spectrum is assumed
-  to be flux calibrated in flux per unit frequency (f-nu).  See also <tt>'n'</tt>.
+  to be flux calibrated in flux per unit frequency (f-nu).  See also <span style="font-family: monospace;">'n'</span>.
   </dd>
   </dl>
   <dl>
@@ -647,15 +647,15 @@ splot: Plot and analyze spectra
   <dt><b>n</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='n' Line='n' -->
   <dd>Convert to flux per unit frequency (f-nu). The spectrum is assumed
-  to be flux calibrated in flux per unit wavelength (f-lambda).  See also <tt>'l'</tt>.
+  to be flux calibrated in flux per unit wavelength (f-lambda).  See also <span style="font-family: monospace;">'l'</span>.
   </dd>
   </dl>
   <dl>
   <dt><b>o</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='o' Line='o' -->
   <dd>Set overplot flag.  The next plot will overplot the current plot.
-  Normally this key is immediately followed by one of <tt>'g'</tt>, <tt>'#'</tt>, <tt>'%'</tt>, <tt>'('</tt>, or <tt>')'</tt>.
-  The <tt>":overplot"</tt> colon command and overplot parameter option may be
+  Normally this key is immediately followed by one of <span style="font-family: monospace;">'g'</span>, <span style="font-family: monospace;">'#'</span>, <span style="font-family: monospace;">'%'</span>, <span style="font-family: monospace;">'('</span>, or <span style="font-family: monospace;">')'</span>.
+  The <span style="font-family: monospace;">":overplot"</span> colon command and overplot parameter option may be
   used to set overplotting to be permanently on.
   </dd>
   </dl>
@@ -679,7 +679,7 @@ splot: Plot and analyze spectra
   <dt><b>r</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='r' Line='r' -->
   <dd>Redraw the spectrum with the current windowing.  To redraw the full
-  spectrum and cancel any windowing use the <tt>'c'</tt> key.
+  spectrum and cancel any windowing use the <span style="font-family: monospace;">'c'</span> key.
   </dd>
   </dl>
   <dl>
@@ -739,10 +739,10 @@ splot: Plot and analyze spectra
   <dl>
   <dt><b>u</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='u' Line='u' -->
-  <dd>Adjust the user coordinate scale.  There are three options, <tt>'d'</tt> mark a
+  <dd>Adjust the user coordinate scale.  There are three options, <span style="font-family: monospace;">'d'</span> mark a
   position with the cursor and doppler shift it to a specified value,
-  <tt>'z'</tt> mark a position with the cursor and zeropoint shift it to a specified
-  value, or <tt>'l'</tt> mark two postions and enter two values to define a linear
+  <span style="font-family: monospace;">'z'</span> mark a position with the cursor and zeropoint shift it to a specified
+  value, or <span style="font-family: monospace;">'l'</span> mark two postions and enter two values to define a linear
   (in wavelength) dispersion scale.  The units used for input are those
   currently displayed.  A wavelength scale set this way will be used for
   other spectra which are not dispersion corrected.
@@ -758,17 +758,17 @@ splot: Plot and analyze spectra
   <dl>
   <dt><b>w</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='w' Line='w' -->
-  <dd>Window the graph.  For further help type <tt>'?'</tt> to the <tt>"window:"</tt> prompt or
-  see help under <b>gtools</b>.  To cancel the windowing use <tt>'a'</tt>.
+  <dd>Window the graph.  For further help type <span style="font-family: monospace;">'?'</span> to the <span style="font-family: monospace;">"window:"</span> prompt or
+  see help under <b>gtools</b>.  To cancel the windowing use <span style="font-family: monospace;">'a'</span>.
   </dd>
   </dl>
   <dl>
   <dt><b>x</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='x' Line='x' -->
-  <dd><tt>"Etch-a-sketch"</tt> mode. Straight lines are drawn between successive
+  <dd><span style="font-family: monospace;">"Etch-a-sketch"</span> mode. Straight lines are drawn between successive
   positions of the cursor. Requires 2 cursor settings in x.  The nearest pixels
   are used as the endpoints.  To draw a line between arbitrary y values first
-  use <tt>'j'</tt> to adjust the endpoints or set the <tt>"xydraw"</tt> option.
+  use <span style="font-family: monospace;">'j'</span> to adjust the endpoints or set the <span style="font-family: monospace;">"xydraw"</span> option.
   </dd>
   </dl>
   <dl>
@@ -819,13 +819,13 @@ splot: Plot and analyze spectra
   <dl>
   <dt><b>-</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='' Line='-' -->
-  <dd>Subtract the fits generated by the <tt>'d'</tt> (deblend), <tt>'k'</tt> (single profile fit),
-  and <tt>'h'</tt> (gaussian of specified width).  The region to be subtracted is
+  <dd>Subtract the fits generated by the <span style="font-family: monospace;">'d'</span> (deblend), <span style="font-family: monospace;">'k'</span> (single profile fit),
+  and <span style="font-family: monospace;">'h'</span> (gaussian of specified width).  The region to be subtracted is
   marked with two cursor positions.
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>','</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">','</span></b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='' Line='','' -->
   <dd>Shift the graph window to the left.
   </dd>
@@ -912,7 +912,7 @@ splot: Plot and analyze spectra
   </dl>
   The label must be quoted if it contains blanks.  A label beginning
   with % (i.e. %.2f) is treated as a format for the x cursor position.
-  The optional format is a gtext string (see help on <tt>"cursors"</tt>).
+  The optional format is a gtext string (see help on <span style="font-family: monospace;">"cursors"</span>).
   The labels are not remembered between redraws.
   </dd>
   </dl>
@@ -980,32 +980,32 @@ splot: Plot and analyze spectra
   <h3>Profile fitting and deblending</h3>
   <!-- BeginSection: 'PROFILE FITTING AND DEBLENDING' -->
   <p>
-  The single profile (<tt>'k'</tt>) and multiple profile deblending (<tt>'d'</tt>) commands fit
+  The single profile (<span style="font-family: monospace;">'k'</span>) and multiple profile deblending (<span style="font-family: monospace;">'d'</span>) commands fit
   gaussian, lorentzian, and voigt line profiles with a linear background.
-  The single profile fit, <tt>'k'</tt> key, is a special case of the multiple profile
+  The single profile fit, <span style="font-family: monospace;">'k'</span> key, is a special case of the multiple profile
   fitting designed to be simple to use.  Two cursor positions define the
   region to be fit and a fixed linear continuum.  The second key is used to
-  select the type of profile to fit with <tt>'g'</tt> for gaussian, <tt>'l'</tt> for
-  lorentzian, and <tt>'v'</tt> for voigt.  Any other second key will default to a
+  select the type of profile to fit with <span style="font-family: monospace;">'g'</span> for gaussian, <span style="font-family: monospace;">'l'</span> for
+  lorentzian, and <span style="font-family: monospace;">'v'</span> for voigt.  Any other second key will default to a
   gaussian profile.  The profile center, peak strength, and width(s) are then
   determined and the results are printed on the status line and in the log
   file.  The meaning of these quantities is described later.  The fit is also
   overplotted and may be subtracted from the spectrum subsequently with
-  the <tt>'-'</tt> key.
+  the <span style="font-family: monospace;">'-'</span> key.
   </p>
   <p>
-  The more complex deblending function, <tt>'d'</tt> key, defines the fitting region
+  The more complex deblending function, <span style="font-family: monospace;">'d'</span> key, defines the fitting region
   and initial linear continuum in the same way with two cursor positions.
   The continuum may be included in the fitting as an option.  The lines to be
-  fit are entered with the cursor near the line center (<tt>'g'</tt> for gaussian, <tt>'l'</tt>
-  for lorentzian, <tt>'v'</tt> for voigt), by typing the wavelengths (<tt>'t'</tt>), or read
-  from a file (<tt>'f'</tt>).  The latter two methods are useful if the wavelengths of
+  fit are entered with the cursor near the line center (<span style="font-family: monospace;">'g'</span> for gaussian, <span style="font-family: monospace;">'l'</span>
+  for lorentzian, <span style="font-family: monospace;">'v'</span> for voigt), by typing the wavelengths (<span style="font-family: monospace;">'t'</span>), or read
+  from a file (<span style="font-family: monospace;">'f'</span>).  The latter two methods are useful if the wavelengths of
   the lines are known accurately and if fits restricting the absolute or
-  relative positions of the lines will be used.  The <tt>'t'</tt> key is
+  relative positions of the lines will be used.  The <span style="font-family: monospace;">'t'</span> key is
   restricted to gaussian fits only.
   </p>
   <p>
-  The <tt>'f'</tt> key asks for a line list file.  The format of this file has
+  The <span style="font-family: monospace;">'f'</span> key asks for a line list file.  The format of this file has
   one or more columns.  The columns are the wavelength, the peak value
   (relative to the continuum with negative values being absorption),
   the profile type (gaussian, lorentzian, or voigt), and the
@@ -1035,18 +1035,18 @@ splot: Plot and analyze spectra
   </p>
   <p>
   There are four queries made to define the set of parameters to be fit or
-  constrained.  The positions may be held <tt>"fixed"</tt> at their input values,
-  allowed to shift by a <tt>"single"</tt> offset from the input values, or <tt>"all"</tt>
+  constrained.  The positions may be held <span style="font-family: monospace;">"fixed"</span> at their input values,
+  allowed to shift by a <span style="font-family: monospace;">"single"</span> offset from the input values, or <span style="font-family: monospace;">"all"</span>
   positions may be fit independently.  The widths may be
-  constrained to a <tt>"single"</tt> value or <tt>"all"</tt> fit independently.  The linear
+  constrained to a <span style="font-family: monospace;">"single"</span> value or <span style="font-family: monospace;">"all"</span> fit independently.  The linear
   background may be included in the fit or kept fixed at that input using the
   cursor.
   </p>
   <p>
   As noted above, sometimes the absolute or relative wavelengths of the lines
   are known a priori and this information may be entered by typing the
-  wavelengths explicitly using the <tt>'t'</tt> option or read from a file using the
-  <tt>'f'</tt> option during marking.  In this case one should fix or fit a single
+  wavelengths explicitly using the <span style="font-family: monospace;">'t'</span> option or read from a file using the
+  <span style="font-family: monospace;">'f'</span> option during marking.  In this case one should fix or fit a single
   shift for the position.  The latter may be useful if the lines are known
   but there is a measurable doppler shift.
   </p>
@@ -1055,10 +1055,10 @@ splot: Plot and analyze spectra
   flux, equivalent width, and full width half maxima are printed on the
   status line for the first line.  The values for the other lines and
   the RMS of the fit may be examined by scrolling the status line
-  using the <tt>'+'</tt>, <tt>'-'</tt>, and <tt>'r'</tt> keys.  To continue enter <tt>'q'</tt>.
+  using the <span style="font-family: monospace;">'+'</span>, <span style="font-family: monospace;">'-'</span>, and <span style="font-family: monospace;">'r'</span> keys.  To continue enter <span style="font-family: monospace;">'q'</span>.
   </p>
   <p>
-  The fitting may be repeated with different options until exited with <tt>'q'</tt>.
+  The fitting may be repeated with different options until exited with <span style="font-family: monospace;">'q'</span>.
   For each line in the blend the line center, continuum intensity at the
   line center, the core intensity above or below the continuum, the
   FWHM for the gaussian and lorentzian parts, the flux above or below the continuum, and the
@@ -1066,11 +1066,11 @@ splot: Plot and analyze spectra
   except the continuum are based on the fitted analytic profiles.
   Thus, even though the fitted region may not extend into the wings of a line
   the equivalent width measurements include the wings in the fitted profile.
-  For direct integration of the flux use the <tt>'e'</tt> key.
+  For direct integration of the flux use the <span style="font-family: monospace;">'e'</span> key.
   </p>
   <p>
   The fitted model may be subtracted from the data (after exiting the
-  deblending function) using the <tt>'-'</tt> (minus) keystroke to delimit the region
+  deblending function) using the <span style="font-family: monospace;">'-'</span> (minus) keystroke to delimit the region
   for which the subtraction is to be performed. This allows you to fit a
   portion of a line which may be contaminated by a blend and then subtract
   away the entire line to examine the remaining components.
@@ -1133,7 +1133,7 @@ splot: Plot and analyze spectra
   There are currently five techniques in SPLOT to measure equivalent widths
   and other line profile parameters. The simplest (conceptually) is by
   integration of the pixel values between two marked pixels. This is
-  invoked  with the <tt>'e'</tt> keystroke.  The user marks the two edges of the line
+  invoked  with the <span style="font-family: monospace;">'e'</span> keystroke.  The user marks the two edges of the line
   at the continuum.  The measured line center, contiuum value, line flux, and
   equivalent width are given by:
   </p>
@@ -1156,14 +1156,14 @@ splot: Plot and analyze spectra
   <p>
   The most complex method for computing line profile parameters is performed
   by the profile fitting and deblending commands which compute a non-linear
-  least-squares fit to the line(s).  These are invoked with the <tt>'d'</tt> or <tt>'k'</tt>
+  least-squares fit to the line(s).  These are invoked with the <span style="font-family: monospace;">'d'</span> or <span style="font-family: monospace;">'k'</span>
   keystroke.  These were described in detail previously.
   </p>
   <p>
-  The fourth and fifth methods, selected with the <tt>'h'</tt> key, determine the
+  The fourth and fifth methods, selected with the <span style="font-family: monospace;">'h'</span> key, determine the
   equivalent width from a gaussian profile defined by a constant continuum
-  level <tt>"cont"</tt>, a core depth <tt>"core"</tt>, and the width of the line <tt>"dw"</tt> at some
-  intermediate level <tt>"Iw"</tt>.
+  level <span style="font-family: monospace;">"cont"</span>, a core depth <span style="font-family: monospace;">"core"</span>, and the width of the line <span style="font-family: monospace;">"dw"</span> at some
+  intermediate level <span style="font-family: monospace;">"Iw"</span>.
   </p>
   <pre>
        I(w) = cont + core * exp (-0.5*((w-center)/sigma)**2)
@@ -1186,10 +1186,10 @@ splot: Plot and analyze spectra
   <p>
   The two methods based on the simple gaussian profile model differ in how
   they use the y cursor position and what part of the line is used.  After
-  typing <tt>'h'</tt> one selects the method and whether to use the left, right, or
-  both sides of the line by a second keystroke.  The <tt>'l'</tt>, <tt>'r'</tt>, and <tt>'k'</tt> keys
+  typing <span style="font-family: monospace;">'h'</span> one selects the method and whether to use the left, right, or
+  both sides of the line by a second keystroke.  The <span style="font-family: monospace;">'l'</span>, <span style="font-family: monospace;">'r'</span>, and <span style="font-family: monospace;">'k'</span> keys
   require a continuum level of one.  The y cursor position defines where the
-  width of the line is determined.  The <tt>'a'</tt>, <tt>'b'</tt>, and <tt>'c'</tt> keys use the y
+  width of the line is determined.  The <span style="font-family: monospace;">'a'</span>, <span style="font-family: monospace;">'b'</span>, and <span style="font-family: monospace;">'c'</span> keys use the y
   cursor position to define the continuum and the line width is determined at
   the point half way between the line core and the continuum.  In both cases
   the width at the appropriate level is determined by the interception of the
@@ -1201,28 +1201,28 @@ splot: Plot and analyze spectra
   The adopted gaussian line profile is drawn over the spectrum and the
   horizontal and vertical lines show the measured line width and the depth of
   the line center from the continuum.  This model may also be subtracted
-  from the spectrum using the <tt>'-'</tt> key.
+  from the spectrum using the <span style="font-family: monospace;">'-'</span> key.
   </p>
   <p>
   The major advantages of these methods are that only a single cursor setting
   (both the x and y positions are used) is required and they are fast.  The
-  <tt>'l'</tt>, <tt>'r'</tt>, and <tt>'k'</tt> keys give more flexibility in adjusting the width of the
+  <span style="font-family: monospace;">'l'</span>, <span style="font-family: monospace;">'r'</span>, and <span style="font-family: monospace;">'k'</span> keys give more flexibility in adjusting the width of the
   gaussian line at the expense or requiring that the spectrum be normalized
-  to a unit continuum.  The <tt>'a'</tt>, <tt>'b'</tt>, and <tt>'c'</tt> keys allow measurements at any
+  to a unit continuum.  The <span style="font-family: monospace;">'a'</span>, <span style="font-family: monospace;">'b'</span>, and <span style="font-family: monospace;">'c'</span> keys allow measurements at any
   continuum level at the expense of only using the half flux level to
   determine the gaussian line width.
   </p>
   <p>
   All these methods print and record in the log file the line center,
   continuum intensity at the line center, the flux, and the equivalent
-  width.  For the <tt>'e'</tt> key the flux is directly integrated while for the other
+  width.  For the <span style="font-family: monospace;">'e'</span> key the flux is directly integrated while for the other
   methods the fitted gaussian is integrated.  In addition, for the profile
   fitting methods the core intensity above or below the continuum, and the
   FWHMs are also printed.  A zero value is record for the gaussian or
   lorentzian width if the value is not determined by profile fit.  A brief
   line of data for each measurement is printed on the graphics status line.
   To get the full output and the output from previous measurements use the
-  command <tt>":show"</tt>.  This pages the output on the text output which may
+  command <span style="font-family: monospace;">":show"</span>.  This pages the output on the text output which may
   involve erasing the graphics.
   </p>
   <p>
@@ -1236,7 +1236,7 @@ splot: Plot and analyze spectra
   in Angstroms the integrated flux will be correct; i.e. ergs/cm2/sec.
   </p>
   <p>
-  Note that one can compute integrated flux in pixel units  by using the <tt>'$'</tt>
+  Note that one can compute integrated flux in pixel units  by using the <span style="font-family: monospace;">'$'</span>
   to plot in pixels.  This is appropriate if the pixel values are in
   data numbers or photon counts to get total data number or photons.
   </p>
@@ -1244,11 +1244,11 @@ splot: Plot and analyze spectra
   <h3>Error estimates</h3>
   <!-- BeginSection: 'ERROR ESTIMATES' -->
   <p>
-  The deblending (<tt>'d'</tt>), single profile fitting (<tt>'k'</tt>), and profile integration and
-  equivalent width (<tt>'e'</tt>) functions provide error estimates for the measured
+  The deblending (<span style="font-family: monospace;">'d'</span>), single profile fitting (<span style="font-family: monospace;">'k'</span>), and profile integration and
+  equivalent width (<span style="font-family: monospace;">'e'</span>) functions provide error estimates for the measured
   parameters.  This requires a model for the pixel sigmas.  Currently this
   model is based on a Poisson statistics model of the data.  The model
-  parameters are a constant gaussian sigma and an <tt>"inverse gain"</tt> as specified
+  parameters are a constant gaussian sigma and an <span style="font-family: monospace;">"inverse gain"</span> as specified
   by the parameters <i>sigma0</i> and <i>invgain</i>.  These parameters are
   used to compute the pixel value sigma from the following formula:
   </p>
@@ -1256,7 +1256,7 @@ splot: Plot and analyze spectra
       sigma**2 = sigma0**2 + invgain * I
   </pre>
   <p>
-  where I is the pixel value and <tt>"**2"</tt> means the square of the quantity.
+  where I is the pixel value and <span style="font-family: monospace;">"**2"</span> means the square of the quantity.
   </p>
   <p>
   If either the constant sigma or the inverse gain are specified as INDEF or
@@ -1307,16 +1307,16 @@ splot: Plot and analyze spectra
   <p>
   The dispersion units capability of <b>splot</b> allows specifying the
   units with the <i>units</i> parameter and interactively changing the units
-  with the <tt>":units"</tt> command.  In addition the <tt>'v'</tt> key allows plotting in
+  with the <span style="font-family: monospace;">":units"</span> command.  In addition the <span style="font-family: monospace;">'v'</span> key allows plotting in
   velocity units with the zero point velocity defined by the cursor
   position.
   </p>
   <p>
   The units are specified by strings having a unit type from the list below
-  along with the possible preceding modifiers, <tt>"inverse"</tt>, to select the
-  inverse of the unit and <tt>"log"</tt> to select logarithmic units. For example <tt>"log
-  angstroms"</tt> to plot the logarithm of wavelength in Angstroms and <tt>"inv
-  microns"</tt> to plot inverse microns.  The various identifiers may be
+  along with the possible preceding modifiers, <span style="font-family: monospace;">"inverse"</span>, to select the
+  inverse of the unit and <span style="font-family: monospace;">"log"</span> to select logarithmic units. For example <span style="font-family: monospace;">"log
+  angstroms"</span> to plot the logarithm of wavelength in Angstroms and <span style="font-family: monospace;">"inv
+  microns"</span> to plot inverse microns.  The various identifiers may be
   abbreviated as words but the syntax is not sophisticated enough to
   recognized standard scientific abbreviations except as noted below.
   </p>
@@ -1373,7 +1373,7 @@ splot: Plot and analyze spectra
   This task has a very large number of commands and capabilities which
   are interactive and  graphical.  Therefore it these examples are
   fairly superficial.  The user is encouraged to simply experiment with
-  the task.  To get some help use the <tt>'?'</tt> or <tt>'/'</tt> keys.
+  the task.  To get some help use the <span style="font-family: monospace;">'?'</span> or <span style="font-family: monospace;">'/'</span> keys.
   </p>
   <p>
   1.  To plot a single spectrum and record any measurements in the file
@@ -1386,7 +1386,7 @@ splot: Plot and analyze spectra
   2.  To force all plots to display zero as the minimum y value:
   </p>
   <p>
-  	cl&gt; splot spectrum options=<tt>"auto, zero"</tt>
+  	cl&gt; splot spectrum options=<span style="font-family: monospace;">"auto, zero"</span>
   </p>
   <p>
   Note that the options auto and zero can be abbreviated to one character.
@@ -1415,20 +1415,20 @@ splot: Plot and analyze spectra
   </pre>
   <p>
   The first example sends the plots to the standard plot device specified
-  by the environment variable <tt>"stdplot"</tt>.  The next example sends the plots
+  by the environment variable <span style="font-family: monospace;">"stdplot"</span>.  The next example sends the plots
   to the standard virtual display metacode file specified by the
-  environment variable <tt>"stdvdm"</tt>.  The last example redirects the
+  environment variable <span style="font-family: monospace;">"stdvdm"</span>.  The last example redirects the
   standard graphics to the metacode file splot.mc.  To spool the metacode
   file the tasks <b>stdplot</b> and <b>gkimosaic</b> may be used.
   For a large number of plots <b>gkimosaic</b> is prefered since it places
   many plots on one page instead of one plot per page.
   The other GKI tasks in the <b>plot</b> package may be used to examine
   the contents of a metacode file.  A simple script call <b>bplot</b> is provided
-  which has the default cursor file given above and default device of <tt>"stdplot"</tt>.
+  which has the default cursor file given above and default device of <span style="font-family: monospace;">"stdplot"</span>.
   </p>
   <p>
   5.  More complex plots may be produced both interactively using the
-  <tt>'='</tt> key or the <tt>":.snap"</tt>  or <tt>":.write"</tt> commands or by preparing a script
+  <span style="font-family: monospace;">'='</span> key or the <span style="font-family: monospace;">":.snap"</span>  or <span style="font-family: monospace;">":.write"</span> commands or by preparing a script
   of cursor commands.
   </p>
   <!-- EndSection:   'EXAMPLES' -->
@@ -1446,27 +1446,27 @@ splot: Plot and analyze spectra
   <dl>
   <dt><b>SPLOT V2.10.3</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='SPLOT' Line='SPLOT V2.10.3' -->
-  <dd>The <tt>'u'</tt> key now allows three ways to adjust the dispersion scale.  The
+  <dd>The <span style="font-family: monospace;">'u'</span> key now allows three ways to adjust the dispersion scale.  The
   old method of setting a linear dispersion scale is retained as well
   as adding a doppler and zeropoint adjustment.  The coordinates are
   input in the currently displayed units.
-  If a wavelength scale is set with either <tt>'p'</tt> or <tt>'u'</tt> then any other
+  If a wavelength scale is set with either <span style="font-family: monospace;">'p'</span> or <span style="font-family: monospace;">'u'</span> then any other
   spectra which are not dispersion corrected will adopt this wavelength
   scale.
-  The <tt>'('</tt> and <tt>')'</tt> keys cycle through bands if there is only one spectrum.
-  A new option, <tt>"flip"</tt>, has been added to the options parameter to select
+  The <span style="font-family: monospace;">'('</span> and <span style="font-family: monospace;">')'</span> keys cycle through bands if there is only one spectrum.
+  A new option, <span style="font-family: monospace;">"flip"</span>, has been added to the options parameter to select
   that the spectra are plotted in decreasing wavelength.
-  A new options <tt>"overplot"</tt> has been added to the options parameters and
+  A new options <span style="font-family: monospace;">"overplot"</span> has been added to the options parameters and
   colon commands to permanently set overplotting.  This allows quickly
   overplotting many spectra.
-  This task will now write out the current display units in the <tt>"units_display"</tt>
-  WCS attribute.  The default task units have been changed to <tt>""</tt> to allow
-  picking up the <tt>"units_display"</tt> units if defined.
+  This task will now write out the current display units in the <span style="font-family: monospace;">"units_display"</span>
+  WCS attribute.  The default task units have been changed to <span style="font-family: monospace;">""</span> to allow
+  picking up the <span style="font-family: monospace;">"units_display"</span> units if defined.
   The deblending and gaussian fitting code now subsamples the profile by
   a factor of 3 and fits the data pixels to the sum of the three
   subsamples.  This accounts for finite sampling of the data.
-  Error estimates are provided for the deblending (<tt>'d'</tt>), gaussian fitting
-  (<tt>'k'</tt>), and profile integration (<tt>'e'</tt>) results.
+  Error estimates are provided for the deblending (<span style="font-family: monospace;">'d'</span>), gaussian fitting
+  (<span style="font-family: monospace;">'k'</span>), and profile integration (<span style="font-family: monospace;">'e'</span>) results.
   </dd>
   </dl>
   <dl>
@@ -1484,38 +1484,38 @@ splot: Plot and analyze spectra
   xydraw options select histogram line type, whether to include a system ID
   banner, and allow editing a spectrum using different endpoint criteria.
   Because nearly every key is used there has been some shuffling,
-  consolidating, or elimination of keys.  One needs to check the run time <tt>'?'</tt>
+  consolidating, or elimination of keys.  One needs to check the run time <span style="font-family: monospace;">'?'</span>
   help or the help to determine the key changes.
   Deblending may now use any number of components and simultaneous fitting of
   a linear background.  A new simplified version of Gaussian fitting for a
-  single line has been added in the <tt>'k'</tt> key.  The old <tt>'k'</tt>, <tt>'h'</tt>, and <tt>'v'</tt>
-  equivalent width commands are all part of the single <tt>'h'</tt> command using a
+  single line has been added in the <span style="font-family: monospace;">'k'</span> key.  The old <span style="font-family: monospace;">'k'</span>, <span style="font-family: monospace;">'h'</span>, and <span style="font-family: monospace;">'v'</span>
+  equivalent width commands are all part of the single <span style="font-family: monospace;">'h'</span> command using a
   second key to select a specific option.  The Gaussian line model from these
   modes may now be subtracted from the spectrum in the same way as the
   Gaussian fitting.  The one-sided options, in particular, are interesting in
   this regard as a new capability.
   The arithmetic functions between two spectra are now done in wavelength
-  with resampling to a common dispersion done automatically.  The <tt>'t'</tt> key now
+  with resampling to a common dispersion done automatically.  The <span style="font-family: monospace;">'t'</span> key now
   provides for the full power of the ICFIT package to be used on a spectrum
   for continuum normalization, subtraction, or line and cosmic ray removal.
-  The <tt>'x'</tt> editing key may now use the nearest pixel values rather than only
+  The <span style="font-family: monospace;">'x'</span> editing key may now use the nearest pixel values rather than only
   the y cursor position to replace regions by straight line segments.  The
-  mode is selected by the task option parameter <tt>"xydraw"</tt>.
+  mode is selected by the task option parameter <span style="font-family: monospace;">"xydraw"</span>.
   Control over the graph window (plotting limits) is better integrated so
   that redrawing, zooming, shifting, and the GTOOLS window commands all work
-  well together.  The new <tt>'c'</tt> key resets the window to the full spectrum
-  allowing the <tt>'r'</tt> redraw key to redraw the current window to clean up
+  well together.  The new <span style="font-family: monospace;">'c'</span> key resets the window to the full spectrum
+  allowing the <span style="font-family: monospace;">'r'</span> redraw key to redraw the current window to clean up
   overplots from the Gaussian fits or spectrum editing.
   The dispersion units may now be selected and changed to be from hertz to
   Mev and the log or inverse (for wave numbers) of units taken.  As part of
-  the units package the <tt>'v'</tt> key or colon commands may be used to plot in
+  the units package the <span style="font-family: monospace;">'v'</span> key or colon commands may be used to plot in
   velocity relative to some origin.  The $ key now easily toggles between the
   dispersion units (whatever they may be) and pixels coordinates.
   Selection of spectra has become more complex with multiaperture and long
   slit spectra.  New keys allow selecting apertures, lines, columns, and
   bands as well as quickly scrolling through the lines in multiaperture
   spectra.  Overplotting is also more general and consistent with other tasks
-  by using the <tt>'o'</tt> key to toggle the next plot to be overplotted.  Overplots,
+  by using the <span style="font-family: monospace;">'o'</span> key to toggle the next plot to be overplotted.  Overplots,
   including those of the Gaussian line models, are now done in a different
   line type.
   There are new colon commands to change the dispersion axis and summing

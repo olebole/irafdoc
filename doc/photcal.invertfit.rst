@@ -39,7 +39,7 @@ invertfit: Compute the standard indices by inverting the fit
   format of the <i>observations</i> and <i>catalog</i> files, and defines the
   form of the transformation equations to be inverted.
   More information can be obtained about the format of this file
-  by typing <tt>"help mkconfig"</tt> and <tt>"help config"</tt>.
+  by typing <span style="font-family: monospace;">"help mkconfig"</span> and <span style="font-family: monospace;">"help config"</span>.
   </dd>
   </dl>
   <dl>
@@ -62,22 +62,22 @@ invertfit: Compute the standard indices by inverting the fit
   followed by the values of the <i>print</i> variables if any,
   followed by the fitted value of each catalog variable, error in the
   catalog variable (if <i>errors</i> is not
-  <tt>"undefined"</tt>), and residual of the fit (if catalog matching is enabled).
+  <span style="font-family: monospace;">"undefined"</span>), and residual of the fit (if catalog matching is enabled).
   </dd>
   </dl>
   <dl>
-  <dt><b>catalogs = <tt>""</tt></b></dt>
+  <dt><b>catalogs = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='catalogs' Line='catalogs = ""' -->
   <dd>The list of files containing the catalog data.
   <i>Catalogs</i> are multi-column text files, whose columns are delimited
   by whitespace, and whose first column is always reserved for an object id.
   All catalog files in the list must have the same format.
-  If <i>catalogs</i> is <tt>""</tt>, then no id matching with the observations files
+  If <i>catalogs</i> is <span style="font-family: monospace;">""</span>, then no id matching with the observations files
   is done, and the residuals of the fit cannot be computed.
   </dd>
   </dl>
   <dl>
-  <dt><b>errors = <tt>"obserrors"</tt></b></dt>
+  <dt><b>errors = <span style="font-family: monospace;">"obserrors"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='errors' Line='errors = "obserrors"' -->
   <dd>The algorithm used to compute formal errors for each object fit. The choices
   are:
@@ -109,7 +109,7 @@ invertfit: Compute the standard indices by inverting the fit
   </dd>
   </dl>
   <dl>
-  <dt><b>objects = <tt>"all"</tt></b></dt>
+  <dt><b>objects = <span style="font-family: monospace;">"all"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='objects' Line='objects = "all"' -->
   <dd>The type of objects to output to <i>calib</i>. The choices are:
   <dl>
@@ -133,7 +133,7 @@ invertfit: Compute the standard indices by inverting the fit
   </dd>
   </dl>
   <dl>
-  <dt><b>print = <tt>""</tt></b></dt>
+  <dt><b>print = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='print' Line='print = ""' -->
   <dd>Additional variables to be printed in the output file. These variables are
   printed immediately after the object id, and may be any of the
@@ -142,7 +142,7 @@ invertfit: Compute the standard indices by inverting the fit
   </dd>
   </dl>
   <dl>
-  <dt><b>format = <tt>""</tt></b></dt>
+  <dt><b>format = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='format' Line='format = ""' -->
   <dd>An SPP style format string to be used for formatting the output data, in
   place of the default format. SPP format
@@ -153,16 +153,16 @@ invertfit: Compute the standard indices by inverting the fit
   <dt><b>append = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='append' Line='append = no' -->
   <dd>Append the output to <i>calib</i> instead of creating a new file. If the
-  file already exists and <i>append</i> is <tt>"no"</tt> INVERTFIT will abort.
+  file already exists and <i>append</i> is <span style="font-family: monospace;">"no"</span> INVERTFIT will abort.
   </dd>
   </dl>
   <dl>
-  <dt><b>catdir = <tt>")_.catdir"</tt></b></dt>
+  <dt><b>catdir = <span style="font-family: monospace;">")_.catdir"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='catdir' Line='catdir = ")_.catdir"' -->
   <dd>The directory containing the supported standard star catalogs.
   The default parameter value  redirects <i>catdir</i>
   to a package parameter of the same name. A list of standard
-  catalogs may be obtained by printing the file <tt>"photcal$catalogs/README"</tt>.
+  catalogs may be obtained by printing the file <span style="font-family: monospace;">"photcal$catalogs/README"</span>.
   Alternatively the user may create their own standard star catalogs 
   and standard star catalog directory.
   </dd>
@@ -176,7 +176,7 @@ invertfit: Compute the standard indices by inverting the fit
   transformation equations defined in <i>config</i>, using the
   parameter values in the file <i>parameters</i> produced by the FITPARAMS
   task, and writes the fitted values to the output file <i>calib</i>.
-  If <i>append</i> is <tt>"yes"</tt> output may be appended to an existing file.
+  If <i>append</i> is <span style="font-family: monospace;">"yes"</span> output may be appended to an existing file.
   </p>
   <p>
   INVERTFIT computes the values of the catalog variables for the program
@@ -237,16 +237,16 @@ invertfit: Compute the standard indices by inverting the fit
   </p>
   <p>
   Formal errors for the fit may
-  be computed by,  1) setting <i>errors</i> to <tt>"obserrors"</tt> and using the
+  be computed by,  1) setting <i>errors</i> to <span style="font-family: monospace;">"obserrors"</span> and using the
   error columns defined in the observations section of <i>config</i>
-  to estimate the errors or 2) setting <i>errors</i> to <tt>"equations"</tt> and
+  to estimate the errors or 2) setting <i>errors</i> to <span style="font-family: monospace;">"equations"</span> and
   using the error equations defined in <i>config</i> to estimate the errors.
   </p>
   <p>
   If the user wishes to match the objects in <i>observations</i> with those
   in <i>catalogs</i> in order for example, to compute the residuals of the fit,
-  <i>catalogs</i> must be defined. Similarly if <i>objects</i> is <tt>"program"</tt>
-  or <tt>"standard"</tt>, <i>catalogs</i> must be defined in order to enable
+  <i>catalogs</i> must be defined. Similarly if <i>objects</i> is <span style="font-family: monospace;">"program"</span>
+  or <span style="font-family: monospace;">"standard"</span>, <i>catalogs</i> must be defined in order to enable
   id matching.
   </p>
   <p>
@@ -261,13 +261,13 @@ invertfit: Compute the standard indices by inverting the fit
   (hh:mm:ss) are interpreted internally as real numbers. The constant
   INDEF can be used to represent data that is missing or undefined.
   Double precision and complex data are
-  not supported. Lines beginning with <tt>"#"</tt> are treated as comment lines.
+  not supported. Lines beginning with <span style="font-family: monospace;">"#"</span> are treated as comment lines.
   </p>
   <p>
   By default INVERTFIT prints out the id,
   followed by the variables listed in the <i>print</i>
   parameter, followed by the fit value, estimated
-  error (if <i>errors</i> is <tt>"undefined"</tt>, and residual of the fit (for any
+  error (if <i>errors</i> is <span style="font-family: monospace;">"undefined"</span>, and residual of the fit (for any
   standard star observations that can be matched with the catalog values)
   for each fitted catalog variable.
   The user can format the output by setting the <i>format</i> parameter to an SPP
@@ -277,9 +277,9 @@ invertfit: Compute the standard indices by inverting the fit
   <h3>Formats</h3>
   <!-- BeginSection: 'FORMATS' -->
   <p>
-  A format specification has the form <tt>"%w.dCn"</tt>, where w is the field width,
+  A format specification has the form <span style="font-family: monospace;">"%w.dCn"</span>, where w is the field width,
   d is the number of decimal places or the number of digits of precision,
-  C is the format code, and n is radix character for format code <tt>"r"</tt> only.
+  C is the format code, and n is radix character for format code <span style="font-family: monospace;">"r"</span> only.
   The w and d fields are optional.  The format codes C are as follows:
   </p>
   <pre>

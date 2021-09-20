@@ -71,13 +71,13 @@ disptrans: Transform dispersion units and apply air correction
   </dd>
   </dl>
   <dl>
-  <dt><b>air = <tt>"none"</tt> (none|air2vac|vac2air)</b></dt>
+  <dt><b>air = <span style="font-family: monospace;">"none"</span> (none|air2vac|vac2air)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='air' Line='air = "none" (none|air2vac|vac2air)' -->
   <dd>Apply an air to vacuum or vacuum to air conversion?  It is the
   responsibility of the user to know whether the input dispersion
   is in air or vacuum units and to select the appropriate conversion.
-  The conversion types are <tt>"none"</tt> for no conversion, <tt>"air2vac"</tt> to
-  convert from air to vacuum, and <tt>"vac2air"</tt> to convert from vacuum
+  The conversion types are <span style="font-family: monospace;">"none"</span> for no conversion, <span style="font-family: monospace;">"air2vac"</span> to
+  convert from air to vacuum, and <span style="font-family: monospace;">"vac2air"</span> to convert from vacuum
   to air.
   </dd>
   </dl>
@@ -92,7 +92,7 @@ disptrans: Transform dispersion units and apply air correction
   OTHER PARAMETERS
   </p>
   <dl>
-  <dt><b>interp = <tt>"poly5"</tt> (nearest|linear|poly3|poly5|spline3|sinc)</b></dt>
+  <dt><b>interp = <span style="font-family: monospace;">"poly5"</span> (nearest|linear|poly3|poly5|spline3|sinc)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interp' Line='interp = "poly5" (nearest|linear|poly3|poly5|spline3|sinc)' -->
   <dd>Spectrum interpolation type used when spectra are resampled.  The choices are:
   <pre>
@@ -160,10 +160,10 @@ disptrans: Transform dispersion units and apply air correction
   <!-- BeginSection: 'UNITS' -->
   <p>
   The dispersion units are specified by strings having a unit type from the
-  list below along with the possible preceding modifiers, <tt>"inverse"</tt>, to
-  select the inverse of the unit and <tt>"log"</tt> to select logarithmic units. For
-  example <tt>"log angstroms"</tt> to select the logarithm of wavelength in Angstroms
-  and <tt>"inv microns"</tt> to select inverse microns.  The various identifiers may
+  list below along with the possible preceding modifiers, <span style="font-family: monospace;">"inverse"</span>, to
+  select the inverse of the unit and <span style="font-family: monospace;">"log"</span> to select logarithmic units. For
+  example <span style="font-family: monospace;">"log angstroms"</span> to select the logarithm of wavelength in Angstroms
+  and <span style="font-family: monospace;">"inv microns"</span> to select inverse microns.  The various identifiers may
   be abbreviated as words but the syntax is not sophisticated enough to
   recognized standard scientific abbreviations except for those given
   explicitly below.

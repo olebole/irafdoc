@@ -42,11 +42,11 @@ flatten: Flatten images using a flat field
   </dd>
   </dl>
   <dl>
-  <dt><b>pixtype = <tt>"real"</tt></b></dt>
+  <dt><b>pixtype = <span style="font-family: monospace;">"real"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pixtype' Line='pixtype = "real"' -->
-  <dd>The pixel datatype of the flattened image.  The null string (<tt>""</tt>) defaults
+  <dd>The pixel datatype of the flattened image.  The null string (<span style="font-family: monospace;">""</span>) defaults
   the pixel datatype to that of the original image before flattening.
-  The other choices are <tt>"short"</tt>, <tt>"integer"</tt>, <tt>"long"</tt>, and <tt>"real"</tt>.
+  The other choices are <span style="font-family: monospace;">"short"</span>, <span style="font-family: monospace;">"integer"</span>, <span style="font-family: monospace;">"long"</span>, and <span style="font-family: monospace;">"real"</span>.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -56,7 +56,7 @@ flatten: Flatten images using a flat field
   Each of the <i>images</i> is flatten by dividing by the <i>flatfield</i>
   flat field image.  The flattened images replace the original images.
   The pixel datatype of the flattened images is specified by the
-  <i>pixtype</i>.  The null string (<tt>""</tt>) leaves the datatype of the images
+  <i>pixtype</i>.  The null string (<span style="font-family: monospace;">""</span>) leaves the datatype of the images
   unchanged.  Low values in the flat field may be replaced by unit response
   by specifying a <i>minflat</i> value.  All pixels in the flat field less
   than or equal to <i>minflat</i> are given unit response.

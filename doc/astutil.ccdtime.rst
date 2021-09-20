@@ -53,27 +53,27 @@ ccdtime: Compute time, magnitude, and signal-to-noise for CCDs
   </dd>
   </dl>
   <dl>
-  <dt><b>database = <tt>"ccdtime$kpno.dat"</tt></b></dt>
+  <dt><b>database = <span style="font-family: monospace;">"ccdtime$kpno.dat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database = "ccdtime$kpno.dat"' -->
   <dd>Database file for telescope, filter, and detector information.  The format
   of this file is described elsewhere.  This file is typically a standard
-  file from the logical directory <tt>"ccdtime$"</tt> or a personal copy in a
+  file from the logical directory <span style="font-family: monospace;">"ccdtime$"</span> or a personal copy in a
   user's directory.
   </dd>
   </dl>
   <dl>
-  <dt><b>telescope = <tt>"?"</tt></b></dt>
+  <dt><b>telescope = <span style="font-family: monospace;">"?"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='telescope' Line='telescope = "?"' -->
-  <dd>Telescope entry from the database.  If <tt>"?"</tt> a list of telescopes in the
+  <dd>Telescope entry from the database.  If <span style="font-family: monospace;">"?"</span> a list of telescopes in the
   database is produced.  The name must match the entry name in the database
   but ignoring case.  If the same telescope has multiple focal ratios then
   there must be multiple entries in the database.
   </dd>
   </dl>
   <dl>
-  <dt><b>detector = <tt>""</tt></b></dt>
+  <dt><b>detector = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='detector' Line='detector = ""' -->
-  <dd>Detector entry from the database.  If <tt>"?"</tt> a list of detectors in the
+  <dd>Detector entry from the database.  If <span style="font-family: monospace;">"?"</span> a list of detectors in the
   database is produced.  The name must match the entry name in the database
   but ignoring case.
   </dd>
@@ -107,11 +107,11 @@ ccdtime: Compute time, magnitude, and signal-to-noise for CCDs
   </dd>
   </dl>
   <dl>
-  <dt><b>f1 = <tt>"U"</tt>, f2 = <tt>"B"</tt>, f3 = <tt>"V"</tt>, f4 = <tt>"R"</tt>, f5 = <tt>"I"</tt></b></dt>
+  <dt><b>f1 = <span style="font-family: monospace;">"U"</span>, f2 = <span style="font-family: monospace;">"B"</span>, f3 = <span style="font-family: monospace;">"V"</span>, f4 = <span style="font-family: monospace;">"R"</span>, f5 = <span style="font-family: monospace;">"I"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='f1' Line='f1 = "U", f2 = "B", f3 = "V", f4 = "R", f5 = "I"' -->
-  <dd>Filters for which to compute the CCD information.  If given as <tt>"?"</tt>
+  <dd>Filters for which to compute the CCD information.  If given as <span style="font-family: monospace;">"?"</span>
   a list of filters in the database is produced.  If the name (ignoring
-  case) is not found then it is ignored.  A null name, that is <tt>""</tt>,
+  case) is not found then it is ignored.  A null name, that is <span style="font-family: monospace;">""</span>,
   is used to eliminate listing of a filter.  There may be many filters
   in the database but the task is currently limited to displaying no
   more than five.
@@ -139,7 +139,7 @@ ccdtime: Compute time, magnitude, and signal-to-noise for CCDs
   <p>
   The calibration information needed to define the count rates are
   taken from a database file.  This file may be standard ones given in
-  the logical directory <tt>"ccdtime$"</tt> or the user may create their own.
+  the logical directory <span style="font-family: monospace;">"ccdtime$"</span> or the user may create their own.
   The database contains entries organized by telescope name (which may
   include a focal ratio if there are multiple ones), detector name,
   and filter name.  One of the standard files may be used as a template.
@@ -147,11 +147,11 @@ ccdtime: Compute time, magnitude, and signal-to-noise for CCDs
   <p>
   The file is actually in free format with whitespace and comments ignored.
   However, following the template formatting makes it easy to see the logical
-  structure.  All lines, except the <tt>"end"</tt> line which separates the different
+  structure.  All lines, except the <span style="font-family: monospace;">"end"</span> line which separates the different
   categories of entries, consist of a keyword an equal sign, and a value
   separated by whitespace.  An entry begins with one of the keywords
-  <tt>"telescope"</tt>, <tt>"detector"</tt>, or <tt>"filter"</tt> and ends with the beginning of
-  a new entry or the <tt>"end"</tt> separator.
+  <span style="font-family: monospace;">"telescope"</span>, <span style="font-family: monospace;">"detector"</span>, or <span style="font-family: monospace;">"filter"</span> and ends with the beginning of
+  a new entry or the <span style="font-family: monospace;">"end"</span> separator.
   </p>
   <p>
   A keyword is one of the words shown in the example below.  These keywords
@@ -249,8 +249,8 @@ ccdtime: Compute time, magnitude, and signal-to-noise for CCDs
   	    10**(0.4*(1-airmass)*extinction) * dqe
   </pre>
   <p>
-  where the <tt>"star"</tt>, <tt>"aperture"</tt>, <tt>"transmission"</tt>, <tt>"extinction"</tt>, are those
-  in the database and the <tt>"dqe"</tt> is the appropriate filter value.  The sky
+  where the <span style="font-family: monospace;">"star"</span>, <span style="font-family: monospace;">"aperture"</span>, <span style="font-family: monospace;">"transmission"</span>, <span style="font-family: monospace;">"extinction"</span>, are those
+  in the database and the <span style="font-family: monospace;">"dqe"</span> is the appropriate filter value.  The sky
   rate per pixel is:
   </p>
   <pre>
@@ -260,7 +260,7 @@ ccdtime: Compute time, magnitude, and signal-to-noise for CCDs
   <p>
   where mag is the fiducial magnitude, sky is the value computed using
   the quadratic formula for the specified moon phase and the database
-  coefficients, the <tt>"pixel"</tt> size is computed using the CCD pixel size and
+  coefficients, the <span style="font-family: monospace;">"pixel"</span> size is computed using the CCD pixel size and
   the telescope scale from the database, and sum is the
   specified CCD binning factor.
   </p>
@@ -409,7 +409,7 @@ ccdtime: Compute time, magnitude, and signal-to-noise for CCDs
   <dt><b>CCDTIME V2.11.2</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='CCDTIME' Line='CCDTIME V2.11.2' -->
   <dd>The incorrect usage of a 1 mag/airmass extinction was fixed by adding an
-  expected <tt>"extinction"</tt> entry in the filter entries.  Note that old files
+  expected <span style="font-family: monospace;">"extinction"</span> entry in the filter entries.  Note that old files
   will still give the same result by using an extinction of 1 if the keyword
   is not found.
   The database keywords can not be indexed by telescope, filter, and/or

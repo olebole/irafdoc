@@ -44,24 +44,24 @@ doslit: Process KPNO coude slit spectra
   <dd>List of object images to be processed.  Previously processed spectra are
   ignored unless the <i>redo</i> flag is set or the <i>update</i> flag is set
   and dependent calibration data has changed.  If the images contain the
-  keyword IMAGETYP then only those with a value of <tt>"object"</tt> or <tt>"OBJECT"</tt>
-  are used and those with a value of <tt>"comp"</tt> or <tt>"COMPARISON"</tt> are added
+  keyword IMAGETYP then only those with a value of <span style="font-family: monospace;">"object"</span> or <span style="font-family: monospace;">"OBJECT"</span>
+  are used and those with a value of <span style="font-family: monospace;">"comp"</span> or <span style="font-family: monospace;">"COMPARISON"</span> are added
   to the list of arcs.  Extracted spectra are ignored.
   </dd>
   </dl>
   <dl>
-  <dt><b>arcs = <tt>""</tt> (at least one if dispersion correcting)</b></dt>
+  <dt><b>arcs = <span style="font-family: monospace;">""</span> (at least one if dispersion correcting)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='arcs' Line='arcs = "" (at least one if dispersion correcting)' -->
   <dd>List of arc calibration spectra.  These spectra are used to define
   the dispersion functions.  The first spectrum is used to mark lines
   and set the dispersion function interactively and dispersion functions
   for all other arc spectra are derived from it.  If the images contain
-  the keyword IMAGETYP then only those with a value of <tt>"comp"</tt> or
-  <tt>"COMPARISON"</tt> are used.  All others are ignored as are extracted spectra.
+  the keyword IMAGETYP then only those with a value of <span style="font-family: monospace;">"comp"</span> or
+  <span style="font-family: monospace;">"COMPARISON"</span> are used.  All others are ignored as are extracted spectra.
   </dd>
   </dl>
   <dl>
-  <dt><b>arctable = <tt>""</tt> (optional) (refspectra)</b></dt>
+  <dt><b>arctable = <span style="font-family: monospace;">""</span> (optional) (refspectra)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='arctable' Line='arctable = "" (optional) (refspectra)' -->
   <dd>Table defining which arc spectra are to be assigned to which object
   spectra (see <b>refspectra</b>).  If not specified an assignment based
@@ -70,14 +70,14 @@ doslit: Process KPNO coude slit spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>standards = <tt>""</tt> (at least one if flux calibrating)</b></dt>
+  <dt><b>standards = <span style="font-family: monospace;">""</span> (at least one if flux calibrating)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='standards' Line='standards = "" (at least one if flux calibrating)' -->
   <dd>List of standard star spectra.  The standard stars must have entries in
   the calibration database (package parameter <i>caldir</i>).
   </dd>
   </dl>
   <dl>
-  <dt><b>readnoise = <tt>"rdnoise"</tt>, gain = <tt>"gain"</tt> (apsum)</b></dt>
+  <dt><b>readnoise = <span style="font-family: monospace;">"rdnoise"</span>, gain = <span style="font-family: monospace;">"gain"</span> (apsum)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='readnoise' Line='readnoise = "rdnoise", gain = "gain" (apsum)' -->
   <dd>Read out noise in photons and detector gain in photons per data value.
   This parameter defines the minimum noise sigma and the conversion between
@@ -200,13 +200,13 @@ doslit: Process KPNO coude slit spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>sparams = <tt>""</tt> (pset)</b></dt>
+  <dt><b>sparams = <span style="font-family: monospace;">""</span> (pset)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sparams' Line='sparams = "" (pset)' -->
   <dd>Name of parameter set containing additional processing parameters.  This
   parameter is only for indicating the link to the parameter set
   <b>sparams</b> and should not be given a value.  The parameter set may be
-  examined and modified in the usual ways (typically with <tt>"epar sparams"</tt>
-  or <tt>":e sparams"</tt> from the parameter editor).  The parameters are
+  examined and modified in the usual ways (typically with <span style="font-family: monospace;">"epar sparams"</span>
+  or <span style="font-family: monospace;">":e sparams"</span> from the parameter editor).  The parameters are
   described below.
   </dd>
   </dl>
@@ -262,11 +262,11 @@ doslit: Process KPNO coude slit spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>t_function = <tt>"spline3"</tt>, t_order = 1 (aptrace)</b></dt>
+  <dt><b>t_function = <span style="font-family: monospace;">"spline3"</span>, t_order = 1 (aptrace)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='t_function' Line='t_function = "spline3", t_order = 1 (aptrace)' -->
   <dd>Default trace fitting function and order.  The fitting function types are
-  <tt>"chebyshev"</tt> polynomial, <tt>"legendre"</tt> polynomial, <tt>"spline1"</tt> linear spline, and
-  <tt>"spline3"</tt> cubic spline.  The order refers to the number of terms in the
+  <span style="font-family: monospace;">"chebyshev"</span> polynomial, <span style="font-family: monospace;">"legendre"</span> polynomial, <span style="font-family: monospace;">"spline1"</span> linear spline, and
+  <span style="font-family: monospace;">"spline3"</span> cubic spline.  The order refers to the number of terms in the
   polynomial functions or the number of spline pieces in the spline
   functions.
   </dd>
@@ -281,20 +281,20 @@ doslit: Process KPNO coude slit spectra
   
   </p>
   <dl>
-  <dt><b>weights = <tt>"none"</tt> (apsum) (none|variance)</b></dt>
+  <dt><b>weights = <span style="font-family: monospace;">"none"</span> (apsum) (none|variance)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='weights' Line='weights = "none" (apsum) (none|variance)' -->
   <dd>Type of extraction weighting.  Note that if the <i>clean</i> parameter is
-  set then the weights used are <tt>"variance"</tt> regardless of the weights
+  set then the weights used are <span style="font-family: monospace;">"variance"</span> regardless of the weights
   specified by this parameter.  The choices are:
   <dl>
-  <dt><b><tt>"none"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"none"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"none"' -->
   <dd>The pixels are summed without weights except for partial pixels at the
   ends.
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"variance"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"variance"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"variance"' -->
   <dd>The extraction is weighted by the variance based on the data values
   and a poisson/ccd model using the <i>gain</i> and <i>readnoise</i>
@@ -304,9 +304,9 @@ doslit: Process KPNO coude slit spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>pfit = <tt>"fit1d"</tt> (apsum and approfile) (fit1d|fit2d)</b></dt>
+  <dt><b>pfit = <span style="font-family: monospace;">"fit1d"</span> (apsum and approfile) (fit1d|fit2d)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pfit' Line='pfit = "fit1d" (apsum and approfile) (fit1d|fit2d)' -->
-  <dd>Type of profile fitting algorithm to use.  The <tt>"fit1d"</tt> algorithm is
+  <dd>Type of profile fitting algorithm to use.  The <span style="font-family: monospace;">"fit1d"</span> algorithm is
   preferred except in cases of extreme tilt.
   </dd>
   </dl>
@@ -321,37 +321,37 @@ doslit: Process KPNO coude slit spectra
   
   </p>
   <dl>
-  <dt><b>background = <tt>"fit"</tt> (apsum) (none|average|median|minimum|fit)</b></dt>
+  <dt><b>background = <span style="font-family: monospace;">"fit"</span> (apsum) (none|average|median|minimum|fit)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='background' Line='background = "fit" (apsum) (none|average|median|minimum|fit)' -->
-  <dd>Type of background subtraction.  The choices are <tt>"none"</tt> for no background
-  subtraction, <tt>"average"</tt> to average the background within the background
-  regions, <tt>"median"</tt> to use the median in the background regions, <tt>"minimum"</tt> to
-  use the minimum in the background regions, or <tt>"fit"</tt> to fit across the
+  <dd>Type of background subtraction.  The choices are <span style="font-family: monospace;">"none"</span> for no background
+  subtraction, <span style="font-family: monospace;">"average"</span> to average the background within the background
+  regions, <span style="font-family: monospace;">"median"</span> to use the median in the background regions, <span style="font-family: monospace;">"minimum"</span> to
+  use the minimum in the background regions, or <span style="font-family: monospace;">"fit"</span> to fit across the
   dispersion using the background within the background regions.  Note that
-  the <tt>"average"</tt> option does not do any medianing or bad pixel checking,
+  the <span style="font-family: monospace;">"average"</span> option does not do any medianing or bad pixel checking,
   something which is recommended.  The fitting option is slower than the
   other options and requires additional fitting parameter.
   </dd>
   </dl>
   <dl>
-  <dt><b>b_function = <tt>"legendre"</tt>, b_order = 1 (apsum)</b></dt>
+  <dt><b>b_function = <span style="font-family: monospace;">"legendre"</span>, b_order = 1 (apsum)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='b_function' Line='b_function = "legendre", b_order = 1 (apsum)' -->
   <dd>Default background fitting function and order.  The fitting function types are
-  <tt>"chebyshev"</tt> polynomial, <tt>"legendre"</tt> polynomial, <tt>"spline1"</tt> linear spline, and
-  <tt>"spline3"</tt> cubic spline.  The order refers to the number of
+  <span style="font-family: monospace;">"chebyshev"</span> polynomial, <span style="font-family: monospace;">"legendre"</span> polynomial, <span style="font-family: monospace;">"spline1"</span> linear spline, and
+  <span style="font-family: monospace;">"spline3"</span> cubic spline.  The order refers to the number of
   terms in the polynomial functions or the number of spline pieces in the spline
   functions.
   </dd>
   </dl>
   <dl>
-  <dt><b>b_sample = <tt>"-10:-6,6:10"</tt> (apsum)</b></dt>
+  <dt><b>b_sample = <span style="font-family: monospace;">"-10:-6,6:10"</span> (apsum)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='b_sample' Line='b_sample = "-10:-6,6:10" (apsum)' -->
   <dd>Default background sample.  The sample is given by a set of colon separated
-  ranges each separated by either whitespace or commas.  The string <tt>"*"</tt> refers
+  ranges each separated by either whitespace or commas.  The string <span style="font-family: monospace;">"*"</span> refers
   to all points.  Note that the background coordinates are relative to the
   aperture center and not image pixel coordinates so the endpoints need not
   be integer.  It is recommended that the background regions be examined
-  and set interactively with the <tt>'b'</tt> key in the interactive aperture
+  and set interactively with the <span style="font-family: monospace;">'b'</span> key in the interactive aperture
   definition mode.  This requires <i>quicklook</i> to be no.
   </dd>
   </dl>
@@ -392,10 +392,10 @@ doslit: Process KPNO coude slit spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>coordlist = <tt>"linelists$idhenear.dat"</tt> (autoidentify/identify)</b></dt>
+  <dt><b>coordlist = <span style="font-family: monospace;">"linelists$idhenear.dat"</span> (autoidentify/identify)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coordlist' Line='coordlist = "linelists$idhenear.dat" (autoidentify/identify)' -->
   <dd>Arc line list consisting of an ordered list of wavelengths.
-  Some standard line lists are available in the directory <tt>"linelists$"</tt>.
+  Some standard line lists are available in the directory <span style="font-family: monospace;">"linelists$"</span>.
   </dd>
   </dl>
   <dl>
@@ -418,11 +418,11 @@ doslit: Process KPNO coude slit spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>i_function = <tt>"spline3"</tt>, i_order = 1 (autoidentify/identify)</b></dt>
+  <dt><b>i_function = <span style="font-family: monospace;">"spline3"</span>, i_order = 1 (autoidentify/identify)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='i_function' Line='i_function = "spline3", i_order = 1 (autoidentify/identify)' -->
   <dd>The default function and order to be fit to the arc wavelengths as a
-  function of the pixel coordinate.  The functions choices are <tt>"chebyshev"</tt>,
-  <tt>"legendre"</tt>, <tt>"spline1"</tt>, or <tt>"spline3"</tt>.
+  function of the pixel coordinate.  The functions choices are <span style="font-family: monospace;">"chebyshev"</span>,
+  <span style="font-family: monospace;">"legendre"</span>, <span style="font-family: monospace;">"spline1"</span>, or <span style="font-family: monospace;">"spline3"</span>.
   </dd>
   </dl>
   <dl>
@@ -456,7 +456,7 @@ doslit: Process KPNO coude slit spectra
   
   </p>
   <dl>
-  <dt><b>select = <tt>"interp"</tt> (refspectra)</b></dt>
+  <dt><b>select = <span style="font-family: monospace;">"interp"</span> (refspectra)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='select' Line='select = "interp" (refspectra)' -->
   <dd>Selection method for assigning wavelength calibration spectra.
   Note that an arc assignment table may be used to override the selection
@@ -516,7 +516,7 @@ doslit: Process KPNO coude slit spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>sort = <tt>"jd"</tt> (setjd and refspectra)</b></dt>
+  <dt><b>sort = <span style="font-family: monospace;">"jd"</span> (setjd and refspectra)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sort' Line='sort = "jd" (setjd and refspectra)' -->
   <dd>Image header keyword to be used as the sorting parameter for selection
   based on order.  The header parameter must be numeric but otherwise may
@@ -524,13 +524,13 @@ doslit: Process KPNO coude slit spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>group = <tt>"ljd"</tt> (setjd and refspectra)</b></dt>
+  <dt><b>group = <span style="font-family: monospace;">"ljd"</span> (setjd and refspectra)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='group' Line='group = "ljd" (setjd and refspectra)' -->
   <dd>Image header keyword to be used to group spectra.  For those selection
   methods which use the group parameter the reference and object
   spectra must have identical values for this keyword.  This can
   be anything but it must be constant within a group.  Common grouping
-  parameters are the date of observation <tt>"date-obs"</tt> (provided it does not
+  parameters are the date of observation <span style="font-family: monospace;">"date-obs"</span> (provided it does not
   change over a night) or the local Julian day number.
   </dd>
   </dl>
@@ -580,11 +580,11 @@ doslit: Process KPNO coude slit spectra
   
   </p>
   <dl>
-  <dt><b>s_function = <tt>"spline3"</tt>, s_order = 1 (sensfunc)</b></dt>
+  <dt><b>s_function = <span style="font-family: monospace;">"spline3"</span>, s_order = 1 (sensfunc)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='s_function' Line='s_function = "spline3", s_order = 1 (sensfunc)' -->
   <dd>Function and order used to fit the sensitivity data.  The function types
-  are <tt>"chebyshev"</tt> polynomial, <tt>"legendre"</tt> polynomial, <tt>"spline3"</tt> cubic spline,
-  and <tt>"spline1"</tt> linear spline.  Order of the sensitivity fitting function.
+  are <span style="font-family: monospace;">"chebyshev"</span> polynomial, <span style="font-family: monospace;">"legendre"</span> polynomial, <span style="font-family: monospace;">"spline3"</span> cubic spline,
+  and <span style="font-family: monospace;">"spline1"</span> linear spline.  Order of the sensitivity fitting function.
   The value corresponds to the number of polynomial terms or the number of
   spline pieces.  The default values may be changed interactively.
   </dd>
@@ -625,13 +625,13 @@ doslit: Process KPNO coude slit spectra
   <dt><b>caldir (standard)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='caldir' Line='caldir (standard)' -->
   <dd>Standard star calibration directory.  A directory containing standard
-  star data files.  Note that the directory name must end with <tt>'/'</tt>.
+  star data files.  Note that the directory name must end with <span style="font-family: monospace;">'/'</span>.
   There are a number of standard star calibrations directories in the NOAO
   standards library, onedstds$.
   </dd>
   </dl>
   <dl>
-  <dt><b>observatory = <tt>"observatory"</tt> (observatory)</b></dt>
+  <dt><b>observatory = <span style="font-family: monospace;">"observatory"</span> (observatory)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory = "observatory" (observatory)' -->
   <dd>The default observatory to use for latitude dependent computations.
   If the OBSERVAT keyword in the image header it takes precedence over
@@ -639,7 +639,7 @@ doslit: Process KPNO coude slit spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>interp = <tt>"poly5"</tt> (nearest|linear|poly3|poly5|spline3|sinc) (dispcor)</b></dt>
+  <dt><b>interp = <span style="font-family: monospace;">"poly5"</span> (nearest|linear|poly3|poly5|spline3|sinc) (dispcor)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interp' Line='interp = "poly5" (nearest|linear|poly3|poly5|spline3|sinc) (dispcor)' -->
   <dd>Spectrum interpolation type used when spectra are resampled.  The choices are:
   <pre>
@@ -653,7 +653,7 @@ doslit: Process KPNO coude slit spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>database = <tt>"database"</tt></b></dt>
+  <dt><b>database = <span style="font-family: monospace;">"database"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"' -->
   <dd>Database name used by various tasks.  This is a directory which is created
   if necessary.
@@ -668,13 +668,13 @@ doslit: Process KPNO coude slit spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>logfile = <tt>"logfile"</tt></b></dt>
+  <dt><b>logfile = <span style="font-family: monospace;">"logfile"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "logfile"' -->
   <dd>If specified detailed text log information is written to this file.
   </dd>
   </dl>
   <dl>
-  <dt><b>plotfile = <tt>""</tt></b></dt>
+  <dt><b>plotfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='plotfile' Line='plotfile = ""' -->
   <dd>If specified metacode plots are recorded in this file for later review.
   Since plot information can become large this should be used only if
@@ -688,7 +688,7 @@ doslit: Process KPNO coude slit spectra
   The environment parameter <i>imtype</i> is used to determine the extension
   of the images to be processed and created.  This allows use with any
   supported image extension.  For STF images the extension has to be exact;
-  for example <tt>"d1h"</tt>.
+  for example <span style="font-family: monospace;">"d1h"</span>.
   </p>
   <!-- EndSection:   'ENVIRONMENT PARAMETERS' -->
   <h3>Description</h3>
@@ -751,7 +751,7 @@ doslit: Process KPNO coude slit spectra
   images to be processed,
   one or more arc images, and one or more standard
   star images.  If there are many object, arc, or standard star images
-  you might prepare <tt>"@ files"</tt>.  Set the detector and data
+  you might prepare <span style="font-family: monospace;">"@ files"</span>.  Set the detector and data
   specific parameters.  Select the processing options desired.
   Finally you might wish to review the <i>sparams</i> algorithm parameters
   though the defaults are probably adequate.
@@ -764,7 +764,7 @@ doslit: Process KPNO coude slit spectra
   observations and the task will generally only do the setup steps
   once and only process new images.  Queries presented during the
   execution for various interactive operations may be answered with
-  <tt>"yes"</tt>, <tt>"no"</tt>, <tt>"YES"</tt>, or <tt>"NO"</tt>.  The lower case responses apply just
+  <span style="font-family: monospace;">"yes"</span>, <span style="font-family: monospace;">"no"</span>, <span style="font-family: monospace;">"YES"</span>, or <span style="font-family: monospace;">"NO"</span>.  The lower case responses apply just
   to that query while the upper case responses apply to all further
   such queries during the current execution and no further queries of that
   type will be made.
@@ -782,13 +782,13 @@ doslit: Process KPNO coude slit spectra
   of entering the aperture editing loop to check the aperture position,
   size, and background fitting parameters, and possibly add additional
   apertures.  This is step is highly recommended.
-  It is important to check the background regions with the <tt>'b'</tt>
+  It is important to check the background regions with the <span style="font-family: monospace;">'b'</span>
   key.  To exit the background mode and then
-  to exit the review mode use <tt>'q'</tt>.
+  to exit the review mode use <span style="font-family: monospace;">'q'</span>.
   The spectrum positions at a series of points along the dispersion are
   measured and a function is fit to these positions.  If not using the
   quicklook option the traced positions may be examined interactively and the
-  fitting parameters adjusted.  To exit the interactive fitting type <tt>'q'</tt>.
+  fitting parameters adjusted.  To exit the interactive fitting type <span style="font-family: monospace;">'q'</span>.
   </dd>
   </dl>
   <dl>
@@ -800,10 +800,10 @@ doslit: Process KPNO coude slit spectra
   the automatic identification.  Whether or not the automatic identification
   is successful you will be shown the result of the arc line identification.
   If the automatic identification is not successful identify a few arc lines
-  with with <tt>'m'</tt> and use the <tt>'l'</tt> line list identification command to
+  with with <span style="font-family: monospace;">'m'</span> and use the <span style="font-family: monospace;">'l'</span> line list identification command to
   automatically add additional lines and fit the dispersion function.  Check
-  the quality of the dispersion function fit with <tt>'f'</tt>.  When satisfied exit
-  with <tt>'q'</tt>.
+  the quality of the dispersion function fit with <span style="font-family: monospace;">'f'</span>.  When satisfied exit
+  with <span style="font-family: monospace;">'q'</span>.
   </dd>
   </dl>
   <dl>
@@ -833,7 +833,7 @@ doslit: Process KPNO coude slit spectra
   <dt><b>[8]</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='' Line='[8]' -->
   <dd>The option to examine the final spectra with <b>splot</b> may be given.
-  To exit type <tt>'q'</tt>.  In quicklook mode the spectra are plotted
+  To exit type <span style="font-family: monospace;">'q'</span>.  In quicklook mode the spectra are plotted
   noninteractively with <b>bplot</b>.
   </dd>
   </dl>
@@ -841,7 +841,7 @@ doslit: Process KPNO coude slit spectra
   <dt><b>[9]</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='' Line='[9]' -->
   <dd>The final spectra will have the same name as the original 2D images
-  with a <tt>".ms"</tt> extension added.
+  with a <span style="font-family: monospace;">".ms"</span> extension added.
   </dd>
   </dl>
   <p>
@@ -874,7 +874,7 @@ doslit: Process KPNO coude slit spectra
   <p>
   The final reduced spectra are recorded in one, two or three dimensional IRAF
   images.  The images have the same name as the original images with an added
-  <tt>".ms"</tt> extension.  Each line in the reduced image is a one dimensional
+  <span style="font-family: monospace;">".ms"</span> extension.  Each line in the reduced image is a one dimensional
   spectrum with associated aperture, wavelength, and identification
   information.  With a single aperture the image will be one dimensional
   and with multiple apertures the image will be two dimensional.
@@ -913,7 +913,7 @@ doslit: Process KPNO coude slit spectra
   <p>
   The spectrum interpolation type is used whenever a spectrum needs to be
   resampled for linearization or performing operations between spectra
-  with different sampling.  The <tt>"sinc"</tt> interpolation may be of interest
+  with different sampling.  The <span style="font-family: monospace;">"sinc"</span> interpolation may be of interest
   as an alternative but see the cautions given in <b>onedspec.package</b>.
   </p>
   <p>
@@ -942,8 +942,8 @@ doslit: Process KPNO coude slit spectra
   To allow wildcard image lists to be used safely and conveniently the
   image lists are checked to remove extracted images (the .ms images)
   and to automatically identify object and arc spectra.  Object and arc
-  images are identified by the keyword IMAGETYP with values of <tt>"object"</tt>,
-  <tt>"OBJECT"</tt>, <tt>"comp"</tt>, or <tt>"COMPARISON"</tt> (the current practice at NOAO).
+  images are identified by the keyword IMAGETYP with values of <span style="font-family: monospace;">"object"</span>,
+  <span style="font-family: monospace;">"OBJECT"</span>, <span style="font-family: monospace;">"comp"</span>, or <span style="font-family: monospace;">"COMPARISON"</span> (the current practice at NOAO).
   If arc images are found in the object list they are transferred to the
   arc list while if object images are found in the arc list they are ignored.
   All other image types, such as biases, darks, or flat fields, are
@@ -961,7 +961,7 @@ doslit: Process KPNO coude slit spectra
   <p>
   The next set of parameters describe the noise characteristics and
   spectrum characteristics.  The read out noise and gain are used when
-  <tt>"cleaning"</tt> cosmic rays and when using variance or optimal weighting.  These
+  <span style="font-family: monospace;">"cleaning"</span> cosmic rays and when using variance or optimal weighting.  These
   parameters must be fairly accurate.  Note that these are the effective
   parameters and must be adjusted if previous processing has modified the
   pixel values; such as with an unnormalized flat field.
@@ -1042,7 +1042,7 @@ doslit: Process KPNO coude slit spectra
   The batch processing option allows object spectra to be processed as a
   background or batch job.  This will occur only if the interactive
   <i>splot</i> option is not active; either not set, turned off during
-  processing with <tt>"NO"</tt>, or in quicklook mode.  In batch processing the
+  processing with <span style="font-family: monospace;">"NO"</span>, or in quicklook mode.  In batch processing the
   terminal output is suppressed.
   </p>
   <p>
@@ -1105,7 +1105,7 @@ doslit: Process KPNO coude slit spectra
   Initially a single spectrum is found and a default aperture defined
   automatically.  If the <i>resize</i> parameter is set the aperture width is
   adjusted to a specified point on the spectrum profile (see
-  <b>apresize</b>).  If not in <tt>"quicklook"</tt> mode (set by the <i>quicklook</i>
+  <b>apresize</b>).  If not in <span style="font-family: monospace;">"quicklook"</span> mode (set by the <i>quicklook</i>
   parameter) a query is printed to select whether to inspect and modify the
   aperture and background aperture definitions using the commands described
   for <b>apedit</b>.  This option allows adding
@@ -1187,7 +1187,7 @@ doslit: Process KPNO coude slit spectra
   routines which include medians, iterative rejection of deviant points, and
   a choice of function types and orders.  Note that it is important to use a
   method which rejects cosmic rays such as using either medians over all the
-  background regions (<i>background</i> = <tt>"median"</tt>) or median samples during
+  background regions (<i>background</i> = <span style="font-family: monospace;">"median"</span>) or median samples during
   fitting (<i>b_naverage</i> &lt; -1).  The background subtraction algorithm and
   options are described in greater detail in <b>apsum</b> and
   <b>apbackground</b>.
@@ -1352,7 +1352,7 @@ doslit: Process KPNO coude slit spectra
   <p>
   1.  The following example uses artificial data and may be executed
   at the terminal (with IRAF V2.10).  This is similar to the sequence
-  performed by the test procedure <tt>"demos doslit"</tt>.  The output is with
+  performed by the test procedure <span style="font-family: monospace;">"demos doslit"</span>.  The output is with
   the verbose package parameter set.  Normally users use <b>eparam</b>
   rather than the long command line.  All parameters not shown
   for <b>sparams</b> and <b>doslit</b> are the default.
@@ -1371,18 +1371,18 @@ doslit: Process KPNO coude slit spectra
   Resizing apertures ...
   Jan 17 15:52: APRESIZE  - 1 apertures resized for demoobj1 (-3.50, 3.49)
   Edit apertures for demostd1?  (yes):
-  &lt;Check aperture and background definitions (<tt>'b'</tt>).  Exit with <tt>'q'</tt>&gt;
+  &lt;Check aperture and background definitions (<span style="font-family: monospace;">'b'</span>).  Exit with <span style="font-family: monospace;">'q'</span>&gt;
   Fit traced positions for demostd1 interactively?  (yes):  
   Tracing apertures ...
   Fit curve to aperture 1 of demostd1 interactively  (yes):
-  &lt;Exit with <tt>'q'</tt>&gt;
+  &lt;Exit with <span style="font-family: monospace;">'q'</span>&gt;
   Searching aperture database ...
   Finding apertures ...
   Jan 17 15:54: FIND - 1 apertures found for demostd1
   Resizing apertures ...
   Jan 17 15:54: APRESIZE  - 1 apertures resized for demostd1 (-3.35, 3.79)
   Edit apertures for demostd1?  (yes):
-  &lt;Exit with <tt>'q'</tt>&gt;
+  &lt;Exit with <span style="font-family: monospace;">'q'</span>&gt;
   Fit traced positions for demostd1 interactively?  (yes): n
   Tracing apertures ...
   Jan 17 15:55: TRACE - 1 apertures traced in demostd1.
@@ -1396,10 +1396,10 @@ doslit: Process KPNO coude slit spectra
   Jan 17 15:55: EXTRACT - Aperture 1 from demoarc1 --&gt; demoarc1.ms
   Determine dispersion solution for demoarc1
   &lt;A dispersion function is automatically determined.&gt;
-  &lt;Type <tt>'f'</tt> to see the fit residuals&gt;
-  &lt;Type <tt>'d'</tt> to delete the two deviant lines&gt;
-  &lt;Type <tt>'f'</tt> to refit with the bad points deleted&gt;
-  &lt;Type <tt>'q'</tt> to quit fit and then <tt>'q'</tt> to exit&gt;
+  &lt;Type <span style="font-family: monospace;">'f'</span> to see the fit residuals&gt;
+  &lt;Type <span style="font-family: monospace;">'d'</span> to delete the two deviant lines&gt;
+  &lt;Type <span style="font-family: monospace;">'f'</span> to refit with the bad points deleted&gt;
+  &lt;Type <span style="font-family: monospace;">'q'</span> to quit fit and then <span style="font-family: monospace;">'q'</span> to exit&gt;
   demoarc1.ms.imh: w1 = 4204.18..., w2 = 7355.37..., dw = 6.16..., nw = 512
     Change wavelength coordinate assignments? (yes|no|NO) (no): n
   Extract standard star spectrum demostd1
@@ -1443,7 +1443,7 @@ doslit: Process KPNO coude slit spectra
   demostd1.ms.imh[1]: Example artificial long slit image
   Compute sensitivity function
   Fit aperture 1 interactively? (no|yes|NO|YES) (no|yes|NO|YES) (yes):
-  &lt;Exit with <tt>'q'</tt>&gt;
+  &lt;Exit with <span style="font-family: monospace;">'q'</span>&gt;
   Sensitivity function for all apertures --&gt; sens
   Flux and/or extinction calibrate standard stars
   [demostd1.ms.imh][1]: Example artificial long slit image
@@ -1507,7 +1507,7 @@ doslit: Process KPNO coude slit spectra
   <dl>
   <dt><b>DOSLIT V2.10.3</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='DOSLIT' Line='DOSLIT V2.10.3' -->
-  <dd>The usual output WCS format is <tt>"equispec"</tt>.  The image format type to be
+  <dd>The usual output WCS format is <span style="font-family: monospace;">"equispec"</span>.  The image format type to be
   processed is selected with the <i>imtype</i> environment parameter.  The
   dispersion axis parameter is now a package parameter.  Images will only
   be processed if the have the CCDPROC keyword.  A <i>datamax</i> parameter

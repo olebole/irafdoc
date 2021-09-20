@@ -23,13 +23,13 @@ sensfunc: Compute instrumental sensitivity from standard stars
   <h3>Parameters</h3>
   <!-- BeginSection: 'PARAMETERS' -->
   <dl>
-  <dt><b>standards = <tt>"std"</tt></b></dt>
+  <dt><b>standards = <span style="font-family: monospace;">"std"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='standards' Line='standards = "std"' -->
   <dd>Input standard star data file created by the task <b>standard</b>.
   </dd>
   </dl>
   <dl>
-  <dt><b>sensitivity = <tt>"sens"</tt></b></dt>
+  <dt><b>sensitivity = <span style="font-family: monospace;">"sens"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sensitivity' Line='sensitivity = "sens"' -->
   <dd>Output sensitivity function image name or rootname.  Generally each
   aperture results in an independent sensitivity function with the
@@ -40,7 +40,7 @@ sensfunc: Compute instrumental sensitivity from standard stars
   </dd>
   </dl>
   <dl>
-  <dt><b>apertures = <tt>""</tt></b></dt>
+  <dt><b>apertures = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
   <dd>List of apertures to be selected from the input file.  All other apertures
   are ignored.  If no list is specified then all apertures are selected.
@@ -57,7 +57,7 @@ sensfunc: Compute instrumental sensitivity from standard stars
   </dd>
   </dl>
   <dl>
-  <dt><b>logfile = <tt>"logfile"</tt></b></dt>
+  <dt><b>logfile = <span style="font-family: monospace;">"logfile"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "logfile"' -->
   <dd>Output log filename for statistical information about the stars used
   and the sensitivity function and extinction function.
@@ -73,14 +73,14 @@ sensfunc: Compute instrumental sensitivity from standard stars
   standard star data will be an absolute determination of the
   extinction.  The default value is redirected to the package parameter
   of the same name.  The extinction file is generally one of the standard
-  extinctions in the calibration directory <tt>"onedstds$"</tt>.
+  extinctions in the calibration directory <span style="font-family: monospace;">"onedstds$"</span>.
   If extinction corrected spectra were used as input to <b>standard</b>
   then it is important that the same extinction file be used here.
   This includes using no extinction file in both tasks.
   </dd>
   </dl>
   <dl>
-  <dt><b>newextinction = <tt>"extinct.dat"</tt></b></dt>
+  <dt><b>newextinction = <span style="font-family: monospace;">"extinct.dat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='newextinction' Line='newextinction = "extinct.dat"' -->
   <dd>Output revised extinction file.  If the extinction is revised and an
   output filename is given then a revised extinction file is written.  It
@@ -88,26 +88,26 @@ sensfunc: Compute instrumental sensitivity from standard stars
   </dd>
   </dl>
   <dl>
-  <dt><b>observatory = <tt>")_.observatory"</tt></b></dt>
+  <dt><b>observatory = <span style="font-family: monospace;">")_.observatory"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory = ")_.observatory"' -->
   <dd>Observatory at which the spectra were obtained if not specified in the
   image header by the keyword OBSERVAT.  The default is a redirection to look
   in the parameters for the parent package for a value.  This is only used
   when graphing flux calibrated data of spectra which do not include the
   airmass in the image header.  The observatory may be one of the
-  observatories in the observatory database, <tt>"observatory"</tt> to select the
-  observatory defined by the environment variable <tt>"observatory"</tt> or the
-  parameter <b>observatory.observatory</b>, or <tt>"obspars"</tt> to select the current
+  observatories in the observatory database, <span style="font-family: monospace;">"observatory"</span> to select the
+  observatory defined by the environment variable <span style="font-family: monospace;">"observatory"</span> or the
+  parameter <b>observatory.observatory</b>, or <span style="font-family: monospace;">"obspars"</span> to select the current
   parameters set in the <b>observatory</b> task.  See help for
   <b>observatory</b> for additional information.
   </dd>
   </dl>
   <dl>
-  <dt><b>function = <tt>"spline3"</tt></b></dt>
+  <dt><b>function = <span style="font-family: monospace;">"spline3"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "spline3"' -->
   <dd>Function used to fit the sensitivity data.  The function types are
-  <tt>"chebyshev"</tt> polynomial, <tt>"legendre"</tt> polynomial, <tt>"spline3"</tt> cubic spline,
-  and <tt>"spline1"</tt> linear spline.  The default value may be changed interactively.
+  <span style="font-family: monospace;">"chebyshev"</span> polynomial, <span style="font-family: monospace;">"legendre"</span> polynomial, <span style="font-family: monospace;">"spline3"</span> cubic spline,
+  and <span style="font-family: monospace;">"spline1"</span> linear spline.  The default value may be changed interactively.
   </dd>
   </dl>
   <dl>
@@ -127,7 +127,7 @@ sensfunc: Compute instrumental sensitivity from standard stars
   </dd>
   </dl>
   <dl>
-  <dt><b>graphs = <tt>"sr"</tt></b></dt>
+  <dt><b>graphs = <span style="font-family: monospace;">"sr"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphs' Line='graphs = "sr"' -->
   <dd>Graphs to be displayed per frame.  From one to four graphs may be displayed
   per frame.  The graph types are selected by single characters and are:
@@ -144,7 +144,7 @@ sensfunc: Compute instrumental sensitivity from standard stars
   </dd>
   </dl>
   <dl>
-  <dt><b>marks = <tt>"plus cross box"</tt></b></dt>
+  <dt><b>marks = <span style="font-family: monospace;">"plus cross box"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='marks' Line='marks = "plus cross box"' -->
   <dd>Symbols used to mark included, deleted, and added data respectively.
   The available mark types are point, box, plus, cross, diamond, hline
@@ -153,23 +153,23 @@ sensfunc: Compute instrumental sensitivity from standard stars
   </dd>
   </dl>
   <dl>
-  <dt><b>colors = <tt>"2 1 3 4"</tt></b></dt>
+  <dt><b>colors = <span style="font-family: monospace;">"2 1 3 4"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='colors' Line='colors = "2 1 3 4"' -->
-  <dd>Colors to use for <tt>"lines"</tt>, <tt>"marks"</tt>, <tt>"deleted"</tt> data, and <tt>"added"</tt> data.
+  <dd>Colors to use for <span style="font-family: monospace;">"lines"</span>, <span style="font-family: monospace;">"marks"</span>, <span style="font-family: monospace;">"deleted"</span> data, and <span style="font-family: monospace;">"added"</span> data.
   The colors associated with the numbers is graphics device dependent.
   For example in XGTERM they are defined by resources while on other
   devices that don't support colors only one color will appear.
   </dd>
   </dl>
   <dl>
-  <dt><b>cursor = <tt>""</tt></b></dt>
+  <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Graphics cursor input list.  If not specified as a file then standard
   graphics cursor is read.
   </dd>
   </dl>
   <dl>
-  <dt><b>device = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>device = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdgraph"' -->
   <dd>Graphics output device.
   </dd>
@@ -258,7 +258,7 @@ sensfunc: Compute instrumental sensitivity from standard stars
   star observation.  The parameter <i>apertures</i> may be used to select
   only specific apertures from the input data.  This parameter is in the
   form of a range list (see help for <b>ranges</b>) and if no list is
-  given (specified by the null string <tt>""</tt>) then all apertures are selected.
+  given (specified by the null string <span style="font-family: monospace;">""</span>) then all apertures are selected.
   </p>
   <p>
   An input extinction file may also be specified.  Any extinction
@@ -354,9 +354,9 @@ sensfunc: Compute instrumental sensitivity from standard stars
   </p>
   <p>
   When the sensitivity is determined interactively a query is given for
-  each aperture.  The responses <tt>"no"</tt> and <tt>"yes"</tt> select fitting the sensitivity
-  interactively or not for the specified aperture.  The responses <tt>"NO"</tt> and
-  <tt>"YES"</tt> apply to all apertures and no further queries will be given.
+  each aperture.  The responses <span style="font-family: monospace;">"no"</span> and <span style="font-family: monospace;">"yes"</span> select fitting the sensitivity
+  interactively or not for the specified aperture.  The responses <span style="font-family: monospace;">"NO"</span> and
+  <span style="font-family: monospace;">"YES"</span> apply to all apertures and no further queries will be given.
   When interactive fitting is selected the data are graphed
   on the specified graphics device and input is through the specified
   cursor list.  The graphics output consists of from one to four graphs.
@@ -391,23 +391,23 @@ sensfunc: Compute instrumental sensitivity from standard stars
   The list of interactive commands in given in the section on CURSOR COMMANDS.
   The commands include deleting, undeleting, adding, moving, and identifying
   individual data points, whole stars, or all points at the same wavelength.
-  Some other commands include <tt>'c'</tt> to create composite points by averaging
+  Some other commands include <span style="font-family: monospace;">'c'</span> to create composite points by averaging
   all points at the same wavelength (this requires exact overlap in the
   bandpasses) which then replace the individual data points in the fit.
   This is different than the composite point graph which displays the
   residual in the mean sensitivity
   and error <i>in the mean</i> but uses the input data in the fitting.
-  The <tt>'s'</tt> command shifts the data so that the mean sensitivity of each
+  The <span style="font-family: monospace;">'s'</span> command shifts the data so that the mean sensitivity of each
   star is the same as the star with the greatest mean sensitivity.
   This compensates for variable grey extinction due to clouds.  Note
   that delete points are excluded from the shift calculation and a
   deleted star will not be used as the star of greatest sensitivity.
-  Another useful command is <tt>'o'</tt> to recover the original data.  This cancels
+  Another useful command is <span style="font-family: monospace;">'o'</span> to recover the original data.  This cancels
   all changes made due to shifting, extinction corrections, deleting points,
   creating composite points, etc.
   </p>
   <p>
-  The <tt>'e'</tt> command attempts to compute a residual extinction by finding
+  The <span style="font-family: monospace;">'e'</span> command attempts to compute a residual extinction by finding
   correlations between the sensitivity points at different airmass.
   Note that this is not iterative so that repeating this after having
   added an extinction correction simply redetermines the correction.
@@ -419,8 +419,8 @@ sensfunc: Compute instrumental sensitivity from standard stars
   estimates as a function of wavelength (see <b>icfit</b> for a description
   of the commands).  The user must decide how much wavelength dependence
   is derivable from the data.  In many cases only a constant fit
-  to a <tt>"gray extinction"</tt> or possibly a linear fit is realistic.
-  The fitting is exited by the key <tt>'q'</tt>.
+  to a <span style="font-family: monospace;">"gray extinction"</span> or possibly a linear fit is realistic.
+  The fitting is exited by the key <span style="font-family: monospace;">'q'</span>.
   </p>
   <p>
   To help evaluate how important the residual extinction determination
@@ -464,14 +464,14 @@ sensfunc: Compute instrumental sensitivity from standard stars
   </p>
   <p>
   This command uses the data from the <b>standard</b> output
-  file <tt>"std"</tt> to create sensitivity functions with rootname <tt>"sens"</tt>.
+  file <span style="font-family: monospace;">"std"</span> to create sensitivity functions with rootname <span style="font-family: monospace;">"sens"</span>.
   If not interactive the task will produce the output with some
   progress messages being printed.  If it is interactive the graphics
   device will be used to display the data and the fit and user can
   change the function and order of the fit, delete bad points, shift
   data to correct for clouds or bandpass errors, and possibly determine
   a revised extinction function.  The statistics of the
-  sensitivity determination are written to the logfile (<tt>"logfile"</tt> by
+  sensitivity determination are written to the logfile (<span style="font-family: monospace;">"logfile"</span> by
   default).
   </p>
   <p>
@@ -514,8 +514,8 @@ sensfunc: Compute instrumental sensitivity from standard stars
   <dt><b>SENSFUNC V2.10</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='SENSFUNC' Line='SENSFUNC V2.10' -->
   <dd>The latitude parameter has been replaced by the observatory parameter.
-  The <tt>'i'</tt> flux calibrated graph type now shows flux in linear scaling 
-  while the new graph type <tt>'l'</tt> shows flux in log scaling.  A new colon
+  The <span style="font-family: monospace;">'i'</span> flux calibrated graph type now shows flux in linear scaling 
+  while the new graph type <span style="font-family: monospace;">'l'</span> shows flux in log scaling.  A new colon
   command allows fixing the flux limits for the flux calibrated graphs.
   </dd>
   </dl>

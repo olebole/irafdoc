@@ -29,17 +29,17 @@ sapertures: Set or change aperture header information
   </dd>
   </dl>
   <dl>
-  <dt><b>apertures = <tt>""</tt></b></dt>
+  <dt><b>apertures = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
   <dd>List of apertures to be modified.  The null list
   selects all apertures.  A list consists of comma separated
   numbers and ranges of numbers.  A range is specified by a hyphen.  An
-  optional step size may be given by using the <tt>'x'</tt> followed by a number.
+  optional step size may be given by using the <span style="font-family: monospace;">'x'</span> followed by a number.
   See <b>xtools.ranges</b> for more information.
   </dd>
   </dl>
   <dl>
-  <dt><b>apidtable = <tt>""</tt></b></dt>
+  <dt><b>apidtable = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apidtable' Line='apidtable = ""' -->
   <dd>Aperture table.  This may be either a text file or an image.
   A text file consisting of lines with an aperture number,
@@ -143,7 +143,7 @@ sapertures: Set or change aperture header information
   <p>
   This task sets or changes any of the aperture specific parameters except
   the aperture number and the number of  valid pixels.  It is particularly
-  useful for images which use the <tt>"multispec"</tt> world coordinate system
+  useful for images which use the <span style="font-family: monospace;">"multispec"</span> world coordinate system
   attribute strings which are not readily accessible with other header
   editors.  A list of images and a list of apertures is used to select which
   spectra are to be modified.  The default empty string for the apertures

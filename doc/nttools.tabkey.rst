@@ -29,7 +29,7 @@ tabkey: Copy a table element to an image or table header keyword.
   data types, this task will convert the type.
   An error will occur if any attempt is made
   to copy an undefined table element to a header keyword. If the value of
-  the task parameter 'add' is <tt>"yes"</tt>, the task will allow you to add a new
+  the task parameter 'add' is <span style="font-family: monospace;">"yes"</span>, the task will allow you to add a new
   keyword to the header, otherwise, adding a new keyword will cause an
   error.
   </p>

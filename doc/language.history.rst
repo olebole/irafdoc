@@ -61,7 +61,7 @@ history: Display  commands previously executed
   	cl&gt; history 5
   </p>
   <p>
-  4. Save the history in the file <tt>"commands"</tt>.
+  4. Save the history in the file <span style="font-family: monospace;">"commands"</span>.
   </p>
   <p>
   	cl&gt; history -999 &gt; commands

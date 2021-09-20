@@ -33,7 +33,7 @@ rimcursor: Read the image display cursor (makes a list)
   </dd>
   </dl>
   <dl>
-  <dt><b>wcs = <tt>"logical"</tt></b></dt>
+  <dt><b>wcs = <span style="font-family: monospace;">"logical"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcs' Line='wcs = "logical"' -->
   <dd>The world coordinate system (<i>wcs</i>) to be used for coordinate output.
   The following standard world systems are predefined.
@@ -43,7 +43,7 @@ rimcursor: Read the image display cursor (makes a list)
   <dd>Logical coordinates are image pixel coordinates relative to the image currently
   being displayed.  This is what the raw cursor read returns, so by default,
   <b>rimcursor</b> merely passes back the raw image cursor coordinates as
-  would be returned by <tt>"=imcur"</tt>.
+  would be returned by <span style="font-family: monospace;">"=imcur"</span>.
   </dd>
   </dl>
   <dl>
@@ -62,7 +62,7 @@ rimcursor: Read the image display cursor (makes a list)
   <dl>
   <dt><b>world</b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='world' Line='world' -->
-  <dd>The <tt>"world"</tt> coordinate system is the <i>current default WCS</i>.
+  <dd>The <span style="font-family: monospace;">"world"</span> coordinate system is the <i>current default WCS</i>.
   The default world system is the system named by the environment variable
   <i>defwcs</i> if defined in the user environment and present in the reference
   image WCS description, else it is the first user WCS defined for the image
@@ -75,7 +75,7 @@ rimcursor: Read the image display cursor (makes a list)
   </dd>
   </dl>
   <dl>
-  <dt><b>wxformat = <tt>""</tt>, wyformat = <tt>""</tt></b></dt>
+  <dt><b>wxformat = <span style="font-family: monospace;">""</span>, wyformat = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wxformat' Line='wxformat = "", wyformat = ""' -->
   <dd>The default output format for the x and y coordinates. If wxformat or wyformat
   are undefined, rimcursor uses formatting options stored with the WCS in the  
@@ -84,7 +84,7 @@ rimcursor: Read the image display cursor (makes a list)
   </dd>
   </dl>
   <dl>
-  <dt><b>cursor = <tt>""</tt></b></dt>
+  <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>The source for image cursor input.  By default, the hardware image cursor
   is read.
@@ -116,12 +116,12 @@ rimcursor: Read the image display cursor (makes a list)
   <p>
   While the program is waiting for the cursor to be read, i.e. whenever
   the image cursor is blinking rapidly, the terminal is said to be in
-  <tt>"cursor mode"</tt>.  To read the cursor position, enter any key not
+  <span style="font-family: monospace;">"cursor mode"</span>.  To read the cursor position, enter any key not
   recognized as a cursor mode command (currently there are no cursor mode
   commands for the image cursor so any character may be typed).
   The colon key returns to text
   input for a line of text terminated by a carriage return.  This is
-  called a <tt>"colon command"</tt>.  The actual character or colon command one
+  called a <span style="font-family: monospace;">"colon command"</span>.  The actual character or colon command one
   types depends upon the program for which the list is intended.  If the
   program will use only the coordinates of the cursor any character may be
   typed, e.g., the space bar.  If the program uses the key value to
@@ -139,15 +139,15 @@ rimcursor: Read the image display cursor (makes a list)
   <p>
   The coordinates returned by <b>rimcursor</b> depend on the type of
   world coordinate system chosen by parameter <i>wcs</i> and those defined
-  by the reference image.  The default <tt>"logical"</tt> coordinates are the
+  by the reference image.  The default <span style="font-family: monospace;">"logical"</span> coordinates are the
   image pixel coordinates being displayed.  This is available for all
   images and may be required by other tasks which read the generated list.
-  The <tt>"physical"</tt> coordinate system provides coordinates from the <tt>"original
-  data image"</tt> irrespective of any linear transformations (such as image
+  The <span style="font-family: monospace;">"physical"</span> coordinate system provides coordinates from the <span style="font-family: monospace;">"original
+  data image"</span> irrespective of any linear transformations (such as image
   sections) used to generate the current image from the original data image.
   Coordinates in a user or application defined linear or nonlinear world
   coordinate system may be obtained by setting the <i>wcs</i> parameter to
-  <tt>"world"</tt> for coordinate output in the default world system, or to the name
+  <span style="font-family: monospace;">"world"</span> for coordinate output in the default world system, or to the name
   of the specific world system for which coordinates are desired.
   An example of a world coordinate system for direct astronomical images
   is RA and DEC using the tangent (gnonomic) projection.
@@ -165,10 +165,10 @@ rimcursor: Read the image display cursor (makes a list)
   <h3>Formats</h3>
   <!-- BeginSection: 'FORMATS' -->
   <p>
-  A  format  specification has the form <tt>"%w.dCn"</tt>, where w is the field
+  A  format  specification has the form <span style="font-family: monospace;">"%w.dCn"</span>, where w is the field
   width, d is the number of decimal places or the number of digits  of
   precision,  C  is  the  format  code,  and  n is radix character for
-  format code <tt>"r"</tt> only.  The w and d fields are optional.  The  format
+  format code <span style="font-family: monospace;">"r"</span> only.  The w and d fields are optional.  The  format
   codes C are as follows:
       
   </p>
@@ -244,7 +244,7 @@ rimcursor: Read the image display cursor (makes a list)
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. Interactively generate a starlist (file <tt>"starlist"</tt>) to be used as input
+  1. Interactively generate a starlist (file <span style="font-family: monospace;">"starlist"</span>) to be used as input
   to another program, e.g., for digital photometry.
   </p>
   <pre>
@@ -261,7 +261,7 @@ rimcursor: Read the image display cursor (makes a list)
       &lt;ctrl/z&gt;		(EOF) terminates rimcursor
   </pre>
   <p>
-  Given the above command sequence, the output file <tt>"starlist"</tt> might
+  Given the above command sequence, the output file <span style="font-family: monospace;">"starlist"</span> might
   contain the following cursor values.
   </p>
   <pre>

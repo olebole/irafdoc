@@ -37,7 +37,7 @@ mkskycor: Make sky illumination correction images
   </dd>
   </dl>
   <dl>
-  <dt><b>ccdtype = <tt>""</tt></b></dt>
+  <dt><b>ccdtype = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ccdtype' Line='ccdtype = ""' -->
   <dd>CCD image type to select from the input images.  If none is specified
   then all types are used.
@@ -81,7 +81,7 @@ mkskycor: Make sky illumination correction images
   <p>
   The large scale iillumination pattern of the input images, generally
   blank sky calibration images, is determined by heavily smoothing
-  the image using a moving <tt>"boxcar"</tt> average.  The effects of objects in
+  the image using a moving <span style="font-family: monospace;">"boxcar"</span> average.  The effects of objects in
   the image may be minimized by using a sigma clipping algorithm to
   detect and exclude the objects from the average.  This
   iillumination image is applied by <b>ccdproc</b> to CCD images to remove
@@ -135,7 +135,7 @@ mkskycor: Make sky illumination correction images
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. The two examples below make an iillumination image from a blank sky image,
-  <tt>"sky017"</tt>.  In the first example a separate iillumination image is created
+  <span style="font-family: monospace;">"sky017"</span>.  In the first example a separate iillumination image is created
   and in the second the iillumination image replaces the sky image.
   </p>
   <pre>

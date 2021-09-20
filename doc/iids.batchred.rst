@@ -86,14 +86,14 @@ batchred: Batch processing of IIDS/IRS spectra
   <p>
   Through a question and answer session, a series of commands to
   ONEDSPEC is generated which are then processed as a batch job
-  to reduce <tt>"typical"</tt> spectra from the IIDS and IRS spectrographs.
+  to reduce <span style="font-family: monospace;">"typical"</span> spectra from the IIDS and IRS spectrographs.
   </p>
   <p>
   By setting the appropriate hidden parameters, the user may
-  <tt>"turn off"</tt> command generation for any of the possible tasks.
+  <span style="font-family: monospace;">"turn off"</span> command generation for any of the possible tasks.
   </p>
   <p>
-  A script task is generated having the name <tt>"process.cl"</tt> which is
+  A script task is generated having the name <span style="font-family: monospace;">"process.cl"</span> which is
   submitted to the CL as the final command of BATCHRED.
   All terminal output which would normally appear during the course
   of running each of the individual tasks is redirected to a log file
@@ -110,36 +110,36 @@ batchred: Batch processing of IIDS/IRS spectra
   The questions which are asked are described below:
   </p>
   <p>
-  <tt>"Root name for spectra file names:"</tt> This is the input root file name
+  <span style="font-family: monospace;">"Root name for spectra file names:"</span> This is the input root file name
   for all spectra which will be run through STANDARD and BSWITCH.
   </p>
   <p>
-  <tt>"Root name for spectra to be created:"</tt> This is the output root file
+  <span style="font-family: monospace;">"Root name for spectra to be created:"</span> This is the output root file
   name which all newly created spectra will use. It is also the
   input file name for tasks CALIBRATE and ADDSETS since these tasks
   operate on spectra created by BSWITCH.
   </p>
   <p>
-  <tt>"Starting record number for spectra to be created:"</tt> All created spectra
+  <span style="font-family: monospace;">"Starting record number for spectra to be created:"</span> All created spectra
   will have a suffix number starting with this value and incremented
   by one for each new spectrum created.
   </p>
   <p>
-  <tt>"File name to contain statistics information:"</tt> This file will contain
+  <span style="font-family: monospace;">"File name to contain statistics information:"</span> This file will contain
   informative output from SENSFUNC and BSWITCH. (default=stats)
   </p>
   <p>
-  <tt>"File name to contain a log of terminal output:"</tt> All tasks talk back
+  <span style="font-family: monospace;">"File name to contain a log of terminal output:"</span> All tasks talk back
   to let you know how things are proceding. The backtalk is saved
   in this file. (default=ttylog)
   </p>
   <p>
-  <tt>"File name for output from STANDARD and input to SENSFUNC:"</tt> Just
+  <span style="font-family: monospace;">"File name for output from STANDARD and input to SENSFUNC:"</span> Just
   what it says. (default=std)
   </p>
   <p>
-  <tt>"Record string to process:"</tt> The spectra are assumed to be representable
-  by strings (try <tt>"help ranges"</tt> for details on the formats allowed).
+  <span style="font-family: monospace;">"Record string to process:"</span> The spectra are assumed to be representable
+  by strings (try <span style="font-family: monospace;">"help ranges"</span> for details on the formats allowed).
   Both STANDARD and BSWITCH expect ranges of spectral record numbers
   which are appended to the root given in answer to the first question
   above. This question is asked repeatedly so that you can enter as
@@ -149,31 +149,31 @@ batchred: Batch processing of IIDS/IRS spectra
   your spectra actually exist.
   </p>
   <p>
-  <tt>"Standard star name:"</tt> For each record string STANDARD expects
+  <span style="font-family: monospace;">"Standard star name:"</span> For each record string STANDARD expects
   the name of the standard star observed, but it must be given in
   a manner acceptable to STANDARD. (see STANDARD and LCALIB for
   more details).
   </p>
   <p>
-  <tt>"Use weighted averages:"</tt> If answered yes, then SENSFUNC and BSWITCH
+  <span style="font-family: monospace;">"Use weighted averages:"</span> If answered yes, then SENSFUNC and BSWITCH
   will use their weighted averaging schemes.
   </p>
   <p>
-  <tt>"Apply magnitude fudging:"</tt> If answered yes, then SENSFUNC will 
-  use its <tt>"fudge"</tt> option. (see SENSFUNC)
+  <span style="font-family: monospace;">"Apply magnitude fudging:"</span> If answered yes, then SENSFUNC will 
+  use its <span style="font-family: monospace;">"fudge"</span> option. (see SENSFUNC)
   </p>
   <p>
-  <tt>"Solve for grey additive extinction constant:"</tt> If answered yes, then
+  <span style="font-family: monospace;">"Solve for grey additive extinction constant:"</span> If answered yes, then
   SENSFUNC will solve for this value.
   </p>
   <p>
-  <tt>"File name for sensitivity image file:"</tt> This will be the root name
+  <span style="font-family: monospace;">"File name for sensitivity image file:"</span> This will be the root name
   for the output sensitivity spectra from SENSFUNC.
   </p>
   <p>
   At anytime during the processing phase, you can inquire about the
-  progress by listing the latest contents of the file <tt>"ttylog"</tt>
-  either by <tt>"type ttylog"</tt> or by <tt>"tail ttylog"</tt>. The latter command
+  progress by listing the latest contents of the file <span style="font-family: monospace;">"ttylog"</span>
+  either by <span style="font-family: monospace;">"type ttylog"</span> or by <span style="font-family: monospace;">"tail ttylog"</span>. The latter command
   lists the last 12 lines of the file.
   </p>
   <p>
@@ -194,7 +194,7 @@ batchred: Batch processing of IIDS/IRS spectra
   </p>
   <p>
   The following inhibits the STANDARD and SENSFUNC tasks which must have
-  been run previously. This is equivalent to the IPPS <tt>"autoreduce"</tt>:
+  been run previously. This is equivalent to the IPPS <span style="font-family: monospace;">"autoreduce"</span>:
   </p>
   <p>
   	cl&gt; batchred standard- sensfunc-
@@ -205,11 +205,11 @@ batchred: Batch processing of IIDS/IRS spectra
   <p>
   If you make an error while entering the requested information, there
   is no way to effect repairs other than to (1) start all over, or (2) edit
-  the generated script file <tt>"process.cl"</tt> using the system editor.
+  the generated script file <span style="font-family: monospace;">"process.cl"</span> using the system editor.
   </p>
   <p>
   If a task encounters an irrecoverable error, the background job
-  hangs until you kill it using <tt>"kill N"</tt> where N is the job number.
+  hangs until you kill it using <span style="font-family: monospace;">"kill N"</span> where N is the job number.
   </p>
   <!-- EndSection:   'BUGS' -->
   <h3>See also</h3>

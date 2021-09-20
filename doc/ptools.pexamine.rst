@@ -34,7 +34,7 @@ pexamine: Interactively examine and edit an apphot/daophot database
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>The name of the edited output catalog. <i>Output</i> is either an
   APPHOT/DAOPHOT text database or an STSDAS binary table database
-  depending on the file type of <i>input</i>. If <i>output</i> = <tt>""</tt> no output
+  depending on the file type of <i>input</i>. If <i>output</i> = <span style="font-family: monospace;">""</span> no output
   catalog is written.
   </dd>
   </dl>
@@ -42,27 +42,27 @@ pexamine: Interactively examine and edit an apphot/daophot database
   <dt><b>image</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image' -->
   <dd>The name of the input image corresponding to the input photometry
-  catalog. If <i>image</i> is <tt>""</tt> no image will be attached to PEXAMINE
+  catalog. If <i>image</i> is <span style="font-family: monospace;">""</span> no image will be attached to PEXAMINE
   and some interactive catalog examining commands will not be available.
   All the catalog editing commands however are still available.
   </dd>
   </dl>
   <dl>
-  <dt><b>deletions = <tt>""</tt></b></dt>
+  <dt><b>deletions = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='deletions' Line='deletions = ""' -->
   <dd>The name of an optional output deletions photometry catalog. <i>Deletions</i>
   is either an APPHOT/DAOPHOT text database or an STSDAS binary
   table database depending on the file type of <i>input</i>. If <i>deletions</i>
-  is <tt>""</tt> no deletions file is written.
+  is <span style="font-family: monospace;">""</span> no deletions file is written.
   </dd>
   </dl>
   <dl>
-  <dt><b>photcolumns = <tt>"daophot"</tt></b></dt>
+  <dt><b>photcolumns = <span style="font-family: monospace;">"daophot"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='photcolumns' Line='photcolumns = "daophot"' -->
   <dd>The list of standard photometry columns that are loaded when pexamine is
   run. The options are listed below.
   <dl>
-  <dt><b><tt>"daophot"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"daophot"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"daophot"' -->
   <dd>The standard columns for the DAOPHOT package. The current list is GROUP, ID,
   XCENTER, YCENTER, MSKY, MAG, MERR, CHI, SHARP and NITER.
@@ -73,7 +73,7 @@ pexamine: Interactively examine and edit an apphot/daophot database
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"apphot"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"apphot"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"apphot"' -->
   <dd>The standard columns for the APPHOT package. The current list is ID,
   XCENTER, YCENTER, MSKY, MAG, and MERR.
@@ -100,7 +100,7 @@ pexamine: Interactively examine and edit an apphot/daophot database
   </dd>
   </dl>
   <dl>
-  <dt><b>xcolumn = <tt>"mag"</tt> (magnitude), ycolumn = <tt>"merr"</tt> (magnitude error)</b></dt>
+  <dt><b>xcolumn = <span style="font-family: monospace;">"mag"</span> (magnitude), ycolumn = <span style="font-family: monospace;">"merr"</span> (magnitude error)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xcolumn' Line='xcolumn = "mag" (magnitude), ycolumn = "merr" (magnitude error)' -->
   <dd>The names of the two columns which define the default X-Y plot.
   <i>Xcolumn</i> and <i>ycolumn</i> must be listed in <i>photcolumns</i> or
@@ -112,7 +112,7 @@ pexamine: Interactively examine and edit an apphot/daophot database
   </dd>
   </dl>
   <dl>
-  <dt><b>hcolumn = <tt>"mag"</tt> (magnitude)</b></dt>
+  <dt><b>hcolumn = <span style="font-family: monospace;">"mag"</span> (magnitude)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='hcolumn' Line='hcolumn = "mag" (magnitude)' -->
   <dd>The name of the column which defines the default histogram plot.
   <i>Hcolumn</i> must be listed in <i>photcolumns</i> or
@@ -123,7 +123,7 @@ pexamine: Interactively examine and edit an apphot/daophot database
   </dd>
   </dl>
   <dl>
-  <dt><b>xposcolumn = <tt>"xcenter"</tt>, yposcolumn = <tt>"ycenter"</tt></b></dt>
+  <dt><b>xposcolumn = <span style="font-family: monospace;">"xcenter"</span>, yposcolumn = <span style="font-family: monospace;">"ycenter"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xposcolumn' Line='xposcolumn = "xcenter", yposcolumn = "ycenter"' -->
   <dd>The names of the two columns which define the X and Y coordinates in
   <i>image</i> of the objects in the catalog. This information is
@@ -135,7 +135,7 @@ pexamine: Interactively examine and edit an apphot/daophot database
   </dd>
   </dl>
   <dl>
-  <dt><b>usercolumns = <tt>""</tt></b></dt>
+  <dt><b>usercolumns = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='usercolumns' Line='usercolumns = ""' -->
   <dd>The list of columns loaded into memory in addition to the
   standard photometry columns <i>photcolumns</i>. The column
@@ -168,13 +168,13 @@ pexamine: Interactively examine and edit an apphot/daophot database
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>The default graphics device.
   </dd>
   </dl>
   <dl>
-  <dt><b>gcommands = <tt>""</tt></b></dt>
+  <dt><b>gcommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""' -->
   <dd>The graphics cursor. If null the standard graphics cursor is used whenever
   graphics cursor input is requested. A cursor file in the appropriate
@@ -182,21 +182,21 @@ pexamine: Interactively examine and edit an apphot/daophot database
   </dd>
   </dl>
   <dl>
-  <dt><b>icommands = <tt>""</tt></b></dt>
+  <dt><b>icommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""' -->
   <dd>The image display cursor. If null the standard image cursor is used whenever
   image cursor input is requested. A cursor file in the appropriate
   format may be substituted by specifying the name of the file.
   Also the image cursor may be changed to query the graphics device or the
-  terminal by setting the environment variable <tt>"stdimcur"</tt> to <tt>"stdgraph"</tt>
-  or <tt>"text"</tt> respectively.
+  terminal by setting the environment variable <span style="font-family: monospace;">"stdimcur"</span> to <span style="font-family: monospace;">"stdgraph"</span>
+  or <span style="font-family: monospace;">"text"</span> respectively.
   </dd>
   </dl>
   <dl>
   <dt><b>use_display = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='use_display' Line='use_display = yes' -->
   <dd>Use the image display? Users without access to an image display should
-  set <i>use_display</i> to <tt>"no"</tt>.
+  set <i>use_display</i> to <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -311,10 +311,10 @@ pexamine: Interactively examine and edit an apphot/daophot database
   </dd>
   </dl>
   <dl>
-  <dt><b>marker = <tt>"box"</tt>			(rx)</b></dt>
+  <dt><b>marker = <span style="font-family: monospace;">"box"</span>			(rx)</b></dt>
   <!-- Sec='PLOTTING PARAMETERS' Level=0 Label='marker' Line='marker = "box"			(rx)' -->
-  <dd>Marker to be drawn.  Markers are <tt>"point"</tt>, <tt>"box"</tt>, 
-  <tt>"cross"</tt>, <tt>"plus"</tt>, <tt>"circle"</tt>, <tt>"hline"</tt>, <tt>"vline"</tt> or <tt>"diamond"</tt>.
+  <dd>Marker to be drawn.  Markers are <span style="font-family: monospace;">"point"</span>, <span style="font-family: monospace;">"box"</span>, 
+  <span style="font-family: monospace;">"cross"</span>, <span style="font-family: monospace;">"plus"</span>, <span style="font-family: monospace;">"circle"</span>, <span style="font-family: monospace;">"hline"</span>, <span style="font-family: monospace;">"vline"</span> or <span style="font-family: monospace;">"diamond"</span>.
   </dd>
   </dl>
   <dl>
@@ -354,7 +354,7 @@ pexamine: Interactively examine and edit an apphot/daophot database
   <dl>
   <dt><b>round = no				(chrx)</b></dt>
   <!-- Sec='PLOTTING PARAMETERS' Level=0 Label='round' Line='round = no				(chrx)' -->
-  <dd>Extend the axes up to <tt>"nice"</tt> values?
+  <dd>Extend the axes up to <span style="font-family: monospace;">"nice"</span> values?
   </dd>
   </dl>
   <dl>
@@ -433,7 +433,7 @@ pexamine: Interactively examine and edit an apphot/daophot database
   more than <i>max_nstars</i> in the input catalog only the data for the
   first <i>max_nstars</i> is read. The <i>photcolumns</i> parameter
   defines the list of standard photometry columns to be loaded. If
-  <tt>"daophot"</tt> or <tt>"apphot"</tt> is selected then the standard columns
+  <span style="font-family: monospace;">"daophot"</span> or <span style="font-family: monospace;">"apphot"</span> is selected then the standard columns
   are GROUP, ID, XCENTER, YCENTER, MSKY, MAG, MERR, CHI, SHARP and NITER
   and ID, XCENTER, YCENTER, MSKY, MAG and MERR respectively.
   Otherwise the user must set <i>photcolumns</i> to his or her own preferred
@@ -465,7 +465,7 @@ pexamine: Interactively examine and edit an apphot/daophot database
   PEXAMINE starts up in graphics command mode, but all the
   interactive commands are accessible from both modes and the user can
   switch modes at any time assuming that the <i>use_display</i> parameter
-  to <tt>"yes"</tt>.
+  to <span style="font-family: monospace;">"yes"</span>.
   </p>
   <p>
   PEXAMINE interprets the cursor position in graphics mode
@@ -555,11 +555,11 @@ pexamine: Interactively examine and edit an apphot/daophot database
   </p>
   <p>
   The data examining commands fall into two categories, those that examine
-  the catalog data including <tt>'l'</tt> (catalog listing), <tt>'o'</tt> (object listing),
-  <tt>'x'</tt> (Y column versus X column plot) and <tt>'h'</tt> (histogram column plot)
+  the catalog data including <span style="font-family: monospace;">'l'</span> (catalog listing), <span style="font-family: monospace;">'o'</span> (object listing),
+  <span style="font-family: monospace;">'x'</span> (Y column versus X column plot) and <span style="font-family: monospace;">'h'</span> (histogram column plot)
   commands, and those which examine the image data around specific catalog
-  objects including <tt>'r'</tt> (radial profile plotting), <tt>'s'</tt> (surface plotting),
-  <tt>'c'</tt> (contour plotting) and <tt>'m'</tt> (pixel dumping). The latter group
+  objects including <span style="font-family: monospace;">'r'</span> (radial profile plotting), <span style="font-family: monospace;">'s'</span> (surface plotting),
+  <span style="font-family: monospace;">'c'</span> (contour plotting) and <span style="font-family: monospace;">'m'</span> (pixel dumping). The latter group
   require that <i>image</i> be defined. A brief summary of each data
   examining command is given below.
   </p>
@@ -652,13 +652,13 @@ pexamine: Interactively examine and edit an apphot/daophot database
   In image command mode the image cursor and the displayed
   image are used to delete points. A data point has three possible states
   good, marked for deletion and deleted.
-  Any one of the keystroke commands <tt>'d'</tt> (delete point), <tt>'('</tt> (delete points
-  with x less than x cursor), <tt>')'</tt> (delete points with x greater than x cursor,
-  <tt>'^'</tt> (delete points with y &gt; y cursor), <tt>'v'</tt> (delete points with y &lt; y cursor)
-  or <tt>'b'</tt> (delete points in a box) can be used to mark points for deletion.
-  The <tt>'f'</tt> key is used to actually delete the points and replot the data.
+  Any one of the keystroke commands <span style="font-family: monospace;">'d'</span> (delete point), <span style="font-family: monospace;">'('</span> (delete points
+  with x less than x cursor), <span style="font-family: monospace;">')'</span> (delete points with x greater than x cursor,
+  <span style="font-family: monospace;">'^'</span> (delete points with y &gt; y cursor), <span style="font-family: monospace;">'v'</span> (delete points with y &lt; y cursor)
+  or <span style="font-family: monospace;">'b'</span> (delete points in a box) can be used to mark points for deletion.
+  The <span style="font-family: monospace;">'f'</span> key is used to actually delete the points and replot the data.
   In between marking the points for deletion and actually deleting the marked
-  points the <tt>'t'</tt> (toggle) key can be used to undelete the last set marked.
+  points the <span style="font-family: monospace;">'t'</span> (toggle) key can be used to undelete the last set marked.
   The full list of the data editing keystroke commands is given below.
   </p>
   <dl>
@@ -692,7 +692,7 @@ pexamine: Interactively examine and edit an apphot/daophot database
   <!-- Sec='DESCRIPTION' Level=0 Label='' Line='(' -->
   <dd>Mark all points with x values less than the x value of the cursor for
   deletion.  In graphics command mode points can only be marked for deletion if
-  the current plot type is <tt>"xyplot"</tt> or <tt>"histplot"</tt>. In image command
+  the current plot type is <span style="font-family: monospace;">"xyplot"</span> or <span style="font-family: monospace;">"histplot"</span>. In image command
   mode <i>xposcolumn</i> and <i>yposcolumn</i> must be defined before
   points can be marked for deletion.
   </dd>
@@ -702,7 +702,7 @@ pexamine: Interactively examine and edit an apphot/daophot database
   <!-- Sec='DESCRIPTION' Level=0 Label='' Line=')' -->
   <dd>Mark all points with x values greater than the x value of the cursor for
   deletion.  In graphics command mode points can only be marked for deletion if
-  the current plot type is <tt>"xyplot"</tt> or <tt>"histplot"</tt>. In image command
+  the current plot type is <span style="font-family: monospace;">"xyplot"</span> or <span style="font-family: monospace;">"histplot"</span>. In image command
   mode <i>xposcolumn</i> and <i>yposcolumn</i> must be defined before
   points can be marked for deletion.
   </dd>
@@ -712,7 +712,7 @@ pexamine: Interactively examine and edit an apphot/daophot database
   <!-- Sec='DESCRIPTION' Level=0 Label='v' Line='v' -->
   <dd>Mark all points with y values less than the y value of the cursor for
   deletion.  In graphics command mode points can only be marked for deletion if
-  the current plot type is <tt>"xyplot"</tt>. In image command
+  the current plot type is <span style="font-family: monospace;">"xyplot"</span>. In image command
   mode <i>xposcolumn</i> and <i>yposcolumn</i> must be defined before
   points can be marked for deletion.
   </dd>
@@ -722,7 +722,7 @@ pexamine: Interactively examine and edit an apphot/daophot database
   <!-- Sec='DESCRIPTION' Level=0 Label='' Line='^' -->
   <dd>Mark all points with y values greater than the y value of the cursor for
   deletion.  In graphics command mode points can only be marked for deletion if
-  the current plot type is <tt>"xyplot"</tt>. In image command
+  the current plot type is <span style="font-family: monospace;">"xyplot"</span>. In image command
   mode <i>xposcolumn</i> and <i>yposcolumn</i> must be defined before
   points can be marked for deletion.
   </dd>
@@ -733,7 +733,7 @@ pexamine: Interactively examine and edit an apphot/daophot database
   <dd>Mark all points within a box whose lower left and upper right hand corners
   are marked by the cursor for deletion.
   In graphics mode points can only be marked for deletion if the current
-  plot type is <tt>"xyplot"</tt>. In image command mode <i>xposcolumn</i> and
+  plot type is <span style="font-family: monospace;">"xyplot"</span>. In image command mode <i>xposcolumn</i> and
   <i>yposcolumn</i> must be defined before points can be marked for
   deletion.
   </dd>
@@ -808,7 +808,7 @@ pexamine: Interactively examine and edit an apphot/daophot database
   <dl>
   <dt><b>:x y key cmd</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='' Line=':x y key cmd' -->
-  <dd>Execute any defined keystroke <tt>"key"</tt> supplying the appropriate x and y
+  <dd>Execute any defined keystroke <span style="font-family: monospace;">"key"</span> supplying the appropriate x and y
   value in place of the cursor position. In graphics command mode the x
   and y position are assumed to be the position in the current graph.
   In image command mode the x and y position are assumed to be the x and
@@ -986,16 +986,16 @@ pexamine: Interactively examine and edit an apphot/daophot database
   	    single deviant point at the bright end of the plot
   
   	... the user decides to remove the deviant point using the
-  	    <tt>'d'</tt> keystroke command to mark the point and the <tt>'f'</tt>
+  	    <span style="font-family: monospace;">'d'</span> keystroke command to mark the point and the <span style="font-family: monospace;">'f'</span>
   	    keystroke command to actually delete and replot the graph
   
   	... after examining the plot further the user decides to delete
   	    all objects for which the magnitude error is &gt; 0.1 magnitudes
-  	    using the <tt>'^'</tt> keystroke command, followed by the <tt>'f'</tt>
+  	    using the <span style="font-family: monospace;">'^'</span> keystroke command, followed by the <span style="font-family: monospace;">'f'</span>
   	    keystroke command to actually replot and delete the data.
   
   	... after deciding that this new plot is satisfactory the user
-  	    issues the <tt>'e'</tt> keystroke command to exit pexamine and save
+  	    issues the <span style="font-family: monospace;">'e'</span> keystroke command to exit pexamine and save
   	    the good data in m92.mag.ed
   
       pt&gt; pexamine m92.als.1 m92.als.ed use_display-
@@ -1008,7 +1008,7 @@ pexamine: Interactively examine and edit an apphot/daophot database
   	    really want to see is a plot of the goodness of fit parameter
   	    chi versus magnitude
   
-  	... the user issues the colon command :ycol chi followed by <tt>'p'</tt>
+  	... the user issues the colon command :ycol chi followed by <span style="font-family: monospace;">'p'</span>
   	    keystroke command to replot the data
   
   	... the user sees a generally smooth trend of increasing
@@ -1016,12 +1016,12 @@ pexamine: Interactively examine and edit an apphot/daophot database
   
   	... after examining the plot further the user decides to delete
   	    all objects for which the chi value  &gt; 2.0  and the
-  	    magnitude is &gt; 25 using the <tt>'^'</tt> key and <tt>')'</tt> keystroke
-  	    commands followed by <tt>'f'</tt> to save the deletions and replot
+  	    magnitude is &gt; 25 using the <span style="font-family: monospace;">'^'</span> key and <span style="font-family: monospace;">')'</span> keystroke
+  	    commands followed by <span style="font-family: monospace;">'f'</span> to save the deletions and replot
   	    the data
   
   	... after deciding that this new plot is satisfactory the user
-  	    issues the <tt>'e'</tt> keystroke command to exit pexamine and save
+  	    issues the <span style="font-family: monospace;">'e'</span> keystroke command to exit pexamine and save
   	    the good data in m92.als.ed
   </pre>
   <p>
@@ -1043,9 +1043,9 @@ pexamine: Interactively examine and edit an apphot/daophot database
   	    to see if these correspond to objects which have poor
   	    subtraction on the displayed image
   
-  	... the user switches to image command mode by tapping the <tt>'i'</tt>
+  	... the user switches to image command mode by tapping the <span style="font-family: monospace;">'i'</span>
   	    key, moves to the first poorly subtracted object and taps
-  	    the <tt>'o'</tt> key
+  	    the <span style="font-family: monospace;">'o'</span> key
   
   	... a list of the values of the loaded columns including chi
   	    appears in the text window , the program switches to graphics
@@ -1056,21 +1056,21 @@ pexamine: Interactively examine and edit an apphot/daophot database
   	    and the user decides to try and investigate the reason for the
   	    anomalous value
   
-  	... the user taps the <tt>'r'</tt> key to get a radial profile of the
+  	... the user taps the <span style="font-family: monospace;">'r'</span> key to get a radial profile of the
   	    object in the original image
   
   	... after carefully examining the profile it appears that the
   	    object's profile is too broad and that it is not a star
   
-  	... the user switches back to the X-Y plot with the <tt>'x'</tt> key,
-  	    marks the point with the <tt>'d'</tt> key and saves the deletions
-  	    and replots with the <tt>'f'</tt> key.
+  	... the user switches back to the X-Y plot with the <span style="font-family: monospace;">'x'</span> key,
+  	    marks the point with the <span style="font-family: monospace;">'d'</span> key and saves the deletions
+  	    and replots with the <span style="font-family: monospace;">'f'</span> key.
   
-  	... the user goes back to image command mode with the <tt>'i'</tt> key
+  	... the user goes back to image command mode with the <span style="font-family: monospace;">'i'</span> key
   	    and begins investigating the next object
   
   	... finally after examining the image and making all the changes
-  	    the user decides to quit and save the changes with the <tt>'e'</tt> key
+  	    the user decides to quit and save the changes with the <span style="font-family: monospace;">'e'</span> key
   
   </pre>
   <!-- EndSection:   'EXAMPLES' -->

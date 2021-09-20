@@ -57,14 +57,14 @@ phelp: Paged HELP: collects and pages the output of HELP
   </p>
   <p>
   When viewing multiple help pages as in this last example, note that the
-  <tt>'N'</tt> and <tt>'P'</tt> keystrokes in the pager may be used to move to the next or
-  previous help page.  <tt>"."</tt> will return to the first help page (the start
-  of the spooled help text) and <tt>'G'</tt> will skip to the end of file.  Type <tt>'?'</tt>
+  <span style="font-family: monospace;">'N'</span> and <span style="font-family: monospace;">'P'</span> keystrokes in the pager may be used to move to the next or
+  previous help page.  <span style="font-family: monospace;">"."</span> will return to the first help page (the start
+  of the spooled help text) and <span style="font-family: monospace;">'G'</span> will skip to the end of file.  Type <span style="font-family: monospace;">'?'</span>
   while in the pager to get a summary of the most often used keystrokes.
   </p>
   <p>
-  3. Format and page the Lroff (IRAF HELP) format document <tt>"MWCS.hlp"</tt> in
-  the system directory <tt>"mwcs"</tt>.
+  3. Format and page the Lroff (IRAF HELP) format document <span style="font-family: monospace;">"MWCS.hlp"</span> in
+  the system directory <span style="font-family: monospace;">"mwcs"</span>.
   </p>
   <pre>
       cl&gt; cd mwcs

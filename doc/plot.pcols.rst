@@ -41,7 +41,7 @@ pcols: Plot the average of a range of image columns
   </dd>
   </dl>
   <dl>
-  <dt><b>wcs = <tt>"logical"</tt></b></dt>
+  <dt><b>wcs = <span style="font-family: monospace;">"logical"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcs' Line='wcs = "logical"' -->
   <dd>The world coordinate system (<i>wcs</i>) to be used for axis labeling when
   input is f rom images.
@@ -69,7 +69,7 @@ pcols: Plot the average of a range of image columns
   <dl>
   <dt><b>world</b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='world' Line='world' -->
-  <dd>The <tt>"world"</tt> coordinate system is the <i>current default WCS</i>.
+  <dd>The <span style="font-family: monospace;">"world"</span> coordinate system is the <i>current default WCS</i>.
   The default world system is the system named by the environment variable
   <i>defwcs</i> if defined in the user environment and present in the reference
   image WCS description, else it is the first user WCS defined for the image
@@ -101,14 +101,14 @@ pcols: Plot the average of a range of image columns
   </dd>
   </dl>
   <dl>
-  <dt><b>marker = <tt>"box"</tt></b></dt>
+  <dt><b>marker = <span style="font-family: monospace;">"box"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='marker' Line='marker = "box"' -->
   <dd>Marker or line type to be drawn.  If <b>pointmode</b> = yes the markers are
-  <tt>"point"</tt>, <tt>"box"</tt>, <tt>"cross"</tt>, <tt>"plus"</tt>, <tt>"circle"</tt>, <tt>"hebar"</tt>, <tt>"vebar"</tt>, <tt>"hline"</tt>,
-  <tt>"vline"</tt> or <tt>"diamond"</tt>.  Any other value defaults to <tt>"box"</tt>.  If drawing lines,
-  <b>pointmode</b> = no, the values are <tt>"line"</tt>, <tt>"lhist"</tt>, <tt>"bhist"</tt>.  Any other
-  value defaults to <tt>"line"</tt>.  <tt>"bhist"</tt> (box histogram) draws lines to the
-  bottom of the graph while <tt>"lhist"</tt> does not.  In both cases the
+  <span style="font-family: monospace;">"point"</span>, <span style="font-family: monospace;">"box"</span>, <span style="font-family: monospace;">"cross"</span>, <span style="font-family: monospace;">"plus"</span>, <span style="font-family: monospace;">"circle"</span>, <span style="font-family: monospace;">"hebar"</span>, <span style="font-family: monospace;">"vebar"</span>, <span style="font-family: monospace;">"hline"</span>,
+  <span style="font-family: monospace;">"vline"</span> or <span style="font-family: monospace;">"diamond"</span>.  Any other value defaults to <span style="font-family: monospace;">"box"</span>.  If drawing lines,
+  <b>pointmode</b> = no, the values are <span style="font-family: monospace;">"line"</span>, <span style="font-family: monospace;">"lhist"</span>, <span style="font-family: monospace;">"bhist"</span>.  Any other
+  value defaults to <span style="font-family: monospace;">"line"</span>.  <span style="font-family: monospace;">"bhist"</span> (box histogram) draws lines to the
+  bottom of the graph while <span style="font-family: monospace;">"lhist"</span> does not.  In both cases the
   horizontal histogram lines run between the half way points (reflected
   at the ends).
   </dd>
@@ -126,25 +126,25 @@ pcols: Plot the average of a range of image columns
   </dd>
   </dl>
   <dl>
-  <dt><b>xlabel = <tt>"wcslabel"</tt>, ylabel = <tt>""</tt></b></dt>
+  <dt><b>xlabel = <span style="font-family: monospace;">"wcslabel"</span>, ylabel = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xlabel' Line='xlabel = "wcslabel", ylabel = ""' -->
-  <dd>Label for the X-axis or Y-axis.  if <b>xlabel</b> = <tt>"wcslabel"</tt>
+  <dd>Label for the X-axis or Y-axis.  if <b>xlabel</b> = <span style="font-family: monospace;">"wcslabel"</span>
   the world coordinate system label in the image, if defined, is used.
   </dd>
   </dl>
   <dl>
-  <dt><b>xformat = <tt>"wcsformat"</tt></b></dt>
+  <dt><b>xformat = <span style="font-family: monospace;">"wcsformat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xformat' Line='xformat = "wcsformat"' -->
-  <dd>The numerical format for the coordinate labels.  The values may be <tt>""</tt>
+  <dd>The numerical format for the coordinate labels.  The values may be <span style="font-family: monospace;">""</span>
   (an empty string), %f for decimal format, %h and %H for xx:xx:xx format, and
   %m and %M for xx:xx.x format.  The upper case %H and %M convert degrees
   to hours.  Some images have a recommended x coordinate format defined as
-  a WCS attribute.  If the xformat value is <tt>"wcsformat"</tt> the WCS attribute
+  a WCS attribute.  If the xformat value is <span style="font-family: monospace;">"wcsformat"</span> the WCS attribute
   format will be used.  Any other value will override the image attribute.
   </dd>
   </dl>
   <dl>
-  <dt><b>title = <tt>"imtitle"</tt></b></dt>
+  <dt><b>title = <span style="font-family: monospace;">"imtitle"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='title' Line='title = "imtitle"' -->
   <dd>Title for plot.  If not changed from the default, the title string from the
   image header, appended with the columns being plotted, is used.
@@ -175,7 +175,7 @@ pcols: Plot the average of a range of image columns
   </dd>
   </dl>
   <dl>
-  <dt><b>device=<tt>"stdgraph"</tt></b></dt>
+  <dt><b>device=<span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device="stdgraph"' -->
   <dd>Output device.
   </dd>
@@ -199,7 +199,7 @@ pcols: Plot the average of a range of image columns
   automatically sets a viewport centered on the device.  The default value
   of <b>fill</b> = yes means the plot spans equal amounts of NDC space in
   x and y.  Setting
-  the value of <b>fill</b>  to <tt>"no"</tt> means the viewport will be adjusted so 
+  the value of <b>fill</b>  to <span style="font-family: monospace;">"no"</span> means the viewport will be adjusted so 
   that the square plot will span equal physical lengths in x and y
   when plotted.  That is, when <b>fill = no</b>, a unity aspect ratio is 
   enforced, and plots
@@ -227,7 +227,7 @@ pcols: Plot the average of a range of image columns
   3. Annotate the axes of the plot:
   </p>
   <p>
-      cl&gt; pcols crab.5009 64 84 xlabel=<tt>"Row Number"</tt> ylabel=Intensity
+      cl&gt; pcols crab.5009 64 84 xlabel=<span style="font-family: monospace;">"Row Number"</span> ylabel=Intensity
   </p>
   <!-- EndSection:   'EXAMPLES' -->
   <h3>Time requirements</h3>

@@ -42,25 +42,25 @@ txtable: Extract 2-D tables from rows of 3-D tables.
   <p>
   Since one input table may generate several output tables, the task adopts
   the following naming scheme for these output tables: their names are
-  built by appending a suffix to the name given in parameter <tt>"outtable"</tt>.
-  The suffix has the form <tt>"_rXXXX"</tt>, where XXXX stands for the row number 
+  built by appending a suffix to the name given in parameter <span style="font-family: monospace;">"outtable"</span>.
+  The suffix has the form <span style="font-family: monospace;">"_rXXXX"</span>, where XXXX stands for the row number 
   in the input table. The suffix is appended before the file name extension.
-  The task recognizes as valid table name extensions the values <tt>".tab"</tt>,
-  <tt>".fits"</tt> and <tt>".fit"</tt>. Any other extension is assumed to be part of the root
+  The task recognizes as valid table name extensions the values <span style="font-family: monospace;">".tab"</span>,
+  <span style="font-family: monospace;">".fits"</span> and <span style="font-family: monospace;">".fit"</span>. Any other extension is assumed to be part of the root
   file name. If only one row is extracted, or in case of ASCII output, no 
   suffixing takes place.
   </p>
   <p>
   NOTE: Be careful when using a wildcard for the extension.
-  If you have the files <tt>"table.tab"</tt> and <tt>"table.lis"</tt> in the current directory,
-  for example, then the command <tt>"txtable tab* test/"</tt> would expand both files 
-  to the subdirectory <tt>"test"</tt>.
+  If you have the files <span style="font-family: monospace;">"table.tab"</span> and <span style="font-family: monospace;">"table.lis"</span> in the current directory,
+  for example, then the command <span style="font-family: monospace;">"txtable tab* test/"</span> would expand both files 
+  to the subdirectory <span style="font-family: monospace;">"test"</span>.
   </p>
   <p>
   There are two forms of handling scalar columns in the input table. If
-  task parameter <tt>"compact"</tt> is set to 'no', the corresponding column in the
+  task parameter <span style="font-family: monospace;">"compact"</span> is set to 'no', the corresponding column in the
   output table will have the scalar value in its first row, and all other
-  rows will be filled with INDEF. If parameter <tt>"compact"</tt> is set to 'yes',
+  rows will be filled with INDEF. If parameter <span style="font-family: monospace;">"compact"</span> is set to 'yes',
   scalar columns will be written into the header as a set of header keywords.
   These keywords can be used later by task 'titable' to re-insert the
   scalars as cell elements of a 3-D table.
@@ -89,7 +89,7 @@ txtable: Extract 2-D tables from rows of 3-D tables.
   <dt><b>outtable [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable [file name template]' -->
   <dd>Either a directory name or a list of output table names. The standard
-  value <tt>"STDOUT"</tt> generates ASCII output that can be redirected to a file.
+  value <span style="font-family: monospace;">"STDOUT"</span> generates ASCII output that can be redirected to a file.
   </dd>
   </dl>
   <dl>
@@ -114,8 +114,8 @@ txtable: Extract 2-D tables from rows of 3-D tables.
   cl&gt; txtable "table.tab[c:FLUX,WAVELENGTH][r:row=(11:13)]" tableout
   </pre>
   <p>
-  This will generate three tables named <tt>"tableout_r0011"</tt>, <tt>"tableout_r0012"</tt>
-  and <tt>"tableout_r0013"</tt>.
+  This will generate three tables named <span style="font-family: monospace;">"tableout_r0011"</span>, <span style="font-family: monospace;">"tableout_r0012"</span>
+  and <span style="font-family: monospace;">"tableout_r0013"</span>.
   </p>
   <!-- EndSection:   'EXAMPLES' -->
   <h3>Bugs</h3>

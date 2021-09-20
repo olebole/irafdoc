@@ -27,7 +27,7 @@ phistogram: Plot or print the histogram of an image or list
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>The name of the image, image subsection, or the text file containing the
   stream of values whose histogram is to be computed. <i>Input</i> may be
-  the standard input <tt>"STDIN"</tt>.
+  the standard input <span style="font-family: monospace;">"STDIN"</span>.
   </dd>
   </dl>
   <dl>
@@ -69,11 +69,11 @@ phistogram: Plot or print the histogram of an image or list
   </dd>
   </dl>
   <dl>
-  <dt><b>hist_type = <tt>"normal"</tt></b></dt>
+  <dt><b>hist_type = <span style="font-family: monospace;">"normal"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='hist_type' Line='hist_type = "normal"' -->
-  <dd>The type of histogram to plot or list.  The choices are <tt>"normal"</tt>,
-  <tt>"cumulative"</tt>, <tt>"difference"</tt>, or <tt>"second_difference"</tt>.  The two
-  <tt>"difference"</tt> options are calculated as forward differences, i.e.
+  <dd>The type of histogram to plot or list.  The choices are <span style="font-family: monospace;">"normal"</span>,
+  <span style="font-family: monospace;">"cumulative"</span>, <span style="font-family: monospace;">"difference"</span>, or <span style="font-family: monospace;">"second_difference"</span>.  The two
+  <span style="font-family: monospace;">"difference"</span> options are calculated as forward differences, i.e.
   diff[n] = hist[n+1] - hist[n].
   </dd>
   </dl>
@@ -84,15 +84,15 @@ phistogram: Plot or print the histogram of an image or list
   </dd>
   </dl>
   <dl>
-  <dt><b>title = <tt>"imtitle"</tt></b></dt>
+  <dt><b>title = <span style="font-family: monospace;">"imtitle"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='title' Line='title = "imtitle"' -->
-  <dd>The plot title. If title = <tt>"imtitle"</tt>, the image name and title or the
+  <dd>The plot title. If title = <span style="font-family: monospace;">"imtitle"</span>, the image name and title or the
   text file name, and the 
   characteristics of the histogram are included in the title.
   </dd>
   </dl>
   <dl>
-  <dt><b>xlabel = <tt>"Data values"</tt>, ylabel = <tt>"Counts"</tt></b></dt>
+  <dt><b>xlabel = <span style="font-family: monospace;">"Data values"</span>, ylabel = <span style="font-family: monospace;">"Counts"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xlabel' Line='xlabel = "Data values", ylabel = "Counts"' -->
   <dd>The labels for the X and Y axes.
   </dd>
@@ -115,15 +115,15 @@ phistogram: Plot or print the histogram of an image or list
   <dl>
   <dt><b>round = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='round' Line='round = no' -->
-  <dd>Round the axes minimum and maximum values up to <tt>"nice"</tt> values?
+  <dd>Round the axes minimum and maximum values up to <span style="font-family: monospace;">"nice"</span> values?
   </dd>
   </dl>
   <dl>
-  <dt><b>plot_type = <tt>"line"</tt></b></dt>
+  <dt><b>plot_type = <span style="font-family: monospace;">"line"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='plot_type' Line='plot_type = "line"' -->
-  <dd>The style of histogram to plot. The options are <tt>"line"</tt>, <tt>"box"</tt> and <tt>"fullbox"</tt>.
-  If <i>plot_type</i> is <tt>"line"</tt> the histogram data points are connected by
-  straight lines; if it is <tt>"box"</tt> a stepped histogram is drawn; if it is <tt>"fullbox"</tt> 
+  <dd>The style of histogram to plot. The options are <span style="font-family: monospace;">"line"</span>, <span style="font-family: monospace;">"box"</span> and <span style="font-family: monospace;">"fullbox"</span>.
+  If <i>plot_type</i> is <span style="font-family: monospace;">"line"</span> the histogram data points are connected by
+  straight lines; if it is <span style="font-family: monospace;">"box"</span> a stepped histogram is drawn; if it is <span style="font-family: monospace;">"fullbox"</span> 
   the histogram lines are drawn to the base of the plot.
   </dd>
   </dl>
@@ -166,15 +166,15 @@ phistogram: Plot or print the histogram of an image or list
   </dd>
   </dl>
   <dl>
-  <dt><b>pattern = <tt>"solid"</tt></b></dt>
+  <dt><b>pattern = <span style="font-family: monospace;">"solid"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pattern' Line='pattern = "solid"' -->
-  <dd>The type of line used to draw the histogram. The options are <tt>"solid"</tt>,
-  <tt>"dashed"</tt> <tt>"dotted"</tt>, and <tt>"dotdash"</tt>. <i>Pattern</i> can be changed when
+  <dd>The type of line used to draw the histogram. The options are <span style="font-family: monospace;">"solid"</span>,
+  <span style="font-family: monospace;">"dashed"</span> <span style="font-family: monospace;">"dotted"</span>, and <span style="font-family: monospace;">"dotdash"</span>. <i>Pattern</i> can be changed when
   appending to an existing plot.
   </dd>
   </dl>
   <dl>
-  <dt><b>device = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>device = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdgraph"' -->
   <dd>The output graphics device.
   </dd>
@@ -198,10 +198,10 @@ phistogram: Plot or print the histogram of an image or list
   the histogram is printed on the standard output.
   </p>
   <p>
-  In addition to computing the <tt>"normal"</tt> histogram, PHISTOGRAM can also
+  In addition to computing the <span style="font-family: monospace;">"normal"</span> histogram, PHISTOGRAM can also
   calculate the cumulative and the first and second difference histograms
   depending on the value of the <i>hist_type</i> parameter. The options are:
-  <tt>"normal"</tt>, <tt>"cumulative"</tt>, <tt>"difference"</tt>, and <tt>"second_difference"</tt>.
+  <span style="font-family: monospace;">"normal"</span>, <span style="font-family: monospace;">"cumulative"</span>, <span style="font-family: monospace;">"difference"</span>, and <span style="font-family: monospace;">"second_difference"</span>.
   </p>
   <p>
   Each bin of the histogram is defined to be half open at the top.  This
@@ -218,7 +218,7 @@ phistogram: Plot or print the histogram of an image or list
   </p>
   <p>
   By default, the plot drawn will fill the device viewport.  Setting
-  the value of <b>fill</b>  to <tt>"no"</tt> means the viewport will be adjusted so 
+  the value of <b>fill</b>  to <span style="font-family: monospace;">"no"</span> means the viewport will be adjusted so 
   that equal numbers of data values in x and y will occupy equal lengths 
   when plotted.  That is, when <b>fill = no</b>, a unity aspect ratio is 
   enforced, and plots
@@ -250,13 +250,13 @@ phistogram: Plot or print the histogram of an image or list
   </p>
   <p>
   4. Plot the cumulative histogram.  This is most useful for images with
-  fairly flat <tt>"normal"</tt> histograms.
+  fairly flat <span style="font-family: monospace;">"normal"</span> histograms.
   </p>
   <p>
       cl&gt; phist R50.imh hist=cum
   </p>
   <p>
-  5. Plot the histogram of a stream of values in the textfile <tt>"list"</tt>.
+  5. Plot the histogram of a stream of values in the textfile <span style="font-family: monospace;">"list"</span>.
   </p>
   <p>
       cl&gt; phist list

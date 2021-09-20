@@ -55,14 +55,14 @@ surface: Make a surface plot of an image
   </dd>
   </dl>
   <dl>
-  <dt><b>device = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>device = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdgraph"' -->
   <dd>Output device (<b>stdgraph</b>, <b>stdplot</b>, or the name of a physical
   device).
   </dd>
   </dl>
   <dl>
-  <dt><b>title = <tt>"imtitle"</tt></b></dt>
+  <dt><b>title = <span style="font-family: monospace;">"imtitle"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='title' Line='title = "imtitle"' -->
   <dd>A title string is centered above the plot.  The user can specify a title
   string; the default is the image title.

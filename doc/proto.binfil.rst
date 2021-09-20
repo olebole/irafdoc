@@ -71,7 +71,7 @@ binfil: Create a binary file from an IRAF image
   </p>
   <p>
   The output binary file assumes the name of the input image with an appended
-  <tt>".b"</tt> to indicate binary.
+  <span style="font-family: monospace;">".b"</span> to indicate binary.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Examples</h3>

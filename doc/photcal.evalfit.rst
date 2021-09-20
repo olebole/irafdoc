@@ -38,7 +38,7 @@ evalfit: Compute the standard indices by evaluating the fit
   specifies the format of the <i>observations</i> and <i>catalog</i> files, and
   defines the form of the transformation equations to be evaluated.
   More information can be obtained about this file by typing
-  <tt>"help mkconfig"</tt> and <tt>"help config"</tt>.
+  <span style="font-family: monospace;">"help mkconfig"</span> and <span style="font-family: monospace;">"help config"</span>.
   </dd>
   </dl>
   <dl>
@@ -61,7 +61,7 @@ evalfit: Compute the standard indices by evaluating the fit
   containing the name of the fitted object in the first column,
   followed by the <i>print</i>
   variables if any, followed by the fitted value, error of the fit (if
-  <i>errors</i> is not <tt>"undefined"</tt>), and residual of the
+  <i>errors</i> is not <span style="font-family: monospace;">"undefined"</span>), and residual of the
   fit (if catalog matching is enabled) for each equation.
   </dd>
   </dl>
@@ -72,12 +72,12 @@ evalfit: Compute the standard indices by evaluating the fit
   <i>Catalogs</i> are multi-column text files, whose columns are delimited
   by whitespace, and whose first column is reserved for an object id.
   All catalog files in the list must have the same format.
-  If <i>catalogs</i> = <tt>""</tt>, then no id matching with the observations
+  If <i>catalogs</i> = <span style="font-family: monospace;">""</span>, then no id matching with the observations
   files is done.
   </dd>
   </dl>
   <dl>
-  <dt><b>errors = <tt>"undefined"</tt></b></dt>
+  <dt><b>errors = <span style="font-family: monospace;">"undefined"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='errors' Line='errors = "undefined"' -->
   <dd>The algorithm used to compute formal errors for each object fit. The choices
   are:
@@ -107,7 +107,7 @@ evalfit: Compute the standard indices by evaluating the fit
   </dd>
   </dl>
   <dl>
-  <dt><b>objects = <tt>"all"</tt></b></dt>
+  <dt><b>objects = <span style="font-family: monospace;">"all"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='objects' Line='objects = "all"' -->
   <dd>The type of objects to output to <i>calib</i>. The choices are:
   <dl>
@@ -131,7 +131,7 @@ evalfit: Compute the standard indices by evaluating the fit
   </dd>
   </dl>
   <dl>
-  <dt><b>print = <tt>""</tt></b></dt>
+  <dt><b>print = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='print' Line='print = ""' -->
   <dd>Additional variables to be printed in the output file. These variables are
   printed immediately after the id, and may be any of the
@@ -140,7 +140,7 @@ evalfit: Compute the standard indices by evaluating the fit
   </dd>
   </dl>
   <dl>
-  <dt><b>format = <tt>""</tt></b></dt>
+  <dt><b>format = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='format' Line='format = ""' -->
   <dd>An SPP style format string to apply to the output data, in place of the
   default format.  SPP format strings
@@ -151,16 +151,16 @@ evalfit: Compute the standard indices by evaluating the fit
   <dt><b>append = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='append' Line='append = no' -->
   <dd>Append the output to <i>calib</i> instead of creating a new file. If the
-  file already exists and <i>append</i> is <tt>"no"</tt> EVALFIT will abort.
+  file already exists and <i>append</i> is <span style="font-family: monospace;">"no"</span> EVALFIT will abort.
   </dd>
   </dl>
   <dl>
-  <dt><b>catdir = <tt>")_.catdir"</tt></b></dt>
+  <dt><b>catdir = <span style="font-family: monospace;">")_.catdir"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='catdir' Line='catdir = ")_.catdir"' -->
   <dd>The directory containing the supported standard star catalogs.
   The default parameter value  redirects <i>catdir</i>
   to a package parameter of the same name. A list of standard
-  catalogs may be obtained by printing the file <tt>"photcal$catalogs/README"</tt>.
+  catalogs may be obtained by printing the file <span style="font-family: monospace;">"photcal$catalogs/README"</span>.
   Alternatively the user may create their own standard star catalogs 
   and standard star catalog directory.
   </dd>
@@ -174,7 +174,7 @@ evalfit: Compute the standard indices by evaluating the fit
   the transformation equations defined in <i>config</i>,
   the fitted parameter values in the file <i>parameters</i> produced by the
   FITPARAMS
-  task, and writes the output to the file <i>calib</i>. If <i>append</i> is <tt>"yes"</tt>
+  task, and writes the output to the file <i>calib</i>. If <i>append</i> is <span style="font-family: monospace;">"yes"</span>
   output may be appended to an existing file.
   </p>
   <p>
@@ -200,7 +200,7 @@ evalfit: Compute the standard indices by evaluating the fit
   </pre>
   <p>
   Formal errors for each fit may
-  be computed by,  1) setting <i>errors</i> to <tt>"obserrors"</tt> and using the
+  be computed by,  1) setting <i>errors</i> to <span style="font-family: monospace;">"obserrors"</span> and using the
   error columns defined in the observations section of <i>config</i>
   to estimate the errors or 2) evaluating the error equations defined in
   <i>config</i>.
@@ -208,8 +208,8 @@ evalfit: Compute the standard indices by evaluating the fit
   <p>
   If the user wishes to match the objects in <i>observations</i> with those
   in <i>catalogs</i> in order for example, to compute the residuals of the fit,
-  <i>catalogs</i> must be defined. Similarly if <i>objects</i> is <tt>"program"</tt>
-  or <tt>"standard"</tt>, <i>catalogs</i> must be defined in order to enable
+  <i>catalogs</i> must be defined. Similarly if <i>objects</i> is <span style="font-family: monospace;">"program"</span>
+  or <span style="font-family: monospace;">"standard"</span>, <i>catalogs</i> must be defined in order to enable
   id matching.
   </p>
   <p>
@@ -224,13 +224,13 @@ evalfit: Compute the standard indices by evaluating the fit
   (hh:mm:ss) are interpreted internally as real numbers. The constant
   INDEF can be used to represent data that is missing or undefined.
   Double precision and complex data are
-  not supported. Lines beginning with <tt>"#"</tt> are treated as comment lines.
+  not supported. Lines beginning with <span style="font-family: monospace;">"#"</span> are treated as comment lines.
   </p>
   <p>
   By default EVALFIT prints out the object id,
   followed by the variables listed in the <i>print</i>
   parameter, followed by the fit value, estimated
-  error (if <i>errors</i> is not <tt>"undefined"</tt>), and residual of the fit
+  error (if <i>errors</i> is not <span style="font-family: monospace;">"undefined"</span>), and residual of the fit
   (for any standard star observations that can be matched with the
   catalog values) for each fitted equation. The user can format the output
   by setting the <i>format</i> parameter to an SPP style string. 
@@ -240,9 +240,9 @@ evalfit: Compute the standard indices by evaluating the fit
   <h3>Formats</h3>
   <!-- BeginSection: 'FORMATS' -->
   <p>
-  A format specification has the form <tt>"%w.dCn"</tt>, where w is the field width,
+  A format specification has the form <span style="font-family: monospace;">"%w.dCn"</span>, where w is the field width,
   d is the number of decimal places or the number of digits of precision,
-  C is the format code, and n is radix character for format code <tt>"r"</tt> only.
+  C is the format code, and n is radix character for format code <span style="font-family: monospace;">"r"</span> only.
   The w and d fields are optional.  The format codes C are as follows:
   </p>
   <pre>

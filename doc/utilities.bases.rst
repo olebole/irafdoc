@@ -31,7 +31,7 @@ bases: Convert an integer to hex, octal, and binary
   <dl>
   <dt><b>nbyte = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nbyte' Line='nbyte = 0' -->
-  <dd>Number of bytes of precision.  Allowed values are <tt>"0"</tt>, <tt>"1"</tt>, <tt>"2"</tt>, or <tt>"4"</tt>.
+  <dd>Number of bytes of precision.  Allowed values are <span style="font-family: monospace;">"0"</span>, <span style="font-family: monospace;">"1"</span>, <span style="font-family: monospace;">"2"</span>, or <span style="font-family: monospace;">"4"</span>.
   </dd>
   </dl>
   <dl>
@@ -51,7 +51,7 @@ bases: Convert an integer to hex, octal, and binary
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. Convert the number 256 (in various bases).  Note the <tt>'x'</tt> and <tt>'b'</tt> suffix
+  1. Convert the number 256 (in various bases).  Note the <span style="font-family: monospace;">'x'</span> and <span style="font-family: monospace;">'b'</span> suffix
   appended to the value to change the input base value:
   </p>
   <pre>

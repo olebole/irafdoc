@@ -23,9 +23,9 @@ hdbexamine: Examine a help database
   <h3>Parameters</h3>
   <!-- BeginSection: 'PARAMETERS' -->
   <dl>
-  <dt><b>helpdb = <tt>"helpdb"</tt></b></dt>
+  <dt><b>helpdb = <span style="font-family: monospace;">"helpdb"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='helpdb' Line='helpdb = "helpdb"' -->
-  <dd>The filename of the help database to be examined.  The reserved name <tt>"helpdb"</tt>
+  <dd>The filename of the help database to be examined.  The reserved name <span style="font-family: monospace;">"helpdb"</span>
   causes the actual filename to be taken from the environment variable of
   the same name.
   </dd>
@@ -48,7 +48,7 @@ hdbexamine: Examine a help database
   database.  By default the standard IRAF help database is examined.
   Examining the help database with <i>hdbexamine</i> verifies that it can
   be read by <i>help</i>, and may be useful as a diagnostic in the event
-  that an invalid help directory file (<tt>".hd"</tt>) somewhere in the help
+  that an invalid help directory file (<span style="font-family: monospace;">".hd"</span>) somewhere in the help
   directory tree, causes the database to be compiled incorrectly.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->

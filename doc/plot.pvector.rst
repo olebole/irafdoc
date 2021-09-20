@@ -107,7 +107,7 @@ pvector: Plot an arbitrary vector in a 2D image
   </dd>
   </dl>
   <dl>
-  <dt><b>vec_output = <tt>""</tt></b></dt>
+  <dt><b>vec_output = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='vec_output' Line='vec_output = ""' -->
   <dd>File or image name if output vector is desired.  If this parameter is
   non-null, then the computed vector will be output to the named file of
@@ -117,10 +117,10 @@ pvector: Plot an arbitrary vector in a 2D image
   </dd>
   </dl>
   <dl>
-  <dt><b>out_type = <tt>"text"</tt></b></dt>
+  <dt><b>out_type = <span style="font-family: monospace;">"text"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='out_type' Line='out_type = "text"' -->
   <dd>Type of output format (image|text). If an image is created, then a new
-  header keyword, <tt>"VSLICE"</tt>, will be appended to the new image describing
+  header keyword, <span style="font-family: monospace;">"VSLICE"</span>, will be appended to the new image describing
   the endpoints of the vector, the width, and the parent image name. The 
   parent image header will be copied to the new image.
   </dd>
@@ -147,14 +147,14 @@ pvector: Plot an arbitrary vector in a 2D image
   </dd>
   </dl>
   <dl>
-  <dt><b>marker = <tt>"box"</tt></b></dt>
+  <dt><b>marker = <span style="font-family: monospace;">"box"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='marker' Line='marker = "box"' -->
   <dd>Marker or line type to be drawn.  If <b>pointmode</b> = yes the markers are
-  <tt>"point"</tt>, <tt>"box"</tt>, <tt>"cross"</tt>, <tt>"plus"</tt>, <tt>"circle"</tt>, <tt>"hebar"</tt>, <tt>"vebar"</tt>, <tt>"hline"</tt>,
-  <tt>"vline"</tt> or <tt>"diamond"</tt>.  Any other value defaults to <tt>"box"</tt>.  If drawing lines,
-  <b>pointmode</b> = no, the values are <tt>"line"</tt>, <tt>"lhist"</tt>, <tt>"bhist"</tt>.  Any other
-  value defaults to <tt>"line"</tt>.  <tt>"bhist"</tt> (box histogram) draws lines to the
-  bottom of the graph while <tt>"lhist"</tt> does not.  In both cases the
+  <span style="font-family: monospace;">"point"</span>, <span style="font-family: monospace;">"box"</span>, <span style="font-family: monospace;">"cross"</span>, <span style="font-family: monospace;">"plus"</span>, <span style="font-family: monospace;">"circle"</span>, <span style="font-family: monospace;">"hebar"</span>, <span style="font-family: monospace;">"vebar"</span>, <span style="font-family: monospace;">"hline"</span>,
+  <span style="font-family: monospace;">"vline"</span> or <span style="font-family: monospace;">"diamond"</span>.  Any other value defaults to <span style="font-family: monospace;">"box"</span>.  If drawing lines,
+  <b>pointmode</b> = no, the values are <span style="font-family: monospace;">"line"</span>, <span style="font-family: monospace;">"lhist"</span>, <span style="font-family: monospace;">"bhist"</span>.  Any other
+  value defaults to <span style="font-family: monospace;">"line"</span>.  <span style="font-family: monospace;">"bhist"</span> (box histogram) draws lines to the
+  bottom of the graph while <span style="font-family: monospace;">"lhist"</span> does not.  In both cases the
   horizontal histogram lines run between the half way points (reflected
   at the ends).
   </dd>
@@ -172,13 +172,13 @@ pvector: Plot an arbitrary vector in a 2D image
   </dd>
   </dl>
   <dl>
-  <dt><b>xlabel = <tt>""</tt>, ylabel = <tt>""</tt></b></dt>
+  <dt><b>xlabel = <span style="font-family: monospace;">""</span>, ylabel = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xlabel' Line='xlabel = "", ylabel = ""' -->
   <dd>The x-axis and y-axis labels.
   </dd>
   </dl>
   <dl>
-  <dt><b>title = <tt>"imtitle"</tt></b></dt>
+  <dt><b>title = <span style="font-family: monospace;">"imtitle"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='title' Line='title = "imtitle"' -->
   <dd>Title for plot.  If not changed from the default, the title string from the
   image header, appended with the vector endpoints, is used.
@@ -209,7 +209,7 @@ pvector: Plot an arbitrary vector in a 2D image
   </dd>
   </dl>
   <dl>
-  <dt><b>device = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>device = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdgraph"' -->
   <dd>Output device.
   </dd>
@@ -252,7 +252,7 @@ pvector: Plot an arbitrary vector in a 2D image
   automatically sets a viewport centered on the device.  The default value
   of <b>fill</b> = yes means the plot spans equal amounts of NDC space in
   x and y.  Setting
-  the value of <b>fill</b>  to <tt>"no"</tt> means the viewport will be adjusted so 
+  the value of <b>fill</b>  to <span style="font-family: monospace;">"no"</span> means the viewport will be adjusted so 
   that the square plot will span equal physical lengths in x and y
   when plotted.  That is, when <b>fill = no</b>, a unity aspect ratio is 
   enforced, and plots

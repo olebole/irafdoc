@@ -32,16 +32,16 @@ daofind: Find stars in an image using the DAO algorithm
   <dt><b>output </b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output ' -->
   <dd>The name of the results file or the results directory. If output is
-  <tt>"default"</tt>, <tt>"dir$default"</tt> or a directory specification then a results file
+  <span style="font-family: monospace;">"default"</span>, <span style="font-family: monospace;">"dir$default"</span> or a directory specification then a results file
   name of the form dir$root.extension.version is constructed, where
-  dir is the directory, root is the root image name, extension is <tt>"coo"</tt>
+  dir is the directory, root is the root image name, extension is <span style="font-family: monospace;">"coo"</span>
   and version is the next available version number for the file. If the
   output string is undefined then no output file is created. One output
   file is created for every input image.
   </dd>
   </dl>
   <dl>
-  <dt><b>starmap = <tt>""</tt></b></dt>
+  <dt><b>starmap = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='starmap' Line='starmap = ""' -->
   <dd>The name of the image prefix and/or directory where the density enhancement
   image will be stored. If starmap is undefined or a directory,
@@ -52,7 +52,7 @@ daofind: Find stars in an image using the DAO algorithm
   </dd>
   </dl>
   <dl>
-  <dt><b>skymap = <tt>""</tt></b></dt>
+  <dt><b>skymap = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='skymap' Line='skymap = ""' -->
   <dd>The name of the image prefix and/or directory where the mean density
   image will be stored.  If skymap is undefined or a directory, no mean density
@@ -64,7 +64,7 @@ daofind: Find stars in an image using the DAO algorithm
   </dd>
   </dl>
   <dl>
-  <dt><b>datapars = <tt>""</tt></b></dt>
+  <dt><b>datapars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='datapars' Line='datapars = ""' -->
   <dd>The name of the file containing the data dependent parameters. The critical
   parameters <i>fwhmpsf</i> and <i>sigma</i> are located here.  If <i>datapars</i>
@@ -73,7 +73,7 @@ daofind: Find stars in an image using the DAO algorithm
   </dd>
   </dl>
   <dl>
-  <dt><b>findpars = <tt>""</tt></b></dt>
+  <dt><b>findpars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='findpars' Line='findpars = ""' -->
   <dd>The name of the file containing the object detection parameters. The
   parameter <i>threshold</i> is located here. If findpars is undefined then
@@ -81,7 +81,7 @@ daofind: Find stars in an image using the DAO algorithm
   </dd>
   </dl>
   <dl>
-  <dt><b>boundary = <tt>"nearest"</tt></b></dt>
+  <dt><b>boundary = <span style="font-family: monospace;">"nearest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"' -->
   <dd>The type of boundary extension. The choices are:
   <dl>
@@ -123,25 +123,25 @@ daofind: Find stars in an image using the DAO algorithm
   </dd>
   </dl>
   <dl>
-  <dt><b>icommands = <tt>""</tt></b></dt>
+  <dt><b>icommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""' -->
   <dd>The image display cursor or image cursor command file.
   </dd>
   </dl>
   <dl>
-  <dt><b>gcommands = <tt>""</tt></b></dt>
+  <dt><b>gcommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""' -->
   <dd>The graphics cursor or graphics cursor command file.
   </dd>
   </dl>
   <dl>
-  <dt><b>wcsout = <tt>")_.wcsout"</tt></b></dt>
+  <dt><b>wcsout = <span style="font-family: monospace;">")_.wcsout"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcsout' Line='wcsout = ")_.wcsout"' -->
   <dd>The coordinate system of the output coordinates written to <i>output</i>. The
-  image header coordinate system is used to transform from the internal <tt>"logical"</tt>
+  image header coordinate system is used to transform from the internal <span style="font-family: monospace;">"logical"</span>
   pixel coordinate system to the output coordinate system. The output coordinate
-  system options are <tt>"logical"</tt>, <tt>"tv"</tt>, and <tt>"physical"</tt>. The image cursor coordinate
-   system is assumed to be the <tt>"tv"</tt> system.
+  system options are <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"tv"</span>, and <span style="font-family: monospace;">"physical"</span>. The image cursor coordinate
+   system is assumed to be the <span style="font-family: monospace;">"tv"</span> system.
   <dl>
   <dt><b>logical</b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='logical' Line='logical' -->
@@ -184,55 +184,55 @@ daofind: Find stars in an image using the DAO algorithm
   </dl>
   The wcsout parameter defaults to the value of the package parameter of the same
    name. The default values of the package parameters wcsin and wcsout are
-  <tt>"logical"</tt> and <tt>"logical"</tt> respectively.
+  <span style="font-family: monospace;">"logical"</span> and <span style="font-family: monospace;">"logical"</span> respectively.
   </dd>
   </dl>
   <dl>
-  <dt><b>cache = <tt>")_.cache"</tt></b></dt>
+  <dt><b>cache = <span style="font-family: monospace;">")_.cache"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cache' Line='cache = ")_.cache"' -->
   <dd>Cache the image pixels in memory. Cache may be set to the value of the apphot
-  package parameter (the default), <tt>"yes"</tt>, or <tt>"no"</tt>. By default caching is
+  package parameter (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>. By default caching is
   disabled.
   </dd>
   </dl>
   <dl>
-  <dt><b>verify = <tt>")_.verify"</tt></b></dt>
+  <dt><b>verify = <span style="font-family: monospace;">")_.verify"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verify' Line='verify = ")_.verify"' -->
   <dd>Automatically confirm the critical parameters when running in non-interactive
   mode ? Verify may be set to the daophot package parameter value (the default),
-  <tt>"yes"</tt>, or <tt>"no"</tt>.
+  <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>update = <tt>")_.update"</tt></b></dt>
+  <dt><b>update = <span style="font-family: monospace;">")_.update"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='update' Line='update = ")_.update"' -->
   <dd>Automatically update the parameters when running in non-interactive mode if
-  verify is <tt>"yes"</tt>? Update may be set to the daophot package parameter value
-  (the default), <tt>"yes"</tt>, or <tt>"no"</tt>.
+  verify is <span style="font-family: monospace;">"yes"</span>? Update may be set to the daophot package parameter value
+  (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>verbose = <tt>")_.verbose"</tt></b></dt>
+  <dt><b>verbose = <span style="font-family: monospace;">")_.verbose"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = ")_.verbose"' -->
   <dd>Print out information about the progress of the task in non-interactive mode.
-  Verbose may be set to the daophot package parameter value (the default), <tt>"yes"</tt>,
-  or <tt>"no"</tt>.
+  Verbose may be set to the daophot package parameter value (the default), <span style="font-family: monospace;">"yes"</span>,
+  or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>")_.graphics"</tt></b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">")_.graphics"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = ")_.graphics"' -->
   <dd>The standard graphics device.  Graphics may be set to the apphot package
-  parameter value (the default), <tt>"yes"</tt>, or <tt>"no"</tt>.
+  parameter value (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>display = <tt>")_.display"</tt></b></dt>
+  <dt><b>display = <span style="font-family: monospace;">")_.display"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='display' Line='display = ")_.display"' -->
   <dd>The standard image display device. Display may be set to the apphot package
-  parameter value (the default), <tt>"yes"</tt>, or <tt>"no"</tt>. By default graphics overlay is
-  disabled.  Setting display to one of <tt>"imdr"</tt>, <tt>"imdg"</tt>, <tt>"imdb"</tt>, or <tt>"imdy"</tt> enables
-  graphics overlay with the IMD graphics kernel.  Setting display to <tt>"stdgraph"</tt>
+  parameter value (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>. By default graphics overlay is
+  disabled.  Setting display to one of <span style="font-family: monospace;">"imdr"</span>, <span style="font-family: monospace;">"imdg"</span>, <span style="font-family: monospace;">"imdb"</span>, or <span style="font-family: monospace;">"imdy"</span> enables
+  graphics overlay with the IMD graphics kernel.  Setting display to <span style="font-family: monospace;">"stdgraph"</span>
   enables DAOFIND to work interactively from a contour plot.
   </dd>
   </dl>
@@ -250,11 +250,11 @@ daofind: Find stars in an image using the DAO algorithm
   </p>
   <p>
   The coordinates written to <i>output</i> are in the coordinate
-  system defined by <i>wcsout</i>. The options are <tt>"logical"</tt>, <tt>"tv"</tt>,
-  and <tt>"physical"</tt>. The simplest default is the <tt>"logical"</tt> system. Users
+  system defined by <i>wcsout</i>. The options are <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"tv"</span>,
+  and <span style="font-family: monospace;">"physical"</span>. The simplest default is the <span style="font-family: monospace;">"logical"</span> system. Users
   wishing to correlate the output coordinates of objects measured in
   image sections or mosaic pieces with coordinates in the parent
-  image must use the <tt>"tv"</tt> or <tt>"physical"</tt> coordinate systems.
+  image must use the <span style="font-family: monospace;">"tv"</span> or <span style="font-family: monospace;">"physical"</span> coordinate systems.
   </p>
   <p>
   If <i>cache</i> is yes and the host machine physical memory and working set size
@@ -678,9 +678,9 @@ daofind: Find stars in an image using the DAO algorithm
   <p>
   Commands which draw to the image display are disabled by default.
   To enable graphics overlay on the image display, set the display
-  parameter to <tt>"imdr"</tt>, <tt>"imdg"</tt>, <tt>"imdb"</tt>, or <tt>"imdy"</tt> to get red, green,
+  parameter to <span style="font-family: monospace;">"imdr"</span>, <span style="font-family: monospace;">"imdg"</span>, <span style="font-family: monospace;">"imdb"</span>, or <span style="font-family: monospace;">"imdy"</span> to get red, green,
   blue or yellow overlays and set the findpars mkdetections switch to
-  <tt>"yes"</tt>. It may be necessary to run gflush and to redisplay the image
+  <span style="font-family: monospace;">"yes"</span>. It may be necessary to run gflush and to redisplay the image
   to get the overlays position correctly.
   </p>
   <!-- EndSection:   'BUGS' -->

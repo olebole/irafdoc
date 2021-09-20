@@ -36,7 +36,7 @@ ccdgroups: Group CCD images into image lists
   </dd>
   </dl>
   <dl>
-  <dt><b>group = <tt>"ccdtype"</tt></b></dt>
+  <dt><b>group = <span style="font-family: monospace;">"ccdtype"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='group' Line='group = "ccdtype"' -->
   <dd>Group type.  There are currently four grouping types:
   <dl>
@@ -79,9 +79,9 @@ ccdgroups: Group CCD images into image lists
   </dd>
   </dl>
   <dl>
-  <dt><b>ccdtype = <tt>""</tt></b></dt>
+  <dt><b>ccdtype = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ccdtype' Line='ccdtype = ""' -->
-  <dd>CCD image types to select from the input image list.  If null (<tt>""</tt>) then
+  <dd>CCD image types to select from the input image list.  If null (<span style="font-family: monospace;">""</span>) then
   all image types are used.
   </dd>
   </dl>
@@ -90,7 +90,7 @@ ccdgroups: Group CCD images into image lists
   <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The input images, possible restricted to a particular CCD image type,
-  are grouped into image lists.  The <tt>"ccdtype"</tt> or <tt>"subset"</tt> groups
+  are grouped into image lists.  The <span style="font-family: monospace;">"ccdtype"</span> or <span style="font-family: monospace;">"subset"</span> groups
   produce output image lists with the given root name and the CCD type
   or subset as an extension (without a period).  For the other group
   types the
@@ -120,8 +120,8 @@ ccdgroups: Group CCD images into image lists
   </p>
   <p>
   The date, title, and coordinates are accessed through the instrument
-  translation file.  The standard names used are <tt>"date-obs"</tt>, <tt>"title"</tt>, <tt>"ra"</tt>,
-  and <tt>"dec"</tt>.
+  translation file.  The standard names used are <span style="font-family: monospace;">"date-obs"</span>, <span style="font-family: monospace;">"title"</span>, <span style="font-family: monospace;">"ra"</span>,
+  and <span style="font-family: monospace;">"dec"</span>.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Examples</h3>
@@ -148,7 +148,7 @@ ccdgroups: Group CCD images into image lists
       [... etc ...]
   </pre>
   <p>
-  Note the numeric suffixes to the output root name <tt>"group"</tt>.
+  Note the numeric suffixes to the output root name <span style="font-family: monospace;">"group"</span>.
    
   2. CCD observations were made in groups with a flat field, the object, and
   a comparison spectrum at each position.  To group and process this data:

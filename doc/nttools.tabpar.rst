@@ -26,8 +26,8 @@ tabpar: Transfer a table element to an IRAF parameter.
   This task reads a table element specified by a table name, column name,
   and row number. The element is written to the task parameter 'value' as
   a character string. If the table element is boolean, then 'value' will
-  be either <tt>"yes"</tt> or <tt>"no"</tt>. If the element is undefined, the task parameter
-  'undef' will be set to <tt>"yes"</tt>. String parameters, such as 'value', can be
+  be either <span style="font-family: monospace;">"yes"</span> or <span style="font-family: monospace;">"no"</span>. If the element is undefined, the task parameter
+  'undef' will be set to <span style="font-family: monospace;">"yes"</span>. String parameters, such as 'value', can be
   converted to numeric types with the built in functions real() and int().
   </p>
   <!-- EndSection:   'DESCRIPTION' -->

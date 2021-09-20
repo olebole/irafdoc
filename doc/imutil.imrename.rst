@@ -54,26 +54,26 @@ imrename: Rename one or more images
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. Rename the image <tt>"pix"</tt> to <tt>"wfpc.1"</tt>.
+  1. Rename the image <span style="font-family: monospace;">"pix"</span> to <span style="font-family: monospace;">"wfpc.1"</span>.
   </p>
   <p>
   	cl&gt; imrename pix wfpc.1
   </p>
   <p>
-  2. Rename all the <tt>"nite1*"</tt> images as <tt>"nite1_c"</tt>.
+  2. Rename all the <span style="font-family: monospace;">"nite1*"</span> images as <span style="font-family: monospace;">"nite1_c"</span>.
   </p>
   <p>
   	cl&gt; imrename nite1.*.imh nite1%%_c%.*.imh
   </p>
   <p>
-  3. Move the images in logical directory <tt>"dd"</tt> to the current directory.
+  3. Move the images in logical directory <span style="font-family: monospace;">"dd"</span> to the current directory.
   </p>
   <p>
   	cl&gt; imrename dd$*.imh .
   </p>
   <p>
   4. Move the pixel files associated with the images in the current directory
-  to a subdirectory <tt>"pix"</tt> of the current directory.
+  to a subdirectory <span style="font-family: monospace;">"pix"</span> of the current directory.
   </p>
   <pre>
   	cl&gt; reset imdir = HDR$pix/

@@ -29,7 +29,7 @@ imdkern: Image display device (IMD) graphics kernel
   </dd>
   </dl>
   <dl>
-  <dt><b>device = <tt>"stdimage"</tt></b></dt>
+  <dt><b>device = <span style="font-family: monospace;">"stdimage"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdimage"' -->
   <dd>The output device.
   </dd>

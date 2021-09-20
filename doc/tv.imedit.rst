@@ -37,7 +37,7 @@ imedit: Examine and edit pixels in images
   </dd>
   </dl>
   <dl>
-  <dt><b>cursor = <tt>""</tt></b></dt>
+  <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>The editing commands are entered via a cursor list.  When the task is
   run interactively this will normally be the standard image cursor
@@ -50,7 +50,7 @@ imedit: Examine and edit pixels in images
   </dd>
   </dl>
   <dl>
-  <dt><b>logfile = <tt>""</tt></b></dt>
+  <dt><b>logfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = ""' -->
   <dd>File in which to record the editing commands which modify the images.
   The display and statistics commands which don't modify the images are
@@ -89,11 +89,11 @@ imedit: Examine and edit pixels in images
   </dd>
   </dl>
   <dl>
-  <dt><b>aperture = <tt>"circular"</tt></b></dt>
+  <dt><b>aperture = <span style="font-family: monospace;">"circular"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='aperture' Line='aperture = "circular"' -->
   <dd>Aperture for aperture editing.  Some commands specify the region to
   be edited by a center and radius.  The shape of the aperture is selected
-  by this parameter.  The choices are <tt>"circular"</tt> and <tt>"square"</tt>.  Note that
+  by this parameter.  The choices are <span style="font-family: monospace;">"circular"</span> and <span style="font-family: monospace;">"square"</span>.  Note that
   this does not apply to commands in which a rectangle is specified by
   selecting the corners.
   </dd>
@@ -180,27 +180,27 @@ imedit: Examine and edit pixels in images
   </dd>
   </dl>
   <dl>
-  <dt><b>command = <tt>"display $image 1 erase=$erase fill=yes order=0 &gt;&amp; dev$null"</tt></b></dt>
+  <dt><b>command = <span style="font-family: monospace;">"display $image 1 erase=$erase fill=yes order=0 &gt;&amp; dev$null"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='command' Line='command = "display $image 1 erase=$erase fill=yes order=0 &gt;&amp; dev$null"' -->
   <dd>Command for displaying images.  This task displays images by executing a
   standard IRAF command.  Two arguments may be substituted by the appropriate
-  values; the image name specified by <tt>"$image"</tt> and the boolean erase
-  flag specified by <tt>"$erase"</tt>.  Except for unusual cases the <b>tv.display</b>
+  values; the image name specified by <span style="font-family: monospace;">"$image"</span> and the boolean erase
+  flag specified by <span style="font-family: monospace;">"$erase"</span>.  Except for unusual cases the <b>tv.display</b>
   command is used with the fill option.  The fill option is required to
   provide a zoom feature.  See the examples for another possible command.
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>Graphics device used for surface plots.  Normally this is the standard
-  graphics device <tt>"stdgraph"</tt> though other possibilities are <tt>"stdplot"</tt>
-  and <tt>"stdvdm"</tt>.  Note the standard graphics output may also be
-  redirected to a file with <tt>"&gt;G file"</tt> where <tt>"file"</tt> is any file name.
+  graphics device <span style="font-family: monospace;">"stdgraph"</span> though other possibilities are <span style="font-family: monospace;">"stdplot"</span>
+  and <span style="font-family: monospace;">"stdvdm"</span>.  Note the standard graphics output may also be
+  redirected to a file with <span style="font-family: monospace;">"&gt;G file"</span> where <span style="font-family: monospace;">"file"</span> is any file name.
   </dd>
   </dl>
   <dl>
-  <dt><b>default = <tt>"b"</tt></b></dt>
+  <dt><b>default = <span style="font-family: monospace;">"b"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='default' Line='default = "b"' -->
   <dd>Default command option for simple position list input.  If the input
   is a list of column and line positions (x,y) then the command executed
@@ -216,7 +216,7 @@ imedit: Examine and edit pixels in images
   <dd>Fixpix style input?  This type of input consists of rectangular regions
   specified by lines giving the starting and ending column and starting
   and ending line.  This is the same input used by <b>fixpix</b> and in
-  the <b>ccdred</b> package.  The feature to refer to <tt>"untrimmed"</tt> images
+  the <b>ccdred</b> package.  The feature to refer to <span style="font-family: monospace;">"untrimmed"</span> images
   in the latter package is not available in this task.  When selected
   the editing consists of interpolation across the narrowest dimension
   of the region and the default key is ignored.
@@ -231,10 +231,10 @@ imedit: Examine and edit pixels in images
   positions and commands.  There are a variety of display and editing
   options.  A list of input images and a matching list of output images
   are specified.  The output images are only created if the input image
-  is modified (except by an explicit <tt>"write"</tt> command).  If no output
-  list is specified (an empty list given by <tt>""</tt>) then the modified images
+  is modified (except by an explicit <span style="font-family: monospace;">"write"</span> command).  If no output
+  list is specified (an empty list given by <span style="font-family: monospace;">""</span>) then the modified images
   are written back to the input images.  The images are edited in
-  a temporary buffer image beginning with <tt>"imedit"</tt>.
+  a temporary buffer image beginning with <span style="font-family: monospace;">"imedit"</span>.
    
   Commands are given via a cursor list.  When the task is run
   interactively this will normally be the standard image cursor
@@ -266,11 +266,11 @@ imedit: Examine and edit pixels in images
   the display command is repeated after each change to the image.  The
   drawback to this is that the full image (or image section) is reloaded
   and so can be slow.  If not set it is still possible to explicitly give
-  a redisplay command, <tt>'r'</tt>, after a number of changes have been made.
+  a redisplay command, <span style="font-family: monospace;">'r'</span>, after a number of changes have been made.
    
   Another display option is to make surface graphs to the specified
   graphics device (normally the standard graphics terminal).  This may
-  be done by the commands <tt>'g'</tt> and <tt>'s'</tt> and automatically after each
+  be done by the commands <span style="font-family: monospace;">'g'</span> and <span style="font-family: monospace;">'s'</span> and automatically after each
   change if the <i>autosurface</i> parameter is set.  The two types of
   surface plots are a single surface of the image at the marked position
   and before and after plots for a change.
@@ -280,8 +280,8 @@ imedit: Examine and edit pixels in images
   of an aperture.  The shape of the aperture, circular or square, is
   specified by the <i>aperture</i> parameter and the radius (or half
   the edge of a square) is specified by the <i>radius</i> parameter.
-  The radius may be zero to select a single pixel.  The keys <tt>'+'</tt> and
-  <tt>'-'</tt> may be used to quickly increment or decrement the current radius.
+  The radius may be zero to select a single pixel.  The keys <span style="font-family: monospace;">'+'</span> and
+  <span style="font-family: monospace;">'-'</span> may be used to quickly increment or decrement the current radius.
   The two keystroke commands either define the corners of a rectangular
   region or the endpoints of a line.
    
@@ -293,7 +293,7 @@ imedit: Examine and edit pixels in images
   <i>search</i>.  If the search radius is zero then the region defined
   by the cursor is not adjusted.  The sign of the search radius
   selects whether a maximum (positive value) or a minimum (negative value)
-  is sought.  The special key <tt>'t'</tt> toggles between the two modes
+  is sought.  The special key <span style="font-family: monospace;">'t'</span> toggles between the two modes
   in order to quickly edit both low sensitivity bad pixels and
   cosmicrays and stars.
    
@@ -305,34 +305,34 @@ imedit: Examine and edit pixels in images
    
   The replacement options are described below as is a summary of all the
   commands.  Two commands requiring a little more description are the
-  space and <tt>'p'</tt> commands.  These print the statistics at the cursor
+  space and <span style="font-family: monospace;">'p'</span> commands.  These print the statistics at the cursor
   position for the current aperture and background parameters.  The
   printout gives the x and y position of the aperture center (after the
   search if any), the pixel value (z) at that pixel, the mean background
   subtracted flux in the aperture, the number of pixels in the aperture,
-  the mean background <tt>"sky"</tt>, the sigma of the background residuals from
+  the mean background <span style="font-family: monospace;">"sky"</span>, the sigma of the background residuals from
   the background fit, and the number of pixels in the background region.
-  The <tt>'p'</tt> key additionally prints the pixel values in the aperture.
+  The <span style="font-family: monospace;">'p'</span> key additionally prints the pixel values in the aperture.
   Beware of apertures with radii greater than 5 since they will wrap
   around in an 80 column terminal.
    
-  When done editing or examining an image exit with <tt>'q'</tt> or <tt>'Q'</tt>.  The
+  When done editing or examining an image exit with <span style="font-family: monospace;">'q'</span> or <span style="font-family: monospace;">'Q'</span>.  The
   former saves the modified image in the output image (which might be
   the same as the input image) while the latter does not save the
   modified image.  Note that if the image has not been modified then
   no output occurs.  After exiting the next image in the input
   list is edited.  One may also change input images using the
-  <tt>":input"</tt> command.  Note that this command sets the output to be the
-  same as the input and a subsequent <tt>":output"</tt> command should be
+  <span style="font-family: monospace;">":input"</span> command.  Note that this command sets the output to be the
+  same as the input and a subsequent <span style="font-family: monospace;">":output"</span> command should be
   used to define a different output image name.  A final useful
-  colon command is <tt>":write"</tt> which forces the current editor buffer
+  colon command is <span style="font-family: monospace;">":write"</span> which forces the current editor buffer
   to be written.  This can be used to save partial changes.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Replacement algorithms</h3>
   <!-- BeginSection: 'REPLACEMENT ALGORITHMS' -->
   <p>
-  The parameters <tt>"minvalue"</tt> and <tt>"maxvalue"</tt> are may be used to limit the
+  The parameters <span style="font-family: monospace;">"minvalue"</span> and <span style="font-family: monospace;">"maxvalue"</span> are may be used to limit the
   range of values modified.  The default is to modify all pixels which
   are selected as described below.
   </p>
@@ -354,14 +354,14 @@ imedit: Examine and edit pixels in images
   <dt><b>c, f, l</b></dt>
   <!-- Sec='REPLACEMENT ALGORITHMS' Level=0 Label='c' Line='c, f, l' -->
   <dd>Replace rectangular or line regions by interpolation from the nearest
-  background column or line.  The <tt>'f'</tt> line option interpolates across the
+  background column or line.  The <span style="font-family: monospace;">'f'</span> line option interpolates across the
   narrowest dimension; i.e. for lines nearer to the line axis interpolation
   is by lines while for those  nearer to the column axis interpolation is
   by columns.  The buffer region applies but only the nearest background
   pixel at each line or column on either side of the replacement region
   is used for interpolation.  Gaussian noise may be added but background
   sampling is not available.  This method is similar to the method used
-  in <b>fixpix</b> or <b>ccdred</b> with no buffer.  For <tt>"fixpix"</tt> type
+  in <b>fixpix</b> or <b>ccdred</b> with no buffer.  For <span style="font-family: monospace;">"fixpix"</span> type
   input the type of interpolation is automatically selected for the
   narrower dimension with column interpolation for square regions.
   </dd>
@@ -380,7 +380,7 @@ imedit: Examine and edit pixels in images
   <!-- Sec='REPLACEMENT ALGORITHMS' Level=0 Label='j' Line='j, k' -->
   <dd>Replace rectangular or aperture regions in the editor buffer by the data
   from the input image.  This may be used to undo any change.  Note that
-  the <tt>'i'</tt> command can be used to completely reinitialize the editor
+  the <span style="font-family: monospace;">'i'</span> command can be used to completely reinitialize the editor
   buffer from the input image.
   </dd>
   </dl>
@@ -458,7 +458,7 @@ imedit: Examine and edit pixels in images
   	l 	Line interpolation (rectangle)
   	m	Copy by replacement (aperture)
   	n	Copy by addition (aperture)
-  	u	Undo last change (see also <tt>'i'</tt>, <tt>'j'</tt>, and <tt>'k'</tt>)
+  	u	Undo last change (see also <span style="font-family: monospace;">'i'</span>, <span style="font-family: monospace;">'j'</span>, and <span style="font-family: monospace;">'k'</span>)
   	v	Constant value substitution (vector)
   	=	Constant value substitution of pixels equal
   		    to pixel at the cursor position
@@ -558,7 +558,7 @@ imedit: Examine and edit pixels in images
   </pre>
   <p>
    
-  4.  Use a <tt>"fixpix"</tt> file (without trim option).
+  4.  Use a <span style="font-family: monospace;">"fixpix"</span> file (without trim option).
    
   </p>
   <pre>
@@ -574,8 +574,8 @@ imedit: Examine and edit pixels in images
   <dl>
   <dt><b>IMEDIT V2.13</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='IMEDIT' Line='IMEDIT V2.13' -->
-  <dd>The <tt>'v'</tt> option was added to allow vector replacement.
-  The <tt>'='</tt>, <tt>'&lt;'</tt>, <tt>'&gt;'</tt> options were added to replace values matching the pixel
+  <dd>The <span style="font-family: monospace;">'v'</span> option was added to allow vector replacement.
+  The <span style="font-family: monospace;">'='</span>, <span style="font-family: monospace;">'&lt;'</span>, <span style="font-family: monospace;">'&gt;'</span> options were added to replace values matching the pixel
   at the cursor.
   </dd>
   </dl>
@@ -583,20 +583,20 @@ imedit: Examine and edit pixels in images
   <dt><b>IMEDIT V2.11.2</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='IMEDIT' Line='IMEDIT V2.11.2' -->
   <dd>The temporary editor image was changed to use a unique temporary image
-  name beginning with <tt>"imedit"</tt> rather than the fixed name of <tt>"epixbuf"</tt>.
+  name beginning with <span style="font-family: monospace;">"imedit"</span> rather than the fixed name of <span style="font-family: monospace;">"epixbuf"</span>.
   </dd>
   </dl>
   <dl>
   <dt><b>IMEDIT V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='IMEDIT' Line='IMEDIT V2.11' -->
   <dd>If xorder or yorder are zero then a median background is computed
-  for the <tt>'a'</tt> and <tt>'b'</tt> keys.
+  for the <span style="font-family: monospace;">'a'</span> and <span style="font-family: monospace;">'b'</span> keys.
   </dd>
   </dl>
   <dl>
   <dt><b>IMEDIT V2.10.4</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='IMEDIT' Line='IMEDIT V2.10.4' -->
-  <dd>The <tt>'u'</tt>, <tt>'j'</tt>, <tt>'k'</tt>, and <tt>'n'</tt> keys were added to those recorded in the
+  <dd>The <span style="font-family: monospace;">'u'</span>, <span style="font-family: monospace;">'j'</span>, <span style="font-family: monospace;">'k'</span>, and <span style="font-family: monospace;">'n'</span> keys were added to those recorded in the
   log file.
   </dd>
   </dl>
@@ -607,8 +607,8 @@ imedit: Examine and edit pixels in images
   Additional features and options will be added as they are suggested.
   It is also a prototype using a very limited display interface; execution
   of a separate display command.  Much better interaction with a variety
-  of image displays will be provided after a planned <tt>"image display
-  interface"</tt> is implemented.  Therefore any deficiencies in this area
+  of image displays will be provided after a planned <span style="font-family: monospace;">"image display
+  interface"</span> is implemented.  Therefore any deficiencies in this area
   should be excused.
    
   The zoom and roam features provided here are quite useful.  However,

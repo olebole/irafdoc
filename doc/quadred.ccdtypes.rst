@@ -65,7 +65,7 @@ ccdtypes: Description of the CCD image types
   is one of the types recognized by the package.  The image header string
   can be virtually anything and if it contains blanks it must be
   quoted.  The package image types are those given above except for
-  the null string, <tt>"none"</tt>, and <tt>"unknown"</tt>.  That is, these types may
+  the null string, <span style="font-family: monospace;">"none"</span>, and <span style="font-family: monospace;">"unknown"</span>.  That is, these types may
   be specified as a CCD image type in selecting images but not as a translations
   of image type strings.
   </p>
@@ -96,7 +96,7 @@ ccdtypes: Description of the CCD image types
       'DOME FLAT (6)'		flat
   </pre>
   <p>
-  The image header keyword describing the image type is <tt>"data-typ"</tt>.
+  The image header keyword describing the image type is <span style="font-family: monospace;">"data-typ"</span>.
   The values of the image type strings in the header contain blanks so they
   are quoted.  Also the case of the strings is important.  Note that there
   are two types of flat field images and two types of other images.
@@ -115,7 +115,7 @@ ccdtypes: Description of the CCD image types
       oldformat.imh[544,512][short][none][1]:M31 V
   </pre>
   <p>
-  The unknown type has a header image type of <tt>"MUL (8)"</tt>.  The old format
+  The unknown type has a header image type of <span style="font-family: monospace;">"MUL (8)"</span>.  The old format
   image does not have any header type.
   </p>
   <p>
@@ -140,7 +140,7 @@ ccdtypes: Description of the CCD image types
   </pre>
   <p>
   In the first case all the images will be processed (the default value of
-  <i>ccdtype</i> is <tt>""</tt>).  However, the task recognizes the calibration
+  <i>ccdtype</i> is <span style="font-family: monospace;">""</span>).  However, the task recognizes the calibration
   images, such as zero level and flat fields, and processes them appropriately.
   In the second case only object images are processed and all other images
   are ignored (except if needed as a calibration image).

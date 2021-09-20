@@ -34,7 +34,7 @@ unprotect: Remove delete protection from a file
   <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <i>Unprotect</i> removes delete protection from the named files.
-  A <tt>"protected"</tt> file cannot be deleted or clobbered.
+  A <span style="font-family: monospace;">"protected"</span> file cannot be deleted or clobbered.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Examples</h3>

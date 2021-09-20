@@ -31,21 +31,21 @@ setjd: Compute and set Julian dates in images
   </dd>
   </dl>
   <dl>
-  <dt><b>observatory = <tt>")_.observatory"</tt></b></dt>
+  <dt><b>observatory = <span style="font-family: monospace;">")_.observatory"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory = ")_.observatory"' -->
   <dd>Observatory of observation, used to define the time zone relative to
   Greenwich, if not specified in the image header by the keyword OBSERVAT.
   The default is a redirection to look in the parameters for the parent
   package for a value.  The observatory may be one of the observatories in
-  the observatory database, <tt>"observatory"</tt> to select the observatory defined
-  by the environment variable <tt>"observatory"</tt> or the parameter
-  <b>observatory.observatory</b>, or <tt>"obspars"</tt> to select the current
+  the observatory database, <span style="font-family: monospace;">"observatory"</span> to select the observatory defined
+  by the environment variable <span style="font-family: monospace;">"observatory"</span> or the parameter
+  <b>observatory.observatory</b>, or <span style="font-family: monospace;">"obspars"</span> to select the current
   parameters set in the <b>observatory</b> task.  See <b>observatory</b> for
   additional information.
   </dd>
   </dl>
   <dl>
-  <dt><b>date = <tt>"date-obs"</tt></b></dt>
+  <dt><b>date = <span style="font-family: monospace;">"date-obs"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='date' Line='date = "date-obs"' -->
   <dd>Date of observation keyword.  The value must be in FITS format.
   This is one of DD/MM/YY (old FITS format), YYYY-MM-DD (new FITS format),
@@ -56,7 +56,7 @@ setjd: Compute and set Julian dates in images
   </dd>
   </dl>
   <dl>
-  <dt><b>time = <tt>"ut"</tt></b></dt>
+  <dt><b>time = <span style="font-family: monospace;">"ut"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='time' Line='time = "ut"' -->
   <dd>Time of observation keyword with value given in decimal hours or HH:MM:SS.S
   format.  The date may be a local time or universal time as selected by the
@@ -68,17 +68,17 @@ setjd: Compute and set Julian dates in images
   </dd>
   </dl>
   <dl>
-  <dt><b>exposure = <tt>"exptime"</tt></b></dt>
+  <dt><b>exposure = <span style="font-family: monospace;">"exptime"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='exposure' Line='exposure = "exptime"' -->
   <dd>Exposure time keyword with value in seconds.  If specified the time
   is corrected to the midpoint of the exposure.  The time is assumed
   to be the beginning of the exposure unless
   the exposure time keyword name begins with a minus sign, for example
-  <tt>"-exptime"</tt>, in which case the time is used as the end of the exposure.
+  <span style="font-family: monospace;">"-exptime"</span>, in which case the time is used as the end of the exposure.
   </dd>
   </dl>
   <dl>
-  <dt><b>ra = <tt>"ra"</tt>, dec = <tt>"dec"</tt>, epoch = <tt>"epoch"</tt></b></dt>
+  <dt><b>ra = <span style="font-family: monospace;">"ra"</span>, dec = <span style="font-family: monospace;">"dec"</span>, epoch = <span style="font-family: monospace;">"epoch"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ra' Line='ra = "ra", dec = "dec", epoch = "epoch"' -->
   <dd>If the heliocentric Julian date is requested the right ascension (in hours)
   and declination (in degrees) of the observation is determined from these
@@ -87,12 +87,12 @@ setjd: Compute and set Julian dates in images
   the coordinates from the specified epoch to the observation epoch.
   If an epoch keyword is given but is not found in the header or can't
   be interpreted then it is an error.  The epoch keyword value may begin
-  with <tt>'B'</tt> or <tt>'J'</tt>.  If the value is before 1800 or after 2100 a warning
+  with <span style="font-family: monospace;">'B'</span> or <span style="font-family: monospace;">'J'</span>.  If the value is before 1800 or after 2100 a warning
   will be printed though the task will still compute the values.
   </dd>
   </dl>
   <dl>
-  <dt><b>jd = <tt>"jd"</tt></b></dt>
+  <dt><b>jd = <span style="font-family: monospace;">"jd"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='jd' Line='jd = "jd"' -->
   <dd>If specified compute the geocentric Julian day (Greenwich) at the
   midpoint of the exposure and record the value in the specified
@@ -100,7 +100,7 @@ setjd: Compute and set Julian dates in images
   </dd>
   </dl>
   <dl>
-  <dt><b>hjd = <tt>"hjd"</tt></b></dt>
+  <dt><b>hjd = <span style="font-family: monospace;">"hjd"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='hjd' Line='hjd = "hjd"' -->
   <dd>If specified compute the heliocentric Julian day (Greenwich) at the
   midpoint of the exposure and record the value in the specified
@@ -108,7 +108,7 @@ setjd: Compute and set Julian dates in images
   </dd>
   </dl>
   <dl>
-  <dt><b>ljd = <tt>"ljd"</tt></b></dt>
+  <dt><b>ljd = <span style="font-family: monospace;">"ljd"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ljd' Line='ljd = "ljd"' -->
   <dd>If specified compute the local Julian day number.  This is an integer
   number which is constant for all observations made during the same night.
@@ -169,10 +169,10 @@ setjd: Compute and set Julian dates in images
   NOAO, local, or user observatory database then the value from the database
   is used.  This is the safest way since the observatory is tied to the
   actual image.  Otherwise, the <i>observatory</i> parameter defines the
-  observatory.  The special value <tt>"observatory"</tt> allows defining a default
+  observatory.  The special value <span style="font-family: monospace;">"observatory"</span> allows defining a default
   observatory with an environment variable or the <b>observatory</b> task.
   Explicitly use the parameter <i>observatory.timezone</i> use the value
-  <tt>"obspars"</tt>.  For more information see help under <b>observatory</b>.
+  <span style="font-family: monospace;">"obspars"</span>.  For more information see help under <b>observatory</b>.
   </p>
   <p>
   The heliocentric Julian date is computed by defining a keyword for
@@ -252,8 +252,8 @@ setjd: Compute and set Julian dates in images
   the Julian date may change during the observations.
   </p>
   <p>
-  2.  To compute only the geocentric Julian date from the <tt>"DATE"</tt> and
-  <tt>"TIME"</tt> keywords in an image,
+  2.  To compute only the geocentric Julian date from the <span style="font-family: monospace;">"DATE"</span> and
+  <span style="font-family: monospace;">"TIME"</span> keywords in an image,
   </p>
   <pre>
       cl&gt; setjd obs1 date=date time=time exp="" hjd="" ljd=""
@@ -276,7 +276,7 @@ setjd: Compute and set Julian dates in images
   there was a problem with the keyword value (missing or malformed) the
   task would use the epoch of the observation.  Now it is an error
   if an epoch keyword is specified but the epoch value can't be determined.
-  Also a leading <tt>'B'</tt> or <tt>'J'</tt> is allowed and a warning will be given if
+  Also a leading <span style="font-family: monospace;">'B'</span> or <span style="font-family: monospace;">'J'</span> is allowed and a warning will be given if
   the epoch value is unlikely.
   </dd>
   </dl>

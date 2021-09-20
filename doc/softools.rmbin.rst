@@ -38,7 +38,7 @@ rmbin: Find/delete binary files in subdirectories
   <dt><b>-i</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='-i' -->
   <dd>Verify before deleting files without extensions.  Files with well known
-  extensions like <tt>".[aoe]"</tt> are deleted without a query.  A heuristic (ZFACSS)
+  extensions like <span style="font-family: monospace;">".[aoe]"</span> are deleted without a query.  A heuristic (ZFACSS)
   is used to determine the filetype of files with unknown extensions, and
   it can fail, though in practice it works quite well.
   </dd>

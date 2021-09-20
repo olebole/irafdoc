@@ -32,7 +32,7 @@ rewind: Rewind a device (magtape)
   <dt><b>initcache = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='initcache' Line='initcache = yes' -->
   <dd>Initialize the magtape device position cache for the device.  This causes
-  the magtape i/o system to <tt>"forget"</tt> what it thinks it knows about things
+  the magtape i/o system to <span style="font-family: monospace;">"forget"</span> what it thinks it knows about things
   like the number of files on the tape, the amount of tape used, and so on.
   </dd>
   </dl>

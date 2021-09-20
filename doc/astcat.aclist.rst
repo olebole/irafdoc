@@ -25,7 +25,7 @@ aclist: List the supported astrometric catalogs
   <dl>
   <dt><b>catalogs</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='catalogs' Line='catalogs' -->
-  <dd>The names of the astrometric catalogs to be listed. If catalogs = <tt>"*"</tt> then
+  <dd>The names of the astrometric catalogs to be listed. If catalogs = <span style="font-family: monospace;">"*"</span> then
   all the astrometric catalogs in the catalog configuration file are listed.
   </dd>
   </dl>
@@ -36,11 +36,11 @@ aclist: List the supported astrometric catalogs
   </dd>
   </dl>
   <dl>
-  <dt><b>catdb = <tt>")_.catdb"</tt></b></dt>
+  <dt><b>catdb = <span style="font-family: monospace;">")_.catdb"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='catdb' Line='catdb = ")_.catdb"' -->
   <dd>The catalog configuration file. The value of catdb defaults to the value
   of the package parameter of the same name. The default catalog configuration
-  file is <tt>"astcat$lib/catdb.dat"</tt>.
+  file is <span style="font-family: monospace;">"astcat$lib/catdb.dat"</span>.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -48,17 +48,17 @@ aclist: List the supported astrometric catalogs
   <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Aclist lists the supported astrometric catalogs specified by the
-  <i>catalogs</i> parameter. If catalogs = <tt>"*"</tt> then all the supported catalogs
+  <i>catalogs</i> parameter. If catalogs = <span style="font-family: monospace;">"*"</span> then all the supported catalogs
   are listed, otherwise only the catalog names specified by the user are
-  listed. Valid catalog names have the form <tt>"catalog@site"</tt>, e.g. <tt>"usno2@noao"</tt>.
-  If <i>verbose</i> = <tt>"yes"</tt>, then the catalog query and output formats are
+  listed. Valid catalog names have the form <span style="font-family: monospace;">"catalog@site"</span>, e.g. <span style="font-family: monospace;">"usno2@noao"</span>.
+  If <i>verbose</i> = <span style="font-family: monospace;">"yes"</span>, then the catalog query and output formats are
   listed after the catalog name.
   </p>
   <p>
   The catalog names, addresses, query formats, and query output formats are
   specified in the catalog configuration file <i>catdb</i>. By default the catalog
   configuration file name defaults to the value of the package parameter catdb.
-  The default catalog configuration file is <tt>"astcat$lib/catdb.dat"</tt>.
+  The default catalog configuration file is <span style="font-family: monospace;">"astcat$lib/catdb.dat"</span>.
   Users can add records to this file or create their own configuration
   file using catdb as a model.
   </p>

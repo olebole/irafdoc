@@ -31,7 +31,7 @@ i2sun: Convert IRAF images to Sun rasterfiles
   <dl>
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
-  <dd>Root template for output images, e.g. <tt>"home$ras/frame.%d"</tt>.
+  <dd>Root template for output images, e.g. <span style="font-family: monospace;">"home$ras/frame.%d"</span>.
   </dd>
   </dl>
   <dl>
@@ -40,7 +40,7 @@ i2sun: Convert IRAF images to Sun rasterfiles
   <dd>Previously saved Sun rasterfile (e.g. output from IMTOOL), containing the
   color/greyscale lookup table information to be passed along to each output
   frame.  Standard ones can be saved and used with any number of images (e.g.
-  <tt>"pseudo.ras"</tt>).
+  <span style="font-family: monospace;">"pseudo.ras"</span>).
   </dd>
   </dl>
   <dl>
@@ -52,10 +52,10 @@ i2sun: Convert IRAF images to Sun rasterfiles
   </dd>
   </dl>
   <dl>
-  <dt><b>ztrans = <tt>"linear"</tt></b></dt>
+  <dt><b>ztrans = <span style="font-family: monospace;">"linear"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ztrans' Line='ztrans = "linear"' -->
   <dd>Intensity transformation on input data (linear|log|none|user).
-  If <tt>"user"</tt>, you must also specify <i>ulutfile</i>.
+  If <span style="font-family: monospace;">"user"</span>, you must also specify <i>ulutfile</i>.
   </dd>
   </dl>
   <dl>
@@ -116,8 +116,8 @@ i2sun: Convert IRAF images to Sun rasterfiles
   program.
   </p>
   <p>
-  The input images may be specified as an image template (<tt>"zoom*.imh"</tt>),
-  an <tt>"@"</tt> file (<tt>"@movie.list"</tt>), or as an n-dimensional image from which to
+  The input images may be specified as an image template (<span style="font-family: monospace;">"zoom*.imh"</span>),
+  an <span style="font-family: monospace;">"@"</span> file (<span style="font-family: monospace;">"@movie.list"</span>), or as an n-dimensional image from which to
   create multiple 2d rasterfiles.  If any images in a list are nD images,
   all 2d sections from the specified <i>sliceaxis</i> will be written out
   (default = band or z axis).  At present, only x-y sections may be made,
@@ -128,11 +128,11 @@ i2sun: Convert IRAF images to Sun rasterfiles
   as it would be not only inefficient to calculate the full zrange of
   each image in a sequence, but would also make very jumpy movies.
   Between input intensities z1 and z2, the pixel intensities may be transformed
-  according to the <i>ztrans</i> parameter: <tt>"linear"</tt>, <tt>"log10"</tt>, <tt>"none"</tt>,
-  or <tt>"user"</tt>.
+  according to the <i>ztrans</i> parameter: <span style="font-family: monospace;">"linear"</span>, <span style="font-family: monospace;">"log10"</span>, <span style="font-family: monospace;">"none"</span>,
+  or <span style="font-family: monospace;">"user"</span>.
   </p>
   <p>
-  When <i>ztrans</i> = <tt>"user"</tt>, a look up table of intensity values and their
+  When <i>ztrans</i> = <span style="font-family: monospace;">"user"</span>, a look up table of intensity values and their
   corresponding greyscale levels is read from the file specified by the
   <i>ulutfile</i> parameter.  From this information, a piecewise linear
   look up table containing 4096 discrete values is composed.  The text

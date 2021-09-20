@@ -51,7 +51,7 @@ mode: Modal box filter a list of 1D or 2D images
   </dd>
   </dl>
   <dl>
-  <dt><b>boundary = <tt>"nearest"</tt></b></dt>
+  <dt><b>boundary = <span style="font-family: monospace;">"nearest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"' -->
   <dd>The type of boundary extension. The options are:
   <dl>
@@ -118,7 +118,7 @@ mode: Modal box filter a list of 1D or 2D images
   <!-- BeginSection: 'REFERENCES' -->
   <p>
   A derivation of the expression for the mode used here can be found in
-  <tt>"Statistics in Theory and Practice"</tt>, Robert Lupton, 1993, Princeton
+  <span style="font-family: monospace;">"Statistics in Theory and Practice"</span>, Robert Lupton, 1993, Princeton
   University Press, problem 2.
   </p>
   <!-- EndSection:   'REFERENCES' -->

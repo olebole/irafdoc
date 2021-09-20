@@ -47,18 +47,18 @@ thselect: Select tables satisfying an expression; print keywords.
   <dt><b>keywords [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='keywords' Line='keywords [string]' -->
   <dd>One or more keywords, separated by commas and/or blanks.
-  The special keywords such as <tt>"i_table"</tt>
+  The special keywords such as <span style="font-family: monospace;">"i_table"</span>
   that are supported by 'thedit' can also be used with 'thselect'.
   For each input table,
   the values of these keywords in the current input table will be printed,
   if 'expr' is a true expression for the current table.
   Any keyword that is not found will be silently ignored.
   Wildcards are supported; however,
-  the <tt>"@filename"</tt> syntax is not supported.
+  the <span style="font-family: monospace;">"@filename"</span> syntax is not supported.
   </dd>
   </dl>
   <dl>
-  <dt><b>expr = <tt>"yes"</tt> [string]</b></dt>
+  <dt><b>expr = <span style="font-family: monospace;">"yes"</span> [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='expr' Line='expr = "yes" [string]' -->
   <dd>This is a boolean expression
   to be evaluated for each table in the list.

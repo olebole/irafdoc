@@ -38,17 +38,17 @@ chpixtype: Change the pixel type of a list of images
   <dl>
   <dt><b>newpixtype</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='newpixtype' Line='newpixtype' -->
-  <dd>The pixel type of the output image. The options are: <tt>"ushort"</tt>, <tt>"short"</tt>,
-  <tt>"int"</tt>, <tt>"long"</tt>, <tt>"real"</tt>, <tt>"double"</tt> and <tt>"complex"</tt>.
+  <dd>The pixel type of the output image. The options are: <span style="font-family: monospace;">"ushort"</span>, <span style="font-family: monospace;">"short"</span>,
+  <span style="font-family: monospace;">"int"</span>, <span style="font-family: monospace;">"long"</span>, <span style="font-family: monospace;">"real"</span>, <span style="font-family: monospace;">"double"</span> and <span style="font-family: monospace;">"complex"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>oldpixtype = <tt>"all"</tt></b></dt>
+  <dt><b>oldpixtype = <span style="font-family: monospace;">"all"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='oldpixtype' Line='oldpixtype = "all"' -->
   <dd>The pixel type of the input images to be converted. By default all the
   images in the input list are converted to the pixel type specified by
-  newpixtype. The remaining options are <tt>"ushort"</tt>, <tt>"short"</tt>, <tt>"int"</tt>, <tt>"long"</tt>,
-  <tt>"real"</tt>, <tt>"double"</tt> and <tt>"complex"</tt> in which case only those images of the
+  newpixtype. The remaining options are <span style="font-family: monospace;">"ushort"</span>, <span style="font-family: monospace;">"short"</span>, <span style="font-family: monospace;">"int"</span>, <span style="font-family: monospace;">"long"</span>,
+  <span style="font-family: monospace;">"real"</span>, <span style="font-family: monospace;">"double"</span> and <span style="font-family: monospace;">"complex"</span> in which case only those images of the
   specified type are converted.
   </dd>
   </dl>

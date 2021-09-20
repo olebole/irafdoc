@@ -25,7 +25,7 @@ wcslab: Overlay a displayed image with a world coordinate grid
   <dl>
   <dt><b>image </b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image ' -->
-  <dd>The name of the image to be labeled. If image is <tt>""</tt>, the parameters
+  <dd>The name of the image to be labeled. If image is <span style="font-family: monospace;">""</span>, the parameters
   in wcspars will be used to draw a labeled coordinate grid.
   </dd>
   </dl>
@@ -40,19 +40,19 @@ wcslab: Overlay a displayed image with a world coordinate grid
   <!-- Sec='PARAMETERS' Level=0 Label='usewcs' Line='usewcs = no' -->
   <dd>Use the world coordinate system specified by the parameters in the wcspars
   parameter set in place of the image world coordinate system  or if
-  image is <tt>""</tt> ?
+  image is <span style="font-family: monospace;">""</span> ?
   </dd>
   </dl>
   <dl>
-  <dt><b>wcspars = <tt>""</tt></b></dt>
+  <dt><b>wcspars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcspars' Line='wcspars = ""' -->
   <dd>The name of the parameter set defining the world coordinate system
-  to be used if image is <tt>""</tt> or if usewcs = <tt>"yes"</tt>.  The wcspars parameters
+  to be used if image is <span style="font-family: monospace;">""</span> or if usewcs = <span style="font-family: monospace;">"yes"</span>.  The wcspars parameters
   are described in more detail below.
   </dd>
   </dl>
   <dl>
-  <dt><b>wlpars = <tt>""</tt> </b></dt>
+  <dt><b>wlpars = <span style="font-family: monospace;">""</span> </b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wlpars' Line='wlpars = "" ' -->
   <dd>The name of the parameter set which controls the
   detailed appearance of the plot. The wlpars parameters are described
@@ -99,24 +99,24 @@ wcslab: Overlay a displayed image with a world coordinate grid
   </dd>
   </dl>
   <dl>
-  <dt><b>device = <tt>"imd"</tt></b></dt>
+  <dt><b>device = <span style="font-family: monospace;">"imd"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "imd"' -->
   <dd>The graphics device. To create an overlay plot, device must be set
   to one of the imdkern devices listed in dev$graphcap. To create a 
   plot of the coordinate grid in the
-  graphics window, device should be set to <tt>"stdgraph"</tt>.
+  graphics window, device should be set to <span style="font-family: monospace;">"stdgraph"</span>.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
   <h3>Wcspars parameters</h3>
   <!-- BeginSection: 'WCSPARS PARAMETERS' -->
   <dl>
-  <dt><b>ctype1 = <tt>"linear"</tt>, ctype2 = <tt>"linear"</tt></b></dt>
+  <dt><b>ctype1 = <span style="font-family: monospace;">"linear"</span>, ctype2 = <span style="font-family: monospace;">"linear"</span></b></dt>
   <!-- Sec='WCSPARS PARAMETERS' Level=0 Label='ctype1' Line='ctype1 = "linear", ctype2 = "linear"' -->
   <dd>The coordinate system type of the first and second axes.
   Valid coordinate system types are:
-  <tt>"linear"</tt>, and <tt>"xxx--tan"</tt>, <tt>"xxx-sin"</tt>, and <tt>"xxx-arc"</tt>, where <tt>"xxx"</tt> can be either
-  <tt>"ra-"</tt> or <tt>"dec"</tt>.
+  <span style="font-family: monospace;">"linear"</span>, and <span style="font-family: monospace;">"xxx--tan"</span>, <span style="font-family: monospace;">"xxx-sin"</span>, and <span style="font-family: monospace;">"xxx-arc"</span>, where <span style="font-family: monospace;">"xxx"</span> can be either
+  <span style="font-family: monospace;">"ra-"</span> or <span style="font-family: monospace;">"dec"</span>.
   </dd>
   </dl>
   <dl>
@@ -194,64 +194,64 @@ wcslab: Overlay a displayed image with a world coordinate grid
   </dd>
   </dl>
   <dl>
-  <dt><b>axis1_beg = <tt>""</tt></b></dt>
+  <dt><b>axis1_beg = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='WLPARS PARAMETERS' Level=0 Label='axis1_beg' Line='axis1_beg = ""' -->
   <dd>The lowest value of axis 1 in world coordinates units
   at which a major grid line / tick mark will be drawn.
-  If axis1_beg = <tt>""</tt>, wcslab  will compute this quantity.
+  If axis1_beg = <span style="font-family: monospace;">""</span>, wcslab  will compute this quantity.
   Axis1_beg will be ignored if axis1_end and axis1_int are undefined.
   </dd>
   </dl>
   <dl>
-  <dt><b>axis1_end = <tt>""</tt></b></dt>
+  <dt><b>axis1_end = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='WLPARS PARAMETERS' Level=0 Label='axis1_end' Line='axis1_end = ""' -->
   <dd>The highest value of axis 1 in world coordinate
   units at which a major grid line / tick mark will be drawn.
-  If axis1_end = <tt>""</tt>, wcslab will compute this quantity.
+  If axis1_end = <span style="font-family: monospace;">""</span>, wcslab will compute this quantity.
   Axis1_end will be ignored if axis1_beg and axis1_int are undefined.
   </dd>
   </dl>
   <dl>
-  <dt><b>axis1_int = <tt>""</tt></b></dt>
+  <dt><b>axis1_int = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='WLPARS PARAMETERS' Level=0 Label='axis1_int' Line='axis1_int = ""' -->
   <dd>The interval in world coordinate units at which
   major grid lines / tick marks will be drawn along axis 1.
-  If axis1_int = <tt>""</tt>, wcslab will compute this quantity.
+  If axis1_int = <span style="font-family: monospace;">""</span>, wcslab will compute this quantity.
   Axis1_int will be ignored if axis1_beg and axis1_end are undefined.
   </dd>
   </dl>
   <dl>
-  <dt><b>axis2_beg = <tt>""</tt></b></dt>
+  <dt><b>axis2_beg = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='WLPARS PARAMETERS' Level=0 Label='axis2_beg' Line='axis2_beg = ""' -->
   <dd>The lowest value of axis 2 in world coordinates units
   at which a major grid line / tick mark will be drawn.
-  If axis2_beg = <tt>""</tt>, wcslab  will compute this quantity.
+  If axis2_beg = <span style="font-family: monospace;">""</span>, wcslab  will compute this quantity.
   Axis2_beg will be ignored if axis2_end and axis2_int are undefined.
   </dd>
   </dl>
   <dl>
-  <dt><b>axis2_end = <tt>""</tt></b></dt>
+  <dt><b>axis2_end = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='WLPARS PARAMETERS' Level=0 Label='axis2_end' Line='axis2_end = ""' -->
   <dd>The highest value of axis 2 in world coordinate
   units at which a major grid line / tick mark will be drawn.
-  If axis2_end = <tt>""</tt>, wcslab will compute this quantity.
+  If axis2_end = <span style="font-family: monospace;">""</span>, wcslab will compute this quantity.
   Axis2_end will be ignored if axis2_beg and axis2_int are undefined.
   </dd>
   </dl>
   <dl>
-  <dt><b>axis2_int = <tt>""</tt></b></dt>
+  <dt><b>axis2_int = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='WLPARS PARAMETERS' Level=0 Label='axis2_int' Line='axis2_int = ""' -->
   <dd>The interval in world coordinate units at which
   major grid lines / tick marks will be drawn along axis 2.
-  If axis2_int = <tt>""</tt>, wcslab will compute this quantity.
+  If axis2_int = <span style="font-family: monospace;">""</span>, wcslab will compute this quantity.
   Axis2_int will be ignored if axis1_beg and axis1_end are undefined.
   </dd>
   </dl>
   <dl>
-  <dt><b>major_line = <tt>"solid"</tt></b></dt>
+  <dt><b>major_line = <span style="font-family: monospace;">"solid"</span></b></dt>
   <!-- Sec='WLPARS PARAMETERS' Level=0 Label='major_line' Line='major_line = "solid"' -->
   <dd>The type of major grid lines to be plotted.
-  The permitted values are <tt>"solid"</tt>, <tt>"dotted"</tt>, <tt>"dashed"</tt>, and <tt>"dotdash"</tt>.
+  The permitted values are <span style="font-family: monospace;">"solid"</span>, <span style="font-family: monospace;">"dotted"</span>, <span style="font-family: monospace;">"dashed"</span>, and <span style="font-family: monospace;">"dotdash"</span>.
   </dd>
   </dl>
   <dl>
@@ -277,10 +277,10 @@ wcslab: Overlay a displayed image with a world coordinate grid
   </dd>
   </dl>
   <dl>
-  <dt><b>minor_line = <tt>"dotted"</tt></b></dt>
+  <dt><b>minor_line = <span style="font-family: monospace;">"dotted"</span></b></dt>
   <!-- Sec='WLPARS PARAMETERS' Level=0 Label='minor_line' Line='minor_line = "dotted"' -->
   <dd>The type of minor grid lines to be plotted.
-  The permitted values are <tt>"solid"</tt>, <tt>"dotted"</tt>, <tt>"dashed"</tt>, and <tt>"dotdash"</tt>.
+  The permitted values are <span style="font-family: monospace;">"solid"</span>, <span style="font-family: monospace;">"dotted"</span>, <span style="font-family: monospace;">"dashed"</span>, and <span style="font-family: monospace;">"dotdash"</span>.
   </dd>
   </dl>
   <dl>
@@ -298,37 +298,37 @@ wcslab: Overlay a displayed image with a world coordinate grid
   </dd>
   </dl>
   <dl>
-  <dt><b>axis1_side = <tt>"default"</tt></b></dt>
+  <dt><b>axis1_side = <span style="font-family: monospace;">"default"</span></b></dt>
   <!-- Sec='WLPARS PARAMETERS' Level=0 Label='axis1_side' Line='axis1_side = "default"' -->
   <dd>The list of viewport edges, separated by commas, on which to place the axis
-  1 labels.  If axis1_side is <tt>"default"</tt>, wcslab will choose a side.
-  Axis1_side may contain any combination of <tt>"left"</tt>, <tt>"right"</tt>,
-  <tt>"bottom"</tt>, <tt>"top"</tt>, or <tt>"default"</tt>.
+  1 labels.  If axis1_side is <span style="font-family: monospace;">"default"</span>, wcslab will choose a side.
+  Axis1_side may contain any combination of <span style="font-family: monospace;">"left"</span>, <span style="font-family: monospace;">"right"</span>,
+  <span style="font-family: monospace;">"bottom"</span>, <span style="font-family: monospace;">"top"</span>, or <span style="font-family: monospace;">"default"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>axis2_side = <tt>"default"</tt></b></dt>
+  <dt><b>axis2_side = <span style="font-family: monospace;">"default"</span></b></dt>
   <!-- Sec='WLPARS PARAMETERS' Level=0 Label='axis2_side' Line='axis2_side = "default"' -->
   <dd>The list of viewport edges, separated by commas, on which to place the axis
-  2 labels.  If axis2_side is <tt>"default"</tt>, wcslab will choose a side.
-  Axis2_side may contain any combination of <tt>"left"</tt>, <tt>"right"</tt>,
-  <tt>"bottom"</tt>, <tt>"top"</tt>, or <tt>"default"</tt>.
+  2 labels.  If axis2_side is <span style="font-family: monospace;">"default"</span>, wcslab will choose a side.
+  Axis2_side may contain any combination of <span style="font-family: monospace;">"left"</span>, <span style="font-family: monospace;">"right"</span>,
+  <span style="font-family: monospace;">"bottom"</span>, <span style="font-family: monospace;">"top"</span>, or <span style="font-family: monospace;">"default"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>axis2_dir = <tt>""</tt></b></dt>
+  <dt><b>axis2_dir = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='WLPARS PARAMETERS' Level=0 Label='axis2_dir' Line='axis2_dir = ""' -->
   <dd>The axis 1 value at which the axis 2 labels will be written for polar graphs. 
-  If axis2_dir is <tt>""</tt>, wcslab will compute this number.
+  If axis2_dir is <span style="font-family: monospace;">""</span>, wcslab will compute this number.
   </dd>
   </dl>
   <dl>
-  <dt><b>justify = <tt>"default"</tt></b></dt>
+  <dt><b>justify = <span style="font-family: monospace;">"default"</span></b></dt>
   <!-- Sec='WLPARS PARAMETERS' Level=0 Label='justify' Line='justify = "default"' -->
   <dd>The direction with respect to axis 2 along which the axis 2
   labels will be drawn from the point they are labeling on polar graphs.
-  If justify = <tt>""</tt>, then wcslab will calculate this quantity.  The permitted
-  values are <tt>"default"</tt>, <tt>"left"</tt>, <tt>"right"</tt>, <tt>"top"</tt>, and <tt>"bottom"</tt>.
+  If justify = <span style="font-family: monospace;">""</span>, then wcslab will calculate this quantity.  The permitted
+  values are <span style="font-family: monospace;">"default"</span>, <span style="font-family: monospace;">"left"</span>, <span style="font-family: monospace;">"right"</span>, <span style="font-family: monospace;">"top"</span>, and <span style="font-family: monospace;">"bottom"</span>.
   </dd>
   </dl>
   <dl>
@@ -356,8 +356,8 @@ wcslab: Overlay a displayed image with a world coordinate grid
   If rotate = yes, then labels will be written
   at an angle to match that of the major grid lines that are being
   labeled.  If rotate = no, then labels are always written
-  <tt>"normally"</tt>, that is horizontally. If labout = no, then rotate is
-  set to <tt>"no"</tt> by default.
+  <span style="font-family: monospace;">"normally"</span>, that is horizontally. If labout = no, then rotate is
+  set to <span style="font-family: monospace;">"no"</span> by default.
   </dd>
   </dl>
   <dl>
@@ -367,47 +367,47 @@ wcslab: Overlay a displayed image with a world coordinate grid
   </dd>
   </dl>
   <dl>
-  <dt><b>title = <tt>"imtitle"</tt></b></dt>
+  <dt><b>title = <span style="font-family: monospace;">"imtitle"</span></b></dt>
   <!-- Sec='WLPARS PARAMETERS' Level=0 Label='title' Line='title = "imtitle"' -->
-  <dd>The graph title. If title = <tt>"imtitle"</tt>, then a default title containing
+  <dd>The graph title. If title = <span style="font-family: monospace;">"imtitle"</span>, then a default title containing
   the image name and title is created.
   </dd>
   </dl>
   <dl>
-  <dt><b>axis1_title = <tt>""</tt></b></dt>
+  <dt><b>axis1_title = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='WLPARS PARAMETERS' Level=0 Label='axis1_title' Line='axis1_title = ""' -->
   <dd>The title for axis 1. By default no axis title is drawn.
   </dd>
   </dl>
   <dl>
-  <dt><b>axis2_title = <tt>""</tt></b></dt>
+  <dt><b>axis2_title = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='WLPARS PARAMETERS' Level=0 Label='axis2_title' Line='axis2_title = ""' -->
   <dd>The title for axis 2. By default no axis title is drawn.
   </dd>
   </dl>
   <dl>
-  <dt><b>title_side = <tt>"top"</tt></b></dt>
+  <dt><b>title_side = <span style="font-family: monospace;">"top"</span></b></dt>
   <!-- Sec='WLPARS PARAMETERS' Level=0 Label='title_side' Line='title_side = "top"' -->
   <dd>The side of the plot on which to place the title.
-  The options are <tt>"left"</tt>, <tt>"right"</tt>, <tt>"bottom"</tt>, and <tt>"top"</tt>.
+  The options are <span style="font-family: monospace;">"left"</span>, <span style="font-family: monospace;">"right"</span>, <span style="font-family: monospace;">"bottom"</span>, and <span style="font-family: monospace;">"top"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>axis1_title_side = <tt>"default"</tt></b></dt>
+  <dt><b>axis1_title_side = <span style="font-family: monospace;">"default"</span></b></dt>
   <!-- Sec='WLPARS PARAMETERS' Level=0 Label='axis1_title_side' Line='axis1_title_side = "default"' -->
   <dd>The side of the plot on which to place the axis 1 title.
-  If axis1_title_side = <tt>"default"</tt>, wcslab will choose a side for the title.
-  The permitted values are <tt>"default"</tt>, <tt>"right"</tt>, <tt>"left"</tt>, <tt>"top"</tt>, and
-  <tt>"bottom"</tt>.
+  If axis1_title_side = <span style="font-family: monospace;">"default"</span>, wcslab will choose a side for the title.
+  The permitted values are <span style="font-family: monospace;">"default"</span>, <span style="font-family: monospace;">"right"</span>, <span style="font-family: monospace;">"left"</span>, <span style="font-family: monospace;">"top"</span>, and
+  <span style="font-family: monospace;">"bottom"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>axis2_title_side = <tt>"default"</tt></b></dt>
+  <dt><b>axis2_title_side = <span style="font-family: monospace;">"default"</span></b></dt>
   <!-- Sec='WLPARS PARAMETERS' Level=0 Label='axis2_title_side' Line='axis2_title_side = "default"' -->
   <dd>The side of the plot on which to place the axis 2 title.
-  If axis2_title_side = <tt>"default"</tt>, wcslab will choose a side for the title.
-  The permitted values are <tt>"default"</tt>, <tt>"right"</tt>, <tt>"left"</tt>, <tt>"top"</tt>, and
-  <tt>"bottom"</tt>.
+  If axis2_title_side = <span style="font-family: monospace;">"default"</span>, wcslab will choose a side for the title.
+  The permitted values are <span style="font-family: monospace;">"default"</span>, <span style="font-family: monospace;">"right"</span>, <span style="font-family: monospace;">"left"</span>, <span style="font-family: monospace;">"top"</span>, and
+  <span style="font-family: monospace;">"bottom"</span>.
   </dd>
   </dl>
   <dl>
@@ -423,11 +423,11 @@ wcslab: Overlay a displayed image with a world coordinate grid
   </dd>
   </dl>
   <dl>
-  <dt><b>graph_type = <tt>"default"</tt></b></dt>
+  <dt><b>graph_type = <span style="font-family: monospace;">"default"</span></b></dt>
   <!-- Sec='WLPARS PARAMETERS' Level=0 Label='graph_type' Line='graph_type = "default"' -->
-  <dd>The type of graph to be drawn.  If graph_type = <tt>"default"</tt>, wcslab will
-  choose an appropriate graph type.  The permitted values are <tt>"normal"</tt>, <tt>"polar"</tt>,
-  and <tt>"near_polar"</tt>.
+  <dd>The type of graph to be drawn.  If graph_type = <span style="font-family: monospace;">"default"</span>, wcslab will
+  choose an appropriate graph type.  The permitted values are <span style="font-family: monospace;">"normal"</span>, <span style="font-family: monospace;">"polar"</span>,
+  and <span style="font-family: monospace;">"near_polar"</span>.
   </dd>
   </dl>
   <!-- EndSection:   'WLPARS PARAMETERS' -->
@@ -437,8 +437,8 @@ wcslab: Overlay a displayed image with a world coordinate grid
   WCSLAB draws a labeled world coordinate grid on the graphics device
   <i>device</i> using world coordinate system (WCS)
   information stored in the header of the IRAF image <i>image</i> if
-  <i>usewcs</i> is <tt>"no"</tt>, or
-  in <i>wcspars</i> if <i>usewcs</i> is <tt>"yes"</tt> or <i>image</i> is <tt>""</tt>.
+  <i>usewcs</i> is <span style="font-family: monospace;">"no"</span>, or
+  in <i>wcspars</i> if <i>usewcs</i> is <span style="font-family: monospace;">"yes"</span> or <i>image</i> is <span style="font-family: monospace;">""</span>.
   WCSLAB currently supports the following coordinate system types 1)
   the tangent plane, sin, and arc sky projections in right ascension
   and declination and 2) any linear coordinate system.
@@ -474,8 +474,8 @@ wcslab: Overlay a displayed image with a world coordinate grid
   or append to an existing plot if <i>append</i> = yes. 
   For new or overplots WCSLAB computes the viewport and window, otherwise it
   uses the viewport and window of a previously existing plot. If <i>device</i>
-  is <tt>"stdgraph"</tt>, then WCSLAB will clear the screen between each new plot.
-  This is not possible if <i>device</i> is one of the <tt>"imd"</tt> devices
+  is <span style="font-family: monospace;">"stdgraph"</span>, then WCSLAB will clear the screen between each new plot.
+  This is not possible if <i>device</i> is one of the <span style="font-family: monospace;">"imd"</span> devices
   since the image display graphics kernel writes directly into the display
   frame buffer. In this case the user must redisplay the image and rerun
   WCSLAB for each new plot.
@@ -489,7 +489,7 @@ wcslab: Overlay a displayed image with a world coordinate grid
   <!-- BeginSection: 'THE USER-DEFINED WCS' -->
   <p>
   The parameters in WCSPARS are used to define the world
-  coordinate system  only if,  1) the parameter <i>usewcs</i> is <tt>"yes"</tt>
+  coordinate system  only if,  1) the parameter <i>usewcs</i> is <span style="font-family: monospace;">"yes"</span>
   or, 2) the input image is undefined.
   This user-defined WCS specifies the transformation from the logical coordinate
   system, e.g.  pixel units, to a world system, e.g. ra and dec.
@@ -501,13 +501,13 @@ wcslab: Overlay a displayed image with a world coordinate grid
   a mapping from pixel units to ra and dec.  The parameters
   <i>ctype1</i> and <i>ctype2</i> define which coordinate system will be in
   effect.  If a linear system is
-  desired, both <i>ctype1</i> and <i>ctype2</i> must be <tt>"linear"</tt>.
+  desired, both <i>ctype1</i> and <i>ctype2</i> must be <span style="font-family: monospace;">"linear"</span>.
   If the tangent plane sky projection is desired,
   and the first axis is ra and the
   second axis is dec, then <i>cypte1</i> and <i>ctype2</i>
-  must be <tt>"ra---tan"</tt> and <tt>"dec--tan"</tt> respectively.
-  To obtain the sin or arc projections <tt>"tan"</tt> is replaced with <tt>"sin"</tt> or
-  <tt>"arc"</tt> respectively.
+  must be <span style="font-family: monospace;">"ra---tan"</span> and <span style="font-family: monospace;">"dec--tan"</span> respectively.
+  To obtain the sin or arc projections <span style="font-family: monospace;">"tan"</span> is replaced with <span style="font-family: monospace;">"sin"</span> or
+  <span style="font-family: monospace;">"arc"</span> respectively.
   </p>
   <p>
   The scale factor and rotation between the logical and world coordinate
@@ -544,7 +544,7 @@ wcslab: Overlay a displayed image with a world coordinate grid
   </p>
   <p>
   The ra/dec transformation is a special case.  Since by convention ra
-  increases <tt>"to the left"</tt>, opposite of standard convention, the first axis
+  increases <span style="font-family: monospace;">"to the left"</span>, opposite of standard convention, the first axis
   transformation needs to be multiplied by -1.  This results in the
   following formulas: 
   </p>
@@ -595,8 +595,8 @@ wcslab: Overlay a displayed image with a world coordinate grid
   <h3>Grid drawing </h3>
   <!-- BeginSection: 'GRID DRAWING ' -->
   <p>
-  There are two types of grid lines / tick marks, <tt>"major"</tt> and
-  <tt>"minor"</tt>.  The major grid lines / tick marks are the lines / ticks
+  There are two types of grid lines / tick marks, <span style="font-family: monospace;">"major"</span> and
+  <span style="font-family: monospace;">"minor"</span>.  The major grid lines / tick marks are the lines / ticks
   that will be labeled.  The minor grid lines / tick marks are plotted
   between the major marks.  Whether lines or tick marks are drawn is
   determined by the boolean parameters <i>major_grid</i> and <i>minor_grid</i>.
@@ -611,7 +611,7 @@ wcslab: Overlay a displayed image with a world coordinate grid
   </p>
   <p>
   Spacing of major marks is more complicated.  WCSLAB tries to
-  present major marks only along <tt>"significant values"</tt> in the
+  present major marks only along <span style="font-family: monospace;">"significant values"</span> in the
   coordinate system.  For example, if the graph spans several hours of
   right ascension,  the interval between major marks will in general be an
   hour and the major marks will appear at whole hours within the graph.
@@ -697,7 +697,7 @@ wcslab: Overlay a displayed image with a world coordinate grid
   which label, the labels will be drawn at an angle equal to that of the
   line which is being labeled.  If this is not desired, 
   the parameter <i>rotate</i> may be set to no, and labels will always appear
-  <tt>"normal"</tt>, i.e.  the text will not be rotated in any way.
+  <span style="font-family: monospace;">"normal"</span>, i.e.  the text will not be rotated in any way.
   </p>
   <p>
   By default, all labels will be shortened to the smallest unit
@@ -721,7 +721,7 @@ wcslab: Overlay a displayed image with a world coordinate grid
   <!-- BeginSection: 'TITLES' -->
   <p>
   A graph title may specified using the parameter <i>title</i>. If <i>title</i>
-  = <tt>"imtitle"</tt> a default title constructed from the image name and title
+  = <span style="font-family: monospace;">"imtitle"</span> a default title constructed from the image name and title
   is used. The location and size of the graph title are controlled by
   the parameters <i>title_side</i> and <i>title_size</i>.
   Similarly the content, placement and size of the axis titles are

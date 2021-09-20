@@ -114,7 +114,7 @@ sinterp: Interpolate a table of x,y pairs to create a spectrum
   </dd>
   </dl>
   <dl>
-  <dt><b>interp_mode = <tt>"chebyshev"</tt></b></dt>
+  <dt><b>interp_mode = <span style="font-family: monospace;">"chebyshev"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interp_mode' Line='interp_mode = "chebyshev"' -->
   <dd>This parameter controls the method of interpolation. The linear
   and curve options are true interpolators, while chebyshev,

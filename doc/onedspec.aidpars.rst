@@ -30,7 +30,7 @@ aidpars: Automatic line identification parameters and algorithm
   <h3>Parameters</h3>
   <!-- BeginSection: 'PARAMETERS' -->
   <dl>
-  <dt><b>reflist = <tt>""</tt></b></dt>
+  <dt><b>reflist = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='reflist' Line='reflist = ""' -->
   <dd>Optional reference coordinate list to use in the pattern matching algorithm
   in place of the task coordinate list.  This file is a simple text list of
@@ -39,7 +39,7 @@ aidpars: Automatic line identification parameters and algorithm
   </dd>
   </dl>
   <dl>
-  <dt><b>refspec = <tt>""</tt></b></dt>
+  <dt><b>refspec = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='refspec' Line='refspec = ""' -->
   <dd>Optional reference dispersion calibrated spectrum.  This template spectrum
   is used to select the prominent lines for the pattern matching algorithm.
@@ -48,11 +48,11 @@ aidpars: Automatic line identification parameters and algorithm
   </dd>
   </dl>
   <dl>
-  <dt><b>crpix = <tt>"INDEF"</tt></b></dt>
+  <dt><b>crpix = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='crpix' Line='crpix = "INDEF"' -->
   <dd>Coordinate reference pixel for the coordinate reference value specified by
   the <i>crval</i> parameter.  This may be specified as a pixel coordinate
-  or an image header keyword name (with or without a <tt>'!'</tt> prefix).  In the
+  or an image header keyword name (with or without a <span style="font-family: monospace;">'!'</span> prefix).  In the
   latter case the value of the keyword in the image header of the spectrum
   being identified is used.  A value of INDEF translates to the middle of
   the target spectrum.
@@ -61,7 +61,7 @@ aidpars: Automatic line identification parameters and algorithm
   <dl>
   <dt><b>crquad = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='crquad' Line='crquad = INDEF' -->
-  <dd>Quadratic correction to the detected pixel positions to <tt>"linearize"</tt> the
+  <dd>Quadratic correction to the detected pixel positions to <span style="font-family: monospace;">"linearize"</span> the
   pattern of line spacings.  The corrected positions x' are derived from
   the measured positions x by
   <pre>
@@ -69,28 +69,28 @@ aidpars: Automatic line identification parameters and algorithm
   </pre>
   where crpix is the pixel reference point as defined by the <i>crpix</i>
   parameter.  The measured and corrected positions may be examined by
-  using the <tt>'t'</tt> debug flag.  The value may be a number or a header
-  keyword (with or without a <tt>'!'</tt> prefix).  The default of INDEF translates
+  using the <span style="font-family: monospace;">'t'</span> debug flag.  The value may be a number or a header
+  keyword (with or without a <span style="font-family: monospace;">'!'</span> prefix).  The default of INDEF translates
   to zero; i.e. no quadratic correction.
   </dd>
   </dl>
   <dl>
-  <dt><b>cddir = <tt>"sign"</tt> (unknown|sign|increasing|decreasing)</b></dt>
+  <dt><b>cddir = <span style="font-family: monospace;">"sign"</span> (unknown|sign|increasing|decreasing)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cddir' Line='cddir = "sign" (unknown|sign|increasing|decreasing)' -->
   <dd>The sense of the dispersion increment with respect to the pixel coordinates
-  in the input spectrum.  The possible values are <tt>"increasing"</tt> or
-  <tt>"decreasing"</tt> if the dispersion coordinates increase or decrease with
-  increasing pixel coordinates, <tt>"sign"</tt> to use the sign of the dispersion
+  in the input spectrum.  The possible values are <span style="font-family: monospace;">"increasing"</span> or
+  <span style="font-family: monospace;">"decreasing"</span> if the dispersion coordinates increase or decrease with
+  increasing pixel coordinates, <span style="font-family: monospace;">"sign"</span> to use the sign of the dispersion
   increment (positive is increasing and negative is decreasing), and
-  <tt>"unknown"</tt> if the sense is unknown and to be determined by the algorithm.
+  <span style="font-family: monospace;">"unknown"</span> if the sense is unknown and to be determined by the algorithm.
   </dd>
   </dl>
   <dl>
-  <dt><b>crsearch = <tt>"INDEF"</tt></b></dt>
+  <dt><b>crsearch = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='crsearch' Line='crsearch = "INDEF"' -->
   <dd>Coordinate reference value search radius.  The value may be specified
   as a numerical value or as an image header keyword (with or without
-  a <tt>'!'</tt> prefix) whose value is to be used.  The algorithm will search
+  a <span style="font-family: monospace;">'!'</span> prefix) whose value is to be used.  The algorithm will search
   for a final coordinate reference value within this amount of the value
   specified by <i>crval</i>.  If the value is positive the search radius is
   the specified value.  If the value is negative it is the absolute value
@@ -102,11 +102,11 @@ aidpars: Automatic line identification parameters and algorithm
   </dd>
   </dl>
   <dl>
-  <dt><b>cdsearch = <tt>"INDEF"</tt></b></dt>
+  <dt><b>cdsearch = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cdsearch' Line='cdsearch = "INDEF"' -->
   <dd>Dispersion coordinate increment search radius.  The value may be specified
   as a numerical value or as an image header keyword (with or without
-  a <tt>'!'</tt> prefix) whose value is to be used.  The algorithm will search
+  a <span style="font-family: monospace;">'!'</span> prefix) whose value is to be used.  The algorithm will search
   for a dispersion coordinate increment within this amount of the value
   specified by <i>cdelt</i>.  If the value is positive the search radius is
   the specified value.  If the value is negative it is the absolute value of
@@ -232,7 +232,7 @@ aidpars: Automatic line identification parameters and algorithm
   </dd>
   </dl>
   <dl>
-  <dt><b>debug = <tt>""</tt></b></dt>
+  <dt><b>debug = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='debug' Line='debug = ""' -->
   <dd>Print or display debugging information.  This is intended for the developer
   and not the user.  The parameter is specified as a string of characters
@@ -251,7 +251,7 @@ aidpars: Automatic line identification parameters and algorithm
       w: Print wavelength bin limits.
   </pre>
   The items with an asterisk are the most useful.  The graphs are exited
-  with <tt>'q'</tt> or <tt>'Q'</tt>.
+  with <span style="font-family: monospace;">'q'</span> or <span style="font-family: monospace;">'Q'</span>.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -264,7 +264,7 @@ aidpars: Automatic line identification parameters and algorithm
   <i>aidpars</i> which links to this parameters set.  Typing <b>aidpars</b>
   allows these parameters to be edited.  When editing the parameters of the
   other tasks with <b>eparam</b> one can edit the <b>aidpars</b> parameters by
-  type <tt>":e"</tt> when pointing to the <i>aidpars</i> task parameter.  The values of
+  type <span style="font-family: monospace;">":e"</span> when pointing to the <i>aidpars</i> task parameter.  The values of
   the <b>aidpars</b> parameters may also be set on the command line for the
   task.  The discussion which follows describes the parameters and the
   algorithm.
@@ -365,7 +365,7 @@ aidpars: Automatic line identification parameters and algorithm
   increment is known and not the sign (i.e. whether the dispersion
   coordinates increase or decrease with increasing pixel coordinates)
   the parameter <i>cdsign</i> specifies if the dispersion direction is
-  <tt>"increasing"</tt>, <tt>"decreasing"</tt>, <tt>"unknown"</tt>, or defined by the <tt>"sign"</tt> of the
+  <span style="font-family: monospace;">"increasing"</span>, <span style="font-family: monospace;">"decreasing"</span>, <span style="font-family: monospace;">"unknown"</span>, or defined by the <span style="font-family: monospace;">"sign"</span> of the
   approximate dispersion increment parameter (sign of <i>cdelt</i>).
   </p>
   <p>
@@ -383,7 +383,7 @@ aidpars: Automatic line identification parameters and algorithm
   An optional input is a dispersion calibrated reference spectrum (referred to
   as the reference spectrum in the discussion).  This is specified either in
   the coordinate line list file or by the parameter <i>refspec</i>.  To
-  specify a spectrum in the line list file the comment <tt>"# Spectrum &lt;image&gt;"</tt>
+  specify a spectrum in the line list file the comment <span style="font-family: monospace;">"# Spectrum &lt;image&gt;"</span>
   is included where &lt;image&gt; is the image filename of the reference spectrum.
   Some of the standard line lists in linelists$ may include a reference
   spectrum.  The reference spectrum is used to select the strongest lines for
@@ -457,7 +457,7 @@ aidpars: Automatic line identification parameters and algorithm
   distortion can be tolerated.  But in order to provide the ability to remove
   some of this distortion when it is known the parameter <i>crquad</i> is
   provided.  This parameter applies a quadratic transformation to the measured
-  pixel positions to another set of <tt>"linearized"</tt> positions  which are used
+  pixel positions to another set of <span style="font-family: monospace;">"linearized"</span> positions  which are used
   in the line ratio pattern matching.  The form of the transformation is
   </p>
   <pre>
@@ -658,10 +658,10 @@ aidpars: Automatic line identification parameters and algorithm
   <dt><b>AIDPARS V2.12.2</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='AIDPARS' Line='AIDPARS V2.12.2' -->
   <dd>There were many changes made in the paramters and algorithm.  New parameters
-  are <tt>"crquad"</tt> and <tt>"maxnl"</tt>.  Changed definitions are for <tt>"rms"</tt>.  Default
-  value changes are for <tt>"cddir"</tt>, <tt>"ntarget"</tt>, <tt>"ndmax"</tt>, and <tt>"fmatch"</tt>.  The most
+  are <span style="font-family: monospace;">"crquad"</span> and <span style="font-family: monospace;">"maxnl"</span>.  Changed definitions are for <span style="font-family: monospace;">"rms"</span>.  Default
+  value changes are for <span style="font-family: monospace;">"cddir"</span>, <span style="font-family: monospace;">"ntarget"</span>, <span style="font-family: monospace;">"ndmax"</span>, and <span style="font-family: monospace;">"fmatch"</span>.  The most
   significant changes in the algorithm are to allow for more non-linear
-  dispersion with the <tt>"maxnl"</tt> parameter, to decrease the <tt>"npattern"</tt> value
+  dispersion with the <span style="font-family: monospace;">"maxnl"</span> parameter, to decrease the <span style="font-family: monospace;">"npattern"</span> value
   if no solution is found with the specified value, and to search a larger
   number of candidate dispersions.
   </dd>

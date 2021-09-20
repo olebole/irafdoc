@@ -49,7 +49,7 @@ trebin: Resample a table to uniform spacing.
   the column will not be copied to output.
   </p>
   <p>
-  Except for function = <tt>"linear"</tt>,
+  Except for function = <span style="font-family: monospace;">"linear"</span>,
   the output values are obtained by interpolation, not by fitting.
   The distinction is important when rebinning to a spacing ('step')
   that is significantly coarser than the spacing of the input data.
@@ -59,14 +59,14 @@ trebin: Resample a table to uniform spacing.
   nearest the current output independent variable value (X) are selected;
   the input data are then interpolated at X
   to obtain the value to write to the output table.
-  For function = <tt>"nearest"</tt>, only one input point is used;
-  for function = <tt>"poly3"</tt> or <tt>"spline"</tt>, four input points are used.
+  For function = <span style="font-family: monospace;">"nearest"</span>, only one input point is used;
+  for function = <span style="font-family: monospace;">"poly3"</span> or <span style="font-family: monospace;">"spline"</span>, four input points are used.
   This is appropriate for rebinning
   to a spacing not much different from the input data.
   For resampling noisy data
   to a significantly wider spacing than the input data, however,
   these options will give very poor results.
-  In the latter case, function = <tt>"linear"</tt> (the default) should be used.
+  In the latter case, function = <span style="font-family: monospace;">"linear"</span> (the default) should be used.
   This option uses a linear fit to all the data
   within an interval of width 'step' centered on each output X value.
   If there are fewer than two input points in a given interval, however,
@@ -142,7 +142,7 @@ trebin: Resample a table to uniform spacing.
   if 'start' is larger than 'end'.
   If 'start' and 'end' are the same,
   the output table will contain one row,
-  and 'step' will only be used for the case of function = <tt>"linear"</tt>.
+  and 'step' will only be used for the case of function = <span style="font-family: monospace;">"linear"</span>.
   For other values of 'function',
   since the data will be interpolated at just the one point 'start',
   the step size will not be needed.
@@ -174,7 +174,7 @@ trebin: Resample a table to uniform spacing.
   </dd>
   </dl>
   <dl>
-  <dt><b>(function = <tt>"linear"</tt>) [string, allowed values: nearest | linear | </b></dt>
+  <dt><b>(function = <span style="font-family: monospace;">"linear"</span>) [string, allowed values: nearest | linear | </b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(function = "linear") [string, allowed values: nearest | linear | ' -->
   <dd>poly3 | spline]
   Interpolation function.
@@ -182,7 +182,7 @@ trebin: Resample a table to uniform spacing.
   for cubic polynomial or cubic spline interpolation.
   Two rows are required for linear interpolation,
   and only one for nearest-neighbor.
-  The <tt>"linear"</tt> option uses a linear fit,
+  The <span style="font-family: monospace;">"linear"</span> option uses a linear fit,
   while all other functions are interpolations
   using only the required number of points
   nearest the value of the independent variable.
@@ -255,16 +255,16 @@ trebin: Resample a table to uniform spacing.
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. Resample all the columns in all tables beginning with <tt>"hr"</tt> so the values
-  in the <tt>"Wavelength"</tt> column range from 3000 to 8000 in steps of 10.
+  1. Resample all the columns in all tables beginning with <span style="font-family: monospace;">"hr"</span> so the values
+  in the <span style="font-family: monospace;">"Wavelength"</span> column range from 3000 to 8000 in steps of 10.
   The output tables will have the same names, but will be written in the
-  directory <tt>"home$spec"</tt> (which should be different from the default directory).
+  directory <span style="font-family: monospace;">"home$spec"</span> (which should be different from the default directory).
   </p>
   <pre>
     tt&gt; trebin hr*.tab "home$spec/" Wavelength 3000. 8000. 10.
   </pre>
   <p>
-  2. Interpolate the text table <tt>"in"</tt> at a single point,
+  2. Interpolate the text table <span style="font-family: monospace;">"in"</span> at a single point,
   where the value in column one is 5,
   and print the results on the standard output.
   </p>
@@ -274,9 +274,9 @@ trebin: Resample a table to uniform spacing.
   <p>
   3. Interpolate the table from example 2
   onto the array of independent variable values
-  in column <tt>"wavelength"</tt> at row 37 of <tt>"x1d.fits"</tt>.
+  in column <span style="font-family: monospace;">"wavelength"</span> at row 37 of <span style="font-family: monospace;">"x1d.fits"</span>.
   As in example 2,
-  the independent variable in <tt>"in"</tt> is the first column, <tt>"c1"</tt>.
+  the independent variable in <span style="font-family: monospace;">"in"</span> is the first column, <span style="font-family: monospace;">"c1"</span>.
   </p>
   <pre>
     tt&gt; trebin in STDOUT c1 xtable="x1d.fits[r:row=37][c:wavelength]"
@@ -310,7 +310,7 @@ trebin: Resample a table to uniform spacing.
   <h3>See also</h3>
   <!-- BeginSection: 'SEE ALSO' -->
   <p>
-  Type <tt>"help tables opt=sys"</tt> for a higher-level description of the 'tables'
+  Type <span style="font-family: monospace;">"help tables opt=sys"</span> for a higher-level description of the 'tables'
   package.
   </p>
   

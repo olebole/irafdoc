@@ -26,14 +26,14 @@ wcardimage: Convert text files to cardimage files
   <dt><b>textfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='textfile' Line='textfile' -->
   <dd>A character string identifying the file (s) on disk to be processed.
-  The string acts as a <tt>"template"</tt> so that multiple files can be pro-
+  The string acts as a <span style="font-family: monospace;">"template"</span> so that multiple files can be pro-
   cessed.
   </dd>
   </dl>
   <dl>
   <dt><b>cardfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cardfile' Line='cardfile' -->
-  <dd>Name of the output tape device of the form <tt>"mta800"</tt> or <tt>"mta800[#]"</tt>
+  <dd>Name of the output tape device of the form <span style="font-family: monospace;">"mta800"</span> or <span style="font-family: monospace;">"mta800[#]"</span>
   or name of disk file (s). EOT and BOT are acceptable tape file numbers.
   The file number will be appended to
   the output file name in the case of multiple file disk output.
@@ -46,7 +46,7 @@ wcardimage: Convert text files to cardimage files
   </dd>
   </dl>
   <dl>
-  <dt><b>contn_string = <tt>"&gt;&gt;"</tt></b></dt>
+  <dt><b>contn_string = <span style="font-family: monospace;">"&gt;&gt;"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='contn_string' Line='contn_string = "&gt;&gt;"' -->
   <dd>Character string which will be inserted at the beginning of
   card image lines which have been split from a single text line.
@@ -92,8 +92,8 @@ wcardimage: Convert text files to cardimage files
   <h3>Description</h3>
   <!-- BeginSection: 'DESCRIPTION' -->
   <p>
-  If multiple file disk output is requested, <tt>".crd"</tt> is appended to the input
-  file name. Oversize lines are split and prefixed by the string <tt>"&gt;&gt;"</tt>.
+  If multiple file disk output is requested, <span style="font-family: monospace;">".crd"</span> is appended to the input
+  file name. Oversize lines are split and prefixed by the string <span style="font-family: monospace;">"&gt;&gt;"</span>.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Examples</h3>
@@ -101,7 +101,7 @@ wcardimage: Convert text files to cardimage files
   <p>
   1. Convert a set of IRAF text files to a set of blocked ASCII cardimage files
   on tape, replacing tabs with blanks and prefixing the leftover portions
-  of oversize lines with <tt>"&gt;&gt;"</tt>.
+  of oversize lines with <span style="font-family: monospace;">"&gt;&gt;"</span>.
   </p>
   <pre>
   
@@ -110,7 +110,7 @@ wcardimage: Convert text files to cardimage files
   <p>
   2. Convert a set of IRAF text files to a set of blocked EBCDIC cardimage files
   on tape, replacing tabs with blanks and prefixing the leftover portions
-  of oversize lines with <tt>"&gt;&gt;"</tt>.
+  of oversize lines with <span style="font-family: monospace;">"&gt;&gt;"</span>.
   </p>
   <p>
   	cl&gt; wcardimage files* mtb1600[1] eb+

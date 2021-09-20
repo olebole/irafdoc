@@ -35,7 +35,7 @@ ridsmtn: Convert mountain format IDS/IRS data to IRAF images
   is set.  If multiple records are being read, the output
   filename is concatenated from this parameter and the IDS record number.
   IRAF images with these names would be created from IDS records 1, 2 and 3 if
-  <i>iraf_file</i> = <tt>"ids"</tt> (and offset = 0; see below):  ids.0001, ids.0002, 
+  <i>iraf_file</i> = <span style="font-family: monospace;">"ids"</span> (and offset = 0; see below):  ids.0001, ids.0002, 
   ids.0003.
   </dd>
   </dl>
@@ -48,7 +48,7 @@ ridsmtn: Convert mountain format IDS/IRS data to IRAF images
   </dd>
   </dl>
   <dl>
-  <dt><b>record_numbers = <tt>"1-9999"</tt></b></dt>
+  <dt><b>record_numbers = <span style="font-family: monospace;">"1-9999"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='record_numbers' Line='record_numbers = "1-9999"' -->
   <dd>A string listing the IDS records to be read.  
   </dd>
@@ -104,7 +104,7 @@ ridsmtn: Convert mountain format IDS/IRS data to IRAF images
   </dd>
   </dl>
   <dl>
-  <dt><b>data_type = <tt>"r"</tt></b></dt>
+  <dt><b>data_type = <span style="font-family: monospace;">"r"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='data_type' Line='data_type = "r"' -->
   <dd>The data type of the output IRAF image.  If an incorrect data_type or null
   string is entered, the default data type <i>real</i> is used.
@@ -150,7 +150,7 @@ ridsmtn: Convert mountain format IDS/IRS data to IRAF images
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
   [1] Convert all records on the IDS tape to IRAF images, with the root image name
-  being <tt>"aug83"</tt>.  The data is mountain reduced, and all records will be
+  being <span style="font-family: monospace;">"aug83"</span>.  The data is mountain reduced, and all records will be
   converted.  The IDS tape is mounted on mtb.
   	
   	cl&gt; ridsmtn mtb aug83

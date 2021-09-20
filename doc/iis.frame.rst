@@ -32,7 +32,7 @@ frame: Select the frame to be displayed
   <h3>Description</h3>
   <!-- BeginSection: 'DESCRIPTION' -->
   <p>
-  The specified frame is displayed on the image display monitor (<tt>"stdimage"</tt>).
+  The specified frame is displayed on the image display monitor (<span style="font-family: monospace;">"stdimage"</span>).
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Examples</h3>

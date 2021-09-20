@@ -46,7 +46,7 @@ show: Show an environment variable
   	cl&gt; show printer
   </p>
   <p>
-  2. Show all <tt>"std"</tt> (standard i/o stream) related variables.
+  2. Show all <span style="font-family: monospace;">"std"</span> (standard i/o stream) related variables.
   </p>
   <p>
   	cl&gt; show | match std

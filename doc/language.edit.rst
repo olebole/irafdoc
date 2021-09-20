@@ -40,9 +40,9 @@ edit: Edit a text file
   </p>
   <p>
   The EDT, EMACS, and VI editors are currently supported.  Each editor interface
-  is controlled by an <i>edcap</i> table file in the logical directory <tt>"dev$"</tt>;
+  is controlled by an <i>edcap</i> table file in the logical directory <span style="font-family: monospace;">"dev$"</span>;
   these files are also used by the <i>ehistory</i> and <i>eparam</i> screen
-  editors.  For example, the file <tt>"dev$edt.ed"</tt> is required to run the EDT
+  editors.  For example, the file <span style="font-family: monospace;">"dev$edt.ed"</span> is required to run the EDT
   editor.  The EDITOR_CMD field of the <i>edcap</i> file defines the command
   to be send to the host system to run the editor; this is not necessarily the
   same as the name of the editor.  Support for additional editors is easily added
@@ -58,13 +58,13 @@ edit: Edit a text file
   	cl&gt; edit home$login.cl
   </p>
   <p>
-  2. Edit the file <tt>"temp"</tt> in the current directory.
+  2. Edit the file <span style="font-family: monospace;">"temp"</span> in the current directory.
   </p>
   <p>
   	cl&gt; edit temp
   </p>
   <p>
-  3. On a UNIX system, edit all the <tt>".x"</tt> files in the current directory.
+  3. On a UNIX system, edit all the <span style="font-family: monospace;">".x"</span> files in the current directory.
   Filename templates cannot be used with the editor unless the editor itself,
   or the host system, expands the filename template.
   </p>
@@ -76,13 +76,13 @@ edit: Edit a text file
   <!-- BeginSection: 'BUGS' -->
   <p>
   The EOF control character is set in the edcap file for the editor language in
-  use, e.g., <tt>"dev$vi.ed"</tt> for the VI editor.  The value in this file may differ
+  use, e.g., <span style="font-family: monospace;">"dev$vi.ed"</span> for the VI editor.  The value in this file may differ
   from that used on the local system; if this is the case, the system installer
   should edit the file and change the value of the parameter EXIT_UPDATE.
   </p>
   <p>
   The control sequences for the keyboard arrow keys are also defined in the
-  <tt>".ed"</tt> edcap file; TERMCAP should be used instead.
+  <span style="font-family: monospace;">".ed"</span> edcap file; TERMCAP should be used instead.
   </p>
   <!-- EndSection:   'BUGS' -->
   <h3>See also</h3>

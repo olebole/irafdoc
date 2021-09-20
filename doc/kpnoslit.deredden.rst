@@ -69,7 +69,7 @@ deredden: Apply interstellar extinction corrections
   </dd>
   </dl>
   <dl>
-  <dt><b>type = <tt>"E(B-V)"</tt></b></dt>
+  <dt><b>type = <span style="font-family: monospace;">"E(B-V)"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='type' Line='type = "E(B-V)"' -->
   <dd>The type of extinction parameter used.  The values may be:
   <dl>
@@ -93,7 +93,7 @@ deredden: Apply interstellar extinction corrections
   </dd>
   </dl>
   <dl>
-  <dt><b>apertures = <tt>""</tt></b></dt>
+  <dt><b>apertures = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
   <dd>List of apertures to be selected from input one dimensional spectra
   to be calibrated.  If no list is specified then all apertures are
@@ -139,8 +139,8 @@ deredden: Apply interstellar extinction corrections
   One of the input task parameters is R(V).  If it is not known one
   may use the default value of 3.1 typical of the average 
   interstellar extinction.  The second input parameter is chosen by
-  the parameter <i>type</i> which may take the values <tt>"A(V)"</tt>, <tt>"E(B-V)"</tt>, or
-  <tt>"c"</tt>.  The value of the parameter is specified by the parameter
+  the parameter <i>type</i> which may take the values <span style="font-family: monospace;">"A(V)"</span>, <span style="font-family: monospace;">"E(B-V)"</span>, or
+  <span style="font-family: monospace;">"c"</span>.  The value of the parameter is specified by the parameter
   <i>value</i>.
   </p>
   <p>

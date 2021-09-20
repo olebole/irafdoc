@@ -58,9 +58,9 @@ rtar: Read a TAR format archive file
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='-f filename' -->
   <dd><i>Rtar</i> uses the first filename argument as the host filename of the
   archive instead of reading from <i>stdin</i>.   Magtape devices should be
-  specified using the host device name, e.g., <tt>"/dev/nrmt8"</tt> or <tt>"MSA0"</tt>.
+  specified using the host device name, e.g., <span style="font-family: monospace;">"/dev/nrmt8"</span> or <span style="font-family: monospace;">"MSA0"</span>.
   Since <i>rtar</i> is a host level program and does not read the IRAF tapecap
-  file, IRAF device names such as <tt>"mta"</tt> cannot be used.
+  file, IRAF device names such as <span style="font-family: monospace;">"mta"</span> cannot be used.
   </dd>
   </dl>
   <dl>
@@ -106,8 +106,8 @@ rtar: Read a TAR format archive file
   <dd>When creating directories and files from the pathnames recorded in the archive,
   omit the given path prefix if it matches the pathname given in the archive.
   This feature is used to relocate directories, or to read tar archives
-  containing absolute pathnames.  For example, given <tt>"-p /usr/"</tt>, the archive
-  pathname <tt>"/usr/me/file"</tt> would be written to the file <tt>"me/file"</tt>.
+  containing absolute pathnames.  For example, given <span style="font-family: monospace;">"-p /usr/"</span>, the archive
+  pathname <span style="font-family: monospace;">"/usr/me/file"</span> would be written to the file <span style="font-family: monospace;">"me/file"</span>.
   </dd>
   </dl>
   <dl>
@@ -175,7 +175,7 @@ rtar: Read a TAR format archive file
   All <i>rtar</i> filename arguments are IRAF virtual filenames (or host
   filenames), except the prefix strings, which pertain to the tape format and
   hence are UNIX pathnames.  Magtape devices must be specified using a host
-  physical or logical device name (i.e., IRAF device names like <tt>"mta"</tt> will not
+  physical or logical device name (i.e., IRAF device names like <span style="font-family: monospace;">"mta"</span> will not
   work).
   </p>
   <p>
@@ -211,7 +211,7 @@ rtar: Read a TAR format archive file
   or at the host system level.  The command syntax is identical on both cases.
   </p>
   <p>
-  1. List the contents of the disk archive file <tt>"foo.tar"</tt>.
+  1. List the contents of the disk archive file <span style="font-family: monospace;">"foo.tar"</span>.
   </p>
   <p>
   	cl&gt; rtar -tvf foo.tar

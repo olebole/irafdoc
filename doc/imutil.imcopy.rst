@@ -102,7 +102,7 @@ imcopy: Copy an image
   	cl&gt; imcopy frame*[1:512,1:512] frame*
   </p>
   <p>
-  In this example all images beginning with <tt>"frame"</tt> are trimmed to 512 x 512.
+  In this example all images beginning with <span style="font-family: monospace;">"frame"</span> are trimmed to 512 x 512.
   </p>
   <p>
   5. To copy a set of images to a new directory:
@@ -115,7 +115,7 @@ imcopy: Copy an image
   	cl&gt; imcopy image* osdirectory
   </pre>
   <p>
-  where <tt>"osdirectory"</tt> is an operating system directory name (i.e. /user/me
+  where <span style="font-family: monospace;">"osdirectory"</span> is an operating system directory name (i.e. /user/me
   in UNIX).
   </p>
   <p>

@@ -30,10 +30,10 @@ galactic: Convert ra, dec to galactic coordinates
   </dd>
   </dl>
   <dl>
-  <dt><b>in_coords = <tt>"equatorial"</tt></b></dt>
+  <dt><b>in_coords = <span style="font-family: monospace;">"equatorial"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='in_coords' Line='in_coords = "equatorial"' -->
-  <dd>Type of input coordinates.  May be either <tt>"equatorial"</tt> (RA and DEC) or
-  <tt>"galactic"</tt> (l and b).
+  <dd>Type of input coordinates.  May be either <span style="font-family: monospace;">"equatorial"</span> (RA and DEC) or
+  <span style="font-family: monospace;">"galactic"</span> (l and b).
   </dd>
   </dl>
   <dl>
@@ -78,7 +78,7 @@ galactic: Convert ra, dec to galactic coordinates
   </pre>
   <p>
   2. The following is equivalent, except that coordinate input is taken from
-  the file <tt>"coords"</tt>, rather than from the terminal:
+  the file <span style="font-family: monospace;">"coords"</span>, rather than from the terminal:
   </p>
   <pre>
   	cl&gt; galactic coords 				[input]

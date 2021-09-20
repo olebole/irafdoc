@@ -35,34 +35,34 @@ scombine: Combine spectra having different wavelength ranges
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>List of output images to be created containing the combined spectra.
-  If the grouping option is <tt>"all"</tt>
-  or <tt>"apertures"</tt> then only one output image will be created.  In the
+  If the grouping option is <span style="font-family: monospace;">"all"</span>
+  or <span style="font-family: monospace;">"apertures"</span> then only one output image will be created.  In the
   first case the image will contain only one spectrum and in the latter case
   there will be a spectrum for each selected aperture.
-  If the grouping option is <tt>"images"</tt> then there will be one
+  If the grouping option is <span style="font-family: monospace;">"images"</span> then there will be one
   output spectrum per input spectrum.
   </dd>
   </dl>
   <dl>
-  <dt><b>noutput = <tt>""</tt></b></dt>
+  <dt><b>noutput = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='noutput' Line='noutput = ""' -->
   <dd>List of output images to be created containing the number of spectra combined.
   The number of images required is the same as the <i>output</i> list.
-  Any or all image names may be given as a null string, i.e. <tt>""</tt>, in which
+  Any or all image names may be given as a null string, i.e. <span style="font-family: monospace;">""</span>, in which
   case no output image is created.
   </dd>
   </dl>
   <dl>
-  <dt><b>logfile = <tt>"STDOUT"</tt></b></dt>
+  <dt><b>logfile = <span style="font-family: monospace;">"STDOUT"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "STDOUT"' -->
   <dd>File name for recording log information about the combining operation.
-  The file name <tt>"STDOUT"</tt> is used to write the information to the terminal.
+  The file name <span style="font-family: monospace;">"STDOUT"</span> is used to write the information to the terminal.
   If the null string is specified then no log information is printed or
   recorded.
   </dd>
   </dl>
   <dl>
-  <dt><b>apertures = <tt>""</tt></b></dt>
+  <dt><b>apertures = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
   <dd>List of apertures to be selected for combining.  If none is specified
   then all apertures are selected.  The syntax is a blank or comma separated
@@ -70,26 +70,26 @@ scombine: Combine spectra having different wavelength ranges
   </dd>
   </dl>
   <dl>
-  <dt><b>group = <tt>"apertures"</tt> (all|images|apertures)</b></dt>
+  <dt><b>group = <span style="font-family: monospace;">"apertures"</span> (all|images|apertures)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='group' Line='group = "apertures" (all|images|apertures)' -->
   <dd>Option for grouping input spectra for combining (after selection by aperture)
   from one or more input images.  The options are:
   <dl>
-  <dt><b><tt>"all"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"all"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"all"' -->
   <dd>Combine all spectra from all images in the input list into a single output
   spectrum.
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"images"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"images"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"images"' -->
   <dd>Combine all spectra in each input image into a single spectrum in
   separate output images.
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"apertures"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"apertures"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"apertures"' -->
   <dd>Combine all spectra of the same aperture from all input images and put it
   into a single output image with the other selected apertures.
@@ -98,19 +98,19 @@ scombine: Combine spectra having different wavelength ranges
   </dd>
   </dl>
   <dl>
-  <dt><b>combine = <tt>"average"</tt> (average|median|sum)</b></dt>
+  <dt><b>combine = <span style="font-family: monospace;">"average"</span> (average|median|sum)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='combine' Line='combine = "average" (average|median|sum)' -->
   <dd>Option for combining pixels at the same dispersion coordinate.  after any
-  rejection operation.  The options are to compute the  <tt>"average"</tt>, <tt>"median"</tt>,
-  or <tt>"sum"</tt> of the pixels.  The first two are applied after any pixel
+  rejection operation.  The options are to compute the  <span style="font-family: monospace;">"average"</span>, <span style="font-family: monospace;">"median"</span>,
+  or <span style="font-family: monospace;">"sum"</span> of the pixels.  The first two are applied after any pixel
   rejection.  The sum option ignores the rejection and scaling parameters and
-  no rejection is performed.  In other words, the <tt>"sum"</tt> option is simply the
+  no rejection is performed.  In other words, the <span style="font-family: monospace;">"sum"</span> option is simply the
   direct summation of the pixels.  The median uses the average of the two
   central values when the number of pixels is even.
   </dd>
   </dl>
   <dl>
-  <dt><b>reject = <tt>"none"</tt> (none|minmax|ccdclip|crreject|sigclip|avsigclip|pclip)</b></dt>
+  <dt><b>reject = <span style="font-family: monospace;">"none"</span> (none|minmax|ccdclip|crreject|sigclip|avsigclip|pclip)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='reject' Line='reject = "none" (none|minmax|ccdclip|crreject|sigclip|avsigclip|pclip)' -->
   <dd>Type of rejection operation performed on the pixels which overlap at each
   dispersion coordinate.  The algorithms are discussed in the
@@ -151,7 +151,7 @@ scombine: Combine spectra having different wavelength ranges
   </dd>
   </dl>
   <dl>
-  <dt><b>scale = <tt>"none"</tt> (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)</b></dt>
+  <dt><b>scale = <span style="font-family: monospace;">"none"</span> (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='scale' Line='scale = "none" (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)' -->
   <dd>Multiplicative image scaling to be applied.  The choices are none,
   multiply by the reciprocal of the mode , median, or mean of the specified
@@ -162,7 +162,7 @@ scombine: Combine spectra having different wavelength ranges
   </dd>
   </dl>
   <dl>
-  <dt><b>zero = <tt>"none"</tt> (none|mode|median|mean|@&lt;file&gt;|!&lt;keyword&gt;)</b></dt>
+  <dt><b>zero = <span style="font-family: monospace;">"none"</span> (none|mode|median|mean|@&lt;file&gt;|!&lt;keyword&gt;)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='zero' Line='zero = "none" (none|mode|median|mean|@&lt;file&gt;|!&lt;keyword&gt;)' -->
   <dd>Additive zero level image shifts to be applied.  The choices are none,
   add the negative of the mode, median, or mean of the specified statistics
@@ -173,7 +173,7 @@ scombine: Combine spectra having different wavelength ranges
   </dd>
   </dl>
   <dl>
-  <dt><b>weight = <tt>"none"</tt> (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)</b></dt>
+  <dt><b>weight = <span style="font-family: monospace;">"none"</span> (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='weight' Line='weight = "none" (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)' -->
   <dd>Weights to be applied during the final averaging.  The choices are none,
   the mode, median, or mean of the specified statistics section, the exposure
@@ -183,7 +183,7 @@ scombine: Combine spectra having different wavelength ranges
   </dd>
   </dl>
   <dl>
-  <dt><b>sample = <tt>""</tt></b></dt>
+  <dt><b>sample = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sample' Line='sample = ""' -->
   <dd>Wavelength sample regions to use in computing spectrum statistics for
   scaling and weighting.  If no sample regions are given then the entire
@@ -206,7 +206,7 @@ scombine: Combine spectra having different wavelength ranges
   <dl>
   <dt><b>nlow = 1,  nhigh = 1 (minmax)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nlow' Line='nlow = 1,  nhigh = 1 (minmax)' -->
-  <dd>The number of low and high pixels to be rejected by the <tt>"minmax"</tt> algorithm.
+  <dd>The number of low and high pixels to be rejected by the <span style="font-family: monospace;">"minmax"</span> algorithm.
   These numbers are converted to fractions of the total number of input spectra
   so that if no rejections have taken place the specified number of pixels
   are rejected while if pixels have been rejected by thresholding
@@ -229,8 +229,8 @@ scombine: Combine spectra having different wavelength ranges
   <dt><b>mclip = yes (ccdclip, crreject, sigclip, avsigcliip)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='mclip' Line='mclip = yes (ccdclip, crreject, sigclip, avsigcliip)' -->
   <dd>Use the median as the estimate for the true intensity rather than the
-  average with high and low values excluded in the <tt>"ccdclip"</tt>, <tt>"crreject"</tt>,
-  <tt>"sigclip"</tt>, and <tt>"avsigclip"</tt> algorithms?  The median is a better estimator
+  average with high and low values excluded in the <span style="font-family: monospace;">"ccdclip"</span>, <span style="font-family: monospace;">"crreject"</span>,
+  <span style="font-family: monospace;">"sigclip"</span>, and <span style="font-family: monospace;">"avsigclip"</span> algorithms?  The median is a better estimator
   in the presence of data which one wants to reject than the average.
   However, computing the median is slower than the average.
   </dd>
@@ -238,19 +238,19 @@ scombine: Combine spectra having different wavelength ranges
   <dl>
   <dt><b>lsigma = 3., hsigma = 3. (ccdclip, crreject, sigclip, avsigclip, pclip)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lsigma' Line='lsigma = 3., hsigma = 3. (ccdclip, crreject, sigclip, avsigclip, pclip)' -->
-  <dd>Low and high sigma clipping factors for the <tt>"ccdclip"</tt>, <tt>"crreject"</tt>, <tt>"sigclip"</tt>,
-  <tt>"avsigclip"</tt>, and <tt>"pclip"</tt> algorithms.  They multiply a <tt>"sigma"</tt> factor
+  <dd>Low and high sigma clipping factors for the <span style="font-family: monospace;">"ccdclip"</span>, <span style="font-family: monospace;">"crreject"</span>, <span style="font-family: monospace;">"sigclip"</span>,
+  <span style="font-family: monospace;">"avsigclip"</span>, and <span style="font-family: monospace;">"pclip"</span> algorithms.  They multiply a <span style="font-family: monospace;">"sigma"</span> factor
   produced by the algorithm to select a point below and above the average or
   median value for rejecting pixels.  The lower sigma is ignored for the
-  <tt>"crreject"</tt> algorithm.
+  <span style="font-family: monospace;">"crreject"</span> algorithm.
   </dd>
   </dl>
   <dl>
-  <dt><b>rdnoise = <tt>"0."</tt>, gain = <tt>"1."</tt>, snoise = <tt>"0."</tt> (ccdclip, crreject)</b></dt>
+  <dt><b>rdnoise = <span style="font-family: monospace;">"0."</span>, gain = <span style="font-family: monospace;">"1."</span>, snoise = <span style="font-family: monospace;">"0."</span> (ccdclip, crreject)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rdnoise' Line='rdnoise = "0.", gain = "1.", snoise = "0." (ccdclip, crreject)' -->
   <dd>Effective CCD readout noise in electrons, gain in electrons/DN, and
   sensitivity noise as a fraction.  These parameters are used with the
-  <tt>"ccdclip"</tt> and <tt>"crreject"</tt> algorithms.  The values may be either numeric or
+  <span style="font-family: monospace;">"ccdclip"</span> and <span style="font-family: monospace;">"crreject"</span> algorithms.  The values may be either numeric or
   an image header keyword which contains the value.  Note that if the spectra
   have been extracted from a 2D CCD image then the noise parameters must be
   adjusted for background and the aperture summing.
@@ -307,7 +307,7 @@ scombine: Combine spectra having different wavelength ranges
   and high thresholds, scaling them in various ways, applying a rejection
   algorithm based on known or empirical noise statistics, and computing the
   sum, weighted average, or median of the remaining pixels.  Note that
-  the <tt>"sum"</tt> option is the direct summation of the pixels and does not
+  the <span style="font-family: monospace;">"sum"</span> option is the direct summation of the pixels and does not
   perform any rejection or scaling of the data regardless of the parameter
   settings.
   </p>
@@ -341,8 +341,8 @@ scombine: Combine spectra having different wavelength ranges
   spectra in counts are not corrected in the interpolation for changes
   in pixel widths.  
   The default interpolation function is a 5th order polynomial.  The
-  choice of interpolation type is made with the package parameter <tt>"interp"</tt>.
-  It may be set to <tt>"nearest"</tt>, <tt>"linear"</tt>, <tt>"spline3"</tt>, <tt>"poly5"</tt>, or <tt>"sinc"</tt>.
+  choice of interpolation type is made with the package parameter <span style="font-family: monospace;">"interp"</span>.
+  It may be set to <span style="font-family: monospace;">"nearest"</span>, <span style="font-family: monospace;">"linear"</span>, <span style="font-family: monospace;">"spline3"</span>, <span style="font-family: monospace;">"poly5"</span>, or <span style="font-family: monospace;">"sinc"</span>.
   Remember that this applies to all tasks which might need to interpolate
   spectra in the <b>onedspec</b> and associated packages.  For a discussion of
   interpolation types see <b>onedspec</b>.
@@ -390,17 +390,17 @@ scombine: Combine spectra having different wavelength ranges
   are two types of scaling available, a multiplicative intensity scale and an
   additive zero point shift.  The intensity scaling is defined by the
   <i>scale</i> parameter and the zero point shift by the <i>zero</i>
-  parameter.  These parameters may take the values <tt>"none"</tt> for no scaling,
-  <tt>"mode"</tt>, <tt>"median"</tt>, or <tt>"mean"</tt> to scale by statistics of the spectrum pixels,
-  <tt>"exposure"</tt> (for intensity scaling only) to scale by the exposure time
+  parameter.  These parameters may take the values <span style="font-family: monospace;">"none"</span> for no scaling,
+  <span style="font-family: monospace;">"mode"</span>, <span style="font-family: monospace;">"median"</span>, or <span style="font-family: monospace;">"mean"</span> to scale by statistics of the spectrum pixels,
+  <span style="font-family: monospace;">"exposure"</span> (for intensity scaling only) to scale by the exposure time
   keyword in the image header, any other image header keyword specified by
-  the keyword name prefixed by the character <tt>'!'</tt>, and the name of a file
+  the keyword name prefixed by the character <span style="font-family: monospace;">'!'</span>, and the name of a file
   containing the scale factors for the input image prefixed by the
-  character <tt>'@'</tt>.
+  character <span style="font-family: monospace;">'@'</span>.
   </p>
   <p>
   Examples of the possible parameter values are shown below where
-  <tt>"myval"</tt> is the name of an image header keyword and <tt>"scales.dat"</tt> is
+  <span style="font-family: monospace;">"myval"</span> is the name of an image header keyword and <span style="font-family: monospace;">"scales.dat"</span> is
   a text file containing a list of scale factors.
   </p>
   <pre>
@@ -426,7 +426,7 @@ scombine: Combine spectra having different wavelength ranges
   computations as well as during the rejection and combining operations.
   </p>
   <p>
-  The <tt>"exposure"</tt> option in the intensity scaling uses the value of the image
+  The <span style="font-family: monospace;">"exposure"</span> option in the intensity scaling uses the value of the image
   header keyword (EXPTIME, EXPOSURE, or ITIME).  Note that the exposure
   keyword is also updated in the final image as the weighted average of the
   input values.  If one wants to use a nonexposure time keyword and keep the
@@ -472,7 +472,7 @@ scombine: Combine spectra having different wavelength ranges
   changes in the spectrum noise characteristics.
   </p>
   <p>
-  In those algorithms it is possible to eliminate the <tt>"sigma correction"</tt>
+  In those algorithms it is possible to eliminate the <span style="font-family: monospace;">"sigma correction"</span>
   while still using scaling.  The reasons this might be desirable are 1) if
   the scalings are similar the corrections in computing the mean or median
   are important but the sigma corrections may not be important and 2) the
@@ -490,7 +490,7 @@ scombine: Combine spectra having different wavelength ranges
   all cases it is set to a very large number.
   </p>
   <p>
-  If the final combining operation is <tt>"average"</tt> then the spectra may be
+  If the final combining operation is <span style="font-family: monospace;">"average"</span> then the spectra may be
   weighted during the averaging.  The weights are specified in the same way
   as the scale factors.  The weights, scaled to a unit sum, are printed in
   the log output.
@@ -522,7 +522,7 @@ scombine: Combine spectra having different wavelength ranges
   <i>hthreshold</i>.  Values of INDEF mean that no threshold value is
   applied.  Threshold rejection may be used to exclude very bad pixel values
   or as a way of masking images.  The former case is useful to exclude very
-  bright cosmic rays.  Some of the rejection algorithms, such as <tt>"avsigclip"</tt>,
+  bright cosmic rays.  Some of the rejection algorithms, such as <span style="font-family: monospace;">"avsigclip"</span>,
   can perform poorly if very strong cosmic rays are present.  For masking one
   can use a task like <b>imedit</b> or <b>imreplace</b> to set parts of the
   spectra to be excluded to some very low or high magic value.
@@ -533,7 +533,7 @@ scombine: Combine spectra having different wavelength ranges
   <p>
   The <i>reject</i> parameter selects a type of rejection operation to
   be applied to pixels not thresholded.  If no rejection
-  operation is desired the value <tt>"none"</tt> is specified.  This task is
+  operation is desired the value <span style="font-family: monospace;">"none"</span> is specified.  This task is
   closely related to the image combining task <b>imcombine</b> and, in
   particular, has the same rejection algorithms.
   Some the algorithms are more appropriate to images but are available
@@ -652,7 +652,7 @@ scombine: Combine spectra having different wavelength ranges
   </p>
   <p>
   CRREJECT
-  This algorithm is identical to <tt>"ccdclip"</tt> except that only pixels above
+  This algorithm is identical to <span style="font-family: monospace;">"ccdclip"</span> except that only pixels above
   the average are rejected based on the <i>hsigma</i> parameter.  This
   is appropriate for rejecting cosmic ray events and works even with
   two spectra.
@@ -743,7 +743,7 @@ scombine: Combine spectra having different wavelength ranges
   This algorithm works well for even a few input spectra.  It works better if
   the median is used though this is slower than using the average.  Note that
   if the spectra have a known read out noise and gain (the proportionality
-  factor above) then the <tt>"ccdclip"</tt> algorithm is superior.  However, currently
+  factor above) then the <span style="font-family: monospace;">"ccdclip"</span> algorithm is superior.  However, currently
   the CCD noise characteristics are not well propagated during extraction so
   this empirical algorithm is the one most likely to be useful.  The two
   algorithms are related in that the average sigma proportionality factor is
@@ -764,7 +764,7 @@ scombine: Combine spectra having different wavelength ranges
   median as the center of the distribution except that, instead of computing
   the sigma of the pixels from the CCD noise parameters or from the data
   values, the width of the distribution is characterized by the difference
-  between the median value and a specified <tt>"percentile"</tt> pixel value.  This
+  between the median value and a specified <span style="font-family: monospace;">"percentile"</span> pixel value.  This
   width is then multipled by the scale factors <i>lsigma</i> and <i>hsigma</i>
   to define the clipping thresholds above and below the median.  The clipping
   is not iterated.

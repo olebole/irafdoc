@@ -34,14 +34,14 @@ hidetask: Make a task invisible to the user
   <p>
   If a task is only to be called from other tasks, and is not normally
   invoked directly by the user, then it may be useful to `hide' the task,
-  i.e., omit it from the list of tasks listed in the <tt>"?"</tt> and <tt>"??"</tt> commands.
+  i.e., omit it from the list of tasks listed in the <span style="font-family: monospace;">"?"</span> and <span style="font-family: monospace;">"??"</span> commands.
   The <i>hidetask</i> command performs this function.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. Define the task <tt>"_rew"</tt> and hide it from the user.  The purpose of the
+  1. Define the task <span style="font-family: monospace;">"_rew"</span> and hide it from the user.  The purpose of the
   leading underscore (not required) is to ensure that the user does not
   accidentally run the task.
   </p>

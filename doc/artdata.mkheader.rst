@@ -29,7 +29,7 @@ mkheader: Append/replace header parameters
   </dd>
   </dl>
   <dl>
-  <dt><b>header = <tt>"artdata$stdheader.dat"</tt></b></dt>
+  <dt><b>header = <span style="font-family: monospace;">"artdata$stdheader.dat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='header' Line='header = "artdata$stdheader.dat"' -->
   <dd>List of images or header keyword data files.  If the list is shorter
   than the input image list then the last entry is repeated.
@@ -82,7 +82,7 @@ mkheader: Append/replace header parameters
   </p>
   <p>
   Header files are also used by several of the tasks in the artificial
-  data package with a standard default file <tt>"artdata$stdheader.dat"</tt>.
+  data package with a standard default file <span style="font-family: monospace;">"artdata$stdheader.dat"</span>.
   To edit image headers also see <b>hedit</b>.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->

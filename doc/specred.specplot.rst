@@ -30,16 +30,16 @@ specplot: Scale, stack, and plot multiple spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>apertures = <tt>""</tt></b></dt>
+  <dt><b>apertures = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
   <dd>List of apertures to plot.  An empty list selects all apertures.
   An aperture list consists of a comma separated list of aperture numbers or
   hyphen separated range of numbers.  A step size may also be specified preceded
-  by <tt>'x'</tt>.  See <b>ranges</b> for more.
+  by <span style="font-family: monospace;">'x'</span>.  See <b>ranges</b> for more.
   </dd>
   </dl>
   <dl>
-  <dt><b>bands = <tt>"1"</tt></b></dt>
+  <dt><b>bands = <span style="font-family: monospace;">"1"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='bands' Line='bands = "1"' -->
   <dd>List of bands to plot if the image is three dimensional.  The list has
   the same syntax as for the apertures.
@@ -78,13 +78,13 @@ specplot: Scale, stack, and plot multiple spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>units = <tt>""</tt></b></dt>
+  <dt><b>units = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='units' Line='units = ""' -->
   <dd>Dispersion coordinate units.  If the spectra have known units, currently
   this is generally Angstroms, the plotted units may be converted
   for plotting to other units as specified by this parameter.
   If this parameter is the null string then the units specified by the
-  world coordinate system attribute <tt>"units_display"</tt> is used.  If neither
+  world coordinate system attribute <span style="font-family: monospace;">"units_display"</span> is used.  If neither
   is specified than the units of the coordinate system are used.
   The units
   may also be changed interactively.  See the units section of the
@@ -92,9 +92,9 @@ specplot: Scale, stack, and plot multiple spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>transform = <tt>"none"</tt> (none|log)</b></dt>
+  <dt><b>transform = <span style="font-family: monospace;">"none"</span> (none|log)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='transform' Line='transform = "none" (none|log)' -->
-  <dd>Transform for the input pixel values.  Currently only <tt>"log"</tt> is implemented.
+  <dd>Transform for the input pixel values.  Currently only <span style="font-family: monospace;">"log"</span> is implemented.
   If all pixels are negative the spectrum values will be unchanged and if
   some pixels are negative they are mapped to the lowest non-negative value in
   the spectrum.  Note that this cannot be changed interactively or applied
@@ -119,7 +119,7 @@ specplot: Scale, stack, and plot multiple spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>ptype = <tt>"1"</tt></b></dt>
+  <dt><b>ptype = <span style="font-family: monospace;">"1"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ptype' Line='ptype = "1"' -->
   <dd>Default plotting type for the spectra.  A numeric value selects line plots
   while marker type strings select marker plots.  The sign of the line type
@@ -127,25 +127,25 @@ specplot: Scale, stack, and plot multiple spectra
   values when positive.  The absolute value selects the line type with 0
   being an invisible line, 1 being a solid line, and higher integers
   different types of lines depending on the capabilities of the graphics
-  device.  The marker type strings are <tt>"point"</tt>, <tt>"box"</tt>, <tt>"plus"</tt>, <tt>"cross"</tt>,
-  <tt>"diamond"</tt>, <tt>"hline"</tt>, <tt>"vline"</tt>, <tt>"hebar"</tt>, <tt>"vebar"</tt>, and <tt>"circle"</tt>.
+  device.  The marker type strings are <span style="font-family: monospace;">"point"</span>, <span style="font-family: monospace;">"box"</span>, <span style="font-family: monospace;">"plus"</span>, <span style="font-family: monospace;">"cross"</span>,
+  <span style="font-family: monospace;">"diamond"</span>, <span style="font-family: monospace;">"hline"</span>, <span style="font-family: monospace;">"vline"</span>, <span style="font-family: monospace;">"hebar"</span>, <span style="font-family: monospace;">"vebar"</span>, and <span style="font-family: monospace;">"circle"</span>.
   The types for individual spectra may be changed interactively.
   </dd>
   </dl>
   <dl>
-  <dt><b>labels = <tt>"user"</tt></b></dt>
+  <dt><b>labels = <span style="font-family: monospace;">"user"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='labels' Line='labels = "user"' -->
-  <dd>Spectrum labels to be used.  If the null string or the word <tt>"none"</tt> is
-  given then the spectra are not labeled.  The word <tt>"imname"</tt> labels the
-  spectra with the image name, the word <tt>"imtitle"</tt> labels them wih the
-  image title, the word <tt>"index"</tt> labels them with the index number, and
-  the word <tt>"user"</tt> labels them with user defined labels.  The user labels
+  <dd>Spectrum labels to be used.  If the null string or the word <span style="font-family: monospace;">"none"</span> is
+  given then the spectra are not labeled.  The word <span style="font-family: monospace;">"imname"</span> labels the
+  spectra with the image name, the word <span style="font-family: monospace;">"imtitle"</span> labels them wih the
+  image title, the word <span style="font-family: monospace;">"index"</span> labels them with the index number, and
+  the word <span style="font-family: monospace;">"user"</span> labels them with user defined labels.  The user labels
   may be given in the file specified by the parameter <i>ulabels</i>, which
   are matched with the list of spectra, and also added interactively.
   </dd>
   </dl>
   <dl>
-  <dt><b>ulabels = <tt>""</tt></b></dt>
+  <dt><b>ulabels = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ulabels' Line='ulabels = ""' -->
   <dd>File containing user labels.
   </dd>
@@ -165,7 +165,7 @@ specplot: Scale, stack, and plot multiple spectra
   <dt><b>sysid = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sysid' Line='sysid = yes' -->
   <dd>Include system banner and separation step label?  This may be changed
-  interactively using <tt>":/sysid"</tt>.
+  interactively using <span style="font-family: monospace;">":/sysid"</span>.
   </dd>
   </dl>
   <dl>
@@ -177,10 +177,10 @@ specplot: Scale, stack, and plot multiple spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>title = <tt>""</tt>, xlabel = <tt>""</tt>, ylabel = <tt>""</tt></b></dt>
+  <dt><b>title = <span style="font-family: monospace;">""</span>, xlabel = <span style="font-family: monospace;">""</span>, ylabel = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='title' Line='title = "", xlabel = "", ylabel = ""' -->
   <dd>Title, x axis label, and y axis label for graphs.  These may be changed
-  interactively using <tt>":/title"</tt>, <tt>":/xlabel"</tt>, and <tt>":/ylabel"</tt>.
+  interactively using <span style="font-family: monospace;">":/title"</span>, <span style="font-family: monospace;">":/xlabel"</span>, and <span style="font-family: monospace;">":/ylabel"</span>.
   </dd>
   </dl>
   <dl>
@@ -188,25 +188,25 @@ specplot: Scale, stack, and plot multiple spectra
   <!-- Sec='PARAMETERS' Level=0 Label='xmin' Line='xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF' -->
   <dd>The default limits for the initial graph.  If INDEF then the limit is
   determined from the range of the data (autoscaling).  These values can
-  be changed with <tt>'w'</tt> cursor key or the cursor commands <tt>":/xwindow"</tt> and
-  <tt>":/ywindow"</tt>.
+  be changed with <span style="font-family: monospace;">'w'</span> cursor key or the cursor commands <span style="font-family: monospace;">":/xwindow"</span> and
+  <span style="font-family: monospace;">":/ywindow"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>logfile = <tt>""</tt></b></dt>
+  <dt><b>logfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = ""' -->
   <dd>Logfile to record the final set of spectra and scale factors displayed.
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
-  <dd>Output graphics device.  One of <tt>"stdgraph"</tt>, <tt>"stdplot"</tt>, <tt>"stdvdm"</tt>,
+  <dd>Output graphics device.  One of <span style="font-family: monospace;">"stdgraph"</span>, <span style="font-family: monospace;">"stdplot"</span>, <span style="font-family: monospace;">"stdvdm"</span>,
   @(enviroment variable), or actual device.
   </dd>
   </dl>
   <dl>
-  <dt><b>cursor = <tt>""</tt></b></dt>
+  <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Graphics cursor input.  When null the standard cursor is used otherwise
   the specified file is used.
@@ -251,8 +251,8 @@ specplot: Scale, stack, and plot multiple spectra
   	I = value * scale + offset + (index - 1) * step
   </p>
   <p>
-  where <tt>"I"</tt> is the final plotted value, <tt>"value"</tt> is the pixel value, <tt>"scale"</tt>
-  is a multiplicative scaling, <tt>"offset"</tt> is a additive offset, and <tt>"step"</tt> is
+  where <span style="font-family: monospace;">"I"</span> is the final plotted value, <span style="font-family: monospace;">"value"</span> is the pixel value, <span style="font-family: monospace;">"scale"</span>
+  is a multiplicative scaling, <span style="font-family: monospace;">"offset"</span> is a additive offset, and <span style="font-family: monospace;">"step"</span> is
   an additive separation step used to stack spectra vertically.
   </p>
   <p>
@@ -276,16 +276,16 @@ specplot: Scale, stack, and plot multiple spectra
   spectra either upward or downward with the index 1 spectrum having no
   offset.  The scale and offset parameters may be specified as either
   constant values, the name of file containing the values (one per line)
-  preceded by the <tt>'@'</tt> character, or the name of an image header keyword.
+  preceded by the <span style="font-family: monospace;">'@'</span> character, or the name of an image header keyword.
   This parameter as well as the scale and offset may be set or
-  changed interactively via colon commands and the <tt>"offset"</tt> may also be
+  changed interactively via colon commands and the <span style="font-family: monospace;">"offset"</span> may also be
   set using the cursor to shift a spectrum vertically.
   </p>
   <p>
   In addition to shifting spectra vertically they may also be shifted
   horizontally as a velocity/redshift or a zero point change with either
   cursor or colon commands.  The dispersion, inteval per pixel, may be
-  modified, either with the <tt>'t'</tt> key or the <tt>"wpc"</tt> command, in which case if
+  modified, either with the <span style="font-family: monospace;">'t'</span> key or the <span style="font-family: monospace;">"wpc"</span> command, in which case if
   the dispersion is nonlinear the spectra will be linearized.
   </p>
   <p>
@@ -293,7 +293,7 @@ specplot: Scale, stack, and plot multiple spectra
   be the image name, the image title, the index number, or a user defined
   label.  The default label type is specified by the parameter
   <i>labels</i>.  For user labels the initial labels may be specified in a
-  file.  Interactively the label type may be changed using the <tt>":labels"</tt>
+  file.  Interactively the label type may be changed using the <span style="font-family: monospace;">":labels"</span>
   command and the user assigned labels may be defined by a colon command
   or by using the cursor to mark the position for the label.  The label
   position is given relative to the range of the graph and the mean
@@ -325,8 +325,8 @@ specplot: Scale, stack, and plot multiple spectra
   The cursor and colon commands generally apply to the spectrum nearest
   the cursor.  This is determined by finding the nearest data point to
   the cursor.  For the colon commands the spectrum may also be specified
-  explicitly by the index number using an optional suffix <tt>"[index]"</tt>, where
-  index is the index number for the spectrum.  Also the special index <tt>"*"</tt>
+  explicitly by the index number using an optional suffix <span style="font-family: monospace;">"[index]"</span>, where
+  index is the index number for the spectrum.  Also the special index <span style="font-family: monospace;">"*"</span>
   may be specified to apply to all spectra.
   </p>
   <p>
@@ -382,9 +382,9 @@ specplot: Scale, stack, and plot multiple spectra
   A command without a value generally shows the current value of the
   parameter while with a value it sets the value of the parameter.  The show
   commands print to the terminal unless a file is given.  For the spectrum
-  parameters the index specification, <tt>"[index]"</tt>, is optional.  If absent the
+  parameters the index specification, <span style="font-family: monospace;">"[index]"</span>, is optional.  If absent the
   nearest spectrum to the cursor when the command is given is selected except
-  for the <tt>"units"</tt> command which selects all spectra.  The index is either a
+  for the <span style="font-family: monospace;">"units"</span> command which selects all spectra.  The index is either a
   number or the character *.  The latter applies the command to all the
   spectra.
   </p>
@@ -448,7 +448,7 @@ specplot: Scale, stack, and plot multiple spectra
   	cl&gt; specplot im1,im2,im3 cursor=cursor.dat
   </p>
   <p>
-  Note that the <tt>'r'</tt> key is necessary redraw the graph with the changed
+  Note that the <span style="font-family: monospace;">'r'</span> key is necessary redraw the graph with the changed
   attributes.
   </p>
   <!-- EndSection:   'EXAMPLES' -->
@@ -459,7 +459,7 @@ specplot: Scale, stack, and plot multiple spectra
   <!-- Sec='REVISIONS' Level=0 Label='SPECPLOT' Line='SPECPLOT V2.11' -->
   <dd>The scale and offset parameters may now be a value, a filename, or
   and image header keyword.
-  The <tt>'f'</tt> key was added to toggle between world and logical pixel coordinates.
+  The <span style="font-family: monospace;">'f'</span> key was added to toggle between world and logical pixel coordinates.
   </dd>
   </dl>
   <dl>
@@ -469,8 +469,8 @@ specplot: Scale, stack, and plot multiple spectra
   The :units command was extended to have an optional spectrum specifier.
   This is primarily intended to plot different (or the same) spectra in
   velocity but with different velocity zeros.
-  The default task units parameter has been changed to <tt>""</tt> to allow picking
-  up a <tt>"units_display"</tt> WCS attribute if defined.
+  The default task units parameter has been changed to <span style="font-family: monospace;">""</span> to allow picking
+  up a <span style="font-family: monospace;">"units_display"</span> WCS attribute if defined.
   </dd>
   </dl>
   <dl>
@@ -481,7 +481,7 @@ specplot: Scale, stack, and plot multiple spectra
   option in <b>apextract</b>), suppress the system ID banner, suppress the Y
   axis scale, output a logfile, and specify the plotting units.  The <i>ptype</i>
   parameter now allows negative numbers to select histogram style lines.
-  Interactively, the plotting units may be changed and the <tt>'v'</tt> key allows
+  Interactively, the plotting units may be changed and the <span style="font-family: monospace;">'v'</span> key allows
   setting a velocity scale zero point with the cursor.  The new version
   supports the new spectral WCS features including nonlinear dispersion
   functions.

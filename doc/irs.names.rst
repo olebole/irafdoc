@@ -37,7 +37,7 @@ names: Generate a list of image names from a string
   </dd>
   </dl>
   <dl>
-  <dt><b>append = <tt>""</tt></b></dt>
+  <dt><b>append = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='append' Line='append = ""' -->
   <dd>If not a null string, this character string will be appended to
   all the generated image names. This allows for a specification of
@@ -59,7 +59,7 @@ names: Generate a list of image names from a string
   <p>
   A sequence of image names is generated from the input root file name
   and the range description by appending the possible range values to
-  the root in the form <tt>"root.nnnn"</tt>. At least four digits will follow the
+  the root in the form <span style="font-family: monospace;">"root.nnnn"</span>. At least four digits will follow the
   root.
   </p>
   <p>

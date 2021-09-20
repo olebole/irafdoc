@@ -45,43 +45,43 @@ gradient: Convolve a list of 1 or 2-D images with a gradient operator
   the intensity distribution in an image.  The eight supported gradient
   operators are listed below.
   <dl>
-  <dt><b><tt>"0"</tt>, <tt>"180"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"0"</span>, <span style="font-family: monospace;">"180"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"0", "180"' -->
   <dd>Calculate the gradient image along a 0 or 180 degree angle.
   These options approximate the d/dx operator.
-  Option <tt>"0"</tt> produces a maximum response for pixel values which
-  increase with increasing x, whereas option <tt>"180"</tt> produces a maximum
+  Option <span style="font-family: monospace;">"0"</span> produces a maximum response for pixel values which
+  increase with increasing x, whereas option <span style="font-family: monospace;">"180"</span> produces a maximum
   response for pixel values which decrease with increasing x. 
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"90"</tt>, <tt>"270"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"90"</span>, <span style="font-family: monospace;">"270"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"90", "270"' -->
   <dd>Calculate the gradient image along a 90 or 270 degree angle.
   These options approximate the d/dy operator.
-  Option <tt>"90"</tt> produces a maximum response for pixel values which
-  increase with increasing y, whereas option <tt>"270"</tt> produces a maximum
+  Option <span style="font-family: monospace;">"90"</span> produces a maximum response for pixel values which
+  increase with increasing y, whereas option <span style="font-family: monospace;">"270"</span> produces a maximum
   response for pixel values which decrease with increasing y.
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"45"</tt>, <tt>"225"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"45"</span>, <span style="font-family: monospace;">"225"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"45", "225"' -->
   <dd>Calculate the gradient image along a 45 or 225 degree angle.
-  Option <tt>"45"</tt> produces a maximum response for pixel values which increase
+  Option <span style="font-family: monospace;">"45"</span> produces a maximum response for pixel values which increase
   along a line at 45 degrees counter-clockwise to the x axis.
-  Option <tt>"225"</tt> produces
+  Option <span style="font-family: monospace;">"225"</span> produces
   a maximum response for pixel values which increase along a line at 225
   degrees to the x axis.
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"135"</tt>, <tt>"315"</tt> </b></dt>
+  <dt><b><span style="font-family: monospace;">"135"</span>, <span style="font-family: monospace;">"315"</span> </b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"135", "315" ' -->
   <dd>Calculate the gradient image along a 135 or 315 degree angle.
-  Option <tt>"135"</tt> produces a maximum response for pixel values which increase
+  Option <span style="font-family: monospace;">"135"</span> produces a maximum response for pixel values which increase
   along a line at 135 degrees counter-clockwise to the x axis.
-  Option <tt>"315"</tt> produces
+  Option <span style="font-family: monospace;">"315"</span> produces
   a maximum response for pixel values which increase along a line at 315
   degrees to the x axis.
   </dd>
@@ -89,7 +89,7 @@ gradient: Convolve a list of 1 or 2-D images with a gradient operator
   </dd>
   </dl>
   <dl>
-  <dt><b>boundary = <tt>"nearest"</tt></b></dt>
+  <dt><b>boundary = <span style="font-family: monospace;">"nearest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"' -->
   <dd>The algorithm used to compute the values of out of bounds pixels. The 
   options are:
@@ -142,7 +142,7 @@ gradient: Convolve a list of 1 or 2-D images with a gradient operator
   to both the magnitude and direction of changes in intensity in an image.
   For example, if an image's pixel values are specified by the sum of their
   x and y coordinates (z = x + y) and boundary extension effects are ignored,
-  the <tt>"0"</tt>, <tt>"45"</tt>, <tt>"90"</tt>, <tt>"135"</tt>, <tt>"180"</tt>, <tt>"225"</tt>, <tt>"270"</tt>, and <tt>"315"</tt> gradient kernels
+  the <span style="font-family: monospace;">"0"</span>, <span style="font-family: monospace;">"45"</span>, <span style="font-family: monospace;">"90"</span>, <span style="font-family: monospace;">"135"</span>, <span style="font-family: monospace;">"180"</span>, <span style="font-family: monospace;">"225"</span>, <span style="font-family: monospace;">"270"</span>, and <span style="font-family: monospace;">"315"</span> gradient kernels
   will each produce a constant image containing the numbers 1, sqrt (2), 1, 0,
   -1, -sqrt (2), -1, and 0 respectively. 
   </p>

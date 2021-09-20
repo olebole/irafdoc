@@ -58,12 +58,12 @@ rrcopy: Convert IPPS rasters from an RCOPY tape to IRAF images
   <dt><b>print_header = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='print_header' Line='print_header = yes' -->
   <dd>This switch determines if the header information will be printed for those
-  rasters in <tt>"raster_list"</tt>.  (It might be appropriate to set print_header=no, or
+  rasters in <span style="font-family: monospace;">"raster_list"</span>.  (It might be appropriate to set print_header=no, or
   redirect the output, if RRCOPY is being run as a background task.)
   </dd>
   </dl>
   <dl>
-  <dt><b>data_type = <tt>""</tt></b></dt>
+  <dt><b>data_type = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='data_type' Line='data_type = ""' -->
   <dd>The data type of the output IRAF image.  If an incorrect data_type or null 
   string is entered, the default data type used is

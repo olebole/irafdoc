@@ -37,21 +37,21 @@ mkms: Create multispec from 1D spectra including associated bands
   <dl>
   <dt><b>raw</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='raw' Line='raw' -->
-  <dd>List of 1D raw or secondary spectra.  If none specify <tt>""</tt> otherwise
+  <dd>List of 1D raw or secondary spectra.  If none specify <span style="font-family: monospace;">""</span> otherwise
   the list must match the list of primary spectra.
   </dd>
   </dl>
   <dl>
   <dt><b>background</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='background' Line='background' -->
-  <dd>List of 1D background spectra.  If none specify <tt>""</tt> otherwise
+  <dd>List of 1D background spectra.  If none specify <span style="font-family: monospace;">""</span> otherwise
   the list must match the list of primary spectra.
   </dd>
   </dl>
   <dl>
   <dt><b>sigma</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sigma' Line='sigma' -->
-  <dd>List of 1D sigma spectra.  If none specify <tt>""</tt> otherwise
+  <dd>List of 1D sigma spectra.  If none specify <span style="font-family: monospace;">""</span> otherwise
   the list must match the list of primary spectra.
   </dd>
   </dl>

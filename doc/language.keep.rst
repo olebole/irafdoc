@@ -27,7 +27,7 @@ keep: Make recent set, task, etc. declarations permanent
   variables, etc. defined during the execution of that task are discarded
   (in other words, the memory used by the task is freed).
   The <i>keep</i> command instructs the CL to retain the definitions after
-  script termination.  Only one level of <tt>"keep"</tt> is achieved, e.g.,
+  script termination.  Only one level of <span style="font-family: monospace;">"keep"</span> is achieved, e.g.,
   if a script with a keep is called from a higher level script, then when
   the higher level script terminates the task definitions will still be lost
   (unless this higher level script also uses <i>keep</i>).

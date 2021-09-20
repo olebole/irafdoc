@@ -58,7 +58,7 @@ irafil: Create an IRAF image from a binary data file
   <dl>
   <dt><b>tb_flip = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='tb_flip' Line='tb_flip = no' -->
-  <dd>This parameter allows the image to be <tt>"top-to-bottom"</tt> flipped during
+  <dd>This parameter allows the image to be <span style="font-family: monospace;">"top-to-bottom"</span> flipped during
   conversion.
   </dd>
   </dl>
@@ -83,10 +83,10 @@ irafil: Create an IRAF image from a binary data file
   </p>
   <p>
   The resultant images will be assigned the same name as the input file,
-  but with <tt>".i"</tt> appended to indicate IRAF format.
+  but with <span style="font-family: monospace;">".i"</span> appended to indicate IRAF format.
   </p>
   <p>
-  The tb_flip parameter should be set to yes when converting the <tt>"snap"</tt>
+  The tb_flip parameter should be set to yes when converting the <span style="font-family: monospace;">"snap"</span>
   format files from the Compaq image display station, or other devices
   which refer to the first row as inverted from the usual IRAF notation.
   </p>
@@ -128,7 +128,7 @@ irafil: Create an IRAF image from a binary data file
   the picture to the new IRAF image we call phoenix.
   </p>
   <p>
-  2. To read the <tt>"snap"</tt> format pictures from the Compaq station:
+  2. To read the <span style="font-family: monospace;">"snap"</span> format pictures from the Compaq station:
   </p>
   <pre>
   lo&gt; irafil m82.snp 512 512 tb_flip+ bits=8

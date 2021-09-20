@@ -42,7 +42,7 @@ ccmap: Compute image plate solutions using matched coordinate lists
   </dd>
   </dl>
   <dl>
-  <dt><b>solutions = <tt>""</tt></b></dt>
+  <dt><b>solutions = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='solutions' Line='solutions = ""' -->
   <dd>An optional list of plate solution names. If there are multiple input
   coordinate files and no name or a single name is specified then the
@@ -54,7 +54,7 @@ ccmap: Compute image plate solutions using matched coordinate lists
   </dd>
   </dl>
   <dl>
-  <dt><b>images = <tt>""</tt></b></dt>
+  <dt><b>images = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images = ""' -->
   <dd>The images associated with the input coordinate files. The number of images
   must be zero or equal to the number of input coordinate files. If an input
@@ -64,13 +64,13 @@ ccmap: Compute image plate solutions using matched coordinate lists
   </dd>
   </dl>
   <dl>
-  <dt><b>results = <tt>""</tt></b></dt>
+  <dt><b>results = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='results' Line='results = ""' -->
   <dd>Optional output files containing a summary of the results including a
   description of the plate geometry and a listing of the input coordinates,
   the fitted coordinates, and the fit residuals. The number of
   results files must be zero, one or equal to the number of input files. If
-  results is <tt>"STDOUT"</tt> the results summary is printed on the standard output.
+  results is <span style="font-family: monospace;">"STDOUT"</span> the results summary is printed on the standard output.
   If there are multiple input coordinate files and zero or one output is
   specified then the input coordinates are combined to produce a single solution.
   </dd>
@@ -94,19 +94,19 @@ ccmap: Compute image plate solutions using matched coordinate lists
   </dd>
   </dl>
   <dl>
-  <dt><b>lngunits = <tt>""</tt>, latunits = <tt>""</tt></b></dt>
+  <dt><b>lngunits = <span style="font-family: monospace;">""</span>, latunits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngunits' Line='lngunits = "", latunits = ""' -->
   <dd>The units of the input ra / longitude and dec / latitude coordinates. The
-  options are <tt>"hours"</tt>, <tt>"degrees"</tt>, and <tt>"radians"</tt> for ra / longitude, and
-  <tt>"degrees"</tt> and <tt>"radians"</tt> for dec / latitude. If the lngunits and latunits
+  options are <span style="font-family: monospace;">"hours"</span>, <span style="font-family: monospace;">"degrees"</span>, and <span style="font-family: monospace;">"radians"</span> for ra / longitude, and
+  <span style="font-family: monospace;">"degrees"</span> and <span style="font-family: monospace;">"radians"</span> for dec / latitude. If the lngunits and latunits
   are undefined they default to the preferred units for the coordinate system
-  specified by <i>insystem</i>, e.g. <tt>"hours"</tt> and <tt>"degrees"</tt> for equatorial
-  systems, and <tt>"degrees"</tt> and <tt>"degrees"</tt> for ecliptic, galactic, and
+  specified by <i>insystem</i>, e.g. <span style="font-family: monospace;">"hours"</span> and <span style="font-family: monospace;">"degrees"</span> for equatorial
+  systems, and <span style="font-family: monospace;">"degrees"</span> and <span style="font-family: monospace;">"degrees"</span> for ecliptic, galactic, and
   supergalactic systems.
   </dd>
   </dl>
   <dl>
-  <dt><b>insystem = <tt>"j2000"</tt></b></dt>
+  <dt><b>insystem = <span style="font-family: monospace;">"j2000"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='insystem' Line='insystem = "j2000"' -->
   <dd>The input celestial coordinate system. The <i>insystem</i> parameter
   sets the preferred units for the input celestial coordinates,
@@ -114,7 +114,7 @@ ccmap: Compute image plate solutions using matched coordinate lists
   point from the reference point coordinate system to the input coordinate
   system, and sets the correct values of the image header keywords CTYPE,
   RADECSYS, EQUINOX, and MJD-WCS if the image header wcs is updated. The 
-  systems of most interest to users are <tt>"icrs"</tt>, <tt>"j2000"</tt>, and <tt>"b1950"</tt> which
+  systems of most interest to users are <span style="font-family: monospace;">"icrs"</span>, <span style="font-family: monospace;">"j2000"</span>, and <span style="font-family: monospace;">"b1950"</span> which
   stand for the ICRS J2000.0, FK5 J2000.0 and FK4 B1950.0 celestial coordinate
   systems respectively.  The full set of options are the following:
   <dl>
@@ -252,7 +252,7 @@ ccmap: Compute image plate solutions using matched coordinate lists
   </dd>
   </dl>
   <dl>
-  <dt><b>refpoint = <tt>"coords"</tt></b></dt>
+  <dt><b>refpoint = <span style="font-family: monospace;">"coords"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='refpoint' Line='refpoint = "coords"' -->
   <dd>The definition of the sky projection reference point in celestial coordinates,
   e.g. the tangent point in the case of the usual tangent plane projection.
@@ -278,7 +278,7 @@ ccmap: Compute image plate solutions using matched coordinate lists
   </dd>
   </dl>
   <dl>
-  <dt><b>xref = <tt>"INDEF"</tt>, yref = <tt>"INDEF"</tt></b></dt>
+  <dt><b>xref = <span style="font-family: monospace;">"INDEF"</span>, yref = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xref' Line='xref = "INDEF", yref = "INDEF"' -->
   <dd>The reference pixel may be specified as a value or image header keyword.
   In the latter case a reference image must be specified.  By specifying
@@ -287,7 +287,7 @@ ccmap: Compute image plate solutions using matched coordinate lists
   </dd>
   </dl>
   <dl>
-  <dt><b>lngref = <tt>"INDEF"</tt>, latref = <tt>"INDEF"</tt></b></dt>
+  <dt><b>lngref = <span style="font-family: monospace;">"INDEF"</span>, latref = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngref' Line='lngref = "INDEF", latref = "INDEF"' -->
   <dd>The ra / longitude and dec / latitude of the reference point(s).  Lngref
   and latref may be numbers, e.g 13:20:42.3 and -33:41:26 or keywords for the
@@ -299,11 +299,11 @@ ccmap: Compute image plate solutions using matched coordinate lists
   </dd>
   </dl>
   <dl>
-  <dt><b>refsystem = <tt>"INDEF"</tt></b></dt>
+  <dt><b>refsystem = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='refsystem' Line='refsystem = "INDEF"' -->
   <dd>The celestial coordinate system of the reference point. Refsystem may
   be any one of the options listed under the <i>insystem</i> parameter, e.g.
-  <tt>"b1950"</tt>, or an image header keyword containing the epoch of the observation
+  <span style="font-family: monospace;">"b1950"</span>, or an image header keyword containing the epoch of the observation
   in years, e.g. EPOCH for NOAO data. In the latter case the coordinate system is
   assumed to be equatorial FK4 at equinox EPOCH. If refsystem is undefined
   the celestial coordinate system of the reference point defaults to the
@@ -311,27 +311,27 @@ ccmap: Compute image plate solutions using matched coordinate lists
   </dd>
   </dl>
   <dl>
-  <dt><b>lngrefunits = <tt>""</tt>, latrefunits = <tt>""</tt></b></dt>
+  <dt><b>lngrefunits = <span style="font-family: monospace;">""</span>, latrefunits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngrefunits' Line='lngrefunits = "", latrefunits = ""' -->
   <dd>The units of the reference point celestial  coordinates. The options
-  are <tt>"hours"</tt>, <tt>"degrees"</tt>, and <tt>"radians"</tt> for the ra / longitude coordinates,
-  and <tt>"degrees"</tt> and <tt>"radians"</tt> for the dec /latitude coordinates. 
+  are <span style="font-family: monospace;">"hours"</span>, <span style="font-family: monospace;">"degrees"</span>, and <span style="font-family: monospace;">"radians"</span> for the ra / longitude coordinates,
+  and <span style="font-family: monospace;">"degrees"</span> and <span style="font-family: monospace;">"radians"</span> for the dec /latitude coordinates. 
   If lngunits and latunits are undefined they default to the  units of the
   input coordinate system.
   </dd>
   </dl>
   <dl>
-  <dt><b>projection = <tt>"tan"</tt></b></dt>
+  <dt><b>projection = <span style="font-family: monospace;">"tan"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='projection' Line='projection = "tan"' -->
   <dd>The sky projection geometry. The most commonly used projections in astronomy
-  are <tt>"tan"</tt>, <tt>"arc"</tt>, <tt>"sin"</tt>, and <tt>"lin"</tt>. Other supported  standard projections
-  are <tt>"ait"</tt>, <tt>"car"</tt>,<tt>"csc"</tt>, <tt>"gls"</tt>, <tt>"mer"</tt>, <tt>"mol"</tt>, <tt>"par"</tt>, <tt>"pco"</tt>, <tt>"qsc"</tt>, <tt>"stg"</tt>,
-  <tt>"tsc"</tt>, and <tt>"zea"</tt>. A new experimental function <tt>"tnx"</tt>, a combination of the
+  are <span style="font-family: monospace;">"tan"</span>, <span style="font-family: monospace;">"arc"</span>, <span style="font-family: monospace;">"sin"</span>, and <span style="font-family: monospace;">"lin"</span>. Other supported  standard projections
+  are <span style="font-family: monospace;">"ait"</span>, <span style="font-family: monospace;">"car"</span>,<span style="font-family: monospace;">"csc"</span>, <span style="font-family: monospace;">"gls"</span>, <span style="font-family: monospace;">"mer"</span>, <span style="font-family: monospace;">"mol"</span>, <span style="font-family: monospace;">"par"</span>, <span style="font-family: monospace;">"pco"</span>, <span style="font-family: monospace;">"qsc"</span>, <span style="font-family: monospace;">"stg"</span>,
+  <span style="font-family: monospace;">"tsc"</span>, and <span style="font-family: monospace;">"zea"</span>. A new experimental function <span style="font-family: monospace;">"tnx"</span>, a combination of the
   tangent plate projection and polynomials, is also available.
   </dd>
   </dl>
   <dl>
-  <dt><b>fitgeometry = <tt>"general"</tt></b></dt>
+  <dt><b>fitgeometry = <span style="font-family: monospace;">"general"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fitgeometry' Line='fitgeometry = "general"' -->
   <dd>The plate solution geometry to be used. The options are the following, where
   xi and eta refer to the usual standard coordinates used in astrometry.
@@ -379,15 +379,15 @@ ccmap: Compute image plate solutions using matched coordinate lists
   default the distortion term is set to zero.
   </dd>
   </dl>
-  For all the fitting geometries except <tt>"general"</tt> no distortion term is fit,
+  For all the fitting geometries except <span style="font-family: monospace;">"general"</span> no distortion term is fit,
   i.e. the x and y polynomial orders are assumed to be 2 and the cross term
-  switches are assumed to be set to <tt>"none"</tt>, regardless of the values of the
+  switches are assumed to be set to <span style="font-family: monospace;">"none"</span>, regardless of the values of the
   <i>xxorder</i>, <i>xyorder</i>, <i>xxterms</i>, <i>yxorder</i>, <i>yyorder</i>
   and <i>yxterms</i> parameters set by the user.
   </dd>
   </dl>
   <dl>
-  <dt><b>function = <tt>"polynomial"</tt></b></dt>
+  <dt><b>function = <span style="font-family: monospace;">"polynomial"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "polynomial"' -->
   <dd>The type of analytic coordinate surface to be fit. The options are the
   following.
@@ -418,15 +418,15 @@ ccmap: Compute image plate solutions using matched coordinate lists
   The default order and cross term settings define the linear term in x
   and y, where the 6 coefficients can be interpreted in terms of an xi and eta
   shift, an x and y scaling in arcsec / pixel, and rotations of the x and y axes.
-  The <tt>"shift"</tt>, <tt>"xyscale"</tt>, <tt>"rotation"</tt>, <tt>"rscale"</tt>, and <tt>"rxyscale"</tt>, fitting geometries
+  The <span style="font-family: monospace;">"shift"</span>, <span style="font-family: monospace;">"xyscale"</span>, <span style="font-family: monospace;">"rotation"</span>, <span style="font-family: monospace;">"rscale"</span>, and <span style="font-family: monospace;">"rxyscale"</span>, fitting geometries
   assume that the polynomial order parameters are 2 regardless of the values
   set by the user. If any of the order parameters are higher than 2 and
-  <i>fitgeometry</i> is <tt>"general"</tt>, then a distortion surface is fit to the
+  <i>fitgeometry</i> is <span style="font-family: monospace;">"general"</span>, then a distortion surface is fit to the
   residuals from the linear portion of the fit.
   </dd>
   </dl>
   <dl>
-  <dt><b>xxterms = <tt>"half"</tt>, yxterms = <tt>"half"</tt></b></dt>
+  <dt><b>xxterms = <span style="font-family: monospace;">"half"</span>, yxterms = <span style="font-family: monospace;">"half"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xxterms' Line='xxterms = "half", yxterms = "half"' -->
   <dd>The options are:
   <dl>
@@ -453,11 +453,11 @@ ccmap: Compute image plate solutions using matched coordinate lists
   MAX (yxorder - 1 + yyorder - 1) for the eta fit.
   </dd>
   </dl>
-  The <tt>"shift"</tt>, <tt>"xyscale"</tt>, <tt>"rotation"</tt>,
-  <tt>"rscale"</tt>, and <tt>"rxyscale"</tt> fitting geometries, assume that the
-  cross term switches are set to <tt>"none"</tt> regardless of the values set by the user.
-  If either of the cross-terms parameters is set to <tt>"half"</tt> or <tt>"full"</tt> and
-  <i>fitgeometry</i> is <tt>"general"</tt> then a distortion surface is fit to the
+  The <span style="font-family: monospace;">"shift"</span>, <span style="font-family: monospace;">"xyscale"</span>, <span style="font-family: monospace;">"rotation"</span>,
+  <span style="font-family: monospace;">"rscale"</span>, and <span style="font-family: monospace;">"rxyscale"</span> fitting geometries, assume that the
+  cross term switches are set to <span style="font-family: monospace;">"none"</span> regardless of the values set by the user.
+  If either of the cross-terms parameters is set to <span style="font-family: monospace;">"half"</span> or <span style="font-family: monospace;">"full"</span> and
+  <i>fitgeometry</i> is <span style="font-family: monospace;">"general"</span> then a distortion surface is fit to the
   residuals from the linear portion of the fit.
   </dd>
   </dl>
@@ -483,13 +483,13 @@ ccmap: Compute image plate solutions using matched coordinate lists
   are set by the <i>projection</i> and <i>insystem</i> parameters. As there
   is currently no standard mechanism for storing the higher order plate solution
   terms if any in the image header wcs, these terms are currently ignored
-  unless the projection function is the experimental function <tt>"tnx"</tt>. The <tt>"tnx"</tt>
+  unless the projection function is the experimental function <span style="font-family: monospace;">"tnx"</span>. The <span style="font-family: monospace;">"tnx"</span>
   function is not FITS compatible and can only be understood by IRAF. Any existing
   image wcs represented by the above keywords is overwritten during the update.
   </dd>
   </dl>
   <dl>
-  <dt><b>pixsystem = <tt>"logical"</tt></b></dt>
+  <dt><b>pixsystem = <span style="font-family: monospace;">"logical"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pixsystem' Line='pixsystem = "logical"' -->
   <dd>The input pixel coordinate system. The options are:
   <dl>
@@ -497,7 +497,7 @@ ccmap: Compute image plate solutions using matched coordinate lists
   <!-- Sec='PARAMETERS' Level=1 Label='logical' Line='logical' -->
   <dd>The logical pixel coordinate system is the coordinate system of the image
   pixels on disk. Since most users measure the pixel coordinates of objects
-  in this system, <tt>"logical"</tt> is the system of choice for most applications.
+  in this system, <span style="font-family: monospace;">"logical"</span> is the system of choice for most applications.
   </dd>
   </dl>
   <dl>
@@ -527,13 +527,13 @@ ccmap: Compute image plate solutions using matched coordinate lists
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>The graphics device.
   </dd>
   </dl>
   <dl>
-  <dt><b>cursor = <tt>""</tt></b></dt>
+  <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>The graphics cursor.
   </dd>
@@ -563,8 +563,8 @@ ccmap: Compute image plate solutions using matched coordinate lists
   The <i>lngunits</i> and <i>latunits</i> parameters set the units of the input
   celestial coordinates. If undefined lngunits and latunits assume sensible
   defaults for the input celestial coordinate system set by the <i>insystem</i>
-  parameter, e.g. <tt>"hours"</tt> and <tt>"degrees"</tt> for equatorial coordinates and <tt>"degrees"</tt>
-  and <tt>"degrees"</tt> for galactic coordinates. The input celestial coordinate system
+  parameter, e.g. <span style="font-family: monospace;">"hours"</span> and <span style="font-family: monospace;">"degrees"</span> for equatorial coordinates and <span style="font-family: monospace;">"degrees"</span>
+  and <span style="font-family: monospace;">"degrees"</span> for galactic coordinates. The input celestial coordinate system
   must be one of the following: equatorial, ecliptic, galactic, or supergalactic.
   The equatorial coordinate systems must be one of: 1) FK4, the mean place
   pre-IAU 1976 system, 2) FK4-NO-E, the same as FK4 but without the E-terms,
@@ -586,12 +586,12 @@ ccmap: Compute image plate solutions using matched coordinate lists
   the celestial coordinates of the projection reference point set by
   the user. The default projection is the tangent plane or gnomonic
   projection commonly used in optical astronomy. The projections most commonly
-  used in astronomy are <tt>"sin"</tt> (the orthographic projection, used in radio
-  aperture synthesis), <tt>"arc"</tt> (the zenithal equidistant projection, widely
-  used as an approximation for Schmidt telescopes), and <tt>"lin"</tt> (linear).
-  Other supported projections are <tt>"ait"</tt>, <tt>"car"</tt>, <tt>"csc"</tt>, <tt>"gls"</tt>, <tt>"mer"</tt>, <tt>"mol"</tt>,
-  <tt>"par"</tt>, <tt>"pco"</tt>, <tt>"qsc"</tt>, <tt>"stg"</tt>, <tt>"tsc"</tt>, and <tt>"zea"</tt>. The experimental projection
-  function <tt>"tnx"</tt> combines the <tt>"tan"</tt> projection with a polynomial fit
+  used in astronomy are <span style="font-family: monospace;">"sin"</span> (the orthographic projection, used in radio
+  aperture synthesis), <span style="font-family: monospace;">"arc"</span> (the zenithal equidistant projection, widely
+  used as an approximation for Schmidt telescopes), and <span style="font-family: monospace;">"lin"</span> (linear).
+  Other supported projections are <span style="font-family: monospace;">"ait"</span>, <span style="font-family: monospace;">"car"</span>, <span style="font-family: monospace;">"csc"</span>, <span style="font-family: monospace;">"gls"</span>, <span style="font-family: monospace;">"mer"</span>, <span style="font-family: monospace;">"mol"</span>,
+  <span style="font-family: monospace;">"par"</span>, <span style="font-family: monospace;">"pco"</span>, <span style="font-family: monospace;">"qsc"</span>, <span style="font-family: monospace;">"stg"</span>, <span style="font-family: monospace;">"tsc"</span>, and <span style="font-family: monospace;">"zea"</span>. The experimental projection
+  function <span style="font-family: monospace;">"tnx"</span> combines the <span style="font-family: monospace;">"tan"</span> projection with a polynomial fit
   to the residuals can be used to represent more complicated distortion
   functions.
   </p>
@@ -645,8 +645,8 @@ ccmap: Compute image plate solutions using matched coordinate lists
   WCS of both the tangent point and plate solution can be obtained.
   </p>
   <p>
-  Several polynomial cross terms options are available. Options <tt>"none"</tt>, 
-  <tt>"half"</tt>, and <tt>"full"</tt> are illustrated below for a quadratic polynomial in
+  Several polynomial cross terms options are available. Options <span style="font-family: monospace;">"none"</span>, 
+  <span style="font-family: monospace;">"half"</span>, and <span style="font-family: monospace;">"full"</span> are illustrated below for a quadratic polynomial in
   x and y.
   </p>
   <pre>
@@ -677,10 +677,10 @@ ccmap: Compute image plate solutions using matched coordinate lists
            a13' * y ** 2 + a23' * x *  y ** 2 + a33' * x ** 2 * y ** 2
   </pre>
   <p>
-  If <i>refpoint</i> is <tt>"coords"</tt>, then the sky projection reference point is set
+  If <i>refpoint</i> is <span style="font-family: monospace;">"coords"</span>, then the sky projection reference point is set
   to the mean of the input celestial coordinates. For images where the true
   reference point is close to the center of the input coordinate distribution,
-  this definition is adequate for many purposes. If <i>refpoint</i> is <tt>"user"</tt>,
+  this definition is adequate for many purposes. If <i>refpoint</i> is <span style="font-family: monospace;">"user"</span>,
   the user may either set the celestial coordinates of the reference
   point explicitly, e.g. <i>lngref</i> = 13:41:02.3 and <i>latref</i> = -33:42:20,
   or point these parameters to the appropriate keywords in the input image
@@ -714,15 +714,15 @@ ccmap: Compute image plate solutions using matched coordinate lists
   polynomials of order <i>xxorder</i> and <i>xyorder</i> in x and <i>yxorder</i>
   and <i>yyorder</i> in y. Cross-terms are optional and are turned on and
   off by setting the <i>xxterms</i> and <i>xyterms</i> parameters. If the
-  <b>fitgeometry</b> parameter is anything other than <tt>"general"</tt>, the order
+  <b>fitgeometry</b> parameter is anything other than <span style="font-family: monospace;">"general"</span>, the order
   parameters assume the value 2 and the cross-terms switches assume the value
-  <tt>"none"</tt>, regardless of the values set by the user. All computation are done in
+  <span style="font-family: monospace;">"none"</span>, regardless of the values set by the user. All computation are done in
   double precision. Automatic pixel rejection may be enabled by setting
   <i>maxiter</i> &gt; 0 and <i>reject</i> to a  positive value, usually something
   in the range 2.5-5.0.
   </p>
   <p>
-  CCMAP may be run interactively by setting <i>interactive</i> to <tt>"yes"</tt> and
+  CCMAP may be run interactively by setting <i>interactive</i> to <span style="font-family: monospace;">"yes"</span> and
   inputting commands by the use of simple keystrokes. In interactive mode the
   user has the option of changing the fitting parameters and displaying the
   data and fit graphically until a satisfactory fit has been achieved. The
@@ -768,7 +768,7 @@ ccmap: Compute image plate solutions using matched coordinate lists
   if one is supplied, or the name of the input coordinate file <i>input</i>.
   </p>
   <p>
-  If the <i>update</i> switch is <tt>"yes"</tt> and an input image is specified,
+  If the <i>update</i> switch is <span style="font-family: monospace;">"yes"</span> and an input image is specified,
   a new image wcs is derived from the linear component of the computed plate
   solution and written to the image header. The numerical components of
   the new image wcs are written to the standards FITS keywords, CRPIX, CRVAL,
@@ -808,14 +808,14 @@ ccmap: Compute image plate solutions using matched coordinate lists
   historical (use of EPOCH keyword at NOAO) reasons.
   </p>
   <p>
-  If <i>verbose</i> is <tt>"yes"</tt>, various pieces of useful information are
+  If <i>verbose</i> is <span style="font-family: monospace;">"yes"</span>, various pieces of useful information are
   printed to the terminal as the task proceeds. If <i>results</i> is set to a
   file name then the original pixel and celestial coordinates, the fitted
   celestial coordinates, and the residuals of the fit in arcseconds are written
   to that file.
   </p>
   <p>
-  The transformation computed by the <tt>"general"</tt> fitting geometry is arbitrary
+  The transformation computed by the <span style="font-family: monospace;">"general"</span> fitting geometry is arbitrary
   and does not correspond to a physically meaningful model. However the computed
   coefficients for the linear term can be given a simple geometrical 
   interpretation for all the fitting geometries as shown below.
@@ -916,16 +916,16 @@ ccmap: Compute image plate solutions using matched coordinate lists
   Additional information on the IRAF world coordinate systems can be found in
   the help pages for the WCSEDIT and WCRESET tasks.
   Detailed documentation for the IRAF world coordinate system interface MWCS
-  can be found in the file <tt>"iraf$sys/mwcs/MWCS.hlp"</tt>. This file can be
-  formatted and printed with the command <tt>"help iraf$sys/mwcs/MWCS.hlp fi+ |
-  lprint"</tt>.
+  can be found in the file <span style="font-family: monospace;">"iraf$sys/mwcs/MWCS.hlp"</span>. This file can be
+  formatted and printed with the command <span style="font-family: monospace;">"help iraf$sys/mwcs/MWCS.hlp fi+ |
+  lprint"</span>.
   </p>
   <p>
   Details of the FITS header world coordinate system interface can
-  be found in the draft paper <tt>"World Coordinate Systems Representations Within the
-  FITS Format"</tt> by Hanisch and Wells, available from the iraf anonymous ftp
-  archive and the draft paper which supersedes it <tt>"Representations of Celestial
-  Coordinates in FITS"</tt> by Greisen and Calabretta available from the NRAO
+  be found in the draft paper <span style="font-family: monospace;">"World Coordinate Systems Representations Within the
+  FITS Format"</span> by Hanisch and Wells, available from the iraf anonymous ftp
+  archive and the draft paper which supersedes it <span style="font-family: monospace;">"Representations of Celestial
+  Coordinates in FITS"</span> by Greisen and Calabretta available from the NRAO
   anonymous ftp archives.
   </p>
   <p>
@@ -933,11 +933,11 @@ ccmap: Compute image plate solutions using matched coordinate lists
   SLALIB library provided courtesy of Patrick Wallace. These routines
   are very well documented internally with extensive references provided
   where appropriate. Interested users are encouraged to examine the routines
-  for this information. Type <tt>"help slalib"</tt> to get a listing of the SLALIB
-  routines, <tt>"help slalib opt=sys"</tt> to get a concise summary of the library,
-  and <tt>"help &lt;routine&gt;"</tt> to get a description of each routine's calling sequence,
+  for this information. Type <span style="font-family: monospace;">"help slalib"</span> to get a listing of the SLALIB
+  routines, <span style="font-family: monospace;">"help slalib opt=sys"</span> to get a concise summary of the library,
+  and <span style="font-family: monospace;">"help &lt;routine&gt;"</span> to get a description of each routine's calling sequence,
   required input and output, etc. An overview of the library can be found in the
-  paper <tt>"SLALIB - A Library of Subprograms"</tt>, Starlink User Note 67.7
+  paper <span style="font-family: monospace;">"SLALIB - A Library of Subprograms"</span>, Starlink User Note 67.7
   by P.T. Wallace, available from the Starlink archives.
   </p>
   <!-- EndSection:   'REFERENCES' -->

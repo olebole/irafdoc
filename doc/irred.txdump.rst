@@ -35,10 +35,10 @@ txdump: Select fields from the center task output text file
   <dd>A template defining the fields to be printed from each selected record.
   The fields are specified by keywords defined in the text database output
   files #K and #N entries. Upper or lower case and minimum match
-  abbreviations are permissible. Some fields such as <tt>"mag"</tt> may have
+  abbreviations are permissible. Some fields such as <span style="font-family: monospace;">"mag"</span> may have
   multiple entries. An individual entry can be referenced by specifying an
-  array index, e.g. <tt>"mag[2]"</tt> or several values can be selected by
-  specifying a range of elements, e.g. <tt>"mag[1-3]"</tt>. The fields are output in
+  array index, e.g. <span style="font-family: monospace;">"mag[2]"</span> or several values can be selected by
+  specifying a range of elements, e.g. <span style="font-family: monospace;">"mag[1-3]"</span>. The fields are output in
   the order in which they are specified in the template.
   </dd>
   </dl>
@@ -48,7 +48,7 @@ txdump: Select fields from the center task output text file
   <dd>The boolean expression to be evaluated once per record.
   Only the fields in those records for which the boolean expression
   evaluates to yes are printed.
-  If <i>expr</i> = <tt>"yes"</tt>, the specified fields in all the records are
+  If <i>expr</i> = <span style="font-family: monospace;">"yes"</span>, the specified fields in all the records are
   printed.
   </dd>
   </dl>

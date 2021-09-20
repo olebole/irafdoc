@@ -39,9 +39,9 @@ tbdump: Print selected columns of a list of tables databases
   meta-characters.  The names or patterns are separated by commas or white space.
   Column names must be spelled in full but may be upper or lower case.
   The columns list can be placed in a file and the name of the file preceded
-  by an <tt>'@'</tt> character given in place of the column template.
+  by an <span style="font-family: monospace;">'@'</span> character given in place of the column template.
   If the first non-white character in the column template
-  is the negation character <tt>'~'</tt>, the output will contain those columns
+  is the negation character <span style="font-family: monospace;">'~'</span>, the output will contain those columns
   NOT named in the remainder of the column template.
   </dd>
   </dl>
@@ -51,44 +51,44 @@ tbdump: Print selected columns of a list of tables databases
   <dd>The boolean expression to be evaluated once per record.
   Only the fields in those records for which the boolean expression
   evaluates to yes are printed.
-  If <i>expr</i> = <tt>"yes"</tt>, the specified columns in all the records are
+  If <i>expr</i> = <span style="font-family: monospace;">"yes"</span>, the specified columns in all the records are
   printed.
   </dd>
   </dl>
   <dl>
   <dt><b>datafile = STDOUT</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='datafile' Line='datafile = STDOUT' -->
-  <dd>If <i>Datafile</i> is not null (<tt>""</tt>) then the table data will be written
+  <dd>If <i>Datafile</i> is not null (<span style="font-family: monospace;">""</span>) then the table data will be written
   to an output file with this name. By default the table data is written
   on the standard output.
   <i>Datafile</i> will not be created if the table is empty.
   </dd>
   </dl>
   <dl>
-  <dt><b>cdfile = <tt>""</tt></b></dt>
+  <dt><b>cdfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cdfile' Line='cdfile = ""' -->
-  <dd>If <i>Cdfile</i> is not null (<tt>""</tt>) then the column definitions will be written
+  <dd>If <i>Cdfile</i> is not null (<span style="font-family: monospace;">""</span>) then the column definitions will be written
   to an output file with this name.
   The column definitions consist of the column name, data type (R, D, I, B,
   or C), print format, and units.
   </dd>
   </dl>
   <dl>
-  <dt><b>pfile = <tt>""</tt></b></dt>
+  <dt><b>pfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pfile' Line='pfile = ""' -->
-  <dd>If <i>Pfile</i> is not null (<tt>""</tt>) then the header parameters will be written
+  <dd>If <i>Pfile</i> is not null (<span style="font-family: monospace;">""</span>) then the header parameters will be written
   to an output file with this name.
   <i>Pfile</i> will not be created if there are no header parameters.
   </dd>
   </dl>
   <dl>
-  <dt><b>rows = <tt>"-"</tt></b></dt>
+  <dt><b>rows = <span style="font-family: monospace;">"-"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rows' Line='rows = "-"' -->
   <dd><i>Rows</i> is a string which may be used to specify ranges of rows which are
-  to be dumped.  The default of <tt>"-"</tt> means dump all rows.  The first
-  ten rows could be specified as <i>rows</i> = <tt>"1-10"</tt> or just <i>rows</i> = <tt>"-10"</tt>.
+  to be dumped.  The default of <span style="font-family: monospace;">"-"</span> means dump all rows.  The first
+  ten rows could be specified as <i>rows</i> = <span style="font-family: monospace;">"1-10"</span> or just <i>rows</i> = <span style="font-family: monospace;">"-10"</span>.
   To dump the first ten rows and all rows from 900 through the last,
-  use <i>rows</i> = <tt>"-10,900-"</tt>.  <i>Rows</i> = <tt>"1,3,7,23"</tt> will print only
+  use <i>rows</i> = <span style="font-family: monospace;">"-10,900-"</span>.  <i>Rows</i> = <span style="font-family: monospace;">"1,3,7,23"</span> will print only
   those four rows.  It is not an error to specify rows larger than the largest
   row number as they will simply be ignored.
   See the help for RANGES in XTOOLS for further information.
@@ -132,7 +132,7 @@ tbdump: Print selected columns of a list of tables databases
   By default only the column data is dumped.
   </p>
   <p>
-  TBDUMP queries for the columns to be dumped. If <i>columns</i> is null (<tt>""</tt>)
+  TBDUMP queries for the columns to be dumped. If <i>columns</i> is null (<span style="font-family: monospace;">""</span>)
   then all the columns are dumped.
   All the rows are dumped by default, but ranges of
   rows may be specified with the <i>rows</i> parameter.
@@ -149,7 +149,7 @@ tbdump: Print selected columns of a list of tables databases
   a list of
   column names so there is no question about spelling or case.  This list may
   be edited to rearrange the names and/or delete some, the list
-  file preceded by an <tt>'@'</tt> and used as the value of the <i>columns</i>
+  file preceded by an <span style="font-family: monospace;">'@'</span> and used as the value of the <i>columns</i>
   parameter.
   </p>
   <p>

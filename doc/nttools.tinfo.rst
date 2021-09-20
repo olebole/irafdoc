@@ -122,12 +122,12 @@ tinfo: Display table size information.
   <dl>
   <dt><b>(tbltype) [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(tbltype) [string]' -->
-  <dd>The table type, currently either <tt>"stsdas"</tt>, <tt>"fits"</tt> or <tt>"text"</tt>.
-  <tt>"stsdas"</tt> is a machine dependent binary format,
+  <dd>The table type, currently either <span style="font-family: monospace;">"stsdas"</span>, <span style="font-family: monospace;">"fits"</span> or <span style="font-family: monospace;">"text"</span>.
+  <span style="font-family: monospace;">"stsdas"</span> is a machine dependent binary format,
   the default .tab format.
-  <tt>"fits"</tt> means that the table is a TABLE or BINTABLE extension
+  <span style="font-family: monospace;">"fits"</span> means that the table is a TABLE or BINTABLE extension
   in a FITS file.
-  <tt>"text"</tt> is an ASCII file in tabular format.
+  <span style="font-family: monospace;">"text"</span> is an ASCII file in tabular format.
   See also 'subtype'.
   </dd>
   </dl>
@@ -135,14 +135,14 @@ tinfo: Display table size information.
   <dt><b>(subtype) [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(subtype) [string]' -->
   <dd>For FITS tables the subtype can be either
-  <tt>"ascii"</tt> (a TABLE extension) or <tt>"binary"</tt> (a BINTABLE extension).
+  <span style="font-family: monospace;">"ascii"</span> (a TABLE extension) or <span style="font-family: monospace;">"binary"</span> (a BINTABLE extension).
   For text tables the subtype can be either
-  <tt>"simple"</tt> or <tt>"explicit column definitions"</tt>.
+  <span style="font-family: monospace;">"simple"</span> or <span style="font-family: monospace;">"explicit column definitions"</span>.
   The latter subtype means there are column definition lines in the file,
-  in the format:  <tt>"#c column_name datatype print_format units"</tt>.
+  in the format:  <span style="font-family: monospace;">"#c column_name datatype print_format units"</span>.
   A simple text table has column names c1, c2, etc., and no units.
   For STSDAS format tables
-  the subtype will be either <tt>"row ordered"</tt> or <tt>"column ordered"</tt>,
+  the subtype will be either <span style="font-family: monospace;">"row ordered"</span> or <span style="font-family: monospace;">"column ordered"</span>,
   which indicates the way the elements are stored in the table file.
   </dd>
   </dl>

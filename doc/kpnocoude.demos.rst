@@ -50,7 +50,7 @@ demos: Demonstrations and tests
   from a previous execution.  After the procedure is completed the data,
   logfiles, etc. are left so that they may be examined further and
   the user may try some experiments.  Thus, it might be useful to create
-  a new directory for the demo using <b>mkdir</b> and <tt>"cd"</tt> to it.
+  a new directory for the demo using <b>mkdir</b> and <span style="font-family: monospace;">"cd"</span> to it.
   </p>
   <p>
   Currently, most of the demos are test procedures which do not contain

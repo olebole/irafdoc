@@ -26,7 +26,7 @@ mskexpr: Create masks using an expression and reference images
   <dt><b>expr</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='expr' Line='expr' -->
   <dd>The expression to be evaluated.  This may be the actual expression, or the
-  string <tt>"@file"</tt> in which case the expression is taken from the named file.
+  string <span style="font-family: monospace;">"@file"</span> in which case the expression is taken from the named file.
   </dd>
   </dl>
   <dl>
@@ -42,8 +42,8 @@ mskexpr: Create masks using an expression and reference images
   <!-- Sec='PARAMETERS' Level=0 Label='refimages' Line='refimages' -->
   <dd>The optional list of reference images. If the reference image list is defined
   there must be one reference image for every output mask. The reference image
-  operand name is <tt>"i"</tt> and the associated reference image keywords are
-  referred to as <tt>"i.&lt;keyword&gt;"</tt>.
+  operand name is <span style="font-family: monospace;">"i"</span> and the associated reference image keywords are
+  referred to as <span style="font-family: monospace;">"i.&lt;keyword&gt;"</span>.
   </dd>
   </dl>
   <dl>
@@ -51,19 +51,19 @@ mskexpr: Create masks using an expression and reference images
   <!-- Sec='PARAMETERS' Level=0 Label='refmasks' Line='refmasks' -->
   <dd>The optional list of reference masks. If the reference mask list is defined
   there must be one reference mask for every output mask. The reference mask
-  operand name is <tt>"m"</tt> and the associated reference image keywords are
-  referred to as <tt>"m.&lt;keyword&gt;"</tt>.
+  operand name is <span style="font-family: monospace;">"m"</span> and the associated reference image keywords are
+  referred to as <span style="font-family: monospace;">"m.&lt;keyword&gt;"</span>.
   If both a reference image and reference mask are defined the reference mask will
   be matched to reference image as described by the help topic <b>pmmatch</b>.
-  The application default is a match in <tt>"logical"</tt> coordinates which is
+  The application default is a match in <span style="font-family: monospace;">"logical"</span> coordinates which is
   effectively a trim or pad operation to match the size of the reference image.
-  However, by use of the <tt>"pmmatch"</tt> environment variable one may match in
-  <tt>"physcial"</tt> or <tt>"world"</tt> coordinates.  Note that the simple expression
-  <tt>"m"</tt> may be used to create an output mask file from the internal matching.
+  However, by use of the <span style="font-family: monospace;">"pmmatch"</span> environment variable one may match in
+  <span style="font-family: monospace;">"physcial"</span> or <span style="font-family: monospace;">"world"</span> coordinates.  Note that the simple expression
+  <span style="font-family: monospace;">"m"</span> may be used to create an output mask file from the internal matching.
   </dd>
   </dl>
   <dl>
-  <dt><b>dims = <tt>"512,512"</tt></b></dt>
+  <dt><b>dims = <span style="font-family: monospace;">"512,512"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dims' Line='dims = "512,512"' -->
   <dd>The default output mask dimensions. The value of dims is a comma delimited
   list of dimensions.
@@ -77,7 +77,7 @@ mskexpr: Create masks using an expression and reference images
   </dd>
   </dl>
   <dl>
-  <dt><b>exprdb = <tt>"none"</tt></b></dt>
+  <dt><b>exprdb = <span style="font-family: monospace;">"none"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='exprdb' Line='exprdb = "none"' -->
   <dd>The file name of an optional expression database. An expression database
   may be used to define symbolic constants or a library of custom function
@@ -95,7 +95,7 @@ mskexpr: Create masks using an expression and reference images
   <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Mskexpr evaluates a mask expression <i>expr</i> and writes the results to an
-  output mask <i>masks</i> image. If expr is preceded by an <tt>"@"</tt> sign then
+  output mask <i>masks</i> image. If expr is preceded by an <span style="font-family: monospace;">"@"</span> sign then
   the expression is read from the named file.  The size of the output mask is
   determined by the reference image <i>refimages</i> if any, the reference masks
   <i>refmasks</i> if any, or the values of the <i>dims</i> parameter, in that
@@ -125,24 +125,24 @@ mskexpr: Create masks using an expression and reference images
   <p>
   Sometimes one may want to merge previous mask information into the output
   mask.  The reference mask can be used for this purpose using the operand
-  <tt>"m"</tt> in the expressions.
+  <span style="font-family: monospace;">"m"</span> in the expressions.
   </p>
   <p>
   When both a reference image and a reference mask are specified another
   useful feature is provided.  This consists of matching the reference
   mask to the reference image even when the two are of different sizes or
-  are related not <tt>"pixel-by-pixel"</tt> but through various transformations.
+  are related not <span style="font-family: monospace;">"pixel-by-pixel"</span> but through various transformations.
   The matching feature is described in the help topic <b>pmmatch</b>.
   (Note that the default for matching in world coordinates results in
   boolean mask values so if the actual mask values are needed the pmmatch
   setting must be set appropriately.)  The application default is a match
-  in <tt>"logical"</tt> coordinates which is effectively a trim or pad operation to
-  match the size of the reference image.  However, by use of the <tt>"pmmatch"</tt>
-  environment variable one may match in <tt>"physcial"</tt> or <tt>"world"</tt> coordinates.
+  in <span style="font-family: monospace;">"logical"</span> coordinates which is effectively a trim or pad operation to
+  match the size of the reference image.  However, by use of the <span style="font-family: monospace;">"pmmatch"</span>
+  environment variable one may match in <span style="font-family: monospace;">"physcial"</span> or <span style="font-family: monospace;">"world"</span> coordinates.
   </p>
   <p>
   This task is one way to create a matched mask for tasks that do not
-  do the matching.  The simple expression <tt>"m"</tt> when both a reference image
+  do the matching.  The simple expression <span style="font-family: monospace;">"m"</span> when both a reference image
   and reference mask are specified will output a mask from for the reference
   image that is match in logical pixel space.
   </p>
@@ -168,9 +168,9 @@ mskexpr: Create masks using an expression and reference images
   <p>
   Finally, there is a special builtin type of operand used to represent the
   mask pixel coordinates in a mask expression.  These operands have the
-  special reserved names <tt>"I"</tt>, <tt>"J"</tt>, <tt>"K"</tt>, etc., up to the dimensions of the
+  special reserved names <span style="font-family: monospace;">"I"</span>, <span style="font-family: monospace;">"J"</span>, <span style="font-family: monospace;">"K"</span>, etc., up to the dimensions of the
   output image.  The names must be upper case to avoid confusion to with the
-  input operands <tt>"i"</tt> and <tt>"m"</tt>.
+  input operands <span style="font-family: monospace;">"i"</span> and <span style="font-family: monospace;">"m"</span>.
   </p>
   <pre>
           I                x coordinate of pixel (column)
@@ -229,8 +229,8 @@ mskexpr: Create masks using an expression and reference images
   two input vectors.
   </p>
   <p>
-  The substring equals operator <tt>"?="</tt>, used for string comparisons,  is like
-  <tt>"=="</tt> but checks for the presence of a substring, rather than exact equality
+  The substring equals operator <span style="font-family: monospace;">"?="</span>, used for string comparisons,  is like
+  <span style="font-family: monospace;">"=="</span> but checks for the presence of a substring, rather than exact equality
   of the two strings.
   </p>
   <p>
@@ -421,7 +421,7 @@ mskexpr: Create masks using an expression and reference images
   The complete syntax of a macro entry is as follows:
   </p>
   <p>
-          &lt;symbol&gt;[<tt>'('</tt> arg-list <tt>')'</tt>][<tt>':'</tt>|<tt>'='</tt>]     replacement-text
+          &lt;symbol&gt;[<span style="font-family: monospace;">'('</span> arg-list <span style="font-family: monospace;">')'</span>][<span style="font-family: monospace;">':'</span>|<span style="font-family: monospace;">'='</span>]     replacement-text
   </p>
   <p>
   The replacement text may appear on the same line as the macro name or may
@@ -475,7 +475,7 @@ mskexpr: Create masks using an expression and reference images
   <p>
   5. Create a 0 valued 512 x 512 mask and set all the pixels inside a circle
   excluding a wedge shaped region to 1. The expression cmpie is used defined
-  and stored in the expression database <tt>"myexpr.db"</tt> 
+  and stored in the expression database <span style="font-family: monospace;">"myexpr.db"</span> 
   </p>
   <pre>
   cl&gt; type myexpr.db

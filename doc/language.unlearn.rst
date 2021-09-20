@@ -73,7 +73,7 @@ unlearn: Restore the default parameters for a task or package
   e.g., if the CL is interrupted while it is updating the parameter file on
   disk, causing a truncated file to be written.  If this should occur one
   will get error messages complaining about illegal arguments or parameters
-  not found when the task is run.  The fix is to <tt>"unlearn"</tt> the parameters
+  not found when the task is run.  The fix is to <span style="font-family: monospace;">"unlearn"</span> the parameters
   for the task.
   </p>
   <p>

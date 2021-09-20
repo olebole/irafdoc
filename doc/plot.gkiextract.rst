@@ -56,15 +56,15 @@ gkiextract: Extract individual frames from metacode file
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. Extract frames 1, 3 and 5 from metacode file <tt>"mc_file"</tt> and
-  plot them on the device <tt>"vup"</tt>:
+  1. Extract frames 1, 3 and 5 from metacode file <span style="font-family: monospace;">"mc_file"</span> and
+  plot them on the device <span style="font-family: monospace;">"vup"</span>:
   </p>
   <p>
       cl&gt; gkiextract mc_file 1,3,5 | stdplot dev=vup
   </p>
   <p>
-  2. Print a directory of the first 99 frames in <tt>"mc_file"</tt>, extract
-  those files requested by the user and write them to file <tt>"new_mc_file"</tt>.
+  2. Print a directory of the first 99 frames in <span style="font-family: monospace;">"mc_file"</span>, extract
+  those files requested by the user and write them to file <span style="font-family: monospace;">"new_mc_file"</span>.
   </p>
   <p>
       cl&gt; gkiextract mc_file 1-99 ver+ &gt; new_mc_file

@@ -31,11 +31,11 @@ gtpar: Pset to specify graph parameters for 'gtedit' task.
   runs 'eparam', enabling the parameters to be interactively edited. 
   Parameters can also be modified on the
   CL command line by specifying the pset name and parameter name,
-  for example, <tt>"gtpar.box = no"</tt>).
+  for example, <span style="font-family: monospace;">"gtpar.box = no"</span>).
   The pset name will also appear as one of
   the task parameters in the 'gtedit' task;
   to change values in the pset,
-  position the cursor to the 'gtpar' pset name and type <tt>":e"</tt> to invoke 'eparam'.
+  position the cursor to the 'gtpar' pset name and type <span style="font-family: monospace;">":e"</span> to invoke 'eparam'.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Parameters</h3>
@@ -130,7 +130,7 @@ gtpar: Pset to specify graph parameters for 'gtedit' task.
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(title = imtitle)' -->
   <dd>The plot title consists of a standard system-supplied string containing
   the user's name, date, etc.  If the 'title' parameter contains the string
-  <tt>"imtitle"</tt> (the default), then the plot title will contain a second line
+  <span style="font-family: monospace;">"imtitle"</span> (the default), then the plot title will contain a second line
   made up from the input file or table name.  Otherwise, the title will
   contain the string value.
   </dd>
@@ -193,8 +193,6 @@ gtpar: Pset to specify graph parameters for 'gtedit' task.
   <dt><b>(fill = yes) [boolean]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(fill = yes) [boolean]' -->
   <dd>Fill the viewport rather than enforcing unity aspect ratio?
-  </dd>
-  </dl>
   <!-- EndSection:   'PARAMETERS' -->
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
@@ -204,13 +202,9 @@ gtpar: Pset to specify graph parameters for 'gtedit' task.
   <!-- EndSection:   'BUGS' -->
   <h3>See also</h3>
   <!-- BeginSection: 'SEE ALSO' -->
-  <p>
   sgraph
-  </p>
-  <p>
-  Type <tt>"help tables opt=sys"</tt> for a higher-level description of the 'tables' 
+  Type <span style="font-family: monospace;">"help tables opt=sys"</span> for a higher-level description of the 'tables' 
   package.
-  </p>
   
   <!-- EndSection:    'SEE ALSO' -->
   

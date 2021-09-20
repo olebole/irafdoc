@@ -34,8 +34,8 @@ netstatus: Print the status of the local network
   The status output identifies the local node, lists all nodes in the local
   network, and lists all the aliases (recognized names) for each node.
   A message will be printed if networking is disabled on the local machine.
-  The local network is defined by the table files <tt>"dev$hosts"</tt>, <tt>"dev$uhosts"</tt>,
-  and <tt>"dev$hostlogin"</tt>.
+  The local network is defined by the table files <span style="font-family: monospace;">"dev$hosts"</span>, <span style="font-family: monospace;">"dev$uhosts"</span>,
+  and <span style="font-family: monospace;">"dev$hostlogin"</span>.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Examples</h3>

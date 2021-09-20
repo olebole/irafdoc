@@ -52,7 +52,7 @@ flat1d: Make flat field by fitting a 1D func. to the lines or columns
   </dd>
   </dl>
   <dl>
-  <dt><b>sample = <tt>"*"</tt></b></dt>
+  <dt><b>sample = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"' -->
   <dd>Lines or columns to be used in the fits.
   </dd>
@@ -69,8 +69,8 @@ flat1d: Make flat field by fitting a 1D func. to the lines or columns
   <dt><b>function = spline3</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = spline3' -->
   <dd>Function to be fit to the image lines or columns.  The functions are
-  <tt>"legendre"</tt> (legendre polynomial), <tt>"chebyshev"</tt> (chebyshev polynomial),
-  <tt>"spline1"</tt> (linear spline), and <tt>"spline3"</tt> (cubic spline).  The functions
+  <span style="font-family: monospace;">"legendre"</span> (legendre polynomial), <span style="font-family: monospace;">"chebyshev"</span> (chebyshev polynomial),
+  <span style="font-family: monospace;">"spline1"</span> (linear spline), and <span style="font-family: monospace;">"spline3"</span> (cubic spline).  The functions
   may be abbreviated.
   </dd>
   </dl>
@@ -107,13 +107,13 @@ flat1d: Make flat field by fitting a 1D func. to the lines or columns
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>Graphics device for interactive graphics output.
   </dd>
   </dl>
   <dl>
-  <dt><b>cursor = <tt>""</tt></b></dt>
+  <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Graphics cursor input
   </dd>
@@ -133,7 +133,7 @@ flat1d: Make flat field by fitting a 1D func. to the lines or columns
   The function fitting parameters may be set interactively when the interactive
   flag is set using the interactive curve fitting package <b>icfit</b>.
   The cursor mode commands for this package are described in a separate
-  help entry under <tt>"icfit"</tt>.  For two dimensional images the user is
+  help entry under <span style="font-family: monospace;">"icfit"</span>.  For two dimensional images the user is
   prompted for the sample line or column or a blank-separated range to be
   averaged and graphed.
   Note that the lines or columns are relative the input image section; for
@@ -156,13 +156,13 @@ flat1d: Make flat field by fitting a 1D func. to the lines or columns
   <p>
   This task is very similar to <b>fit1d</b> with the addition of the
   parameter <i>minflat</i> and the deletion of the parameter <i>type</i>
-  which is always <tt>"ratio"</tt>.
+  which is always <span style="font-family: monospace;">"ratio"</span>.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1.  Create a flat field from the calibration image <tt>"quartz"</tt> with the
+  1.  Create a flat field from the calibration image <span style="font-family: monospace;">"quartz"</span> with the
   spectrum running along the lines.  Exclude the first and last columns,
   use a spline fit of 25 pieces (a width of 32 pixels over 800 columns),
   and set grow to 4 pixels.
@@ -216,7 +216,7 @@ flat1d: Make flat field by fitting a 1D func. to the lines or columns
   <dl>
   <dt><b>FLAT1D V2.10.3</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='FLAT1D' Line='FLAT1D V2.10.3' -->
-  <dd>The image header keyword <tt>"CCDMEAN = 1."</tt> is now added or updated.
+  <dd>The image header keyword <span style="font-family: monospace;">"CCDMEAN = 1."</span> is now added or updated.
   </dd>
   </dl>
   <!-- EndSection:   'REVISIONS' -->

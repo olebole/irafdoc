@@ -60,21 +60,21 @@ mosproc: Prepare images for quick look mosaicing
   </dd>
   </dl>
   <dl>
-  <dt><b>sky = <tt>""</tt></b></dt>
+  <dt><b>sky = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sky' Line='sky = ""' -->
   <dd>The name of the sky image.
   </dd>
   </dl>
   <dl>
-  <dt><b>exclude = <tt>""</tt></b></dt>
+  <dt><b>exclude = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='exclude' Line='exclude = ""' -->
   <dd>The input images to be excluded from the computation of the sky image.
-  For example if <i>exclude</i>=<tt>"1,3-5"</tt> then input images 1, 3, 4, 5 are
+  For example if <i>exclude</i>=<span style="font-family: monospace;">"1,3-5"</span> then input images 1, 3, 4, 5 are
   not used for computing the sky frame.
   </dd>
   </dl>
   <dl>
-  <dt><b>expname = <tt>"exptime"</tt></b></dt>
+  <dt><b>expname = <span style="font-family: monospace;">"exptime"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='expname' Line='expname = "exptime"' -->
   <dd>The image header exposure time keyword. If the sky frame is computed
   internally by median filtering the input images, the individual images
@@ -94,7 +94,7 @@ mosproc: Prepare images for quick look mosaicing
   </dd>
   </dl>
   <dl>
-  <dt><b>flat = <tt>""</tt></b></dt>
+  <dt><b>flat = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='flat' Line='flat = ""' -->
   <dd>The name of the flat field image.
   </dd>
@@ -106,28 +106,28 @@ mosproc: Prepare images for quick look mosaicing
   </dd>
   </dl>
   <dl>
-  <dt><b>trim_section = <tt>"[*,*]"</tt></b></dt>
+  <dt><b>trim_section = <span style="font-family: monospace;">"[*,*]"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='trim_section' Line='trim_section = "[*,*]"' -->
   <dd>The section of the input images to be mosaiced into the output
   image. Section can be used to flip and/or trim the individual
   subrasters before adding them to the mosaic. For example if we
   want to flip each subraster around the y axis before adding it
-  to the mosaic, then <i>trim_section</i> = <tt>"[*,-*]"</tt>.
+  to the mosaic, then <i>trim_section</i> = <span style="font-family: monospace;">"[*,-*]"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>corner = <tt>"lr"</tt></b></dt>
+  <dt><b>corner = <span style="font-family: monospace;">"lr"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='corner' Line='corner = "lr"' -->
-  <dd>The starting position in the output image. The four options are <tt>"ll"</tt> for
-  lower left corner, <tt>"lr"</tt> for lower right corner, <tt>"ul"</tt> for upper left
-  corner and <tt>"ur"</tt> for upper right corner.
+  <dd>The starting position in the output image. The four options are <span style="font-family: monospace;">"ll"</span> for
+  lower left corner, <span style="font-family: monospace;">"lr"</span> for lower right corner, <span style="font-family: monospace;">"ul"</span> for upper left
+  corner and <span style="font-family: monospace;">"ur"</span> for upper right corner.
   </dd>
   </dl>
   <dl>
-  <dt><b>direction = <tt>"row"</tt></b></dt>
+  <dt><b>direction = <span style="font-family: monospace;">"row"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='direction' Line='direction = "row"' -->
   <dd>Add input images to the output image in row or column order. The options
-  are <tt>"row"</tt> for row order and <tt>"column"</tt> for column order. The direction
+  are <span style="font-family: monospace;">"row"</span> for row order and <span style="font-family: monospace;">"column"</span> for column order. The direction
   specified must agree with the order of the input list.
   </dd>
   </dl>
@@ -139,7 +139,7 @@ mosproc: Prepare images for quick look mosaicing
   </dd>
   </dl>
   <dl>
-  <dt><b>median_section = <tt>""</tt></b></dt>
+  <dt><b>median_section = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='median_section' Line='median_section = ""' -->
   <dd>Compute the median of each input image inserted into the mosaic using the
   specified section.
@@ -236,7 +236,7 @@ mosproc: Prepare images for quick look mosaicing
      subtraction and flat fielding. Derive the sky and flat field frames
      from the data excluding image number 5
    
-      ir&gt; mosproc @imlist mosaic 8 8 skysub+ exclude=<tt>"5"</tt> flatten+ 
+      ir&gt; mosproc @imlist mosaic 8 8 skysub+ exclude=<span style="font-family: monospace;">"5"</span> flatten+ 
   </p>
   <!-- EndSection:   'EXAMPLES' -->
   <h3>Time requirements</h3>

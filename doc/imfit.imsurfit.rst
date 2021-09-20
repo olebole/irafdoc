@@ -57,7 +57,7 @@ imsurfit: Fit a surface to a 2-D image
   </dd>
   </dl>
   <dl>
-  <dt><b>function = <tt>"leg"</tt></b></dt>
+  <dt><b>function = <span style="font-family: monospace;">"leg"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "leg"' -->
   <dd>Functional for of surface to be fit to the image. The available functions
   (with minimum match abbreviation) are:
@@ -84,7 +84,7 @@ imsurfit: Fit a surface to a 2-D image
   </dd>
   </dl>
   <dl>
-  <dt><b>type_output = <tt>"fit"</tt></b></dt>
+  <dt><b>type_output = <span style="font-family: monospace;">"fit"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='type_output' Line='type_output = "fit"' -->
   <dd>The type of output image.  The allowed types (with minimum match abbreviation)
   are:
@@ -157,7 +157,7 @@ imsurfit: Fit a surface to a 2-D image
   </dd>
   </dl>
   <dl>
-  <dt><b>regions = <tt>"all"</tt></b></dt>
+  <dt><b>regions = <span style="font-family: monospace;">"all"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='regions' Line='regions = "all"' -->
   <dd>The available options (with minimum match abbreviation) are:
   <dl>
@@ -209,28 +209,28 @@ imsurfit: Fit a surface to a 2-D image
   </dd>
   </dl>
   <dl>
-  <dt><b>rows = <tt>"*"</tt></b></dt>
+  <dt><b>rows = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rows' Line='rows = "*"' -->
   <dd>When <i>region_type</i> = 'rows', the string parameter <i>rows</i> specifies
   the rows to be fit.
   </dd>
   </dl>
   <dl>
-  <dt><b>columns = <tt>"*"</tt></b></dt>
+  <dt><b>columns = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='columns' Line='columns = "*"' -->
   <dd>When <i>region_type</i> = 'columns', the string parameter <i>columns</i>
   specifies the columns to be fit.
   </dd>
   </dl>
   <dl>
-  <dt><b>border = <tt>"50"</tt></b></dt>
+  <dt><b>border = <span style="font-family: monospace;">"50"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='border' Line='border = "50"' -->
   <dd>When <i>region_type</i> = 'border', the
   string parameter <i>border</i> specifies the width of the border to be fit.
   </dd>
   </dl>
   <dl>
-  <dt><b>sections = <tt>""</tt></b></dt>
+  <dt><b>sections = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sections' Line='sections = ""' -->
   <dd>When <i>region_type</i> = 'sections', the
   string parameter <i>sections</i> is the name of the  file containing the list of
@@ -240,7 +240,7 @@ imsurfit: Fit a surface to a 2-D image
   </dd>
   </dl>
   <dl>
-  <dt><b>circle = <tt>""</tt></b></dt>
+  <dt><b>circle = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='circle' Line='circle = ""' -->
   <dd>The string parameter <i>circle</i> lists the parameter needed to specify
   the circle in the following format: xcenter ycenter radius. The three
@@ -270,8 +270,8 @@ imsurfit: Fit a surface to a 2-D image
   </p>
   <p>
   The parameter <i>surface_type</i> may be a
-  <tt>"legendre"</tt> polynomial, <tt>"chebyshev"</tt> polynomial,
-  a cubic spline (<tt>"spline3"</tt>) or a linear spline (<tt>"spline1"</tt>).
+  <span style="font-family: monospace;">"legendre"</span> polynomial, <span style="font-family: monospace;">"chebyshev"</span> polynomial,
+  a cubic spline (<span style="font-family: monospace;">"spline3"</span>) or a linear spline (<span style="font-family: monospace;">"spline1"</span>).
   The order of the polynomials is selected in both x and y.
   Cross terms for the polynomial surfaces are optional.
   For the cubic spline the parameters <i>xorder</i> and <i>yorder</i> specify

@@ -48,7 +48,7 @@ gallist: Make an artificial galaxies list
   			SPATIAL DISTRIBUTION
   </p>
   <dl>
-  <dt><b>spatial = <tt>"uniform"</tt></b></dt>
+  <dt><b>spatial = <span style="font-family: monospace;">"uniform"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='spatial' Line='spatial = "uniform"' -->
   <dd>Type of spatial distribution for the galaxies.  The types are:
   <dl>
@@ -83,8 +83,8 @@ gallist: Make an artificial galaxies list
   <dl>
   <dt><b>xcenter = INDEF, ycenter = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xcenter' Line='xcenter = INDEF, ycenter = INDEF' -->
-  <dd>The coordinate of the center of symmetry for the <tt>"hubble"</tt>
-  and <tt>"file"</tt> radial density functions. The default is the
+  <dd>The coordinate of the center of symmetry for the <span style="font-family: monospace;">"hubble"</span>
+  and <span style="font-family: monospace;">"file"</span> radial density functions. The default is the
   midpoint of the coordinate limits.
   </dd>
   </dl>
@@ -106,7 +106,7 @@ gallist: Make an artificial galaxies list
   <!-- Sec='PARAMETERS' Level=0 Label='sseed' Line='sseed = 2' -->
   <dd>The initial value supplied to the random number generator used to
   generate the output x and y coordinates.
-  If a value of <tt>"INDEF"</tt> is given then the clock
+  If a value of <span style="font-family: monospace;">"INDEF"</span> is given then the clock
   time (integer seconds since 1980) is used as the seed yielding
   different random numbers for each execution.
   </dd>
@@ -115,7 +115,7 @@ gallist: Make an artificial galaxies list
   			MAGNITUDE DISTRIBUTION
   </p>
   <dl>
-  <dt><b>luminosity = <tt>"powlaw"</tt></b></dt>
+  <dt><b>luminosity = <span style="font-family: monospace;">"powlaw"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='luminosity' Line='luminosity = "powlaw"' -->
   <dd>Type of luminosity distribution for the galaxies.  The types are:
   <dl>
@@ -185,7 +185,7 @@ gallist: Make an artificial galaxies list
   <!-- Sec='PARAMETERS' Level=0 Label='lseed' Line='lseed = 2' -->
   <dd>The initial value supplied to the random number generator used to
   generate the output magnitudes.
-  If a value of <tt>"INDEF"</tt> is given then the clock
+  If a value of <span style="font-family: monospace;">"INDEF"</span> is given then the clock
   time (integer seconds since 1980) is used as the seed yielding
   different random numbers for each execution.
   </dd>
@@ -196,8 +196,8 @@ gallist: Make an artificial galaxies list
   <dl>
   <dt><b>egalmix = 0.4</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='egalmix' Line='egalmix = 0.4' -->
-  <dd>The fraction of the galaxies that are <tt>"ellipticals"</tt> represented
-  by a de Vaucouleurs surface brightness law as opposed to <tt>"spirals"</tt>
+  <dd>The fraction of the galaxies that are <span style="font-family: monospace;">"ellipticals"</span> represented
+  by a de Vaucouleurs surface brightness law as opposed to <span style="font-family: monospace;">"spirals"</span>
   represented by an exponential disk surface brightness law.
   </dd>
   </dl>
@@ -246,7 +246,7 @@ gallist: Make an artificial galaxies list
   			USER FUNCTIONS
   </p>
   <dl>
-  <dt><b>sfile = <tt>""</tt></b></dt>
+  <dt><b>sfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sfile' Line='sfile = ""' -->
   <dd>The name of the input text file containing the sampled spatial radial
   density
@@ -260,8 +260,8 @@ gallist: Make an artificial galaxies list
   <!-- Sec='PARAMETERS' Level=0 Label='nssample' Line='nssample = 100' -->
   <dd>The number of points at which the spatial density function is 
   sampled. If the spatial density function is analytic or approximated
-  analytically (the <tt>"hubble"</tt> option) the function is sampled
-  directly. If the function is read from a file  (the <tt>"file"</tt> option) an
+  analytically (the <span style="font-family: monospace;">"hubble"</span> option) the function is sampled
+  directly. If the function is read from a file  (the <span style="font-family: monospace;">"file"</span> option) an
   initial smoothing step is performed before sampling.
   </dd>
   </dl>
@@ -273,7 +273,7 @@ gallist: Make an artificial galaxies list
   </dd>
   </dl>
   <dl>
-  <dt><b>lfile = <tt>""</tt></b></dt>
+  <dt><b>lfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lfile' Line='lfile = ""' -->
   <dd>The name of the input text file containing the sampled luminosity
   function, one sample point per line, with the magnitude and relative
@@ -286,9 +286,9 @@ gallist: Make an artificial galaxies list
   <!-- Sec='PARAMETERS' Level=0 Label='nlsample' Line='nlsample = 100' -->
   <dd>The number of points at which the luminosity function is 
   sampled. If the luminosity function is analytic or approximated
-  analytically (the <tt>"uniform"</tt>, <tt>"powlaw"</tt> and <tt>"schecter"</tt> options) the
+  analytically (the <span style="font-family: monospace;">"uniform"</span>, <span style="font-family: monospace;">"powlaw"</span> and <span style="font-family: monospace;">"schecter"</span> options) the
   function is sampled directly.  If it is read from a file
-  (the <tt>"file"</tt> option) an initial smoothing step is performed before sampling.
+  (the <span style="font-family: monospace;">"file"</span> option) an initial smoothing step is performed before sampling.
   </dd>
   </dl>
   <dl>
@@ -341,7 +341,7 @@ gallist: Make an artificial galaxies list
   </dd>
   </dl>
   <dl>
-  <dt><b>cursor = <tt>""</tt></b></dt>
+  <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>The graphics cursor.
   </dd>
@@ -355,7 +355,7 @@ gallist: Make an artificial galaxies list
   angles for a sample of <i>ngals</i> galaxies based on a user selected
   spatial density function <i>spatial</i>  and luminosity function
   <i>luminosity</i> and writes (appends) the results to the text file
-  <i>gallist</i>. If the <i>interactive</i> parameter is <tt>"yes"</tt> the user can
+  <i>gallist</i>. If the <i>interactive</i> parameter is <span style="font-family: monospace;">"yes"</span> the user can
   interactively examine plots of the spatial density function, the
   radial density function,  the luminosity function, radii, axial ratios,
   and position angle distributions and alter the parameters of the task
@@ -412,7 +412,7 @@ gallist: Make an artificial galaxies list
   of faint galaxies generally show a smaller value.  The Schecter
   function provides a good approximation to a galaxy cluster when
   used in conjunction with the Hubble spatial distribution (though there
-  is no mass segregation applied).  The <tt>"best fit"</tt> values for the
+  is no mass segregation applied).  The <span style="font-family: monospace;">"best fit"</span> values for the
   parameters <i>mstar</i> and <i>alpha</i> are taken from the paper by
   Schecter (Ap.J 203, 297, 1976).  The <i>mzero</i> parameter is used
   to convert to absolute magnitudes.  Note that it is equivalent to
@@ -431,8 +431,8 @@ gallist: Make an artificial galaxies list
   </p>
   <p>
   The artificial galaxies have one of two morphological types,
-  <tt>"ellipticals"</tt> with a de Vaucouleurs surface brightness law and
-  <tt>"spirals"</tt> with an exponential surface brightness law. The fraction
+  <span style="font-family: monospace;">"ellipticals"</span> with a de Vaucouleurs surface brightness law and
+  <span style="font-family: monospace;">"spirals"</span> with an exponential surface brightness law. The fraction
   of elliptical galaxies is set by the parameter <i>egalmix</i>.  The
   position angles of the major axis are distributed uniformly between 0.0
   and 360.0 degrees.  The axial ratio (major to minor) of the elliptical
@@ -633,7 +633,7 @@ gallist: Make an artificial galaxies list
   <dt><b>GALLIST V2.11+</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='GALLIST' Line='GALLIST V2.11+' -->
   <dd>The random number seeds can be set from the clock time by using the value
-  <tt>"INDEF"</tt> to yield different random numbers for each execution.
+  <span style="font-family: monospace;">"INDEF"</span> to yield different random numbers for each execution.
   </dd>
   </dl>
   <dl>

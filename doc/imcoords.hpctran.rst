@@ -29,8 +29,8 @@ hpctran: Convert between HEALPix row and spherical coordinate
   <!-- Sec='PARAMETERS' Level=0 Label='row' Line='row     ' -->
   <dd>HEALPix table row (1 indexed).
   This is used as input if the direction
-  is <tt>"row2ang"</tt> or is used to store the value if the direction is
-  <tt>"ang2row"</tt>.
+  is <span style="font-family: monospace;">"row2ang"</span> or is used to store the value if the direction is
+  <span style="font-family: monospace;">"ang2row"</span>.
   </dd>
   </dl>
   <dl>
@@ -38,8 +38,8 @@ hpctran: Convert between HEALPix row and spherical coordinate
   <!-- Sec='PARAMETERS' Level=0 Label='lng' Line='lng, lat' -->
   <dd>Spherical coordinate consisting of a longitude and latitude.
   These are used as input if the direction
-  is <tt>"ang2row"</tt> or is used to store the value if the direction is
-  <tt>"row2ang"</tt>.  The units are interpreted as selected by the <i>cunits</i>
+  is <span style="font-family: monospace;">"ang2row"</span> or is used to store the value if the direction is
+  <span style="font-family: monospace;">"row2ang"</span>.  The units are interpreted as selected by the <i>cunits</i>
   parameter.  The type of coordinates appropriate for a particular map
   is defined by the map provider.
   </dd>
@@ -51,23 +51,23 @@ hpctran: Convert between HEALPix row and spherical coordinate
   </dd>
   </dl>
   <dl>
-  <dt><b>cunits = <tt>"degrees"</tt> (degrees|hourdegree|radians)</b></dt>
+  <dt><b>cunits = <span style="font-family: monospace;">"degrees"</span> (degrees|hourdegree|radians)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cunits' Line='cunits = "degrees" (degrees|hourdegree|radians)' -->
-  <dd>The units of the longitude and latitude.  The <tt>"hourdegree"</tt> is for
+  <dd>The units of the longitude and latitude.  The <span style="font-family: monospace;">"hourdegree"</span> is for
   longitude in hours and latitude in degrees.
   </dd>
   </dl>
   <dl>
-  <dt><b>maptype = <tt>"nest"</tt> (nest|ring)</b></dt>
+  <dt><b>maptype = <span style="font-family: monospace;">"nest"</span> (nest|ring)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maptype' Line='maptype = "nest" (nest|ring)' -->
-  <dd>The map pixelization type which may be <tt>"nest"</tt> or <tt>"ring"</tt>.
+  <dd>The map pixelization type which may be <span style="font-family: monospace;">"nest"</span> or <span style="font-family: monospace;">"ring"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>direction = <tt>"ang2row"</tt> (ang2row|row2ang)</b></dt>
+  <dt><b>direction = <span style="font-family: monospace;">"ang2row"</span> (ang2row|row2ang)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='direction' Line='direction = "ang2row" (ang2row|row2ang)' -->
-  <dd>The conversion direction.  <tt>"ang2row"</tt> converts a spherical coordinate
-  to a map row or pixel number.  <tt>"row2ang"</tt> converts a map row or pixel
+  <dd>The conversion direction.  <span style="font-family: monospace;">"ang2row"</span> converts a spherical coordinate
+  to a map row or pixel number.  <span style="font-family: monospace;">"row2ang"</span> converts a map row or pixel
   number to a spherical coordinate.
   </dd>
   </dl>
@@ -79,8 +79,8 @@ hpctran: Convert between HEALPix row and spherical coordinate
   of a sphere.  See the reference section for a technical description of the
   pixelization and mathematics.  As suggested in the name, this pixelization,
   or tiling, produces a subdivision of a spherical surface in which each
-  <tt>"pixel"</tt> covers the same surface area as every other pixel.  A HEALPix FITS
-  <tt>"map"</tt> is a table where each row contains <tt>"pixel"</tt> data for a region on the
+  <span style="font-family: monospace;">"pixel"</span> covers the same surface area as every other pixel.  A HEALPix FITS
+  <span style="font-family: monospace;">"map"</span> is a table where each row contains <span style="font-family: monospace;">"pixel"</span> data for a region on the
   sphere.  It is a table because the pixels don't form a raster as in an
   image.
   </p>
@@ -89,7 +89,7 @@ hpctran: Convert between HEALPix row and spherical coordinate
   in various ways.  This task uses the number of pixels along a side of one of
   the 12 basic faces.  The number of pixels/rows is 12 * nside * nside.  The
   pixelization has two forms supported by this task.  These are called
-  <tt>"nested"</tt> and <tt>"ring"</tt>.
+  <span style="font-family: monospace;">"nested"</span> and <span style="font-family: monospace;">"ring"</span>.
   </p>
   <p>
   The HEALPix WCS task, <b>hpctran</b>, provides a translation between
@@ -99,7 +99,7 @@ hpctran: Convert between HEALPix row and spherical coordinate
   be a keyword specifying the system.  This is the case with WMAP data.
   </p>
   <p>
-  This task only provides the conversion.  Access to the <tt>"pixel"</tt> data
+  This task only provides the conversion.  Access to the <span style="font-family: monospace;">"pixel"</span> data
   requires other tools.  For binary tables the <b>tables</b> may be used.
   </p>
   <p>
@@ -111,7 +111,7 @@ hpctran: Convert between HEALPix row and spherical coordinate
   <p>
   The output is provide in two ways to provide flexibility in scripting.  One
   is writing the results to the task parameters.  Note that it is recommended
-  that tasks which write to there parameter be <tt>"cached"</tt> with the <b>cache</b>
+  that tasks which write to there parameter be <span style="font-family: monospace;">"cached"</span> with the <b>cache</b>
   command to avoid problems with background submission or multiple scripts
   running in parallel.  The other output is printed to the standard output.
   Regardless of the direction of conversion the printed output is in the same
@@ -122,7 +122,7 @@ hpctran: Convert between HEALPix row and spherical coordinate
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
   A CMB WMAP file is obtained and one wants the temperature at a particular
-  point on the sky.  Note that the WMAP format is <tt>"nested"</tt> and
+  point on the sky.  Note that the WMAP format is <span style="font-family: monospace;">"nested"</span> and
   coordinate system is galactic.
   </p>
   <pre>

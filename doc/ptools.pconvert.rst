@@ -36,7 +36,7 @@ pconvert: Convert from an apphot/daophot text to tables database
   </dd>
   </dl>
   <dl>
-  <dt><b>fields = <tt>"*"</tt></b></dt>
+  <dt><b>fields = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fields' Line='fields = "*"' -->
   <dd>Template defining the fields to be selected from each record. By default
   all the fields are output. Fields
@@ -135,7 +135,7 @@ pconvert: Convert from an apphot/daophot text to tables database
   nearest integer		nint(x)		modulo			mod(x)
   </pre>
   <p>
-  If the append parameter is <tt>"yes"</tt> then the converted input text database is
+  If the append parameter is <span style="font-family: monospace;">"yes"</span> then the converted input text database is
   appended to the specified output table. When appending to a table each of the
   output fields must already exist in the output table.
   </p>
@@ -170,7 +170,7 @@ pconvert: Convert from an apphot/daophot text to tables database
      an STSDAS table.
   </p>
   <p>
-     pt&gt; pconvert n4147.nst.1 n4147.tnst.1 <tt>"*"</tt>
+     pt&gt; pconvert n4147.nst.1 n4147.tnst.1 <span style="font-family: monospace;">"*"</span>
   </p>
   <!-- EndSection:   'EXAMPLES' -->
   <h3>Time requirements</h3>

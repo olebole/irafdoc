@@ -30,7 +30,7 @@ ccdinstrument: Review and edit instrument translation files
   </dd>
   </dl>
   <dl>
-  <dt><b>instrument = <tt>")_.instrument"</tt></b></dt>
+  <dt><b>instrument = <span style="font-family: monospace;">")_.instrument"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='instrument' Line='instrument = ")_.instrument"' -->
   <dd>CCD instrument translation file.  The default is to use the translation
   file defined in the <b>ccdred</b> package parameters.  Note that one would
@@ -39,7 +39,7 @@ ccdinstrument: Review and edit instrument translation files
   </dd>
   </dl>
   <dl>
-  <dt><b>ssfile = <tt>")_.ssfile"</tt></b></dt>
+  <dt><b>ssfile = <span style="font-family: monospace;">")_.ssfile"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ssfile' Line='ssfile = ")_.ssfile"' -->
   <dd>Subset translation file.  The default is to use the file defined in
   the <b>ccdred</b> package parameters.
@@ -48,21 +48,21 @@ ccdinstrument: Review and edit instrument translation files
   <dl>
   <dt><b>edit = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='edit' Line='edit = yes' -->
-  <dd>Edit the instrument translation file?  If <tt>"yes"</tt> an interactive
+  <dd>Edit the instrument translation file?  If <span style="font-family: monospace;">"yes"</span> an interactive
   mode is entered allowing translation parameters to be modified while if
-  <tt>"no"</tt> the task is simply used to verify the translations noninteractively.
+  <span style="font-family: monospace;">"no"</span> the task is simply used to verify the translations noninteractively.
   </dd>
   </dl>
   <dl>
-  <dt><b>parameters = <tt>"basic"</tt></b></dt>
+  <dt><b>parameters = <span style="font-family: monospace;">"basic"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='parameters' Line='parameters = "basic"' -->
-  <dd>Parameters to be displayed.  The choices are <tt>"basic"</tt> to display only the
+  <dd>Parameters to be displayed.  The choices are <span style="font-family: monospace;">"basic"</span> to display only the
   most basic parameters (those needed for the simplest automation of
-  <b>ccdred</b> tasks),  <tt>"common"</tt> to display the common parameters used
+  <b>ccdred</b> tasks),  <span style="font-family: monospace;">"common"</span> to display the common parameters used
   by the package (most of these are keywords to be written to the image
-  rather than translated), and <tt>"all"</tt> to display all the parameters
+  rather than translated), and <span style="font-family: monospace;">"all"</span> to display all the parameters
   referenced by the package including the most obscure.  For most uses
-  the <tt>"basic"</tt> set is all that is important and the other options are
+  the <span style="font-family: monospace;">"basic"</span> set is all that is important and the other options are
   included for completeness.
   </dd>
   </dl>
@@ -89,7 +89,7 @@ ccdinstrument: Review and edit instrument translation files
   The key to providing image header access across different observatories
   is the ability to translate the needs of the package to the appropriate
   keywords in the image header.  This is done through a file called
-  an <tt>"instrument translation file"</tt>.  For a complete description of
+  an <span style="font-family: monospace;">"instrument translation file"</span>.  For a complete description of
   this file and other instrument setup features of the package see
   <b>ccdred.instruments</b>.
   </p>
@@ -98,14 +98,14 @@ ccdinstrument: Review and edit instrument translation files
   the <b>ccdred</b> package into image specific parameters and also
   supplies default values for parameters.  The translation proceeds as
   follows.  When a package task needs a parameter for an image, for
-  example <tt>"imagetyp"</tt>, it looks in the instrument translation file.  If
+  example <span style="font-family: monospace;">"imagetyp"</span>, it looks in the instrument translation file.  If
   the file is not found or none is specified then the image header
   keyword that is requested is assumed to have the same name.  If an
   instrument translation file is defined then the requested parameter is
   translated to an image header keyword, provided a translation entry is
   given.  If no translation is given the package name is used.  For
-  example the package parameter <tt>"imagetyp"</tt> might be translated to
-  <tt>"data-typ"</tt> (the old NOAO CCD keyword).  If the parameter is not found
+  example the package parameter <span style="font-family: monospace;">"imagetyp"</span> might be translated to
+  <span style="font-family: monospace;">"data-typ"</span> (the old NOAO CCD keyword).  If the parameter is not found
   then the default value specified in the translation file, if present,
   is returned.
   </p>
@@ -113,9 +113,9 @@ ccdinstrument: Review and edit instrument translation files
   For recording parameter information in the header, such
   as processing flags, translation is also used.  For example, if the
   flag specifying that the image has been corrected by a flat field is to
-  be set then the package parameter name <tt>"flatcor"</tt> might be translated to
-  <tt>"ff-flag"</tt>.  If no translation is given then the new image header
-  parameter is entered as <tt>"flatcor"</tt>.
+  be set then the package parameter name <span style="font-family: monospace;">"flatcor"</span> might be translated to
+  <span style="font-family: monospace;">"ff-flag"</span>.  If no translation is given then the new image header
+  parameter is entered as <span style="font-family: monospace;">"flatcor"</span>.
   </p>
   <p>
   The CCD image type requires a second level of translation also defined
@@ -135,7 +135,7 @@ ccdinstrument: Review and edit instrument translation files
   giving the parameter name used by the package, the image keyword
   to which it is translated, the default value (if any), the value
   the task will receive for the current image after translation,
-  and the actual keyword value in the image.  A <tt>"?"</tt> is printed if
+  and the actual keyword value in the image.  A <span style="font-family: monospace;">"?"</span> is printed if
   a value cannot be determined.  The idea of the task is to make sure
   that the value a <b>ccdred</b> task sees is the correct one and if not
   to modify the translation appropriately.  In verify mode when the
@@ -190,7 +190,7 @@ ccdinstrument: Review and edit instrument translation files
   which may then be changed.
   </p>
   <p>
-  The set of parameters shown above are only those considered <tt>"basic"</tt>.
+  The set of parameters shown above are only those considered <span style="font-family: monospace;">"basic"</span>.
   In order to avoid confusion the task can limit the set of parameters
   displayed.  Without going into great detail, it is only the basic
   parameters which are generally required to have valid translations to

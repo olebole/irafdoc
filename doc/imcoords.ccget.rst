@@ -53,12 +53,12 @@ ccget: Extract objects from a text file catalog
   </dd>
   </dl>
   <dl>
-  <dt><b>fcsystem = <tt>""</tt></b></dt>
+  <dt><b>fcsystem = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fcsystem' Line='fcsystem = ""' -->
   <dd>The celestial coordinate system of the field center. If undefined fcsystem
   defaults to the catalog celestial coordinate system specified by
   <i>catsystem</i>. The two systems of
-  most interest to users are <tt>"j2000"</tt> and <tt>"b1950"</tt>. The full set of options is:
+  most interest to users are <span style="font-family: monospace;">"j2000"</span> and <span style="font-family: monospace;">"b1950"</span>. The full set of options is:
   <dl>
   <dt><b>equinox [epoch]</b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='equinox' Line='equinox [epoch]' -->
@@ -180,84 +180,84 @@ ccget: Extract objects from a text file catalog
   </dd>
   </dl>
   <dl>
-  <dt><b>fclngunits = <tt>""</tt>, fclatunits = <tt>""</tt></b></dt>
+  <dt><b>fclngunits = <span style="font-family: monospace;">""</span>, fclatunits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fclngunits' Line='fclngunits = "", fclatunits = ""' -->
-  <dd>The units of the field center coordinates. The options are <tt>"hours"</tt>, <tt>"degrees"</tt>,
-  and <tt>"radians"</tt> for the ra / longitude coordinate and <tt>"degrees"</tt> and <tt>"radians"</tt>
+  <dd>The units of the field center coordinates. The options are <span style="font-family: monospace;">"hours"</span>, <span style="font-family: monospace;">"degrees"</span>,
+  and <span style="font-family: monospace;">"radians"</span> for the ra / longitude coordinate and <span style="font-family: monospace;">"degrees"</span> and <span style="font-family: monospace;">"radians"</span>
   for the dec / latitude coordinates. If fclngunits and fclatunits are undefined
-  they default to the preferred units for the given system, e.g. <tt>"hours"</tt> and
-  <tt>"degrees"</tt> for equatorial systems and <tt>"degrees"</tt> and <tt>"degrees"</tt> for ecliptic,
+  they default to the preferred units for the given system, e.g. <span style="font-family: monospace;">"hours"</span> and
+  <span style="font-family: monospace;">"degrees"</span> for equatorial systems and <span style="font-family: monospace;">"degrees"</span> and <span style="font-family: monospace;">"degrees"</span> for ecliptic,
   galactic, and supergalactic systems.
   </dd>
   </dl>
   <dl>
-  <dt><b>colaliases = <tt>""</tt></b></dt>
+  <dt><b>colaliases = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='colaliases' Line='colaliases = ""' -->
   <dd>The list of input catalog column aliases separated by commas. By default the
-  catalog columns are <tt>"c1"</tt>, <tt>"c2"</tt>, <tt>"c10"</tt>, etc. If colaliases is defined then
+  catalog columns are <span style="font-family: monospace;">"c1"</span>, <span style="font-family: monospace;">"c2"</span>, <span style="font-family: monospace;">"c10"</span>, etc. If colaliases is defined then
   the aliases are assigned to the columns in order. For example if colaliases
-  is <tt>"id,ra,dec,v,bv"</tt> then columns c1, c2, c3, c4, c5 will be assigned
+  is <span style="font-family: monospace;">"id,ra,dec,v,bv"</span> then columns c1, c2, c3, c4, c5 will be assigned
   the names id, ra, dec, v, and bv and any remaining columns in the input catalog
   file will be assigned default names beginning with c6.
   </dd>
   </dl>
   <dl>
-  <dt><b>lngcolumn = <tt>"c2"</tt>, latcolumn = <tt>"c3"</tt></b></dt>
+  <dt><b>lngcolumn = <span style="font-family: monospace;">"c2"</span>, latcolumn = <span style="font-family: monospace;">"c3"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngcolumn' Line='lngcolumn = "c2", latcolumn = "c3"' -->
   <dd>The input catalog columns containing the coordinates of catalog objects.
   </dd>
   </dl>
   <dl>
-  <dt><b>catsystem = <tt>"j2000"</tt></b></dt>
+  <dt><b>catsystem = <span style="font-family: monospace;">"j2000"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='catsystem' Line='catsystem = "j2000"' -->
   <dd>The celestial coordinate system of the input catalog(s). The two systems of
-  most interest to users are <tt>"j2000"</tt> and <tt>"b1950"</tt>. The full set of options is
+  most interest to users are <span style="font-family: monospace;">"j2000"</span> and <span style="font-family: monospace;">"b1950"</span>. The full set of options is
   described in the <i>fcsystem</i> parameter section.
   </dd>
   </dl>
   <dl>
-  <dt><b>catlngunits = <tt>""</tt>, catlatunits = <tt>""</tt></b></dt>
+  <dt><b>catlngunits = <span style="font-family: monospace;">""</span>, catlatunits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='catlngunits' Line='catlngunits = "", catlatunits = ""' -->
-  <dd>The units of the catalog coordinates. The options are <tt>"hours"</tt>, <tt>"degrees"</tt>,
-  and <tt>"radians"</tt> for the ra / longitude coordinate and <tt>"degrees"</tt> and <tt>"radians"</tt>
+  <dd>The units of the catalog coordinates. The options are <span style="font-family: monospace;">"hours"</span>, <span style="font-family: monospace;">"degrees"</span>,
+  and <span style="font-family: monospace;">"radians"</span> for the ra / longitude coordinate and <span style="font-family: monospace;">"degrees"</span> and <span style="font-family: monospace;">"radians"</span>
   for the dec / latitude coordinates. If catlngunits and catlatunits are undefined
-  they default to the preferred units for the catalog system, e.g. <tt>"hours"</tt> and
-  <tt>"degrees"</tt> for equatorial systems and <tt>"degrees"</tt> and <tt>"degrees"</tt> for ecliptic,
+  they default to the preferred units for the catalog system, e.g. <span style="font-family: monospace;">"hours"</span> and
+  <span style="font-family: monospace;">"degrees"</span> for equatorial systems and <span style="font-family: monospace;">"degrees"</span> and <span style="font-family: monospace;">"degrees"</span> for ecliptic,
   galactic, and supergalactic systems.
   </dd>
   </dl>
   <dl>
-  <dt><b>outsystem = <tt>""</tt></b></dt>
+  <dt><b>outsystem = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outsystem' Line='outsystem = ""' -->
   <dd>The celestial coordinate system of the output coordinates. If undefined
   outsystem defaults to the celestial coordinate system of the catalog.
-  The two systems of most interest to users are <tt>"j2000"</tt> and <tt>"b1950"</tt>. The
+  The two systems of most interest to users are <span style="font-family: monospace;">"j2000"</span> and <span style="font-family: monospace;">"b1950"</span>. The
   full set of options is described under the <i>fcsystem</i> parameter
   section.
   </dd>
   </dl>
   <dl>
-  <dt><b>olngunits = <tt>""</tt>, olatunits = <tt>""</tt></b></dt>
+  <dt><b>olngunits = <span style="font-family: monospace;">""</span>, olatunits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='olngunits' Line='olngunits = "", olatunits = ""' -->
-  <dd>The units of the output coordinates. The options are <tt>"hours"</tt>, <tt>"degrees"</tt>,
-  and <tt>"radians"</tt> for the ra / longitude coordinate and <tt>"degrees"</tt> and <tt>"radians"</tt>
+  <dd>The units of the output coordinates. The options are <span style="font-family: monospace;">"hours"</span>, <span style="font-family: monospace;">"degrees"</span>,
+  and <span style="font-family: monospace;">"radians"</span> for the ra / longitude coordinate and <span style="font-family: monospace;">"degrees"</span> and <span style="font-family: monospace;">"radians"</span>
   for the dec / latitude coordinates. If olngunits and olatunits are undefined
-  they default to the preferred units for outsystem, e.g. <tt>"hours"</tt> and <tt>"degrees"</tt> for
-  equatorial systems and <tt>"degrees"</tt> and <tt>"degrees"</tt> for ecliptic, galactic, and
+  they default to the preferred units for outsystem, e.g. <span style="font-family: monospace;">"hours"</span> and <span style="font-family: monospace;">"degrees"</span> for
+  equatorial systems and <span style="font-family: monospace;">"degrees"</span> and <span style="font-family: monospace;">"degrees"</span> for ecliptic, galactic, and
   supergalactic systems.
   </dd>
   </dl>
   <dl>
-  <dt><b>olngformat = <tt>""</tt>, olatformat=<tt>""</tt></b></dt>
+  <dt><b>olngformat = <span style="font-family: monospace;">""</span>, olatformat=<span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='olngformat' Line='olngformat = "", olatformat=""' -->
   <dd>The output ra / longitude and dec / latitude formats if the output
   celestial coordinate system is different from the catalog celestial
-  coordinate system. The defaults are <tt>"  %010.1h"</tt> for hours, <tt>"  %9h"</tt> for degrees
-  and <tt>"  %9.7g"</tt> for radians.
+  coordinate system. The defaults are <span style="font-family: monospace;">"  %010.1h"</span> for hours, <span style="font-family: monospace;">"  %9h"</span> for degrees
+  and <span style="font-family: monospace;">"  %9.7g"</span> for radians.
   </dd>
   </dl>
   <dl>
-  <dt><b>exprs = <tt>"c[*]"</tt></b></dt>
+  <dt><b>exprs = <span style="font-family: monospace;">"c[*]"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='exprs' Line='exprs = "c[*]"' -->
   <dd>The list of output columns and column expressions separated by commas.
   By default the entire record for the extracted object is output exactly
@@ -268,14 +268,14 @@ ccget: Extract objects from a text file catalog
   </dd>
   </dl>
   <dl>
-  <dt><b>formats = <tt>""</tt></b></dt>
+  <dt><b>formats = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='formats' Line='formats = ""' -->
   <dd>An optional list of column formats separated by commas. Column formats must
   be placeholders, e.g. the letter f for existing columns which are not
   reformatted (with the possible exception of the coordinate columns).
   Column expression formats may be any regular formatting expression.
-  For example if <i>exprs</i> is <tt>"c[1-3],c4+c5,c5+c7"</tt>, then formats might be
-  <tt>"f,%7.3f,%7.3f"</tt>.
+  For example if <i>exprs</i> is <span style="font-family: monospace;">"c[1-3],c4+c5,c5+c7"</span>, then formats might be
+  <span style="font-family: monospace;">"f,%7.3f,%7.3f"</span>.
   </dd>
   </dl>
   <dl>
@@ -349,7 +349,7 @@ ccget: Extract objects from a text file catalog
   where [] indicates optional, {} indicates a class, - indicates an ascii
   range of characters, and * indicates zero or more occurrences. In words
   a column name must begin with an alphabetic character and be followed
-  by any combination of alphabetic, digit, or <tt>'.'</tt>, <tt>'_'</tt>, and <tt>'$'</tt> characters.
+  by any combination of alphabetic, digit, or <span style="font-family: monospace;">'.'</span>, <span style="font-family: monospace;">'_'</span>, and <span style="font-family: monospace;">'$'</span> characters.
   The ccget task imposes a 19 character limit on the columns names so it is
   best to keep them short.
   </p>
@@ -397,10 +397,10 @@ ccget: Extract objects from a text file catalog
   <h3>Column formats</h3>
   <!-- BeginSection: 'COLUMN FORMATS' -->
   <p>
-  A  format  specification has the form <tt>"%w.dCn"</tt>, where w is the field
+  A  format  specification has the form <span style="font-family: monospace;">"%w.dCn"</span>, where w is the field
   width, d is the number of decimal places or the number of digits  of
   precision,  C  is  the  format  code,  and  n is radix character for
-  format code <tt>"r"</tt> only.  The w and d fields are optional.  The  format
+  format code <span style="font-family: monospace;">"r"</span> only.  The w and d fields are optional.  The  format
   codes C are as follows:
   </p>
   <pre>

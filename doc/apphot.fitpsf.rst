@@ -35,26 +35,26 @@ fitpsf: Model the stellar psf with an analytic function
   </dd>
   </dl>
   <dl>
-  <dt><b>coords = <tt>""</tt></b></dt>
+  <dt><b>coords = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coords' Line='coords = ""' -->
   <dd>The list of text files containing initial coordinates for the objects to
   be centered. Objects are listed in coords one object per line with the
   initial coordinate values in columns one and two. The number of coordinate
   files must be zero, one, or equal to the number of images.
-  If coords is <tt>"default"</tt>, <tt>"dir$default"</tt>, or a directory specification then an
+  If coords is <span style="font-family: monospace;">"default"</span>, <span style="font-family: monospace;">"dir$default"</span>, or a directory specification then an
   coords file name of the form dir$root.extension.version is constructed and
   searched for, where dir is the directory, root is the root image name,
-  extension is <tt>"coo"</tt> and version is the next available version number for the
+  extension is <span style="font-family: monospace;">"coo"</span> and version is the next available version number for the
   file.
   </dd>
   </dl>
   <dl>
-  <dt><b>output = <tt>"default"</tt></b></dt>
+  <dt><b>output = <span style="font-family: monospace;">"default"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = "default"' -->
   <dd>The name of the results file or results directory. If output is
-  <tt>"default"</tt>, <tt>"dir$default"</tt>, or a directory specification then an output file name
+  <span style="font-family: monospace;">"default"</span>, <span style="font-family: monospace;">"dir$default"</span>, or a directory specification then an output file name
   of the form dir$root.extension.version is constructed, where dir is the
-  directory, root is the root image name, extension is <tt>"psf"</tt> and version is
+  directory, root is the root image name, extension is <span style="font-family: monospace;">"psf"</span> and version is
   the next available version number for the file. The number of output files
   must be zero, one, or equal to the number of image files.  In both interactive
   and batch mode full output is written to output. In interactive mode
@@ -62,7 +62,7 @@ fitpsf: Model the stellar psf with an analytic function
   </dd>
   </dl>
   <dl>
-  <dt><b>datapars = <tt>""</tt></b></dt>
+  <dt><b>datapars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='datapars' Line='datapars = ""' -->
   <dd>The name of the file containing the data dependent parameters.
   The critical parameters <i>fwhmpsf</i> and <i>sigma</i> are located in
@@ -71,7 +71,7 @@ fitpsf: Model the stellar psf with an analytic function
   </dd>
   </dl>
   <dl>
-  <dt><b>function = <tt>"radgauss"</tt></b></dt>
+  <dt><b>function = <span style="font-family: monospace;">"radgauss"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "radgauss"' -->
   <dd>The function to be fit. The options are:
   <dl>
@@ -134,29 +134,29 @@ fitpsf: Model the stellar psf with an analytic function
   </dd>
   </dl>
   <dl>
-  <dt><b>icommands = <tt>""</tt></b></dt>
+  <dt><b>icommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""' -->
   <dd>The image cursor or image cursor command file.
   </dd>
   </dl>
   <dl>
-  <dt><b>gcommands = <tt>""</tt></b></dt>
+  <dt><b>gcommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""' -->
   <dd>The graphics cursor or graphics cursor command file.
   </dd>
   </dl>
   <dl>
-  <dt><b>wcsin = <tt>")_.wcsin"</tt>, wcsout = <tt>")_.wcsout"</tt></b></dt>
+  <dt><b>wcsin = <span style="font-family: monospace;">")_.wcsin"</span>, wcsout = <span style="font-family: monospace;">")_.wcsout"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcsin' Line='wcsin = ")_.wcsin", wcsout = ")_.wcsout"' -->
   <dd>The coordinate system of the input coordinates read from <i>coords</i> and
   of the output coordinates written to <i>output</i> respectively. The image
   header coordinate system is used to transform from the input coordinate
-  system to the <tt>"logical"</tt> pixel coordinate system used internally,
-  and from the internal <tt>"logical"</tt> pixel coordinate system to the output
-  coordinate system. The input coordinate system options are <tt>"logical"</tt>, <tt>"tv"</tt>,
-  <tt>"physical"</tt>, and <tt>"world"</tt>. The output coordinate system options are <tt>"logical"</tt>,
-  <tt>"tv"</tt>, and <tt>"physical"</tt>. The image cursor coordinate system is assumed to
-  be the <tt>"tv"</tt> system.
+  system to the <span style="font-family: monospace;">"logical"</span> pixel coordinate system used internally,
+  and from the internal <span style="font-family: monospace;">"logical"</span> pixel coordinate system to the output
+  coordinate system. The input coordinate system options are <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"tv"</span>,
+  <span style="font-family: monospace;">"physical"</span>, and <span style="font-family: monospace;">"world"</span>. The output coordinate system options are <span style="font-family: monospace;">"logical"</span>,
+  <span style="font-family: monospace;">"tv"</span>, and <span style="font-family: monospace;">"physical"</span>. The image cursor coordinate system is assumed to
+  be the <span style="font-family: monospace;">"tv"</span> system.
   <dl>
   <dt><b>logical</b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='logical' Line='logical' -->
@@ -210,54 +210,54 @@ fitpsf: Model the stellar psf with an analytic function
   </dl>
   The wcsin and wcsout parameters default to the values of the package
   parameters of the same name. The default values of the package parameters
-  wcsin and wcsout are <tt>"logical"</tt> and <tt>"logical"</tt> respectively.
+  wcsin and wcsout are <span style="font-family: monospace;">"logical"</span> and <span style="font-family: monospace;">"logical"</span> respectively.
   </dd>
   </dl>
   <dl>
-  <dt><b>cache = <tt>")_.cache"</tt></b></dt>
+  <dt><b>cache = <span style="font-family: monospace;">")_.cache"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cache' Line='cache = ")_.cache"' -->
   <dd>Cache the image pixels in memory. Cache may be set to the value of the apphot
-  package parameter (the default), <tt>"yes"</tt>, or <tt>"no"</tt>. By default cacheing is 
+  package parameter (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>. By default cacheing is 
   disabled.
   </dd>
   </dl>
   <dl>
-  <dt><b>verify = <tt>")_.verify"</tt></b></dt>
+  <dt><b>verify = <span style="font-family: monospace;">")_.verify"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verify' Line='verify = ")_.verify"' -->
   <dd>Verify the critical parameters in non-interactive mode ? Verify may be set to
-  the apphot package parameter value (the default), <tt>"yes"</tt>, or <tt>"no"</tt>.
+  the apphot package parameter value (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>update = <tt>")_.update"</tt></b></dt>
+  <dt><b>update = <span style="font-family: monospace;">")_.update"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='update' Line='update = ")_.update"' -->
   <dd>Update the critical parameters in non-interactive mode if verify is set of
-  <tt>"yes"</tt> ? Update may be set to the apphot package parameter value (the default),
-  <tt>"yes"</tt>, or <tt>"no"</tt>.
+  <span style="font-family: monospace;">"yes"</span> ? Update may be set to the apphot package parameter value (the default),
+  <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>verbose = <tt>")_.verbose"</tt></b></dt>
+  <dt><b>verbose = <span style="font-family: monospace;">")_.verbose"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = ")_.verbose"' -->
   <dd>Print messages on the terminal in non-interactive mode ? Verbose may be set
-  to the apphot package parameter value (the default), <tt>"yes"</tt>, or <tt>"no"</tt>.
+  to the apphot package parameter value (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>")_.graphics"</tt></b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">")_.graphics"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = ")_.graphics"' -->
   <dd>The default graphics device.  Graphics may be set to the apphot package
-  parameter value (the default), <tt>"yes"</tt>, or <tt>"no"</tt>.
+  parameter value (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>display = <tt>")_.display"</tt></b></dt>
+  <dt><b>display = <span style="font-family: monospace;">")_.display"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='display' Line='display = ")_.display"' -->
   <dd>The default display device.  Display may be set to the apphot package
-  parameter value (the default), <tt>"yes"</tt>, or <tt>"no"</tt>.  By default graphics overlay
-  is disabled.  Setting display to one of <tt>"imdr"</tt>, <tt>"imdg"</tt>, <tt>"imdb"</tt>, or <tt>"imdy"</tt>
+  parameter value (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.  By default graphics overlay
+  is disabled.  Setting display to one of <span style="font-family: monospace;">"imdr"</span>, <span style="font-family: monospace;">"imdg"</span>, <span style="font-family: monospace;">"imdb"</span>, or <span style="font-family: monospace;">"imdy"</span>
   enables graphics overlay with the IMD graphics kernel.  Setting display to
-  <tt>"stdgraph"</tt> enables FITPSF to work interactively from a contour plot.
+  <span style="font-family: monospace;">"stdgraph"</span> enables FITPSF to work interactively from a contour plot.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -273,23 +273,23 @@ fitpsf: Model the stellar psf with an analytic function
   </p>
   <p>
   The coordinates read from <i>coords</i> are assumed to be in coordinate
-  system defined by <i>wcsin</i>. The options are <tt>"logical"</tt>, <tt>"tv"</tt>, <tt>"physical"</tt>,
-  and <tt>"world"</tt> and the transformation from the input coordinate system to
-  the internal <tt>"logical"</tt> system is defined by the image coordinate system.
-  The simplest default is the <tt>"logical"</tt> pixel system. Users working on with
+  system defined by <i>wcsin</i>. The options are <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"tv"</span>, <span style="font-family: monospace;">"physical"</span>,
+  and <span style="font-family: monospace;">"world"</span> and the transformation from the input coordinate system to
+  the internal <span style="font-family: monospace;">"logical"</span> system is defined by the image coordinate system.
+  The simplest default is the <span style="font-family: monospace;">"logical"</span> pixel system. Users working on with
   image sections but importing pixel coordinate lists generated from the parent
-  image must use the <tt>"tv"</tt> or <tt>"physical"</tt> input coordinate systems.
+  image must use the <span style="font-family: monospace;">"tv"</span> or <span style="font-family: monospace;">"physical"</span> input coordinate systems.
   Users importing coordinate lists in world coordinates, e.g. ra and dec,
-  must use the <tt>"world"</tt> coordinate system and may need to convert their
+  must use the <span style="font-family: monospace;">"world"</span> coordinate system and may need to convert their
   equatorial coordinate units from hours and degrees to degrees and degrees first.
   </p>
   <p>
   The coordinates written to <i>output</i> are in the coordinate
-  system defined by <i>wcsout</i>. The options are <tt>"logical"</tt>, <tt>"tv"</tt>,
-  and <tt>"physical"</tt>. The simplest default is the <tt>"logical"</tt> system. Users
+  system defined by <i>wcsout</i>. The options are <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"tv"</span>,
+  and <span style="font-family: monospace;">"physical"</span>. The simplest default is the <span style="font-family: monospace;">"logical"</span> system. Users
   wishing to correlate the output coordinates of objects measured in
   image sections or mosaic pieces with coordinates in the parent
-  image must use the <tt>"tv"</tt> or <tt>"physical"</tt> coordinate systems.
+  image must use the <span style="font-family: monospace;">"tv"</span> or <span style="font-family: monospace;">"physical"</span> coordinate systems.
   </p>
   <p>
   If <i>cache</i> is yes and the host machine physical memory and working set size
@@ -421,8 +421,8 @@ fitpsf: Model the stellar psf with an analytic function
   to be fit, <i>maxiter</i>, the maximum number of iterations per fit,
   <i>kreject</i>, the K-sigma rejection limit and <i>nreject</i>, the maximum
   number of rejection cycles. The currently available functions are a 2D
-  moments analysis <tt>"moments"</tt>, a 2D radial Gaussian <tt>"radgauss"</tt>,  and a
-  2D elliptical Gaussian <tt>"elgauss"</tt>.
+  moments analysis <span style="font-family: monospace;">"moments"</span>, a 2D radial Gaussian <span style="font-family: monospace;">"radgauss"</span>,  and a
+  2D elliptical Gaussian <span style="font-family: monospace;">"elgauss"</span>.
   </p>
   <p>
   The weighting of the fit is determined by the parameter <i>noise</i> in the 
@@ -431,7 +431,7 @@ fitpsf: Model the stellar psf with an analytic function
   the inverse of the counts divided by the image gain read from the datapars
   <i>gain</i> or <i>epadu</i> parameters plus the square of the readout noise
   determined from the datapars parameters <i>ccdread</i> or <i>readnoise</i>.
-  If <i>function</i> is either <tt>"radgauss"</tt> or <tt>"ellgauss"</tt> then the datapars
+  If <i>function</i> is either <span style="font-family: monospace;">"radgauss"</span> or <span style="font-family: monospace;">"ellgauss"</span> then the datapars
   parameter <i>fwhmpsf</i> is used to determine the initial guess for the
   Gaussian sigma.  The datapars parameter <i>threshold</i> determines the
   intensity threshold above which the moment analysis is performed.
@@ -486,7 +486,7 @@ fitpsf: Model the stellar psf with an analytic function
   and minor axes of the ellipse respectively. The amplitude and sky refer to
   the amplitude of
   the Gaussian function and a constant background value respectively.
-  If function = <tt>"moments"</tt> amplitude and sky refer to the total intensity
+  If function = <span style="font-family: monospace;">"moments"</span> amplitude and sky refer to the total intensity
   above threshold and sky is the threshold value. Rot and pa are position angles
   of the major axis measured counter-clockwise with respect to the x axis.
   Rgyrat is the radius
@@ -767,8 +767,8 @@ fitpsf: Model the stellar psf with an analytic function
   <p>
   Commands which draw to the image display are disabled by default.
   To enable graphics overlay on the image display, set the display
-  parameter to <tt>"imdr"</tt>, <tt>"imdg"</tt>, <tt>"imdb"</tt>, or <tt>"imdy"</tt> to get red, green,
-  blue or yellow overlays and set the  mkbox switch to<tt>"yes"</tt>.
+  parameter to <span style="font-family: monospace;">"imdr"</span>, <span style="font-family: monospace;">"imdg"</span>, <span style="font-family: monospace;">"imdb"</span>, or <span style="font-family: monospace;">"imdy"</span> to get red, green,
+  blue or yellow overlays and set the  mkbox switch to<span style="font-family: monospace;">"yes"</span>.
   It may be necessary to run gflush and to redisplay the image
   to get the overlays position correctly.
   </p>

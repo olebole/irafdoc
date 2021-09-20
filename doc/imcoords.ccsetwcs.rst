@@ -93,11 +93,11 @@ ccsetwcs: Create an image celestial wcs from the ccmap plate solution
   </dd>
   </dl>
   <dl>
-  <dt><b>lngunits = <tt>""</tt>, latunits = <tt>""</tt></b></dt>
+  <dt><b>lngunits = <span style="font-family: monospace;">""</span>, latunits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngunits' Line='lngunits = "", latunits = ""' -->
   <dd>The units of the lngref and latref parameters.
-  The options are <tt>"hours"</tt>, <tt>"degrees"</tt>, <tt>"radians"</tt> for the ra / longitude
-  coordinates, and <tt>"degrees"</tt> and <tt>"radians"</tt> for the dec / latitude coordinates.
+  The options are <span style="font-family: monospace;">"hours"</span>, <span style="font-family: monospace;">"degrees"</span>, <span style="font-family: monospace;">"radians"</span> for the ra / longitude
+  coordinates, and <span style="font-family: monospace;">"degrees"</span> and <span style="font-family: monospace;">"radians"</span> for the dec / latitude coordinates.
   If database is undefined then lngunits and latunits default to the preferred
   units for the celestial coordinate system defined by the <i>coosystem</i>
   parameter, otherwise these parameters are ignored.
@@ -110,19 +110,19 @@ ccsetwcs: Create an image celestial wcs from the ccmap plate solution
   </dd>
   </dl>
   <dl>
-  <dt><b>projection = <tt>"tan"</tt></b></dt>
+  <dt><b>projection = <span style="font-family: monospace;">"tan"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='projection' Line='projection = "tan"' -->
   <dd>The sky projection geometry. The most commonly used projections in
-  astronomy are <tt>"tan"</tt>, <tt>"arc"</tt>, <tt>"sin"</tt>, and <tt>"lin"</tt>. Other supported projections
-  are <tt>"ait"</tt>, <tt>"car"</tt>, <tt>"csc"</tt>, <tt>"gls"</tt>, <tt>"mer"</tt>, <tt>"mol"</tt>, <tt>"par"</tt>, <tt>"pco"</tt>, <tt>"qsc"</tt>, <tt>"stg"</tt>,
-  <tt>"tsc"</tt>, and <tt>"zea"</tt>.
+  astronomy are <span style="font-family: monospace;">"tan"</span>, <span style="font-family: monospace;">"arc"</span>, <span style="font-family: monospace;">"sin"</span>, and <span style="font-family: monospace;">"lin"</span>. Other supported projections
+  are <span style="font-family: monospace;">"ait"</span>, <span style="font-family: monospace;">"car"</span>, <span style="font-family: monospace;">"csc"</span>, <span style="font-family: monospace;">"gls"</span>, <span style="font-family: monospace;">"mer"</span>, <span style="font-family: monospace;">"mol"</span>, <span style="font-family: monospace;">"par"</span>, <span style="font-family: monospace;">"pco"</span>, <span style="font-family: monospace;">"qsc"</span>, <span style="font-family: monospace;">"stg"</span>,
+  <span style="font-family: monospace;">"tsc"</span>, and <span style="font-family: monospace;">"zea"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>coosystem = <tt>"j2000"</tt></b></dt>
+  <dt><b>coosystem = <span style="font-family: monospace;">"j2000"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coosystem' Line='coosystem = "j2000"' -->
   <dd>The celestial coordinate system. The systems of most interest to users
-  are <tt>"icrs"</tt>, <tt>"j2000"</tt> and <tt>"b1950"</tt> which stand for the ICRS J2000.0, FK5 J2000.0,
+  are <span style="font-family: monospace;">"icrs"</span>, <span style="font-family: monospace;">"j2000"</span> and <span style="font-family: monospace;">"b1950"</span> which stand for the ICRS J2000.0, FK5 J2000.0,
   and FK4 B1950.0 celestial coordinate systems respectively. The full set of
   options are listed below. The celestial coordinate system sets the preferred
   units for the lngref and latref parameters and the correct values of the image
@@ -277,7 +277,7 @@ ccsetwcs: Create an image celestial wcs from the ccmap plate solution
   </dd>
   </dl>
   <dl>
-  <dt><b>pixsystem = <tt>"logical"</tt></b></dt>
+  <dt><b>pixsystem = <span style="font-family: monospace;">"logical"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pixsystem' Line='pixsystem = "logical"' -->
   <dd>The pixel coordinate system. The options are:
   <dl>
@@ -285,7 +285,7 @@ ccsetwcs: Create an image celestial wcs from the ccmap plate solution
   <!-- Sec='PARAMETERS' Level=1 Label='logical' Line='logical' -->
   <dd>The logical pixel coordinate system is the coordinate system of the image
   pixels on disk. Since most users measure the pixel coordinates of objects
-  in this system, <tt>"logical"</tt> is the system of choice for most applications.
+  in this system, <span style="font-family: monospace;">"logical"</span> is the system of choice for most applications.
   </dd>
   </dl>
   <dl>
@@ -384,7 +384,7 @@ ccsetwcs: Create an image celestial wcs from the ccmap plate solution
   image wcs.
   </p>
   <p>
-  If the <i>update</i> switch is <tt>"yes"</tt> and an input image is specified,
+  If the <i>update</i> switch is <span style="font-family: monospace;">"yes"</span> and an input image is specified,
   a new image wcs is derived from the linear component of the computed plate
   solution and written to the image header. The numerical components of
   the new image wcs are written to the standards FITS keywords, CRPIX, CRVAL,
@@ -424,7 +424,7 @@ ccsetwcs: Create an image celestial wcs from the ccmap plate solution
   historical (use of EPOCH keyword at NOAO) reasons.
   </p>
   <p>
-  If <i>verbose</i> is <tt>"yes"</tt>, various pieces of useful information are
+  If <i>verbose</i> is <span style="font-family: monospace;">"yes"</span>, various pieces of useful information are
   printed to the terminal as the task proceeds.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
@@ -434,16 +434,16 @@ ccsetwcs: Create an image celestial wcs from the ccmap plate solution
   Additional information on the IRAF world coordinate systems can be found in
   the help pages for the WCSEDIT and WCRESET tasks.
   Detailed documentation for the IRAF world coordinate system interface MWCS
-  can be found in the file <tt>"iraf$sys/mwcs/MWCS.hlp"</tt>. This file can be
-  formatted and printed with the command <tt>"help iraf$sys/mwcs/MWCS.hlp fi+ |
-  lprint"</tt>.
+  can be found in the file <span style="font-family: monospace;">"iraf$sys/mwcs/MWCS.hlp"</span>. This file can be
+  formatted and printed with the command <span style="font-family: monospace;">"help iraf$sys/mwcs/MWCS.hlp fi+ |
+  lprint"</span>.
   </p>
   <p>
   Details of the FITS header world coordinate system interface can
-  be found in the draft paper <tt>"World Coordinate Systems Representations Within the
-  FITS Format"</tt> by Hanisch and Wells, available from the iraf anonymous ftp
-  archive and the draft paper which supersedes it <tt>"Representations of Celestial
-  Coordinates in FITS"</tt> by Greisen and Calabretta available from the NRAO
+  be found in the draft paper <span style="font-family: monospace;">"World Coordinate Systems Representations Within the
+  FITS Format"</span> by Hanisch and Wells, available from the iraf anonymous ftp
+  archive and the draft paper which supersedes it <span style="font-family: monospace;">"Representations of Celestial
+  Coordinates in FITS"</span> by Greisen and Calabretta available from the NRAO
   anonymous ftp archives.
   </p>
   <p>
@@ -451,11 +451,11 @@ ccsetwcs: Create an image celestial wcs from the ccmap plate solution
   SLALIB library provided courtesy of Patrick Wallace. These routines
   are very well documented internally with extensive references provided
   where appropriate. Interested users are encouraged to examine the routines
-  for this information. Type <tt>"help slalib"</tt> to get a listing of the SLALIB
-  routines, <tt>"help slalib opt=sys"</tt> to get a concise summary of the library,
-  and <tt>"help &lt;routine&gt;"</tt> to get a description of each routine's calling sequence,
+  for this information. Type <span style="font-family: monospace;">"help slalib"</span> to get a listing of the SLALIB
+  routines, <span style="font-family: monospace;">"help slalib opt=sys"</span> to get a concise summary of the library,
+  and <span style="font-family: monospace;">"help &lt;routine&gt;"</span> to get a description of each routine's calling sequence,
   required input and output, etc. An overview of the library can be found in the
-  paper <tt>"SLALIB - A Library of Subprograms"</tt>, Starlink User Note 67.7
+  paper <span style="font-family: monospace;">"SLALIB - A Library of Subprograms"</span>, Starlink User Note 67.7
   by P.T. Wallace, available from the Starlink archives.
   </p>
   <!-- EndSection:   'REFERENCES' -->

@@ -66,7 +66,7 @@ linpol: Calculate polarization frames and Stoke's parameters
   </dd>
   </dl>
   <dl>
-  <dt><b>keyword = <tt>"polangle"</tt></b></dt>
+  <dt><b>keyword = <span style="font-family: monospace;">"polangle"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='keyword' Line='keyword = "polangle"' -->
   <dd>This must be set to the name of a header keyword that contains the
   polarizer angle for each of the <b>input</b> images.  LINPOL will only
@@ -132,7 +132,7 @@ linpol: Calculate polarization frames and Stoke's parameters
   (Point Spread Functions) of the various frames.  Ideally, these are
   stable in the raw data (i.e., the seeing at the telescope was constant),
   but if not they must be matched to avoid the same errors as above.  Note
-  that it may also be a good idea to <tt>"smooth"</tt> the raw images before
+  that it may also be a good idea to <span style="font-family: monospace;">"smooth"</span> the raw images before
   applying linpol to increase the signal-to-noise of the output.
   </p>
   <p>
@@ -198,7 +198,7 @@ linpol: Calculate polarization frames and Stoke's parameters
   Note that the current version of the velvect task is not particularly
   appropriate for this use.  It has no support for reducing the pixel
   resolution of the output plot:  each pixel will generate a plotted vector
-  so that to produce an uncrowded (and low <tt>"noise"</tt>) plot, the input images
+  so that to produce an uncrowded (and low <span style="font-family: monospace;">"noise"</span>) plot, the input images
   or output bands must be manually block averaged or otherwise smoothed.
   In addition, the plotted vectors are directed (little arrows) not
   undirected line segments, and the length of the vectors are not easily

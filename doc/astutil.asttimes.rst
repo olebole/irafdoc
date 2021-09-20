@@ -23,7 +23,7 @@ asttimes: Compute UT, Julian day, epoch, and sidereal time
   <h3>Parameters</h3>
   <!-- BeginSection: 'PARAMETERS' -->
   <dl>
-  <dt><b>files = <tt>""</tt></b></dt>
+  <dt><b>files = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='files' Line='files = ""' -->
   <dd>List of files containing local dates and times for which the astronomical
   dates and times are desired.  If no input files are specified then task
@@ -37,14 +37,14 @@ asttimes: Compute UT, Julian day, epoch, and sidereal time
   </dd>
   </dl>
   <dl>
-  <dt><b>observatory = <tt>")_.observatory"</tt></b></dt>
+  <dt><b>observatory = <span style="font-family: monospace;">")_.observatory"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory = ")_.observatory"' -->
   <dd>Observatory for  which times are to be computed.  The default is a
   redirection to look in the parameters for the parent package for a value.
   The final value of this parameter may be one of the
-  observatories in the observatory database, <tt>"observatory"</tt> to select the
-  observatory defined by the environment variable <tt>"observatory"</tt> or the
-  parameter <b>observatory.observatory</b>, or <tt>"obspars"</tt> to select the
+  observatories in the observatory database, <span style="font-family: monospace;">"observatory"</span> to select the
+  observatory defined by the environment variable <span style="font-family: monospace;">"observatory"</span> or the
+  parameter <b>observatory.observatory</b>, or <span style="font-family: monospace;">"obspars"</span> to select the
   current parameters set in the <b>observatory</b> task.  See help for
   <b>observatory</b> for additional information.
   </dd>
@@ -77,7 +77,7 @@ asttimes: Compute UT, Julian day, epoch, and sidereal time
   and local mean sidereal time at the specified observatory are computed and
   printed for the given dates and times.  To compute parameters for a
   location not specified in the observatory database use the observatory name
-  <tt>"obspars"</tt> which will use the values defined by the parameters
+  <span style="font-family: monospace;">"obspars"</span> which will use the values defined by the parameters
   <i>observatory.longitude</i> and <i>observatory.timezone</i>.  The input
   dates and times may be taken from files containing the year, month (as an
   integer between 1 and 12), day, and local time (sexagesimal notation is
@@ -128,7 +128,7 @@ asttimes: Compute UT, Julian day, epoch, and sidereal time
   In practice the output would be directed to a file:
   </p>
   <p>
-      &gt;&gt;&gt; asttimes (day=i, header=no, &gt;&gt;<tt>"table"</tt>)
+      &gt;&gt;&gt; asttimes (day=i, header=no, &gt;&gt;<span style="font-family: monospace;">"table"</span>)
   </p>
   <p>
   3. To use an input file:

@@ -31,7 +31,7 @@ apdefault: Set the default aperture parameters and apidtable
   </dd>
   </dl>
   <dl>
-  <dt><b>apidtable = <tt>""</tt></b></dt>
+  <dt><b>apidtable = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apidtable' Line='apidtable = ""' -->
   <dd>Aperture identification table.  This may be either a text file or an
   image.  A text file consisting of lines with an aperture number, beam
@@ -46,11 +46,11 @@ apdefault: Set the default aperture parameters and apidtable
   
   </p>
   <dl>
-  <dt><b>b_function = <tt>"chebyshev"</tt></b></dt>
+  <dt><b>b_function = <span style="font-family: monospace;">"chebyshev"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='b_function' Line='b_function = "chebyshev"' -->
   <dd>Default background fitting function.  The fitting function types are
-  <tt>"chebyshev"</tt> polynomial, <tt>"legendre"</tt> polynomial, <tt>"spline1"</tt> linear spline, and
-  <tt>"spline3"</tt> cubic spline.
+  <span style="font-family: monospace;">"chebyshev"</span> polynomial, <span style="font-family: monospace;">"legendre"</span> polynomial, <span style="font-family: monospace;">"spline1"</span> linear spline, and
+  <span style="font-family: monospace;">"spline3"</span> cubic spline.
   </dd>
   </dl>
   <dl>
@@ -62,10 +62,10 @@ apdefault: Set the default aperture parameters and apidtable
   </dd>
   </dl>
   <dl>
-  <dt><b>b_sample = <tt>"-10:-6,6:10"</tt></b></dt>
+  <dt><b>b_sample = <span style="font-family: monospace;">"-10:-6,6:10"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='b_sample' Line='b_sample = "-10:-6,6:10"' -->
   <dd>Default background sample.  The sample is given by a set of colon separated
-  ranges each separated by either whitespace or commas.  The string <tt>"*"</tt> refers
+  ranges each separated by either whitespace or commas.  The string <span style="font-family: monospace;">"*"</span> refers
   to all points.  Note that the background coordinates are relative to the
   aperture center and not image pixel coordinates so the endpoints need not
   be integer.
@@ -114,14 +114,14 @@ apdefault: Set the default aperture parameters and apidtable
   APEXTRACT Package</b>.  In <b>apedit</b> the default aperture limits and
   background parameters are only used if there are no other
   apertures defined.  The aperture identification table is used when
-  reordering the apertures with the <tt>'o'</tt> key.  When run the parameters are
+  reordering the apertures with the <span style="font-family: monospace;">'o'</span> key.  When run the parameters are
   displayed and modified using the <b>eparam</b> task.
   </p>
   <p>
   The aperture limits and background fitting sample regions are defined
   relative to the center of the aperture.  The background fitting parameters
   are those used by the ICFIT package.  They may be modified interactively
-  with the <tt>'b'</tt> key in the task <b>apedit</b>.  For more on background fitting
+  with the <span style="font-family: monospace;">'b'</span> key in the task <b>apedit</b>.  For more on background fitting
   and subtracting see <b>apbackground</b>.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->

@@ -25,7 +25,7 @@ crfix: Fix cosmic rays in images using cosmic ray masks
   <dl>
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
-  <dd>Input two dimensional image to be <tt>"fixed"</tt> (modified) by linear interpolation.
+  <dd>Input two dimensional image to be <span style="font-family: monospace;">"fixed"</span> (modified) by linear interpolation.
   </dd>
   </dl>
   <dl>
@@ -52,11 +52,11 @@ crfix: Fix cosmic rays in images using cosmic ray masks
   rays, identified in a cosmic ray mask specified by the <i>crmask</i>
   parameter, are replaced in the output image by linear interpolation along
   lines or columns using the nearest good pixels.  The special mask name
-  <tt>"BPM"</tt> may be used to select a mask name given in the input image header
-  under the keyword <tt>"BPM"</tt>.
+  <span style="font-family: monospace;">"BPM"</span> may be used to select a mask name given in the input image header
+  under the keyword <span style="font-family: monospace;">"BPM"</span>.
   </p>
   <p>
-  Cosmic ray pixels are <tt>"fixed"</tt> by replacing them with values
+  Cosmic ray pixels are <span style="font-family: monospace;">"fixed"</span> by replacing them with values
   by linear interpolation to the nearest pixels not identified as bad.
   The interpolation direction is the shortest length between good pixels
   along columns or lines.

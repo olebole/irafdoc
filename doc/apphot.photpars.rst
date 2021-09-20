@@ -23,7 +23,7 @@ photpars: Edit the photometry parameters
   <h3>Parameters</h3>
   <!-- BeginSection: 'PARAMETERS' -->
   <dl>
-  <dt><b>weighting = <tt>"constant"</tt></b></dt>
+  <dt><b>weighting = <span style="font-family: monospace;">"constant"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='weighting' Line='weighting = "constant"' -->
   <dd>The type of weighting for the WPHOT task. The weighting parameter is
   ignored by the PHOT task. The options are:
@@ -50,7 +50,7 @@ photpars: Edit the photometry parameters
   </dd>
   </dl>
   <dl>
-  <dt><b>apertures = <tt>"3"</tt> (scale units)</b></dt>
+  <dt><b>apertures = <span style="font-family: monospace;">"3"</span> (scale units)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = "3" (scale units)' -->
   <dd>A list of aperture radii in units of the  scale parameter or the name of the
   file containing the list of aperture radii. List elements may be separated by

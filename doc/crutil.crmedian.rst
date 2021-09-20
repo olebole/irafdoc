@@ -36,7 +36,7 @@ crmedian: Detect and replace cosmic rays with median filter
   </dd>
   </dl>
   <dl>
-  <dt><b>crmask = <tt>""</tt></b></dt>
+  <dt><b>crmask = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='crmask' Line='crmask = ""' -->
   <dd>Output cosmic ray mask.  Detected cosmic rays (and other deviant pixels)
   are identified in the mask with values of one and good pixels with a values
@@ -45,21 +45,21 @@ crmedian: Detect and replace cosmic rays with median filter
   </dd>
   </dl>
   <dl>
-  <dt><b>median = <tt>""</tt></b></dt>
+  <dt><b>median = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='median' Line='median = ""' -->
   <dd>Output median filtered image.  If no image name is given then no output will be
   created.
   </dd>
   </dl>
   <dl>
-  <dt><b>sigma = <tt>""</tt></b></dt>
+  <dt><b>sigma = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sigma' Line='sigma = ""' -->
   <dd>Output sigma image.  If no image name is given then no output will be
   created.
   </dd>
   </dl>
   <dl>
-  <dt><b>residual = <tt>""</tt></b></dt>
+  <dt><b>residual = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='residual' Line='residual = ""' -->
   <dd>Output residual image.  This is the input image minus the median filtered
   image divided by the sigma image.  Thresholds in this image determine the

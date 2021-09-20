@@ -38,7 +38,7 @@ dispcor: Dispersion correct and resample spectra
   <dd>List of dispersion corrected output spectra or root names.  When using the
   record number extension format, record number extensions will be appended
   to each root name in the list.  The output extension will be the same as
-  the input extension.  If <tt>"no"</tt> output list is specified then the output
+  the input extension.  If <span style="font-family: monospace;">"no"</span> output list is specified then the output
   spectrum will replace the input spectrum after dispersion correction.
   </dd>
   </dl>
@@ -65,7 +65,7 @@ dispcor: Dispersion correct and resample spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>database = <tt>"database"</tt></b></dt>
+  <dt><b>database = <span style="font-family: monospace;">"database"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"' -->
   <dd>Database containing dispersion solutions created by <b>identify</b> or
   <b>ecidentify</b>.  If the spectra have been previous dispersion corrected
@@ -73,7 +73,7 @@ dispcor: Dispersion correct and resample spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>table = <tt>""</tt></b></dt>
+  <dt><b>table = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='table' Line='table = ""' -->
   <dd>Wavelength coordinate table or reference image.  Elements in this optional
   table or reference image override the wavelength coordinates given below
@@ -114,8 +114,8 @@ dispcor: Dispersion correct and resample spectra
   <dt><b>flux = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='flux' Line='flux = yes' -->
   <dd>Conserve the total flux during interpolation rather than the flux density?
-  If <tt>"no"</tt>, the output spectrum is average of the input spectrum across each
-  output wavelength coordinate.  This conserves flux density.  If <tt>"yes"</tt> the
+  If <span style="font-family: monospace;">"no"</span>, the output spectrum is average of the input spectrum across each
+  output wavelength coordinate.  This conserves flux density.  If <span style="font-family: monospace;">"yes"</span> the
   input spectrum is integrated over the extent of each output pixel.  This
   conserves the total flux.  Note that in this case units of the flux will
   change; for example rebinning to logarithmic wavelengths will produce flux
@@ -150,8 +150,8 @@ dispcor: Dispersion correct and resample spectra
   coordinate parameters are determined if two or less of the wavelength
   parameters are specified.  The defaults are based on the number of
   pixels and the wavelengths of the first and last pixel as given by the
-  dispersion solution.  If this parameter is <tt>"no"</tt> this is done
-  independently for each input spectrum.  If this parameter is <tt>"yes"</tt>
+  dispersion solution.  If this parameter is <span style="font-family: monospace;">"no"</span> this is done
+  independently for each input spectrum.  If this parameter is <span style="font-family: monospace;">"yes"</span>
   then the maximum number of pixels and the minimum and maximum
   wavelengths of all the input spectra or those of the same aperture are
   used to provide defaults for the spectra.  The parameter
@@ -209,7 +209,7 @@ dispcor: Dispersion correct and resample spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>logfile = <tt>""</tt></b></dt>
+  <dt><b>logfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = ""' -->
   <dd>Log file for recording the dispersion correction operations.  If no file
   name is given then no log information is recorded.
@@ -276,18 +276,18 @@ dispcor: Dispersion correct and resample spectra
   In addition to the one or two reference dispersion functions for each input
   aperture there may also be image header keywords REFSHFT1 and REFSHFT2
   specifying reference spectra whose dispersion function zero point shifts
-  (the <tt>"shift"</tt> parameter in the database files) are to be applied to the
+  (the <span style="font-family: monospace;">"shift"</span> parameter in the database files) are to be applied to the
   reference dispersion functions.  The shifts from REFSHFT1 will be applied
   to the dispersion functions from REFSPEC1 and similarly for the second
   dispersion functions.  The reference shifts need not be present for every
   aperture in a multispectrum image.  By default the mean shift from all the
   reference apertures having a zero point shift is applied to all the
   reference dispersion functions.  If the REFSHFT keyword has the modifier
-  word <tt>"nearest"</tt> following the spectrum name then the shift from the nearest
+  word <span style="font-family: monospace;">"nearest"</span> following the spectrum name then the shift from the nearest
   aperture in spatial position (from the aperture extraction limits in the
   original 2D spectrum as recorded in the 6th and 7th fields of the APNUM
   keywords) is used for a particular input aperture.  If the modifier word is
-  <tt>"interp"</tt> then the nearest two apertures are used to interpolate a zero
+  <span style="font-family: monospace;">"interp"</span> then the nearest two apertures are used to interpolate a zero
   point shift spatially.
   </p>
   <p>
@@ -404,8 +404,8 @@ dispcor: Dispersion correct and resample spectra
   of the input spectrum are set to the value given by the <i>blank</i> parameter
   value.  The default interpolation function
   is a 5th order polynomial.  The choice of interpolation type is made
-  with the package parameter <tt>"interp"</tt>.  It may be set to <tt>"nearest"</tt>,
-  <tt>"linear"</tt>, <tt>"spline3"</tt>, <tt>"poly5"</tt>, or <tt>"sinc"</tt>.  Remember that this
+  with the package parameter <span style="font-family: monospace;">"interp"</span>.  It may be set to <span style="font-family: monospace;">"nearest"</span>,
+  <span style="font-family: monospace;">"linear"</span>, <span style="font-family: monospace;">"spline3"</span>, <span style="font-family: monospace;">"poly5"</span>, or <span style="font-family: monospace;">"sinc"</span>.  Remember that this
   applies to all tasks which might need to interpolate spectra in the
   <b>onedspec</b> and associated packages.  For a discussion of interpolation
   types see <b>onedspec</b>.
@@ -435,9 +435,9 @@ dispcor: Dispersion correct and resample spectra
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
   In the examples when the task is used in the IRS and IIDS packages,
-  shown with the <tt>"ir&gt;"</tt> prompt the spectra have a record number extension
+  shown with the <span style="font-family: monospace;">"ir&gt;"</span> prompt the spectra have a record number extension
   image name format and the records parameter must be specified.  In
-  the other case shown with the <tt>"on&gt;"</tt> prompt the records parameter is
+  the other case shown with the <span style="font-family: monospace;">"on&gt;"</span> prompt the records parameter is
   not used.
   </p>
   <p>
@@ -515,7 +515,7 @@ dispcor: Dispersion correct and resample spectra
   images.
   </p>
   <p>
-  ir&gt; dispcor nite101 dcnite101 <tt>"1-10"</tt> ignore+ confirm-
+  ir&gt; dispcor nite101 dcnite101 <span style="font-family: monospace;">"1-10"</span> ignore+ confirm-
   </p>
   <!-- EndSection:   'EXAMPLES' -->
   <h3>Revisions</h3>
@@ -538,7 +538,7 @@ dispcor: Dispersion correct and resample spectra
   <dt><b>DISPCOR V2.10.3</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='DISPCOR' Line='DISPCOR V2.10.3' -->
   <dd>Provision was added for IDENTIFY dispersion solutions consisting of
-  only a shift (as produced by the <tt>'g'</tt> key in IDENTIFY or the refit=no
+  only a shift (as produced by the <span style="font-family: monospace;">'g'</span> key in IDENTIFY or the refit=no
   flag in REIDENTIFY) to be applied to previously LINEARIZED spectra.
   Thus it is possible to use IDENIFY/REIDENTIFY to automatically
   compute a zero point shift based on 1 or more lines and then shift
@@ -578,7 +578,7 @@ dispcor: Dispersion correct and resample spectra
   nonlinear dispersion function to the image without any interpolation.  The
   interpolation function parameter has been eliminated and the package
   parameter <i>interp</i> is used to select the interpolation function.  The
-  new interpolation type <tt>"sinc"</tt> may be used but care should be exercised.
+  new interpolation type <span style="font-family: monospace;">"sinc"</span> may be used but care should be exercised.
   The new task supports applying a secondary zero point shift spectrum to a
   master dispersion function and a spatial interpolation of the shifts when
   calibration spectra are taken at the same time on a different region of the

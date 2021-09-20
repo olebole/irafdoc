@@ -41,9 +41,9 @@ imdivide: Image division with zero checking and rescaling
   </dd>
   </dl>
   <dl>
-  <dt><b>title = <tt>'*'</tt></b></dt>
+  <dt><b>title = <span style="font-family: monospace;">'*'</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='title' Line='title = '*'' -->
-  <dd>Title for resultant image.  The special character <tt>'*'</tt> defaults the title
+  <dd>Title for resultant image.  The special character <span style="font-family: monospace;">'*'</span> defaults the title
   to that of the numerator image.
   </dd>
   </dl>

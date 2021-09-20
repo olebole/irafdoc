@@ -39,7 +39,7 @@ txselect: Select records from a list of apphot/daophot text databases
   <dt><b>expr</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='expr' Line='expr' -->
   <dd>The boolean expression to be evaluated once for each record.
-  Each input record for which <i>expr</i> evaluates as <tt>"yes"</tt> will be
+  Each input record for which <i>expr</i> evaluates as <span style="font-family: monospace;">"yes"</span> will be
   written to the output file.
   If <i>expr</i> = yes, a copy is made of the input file.
   </dd>

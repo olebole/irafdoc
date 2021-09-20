@@ -30,14 +30,14 @@ gkimosaic: Condense metacode frames to fit on one page
   </dd>
   </dl>
   <dl>
-  <dt><b>output = <tt>""</tt></b></dt>
+  <dt><b>output = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
   <dd>If <b>output</b> is specified, the mosaiced metacode is spooled to this
   file for later plotting.
   </dd>
   </dl>
   <dl>
-  <dt><b>device = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>device = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdgraph"' -->
   <dd>Output plotting device.
   </dd>
@@ -73,7 +73,7 @@ gkimosaic: Condense metacode frames to fit on one page
   </dd>
   </dl>
   <dl>
-  <dt><b>cursor = <tt>"stdgcur"</tt></b></dt>
+  <dt><b>cursor = <span style="font-family: monospace;">"stdgcur"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = "stdgcur"' -->
   <dd>Source of cursor input.
   </dd>
@@ -133,21 +133,21 @@ gkimosaic: Condense metacode frames to fit on one page
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. Plot every frame in the metacode file <tt>"oned.plots"</tt>.  There will be 4 plots
+  1. Plot every frame in the metacode file <span style="font-family: monospace;">"oned.plots"</span>.  There will be 4 plots
   to the page originally, but this can be overridden interactively.
   </p>
   <p>
       cl&gt; gkimosaic oned.plots
   </p>
   <p>
-  2. Extract every third plot from the metacode file <tt>"oned.plots"</tt> with task
+  2. Extract every third plot from the metacode file <span style="font-family: monospace;">"oned.plots"</span> with task
   <i>gkiextract</i> and plot them four to a page.
   </p>
   <p>
       cl&gt; gkiextract oned.plots 1-99x3 | gkimosaic
   </p>
   <p>
-  3. Plot all frames in every metacode file beginning with <tt>"mcode."</tt> and
+  3. Plot all frames in every metacode file beginning with <span style="font-family: monospace;">"mcode."</span> and
   condense them so 16 fit on a page.  The metacode is being spooled;
   it will be plotted, perhaps, when the computer isn't so busy.  Interactive
   mode is automatically disabled when not plotting to a graphics terminal.
@@ -159,8 +159,8 @@ gkimosaic: Condense metacode frames to fit on one page
   <h3>Bugs</h3>
   <!-- BeginSection: 'BUGS' -->
   <p>
-  Setting <b>device</b> to <tt>"stdvdm"</tt> does not work.  To produce an output file
-  of mosaiced metacode, use the <i>output</i> parameter or the <tt>"&gt;G"</tt> graphics 
+  Setting <b>device</b> to <span style="font-family: monospace;">"stdvdm"</span> does not work.  To produce an output file
+  of mosaiced metacode, use the <i>output</i> parameter or the <span style="font-family: monospace;">"&gt;G"</span> graphics 
   stream redirection feature of the cl.
   </p>
   <!-- EndSection:   'BUGS' -->

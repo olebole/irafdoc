@@ -25,7 +25,7 @@ translit: Replace or delete specified characters in a file
   <dl>
   <dt><b>infile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='infile' Line='infile' -->
-  <dd>The input file name or template, e.g. <tt>"abc"</tt> or <tt>"abc.*"</tt>.
+  <dd>The input file name or template, e.g. <span style="font-family: monospace;">"abc"</span> or <span style="font-family: monospace;">"abc.*"</span>.
   </dd>
   </dl>
   <dl>
@@ -33,9 +33,9 @@ translit: Replace or delete specified characters in a file
   <!-- Sec='PARAMETERS' Level=0 Label='from_string' Line='from_string' -->
   <dd>String containing characters to be mapped. 
   If delete is yes then the characters in from_string are deleted from the input
-  file(s). The from_string may specify a range of characters, e.g. <tt>"a-z"</tt> or <tt>"A-Z"</tt>.
+  file(s). The from_string may specify a range of characters, e.g. <span style="font-family: monospace;">"a-z"</span> or <span style="font-family: monospace;">"A-Z"</span>.
   If the first character of from_string is ^ then the program will operate
-  on all but the specified characters, e.g. <tt>"^a-z"</tt> means all but lower case
+  on all but the specified characters, e.g. <span style="font-family: monospace;">"^a-z"</span> means all but lower case
   alphabetic characters.
   </dd>
   </dl>

@@ -40,7 +40,7 @@ fxcor: Radial velocities via Fourier cross correlation
   </dd>
   </dl>
   <dl>
-  <dt><b>apertures = <tt>"*"</tt></b></dt>
+  <dt><b>apertures = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = "*"' -->
   <dd>List of apertures to be correlated in echelle and multispec format spectra.  
   This parameter is used for <i>both</i> the object and reference spectra if both
@@ -49,13 +49,13 @@ fxcor: Radial velocities via Fourier cross correlation
   two-dimensional template may be
   extracted to 1-D using the <i>onedspec.scopy</i> task, and these new images may
   then be used in the template list as separate images.  (See the examples for
-  how this may be done). The default of <tt>'*'</tt> means to process all of the
+  how this may be done). The default of <span style="font-family: monospace;">'*'</span> means to process all of the
   apertures in the spectrum.  Note that the sample regions named by the 
   <i>osample</i> and <i>rsample</i> parameters will apply to all apertures.
   </dd>
   </dl>
   <dl>
-  <dt><b>cursor = <tt>""</tt></b></dt>
+  <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Graphics cursor input.
   </dd>
@@ -64,43 +64,43 @@ fxcor: Radial velocities via Fourier cross correlation
   
   </p>
   <dl>
-  <dt><b>continuum = <tt>"both"</tt></b></dt>
+  <dt><b>continuum = <span style="font-family: monospace;">"both"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='continuum' Line='continuum = "both"' -->
   <dd>Continuum subtract the spectra prior to correlation?  Possible values for
-  this parameter are any of the strings (or abbreviations) <tt>"object"</tt> (for object 
-  spectrum only), <tt>"template"</tt> (for template spectrum only), <tt>"both"</tt> for 
-  continuum flattening both object and template spectra, or <tt>"none"</tt> for 
+  this parameter are any of the strings (or abbreviations) <span style="font-family: monospace;">"object"</span> (for object 
+  spectrum only), <span style="font-family: monospace;">"template"</span> (for template spectrum only), <span style="font-family: monospace;">"both"</span> for 
+  continuum flattening both object and template spectra, or <span style="font-family: monospace;">"none"</span> for 
   flattening neither spectrum.  The <i>continpars</i> pset is used to specify 
   the continuum fitting parameters.
   </dd>
   </dl>
   <dl>
-  <dt><b>filter = <tt>"none"</tt></b></dt>
+  <dt><b>filter = <span style="font-family: monospace;">"none"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='filter' Line='filter = "none"' -->
   <dd>Fourier filter the spectra prior to correlation?  Possible values for
-  this parameter are any of the strings (or abbreviations) <tt>"object"</tt> (for object 
-  spectrum only), <tt>"template"</tt> (for template spectrum only), <tt>"both"</tt> for 
-  fourier filtering both object and template spectra, or <tt>"none"</tt> for 
+  this parameter are any of the strings (or abbreviations) <span style="font-family: monospace;">"object"</span> (for object 
+  spectrum only), <span style="font-family: monospace;">"template"</span> (for template spectrum only), <span style="font-family: monospace;">"both"</span> for 
+  fourier filtering both object and template spectra, or <span style="font-family: monospace;">"none"</span> for 
   filtering neither spectrum.  The <i>filtpars</i> pset holds the parameters 
   for the filtering (filter type and width).
   </dd>
   </dl>
   <dl>
-  <dt><b>rebin = <tt>"smallest"</tt></b></dt>
+  <dt><b>rebin = <span style="font-family: monospace;">"smallest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rebin' Line='rebin = "smallest"' -->
   <dd>Rebin to which spectrum dispersion?  If the input dispersions are not equal
   prior to the correlation,
   one of the two spectra in the pair will be rebinned according to the
-  <i>rebin</i> parameter.  Possible values are <tt>"smallest"</tt> (to rebin to the
-  smaller of the two values), <tt>"largest"</tt> (to rebin to the larger of the two
-  values), <tt>"object"</tt> (to force the template to always be rebinned to the object
-  dispersion), and <tt>"template"</tt> (to force the object to always be rebinned to the
+  <i>rebin</i> parameter.  Possible values are <span style="font-family: monospace;">"smallest"</span> (to rebin to the
+  smaller of the two values), <span style="font-family: monospace;">"largest"</span> (to rebin to the larger of the two
+  values), <span style="font-family: monospace;">"object"</span> (to force the template to always be rebinned to the object
+  dispersion), and <span style="font-family: monospace;">"template"</span> (to force the object to always be rebinned to the
   template dispersion).  Input spectra <i>must be</i> linearly corrected.
   Support for non-linear input dispersions is not included in this release.
   </dd>
   </dl>
   <dl>
-  <dt><b>pixcorr = <tt>"no"</tt></b></dt>
+  <dt><b>pixcorr = <span style="font-family: monospace;">"no"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pixcorr' Line='pixcorr = "no"' -->
   <dd>Do a pixel-only correlation, ignoring any dispersion information?  If this
   parameter is set to <i>yes</i>, then regardless of whether dispersion
@@ -110,30 +110,30 @@ fxcor: Radial velocities via Fourier cross correlation
   </dd>
   </dl>
   <dl>
-  <dt><b>osample = <tt>"*"</tt></b></dt>
+  <dt><b>osample = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='osample' Line='osample = "*"' -->
   <dd>Sample regions of the object spectrum to be used in the correlation specified
-  in pixels if the first character is a <tt>'p'</tt>, or angstroms if the first
-  character is an <tt>'a'</tt>.  The default (i.e. no <tt>'a'</tt> or <tt>'p'</tt> as the first
+  in pixels if the first character is a <span style="font-family: monospace;">'p'</span>, or angstroms if the first
+  character is an <span style="font-family: monospace;">'a'</span>.  The default (i.e. no <span style="font-family: monospace;">'a'</span> or <span style="font-family: monospace;">'p'</span> as the first
   character) if a range is provided, is a range specified in angstroms.
   This string value will be updated in an interactive session as sample
-  regions are re-selected in spectrum mode. The default, <tt>'*'</tt>, is the entire 
-  spectrum.  The region is specified as a starting value, a <tt>'-'</tt>, and an ending 
+  regions are re-selected in spectrum mode. The default, <span style="font-family: monospace;">'*'</span>, is the entire 
+  spectrum.  The region is specified as a starting value, a <span style="font-family: monospace;">'-'</span>, and an ending 
   value.  If the specified range is out of bounds, the endpoints will be 
   modified to the nearest boundary, or else the entire spectrum will be 
   correlated if the whole range is out of bounds.
   </dd>
   </dl>
   <dl>
-  <dt><b>rsample = <tt>"*"</tt></b></dt>
+  <dt><b>rsample = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rsample' Line='rsample = "*"' -->
   <dd>Sample regions of the template spectrum to be used in the correlation specified
-  in pixels if the first character is a <tt>'p'</tt>, or angstroms if the first
-  character is an <tt>'a'</tt>.  The default (i.e. no <tt>'a'</tt> or <tt>'p'</tt> as the first
+  in pixels if the first character is a <span style="font-family: monospace;">'p'</span>, or angstroms if the first
+  character is an <span style="font-family: monospace;">'a'</span>.  The default (i.e. no <span style="font-family: monospace;">'a'</span> or <span style="font-family: monospace;">'p'</span> as the first
   character) if a range is provided, is a range specified in angstroms.
   This string value will be updated in an interactive session as sample
-  regions are re-selected in spectrum mode. The default, <tt>'*'</tt>, is the entire 
-  spectrum.  The region is specified as a starting value, a <tt>'-'</tt>, and an ending 
+  regions are re-selected in spectrum mode. The default, <span style="font-family: monospace;">'*'</span>, is the entire 
+  spectrum.  The region is specified as a starting value, a <span style="font-family: monospace;">'-'</span>, and an ending 
   value.  If the specified range is out of bounds, the endpoints will be 
   modified to the nearest boundary, or else the entire spectrum will be 
   correlated if the whole range is out of bounds.
@@ -150,12 +150,12 @@ fxcor: Radial velocities via Fourier cross correlation
   
   </p>
   <dl>
-  <dt><b>function = <tt>"gaussian"</tt></b></dt>
+  <dt><b>function = <span style="font-family: monospace;">"gaussian"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "gaussian"' -->
   <dd>Function used to find the center and width of the correlation peak.
-  Possible choices are <tt>"gaussian"</tt>, <tt>"parabola"</tt>, <tt>"lorentzian"</tt>, <tt>"center1d"</tt>,
-  or <tt>"sinc"</tt>.  If a center1d fit is selected, then only the center is determined.
-  A <tt>"sinc"</tt> function uses a sinc interpolator to find the maximum of the 
+  Possible choices are <span style="font-family: monospace;">"gaussian"</span>, <span style="font-family: monospace;">"parabola"</span>, <span style="font-family: monospace;">"lorentzian"</span>, <span style="font-family: monospace;">"center1d"</span>,
+  or <span style="font-family: monospace;">"sinc"</span>.  If a center1d fit is selected, then only the center is determined.
+  A <span style="font-family: monospace;">"sinc"</span> function uses a sinc interpolator to find the maximum of the 
   peak by interpolating the points selectes.  The FWHM calculation in this
   case is computed empirically by finding the half power point according
   to the computed peak height and the <i>background</i> level.  No FWHM 
@@ -179,7 +179,7 @@ fxcor: Radial velocities via Fourier cross correlation
   <dd>The width of the fitting region is defined by where the correlation
   function crosses this height starting from the peak.  The height is
   specified as either a normalized correlation level (this is like
-  the <tt>'y'</tt> interactive key) or normalized to the peak.  The type of
+  the <span style="font-family: monospace;">'y'</span> interactive key) or normalized to the peak.  The type of
   level is selected by the <i>peak</i> parameter.
   </dd>
   </dl>
@@ -231,7 +231,7 @@ fxcor: Radial velocities via Fourier cross correlation
   A value of INDEF results in a default window size of 20 pixels.  If the
   window proves to be too small for the number of points to be fit selected 
   with the <i>width</i>, <i>height</i>, and/or <i>peak</i> parameters, a message
-  will be written to the <tt>".log"</tt> file and/or screen explaining that points
+  will be written to the <span style="font-family: monospace;">".log"</span> file and/or screen explaining that points
   outside the window bounds were used in the fit.  The user may wish to
   review this fit or increase the window size.
   </dd>
@@ -252,15 +252,15 @@ fxcor: Radial velocities via Fourier cross correlation
   
   </p>
   <dl>
-  <dt><b>output = <tt>""</tt></b></dt>
+  <dt><b>output = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
   <dd>Name of the file to which output will be written.  If no file name is given
   then no log files will be kept, but the user will be queried for a file name
-  if a write operation is performed.  Tabular text output will have a <tt>".txt"</tt> 
+  if a write operation is performed.  Tabular text output will have a <span style="font-family: monospace;">".txt"</span> 
   suffix appended to the <i>output</i> name, a verbose description of each fit
-  will have <tt>".log"</tt> suffix appended and will be written only if the <i>verbose</i>
+  will have <span style="font-family: monospace;">".log"</span> suffix appended and will be written only if the <i>verbose</i>
   parameter is set, and the graphics metacode file will be appended with 
-  a <tt>".gki"</tt> suffix. (NOTE: Image names will be truncated to 10 characters in the
+  a <span style="font-family: monospace;">".gki"</span> suffix. (NOTE: Image names will be truncated to 10 characters in the
   output file because of space considerations.  Verbose output logs will
   truncate the image names to 24 characters.  Object names are similarly
   truncated to 15 characters.  If a relative velocity is calculated with a
@@ -269,12 +269,12 @@ fxcor: Radial velocities via Fourier cross correlation
   </dd>
   </dl>
   <dl>
-  <dt><b>verbose = <tt>"long"</tt></b></dt>
+  <dt><b>verbose = <span style="font-family: monospace;">"long"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = "long"' -->
   <dd>Set level of verbosity and types of files to create.  The <i>verbose</i>
   parameter is an enumerated string whose values determine the number and type
-  of output files created.  Up to three files are created: the <tt>".txt"</tt>, <tt>".log"</tt>,
-  and <tt>".gki"</tt> files (see the description for the <i>output</i> parameter).
+  of output files created.  Up to three files are created: the <span style="font-family: monospace;">".txt"</span>, <span style="font-family: monospace;">".log"</span>,
+  and <span style="font-family: monospace;">".gki"</span> files (see the description for the <i>output</i> parameter).
   Possible values  for <i>verbose</i> and the files created are as follows:
   <pre>
   
@@ -295,7 +295,7 @@ fxcor: Radial velocities via Fourier cross correlation
   </dd>
   </dl>
   <dl>
-  <dt><b>imupdate = <tt>"no"</tt></b></dt>
+  <dt><b>imupdate = <span style="font-family: monospace;">"no"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='imupdate' Line='imupdate = "no"' -->
   <dd>Update the image header with the computed velocities?  If set to yes, then
   the image will be updated with the observed and heliocentric velocities
@@ -305,7 +305,7 @@ fxcor: Radial velocities via Fourier cross correlation
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>Output graphics device.
   </dd>
@@ -314,35 +314,35 @@ fxcor: Radial velocities via Fourier cross correlation
   
   </p>
   <dl>
-  <dt><b>interactive = <tt>"yes"</tt></b></dt>
+  <dt><b>interactive = <span style="font-family: monospace;">"yes"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = "yes"' -->
   <dd>Process the spectra interactively?  
   </dd>
   </dl>
   <dl>
-  <dt><b>autowrite = <tt>"yes"</tt></b></dt>
+  <dt><b>autowrite = <span style="font-family: monospace;">"yes"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='autowrite' Line='autowrite = "yes"' -->
   <dd>Automatically record the last fit to the log file when moving to the 
-  next/previous spectrum or quitting? If set to <tt>"no"</tt>, the user will be 
+  next/previous spectrum or quitting? If set to <span style="font-family: monospace;">"no"</span>, the user will be 
   queried whether to write the results if no write was performed, and 
   possibly queried for a file name if <i>output</i> isn't set.  
   </dd>
   </dl>
   <dl>
-  <dt><b>autodraw = <tt>"yes"</tt></b></dt>
+  <dt><b>autodraw = <span style="font-family: monospace;">"yes"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='autodraw' Line='autodraw = "yes"' -->
   <dd>Automatically redraw the new fit after it changes.  If set to the default
-  <tt>"yes"</tt> then the old fit is erased and a new one computed and drawn after 
-  the <tt>'g'</tt>, <tt>'y'</tt>, <tt>'d'</tt>, or <tt>'b'</tt> keystrokes.  If set to <tt>"no"</tt>, then old fits are not
-  erased and the user must redraw the screen with an <tt>'r'</tt> keystroke.
+  <span style="font-family: monospace;">"yes"</span> then the old fit is erased and a new one computed and drawn after 
+  the <span style="font-family: monospace;">'g'</span>, <span style="font-family: monospace;">'y'</span>, <span style="font-family: monospace;">'d'</span>, or <span style="font-family: monospace;">'b'</span> keystrokes.  If set to <span style="font-family: monospace;">"no"</span>, then old fits are not
+  erased and the user must redraw the screen with an <span style="font-family: monospace;">'r'</span> keystroke.
   </dd>
   </dl>
   <dl>
-  <dt><b>ccftype = <tt>"image"</tt></b></dt>
+  <dt><b>ccftype = <span style="font-family: monospace;">"image"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ccftype' Line='ccftype = "image"' -->
   <dd>Type of output to create when writing out the correlation function with
-  the <tt>":wccf file"</tt> command.  Possible choices are <tt>"text"</tt> which will be a
-  simple list of (lag,correlation_value) pairs, or <tt>"image"</tt> which will be an
+  the <span style="font-family: monospace;">":wccf file"</span> command.  Possible choices are <span style="font-family: monospace;">"text"</span> which will be a
+  simple list of (lag,correlation_value) pairs, or <span style="font-family: monospace;">"image"</span> which will be an
   IRAF image whose header would describe the lag limits and selected peak.
   </dd>
   </dl>
@@ -350,7 +350,7 @@ fxcor: Radial velocities via Fourier cross correlation
   
   </p>
   <dl>
-  <dt><b>observatory = <tt>"kpno"</tt></b></dt>
+  <dt><b>observatory = <span style="font-family: monospace;">"kpno"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory = "kpno"' -->
   <dd>The location of the observations, as defined by the <i>noao.observatory</i>
   task.  The image header keyword OBSERVAT will override this parameter, thus
@@ -359,21 +359,21 @@ fxcor: Radial velocities via Fourier cross correlation
   </dd>
   </dl>
   <dl>
-  <dt><b>continpars = <tt>""</tt></b></dt>
+  <dt><b>continpars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='continpars' Line='continpars = ""' -->
   <dd>The continuum subtraction parameters as described in the <i>continpars</i> 
   named pset.
   </dd>
   </dl>
   <dl>
-  <dt><b>filtpars = <tt>""</tt></b></dt>
+  <dt><b>filtpars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='filtpars' Line='filtpars = ""' -->
   <dd>The parameter set defining the parameters to be used in filtering the
   data prior to the correlation. 
   </dd>
   </dl>
   <dl>
-  <dt><b>keywpars = <tt>""</tt></b></dt>
+  <dt><b>keywpars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='keywpars' Line='keywpars = ""' -->
   <dd>The image header keyword translation table as described in 
   the <i>keywpars</i> named pset.
@@ -412,11 +412,11 @@ fxcor: Radial velocities via Fourier cross correlation
   </dd>
   </dl>
   <dl>
-  <dt><b>interp = <tt>"poly5"</tt></b></dt>
+  <dt><b>interp = <span style="font-family: monospace;">"poly5"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interp' Line='interp = "poly5"' -->
   <dd>Interpolator used when rebinning the data to a log-linear dispersion.   See 
   the section on interpolation for more information.  Possible choices are
-  <tt>"nearest"</tt>, <tt>"linear"</tt>, <tt>"poly3"</tt>, <tt>"poly5"</tt>, <tt>"spline3"</tt>, and <tt>"sinc"</tt>.
+  <span style="font-family: monospace;">"nearest"</span>, <span style="font-family: monospace;">"linear"</span>, <span style="font-family: monospace;">"poly3"</span>, <span style="font-family: monospace;">"poly5"</span>, <span style="font-family: monospace;">"spline3"</span>, and <span style="font-family: monospace;">"sinc"</span>.
   </dd>
   </dl>
   <dl>
@@ -434,15 +434,15 @@ fxcor: Radial velocities via Fourier cross correlation
   </dd>
   </dl>
   <dl>
-  <dt><b>observatory = <tt>"observatory"</tt></b></dt>
+  <dt><b>observatory = <span style="font-family: monospace;">"observatory"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory = "observatory"' -->
   <dd>Observatory at which the spectra were obtained if not specified in the
   image header by the keyword OBSERVAT.  This parameter is used by several
   tasks in the package through parameter redirection so this parameter may be
   used to affect all these tasks at the same time.  The observatory may be
-  one of the observatories in the observatory database, <tt>"observatory"</tt> to
-  select the observatory defined by the environment variable <tt>"observatory"</tt> or
-  the parameter <b>observatory.observatory</b>, or <tt>"obspars"</tt> to select the
+  one of the observatories in the observatory database, <span style="font-family: monospace;">"observatory"</span> to
+  select the observatory defined by the environment variable <span style="font-family: monospace;">"observatory"</span> or
+  the parameter <b>observatory.observatory</b>, or <span style="font-family: monospace;">"obspars"</span> to select the
   current parameters set in the <b>observatory</b> task.  See help for
   <b>observatory</b> for additional information.
   </dd>
@@ -471,7 +471,7 @@ fxcor: Radial velocities via Fourier cross correlation
   velocity corrections (see help for <b>keywpars</b>), the corrections are
   computed and possibly recorded in the image header (see below for a full
   explanation of the computed velocities).  If the value of the 
-  heliocentric velocity is returned as INDEF, the user may use the <tt>'v'</tt>
+  heliocentric velocity is returned as INDEF, the user may use the <span style="font-family: monospace;">'v'</span>
   keystroke to see the full results of the correlation, including errors
   which occured causing the corrections to not be done.
   </p>
@@ -485,7 +485,7 @@ fxcor: Radial velocities via Fourier cross correlation
   both spectra will remain the same, but the dispersion in log space will be
   determined from the <i>rebin</i> parameter if the input disersions aren't
   equal, or from the spectrum's endpoints and number of pixels if they are
-  equal.  For example, assuming <i>rebin</i> is set to <tt>"smallest"</tt>, if object
+  equal.  For example, assuming <i>rebin</i> is set to <span style="font-family: monospace;">"smallest"</span>, if object
   one and the template have the same input log dispersion of 0.5e-4 A/pix the
   data will not be rebinned.  Object two with a wpc of 0.4e-4 A/pix will force
   the template to be rebinned to a common wpc of 0.4e-4 A/pix.  If the third
@@ -500,13 +500,13 @@ fxcor: Radial velocities via Fourier cross correlation
   </p>
   <p>
   If the <i>continuum</i> flag is set to something other than 
-  <tt>"none"</tt>, the object and/or template data will
+  <span style="font-family: monospace;">"none"</span>, the object and/or template data will
   be continuum subtracted using the fitting parameters found in the
   <i>continpars</i> pset on input.  The data are zeroed outside the sample
   region specified by the <i>osample</i> and <i>rsample</i> parameters, 
   the ends of each region are apodized, and the bias is then subtracted.
   If the <i>filter</i> flag is set to something other than
-  <tt>"none"</tt>, the data are Fourier filtered according to the parameters in 
+  <span style="font-family: monospace;">"none"</span>, the data are Fourier filtered according to the parameters in 
   the <i>filtpars</i> pset prior to the correlation computation.
   </p>
   <p>
@@ -520,27 +520,27 @@ fxcor: Radial velocities via Fourier cross correlation
   expanded plot is labeled with pixel lag and, if dispersion information is
   present, the top axis is labeled with relative velocity.  To choose a
   different peak to fit, move the cursor to the top plot of the whole ccf and
-  hit the <tt>'z'</tt> keystroke at the desired peak.  The plot will be redrawn with
+  hit the <span style="font-family: monospace;">'z'</span> keystroke at the desired peak.  The plot will be redrawn with
   the new peak now centered in the window and a fit automatically done.  The
   status line will contain a summary of the pixel shift from the fit and
-  optional velocity information.  The <tt>'v'</tt> keystroke may be used to suspend
+  optional velocity information.  The <span style="font-family: monospace;">'v'</span> keystroke may be used to suspend
   graphics and get a more detailed description of the correlation and fit, and
-  the <tt>'+'</tt> keystroke will toggle the status line output.  To view the
+  the <span style="font-family: monospace;">'+'</span> keystroke will toggle the status line output.  To view the
   antisymmetric noise component of the correlation function, simply hit the
-  <tt>'a'</tt> keystroke followed by any keystroke to return to the correlation plot.
-  Similarly, the <tt>'e'</tt> keystroke may be used to preview the summary plot of the
+  <span style="font-family: monospace;">'a'</span> keystroke followed by any keystroke to return to the correlation plot.
+  Similarly, the <span style="font-family: monospace;">'e'</span> keystroke may be used to preview the summary plot of the
   correlation, again hitting any key to return to the correlation.  An
-  overplot of the subtracted fit (residuals) may be seen with the <tt>'j'</tt>
+  overplot of the subtracted fit (residuals) may be seen with the <span style="font-family: monospace;">'j'</span>
   keystroke.
   </p>
   <p>
   If the user is dissatisfied with the fit to the peak, he can mark the left
-  and right side of the peak with the <tt>'g'</tt> keystroke to redo the fit, or else
-  set the cursor to mark a cutoff with the <tt>'y'</tt> keystroke, and all points from
+  and right side of the peak with the <span style="font-family: monospace;">'g'</span> keystroke to redo the fit, or else
+  set the cursor to mark a cutoff with the <span style="font-family: monospace;">'y'</span> keystroke, and all points from
   the peak maximum to the cursor will be fit.  To fix the background of a
   Gaussian fit (i.e. change the <i>background</i> parameter graphically), type
-  the <tt>'b'</tt> keystroke at the desired level, and a new fit will be done.  The <tt>'r'</tt>
-  keystroke may be used at any time to redraw the plot, and the <tt>'x'</tt> keystroke
+  the <span style="font-family: monospace;">'b'</span> keystroke at the desired level, and a new fit will be done.  The <span style="font-family: monospace;">'r'</span>
+  keystroke may be used at any time to redraw the plot, and the <span style="font-family: monospace;">'x'</span> keystroke
   can be used to compute a new correlation if any of the parameters relating
   to the correlation are changed (e.g. the apodize percentage).  New
   correlations are automatically computed when new images are read in, the
@@ -550,19 +550,19 @@ fxcor: Radial velocities via Fourier cross correlation
   computed when these modes are exited.
   </p>
   <p>
-  The <tt>'c'</tt> keystroke may be used to get a printout of the cursor position in both 
+  The <span style="font-family: monospace;">'c'</span> keystroke may be used to get a printout of the cursor position in both 
   lag and relative velocity.  The cursor may be positioned in either the
   unlabeled CCF plot on the top, or in the zoomed plot on the bottom.  This is
   useful for judging the FWHM calculation, or estimating the velocity of a
-  peak without using the <tt>'z'</tt> keystroke to zoom and fit.  Note that because of
+  peak without using the <span style="font-family: monospace;">'z'</span> keystroke to zoom and fit.  Note that because of
   the plotting implementation, the normal cursor mode keystroke <i>shift-C</i>
   should not be used as it may return erroneous results depending upon cursor
   position.  Note also that velocities printed are only approximate relative
-  velocities, and the user should properly fit a peak or use the <tt>":correction"</tt>
+  velocities, and the user should properly fit a peak or use the <span style="font-family: monospace;">":correction"</span>
   command to get a true heliocentric velocity.
   </p>
   <p>
-  For binary star work, the user may type the <tt>'d'</tt> and/or <tt>'-'</tt> keystrokes to fit
+  For binary star work, the user may type the <span style="font-family: monospace;">'d'</span> and/or <span style="font-family: monospace;">'-'</span> keystrokes to fit
   and then subtract up to four Gaussians to the peaks. See the discussion
   below for more deatils on the use of this feature.  If multiple peaks were
   fit, a separate entry will be made in the log file for each peak with a
@@ -572,7 +572,7 @@ fxcor: Radial velocities via Fourier cross correlation
   </p>
   <p>
   To move to the next spectrum in a list (of images or apertures), simply hit
-  the <tt>'n'</tt> keystroke.  Similary, the <tt>'p'</tt> keystroke will move to the previous
+  the <span style="font-family: monospace;">'n'</span> keystroke.  Similary, the <span style="font-family: monospace;">'p'</span> keystroke will move to the previous
   spectrum.  These commands have a hitch, though.  By default, the
   next/previous commands will move first to the next template in the template
   image list.  Once the end of the template image list is reached, the next
@@ -581,36 +581,36 @@ fxcor: Radial velocities via Fourier cross correlation
   aperture in the template image as well.  Finally, after correlating all of
   the templates against all of the apertures, the next/previous command will
   move to the next object image, again resetting the template image and/or
-  aperture list.  To override this sequence, the user may use the <tt>":next"</tt> or
-  <tt>":previous"</tt> commands and specify one of <tt>"aperture"</tt>, <tt>"object"</tt>, or
-  <tt>"template"</tt>.  If <i>autowrite</i> is set, the results of the last fit will be
+  aperture list.  To override this sequence, the user may use the <span style="font-family: monospace;">":next"</span> or
+  <span style="font-family: monospace;">":previous"</span> commands and specify one of <span style="font-family: monospace;">"aperture"</span>, <span style="font-family: monospace;">"object"</span>, or
+  <span style="font-family: monospace;">"template"</span>.  If <i>autowrite</i> is set, the results of the last fit will be
   written to the log automatically.  To write any one of the fits explicitly,
-  use the <tt>'w'</tt> keystroke.
+  use the <span style="font-family: monospace;">'w'</span> keystroke.
   </p>
   <p>
   The <i>fxcor</i> task also contains three submodes discussed in detail below.
-  Briefly, the <tt>'f'</tt> keystroke will put the user in the <tt>"fourier mode"</tt>,
+  Briefly, the <span style="font-family: monospace;">'f'</span> keystroke will put the user in the <span style="font-family: monospace;">"fourier mode"</span>,
   where he can examine the Fourier transform of the spectra in various
-  ways and change/examine the filtering parameters.  The <tt>'o'</tt> and <tt>'t'</tt>
+  ways and change/examine the filtering parameters.  The <span style="font-family: monospace;">'o'</span> and <span style="font-family: monospace;">'t'</span>
   keystrokes let the user examine and fit the continuum for the object
   and template spectra, respectively, using the <b>icfit</b> commands.
   Upon exiting the continuum fitting the spectra are continuum subtracted 
-  and a new correlation is computed.  Finally the <tt>'s'</tt> keystroke will put
-  the user in <tt>"spectrum mode"</tt>, in which he may graphically select the
+  and a new correlation is computed.  Finally the <span style="font-family: monospace;">'s'</span> keystroke will put
+  the user in <span style="font-family: monospace;">"spectrum mode"</span>, in which he may graphically select the
   region to be correlated, compute an approximate shift using the cursor,
   or simply examine the two spectra in a variety of ways.  All of these
-  submodes are exited with the <tt>'q'</tt> keystroke, after which the correlation
+  submodes are exited with the <span style="font-family: monospace;">'q'</span> keystroke, after which the correlation
   will be redone, if necessary, and the CCF plot redrawn.
   </p>
   <p>
   Colon commands may also be used to examine or change parameter values in
   any of the <i>filtpars</i>, <i>continpars</i>, or <i>keywpars</i>
-  psets.  Simply type a <tt>':'</tt> followed by the parameter name and an optional
+  psets.  Simply type a <span style="font-family: monospace;">':'</span> followed by the parameter name and an optional
   new value.  The <i>observatory</i> parameters may only be changed outside
   the task.
   </p>
   <p>
-  To exit the task, type <tt>'q'</tt>.  Results will be saved
+  To exit the task, type <span style="font-family: monospace;">'q'</span>.  Results will be saved
   to the logfile automatically if one was specified, otherwise the user will
   be asked if he wants to save the results, and if so, queried for a file name
   before exiting if no <i>output</i> file was defined.
@@ -618,14 +618,14 @@ fxcor: Radial velocities via Fourier cross correlation
   <p>
   If the <i>output</i> parameter is set, several files will be created
   depending on the value of the <i>verbose</i> parameter (see the parameter
-  description for details).  These include a file with a <tt>".gki"</tt> suffix
-  containing metacode output of a summary plot, a <tt>".txt"</tt> suffix file
+  description for details).  These include a file with a <span style="font-family: monospace;">".gki"</span> suffix
+  containing metacode output of a summary plot, a <span style="font-family: monospace;">".txt"</span> suffix file
   containing text output in the standard IRAF 'list' format containing either
-  verbose or non-verbose output, and a third file having a <tt>".log"</tt> suffix
+  verbose or non-verbose output, and a third file having a <span style="font-family: monospace;">".log"</span> suffix
   containing a verbose description of the correlation and fit, as well as any
-  warning messages.  This contents of the <tt>".log"</tt> file is identical to what is
-  seen with the <tt>'v'</tt> keystroke.  If the computed relative velocity exceeds the
-  package parameter <i>z_threshold</i>, the <tt>".txt"</tt> file will contain redshift Z
+  warning messages.  This contents of the <span style="font-family: monospace;">".log"</span> file is identical to what is
+  seen with the <span style="font-family: monospace;">'v'</span> keystroke.  If the computed relative velocity exceeds the
+  package parameter <i>z_threshold</i>, the <span style="font-family: monospace;">".txt"</span> file will contain redshift Z
   values rather than the default velocities.  Text file output may be have
   selected columns extracted using the iraf <i>fields</i> task (where string
   valued fields will have blank spaces replaced with an underscore), and
@@ -641,35 +641,35 @@ fxcor: Radial velocities via Fourier cross correlation
   <h3>Fourier mode description</h3>
   <!-- BeginSection: 'FOURIER MODE DESCRIPTION' -->
   <p>
-  Fourier mode is entered from the main task mode via the <tt>'f'</tt> keystroke.  By 
+  Fourier mode is entered from the main task mode via the <span style="font-family: monospace;">'f'</span> keystroke.  By 
   default, the user is presented with a split plot of the power spectra of
   the object and template spectra (object on top) and the requested filter
   overlayed. The X-axis is double-labeled with wavenumbers on the bottom of
-  the screen and frequency on top.  The <tt>":log_scale"</tt> command can be used to 
-  toggle the log scaling of the Y-axis of the plot, and the <tt>":overlay"</tt> command 
+  the screen and frequency on top.  The <span style="font-family: monospace;">":log_scale"</span> command can be used to 
+  toggle the log scaling of the Y-axis of the plot, and the <span style="font-family: monospace;">":overlay"</span> command 
   will toggle whether or not the filter function (if specified) is overlayed 
   on the plot.  By default the entire power spectrum is displayed, but 
-  the <tt>":zoom"</tt> command may be used to specify a blowup factor for the 
-  display (e.g. <tt>":zoom 2"</tt> will display only the first half of the power 
+  the <span style="font-family: monospace;">":zoom"</span> command may be used to specify a blowup factor for the 
+  display (e.g. <span style="font-family: monospace;">":zoom 2"</span> will display only the first half of the power 
   spectrum).  Plot scaling and content parameters are learned for the next 
   invocation of this mode.
   </p>
   <p>
   The plot contents may also be changed through various keystroke commands.
-  The <tt>'p'</tt> keystroke will display the power spectrum (the default) and the <tt>'f'</tt>
-  keystroke will display the two FFT's.   The <tt>'b'</tt> and <tt>'g'</tt> 
+  The <span style="font-family: monospace;">'p'</span> keystroke will display the power spectrum (the default) and the <span style="font-family: monospace;">'f'</span>
+  keystroke will display the two FFT's.   The <span style="font-family: monospace;">'b'</span> and <span style="font-family: monospace;">'g'</span> 
   keystrokes may be used to examine the power spectra and FFT's 
   respectively <i>before</i> filtering.  The user can determine the period 
   trend in the data by placing the cursor at a particular wavenumber/frequency 
-  and hitting the <tt>'i'</tt> keystroke (this command will not work on a plot of 
-  the filtered spectra).  The <tt>'r'</tt> key will redraw whichever plot is currently
-  selected and a <tt>'q'</tt> will return the user to the mode which called the Fourier
+  and hitting the <span style="font-family: monospace;">'i'</span> keystroke (this command will not work on a plot of 
+  the filtered spectra).  The <span style="font-family: monospace;">'r'</span> key will redraw whichever plot is currently
+  selected and a <span style="font-family: monospace;">'q'</span> will return the user to the mode which called the Fourier
   mode (i.e. either the main task mode or the Spectrum mode).  The Spectrum
-  mode may be entered from within Fourier mode via the <tt>'s'</tt> keystroke.
+  mode may be entered from within Fourier mode via the <span style="font-family: monospace;">'s'</span> keystroke.
   </p>
   <p>
   Colon commands are also used to specify or examine the filtering parameters
-  by simply typing a <tt>':'</tt> followed by the parameter name found in 
+  by simply typing a <span style="font-family: monospace;">':'</span> followed by the parameter name found in 
   the <i>filtpars</i> pset.
   </p>
   <!-- EndSection:   'FOURIER MODE DESCRIPTION' -->
@@ -679,46 +679,46 @@ fxcor: Radial velocities via Fourier cross correlation
   Automatic continuum subtraction is controlled by the <i>continpars</i>
   pset.  These may be reset from the main
   correlation function mode.  To interactively fit and modify the continuum
-  fitting parameters the <tt>'o'</tt> and <tt>'t'</tt> keys are used.  This enters
+  fitting parameters the <span style="font-family: monospace;">'o'</span> and <span style="font-family: monospace;">'t'</span> keys are used.  This enters
   the ICFIT package which is described elsewhere (see <i>icfit</i>).  
   Exiting the fitting,
-  with <tt>'q'</tt>, causes a recomputation of the correlation function and peak
+  with <span style="font-family: monospace;">'q'</span>, causes a recomputation of the correlation function and peak
   fit.  To view the flattened spectra use the spectrum review mode
-  entered with the <tt>'s'</tt> key.  Fitting parameters changed while doing the
+  entered with the <span style="font-family: monospace;">'s'</span> key.  Fitting parameters changed while doing the
   interactive continuum fitting are learned.
   </p>
   <!-- EndSection:   'CONTINUUM MODE DESCRIPTION' -->
   <h3>Spectrum mode description</h3>
   <!-- BeginSection: 'SPECTRUM MODE DESCRIPTION' -->
   <p>
-  Spectrum mode is entered from the main or fourier mode via the <tt>'s'</tt>
+  Spectrum mode is entered from the main or fourier mode via the <span style="font-family: monospace;">'s'</span>
   keystroke.  The user may select plots of the original input spectra with the
-  <tt>'i'</tt> keystroke, or the continuum subtracted spectra with the <tt>'n'</tt> keystroke,
+  <span style="font-family: monospace;">'i'</span> keystroke, or the continuum subtracted spectra with the <span style="font-family: monospace;">'n'</span> keystroke,
   If the data have been rebinned to a log scale, they will still be plotted 
   on a linear wavelength scale for clarity.  Pixel data are plotted identically
   to how they were read.  (NOTE: For rebinned spectra, a slight slope may be
   noticed in the 'original' data because of rebinning effects.)
   In addition, a sample regions (if selected) for the correlation are marked
-  on the bottom of both plots.  To select a new sample region, use the <tt>'s'</tt>
-  keystroke to select the endpoints of the region.  An <tt>'s'</tt> keystroke on the
-  top plot will select a sample region for the object spectrum, and an <tt>'s'</tt> on
-  the bottom plot will select a template sample, using the <tt>'b'</tt> keystroke will
+  on the bottom of both plots.  To select a new sample region, use the <span style="font-family: monospace;">'s'</span>
+  keystroke to select the endpoints of the region.  An <span style="font-family: monospace;">'s'</span> keystroke on the
+  top plot will select a sample region for the object spectrum, and an <span style="font-family: monospace;">'s'</span> on
+  the bottom plot will select a template sample, using the <span style="font-family: monospace;">'b'</span> keystroke will
   select both samples simultaneously.  The regions may be selected
-  explicitly by using the <tt>":osample"</tt> and <tt>":rsample"</tt> commands, and selected
-  sample regions may be cleared entirely using the (e.g.) <tt>":osample *"</tt> command,
+  explicitly by using the <span style="font-family: monospace;">":osample"</span> and <span style="font-family: monospace;">":rsample"</span> commands, and selected
+  sample regions may be cleared entirely using the (e.g.) <span style="font-family: monospace;">":osample *"</span> command,
   or individual regions may be unselected by putting the cursor within the
-  region and typing <tt>'u'</tt>.  See the
+  region and typing <span style="font-family: monospace;">'u'</span>.  See the
   parameter description for syntax of the sample ranges.  Regions will be
   checked and possibly truncated to see if they 
-  lie within the range of the spectrum.  The <tt>'d'</tt>
+  lie within the range of the spectrum.  The <span style="font-family: monospace;">'d'</span>
   keystroke may be used to print the difference in pixels (and/or velocity)
   between two points on the spectrum.  This is useful for getting an
-  approximate shift.  Fourier mode may be entered via the <tt>'f'</tt> keystroke.  To
-  return to the correlation simply type <tt>'q'</tt> or <tt>'x'</tt>.
+  approximate shift.  Fourier mode may be entered via the <span style="font-family: monospace;">'f'</span> keystroke.  To
+  return to the correlation simply type <span style="font-family: monospace;">'q'</span> or <span style="font-family: monospace;">'x'</span>.
   </p>
   <p>
   In addition to the above commands, the user may examine or change the 
-  parameters in the <i>continpars</i> pset by simply typing a <tt>':'</tt> followed
+  parameters in the <i>continpars</i> pset by simply typing a <span style="font-family: monospace;">':'</span> followed
   by the parameter name. Changing these values will not cause a new correlation
   until an explicit command is given to redo the continuum subtraction.
   </p>
@@ -746,14 +746,14 @@ fxcor: Radial velocities via Fourier cross correlation
   <p>
   The choice of interpolation type depends on the type of data, smooth
   verses strong, sharp, undersampled features, and the requirements of
-  the user.  The <tt>"nearest"</tt> and <tt>"linear"</tt> interpolation are somewhat
-  crude and simple but they avoid <tt>"ringing"</tt> near sharp features.  The
+  the user.  The <span style="font-family: monospace;">"nearest"</span> and <span style="font-family: monospace;">"linear"</span> interpolation are somewhat
+  crude and simple but they avoid <span style="font-family: monospace;">"ringing"</span> near sharp features.  The
   polynomial interpolations are smoother but have noticible ringing
   near sharp features.  They are, unlike the sinc function described
   below, localized.
   </p>
   <p>
-  In V2.10 a <tt>"sinc"</tt> interpolation option is available.  This function
+  In V2.10 a <span style="font-family: monospace;">"sinc"</span> interpolation option is available.  This function
   has advantages and disadvantages.  It is important to realize that
   there are disadvantages!  Sinc interpolation approximates applying a phase
   shift to the fourier transform of the spectrum.  Thus, repeated
@@ -781,12 +781,12 @@ fxcor: Radial velocities via Fourier cross correlation
   When entering the deblending function, two cursor settings define the
   local background, which may be sloping, and the region to be fit.  Note
   that both the x and y of the cursor position are used.  The lines to be
-  fit are then entered either with the cursor (<tt>'m'</tt>), or by typing the
-  shifts (<tt>'t'</tt>).  The latter is useful if the shifts of the
+  fit are then entered either with the cursor (<span style="font-family: monospace;">'m'</span>), or by typing the
+  shifts (<span style="font-family: monospace;">'t'</span>).  The latter is useful if the shifts of the
   lines are known accurately and if fits restricting the absolute or
-  relative positions of the lines will be used (i.e. <tt>'a'</tt>, <tt>'b'</tt>, <tt>'d'</tt>,
-  <tt>'e'</tt>).  A maximum of four lines may be fit.  If fewer lines are desired,
-  exit the marking step with <tt>'q'</tt>.
+  relative positions of the lines will be used (i.e. <span style="font-family: monospace;">'a'</span>, <span style="font-family: monospace;">'b'</span>, <span style="font-family: monospace;">'d'</span>,
+  <span style="font-family: monospace;">'e'</span>).  A maximum of four lines may be fit.  If fewer lines are desired,
+  exit the marking step with <span style="font-family: monospace;">'q'</span>.
   </p>
   <p>
   There are six types of fits which may be selected.  This covers all
@@ -806,17 +806,17 @@ fxcor: Radial velocities via Fourier cross correlation
       f=npns	Fit intensities, positions, and sigmas
   </pre>
   <p>
-  This list may also be printed with the <tt>'?'</tt> key when in the deblending
+  This list may also be printed with the <span style="font-family: monospace;">'?'</span> key when in the deblending
   function.
   </p>
   <p>
   As noted above, sometimes the absolute or relative shifts of the
   lines are known a priori and this information may be entered by typing
-  the shifts explicitly using the <tt>'t'</tt> option during marking.  In
-  this case, one should not use the <tt>'c'</tt> or <tt>'f'</tt> fitting options since they
-  will adjust the line positions to improve the fit.  Options <tt>'a'</tt> and <tt>'d'</tt>
+  the shifts explicitly using the <span style="font-family: monospace;">'t'</span> option during marking.  In
+  this case, one should not use the <span style="font-family: monospace;">'c'</span> or <span style="font-family: monospace;">'f'</span> fitting options since they
+  will adjust the line positions to improve the fit.  Options <span style="font-family: monospace;">'a'</span> and <span style="font-family: monospace;">'d'</span>
   will not change the lines positions and fit for one or more sigmas.
-  Options <tt>'b'</tt> and <tt>'e'</tt> will maintain the relative positions of the lines
+  Options <span style="font-family: monospace;">'b'</span> and <span style="font-family: monospace;">'e'</span> will maintain the relative positions of the lines
   but allow an other than expected shift.
   </p>
   <p>
@@ -824,15 +824,15 @@ fxcor: Radial velocities via Fourier cross correlation
   flux, equivalent width, and full width half maximum are printed on the
   status line for the first line.  The values for the other lines and
   the RMS of the fit may be examined by scrolling the status line
-  using the <tt>'+'</tt>, <tt>'-'</tt>, and <tt>'r'</tt> keys.  Velocity information is obtained by
-  typing the <tt>'v'</tt> keystroke.  To continue enter <tt>'q'</tt>.
+  using the <span style="font-family: monospace;">'+'</span>, <span style="font-family: monospace;">'-'</span>, and <span style="font-family: monospace;">'r'</span> keys.  Velocity information is obtained by
+  typing the <span style="font-family: monospace;">'v'</span> keystroke.  To continue enter <span style="font-family: monospace;">'q'</span>.
   </p>
   <p>
-  The fitting may be repeated with different options until exiting with <tt>'q'</tt>.
+  The fitting may be repeated with different options until exiting with <span style="font-family: monospace;">'q'</span>.
   </p>
   <p>
   The fitted model may be subtracted from the data (after exiting the
-  deblending function) using the <tt>'-'</tt> (minus)
+  deblending function) using the <span style="font-family: monospace;">'-'</span> (minus)
   keystroke to delimit the region for which the subtraction is to
   be performed. This allows you to fit a portion of a peak which may
   be contaminated by a blend and then subtract away the entire peak
@@ -879,16 +879,16 @@ fxcor: Radial velocities via Fourier cross correlation
   	f: 0p1s, 1p1s, np1s, npns
   </pre>
   <p>
-  For example, the most general fit, <tt>'f'</tt>, first fits for only a single sigma
+  For example, the most general fit, <span style="font-family: monospace;">'f'</span>, first fits for only a single sigma
   and the peak intensities, then allows the lines to shift but keeping the
   relative separations fixed. Next, the positions are allowed to vary
   independently but still using a single sigma, and then allows all parameters
   to vary.
   </p>
   <p>
-  To conclude, here are some general comments.  The most restrictive <tt>'a'</tt>
+  To conclude, here are some general comments.  The most restrictive <span style="font-family: monospace;">'a'</span>
   key will give odd results if the initial positions are not close to the
-  true centers.  The most general <tt>'f'</tt> can also lead to incorrect results
+  true centers.  The most general <span style="font-family: monospace;">'f'</span> can also lead to incorrect results
   by using unphysically different sigmas to make one line very narrow and
   another very broad in an attempt to fit very blended lines.  The
   algorithm works well when the lines are not severely blended and the
@@ -911,7 +911,7 @@ fxcor: Radial velocities via Fourier cross correlation
   measurement.  Note that the width defines where the fitting weights vanish
   and should be something like the full width.  For the CENTER1D algorithm the
   maximum weights are at the half width points while for the other methods
-  (with the exception of <tt>"sinc"</tt>) greater weight is given to data nearer the
+  (with the exception of <span style="font-family: monospace;">"sinc"</span>) greater weight is given to data nearer the
   center.
   </p>
   <p>
@@ -921,8 +921,8 @@ fxcor: Radial velocities via Fourier cross correlation
   where the correlation function crosses a specified height or level.
   The height may be specified in normalized correlation units or as a
   fraction of the peak height.  The former is equivalent to the
-  interactive <tt>'y'</tt> key setting while the latter may be used to select some
-  <tt>"flux"</tt> point.  A value of 0.5 in the latter would be approximately the
+  interactive <span style="font-family: monospace;">'y'</span> key setting while the latter may be used to select some
+  <span style="font-family: monospace;">"flux"</span> point.  A value of 0.5 in the latter would be approximately the
   full width at half intensity point except that the true zero or base of
   the peak is somewhat uncertain and one needs to keep in mind that the
   weights go to zero at this point.  Note that a level may be negative.
@@ -930,7 +930,7 @@ fxcor: Radial velocities via Fourier cross correlation
   data range if the level fall above the peak or below the minimum of the
   correlation.  The minimum and maximum width parameters are applied to
   constrain the fitting region.  The last method is to interactively mark
-  the fitting region with the <tt>'g'</tt> key.
+  the fitting region with the <span style="font-family: monospace;">'g'</span> key.
   </p>
   <p>
   There are five methods for determining the correlation peak position.  The
@@ -986,13 +986,13 @@ fxcor: Radial velocities via Fourier cross correlation
   The initial peak fit will be the maximum of the CCF.  This will be the only 
   peak fit in non-interactive mode but a confidence level will be entered in
   the logfile.  In interactive mode, the user may select a different peak with
-  the <tt>'z'</tt> keystroke, and the maximum peak within the specified <i>window</i>
+  the <span style="font-family: monospace;">'z'</span> keystroke, and the maximum peak within the specified <i>window</i>
   (centered on the cursor) will be fit.  The user has full control in interactive
   mode over the points used in the fit.  Once the endpoints of the peak have
-  been selected, the actual data points are shown with <tt>'+'</tt> signs on the CCF,
+  been selected, the actual data points are shown with <span style="font-family: monospace;">'+'</span> signs on the CCF,
   the fitted curve drawn, and a horizontal bar showing the location of the
   FWHM calculation is displayed.  The status line will show a summary of the 
-  fit, and the user may type the <tt>'v'</tt> keystroke for a more detailed description
+  fit, and the user may type the <span style="font-family: monospace;">'v'</span> keystroke for a more detailed description
   of the fit and correlation. 
   </p>
   <!-- EndSection:   'PEAK FITTING/FINDING ALGORITHMS' -->
@@ -1034,7 +1034,7 @@ fxcor: Radial velocities via Fourier cross correlation
   </p>
   <p>
   The keyword added to the template header (as defined by the
-  <tt>"vhelio"</tt> parameter in the <i>keywpars</i> pset) should be the catalogue velocity 
+  <span style="font-family: monospace;">"vhelio"</span> parameter in the <i>keywpars</i> pset) should be the catalogue velocity 
   of the template.  Since the observation of the template has a slightly
   different heliocentric correction, this is subtracted from the template
   heliocentric velocity so that the <i>observed</i> velocity of the template 
@@ -1232,46 +1232,46 @@ fxcor: Radial velocities via Fourier cross correlation
   	rv&gt; fxcor obj temp inter+ continuum="both" autowrite- output=""
   	    Screen is cleared and CCF peak with fit displayed
   
-  	... to refit peak, move cursor to left side of peak and type <tt>'g'</tt>
+  	... to refit peak, move cursor to left side of peak and type <span style="font-family: monospace;">'g'</span>
   	... move cursor to right side of peak and hit any key
   
   	    New fit is drawn and results displayed to the status line
   
-  	... type the <tt>'v'</tt> key for a detailed description of the correlation
+  	... type the <span style="font-family: monospace;">'v'</span> key for a detailed description of the correlation
   
   	    Graphics are suspended and the text screen shows various
   	    parameters of the correlation and fit. 
   
-  	... type <tt>'q'</tt> to get back to graphics mode
+  	... type <span style="font-family: monospace;">'q'</span> to get back to graphics mode
   
-  	... to examine the FFT's of the spectra, type the <tt>'f'</tt> keystroke.
+  	... to examine the FFT's of the spectra, type the <span style="font-family: monospace;">'f'</span> keystroke.
   
   	    The screen is cleared and a split plot of the two power spectra
   	    after filtering is drawn with the requested filter (if any)
   	    overlayed.
-  	... type the <tt>'f'</tt> keystroke
+  	... type the <span style="font-family: monospace;">'f'</span> keystroke
   	    The screen is cleared and the absolute value of the two FFT's
   	    after filtering is plotted, again with the filter overlayed.
-  	... type ":overlay no", followed by a <tt>'g'</tt> keystroke
+  	... type ":overlay no", followed by a <span style="font-family: monospace;">'g'</span> keystroke
   	    The spectra are redrawn prior to filtering, with no filter over-
   	    lay
-  	... type <tt>'q'</tt> to return to correlation mode
+  	... type <span style="font-family: monospace;">'q'</span> to return to correlation mode
   
   	    The screen is redrawn with the CCF plot and peak fit
   
-  	... type <tt>'s'</tt> to enter spectrum mode
+  	... type <span style="font-family: monospace;">'s'</span> to enter spectrum mode
   
   	    The screen is cleared and the input spectra displayed
-  	... type <tt>'s'</tt> to mark the endpoints of sample regions for correl-
+  	... type <span style="font-family: monospace;">'s'</span> to mark the endpoints of sample regions for correl-
   	... ation.  The user can mark either the top or bottom plot to
   	... set sample regions for the object and template respectively.
-  	... Then type <tt>'q'</tt> to quit this mode
+  	... Then type <span style="font-family: monospace;">'q'</span> to quit this mode
   
   	    A new correlation is computed and the peak refit automatically
   
-  	... type <tt>'q'</tt> to quit the task, satisfied with the results
+  	... type <span style="font-family: monospace;">'q'</span> to quit the task, satisfied with the results
   	    The user is asked whether he wants to save results
-  	... type <tt>'y'</tt> or &lt;cr&gt; to save results
+  	... type <span style="font-family: monospace;">'y'</span> or &lt;cr&gt; to save results
   	    The user is prompted for an output file name since one wasn't
   	    specified in the parameter set
   	... type in a file name

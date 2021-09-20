@@ -38,7 +38,7 @@ mkskyflat: Make sky corrected flat field images
   </dd>
   </dl>
   <dl>
-  <dt><b>ccdtype = <tt>""</tt></b></dt>
+  <dt><b>ccdtype = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ccdtype' Line='ccdtype = ""' -->
   <dd>CCD image type to select from the input images.
   </dd>
@@ -110,7 +110,7 @@ mkskyflat: Make sky corrected flat field images
   <b>ccdproc</b> parameters, if needed.  These parameters also determine
   the flat field image to be used in making the sky flat.  The residual
   iillumination pattern is determined by heavily smoothing the image using
-  a moving <tt>"boxcar"</tt> average.  The effects of objects in the input image
+  a moving <span style="font-family: monospace;">"boxcar"</span> average.  The effects of objects in the input image
   may be minimized by using a sigma clipping algorithm to detect and
   exclude the objects from the average.  The output image is ratio of the
   flat field image, for the same subset as the input image, to the

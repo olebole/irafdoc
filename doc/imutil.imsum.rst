@@ -35,14 +35,14 @@ imsum: Compute the sum, average, or median of a set of images
   </dd>
   </dl>
   <dl>
-  <dt><b>title = <tt>""</tt></b></dt>
+  <dt><b>title = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='title' Line='title = ""' -->
-  <dd>Image title for the output image.  If null (<tt>""</tt>) then the title of the
+  <dd>Image title for the output image.  If null (<span style="font-family: monospace;">""</span>) then the title of the
   first image is used.
   </dd>
   </dl>
   <dl>
-  <dt><b>hparams = <tt>""</tt></b></dt>
+  <dt><b>hparams = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='hparams' Line='hparams = ""' -->
   <dd>List of image header parameters to be summed or averaged.  This feature
   is only used when summing or averaging and no correction is made for
@@ -50,29 +50,29 @@ imsum: Compute the sum, average, or median of a set of images
   </dd>
   </dl>
   <dl>
-  <dt><b>pixtype = <tt>""</tt></b></dt>
+  <dt><b>pixtype = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pixtype' Line='pixtype = ""' -->
-  <dd>Pixel datatype for the output image.  The pixel datatypes are <tt>"double"</tt>,
-  <tt>"real"</tt>, <tt>"long"</tt>, <tt>"integer"</tt>, <tt>"ushort"</tt>, and <tt>"short"</tt> in order of precedence.
-  If null (<tt>""</tt>) then the calculation type is used.
+  <dd>Pixel datatype for the output image.  The pixel datatypes are <span style="font-family: monospace;">"double"</span>,
+  <span style="font-family: monospace;">"real"</span>, <span style="font-family: monospace;">"long"</span>, <span style="font-family: monospace;">"integer"</span>, <span style="font-family: monospace;">"ushort"</span>, and <span style="font-family: monospace;">"short"</span> in order of precedence.
+  If null (<span style="font-family: monospace;">""</span>) then the calculation type is used.
   The datatypes may be abbreviated to a single character.
   </dd>
   </dl>
   <dl>
-  <dt><b>calctype = <tt>""</tt></b></dt>
+  <dt><b>calctype = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='calctype' Line='calctype = ""' -->
-  <dd>Calculation type.  The calculation types are <tt>"double"</tt>, <tt>"real"</tt>, <tt>"long"</tt>,
-  <tt>"integer"</tt>, and <tt>"short"</tt> in order of precedence.  If null (<tt>""</tt>) then the
+  <dd>Calculation type.  The calculation types are <span style="font-family: monospace;">"double"</span>, <span style="font-family: monospace;">"real"</span>, <span style="font-family: monospace;">"long"</span>,
+  <span style="font-family: monospace;">"integer"</span>, and <span style="font-family: monospace;">"short"</span> in order of precedence.  If null (<span style="font-family: monospace;">""</span>) then the
   highest precedence datatype of the input images is used.
-  If there is a mixture of <tt>"short"</tt> and <tt>"ushort"</tt> images then the highest
-  precedence datatype will be <tt>"int"</tt>.
+  If there is a mixture of <span style="font-family: monospace;">"short"</span> and <span style="font-family: monospace;">"ushort"</span> images then the highest
+  precedence datatype will be <span style="font-family: monospace;">"int"</span>.
   The calculation types may be abbreviated to a single character.
   </dd>
   </dl>
   <dl>
-  <dt><b>option = <tt>"sum"</tt></b></dt>
+  <dt><b>option = <span style="font-family: monospace;">"sum"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='option' Line='option = "sum"' -->
-  <dd>Output options are <tt>"sum"</tt>, <tt>"average"</tt>, or <tt>"median"</tt>.  The <tt>"median"</tt> of an
+  <dd>Output options are <span style="font-family: monospace;">"sum"</span>, <span style="font-family: monospace;">"average"</span>, or <span style="font-family: monospace;">"median"</span>.  The <span style="font-family: monospace;">"median"</span> of an
   even number of images takes pixel nimages/2 + 1, where nimages is the
   number of images.
   </dd>
@@ -107,12 +107,12 @@ imsum: Compute the sum, average, or median of a set of images
   result recorded in the output image.  All input images must be the same
   size but not necessarily of the same pixel datatype.  For the sum or average
   option a selected fraction or number of pixels may be rejected.  The output
-  option <tt>"average"</tt> divides the sum by the number of pixels in the sum.  The
+  option <span style="font-family: monospace;">"average"</span> divides the sum by the number of pixels in the sum.  The
   pixel datatype of the output image may be selected or defaulted to the
   calculation datatype. The calculation type may be selected or defaulted
   to the highest precedence datatype of the input images.  Note that a
-  mixture of <tt>"short"</tt> and <tt>"ushort"</tt> images has a highest precedence datatype
-  of <tt>"int"</tt>.  If all the image pixel datatypes are the same and agree with the
+  mixture of <span style="font-family: monospace;">"short"</span> and <span style="font-family: monospace;">"ushort"</span> images has a highest precedence datatype
+  of <span style="font-family: monospace;">"int"</span>.  If all the image pixel datatypes are the same and agree with the
   calculation type then this operation is maximally efficient.  However,
   beware of integer overflows with images of datatype short or ushort.  A log
   of the task name, the input image names, the output image name, the output
@@ -131,7 +131,7 @@ imsum: Compute the sum, average, or median of a set of images
   1. To sum three images:
   </p>
   <p>
-  	im&gt; imsum frame1,frame2,frame3 sum hparams=<tt>"itime,exposure"</tt>
+  	im&gt; imsum frame1,frame2,frame3 sum hparams=<span style="font-family: monospace;">"itime,exposure"</span>
   </p>
   <p>
   2. To make a median image of a set of images:
@@ -140,7 +140,7 @@ imsum: Compute the sum, average, or median of a set of images
   	im&gt; imsum obs* median option=median
   </p>
   <p>
-  where <tt>'*'</tt> is a template wildcard.
+  where <span style="font-family: monospace;">'*'</span> is a template wildcard.
   </p>
   <p>
   3. To reject the lowest and highest 2 pixels and average the rest:
@@ -154,7 +154,7 @@ imsum: Compute the sum, average, or median of a set of images
   <dl>
   <dt><b>IMSUM V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='IMSUM' Line='IMSUM V2.11' -->
-  <dd>Now allows <tt>"ushort"</tt> data types.
+  <dd>Now allows <span style="font-family: monospace;">"ushort"</span> data types.
   </dd>
   </dl>
   <!-- EndSection:   'REVISIONS' -->
@@ -183,7 +183,7 @@ imsum: Compute the sum, average, or median of a set of images
   (of dimension &gt;= 2) exceeds this maximum and median or pixel rejection is
   used then the performance of this task will suffer due to the need to
   repeatedly open and close the excess images.  The maximum number is a
-  configurable parameter in the include file <tt>"imsum.h"</tt>.
+  configurable parameter in the include file <span style="font-family: monospace;">"imsum.h"</span>.
   </p>
   <p>
   This task has been largely replaced by the task <b>imcombine</b>.  It is

@@ -65,7 +65,7 @@ geotran: Transform 1-D or 2-D images using various mapping transforms
   </dd>
   </dl>
   <dl>
-  <dt><b>geometry = <tt>"geometric"</tt></b></dt>
+  <dt><b>geometry = <span style="font-family: monospace;">"geometric"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='geometry' Line='geometry = "geometric"' -->
   <dd>The type of geometric transformation. The geometry parameter is
   only requested if database is not equal to the null string. The options are:
@@ -126,7 +126,7 @@ geotran: Transform 1-D or 2-D images using various mapping transforms
   </dd>
   </dl>
   <dl>
-  <dt><b>interpolant = <tt>"linear"</tt></b></dt>
+  <dt><b>interpolant = <span style="font-family: monospace;">"linear"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interpolant' Line='interpolant = "linear"' -->
   <dd>The interpolant used for rebinning the image.
   The choices are the following.
@@ -199,7 +199,7 @@ geotran: Transform 1-D or 2-D images using various mapping transforms
   </dd>
   </dl>
   <dl>
-  <dt><b>boundary = <tt>"nearest"</tt></b></dt>
+  <dt><b>boundary = <span style="font-family: monospace;">"nearest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"' -->
   <dd>The choices are:
   <dl>
@@ -363,7 +363,7 @@ geotran: Transform 1-D or 2-D images using various mapping transforms
   the output image, and nyblock to be as large as machine memory will permit.
   </p>
   <p>
-  If the CL environment variable <i>nomwcs</i> is <tt>"no"</tt> then the world
+  If the CL environment variable <i>nomwcs</i> is <span style="font-family: monospace;">"no"</span> then the world
   coordinate system of the input image will be modified in the output image
   to reflect the effects of the <i>linear</i> portion of the geometric
   transformation operation.
@@ -387,7 +387,7 @@ geotran: Transform 1-D or 2-D images using various mapping transforms
   image to the coordinate system of the reference image. The size of the
   reference image is 512 by 512.  The output image scale will be 1.0 and
   its size will be determined by the xmin, xmax, ymin, ymax parameters set
-  in the task GEOMAP. The file <tt>"database"</tt> containing the record <tt>"m51.coo"</tt>
+  in the task GEOMAP. The file <span style="font-family: monospace;">"database"</span> containing the record <span style="font-family: monospace;">"m51.coo"</span>
   was produced by GEOMAP.
   </p>
   <pre>

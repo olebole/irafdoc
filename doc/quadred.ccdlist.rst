@@ -30,7 +30,7 @@ ccdlist: List CCD processing information
   </dd>
   </dl>
   <dl>
-  <dt><b>ccdtype = <tt>""</tt></b></dt>
+  <dt><b>ccdtype = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ccdtype' Line='ccdtype = ""' -->
   <dd>CCD image type to be listed.  If no type is specified then all the images
   are listed.  If an image type is specified then only images
@@ -92,7 +92,7 @@ ccdlist: List CCD processing information
   </p>
   <p>
   The image name only format is intended to be used to generate lists of
-  images of the same CCD image type.  These lists may be used as <tt>"@"</tt> file
+  images of the same CCD image type.  These lists may be used as <span style="font-family: monospace;">"@"</span> file
   lists in IRAF tasks.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
@@ -126,7 +126,7 @@ ccdlist: List CCD processing information
       ccd024.imh[544,512][short][object][R]:N4036 R 600s
   </pre>
   <p>
-  3. The long list for image <tt>"ccd007"</tt> is obtained by:
+  3. The long list for image <span style="font-family: monospace;">"ccd007"</span> is obtained by:
   </p>
   <pre>
       cl&gt; ccdlist ccd007 l+
@@ -149,7 +149,7 @@ ccdlist: List CCD processing information
   The processing indicated is overscan subtraction, trimming, and flat fielding.
   </p>
   <p>
-  5. The long listing for <tt>"ccd007"</tt> after processing is:
+  5. The long listing for <span style="font-family: monospace;">"ccd007"</span> after processing is:
   </p>
   <pre>
       cl&gt; ccdlist ccd007 l+

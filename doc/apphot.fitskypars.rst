@@ -23,7 +23,7 @@ fitskypars: Edit the sky fitting parameters
   <h3>Parameters</h3>
   <!-- BeginSection: 'PARAMETERS' -->
   <dl>
-  <dt><b>salgorithm = <tt>"centroid"</tt></b></dt>
+  <dt><b>salgorithm = <span style="font-family: monospace;">"centroid"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='salgorithm' Line='salgorithm = "centroid"' -->
   <dd>The sky fitting algorithm to be employed. The sky fitting options are:
   <dl>
@@ -53,7 +53,7 @@ fitskypars: Edit the sky fitting parameters
   <!-- Sec='PARAMETERS' Level=1 Label='median' Line='median' -->
   <dd>Compute the median of the sky pixel distribution. This algorithm is a useful
   for computing sky values in regions with rapidly varying sky backgrounds
-  and is a good alternative to <tt>"centroid"</tt>.
+  and is a good alternative to <span style="font-family: monospace;">"centroid"</span>.
   </dd>
   </dl>
   <dl>
@@ -139,7 +139,7 @@ fitskypars: Edit the sky fitting parameters
   <dt><b>smaxiter = 10</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='smaxiter' Line='smaxiter = 10' -->
   <dd>The maximum number of iterations performed by the sky fitting algorithm.
-  <i>Smaxiter</i> is required by the <tt>"gauss"</tt> and <tt>"ofilter"</tt> sky fitting algorithms.
+  <i>Smaxiter</i> is required by the <span style="font-family: monospace;">"gauss"</span> and <span style="font-family: monospace;">"ofilter"</span> sky fitting algorithms.
   </dd>
   </dl>
   <dl>
@@ -241,22 +241,22 @@ fitskypars: Edit the sky fitting parameters
   </p>
   <p>
   Sky values are computed using the sky fitting algorithm specified by
-  <i>salgorithm</i>. The default value is <tt>"centroid"</tt>. If <i>salgorithm</i>
-  = <tt>"mean"</tt>, <tt>"median"</tt> or <tt>"mode"</tt>, the sky value is computed directly from the
+  <i>salgorithm</i>. The default value is <span style="font-family: monospace;">"centroid"</span>. If <i>salgorithm</i>
+  = <span style="font-family: monospace;">"mean"</span>, <span style="font-family: monospace;">"median"</span> or <span style="font-family: monospace;">"mode"</span>, the sky value is computed directly from the
   array of sky pixels.  The remaining sky fitting algorithms use the histogram
   of the object sky pixels. The computed histogram is <i>khist</i> * sigma wide
   with a bin width of <i>binsize</i> * sigma  where sigma is the computed
   standard deviation of the sky pixels for each object. If <i>smooth</i> = yes,
   boxcar smoothing is performed on the computed histogram before sky fitting.
   The mode of the histogram is  computed using, a non-linear least squares
-  fit to a Gaussian (salgorithm = <tt>"gauss"</tt>), optimal filtering of the histogram
-  (salgorithm = <tt>"ofilter"</tt>), computing the intensity weighted mean of the
-  histogram (salgorithm = <tt>"centroid"</tt>), or by cross-correlation techniques 
-  (salgorithm = <tt>"crosscor"</tt>).
+  fit to a Gaussian (salgorithm = <span style="font-family: monospace;">"gauss"</span>), optimal filtering of the histogram
+  (salgorithm = <span style="font-family: monospace;">"ofilter"</span>), computing the intensity weighted mean of the
+  histogram (salgorithm = <span style="font-family: monospace;">"centroid"</span>), or by cross-correlation techniques 
+  (salgorithm = <span style="font-family: monospace;">"crosscor"</span>).
   </p>
   <p>
   Two interactive methods of fitting sky are also available. If <i>salgorithm</i>
-  is <tt>"radplot"</tt> or <tt>"histplot"</tt>, the user must interactively set the value of the
+  is <span style="font-family: monospace;">"radplot"</span> or <span style="font-family: monospace;">"histplot"</span>, the user must interactively set the value of the
   sky using a radial profile or a histogram profile plot.
   </p>
   <p>

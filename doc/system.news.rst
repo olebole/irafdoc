@@ -28,7 +28,7 @@ news: Page through the system news file
   The revisions summaries for older versions of the system are also provided:
   use the <i>N</i> and <i>P</i> pager keys to display the next or previous
   system revisions summary.  The revisions summary is given in the file
-  <tt>"doc$newsfile"</tt>.
+  <span style="font-family: monospace;">"doc$newsfile"</span>.
   </p>
   <p>
   For reasons of brevity, only the revisions summary is printed.  For detailed
@@ -38,11 +38,11 @@ news: Page through the system news file
       cl&gt; help &lt;pkg&gt;.revisions op=sys
   </p>
   <p>
-  where <tt>"pkg"</tt> is the name of the CL package for which revisions information
+  where <span style="font-family: monospace;">"pkg"</span> is the name of the CL package for which revisions information
   is desired.  For detailed information on the revisions to the system
   software and programming interfaces, examine the system notes file,
-  given in the file <tt>"notes.*"</tt> in the directory <tt>"iraf$local"</tt>.  The system
-  notes files for older versions of the system will be found in the <tt>"doc"</tt>
+  given in the file <span style="font-family: monospace;">"notes.*"</span> in the directory <span style="font-family: monospace;">"iraf$local"</span>.  The system
+  notes files for older versions of the system will be found in the <span style="font-family: monospace;">"doc"</span>
   directory.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->

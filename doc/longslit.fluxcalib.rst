@@ -49,7 +49,7 @@ fluxcalib: Apply flux calibration to images (obsolete)
   </dd>
   </dl>
   <dl>
-  <dt><b>exposure = <tt>"otime"</tt></b></dt>
+  <dt><b>exposure = <span style="font-family: monospace;">"otime"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='exposure' Line='exposure = "otime"' -->
   <dd>Exposure time keyword in image headers.
   </dd>
@@ -123,7 +123,7 @@ fluxcalib: Apply flux calibration to images (obsolete)
   	cl&gt; fluxcalib img* img* sens.0000
   </pre>
   <p>
-  where <tt>"sens.0000"</tt> is the calibration file produced by the task
+  where <span style="font-family: monospace;">"sens.0000"</span> is the calibration file produced by the task
   <b>onedspec.sensfunc</b>.
   </p>
   <p>

@@ -43,11 +43,11 @@ imjoin: Join images along a given dimension
   </dd>
   </dl>
   <dl>
-  <dt><b>pixtype = <tt>""</tt></b></dt>
+  <dt><b>pixtype = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pixtype' Line='pixtype = ""' -->
   <dd>The output image pixel type. The options are in order of increasing
-  precedence <tt>"s"</tt> (short), <tt>"u"</tt> (unsigned short), <tt>"i"</tt> (integer),
-  <tt>"l"</tt> (long integer), <tt>"r"</tt> (real), <tt>"d"</tt> (double), and <tt>"x"</tt> (complex).
+  precedence <span style="font-family: monospace;">"s"</span> (short), <span style="font-family: monospace;">"u"</span> (unsigned short), <span style="font-family: monospace;">"i"</span> (integer),
+  <span style="font-family: monospace;">"l"</span> (long integer), <span style="font-family: monospace;">"r"</span> (real), <span style="font-family: monospace;">"d"</span> (double), and <span style="font-family: monospace;">"x"</span> (complex).
   If the output image pixel type is not specified, it defaults to highest
   precedence input image datatype.
   </dd>

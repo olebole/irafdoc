@@ -27,37 +27,37 @@ sections: Expand an image template on the standard output
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>Image template or list of images.  There is no check that the names are
   images and any name may be used.  The thing which distinguishes an image
-  template from a file template is that the special characters <tt>'['</tt> and
-  <tt>']'</tt> are interpreted as image sections rather than a character class
-  wildcard unless preceded by the escape character <tt>'!'</tt>.  To explicitly
+  template from a file template is that the special characters <span style="font-family: monospace;">'['</span> and
+  <span style="font-family: monospace;">']'</span> are interpreted as image sections rather than a character class
+  wildcard unless preceded by the escape character <span style="font-family: monospace;">'!'</span>.  To explicitly
   limit a wildcard template to images one should use an appropriate
-  extension such as <tt>".imh"</tt>.
+  extension such as <span style="font-family: monospace;">".imh"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>option = <tt>"fullname"</tt></b></dt>
+  <dt><b>option = <span style="font-family: monospace;">"fullname"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='option' Line='option = "fullname"' -->
   <dd>The options are:
   <dl>
-  <dt><b><tt>"nolist"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"nolist"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"nolist"' -->
   <dd>Do not print list.
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"fullname"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"fullname"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"fullname"' -->
   <dd>Print the full image name for each image in the template.
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"root"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"root"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"root"' -->
   <dd>Print the root name for each image in the template.
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"section"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"section"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"section"' -->
   <dd>Print the section for each image in the template.
   </dd>
@@ -75,7 +75,7 @@ sections: Expand an image template on the standard output
   <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The image template list <i>images</i> is expanded and the images are printed
-  one per line on the standard output unless the <tt>"nolist"</tt> option is given.
+  one per line on the standard output unless the <span style="font-family: monospace;">"nolist"</span> option is given.
   Other options allow selection of a portion of the image name.  The number
   of images in the list is determined and stored in the parameter <i>nimages</i>.
   </p>
@@ -111,10 +111,10 @@ sections: Expand an image template on the standard output
   <p>
   There is no check that the names are images and any name may be used.
   The thing which distinguishes an <i>image template</i> from a <i>file
-  template</i> is that the special characters <tt>'['</tt> and <tt>']'</tt> are interpreted
+  template</i> is that the special characters <span style="font-family: monospace;">'['</span> and <span style="font-family: monospace;">']'</span> are interpreted
   as image sections rather than a character class wildcard unless
-  preceded by the escape character <tt>'!'</tt>.  To explicitly limit a wildcard
-  template to images one should use an appropriate extension such as <tt>".imh"</tt>.
+  preceded by the escape character <span style="font-family: monospace;">'!'</span>.  To explicitly limit a wildcard
+  template to images one should use an appropriate extension such as <span style="font-family: monospace;">".imh"</span>.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Examples</h3>
@@ -141,7 +141,7 @@ sections: Expand an image template on the standard output
   and explicit use of the .imh extension.
   </p>
   <p>
-  3. Create a new list of image names by adding the suffix <tt>"new"</tt>:
+  3. Create a new list of image names by adding the suffix <span style="font-family: monospace;">"new"</span>:
   </p>
   <pre>
   	cl&gt; sections jan18???//new

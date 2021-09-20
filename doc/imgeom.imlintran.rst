@@ -79,7 +79,7 @@ imlintran: Linearly transform a list of 2-D images
   </dd>
   </dl>
   <dl>
-  <dt><b>interpolant = <tt>"linear"</tt></b></dt>
+  <dt><b>interpolant = <span style="font-family: monospace;">"linear"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interpolant' Line='interpolant = "linear"' -->
   <dd>The choices are the following.
   <dl>
@@ -151,7 +151,7 @@ imlintran: Linearly transform a list of 2-D images
   </dd>
   </dl>
   <dl>
-  <dt><b>boundary = <tt>"nearest"</tt></b></dt>
+  <dt><b>boundary = <span style="font-family: monospace;">"nearest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"' -->
   <dd>The choices are:
   <dl>

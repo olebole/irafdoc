@@ -32,11 +32,11 @@ tcalc: Perform arithmetic operations on table columns.
   Columns
   may be of any type except string. If the column name contains
   non-alphanumeric characters, it should be preceded by a dollar sign
-  and followed by a blank. For example, the expression <tt>"date-obs+1."</tt>
-  contains the column <tt>"date-obs"</tt>, but the task thinks that it contains
-  two column names, <tt>"date"</tt> and <tt>"obs"</tt>.  To ensure that the expression is
-  evaluated correctly, rewrite it as <tt>"$date-obs +1."</tt>. The variable
-  <tt>"rownum"</tt> may also be used in an expression if there is no column in
+  and followed by a blank. For example, the expression <span style="font-family: monospace;">"date-obs+1."</span>
+  contains the column <span style="font-family: monospace;">"date-obs"</span>, but the task thinks that it contains
+  two column names, <span style="font-family: monospace;">"date"</span> and <span style="font-family: monospace;">"obs"</span>.  To ensure that the expression is
+  evaluated correctly, rewrite it as <span style="font-family: monospace;">"$date-obs +1."</span>. The variable
+  <span style="font-family: monospace;">"rownum"</span> may also be used in an expression if there is no column in
   the table of the same name. Its value is the current row number. The
   expression will be evaluated using the data types of the columns and
   constants in the expression, with the usual rules of type promotion used in
@@ -99,9 +99,9 @@ tcalc: Perform arithmetic operations on table columns.
   mod 	modulus			sign	sign transfer
   </pre>
   <p>
-  Conditional expressions of the form <tt>"if expr then expr else expr"</tt> are
+  Conditional expressions of the form <span style="font-family: monospace;">"if expr then expr else expr"</span> are
   supported. The expression after the else may be another conditional
-  expression.  The words <tt>"if"</tt>, <tt>"then"</tt>, and <tt>"else"</tt> must be surrounded by
+  expression.  The words <span style="font-family: monospace;">"if"</span>, <span style="font-family: monospace;">"then"</span>, and <span style="font-family: monospace;">"else"</span> must be surrounded by
   blanks.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
@@ -130,8 +130,8 @@ tcalc: Perform arithmetic operations on table columns.
   <!-- Sec='PARAMETERS' Level=0 Label='equals' Line='equals [string]' -->
   <dd>The arithmetic expression to evaluate. If the expression is too long
   to pass as a parameter, place the expression in a file and set the
-  value of this parameter to the file name preceded by an <tt>"@"</tt>, for
-  example, <tt>"@filename"</tt>.
+  value of this parameter to the file name preceded by an <span style="font-family: monospace;">"@"</span>, for
+  example, <span style="font-family: monospace;">"@filename"</span>.
   </dd>
   </dl>
   <dl>
@@ -151,8 +151,8 @@ tcalc: Perform arithmetic operations on table columns.
   <dt><b>(colfmt) [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(colfmt) [string]' -->
   <dd>Print format for the output column, if it is a new column.  If this
-  parameter is left blank then a default will be used.  Type <tt>"help
-  ttools opt=sysdoc"</tt> for more information about print formats.
+  parameter is left blank then a default will be used.  Type <span style="font-family: monospace;">"help
+  ttools opt=sysdoc"</span> for more information about print formats.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -195,7 +195,7 @@ tcalc: Perform arithmetic operations on table columns.
   imcalc
   </p>
   <p>
-  Type <tt>"help ttools opt=sys"</tt> for a higher-level description of the 'tables' 
+  Type <span style="font-family: monospace;">"help ttools opt=sys"</span> for a higher-level description of the 'tables' 
   package.
   </p>
   

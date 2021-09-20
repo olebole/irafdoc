@@ -36,7 +36,7 @@ datapars: Edit the image data dependent parameters
   <dt><b>fwhmpsf = 2.5 (scale units)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fwhmpsf' Line='fwhmpsf = 2.5 (scale units)' -->
   <dd>The full-width half-maximum of the point spread function in scale units.
-  The DAOFIND task and the PHOT task  <tt>"gauss"</tt> and <tt>"ofilter"</tt> centering algorithms
+  The DAOFIND task and the PHOT task  <span style="font-family: monospace;">"gauss"</span> and <span style="font-family: monospace;">"ofilter"</span> centering algorithms
   depend on the value of fwhmpsf. DAOPHOT users can either determine a value
   for fwhmpsf using an external task such as IMEXAMINE, or make use of the
   interactive capabilities of the DAOPHOT tasks to set and store it.
@@ -47,14 +47,14 @@ datapars: Edit the image data dependent parameters
   <!-- Sec='PARAMETERS' Level=0 Label='emission' Line='emission = yes' -->
   <dd>The features to be measured are above sky. By default the DAOPHOT package
   considers all features to be emission features. DAOPHOT users should
-  leave this parameter set to <tt>"yes"</tt>. 
+  leave this parameter set to <span style="font-family: monospace;">"yes"</span>. 
   </dd>
   </dl>
   <dl>
   <dt><b>sigma = 0.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sigma' Line='sigma = 0.0' -->
   <dd>The standard deviation of the sky pixels.  The DAOFIND task and the PHOT task
-  <tt>"constant"</tt> sky fitting algorithm error estimate depend on the value of sigma. 
+  <span style="font-family: monospace;">"constant"</span> sky fitting algorithm error estimate depend on the value of sigma. 
   DAOPHOT users should set sigma to a value representative of the noise in
   the sky background.
   </dd>
@@ -84,21 +84,21 @@ datapars: Edit the image data dependent parameters
   </dd>
   </dl>
   <dl>
-  <dt><b>noise = <tt>"poisson"</tt></b></dt>
+  <dt><b>noise = <span style="font-family: monospace;">"poisson"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='noise' Line='noise = "poisson"' -->
   <dd>The noise model used to estimate the uncertainties in the computed
-  magnitudes. DAOPHOT users must leave noise set to <tt>"poisson"</tt>.
+  magnitudes. DAOPHOT users must leave noise set to <span style="font-family: monospace;">"poisson"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>ccdread = <tt>""</tt></b></dt>
+  <dt><b>ccdread = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ccdread' Line='ccdread = ""' -->
   <dd>The image header keyword defining the readout noise parameter whose units
   are assumed to be electrons.
   </dd>
   </dl>
   <dl>
-  <dt><b>gain = <tt>""</tt></b></dt>
+  <dt><b>gain = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gain' Line='gain = ""' -->
   <dd>The image header keyword defining the gain parameter whose units are assumed to
   be electrons per adu.
@@ -123,7 +123,7 @@ datapars: Edit the image data dependent parameters
   </dd>
   </dl>
   <dl>
-  <dt><b>exposure = <tt>""</tt></b></dt>
+  <dt><b>exposure = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='exposure' Line='exposure = ""' -->
   <dd>The image header exposure time keyword. The time units are arbitrary but
   must be consistent for any list of images whose magnitudes are to be compared.
@@ -134,7 +134,7 @@ datapars: Edit the image data dependent parameters
   </dd>
   </dl>
   <dl>
-  <dt><b>airmass = <tt>""</tt></b></dt>
+  <dt><b>airmass = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='airmass' Line='airmass = ""' -->
   <dd>The image header airmass keyword.  The airmass parameter is not used
   directly by DAOPHOT but the airmass value is stored in the output file
@@ -142,7 +142,7 @@ datapars: Edit the image data dependent parameters
   </dd>
   </dl>
   <dl>
-  <dt><b>filter = <tt>""</tt></b></dt>
+  <dt><b>filter = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='filter' Line='filter = ""' -->
   <dd>The image header filter id keyword.  The filter parameter is not used
   directly by DAOPHOT but the filter id is stored in the output file
@@ -150,7 +150,7 @@ datapars: Edit the image data dependent parameters
   </dd>
   </dl>
   <dl>
-  <dt><b>obstime = <tt>""</tt></b></dt>
+  <dt><b>obstime = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='obstime' Line='obstime = ""' -->
   <dd>The image header time of observation keyword. The obstime parameter is not used
   directly by DAOPHOT but the obstime value is stored in the output file
@@ -174,7 +174,7 @@ datapars: Edit the image data dependent parameters
   </dd>
   </dl>
   <dl>
-  <dt><b>ifilter = <tt>"INDEF"</tt></b></dt>
+  <dt><b>ifilter = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ifilter' Line='ifilter = "INDEF"' -->
   <dd>The filter id string. The filter id is read from the image header if filter
   is defined otherwise from ifilter. The filter id is stored in the DAOPHOT
@@ -182,7 +182,7 @@ datapars: Edit the image data dependent parameters
   </dd>
   </dl>
   <dl>
-  <dt><b>otime = <tt>"INDEF"</tt></b></dt>
+  <dt><b>otime = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='otime' Line='otime = "INDEF"' -->
   <dd>The value of the time of observation. The time of observation is read from
   the image header if obstime is defined otherwise from otime. The time of
@@ -215,7 +215,7 @@ datapars: Edit the image data dependent parameters
   <p>
   The parameter <i>fwhmpsf</i> defines the full-width at half-maximum of the
   stellar point spread function. The DAOFIND task, the PHOT task centering
-  algorithms <tt>"gauss"</tt> and <tt>"ofilt"</tt>, and the PSF modeling task PSF all require
+  algorithms <span style="font-family: monospace;">"gauss"</span> and <span style="font-family: monospace;">"ofilt"</span>, and the PSF modeling task PSF all require
   an accurate estimate for this parameter.
   </p>
   <p>
@@ -232,9 +232,9 @@ datapars: Edit the image data dependent parameters
   executing a DAOPHOT task on a new image.
   </p>
   <p>
-  If <i>emission</i> is <tt>"yes"</tt>, the features to be measured are assumed to
+  If <i>emission</i> is <span style="font-family: monospace;">"yes"</span>, the features to be measured are assumed to
   be above sky. By default the DAOPHOT package considers all features to be
-  emission features. DAOPHOT users should leave this parameter set to <tt>"yes"</tt>.
+  emission features. DAOPHOT users should leave this parameter set to <span style="font-family: monospace;">"yes"</span>.
   Although the DAOFIND and PHOT tasks can detect and measure absorption features
   the PSF fitting tasks currently cannot.
   </p>
@@ -262,7 +262,7 @@ datapars: Edit the image data dependent parameters
   before running the DAOPHOT tasks.
   </p>
   <p>
-  DAOPHOT users must leave <i>noise</i> set to <tt>"poisson"</tt>.  This model includes
+  DAOPHOT users must leave <i>noise</i> set to <span style="font-family: monospace;">"poisson"</span>.  This model includes
   Poisson noise from the object and both Poisson and readout noise in the sky
   background.
   </p>

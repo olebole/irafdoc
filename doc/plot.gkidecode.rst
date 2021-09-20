@@ -79,7 +79,7 @@ gkidecode: Decode metacode on the standard output
       cl&gt; gkidecode crtpict.mc | lprint dev=ver
   </p>
   <p>
-  3. Decode the third frame in metacode file <tt>"oned.mc"</tt>.
+  3. Decode the third frame in metacode file <span style="font-family: monospace;">"oned.mc"</span>.
   </p>
   <p>
       cl&gt; gkiextract oned.mc 3 | gkidecode

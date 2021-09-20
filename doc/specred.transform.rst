@@ -36,14 +36,14 @@ transform: Resample longslit spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>minput = <tt>""</tt></b></dt>
+  <dt><b>minput = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='minput' Line='minput = ""' -->
   <dd>List of input masks or references.  This mask is used to create an output
   mask and is currently not used in the calculation of the output pixel
   values.  The list may be empty, a single element to apply to all input
   images, or a list that matches the input list.  A element in the list
-  may be <tt>"BPM"</tt> to use the mask referenced by the standard bad pixel mask
-  keyword <tt>"BPM"</tt>, <tt>"!&lt;keyword&gt;"</tt> to use another header keyword pointing to a
+  may be <span style="font-family: monospace;">"BPM"</span> to use the mask referenced by the standard bad pixel mask
+  keyword <span style="font-family: monospace;">"BPM"</span>, <span style="font-family: monospace;">"!&lt;keyword&gt;"</span> to use another header keyword pointing to a
   mask, or a mask filename.  The mask file is typically a pixel list file
   but it may also be an image.  The mask values are interpreted as zero and
   greater than zero with the actual values ignored.  The mask is assumed to
@@ -53,45 +53,45 @@ transform: Resample longslit spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>moutput = <tt>""</tt></b></dt>
+  <dt><b>moutput = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='moutput' Line='moutput = ""' -->
   <dd>List of output masks to be created.  The list may be empty or must match
   the input list.  Output masks may be specified even if no input mask is
   specified, in which case the output mask will identify pixels which map
   to regions outside the input images (also see the <i>blank</i> parameter).
   If an explicit extension is not specified a FITS mask is extension is
-  created unless the environment variable <tt>"masktype"</tt> is set to <tt>"pl"</tt>.
+  created unless the environment variable <span style="font-family: monospace;">"masktype"</span> is set to <span style="font-family: monospace;">"pl"</span>.
   </dd>
   </dl>
   <dl>
   <dt><b>fitnames  </b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fitnames' Line='fitnames  ' -->
   <dd>Names of the user coordinate maps in the database to be used in the transform.
-  If no names are specified, using the null string <tt>""</tt>, the world coordinate
+  If no names are specified, using the null string <span style="font-family: monospace;">""</span>, the world coordinate
   system (WCS) of the image is used.  This latter case may be used to
   resample previously WCS calibrated images to a different linear range
   or sampling.
   </dd>
   </dl>
   <dl>
-  <dt><b>database = <tt>"database"</tt></b></dt>
+  <dt><b>database = <span style="font-family: monospace;">"database"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"' -->
   <dd>Database containing the coordinate map to be used in transforming the images.
   </dd>
   </dl>
   <dl>
-  <dt><b>interptype = <tt>"spline3"</tt></b></dt>
+  <dt><b>interptype = <span style="font-family: monospace;">"spline3"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interptype' Line='interptype = "spline3"' -->
-  <dd>Image interpolation type.  The allowed types are <tt>"nearest"</tt> (nearest neighbor),
-  <tt>"linear"</tt> (bilinear), <tt>"poly3"</tt> (bicubic polynomial), <tt>"poly5"</tt> (biquintic
-  polynomial), and <tt>"spline3"</tt> (bicubic polynomial).
+  <dd>Image interpolation type.  The allowed types are <span style="font-family: monospace;">"nearest"</span> (nearest neighbor),
+  <span style="font-family: monospace;">"linear"</span> (bilinear), <span style="font-family: monospace;">"poly3"</span> (bicubic polynomial), <span style="font-family: monospace;">"poly5"</span> (biquintic
+  polynomial), and <span style="font-family: monospace;">"spline3"</span> (bicubic polynomial).
   </dd>
   </dl>
   <dl>
   <dt><b>flux = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='flux' Line='flux = yes' -->
-  <dd>Conserve flux per pixel?  If <tt>"no"</tt> then each output pixel is simply interpolated
-  from the input image.  If <tt>"yes"</tt> the interpolated output pixel value is
+  <dd>Conserve flux per pixel?  If <span style="font-family: monospace;">"no"</span> then each output pixel is simply interpolated
+  from the input image.  If <span style="font-family: monospace;">"yes"</span> the interpolated output pixel value is
   multiplied by the Jacobean of the transformation (essentially the ratio of
   pixel areas between the output and input images).
   </dd>
@@ -133,7 +133,7 @@ transform: Resample longslit spectra
   <dl>
   <dt><b>xlog = no, ylog = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xlog' Line='xlog = no, ylog = no' -->
-  <dd>Convert to logarithmic intervals?  If <tt>"yes"</tt> the output pixel intervals
+  <dd>Convert to logarithmic intervals?  If <span style="font-family: monospace;">"yes"</span> the output pixel intervals
   are logarithmic.
   </dd>
   </dl>
@@ -149,9 +149,9 @@ transform: Resample longslit spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>logfiles = <tt>"STDOUT,logfile"</tt></b></dt>
+  <dt><b>logfiles = <span style="font-family: monospace;">"STDOUT,logfile"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfiles' Line='logfiles = "STDOUT,logfile"' -->
-  <dd>List of files in which to keep a log.  If null, <tt>""</tt>, then no log is kept.
+  <dd>List of files in which to keep a log.  If null, <span style="font-family: monospace;">""</span>, then no log is kept.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -200,7 +200,7 @@ transform: Resample longslit spectra
   </p>
   <p>
   The pixel intervals may also be logarithmic if the parameter <i>xlog</i> or
-  <i>ylog</i> is <tt>"yes"</tt>.  Generally, the number of output pixels is specified
+  <i>ylog</i> is <span style="font-family: monospace;">"yes"</span>.  Generally, the number of output pixels is specified
   in this case .  However, if the interval is specified it must be a base
   10 logarithmic interval and not in units of the x and y limits which are
   specified in user units.
@@ -259,8 +259,8 @@ transform: Resample longslit spectra
   <p>
   The following timings were obtained for transforming a 511x512 real
   image to another 511x512 real image using two Chebyshev transformation
-  surface functions (one for the dispersion axis, <tt>"henear"</tt>, and one in
-  spatial axis, <tt>"object"</tt>) of order 6 in both dimensions created with the
+  surface functions (one for the dispersion axis, <span style="font-family: monospace;">"henear"</span>, and one in
+  spatial axis, <span style="font-family: monospace;">"object"</span>) of order 6 in both dimensions created with the
   task <b>fitcoords</b>.  The times are for a UNIX/VAX 11/750.
   </p>
   <pre>
@@ -289,7 +289,7 @@ transform: Resample longslit spectra
   <dl>
   <dt><b>TRANSFORM: V2.12.2</b></dt>
   <!-- Sec='NOTES' Level=0 Label='TRANSFORM' Line='TRANSFORM: V2.12.2' -->
-  <dd>The use of bad pixel masks, a specified <tt>"blank"</tt> value, and use of a WCS
+  <dd>The use of bad pixel masks, a specified <span style="font-family: monospace;">"blank"</span> value, and use of a WCS
   to resample a WCS calibrated image was added.
   </dd>
   </dl>

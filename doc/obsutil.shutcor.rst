@@ -39,7 +39,7 @@ shutcor: Shutter correction from images of varying exposure times
   </dd>
   </dl>
   <dl>
-  <dt><b>section = <tt>""</tt></b></dt>
+  <dt><b>section = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='section' Line='section = ""' -->
   <dd>The selected image section for the statistics.  This should be chosen
   to exclude bad columns or rows, cosmic rays, and other non-linear
@@ -47,7 +47,7 @@ shutcor: Shutter correction from images of varying exposure times
   </dd>
   </dl>
   <dl>
-  <dt><b>center = <tt>"mode"</tt></b></dt>
+  <dt><b>center = <span style="font-family: monospace;">"mode"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='center' Line='center = "mode"' -->
   <dd>The statistical measure of central tendency that is used to estimate
   the data level of each image.  This can have the values:  <b>mean</b>,
@@ -73,7 +73,7 @@ shutcor: Shutter correction from images of varying exposure times
   </dd>
   </dl>
   <dl>
-  <dt><b>exposure = <tt>"exptime"</tt></b></dt>
+  <dt><b>exposure = <span style="font-family: monospace;">"exptime"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='exposure' Line='exposure = "exptime"' -->
   <dd>Keyword giving the exposure time.
   </dd>

@@ -83,7 +83,7 @@ reset: Reset the value of an environment variable
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. Define the data directory <tt>"dd"</tt> on a remote node, and call <i>implot</i>
+  1. Define the data directory <span style="font-family: monospace;">"dd"</span> on a remote node, and call <i>implot</i>
   to make plots of an image which resides in the remote directory.
   </p>
   <pre>

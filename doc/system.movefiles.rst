@@ -37,7 +37,7 @@ movefiles: Move files to a directory
   <dl>
   <dt><b>verbose = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
-  <dd>If set to <tt>"yes"</tt>, tell user as each file is moved.
+  <dd>If set to <span style="font-family: monospace;">"yes"</span>, tell user as each file is moved.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -53,7 +53,7 @@ movefiles: Move files to a directory
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Move all files whose names start with `im' and end with `ab' to
-  the directory `dir'.  Since <tt>"verbose"</tt> defaults to <tt>"no"</tt>, do the work silently.
+  the directory `dir'.  Since <span style="font-family: monospace;">"verbose"</span> defaults to <span style="font-family: monospace;">"no"</span>, do the work silently.
   </p>
   <p>
   	cl&gt; movefiles im*ab dir

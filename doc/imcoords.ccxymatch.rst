@@ -54,12 +54,12 @@ ccxymatch: Match celestial and pixel coordinate lists
   <dt><b>ptolerance</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ptolerance' Line='ptolerance' -->
   <dd>The matching tolerance in pixels. The ptolerance parameter is required 
-  by the <tt>"triangles"</tt> matching algorithm but not by the <tt>"tolerance"</tt> matching
+  by the <span style="font-family: monospace;">"triangles"</span> matching algorithm but not by the <span style="font-family: monospace;">"tolerance"</span> matching
   algorithm.
   </dd>
   </dl>
   <dl>
-  <dt><b>refpoints = <tt>""</tt></b></dt>
+  <dt><b>refpoints = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='refpoints' Line='refpoints = ""' -->
   <dd>A file of tie points used to compute the linear transformation
   from the pixel coordinate system to the celestial coordinate system. Refpoints
@@ -98,12 +98,12 @@ ccxymatch: Match celestial and pixel coordinate lists
   </dd>
   </dl>
   <dl>
-  <dt><b>projection = <tt>"tan"</tt></b></dt>
+  <dt><b>projection = <span style="font-family: monospace;">"tan"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='projection' Line='projection = "tan"' -->
   <dd>The sky projection geometry. The most commonly used projections in
-  astronomy are <tt>"tan"</tt>, <tt>"arc"</tt>, <tt>"sin"</tt>, and <tt>"lin"</tt>. Other supported projections
-  are <tt>"ait"</tt>, <tt>"car"</tt>, <tt>"csc"</tt>, <tt>"gls"</tt>, <tt>"mer"</tt>, <tt>"mol"</tt>, <tt>"par"</tt>, <tt>"pco"</tt>, <tt>"qsc"</tt>, <tt>"stg"</tt>,
-  <tt>"tsc"</tt>, and <tt>"zea"</tt>.
+  astronomy are <span style="font-family: monospace;">"tan"</span>, <span style="font-family: monospace;">"arc"</span>, <span style="font-family: monospace;">"sin"</span>, and <span style="font-family: monospace;">"lin"</span>. Other supported projections
+  are <span style="font-family: monospace;">"ait"</span>, <span style="font-family: monospace;">"car"</span>, <span style="font-family: monospace;">"csc"</span>, <span style="font-family: monospace;">"gls"</span>, <span style="font-family: monospace;">"mer"</span>, <span style="font-family: monospace;">"mol"</span>, <span style="font-family: monospace;">"par"</span>, <span style="font-family: monospace;">"pco"</span>, <span style="font-family: monospace;">"qsc"</span>, <span style="font-family: monospace;">"stg"</span>,
+  <span style="font-family: monospace;">"tsc"</span>, and <span style="font-family: monospace;">"zea"</span>.
   </dd>
   </dl>
   <dl>
@@ -130,10 +130,10 @@ ccxymatch: Match celestial and pixel coordinate lists
   </dd>
   </dl>
   <dl>
-  <dt><b>lngunits = <tt>"hours"</tt>, latunits = <tt>"degrees"</tt></b></dt>
+  <dt><b>lngunits = <span style="font-family: monospace;">"hours"</span>, latunits = <span style="font-family: monospace;">"degrees"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngunits' Line='lngunits = "hours", latunits = "degrees"' -->
-  <dd>The units of the celestial coordinates. The options are <tt>"hours"</tt>, <tt>"degrees"</tt>,
-  and <tt>"radians"</tt> for lngunits, and <tt>"degrees"</tt> and <tt>"radians"</tt> for latunits.
+  <dd>The units of the celestial coordinates. The options are <span style="font-family: monospace;">"hours"</span>, <span style="font-family: monospace;">"degrees"</span>,
+  and <span style="font-family: monospace;">"radians"</span> for lngunits, and <span style="font-family: monospace;">"degrees"</span> and <span style="font-family: monospace;">"radians"</span> for latunits.
   </dd>
   </dl>
   <dl>
@@ -153,7 +153,7 @@ ccxymatch: Match celestial and pixel coordinate lists
   </dd>
   </dl>
   <dl>
-  <dt><b>matching = <tt>"triangles"</tt></b></dt>
+  <dt><b>matching = <span style="font-family: monospace;">"triangles"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='matching' Line='matching = "triangles"' -->
   <dd>The matching algorithm. The choices are:
   <dl>
@@ -204,9 +204,9 @@ ccxymatch: Match celestial and pixel coordinate lists
   <dt><b>nmatch = 30</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nmatch' Line='nmatch = 30' -->
   <dd>The maximum number of celestial and pixel coordinates used
-  by the <tt>"triangles"</tt> pattern matching algorithm. If either list contains
+  by the <span style="font-family: monospace;">"triangles"</span> pattern matching algorithm. If either list contains
   more coordinates than nmatch, the lists are subsampled. Nmatch should be
-  kept small as the computation and memory requirements of the <tt>"triangles"</tt>
+  kept small as the computation and memory requirements of the <span style="font-family: monospace;">"triangles"</span>
   algorithm depend on a high power of the lengths of the respective lists.
   </dd>
   </dl>
@@ -214,7 +214,7 @@ ccxymatch: Match celestial and pixel coordinate lists
   <dt><b>ratio = 10.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ratio' Line='ratio = 10.0' -->
   <dd>The maximum ratio of the longest to shortest side of the 
-  triangles generated by the <tt>"triangles"</tt> pattern matching algorithm.
+  triangles generated by the <span style="font-family: monospace;">"triangles"</span> pattern matching algorithm.
   Triangles with computed longest to shortest side ratios &gt; ratio
   are rejected from the pattern matching algorithm. Ratio should never
   be set higher than 10.0 but may be set as low as 5.0.
@@ -223,20 +223,20 @@ ccxymatch: Match celestial and pixel coordinate lists
   <dl>
   <dt><b>nreject = 10</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nreject' Line='nreject = 10' -->
-  <dd>The maximum number of rejection iterations for the <tt>"triangles"</tt> pattern
+  <dd>The maximum number of rejection iterations for the <span style="font-family: monospace;">"triangles"</span> pattern
   matching algorithm.
   </dd>
   </dl>
   <dl>
-  <dt><b>lngformat = <tt>""</tt>, latformat = <tt>""</tt></b></dt>
+  <dt><b>lngformat = <span style="font-family: monospace;">""</span>, latformat = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngformat' Line='lngformat = "", latformat = ""' -->
   <dd>The format of the output celestial coordinates. The default formats are
-  <tt>"%13.3h"</tt>, <tt>"%13.3h"</tt>, and <tt>"%13.7g"</tt> for units of <tt>"hours"</tt>, <tt>"degrees"</tt>, and
-  <tt>"radians"</tt> respectively.
+  <span style="font-family: monospace;">"%13.3h"</span>, <span style="font-family: monospace;">"%13.3h"</span>, and <span style="font-family: monospace;">"%13.7g"</span> for units of <span style="font-family: monospace;">"hours"</span>, <span style="font-family: monospace;">"degrees"</span>, and
+  <span style="font-family: monospace;">"radians"</span> respectively.
   </dd>
   </dl>
   <dl>
-  <dt><b>xformat = <tt>"%13.3f"</tt>, yformat = <tt>"%13.3f"</tt></b></dt>
+  <dt><b>xformat = <span style="font-family: monospace;">"%13.3f"</span>, yformat = <span style="font-family: monospace;">"%13.3f"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xformat' Line='xformat = "%13.3f", yformat = "%13.3f"' -->
   <dd>The format of the output pixel coordinates.
   By default the coordinates are output right justified in a field of
@@ -270,7 +270,7 @@ ccxymatch: Match celestial and pixel coordinate lists
   the projected celestial and pixel coordinates lists, 5) removing points with a
   minimum separation specified by the parameters <i>separation</i> and
   <i>pseparation</i> from both lists, 6) matching the two lists using either
-  the <tt>"triangles"</tt> or <tt>"tolerance"</tt> matching algorithms, and 7) writing the matched
+  the <span style="font-family: monospace;">"triangles"</span> or <span style="font-family: monospace;">"tolerance"</span> matching algorithms, and 7) writing the matched
   list to the output file.
   </p>
   <p>
@@ -278,7 +278,7 @@ ccxymatch: Match celestial and pixel coordinate lists
   two ways. If <i>refpoints</i> is defined, the celestial and pixel coordinates
   of up to three tie points are read from succeeding lines in the refpoints file,
   and used to compute the linear transformation.  The coordinates of the tie
-  points can be typed in by hand if <i>refpoints</i> is <tt>"STDIN"</tt>. The formats of
+  points can be typed in by hand if <i>refpoints</i> is <span style="font-family: monospace;">"STDIN"</span>. The formats of
   two sample refpoints files are shown below.
   </p>
   <pre>
@@ -343,25 +343,25 @@ ccxymatch: Match celestial and pixel coordinate lists
   </p>
   <p>
   The coordinate lists are matched using the matching algorithm specified by
-  <i>matching</i>. If matching is <tt>"tolerance"</tt>, CCXYMATCH searches the transformed
+  <i>matching</i>. If matching is <span style="font-family: monospace;">"tolerance"</span>, CCXYMATCH searches the transformed
   sorted pixel coordinate list for the coordinates that are within the matching
   tolerance <i>tolerance</i> and closest to the current standard coordinates.
-  The major advantage of the <tt>"tolerance"</tt> algorithm is that it can handle x and y
+  The major advantage of the <span style="font-family: monospace;">"tolerance"</span> algorithm is that it can handle x and y
   scale differences and axis skew in the coordinate transformation. The major
-  disadvantage of the <tt>"tolerance"</tt> algorithm is that the user must supply
+  disadvantage of the <span style="font-family: monospace;">"tolerance"</span> algorithm is that the user must supply
   tie point information in all but the simplest case of small x and y
   shifts between the pixel and celestial coordinate systems.
   </p>
   <p>
-  If matching is <tt>"triangles"</tt>, CCXYMATCH constructs a list of triangles
+  If matching is <span style="font-family: monospace;">"triangles"</span>, CCXYMATCH constructs a list of triangles
   using up to <i>nmatch</i> celestial coordinates and transformed pixel
   coordinates and performs a pattern matching operation on the resulting
   triangle lists. If the number of coordinates in both lists is less than
-  <i>nmatch</i> the entire list is matched using the <tt>"triangles"</tt> algorithm
-  directly, otherwise the <tt>"triangles"</tt> algorithm is used to estimate a new
+  <i>nmatch</i> the entire list is matched using the <span style="font-family: monospace;">"triangles"</span> algorithm
+  directly, otherwise the <span style="font-family: monospace;">"triangles"</span> algorithm is used to estimate a new
   linear transformation, the input coordinate list is transformed using
-  the new transformation, and the entire list is matched using the <tt>"tolerance"</tt>
-  algorithm. The major advantage of the <tt>"triangles"</tt> algorithm is that it
+  the new transformation, and the entire list is matched using the <span style="font-family: monospace;">"tolerance"</span>
+  algorithm. The major advantage of the <span style="font-family: monospace;">"triangles"</span> algorithm is that it
   requires no tie point information from the user. The major disadvantages of the
   algorithm are that, it is sensitive to x and y scale differences and axis
   skew between the celestial and pixel coordinate systems, and can be
@@ -382,13 +382,13 @@ ccxymatch: Match celestial and pixel coordinate lists
   <h3>Algorithms</h3>
   <!-- BeginSection: 'ALGORITHMS' -->
   <p>
-  The <tt>"triangles"</tt> algorithm uses a sophisticated pattern matching
+  The <span style="font-family: monospace;">"triangles"</span> algorithm uses a sophisticated pattern matching
   technique which requires no tie point information from the user.
   It is expensive computationally and is therefore restricted to a maximum
   of <i>nmatch</i> objects from the celestial and pixel coordinate lists.
   </p>
   <p>
-  The <tt>"triangles"</tt> algorithm first generates a list
+  The <span style="font-family: monospace;">"triangles"</span> algorithm first generates a list
   of all the possible triangles that can be formed from the points in each list.
   For a list of nmatch points this number is the combinatorial factor
   nmatch! / [(nmatch-3)! * 3!] or  nmatch * (nmatch-1) * (nmatch-2) / 6.
@@ -417,7 +417,7 @@ ccxymatch: Match celestial and pixel coordinate lists
   votes are discarded. The final set of matches are written to the output file.
   </p>
   <p>
-  The <tt>"triangles"</tt> algorithm functions well when the celestial and
+  The <span style="font-family: monospace;">"triangles"</span> algorithm functions well when the celestial and
   pixel coordinate lists have a sufficient number of objects (50%, 
   in some cases as low as 25%) of their objects in common, any distortions
   including x and y scale differences and skew between the two systems are small,
@@ -430,10 +430,10 @@ ccxymatch: Match celestial and pixel coordinate lists
   <h3>Formats</h3>
   <!-- BeginSection: 'FORMATS' -->
   <p>
-  A  format  specification has the form <tt>"%w.dCn"</tt>, where w is the field
+  A  format  specification has the form <span style="font-family: monospace;">"%w.dCn"</span>, where w is the field
   width, d is the number of decimal places or the number of digits  of
   precision,  C  is  the  format  code,  and  n is radix character for
-  format code <tt>"r"</tt> only.  The w and d fields are optional.  The  format
+  format code <span style="font-family: monospace;">"r"</span> only.  The w and d fields are optional.  The  format
   codes C are as follows:
    
   </p>
@@ -509,9 +509,9 @@ ccxymatch: Match celestial and pixel coordinate lists
   <h3>References</h3>
   <!-- BeginSection: 'REFERENCES' -->
   <p>
-  A detailed description of the <tt>"triangles"</tt> pattern matching algorithm used here
-  can be found in the article <tt>"A Pattern-Matching Algorithm for Two-
-  Dimensional Coordinate Lists"</tt> by E.J. Groth, A.J. 91, 1244 (1986).
+  A detailed description of the <span style="font-family: monospace;">"triangles"</span> pattern matching algorithm used here
+  can be found in the article <span style="font-family: monospace;">"A Pattern-Matching Algorithm for Two-
+  Dimensional Coordinate Lists"</span> by E.J. Groth, A.J. 91, 1244 (1986).
   </p>
   <!-- EndSection:   'REFERENCES' -->
   <h3>Examples</h3>
@@ -718,7 +718,7 @@ ccxymatch: Match celestial and pixel coordinate lists
      X      Y        Ra         Dec        Ra(fit)    Dec(fit)    Dra    Ddec
   </pre>
   <p>
-  3. Repeat example 1 but use the <tt>"tolerance"</tt> matching algorithm and apriori
+  3. Repeat example 1 but use the <span style="font-family: monospace;">"tolerance"</span> matching algorithm and apriori
   knowledge of the celestial and pixel coordinates of the nucleus of M51,
   the x and y image scales, and the orientation of the detector on the telescope
   to match the two lists.

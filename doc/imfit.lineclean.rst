@@ -36,7 +36,7 @@ lineclean: Replace deviant pixels in image lines
   </dd>
   </dl>
   <dl>
-  <dt><b>sample = <tt>"*"</tt></b></dt>
+  <dt><b>sample = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"' -->
   <dd>Columns to be used in fitting the cleaning function.
   </dd>
@@ -105,13 +105,13 @@ lineclean: Replace deviant pixels in image lines
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>Graphics output device for interactive graphics.
   </dd>
   </dl>
   <dl>
-  <dt><b>cursor = <tt>"stdgcur"</tt></b></dt>
+  <dt><b>cursor = <span style="font-family: monospace;">"stdgcur"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = "stdgcur"' -->
   <dd>Graphics cursor input.
   </dd>
@@ -192,7 +192,7 @@ lineclean: Replace deviant pixels in image lines
   <p>
   The selected line is graphed and the interactive options for setting and
   fitting the line are used.  Data points marked with diamonds indicate
-  points to be replaced by the fitted value.  Exiting with <tt>'q'</tt> or return
+  points to be replaced by the fitted value.  Exiting with <span style="font-family: monospace;">'q'</span> or return
   prompts for another line.  When the fitting parameters are suitably set
   then respond with end-of-file or return to fit all the lines of the image
   and create the output image.

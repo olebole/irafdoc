@@ -34,11 +34,11 @@ mkconfig: Prepare a configuration file
   <dd>The source of the standard star catalog format description.
   <i>Catalog</i> may be one of the supported standard star
   catalogs maintained
-  in the directory <tt>"photcal$catalogs/"</tt>, a catalog created with
-  MKCATALOG, the standard input <tt>"STDIN"</tt>,
+  in the directory <span style="font-family: monospace;">"photcal$catalogs/"</span>, a catalog created with
+  MKCATALOG, the standard input <span style="font-family: monospace;">"STDIN"</span>,
   or a file created by the user containing the catalog
   format description.
-  <i>Catalog</i> is not prompted for if <i>template</i> is <tt>""</tt>.
+  <i>Catalog</i> is not prompted for if <i>template</i> is <span style="font-family: monospace;">""</span>.
   </dd>
   </dl>
   <dl>
@@ -46,9 +46,9 @@ mkconfig: Prepare a configuration file
   <!-- Sec='PARAMETERS' Level=0 Label='observations' Line='observations' -->
   <dd>The source of the observations file format description.
   <i>Observations</i> may be a catalog created by MKNOBSFILE,
-  MKOBSFILE, OBSFILE, or MKCATALOG, the standard input <tt>"STDIN"</tt>,
+  MKOBSFILE, OBSFILE, or MKCATALOG, the standard input <span style="font-family: monospace;">"STDIN"</span>,
   or a file created by the user containing the observations file format
-  description. <i>Observations</i> is not prompted for if <i>template</i> is <tt>""</tt>.
+  description. <i>Observations</i> is not prompted for if <i>template</i> is <span style="font-family: monospace;">""</span>.
   </dd>
   </dl>
   <dl>
@@ -56,34 +56,34 @@ mkconfig: Prepare a configuration file
   <!-- Sec='PARAMETERS' Level=0 Label='transform' Line='transform ' -->
   <dd>The source of the transformation equations definition.
   <i>Transform</i> may be the name of one of the supported standard star
-  catalogs maintained in the directory <tt>"photcal$catalogs/"</tt>,
-  the standard input <tt>"STDIN"</tt>, or a file created by the user
+  catalogs maintained in the directory <span style="font-family: monospace;">"photcal$catalogs/"</span>,
+  the standard input <span style="font-family: monospace;">"STDIN"</span>, or a file created by the user
   containing the transformation equations definition.
-  <i>Transform</i> is not prompted for if <i>template</i> is <tt>""</tt>.
+  <i>Transform</i> is not prompted for if <i>template</i> is <span style="font-family: monospace;">""</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>template = <tt>""</tt></b></dt>
+  <dt><b>template = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='template' Line='template = ""' -->
   <dd>The name of an existing configuration file that can be used as a template
   for the new configuration file.
-  If <i>template</i> is the null string <tt>""</tt>, then MKCONFIG
+  If <i>template</i> is the null string <span style="font-family: monospace;">""</span>, then MKCONFIG
   prompts the user for the source of the standard star catalog 
   and observations file format descriptions
   <i>catalog</i> and <i>observations</i>, and the source of the transformation
   equation definitions <i>transform</i>.
   If <i>template</i> exists,
   MKCONFIG copies <i>template</i> into <i>config</i> and enters the editor
-  if <i>edit</i> is <tt>"yes"</tt>.
+  if <i>edit</i> is <span style="font-family: monospace;">"yes"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>catdir = <tt>")_.catdir"</tt></b></dt>
+  <dt><b>catdir = <span style="font-family: monospace;">")_.catdir"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='catdir' Line='catdir = ")_.catdir"' -->
   <dd>The directory containing the supported standard star catalogs.
   The default parameter value  redirects <i>catdir</i>
   to a package parameter of the same name. A list of standard
-  catalogs may be obtained by printing the file <tt>"photcal$catalogs/README"</tt>.
+  catalogs may be obtained by printing the file <span style="font-family: monospace;">"photcal$catalogs/README"</span>.
   Alternatively the user may create their own standard star catalogs 
   and standard star catalog directory.
   </dd>
@@ -121,11 +121,11 @@ mkconfig: Prepare a configuration file
   file <i>config</i>. If the configuration file already
   exists MKCONFIG, quits with a warning message. If the configuration file is
   a new file, MKCONFIG either prompts the
-  user for input if <i>template</i> = <tt>""</tt>, or copies the existing configuration
+  user for input if <i>template</i> = <span style="font-family: monospace;">""</span>, or copies the existing configuration
   file <i>template</i> into <i>config</i>.
   </p>
   <p>
-  If <i>template</i>  is <tt>""</tt>, MKCONFIG prompts the user for:
+  If <i>template</i>  is <span style="font-family: monospace;">""</span>, MKCONFIG prompts the user for:
   1) the source of the standard star catalog format description
   <i>catalog</i>, which assigns names to the columns of the standard star
   catalog,
@@ -137,52 +137,52 @@ mkconfig: Prepare a configuration file
   </p>
   <p>
   If <i>catalog</i>, <i>observations</i>, or <i>transform</i>
-  are set to the standard input <tt>"STDIN"</tt>, MKCONFIG prompts for input from
-  the terminal, verifying the input as it is entered if <i>verify</i> is <tt>"yes"</tt>. 
+  are set to the standard input <span style="font-family: monospace;">"STDIN"</span>, MKCONFIG prompts for input from
+  the terminal, verifying the input as it is entered if <i>verify</i> is <span style="font-family: monospace;">"yes"</span>. 
   </p>
   <p>
   If <i>catalog</i> is a standard star catalog name or a file name,
   MKCONFIG searches 1) the current directory for the associated format
-  description file <tt>"fcatalog.dat"</tt>, 2) the directory
-  <i>catdir</i> for the format description file <tt>"fcatalog.dat"</tt>,
-  and 3) the current directory for a file called <tt>"catalog"</tt>, in that order.
+  description file <span style="font-family: monospace;">"fcatalog.dat"</span>, 2) the directory
+  <i>catdir</i> for the format description file <span style="font-family: monospace;">"fcatalog.dat"</span>,
+  and 3) the current directory for a file called <span style="font-family: monospace;">"catalog"</span>, in that order.
   <i>Catalog</i> is usually one of the supported standard star catalogs or
   a standard star catalog created by the user with MKCATALOG. 
   </p>
   <p>
   If <i>observations</i> is an observations file name or a file name,
   MKCONFIG searches 1) the current directory for the format
-  description file <tt>"fobservations.dat"</tt>, and 2)
-  the current directory for a file called <tt>"observations"</tt>, in that order.
+  description file <span style="font-family: monospace;">"fobservations.dat"</span>, and 2)
+  the current directory for a file called <span style="font-family: monospace;">"observations"</span>, in that order.
   <i>Observations</i> is usually created by the user with MKNOBSFILE or MKOBSFILE.
   </p>
   <p>
   If <i>transform</i> is assigned a standard star catalog name or a file name,
   MKCONFIG searches 1) the directory
   <i>catdir</i> for the transformation equations definition file
-  <tt>"ttransform.dat"</tt>, and 2)
-  the current directory for a file called <tt>"transform"</tt>, in that order.
+  <span style="font-family: monospace;">"ttransform.dat"</span>, and 2)
+  the current directory for a file called <span style="font-family: monospace;">"transform"</span>, in that order.
   <i>Transform</i> is usually one of the supported standard star catalogs or
-  <tt>"STDIN"</tt>.
+  <span style="font-family: monospace;">"STDIN"</span>.
   </p>
   <p>
-  The default photometric standards directory is <tt>"photcal$catalogs/"</tt>.
+  The default photometric standards directory is <span style="font-family: monospace;">"photcal$catalogs/"</span>.
   A list of supported catalogs is shown below.
   The standard catalog format description files may be listed or
   printed with the commands
-  <tt>"dir photcal$catalogs/f*.dat"</tt> or <tt>"lprint photcal$catalogs/f*.dat"</tt> respectively.
+  <span style="font-family: monospace;">"dir photcal$catalogs/f*.dat"</span> or <span style="font-family: monospace;">"lprint photcal$catalogs/f*.dat"</span> respectively.
   The standard transformation equation definition files may be listed or
   printed with
-  the commands <tt>"dir photcal$catalogs/t*.dat"</tt> or <tt>"lprint photcal$catalogs/t*.dat"</tt>
+  the commands <span style="font-family: monospace;">"dir photcal$catalogs/t*.dat"</span> or <span style="font-family: monospace;">"lprint photcal$catalogs/t*.dat"</span>
   respectively.
   </p>
   <p>
-  After data entry, and if <i>edit</i> is <tt>"yes"</tt>,
+  After data entry, and if <i>edit</i> is <span style="font-family: monospace;">"yes"</span>,
   MKCONFIG enters the default text editor defined by the
   IRAF environment variable <i>editor</i>.  Small
   corrections to the configuration file may be made at this point.
   Next the configuration file is checked for semantic and syntax errors
-  if <i>check</i> is <tt>"yes"</tt> and the results are written on the terminal. 
+  if <i>check</i> is <span style="font-family: monospace;">"yes"</span> and the results are written on the terminal. 
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Standard catalog format and transform files</h3>
@@ -477,7 +477,7 @@ mkconfig: Prepare a configuration file
   <p>
   3. Create a new configuration file for reducing some UBVR photometry, using 
   the UBVR standards in the landolt UBVRI standard star catalog. The standard
-  star observations file <tt>"stdobs"</tt> was created with the task MKNOBSFILE.
+  star observations file <span style="font-family: monospace;">"stdobs"</span> was created with the task MKNOBSFILE.
   </p>
   <pre>
   	ph&gt; mkconfig ubvr.cfg landolt stdobs landolt

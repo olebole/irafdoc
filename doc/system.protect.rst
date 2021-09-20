@@ -33,25 +33,25 @@ protect: Protect a file from deletion
   <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <i>Protect</i> asserts protection from deletion for the specified files.
-  A protected file can be deleted only by first <tt>"unprotecting"</tt> it.
+  A protected file can be deleted only by first <span style="font-family: monospace;">"unprotecting"</span> it.
   File protection is preserved when a file is copied or renamed,
   even when copied or renamed to a remote network node,
   but may be lost when a file is backed up on tape and later restored
   (depending upon what utility one uses).  Note that imagefiles are
   automatically protected to prevent accidental deletion of the header
-  file, leaving a <tt>"zombie"</tt> pixel file somewhere on disk.
+  file, leaving a <span style="font-family: monospace;">"zombie"</span> pixel file somewhere on disk.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. Protect the file <tt>"paper.ms"</tt> from deletion, accidental or otherwise.
+  1. Protect the file <span style="font-family: monospace;">"paper.ms"</span> from deletion, accidental or otherwise.
   </p>
   <p>
   	cl&gt; protect paper.ms
   </p>
   <p>
-  2. Protect all the <tt>".ms"</tt> files from deletion.
+  2. Protect all the <span style="font-family: monospace;">".ms"</span> files from deletion.
   </p>
   <p>
   	cl&gt; protect *.ms

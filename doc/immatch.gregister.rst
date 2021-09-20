@@ -52,7 +52,7 @@ gregister: Register 1-D or 2-D images using the geomap transforms
   </dd>
   </dl>
   <dl>
-  <dt><b>geometry = <tt>"geometric"</tt></b></dt>
+  <dt><b>geometry = <span style="font-family: monospace;">"geometric"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='geometry' Line='geometry = "geometric"' -->
   <dd>The type of geometry to be applied: The choices are:
   <dl>
@@ -109,7 +109,7 @@ gregister: Register 1-D or 2-D images using the geomap transforms
   </dd>
   </dl>
   <dl>
-  <dt><b>interpolant = <tt>"linear"</tt></b></dt>
+  <dt><b>interpolant = <span style="font-family: monospace;">"linear"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interpolant' Line='interpolant = "linear"' -->
   <dd>The choices are the following.
   <dl>
@@ -181,7 +181,7 @@ gregister: Register 1-D or 2-D images using the geomap transforms
   </dd>
   </dl>
   <dl>
-  <dt><b>boundary = <tt>"nearest"</tt></b></dt>
+  <dt><b>boundary = <span style="font-family: monospace;">"nearest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"' -->
   <dd>The boundary extension choices are:
   <dl>
@@ -291,7 +291,7 @@ gregister: Register 1-D or 2-D images using the geomap transforms
   will permit.
   </p>
   <p>
-  If the environment variable <i>nomwcs</i> is <tt>"no"</tt> then the world coordinate
+  If the environment variable <i>nomwcs</i> is <span style="font-family: monospace;">"no"</span> then the world coordinate
   system of the input image is modified in the output image to reflect the
   effects of the <i>linear</i> portion of the registration operation.
   Support does not yet exist in the IRAF world coordinate system interface

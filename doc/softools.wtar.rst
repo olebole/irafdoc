@@ -49,8 +49,8 @@ wtar: Write a TAR format archive file
   <dl>
   <dt><b>-f archive</b></dt>
   <!-- Sec='ARGUMENTS' Level=0 Label='' Line='-f archive' -->
-  <dd>The tar format file to be written, i.e., <tt>"stdout"</tt>, a host magtape device
-  name (e.g., <tt>"/dev/nrmt8"</tt> or <tt>"MSA0"</tt>), or the IRAF virtual filename of a disk
+  <dd>The tar format file to be written, i.e., <span style="font-family: monospace;">"stdout"</span>, a host magtape device
+  name (e.g., <span style="font-family: monospace;">"/dev/nrmt8"</span> or <span style="font-family: monospace;">"MSA0"</span>), or the IRAF virtual filename of a disk
   file.  The default is the standard output.
   </dd>
   </dl>
@@ -58,7 +58,7 @@ wtar: Write a TAR format archive file
   <dt><b>files</b></dt>
   <!-- Sec='ARGUMENTS' Level=0 Label='files' Line='files' -->
   <dd>The names of the files or root directories of directory trees to be written
-  to the archive file.  If no files are specified <tt>"."</tt> (the directory tree
+  to the archive file.  If no files are specified <span style="font-family: monospace;">"."</span> (the directory tree
   rooted at the current directory) is assumed.
   </dd>
   </dl>
@@ -67,7 +67,7 @@ wtar: Write a TAR format archive file
   <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The named files and directories are written to the indicated
-  UNIX <tt>"tar"</tt> format output file.  Any directories in the file list are
+  UNIX <span style="font-family: monospace;">"tar"</span> format output file.  Any directories in the file list are
   recursively descended.  The named directories should be subdirectories of
   the current directory when <i>wtar</i> is called.  Binary files may be
   omitted if desired, e.g., when transporting software to a different host, or
@@ -91,7 +91,7 @@ wtar: Write a TAR format archive file
   <p>
   All <i>wtar</i> filename arguments are IRAF virtual filenames (or host
   filenames).  Magtape devices should be specified by their host (not IRAF)
-  device name, e.g., <tt>"/dev/nrmt8"</tt> or <tt>"MSA0"</tt>.
+  device name, e.g., <span style="font-family: monospace;">"/dev/nrmt8"</span> or <span style="font-family: monospace;">"MSA0"</span>.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Examples</h3>
@@ -105,7 +105,7 @@ wtar: Write a TAR format archive file
   	cl&gt; wtar -of /dev/nrmt8
   </pre>
   <p>
-  2. Archive the <tt>"uparm"</tt> directory to the VMS logical device MSA0:.
+  2. Archive the <span style="font-family: monospace;">"uparm"</span> directory to the VMS logical device MSA0:.
   </p>
   <p>
   	cl&gt; wtar -f msa0 uparm

@@ -40,7 +40,7 @@ cache: Cache parameter files, or print the current cache list
   </p>
   <p>
   If the <i>cache</i> command is entered without any arguments a list of the
-  currently <tt>"cached"</tt> tasks is printed.
+  currently <span style="font-family: monospace;">"cached"</span> tasks is printed.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Examples</h3>

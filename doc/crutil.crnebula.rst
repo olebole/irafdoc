@@ -32,21 +32,21 @@ crnebula: Detect and replace cosmic rays in nebular data
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>Output image in which cosmic rays are to be replaced by the median.
-  If no output image is given (specified as <tt>""</tt>) then no output image
+  If no output image is given (specified as <span style="font-family: monospace;">""</span>) then no output image
   is created.
   </dd>
   </dl>
   <dl>
-  <dt><b>crmask = <tt>""</tt></b></dt>
+  <dt><b>crmask = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='crmask' Line='crmask = ""' -->
   <dd>Output cosmic ray mask identifying the cosmic rays found.  The mask
   will have values of one for cosmic rays and zero for non-cosmic rays.
-  If no output cosmic ray mask is given (specified as <tt>""</tt>) then no mask
+  If no output cosmic ray mask is given (specified as <span style="font-family: monospace;">""</span>) then no mask
   is created.
   </dd>
   </dl>
   <dl>
-  <dt><b>residual = <tt>""</tt></b></dt>
+  <dt><b>residual = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='residual' Line='residual = ""' -->
   <dd>Output residual image.  This is the input image minus the median filtered
   image divided by the estimated sigma at each pixel.  Thresholds in this
@@ -55,7 +55,7 @@ crnebula: Detect and replace cosmic rays in nebular data
   </dd>
   </dl>
   <dl>
-  <dt><b>rmedresid = <tt>""</tt></b></dt>
+  <dt><b>rmedresid = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rmedresid' Line='rmedresid = ""' -->
   <dd>Output image for the difference between the box median filter image and
   the ring median filtered image divided by the estimated sigma at each

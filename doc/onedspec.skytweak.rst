@@ -62,7 +62,7 @@ skytweak: Sky subtract 1D spectra after tweaking sky spectra
   <dt><b>ignoreaps = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ignoreaps' Line='ignoreaps = no' -->
   <dd>Ignore aperture numbers between the input spectra and the calibration
-  spectra?  If <tt>"no"</tt> then the calibration image must contain a spectrum
+  spectra?  If <span style="font-family: monospace;">"no"</span> then the calibration image must contain a spectrum
   with the same aperture number as each spectrum in the input image.
   Otherwise the first spectrum in the calibration image will be used
   for all spectra in the input image.
@@ -95,13 +95,13 @@ skytweak: Sky subtract 1D spectra after tweaking sky spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>sample = <tt>"*"</tt></b></dt>
+  <dt><b>sample = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"' -->
   <dd>Sample regions to use for cross-correlation, automatic RMS minimization,
   and RMS values.  The sample regions are specified by a list of comma
   separated ranges.  The ranges are colon separate coordinate values.
   For dispersion calibrated spectra the coordinate values are in the
-  dispersion units otherwise they are in pixel coordinates.  The string <tt>"*"</tt>
+  dispersion units otherwise they are in pixel coordinates.  The string <span style="font-family: monospace;">"*"</span>
   selects the entire spectrum.  The sample regions may be changed
   interactively either with the cursor or with a colon command.
   </dd>
@@ -120,7 +120,7 @@ skytweak: Sky subtract 1D spectra after tweaking sky spectra
   <!-- Sec='PARAMETERS' Level=0 Label='shift' Line='shift = 0., dshift = 1.' -->
   <dd>The initial shift and shift step in pixels.  This initializes the shift
   search parameters for the first spectrum.  If <i>dshift</i> is zero then
-  there will be no search for a new shift and the <tt>'x'</tt> interactive function is
+  there will be no search for a new shift and the <span style="font-family: monospace;">'x'</span> interactive function is
   disabled.  These parameters may be changed interactively.  After the
   first spectrum subsequent spectra begin with the values from the last
   spectrum.
@@ -131,7 +131,7 @@ skytweak: Sky subtract 1D spectra after tweaking sky spectra
   <!-- Sec='PARAMETERS' Level=0 Label='scale' Line='scale = 1., dscale = 0.2' -->
   <dd>The initial scale and scale step.  This initializes the scale
   search parameters for the first spectrum.  If <i>dscale</i> is zero then
-  there will be no search for a new scale and the <tt>'y'</tt> interactive function is
+  there will be no search for a new scale and the <span style="font-family: monospace;">'y'</span> interactive function is
   disabled.  These parameters may be changed interactively.  After the
   first spectrum subsequent spectra begin with the values from the last
   spectrum.
@@ -155,7 +155,7 @@ skytweak: Sky subtract 1D spectra after tweaking sky spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>cursor = <tt>""</tt></b></dt>
+  <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Input cursor for the interactive graphics.  A null value selects the
   graphics cursor otherwise a file of cursor values may be specified.
@@ -275,10 +275,10 @@ skytweak: Sky subtract 1D spectra after tweaking sky spectra
   <p>
   After the optional cross-correlation and tweak steps the interactive search
   mode may be entered.  This occurs if <i>interactive</i> = yes.  A query is
-  asking whether to search interactively.  The answers may be <tt>"no"</tt>, <tt>"yes"</tt>,
-  <tt>"NO"</tt>, or <tt>"YES"</tt>.  The lower case answers apply to the current spectrum and
+  asking whether to search interactively.  The answers may be <span style="font-family: monospace;">"no"</span>, <span style="font-family: monospace;">"yes"</span>,
+  <span style="font-family: monospace;">"NO"</span>, or <span style="font-family: monospace;">"YES"</span>.  The lower case answers apply to the current spectrum and
   the upper case answers apply to all subsequent spectra.  This means that if
-  an answer of <tt>"NO"</tt> or <tt>"YES"</tt> is given then there will be no further queries
+  an answer of <span style="font-family: monospace;">"NO"</span> or <span style="font-family: monospace;">"YES"</span> is given then there will be no further queries
   for the remaining input spectra.
   </p>
   <p>
@@ -286,7 +286,7 @@ skytweak: Sky subtract 1D spectra after tweaking sky spectra
   for the input spectrum is displayed.  There also may be a graph of the
   calibration or input spectrum shown for reference.  Initially the
   calibration spectrum is displayed.  The additional graph may be toggled off
-  and on and between the input and calibration spectra with the <tt>'c'</tt> and <tt>'d'</tt>
+  and on and between the input and calibration spectra with the <span style="font-family: monospace;">'c'</span> and <span style="font-family: monospace;">'d'</span>
   keys.  The three candidate corrected spectra will be with the current shift
   and scale in the middle and plus or minus one step in either the shift or
   scale.  Initially the spectra will be at different scale values.
@@ -294,20 +294,20 @@ skytweak: Sky subtract 1D spectra after tweaking sky spectra
   the graph title.
   </p>
   <p>
-  One may toggle between shift steps and scale steps with the <tt>'x'</tt> (for shift)
-  or <tt>'y'</tt> (for scale) keys.  The RMS in the title is the RMS within the
+  One may toggle between shift steps and scale steps with the <span style="font-family: monospace;">'x'</span> (for shift)
+  or <span style="font-family: monospace;">'y'</span> (for scale) keys.  The RMS in the title is the RMS within the
   currently defined sample regions.  If one of the step values is zero then a
   display of different values of that parameter will not be selected.  The
   step size will need to be set with a colon command to search in that
   parameter.
   </p>
   <p>
-  If <tt>'x'</tt> is typed when the three spectra are at different shifts then the
+  If <span style="font-family: monospace;">'x'</span> is typed when the three spectra are at different shifts then the
   nearest spectrum to the y cursor at the x cursor position will be
   selected.  If the central spectrum is selected the step size is divided in
   half otherwise the current shift is changed and the  selected spectrum
   becomes the middle spectrum.  Three new spectra are then shown.  The same
-  applies if <tt>'y'</tt> is typed when the three spectra are at different scales.
+  applies if <span style="font-family: monospace;">'y'</span> is typed when the three spectra are at different scales.
   This allows an interactive search similar to the iterative tweakrms method
   described previously except the user can use whatever criteria is desired
   to search for the best scale and shift.
@@ -316,16 +316,16 @@ skytweak: Sky subtract 1D spectra after tweaking sky spectra
   There are additional keystrokes and colon commands to set or change sample
   regions, reset the current shift, scale, and step sizes, expand the step
   size in the current mode, adjust the offsets between the spectra, and
-  get help.  The <tt>'w'</tt> key and GTOOLS colon commands are available to window
+  get help.  The <span style="font-family: monospace;">'w'</span> key and GTOOLS colon commands are available to window
   the graphs.  Any changes in the x limits apply to both graphs while y limit
   adjustments apply to the graph pointed to by the cursor.
   </p>
   <p>
-  Two other commands require a short explanation.  The <tt>'a'</tt> key may
+  Two other commands require a short explanation.  The <span style="font-family: monospace;">'a'</span> key may
   be used to run the tweakrms algorithm starting from the current
   shift, scale, and steps and the current sample regions.  This allows
   one to graphically set or reset the sample regions before doing
-  the RMS minimization.  The <tt>":smooth"</tt> command and associated
+  the RMS minimization.  The <span style="font-family: monospace;">":smooth"</span> command and associated
   <i>smooth</i> task parameter allow the corrected spectra to be
   displayed with a boxcar smoothing to better see faint features in
   noise.  It is important to realize that the smoothing is only
@@ -333,7 +333,7 @@ skytweak: Sky subtract 1D spectra after tweaking sky spectra
   are done in the unsmoothed data.
   </p>
   <p>
-  After the interactive step is quit with <tt>'q'</tt> or if the interactive
+  After the interactive step is quit with <span style="font-family: monospace;">'q'</span> or if the interactive
   step is not done then the final output spectrum is computed and
   written to the output image.  A brief log output is printed for
   each spectrum.

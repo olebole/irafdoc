@@ -23,7 +23,7 @@ gdevices: List available imaging or other graphics devices
   <h3>Parameters</h3>
   <!-- BeginSection: 'PARAMETERS' -->
   <dl>
-  <dt><b>devices = <tt>"^imt"</tt></b></dt>
+  <dt><b>devices = <span style="font-family: monospace;">"^imt"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='devices' Line='devices = "^imt"' -->
   <dd>A list of patterns identifying the class of devices for which information
   is to be output.  If multiple patterns are given they should be separated
@@ -31,11 +31,11 @@ gdevices: List available imaging or other graphics devices
   </dd>
   </dl>
   <dl>
-  <dt><b>graphcap = <tt>"graphcap"</tt></b></dt>
+  <dt><b>graphcap = <span style="font-family: monospace;">"graphcap"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphcap' Line='graphcap = "graphcap"' -->
   <dd>The graphcap file to be scanned (any termcap format file will do).  By default
   the graphcap file specified by the graphcap environment variable, usually
-  <tt>"dev$graphcap"</tt>, is scanned.
+  <span style="font-family: monospace;">"dev$graphcap"</span>, is scanned.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->

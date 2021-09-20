@@ -72,7 +72,7 @@ approfiles: Profile determination algorithms
   </p>
   <p>
   These requirements lead to two fitting algorithms which the user
-  selects with the <i>pfit</i> parameter.  The primary method, <tt>"fit1d"</tt>,
+  selects with the <i>pfit</i> parameter.  The primary method, <span style="font-family: monospace;">"fit1d"</span>,
   fits low order, one dimensional functions to the lines or columns
   most nearly parallel to the dispersion.  While this is intended for
   spectra which are well aligned with the image axes, even fairly large
@@ -87,15 +87,15 @@ approfiles: Profile determination algorithms
   tracing the spectrum but which does not interpolate the image data.
   Instead it weights and couples polynomial coefficients.  This
   method was developed by Tom Marsh and is described in detail in the
-  paper, <tt>"The Extraction of Highly Distorted Spectra"</tt>, PASP 101, 1032,
-  Nov. 1989.  Here we refer to this method as the Marsh or <tt>"fit2d"</tt>
+  paper, <span style="font-family: monospace;">"The Extraction of Highly Distorted Spectra"</span>, PASP 101, 1032,
+  Nov. 1989.  Here we refer to this method as the Marsh or <span style="font-family: monospace;">"fit2d"</span>
   algorithm and do not attempt to explain it further.
   </p>
   <p>
   The choice of when to use the one dimensional or the two dimensional
-  fitting is left to the user.  The <tt>"fit1d"</tt> algorithm is preferable since it
+  fitting is left to the user.  The <span style="font-family: monospace;">"fit1d"</span> algorithm is preferable since it
   is faster, easier to understand, and has proved to be very robust.  The
-  <tt>"fit2d"</tt> algorithm usually works just as well but is slower and has been
+  <span style="font-family: monospace;">"fit2d"</span> algorithm usually works just as well but is slower and has been
   seen to fail on some data.  The user may simply try both to achieve the
   best results.
   </p>

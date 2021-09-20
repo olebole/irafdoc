@@ -38,10 +38,10 @@ rcardimage: Convert a cardimage file into a text file
   <!-- Sec='PARAMETERS' Level=0 Label='file_list' Line='file_list' -->
   <dd>A list of tape file
   numbers or ranges delimited by commas,  for example
-  <tt>"1,3,5-8"</tt>, which is used only if the magtape device is specified.
+  <span style="font-family: monospace;">"1,3,5-8"</span>, which is used only if the magtape device is specified.
   Files will be read in ascending order, regardless of
   the ordering of the list.  Reading will terminate silently if EOT
-  is reached, thus a list such as <tt>"1-999"</tt> may be used to read all
+  is reached, thus a list such as <span style="font-family: monospace;">"1-999"</span> may be used to read all
   files on a tape.
   </dd>
   </dl>
@@ -57,7 +57,7 @@ rcardimage: Convert a cardimage file into a text file
   <dt><b>card_length = 80</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='card_length' Line='card_length = 80' -->
   <dd>The number of columns per card in the input card image file.
-  Must be divisible by the number of bytes per <tt>"IRAF character"</tt> (2 on most
+  Must be divisible by the number of bytes per <span style="font-family: monospace;">"IRAF character"</span> (2 on most
   machines). The task reblock can be used to pad files with odd-sized
   cards.
   </dd>
@@ -83,7 +83,7 @@ rcardimage: Convert a cardimage file into a text file
   </dd>
   </dl>
   <dl>
-  <dt><b>contn_string = <tt>"&gt;&gt;"</tt></b></dt>
+  <dt><b>contn_string = <span style="font-family: monospace;">"&gt;&gt;"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='contn_string' Line='contn_string = "&gt;&gt;"' -->
   <dd>Marker to enable program to recognize oversize lines.
   </dd>
@@ -117,9 +117,9 @@ rcardimage: Convert a cardimage file into a text file
   <dt><b>offset = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='offset' Line='offset = 0' -->
   <dd>Integer parameter specifying the tape file number offset. For example if
-  offset = 100, card_file = <tt>"card"</tt> and file_list = <tt>"1-3"</tt>, the output file
-  names will be <tt>"card101"</tt>, <tt>"card102"</tt> and <tt>"card103"</tt> respectively, instead of
-  <tt>"card001"</tt>, <tt>"card002"</tt> and <tt>"card003"</tt>.
+  offset = 100, card_file = <span style="font-family: monospace;">"card"</span> and file_list = <span style="font-family: monospace;">"1-3"</span>, the output file
+  names will be <span style="font-family: monospace;">"card101"</span>, <span style="font-family: monospace;">"card102"</span> and <span style="font-family: monospace;">"card103"</span> respectively, instead of
+  <span style="font-family: monospace;">"card001"</span>, <span style="font-family: monospace;">"card002"</span> and <span style="font-family: monospace;">"card003"</span>.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -164,7 +164,7 @@ rcardimage: Convert a cardimage file into a text file
   </p>
   <p>
   	cl&gt; reblock mta[1] cardimage inrecord=81 outrecord=82 \<br>
-  	    padchar=<tt>" "</tt>
+  	    padchar=<span style="font-family: monospace;">" "</span>
   </p>
   <p>
   	cl&gt; rcardimage cardimage 1 textfile card_length=82

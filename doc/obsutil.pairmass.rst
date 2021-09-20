@@ -59,18 +59,18 @@ pairmass: Plot airmass vs time for a given coordinate
   </dd>
   </dl>
   <dl>
-  <dt><b>observatory = <tt>"observatory"</tt></b></dt>
+  <dt><b>observatory = <span style="font-family: monospace;">"observatory"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory = "observatory"' -->
   <dd>The observatory identifier in the observatory database.  See the
   help for <b>observatory</b> task for more information.
   </dd>
   </dl>
   <dl>
-  <dt><b>timesys = <tt>"Standard"</tt> (Universal|Standard|Siderial)</b></dt>
+  <dt><b>timesys = <span style="font-family: monospace;">"Standard"</span> (Universal|Standard|Siderial)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='timesys' Line='timesys = "Standard" (Universal|Standard|Siderial)' -->
   <dd>Time system for the plot or output list.  The choices are
-  <tt>"Universal"</tt> for universal time, <tt>"Standard"</tt> for standard time (where
-  the time zone is determined from the observatory database), and <tt>"Siderial"</tt>
+  <span style="font-family: monospace;">"Universal"</span> for universal time, <span style="font-family: monospace;">"Standard"</span> for standard time (where
+  the time zone is determined from the observatory database), and <span style="font-family: monospace;">"Siderial"</span>
   for the siderial time.
   </dd>
   </dl>
@@ -107,11 +107,11 @@ pairmass: Plot airmass vs time for a given coordinate
   </dd>
   </dl>
   <dl>
-  <dt><b>marker=<tt>"box"</tt></b></dt>
+  <dt><b>marker=<span style="font-family: monospace;">"box"</span></b></dt>
   <!-- Sec='PLOT PARAMETERS' Level=0 Label='marker' Line='marker="box"' -->
   <dd>If <b>pointmode</b> = yes, the marker drawn at each point is set with this
-  parameter.  The acceptable choices are <tt>"point"</tt>, <tt>"box"</tt>, <tt>"plus"</tt>, <tt>"cross"</tt>,
-  <tt>"circle"</tt>, <tt>"hebar"</tt>, <tt>"vebar"</tt>, <tt>"hline"</tt>, <tt>"vline"</tt>, and <tt>"diamond"</tt>.
+  parameter.  The acceptable choices are <span style="font-family: monospace;">"point"</span>, <span style="font-family: monospace;">"box"</span>, <span style="font-family: monospace;">"plus"</span>, <span style="font-family: monospace;">"cross"</span>,
+  <span style="font-family: monospace;">"circle"</span>, <span style="font-family: monospace;">"hebar"</span>, <span style="font-family: monospace;">"vebar"</span>, <span style="font-family: monospace;">"hline"</span>, <span style="font-family: monospace;">"vline"</span>, and <span style="font-family: monospace;">"diamond"</span>.
   </dd>
   </dl>
   <dl>
@@ -128,21 +128,21 @@ pairmass: Plot airmass vs time for a given coordinate
   </dd>
   </dl>
   <dl>
-  <dt><b>xlabel=<tt>"default"</tt></b></dt>
+  <dt><b>xlabel=<span style="font-family: monospace;">"default"</span></b></dt>
   <!-- Sec='PLOT PARAMETERS' Level=0 Label='xlabel' Line='xlabel="default"' -->
-  <dd>Label for the X-axis.  The value <tt>"default"</tt> uses the specified time system.
+  <dd>Label for the X-axis.  The value <span style="font-family: monospace;">"default"</span> uses the specified time system.
   </dd>
   </dl>
   <dl>
-  <dt><b>ylabel=<tt>"Airmass"</tt></b></dt>
+  <dt><b>ylabel=<span style="font-family: monospace;">"Airmass"</span></b></dt>
   <!-- Sec='PLOT PARAMETERS' Level=0 Label='ylabel' Line='ylabel="Airmass"' -->
   <dd>Labels for the Y-axis.
   </dd>
   </dl>
   <dl>
-  <dt><b>title=<tt>"default"</tt></b></dt>
+  <dt><b>title=<span style="font-family: monospace;">"default"</span></b></dt>
   <!-- Sec='PLOT PARAMETERS' Level=0 Label='title' Line='title="default"' -->
-  <dd>Title for plot.  If not changed from <tt>"default"</tt>, a title string consisting
+  <dd>Title for plot.  If not changed from <span style="font-family: monospace;">"default"</span>, a title string consisting
   of the date, observatory, and  object position is used.
   </dd>
   </dl>
@@ -179,7 +179,7 @@ pairmass: Plot airmass vs time for a given coordinate
   </dd>
   </dl>
   <dl>
-  <dt><b>device=<tt>"stdgraph"</tt></b></dt>
+  <dt><b>device=<span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PLOT PARAMETERS' Level=0 Label='device' Line='device="stdgraph"' -->
   <dd>Output device.
   </dd>
@@ -190,7 +190,7 @@ pairmass: Plot airmass vs time for a given coordinate
   <p>
   The airmass is plotted over a specified set of hours for a given
   observatory.  The observatory is specified by an identifier as given
-  in the observatory database.  See the help for <tt>"observatory"</tt> for more
+  in the observatory database.  See the help for <span style="font-family: monospace;">"observatory"</span> for more
   information about the database and identifiers.
   </p>
   <p>

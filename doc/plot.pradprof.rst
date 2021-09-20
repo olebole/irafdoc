@@ -72,7 +72,7 @@ pradprof: Plot or list the radial profile of a stellar object
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>The graphics device for plotting.
   </dd>
@@ -84,16 +84,16 @@ pradprof: Plot or list the radial profile of a stellar object
   </dd>
   </dl>
   <dl>
-  <dt><b>title = <tt>"imtitle"</tt></b></dt>
+  <dt><b>title = <span style="font-family: monospace;">"imtitle"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='title' Line='title = "imtitle"' -->
-  <dd>The plot title. If title = <tt>"imtitle"</tt>, the image name, <i>xinit</i>, and
+  <dd>The plot title. If title = <span style="font-family: monospace;">"imtitle"</span>, the image name, <i>xinit</i>, and
   <i>yinit</i> are
   used to construct a default title, otherwise the user specified title is
   used.
   </dd>
   </dl>
   <dl>
-  <dt><b>xlabel = <tt>"Radius"</tt>, ylabel = <tt>"Intensity"</tt></b></dt>
+  <dt><b>xlabel = <span style="font-family: monospace;">"Radius"</span>, ylabel = <span style="font-family: monospace;">"Intensity"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xlabel' Line='xlabel = "Radius", ylabel = "Intensity"' -->
   <dd>The default labels for the X and Y axes.
   </dd>
@@ -114,7 +114,7 @@ pradprof: Plot or list the radial profile of a stellar object
   <dl>
   <dt><b>round = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='round' Line='round = no' -->
-  <dd>Round the axes minimum and maximum values up to <tt>"nice"</tt> values?
+  <dd>Round the axes minimum and maximum values up to <span style="font-family: monospace;">"nice"</span> values?
   </dd>
   </dl>
   <dl>
@@ -156,7 +156,7 @@ pradprof: Plot or list the radial profile of a stellar object
   </dd>
   </dl>
   <dl>
-  <dt><b>marker = <tt>"plus"</tt></b></dt>
+  <dt><b>marker = <span style="font-family: monospace;">"plus"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='marker' Line='marker = "plus"' -->
   <dd>Type of marker used in pointmode.
   </dd>
@@ -176,7 +176,7 @@ pradprof: Plot or list the radial profile of a stellar object
   for the object near (<i>xinit</i>, <i>yinit</i>) in the input image(s) 
   <i>input</i>, and plots it on the graphics device <i>graphics</i>.
   If the parameter <i>center</i> is
-  <tt>"yes"</tt>, then pixels in a box <i>cboxwidth</i> wide around the initial
+  <span style="font-family: monospace;">"yes"</span>, then pixels in a box <i>cboxwidth</i> wide around the initial
   coordinates and a simple centroiding algorithm  are used to
   compute a more accurate center, before the radial profile is computed.
   </p>
@@ -190,7 +190,7 @@ pradprof: Plot or list the radial profile of a stellar object
   <i>append</i> is yes then the new plot will be appended to an existing plot,
   otherwise the device is cleared and a new plot is made. The
   remainder of the parameters control the details of how
-  the plot is displayed. If the parameter <b>list</b> is <tt>"yes"</tt> 
+  the plot is displayed. If the parameter <b>list</b> is <span style="font-family: monospace;">"yes"</span> 
   the radial profile is listed on the standard output instead of plotted.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->

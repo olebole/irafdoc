@@ -57,25 +57,25 @@ autoidentify: Automatically identify lines and fit dispersion
   </dd>
   </dl>
   <dl>
-  <dt><b>coordlist = <tt>""</tt></b></dt>
+  <dt><b>coordlist = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coordlist' Line='coordlist = ""' -->
   <dd>Coordinate list consisting of an list of spectral line coordinates.
-  A comment line of the form <tt>"# units &lt;units&gt;"</tt>, where &lt;units&gt; is one of the
+  A comment line of the form <span style="font-family: monospace;">"# units &lt;units&gt;"</span>, where &lt;units&gt; is one of the
   understood units names, defines the units of the coordinate list.  If no units
   are specified then Angstroms are assumed.
   The line list is used for both the final identifications and for the set of
   lines to use in the automatic search.  A restricted search list may be
   specified with the parameter <i>aidpars.reflist</i>.  The line list may
-  contain a comment line of the form <tt>"# Spectrum &lt;name&gt;"</tt>, where &lt;name&gt; is a
+  contain a comment line of the form <span style="font-family: monospace;">"# Spectrum &lt;name&gt;"</span>, where &lt;name&gt; is a
   filename containing a reference spectrum.  The reference spectrum will be
   used in selecting the strong lines for the automatic search.  A reference
   spectrum may also be specified with the parameter <i>aidpars.refspec</i>.
-  Some standard line lists are available in the directory <tt>"linelists$"</tt>.
+  Some standard line lists are available in the directory <span style="font-family: monospace;">"linelists$"</span>.
   See the help topic <i>linelists</i> for the available line lists.
   </dd>
   </dl>
   <dl>
-  <dt><b>units = <tt>""</tt></b></dt>
+  <dt><b>units = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='units' Line='units = ""' -->
   <dd>The units to use if no database entry exists.  The units are specified as
   described in
@@ -91,15 +91,15 @@ autoidentify: Automatically identify lines and fit dispersion
   <dt><b>interactive = yes (no|yes|NO|YES)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes (no|yes|NO|YES)' -->
   <dd>After automatically identifying the spectral lines and dispersion function
-  review and modify the solution interactively?  If <tt>"yes"</tt> a query is given
+  review and modify the solution interactively?  If <span style="font-family: monospace;">"yes"</span> a query is given
   for each spectrum providing the choice of interactive review.  The
-  query may be turned off during execution.  If <tt>"YES"</tt> the interactive review
+  query may be turned off during execution.  If <span style="font-family: monospace;">"YES"</span> the interactive review
   is entered automatically without a query.  The interactive, graphical
   review is the same as the task <b>identify</b> with a few restriction.
   </dd>
   </dl>
   <dl>
-  <dt><b>aidpars = <tt>""</tt> (parameter set)</b></dt>
+  <dt><b>aidpars = <span style="font-family: monospace;">""</span> (parameter set)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='aidpars' Line='aidpars = "" (parameter set)' -->
   <dd>Parameter set for the automatic line identification algorithm.  The
   parameters are described in the help topic <b>aidpars</b>.
@@ -110,7 +110,7 @@ autoidentify: Automatically identify lines and fit dispersion
   used to select a one dimensional spectrum.
   </p>
   <dl>
-  <dt><b>section = <tt>"middle line"</tt></b></dt>
+  <dt><b>section = <span style="font-family: monospace;">"middle line"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='section' Line='section = "middle line"' -->
   <dd>If an image is not one dimensional or specified as a one dimensional image
   section then the image section given by this parameter is used.  The
@@ -125,11 +125,11 @@ autoidentify: Automatically identify lines and fit dispersion
   where each field can be one of the strings separated by | except for #
   which is an integer number.  The field in [] is a second designator which
   is used with three dimensional data.  Abbreviations are allowed though
-  beware that <tt>'l'</tt> is not a sufficient abbreviation.
+  beware that <span style="font-family: monospace;">'l'</span> is not a sufficient abbreviation.
   </dd>
   </dl>
   <dl>
-  <dt><b>nsum = <tt>"1"</tt></b></dt>
+  <dt><b>nsum = <span style="font-family: monospace;">"1"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nsum' Line='nsum = "1"' -->
   <dd>Number of lines, columns, or bands across the designated dispersion axis to
   be summed when the image is a two or three dimensional image.
@@ -144,10 +144,10 @@ autoidentify: Automatically identify lines and fit dispersion
   The following parameters are used in finding spectral lines.
   </p>
   <dl>
-  <dt><b>ftype = <tt>"emission"</tt></b></dt>
+  <dt><b>ftype = <span style="font-family: monospace;">"emission"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ftype' Line='ftype = "emission"' -->
   <dd>Type of spectral lines to be identified.  The possibly abbreviated choices are
-  <tt>"emission"</tt> and <tt>"absorption"</tt>.
+  <span style="font-family: monospace;">"emission"</span> and <span style="font-family: monospace;">"absorption"</span>.
   </dd>
   </dl>
   <dl>
@@ -192,10 +192,10 @@ autoidentify: Automatically identify lines and fit dispersion
   about these parameters may be found under that topic.
   </p>
   <dl>
-  <dt><b>function = <tt>"spline3"</tt></b></dt>
+  <dt><b>function = <span style="font-family: monospace;">"spline3"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "spline3"' -->
   <dd>The function to be fit to user coordinates as a function of the pixel
-  coordinates.  The choices are <tt>"chebyshev"</tt>, <tt>"legendre"</tt>, <tt>"spline1"</tt>, or <tt>"spline3"</tt>.
+  coordinates.  The choices are <span style="font-family: monospace;">"chebyshev"</span>, <span style="font-family: monospace;">"legendre"</span>, <span style="font-family: monospace;">"spline1"</span>, or <span style="font-family: monospace;">"spline3"</span>.
   </dd>
   </dl>
   <dl>
@@ -206,7 +206,7 @@ autoidentify: Automatically identify lines and fit dispersion
   </dd>
   </dl>
   <dl>
-  <dt><b>sample = <tt>"*"</tt></b></dt>
+  <dt><b>sample = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"' -->
   <dd>Sample regions for fitting specified in pixel coordinates.
   </dd>
@@ -234,13 +234,13 @@ autoidentify: Automatically identify lines and fit dispersion
   The following parameters control the input and output.
   </p>
   <dl>
-  <dt><b>dbwrite = <tt>"yes"</tt>  (no|yes|NO|YES)</b></dt>
+  <dt><b>dbwrite = <span style="font-family: monospace;">"yes"</span>  (no|yes|NO|YES)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dbwrite' Line='dbwrite = "yes"  (no|yes|NO|YES)' -->
   <dd>Automatically write or update the database with the line identifications
-  and dispersion function?  If <tt>"no"</tt> or <tt>"NO"</tt> then there is no database
-  output.  If <tt>"YES"</tt> the results are automatically written to the database.
-  If <tt>"yes"</tt> a query is made allowing the user to reply with <tt>"no"</tt>, <tt>"yes"</tt>, <tt>"NO"</tt>
-  or <tt>"YES"</tt>.  The negative responses do not write to the database and the
+  and dispersion function?  If <span style="font-family: monospace;">"no"</span> or <span style="font-family: monospace;">"NO"</span> then there is no database
+  output.  If <span style="font-family: monospace;">"YES"</span> the results are automatically written to the database.
+  If <span style="font-family: monospace;">"yes"</span> a query is made allowing the user to reply with <span style="font-family: monospace;">"no"</span>, <span style="font-family: monospace;">"yes"</span>, <span style="font-family: monospace;">"NO"</span>
+  or <span style="font-family: monospace;">"YES"</span>.  The negative responses do not write to the database and the
   affirmative ones do write to the database.  The upper-case responses
   suppress any further queries for any remaining spectra.
   </dd>
@@ -250,13 +250,13 @@ autoidentify: Automatically identify lines and fit dispersion
   <!-- Sec='PARAMETERS' Level=0 Label='overwrite' Line='overwrite = yes' -->
   <dd>Overwrite previous solutions in the database?  If there is a previous
   solution for the spectrum being identified this parameter selects whether
-  to skip the spectrum (<tt>"no"</tt>) or find a new solution (<tt>"yes"</tt>).  In the later
+  to skip the spectrum (<span style="font-family: monospace;">"no"</span>) or find a new solution (<span style="font-family: monospace;">"yes"</span>).  In the later
   case saving the solution to the database will overwrite the previous
   solution.
   </dd>
   </dl>
   <dl>
-  <dt><b>database = <tt>"database"</tt></b></dt>
+  <dt><b>database = <span style="font-family: monospace;">"database"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"' -->
   <dd>Database for reading and writing the line identifications and
   dispersion functions.
@@ -269,29 +269,29 @@ autoidentify: Automatically identify lines and fit dispersion
   </dd>
   </dl>
   <dl>
-  <dt><b>logfile = <tt>"logfile"</tt></b></dt>
+  <dt><b>logfile = <span style="font-family: monospace;">"logfile"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "logfile"' -->
   <dd>Filename for recording log information about the identifications.
-  The null string, <tt>""</tt>, may be specified to skip recording the log information.
+  The null string, <span style="font-family: monospace;">""</span>, may be specified to skip recording the log information.
   </dd>
   </dl>
   <dl>
-  <dt><b>plotfile = <tt>""</tt></b></dt>
+  <dt><b>plotfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='plotfile' Line='plotfile = ""' -->
   <dd>Filename for recording log plot information as IRAF metacode.  A
-  null string, <tt>""</tt>, may be specified to skip recording the plot information.
+  null string, <span style="font-family: monospace;">""</span>, may be specified to skip recording the plot information.
   (Plot output is currently not implemented.)
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>Graphics device for the interactive review.  The default is the standard
   graphics device which is generally a graphics terminal.
   </dd>
   </dl>
   <dl>
-  <dt><b>cursor = <tt>""</tt></b></dt>
+  <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Cursor input file for the interactive review.  If a cursor file is not
   given then the standard graphics cursor is read.
@@ -331,7 +331,7 @@ autoidentify: Automatically identify lines and fit dispersion
   <p>
   The coordinate list of spectral lines often covers a much larger dispersion
   range than the spectra being identified.  This is true of the standard line
-  lists available in the <tt>"linelists$"</tt> directory.  While the algorithm for
+  lists available in the <span style="font-family: monospace;">"linelists$"</span> directory.  While the algorithm for
   identifying the lines will often succeed with a large line list it is not
   guaranteed nor will it find the solution quickly without additional
   information.  Thus it is highly desirable to provide the algorithm with
@@ -356,7 +356,7 @@ autoidentify: Automatically identify lines and fit dispersion
   specified by the parameter <i>aidpars.crpix</i>.  By default this is INDEF
   which means use the center of the spectrum.  The direction in which the
   dispersion coordinates increase relative to the pixel coordinates may be
-  specified by the <i>aidpars.cddir</i> parameter.  The default is <tt>"unknown"</tt>
+  specified by the <i>aidpars.cddir</i> parameter.  The default is <span style="font-family: monospace;">"unknown"</span>
   to search in either direction.
   </p>
   <p>
@@ -367,9 +367,9 @@ autoidentify: Automatically identify lines and fit dispersion
   </p>
   <p>
   The characteristics of the spectral lines to be found and identified are
-  set by several parameters.  The type of spectral lines, whether <tt>"emission"</tt>
-  or <tt>"absorption"</tt>, is set by the parameter <i>ftype</i>.  For arc-line
-  calibration spectra this parameter is set to <tt>"emission"</tt>.  The full-width
+  set by several parameters.  The type of spectral lines, whether <span style="font-family: monospace;">"emission"</span>
+  or <span style="font-family: monospace;">"absorption"</span>, is set by the parameter <i>ftype</i>.  For arc-line
+  calibration spectra this parameter is set to <span style="font-family: monospace;">"emission"</span>.  The full-width
   (in pixels) at the base of the spectral lines is set by the parameter
   <i>fwidth</i>.  This is used by the centering algorithm to define the extent
   of the line profile to be centered.  The <i>threshold</i> parameter defines
@@ -429,15 +429,15 @@ autoidentify: Automatically identify lines and fit dispersion
   The line identifications and dispersion function are written to the
   specified <i>database</i>.  The current format of the database is described
   in the help for <i>identify</i>.  If a database entry is already present for
-  a spectrum and the parameter <i>overwrite</i> is <tt>"no"</tt> then the spectrum is
+  a spectrum and the parameter <i>overwrite</i> is <span style="font-family: monospace;">"no"</span> then the spectrum is
   skipped and a message is printed to the standard output.   After a solution
   is found and after any interactive review (see below) the results may be
   written to the database.  The <i>dbwrite</i> parameter may be specified as
-  <tt>"no"</tt> or <tt>"NO"</tt> to disable writing to the database (and no queries will be
-  made), as <tt>"yes"</tt> to query whether to or not to write to the database, or as
-  <tt>"YES"</tt> to automatically write the results to the database with no queries.
-  When a query is given the responses may be <tt>"no"</tt> or <tt>"yes"</tt> for an individual
-  spectrum or <tt>"NO"</tt> or <tt>"YES"</tt> for all remaining spectra without further
+  <span style="font-family: monospace;">"no"</span> or <span style="font-family: monospace;">"NO"</span> to disable writing to the database (and no queries will be
+  made), as <span style="font-family: monospace;">"yes"</span> to query whether to or not to write to the database, or as
+  <span style="font-family: monospace;">"YES"</span> to automatically write the results to the database with no queries.
+  When a query is given the responses may be <span style="font-family: monospace;">"no"</span> or <span style="font-family: monospace;">"yes"</span> for an individual
+  spectrum or <span style="font-family: monospace;">"NO"</span> or <span style="font-family: monospace;">"YES"</span> for all remaining spectra without further
   queries.
   </p>
   <p>
@@ -445,15 +445,15 @@ autoidentify: Automatically identify lines and fit dispersion
   identifications and dispersion function using the graphical functions of
   the <b>identify</b> task (with the exception that a new spectrum may not be
   selected).  The review mode is selected with the <i>interactive</i>
-  parameter.  If the parameter is <tt>"no"</tt> or <tt>"NO"</tt> then no interactive review
+  parameter.  If the parameter is <span style="font-family: monospace;">"no"</span> or <span style="font-family: monospace;">"NO"</span> then no interactive review
   will be provided and there will be no queries either.  If the parameter is
-  <tt>"YES"</tt> then the graphical review mode will be entered after each solution is
-  found without any query.  If the parameter is <tt>"yes"</tt> then a query will be
+  <span style="font-family: monospace;">"YES"</span> then the graphical review mode will be entered after each solution is
+  found without any query.  If the parameter is <span style="font-family: monospace;">"yes"</span> then a query will be
   made after a solution is found and after any log information is written to
-  the terminal.  One may respond to the query with <tt>"no"</tt> or <tt>"yes"</tt> for an
-  individual spectrum or <tt>"NO"</tt> or <tt>"YES"</tt> for all remaining spectra without
-  further queries.  For <tt>"yes"</tt> or <tt>"YES"</tt> the <i>identify</i> review  mode is
-  entered.  To exit type <tt>'q'</tt>.
+  the terminal.  One may respond to the query with <span style="font-family: monospace;">"no"</span> or <span style="font-family: monospace;">"yes"</span> for an
+  individual spectrum or <span style="font-family: monospace;">"NO"</span> or <span style="font-family: monospace;">"YES"</span> for all remaining spectra without
+  further queries.  For <span style="font-family: monospace;">"yes"</span> or <span style="font-family: monospace;">"YES"</span> the <i>identify</i> review  mode is
+  entered.  To exit type <span style="font-family: monospace;">'q'</span>.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Examples</h3>

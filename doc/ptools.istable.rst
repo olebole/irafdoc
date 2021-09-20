@@ -31,22 +31,22 @@ istable: Is a file a table or text database file ?
   <dl>
   <dt><b>table = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='table' Line='table = no' -->
-  <dd>An output variable which is <tt>"yes"</tt> if <i>infile</i> is an STSDAS table
-  and <tt>"no"</tt> otherwise.
+  <dd>An output variable which is <span style="font-family: monospace;">"yes"</span> if <i>infile</i> is an STSDAS table
+  and <span style="font-family: monospace;">"no"</span> otherwise.
   </dd>
   </dl>
   <dl>
   <dt><b>text = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='text' Line='text = no' -->
-  <dd>An output variable which is <tt>"yes"</tt> if <i>infile</i> is an APPHOT/DAOPHOT
-  text database and <tt>"no"</tt> otherwise.
+  <dd>An output variable which is <span style="font-family: monospace;">"yes"</span> if <i>infile</i> is an APPHOT/DAOPHOT
+  text database and <span style="font-family: monospace;">"no"</span> otherwise.
   </dd>
   </dl>
   <dl>
   <dt><b>other = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='other' Line='other = no' -->
-  <dd>An output variable which is <tt>"yes"</tt> if <i>infile</i> is neither of the
-  above and <tt>"no"</tt> otherwise.
+  <dd>An output variable which is <span style="font-family: monospace;">"yes"</span> if <i>infile</i> is neither of the
+  above and <span style="font-family: monospace;">"no"</span> otherwise.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -56,14 +56,14 @@ istable: Is a file a table or text database file ?
   ISTABLE is a very simple task which determines whether a specified
   input file is an STSDAS table, an APPHOT/DAOPHOT text database file or 
   neither of the above. ISTABLE first tries to open the input file as an 
-  STSDAS table. If successful ISTABLE returns <tt>"yes"</tt> in the
-  variable <i>table</i> and <tt>"no"</tt> in <i>text</i> and <i>other</i>. Otherwise
+  STSDAS table. If successful ISTABLE returns <span style="font-family: monospace;">"yes"</span> in the
+  variable <i>table</i> and <span style="font-family: monospace;">"no"</span> in <i>text</i> and <i>other</i>. Otherwise
   ISTABLE  tries to open the input file as an APPHOT/DAOPHOT text database
-  file by checking for the <tt>"#K IRAF"</tt> keyword.
-  If the check is positive ISTABLE return <tt>"yes"</tt> in
-  the variable <i>text</i> and <tt>"no"</tt> in <i>table</i> and <i>other</i>. If the input
+  file by checking for the <span style="font-family: monospace;">"#K IRAF"</span> keyword.
+  If the check is positive ISTABLE return <span style="font-family: monospace;">"yes"</span> in
+  the variable <i>text</i> and <span style="font-family: monospace;">"no"</span> in <i>table</i> and <i>other</i>. If the input
   file is neither an STSDAS table or an APPHOT/DAOPHOT text database
-  ISTABLE returns <tt>"yes"</tt> in the variable <i>other</i> and <tt>"no"</tt> in <i>text</i>
+  ISTABLE returns <span style="font-family: monospace;">"yes"</span> in the variable <i>other</i> and <span style="font-family: monospace;">"no"</span> in <i>text</i>
   and <i>table</i>.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->

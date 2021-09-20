@@ -25,7 +25,7 @@ fixpix: Fix bad pixels by linear interpolation from nearby pixels
   <dl>
   <dt><b>images</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
-  <dd>List of two dimensional images to be <tt>"fixed"</tt> (modified) by
+  <dd>List of two dimensional images to be <span style="font-family: monospace;">"fixed"</span> (modified) by
   linear interpolation.
   </dd>
   </dl>
@@ -35,13 +35,13 @@ fixpix: Fix bad pixels by linear interpolation from nearby pixels
   <dd>List of bad pixel masks, images, or files (collectively called masks)
   identifying the bad pixels.  The list of masks must either match the
   list of input images in number or a single mask may be specified to apply
-  to all images.  The special name <tt>"BPM"</tt> may be specified to select a mask
-  specified by the header keyword <tt>"BPM"</tt> in the input image.  The possible
+  to all images.  The special name <span style="font-family: monospace;">"BPM"</span> may be specified to select a mask
+  specified by the header keyword <span style="font-family: monospace;">"BPM"</span> in the input image.  The possible
   mask formats are given in the DESCRIPTION section.
   </dd>
   </dl>
   <dl>
-  <dt><b>linterp = <tt>"INDEF"</tt>, cinterp = <tt>"INDEF"</tt></b></dt>
+  <dt><b>linterp = <span style="font-family: monospace;">"INDEF"</span>, cinterp = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='linterp' Line='linterp = "INDEF", cinterp = "INDEF"' -->
   <dd>Normally interpolation is performed across the narrowest dimension spanning
   the bad pixels with interpolation along image lines if the two dimensions are
@@ -80,14 +80,14 @@ fixpix: Fix bad pixels by linear interpolation from nearby pixels
   images, specified by the <i>images</i> parameter, are matched with a list of
   masks, specified by the <i>masks</i> parameter.  The list of masks must
   match the list of input images or a single mask name may be given to apply
-  to all input images.  The special mask name <tt>"BPM"</tt> may be used to
+  to all input images.  The special mask name <span style="font-family: monospace;">"BPM"</span> may be used to
   select a mask name given in the input image header under the keyword
-  <tt>"BPM"</tt>.
+  <span style="font-family: monospace;">"BPM"</span>.
   </p>
   <p>
   There are three types of masks which may be used.  The preferred type
-  is a bad pixel mask given as a <tt>"pixel list"</tt> image.  Pixel list images
-  have the extension <tt>".pl"</tt> signifying a special compact file of integer
+  is a bad pixel mask given as a <span style="font-family: monospace;">"pixel list"</span> image.  Pixel list images
+  have the extension <span style="font-family: monospace;">".pl"</span> signifying a special compact file of integer
   values ideal for identifying sets of pixels.  For a bad pixel mask the
   good pixels have a value of zero and bad pixels have positive integer
   values.
@@ -109,7 +109,7 @@ fixpix: Fix bad pixels by linear interpolation from nearby pixels
   interpolation direction along columns.
   </p>
   <p>
-  As noted previously, bad pixels are <tt>"fixed"</tt> by replacing them with values
+  As noted previously, bad pixels are <span style="font-family: monospace;">"fixed"</span> by replacing them with values
   by linear interpolation to the nearest pixels not identified as bad.
   Normally interpolation is performed across the narrowest dimension spanning
   bad pixels with interpolation along image lines if the two dimensions are
@@ -149,11 +149,11 @@ fixpix: Fix bad pixels by linear interpolation from nearby pixels
   Mask images may be made in a variety of ways.  Any task which produces
   and modifies image values may be used.  Some useful tasks are
   <b>imexpr, imreplace, imcopy,</b> and <b>mkpattern</b>.  If a new image
-  is specified with the explicit <tt>".pl"</tt> extension then the pixel mask
+  is specified with the explicit <span style="font-family: monospace;">".pl"</span> extension then the pixel mask
   format is produced.  Two other ways to make masks are with the
   tasks <b>text2mask</b> and <b>ccdmask</b>.  The former uses an input
   text file consisting of rectangular region.  This is the old
-  <tt>"fixpix"</tt> format.  The task <b>ccdmask</b> is specialized to make a mask
+  <span style="font-family: monospace;">"fixpix"</span> format.  The task <b>ccdmask</b> is specialized to make a mask
   of bad pixels from flat fields or, even better, from the ratio of
   two flat fields of different exposure levels.
   </p>

@@ -37,7 +37,7 @@ laplace: Laplacian filter a list of 1 or 2-D images
   </dd>
   </dl>
   <dl>
-  <dt><b>laplace = <tt>"xycentral"</tt></b></dt>
+  <dt><b>laplace = <span style="font-family: monospace;">"xycentral"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='laplace' Line='laplace = "xycentral"' -->
   <dd>The Laplacian filters are a set of four three by three kernels which
   approximate the Laplacian operator, where a Laplacian operator is defined
@@ -75,7 +75,7 @@ laplace: Laplacian filter a list of 1 or 2-D images
   </dd>
   </dl>
   <dl>
-  <dt><b>boundary = <tt>"nearest"</tt></b></dt>
+  <dt><b>boundary = <span style="font-family: monospace;">"nearest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"' -->
   <dd>The algorithm used to compute the values of the out of bounds pixels.
   The options are:

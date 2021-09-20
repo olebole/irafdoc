@@ -63,14 +63,14 @@ imslice: Slice images into images of lower dimension
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. Slice the 3-D image <tt>"datacube"</tt> into a list of 2D images. A list of
+  1. Slice the 3-D image <span style="font-family: monospace;">"datacube"</span> into a list of 2D images. A list of
   images called plane001, plane002, plane003 ... will be created.
   </p>
   <pre>
   	im&gt; imslice datacube plane 3
   </pre>
   <p>
-  2. Slice the list of 2-D images <tt>"nite1,nite2,nite3"</tt> into a list of 1-D images.
+  2. Slice the list of 2-D images <span style="font-family: monospace;">"nite1,nite2,nite3"</span> into a list of 1-D images.
   A new list of images nite1001, nite1002, ..., nite2001, nite2002, ...,
   nite3001, nite3002 will be created.
   </p>

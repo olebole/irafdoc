@@ -43,7 +43,7 @@ astradius: Find images within a circle on the sky
   </dd>
   </dl>
   <dl>
-  <dt><b>keywpars = <tt>""</tt> (pset)</b></dt>
+  <dt><b>keywpars = <span style="font-family: monospace;">""</span> (pset)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='keywpars' Line='keywpars = "" (pset)' -->
   <dd>Parameter set defining the image header keywords.  This task requires
   keywords for the right ascension, declination, and epoch.  If
@@ -53,7 +53,7 @@ astradius: Find images within a circle on the sky
   </dd>
   </dl>
   <dl>
-  <dt><b>commands = <tt>"astutil$astradius.dat"</tt></b></dt>
+  <dt><b>commands = <span style="font-family: monospace;">"astutil$astradius.dat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='commands' Line='commands = "astutil$astradius.dat"' -->
   <dd>Command file used to compute the distance from the coordinate center
   and print a result if the distance is less than the specified radius.

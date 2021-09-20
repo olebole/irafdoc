@@ -40,16 +40,16 @@ envget: Get the string value of an environment variable
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Construct a filename using the value of the environment variable
-  <tt>"editor"</tt>, and page the file thus named.
+  <span style="font-family: monospace;">"editor"</span>, and page the file thus named.
   </p>
   <p>
-  	cl&gt; page (<tt>"dev$"</tt> // envget (<tt>"editor"</tt>) // <tt>".ed"</tt>)
+  	cl&gt; page (<span style="font-family: monospace;">"dev$"</span> // envget (<span style="font-family: monospace;">"editor"</span>) // <span style="font-family: monospace;">".ed"</span>)
   </p>
   <p>
   2. Compute and print the center line on the terminal screen.
   </p>
   <p>
-  	cl&gt; = ((int (envget (<tt>"ttynlines"</tt>)) + 1) / 2)
+  	cl&gt; = ((int (envget (<span style="font-family: monospace;">"ttynlines"</span>)) + 1) / 2)
   </p>
   <!-- EndSection:   'EXAMPLES' -->
   <h3>See also</h3>

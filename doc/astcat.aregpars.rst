@@ -23,13 +23,13 @@ aregpars: Default region parameter set
   <h3>Parameters</h3>
   <!-- BeginSection: 'PARAMETERS' -->
   <dl>
-  <dt><b>rcra = <tt>"00:00:00.0"</tt></b></dt>
+  <dt><b>rcra = <span style="font-family: monospace;">"00:00:00.0"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rcra' Line='rcra = "00:00:00.0"' -->
   <dd>The right ascension / longitude of the center of the region to be extracted.
   </dd>
   </dl>
   <dl>
-  <dt><b>rcdec = <tt>"+00:00.00"</tt></b></dt>
+  <dt><b>rcdec = <span style="font-family: monospace;">"+00:00.00"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rcdec' Line='rcdec = "+00:00.00"' -->
   <dd>The declination / latitude of the center of the region to be extracted.
   </dd>
@@ -49,19 +49,19 @@ aregpars: Default region parameter set
   </dd>
   </dl>
   <dl>
-  <dt><b>rcsystem = <tt>""</tt></b></dt>
+  <dt><b>rcsystem = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rcsystem' Line='rcsystem = ""' -->
   <dd>The input celestial coordinate system. This is the celestial coordinate system
   of the region center. If the input celestial coordinate system is undefined it
   defaults to the query celestial coordinate system. Popular options are
-  <tt>"icrs"</tt>, <tt>"j2000.0"</tt>, and <tt>"b1950.0"</tt>. The full set of options can be examined
-  by typing <tt>"help ccsystems"</tt>.
+  <span style="font-family: monospace;">"icrs"</span>, <span style="font-family: monospace;">"j2000.0"</span>, and <span style="font-family: monospace;">"b1950.0"</span>. The full set of options can be examined
+  by typing <span style="font-family: monospace;">"help ccsystems"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>rcraunits = <tt>""</tt></b></dt>
+  <dt><b>rcraunits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rcraunits' Line='rcraunits = ""' -->
-  <dd>The units of rcra. Permitted values are <tt>"hours"</tt>, <tt>"degrees"</tt>, and radians. If
+  <dd>The units of rcra. Permitted values are <span style="font-family: monospace;">"hours"</span>, <span style="font-family: monospace;">"degrees"</span>, and radians. If
   rcraunits is undefined it defaults to the preferred units of the
   input celestial coordinate system, e.g. hours for equatorial coordinate
   system, degrees for ecliptic, galactic, and super-galactic coordinate
@@ -69,9 +69,9 @@ aregpars: Default region parameter set
   </dd>
   </dl>
   <dl>
-  <dt><b>rcdecunits = <tt>""</tt></b></dt>
+  <dt><b>rcdecunits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rcdecunits' Line='rcdecunits = ""' -->
-  <dd>The units of rcdec. Permitted values are <tt>"degrees"</tt> and <tt>"radians"</tt>. If rcdecunits
+  <dd>The units of rcdec. Permitted values are <span style="font-family: monospace;">"degrees"</span> and <span style="font-family: monospace;">"radians"</span>. If rcdecunits
   is undefined it defaults to the preferred units of the input celestial
   coordinate system, e.g. degrees for all systems.
   </dd>

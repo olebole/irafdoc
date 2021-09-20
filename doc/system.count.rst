@@ -44,7 +44,7 @@ count: Count the number of lines, words, characters in a text file
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Count the number of lines, words and characters in all files in the
-  current directory with the extensions <tt>".x"</tt> and <tt>".h"</tt>.
+  current directory with the extensions <span style="font-family: monospace;">".x"</span> and <span style="font-family: monospace;">".h"</span>.
   </p>
   <p>
   	cl&gt; count *.[xh]
@@ -66,7 +66,7 @@ count: Count the number of lines, words, characters in a text file
   the current directory.
   </p>
   <p>
-  	cl&gt; match <tt>"read#("</tt> *.x | count
+  	cl&gt; match <span style="font-family: monospace;">"read#("</span> *.x | count
   </p>
   <!-- EndSection:   'EXAMPLES' -->
   <h3>See also</h3>

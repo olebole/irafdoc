@@ -47,7 +47,7 @@ widstape: Convert ONEDSPEC spectra to IDSOUT text format
   <!-- Sec='PARAMETERS' Level=0 Label='new_tape' Line='new_tape = no' -->
   <dd>If set to yes, the tape is rewound and output begins at BOT. If no,
   output begins at EOT unless an explicit file specification is given
-  as part of the magtape file name for parameter <tt>"idsout"</tt> (e.g. mta[2]).
+  as part of the magtape file name for parameter <span style="font-family: monospace;">"idsout"</span> (e.g. mta[2]).
   If idsout contains a file specification of [1], then writing begins
   at BOT regardless of the value for new_tape.
   </dd>
@@ -103,7 +103,7 @@ widstape: Convert ONEDSPEC spectra to IDSOUT text format
     133			  Blank line
   </pre>
   <p>
-  The data of type real are in exponent format; i.e FORTRAN <tt>'E'</tt> format (1.234e3).
+  The data of type real are in exponent format; i.e FORTRAN <span style="font-family: monospace;">'E'</span> format (1.234e3).
   </p>
   <p>
   There are no special marks between spectral images, 

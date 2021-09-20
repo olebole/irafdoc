@@ -29,28 +29,28 @@ quadsections: Produce image section list for sections of quadformat images
   </dd>
   </dl>
   <dl>
-  <dt><b>window = <tt>"datasec"</tt> (datasec|trimsec|biassec)</b></dt>
+  <dt><b>window = <span style="font-family: monospace;">"datasec"</span> (datasec|trimsec|biassec)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='window' Line='window = "datasec" (datasec|trimsec|biassec)' -->
-  <dd>Type of section to output.  The choices are <tt>"datasec"</tt> for the amplifier
-  section which includes the bias if any is present, <tt>"trimsec"</tt> for the trim
-  section, and <tt>"biassec"</tt> for the bias section.
+  <dd>Type of section to output.  The choices are <span style="font-family: monospace;">"datasec"</span> for the amplifier
+  section which includes the bias if any is present, <span style="font-family: monospace;">"trimsec"</span> for the trim
+  section, and <span style="font-family: monospace;">"biassec"</span> for the bias section.
   </dd>
   </dl>
   <dl>
-  <dt><b>section = <tt>""</tt></b></dt>
+  <dt><b>section = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='section' Line='section = ""' -->
   <dd>Section to be overlapped.  The output sections will be the parts of the
   amplifier windows which are included within this section.
   </dd>
   </dl>
   <dl>
-  <dt><b>template = <tt>""</tt></b></dt>
+  <dt><b>template = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='template' Line='template = ""' -->
   <dd>Template for producing the output.  The template replaces occurs of
   $I with the image name, $S with the section, and $A with the amplifier
-  label.  If none is specified then the default template <tt>"$I$S\\n"</tt> is
+  label.  If none is specified then the default template <span style="font-family: monospace;">"$I$S\\n"</span> is
   used which produces the image name with section separated by new-lines.
-  The special characters <tt>"\n"</tt> is the new-line and the extra <tt>"\"</tt> is
+  The special characters <span style="font-family: monospace;">"\n"</span> is the new-line and the extra <span style="font-family: monospace;">"\"</span> is
   required to pass the new-line through to the formatting routine.
   </dd>
   </dl>
@@ -58,7 +58,7 @@ quadsections: Produce image section list for sections of quadformat images
   <h3>Description</h3>
   <!-- BeginSection: 'DESCRIPTION' -->
   <p>
-  Images in <tt>"quadformat"</tt> (see help topic <b>quadformat</b>) are broken down
+  Images in <span style="font-family: monospace;">"quadformat"</span> (see help topic <b>quadformat</b>) are broken down
   in sections and written to the standard output in a specified format.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->

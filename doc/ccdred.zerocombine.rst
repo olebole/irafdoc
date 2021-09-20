@@ -31,28 +31,28 @@ zerocombine: Combine and process zero level images
   </dd>
   </dl>
   <dl>
-  <dt><b>output = <tt>"Zero"</tt></b></dt>
+  <dt><b>output = <span style="font-family: monospace;">"Zero"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = "Zero"' -->
   <dd>Output zero level root image name.
   </dd>
   </dl>
   <dl>
-  <dt><b>combine = <tt>"average"</tt> (average|median)</b></dt>
+  <dt><b>combine = <span style="font-family: monospace;">"average"</span> (average|median)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='combine' Line='combine = "average" (average|median)' -->
   <dd>Type of combining operation performed on the final set of pixels (after
   rejection).  The choices are
-  <tt>"average"</tt> or <tt>"median"</tt>.  The median uses the average of the two central
+  <span style="font-family: monospace;">"average"</span> or <span style="font-family: monospace;">"median"</span>.  The median uses the average of the two central
   values when the number of pixels is even.
   </dd>
   </dl>
   <dl>
-  <dt><b>reject = <tt>"minmax"</tt> (none|minmax|ccdclip|crreject|sigclip|avsigclip|pclip)</b></dt>
+  <dt><b>reject = <span style="font-family: monospace;">"minmax"</span> (none|minmax|ccdclip|crreject|sigclip|avsigclip|pclip)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='reject' Line='reject = "minmax" (none|minmax|ccdclip|crreject|sigclip|avsigclip|pclip)' -->
   <dd>Type of rejection operation.  See <b>combine</b> for details.
   </dd>
   </dl>
   <dl>
-  <dt><b>ccdtype = <tt>"zero"</tt></b></dt>
+  <dt><b>ccdtype = <span style="font-family: monospace;">"zero"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ccdtype' Line='ccdtype = "zero"' -->
   <dd>CCD image type to combine.  If no image type is given then all input images
   are combined.
@@ -77,7 +77,7 @@ zerocombine: Combine and process zero level images
   </dd>
   </dl>
   <dl>
-  <dt><b>scale = <tt>"none"</tt> (none|mode|median|mean|exposure)</b></dt>
+  <dt><b>scale = <span style="font-family: monospace;">"none"</span> (none|mode|median|mean|exposure)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='scale' Line='scale = "none" (none|mode|median|mean|exposure)' -->
   <dd>Multiplicative image scaling to be applied.  The choices are none, scale
   by the mode, median, or mean of the specified statistics section, or scale
@@ -85,7 +85,7 @@ zerocombine: Combine and process zero level images
   </dd>
   </dl>
   <dl>
-  <dt><b>statsec = <tt>""</tt></b></dt>
+  <dt><b>statsec = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='statsec' Line='statsec = ""' -->
   <dd>Section of images to use in computing image statistics for scaling.
   If no section is given then the entire region of the image is
@@ -98,7 +98,7 @@ zerocombine: Combine and process zero level images
   <dl>
   <dt><b>nlow = 0,  nhigh = 1 (minmax)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nlow' Line='nlow = 0,  nhigh = 1 (minmax)' -->
-  <dd>The number of low and high pixels to be rejected by the <tt>"minmax"</tt> algorithm.
+  <dd>The number of low and high pixels to be rejected by the <span style="font-family: monospace;">"minmax"</span> algorithm.
   </dd>
   </dl>
   <dl>
@@ -116,8 +116,8 @@ zerocombine: Combine and process zero level images
   <dt><b>mclip = yes (ccdclip, crreject, sigclip, avsigcliip)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='mclip' Line='mclip = yes (ccdclip, crreject, sigclip, avsigcliip)' -->
   <dd>Use the median as the estimate for the true intensity rather than the
-  average with high and low values excluded in the <tt>"ccdclip"</tt>, <tt>"crreject"</tt>,
-  <tt>"sigclip"</tt>, and <tt>"avsigclip"</tt> algorithms?  The median is a better estimator
+  average with high and low values excluded in the <span style="font-family: monospace;">"ccdclip"</span>, <span style="font-family: monospace;">"crreject"</span>,
+  <span style="font-family: monospace;">"sigclip"</span>, and <span style="font-family: monospace;">"avsigclip"</span> algorithms?  The median is a better estimator
   in the presence of data which one wants to reject than the average.
   However, computing the median is slower than the average.
   </dd>
@@ -125,18 +125,18 @@ zerocombine: Combine and process zero level images
   <dl>
   <dt><b>lsigma = 3., hsigma = 3. (ccdclip, crreject, sigclip, avsigclip, pclip)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lsigma' Line='lsigma = 3., hsigma = 3. (ccdclip, crreject, sigclip, avsigclip, pclip)' -->
-  <dd>Low and high sigma clipping factors for the <tt>"ccdclip"</tt>, <tt>"crreject"</tt>, <tt>"sigclip"</tt>,
-  <tt>"avsigclip"</tt>, and <tt>"pclip"</tt> algorithms.  They multiply a <tt>"sigma"</tt> factor
+  <dd>Low and high sigma clipping factors for the <span style="font-family: monospace;">"ccdclip"</span>, <span style="font-family: monospace;">"crreject"</span>, <span style="font-family: monospace;">"sigclip"</span>,
+  <span style="font-family: monospace;">"avsigclip"</span>, and <span style="font-family: monospace;">"pclip"</span> algorithms.  They multiply a <span style="font-family: monospace;">"sigma"</span> factor
   produced by the algorithm to select a point below and above the average or
   median value for rejecting pixels.  The lower sigma is ignored for the
-  <tt>"crreject"</tt> algorithm.
+  <span style="font-family: monospace;">"crreject"</span> algorithm.
   </dd>
   </dl>
   <dl>
-  <dt><b>rdnoise = <tt>"0."</tt>, gain = <tt>"1."</tt>, snoise = <tt>"0."</tt> (ccdclip, crreject)</b></dt>
+  <dt><b>rdnoise = <span style="font-family: monospace;">"0."</span>, gain = <span style="font-family: monospace;">"1."</span>, snoise = <span style="font-family: monospace;">"0."</span> (ccdclip, crreject)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rdnoise' Line='rdnoise = "0.", gain = "1.", snoise = "0." (ccdclip, crreject)' -->
   <dd>CCD readout noise in electrons, gain in electrons/DN, and sensitivity noise
-  as a fraction.  These parameters are used with the <tt>"ccdclip"</tt> and <tt>"crreject"</tt>
+  as a fraction.  These parameters are used with the <span style="font-family: monospace;">"ccdclip"</span> and <span style="font-family: monospace;">"crreject"</span>
   algorithms.  The values may be either numeric or an image header keyword
   which contains the value.
   </dd>

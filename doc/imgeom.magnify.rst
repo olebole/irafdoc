@@ -73,7 +73,7 @@ magnify: Magnify a list of 1-D or 2-D images
   </dd>
   </dl>
   <dl>
-  <dt><b>interpolant = <tt>"linear"</tt></b></dt>
+  <dt><b>interpolant = <span style="font-family: monospace;">"linear"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interpolant' Line='interpolant = "linear"' -->
   <dd>The interpolant used for rebinning the image.
   The choices are the following.
@@ -146,7 +146,7 @@ magnify: Magnify a list of 1-D or 2-D images
   </dd>
   </dl>
   <dl>
-  <dt><b>boundary = <tt>"nearest"</tt></b></dt>
+  <dt><b>boundary = <span style="font-family: monospace;">"nearest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"' -->
   <dd>Boundary extension type for references to pixels outside the bounds of the
   input image. The choices are:

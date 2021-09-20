@@ -32,8 +32,8 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   <dt><b>reference</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='reference' Line='reference' -->
   <dd>The list of reference images to which the input images are to be matched if
-  <i>convolution</i> = <tt>"image"</tt>, or the list of reference image psfs if 
-  <i>convolution</i> = <tt>"psf"</tt>. The reference image psf must be broader than the
+  <i>convolution</i> = <span style="font-family: monospace;">"image"</span>, or the list of reference image psfs if 
+  <i>convolution</i> = <span style="font-family: monospace;">"psf"</span>. The reference image psf must be broader than the
   input image psf in at least one dimension.
   The number of reference images/psfs must be one or equal to the number of
   input images.
@@ -43,10 +43,10 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   <dt><b>psfdata</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='psfdata' Line='psfdata' -->
   <dd>The list of objects used to compute the psf matching function if
-  <i>convolution</i> is <tt>"image"</tt>, or the list of input image psfs if 
-  <i>convolution</i> is <tt>"psf"</tt>. In the former case <i>psfdata</i> may be:
+  <i>convolution</i> is <span style="font-family: monospace;">"image"</span>, or the list of input image psfs if 
+  <i>convolution</i> is <span style="font-family: monospace;">"psf"</span>. In the former case <i>psfdata</i> may be:
   1) a string containing the x and y coordinates of a single object,
-  e.g. <tt>"51.0 105.0"</tt> or 2) the name of a text file containing a list of
+  e.g. <span style="font-family: monospace;">"51.0 105.0"</span> or 2) the name of a text file containing a list of
   objects, and the number of objects
   files must equal the number of reference images. In the latter case
   the number of input psf images must equal the number of input images.
@@ -61,7 +61,7 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   </dd>
   </dl>
   <dl>
-  <dt><b>output = <tt>""</tt></b></dt>
+  <dt><b>output = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
   <dd>The list of output matched images. If <i>output</i> is the NULL string
   then the psf matching function is computed for each input image and written to
@@ -70,7 +70,7 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   </dd>
   </dl>
   <dl>
-  <dt><b>convolution = <tt>"image"</tt></b></dt>
+  <dt><b>convolution = <span style="font-family: monospace;">"image"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='convolution' Line='convolution = "image"' -->
   <dd>The algorithm used to compute the psf matching function. The options are:
   <dl>
@@ -103,8 +103,8 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   <!-- Sec='PARAMETERS' Level=0 Label='dnx' Line='dnx = 31, ls dny = 31' -->
   <dd>The x and y width of the data region to be extracted around each object. The
   data region should be big enough to include both object and sky data.
-  <i>Dnx</i> and <i>dny</i> are not used if <i>convolution</i> is <tt>"psf"</tt> or
-  <tt>"kernel"</tt>.
+  <i>Dnx</i> and <i>dny</i> are not used if <i>convolution</i> is <span style="font-family: monospace;">"psf"</span> or
+  <span style="font-family: monospace;">"kernel"</span>.
   </dd>
   </dl>
   <dl>
@@ -114,8 +114,8 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   less than <i>dnx</i> and <i>dny</i> respectively. The psf
   matching function should be kept as small as possible to minimize
   the time required to compute the output image.
-  <i>Pnx</i> and <i>Pny</i> are not used if <i>convolution</i> is <tt>"psf"</tt> or
-  <tt>"kernel"</tt>.
+  <i>Pnx</i> and <i>Pny</i> are not used if <i>convolution</i> is <span style="font-family: monospace;">"psf"</span> or
+  <span style="font-family: monospace;">"kernel"</span>.
   </dd>
   </dl>
   <dl>
@@ -124,8 +124,8 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   <dd>Center the objects in <i>psfdata</i> before extracting the data from the
   input and reference images. Centering should be turned off if the objects
   are non-stellar and do not have well-defined centers.
-  Centering is turned off if <i>convolution</i> is <tt>"psf"</tt> or
-  <tt>"kernel"</tt>.
+  Centering is turned off if <i>convolution</i> is <span style="font-family: monospace;">"psf"</span> or
+  <span style="font-family: monospace;">"kernel"</span>.
   </dd>
   </dl>
   <dl>
@@ -136,8 +136,8 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   psf matching function is computed. The background is computed using
   data inside the data extraction region defined by <i>dnx</i> and <i>dny</i>
   but outside the kernel region defined by <i>pnx</i> and <i>pny</i>.
-  Background fitting is turned off if <i>convolution</i> is <tt>"psf"</tt> or
-  <tt>"kernel"</tt>.
+  Background fitting is turned off if <i>convolution</i> is <span style="font-family: monospace;">"psf"</span> or
+  <span style="font-family: monospace;">"kernel"</span>.
   The options are:
   <dl>
   <dt><b>none</b></dt>
@@ -146,7 +146,7 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"insky refsky"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"insky refsky"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"insky refsky"' -->
   <dd>the numerical values of insky and refsky are subtracted from the
   input and reference image respectively.
@@ -188,8 +188,8 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   <dd>The fraction of the input and reference image data endpoints in x and y
   to apodize with a
   cosine bell function before the psf matching function is computed.
-  Apodizing is turned off if <i>convolution</i> is <tt>"psf"</tt> or
-  <tt>"kernel"</tt>.
+  Apodizing is turned off if <i>convolution</i> is <span style="font-family: monospace;">"psf"</span> or
+  <span style="font-family: monospace;">"kernel"</span>.
   </dd>
   </dl>
   <dl>
@@ -201,11 +201,11 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   </dd>
   </dl>
   <dl>
-  <dt><b>filter = <tt>"replace"</tt></b></dt>
+  <dt><b>filter = <span style="font-family: monospace;">"replace"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='filter' Line='filter = "replace"' -->
   <dd>The filter used to remove high frequency noise from the psf
   matching function. Filtering is not performed if <i>convolution</i>
-  is <tt>"kernel"</tt>. The options are:
+  is <span style="font-family: monospace;">"kernel"</span>. The options are:
   <dl>
   <dt><b>cosbell</b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='cosbell' Line='cosbell' -->
@@ -248,7 +248,7 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   <dt><b>threshold = 0.2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 0.2' -->
   <dd>The low frequency cutoff in fraction of the total input image spectrum
-  power for the filtering options <tt>"replace"</tt> and <tt>"model"</tt>.
+  power for the filtering options <span style="font-family: monospace;">"replace"</span> and <span style="font-family: monospace;">"model"</span>.
   </dd>
   </dl>
   <dl>
@@ -257,11 +257,11 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   <dd>The total power in the computed psf matching function <i>kernel</i>. By default
   the psf matching function is normalized.  If <i>normfactor</i>
   is set to INDEF, then the total power is set to <i>fluxratio</i>.
-  <i>Normfactor</i> is not used if <i>convolution</i> is set <tt>"kernel"</tt>.
+  <i>Normfactor</i> is not used if <i>convolution</i> is set <span style="font-family: monospace;">"kernel"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>boundary_type = <tt>"nearest"</tt></b></dt>
+  <dt><b>boundary_type = <span style="font-family: monospace;">"nearest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boundary_type' Line='boundary_type = "nearest"' -->
   <dd>The boundary extension algorithm used to compute the output matched
   image.  The options are:
@@ -311,25 +311,25 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>The default graphics device.
   </dd>
   </dl>
   <dl>
-  <dt><b>display = <tt>"stdimage"</tt></b></dt>
+  <dt><b>display = <span style="font-family: monospace;">"stdimage"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='display' Line='display = "stdimage"' -->
   <dd>The default image display device.
   </dd>
   </dl>
   <dl>
-  <dt><b>gcommands = <tt>""</tt></b></dt>
+  <dt><b>gcommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""' -->
   <dd>The default graphics cursor.
   </dd>
   </dl>
   <dl>
-  <dt><b>icommands = <tt>""</tt></b></dt>
+  <dt><b>icommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""' -->
   <dd>The default image display cursor.
   </dd>
@@ -353,11 +353,11 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   than the input images in at least one dimension.
   </p>
   <p>
-  If <i>convolution</i> = <tt>"image"</tt>, the matching function is computed directly
+  If <i>convolution</i> = <span style="font-family: monospace;">"image"</span>, the matching function is computed directly
   from the input and reference image data using the objects listed in
   <i>psfdata</i> and the convolution theorem as described in the ALGORITHMS
   section. <i>psfdata</i> is interpreted as either: 1) a
-  string defining the coordinates of a single object e.g. <tt>"103.3 189.2"</tt> or 2)
+  string defining the coordinates of a single object e.g. <span style="font-family: monospace;">"103.3 189.2"</span> or 2)
   the name of a text file containing the coordinates of one or 
   more objects, one object per line, with the x and y coordinates
   in columns 1 and 2 respectively.  The object coordinates, the
@@ -371,7 +371,7 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   neighbors and is well centered on a pixel.
   </p>
   <p>
-  If <i>center</i> is <tt>"yes"</tt> and <i>convolution</i> is <tt>"image"</tt>, the objects
+  If <i>center</i> is <span style="font-family: monospace;">"yes"</span> and <i>convolution</i> is <span style="font-family: monospace;">"image"</span>, the objects
   in <i>psfdata</i> are centered before
   the data region is extracted.  Centering should be on if the objects
   are stellar, particularly if their coordinates were read from the image
@@ -379,8 +379,8 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   do not have well-defined centers.
   </p>
   <p>
-  If the <i>background</i> fitting algorithm is other than <tt>"none"</tt> and
-  <i>convolution</i> is <tt>"image"</tt>, the background for each object is fit using 
+  If the <i>background</i> fitting algorithm is other than <span style="font-family: monospace;">"none"</span> and
+  <i>convolution</i> is <span style="font-family: monospace;">"image"</span>, the background for each object is fit using 
   data inside the region defined by
   <i>dnx</i> and <i>dny</i> but outside the region defined by
   <i>pnx</i> by <i>pny</i>. Bad data can be removed from the
@@ -396,7 +396,7 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   data region for each reference and input image.
   </p>
   <p>
-  If <i>convolution</i> = <tt>"psf"</tt>,
+  If <i>convolution</i> = <span style="font-family: monospace;">"psf"</span>,
   the psf matching function is computed directly from the input image
   and reference
   image point-spread functions
@@ -404,7 +404,7 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   In this case  <i>psfdata</i> is the list of input image psfs  and
   <i>reference</i> are the corresponding reference image psfs written by
   by some external psf modeling task. 
-  If <i>convolution</i> is <tt>"psf"</tt>,
+  If <i>convolution</i> is <span style="font-family: monospace;">"psf"</span>,
   centering and background fitting
   are assumed to have been performed by the psf modeling task and are not
   performed by PSFMATCH.
@@ -418,7 +418,7 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   otherwise the <i>fluxratio</i> is set to the value supplied by the user.
   </p>
   <p>
-  If <i>convolution</i> is <tt>"kernel"</tt>, PSFMATCH reads the psf matching function
+  If <i>convolution</i> is <span style="font-family: monospace;">"kernel"</span>, PSFMATCH reads the psf matching function
   from the images in <i>kernel</i>  which were either
   created during a previous run of PSFMATCH or by a separate task.
   </p>
@@ -429,7 +429,7 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   fourier transforms is taken.
   </p>
   <p>
-  If <i>filter</i> is set to <tt>"cosbell"</tt>, a cosine bell function
+  If <i>filter</i> is set to <span style="font-family: monospace;">"cosbell"</span>, a cosine bell function
   with a taper defined by <i>sx1</i>, <i>sx2</i>, <i>sy1</i>, and <i>sy2</i> and
   symmetry defined by radsym is applied to
   the psf matching function in frequency space. This filter
@@ -449,13 +449,13 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   reliably with an elliptical gaussian function. The model derived from the low
   frequency components of the matching can then be used to replace the high
   frequency components.
-  If <i>filter</i> is set to <tt>"replace"</tt>, those high frequency components
+  If <i>filter</i> is set to <span style="font-family: monospace;">"replace"</span>, those high frequency components
   of the matching function  which have less than a fraction
   <i>threshold</i> of their total power in the equivalent high frequency
   components of the divisor or input image transform,
   are replaced by a model computed by fitting a gaussian to the low frequency
   components of the matching function, as described in the ALGORITHMS section.
-  If <i>filter</i> = <tt>"model"</tt> then the entire psf matching function
+  If <i>filter</i> = <span style="font-family: monospace;">"model"</span> then the entire psf matching function
   is replaced with the best fitting gaussian model.
   </p>
   <p>
@@ -702,7 +702,7 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   large use the stsdas fourier package task fconvolve to do the actual
   convolution. The boundary extension algorithm in fconvolve is equivalent
   to setting the psfmatch boundary extension parameters boundary and
-  constant to <tt>"constant"</tt> and <tt>"0.0"</tt> respectively.
+  constant to <span style="font-family: monospace;">"constant"</span> and <span style="font-family: monospace;">"0.0"</span> respectively.
   </p>
   <pre>
   	cl&gt; psfmatch inimage refpsf inpsf kernel convolution=psf

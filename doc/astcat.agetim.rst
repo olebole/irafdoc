@@ -45,10 +45,10 @@ agetim: Extract FITS images from image surveys
   <dl>
   <dt><b>pars</b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='pars' Line='pars' -->
-  <dd>If regions is set to the reserved keyword <tt>"pars"</tt> then a single region
+  <dd>If regions is set to the reserved keyword <span style="font-family: monospace;">"pars"</span> then a single region
   definition is read from the <i>aregpars</i> parameter set. By default a region
-  ten arc minutes in size centered on coordinates ra = <tt>"00:00:00.0"</tt> and
-  dec = <tt>"+00:00:00"</tt> in the query coordinate system is extracted.
+  ten arc minutes in size centered on coordinates ra = <span style="font-family: monospace;">"00:00:00.0"</span> and
+  dec = <span style="font-family: monospace;">"+00:00:00"</span> in the query coordinate system is extracted.
   </dd>
   </dl>
   </dd>
@@ -59,24 +59,24 @@ agetim: Extract FITS images from image surveys
   <dd>The list of output FITS image files. The number of output files must be equal
   to the number regions in the regions list times the number of astrometry
   catalogs in the catalog list. By default the output images are assigned names of
-  the form <tt>"reg#[.sv#].#.fits"</tt> if the region definition source is <tt>"pars"</tt> or
-  a file, e.g. <tt>"reg002.1.fits"</tt>, or <tt>"image[.sv#].#.fits"</tt> if the region
-  definition source is an image list, e.g. <tt>"image.1.fits"</tt>. The image survey
+  the form <span style="font-family: monospace;">"reg#[.sv#].#.fits"</span> if the region definition source is <span style="font-family: monospace;">"pars"</span> or
+  a file, e.g. <span style="font-family: monospace;">"reg002.1.fits"</span>, or <span style="font-family: monospace;">"image[.sv#].#.fits"</span> if the region
+  definition source is an image list, e.g. <span style="font-family: monospace;">"image.1.fits"</span>. The image survey
   number is only inserted if there is more than one image survey
   in the image survey list.
   </dd>
   </dl>
   <dl>
-  <dt><b>aregpars = <tt>""</tt></b></dt>
+  <dt><b>aregpars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='aregpars' Line='aregpars = ""' -->
   <dd>The region definition parameter set. The aregpars parameters define the
   extraction region center, region width, region center units, and the region
   center coordinate system. The region definition parameters are used if
-  <i>regions</i> = <tt>"pars"</tt>.
+  <i>regions</i> = <span style="font-family: monospace;">"pars"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>imsurveys = <tt>")_.imsurveys"</tt></b></dt>
+  <dt><b>imsurveys = <span style="font-family: monospace;">")_.imsurveys"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='imsurveys' Line='imsurveys = ")_.imsurveys"' -->
   <dd>The list of input image surveys. By default the image survey name is set to the
   value of the package parameter imsurveys. 
@@ -117,11 +117,11 @@ agetim: Extract FITS images from image surveys
   </dd>
   </dl>
   <dl>
-  <dt><b>imdb = <tt>")_.imdb"</tt></b></dt>
+  <dt><b>imdb = <span style="font-family: monospace;">")_.imdb"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='imdb' Line='imdb = ")_.imdb"' -->
   <dd>The image surveys configuration file. Imdb defaults to the value of the
   package parameter imdb. The default image surveys configuration file is
-  <tt>"astcat$lib/imdb.dat"</tt>.
+  <span style="font-family: monospace;">"astcat$lib/imdb.dat"</span>.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -136,7 +136,7 @@ agetim: Extract FITS images from image surveys
   <p>
   A regions definition consists of the coordinates of the field center,
   the field size, the units of the field center, and the coordinate system of
-  the field center. If <i>regions</i> = <tt>"pars"</tt> these quantities are read
+  the field center. If <i>regions</i> = <span style="font-family: monospace;">"pars"</span> these quantities are read
   from the <i>aregpars</i> parameters <i>rcra</i>, <i>rcdec</i>, <i>rcrawidth</i>,
   <i>rcdecwidth</i> <i>rcraunits</i>, <i>rcdecunits</i>., and <i>rcsystem</i>. 
   If <i>regions</i> is an input image
@@ -194,7 +194,7 @@ agetim: Extract FITS images from image surveys
   scale, orientation, and projection information <i>wxmag</i>, <i>wymag</i>,
   <i>wxrot</i>, <i>wyrot</i>, and <i>wproj</i>. For more information on how these
   quantities are defined in the image surveys configuration file 
-  type <tt>"help imsurveys"</tt>.
+  type <span style="font-family: monospace;">"help imsurveys"</span>.
   </p>
   <p>
   If <i>hdredit</i> = yes then a standard set of keyword equal values
@@ -208,7 +208,7 @@ agetim: Extract FITS images from image surveys
   <i>emjdobs</i>, <i>ewavlen</i>, <i>etemp</i>, and <i>epress</i>. New keyword
   values are only added to the header if keywords of the same name do not
   already exist and if appropriate values for the keywords exists, i.e.
-  <tt>"INDEF"</tt> valued parameters will not be added to the header.
+  <span style="font-family: monospace;">"INDEF"</span> valued parameters will not be added to the header.
   </p>
   <p>
   If <i>update</i> = yes the values of the <i>aregpars</i> parameters will be

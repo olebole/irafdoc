@@ -55,7 +55,7 @@ tlcol: List column information for a table.
   units (if 'nlist' is 4).
   If 'nlist = 1', only the column name will be displayed;
   the output list may be edited and used as input to
-  'tprint', 'tdump,<tt>' '</tt>tedit', 'tread', 'tproject', or 'tquery'.
+  'tprint', 'tdump,<span style="font-family: monospace;">' '</span>tedit', 'tread', 'tproject', or 'tquery'.
   The default of 4 can be used to generate
   a column-description file for the 'tcreate' task.
   If a column contains an array of values at each row,
@@ -68,7 +68,7 @@ tlcol: List column information for a table.
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  Display the names, data types, print formats, and units of all the
-  columns in the table <tt>"example.tab"</tt>:
+  columns in the table <span style="font-family: monospace;">"example.tab"</span>:
   </p>
   <pre>
   	tt&gt; tlcol example.tab

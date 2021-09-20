@@ -66,7 +66,7 @@ mkscript: Make a command script
   </dd>
   </dl>
   <dl>
-  <dt><b>logfile = <tt>"script.log"</tt></b></dt>
+  <dt><b>logfile = <span style="font-family: monospace;">"script.log"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "script.log"' -->
   <dd>Script log file name.  When the script is submitted as a background job
   by this task any command and error output is directed to this file.

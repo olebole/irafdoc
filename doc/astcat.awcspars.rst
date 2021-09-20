@@ -23,15 +23,15 @@ awcspars: Default image wcs parameters
   <h3>Parameters</h3>
   <!-- BeginSection: 'PARAMETERS' -->
   <dl>
-  <dt><b>wxref = <tt>"INDEF"</tt>, wyref = <tt>"INDEF"</tt></b></dt>
+  <dt><b>wxref = <span style="font-family: monospace;">"INDEF"</span>, wyref = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wxref' Line='wxref = "INDEF", wyref = "INDEF"' -->
   <dd>The image header keyword names or the numerical values of the x and y reference
-  point in pixels. If wxref = <tt>"INDEF"</tt> and wyref = <tt>"INDEF"</tt> the reference
+  point in pixels. If wxref = <span style="font-family: monospace;">"INDEF"</span> and wyref = <span style="font-family: monospace;">"INDEF"</span> the reference
   point defaults to the center of the image.
   </dd>
   </dl>
   <dl>
-  <dt><b>wxmag = <tt>"INDEF"</tt>, wymag = <tt>"INDEF"</tt></b></dt>
+  <dt><b>wxmag = <span style="font-family: monospace;">"INDEF"</span>, wymag = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wxmag' Line='wxmag = "INDEF", wymag = "INDEF"' -->
   <dd>The image header keyword names or the numerical values of the x and y scale
   factors in arcseconds per pixel. If wxmag  or wymag = are undefined a new
@@ -39,7 +39,7 @@ awcspars: Default image wcs parameters
   </dd>
   </dl>
   <dl>
-  <dt><b>wxrot = <tt>"180.0"</tt>, wyrot = <tt>"0.0"</tt></b></dt>
+  <dt><b>wxrot = <span style="font-family: monospace;">"180.0"</span>, wyrot = <span style="font-family: monospace;">"0.0"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wxrot' Line='wxrot = "180.0", wyrot = "0.0"' -->
   <dd>The image header keyword names or the numerical values of the x and y rotation
   angles in degrees measured counter-clockwise to the positive x and y image
@@ -50,7 +50,7 @@ awcspars: Default image wcs parameters
   </dd>
   </dl>
   <dl>
-  <dt><b>wraref = <tt>"RA"</tt>, wdecref = <tt>"DEC"</tt></b></dt>
+  <dt><b>wraref = <span style="font-family: monospace;">"RA"</span>, wdecref = <span style="font-family: monospace;">"DEC"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wraref' Line='wraref = "RA", wdecref = "DEC"' -->
   <dd>The image header keyword names or the numerical values of the reference
   point in celestial coordinates. If wraref and wdecref are undefined
@@ -58,28 +58,28 @@ awcspars: Default image wcs parameters
   </dd>
   </dl>
   <dl>
-  <dt><b>wraunits = <tt>""</tt>, wdecunits = <tt>""</tt></b></dt>
+  <dt><b>wraunits = <span style="font-family: monospace;">""</span>, wdecunits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wraunits' Line='wraunits = "", wdecunits = ""' -->
   <dd>The units of the reference point celestial coordinates. The options are
-  <tt>"hours"</tt>, <tt>"degrees"</tt>, and <tt>"radians"</tt> for the ra coordinate and <tt>"degrees"</tt>
-  and <tt>"radians"</tt> for the dec coordinate. If wraunits and wdecunits are undefined
+  <span style="font-family: monospace;">"hours"</span>, <span style="font-family: monospace;">"degrees"</span>, and <span style="font-family: monospace;">"radians"</span> for the ra coordinate and <span style="font-family: monospace;">"degrees"</span>
+  and <span style="font-family: monospace;">"radians"</span> for the dec coordinate. If wraunits and wdecunits are undefined
   they default to the preferred units of the reference system.
   </dd>
   </dl>
   <dl>
-  <dt><b>wproj = <tt>"tan"</tt></b></dt>
+  <dt><b>wproj = <span style="font-family: monospace;">"tan"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wproj' Line='wproj = "tan"' -->
-  <dd>The sky projection geometry. The most commonly used projections are <tt>"tan"</tt>,
-  <tt>"arc"</tt>, <tt>"sin"</tt>, and <tt>"lin"</tt>. Other supported projections are <tt>"ait"</tt>,<tt>"car"</tt>, <tt>"csc"</tt>,
-  <tt>"gls"</tt>, <tt>"mer"</tt>, <tt>"mol"</tt>, <tt>"par"</tt>, <tt>"pco"</tt>, <tt>"qsc"</tt>, <tt>"stg"</tt>, <tt>"tsc"</tt>, and <tt>"zea"</tt>.
+  <dd>The sky projection geometry. The most commonly used projections are <span style="font-family: monospace;">"tan"</span>,
+  <span style="font-family: monospace;">"arc"</span>, <span style="font-family: monospace;">"sin"</span>, and <span style="font-family: monospace;">"lin"</span>. Other supported projections are <span style="font-family: monospace;">"ait"</span>,<span style="font-family: monospace;">"car"</span>, <span style="font-family: monospace;">"csc"</span>,
+  <span style="font-family: monospace;">"gls"</span>, <span style="font-family: monospace;">"mer"</span>, <span style="font-family: monospace;">"mol"</span>, <span style="font-family: monospace;">"par"</span>, <span style="font-family: monospace;">"pco"</span>, <span style="font-family: monospace;">"qsc"</span>, <span style="font-family: monospace;">"stg"</span>, <span style="font-family: monospace;">"tsc"</span>, and <span style="font-family: monospace;">"zea"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>wsystem = <tt>"EQUINOX"</tt></b></dt>
+  <dt><b>wsystem = <span style="font-family: monospace;">"EQUINOX"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wsystem' Line='wsystem = "EQUINOX"' -->
   <dd>The image header keyword name or string defining the celestial coordinate
   system of the reference point. The most common values for wsystem are
-  <tt>"2000.0"</tt>, <tt>"1950.0"</tt>, <tt>"J2000.0"</tt>, and <tt>"B1950.0"</tt>. Type <tt>"help ccssytems"</tt> to get
+  <span style="font-family: monospace;">"2000.0"</span>, <span style="font-family: monospace;">"1950.0"</span>, <span style="font-family: monospace;">"J2000.0"</span>, and <span style="font-family: monospace;">"B1950.0"</span>. Type <span style="font-family: monospace;">"help ccssytems"</span> to get
   a full list of options.
   </dd>
   </dl>

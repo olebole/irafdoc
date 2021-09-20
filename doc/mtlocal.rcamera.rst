@@ -40,7 +40,7 @@ rcamera: Convert a CAMERA image into an IRAF image
   string can consist of any sequence of file numbers separated by
   at least one of comma, or dash.
   A dash specifies a range of files.  For example the string
-  	<tt>"1,2,3-5,8-6"</tt>
+  	<span style="font-family: monospace;">"1,2,3-5,8-6"</span>
   will convert the files 1 through 8.
   </dd>
   </dl>
@@ -57,10 +57,10 @@ rcamera: Convert a CAMERA image into an IRAF image
   </dd>
   </dl>
   <dl>
-  <dt><b>image_list = <tt>"1"</tt></b></dt>
+  <dt><b>image_list = <span style="font-family: monospace;">"1"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='image_list' Line='image_list = "1"' -->
   <dd>The list of CAMERA images to extract from a single tape file. For all recent
-  tapes image_list = <tt>"1"</tt>. Old tapes were however contained multiple images
+  tapes image_list = <span style="font-family: monospace;">"1"</span>. Old tapes were however contained multiple images
   per file.
   </dd>
   </dl>
@@ -94,7 +94,7 @@ rcamera: Convert a CAMERA image into an IRAF image
   </dd>
   </dl>
   <dl>
-  <dt><b>datatype = <tt>"s"</tt></b></dt>
+  <dt><b>datatype = <span style="font-family: monospace;">"s"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='datatype' Line='datatype = "s"' -->
   <dd>The IRAF image file may be of a different data type than the CAMERA image data.
   The data type may be specified as s for short, l for long, r for real, and
@@ -109,9 +109,9 @@ rcamera: Convert a CAMERA image into an IRAF image
   <!-- Sec='PARAMETERS' Level=0 Label='offset' Line='offset = 0' -->
   <dd>Offset is an integer parameter specifying the offset to the tape file number
   appended to iraf_file. For example if the user specifies offset = 100,
-  iraf_file = <tt>"cam"</tt> and file_list = <tt>"1-3"</tt>, the output file names produced
-  will be <tt>"cam101"</tt>, <tt>"cam102"</tt> and <tt>"cam103"</tt> respectively, instead of <tt>"cam001"</tt>,
-  <tt>"cam002"</tt> and <tt>"cam003"</tt>.
+  iraf_file = <span style="font-family: monospace;">"cam"</span> and file_list = <span style="font-family: monospace;">"1-3"</span>, the output file names produced
+  will be <span style="font-family: monospace;">"cam101"</span>, <span style="font-family: monospace;">"cam102"</span> and <span style="font-family: monospace;">"cam103"</span> respectively, instead of <span style="font-family: monospace;">"cam001"</span>,
+  <span style="font-family: monospace;">"cam002"</span> and <span style="font-family: monospace;">"cam003"</span>.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->

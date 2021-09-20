@@ -35,12 +35,12 @@ eparam: Edit parameters of a task
   The <i>eparam</i> command calls up an interactive screen editor
   to edit the parameters of the named task or tasks.  The syntax of the
   page editor is controlled by the environment variable `editor' which
-  may have the values <tt>"edt"</tt>, <tt>"emacs"</tt>, or <tt>"vi"</tt>.  The user may also customize
-  the editor by copying the associated <tt>"dev$*.ed"</tt> file to their home
+  may have the values <span style="font-family: monospace;">"edt"</span>, <span style="font-family: monospace;">"emacs"</span>, or <span style="font-family: monospace;">"vi"</span>.  The user may also customize
+  the editor by copying the associated <span style="font-family: monospace;">"dev$*.ed"</span> file to their home
   directory, and editing the file.
   </p>
   <p>
-  The CL parameter <tt>"epinit"</tt> may be used to set the following options:
+  The CL parameter <span style="font-family: monospace;">"epinit"</span> may be used to set the following options:
   </p>
   <dl>
   <dt><b>[no]standout</b></dt>
@@ -183,7 +183,7 @@ eparam: Edit parameters of a task
   only the positional parameters).
   </p>
   <p>
-  	cl&gt; epinit = <tt>"standout noshowall"</tt>
+  	cl&gt; epinit = <span style="font-family: monospace;">"standout noshowall"</span>
   </p>
   <p>
   2. Edit the parameters for the <i>delete</i> task.

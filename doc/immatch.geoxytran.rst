@@ -59,7 +59,7 @@ geoxytran: Transform coordinate lists using the geomap transforms
   </dd>
   </dl>
   <dl>
-  <dt><b>geometry = <tt>"geometric"</tt> (linear|geometric)</b></dt>
+  <dt><b>geometry = <span style="font-family: monospace;">"geometric"</span> (linear|geometric)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='geometry' Line='geometry = "geometric" (linear|geometric)' -->
   <dd>The type of geometric transformation. The geometry parameter is
   only requested if database is defined. The options are:
@@ -78,9 +78,9 @@ geoxytran: Transform coordinate lists using the geomap transforms
   </dd>
   </dl>
   <dl>
-  <dt><b>direction = <tt>"forward"</tt> (forward|backward)</b></dt>
+  <dt><b>direction = <span style="font-family: monospace;">"forward"</span> (forward|backward)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='direction' Line='direction = "forward" (forward|backward)' -->
-  <dd>The transformation direction may be <tt>"forward"</tt> or <tt>"backward"</tt>.  The forward
+  <dd>The transformation direction may be <span style="font-family: monospace;">"forward"</span> or <span style="font-family: monospace;">"backward"</span>.  The forward
   direction directly evaluates the database solution.  The backward
   direction iteratively determines the coordinate which evaluates to the
   specified coordinate.
@@ -151,16 +151,16 @@ geoxytran: Transform coordinate lists using the geomap transforms
   </dd>
   </dl>
   <dl>
-  <dt><b>calctype = <tt>"real"</tt></b></dt>
+  <dt><b>calctype = <span style="font-family: monospace;">"real"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='calctype' Line='calctype = "real"' -->
   <dd>The precision of the coordinate transformation calculations. The options
-  are <tt>"real"</tt> and <tt>"double"</tt>.  Note that this only applies to a <tt>"forward"</tt>
-  transformation.  The <tt>"backward"</tt> transformation is done iteratively and
+  are <span style="font-family: monospace;">"real"</span> and <span style="font-family: monospace;">"double"</span>.  Note that this only applies to a <span style="font-family: monospace;">"forward"</span>
+  transformation.  The <span style="font-family: monospace;">"backward"</span> transformation is done iteratively and
   is always calculated in double precision to get the best convergence.
   </dd>
   </dl>
   <dl>
-  <dt><b>xformat = <tt>""</tt>, yformat = <tt>""</tt></b></dt>
+  <dt><b>xformat = <span style="font-family: monospace;">""</span>, yformat = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xformat' Line='xformat = "", yformat = ""' -->
   <dd>The default output format for the computed x and y coordinates. If
   xformat and yformat are undefined geoxytran outputs the coordinates
@@ -281,21 +281,21 @@ geoxytran: Transform coordinate lists using the geomap transforms
   <!-- BeginSection: 'Forward vs. Backward Transformations' -->
   <p>
   The transformation direction is specified by the <i>direction</i> parameter
-  which may take the values <tt>"forward"</tt> or <tt>"backward"</tt>.  The forward transformation
+  which may take the values <span style="font-family: monospace;">"forward"</span> or <span style="font-family: monospace;">"backward"</span>.  The forward transformation
   is a direct evaluation of the database solution.  The backward
   transformation is an iterative evaluation to obtain the coordinate which
   evaluates to the desired coordinate.
   </p>
   <p>
   When the same solution is used with <b>geotran</b> to transform an image
-  to another image matching the <tt>"reference"</tt> image is needed to obtain
+  to another image matching the <span style="font-family: monospace;">"reference"</span> image is needed to obtain
   coordinates in the transformed image.  This is because the transformation
-  is produced with <b>geomap</b> to map <tt>"reference"</tt> coordinates to the
+  is produced with <b>geomap</b> to map <span style="font-family: monospace;">"reference"</span> coordinates to the
   image which is subsequently transformed.  Therefore, if you have coordinates
-  in the image which has been transformed then you should use the <tt>"backward"</tt>
+  in the image which has been transformed then you should use the <span style="font-family: monospace;">"backward"</span>
   transformation to get coordinates for the transformed image.  But if you
   have standard coordinates from the reference image being matched then you
-  would use the <tt>"forward"</tt> transformation.  If you are not sure then you can
+  would use the <span style="font-family: monospace;">"forward"</span> transformation.  If you are not sure then you can
   use <b>tvmark</b> to overlay the results to find which direction produces
   the desired coordinates.
   </p>
@@ -310,10 +310,10 @@ geoxytran: Transform coordinate lists using the geomap transforms
   <h3>Formats</h3>
   <!-- BeginSection: 'FORMATS' -->
   <p>
-  A  format  specification has the form <tt>"%w.dCn"</tt>, where w is the field
+  A  format  specification has the form <span style="font-family: monospace;">"%w.dCn"</span>, where w is the field
   width, d is the number of decimal places or the number of digits  of
   precision,  C  is  the  format  code,  and  n is radix character for
-  format code <tt>"r"</tt> only.  The w and d fields are optional.  The  format
+  format code <span style="font-family: monospace;">"r"</span> only.  The w and d fields are optional.  The  format
   codes C are as follows:
      
   </p>

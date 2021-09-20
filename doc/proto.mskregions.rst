@@ -28,8 +28,8 @@ mskregions: Create or modify masks using regions lists
   <dd>The list of input regions files. The number of regions files must be one or
   equal to the number of output mask images. Regions files contain a list of
   region specifications one region per line. The region specifications may be
-  a simple region description, e.g. <tt>"circle 100. 100. 50."</tt>, or a region
-  expression, e.g.  <tt>"circle (100., 100., 50.) &amp;&amp; circle (125., 100., 50.)"</tt>.
+  a simple region description, e.g. <span style="font-family: monospace;">"circle 100. 100. 50."</span>, or a region
+  expression, e.g.  <span style="font-family: monospace;">"circle (100., 100., 50.) &amp;&amp; circle (125., 100., 50.)"</span>.
   </dd>
   </dl>
   <dl>
@@ -48,7 +48,7 @@ mskregions: Create or modify masks using regions lists
   </dd>
   </dl>
   <dl>
-  <dt><b>dims = <tt>"512,512"</tt></b></dt>
+  <dt><b>dims = <span style="font-family: monospace;">"512,512"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dims' Line='dims = "512,512"' -->
   <dd>The default output mask dimensions. The value of dims is a comma delimited
   list of dimensions.
@@ -61,7 +61,7 @@ mskregions: Create or modify masks using regions lists
   </dd>
   </dl>
   <dl>
-  <dt><b>regnumber = <tt>"constant"</tt></b></dt>
+  <dt><b>regnumber = <span style="font-family: monospace;">"constant"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='regnumber' Line='regnumber = "constant"' -->
   <dd>The region definition scheme. The options are:
   <dl>
@@ -85,7 +85,7 @@ mskregions: Create or modify masks using regions lists
   </dd>
   </dl>
   <dl>
-  <dt><b>exprdb = <tt>"none"</tt></b></dt>
+  <dt><b>exprdb = <span style="font-family: monospace;">"none"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='exprdb' Line='exprdb = "none"' -->
   <dd>The file name of an optional expression database. An expression database
   may be used to define symbolic constants or a library of custom function
@@ -162,9 +162,9 @@ mskregions: Create or modify masks using regions lists
   <p>
   There is a special builtin type of operand used to represent the
   mask pixel coordinates in a mask expression.  These operands have the
-  special reserved names <tt>"I"</tt>, <tt>"J"</tt>, <tt>"K"</tt>, etc., up to the dimensions of the
+  special reserved names <span style="font-family: monospace;">"I"</span>, <span style="font-family: monospace;">"J"</span>, <span style="font-family: monospace;">"K"</span>, etc., up to the dimensions of the
   output image.  The names must be upper case to avoid confusion to with the
-  input operands <tt>"i"</tt> and <tt>"m"</tt>.
+  input operands <span style="font-family: monospace;">"i"</span> and <span style="font-family: monospace;">"m"</span>.
   </p>
   <pre>
           I                x coordinate of pixel (column)
@@ -260,7 +260,7 @@ mskregions: Create or modify masks using regions lists
   The complete syntax of a macro entry is as follows:
   </p>
   <p>
-          &lt;symbol&gt;[<tt>'('</tt> arg-list <tt>')'</tt>][<tt>':'</tt>|<tt>'='</tt>]     replacement-text
+          &lt;symbol&gt;[<span style="font-family: monospace;">'('</span> arg-list <span style="font-family: monospace;">')'</span>][<span style="font-family: monospace;">':'</span>|<span style="font-family: monospace;">'='</span>]     replacement-text
   </p>
   <p>
   The replacement text may appear on the same line as the macro name or may
@@ -305,7 +305,7 @@ mskregions: Create or modify masks using regions lists
   <p>
   4. Create a 0 valued 512 x 512 mask and set all the pixels inside a circle
   excluding a wedge shaped region to 1. The expression cmpie is used defined
-  and stored in the expression database <tt>"myexpr.db"</tt> 
+  and stored in the expression database <span style="font-family: monospace;">"myexpr.db"</span> 
   </p>
   <pre>
   cl&gt; type myexpr.db

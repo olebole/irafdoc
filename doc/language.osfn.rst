@@ -40,10 +40,10 @@ osfn: Return the host system equivalent of an IRAF filename
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. Print the host equivalent of the vfn <tt>"hlib$login.cl"</tt>.
+  1. Print the host equivalent of the vfn <span style="font-family: monospace;">"hlib$login.cl"</span>.
   </p>
   <p>
-  	cl&gt; = osfn (<tt>"hlib$login.cl"</tt>)
+  	cl&gt; = osfn (<span style="font-family: monospace;">"hlib$login.cl"</span>)
   </p>
   <p>
   2. Compute a host filename for use as an argument to a foreign task

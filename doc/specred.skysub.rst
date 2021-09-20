@@ -29,14 +29,14 @@ skysub: Sky subtract extracted multispec spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>output = <tt>""</tt></b></dt>
+  <dt><b>output = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
   <dd>List of output sky subtracted spectra.  If no output is specified then
   the output replaces the input spectra.
   </dd>
   </dl>
   <dl>
-  <dt><b>objaps = <tt>""</tt>, objbeams = <tt>""</tt></b></dt>
+  <dt><b>objaps = <span style="font-family: monospace;">""</span>, objbeams = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='objaps' Line='objaps = "", objbeams = ""' -->
   <dd>Object aperture and beam numbers.  An empty list selects all aperture
   or beam numbers.  Only the selected apertures are sky subtracted.
@@ -46,7 +46,7 @@ skysub: Sky subtract extracted multispec spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>skyaps = <tt>""</tt>, skybeams = <tt>""</tt></b></dt>
+  <dt><b>skyaps = <span style="font-family: monospace;">""</span>, skybeams = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='skyaps' Line='skyaps = "", skybeams = ""' -->
   <dd>Sky aperture and beam numbers.  An empty list selects all aperture or
   beam numbers.
@@ -57,20 +57,20 @@ skysub: Sky subtract extracted multispec spectra
   <!-- Sec='PARAMETERS' Level=0 Label='skyedit' Line='skyedit = yes' -->
   <dd>Edit the sky spectra?  If yes the sky spectra are graphed using the
   task <b>specplot</b> and the user may delete contaminated sky spectra with
-  the <tt>'d'</tt> key and exit with <tt>'q'</tt>.
+  the <span style="font-family: monospace;">'d'</span> key and exit with <span style="font-family: monospace;">'q'</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>combine = <tt>"average"</tt> (average|median|sum)</b></dt>
+  <dt><b>combine = <span style="font-family: monospace;">"average"</span> (average|median|sum)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='combine' Line='combine = "average" (average|median|sum)' -->
   <dd>Option for combining pixels at the same dispersion coordinate after any
-  rejection operation.  The options are to compute the  <tt>"average"</tt>, <tt>"median"</tt>,
-  or <tt>"sum"</tt> of the pixels.  The median uses the average of the two central
+  rejection operation.  The options are to compute the  <span style="font-family: monospace;">"average"</span>, <span style="font-family: monospace;">"median"</span>,
+  or <span style="font-family: monospace;">"sum"</span> of the pixels.  The median uses the average of the two central
   values when the number of pixels is even.
   </dd>
   </dl>
   <dl>
-  <dt><b>reject = <tt>"none"</tt> (none|minmax|avsigclip)</b></dt>
+  <dt><b>reject = <span style="font-family: monospace;">"none"</span> (none|minmax|avsigclip)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='reject' Line='reject = "none" (none|minmax|avsigclip)' -->
   <dd>Type of rejection operation performed on the pixels which overlap at each
   dispersion coordinate.  The algorithms are discussed in the
@@ -93,11 +93,11 @@ skysub: Sky subtract extracted multispec spectra
   <!-- Sec='PARAMETERS' Level=0 Label='saveskys' Line='saveskys = yes' -->
   <dd>Save the sky spectra?  If no then the mean sky spectra will be deleted after
   sky subtraction is completed.  Otherwise a one dimensional image with
-  the prefix <tt>"sky"</tt> and then the output name is created.
+  the prefix <span style="font-family: monospace;">"sky"</span> and then the output name is created.
   </dd>
   </dl>
   <dl>
-  <dt><b>logfile = <tt>""</tt></b></dt>
+  <dt><b>logfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = ""' -->
   <dd>Logfile for making a record of the sky subtraction operation.
   </dd>
@@ -128,12 +128,12 @@ skysub: Sky subtract extracted multispec spectra
   </p>
   <p>
   When interactively editing the sky spectra the task <b>specplot</b>
-  is used.  To delete a spectrum type <tt>'d'</tt>.  To undelete the last deleted
-  spectrum type <tt>'e'</tt>.  When finished type <tt>'e'</tt>.
+  is used.  To delete a spectrum type <span style="font-family: monospace;">'d'</span>.  To undelete the last deleted
+  spectrum type <span style="font-family: monospace;">'e'</span>.  When finished type <span style="font-family: monospace;">'e'</span>.
   </p>
   <p>
   The sky spectra are combined using one of combining and rejection options from
-  the task <b>scombine</b> except for the option <tt>"none"</tt>.
+  the task <b>scombine</b> except for the option <span style="font-family: monospace;">"none"</span>.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Examples</h3>

@@ -26,7 +26,7 @@ joinlines: Join text files line by line
   <dt><b>list1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='list1' Line='list1' -->
   <dd>List of input text files to be joined.  It is an error if a file does
-  not exist.  The special file <tt>"STDIN"</tt> may be used to read from the
+  not exist.  The special file <span style="font-family: monospace;">"STDIN"</span> may be used to read from the
   terminal, redirected input, or a pipe.
   </dd>
   </dl>
@@ -39,22 +39,22 @@ joinlines: Join text files line by line
   </dd>
   </dl>
   <dl>
-  <dt><b>output = <tt>"STDOUT"</tt></b></dt>
+  <dt><b>output = <span style="font-family: monospace;">"STDOUT"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = "STDOUT"' -->
   <dd>Output filename.  The result of joining the input lines is appended
-  to the specified file.  The special file <tt>"STDOUT"</tt> selects the standard
+  to the specified file.  The special file <span style="font-family: monospace;">"STDOUT"</span> selects the standard
   output stream, which is usually the terminal but which may be redirected.
   </dd>
   </dl>
   <dl>
-  <dt><b>delim = <tt>" "</tt></b></dt>
+  <dt><b>delim = <span style="font-family: monospace;">" "</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='delim' Line='delim = " "' -->
   <dd>The delimiter placed between joined input lines.  The default is a space
   (note that this will not be visible when viewed with <b>eparam</b>).
   </dd>
   </dl>
   <dl>
-  <dt><b>missing = <tt>"Missing"</tt></b></dt>
+  <dt><b>missing = <span style="font-family: monospace;">"Missing"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='missing' Line='missing = "Missing"' -->
   <dd>This string is substituted for missing lines when going beyond the end
   of shorter input files.
@@ -140,15 +140,15 @@ joinlines: Join text files line by line
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. Join the two files <tt>"names"</tt> and <tt>"titles"</tt>, redirecting the output into a third
-  file <tt>"personnel_file"</tt>.
+  1. Join the two files <span style="font-family: monospace;">"names"</span> and <span style="font-family: monospace;">"titles"</span>, redirecting the output into a third
+  file <span style="font-family: monospace;">"personnel_file"</span>.
   </p>
   <pre>
   	cl&gt; joinlines names titles &gt; personnel_file
   </pre>
   <p>
   2. Join a set of magnitudes given in separate files and place the
-  output in <tt>"allmags"</tt>.  Separate the columns by tabs.
+  output in <span style="font-family: monospace;">"allmags"</span>.  Separate the columns by tabs.
   </p>
   <pre>
   	cl&gt; joinlines mags* out=allmags delim="	"

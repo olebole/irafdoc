@@ -37,7 +37,7 @@ back: Return to the previous directory (after a chdir)
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. Go to the logical directory <tt>"dataio"</tt>.
+  1. Go to the logical directory <span style="font-family: monospace;">"dataio"</span>.
   </p>
   <p>
   	cl&gt; cd dataio

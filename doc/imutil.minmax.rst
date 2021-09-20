@@ -79,13 +79,13 @@ minmax: Compute the minimum and maximum pixel values in an image
   </dd>
   </dl>
   <dl>
-  <dt><b>minpix = <tt>""</tt></b></dt>
+  <dt><b>minpix = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='minpix' Line='minpix = ""' -->
   <dd>Set to the minimum pixel specification of the last image processed.
   </dd>
   </dl>
   <dl>
-  <dt><b>maxpix = <tt>""</tt></b></dt>
+  <dt><b>maxpix = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maxpix' Line='maxpix = ""' -->
   <dd>Set to the maximum pixel specification of the last image processed.
   </dd>

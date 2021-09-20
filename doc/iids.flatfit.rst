@@ -42,12 +42,12 @@ flatfit: Sum and normalize flat field spectra
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>This is the root file name for the names of the spectra which will
   be created during normalization. The aperture number for the observation
-  will be appended to the root in form <tt>"root.nnnn"</tt> where nnnn is the aperture
+  will be appended to the root in form <span style="font-family: monospace;">"root.nnnn"</span> where nnnn is the aperture
   number with leading 0's.
   </dd>
   </dl>
   <dl>
-  <dt><b>function = <tt>"chebyshev"</tt></b></dt>
+  <dt><b>function = <span style="font-family: monospace;">"chebyshev"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "chebyshev"' -->
   <dd>The accumulated spectra are fit by this function type - either
   chebyshev or legendre polynomials, or spline3 or spline1 interpolators.
@@ -120,7 +120,7 @@ flatfit: Sum and normalize flat field spectra
   <dt><b>ccmode = )_.ccmode</b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='ccmode' Line='ccmode = )_.ccmode' -->
   <dd>The mode by which the coincidence correction is to be performed.
-  This may be <tt>"iids"</tt> or <tt>"photo"</tt>.
+  This may be <span style="font-family: monospace;">"iids"</span> or <span style="font-family: monospace;">"photo"</span>.
   </dd>
   </dl>
   <dl>
@@ -138,7 +138,7 @@ flatfit: Sum and normalize flat field spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>cursor = <tt>""</tt></b></dt>
+  <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Graphics cursor input.  When null the standard cursor is used otherwise
   the specified file is used.
@@ -178,7 +178,7 @@ flatfit: Sum and normalize flat field spectra
   </p>
   <p>
   At each step in the fit, pixels which are discrepant by more than
-  <tt>"upper"</tt> sigmas above the fit, or <tt>"lower"</tt> sigmas below the fit, are
+  <span style="font-family: monospace;">"upper"</span> sigmas above the fit, or <span style="font-family: monospace;">"lower"</span> sigmas below the fit, are
   rejected. The rejection process may be applied many times (iterations)
   to continue rejecting pixels. If the upper and lower sigmas are
   not equal, the resulting fit will be biased slightly above the mean
@@ -271,7 +271,7 @@ flatfit: Sum and normalize flat field spectra
   <dl>
   <dt><b>&lt;CR&gt;</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='' Line='&lt;CR&gt;' -->
-  <dd>RETURN is the same as <tt>'q'</tt> but a confirmation request to exit must be
+  <dd>RETURN is the same as <span style="font-family: monospace;">'q'</span> but a confirmation request to exit must be
   answered as yes.
   </dd>
   </dl>

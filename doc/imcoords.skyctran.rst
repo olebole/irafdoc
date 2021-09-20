@@ -30,14 +30,14 @@ skyctran: Transform coordinates from one celestial wcs to another
   <dt><b>&lt;filename&gt;</b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='&lt;filename&gt;' -->
   <dd>The list of input coordinate files. Coordinates may be entered by hand by
-  setting input to <tt>"STDIN"</tt>. A STDIN coordinate list is terminated by typing
+  setting input to <span style="font-family: monospace;">"STDIN"</span>. A STDIN coordinate list is terminated by typing
   q or &lt;EOF&gt; (usually &lt;ctrl/d&gt; or &lt;ctrl/z&gt;).
   </dd>
   </dl>
   <dl>
   <dt><b>imcursor</b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='imcursor' Line='imcursor' -->
-  <dd>If the input file name is equal to the reserved keyword <tt>"imcursor"</tt> the input
+  <dd>If the input file name is equal to the reserved keyword <span style="font-family: monospace;">"imcursor"</span> the input
   coordinates are read from the image cursor and the input coordinate system
   is the coordinate system of the image specified by the insystem parameter.
   The coordinate list is terminated by typing q or  &lt;EOF&gt; (usually &lt;ctrl/d&gt; or
@@ -48,7 +48,7 @@ skyctran: Transform coordinates from one celestial wcs to another
   <dt><b>grid</b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='grid' Line='grid' -->
   <dd>If the input file name is equal to the reserved
-  keyword <tt>"grid"</tt>, an <i>nilng</i> by <i>nilat</i> grid of equally spaced
+  keyword <span style="font-family: monospace;">"grid"</span>, an <i>nilng</i> by <i>nilat</i> grid of equally spaced
   input coordinates
   is generating spanning the region defined by <i>ilngmin</i>, <i>ilngmax</i>,
   <i>ilatmin</i>, <i>ilatmax</i>.
@@ -61,7 +61,7 @@ skyctran: Transform coordinates from one celestial wcs to another
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>The list of output coordinate files. The number of output files must be
   equal to one or the number of input files. Results may be printed on the
-  terminal by setting output to <tt>"STDOUT"</tt>.
+  terminal by setting output to <span style="font-family: monospace;">"STDOUT"</span>.
   </dd>
   </dl>
   <dl>
@@ -74,9 +74,9 @@ skyctran: Transform coordinates from one celestial wcs to another
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='&lt;imagename&gt; [wcs]' -->
   <dd>The celestial coordinate system is the world coordinate system of the image
   &lt;imagename&gt; and the input or output pixel coordinates may be in the
-  <tt>"logical"</tt>, <tt>"tv"</tt>, <tt>"physical"</tt> or <tt>"world"</tt> coordinate systems. If wcs is not
-  specified <tt>"logical"</tt> is assumed, unless the input coordinates are read from the
-  image cursor, in which case <tt>"tv"</tt> is assumed. The image celestial coordinate
+  <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"tv"</span>, <span style="font-family: monospace;">"physical"</span> or <span style="font-family: monospace;">"world"</span> coordinate systems. If wcs is not
+  specified <span style="font-family: monospace;">"logical"</span> is assumed, unless the input coordinates are read from the
+  image cursor, in which case <span style="font-family: monospace;">"tv"</span> is assumed. The image celestial coordinate
   system must be one of the valid FITS celestial coordinate systems:
   equatorial (FK4, FK4-NO-E, FK5, ICRS, or GAPPT), ecliptic, galactic, or
   supergalactic.
@@ -221,7 +221,7 @@ skyctran: Transform coordinates from one celestial wcs to another
   input line and the new extended line is written to the output file. If
   transform = yes the computed output coordinates replace
   the input coordinates in the input line and the edited line is written
-  to the output file. Transform is always set to <tt>"no"</tt> if the input
+  to the output file. Transform is always set to <span style="font-family: monospace;">"no"</span> if the input
   is from the unredirected standard input.
   </dd>
   </dl>
@@ -259,7 +259,7 @@ skyctran: Transform coordinates from one celestial wcs to another
   <dt><b>ilngmin = INDEF, ilngmax = INDEF, ilatmin = INDEF, ilatmax = INDEF </b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ilngmin' Line='ilngmin = INDEF, ilngmax = INDEF, ilatmin = INDEF, ilatmax = INDEF ' -->
   <dd>The lower and upper limits of the coordinate grid if <i>input</i> =
-  <tt>"grid"</tt>.
+  <span style="font-family: monospace;">"grid"</span>.
   Ilngmin and ilngmax default to 1.0, 1.0, 0.0, 0.0, 0.0 and, 2048.0, ncols, 24.0,
   360.0, and TWOPI for coordinates in units of INDEF, pixels, hours, degrees,
   and radians respectively. Ilatmin and ilatmax default to 1.0, 1.0,
@@ -270,11 +270,11 @@ skyctran: Transform coordinates from one celestial wcs to another
   <dl>
   <dt><b>nilng = 10, nilat = 10</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nilng' Line='nilng = 10, nilat = 10' -->
-  <dd>The size of the computed coordinate grid if <i>input</i> = <tt>"grid"</tt>.
+  <dd>The size of the computed coordinate grid if <i>input</i> = <span style="font-family: monospace;">"grid"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>ilngunits = <tt>""</tt>, ilatunits = <tt>""</tt></b></dt>
+  <dt><b>ilngunits = <span style="font-family: monospace;">""</span>, ilatunits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ilngunits' Line='ilngunits = "", ilatunits = ""' -->
   <dd>The units of the input ra/longitude and dec/latitude coordinates.
   The options are:
@@ -305,22 +305,22 @@ skyctran: Transform coordinates from one celestial wcs to another
   </dd>
   </dl>
   <dl>
-  <dt><b>ilngformat = <tt>""</tt>, ilatformat = <tt>""</tt></b></dt>
+  <dt><b>ilngformat = <span style="font-family: monospace;">""</span>, ilatformat = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ilngformat' Line='ilngformat = "", ilatformat = ""' -->
   <dd>The output format of the input x/ra/longitude and y/dec/latitude coordinates
-  if <i>input</i> = <tt>"grid"</tt>.
+  if <i>input</i> = <span style="font-family: monospace;">"grid"</span>.
   The options are discussed in the formats section of the help page below.
   If the input coordinate system is the &lt;imagename&gt; [logical/tv/physical]
   system, default formats of %10.3f and %10.3f are assumed regardless
   of the values of ilngunits and ilatunits. Otherwise default formats
-  of %12.3h, %12.2h, and %13.7g are assumed for input units of <tt>"hours"</tt>, <tt>"degrees"</tt>,
-  and <tt>"radians"</tt> respectively. For values of <i>input</i> other than <tt>"grid"</tt>
+  of %12.3h, %12.2h, and %13.7g are assumed for input units of <span style="font-family: monospace;">"hours"</span>, <span style="font-family: monospace;">"degrees"</span>,
+  and <span style="font-family: monospace;">"radians"</span> respectively. For values of <i>input</i> other than <span style="font-family: monospace;">"grid"</span>
   the output formats of the input coordinates are the same as the input
   formats.
   </dd>
   </dl>
   <dl>
-  <dt><b>olngunits = <tt>""</tt>, olatunits = <tt>""</tt></b></dt>
+  <dt><b>olngunits = <span style="font-family: monospace;">""</span>, olatunits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='olngunits' Line='olngunits = "", olatunits = ""' -->
   <dd>The units of the output ra/longitude and dec/latitude coordinates.
   The options are:
@@ -351,19 +351,19 @@ skyctran: Transform coordinates from one celestial wcs to another
   </dd>
   </dl>
   <dl>
-  <dt><b>olngformat = <tt>""</tt>, olatformat = <tt>""</tt></b></dt>
+  <dt><b>olngformat = <span style="font-family: monospace;">""</span>, olatformat = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='olngformat' Line='olngformat = "", olatformat = ""' -->
   <dd>The format of the computed x/ra/longitude and y/dec/latitude coordinates.
   The options are discussed in the formats section of the help page below.
   If the output coordinate system is the &lt;imagename&gt; [logical/tv/physical]
   system, default formats of %10.3f and %10.3f are assumed regardless
   of the values of olngunits and olatunits. Otherwise default formats
-  of %12.3h, %12.2h, and %13.7g are assumed for output units of <tt>"hours"</tt>,
-  <tt>"degrees"</tt>, and <tt>"radians"</tt> respectively.
+  of %12.3h, %12.2h, and %13.7g are assumed for output units of <span style="font-family: monospace;">"hours"</span>,
+  <span style="font-family: monospace;">"degrees"</span>, and <span style="font-family: monospace;">"radians"</span> respectively.
   </dd>
   </dl>
   <dl>
-  <dt><b>icommands = <tt>""</tt></b></dt>
+  <dt><b>icommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""' -->
   <dd>The default image display cursor.
   </dd>
@@ -382,10 +382,10 @@ skyctran: Transform coordinates from one celestial wcs to another
   <i>input</i> from the input celestial coordinate system <i>insystem</i>
   to the output celestial coordinate system <i>outsystem</i> and writes the
   converted coordinates to the output files <i>output</i>. The input
-  files may be simple text files, the standard input <tt>"STDIN"</tt>,
-  the image display cursor <tt>"imcursor"</tt>, or a user specified coordinate grid.
+  files may be simple text files, the standard input <span style="font-family: monospace;">"STDIN"</span>,
+  the image display cursor <span style="font-family: monospace;">"imcursor"</span>, or a user specified coordinate grid.
   The output files may be simple
-  text files or the standard output <tt>"STDOUT"</tt>. SKYCTRAN may be used
+  text files or the standard output <span style="font-family: monospace;">"STDOUT"</span>. SKYCTRAN may be used
   to change the units of the input coordinates, e.g. from degrees and degrees
   to hours and degrees, to precess the coordinates, to convert from one
   celestial coordinate system to another, e.g. from equatorial to ecliptic
@@ -398,10 +398,10 @@ skyctran: Transform coordinates from one celestial wcs to another
   The input data are read from columns <i>lngcolumn</i>, <i>latcolumn</i>,
   <i>plngcolumn</i>, <i>platcolumn</i>, <i>pxcolumn</i>, and <i>rvcolumn</i>
   in the input files and if <i>transform</i> = yes, the converted coordinates are
-  written to the same columns in the output files. If <i>transform</i> = <tt>"no"</tt>,
+  written to the same columns in the output files. If <i>transform</i> = <span style="font-family: monospace;">"no"</span>,
   the converted coordinates are appended to the input line creating two
   additional columns in the output file. If the input file is the
-  unredirected standard input then transpose is always <tt>"no"</tt>. Comment lines, blanks
+  unredirected standard input then transpose is always <span style="font-family: monospace;">"no"</span>. Comment lines, blanks
   lines, and lines for which the input coordinates could not be successfully
   decoded are passed on to the output file without modification.
   </p>
@@ -487,7 +487,7 @@ skyctran: Transform coordinates from one celestial wcs to another
   <p>
   USERS NEED TO BE AWARE THAT THE IRAF IMAGE WORLD COORDINATE SYSTEM
   CURRENTLY (IRAF VERSIONS 2.10.4 PATCH 2 AND EARLIER) SUPPORTS ONLY THE
-  EQUATORIAL SYSTEM (CTYPE (ra axis) = <tt>"RA--XXXX"</tt> CTYPE (dec axis) = <tt>"DEC-XXXX"</tt>)
+  EQUATORIAL SYSTEM (CTYPE (ra axis) = <span style="font-family: monospace;">"RA--XXXX"</span> CTYPE (dec axis) = <span style="font-family: monospace;">"DEC-XXXX"</span>)
   WHERE XXXX IS THE PROJECTION TYPE, EVEN THOUGH THE SKYCTRAN TASK 
   SUPPORTS GALACTIC, ECLIPTIC, AND SUPERGALACTIC COORDINATES.
   </p>
@@ -498,7 +498,7 @@ skyctran: Transform coordinates from one celestial wcs to another
   FINAL FITS STANDARD MAY DIFFER FROM THE ONE ADOPTED HERE.
   </p>
   <p>
-  The IRAF builtin world coordinate systems <tt>"logical"</tt>, <tt>"tv"</tt>, <tt>"physical"</tt>, and
+  The IRAF builtin world coordinate systems <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"tv"</span>, <span style="font-family: monospace;">"physical"</span>, and
   world are also supported. This means for example that users can begin
   with cursor coordinates in image 1, use the image header of image 1
   to transform the pixel coordinates to the celestial coordinate system of
@@ -541,7 +541,7 @@ skyctran: Transform coordinates from one celestial wcs to another
   <p>
   The <i>world coordinate system</i> is the default coordinate system for the
   image. The default world coordinate system is the one named by the
-  environment variable <tt>"defwcs"</tt> if defined in the user environment (initially
+  environment variable <span style="font-family: monospace;">"defwcs"</span> if defined in the user environment (initially
   it is undefined) and present in the image header; else it is the first
   world coordinate system
   defined for the image (the .imh and .hhh image format support only one wcs
@@ -571,8 +571,8 @@ skyctran: Transform coordinates from one celestial wcs to another
   If the output coordinate system is the &lt;imagename&gt; [logical/tv/physical],
   default formats of %10.3f and %10.3f are assumed regardless
   of the values of olngunits and olatunits. Otherwise default formats
-  of %12.3h, %12.2h, and %g are assumed for output units of <tt>"hours"</tt>, <tt>"degrees"</tt>,
-  and <tt>"radians"</tt> respectively.
+  of %12.3h, %12.2h, and %g are assumed for output units of <span style="font-family: monospace;">"hours"</span>, <span style="font-family: monospace;">"degrees"</span>,
+  and <span style="font-family: monospace;">"radians"</span> respectively.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>User commands</h3>
@@ -682,10 +682,10 @@ skyctran: Transform coordinates from one celestial wcs to another
   <h3>Formats</h3>
   <!-- BeginSection: 'FORMATS' -->
   <p>
-  A  format  specification has the form <tt>"%w.dCn"</tt>, where w is the field
+  A  format  specification has the form <span style="font-family: monospace;">"%w.dCn"</span>, where w is the field
   width, d is the number of decimal places or the number of digits  of
   precision,  C  is  the  format  code,  and  n is radix character for
-  format code <tt>"r"</tt> only.  The w and d fields are optional.  The  format
+  format code <span style="font-family: monospace;">"r"</span> only.  The w and d fields are optional.  The  format
   codes C are as follows:
    
   </p>
@@ -763,16 +763,16 @@ skyctran: Transform coordinates from one celestial wcs to another
   Additional information on the IRAF world coordinate systems can be found in
   the help pages for the WCSEDIT and WCRESET tasks.
   Detailed documentation for the IRAF world coordinate system interface MWCS
-  can be found in the file <tt>"iraf$sys/mwcs/MWCS.hlp"</tt>. This file can be
-  formatted and printed with the command <tt>"help iraf$sys/mwcs/MWCS.hlp fi+ |
-  lprint"</tt>.
+  can be found in the file <span style="font-family: monospace;">"iraf$sys/mwcs/MWCS.hlp"</span>. This file can be
+  formatted and printed with the command <span style="font-family: monospace;">"help iraf$sys/mwcs/MWCS.hlp fi+ |
+  lprint"</span>.
   </p>
   <p>
   Details of the FITS header world coordinate system interface can
-  be found in the draft paper <tt>"World Coordinate Systems Representations Within the
-  FITS Format"</tt> by Hanisch and Wells, available from the iraf anonymous ftp
-  archive and the draft paper which supersedes it <tt>"Representations of Celestial
-  Coordinates in FITS"</tt> by Greisen and Calabretta available from the NRAO
+  be found in the draft paper <span style="font-family: monospace;">"World Coordinate Systems Representations Within the
+  FITS Format"</span> by Hanisch and Wells, available from the iraf anonymous ftp
+  archive and the draft paper which supersedes it <span style="font-family: monospace;">"Representations of Celestial
+  Coordinates in FITS"</span> by Greisen and Calabretta available from the NRAO
   anonymous ftp archives.
   </p>
   <p>
@@ -780,11 +780,11 @@ skyctran: Transform coordinates from one celestial wcs to another
   SLALIB library provided courtesy of Patrick Wallace. These routines
   are very well documented internally with extensive references provided
   where appropriate. Interested users are encouraged to examine the routines
-  for this information. Type <tt>"help slalib"</tt> to get a listing of the SLALIB
-  routines, <tt>"help slalib opt=sys"</tt> to get a concise summary of the library,
-  and <tt>"help &lt;routine&gt;"</tt> to get a description of each routine's calling sequence,
+  for this information. Type <span style="font-family: monospace;">"help slalib"</span> to get a listing of the SLALIB
+  routines, <span style="font-family: monospace;">"help slalib opt=sys"</span> to get a concise summary of the library,
+  and <span style="font-family: monospace;">"help &lt;routine&gt;"</span> to get a description of each routine's calling sequence,
   required input and output, etc. An overview of the library can be found in the
-  paper <tt>"SLALIB - A Library of Subprograms"</tt>, Starlink User Note 67.7
+  paper <span style="font-family: monospace;">"SLALIB - A Library of Subprograms"</span>, Starlink User Note 67.7
   by P.T. Wallace, available from the Starlink archives.
   </p>
   <!-- EndSection:   'REFERENCES' -->

@@ -25,16 +25,16 @@ mtexamine: Examine the structure of a magnetic tape
   <dl>
   <dt><b>tape_file</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='tape_file' Line='tape_file' -->
-  <dd>Tape or disk file, e.g. <tt>"mta1600[2]"</tt>, <tt>"mta1600"</tt> or <tt>"data"</tt>.
+  <dd>Tape or disk file, e.g. <span style="font-family: monospace;">"mta1600[2]"</span>, <span style="font-family: monospace;">"mta1600"</span> or <span style="font-family: monospace;">"data"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>file_list = <tt>"1-999"</tt></b></dt>
+  <dt><b>file_list = <span style="font-family: monospace;">"1-999"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='file_list' Line='file_list = "1-999"' -->
-  <dd>List of tape file numbers or ranges delimited by commas, e.g. <tt>"1-3,5-8"</tt>.
+  <dd>List of tape file numbers or ranges delimited by commas, e.g. <span style="font-family: monospace;">"1-3,5-8"</span>.
   File_list is used only if no file number is given in tape_file.
   Files will be read in ascending order, regardless of the order of the list.
-  Reading will terminate if EOT is reached, thus a list such as <tt>"1-999"</tt>
+  Reading will terminate if EOT is reached, thus a list such as <span style="font-family: monospace;">"1-999"</span>
   may be used to read all the files on the tape. File_list is ignored is input
   is a single disk file.
   </dd>
@@ -46,10 +46,10 @@ mtexamine: Examine the structure of a magnetic tape
   </dd>
   </dl>
   <dl>
-  <dt><b>rec_list = <tt>"1-999"</tt></b></dt>
+  <dt><b>rec_list = <span style="font-family: monospace;">"1-999"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rec_list' Line='rec_list = "1-999"' -->
   <dd>List of tape record numbers or ranges to be dumped delimited by whitespace
-  or commas e.g <tt>"1-3,4"</tt>.
+  or commas e.g <span style="font-family: monospace;">"1-3,4"</span>.
   </dd>
   </dl>
   <dl>
@@ -67,7 +67,7 @@ mtexamine: Examine the structure of a magnetic tape
   </dd>
   </dl>
   <dl>
-  <dt><b>output_format = <tt>"o"</tt></b></dt>
+  <dt><b>output_format = <span style="font-family: monospace;">"o"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output_format' Line='output_format = "o"' -->
   <dd>Permitted types are character(c), octal(o), hexadecimal (x), decimal (d)
   or unsigned decimal (u).  Character dumps are only permitted for byte_chunk = 1.

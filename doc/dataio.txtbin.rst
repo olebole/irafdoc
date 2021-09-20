@@ -25,7 +25,7 @@ txtbin: Convert an IRAF text file to a binary file
   <dl>
   <dt><b>text_file</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='text_file' Line='text_file' -->
-  <dd>Input file name or template, e.g. <tt>"abc"</tt> or <tt>"abc.*"</tt>.
+  <dd>Input file name or template, e.g. <span style="font-family: monospace;">"abc"</span> or <span style="font-family: monospace;">"abc.*"</span>.
   </dd>
   </dl>
   <dl>
@@ -36,7 +36,7 @@ txtbin: Convert an IRAF text file to a binary file
   </dd>
   </dl>
   <dl>
-  <dt><b>verbose = <tt>"yes"</tt></b></dt>
+  <dt><b>verbose = <span style="font-family: monospace;">"yes"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = "yes"' -->
   <dd>Print messages about files processed?
   </dd>

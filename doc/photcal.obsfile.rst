@@ -82,7 +82,7 @@ obsfile: Prepare an observations file from a text file
   </dd>
   </dl>
   <dl>
-  <dt><b>obsparams = <tt>""</tt></b></dt>
+  <dt><b>obsparams = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='obsparams' Line='obsparams = ""' -->
   <dd>The name of an optional text file containing the correct filter ids, exposure
   times, airmasses, and time of observations for each image whose values are
@@ -95,14 +95,14 @@ obsfile: Prepare an observations file from a text file
   </dd>
   </dl>
   <dl>
-  <dt><b>obscolumns = <tt>"2 3 4 5"</tt></b></dt>
+  <dt><b>obscolumns = <span style="font-family: monospace;">"2 3 4 5"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='obscolumns' Line='obscolumns = "2 3 4 5"' -->
   <dd>The list of numbers separated by commas or whitespace specifying which columns
   in the text file <i>obsparams</i> contain the correct filter ids, exposure
   times, airmasses, and times of observation respectively. The number 0 can be
   used as a place holder in the <i>obscolumns</i> string. For example, to correct
   only  the <i>photfiles</i> airmass values, <i>obscolumns</i> should be set to
-  <tt>"0 0 column 0"</tt>, where column is the airmass column number. The default value of
+  <span style="font-family: monospace;">"0 0 column 0"</span>, where column is the airmass column number. The default value of
   <i>obscolumns</i> corresponds to the format of the default <i>obsparams</i> file
   produced by MKIMSETS.
   </dd>
@@ -115,7 +115,7 @@ obsfile: Prepare an observations file from a text file
   </dd>
   </dl>
   <dl>
-  <dt><b>shifts = <tt>""</tt></b></dt>
+  <dt><b>shifts = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='shifts' Line='shifts = ""' -->
   <dd>The name of the text file specifying the x and y shifts to be ADDED to the x-y
   positions of all objects in an image before position matching (the original x's
@@ -126,7 +126,7 @@ obsfile: Prepare an observations file from a text file
   </dd>
   </dl>
   <dl>
-  <dt><b>apercors = <tt>""</tt></b></dt>
+  <dt><b>apercors = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apercors' Line='apercors = ""' -->
   <dd>The name of the text file specifying the aperture corrections to be ADDED to
   the extracted magnitudes. Aperture corrections are listed for each image, 1
@@ -168,7 +168,7 @@ obsfile: Prepare an observations file from a text file
   <!-- Sec='PARAMETERS' Level=0 Label='verify' Line='verify = no' -->
   <dd>Verify interactive user input? This option is used only if any of <i>imsets</i>,
   <i>obsparams</i>, <i>shifts</i>, or <i> apercors</i> are set to the standard input
-  <tt>"STDIN"</tt>.
+  <span style="font-family: monospace;">"STDIN"</span>.
   </dd>
   </dl>
   <dl>
@@ -209,7 +209,7 @@ obsfile: Prepare an observations file from a text file
   the airmass, the time of observation the instrumental magnitude, the
   magnitude error, and the object id.
   For example
-  if <i>incolumns</i> is <tt>"10 2 3 6 8 7 9 4 5 1"</tt>, the object id is assumed to
+  if <i>incolumns</i> is <span style="font-family: monospace;">"10 2 3 6 8 7 9 4 5 1"</span>, the object id is assumed to
   be in column 1, the image id in column 10, the x and y positions in columns 2 and 3, the filter id,
   exposure time, airmass, and time of observation in columns 6, 8, 7 and 9,
   and the instrumental
@@ -217,7 +217,7 @@ obsfile: Prepare an observations file from a text file
   match those in <i>imsets</i> or the corresponding input data is skipped.
   The columns image name, x coordinate, y coordinate, and magnitude
   are mandatory and must be present in <i>photfiles</i>. 
-  Other missing columns in the data may be represented by a <tt>"0"</tt> in the
+  Other missing columns in the data may be represented by a <span style="font-family: monospace;">"0"</span> in the
   appropriate place in <i>incolumns</i>.
   For example, if there is no magnitude error
   column in <i>photfiles</i> a value of INDEF will be written in the appropriate
@@ -240,10 +240,10 @@ obsfile: Prepare an observations file from a text file
   For fields containing more than one star, OBSFILE constructs a unique
   name for each object in the field by adding a sequence number to the 
   field name in <i>imsets</i>, which if the star is a standard star, the
-  user must later edit. For example the fourth star in the field <tt>"M92"</tt>
-  will be assigned the name <tt>"M92-4"</tt> in <i>observations</i>.
-  If this star is a standard star and its true name is <tt>"IX-10"</tt> in the
-  standard star catalog, then the user must change <tt>"M92-4"</tt> to <tt>"IX-10"</tt>
+  user must later edit. For example the fourth star in the field <span style="font-family: monospace;">"M92"</span>
+  will be assigned the name <span style="font-family: monospace;">"M92-4"</span> in <i>observations</i>.
+  If this star is a standard star and its true name is <span style="font-family: monospace;">"IX-10"</span> in the
+  standard star catalog, then the user must change <span style="font-family: monospace;">"M92-4"</span> to <span style="font-family: monospace;">"IX-10"</span>
   in <i>observations</i>.
   <i>Imsets</i> also tells OBSFILE which images
   in <i>photfiles</i> are images of the same region of the sky belonging
@@ -271,7 +271,7 @@ obsfile: Prepare an observations file from a text file
   pixels of each other.  The user may supply an optional file of x and y
   shifts <i>shifts</i> to be added to the object positions prior to
   matching. The format of <i>shifts</i> is described in detail below.
-  If the parameter <i>allfilters</i> is <tt>"yes"</tt>, only objects which are matched
+  If the parameter <i>allfilters</i> is <span style="font-family: monospace;">"yes"</span>, only objects which are matched
   in all the filters <i>idfilters</i> are output to <i>observations</i>.
   </p>
   <p>
@@ -287,10 +287,10 @@ obsfile: Prepare an observations file from a text file
   of the fields extracted from <i>photfiles</i>. This file, referenced 
   by its parent observations file name, can be used as input to the
   MKCONFIG task. The actual name of the format description file on disk is
-  constructed by prepending the string <tt>"f"</tt> and appending the string <tt>".dat"</tt>
+  constructed by prepending the string <span style="font-family: monospace;">"f"</span> and appending the string <span style="font-family: monospace;">".dat"</span>
   to <i>observations</i>.
-  For example if a new observations file called <tt>"nite1"</tt> is created by
-  OBSFILE, a format description file called <tt>"fnite1.dat"</tt> will also be
+  For example if a new observations file called <span style="font-family: monospace;">"nite1"</span> is created by
+  OBSFILE, a format description file called <span style="font-family: monospace;">"fnite1.dat"</span> will also be
   created. Any pre-existing format description file of that name, which does
   not have an associated observations file, will be deleted.
   </p>
@@ -316,9 +316,9 @@ obsfile: Prepare an observations file from a text file
   the single object is a standard star, the user should edit <i>imsets</i>
   so that the field name is the same as the name of the standard star in
   the standard star catalog. If a stellar field contains more than one
-  measured object, OBSFILE generates names of the form <tt>"field-#"</tt> where
-  <tt>"field"</tt> is the field name and <tt>"#"</tt> is a sequence number. For example the
-  fourth star in the field <tt>"M92"</tt> will be assigned the name <tt>"M92-4"</tt> in
+  measured object, OBSFILE generates names of the form <span style="font-family: monospace;">"field-#"</span> where
+  <span style="font-family: monospace;">"field"</span> is the field name and <span style="font-family: monospace;">"#"</span> is a sequence number. For example the
+  fourth star in the field <span style="font-family: monospace;">"M92"</span> will be assigned the name <span style="font-family: monospace;">"M92-4"</span> in
   <i>observations</i>. If the star is a standard star, the user must edit
   the object names in <i>observations</i> to match those in the standard
   star catalog.
@@ -339,10 +339,10 @@ obsfile: Prepare an observations file from a text file
   fields is listed below. There is only a single bright star per field.
   The name of star field in column 1 has been edited to be identical
   to the name of the standard in the standard star catalog. Column 2 contains
-  a <tt>':'</tt>. The U, B and V
+  a <span style="font-family: monospace;">':'</span>. The U, B and V
   images for each field are listed in columns 3, 4 and 5 respectively.
-  The missing U image for field <tt>"STD7"</tt> is represented by the name <tt>"INDEF"</tt>.
-  Standard stars <tt>"STD1"</tt> and <tt>"STD2"</tt> were observed twice in the same night
+  The missing U image for field <span style="font-family: monospace;">"STD7"</span> is represented by the name <span style="font-family: monospace;">"INDEF"</span>.
+  Standard stars <span style="font-family: monospace;">"STD1"</span> and <span style="font-family: monospace;">"STD2"</span> were observed twice in the same night
   at different airmasses.
   </p>
   <pre>
@@ -365,9 +365,9 @@ obsfile: Prepare an observations file from a text file
   The filter ids, exposure times, airmasses, and times of observation for all the images were
   correctly read
   from the image headers with the exception of the filter id, exposure time,
-  and airmass for the first  <tt>"STD2"</tt> V frame.
+  and airmass for the first  <span style="font-family: monospace;">"STD2"</span> V frame.
   The correct filter id, exposure time, airmass, and time of observation, is supplied
-  in <i>obsparams</i>  and <i>obscolumns</i> is set to <tt>"2 3 4 5"</tt>
+  in <i>obsparams</i>  and <i>obscolumns</i> is set to <span style="font-family: monospace;">"2 3 4 5"</span>
   </p>
   <pre>
   	nite006    3 8 1.256 14:30:02.3
@@ -376,7 +376,7 @@ obsfile: Prepare an observations file from a text file
   Zero can be used as a place holder in <i>obscolumns</i>,
   as in the following example where
   the user only wants to correct the exposure time and the airmass and
-  leave the filter id alone. In this case <i>obscolumns</i> is <tt>"0 2 3 0"</tt>
+  leave the filter id alone. In this case <i>obscolumns</i> is <span style="font-family: monospace;">"0 2 3 0"</span>
   and <i>obsparams</i> looks as follows.
   </p>
   <pre>
@@ -397,11 +397,11 @@ obsfile: Prepare an observations file from a text file
   </p>
   <p>
   A sample shifts file for the previous set of UBV standards
-  observations is shown below. All the standards except for <tt>"STD14"</tt> are assumed
+  observations is shown below. All the standards except for <span style="font-family: monospace;">"STD14"</span> are assumed
   to have no significant shifts from filter to filter. The B and V frames
-  for <tt>"STD14"</tt> are shifted -10 pixels in x and -5 pixels
+  for <span style="font-family: monospace;">"STD14"</span> are shifted -10 pixels in x and -5 pixels
   in y with respect to the U frame. Therefore +10 and +5 pixels should be
-  added to the <tt>"STD14"</tt> B and V frame positions respectively before
+  added to the <span style="font-family: monospace;">"STD14"</span> B and V frame positions respectively before
   position matching.
   </p>
   <pre>
@@ -428,7 +428,7 @@ obsfile: Prepare an observations file from a text file
   The <i>apercors</i> file for the previous set of UBV observations is shown
   below.
   The aperture corrections for all the standard stars are assumed to be
-  zero except for <tt>"STD14"</tt>.
+  zero except for <span style="font-family: monospace;">"STD14"</span>.
   </p>
   <pre>
   	nite039    -0.150

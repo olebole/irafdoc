@@ -26,7 +26,7 @@ adumpim: Image survey access debugging task
   <dt><b>imsurvey</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='imsurvey' Line='imsurvey' -->
   <dd>The name of the image survey to be queried. Image survey names have the form
-  survey@site, e.g. <tt>"dss2@cadc"</tt>. The image survey address and query format are
+  survey@site, e.g. <span style="font-family: monospace;">"dss2@cadc"</span>. The image survey address and query format are
   stored in a record called imsurvey in the image survey configuration file.
   </dd>
   </dl>
@@ -35,7 +35,7 @@ adumpim: Image survey access debugging task
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>The name of the output query results file. The query results are written
   to the output file without modification, but at present they are implicitly
-  assumed to be in fits format. Users should append a <tt>".fits"</tt> extension to
+  assumed to be in fits format. Users should append a <span style="font-family: monospace;">".fits"</span> extension to
   the output file name if they wish the output file to be visible to IRAF
   as a FITS image.
   </dd>
@@ -67,11 +67,11 @@ adumpim: Image survey access debugging task
   </dd>
   </dl>
   <dl>
-  <dt><b>imdb = <tt>")_.imdb"</tt></b></dt>
+  <dt><b>imdb = <span style="font-family: monospace;">")_.imdb"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='imdb' Line='imdb = ")_.imdb"' -->
   <dd>The image survey configuration file. The name of the image survey configuration
   file defaults to the value of the imdb package parameter.  The default
-  configuration file is <tt>"astcat$lib/imdb.dat"</tt>.
+  configuration file is <span style="font-family: monospace;">"astcat$lib/imdb.dat"</span>.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -95,7 +95,7 @@ adumpim: Image survey access debugging task
   The image survey configuration file <i>imdb</i> contains a record for each
   supported <i>imsurvey</i>. This record contains the image survey address,
   the query format, and the output format. The default image survey configuration
-  file is <tt>"astcat$lib/imdb.dat"</tt>.
+  file is <span style="font-family: monospace;">"astcat$lib/imdb.dat"</span>.
   </p>
   <p>
   The output of adumpim can be used to refine the image survey record in the

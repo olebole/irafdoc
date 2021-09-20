@@ -57,7 +57,7 @@ prcache: Show process cache, or lock a process into the cache
   </p>
   <p>
   Here, 07 is the process slot number as required by <i>flprcache</i> to
-  disconnect the process.  The name <tt>"lyra"</tt> is the name of the node in the
+  disconnect the process.  The name <span style="font-family: monospace;">"lyra"</span> is the name of the node in the
   local network on which the process is executing; this is not normally
   the local node.  In the example, 17763 (hex 4563X) is the process number
   (pid) of the executable.  H indicates that the task is hibernating,

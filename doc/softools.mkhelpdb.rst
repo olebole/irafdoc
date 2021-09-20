@@ -23,18 +23,18 @@ mkhelpdb: Make (compile) a help database
   <h3>Parameters</h3>
   <!-- BeginSection: 'PARAMETERS' -->
   <dl>
-  <dt><b>helpdir = <tt>"lib$root.hd"</tt></b></dt>
+  <dt><b>helpdir = <span style="font-family: monospace;">"lib$root.hd"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='helpdir' Line='helpdir = "lib$root.hd"' -->
-  <dd>The filename of the root help directory file (<tt>".hd"</tt> file) defining the
+  <dd>The filename of the root help directory file (<span style="font-family: monospace;">".hd"</span> file) defining the
   help tree to be updated.  By convention this is <i>root.hd</i> in some
   directory.
   </dd>
   </dl>
   <dl>
-  <dt><b>helpdb = <tt>"lib$helpdb.mip"</tt></b></dt>
+  <dt><b>helpdb = <span style="font-family: monospace;">"lib$helpdb.mip"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='helpdb' Line='helpdb = "lib$helpdb.mip"' -->
   <dd>The filename of the help database file to be written.  By convention this
-  is <i>helpdb.mip</i> in some directory (the <tt>".mip"</tt> signifies that the file
+  is <i>helpdb.mip</i> in some directory (the <span style="font-family: monospace;">".mip"</span> signifies that the file
   format is machine independent).
   </dd>
   </dl>
@@ -51,10 +51,10 @@ mkhelpdb: Make (compile) a help database
   <h3>Description</h3>
   <!-- BeginSection: 'DESCRIPTION' -->
   <p>
-  The <i>mkhelpdb</i> task descends a tree of help directory (<tt>".hd"</tt>) files and
+  The <i>mkhelpdb</i> task descends a tree of help directory (<span style="font-family: monospace;">".hd"</span>) files and
   compiles a binary help database from the information therein.  The help
   database is used to speed global searches when help is requested for a
-  module, the <tt>".hlp"</tt> file for which might be anywhere in the system.
+  module, the <span style="font-family: monospace;">".hlp"</span> file for which might be anywhere in the system.
   The help database defines the packages and modules in the help database,
   and stores the filenames of the associated help files.  No actual help text
   is stored in the help database, only sufficient index information to find

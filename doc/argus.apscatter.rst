@@ -37,7 +37,7 @@ apscatter: Fit and remove scattered light
   </dd>
   </dl>
   <dl>
-  <dt><b>apertures = <tt>""</tt></b></dt>
+  <dt><b>apertures = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
   <dd>Apertures to recenter, resize, trace, and extract.  All apertures are
   used to define the scattered light region.  This only applies
@@ -45,12 +45,12 @@ apscatter: Fit and remove scattered light
   apertures defined with the automatic finding algorithm or interactively
   are always selected.  The syntax is a list comma separated ranges
   where a range can be a single aperture number, a hyphen separated
-  range of aperture numbers, or a range with a step specified by <tt>"x&lt;step&gt;"</tt>;
-  for example, <tt>"1,3-5,9-12x2"</tt>.
+  range of aperture numbers, or a range with a step specified by <span style="font-family: monospace;">"x&lt;step&gt;"</span>;
+  for example, <span style="font-family: monospace;">"1,3-5,9-12x2"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>scatter = <tt>""</tt></b></dt>
+  <dt><b>scatter = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='scatter' Line='scatter = ""' -->
   <dd>List of scattered light images.  This is the scattered light subtracted
   from the input image.  If no list is given or the end of the list is
@@ -59,16 +59,16 @@ apscatter: Fit and remove scattered light
   </dd>
   </dl>
   <dl>
-  <dt><b>references = <tt>""</tt></b></dt>
+  <dt><b>references = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='references' Line='references = ""' -->
   <dd>List of reference images to be used to define apertures for the input
   images.  When a reference image is given it supersedes apertures
-  previously defined for the input image. The list may be null, <tt>""</tt>, or
+  previously defined for the input image. The list may be null, <span style="font-family: monospace;">""</span>, or
   any number of images less than or equal to the list of input images.
   There are three special words which may be used in place of an image
-  name.  The word <tt>"last"</tt> refers to the last set of apertures written to
-  the database.  The word <tt>"OLD"</tt> requires that an entry exist
-  and the word <tt>"NEW"</tt> requires that the entry not exist for each input image.
+  name.  The word <span style="font-family: monospace;">"last"</span> refers to the last set of apertures written to
+  the database.  The word <span style="font-family: monospace;">"OLD"</span> requires that an entry exist
+  and the word <span style="font-family: monospace;">"NEW"</span> requires that the entry not exist for each input image.
   </dd>
   </dl>
   <dl>
@@ -166,18 +166,18 @@ apscatter: Fit and remove scattered light
   </dd>
   </dl>
   <dl>
-  <dt><b>apscat1 = <tt>""</tt></b></dt>
+  <dt><b>apscat1 = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apscat1' Line='apscat1 = ""' -->
   <dd>Fitting parameters across the dispersion.  This references an additional
-  set of parameters for the ICFIT package.  The default is the <tt>"apscat1"</tt>
+  set of parameters for the ICFIT package.  The default is the <span style="font-family: monospace;">"apscat1"</span>
   parameter set.  See below for additional information.
   </dd>
   </dl>
   <dl>
-  <dt><b>apscat2 = <tt>""</tt></b></dt>
+  <dt><b>apscat2 = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apscat2' Line='apscat2 = ""' -->
   <dd>Fitting parameters along the dispersion.  This references an additional
-  set of parameters for the ICFIT package.  The default is the <tt>"apscat2"</tt>
+  set of parameters for the ICFIT package.  The default is the <span style="font-family: monospace;">"apscat2"</span>
   parameter set.  See below for additional information.
   </dd>
   </dl>
@@ -189,17 +189,17 @@ apscatter: Fit and remove scattered light
   for fitting the scattered light across the dispersion and along the
   dispersion.  The default parameter sets are <b>apscat1</b> and <b>apscat2</b>.
   The parameters may be examined and edited by either typing their names
-  or by typing <tt>":e"</tt> when editing the main parameter set with <b>eparam</b>
+  or by typing <span style="font-family: monospace;">":e"</span> when editing the main parameter set with <b>eparam</b>
   and with the cursor pointing at the appropriate parameter set name.
   These parameters are used by the ICFIT package and a further
   description may be found there.
   </p>
   <dl>
-  <dt><b>function = <tt>"spline3"</tt> (apscat1 and apscat2)</b></dt>
+  <dt><b>function = <span style="font-family: monospace;">"spline3"</span> (apscat1 and apscat2)</b></dt>
   <!-- Sec='ICFIT PARAMETERS FOR FITTING THE SCATTERED LIGHT' Level=0 Label='function' Line='function = "spline3" (apscat1 and apscat2)' -->
   <dd>Fitting function for the scattered light across and along the dispersion.
-  The choices are <tt>"legendre"</tt> polynomial, <tt>"chebyshev"</tt> polynomial,
-  linear spline (<tt>"spline1"</tt>), and cubic spline (<tt>"spline3"</tt>).
+  The choices are <span style="font-family: monospace;">"legendre"</span> polynomial, <span style="font-family: monospace;">"chebyshev"</span> polynomial,
+  linear spline (<span style="font-family: monospace;">"spline1"</span>), and cubic spline (<span style="font-family: monospace;">"spline3"</span>).
   </dd>
   </dl>
   <dl>
@@ -209,10 +209,10 @@ apscatter: Fit and remove scattered light
   </dd>
   </dl>
   <dl>
-  <dt><b>sample = <tt>"*"</tt> (apscat1 and apscat2)</b></dt>
+  <dt><b>sample = <span style="font-family: monospace;">"*"</span> (apscat1 and apscat2)</b></dt>
   <!-- Sec='ICFIT PARAMETERS FOR FITTING THE SCATTERED LIGHT' Level=0 Label='sample' Line='sample = "*" (apscat1 and apscat2)' -->
-  <dd>Sample regions for fitting points.  Intervals are separated by <tt>","</tt> and an
-  interval may be one point or a range separated by <tt>":"</tt>.
+  <dd>Sample regions for fitting points.  Intervals are separated by <span style="font-family: monospace;">","</span> and an
+  interval may be one point or a range separated by <span style="font-family: monospace;">":"</span>.
   </dd>
   </dl>
   <dl>
@@ -302,7 +302,7 @@ apscatter: Fit and remove scattered light
   light determination and fitting is done interactively (the
   <i>interactive</i> parameter set to yes) then the user is queried
   whether or not to do the fitting and subtraction for each image.  The
-  responses are <tt>"yes"</tt>, <tt>"no"</tt>, <tt>"YES"</tt>, or <tt>"NO"</tt>, where the upper case
+  responses are <span style="font-family: monospace;">"yes"</span>, <span style="font-family: monospace;">"no"</span>, <span style="font-family: monospace;">"YES"</span>, or <span style="font-family: monospace;">"NO"</span>, where the upper case
   queries suppress this query for the following images.  When the task is
   interactive there are further queries for each step of the operation
   which may also be answered both individually or collectively for all
@@ -312,7 +312,7 @@ apscatter: Fit and remove scattered light
   When the scattered light operation is done interactively the user may
   set the fitting parameters for the scattered light functions both
   across and along the dispersion interactively.  Initially the central
-  line or column is used but after exiting (with <tt>'q'</tt>) a prompt is given
+  line or column is used but after exiting (with <span style="font-family: monospace;">'q'</span>) a prompt is given
   for selecting additional lines or columns and for changing the buffer
   distance.  Note that the point of the interactive stage is to set the
   fitting parameters.  When the entire image is finally fit the last set
@@ -348,7 +348,7 @@ apscatter: Fit and remove scattered light
   images:
   </p>
   <p>
-  	cl&gt; apscatter im* <tt>""</tt> scatter=<tt>"s//im*"</tt> ref=im1 interact-
+  	cl&gt; apscatter im* <span style="font-family: monospace;">""</span> scatter=<span style="font-family: monospace;">"s//im*"</span> ref=im1 interact-
   </p>
   <p>
   The prefix s is added to the original names for the scattered light.
@@ -361,10 +361,10 @@ apscatter: Fit and remove scattered light
   <dl>
   <dt><b>APSCATTER V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='APSCATTER' Line='APSCATTER V2.11' -->
-  <dd>The <tt>"apertures"</tt> parameter can be used to select apertures for resizing,
+  <dd>The <span style="font-family: monospace;">"apertures"</span> parameter can be used to select apertures for resizing,
   recentering, tracing, and extraction.  This parameter name was previously
   used for selecting apertures in the recentering algorithm.  The new
-  parameter name for this is now <tt>"aprecenter"</tt>.
+  parameter name for this is now <span style="font-family: monospace;">"aprecenter"</span>.
   </dd>
   </dl>
   <!-- EndSection:   'REVISIONS' -->

@@ -76,13 +76,13 @@ tdump: Dump the contents of a table to an ASCII file.
   <dl>
   <dt><b>(cdfile = STDOUT) [file name]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(cdfile = STDOUT) [file name]' -->
-  <dd>If 'cdfile' is not null (i.e., it is not passed a value of <tt>""</tt>)
+  <dd>If 'cdfile' is not null (i.e., it is not passed a value of <span style="font-family: monospace;">""</span>)
   then the column definitions will be written
   to an output file having the name passed to 'cdfile'.
   (Note:  A space is not null.)  The column definitions consist of
-  the column name, data type (<tt>"R"</tt> for real,
-  <tt>"D"</tt> for double, <tt>"I"</tt> for integer, <tt>"B"</tt> for boolean,
-  or <tt>"CH*n"</tt> for character strings of length n), print format, and units.
+  the column name, data type (<span style="font-family: monospace;">"R"</span> for real,
+  <span style="font-family: monospace;">"D"</span> for double, <span style="font-family: monospace;">"I"</span> for integer, <span style="font-family: monospace;">"B"</span> for boolean,
+  or <span style="font-family: monospace;">"CH*n"</span> for character strings of length n), print format, and units.
   For columns of arrays,
   the array size is shown in square brackets appended to the data type.
   </dd>
@@ -90,7 +90,7 @@ tdump: Dump the contents of a table to an ASCII file.
   <dl>
   <dt><b>(pfile = STDOUT) [file name]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(pfile = STDOUT) [file name]' -->
-  <dd>If 'pfile' is not null (i.e., it is not passed a value of <tt>""</tt>) 
+  <dd>If 'pfile' is not null (i.e., it is not passed a value of <span style="font-family: monospace;">""</span>) 
   then the header parameters will be written
   to an output file with the name passed to 'pfile'.
   This file will not be created
@@ -100,14 +100,14 @@ tdump: Dump the contents of a table to an ASCII file.
   <dl>
   <dt><b>(datafile = STDOUT) [file name]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(datafile = STDOUT) [file name]' -->
-  <dd>If 'datafile' is not null (i.e., it is not passed a value of <tt>""</tt>) then 
+  <dd>If 'datafile' is not null (i.e., it is not passed a value of <span style="font-family: monospace;">""</span>) then 
   the table data will be written
   to an output file with the name passed to 'datafile'.
   This file will not be created if the input table is empty.
   </dd>
   </dl>
   <dl>
-  <dt><b>(columns = <tt>""</tt>) [string]</b></dt>
+  <dt><b>(columns = <span style="font-family: monospace;">""</span>) [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(columns = "") [string]' -->
   <dd>The names of the columns to be printed.
   A null value causes all columns to be printed.
@@ -115,9 +115,9 @@ tdump: Dump the contents of a table to an ASCII file.
   of either column names or column name templates that include wildcards.
   Individual column names or templates are separated by commas or white space.
   This list of column names can be placed in a list file and 'column'
-  will then be passed the file name preceded by a <tt>"@"</tt> character.
+  will then be passed the file name preceded by a <span style="font-family: monospace;">"@"</span> character.
   If the first non-white character in the column template
-  is the negation character (either <tt>"~"</tt> or <tt>"!"</tt>)
+  is the negation character (either <span style="font-family: monospace;">"~"</span> or <span style="font-family: monospace;">"!"</span>)
   the columns NOT named in the template will be printed.
   The 'tlcol' task (with the 'nlist' parameter set to 1) may be used 
   to generate a list of column names so there is no question about spelling.
@@ -125,17 +125,17 @@ tdump: Dump the contents of a table to an ASCII file.
   </dd>
   </dl>
   <dl>
-  <dt><b>(rows = <tt>"-"</tt>) [string]</b></dt>
+  <dt><b>(rows = <span style="font-family: monospace;">"-"</span>) [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(rows = "-") [string]' -->
   <dd>The range of rows to be printed.
-  The default of <tt>"-"</tt> means print all rows.
-  The first ten rows could be specified as 'rows=<tt>"1-10"</tt>'.
+  The default of <span style="font-family: monospace;">"-"</span> means print all rows.
+  The first ten rows could be specified as 'rows=<span style="font-family: monospace;">"1-10"</span>'.
   To print the first ten rows and all rows from 900 through
-  the last (inclusive), use 'rows=<tt>"1-10,900-"</tt>'.
-  Setting 'rows=<tt>"1,3,7,23"</tt>' will print only those four rows.
+  the last (inclusive), use 'rows=<span style="font-family: monospace;">"1-10,900-"</span>'.
+  Setting 'rows=<span style="font-family: monospace;">"1,3,7,23"</span>' will print only those four rows.
   It is not an error to specify rows larger than the largest row number;
   they will simply be ignored.
-  Type <tt>"help xtools.ranges"</tt> for more information.
+  Type <span style="font-family: monospace;">"help xtools.ranges"</span> for more information.
   </dd>
   </dl>
   <dl>
@@ -157,7 +157,7 @@ tdump: Dump the contents of a table to an ASCII file.
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1.  Dump the table <tt>"junk.tab"</tt> to STDOUT:
+  1.  Dump the table <span style="font-family: monospace;">"junk.tab"</span> to STDOUT:
   </p>
   <pre>
   
@@ -165,7 +165,7 @@ tdump: Dump the contents of a table to an ASCII file.
   
   </pre>
   <p>
-  2.  Dump <tt>"junk.tab"</tt>, but with the order of the columns rearranged:
+  2.  Dump <span style="font-family: monospace;">"junk.tab"</span>, but with the order of the columns rearranged:
   </p>
   <pre>
   
@@ -175,7 +175,7 @@ tdump: Dump the contents of a table to an ASCII file.
        tt&gt; tdump junk.tab columns=@colnames.lis
   </pre>
   <p>
-  3.  Dump only the first 100 rows of the file <tt>"big.fits"</tt>:
+  3.  Dump only the first 100 rows of the file <span style="font-family: monospace;">"big.fits"</span>:
   </p>
   <pre>
   	tt&gt; tdump big.fits rows="1-100"
@@ -196,7 +196,7 @@ tdump: Dump the contents of a table to an ASCII file.
   tprint, tlcol, tcreate, ranges
   </p>
   <p>
-  Type <tt>"help tables opt=sys"</tt> for a higher-level description of the 'tables' 
+  Type <span style="font-family: monospace;">"help tables opt=sys"</span> for a higher-level description of the 'tables' 
   package.
   </p>
   

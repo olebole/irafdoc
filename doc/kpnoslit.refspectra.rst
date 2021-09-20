@@ -37,21 +37,21 @@ refspectra: Assign reference spectra to observations
   names when using record number extension format.  The syntax of this
   list is comma separated record numbers or ranges of record numbers.  A
   range consists of two numbers separated by a hyphen. An example of this
-  syntax is <tt>"1-5,13,17-19"</tt>.  A null list (<tt>""</tt>) may
+  syntax is <span style="font-family: monospace;">"1-5,13,17-19"</span>.  A null list (<span style="font-family: monospace;">""</span>) may
   be used if no record number extensions are desired.  This is a
   positional query parameter only if the record format is specified with
   the <i>recformat</i> parameter.
   </dd>
   </dl>
   <dl>
-  <dt><b>references = <tt>"*.imh"</tt></b></dt>
+  <dt><b>references = <span style="font-family: monospace;">"*.imh"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='references' Line='references = "*.imh"' -->
-  <dd>List of reference spectra to be assigned or a <tt>"reference spectra assignment
-  table"</tt> (see DESCRIPTION section).
+  <dd>List of reference spectra to be assigned or a <span style="font-family: monospace;">"reference spectra assignment
+  table"</span> (see DESCRIPTION section).
   </dd>
   </dl>
   <dl>
-  <dt><b>apertures = <tt>""</tt></b></dt>
+  <dt><b>apertures = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
   <dd>List of apertures to be SELECTED from the input list of spectra.  If no list
   is specified then all apertures are selected.  The syntax is the same as the
@@ -59,7 +59,7 @@ refspectra: Assign reference spectra to observations
   </dd>
   </dl>
   <dl>
-  <dt><b>refaps = <tt>""</tt></b></dt>
+  <dt><b>refaps = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='refaps' Line='refaps = ""' -->
   <dd>List of reference spectra apertures to be SELECTED.  If no list is specified
   then all apertures are selected.  The syntax is the same as the record number
@@ -73,14 +73,14 @@ refspectra: Assign reference spectra to observations
   If the aperture numbers are not ignored then only the reference spectra with
   the same aperture number as a particular input spectra are used when assigning
   reference spectra.  Otherwise all the reference spectra are used.  This does
-  not apply to the <tt>"match"</tt> and <tt>"average"</tt> options which always ignore the aperture
+  not apply to the <span style="font-family: monospace;">"match"</span> and <span style="font-family: monospace;">"average"</span> options which always ignore the aperture
   numbers.  Note that this parameter applies to relating reference spectra to
   input spectra and does not override the aperture selections on the input
   spectra and reference spectra.
   </dd>
   </dl>
   <dl>
-  <dt><b>select = <tt>"interp"</tt></b></dt>
+  <dt><b>select = <span style="font-family: monospace;">"interp"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='select' Line='select = "interp"' -->
   <dd>Selection method for assigning reference spectra.  The methods are:
   <dl>
@@ -137,24 +137,24 @@ refspectra: Assign reference spectra to observations
   </dd>
   </dl>
   <dl>
-  <dt><b>sort = <tt>"jd"</tt></b></dt>
+  <dt><b>sort = <span style="font-family: monospace;">"jd"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sort' Line='sort = "jd"' -->
   <dd>Image header keyword to be used as the sorting parameter for selection
   based on order.  The header parameter must be numeric but otherwise may
   be anything.  Common sorting parameters are times or positions.
-  A null string, <tt>""</tt>, or the word <tt>"none"</tt> may be use to disable the sorting
+  A null string, <span style="font-family: monospace;">""</span>, or the word <span style="font-family: monospace;">"none"</span> may be use to disable the sorting
   parameter.
   </dd>
   </dl>
   <dl>
-  <dt><b>group = <tt>"ljd"</tt></b></dt>
+  <dt><b>group = <span style="font-family: monospace;">"ljd"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='group' Line='group = "ljd"' -->
   <dd>Image header keyword to be used to group spectra.  For those selection
   methods which use the group parameter the reference and object spectra must
   have identical values for this keyword.  This can be anything but it must
   be constant within a group.  Common grouping parameters are the date of
-  observation <tt>"date-obs"</tt> (provided it does not change over a night) or the
-  local Julian day number.  A null string, <tt>""</tt>, or the word <tt>"none"</tt> may be use
+  observation <span style="font-family: monospace;">"date-obs"</span> (provided it does not change over a night) or the
+  local Julian day number.  A null string, <span style="font-family: monospace;">""</span>, or the word <span style="font-family: monospace;">"none"</span> may be use
   to disable the grouping parameter.
   </dd>
   </dl>
@@ -194,10 +194,10 @@ refspectra: Assign reference spectra to observations
   </dd>
   </dl>
   <dl>
-  <dt><b>logfiles = <tt>"STDOUT,logfile"</tt></b></dt>
+  <dt><b>logfiles = <span style="font-family: monospace;">"STDOUT,logfile"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfiles' Line='logfiles = "STDOUT,logfile"' -->
   <dd>List of log files for recording reference spectra assignments.
-  The file STDOUT prints to the standard output.  If not specified (<tt>""</tt>)
+  The file STDOUT prints to the standard output.  If not specified (<span style="font-family: monospace;">""</span>)
   then no logs will be recorded.
   </dd>
   </dl>
@@ -246,7 +246,7 @@ refspectra: Assign reference spectra to observations
   (used as a root name) in the input list in the <b>iids/irs</b> packages.
   The input spectra may be restricted to a particular set of aperture numbers
   by the parameter <i>apertures</i>; the spectra not in the list of apertures
-  are skipped.  If the aperture list is null (i.e. specified as <tt>""</tt>) then all
+  are skipped.  If the aperture list is null (i.e. specified as <span style="font-family: monospace;">""</span>) then all
   apertures are selected.  One further selection may be made on the input
   spectra.  If the parameter <i>override</i> is no then input spectra which
   have existing reference spectra assignments (which includes the reference
@@ -255,7 +255,7 @@ refspectra: Assign reference spectra to observations
   <p>
   The reference spectra parameter <i>references</i> may take two forms.
   It may be an image list of spectra or a text file containing
-  a <tt>"reference spectrum assignment table"</tt>.  The table consists of pairs
+  a <span style="font-family: monospace;">"reference spectrum assignment table"</span>.  The table consists of pairs
   of strings/lists with the first string being a list of object spectra
   and the second string being a list of reference spectra.  If this
   table is used, then only those object spectra in the table that are also
@@ -297,14 +297,14 @@ refspectra: Assign reference spectra to observations
   <p>
   Once the appropriate reference spectra from the reference list have been
   determined for an input spectrum they are assigned using one of the
-  methods selected by the parameter <i>select</i>.  The <tt>"match"</tt> method
+  methods selected by the parameter <i>select</i>.  The <span style="font-family: monospace;">"match"</span> method
   simply pairs each element of the input spectrum list with each element
   in the reference spectrum list.  If a reference assignment table
-  is used with <tt>"match"</tt>, then only the first spectrum in the reference
+  is used with <span style="font-family: monospace;">"match"</span>, then only the first spectrum in the reference
   list for each input spectrum is assigned.
   </p>
   <p>
-  The <tt>"average"</tt> method assigns the first two spectra in the reference list
+  The <span style="font-family: monospace;">"average"</span> method assigns the first two spectra in the reference list
   ignoring aperture numbers or groups. The spectra are averaged by assigning
   equal weights.  There is no weighting based on any sort parameter.  If
   there are more than two spectra in the reference list then only the first
@@ -315,10 +315,10 @@ refspectra: Assign reference spectra to observations
   <p>
   The remaining selection methods group the spectra using a header keyword
   which must be constant within a group.  If no group parameter is specfied
-  (the null string <tt>""</tt> or the word <tt>"none"</tt>)
+  (the null string <span style="font-family: monospace;">""</span> or the word <span style="font-family: monospace;">"none"</span>)
   then grouping does not occur.  Only reference spectra with the same
   group header value as the object are assigned to an object spectrum.
-  One likely group parameter is the <tt>"date-obs"</tt> keyword.  This is usually
+  One likely group parameter is the <span style="font-family: monospace;">"date-obs"</span> keyword.  This is usually
   constant over a night at CTIO and KPNO.  At other sites this may not
   be the case.  Therefore, the task <b>setjd</b> may be used to set a
   local Julian day number which is constant over a night at any
@@ -326,8 +326,8 @@ refspectra: Assign reference spectra to observations
   </p>
   <p>
   Within a group the spectra are ordered based on a numeric image header
-  parameter specified by the <i>sort</i> parameter.  A null string <tt>""</tt> or the
-  word <tt>"null"</tt> may be used to select no sort parameter.  Parameters which are
+  parameter specified by the <i>sort</i> parameter.  A null string <span style="font-family: monospace;">""</span> or the
+  word <span style="font-family: monospace;">"null"</span> may be used to select no sort parameter.  Parameters which are
   times, as indicated by the <i>time</i> parameter, are assumed to be cyclic
   with a period of 24 hours.  The time wrap parameter defines the origin of a
   cycle and should precede the first observation and follow the last
@@ -340,7 +340,7 @@ refspectra: Assign reference spectra to observations
   <b>setairmass</b>.
   </p>
   <p>
-  The selection methods may choose the <tt>"nearest"</tt>, <tt>"preceding"</tt>, or <tt>"following"</tt>
+  The selection methods may choose the <span style="font-family: monospace;">"nearest"</span>, <span style="font-family: monospace;">"preceding"</span>, or <span style="font-family: monospace;">"following"</span>
   reference spectrum.  Alternatively, the reference wavelengths may be
   interpolated between the preceding and following reference spectra with
   weights given by the relative distances measured by the sorting parameter.
@@ -350,16 +350,16 @@ refspectra: Assign reference spectra to observations
   nearby in time or space.
   </p>
   <p>
-  The option <tt>"interp"</tt> should not be used without some thought as to the
+  The option <span style="font-family: monospace;">"interp"</span> should not be used without some thought as to the
   nature of the interpolation.  If the sorting parameter is a time (a 24 hour
   cyclic parameter as opposed to a continuous parameter such as a Julian
   date) then the user must be aware of when these times were recorded in the
-  header.  For example, let us assume that the sort parameter is <tt>"ut"</tt> and
+  header.  For example, let us assume that the sort parameter is <span style="font-family: monospace;">"ut"</span> and
   that this time was recorded in the header at the beginning of the
   exposure.  If the object spectrum exposure time is longer than the
   reference spectra exposure times, then interpolation will weight the
   preceding reference spectrum too heavily.  This problem can be circumvented
-  by using the <tt>"average"</tt> selection method along with the reference assignment
+  by using the <span style="font-family: monospace;">"average"</span> selection method along with the reference assignment
   table.  Or the sort time parameter in the headers of the spectra can be
   changes with <i>setjd</i> or <i>setairmass</i> or edited to reflect the
   values at mid-exposure (see EXAMPLES).
@@ -416,7 +416,7 @@ refspectra: Assign reference spectra to observations
   </pre>
   <p>
   3.  Use a reference assignment table to assign reference spectra to input
-  spectra using the <tt>"average"</tt> option.  First a table is created using an
+  spectra using the <span style="font-family: monospace;">"average"</span> option.  First a table is created using an
   editor.
   </p>
   <pre>
@@ -434,13 +434,13 @@ refspectra: Assign reference spectra to observations
   wildcard lists.  By default the aperture numbers must match.
   </p>
   <p>
-      cl&gt; refspec *.imh <tt>""</tt> sort=zd select=nearest time-
+      cl&gt; refspec *.imh <span style="font-family: monospace;">""</span> sort=zd select=nearest time-
   </p>
   <p>
   5.  Assign a specific reference spectrum to all apertures.
   </p>
   <p>
-      cl&gt; refspec *.imh <tt>""</tt> refer=refnite1 ignoreaps+
+      cl&gt; refspec *.imh <span style="font-family: monospace;">""</span> refer=refnite1 ignoreaps+
   </p>
   <p>
   6.  Confirm assignments.
@@ -462,13 +462,13 @@ refspectra: Assign reference spectra to observations
   </pre>
   <p>
   Because the reference spectrum list includes all spectra the
-  warning messages <tt>"Not a reference spectrum"</tt> are printed with verbose
+  warning messages <span style="font-family: monospace;">"Not a reference spectrum"</span> are printed with verbose
   output.  Remember a reference spectrum is any spectrum which has a
   reference spectrum assigned which refers to itself.
   </p>
   <p>
   7.  Assign reference spectra with weights using interpolation.  In this
-  example we want to sort by <tt>"ut"</tt> but this keyword value was 
+  example we want to sort by <span style="font-family: monospace;">"ut"</span> but this keyword value was 
   recorded at the beginning of the integration. So we first create an
   new keyword and then compute its value to be that of mid-exposure.  The
   new keyword is then used as the sorting parameter.
@@ -480,7 +480,7 @@ refspectra: Assign reference spectra to observations
       cl&gt; refspec *.imh refer=*.imh recfor- select=interp sort=utmid
   </pre>
   <p>
-  8.  Assign reference spectra using the <tt>"average"</tt> option and the reference
+  8.  Assign reference spectra using the <span style="font-family: monospace;">"average"</span> option and the reference
   assignment table with data with record number extensions.  First edit
   the file reftable:
   </p>

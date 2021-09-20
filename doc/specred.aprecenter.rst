@@ -29,28 +29,28 @@ aprecenter: Recenter apertures
   </dd>
   </dl>
   <dl>
-  <dt><b>apertures = <tt>""</tt></b></dt>
+  <dt><b>apertures = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
   <dd>Apertures to recenter, resize, trace, and extract.  This only applies
   to apertures read from the input or reference database.  Any new
   apertures defined with the automatic finding algorithm or interactively
   are always selected.  The syntax is a list comma separated ranges
   where a range can be a single aperture number, a hyphen separated
-  range of aperture numbers, or a range with a step specified by <tt>"x&lt;step&gt;"</tt>;
-  for example, <tt>"1,3-5,9-12x2"</tt>.
+  range of aperture numbers, or a range with a step specified by <span style="font-family: monospace;">"x&lt;step&gt;"</span>;
+  for example, <span style="font-family: monospace;">"1,3-5,9-12x2"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>references = <tt>""</tt></b></dt>
+  <dt><b>references = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='references' Line='references = ""' -->
   <dd>List of reference images to be used to define apertures for the input
   images.  When a reference image is given it supersedes apertures
-  previously defined for the input image. The list may be null, <tt>""</tt>, or
+  previously defined for the input image. The list may be null, <span style="font-family: monospace;">""</span>, or
   any number of images less than or equal to the list of input images.
   There are three special words which may be used in place of an image
-  name.  The word <tt>"last"</tt> refers to the last set of apertures written to
-  the database.  The word <tt>"OLD"</tt> requires that an entry exist
-  and the word <tt>"NEW"</tt> requires that the entry not exist for each input image.
+  name.  The word <span style="font-family: monospace;">"last"</span> refers to the last set of apertures written to
+  the database.  The word <span style="font-family: monospace;">"OLD"</span> requires that an entry exist
+  and the word <span style="font-family: monospace;">"NEW"</span> requires that the entry not exist for each input image.
   </dd>
   </dl>
   <dl>
@@ -104,7 +104,7 @@ aprecenter: Recenter apertures
   </dd>
   </dl>
   <dl>
-  <dt><b>aprecenter = <tt>""</tt></b></dt>
+  <dt><b>aprecenter = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='aprecenter' Line='aprecenter = ""' -->
   <dd>List of apertures to be used in shift calculation.
   </dd>
@@ -149,7 +149,7 @@ aprecenter: Recenter apertures
   are redefined by centering at the specified dispersion line using the
   <b>center1d</b> algorithm with centering parameters from <b>apedit</b>.
   Normally this is done when inheriting apertures from an aperture
-  reference image.  The recentering does not change the <tt>"trace"</tt> of the
+  reference image.  The recentering does not change the <span style="font-family: monospace;">"trace"</span> of the
   aperture but simple adds a shift across the dispersion axis.
   </p>
   <p>
@@ -183,12 +183,12 @@ aprecenter: Recenter apertures
   aperture positions and any other parameters may also be edited with the
   aperture editing function if selected by the <i>apedit</i> parameter and
   the task is run interactively.  The recentering algorithm may be run
-  from the aperture editor using the <tt>'g'</tt> keystroke.
+  from the aperture editor using the <span style="font-family: monospace;">'g'</span> keystroke.
   </p>
   <p>
   If the task is interactive the user is queried whether to perform
   various steps on each image.  The queries may be answered with one of
-  the four values <tt>"yes"</tt>, <tt>"no"</tt>, <tt>"YES"</tt> and <tt>"NO"</tt>, where an upper case
+  the four values <span style="font-family: monospace;">"yes"</span>, <span style="font-family: monospace;">"no"</span>, <span style="font-family: monospace;">"YES"</span> and <span style="font-family: monospace;">"NO"</span>, where an upper case
   response suppresses all further queries to this question.
   </p>
   <p>
@@ -207,10 +207,10 @@ aprecenter: Recenter apertures
   <dl>
   <dt><b>APRECENTER V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='APRECENTER' Line='APRECENTER V2.11' -->
-  <dd>The <tt>"apertures"</tt> parameter can be used to select apertures for resizing,
+  <dd>The <span style="font-family: monospace;">"apertures"</span> parameter can be used to select apertures for resizing,
   recentering, tracing, and extraction.  This parameter name was previously
   used for selecting apertures in the recentering algorithm.  The new
-  parameter name for this is now <tt>"aprecenter"</tt>.
+  parameter name for this is now <span style="font-family: monospace;">"aprecenter"</span>.
   </dd>
   </dl>
   <!-- EndSection:   'REVISIONS' -->

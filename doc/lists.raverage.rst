@@ -27,7 +27,7 @@ raverage: Running average, standard deviation, and envelope
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>Input one or two column list of numbers.  Any line that can't be read
   as one or two numbers is ignored which means comments are allowed.  The
-  special name <tt>"STDIN"</tt> may be used to read the numbers from the standard
+  special name <span style="font-family: monospace;">"STDIN"</span> may be used to read the numbers from the standard
   input pipe or redirection.
   </dd>
   </dl>
@@ -73,7 +73,7 @@ raverage: Running average, standard deviation, and envelope
   </p>
   <p>
   The input may be a physical file or the standard input.  The standard
-  input is specified by the special name <tt>"STDIN"</tt>.  All the input values
+  input is specified by the special name <span style="font-family: monospace;">"STDIN"</span>.  All the input values
   are read and stored in a temporary file prior to computing the output.
   A temporary file is also used if the input is to be numerically sorted
   by increasing value of the first column.  Note that the sorting is done
@@ -94,7 +94,7 @@ raverage: Running average, standard deviation, and envelope
          upper - optional upper envelope value
   </pre>
   <p>
-  The <tt>"number"</tt> of values may be less than the window if the window size is
+  The <span style="font-family: monospace;">"number"</span> of values may be less than the window if the window size is
   larger than the list.
   </p>
   <p>
@@ -121,7 +121,7 @@ raverage: Running average, standard deviation, and envelope
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  Compute the running average with a window of 100 values on the list of
-  numbers in file <tt>"numbers"</tt>.
+  numbers in file <span style="font-family: monospace;">"numbers"</span>.
   </p>
   <pre>
   	

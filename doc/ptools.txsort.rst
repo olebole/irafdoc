@@ -35,8 +35,8 @@ txsort: Sort a list of apphot/daophot text databases
   <dd>The field to be sorted on. <i>Field</i> may be any quantity defined by
   the APPHOT/DAOPHOT #K and #N keywords. The keywords may be
   of type integer or real, in which case a numeric sort is performed,
-  boolean, in which case the boolean constant <tt>"no"</tt> has a smaller value
-  than <tt>"yes"</tt>, or character in which case an alphabetic sort is performed.
+  boolean, in which case the boolean constant <span style="font-family: monospace;">"no"</span> has a smaller value
+  than <span style="font-family: monospace;">"yes"</span>, or character in which case an alphabetic sort is performed.
   </dd>
   </dl>
   <dl>
@@ -55,11 +55,11 @@ txsort: Sort a list of apphot/daophot text databases
   specifier <i>field</i>. By default the sort is performed in increasing order
   of the value
   of <i>field</i>, but a reverse sort can be performed by 
-  setting <i>ascend</i> = <tt>"no"</tt>.
+  setting <i>ascend</i> = <span style="font-family: monospace;">"no"</span>.
   </p>
   <p>
   If <i>field</i> is a real or integer quantity the sort is numeric; if boolean
-  the boolean constant <tt>"no"</tt> is assumed to have a smaller value than <tt>"yes"</tt>; if
+  the boolean constant <span style="font-family: monospace;">"no"</span> is assumed to have a smaller value than <span style="font-family: monospace;">"yes"</span>; if
   character the sort is alphabetic.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->

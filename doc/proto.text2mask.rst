@@ -86,8 +86,8 @@ text2mask: Convert text description to pixel mask
   are given, separated by whitespace, they define a rectangular region.
   The four numbers are the pixel coordinates for the starting column,
   the ending column, the starting line, and the ending line.  This format
-  is the same as the old (pre-V2.11) <tt>"fixpix"</tt> format.  This task may
-  be used to convert these old <tt>"fixpix"</tt> data files to pixel masks (as used
+  is the same as the old (pre-V2.11) <span style="font-family: monospace;">"fixpix"</span> format.  This task may
+  be used to convert these old <span style="font-family: monospace;">"fixpix"</span> data files to pixel masks (as used
   by the new <b>fixpix</b> task) or to create pixel masks.
   </p>
   <p>
@@ -103,7 +103,7 @@ text2mask: Convert text description to pixel mask
   pixel mask images may be made in a variety of ways.  Any task which produces
   and modifies image values may be used.  Some useful tasks are
   <b>imexpr, imreplace, imcopy,</b> and <b>mkpattern</b>.  If a new image
-  is specified with the explicit <tt>".pl"</tt> extension then the pixel mask
+  is specified with the explicit <span style="font-family: monospace;">".pl"</span> extension then the pixel mask
   format is produced.  Another way to make masks are with the
   task <b>ccdmask</b>.  The task <b>ccdmask</b> is specialized to make a mask
   of bad pixels from flat fields or, even better, from the ratio of

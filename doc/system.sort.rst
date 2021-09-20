@@ -37,7 +37,7 @@ sort: Sort a text file
   <pre>
   	12   abc   34   56
   </pre>
-  has four columns, <tt>"abc"</tt> being in the second.
+  has four columns, <span style="font-family: monospace;">"abc"</span> being in the second.
   </dd>
   </dl>
   <dl>
@@ -80,7 +80,7 @@ sort: Sort a text file
   	cl&gt; set | sort
   </p>
   <p>
-  2. Sort the contents of <tt>"file"</tt>, in reverse ASCII order, ignoring the
+  2. Sort the contents of <span style="font-family: monospace;">"file"</span>, in reverse ASCII order, ignoring the
   contents of columns 1 through 4.
   </p>
   <p>

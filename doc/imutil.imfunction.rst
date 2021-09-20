@@ -196,12 +196,12 @@ imfunction: Apply a single argument function to a list of images
   be of type real or double respectively. If the input image is type
   ushort then the output image will be type real. If the input image is one of
   the remaining integer data types, then the output image will be type
-  real, unless function is <tt>"abs"</tt> or <tt>"neg"</tt>, in which case the output
+  real, unless function is <span style="font-family: monospace;">"abs"</span> or <span style="font-family: monospace;">"neg"</span>, in which case the output
   data type will be the same as the input data type.
   </p>
   <p>
   Values of the machine dependent constants MAX_REAL and MAX_EXPONENT can be
-  found in the file <tt>"hlib$mach.h"</tt>. 
+  found in the file <span style="font-family: monospace;">"hlib$mach.h"</span>. 
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Examples</h3>

@@ -45,22 +45,22 @@ tximage: Extract images from rows of 3-D tables.
   <p>
   Since one input table may generate several output images, the task adopts
   the following naming scheme for these output images: their names are
-  built by appending a suffix to the name given in parameter <tt>"output"</tt>.
-  The suffix has the form <tt>"_rXXXX"</tt>, where XXXX stands for the row number 
+  built by appending a suffix to the name given in parameter <span style="font-family: monospace;">"output"</span>.
+  The suffix has the form <span style="font-family: monospace;">"_rXXXX"</span>, where XXXX stands for the row number 
   in the input table. The suffix is appended before the file name extension.
-  The task recognizes as valid image name extensions the values <tt>".??h"</tt>,
-  <tt>".fits"</tt> and <tt>".fit"</tt>. Any other extension is assumed to be part of the root
+  The task recognizes as valid image name extensions the values <span style="font-family: monospace;">".??h"</span>,
+  <span style="font-family: monospace;">".fits"</span> and <span style="font-family: monospace;">".fit"</span>. Any other extension is assumed to be part of the root
   file name. If only one row is extracted, no suffixing takes place.
   </p>
   <p>
   NOTE: Be careful when using a wildcard for the extension.
-  If you have the files <tt>"table.tab"</tt> and <tt>"table.lis"</tt> in the current directory,
-  for example, then the command <tt>"tximage tab* test/"</tt> would expand both files 
-  to the subdirectory <tt>"test"</tt>.
+  If you have the files <span style="font-family: monospace;">"table.tab"</span> and <span style="font-family: monospace;">"table.lis"</span> in the current directory,
+  for example, then the command <span style="font-family: monospace;">"tximage tab* test/"</span> would expand both files 
+  to the subdirectory <span style="font-family: monospace;">"test"</span>.
   </p>
   <p>
   Basic column information describing the column where the image came from
-  is written into the image header in the <tt>"COLDATA"</tt> keyword. This information
+  is written into the image header in the <span style="font-family: monospace;">"COLDATA"</span> keyword. This information
   can be used later by task 'tiimage' to re-insert the image into a cell of 
   a 3-D table.
   </p>
@@ -108,8 +108,8 @@ tximage: Extract images from rows of 3-D tables.
   cl&gt; tximage "table.tab[c:FLUX][r:row=(11:13)]" image
   </pre>
   <p>
-  This will generate three images named <tt>"image_r0011"</tt>, <tt>"image_r0012"</tt>
-  and <tt>"image_r0013"</tt>.
+  This will generate three images named <span style="font-family: monospace;">"image_r0011"</span>, <span style="font-family: monospace;">"image_r0012"</span>
+  and <span style="font-family: monospace;">"image_r0013"</span>.
   </p>
   <!-- EndSection:   'EXAMPLES' -->
   <h3>Bugs</h3>

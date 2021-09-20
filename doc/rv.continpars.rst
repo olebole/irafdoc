@@ -23,28 +23,28 @@ continpars: Edit continuum subtraction parameters
   <h3>Parameters</h3>
   <!-- BeginSection: 'PARAMETERS' -->
   <dl>
-  <dt><b>c_sample = <tt>"*"</tt></b></dt>
+  <dt><b>c_sample = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='c_sample' Line='c_sample = "*"' -->
-  <dd>Lines or columns to be used in the fits.  The default value (<tt>"*"</tt>) selects
+  <dd>Lines or columns to be used in the fits.  The default value (<span style="font-family: monospace;">"*"</span>) selects
   all pixels.  Type <i>help ranges</i> for a complete description of the
   syntax.
   </dd>
   </dl>
   <dl>
-  <dt><b>c_function = <tt>"spline3"</tt></b></dt>
+  <dt><b>c_function = <span style="font-family: monospace;">"spline3"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='c_function' Line='c_function = "spline3"' -->
   <dd>Continuum function to be fit to the image lines or columns.  The functions are
-  <tt>"legendre"</tt> (Legendre polynomial), <tt>"chebyshev"</tt> (Chebyshev polynomial),
-  <tt>"spline1"</tt> (linear spline), and <tt>"spline3"</tt> (cubic spline).  The functions
+  <span style="font-family: monospace;">"legendre"</span> (Legendre polynomial), <span style="font-family: monospace;">"chebyshev"</span> (Chebyshev polynomial),
+  <span style="font-family: monospace;">"spline1"</span> (linear spline), and <span style="font-family: monospace;">"spline3"</span> (cubic spline).  The functions
   may be abbreviated.
   </dd>
   </dl>
   <dl>
-  <dt><b>c_interactive = <tt>"no"</tt></b></dt>
+  <dt><b>c_interactive = <span style="font-family: monospace;">"no"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='c_interactive' Line='c_interactive = "no"' -->
   <dd>Interactively fit the continuum? If set to yes, each spectrum will be fit
   interactively as they are read into the task if the <i>fxcor.continuum</i>
-  parameter requires it.  The <i>fxcor</i> keystroke commands <tt>'o'</tt> and <tt>'t'</tt> will
+  parameter requires it.  The <i>fxcor</i> keystroke commands <span style="font-family: monospace;">'o'</span> and <span style="font-family: monospace;">'t'</span> will
   automatically fit the continuum interactively.
   </dd>
   </dl>
@@ -115,7 +115,7 @@ continpars: Edit continuum subtraction parameters
   <p>
   Users who require the full ability of the <i>onedspec.continuum</i> task to
   supply another form of output spectrum, such as the ratio of the fit, or
-  who wish to make use of the <tt>"clean"</tt> option, should use that task and disable
+  who wish to make use of the <span style="font-family: monospace;">"clean"</span> option, should use that task and disable
   continuum subtraction in the <i>rv</i> package tasks.  More functionality is
   planned for this pset in the future.
   </p>
@@ -132,7 +132,7 @@ continpars: Edit continuum subtraction parameters
   <dt><b>:unlearn	continpars</b></dt>
   <!-- Sec='TASK COLON COMMANDS' Level=0 Label='' Line=':unlearn	continpars' -->
   <dd>Reset the continpars pset parameters with their default values.
-  The argument <tt>"continpars"</tt> must be present or else the command will default
+  The argument <span style="font-family: monospace;">"continpars"</span> must be present or else the command will default
   to the <i>fxcor</i> task command.
   </dd>
   </dl>
@@ -140,7 +140,7 @@ continpars: Edit continuum subtraction parameters
   <dt><b>:update	continpars</b></dt>
   <!-- Sec='TASK COLON COMMANDS' Level=0 Label='' Line=':update	continpars' -->
   <dd>Update the continpars pset parameters with the current values.
-  The argument <tt>"continpars"</tt> must be present or else the command will default
+  The argument <span style="font-family: monospace;">"continpars"</span> must be present or else the command will default
   to the <i>fxcor</i> task command.
   </dd>
   </dl>
@@ -148,7 +148,7 @@ continpars: Edit continuum subtraction parameters
   <dt><b>:show	continpars</b></dt>
   <!-- Sec='TASK COLON COMMANDS' Level=0 Label='' Line=':show	continpars' -->
   <dd>Show the current values of the continpars pset parameters.
-  The argument <tt>"continpars"</tt> must be present or else the command will default
+  The argument <span style="font-family: monospace;">"continpars"</span> must be present or else the command will default
   to the <i>fxcor</i> task command.
   </dd>
   </dl>

@@ -40,7 +40,7 @@ rgcursor: Read the graphics cursor (makes a list)
   <p>
   While the program is waiting for the cursor to be read, i.e., whenever
   the cursor crosshairs are displayed, the terminal is said to be in
-  <tt>"cursor mode"</tt>.  While in cursor mode, various commands may be entered,
+  <span style="font-family: monospace;">"cursor mode"</span>.  While in cursor mode, various commands may be entered,
   e.g., to zoom in a feature to get a more accurate cursor position, without
   terminating the current cursor read.  To read the cursor position, enter
   any key not recognized as a cursor mode command, i.e., any lower case or
@@ -54,13 +54,13 @@ rgcursor: Read the graphics cursor (makes a list)
   The X and Y coordinates of the cursor position and other information
   comprising the cursor value are printed on the standard output when the
   cursor is read.  The cursor position may optionally be marked whenever the
-  cursor is read, by setting the <tt>":.markcur"</tt> option when in cursor mode.
+  cursor is read, by setting the <span style="font-family: monospace;">":.markcur"</span> option when in cursor mode.
   This is useful when preparing long lists to keep track of the objects
   or features that have already been marked.
   </p>
   <p>
   For additional information on <i>cursor mode</i> and the format of a cursor
-  value string, type <tt>"help cursor"</tt>.  For information on the key and string values
+  value string, type <span style="font-family: monospace;">"help cursor"</span>.  For information on the key and string values
   required by the applications program for which the cursor list is intended,
   consult the documentation for that program.
   </p>
@@ -68,7 +68,7 @@ rgcursor: Read the graphics cursor (makes a list)
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. Interactively generate a starlist (file <tt>"starlist"</tt>) to be used as input
+  1. Interactively generate a starlist (file <span style="font-family: monospace;">"starlist"</span>) to be used as input
   to another program, e.g., for digital photometry.  In this case one would
   probably want to start with a contour plot labeled in image pixel coordinates.
   </p>
@@ -100,7 +100,7 @@ rgcursor: Read the graphics cursor (makes a list)
   	&lt;crtl/z&gt;	(EOF) terminates rgcursor
   </pre>
   <p>
-  Given the above command sequence, the output file <tt>"starlist"</tt> might
+  Given the above command sequence, the output file <span style="font-family: monospace;">"starlist"</span> might
   contain the following cursor values.
   </p>
   <pre>

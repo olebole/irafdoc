@@ -26,7 +26,7 @@ head: Print the first few lines of a text file
   <dt><b>files</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='files' Line='files' -->
   <dd>The list of files to be dealt with, quite possibly given as
-  a template, such a <tt>"image*"</tt>.
+  a template, such a <span style="font-family: monospace;">"image*"</span>.
   </dd>
   </dl>
   <dl>

@@ -57,7 +57,7 @@ ahedit: Initialize the image wcs and set standard keywords
   </dd>
   </dl>
   <dl>
-  <dt><b>wcs = <tt>"none"</tt></b></dt>
+  <dt><b>wcs = <span style="font-family: monospace;">"none"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcs' Line='wcs = "none"' -->
   <dd>The default wcs status of the input images if <i>imsurveys</i> is undefined.
   The options are:
@@ -84,12 +84,12 @@ ahedit: Initialize the image wcs and set standard keywords
   </dd>
   </dl>
   <dl>
-  <dt><b>awcspars = <tt>""</tt></b></dt>
+  <dt><b>awcspars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='awcspars' Line='awcspars = ""' -->
   <dd>The default WCS parameter set. If <i>wcsedit</i> = yes and <i>imsurveys</i>
   is undefined then the awcspars parameters are used to create an approximate
   FITS WCS. For more information about the awcspars parameters type
-  <tt>"help awcspars"</tt>.
+  <span style="font-family: monospace;">"help awcspars"</span>.
   </dd>
   </dl>
   <dl>
@@ -105,12 +105,12 @@ ahedit: Initialize the image wcs and set standard keywords
   </dd>
   </dl>
   <dl>
-  <dt><b>aimpars = <tt>""</tt></b></dt>
+  <dt><b>aimpars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='aimpars' Line='aimpars = ""' -->
   <dd>The default standard image header keywords parameter set. If <i>hdredit</i> =
   yes and <i>imsurveys</i> is undefined the parameter names and values
   in <i>aimpars</i> are used to write the standard image header keywords. For more
-  information about these parameters type <tt>"help aimpars"</tt>.
+  information about these parameters type <span style="font-family: monospace;">"help aimpars"</span>.
   </dd>
   </dl>
   <dl>
@@ -127,11 +127,11 @@ ahedit: Initialize the image wcs and set standard keywords
   </dd>
   </dl>
   <dl>
-  <dt><b>imdb = <tt>"astcat$lib/imdb.dat"</tt></b></dt>
+  <dt><b>imdb = <span style="font-family: monospace;">"astcat$lib/imdb.dat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='imdb' Line='imdb = "astcat$lib/imdb.dat"' -->
   <dd>The image surveys configuration file. Imdb defaults to the value of the
   package parameter imdb. The default image surveys configuration file is
-  <tt>"astcat$lib/imdb.dat"</tt>.
+  <span style="font-family: monospace;">"astcat$lib/imdb.dat"</span>.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -156,8 +156,8 @@ ahedit: Initialize the image wcs and set standard keywords
   <i>wsystem</i>, and the image scale, orientation, and projection information
   <i>wxmag</i>, <i>wymag</i>, <i>wxrot</i>, <i>wyrot</i>, and <i>wproj</i>. For
   more information on how these quantities are defined in the image surveys
-  configuration file or the awcspars parameter set type <tt>"help imsurveys"</tt> and / or
-  <tt>"help awcspars"</tt>.
+  configuration file or the awcspars parameter set type <span style="font-family: monospace;">"help imsurveys"</span> and / or
+  <span style="font-family: monospace;">"help awcspars"</span>.
   </p>
   <p>
   If <i>hdredit</i> = yes then a standard set of keyword equal value
@@ -174,7 +174,7 @@ ahedit: Initialize the image wcs and set standard keywords
   <i>emjdobs</i>, <i>ewavlen</i>, <i>etemp</i>, and <i>epress</i>. New keyword
   values are only added to the header if keywords of the same name do not
   already exist, and if appropriate values for the keywords exists, i.e.
-  <tt>"INDEF"</tt> valued parameters will not be added to the header.
+  <span style="font-family: monospace;">"INDEF"</span> valued parameters will not be added to the header.
   </p>
   <p>
   If <i>update</i> = yes then the fIawcspars,

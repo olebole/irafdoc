@@ -44,14 +44,14 @@ doargus: Process ARGUS spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>apref = <tt>""</tt></b></dt>
+  <dt><b>apref = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apref' Line='apref = ""' -->
   <dd>Aperture reference spectrum.  This spectrum is used to define the basic
   extraction apertures and is typically a flat field spectrum.
   </dd>
   </dl>
   <dl>
-  <dt><b>flat = <tt>""</tt> (optional)</b></dt>
+  <dt><b>flat = <span style="font-family: monospace;">""</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='flat' Line='flat = "" (optional)' -->
   <dd>Flat field spectrum.  If specified the one dimensional flat field spectra
   are extracted and used to make flat field calibrations.  If a separate
@@ -60,7 +60,7 @@ doargus: Process ARGUS spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>throughput = <tt>""</tt> (optional)</b></dt>
+  <dt><b>throughput = <span style="font-family: monospace;">""</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='throughput' Line='throughput = "" (optional)' -->
   <dd>Throughput file or image.  If an image is specified, typically a blank sky
   observation, the total flux through each fiber is used to correct for fiber
@@ -71,7 +71,7 @@ doargus: Process ARGUS spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>arcs1 = <tt>""</tt> (at least one if dispersion correcting)</b></dt>
+  <dt><b>arcs1 = <span style="font-family: monospace;">""</span> (at least one if dispersion correcting)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='arcs1' Line='arcs1 = "" (at least one if dispersion correcting)' -->
   <dd>List of primary arc spectra.  These spectra are used to define the dispersion
   functions for each fiber apart from a possible zero point correction made
@@ -82,7 +82,7 @@ doargus: Process ARGUS spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>arcs2 = <tt>""</tt> (optional)</b></dt>
+  <dt><b>arcs2 = <span style="font-family: monospace;">""</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='arcs2' Line='arcs2 = "" (optional)' -->
   <dd>List of optional shift arc spectra.  Features in these secondary observations
   are used to supply a wavelength zero point shift through the observing
@@ -91,7 +91,7 @@ doargus: Process ARGUS spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>arctable = <tt>""</tt> (optional) (refspectra)</b></dt>
+  <dt><b>arctable = <span style="font-family: monospace;">""</span> (optional) (refspectra)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='arctable' Line='arctable = "" (optional) (refspectra)' -->
   <dd>Table defining arc spectra to be assigned to object
   spectra (see <b>refspectra</b>).  If not specified an assignment based
@@ -99,7 +99,7 @@ doargus: Process ARGUS spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>readnoise = <tt>"0."</tt> (apsum)</b></dt>
+  <dt><b>readnoise = <span style="font-family: monospace;">"0."</span> (apsum)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='readnoise' Line='readnoise = "0." (apsum)' -->
   <dd>Read out noise in photons.  This parameter defines the minimum noise
   sigma.  It is defined in terms of photons (or electrons) and scales
@@ -108,7 +108,7 @@ doargus: Process ARGUS spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>gain = <tt>"1."</tt> (apsum)</b></dt>
+  <dt><b>gain = <span style="font-family: monospace;">"1."</span> (apsum)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gain' Line='gain = "1." (apsum)' -->
   <dd>Detector gain or conversion factor between photons/electrons and
   data values.  It is specified as the number of photons per data value.
@@ -168,7 +168,7 @@ doargus: Process ARGUS spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>apidtable = <tt>""</tt> (apfind)</b></dt>
+  <dt><b>apidtable = <span style="font-family: monospace;">""</span> (apfind)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apidtable' Line='apidtable = "" (apfind)' -->
   <dd>Aperture identification table.  This may be either a text file or an
   image.  A text file contains the fiber number, beam number defining object
@@ -190,7 +190,7 @@ doargus: Process ARGUS spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>objaps = <tt>""</tt>, skyaps = <tt>"2x2"</tt></b></dt>
+  <dt><b>objaps = <span style="font-family: monospace;">""</span>, skyaps = <span style="font-family: monospace;">"2x2"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='objaps' Line='objaps = "", skyaps = "2x2"' -->
   <dd>List of object and sky aperture numbers.  These are used to identify
   object and sky
@@ -202,7 +202,7 @@ doargus: Process ARGUS spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>objbeams = <tt>""</tt>, skybeams = <tt>""</tt></b></dt>
+  <dt><b>objbeams = <span style="font-family: monospace;">""</span>, skybeams = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='objbeams' Line='objbeams = "", skybeams = ""' -->
   <dd>List of object and sky beam numbers.
   The beam numbers are typically the same as the aperture numbers unless
@@ -314,11 +314,11 @@ doargus: Process ARGUS spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>params = <tt>""</tt> (pset)</b></dt>
+  <dt><b>params = <span style="font-family: monospace;">""</span> (pset)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='params' Line='params = "" (pset)' -->
   <dd>Name of parameter set containing additional processing parameters.  The
   default is parameter set <b>params</b>.  The parameter set may be examined
-  and modified in the usual ways (typically with <tt>"epar params"</tt> or <tt>":e params"</tt>
+  and modified in the usual ways (typically with <span style="font-family: monospace;">"epar params"</span> or <span style="font-family: monospace;">":e params"</span>
   from the parameter editor).  Note that using a different parameter file
   is not allowed.  The parameters are described below.
   </dd>
@@ -341,17 +341,17 @@ doargus: Process ARGUS spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>observatory = <tt>"observatory"</tt></b></dt>
+  <dt><b>observatory = <span style="font-family: monospace;">"observatory"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory = "observatory"' -->
   <dd>Observatory at which the spectra were obtained if not specified in the
   image header by the keyword OBSERVAT.  For Argus data the image headers
-  identify the observatory as <tt>"kpno"</tt> so this parameter is not used.
+  identify the observatory as <span style="font-family: monospace;">"kpno"</span> so this parameter is not used.
   For data from other observatories this parameter may be used
   as describe in <b>observatory</b>.
   </dd>
   </dl>
   <dl>
-  <dt><b>interp = <tt>"poly5"</tt> (nearest|linear|poly3|poly5|spline3|sinc)</b></dt>
+  <dt><b>interp = <span style="font-family: monospace;">"poly5"</span> (nearest|linear|poly3|poly5|spline3|sinc)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interp' Line='interp = "poly5" (nearest|linear|poly3|poly5|spline3|sinc)' -->
   <dd>Spectrum interpolation type used when spectra are resampled.  The choices are:
   <pre>
@@ -365,7 +365,7 @@ doargus: Process ARGUS spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>database = <tt>"database"</tt></b></dt>
+  <dt><b>database = <span style="font-family: monospace;">"database"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"' -->
   <dd>Database (directory) used for storing aperture and dispersion information.
   </dd>
@@ -377,7 +377,7 @@ doargus: Process ARGUS spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>logfile = <tt>"logfile"</tt>, plotfile = <tt>""</tt></b></dt>
+  <dt><b>logfile = <span style="font-family: monospace;">"logfile"</span>, plotfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "logfile", plotfile = ""' -->
   <dd>Text and plot log files.  If a filename is not specified then no log is
   kept.  The plot file contains IRAF graphics metacode which may be examined
@@ -385,13 +385,13 @@ doargus: Process ARGUS spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>records = <tt>""</tt></b></dt>
+  <dt><b>records = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='records' Line='records = ""' -->
   <dd>Dummy parameter to be ignored.
   </dd>
   </dl>
   <dl>
-  <dt><b>version = <tt>"ARGUS: ..."</tt></b></dt>
+  <dt><b>version = <span style="font-family: monospace;">"ARGUS: ..."</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='version' Line='version = "ARGUS: ..."' -->
   <dd>Version of the package.
   </dd>
@@ -417,10 +417,10 @@ doargus: Process ARGUS spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>order = <tt>"decreasing"</tt> (apfind)</b></dt>
+  <dt><b>order = <span style="font-family: monospace;">"decreasing"</span> (apfind)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='order' Line='order = "decreasing" (apfind)' -->
-  <dd>When assigning aperture identifications order the spectra <tt>"increasing"</tt>
-  or <tt>"decreasing"</tt> with increasing pixel position (left-to-right or
+  <dd>When assigning aperture identifications order the spectra <span style="font-family: monospace;">"increasing"</span>
+  or <span style="font-family: monospace;">"decreasing"</span> with increasing pixel position (left-to-right or
   right-to-left in a cross-section plot of the image).
   </dd>
   </dl>
@@ -466,11 +466,11 @@ doargus: Process ARGUS spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>t_function = <tt>"spline3"</tt>, t_order = 3 (aptrace)</b></dt>
+  <dt><b>t_function = <span style="font-family: monospace;">"spline3"</span>, t_order = 3 (aptrace)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='t_function' Line='t_function = "spline3", t_order = 3 (aptrace)' -->
   <dd>Default trace fitting function and order.  The fitting function types are
-  <tt>"chebyshev"</tt> polynomial, <tt>"legendre"</tt> polynomial, <tt>"spline1"</tt> linear spline, and
-  <tt>"spline3"</tt> cubic spline.  The order refers to the number of
+  <span style="font-family: monospace;">"chebyshev"</span> polynomial, <span style="font-family: monospace;">"legendre"</span> polynomial, <span style="font-family: monospace;">"spline1"</span> linear spline, and
+  <span style="font-family: monospace;">"spline3"</span> cubic spline.  The order refers to the number of
   terms in the polynomial functions or the number of spline pieces in the spline
   functions.
   </dd>
@@ -492,18 +492,18 @@ doargus: Process ARGUS spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>apscat1 = <tt>""</tt> (apscatter)</b></dt>
+  <dt><b>apscat1 = <span style="font-family: monospace;">""</span> (apscatter)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apscat1' Line='apscat1 = "" (apscatter)' -->
   <dd>Fitting parameters across the dispersion.  This references an additional
-  set of parameters for the ICFIT package.  The default is the <tt>"apscat1"</tt>
+  set of parameters for the ICFIT package.  The default is the <span style="font-family: monospace;">"apscat1"</span>
   parameter set.
   </dd>
   </dl>
   <dl>
-  <dt><b>apscat2 = <tt>""</tt> (apscatter)</b></dt>
+  <dt><b>apscat2 = <span style="font-family: monospace;">""</span> (apscatter)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apscat2' Line='apscat2 = "" (apscatter)' -->
   <dd>Fitting parameters along the dispersion.  This references an additional
-  set of parameters for the ICFIT package.  The default is the <tt>"apscat2"</tt>
+  set of parameters for the ICFIT package.  The default is the <span style="font-family: monospace;">"apscat2"</span>
   parameter set.
   </dd>
   </dl>
@@ -511,20 +511,20 @@ doargus: Process ARGUS spectra
   
   </p>
   <dl>
-  <dt><b>weights = <tt>"none"</tt> (apsum)</b></dt>
+  <dt><b>weights = <span style="font-family: monospace;">"none"</span> (apsum)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='weights' Line='weights = "none" (apsum)' -->
   <dd>Type of extraction weighting.  Note that if the <i>clean</i> parameter is
-  set then the weights used are <tt>"variance"</tt> regardless of the weights
+  set then the weights used are <span style="font-family: monospace;">"variance"</span> regardless of the weights
   specified by this parameter.  The choices are:
   <dl>
-  <dt><b><tt>"none"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"none"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"none"' -->
   <dd>The pixels are summed without weights except for partial pixels at the
   ends.
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"variance"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"variance"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"variance"' -->
   <dd>The extraction is weighted by the variance based on the data values
   and a poisson/ccd model using the <i>gain</i> and <i>readnoise</i>
@@ -534,7 +534,7 @@ doargus: Process ARGUS spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>pfit = <tt>"fit1d"</tt> (apsum) (fit1d|fit2d)</b></dt>
+  <dt><b>pfit = <span style="font-family: monospace;">"fit1d"</span> (apsum) (fit1d|fit2d)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pfit' Line='pfit = "fit1d" (apsum) (fit1d|fit2d)' -->
   <dd>Profile fitting algorithm for cleaning and variance weighted extractions.
   The default is generally appropriate for Argus data but users
@@ -567,11 +567,11 @@ doargus: Process ARGUS spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>f_function = <tt>"spline3"</tt>, f_order = 10 (fit1d)</b></dt>
+  <dt><b>f_function = <span style="font-family: monospace;">"spline3"</span>, f_order = 10 (fit1d)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='f_function' Line='f_function = "spline3", f_order = 10 (fit1d)' -->
   <dd>Function and order used to fit the composite one dimensional flat field
-  spectrum.  The functions are <tt>"legendre"</tt>, <tt>"chebyshev"</tt>, <tt>"spline1"</tt>, and
-  <tt>"spline3"</tt>.  The spline functions are linear and cubic splines with the
+  spectrum.  The functions are <span style="font-family: monospace;">"legendre"</span>, <span style="font-family: monospace;">"chebyshev"</span>, <span style="font-family: monospace;">"spline1"</span>, and
+  <span style="font-family: monospace;">"spline3"</span>.  The spline functions are linear and cubic splines with the
   order specifying the number of pieces.
   </dd>
   </dl>
@@ -586,10 +586,10 @@ doargus: Process ARGUS spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>coordlist = <tt>"linelists$ctiohenear.dat"</tt> (autoidentify/identify)</b></dt>
+  <dt><b>coordlist = <span style="font-family: monospace;">"linelists$ctiohenear.dat"</span> (autoidentify/identify)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coordlist' Line='coordlist = "linelists$ctiohenear.dat" (autoidentify/identify)' -->
   <dd>Arc line list consisting of an ordered list of wavelengths.
-  Some standard line lists are available in the directory <tt>"linelists$"</tt>.
+  Some standard line lists are available in the directory <span style="font-family: monospace;">"linelists$"</span>.
   </dd>
   </dl>
   <dl>
@@ -612,11 +612,11 @@ doargus: Process ARGUS spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>i_function = <tt>"chebyshev"</tt>, i_order = 3 (autoidentify/identify)</b></dt>
+  <dt><b>i_function = <span style="font-family: monospace;">"chebyshev"</span>, i_order = 3 (autoidentify/identify)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='i_function' Line='i_function = "chebyshev", i_order = 3 (autoidentify/identify)' -->
   <dd>The default function and order to be fit to the arc wavelengths as a
-  function of the pixel coordinate.  The functions choices are <tt>"chebyshev"</tt>,
-  <tt>"legendre"</tt>, <tt>"spline1"</tt>, or <tt>"spline3"</tt>.
+  function of the pixel coordinate.  The functions choices are <span style="font-family: monospace;">"chebyshev"</span>,
+  <span style="font-family: monospace;">"legendre"</span>, <span style="font-family: monospace;">"spline1"</span>, or <span style="font-family: monospace;">"spline3"</span>.
   </dd>
   </dl>
   <dl>
@@ -650,7 +650,7 @@ doargus: Process ARGUS spectra
   
   </p>
   <dl>
-  <dt><b>select = <tt>"interp"</tt> (refspectra)</b></dt>
+  <dt><b>select = <span style="font-family: monospace;">"interp"</span> (refspectra)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='select' Line='select = "interp" (refspectra)' -->
   <dd>Selection method for assigning wavelength calibration spectra.
   Note that an arc assignment table may be used to override the selection
@@ -709,11 +709,11 @@ doargus: Process ARGUS spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>sort = <tt>"jd"</tt>, group = <tt>"ljd"</tt> (refspectra)</b></dt>
+  <dt><b>sort = <span style="font-family: monospace;">"jd"</span>, group = <span style="font-family: monospace;">"ljd"</span> (refspectra)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sort' Line='sort = "jd", group = "ljd" (refspectra)' -->
   <dd>Image header keywords to be used as the sorting parameter for selection
   based on order and to group spectra.
-  A null string, <tt>""</tt>, or the word <tt>"none"</tt> may be use to disable the sorting
+  A null string, <span style="font-family: monospace;">""</span>, or the word <span style="font-family: monospace;">"none"</span> may be use to disable the sorting
   or grouping parameters.
   The sorting parameter
   must be numeric but otherwise may be anything.  The grouping parameter
@@ -770,16 +770,16 @@ doargus: Process ARGUS spectra
   
   </p>
   <dl>
-  <dt><b>combine = <tt>"average"</tt> (scombine) (average|median)</b></dt>
+  <dt><b>combine = <span style="font-family: monospace;">"average"</span> (scombine) (average|median)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='combine' Line='combine = "average" (scombine) (average|median)' -->
   <dd>Option for combining sky pixels at the same dispersion coordinate after any
-  rejection operation.  The options are to compute the  <tt>"average"</tt> or <tt>"median"</tt>
+  rejection operation.  The options are to compute the  <span style="font-family: monospace;">"average"</span> or <span style="font-family: monospace;">"median"</span>
   of the pixels.  The median uses the average of the two central
   values when the number of pixels is even.
   </dd>
   </dl>
   <dl>
-  <dt><b>reject = <tt>"none"</tt> (scombine) (none|minmax|avsigclip)</b></dt>
+  <dt><b>reject = <span style="font-family: monospace;">"none"</span> (scombine) (none|minmax|avsigclip)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='reject' Line='reject = "none" (scombine) (none|minmax|avsigclip)' -->
   <dd>Type of rejection operation performed on the pixels which overlap at each
   dispersion coordinate.  The algorithms are discussed in the
@@ -792,7 +792,7 @@ doargus: Process ARGUS spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>scale = <tt>"none"</tt> (none|mode|median|mean)</b></dt>
+  <dt><b>scale = <span style="font-family: monospace;">"none"</span> (none|mode|median|mean)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='scale' Line='scale = "none" (none|mode|median|mean)' -->
   <dd>Multiplicative scaling to be applied to each spectrum.  The choices are none
   or scale by the mode, median, or mean.  This should not be necessary if the
@@ -806,7 +806,7 @@ doargus: Process ARGUS spectra
   The environment parameter <i>imtype</i> is used to determine the extension
   of the images to be processed and created.  This allows use with any
   supported image extension.  For STF images the extension has to be exact;
-  for example <tt>"d1h"</tt>.
+  for example <span style="font-family: monospace;">"d1h"</span>.
   </p>
   <!-- EndSection:   'ENVIRONMENT PARAMETERS' -->
   <h3>Description</h3>
@@ -862,7 +862,7 @@ doargus: Process ARGUS spectra
   images to be processed, the flat field image as the aperture reference and
   the flat field, and one or more arc images.  A throughput file or image,
   such as a blank sky observation, may also be specified.  If there are many
-  object or arc spectra per setup you might want to prepare <tt>"@ files"</tt>.
+  object or arc spectra per setup you might want to prepare <span style="font-family: monospace;">"@ files"</span>.
   Prepare and specify the aperture identification table if desired.  If
   the image headers contain the fiber identification information with
   SLFIB keywords then specify an image for the aperture identification table.
@@ -883,7 +883,7 @@ doargus: Process ARGUS spectra
   observations and the task will generally only do the setup steps
   once and only process new images.  Queries presented during the
   execution for various interactive operations may be answered with
-  <tt>"yes"</tt>, <tt>"no"</tt>, <tt>"YES"</tt>, or <tt>"NO"</tt>.  The lower case responses apply just
+  <span style="font-family: monospace;">"yes"</span>, <span style="font-family: monospace;">"no"</span>, <span style="font-family: monospace;">"YES"</span>, or <span style="font-family: monospace;">"NO"</span>.  The lower case responses apply just
   to that query while the upper case responses apply to all further
   such queries during the execution and no further queries of that
   type will be made.
@@ -899,7 +899,7 @@ doargus: Process ARGUS spectra
   processing.  The resize option sets the aperture size to the widths of
   the profiles at a fixed fraction of the peak height.  The interactive
   review of the apertures is recommended.  If the identifications are off
-  by a shift the <tt>'o'</tt> key is used.  To exit the aperture review type <tt>'q'</tt>.
+  by a shift the <span style="font-family: monospace;">'o'</span> key is used.  To exit the aperture review type <span style="font-family: monospace;">'q'</span>.
   </dd>
   </dl>
   <dl>
@@ -907,9 +907,9 @@ doargus: Process ARGUS spectra
   <!-- Sec='DESCRIPTION' Level=0 Label='' Line='[5]' -->
   <dd>The fiber positions at a series of points along the dispersion are measured
   and a function is fit to these positions.  This may be done interactively to
-  adjust the fitting parameters.  Not all fibers need be examined and the <tt>"NO"</tt>
+  adjust the fitting parameters.  Not all fibers need be examined and the <span style="font-family: monospace;">"NO"</span>
   response will quit the interactive fitting.  To exit the interactive
-  fitting type <tt>'q'</tt>.
+  fitting type <span style="font-family: monospace;">'q'</span>.
   </dd>
   </dl>
   <dl>
@@ -922,13 +922,13 @@ doargus: Process ARGUS spectra
   There are two queries for the interactive fitting.  A graph of the
   data between the defined reference apertures separated by a specified
   buffer distance is first shown.  The function order and type may be
-  adjusted.  After quiting with <tt>'q'</tt> the user has the option of changing
+  adjusted.  After quiting with <span style="font-family: monospace;">'q'</span> the user has the option of changing
   the buffer value and returning to the fitting, changing the image line
   or column to check if the fit parameters are satisfactory at other points,
   or to quit and accept the fit parameters.  After fitting all points
   across the dispersion another graph showing the scattered light from
   the individual fits is shown and the smoothing parameters along the
-  dispersion may be adjusted.  Upon quiting with <tt>'q'</tt> you have the option
+  dispersion may be adjusted.  Upon quiting with <span style="font-family: monospace;">'q'</span> you have the option
   of checking other cuts parallel to the dispersion or quiting and finishing
   the scattered light function smoothing and subtraction.
   If there is a throughput image then this is corrected for scattered light
@@ -940,7 +940,7 @@ doargus: Process ARGUS spectra
   <!-- Sec='DESCRIPTION' Level=0 Label='' Line='[7]' -->
   <dd>If flat fielding is to be done the flat field spectra are extracted.  The
   average spectrum over all fibers is determined and a function is fit
-  interactively (exit with <tt>'q'</tt>).  This function is generally of sufficiently
+  interactively (exit with <span style="font-family: monospace;">'q'</span>).  This function is generally of sufficiently
   high order that the overall shape is well fit.  This function is then used
   to normalize the individual flat field spectra.  If a throughput image, a
   sky flat, is specified then the total sky counts through each fiber are
@@ -962,10 +962,10 @@ doargus: Process ARGUS spectra
   identification.  Whether or not the automatic identification is
   successful you will be shown the result of the arc line identification.
   If the automatic identification is not successful identify a few arc
-  lines with <tt>'m'</tt> and use the <tt>'l'</tt> line list identification command to
+  lines with <span style="font-family: monospace;">'m'</span> and use the <span style="font-family: monospace;">'l'</span> line list identification command to
   automatically add additional lines and fit the dispersion function.  Check
-  the quality of the dispersion function fit with <tt>'f'</tt>.  When satisfied exit
-  with <tt>'q'</tt>.
+  the quality of the dispersion function fit with <span style="font-family: monospace;">'f'</span>.  When satisfied exit
+  with <span style="font-family: monospace;">'q'</span>.
   </dd>
   </dl>
   <dl>
@@ -1010,8 +1010,8 @@ doargus: Process ARGUS spectra
   <dt><b>[13]</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='' Line='[13]' -->
   <dd>When sky subtracting, the individual sky spectra may be reviewed and some
-  spectra eliminated using the <tt>'d'</tt> key.  The last deleted spectrum may be
-  recovered with the <tt>'e'</tt> key.  After exiting the review with <tt>'q'</tt> you are
+  spectra eliminated using the <span style="font-family: monospace;">'d'</span> key.  The last deleted spectrum may be
+  recovered with the <span style="font-family: monospace;">'e'</span> key.  After exiting the review with <span style="font-family: monospace;">'q'</span> you are
   asked for the combining option.  The type of combining is dictated by the
   number of sky fibers.
   </dd>
@@ -1020,24 +1020,24 @@ doargus: Process ARGUS spectra
   <dt><b>[14]</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='' Line='[14]' -->
   <dd>The option to examine the final spectra with <b>splot</b> may be given.
-  To exit type <tt>'q'</tt>.
+  To exit type <span style="font-family: monospace;">'q'</span>.
   </dd>
   </dl>
   <dl>
   <dt><b>[15]</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='' Line='[15]' -->
   <dd>If scattered light is subtracted from the input data a copy of the
-  original image is made by appending <tt>"noscat"</tt> to the image name.
+  original image is made by appending <span style="font-family: monospace;">"noscat"</span> to the image name.
   If the data are reprocessed with the <i>redo</i> flag the original
   image will be used again to allow modification of the scattered
   light parameters.
   The final spectra will have the same name as the original 2D images
-  with a <tt>".ms"</tt> extension added.  The flat field and arc spectra may
+  with a <span style="font-family: monospace;">".ms"</span> extension added.  The flat field and arc spectra may
   also have part of the aperture identification table name added, if
   used, to
   allow different configurations to use the same 2D flat field and arcs
   but with different aperture definitions.  If using the sky alignment
-  option an image <tt>"align"</tt> with the aperture identification table name
+  option an image <span style="font-family: monospace;">"align"</span> with the aperture identification table name
   applied will also be created.
   </dd>
   </dl>
@@ -1156,7 +1156,7 @@ doargus: Process ARGUS spectra
   <p>
   The final reduced spectra are recorded in two or three dimensional IRAF
   images.  The images have the same name as the original images with an added
-  <tt>".ms"</tt> extension.  Each line in the reduced image is a one dimensional
+  <span style="font-family: monospace;">".ms"</span> extension.  Each line in the reduced image is a one dimensional
   spectrum with associated aperture, wavelength, and identification
   information.  When the <i>extras</i> parameter is set the lines in the
   third dimension contain additional information (see
@@ -1177,7 +1177,7 @@ doargus: Process ARGUS spectra
   dispersion axis with the DISPAXIS keyword.
   The observatory parameter is only required
   for data taken with fiber instruments other than Argus.
-  The spectrum interpolation type might be changed to <tt>"sinc"</tt> but
+  The spectrum interpolation type might be changed to <span style="font-family: monospace;">"sinc"</span> but
   with the cautions given in <b>onedspec.package</b>.
   The other parameters define the standard I/O functions.
   The verbose parameter selects whether to print everything which goes
@@ -1235,7 +1235,7 @@ doargus: Process ARGUS spectra
   the spectra identified as objects are sky subtracted one can exclude
   fibers from the sky subtraction.  For example, to eliminate the sky
   spectra from the final results the <i>objaps</i> parameter could be
-  set to <tt>"1x2"</tt>.  All other fibers will remain in the extracted spectra
+  set to <span style="font-family: monospace;">"1x2"</span>.  All other fibers will remain in the extracted spectra
   but will not be sky subtracted.
   </p>
   <p>
@@ -1289,7 +1289,7 @@ doargus: Process ARGUS spectra
   <p>
   After a spectrum has been processed it is possible to examine the results
   interactively using the <b>splot</b> tasks.  This option has a query which
-  may be turned off with <tt>"YES"</tt> or <tt>"NO"</tt> if there are multiple spectra to be
+  may be turned off with <span style="font-family: monospace;">"YES"</span> or <span style="font-family: monospace;">"NO"</span> if there are multiple spectra to be
   processed.
   </p>
   <p>
@@ -1306,7 +1306,7 @@ doargus: Process ARGUS spectra
   The <i>batch</i> processing option allows object spectra to be processed as
   a background or batch job.  This will only occur if sky spectra editing and
   <b>splot</b> review (interactive operations) are turned off, either when the
-  task is run or by responding with <tt>"NO"</tt> to the queries during processing.
+  task is run or by responding with <span style="font-family: monospace;">"NO"</span> to the queries during processing.
   </p>
   <p>
   The <i>listonly</i> option prints a summary of the processing steps which
@@ -1412,7 +1412,7 @@ doargus: Process ARGUS spectra
   be associated with the proper fibers;
   otherwise the spectrum
   identifications will not be for the objects they say.  An important command in
-  this regard is the <tt>'o'</tt> key which allows reordering the identifications.
+  this regard is the <span style="font-family: monospace;">'o'</span> key which allows reordering the identifications.
   This is required if the first
   fiber is actually missing since the initial assignment begins with the
   first spectrum found.  The
@@ -1480,7 +1480,7 @@ doargus: Process ARGUS spectra
   interactively with the <b>icfit</b> commands.  A query is first issued
   which allows skipping this interactive stage.  Note that the interactive
   fitting is only for defining the fitting functions and orders.  When
-  the graphical <b>icfit</b> fitting is exited (with <tt>'q'</tt>) there is a second prompt
+  the graphical <b>icfit</b> fitting is exited (with <span style="font-family: monospace;">'q'</span>) there is a second prompt
   allowing you to change the buffer distance (in the first cross-dispersion
   stage) from the apertures, change the line/column, or finally quit.
   </p>
@@ -1493,11 +1493,11 @@ doargus: Process ARGUS spectra
   <p>
   The scattered light subtraction modifies the input 2D images.  To preserve
   the original data a copy of the original image is made with the same
-  root name and the word <tt>"noscat"</tt> appended.  The scattered light subtracted
-  images will have the header keyword <tt>"APSCATTE"</tt> which is how the task
+  root name and the word <span style="font-family: monospace;">"noscat"</span> appended.  The scattered light subtracted
+  images will have the header keyword <span style="font-family: monospace;">"APSCATTE"</span> which is how the task
   avoids repeating the scattered light subtraction during any reprocessing.
   However if the <i>redo</i> option is selected the scattered light subtraction
-  will also be redone by first restoring the <tt>"noscat"</tt> images to the original
+  will also be redone by first restoring the <span style="font-family: monospace;">"noscat"</span> images to the original
   input names.
   </p>
   <p>
@@ -1506,7 +1506,7 @@ doargus: Process ARGUS spectra
   <p>
   Flat field corrections may be made during the basic CCD processing; i.e.
   direct division by the two dimensional flat field observation.  In that
-  case do not specify a flat field spectrum; use the null string <tt>""</tt>.  The
+  case do not specify a flat field spectrum; use the null string <span style="font-family: monospace;">""</span>.  The
   <b>doargus</b> task provides an alternative flat field response correction
   based on division of the extracted object spectra by the extracted flat field
   spectra.  A discussion of the theory and merits of flat fielding directly
@@ -1533,7 +1533,7 @@ doargus: Process ARGUS spectra
   option is selected (the default) the extracted flat field spectra are
   averaged together and a smooth function is fit.  The default fitting
   function and order are given by the parameters <i>f_function</i> and
-  <i>f_order</i>.  If the parameter <i>f_interactive</i> is <tt>"yes"</tt> then the
+  <i>f_order</i>.  If the parameter <i>f_interactive</i> is <span style="font-family: monospace;">"yes"</span> then the
   fitting is done interactively using the <b>fit1d</b> task which uses the
   <b>icfit</b> interactive fitting commands.
   </p>
@@ -1691,11 +1691,11 @@ doargus: Process ARGUS spectra
   <b>specplot</b>.  By default they are superposed to allow identifying
   spectra with unusually high signal due to object contamination.  To
   eliminate a sky spectrum from consideration point at it with the cursor and
-  type <tt>'d'</tt>.  The last deleted spectrum may be undeleted with <tt>'e'</tt>.  This
+  type <span style="font-family: monospace;">'d'</span>.  The last deleted spectrum may be undeleted with <span style="font-family: monospace;">'e'</span>.  This
   allows recovery of incorrect or accidental deletions.
   </p>
   <p>
-  If the combining option is <tt>"none"</tt> then the sky and object fibers are
+  If the combining option is <span style="font-family: monospace;">"none"</span> then the sky and object fibers are
   paired and one sky is subtracted from one object and the saved sky will
   be the individual sky fiber spectra.
   </p>
@@ -1716,7 +1716,7 @@ doargus: Process ARGUS spectra
   <i>skyedit</i> option selected, then after selecting the spectra to be
   combined a query is made for the combining algorithm.  This allows
   modifying the default algorithm based on the number of sky spectra
-  selected since the <tt>"avsigclip"</tt> rejection algorithm requires at least
+  selected since the <span style="font-family: monospace;">"avsigclip"</span> rejection algorithm requires at least
   three spectra.
   </p>
   <p>
@@ -1726,7 +1726,7 @@ doargus: Process ARGUS spectra
   object spectra to produce residual sky spectra for analysis.  The combined
   master sky spectra may be saved if the <i>saveskys</i> parameter is set.
   The saved sky is given the name of the object spectrum with the prefix
-  <tt>"sky"</tt>.
+  <span style="font-family: monospace;">"sky"</span>.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Examples</h3>
@@ -1734,7 +1734,7 @@ doargus: Process ARGUS spectra
   <p>
   1.  The following example uses artificial data and may be executed
   at the terminal (with IRAF V2.10).  This is also the sequence performed
-  by the test procedure <tt>"demos qtest"</tt>.
+  by the test procedure <span style="font-family: monospace;">"demos qtest"</span>.
   </p>
   <pre>
   ar&gt; demos mkqdata
@@ -1747,14 +1747,14 @@ doargus: Process ARGUS spectra
   Set reference apertures for demoflat
   Resize apertures for demoflat?  (yes):
   Edit apertures for demoflat?  (yes):
-  &lt;Exit with <tt>'q'</tt>&gt;
+  &lt;Exit with <span style="font-family: monospace;">'q'</span>&gt;
   Fit curve to aperture 1 of demoflat interactively  (yes):
-  &lt;Exit with <tt>'q'</tt>&gt;
+  &lt;Exit with <span style="font-family: monospace;">'q'</span>&gt;
   Fit curve to aperture 2 of demoflat interactively  (yes): N
   Create response function demoflatnorm.ms
   Extract flat field demoflat
   Fit and ratio flat field demoflat
-  &lt;Exit with <tt>'q'</tt>&gt;
+  &lt;Exit with <span style="font-family: monospace;">'q'</span>&gt;
   Extract flat field demoflat
   Fit and ratio flat field demoflat
   Create the normalized response demoflatnorm.ms
@@ -1779,8 +1779,8 @@ doargus: Process ARGUS spectra
   Extract arc reference image demoarc
   Determine dispersion solution for demoarc
   &lt;A dispersion solution is found automatically.&gt;
-  &lt;Type <tt>'f'</tt> to look at fit.  Type <tt>'q'</tt> to exit fit.&gt;
-  &lt;Exit with <tt>'q'</tt>&gt;
+  &lt;Type <span style="font-family: monospace;">'f'</span> to look at fit.  Type <span style="font-family: monospace;">'q'</span> to exit fit.&gt;
+  &lt;Exit with <span style="font-family: monospace;">'q'</span>&gt;
   
   REIDENTIFY: NOAO/IRAF V2.10BETA valdes@puppis Tue 16:01:07 11-Feb-92
     Reference image = d....ms.imh, New image = d....ms, Refit = yes
@@ -1813,13 +1813,13 @@ doargus: Process ARGUS spectra
   demoobj.ms.imh: w1 = 5785.833, w2 =  7351.63, dw = 6.140378, nw = 256
   Sky subtract demoobj:  skybeams=0
   Edit the sky spectra? (yes):
-  &lt;Exit with <tt>'q'</tt>&gt;
+  &lt;Exit with <span style="font-family: monospace;">'q'</span>&gt;
   Sky rejection option (none|minmax|avsigclip) (avsigclip):
   demoobj.ms.imh:
   Splot spectrum? (no|yes|NO|YES) (yes):
   Image line/aperture to plot (1:) (1):
   &lt;Look at spectra and change apertures with # key&gt;
-  &lt;Exit with <tt>'q'</tt>&gt;
+  &lt;Exit with <span style="font-family: monospace;">'q'</span>&gt;
   </pre>
   <!-- EndSection:   'EXAMPLES' -->
   <h3>Revisions</h3>
@@ -1836,7 +1836,7 @@ doargus: Process ARGUS spectra
   <dl>
   <dt><b>DOARGUS V2.10.3</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='DOARGUS' Line='DOARGUS V2.10.3' -->
-  <dd>The usual output WCS format is <tt>"equispec"</tt>.  The image format type to be
+  <dd>The usual output WCS format is <span style="font-family: monospace;">"equispec"</span>.  The image format type to be
   processed is selected with the <i>imtype</i> environment parameter.  The
   dispersion axis parameter is now a package parameter.  Images will only
   be processed if the have the CCDPROC keyword.  A <i>datamax</i> parameter

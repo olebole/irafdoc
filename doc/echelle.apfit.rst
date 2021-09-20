@@ -29,44 +29,44 @@ apfit: Fit 2D spectra and output the fit, difference, or ratio
   </dd>
   </dl>
   <dl>
-  <dt><b>output = <tt>""</tt></b></dt>
+  <dt><b>output = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
   <dd>List of output images to be created with the  fitting results.  If the null
   string is given or the end of the output list is reached before the end
   of the input list then the input image name is used and an extension
-  of <tt>".fit"</tt>, <tt>".diff"</tt>, or <tt>".ratio"</tt> is added based on the type of fit.
+  of <span style="font-family: monospace;">".fit"</span>, <span style="font-family: monospace;">".diff"</span>, or <span style="font-family: monospace;">".ratio"</span> is added based on the type of fit.
   </dd>
   </dl>
   <dl>
-  <dt><b>apertures = <tt>""</tt></b></dt>
+  <dt><b>apertures = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
   <dd>Apertures to recenter, resize, trace, and fit.  This only applies
   to apertures read from the input or reference database.  Any new
   apertures defined with the automatic finding algorithm or interactively
   are always selected.  The syntax is a list comma separated ranges
   where a range can be a single aperture number, a hyphen separated
-  range of aperture numbers, or a range with a step specified by <tt>"x&lt;step&gt;"</tt>;
-  for example, <tt>"1,3-5,9-12x2"</tt>.
+  range of aperture numbers, or a range with a step specified by <span style="font-family: monospace;">"x&lt;step&gt;"</span>;
+  for example, <span style="font-family: monospace;">"1,3-5,9-12x2"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>fittype = <tt>"difference"</tt></b></dt>
+  <dt><b>fittype = <span style="font-family: monospace;">"difference"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fittype' Line='fittype = "difference"' -->
   <dd>Type of fitted output.  The choices are:
   <dl>
-  <dt><b><tt>"fit"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"fit"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"fit"' -->
   <dd>The fitted spectra are output.
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"difference"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"difference"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"difference"' -->
   <dd>The difference (or residuals) of the data and the fit (data - fit).
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"ratio"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"ratio"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"ratio"' -->
   <dd>The ratio of the data to the fit.  If a fitted pixel goes below a specified
   threshold the ratio is set to 1.
@@ -75,16 +75,16 @@ apfit: Fit 2D spectra and output the fit, difference, or ratio
   </dd>
   </dl>
   <dl>
-  <dt><b>references = <tt>""</tt></b></dt>
+  <dt><b>references = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='references' Line='references = ""' -->
   <dd>List of reference images to be used to define apertures for the input
   images.  When a reference image is given it supersedes apertures
-  previously defined for the input image. The list may be null, <tt>""</tt>, or
+  previously defined for the input image. The list may be null, <span style="font-family: monospace;">""</span>, or
   any number of images less than or equal to the list of input images.
   There are three special words which may be used in place of an image
-  name.  The word <tt>"last"</tt> refers to the last set of apertures written to
-  the database.  The word <tt>"OLD"</tt> requires that an entry exist
-  and the word <tt>"NEW"</tt> requires that the entry not exist for each input image.
+  name.  The word <span style="font-family: monospace;">"last"</span> refers to the last set of apertures written to
+  the database.  The word <span style="font-family: monospace;">"OLD"</span> requires that an entry exist
+  and the word <span style="font-family: monospace;">"NEW"</span> requires that the entry not exist for each input image.
   </dd>
   </dl>
   <dl>
@@ -170,28 +170,28 @@ apfit: Fit 2D spectra and output the fit, difference, or ratio
   The following parameters control the profile and spectrum fitting.
   </p>
   <dl>
-  <dt><b>background = <tt>"none"</tt></b></dt>
+  <dt><b>background = <span style="font-family: monospace;">"none"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='background' Line='background = "none"' -->
-  <dd>Type of background subtraction.  The choices are <tt>"none"</tt> for no
-  background subtraction, <tt>"average"</tt> to average the background within the
-  background regions, or <tt>"fit"</tt> to fit across the dispersion using the
-  background within the background regions.  Note that the <tt>"average"</tt>
+  <dd>Type of background subtraction.  The choices are <span style="font-family: monospace;">"none"</span> for no
+  background subtraction, <span style="font-family: monospace;">"average"</span> to average the background within the
+  background regions, or <span style="font-family: monospace;">"fit"</span> to fit across the dispersion using the
+  background within the background regions.  Note that the <span style="font-family: monospace;">"average"</span>
   option does not do any medianing or bad pixel checking; it is faster
   than fitting however.  Background subtraction also requires that the
-  background fitting parameters are properly defined.  For the <tt>"average"</tt>
+  background fitting parameters are properly defined.  For the <span style="font-family: monospace;">"average"</span>
   option only the background sample regions parameter is used.
   </dd>
   </dl>
   <dl>
-  <dt><b>pfit = <tt>"fit1d"</tt> (fit1d|fit2d)</b></dt>
+  <dt><b>pfit = <span style="font-family: monospace;">"fit1d"</span> (fit1d|fit2d)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pfit' Line='pfit = "fit1d" (fit1d|fit2d)' -->
   <dd>Profile fitting algorithm to use with variance weighting or cleaning.
   When determining a profile the two dimensional spectrum is divided by
   an estimate of the one dimensional spectrum to form a normalized two
   dimensional spectrum profile.  This profile is then smoothed by fitting
-  one dimensional functions, <tt>"fit1d"</tt>, along the lines or columns most closely
+  one dimensional functions, <span style="font-family: monospace;">"fit1d"</span>, along the lines or columns most closely
   corresponding to the dispersion axis or a special two dimensional
-  function, <tt>"fit2d"</tt>, described by Marsh (see <b>approfile</b>).
+  function, <span style="font-family: monospace;">"fit2d"</span>, described by Marsh (see <b>approfile</b>).
   </dd>
   </dl>
   <dl>
@@ -265,7 +265,7 @@ apfit: Fit 2D spectra and output the fit, difference, or ratio
   the model spectra, the difference between the input and model spectra,
   or the ratio of input and model spectra.  The type of output is
   selected by the parameter <i>fittype</i> which may have one of the
-  values <tt>"fit"</tt>, <tt>"difference"</tt>, or <tt>"ratio"</tt>.
+  values <span style="font-family: monospace;">"fit"</span>, <span style="font-family: monospace;">"difference"</span>, or <span style="font-family: monospace;">"ratio"</span>.
   </p>
   <p>
   Aperture definitions may be inherited from those of other images by
@@ -275,7 +275,7 @@ apfit: Fit 2D spectra and output the fit, difference, or ratio
   number of input images, the last reference image is used for all
   remaining input images.  Thus, a single reference image may be given
   for all the input images or different reference images may be given for
-  each input image.  The special reference name <tt>"last"</tt> may be used to
+  each input image.  The special reference name <span style="font-family: monospace;">"last"</span> may be used to
   select the last set apertures used in any of the <b>apextract</b> tasks.
   </p>
   <p>
@@ -300,7 +300,7 @@ apfit: Fit 2D spectra and output the fit, difference, or ratio
   <p>
   Each function selection will produce a query for each input spectrum if
   the <i>interactive</i> parameter is set.  The queries are answered by
-  <tt>"yes"</tt>, <tt>"no"</tt>, <tt>"YES"</tt>, or <tt>"NO"</tt>, where the upper case responses suppress
+  <span style="font-family: monospace;">"yes"</span>, <span style="font-family: monospace;">"no"</span>, <span style="font-family: monospace;">"YES"</span>, or <span style="font-family: monospace;">"NO"</span>, where the upper case responses suppress
   the query for following images.  There are other queries associated
   with tracing which first ask whether the operation is to be done
   interactively and, if yes, lead to queries for each aperture.  If the
@@ -331,22 +331,22 @@ apfit: Fit 2D spectra and output the fit, difference, or ratio
   Because of the connection with variance weighted extraction and cleaning
   of one dimensional spectra, this task is useful as a diagnostic tool for
   understanding and evaluating the variance weighting algorithm.
-  For example the <tt>"difference"</tt> image provides the residuals in a
+  For example the <span style="font-family: monospace;">"difference"</span> image provides the residuals in a
   two dimensional visual form.
   </p>
   <p>
-  The <tt>"fit"</tt> output image does not include any background determination;
+  The <span style="font-family: monospace;">"fit"</span> output image does not include any background determination;
   i.e the fit is background subtracted.  Pixels outside the modeled
   spectra are set to zero.
   </p>
   <p>
-  The <tt>"difference"</tt> output image is simply the difference between the
-  background subtracted <tt>"fit"</tt> and the data.  Thus the difference within
+  The <span style="font-family: monospace;">"difference"</span> output image is simply the difference between the
+  background subtracted <span style="font-family: monospace;">"fit"</span> and the data.  Thus the difference within
   the apertures should approximate the background and outside the
   apertures the difference will be identical with the input image.
   </p>
   <p>
-  The <tt>"ratio"</tt> output image does include any background in the model
+  The <span style="font-family: monospace;">"ratio"</span> output image does include any background in the model
   before taking the ratio of the data and model.  If a model pixel
   is less than the given <i>threshold</i> parameter the output ratio
   is set to one.  This is used to avoid division by zero and set a
@@ -369,10 +369,10 @@ apfit: Fit 2D spectra and output the fit, difference, or ratio
   <dl>
   <dt><b>APFIND V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='APFIND' Line='APFIND V2.11' -->
-  <dd>The <tt>"apertures"</tt> parameter can be used to select apertures for resizing,
+  <dd>The <span style="font-family: monospace;">"apertures"</span> parameter can be used to select apertures for resizing,
   recentering, tracing, and extraction.  This parameter name was previously
   used for selecting apertures in the recentering algorithm.  The new
-  parameter name for this is now <tt>"aprecenter"</tt>.
+  parameter name for this is now <span style="font-family: monospace;">"aprecenter"</span>.
   </dd>
   </dl>
   <!-- EndSection:   'REVISIONS' -->

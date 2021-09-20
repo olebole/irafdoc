@@ -30,7 +30,7 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   </dd>
   </dl>
   <dl>
-  <dt><b>ccdtype = <tt>""</tt></b></dt>
+  <dt><b>ccdtype = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ccdtype' Line='ccdtype = ""' -->
   <dd>CCD image type to select from the input image list.  If no type is given
   then all input images will be selected.  The recognized types are described
@@ -126,15 +126,15 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   
   </p>
   <dl>
-  <dt><b>readaxis = <tt>"line"</tt></b></dt>
+  <dt><b>readaxis = <span style="font-family: monospace;">"line"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='readaxis' Line='readaxis = "line"' -->
-  <dd>Read out axis specified as <tt>"line"</tt> or <tt>"column"</tt>.
+  <dd>Read out axis specified as <span style="font-family: monospace;">"line"</span> or <span style="font-family: monospace;">"column"</span>.
   </dd>
   </dl>
   <dl>
   <dt><b>fixfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fixfile' Line='fixfile' -->
-  <dd>File describing the bad lines and columns.  If <tt>"image"</tt> is specified then
+  <dd>File describing the bad lines and columns.  If <span style="font-family: monospace;">"image"</span> is specified then
   the file is specified in the image header or instrument translation file.
   See Section 2. of Description for further information on bad pixel files.
   </dd>
@@ -142,7 +142,7 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   <dl>
   <dt><b>biassec</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='biassec' Line='biassec' -->
-  <dd>Overscan bias strip image section.  If <tt>"image"</tt> is specified then the overscan
+  <dd>Overscan bias strip image section.  If <span style="font-family: monospace;">"image"</span> is specified then the overscan
   bias section is specified in the image header or instrument translation file.
   See Section 3. of Description for further information on setting this parmeter.
   </dd>
@@ -150,13 +150,13 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   <dl>
   <dt><b>trimsec</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='trimsec' Line='trimsec' -->
-  <dd>image section for trimming.  If <tt>"image"</tt> is specified then the trim
+  <dd>image section for trimming.  If <span style="font-family: monospace;">"image"</span> is specified then the trim
   image section is specified in the image header or instrument translation file.
   See Section 4. of Description for further information on setting this parmeter.
   </dd>
   </dl>
   <dl>
-  <dt><b>zero = <tt>""</tt></b></dt>
+  <dt><b>zero = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='zero' Line='zero = ""' -->
   <dd>Zero level calibration image.  The zero level image may be one or two
   dimensional.  The CCD image type and subset are not checked for these
@@ -165,7 +165,7 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   </dd>
   </dl>
   <dl>
-  <dt><b>dark = <tt>""</tt></b></dt>
+  <dt><b>dark = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dark' Line='dark = ""' -->
   <dd>Dark count calibration image.  The CCD image type and subset are not checked
   for these images and they take precedence over any dark count calibration
@@ -173,7 +173,7 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   </dd>
   </dl>
   <dl>
-  <dt><b>flat = <tt>""</tt></b></dt>
+  <dt><b>flat = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='flat' Line='flat = ""' -->
   <dd>Flat field calibration images.  The flat field images may be one or
   two dimensional.  The CCD image type is not checked for these
@@ -183,7 +183,7 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   </dd>
   </dl>
   <dl>
-  <dt><b>illum = <tt>""</tt></b></dt>
+  <dt><b>illum = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='illum' Line='illum = ""' -->
   <dd>Iillumination correction images.  The CCD image type is not checked for these
   images and they take precedence over any iillumination correction images given
@@ -192,7 +192,7 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   </dd>
   </dl>
   <dl>
-  <dt><b>fringe = <tt>""</tt></b></dt>
+  <dt><b>fringe = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fringe' Line='fringe = ""' -->
   <dd>Fringe correction images.  The CCD image type is not checked for these
   images and they take precedence over any fringe correction images given
@@ -211,11 +211,11 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   </dd>
   </dl>
   <dl>
-  <dt><b>scantype = <tt>"shortscan"</tt></b></dt>
+  <dt><b>scantype = <span style="font-family: monospace;">"shortscan"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='scantype' Line='scantype = "shortscan"' -->
   <dd>Type of scan format used in creating the CCD images.  The modes are:
   <dl>
-  <dt><b><tt>"shortscan"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"shortscan"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"shortscan"' -->
   <dd>The CCD is scanned over a number of lines and then read out as a regular
   two dimensional image.  In this mode unscanned flat fields are numerically
@@ -226,7 +226,7 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"longscan"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"longscan"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"longscan"' -->
   <dd>In this mode the CCD is clocked and read out continuously to form a long
   strip.  Flat fields are averaged across the readout axis to
@@ -241,7 +241,7 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   <dt><b>nscan</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nscan' Line='nscan' -->
   <dd>Number of scan readout lines used in short scan mode.  This parameter is used
-  when the scan type is <tt>"shortscan"</tt>.
+  when the scan type is <span style="font-family: monospace;">"shortscan"</span>.
   </dd>
   </dl>
   <p style="text-align:center">OVERSCAN FITTING PARAMETERS
@@ -256,10 +256,10 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   </dd>
   </dl>
   <dl>
-  <dt><b>function = <tt>"legendre"</tt></b></dt>
+  <dt><b>function = <span style="font-family: monospace;">"legendre"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "legendre"' -->
-  <dd>Overscan fitting function.  The function types are <tt>"legendre"</tt> polynomial,
-  <tt>"chebyshev"</tt> polynomial, <tt>"spline1"</tt> linear spline, and <tt>"spline3"</tt> cubic
+  <dd>Overscan fitting function.  The function types are <span style="font-family: monospace;">"legendre"</span> polynomial,
+  <span style="font-family: monospace;">"chebyshev"</span> polynomial, <span style="font-family: monospace;">"spline1"</span> linear spline, and <span style="font-family: monospace;">"spline3"</span> cubic
   spline.
   </dd>
   </dl>
@@ -270,9 +270,9 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   </dd>
   </dl>
   <dl>
-  <dt><b>sample = <tt>"*"</tt></b></dt>
+  <dt><b>sample = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"' -->
-  <dd>Sample points to use in the overscan fit.  The string <tt>"*"</tt> specified all
+  <dd>Sample points to use in the overscan fit.  The string <span style="font-family: monospace;">"*"</span> specified all
   points otherwise an <b>icfit</b> range string is used.
   </dd>
   </dl>
@@ -307,7 +307,7 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   <h3>Description</h3>
   <!-- BeginSection: 'DESCRIPTION' -->
   <p>
-  <b>Quadproc</b> processes CCD images to remove all <tt>"instrumental signatures"</tt> from
+  <b>Quadproc</b> processes CCD images to remove all <span style="font-family: monospace;">"instrumental signatures"</span> from
   the data. The operations performed are:
   </p>
   <dl>
@@ -379,7 +379,7 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   recognized, provided the CCD image types are in the image header (see
   <b>instruments</b> and <b>ccdtypes</b>).  <b>Quadproc</b> separates multi- and
   mono-readout images in the input list and handles them accordingly.
-  Therefore it is permissible to use simple image templates such as <tt>"*.imh"</tt>.
+  Therefore it is permissible to use simple image templates such as <span style="font-family: monospace;">"*.imh"</span>.
   The <i>ccdtype</i> parameter may be used to select only certain types of CCD
   images to process (see <b>ccdtypes</b>).
   </p>
@@ -417,9 +417,9 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   count images.  If no calibration image is specified by task parameter
   then calibration images in the input image list are identified and
   used.  This requires that the images have CCD image types recognized
-  by the package.  This method is useful if one may simply say <tt>"*.imh"</tt>
+  by the package.  This method is useful if one may simply say <span style="font-family: monospace;">"*.imh"</span>
   as the image list to process all images or if the images are broken
-  up into groups, in <tt>"@"</tt> files for example, each with their own calibration
+  up into groups, in <span style="font-family: monospace;">"@"</span> files for example, each with their own calibration
   frames.
   </p>
   <!-- EndSection:   '1. Parameters' -->
@@ -438,13 +438,13 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   made on a raw multi-readout image.
   </p>
   <p>
-  Comment lines beginning with the character <tt>'#'</tt> may be included. If a comment
-  line preceding the bad regions contains the word <tt>"untrimmed"</tt> then the
+  Comment lines beginning with the character <span style="font-family: monospace;">'#'</span> may be included. If a comment
+  line preceding the bad regions contains the word <span style="font-family: monospace;">"untrimmed"</span> then the
   coordinate system refers to the original format of the images; i.e.  before 
   trimming.  If an image has been trimmed previously then the trim region
   specified in the image header is used to convert the coordinates in the bad
   pixel file to those of the trimmed image.  If the file does not contain the
-  word <tt>"untrimmed"</tt> then the coordinate system must match that of the image
+  word <span style="font-family: monospace;">"untrimmed"</span> then the coordinate system must match that of the image
   being corrected; i.e. untrimmed coordinates if the image has not been
   trimmed and trimmed coordinates if the image has been trimmed.
   Standard bad pixel files should always be specified in terms of the original
@@ -452,7 +452,7 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   </p>
   <p>
   The bad pixel file may be specified explicitly with the parameter <i>fixfile</i>
-  or indirectly if the parameter has the value <tt>"image"</tt>.  In the latter case
+  or indirectly if the parameter has the value <span style="font-family: monospace;">"image"</span>.  In the latter case
   the instrument file must contain the name of the file.
   </p>
   <!-- EndSection:   '2. Fixpix' -->
@@ -461,7 +461,7 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   <p>
   The portion of the image used to determine the readout bias level is specified
   with the parameter <b>biassec</b>. This may be an explicit image section, or it
-  may be set to the special value <tt>"image"</tt>. In the latter case the value given in
+  may be set to the special value <span style="font-family: monospace;">"image"</span>. In the latter case the value given in
   the image header is used.  The image header value uses the entire overscan 
   strip without allowing any margin between the data section and the bias
   section.  Because Arcon uses a DC-coupled preamplifier the transition
@@ -478,11 +478,11 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   the value recorded in the image header is that which would be appropriate had
   the detector been read out using a single amplifier; an explicit image section
   must be specified in the same way. <b>Quadproc</b> calculates the sections
-  to use for the sub-images corresponding to each readout based on such <tt>"single
-  readout"</tt> sections. To determine the section you must enter, use <b>imhead</b>
+  to use for the sub-images corresponding to each readout based on such <span style="font-family: monospace;">"single
+  readout"</span> sections. To determine the section you must enter, use <b>imhead</b>
   or <b>hselect</b> to determine the value of <b>biassec</b> stored in the image 
-  header. If this is, for instance,  <tt>"[1025:1060,1:1028]"</tt> then setting 
-  <b>biassec</b> = <tt>"[1029:1060,1:1028]"</tt> would leave  a margin of 4 pixels
+  header. If this is, for instance,  <span style="font-family: monospace;">"[1025:1060,1:1028]"</span> then setting 
+  <b>biassec</b> = <span style="font-family: monospace;">"[1029:1060,1:1028]"</span> would leave  a margin of 4 pixels
   (1029 - 1025).  Note that if two readouts are used in the horizontal direction 
   (quad or serial-split dual readout) the overscan strip for each amplifier is
   only half as wide as that in single readout mode. Thus in the example a 15
@@ -519,7 +519,7 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   <p>
   When the parameter <i>trim</i> is set the input image will be trimmed to
   the image section given by the parameter <i>trimsec</i>. This may be an explicit
-  image section, or it may be set to the special value <tt>"image"</tt>. In the latter
+  image section, or it may be set to the special value <span style="font-family: monospace;">"image"</span>. In the latter
   case the value given in the image header is used.  The image header value keeps
   the entire imaging section of the CCD.
   </p>
@@ -529,14 +529,14 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   the value recorded in the image header is that which would be appropriate had
   the detector been read out using a single amplifier; an explicit image section
   must be specified in the same way. <b>Quadproc</b> calculates the sections
-  to use for the sub-images corresponding to each readout based on such <tt>"single
-  readout"</tt> sections. In addition one is currently restricted to trimming exactly
+  to use for the sub-images corresponding to each readout based on such <span style="font-family: monospace;">"single
+  readout"</span> sections. In addition one is currently restricted to trimming exactly
   the same number of columns from each side of the CCD; there is no such 
   restriction on the number of lines which can be trimmed from the top and bottom
   edges of the image. To determine the section you must enter, use <b>imhead</b>
   or <b>hselect</b> to determine the value of <b>trimsec</b> stored in the image
-  header. If this is, for instance, <tt>"[1:1024,1:1028]"</tt> then setting
-  <b>trimsec</b> = <tt>"[10:1015,20:998]"</tt> would trim 9 columns from the left and right
+  header. If this is, for instance, <span style="font-family: monospace;">"[1:1024,1:1028]"</span> then setting
+  <b>trimsec</b> = <span style="font-family: monospace;">"[10:1015,20:998]"</span> would trim 9 columns from the left and right
   edges and 19 and 29 lines from the bottom and top edges respectively. If you
   need to perform an asymmetric trim in the horizontal direction this can be
   done, after processing, by using <b>imcopy</b> to copy the required portion of
@@ -693,11 +693,11 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   integrates one point in the sky or spectrum.  However, the design of most CCD's
   allows the sky to be scanned across the CCD while shifting the
   accumulating signal at the same rate.  <b>Quadproc</b> provides for two
-  scanning modes called <tt>"shortscan"</tt> and <tt>"longscan"</tt>.  The type of scan
+  scanning modes called <span style="font-family: monospace;">"shortscan"</span> and <span style="font-family: monospace;">"longscan"</span>.  The type of scan
   mode is set with the parameter <i>scanmode</i>.
   </p>
   <p>
-  In <tt>"shortscan"</tt> mode the detector is scanned over a specified number of
+  In <span style="font-family: monospace;">"shortscan"</span> mode the detector is scanned over a specified number of
   lines (not necessarily at sideral rates).  The lines that scroll off
   the detector during the integration are thrown away.  At the end of the
   integration the detector is read out in the same way as an unscanned
@@ -713,11 +713,11 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   (<i>nscan</i> parameter).
   </p>
   <p>
-  In <tt>"longscan"</tt> mode the detector is continuously read out to produce
+  In <span style="font-family: monospace;">"longscan"</span> mode the detector is continuously read out to produce
   an arbitrarily long strip.  Provided data which has not passed over
   the entire detector is thrown away, the flat field corrections will
   be one dimensional.  If <i>scancor</i> is specified and the
-  scan mode is <tt>"longscan"</tt> then a one dimensional flat field correction
+  scan mode is <span style="font-family: monospace;">"longscan"</span> then a one dimensional flat field correction
   will be applied.  If the specified flat field (<i>flat</i> parameter)
   is a two dimensional image then when the flat field image is processed
   it will be averaged across the readout axis to form a one dimensional
@@ -856,7 +856,7 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   <p>
   The second way is to specify the processing operations more explicitly
   than is needed when the header information is present.  The parameter
-  <i>ccdtype</i> is set to <tt>""</tt> or to <tt>"none"</tt>.  The calibration images are
+  <i>ccdtype</i> is set to <span style="font-family: monospace;">""</span> or to <span style="font-family: monospace;">"none"</span>.  The calibration images are
   specified explicitly by task parameter since they cannot be recognized
   in the input list.  Only one subset at a time may be processed.
   </p>

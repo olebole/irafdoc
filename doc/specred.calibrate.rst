@@ -71,18 +71,18 @@ calibrate: Extinction and flux calibrate spectra
   <dt><b>extinction = &lt;no default&gt;</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='extinction' Line='extinction = &lt;no default&gt;' -->
   <dd>Extinction file for the observation.  Standard extinction files
-  are available in the <tt>"onedstds$"</tt> directory.
+  are available in the <span style="font-family: monospace;">"onedstds$"</span> directory.
   </dd>
   </dl>
   <dl>
-  <dt><b>observatory = <tt>")_.observatory"</tt></b></dt>
+  <dt><b>observatory = <span style="font-family: monospace;">")_.observatory"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory = ")_.observatory"' -->
   <dd>Observatory at which the spectra were obtained if not specified in the
   image header by the keyword OBSERVAT.  The default is a redirection to the
   package parameter of the same name.  The observatory may be one of the
-  observatories in the observatory database, <tt>"observatory"</tt> to select the
-  observatory defined by the environment variable <tt>"observatory"</tt> or the
-  parameter <b>observatory.observatory</b>, or <tt>"obspars"</tt> to select the current
+  observatories in the observatory database, <span style="font-family: monospace;">"observatory"</span> to select the
+  observatory defined by the environment variable <span style="font-family: monospace;">"observatory"</span> or the
+  parameter <b>observatory.observatory</b>, or <span style="font-family: monospace;">"obspars"</span> to select the current
   parameters in the <b>observatory</b> task.  See <b>observatory</b> for
   additional information.
   </dd>
@@ -101,7 +101,7 @@ calibrate: Extinction and flux calibrate spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>sensitivity = <tt>"sens"</tt></b></dt>
+  <dt><b>sensitivity = <span style="font-family: monospace;">"sens"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sensitivity' Line='sensitivity = "sens"' -->
   <dd>The root name for the sensitivity spectra produced by <b>sensfunc</b>.
   Normally with multiaperture instruments, <b>sensfunc</b> will produce a
@@ -138,7 +138,7 @@ calibrate: Extinction and flux calibrate spectra
   parameter flags.  It is an error if no calibration is specified.  Normally
   the spectra should be extinction corrected if also flux calibrating.
   The image header keywords DC-FLAG (or the dispersion type field in the
-  <tt>"multispec"</tt> world coordinate system), EX-FLAG, and CA-FLAG are checked for
+  <span style="font-family: monospace;">"multispec"</span> world coordinate system), EX-FLAG, and CA-FLAG are checked for
   dispersion solution (required), previous extinction correction, and
   previous flux calibration.  If previously calibrated the spectrum is
   skipped and a new output image is not created.
@@ -158,7 +158,7 @@ calibrate: Extinction and flux calibrate spectra
   latitude of the observatory and observation parameters in the image
   header.  The observatory is first determined from the image under the
   keyword OBSERVAT.  If absent the observatory specified by the task
-  parameter <tt>"observatory"</tt> is used.  See <b>observatory</b> for further
+  parameter <span style="font-family: monospace;">"observatory"</span> is used.  See <b>observatory</b> for further
   details of the observatory database.  If the air mass cannot be
   determined an error results.  Currently a single airmass is used
   and no correction for changing extinction during the observation is
@@ -194,8 +194,8 @@ calibrate: Extinction and flux calibrate spectra
   	2.5 * Log10 [counts/sec/Ang / ergs/cm2/sec/Ang].
   </p>
   <p>
-  A new spectrum is created in <tt>"F-lambda"</tt> units - ergs/cm2/sec/Angstrom
-  or <tt>"F-nu"</tt> units - ergs/cm2/sec/Hz.  The sensitivity must span the range of
+  A new spectrum is created in <span style="font-family: monospace;">"F-lambda"</span> units - ergs/cm2/sec/Angstrom
+  or <span style="font-family: monospace;">"F-nu"</span> units - ergs/cm2/sec/Hz.  The sensitivity must span the range of
   wavelengths in the spectrum and interpolation is used if the wavelength
   coordinates are not identical.  If some pixels in the spectrum being
   calibrated fall outside the wavelength range of the sensitivity function
@@ -220,7 +220,7 @@ calibrate: Extinction and flux calibrate spectra
   the calibrated spectra:
   </p>
   <p>
-  	cl&gt; calibrate nite1 <tt>""</tt>
+  	cl&gt; calibrate nite1 <span style="font-family: monospace;">""</span>
   </p>
   <p>
   2.  To only extinction correct echelle spectra:
@@ -252,7 +252,7 @@ calibrate: Extinction and flux calibrate spectra
   <dt><b>CALIBRATE V2.10</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='CALIBRATE' Line='CALIBRATE V2.10' -->
   <dd>This task was revised to operate on nonlinear dispersion corrected spectra
-  and 3D images (the <b>apextract</b> <tt>"extras"</tt>).  The aperture selection
+  and 3D images (the <b>apextract</b> <span style="font-family: monospace;">"extras"</span>).  The aperture selection
   parameter was eliminated (since the header structure does not allow mixing
   calibrated and uncalibrated spectra) and the latitude parameter was
   replaced by the observatory parameter.  The observatory mechanism insures

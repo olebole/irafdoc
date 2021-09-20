@@ -40,8 +40,8 @@ tsort: Sort a table.
   sorted column is a character string).  If 'casesens = yes', upper 
   case characters
   precede lower case characters.  Otherwise, case is not significant
-  in determining the sort order.  When sorting a boolean column, <tt>"no"</tt> precedes
-  <tt>"yes"</tt>.  Null table elements are always last in the sort, regardless
+  in determining the sort order.  When sorting a boolean column, <span style="font-family: monospace;">"no"</span> precedes
+  <span style="font-family: monospace;">"yes"</span>.  Null table elements are always last in the sort, regardless
   of the value of 'ascend'. 
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
@@ -65,7 +65,7 @@ tsort: Sort a table.
   Individual column names, or templates, are separated by commas or white space.
   The list of columns can be placed in a file and the name of the 
   file passed to 'columns' (preceded by a
-  <tt>"@"</tt> character). 
+  <span style="font-family: monospace;">"@"</span> character). 
   </dd>
   </dl>
   <dl>
@@ -84,27 +84,19 @@ tsort: Sort a table.
   <dl>
   <dt><b></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line=' ' -->
-  <dd></dd>
-  </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  <dd><!-- EndSection:   'PARAMETERS' -->
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
-  <p>
   1. Sort a table of star positions by right ascension and declination:
-  </p>
   <pre>
   tt&gt; tsort starcat.tab ra,dec
   </pre>
-  <p>
   2. Sort a phone list. Make the sort case insensitive:
-  </p>
   <pre>
   tt&gt; tsort phone.tab lname,fname case-
   </pre>
-  <p>
   3. Sort a star catalog so that all binary stars (i.e., a boolean column
   named 'binary') are first:
-  </p>
   <pre>
   tt&gt; tsort starcat.tab binary asc-
   </pre>
@@ -114,15 +106,11 @@ tsort: Sort a table.
   <!-- EndSection:   'BUGS' -->
   <h3>References</h3>
   <!-- BeginSection: 'REFERENCES' -->
-  <p>
   This task was written by Bernie Simon.
-  </p>
   <!-- EndSection:   'REFERENCES' -->
   <h3>See also</h3>
   <!-- BeginSection: 'SEE ALSO' -->
-  <p>
   tcopy
-  </p>
   
   <!-- EndSection:    'SEE ALSO' -->
   

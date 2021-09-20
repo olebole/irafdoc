@@ -23,7 +23,7 @@ filtpars: Edit the filter function parameters
   <h3>Parameters</h3>
   <!-- BeginSection: 'PARAMETERS' -->
   <dl>
-  <dt><b>f_type = <tt>"ramp"</tt></b></dt>
+  <dt><b>f_type = <span style="font-family: monospace;">"ramp"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='f_type' Line='f_type = "ramp"' -->
   <dd>Type of filter to be used.  Possible choices are
   <dl>
@@ -110,7 +110,7 @@ filtpars: Edit the filter function parameters
   </p>
   <p>
   Filtering is enabled by turning on the <i>fxcor.filter</i> parameter and setting
-  it to something other than <tt>"none"</tt>.  Filtering may be done on only one of the
+  it to something other than <span style="font-family: monospace;">"none"</span>.  Filtering may be done on only one of the
   two spectra or both prior to correlation.
   </p>
   <p>
@@ -182,7 +182,7 @@ filtpars: Edit the filter function parameters
   <dt><b>:update  filtpars</b></dt>
   <!-- Sec='TASK COLON COMMANDS' Level=0 Label='' Line=':update  filtpars' -->
   <dd>Update the pset with the current values of the filter parameters.
-  The argument <tt>"filtpars"</tt> must be present or else the command will default
+  The argument <span style="font-family: monospace;">"filtpars"</span> must be present or else the command will default
   to the task parameters.
   </dd>
   </dl>
@@ -190,7 +190,7 @@ filtpars: Edit the filter function parameters
   <dt><b>:unlearn  filtpars</b></dt>
   <!-- Sec='TASK COLON COMMANDS' Level=0 Label='' Line=':unlearn  filtpars' -->
   <dd>Reset the parameter values to their defaults.
-  The argument <tt>"filtpars"</tt> must be present or else the command will default
+  The argument <span style="font-family: monospace;">"filtpars"</span> must be present or else the command will default
   to the task parameters.
   </dd>
   </dl>
@@ -198,7 +198,7 @@ filtpars: Edit the filter function parameters
   <dt><b>:show  filtpars</b></dt>
   <!-- Sec='TASK COLON COMMANDS' Level=0 Label='' Line=':show  filtpars' -->
   <dd>Clear the screen and display all values in the filtpars pset.
-  The argument <tt>"filtpars"</tt> must be present or else the command will default
+  The argument <span style="font-family: monospace;">"filtpars"</span> must be present or else the command will default
   to the task default.
   </dd>
   </dl>

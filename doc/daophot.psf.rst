@@ -32,7 +32,7 @@ psf: Compute the point spread function
   <dt><b>photfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='photfile' Line='photfile' -->
   <dd>The list of input photometry files. The number of photometry files must
-  be equal to the number of input images. If photfile is <tt>"default"</tt>, <tt>"dir$default"</tt>,
+  be equal to the number of input images. If photfile is <span style="font-family: monospace;">"default"</span>, <span style="font-family: monospace;">"dir$default"</span>,
   or a directory specification  PSF searches for a file called dir$image.mag.# 
   where # is the highest available version number for the file. Photfile is
   normally the output of the PHOT task but may also be the  output of the PSF,
@@ -46,7 +46,7 @@ psf: Compute the point spread function
   <dd>The list of input psf star photometry files. The ids of the psf stars in these
   files must be the same as their ids in <i>photfile</i>. The number of psf
   star files must be zero or equal to the number of input images. If pstfile
-  is <tt>"default"</tt>, <tt>"dir$default"</tt> or a directory specification, PSF searches for
+  is <span style="font-family: monospace;">"default"</span>, <span style="font-family: monospace;">"dir$default"</span> or a directory specification, PSF searches for
   a file called image.pst.? where ? is the highest existing version number.
   Pstfile is usually the output of the DAOPHOT PSTSELECT task but may also be
   the appropriately edited output psf file produced by PSF itself, or the output
@@ -58,7 +58,7 @@ psf: Compute the point spread function
   <dt><b>psfimage</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='psfimage' Line='psfimage' -->
   <dd>The output PSF model image names or directory. The must be one PSF image name
-  for every input image. If psfimage is <tt>"default"</tt>, <tt>"dir$default"</tt>, or a directory
+  for every input image. If psfimage is <span style="font-family: monospace;">"default"</span>, <span style="font-family: monospace;">"dir$default"</span>, or a directory
   specification, then PSF creates an image called image.psf.? where ? is the next
   available version number.
   </dd>
@@ -68,9 +68,9 @@ psf: Compute the point spread function
   <!-- Sec='PARAMETERS' Level=0 Label='opstfile' Line='opstfile' -->
   <dd>The output psf star files containing lists of the stars actually used to
   compute the PSF model. There must be one output psf star file for every input
-  image. If opstfile is <tt>"default"</tt>, <tt>"dir$default"</tt>, or a directory specification
+  image. If opstfile is <span style="font-family: monospace;">"default"</span>, <span style="font-family: monospace;">"dir$default"</span>, or a directory specification
   then PSF creates a file called image.pst.? where ? is the next available
-  version number. If the DAOPHOT package parameter <i>text</i> is <tt>"yes"</tt> then an
+  version number. If the DAOPHOT package parameter <i>text</i> is <span style="font-family: monospace;">"yes"</span> then an
   APPHOT/DAOPHOT text database is written, otherwise an STSDAS binary table is
   written.
   </dd>
@@ -80,15 +80,15 @@ psf: Compute the point spread function
   <!-- Sec='PARAMETERS' Level=0 Label='groupfile' Line='groupfile' -->
   <dd>The output psf star group files listing the PSF stars and their neighbors that
   were used to create the PSF models. There must be one output group file for
-  every input image. If groupfile is <tt>"default"</tt>, <tt>"dir$default"</tt>, or a directory
+  every input image. If groupfile is <span style="font-family: monospace;">"default"</span>, <span style="font-family: monospace;">"dir$default"</span>, or a directory
   specification then PSF creates a file called image.psg.? where ? is the
   next available version number. If the DAOPHOT package parameter <i>text</i> is
-  <tt>"yes"</tt> then an APPHOT/DAOPHOT text database is written, otherwise an STSDAS
+  <span style="font-family: monospace;">"yes"</span> then an APPHOT/DAOPHOT text database is written, otherwise an STSDAS
   table database is written.
   </dd>
   </dl>
   <dl>
-  <dt><b>plotfile = <tt>""</tt></b></dt>
+  <dt><b>plotfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='plotfile' Line='plotfile = ""' -->
   <dd>The name of the output file containing mesh, contour, or profile plots of the
   selected PSF stars. If plotfile is undefined no plot file is created,
@@ -97,7 +97,7 @@ psf: Compute the point spread function
   </dd>
   </dl>
   <dl>
-  <dt><b>datapars = <tt>""</tt></b></dt>
+  <dt><b>datapars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='datapars' Line='datapars = ""' -->
   <dd>The name of the file containing the data dependent parameters. The parameters
   <i>scale</i>, <i>datamin</i>, and <i>datamax</i> are located here. If datapars
@@ -105,7 +105,7 @@ psf: Compute the point spread function
   </dd>
   </dl>
   <dl>
-  <dt><b>daopars = <tt>""</tt></b></dt>
+  <dt><b>daopars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='daopars' Line='daopars = ""' -->
   <dd>The name of the file containing the daophot fitting parameters. The parameters
   <i>psfrad</i> and <i>fitrad</i> are located here. If <i>daopars</i> is undefined
@@ -145,40 +145,40 @@ psf: Compute the point spread function
   interactively by the user, a mesh, contour, or profile plot of the data
   subraster around the candidate star is displayed. At this point the user
   can accept or reject the star. In interactive mode the user can set showplots
-  to <tt>"yes"</tt> or <tt>"no"</tt>.  In non-interactive mode showplots is always <tt>"no"</tt>.
+  to <span style="font-family: monospace;">"yes"</span> or <span style="font-family: monospace;">"no"</span>.  In non-interactive mode showplots is always <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>plottype = <tt>"mesh"</tt></b></dt>
+  <dt><b>plottype = <span style="font-family: monospace;">"mesh"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='plottype' Line='plottype = "mesh"' -->
   <dd>The default type of plot displayed when selecting PSF stars. The choices
-  are <tt>"mesh"</tt>, <tt>"contour"</tt>, or <tt>"radial"</tt>.
+  are <span style="font-family: monospace;">"mesh"</span>, <span style="font-family: monospace;">"contour"</span>, or <span style="font-family: monospace;">"radial"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>icommands = <tt>""</tt></b></dt>
+  <dt><b>icommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""' -->
   <dd>The image display cursor or the name of the image cursor command file.
   </dd>
   </dl>
   <dl>
-  <dt><b>gcommands = <tt>""</tt></b></dt>
+  <dt><b>gcommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""' -->
   <dd>The graphics cursor or the name of the graphics cursor command file.
   </dd>
   </dl>
   <dl>
-  <dt><b>wcsin = <tt>")_.wcsin"</tt>, wcsout = <tt>")_.wcsout"</tt></b></dt>
+  <dt><b>wcsin = <span style="font-family: monospace;">")_.wcsin"</span>, wcsout = <span style="font-family: monospace;">")_.wcsout"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcsin' Line='wcsin = ")_.wcsin", wcsout = ")_.wcsout"' -->
   <dd>The coordinate system of the input coordinates read from <i>photfile</i> and
   <i>pstfile</i>, and of the output coordinates written to <i>psfimage</i>,
   <i>opstfile</i>, <i>groupfile</i> respectively. The image header coordinate
-  system is used to transform from the input coordinate system to the <tt>"logical"</tt>
-  pixel coordinate system used internally, and from the internal <tt>"logical"</tt> pixel
+  system is used to transform from the input coordinate system to the <span style="font-family: monospace;">"logical"</span>
+  pixel coordinate system used internally, and from the internal <span style="font-family: monospace;">"logical"</span> pixel
   coordinate system to the output coordinate system. The input coordinate system
-  options are <tt>"logical"</tt>, <tt>"tv"</tt>, <tt>"physical"</tt>, and <tt>"world"</tt>. The output coordinate
-  system options are <tt>"logical"</tt>, <tt>"tv"</tt>, and <tt>"physical"</tt>. The image cursor coordinate
-  system is assumed to be the <tt>"tv"</tt> system.
+  options are <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"tv"</span>, <span style="font-family: monospace;">"physical"</span>, and <span style="font-family: monospace;">"world"</span>. The output coordinate
+  system options are <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"tv"</span>, and <span style="font-family: monospace;">"physical"</span>. The image cursor coordinate
+  system is assumed to be the <span style="font-family: monospace;">"tv"</span> system.
   <dl>
   <dt><b>logical</b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='logical' Line='logical' -->
@@ -232,52 +232,52 @@ psf: Compute the point spread function
   </dl>
   The wcsin and wcsout parameters default to the values of the package
   parameters of the same name. The default values of the package parameters
-  wcsin and wcsout are <tt>"logical"</tt> and <tt>"logical"</tt> respectively.
+  wcsin and wcsout are <span style="font-family: monospace;">"logical"</span> and <span style="font-family: monospace;">"logical"</span> respectively.
   </dd>
   </dl>
   <dl>
-  <dt><b>cache = <tt>")_.cache"</tt></b></dt>
+  <dt><b>cache = <span style="font-family: monospace;">")_.cache"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cache' Line='cache = ")_.cache"' -->
   <dd>Cache the image pixels in memory. Cache may be set to the value of the apphot
-  package parameter (the default), <tt>"yes"</tt>, or <tt>"no"</tt>. By default caching is
+  package parameter (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>. By default caching is
   disabled.
   </dd>
   </dl>
   <dl>
-  <dt><b>verify = <tt>")_.verify"</tt></b></dt>
+  <dt><b>verify = <span style="font-family: monospace;">")_.verify"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verify' Line='verify = ")_.verify"' -->
   <dd>Verify the critical PSF task parameters? Verify can be set to the DAOPHOT
-  package parameter value (the default), <tt>"yes"</tt>, or <tt>"no"</tt>.
+  package parameter value (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>update = <tt>")_.update"</tt></b></dt>
+  <dt><b>update = <span style="font-family: monospace;">")_.update"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='update' Line='update = ")_.update"' -->
-  <dd>Update the PSF task parameters if <i>verify</i> is <tt>"yes"</tt>? Update can be
-  set to the default daophot package parameter value, <tt>"yes"</tt>, or <tt>"no"</tt>.
+  <dd>Update the PSF task parameters if <i>verify</i> is <span style="font-family: monospace;">"yes"</span>? Update can be
+  set to the default daophot package parameter value, <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>verbose = <tt>")_.verbose"</tt></b></dt>
+  <dt><b>verbose = <span style="font-family: monospace;">")_.verbose"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = ")_.verbose"' -->
   <dd>Print messages about the progress of the task ? Verbose can be set to the
-  DAOPHOT package parameter value (the default), <tt>"yes"</tt>, or <tt>"no"</tt>.
+  DAOPHOT package parameter value (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>")_.graphics"</tt></b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">")_.graphics"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = ")_.graphics"' -->
   <dd>The default graphics device. Graphics can be set to the default DAOPHOT package
-  parameter value, <tt>"yes"</tt>, or <tt>"no"</tt>.
+  parameter value, <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>display = <tt>")_.display"</tt></b></dt>
+  <dt><b>display = <span style="font-family: monospace;">")_.display"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='display' Line='display = ")_.display"' -->
   <dd>The  default  image  display  device.  Display can be set to the DAOPHOT
-  package parameter value (the default), <tt>"yes"</tt>, or <tt>"no"</tt>. By default graphics
-  overlay is disabled.  Setting display to one of <tt>"imdr"</tt>, <tt>"imdg"</tt>, <tt>"imdb"</tt>, or
-  <tt>"imdy"</tt> enables graphics overlay with the IMD graphics kernel. 
+  package parameter value (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>. By default graphics
+  overlay is disabled.  Setting display to one of <span style="font-family: monospace;">"imdr"</span>, <span style="font-family: monospace;">"imdg"</span>, <span style="font-family: monospace;">"imdb"</span>, or
+  <span style="font-family: monospace;">"imdy"</span> enables graphics overlay with the IMD graphics kernel. 
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -290,27 +290,27 @@ psf: Compute the point spread function
   and writes the PSF model out to the IRAF image <i>psfimage</i>, the final
   PSF star list to <i>opstfile</i>, and group membership information for the
   selected PSF stars to <i>groupfile</i>. If the DAOPHOT package parameter
-  <i>text</i> is <tt>"yes"</tt>, then <i>groupfile</i> is an APPHOT/DAOPHOT text database,
+  <i>text</i> is <span style="font-family: monospace;">"yes"</span>, then <i>groupfile</i> is an APPHOT/DAOPHOT text database,
   otherwise it is an STSDAS binary table.
   </p>
   <p>
   The coordinates read from <i>photfile</i> and <i>pstfile</i> are assumed to be
-  in coordinate system defined by <i>wcsin</i>. The options are <tt>"logical"</tt>, <tt>"tv"</tt>,
-  <tt>"physical"</tt>, and <tt>"world"</tt> and the transformation from the input coordinate
-  system to the internal <tt>"logical"</tt> system is defined by the image coordinate
-  system. The simplest default is the <tt>"logical"</tt> pixel system. Users working on
+  in coordinate system defined by <i>wcsin</i>. The options are <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"tv"</span>,
+  <span style="font-family: monospace;">"physical"</span>, and <span style="font-family: monospace;">"world"</span> and the transformation from the input coordinate
+  system to the internal <span style="font-family: monospace;">"logical"</span> system is defined by the image coordinate
+  system. The simplest default is the <span style="font-family: monospace;">"logical"</span> pixel system. Users working on
   with image sections but importing pixel coordinate lists generated from the
-  parent image must use the <tt>"tv"</tt> or <tt>"physical"</tt> input coordinate systems.
+  parent image must use the <span style="font-family: monospace;">"tv"</span> or <span style="font-family: monospace;">"physical"</span> input coordinate systems.
   </p>
   <p>
   The coordinates written to <i>psfimage</i>, <i>pstfile</i> and <i>groupfile</i>
   are in the coordinate system defined by <i>wcsout</i> with the exception
   of the psf model center coordinates PSFX and PSFY which are always in the
-  logical system of the input image. The options are <tt>"logical"</tt>, <tt>"tv"</tt>, and
-  <tt>"physical"</tt>. The simplest default is the <tt>"logical"</tt> system.  Users wishing to
+  logical system of the input image. The options are <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"tv"</span>, and
+  <span style="font-family: monospace;">"physical"</span>. The simplest default is the <span style="font-family: monospace;">"logical"</span> system.  Users wishing to
   correlate the output coordinates of objects measured in image sections or
-  mosaic pieces with coordinates in the parent image must use the <tt>"tv"</tt>
-  or <tt>"physical"</tt> coordinate systems.
+  mosaic pieces with coordinates in the parent image must use the <span style="font-family: monospace;">"tv"</span>
+  or <span style="font-family: monospace;">"physical"</span> coordinate systems.
   </p>
   <p>
   Suitable PSF stars are normally selected interactively using the image display
@@ -343,7 +343,7 @@ psf: Compute the point spread function
   </p>
   <p>
   In interactive mode the PSF star may be initialized by setting <i>pstfile</i>
-  to a file created by the PSTSELECT task. If <i>showplot</i> = <tt>"yes"</tt> the user is
+  to a file created by the PSTSELECT task. If <i>showplot</i> = <span style="font-family: monospace;">"yes"</span> the user is
   asked to accept or delete each star in the input psf star list.  Other stars
   may also be added or deleted from this list at any time with the image cursor.
   If <i>interactive</i>=no or <i>icommands</i> is defined, the PSF stars are read
@@ -369,9 +369,9 @@ psf: Compute the point spread function
   </p>
   <p>
   The output PSF image <i>psfimage</i>  is normally a 2D  image containing the
-  image header parameters, <tt>"XPSF"</tt>, <tt>"YPSF"</tt>, <tt>"PSFMAG"</tt> and <tt>"PSFRAD"</tt> which define the
-  centroid, magnitude and size of the PSF model, the parameters <tt>"FUNCTION"</tt>,
-  <tt>"PSFHEIGH"</tt>, <tt>"NPARS"</tt>, and <tt>"PAR#"</tt> which define the analytic component of the PSF,
+  image header parameters, <span style="font-family: monospace;">"XPSF"</span>, <span style="font-family: monospace;">"YPSF"</span>, <span style="font-family: monospace;">"PSFMAG"</span> and <span style="font-family: monospace;">"PSFRAD"</span> which define the
+  centroid, magnitude and size of the PSF model, the parameters <span style="font-family: monospace;">"FUNCTION"</span>,
+  <span style="font-family: monospace;">"PSFHEIGH"</span>, <span style="font-family: monospace;">"NPARS"</span>, and <span style="font-family: monospace;">"PAR#"</span> which define the analytic component of the PSF,
   and a single look-up table of residuals from the analytic fit subsampled by a
   factor of 2 with respect to the parent image.
   </p>
@@ -489,15 +489,15 @@ psf: Compute the point spread function
   The first component is an analytic function which approximates
   the light distribution in the cores of the PSF stars. There are
   currently 6 choices for the analytic component of the model:
-  <tt>"gauss"</tt>, <tt>"moffat15"</tt>, <tt>"moffat25"</tt>, <tt>"lorentz"</tt>, <tt>"penny1"</tt>, and <tt>"penny2"</tt>.
+  <span style="font-family: monospace;">"gauss"</span>, <span style="font-family: monospace;">"moffat15"</span>, <span style="font-family: monospace;">"moffat25"</span>, <span style="font-family: monospace;">"lorentz"</span>, <span style="font-family: monospace;">"penny1"</span>, and <span style="font-family: monospace;">"penny2"</span>.
   The parameters of the analytic component of the psf model are stored
-  in the psf image header parameters <tt>"FUNCTION"</tt>, <tt>"PSFHEIGH"</tt>, <tt>"NPARS"</tt>,
-  and <tt>"PARN"</tt>. The magnitude, size, and centroid of the PSF are stored
-  in the image header parameters <tt>"PSFMAG"</tt>, <tt>"PSFRAD"</tt>, 
-  <tt>"XPSF"</tt>, and <tt>"YPSF"</tt>. If <i>matchbyid</i> is <tt>"no"</tt> or there is no input psf star list <tt>"PSFMAG"</tt> is
+  in the psf image header parameters <span style="font-family: monospace;">"FUNCTION"</span>, <span style="font-family: monospace;">"PSFHEIGH"</span>, <span style="font-family: monospace;">"NPARS"</span>,
+  and <span style="font-family: monospace;">"PARN"</span>. The magnitude, size, and centroid of the PSF are stored
+  in the image header parameters <span style="font-family: monospace;">"PSFMAG"</span>, <span style="font-family: monospace;">"PSFRAD"</span>, 
+  <span style="font-family: monospace;">"XPSF"</span>, and <span style="font-family: monospace;">"YPSF"</span>. If <i>matchbyid</i> is <span style="font-family: monospace;">"no"</span> or there is no input psf star list <span style="font-family: monospace;">"PSFMAG"</span> is
   set to the magnitude of the first PSF star in the input photometry file. If <i>matchbyid</i>
-  is <tt>"yes"</tt>, and there is an input psf star list <tt>"PSFMAG"</tt> is set to the magnitude of the first psf star
-  in the psf star list. <tt>"XPSF"</tt> and <tt>"YPSF"</tt> are the center of the image.
+  is <span style="font-family: monospace;">"yes"</span>, and there is an input psf star list <span style="font-family: monospace;">"PSFMAG"</span> is set to the magnitude of the first psf star
+  in the psf star list. <span style="font-family: monospace;">"XPSF"</span> and <span style="font-family: monospace;">"YPSF"</span> are the center of the image.
   If <i>varorder</i> &gt;= 0,
   the residuals from this fit are stored as a lookup
   table with twice the sampling interval of the original image.
@@ -610,7 +610,7 @@ psf: Compute the point spread function
   selecting the missing stars with the image cursor.
   Be sure to use the same set of PHOT parameters used in step [1] with
   the exception of the CENTERPARS
-  task parameter <i>calgorithm</i> which should be temporarily set to <tt>"centroid"</tt>.
+  task parameter <i>calgorithm</i> which should be temporarily set to <span style="font-family: monospace;">"centroid"</span>.
   If IRAF does not support the
   local display generate a list of the approximate coordinates of the
   missing stars.

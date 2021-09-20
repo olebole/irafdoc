@@ -25,18 +25,18 @@ setinstrument: Set instrument parameters
   <dl>
   <dt><b>instrument</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='instrument' Line='instrument' -->
-  <dd>Instrument identification for instrument parameters to be set.  If <tt>'?'</tt>
+  <dd>Instrument identification for instrument parameters to be set.  If <span style="font-family: monospace;">'?'</span>
   then a list of the instrument identifiers is printed.
   </dd>
   </dl>
   <dl>
-  <dt><b>site = <tt>"kpno"</tt></b></dt>
+  <dt><b>site = <span style="font-family: monospace;">"kpno"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='site' Line='site = "kpno"' -->
   <dd>Site ID.
   </dd>
   </dl>
   <dl>
-  <dt><b>directory = <tt>"ccddb$"</tt></b></dt>
+  <dt><b>directory = <span style="font-family: monospace;">"ccddb$"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='directory' Line='directory = "ccddb$"' -->
   <dd>Instrument directory containing instrument files.  The instrument files
   are found in the subdirectory given by the site ID. 
@@ -63,35 +63,35 @@ setinstrument: Set instrument parameters
   parameters for a new instrument.  The default parameters are generally
   defined by support personal in an instrument directory for a particular
   site.  The instrument directory is the concatenation of the specified
-  directory and the site.  For example if the directory is <tt>"ccddb$"</tt> and
-  the site is <tt>"kpno"</tt> then the instrument directory is <tt>"ccddb$kpno/"</tt>.
+  directory and the site.  For example if the directory is <span style="font-family: monospace;">"ccddb$"</span> and
+  the site is <span style="font-family: monospace;">"kpno"</span> then the instrument directory is <span style="font-family: monospace;">"ccddb$kpno/"</span>.
   The user may have his own set of instrument files in a local directory.
   The current directory is used by setting the directory and site to the
-  null string (<tt>""</tt>).
+  null string (<span style="font-family: monospace;">""</span>).
   </p>
   <p>
   The user specifies an instrument identifier.  This instrument may
   be specific to a particular observatory, telescope, instrument, and
-  detector.  If the character <tt>'?'</tt> is specified or the instrument file is
+  detector.  If the character <span style="font-family: monospace;">'?'</span> is specified or the instrument file is
   not found then a list of instruments
-  in the instrument directory is produced by paging the file <tt>"instruments.men"</tt>.
+  in the instrument directory is produced by paging the file <span style="font-family: monospace;">"instruments.men"</span>.
   The task then performs the following operations:
   </p>
   <dl>
   <dt><b>(1)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='' Line='(1)' -->
   <dd>If an instrument translation file with the name given by the instrument
-  ID and the extension <tt>".dat"</tt> is found then the instrument translation
+  ID and the extension <span style="font-family: monospace;">".dat"</span> is found then the instrument translation
   file parameter, <i>ccdred.instrument</i>, is set to this file.
   If it does not exist then the user is queried again.  Note that a
-  null instrument, <tt>""</tt>, is allowed to set no translation file.
+  null instrument, <span style="font-family: monospace;">""</span>, is allowed to set no translation file.
   </dd>
   </dl>
   <dl>
   <dt><b>(2)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='' Line='(2)' -->
   <dd>If an instrument setup script with the name given by the instrument ID
-  and the extension <tt>".cl"</tt> is found then the commands in the file are
+  and the extension <span style="font-family: monospace;">".cl"</span> is found then the commands in the file are
   executed (using the command <i>cl &lt; script</i>.  This script generally
   sets default parameters.
   </dd>

@@ -29,7 +29,7 @@ imheader: Print an image header
   </dd>
   </dl>
   <dl>
-  <dt><b>imlist = <tt>"*.imh,*.fits,*.pl,*.qp,*.hhh"</tt></b></dt>
+  <dt><b>imlist = <span style="font-family: monospace;">"*.imh,*.fits,*.pl,*.qp,*.hhh"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='imlist' Line='imlist = "*.imh,*.fits,*.pl,*.qp,*.hhh"' -->
   <dd>The default IRAF image name template.
   </dd>

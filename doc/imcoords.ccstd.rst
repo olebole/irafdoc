@@ -27,7 +27,7 @@ ccstd: Transform to and from standard astrometric coordinates
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>The input coordinate files. Coordinates may be entered by hand by setting input
-  to <tt>"STDIN"</tt>.
+  to <span style="font-family: monospace;">"STDIN"</span>.
   </dd>
   </dl>
   <dl>
@@ -35,7 +35,7 @@ ccstd: Transform to and from standard astrometric coordinates
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>The output coordinate files. The number of output files must be one or equal
   to the number of input files. Results may be printed on the terminal by
-  setting output to <tt>"STDOUT"</tt>.
+  setting output to <span style="font-family: monospace;">"STDOUT"</span>.
   </dd>
   </dl>
   <dl>
@@ -62,7 +62,7 @@ ccstd: Transform to and from standard astrometric coordinates
   </dd>
   </dl>
   <dl>
-  <dt><b>geometry = <tt>"geometric"</tt></b></dt>
+  <dt><b>geometry = <span style="font-family: monospace;">"geometric"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='geometry' Line='geometry = "geometric"' -->
   <dd>The type of geometric transformation. The geometry parameter is
   only requested if database is defined. The options are:
@@ -87,7 +87,7 @@ ccstd: Transform to and from standard astrometric coordinates
   <dt><b>forward = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='forward' Line='forward = yes' -->
   <dd>Transform from pixel and celestial coordinates to standard coordinates ? If
-  forward is <tt>"no"</tt> then the plate solution is inverted and standard coordinates
+  forward is <span style="font-family: monospace;">"no"</span> then the plate solution is inverted and standard coordinates
   are transformed to pixel and celestial coordinates.
   </dd>
   </dl>
@@ -144,21 +144,21 @@ ccstd: Transform to and from standard astrometric coordinates
   </dd>
   </dl>
   <dl>
-  <dt><b>lngunits = <tt>""</tt>, latunits = <tt>""</tt></b></dt>
+  <dt><b>lngunits = <span style="font-family: monospace;">""</span>, latunits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngunits' Line='lngunits = "", latunits = ""' -->
   <dd>The units of the input or output ra / longitude and dec / latitude coordinates.
-  The options are <tt>"hours"</tt>, <tt>"degrees"</tt>, <tt>"radians"</tt> for ra / longitude coordinates,
-  and <tt>"degrees"</tt> and <tt>"radians"</tt> for dec / latitude systems. If lngunits and
+  The options are <span style="font-family: monospace;">"hours"</span>, <span style="font-family: monospace;">"degrees"</span>, <span style="font-family: monospace;">"radians"</span> for ra / longitude coordinates,
+  and <span style="font-family: monospace;">"degrees"</span> and <span style="font-family: monospace;">"radians"</span> for dec / latitude systems. If lngunits and
   latunits are undefined they default to the values in the database records.
-  If database is undefined then lngunits and latunits default to <tt>"hours"</tt> and
-  <tt>"degrees"</tt> respectively.
+  If database is undefined then lngunits and latunits default to <span style="font-family: monospace;">"hours"</span> and
+  <span style="font-family: monospace;">"degrees"</span> respectively.
   </dd>
   </dl>
   <dl>
-  <dt><b>projection = <tt>"tan"</tt></b></dt>
+  <dt><b>projection = <span style="font-family: monospace;">"tan"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='projection' Line='projection = "tan"' -->
-  <dd>The sky projection geometry. The options are <tt>"tan"</tt>, <tt>"sin"</tt>, <tt>"arc"</tt> and
-  <tt>"lin"</tt>. If database is undefined then the value of the projection parameter
+  <dd>The sky projection geometry. The options are <span style="font-family: monospace;">"tan"</span>, <span style="font-family: monospace;">"sin"</span>, <span style="font-family: monospace;">"arc"</span> and
+  <span style="font-family: monospace;">"lin"</span>. If database is undefined then the value of the projection parameter
   is used, otherwise this parameter is ignored.
   </dd>
   </dl>
@@ -166,33 +166,33 @@ ccstd: Transform to and from standard astrometric coordinates
   <dt><b>xcolumn = 1, ycolumn = 2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xcolumn' Line='xcolumn = 1, ycolumn = 2' -->
   <dd>The columns in the input coordinate file containing the x and y coordinates
-  if the <i>forward</i> parameter is <tt>"yes"</tt>, or the corresponding standard
-  coordinates xi and eta if the forward parameter is <tt>"no"</tt>.
+  if the <i>forward</i> parameter is <span style="font-family: monospace;">"yes"</span>, or the corresponding standard
+  coordinates xi and eta if the forward parameter is <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <dl>
   <dt><b>lngcolumn = 3, latcolumn = 4</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngcolumn' Line='lngcolumn = 3, latcolumn = 4' -->
   <dd>The columns in the input coordinate file containing the celestial coordinates
-  if the <i>forward</i> parameter is <tt>"yes"</tt>, or the corresponding standard
-  coordinates xi and eta if the forward parameter is <tt>"no"</tt>.
+  if the <i>forward</i> parameter is <span style="font-family: monospace;">"yes"</span>, or the corresponding standard
+  coordinates xi and eta if the forward parameter is <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>lngformat = <tt>""</tt>, latformat = <tt>""</tt></b></dt>
+  <dt><b>lngformat = <span style="font-family: monospace;">""</span>, latformat = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngformat' Line='lngformat = "", latformat = ""' -->
   <dd>The default output format of the transformed coordinates in lngcolumn and 
-  latcolumn. If forward = yes then the default output format is <tt>"%10.3f"</tt>.
-  Otherwise the defaults are <tt>"%12.2h"</tt> for output coordinates in hours, <tt>"%11.1h"</tt>
-  for output coordinates in degrees, and <tt>"%13.7g"</tt> for output coordinates in
+  latcolumn. If forward = yes then the default output format is <span style="font-family: monospace;">"%10.3f"</span>.
+  Otherwise the defaults are <span style="font-family: monospace;">"%12.2h"</span> for output coordinates in hours, <span style="font-family: monospace;">"%11.1h"</span>
+  for output coordinates in degrees, and <span style="font-family: monospace;">"%13.7g"</span> for output coordinates in
   radians.
   </dd>
   </dl>
   <dl>
-  <dt><b>xformat = <tt>""</tt>, yformat = <tt>""</tt></b></dt>
+  <dt><b>xformat = <span style="font-family: monospace;">""</span>, yformat = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xformat' Line='xformat = "", yformat = ""' -->
   <dd>The default output format of the transformed coordinates in xcolumn and
-  ycolumn. The default is <tt>"%10.3f"</tt>.
+  ycolumn. The default is <span style="font-family: monospace;">"%10.3f"</span>.
   </dd>
   </dl>
   <dl>
@@ -214,9 +214,9 @@ ccstd: Transform to and from standard astrometric coordinates
   files. The format of the output coordinates can be specified using the
   <i>xformat</i>, <i>yformat</i>, <i>lngformat</i> and <i>latformat</i> parameters.
   If the output formats are unspecified the coordinates are written  out with
-  reasonable default formats, e.g. <tt>"%10.3f"</tt> for standard coordinates,
-  <tt>"%12.2h"</tt> and <tt>"11.1h"</tt> for celestial coordinates in hours or degrees,
-  and <tt>"%13.7g"</tt> for celestial coordinates in radians. All the remaining
+  reasonable default formats, e.g. <span style="font-family: monospace;">"%10.3f"</span> for standard coordinates,
+  <span style="font-family: monospace;">"%12.2h"</span> and <span style="font-family: monospace;">"11.1h"</span> for celestial coordinates in hours or degrees,
+  and <span style="font-family: monospace;">"%13.7g"</span> for celestial coordinates in radians. All the remaining
   fields in the
   input file are copied to the output file without modification. Blank lines
   and comment lines are also passed to the output file unaltered.
@@ -229,17 +229,17 @@ ccstd: Transform to and from standard astrometric coordinates
   and <i>projection</i> parameters. <i>lngunits</i> and <i>latunits</i>
   define the units of the input celestial coordinates. If 
   undefined they default to the values in the database or to
-  the quantities <tt>"hours"</tt> and <tt>"degrees"</tt> respectively. The standard coordinates
+  the quantities <span style="font-family: monospace;">"hours"</span> and <span style="font-family: monospace;">"degrees"</span> respectively. The standard coordinates
   are always written and read in units of arcseconds.
   </p>
   <p>
   If the <i>forward</i>
-  parameter is <tt>"yes"</tt>, the input coordinates are assumed to be pixel coordinates
+  parameter is <span style="font-family: monospace;">"yes"</span>, the input coordinates are assumed to be pixel coordinates
   and celestial coordinates. The pixel coordinates are transformed to standard
   coordinates using the plate solution, and celestial coordinates are
   transformed to standard coordinates using the position of the reference
   point <i>lngref</i>, <i>latref</i>, and the projection specified by
-  <i>projection</i>. If <i>forward</i> is <tt>"no"</tt>, then
+  <i>projection</i>. If <i>forward</i> is <span style="font-family: monospace;">"no"</span>, then
   the input coordinates are assumed to be standard coordinates and 
   those in <i>xcolumn</i> and <i>ycolumn</i> are transformed to pixel
   coordinates by inverting the plate solution, and those in <i>lngcolumn</i>
@@ -314,10 +314,10 @@ ccstd: Transform to and from standard astrometric coordinates
   <h3>Formats</h3>
   <!-- BeginSection: 'FORMATS' -->
   <p>
-  A  format  specification has the form <tt>"%w.dCn"</tt>, where w is the field
+  A  format  specification has the form <span style="font-family: monospace;">"%w.dCn"</span>, where w is the field
   width, d is the number of decimal places or the number of digits  of
   precision,  C  is  the  format  code,  and  n is radix character for
-  format code <tt>"r"</tt> only.  The w and d fields are optional.  The  format
+  format code <span style="font-family: monospace;">"r"</span> only.  The w and d fields are optional.  The  format
   codes C are as follows:
      
   </p>

@@ -32,7 +32,7 @@ bpmedit: examine and edit bad pixel masks associated with images
   </dd>
   </dl>
   <dl>
-  <dt><b>bpmkey = <tt>"BPM"</tt></b></dt>
+  <dt><b>bpmkey = <span style="font-family: monospace;">"BPM"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='bpmkey' Line='bpmkey = "BPM"' -->
   <dd>The mask to be edited is defined by the value of this keyword.
   </dd>
@@ -50,7 +50,7 @@ bpmedit: examine and edit bad pixel masks associated with images
   </dd>
   </dl>
   <dl>
-  <dt><b>command = <tt>"display ..."</tt></b></dt>
+  <dt><b>command = <span style="font-family: monospace;">"display ..."</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='command' Line='command = "display ..."' -->
   <dd>Command for displaying and updating the mask overlay.  This is the
   command used with <b>imedit</b>.  This should be changed with care.
@@ -71,7 +71,7 @@ bpmedit: examine and edit bad pixel masks associated with images
   </dd>
   </dl>
   <dl>
-  <dt><b>cursor = <tt>""</tt></b></dt>
+  <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Image cursor input.  This is normally either a null string for interactive
   display editing or the value of a file with cursor commands to edit
@@ -102,10 +102,10 @@ bpmedit: examine and edit bad pixel masks associated with images
   image pixels.  In this application the edited values should be integer mask
   values.  In the usual case where zero indicates good pixels and non-zero
   indicates bad pixels one can set and unset values by changing current
-  replacement value with <tt>":value"</tt>.  Two useful parameters, <tt>":minvalue"</tt>
-  and <tt>":maxvalue"</tt>, are useful in this context to allow editing only
+  replacement value with <span style="font-family: monospace;">":value"</span>.  Two useful parameters, <span style="font-family: monospace;">":minvalue"</span>
+  and <span style="font-family: monospace;">":maxvalue"</span>, are useful in this context to allow editing only
   specific ranges of mask values.  Note that many of the imedit options are
-  not useful for mask editing.  The <tt>'?'</tt> keystroke prints a list of the
+  not useful for mask editing.  The <span style="font-family: monospace;">'?'</span> keystroke prints a list of the
   useful cursor and colon commands.  This list is also shown below.
   </p>
   <p>
@@ -157,7 +157,7 @@ bpmedit: examine and edit bad pixel masks associated with images
   
   	d 	Set rectangle to "value"
   	e 	Set aperture to "value"
-  	u	Undo last change (see also <tt>'i'</tt>, <tt>'j'</tt>, and <tt>'k'</tt>)
+  	u	Undo last change (see also <span style="font-family: monospace;">'i'</span>, <span style="font-family: monospace;">'j'</span>, and <span style="font-family: monospace;">'k'</span>)
   	v       Set vector to "value"
   	=	Replace pixels = to "cursor value" to "value"
   	&lt;	Replace pixels &lt; or = to "cursor value" to "value"

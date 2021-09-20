@@ -37,14 +37,14 @@ lscombine: Combine longslit images
   </dd>
   </dl>
   <dl>
-  <dt><b>headers = <tt>""</tt> (optional)</b></dt>
+  <dt><b>headers = <span style="font-family: monospace;">""</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='headers' Line='headers = "" (optional)' -->
   <dd>Optional output multiextension FITS file where each extension is a dataless
   headers from each input image.
   </dd>
   </dl>
   <dl>
-  <dt><b>bpmasks = <tt>""</tt> (optional)</b></dt>
+  <dt><b>bpmasks = <span style="font-family: monospace;">""</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='bpmasks' Line='bpmasks = "" (optional)' -->
   <dd>Optional output bad pixel mask with good values of 0 and bad values of 1.
   Output pixels are marked as bad when no input pixels contributed to the
@@ -53,7 +53,7 @@ lscombine: Combine longslit images
   </dd>
   </dl>
   <dl>
-  <dt><b>rejmask = <tt>""</tt> (optional)</b></dt>
+  <dt><b>rejmask = <span style="font-family: monospace;">""</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rejmask' Line='rejmask = "" (optional)' -->
   <dd>Optional output mask file identifying rejected or excluded pixels.  The
   pixel mask is the size of the output image but there is one extra dimension
@@ -67,14 +67,14 @@ lscombine: Combine longslit images
   </dd>
   </dl>
   <dl>
-  <dt><b>nrejmasks = <tt>""</tt> (optional)</b></dt>
+  <dt><b>nrejmasks = <span style="font-family: monospace;">""</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nrejmasks' Line='nrejmasks = "" (optional)' -->
   <dd>Optional output pixel mask giving the number of input pixels rejected or
   excluded from the input images.
   </dd>
   </dl>
   <dl>
-  <dt><b>expmasks = <tt>""</tt> (optional)</b></dt>
+  <dt><b>expmasks = <span style="font-family: monospace;">""</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='expmasks' Line='expmasks = "" (optional)' -->
   <dd>Optional output exposure mask giving the sum of the exposure values of
   the input images with non-zero weights that contributed to that pixel.
@@ -87,7 +87,7 @@ lscombine: Combine longslit images
   </dd>
   </dl>
   <dl>
-  <dt><b>sigma = <tt>""</tt> (optional)</b></dt>
+  <dt><b>sigma = <span style="font-family: monospace;">""</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sigma' Line='sigma = "" (optional)' -->
   <dd>Optional output sigma image.  The sigma is the standard deviation,
   corrected for a finite population, of the input pixel values (excluding
@@ -95,19 +95,19 @@ lscombine: Combine longslit images
   </dd>
   </dl>
   <dl>
-  <dt><b>logfile = <tt>"STDOUT"</tt> (optional)</b></dt>
+  <dt><b>logfile = <span style="font-family: monospace;">"STDOUT"</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "STDOUT" (optional)' -->
   <dd>Optional output log file.  If no file is specified then no log information is
-  produced.  The special filename <tt>"STDOUT"</tt> prints log information to the
+  produced.  The special filename <span style="font-family: monospace;">"STDOUT"</span> prints log information to the
   terminal.
   </dd>
   </dl>
   <dl>
-  <dt><b>interptype = <tt>"spline3"</tt></b></dt>
+  <dt><b>interptype = <span style="font-family: monospace;">"spline3"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interptype' Line='interptype = "spline3"' -->
   <dd>Image interpolation type for any resampling prior to combining.
-  The allowed types are <tt>"nearest"</tt> (nearest neighbor), <tt>"linear"</tt> (bilinear),
-  <tt>"poly3"</tt> (bicubic polynomial), <tt>"poly5"</tt> (biquintic polynomial), and <tt>"spline3"</tt>
+  The allowed types are <span style="font-family: monospace;">"nearest"</span> (nearest neighbor), <span style="font-family: monospace;">"linear"</span> (bilinear),
+  <span style="font-family: monospace;">"poly3"</span> (bicubic polynomial), <span style="font-family: monospace;">"poly5"</span> (biquintic polynomial), and <span style="font-family: monospace;">"spline3"</span>
   (bicubic polynomial).
   </dd>
   </dl>
@@ -140,11 +140,11 @@ lscombine: Combine longslit images
   </dd>
   </dl>
   <dl>
-  <dt><b>combine = <tt>"average"</tt> (average|median|sum)</b></dt>
+  <dt><b>combine = <span style="font-family: monospace;">"average"</span> (average|median|sum)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='combine' Line='combine = "average" (average|median|sum)' -->
   <dd>Type of combining operation performed on the final set of pixels (after
   offsetting, masking, thresholding, and rejection).  The choices are
-  <tt>"average"</tt>, <tt>"median"</tt>, or <tt>"sum"</tt>.  The median uses the average of the two central
+  <span style="font-family: monospace;">"average"</span>, <span style="font-family: monospace;">"median"</span>, or <span style="font-family: monospace;">"sum"</span>.  The median uses the average of the two central
   values when the number of pixels is even.  For the average and sum, the
   pixel values are multiplied by the weights (1 if no weighting is used)
   and summed.  The average is computed by dividing by the sum of the weights.
@@ -152,7 +152,7 @@ lscombine: Combine longslit images
   </dd>
   </dl>
   <dl>
-  <dt><b>reject = <tt>"none"</tt> (none|minmax|ccdclip|crreject|sigclip|avsigclip|pclip)</b></dt>
+  <dt><b>reject = <span style="font-family: monospace;">"none"</span> (none|minmax|ccdclip|crreject|sigclip|avsigclip|pclip)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='reject' Line='reject = "none" (none|minmax|ccdclip|crreject|sigclip|avsigclip|pclip)' -->
   <dd>Type of rejection operation performed on the pixels remaining after offsetting,
   masking and thresholding.  The algorithms are described in the
@@ -169,18 +169,18 @@ lscombine: Combine longslit images
   </dd>
   </dl>
   <dl>
-  <dt><b>outtype = <tt>"real"</tt> (none|short|ushort|integer|long|real|double)</b></dt>
+  <dt><b>outtype = <span style="font-family: monospace;">"real"</span> (none|short|ushort|integer|long|real|double)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtype' Line='outtype = "real" (none|short|ushort|integer|long|real|double)' -->
-  <dd>Output image pixel datatype.  The pixel datatypes are <tt>"double"</tt>, <tt>"real"</tt>,
-  <tt>"long"</tt>, <tt>"integer"</tt>, unsigned short <tt>"ushort"</tt>, and <tt>"short"</tt> with highest
-  precedence first.  If <tt>"none"</tt> is specified then the highest precedence
+  <dd>Output image pixel datatype.  The pixel datatypes are <span style="font-family: monospace;">"double"</span>, <span style="font-family: monospace;">"real"</span>,
+  <span style="font-family: monospace;">"long"</span>, <span style="font-family: monospace;">"integer"</span>, unsigned short <span style="font-family: monospace;">"ushort"</span>, and <span style="font-family: monospace;">"short"</span> with highest
+  precedence first.  If <span style="font-family: monospace;">"none"</span> is specified then the highest precedence
   datatype of the input images is used.  When there is a mixture of
   short and unsigned short images the highest precedence become integer.
   The datatypes may be abbreviated to a single character.
   </dd>
   </dl>
   <dl>
-  <dt><b>outlimits = <tt>""</tt></b></dt>
+  <dt><b>outlimits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outlimits' Line='outlimits = ""' -->
   <dd>Output region limits in pixels specified as pairs of whitespace separated
   values.  The first two numbers are the limits along the first output image
@@ -193,11 +193,11 @@ lscombine: Combine longslit images
   </dd>
   </dl>
   <dl>
-  <dt><b>masktype = <tt>"none"</tt> (none|goodvalue)</b></dt>
+  <dt><b>masktype = <span style="font-family: monospace;">"none"</span> (none|goodvalue)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='masktype' Line='masktype = "none" (none|goodvalue)' -->
-  <dd>Type of pixel masking to use.  If <tt>"none"</tt> then no pixel masking is done
+  <dd>Type of pixel masking to use.  If <span style="font-family: monospace;">"none"</span> then no pixel masking is done
   even if an image has an associated  pixel mask.  Otherwise the
-  value <tt>"goodvalue"</tt> will use any mask specified for the image under
+  value <span style="font-family: monospace;">"goodvalue"</span> will use any mask specified for the image under
   the BPM keyword.  The values of the mask will be interpreted as
   zero for good pixels and non-zero for bad pixels.  The mask pixels
   are assumed to be registered with the image pixels.
@@ -210,7 +210,7 @@ lscombine: Combine longslit images
   </dd>
   </dl>
   <dl>
-  <dt><b>scale = <tt>"none"</tt> (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)</b></dt>
+  <dt><b>scale = <span style="font-family: monospace;">"none"</span> (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='scale' Line='scale = "none" (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)' -->
   <dd>Multiplicative image scaling to be applied.  The choices are none, multiply
   by the reciprocal of the mode, median, or mean of the specified statistics
@@ -221,7 +221,7 @@ lscombine: Combine longslit images
   </dd>
   </dl>
   <dl>
-  <dt><b>zero = <tt>"none"</tt> (none|mode|median|mean|@&lt;file&gt;|!&lt;keyword&gt;)</b></dt>
+  <dt><b>zero = <span style="font-family: monospace;">"none"</span> (none|mode|median|mean|@&lt;file&gt;|!&lt;keyword&gt;)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='zero' Line='zero = "none" (none|mode|median|mean|@&lt;file&gt;|!&lt;keyword&gt;)' -->
   <dd>Additive zero level image shifts to be applied.  The choices are none, add
   the negative of the mode, median, or mean of the specified statistics
@@ -232,7 +232,7 @@ lscombine: Combine longslit images
   </dd>
   </dl>
   <dl>
-  <dt><b>weight = <tt>"none"</tt> (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)</b></dt>
+  <dt><b>weight = <span style="font-family: monospace;">"none"</span> (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='weight' Line='weight = "none" (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)' -->
   <dd>Weights to be applied during the final averaging.  The choices are none,
   the mode, median, or mean of the specified statistics section, the exposure
@@ -245,13 +245,13 @@ lscombine: Combine longslit images
   </dd>
   </dl>
   <dl>
-  <dt><b>statsec = <tt>""</tt></b></dt>
+  <dt><b>statsec = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='statsec' Line='statsec = ""' -->
   <dd>Section of images to use in computing image statistics for scaling and
   weighting.  If no section is given then the entire region of the input is
   sampled (for efficiency the images are sampled if they are big enough).
   When the images are offset relative to each other one can precede the image
-  section with one of the modifiers <tt>"input"</tt>, <tt>"output"</tt>, <tt>"overlap"</tt>.  The first
+  section with one of the modifiers <span style="font-family: monospace;">"input"</span>, <span style="font-family: monospace;">"output"</span>, <span style="font-family: monospace;">"overlap"</span>.  The first
   interprets the section relative to the input image (which is equivalent to
   not specifying a modifier), the second interprets the section relative to
   the output image, and the last selects the common overlap and any following
@@ -259,7 +259,7 @@ lscombine: Combine longslit images
   </dd>
   </dl>
   <dl>
-  <dt><b> expname = <tt>""</tt></b></dt>
+  <dt><b> expname = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line=' expname = ""' -->
   <dd>Image header keyword to be used with the exposure scaling and weighting
   options.  Also if an exposure keyword is specified that keyword will be
@@ -281,7 +281,7 @@ lscombine: Combine longslit images
   <dl>
   <dt><b>nlow = 1,  nhigh = 1 (minmax)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nlow' Line='nlow = 1,  nhigh = 1 (minmax)' -->
-  <dd>The number of low and high pixels to be rejected by the <tt>"minmax"</tt> algorithm.
+  <dd>The number of low and high pixels to be rejected by the <span style="font-family: monospace;">"minmax"</span> algorithm.
   These numbers are converted to fractions of the total number of input images
   so that if no rejections have taken place the specified number of pixels
   are rejected while if pixels have been rejected by masking, thresholding,
@@ -304,8 +304,8 @@ lscombine: Combine longslit images
   <dt><b>mclip = yes (ccdclip, crreject, sigclip, avsigcliip)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='mclip' Line='mclip = yes (ccdclip, crreject, sigclip, avsigcliip)' -->
   <dd>Use the median as the estimate for the true intensity rather than the
-  average with high and low values excluded in the <tt>"ccdclip"</tt>, <tt>"crreject"</tt>,
-  <tt>"sigclip"</tt>, and <tt>"avsigclip"</tt> algorithms?  The median is a better estimator
+  average with high and low values excluded in the <span style="font-family: monospace;">"ccdclip"</span>, <span style="font-family: monospace;">"crreject"</span>,
+  <span style="font-family: monospace;">"sigclip"</span>, and <span style="font-family: monospace;">"avsigclip"</span> algorithms?  The median is a better estimator
   in the presence of data which one wants to reject than the average.
   However, computing the median is slower than the average.
   </dd>
@@ -313,18 +313,18 @@ lscombine: Combine longslit images
   <dl>
   <dt><b>lsigma = 3., hsigma = 3. (ccdclip, crreject, sigclip, avsigclip, pclip)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lsigma' Line='lsigma = 3., hsigma = 3. (ccdclip, crreject, sigclip, avsigclip, pclip)' -->
-  <dd>Low and high sigma clipping factors for the <tt>"ccdclip"</tt>, <tt>"crreject"</tt>, <tt>"sigclip"</tt>,
-  <tt>"avsigclip"</tt>, and <tt>"pclip"</tt> algorithms.  They multiply a <tt>"sigma"</tt> factor
+  <dd>Low and high sigma clipping factors for the <span style="font-family: monospace;">"ccdclip"</span>, <span style="font-family: monospace;">"crreject"</span>, <span style="font-family: monospace;">"sigclip"</span>,
+  <span style="font-family: monospace;">"avsigclip"</span>, and <span style="font-family: monospace;">"pclip"</span> algorithms.  They multiply a <span style="font-family: monospace;">"sigma"</span> factor
   produced by the algorithm to select a point below and above the average or
   median value for rejecting pixels.  The lower sigma is ignored for the
-  <tt>"crreject"</tt> algorithm.
+  <span style="font-family: monospace;">"crreject"</span> algorithm.
   </dd>
   </dl>
   <dl>
-  <dt><b>rdnoise = <tt>"0."</tt>, gain = <tt>"1."</tt>, snoise = <tt>"0."</tt> (ccdclip, crreject)</b></dt>
+  <dt><b>rdnoise = <span style="font-family: monospace;">"0."</span>, gain = <span style="font-family: monospace;">"1."</span>, snoise = <span style="font-family: monospace;">"0."</span> (ccdclip, crreject)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rdnoise' Line='rdnoise = "0.", gain = "1.", snoise = "0." (ccdclip, crreject)' -->
   <dd>CCD readout noise in electrons, gain in electrons/DN, and sensitivity noise
-  as a fraction.  These parameters are used with the <tt>"ccdclip"</tt> and <tt>"crreject"</tt>
+  as a fraction.  These parameters are used with the <span style="font-family: monospace;">"ccdclip"</span> and <span style="font-family: monospace;">"crreject"</span>
   algorithms.  The values may be either numeric or an image header keyword
   which contains the value.  The noise model for a pixel is:
   <pre>
@@ -385,7 +385,7 @@ lscombine: Combine longslit images
   <p>
   Algorithmically it is a combination of the tasks <b>TRANSFORM</b> (using
   the WCS) and <b>IMCOMBINE</b>.  When executing it will generate temporary
-  images (<tt>"lsc*"</tt>) and masks (<tt>"mlsc*"</tt>) if the images are not already on a
+  images (<span style="font-family: monospace;">"lsc*"</span>) and masks (<span style="font-family: monospace;">"mlsc*"</span>) if the images are not already on a
   common world coordinate system.  The user only need be aware of this
   in case of an unexpected abort leaving these files behind.
   </p>

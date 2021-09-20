@@ -29,7 +29,7 @@ prenumber: Renumber a list of apphot/daophot databases
   </dd>
   </dl>
   <dl>
-  <dt><b>id = <tt>"ID"</tt></b></dt>
+  <dt><b>id = <span style="font-family: monospace;">"ID"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='id' Line='id = "ID"' -->
   <dd>The name of the keyword whose value is the sequence number of the object
   </dd>

@@ -44,7 +44,7 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   <i>Regions</i> may be: 1) a list of one or more image sections
   separated by whitespace, 2) the name of a text file containing a list
   of one or more image sections separated by whitespace and/or newlines,
-  3) a string of the form <tt>"grid nx ny"</tt> defining a grid of nx by ny
+  3) a string of the form <span style="font-family: monospace;">"grid nx ny"</span> defining a grid of nx by ny
   equally spaced and sized image sections spanning the entire image. Shifts are
   computed for each specified region individually and averaged to produce the
   final x and y shift.
@@ -54,16 +54,16 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   <dt><b>shifts</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='shifts' Line='shifts' -->
   <dd>The name of the text file where the computed x and y shifts 
-  are written. If <i>databasefmt</i> is <tt>"yes"</tt>,  a single record containing the
+  are written. If <i>databasefmt</i> is <span style="font-family: monospace;">"yes"</span>,  a single record containing the
   computed x and y shifts for each image region and the final average x and y
   shift is written to a text database file for each input image.
-  If <i>databasefmt</i> = <tt>"no"</tt>, a single line containing the image name and the
+  If <i>databasefmt</i> = <span style="font-family: monospace;">"no"</span>, a single line containing the image name and the
   final average x and y shift is written to a simple text file
   for each input image.
   </dd>
   </dl>
   <dl>
-  <dt><b>output = <tt>""</tt></b></dt>
+  <dt><b>output = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
   <dd>The list of output shifted images. If <i>output</i> is the NULL string
   then x and y shifts are computed for each input image and written to
@@ -74,12 +74,12 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   <dl>
   <dt><b>databasefmt = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='databasefmt' Line='databasefmt = yes' -->
-  <dd>If <i>databasefmt</i> is <tt>"yes"</tt> the results are written to a text database
+  <dd>If <i>databasefmt</i> is <span style="font-family: monospace;">"yes"</span> the results are written to a text database
   file, otherwise they are written to a simple text file.
   </dd>
   </dl>
   <dl>
-  <dt><b>records = <tt>""</tt></b></dt>
+  <dt><b>records = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='records' Line='records = ""' -->
   <dd>The list of records to be written to or read from <i>shifts</i> for each
   input image. If <i>records</i> is NULL then the output or input record names
@@ -91,7 +91,7 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   original unprocessed images. If more then one record
   with the same name exists in <i>shifts</i> then the most recently written
   record takes precedence. The records parameter is ignored if
-  <i>databasefmt</i> is <tt>"no"</tt>.
+  <i>databasefmt</i> is <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <dl>
@@ -99,11 +99,11 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   <!-- Sec='PARAMETERS' Level=0 Label='append' Line='append = yes' -->
   <dd>Append new records to an existing <i>shifts</i> file or start a new shifts
   file for each execution of XREGISTER? The append parameter is ignored
-  if <i>databasefmt</i> is <tt>"no"</tt>.
+  if <i>databasefmt</i> is <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>coords = <tt>""</tt></b></dt>
+  <dt><b>coords = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coords' Line='coords = ""' -->
   <dd>An optional list of coordinates files containing the x and y coordinates of
   an object in the reference image on the first line and the x and y coordinates
@@ -173,7 +173,7 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   </dl>
   By default the cross-correlation function is computed in a manner
   which removes the mean intensity in the reference and input image regions 
-  from the data. For many data sets this <tt>"correction"</tt>  is sufficient to
+  from the data. For many data sets this <span style="font-family: monospace;">"correction"</span>  is sufficient to
   remove first order background level effects
   from the computed cross-correlation function and  no additional
   background subtraction is required.
@@ -184,7 +184,7 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   <!-- Sec='PARAMETERS' Level=0 Label='border' Line='border = INDEF' -->
   <dd>The width of the border region around the input and reference image data
   regions used to compute the background function if <i>background</i>
-  is not <tt>"none"</tt>. By default the entire region is used.
+  is not <span style="font-family: monospace;">"none"</span>. By default the entire region is used.
   </dd>
   </dl>
   <dl>
@@ -257,8 +257,8 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   <!-- Sec='PARAMETERS' Level=1 Label='file' Line='file' -->
   <dd>No cross-correlation function is computed. Instead the previously
   computed x and y shifts are read from record <i>record</i> in  the text
-  database file <i>shifts</i> if <i>databasefmt</i> is <tt>"yes"</tt>, or the
-  next line of a simple text file if <i>databasefmt</i> is <tt>"no"</tt>.
+  database file <i>shifts</i> if <i>databasefmt</i> is <span style="font-family: monospace;">"yes"</span>, or the
+  next line of a simple text file if <i>databasefmt</i> is <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   </dd>
@@ -315,7 +315,7 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   <dt><b>mark</b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='mark' Line='mark' -->
   <dd>mark the peak of the cross-correlation function with the graphics cursor.
-  This option will only work if <i>interactive</i> = <tt>"yes"</tt>.
+  This option will only work if <i>interactive</i> = <span style="font-family: monospace;">"yes"</span>.
   </dd>
   </dl>
   </dd>
@@ -328,7 +328,7 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   </dd>
   </dl>
   <dl>
-  <dt><b>interp_type = <tt>"linear"</tt></b></dt>
+  <dt><b>interp_type = <span style="font-family: monospace;">"linear"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interp_type' Line='interp_type = "linear"' -->
   <dd>The interpolant type use to computed the output shifted image.
   The choices are the following:
@@ -385,7 +385,7 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   </dd>
   </dl>
   <dl>
-  <dt><b>boundary_type = <tt>"nearest"</tt></b></dt>
+  <dt><b>boundary_type = <span style="font-family: monospace;">"nearest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boundary_type' Line='boundary_type = "nearest"' -->
   <dd>The boundary extension algorithm used to compute the output shifted
   image.  The choices are:
@@ -436,25 +436,25 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>The default graphics device.
   </dd>
   </dl>
   <dl>
-  <dt><b>display = <tt>"stdimage"</tt></b></dt>
+  <dt><b>display = <span style="font-family: monospace;">"stdimage"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='display' Line='display = "stdimage"' -->
   <dd>The default image display device.
   </dd>
   </dl>
   <dl>
-  <dt><b>gcommands = <tt>""</tt></b></dt>
+  <dt><b>gcommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""' -->
   <dd>The default graphics cursor.
   </dd>
   </dl>
   <dl>
-  <dt><b>icommands = <tt>""</tt></b></dt>
+  <dt><b>icommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""' -->
   <dd>The default image display cursor.
   </dd>
@@ -467,8 +467,8 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   images <i>input</i> to a list of reference images <i>reference</i> using
   cross-correlation techniques. The computed x and y shifts are stored
   in the text file <i>shifts</i>, in the records <i>records</i> if
-  <i>databasefmt</i> is <tt>"yes"</tt> or a single line of a simple text file
-  if <i>databasefmt</i> is <tt>"no"</tt>. One entry is made in the shifts file for
+  <i>databasefmt</i> is <span style="font-family: monospace;">"yes"</span> or a single line of a simple text file
+  if <i>databasefmt</i> is <span style="font-family: monospace;">"no"</span>. One entry is made in the shifts file for
   each input image. If a non NULL list of output images
   <i>output</i> is supplied a shifted output image is written for each input
   image. XREGISTER is intended to solve 1D and 2D image registration problems
@@ -483,11 +483,11 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   function shifts are defined by the parameter
   <i>regions</i>. <i>Regions</i> may be:
   1) a list of one or more image sections, e.g.
-  <tt>"[100:200,100:200] [400:500,400:500]"</tt> separated
+  <span style="font-family: monospace;">"[100:200,100:200] [400:500,400:500]"</span> separated
   by whitespace, 2) the name of a text file containing a list of one or
   more image sections separated by whitespace and / or newline characters,
   or, 3) a string
-  of the form <tt>"grid nx ny"</tt> specifying a grid of nx by ny
+  of the form <span style="font-family: monospace;">"grid nx ny"</span> specifying a grid of nx by ny
   image sections spanning the entire reference image.
   All reference image regions should be chosen so as to 
   include at least one well-defined object or feature. Cross-correlation
@@ -517,7 +517,7 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   numbers of reference plus input images, then x and y shifts of 0.0 are
   assumed for the extra input images. For example,
   if the  user specifies a single input and reference image, sets the
-  <i>regions</i> parameter to <tt>"[100:200,100:200]"</tt>, and defines
+  <i>regions</i> parameter to <span style="font-family: monospace;">"[100:200,100:200]"</span>, and defines
   a coordinates file  which contains the numbers 
   50.0 50.0 in columns one and two of line one,  and the numbers 52.0 and 52.0
   in columns one and two of line two, then the initial x and y
@@ -553,9 +553,9 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   in a manner which removes
   the effect of large mean background values from the resulting
   function. For many if not most typical data sets the user can safely leave
-  the parameter <i>background</i> at its default value of <tt>"none"</tt> and
+  the parameter <i>background</i> at its default value of <span style="font-family: monospace;">"none"</span> and
   achieve reasonable results. For more demanding data sets the user should
-  experiment with the <tt>"mean"</tt>, <tt>"median"</tt>, and <tt>"plane"</tt> background fitting
+  experiment with the <span style="font-family: monospace;">"mean"</span>, <span style="font-family: monospace;">"median"</span>, and <span style="font-family: monospace;">"plane"</span> background fitting
   algorithms which compute and subtract, the mean value, median value, and
   a plane from the input and reference image data respectively,
   before computing the
@@ -572,8 +572,8 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   parameter.
   </p>
   <p>
-  If the <i>filter</i> parameter is set to <tt>"laplace"</tt> instead of its default
-  value of <tt>"none"</tt> then a Laplacian filter is applied to the input and
+  If the <i>filter</i> parameter is set to <span style="font-family: monospace;">"laplace"</span> instead of its default
+  value of <span style="font-family: monospace;">"none"</span> then a Laplacian filter is applied to the input and
   reference image data before the cross-correlation function is computed.
   This spatial filtering operation effectively
   removes both a background and a slope from the input and reference image
@@ -585,9 +585,9 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   </p>
   <p>
   The cross-correlation function for each region is computed by
-  discrete convolution, <i>correlation</i> = <tt>"discrete"</tt>,
-  Fourier convolution, <i>correlation</i> = <tt>"fourier"</tt>, or by computing
-  the error function, <i>correlation</i> = <tt>"difference"</tt>. The x and y lag
+  discrete convolution, <i>correlation</i> = <span style="font-family: monospace;">"discrete"</span>,
+  Fourier convolution, <i>correlation</i> = <span style="font-family: monospace;">"fourier"</span>, or by computing
+  the error function, <i>correlation</i> = <span style="font-family: monospace;">"difference"</span>. The x and y lag
   space in pixels around the initial x and y lag over which the cross-correlation 
   function is searched for the correlation peak, is specified by the
   <i>xwindow</i> and
@@ -605,17 +605,17 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   region are computed by computing
   the position of the peak of the cross-correlation function in the
   search window using
-  one of the four centering algorithms: <tt>"none"</tt>, <tt>"centroid"</tt>, <tt>"sawtooth"</tt>,
-  and <tt>"parabolic"</tt>.
+  one of the four centering algorithms: <span style="font-family: monospace;">"none"</span>, <span style="font-family: monospace;">"centroid"</span>, <span style="font-family: monospace;">"sawtooth"</span>,
+  and <span style="font-family: monospace;">"parabolic"</span>.
   </p>
   <p>
   The computed x and y shifts for each region and the final x and y shift
   for each input image (where the computed x and y shifts are just the negative
   of the computed x and y lags) are written to the shifts file <i>shifts</i>.
-  If <i>databasefmt</i> is <tt>"yes"</tt> each results is written in a record whose name
+  If <i>databasefmt</i> is <span style="font-family: monospace;">"yes"</span> each results is written in a record whose name
   is either identical to the name of the input
   image or supplied by the user via the <i>records</i> parameter .
-  If <i>databasefmt</i> is <tt>"no"</tt>, then a single containing the input image
+  If <i>databasefmt</i> is <span style="font-family: monospace;">"no"</span>, then a single containing the input image
   name and the computed x and y shifts is written to the output shifts file.
   </p>
   <p>
@@ -625,7 +625,7 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   boundary extension algorithm specified by <i>boundary</i> and <i>constant</i>. 
   </p>
   <p>
-  If the <i>correlation</i> parameter is set to <tt>"file"</tt> then the shifts
+  If the <i>correlation</i> parameter is set to <span style="font-family: monospace;">"file"</span> then the shifts
   computed in a previous run of XREGISTER will be read from the <i>shifts</i>
   file and applied to the input images to compute the output images.
   If no record list is supplied by the user XREGISTER will for each input

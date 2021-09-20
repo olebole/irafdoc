@@ -34,10 +34,10 @@ crcombine: Combine multiple exposures to eliminate cosmic rays
   </p>
   <p>
   For the purpose of removing cosmic rays the most useful options
-  are the <tt>"crreject"</tt> algorithm and/or combining with a median.  Many other
+  are the <span style="font-family: monospace;">"crreject"</span> algorithm and/or combining with a median.  Many other
   options may work as well.  The best use of this task depends on the
   number of images available.  If there are more than a few images the
-  images should be combined with an <tt>"average"</tt> and using a rejection
+  images should be combined with an <span style="font-family: monospace;">"average"</span> and using a rejection
   algorithm.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->

@@ -51,7 +51,7 @@ imalign: Align and register 2-D images using a reference pixel list
   </dd>
   </dl>
   <dl>
-  <dt><b>shifts = <tt>""</tt></b></dt>
+  <dt><b>shifts = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='shifts' Line='shifts = ""' -->
   <dd>A text file containing the initial estimate for each image of the
   shift in each axis relative to the reference image.  These
@@ -148,13 +148,13 @@ imalign: Align and register 2-D images using a reference pixel list
   </dd>
   </dl>
   <dl>
-  <dt><b>interp_type = <tt>"spline3"</tt></b></dt>
+  <dt><b>interp_type = <span style="font-family: monospace;">"spline3"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interp_type' Line='interp_type = "spline3"' -->
   <dd>The interpolation function used by the IMSHIFT task.
   </dd>
   </dl>
   <dl>
-  <dt><b>boundary_type = <tt>"constant"</tt></b></dt>
+  <dt><b>boundary_type = <span style="font-family: monospace;">"constant"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boundary_type' Line='boundary_type = "constant"' -->
   <dd>The boundary extension type used by the IMSHIFT task.
   </dd>
@@ -162,7 +162,7 @@ imalign: Align and register 2-D images using a reference pixel list
   <dl>
   <dt><b>constant = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.' -->
-  <dd>The constant used by the IMSHIFT task if <i>boundary_type</i> is <tt>"constant"</tt>. 
+  <dd>The constant used by the IMSHIFT task if <i>boundary_type</i> is <span style="font-family: monospace;">"constant"</span>. 
   </dd>
   </dl>
   <dl>
@@ -172,7 +172,7 @@ imalign: Align and register 2-D images using a reference pixel list
   include only the region over which they all overlap.  The
   trim section that is actually used may differ slightly from that
   reported by IMCENTROID, due to a correction applied to compensate for
-  the boundary extension <tt>"contamination"</tt> near the edges of the images.
+  the boundary extension <span style="font-family: monospace;">"contamination"</span> near the edges of the images.
   </dd>
   </dl>
   <dl>
@@ -248,7 +248,7 @@ imalign: Align and register 2-D images using a reference pixel list
   </p>
   <p>
   If <i>shiftimages</i> is yes the images will actually be shifted using
-  the IMSHIFT task.  Note that if <i>interp_type</i> is <tt>"nearest"</tt> the
+  the IMSHIFT task.  Note that if <i>interp_type</i> is <span style="font-family: monospace;">"nearest"</span> the
   effect on the images is the same as if the shifts were rounded to
   integral values.  In this case, the pixels will be shifted without
   interpolation.  This can be used for data in which it is more important
@@ -260,7 +260,7 @@ imalign: Align and register 2-D images using a reference pixel list
   include only the region over which they all overlap.  The trim section
   that is actually used may differ slightly from that reported by
   IMCENTROID.  A one or two pixel correction may be applied to each edge
-  to compensate for the boundary extension <tt>"contamination"</tt> due to
+  to compensate for the boundary extension <span style="font-family: monospace;">"contamination"</span> due to
   multi-pixel (e.g., <i>interp_type</i> = poly5) interpolation near the
   edges of the images.
   </p>
@@ -295,7 +295,7 @@ imalign: Align and register 2-D images using a reference pixel list
   <p>
   Note that many of these difficulties are due to the intrinsically fuzzy
   nature of the process of image registration.  This all leads to a few
-  <tt>"rules of thumb"</tt>:
+  <span style="font-family: monospace;">"rules of thumb"</span>:
   </p>
   <pre>
       o	Include the reference image in the input image list
@@ -314,7 +314,7 @@ imalign: Align and register 2-D images using a reference pixel list
   <h3>Centering algorithm</h3>
   <!-- BeginSection: 'CENTERING ALGORITHM' -->
   <p>
-  The algorithm is a <tt>"marginal"</tt> centroid in which the fit for each axis
+  The algorithm is a <span style="font-family: monospace;">"marginal"</span> centroid in which the fit for each axis
   is performed separately upon a vector created by collapsing the
   centering box perpendicular to that axis.  The centroid is calculated
   with respect to the level specified by <i>background</i>.  If
@@ -346,13 +346,13 @@ imalign: Align and register 2-D images using a reference pixel list
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Align three images to the first using the list of registration star
-  coordinates in the file <tt>"x1.coords"</tt>.
+  coordinates in the file <span style="font-family: monospace;">"x1.coords"</span>.
   </p>
   <pre>
       cl&gt; imalign x1,x2,x3 x1 x1.coords x1.out,x2.out,x3.out
   </pre>
   <p>
-  2. Align a list of images contained in the file <tt>"imlist"</tt>, overwriting the
+  2. Align a list of images contained in the file <span style="font-family: monospace;">"imlist"</span>, overwriting the
   original images with the shifted and trimmed images:
   </p>
   <pre>
@@ -394,7 +394,7 @@ imalign: Align and register 2-D images using a reference pixel list
   The task can produce output images that do not contain the entire
   overlap region.  This can only occur if the images are of varying sizes.
   This behavior is caused by the action of the IMSHIFT task to preserve the
-  size of an input image, thus implicitly <tt>"trimming"</tt> the image.  A work
+  size of an input image, thus implicitly <span style="font-family: monospace;">"trimming"</span> the image.  A work
   around is to use IMCOPY to place the images into subsections of blank
   images that are the size (in each dimension) of the largest image(s)
   and use IMALIGN with <i>trimimages</i> set to no.  The borders of the output

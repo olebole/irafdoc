@@ -46,21 +46,21 @@ runmed: Running median a list of images at each pixel position
   </dd>
   </dl>
   <dl>
-  <dt><b>masks = <tt>""</tt></b></dt>
+  <dt><b>masks = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='masks' Line='masks = ""' -->
   <dd>List of output masks indicating the number of pixels used in calculating the
   filter value.  If specified the list must match the output list.
   </dd>
   </dl>
   <dl>
-  <dt><b>inmaskkey = <tt>""</tt></b></dt>
+  <dt><b>inmaskkey = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='inmaskkey' Line='inmaskkey = ""' -->
   <dd>Keyword in the input image containing a maskname for selecting or ignoring
   pixels.  Pixels to be used are selected by zero values in the mask.
   </dd>
   </dl>
   <dl>
-  <dt><b>outmaskkey = <tt>"HOLES"</tt></b></dt>
+  <dt><b>outmaskkey = <span style="font-family: monospace;">"HOLES"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outmaskkey' Line='outmaskkey = "HOLES"' -->
   <dd>Keyword in the output image to containing the name of the output mask.
   If no output mask is created or if no keyword is specified then the
@@ -68,11 +68,11 @@ runmed: Running median a list of images at each pixel position
   </dd>
   </dl>
   <dl>
-  <dt><b>outtype = <tt>"filter"</tt> (filter|difference|ratio)</b></dt>
+  <dt><b>outtype = <span style="font-family: monospace;">"filter"</span> (filter|difference|ratio)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtype' Line='outtype = "filter" (filter|difference|ratio)' -->
-  <dd>The type of output values in the images.  The choices are <tt>"filter"</tt> for
-  the filter value, <tt>"difference"</tt> for the difference of the input and
-  filter value (input-filter), and <tt>"ratio"</tt> for the ratio of the input
+  <dd>The type of output values in the images.  The choices are <span style="font-family: monospace;">"filter"</span> for
+  the filter value, <span style="font-family: monospace;">"difference"</span> for the difference of the input and
+  filter value (input-filter), and <span style="font-family: monospace;">"ratio"</span> for the ratio of the input
   and filter value (input/filter).
   </dd>
   </dl>
@@ -99,12 +99,12 @@ runmed: Running median a list of images at each pixel position
   </dd>
   </dl>
   <dl>
-  <dt><b>scale = <tt>"none"</tt> (none|mode|!&lt;keyword&gt;|@&lt;file&gt;)</b></dt>
+  <dt><b>scale = <span style="font-family: monospace;">"none"</span> (none|mode|!&lt;keyword&gt;|@&lt;file&gt;)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='scale' Line='scale = "none" (none|mode|!&lt;keyword&gt;|@&lt;file&gt;)' -->
   <dd>Scale the images with the specified method.  The choices are
-  <tt>"none"</tt>, <tt>"mode"</tt> to compute a mode for each image and divide by the value,
-  <tt>"!&lt;keyword&gt;"</tt> to find the value to multiple the image from the specified
-  keyword in the header, and <tt>"@&lt;file&gt;"</tt> to get the values to multiple the
+  <span style="font-family: monospace;">"none"</span>, <span style="font-family: monospace;">"mode"</span> to compute a mode for each image and divide by the value,
+  <span style="font-family: monospace;">"!&lt;keyword&gt;"</span> to find the value to multiple the image from the specified
+  keyword in the header, and <span style="font-family: monospace;">"@&lt;file&gt;"</span> to get the values to multiple the
   images from the specified file.  The scales are normalized by the scale
   for the first image to make the scaling relative to the first image.
   The values in a file must be in the same order as the input images.
@@ -131,9 +131,9 @@ runmed: Running median a list of images at each pixel position
   </dd>
   </dl>
   <dl>
-  <dt><b>storetype = <tt>"real"</tt></b></dt>
+  <dt><b>storetype = <span style="font-family: monospace;">"real"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='storetype' Line='storetype = "real"' -->
-  <dd>Internal storage type which may be <tt>"real"</tt> or <tt>"short"</tt>.  The short
+  <dd>Internal storage type which may be <span style="font-family: monospace;">"real"</span> or <span style="font-family: monospace;">"short"</span>.  The short
   integer type saves memory at the cost of rounding.  Unless memory
   is a problem real storage is recommended.
   </dd>
@@ -216,9 +216,9 @@ runmed: Running median a list of images at each pixel position
   </p>
   <p>
   The output of this task are images of the filter values
-  (<i>outtype</i>=<tt>"filter"</tt>), the difference of the input image and the
-  filter value (<i>outtype</i>=<tt>"difference"</tt>), or the ratio of the input
-  image and the filter value (<i>outtype</i>=<tt>"ratio"</tt>).  The difference
+  (<i>outtype</i>=<span style="font-family: monospace;">"filter"</span>), the difference of the input image and the
+  filter value (<i>outtype</i>=<span style="font-family: monospace;">"difference"</span>), or the ratio of the input
+  image and the filter value (<i>outtype</i>=<span style="font-family: monospace;">"ratio"</span>).  The difference
   output is useful as a background subtraction for a background that varies
   systematically through the list of images.  When the difference
   is selected the input and filter value are matched by their scale factors

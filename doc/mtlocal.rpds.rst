@@ -27,7 +27,7 @@ rpds: Convert a PDS image into an IRAF image
   <!-- Sec='PARAMETERS' Level=0 Label='pds_file' Line='pds_file' -->
   <dd>The PDS data source. The data source may be a template specifying
   a list of disk files, e.g. pds* or a mag tape file specification of
-  the form mtl*[n], e.g. <tt>"mta1600"</tt> or <tt>"mtb800[1]"</tt>. The mt specifies magtape,
+  the form mtl*[n], e.g. <span style="font-family: monospace;">"mta1600"</span> or <span style="font-family: monospace;">"mtb800[1]"</span>. The mt specifies magtape,
   l specifies the drive, a,b,c etc, * specifies the density and [n]
   the tape file number. If no tape file number is specified rpds reads
   the tape files specified by file_list.
@@ -39,7 +39,7 @@ rpds: Convert a PDS image into an IRAF image
   <dd>A string parameter containing the list of tape files to be processed.
   File_list is only requested if no tape file number is specified in pds_file.
   For example the string
-  	<tt>"1,2,3-5,8-6"</tt>
+  	<span style="font-family: monospace;">"1,2,3-5,8-6"</span>
   will convert files 1 through 8.
   </dd>
   </dl>
@@ -73,7 +73,7 @@ rpds: Convert a PDS image into an IRAF image
   </dd>
   </dl>
   <dl>
-  <dt><b>datatype = <tt>"s"</tt></b></dt>
+  <dt><b>datatype = <span style="font-family: monospace;">"s"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='datatype' Line='datatype = "s"' -->
   <dd>The IRAF image data type, s (short integer), i (integer), l (long integer),
    r (real) or d (double).
@@ -97,9 +97,9 @@ rpds: Convert a PDS image into an IRAF image
   <dd>Offset is an integer parameter which is added to the tape file number
   or disk sequence number and
   appended to the parameter iraf_file. For example if offset = 100,
-  iraf_file = <tt>"pds"</tt> and file_list = <tt>"1-3"</tt> the output file names will be
-  <tt>"pds101"</tt>, <tt>"pds102"</tt> and <tt>"pds103"</tt> respectively, instead of <tt>"pds001"</tt>, <tt>"pds002"</tt>
-  and <tt>"pds003"</tt>.
+  iraf_file = <span style="font-family: monospace;">"pds"</span> and file_list = <span style="font-family: monospace;">"1-3"</span> the output file names will be
+  <span style="font-family: monospace;">"pds101"</span>, <span style="font-family: monospace;">"pds102"</span> and <span style="font-family: monospace;">"pds103"</span> respectively, instead of <span style="font-family: monospace;">"pds001"</span>, <span style="font-family: monospace;">"pds002"</span>
+  and <span style="font-family: monospace;">"pds003"</span>.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->

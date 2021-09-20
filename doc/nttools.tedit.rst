@@ -43,8 +43,8 @@ tedit: Edit a table.
   </p>
   <p>
   If you try to edit a table that does not exist, the editor will ask if
-  you want to create the table. If you answer <tt>"no"</tt>, the editor will
-  exit.  If you answer <tt>"yes"</tt>, the editor will ask you for each column
+  you want to create the table. If you answer <span style="font-family: monospace;">"no"</span>, the editor will
+  exit.  If you answer <span style="font-family: monospace;">"yes"</span>, the editor will ask you for each column
   name, type, unit, and print format. When you have finished entering
   all the columns, press the return key instead of entering another
   column name. The editor will create the table and put you in table
@@ -68,9 +68,9 @@ tedit: Edit a table.
   interactively. When the editor interactively prompts you for a command
   argument it will also display a default value for the argument.
   Pressing the return key gets the default value. Some command names are
-  two words long, for example, <tt>"add row"</tt>. Usually the second word is
-  optional and modifies the meaning of the first, for example <tt>"copy
-  append"</tt>. If the second word is not optional and you omit it, the
+  two words long, for example, <span style="font-family: monospace;">"add row"</span>. Usually the second word is
+  optional and modifies the meaning of the first, for example <span style="font-family: monospace;">"copy
+  append"</span>. If the second word is not optional and you omit it, the
   editor will prompt you for it. All command names can be abbreviated to
   one or more letters. If the command name is two words long, both words
   can be abbreviated to one or more letters.
@@ -139,8 +139,8 @@ tedit: Edit a table.
   are column names. For more information on the syntax of the
   expression, read the help for 'tselect'. The direction of the search depends 
   upon previous 'find' commands. By default the search direction is forward;
-  however, if a <tt>"find backwards"</tt> command has been executed previously, 
-  searches will be done in a backwards direction until a <tt>"find forward"</tt>
+  however, if a <span style="font-family: monospace;">"find backwards"</span> command has been executed previously, 
+  searches will be done in a backwards direction until a <span style="font-family: monospace;">"find forward"</span>
   command is executed.
   </dd>
   </dl>
@@ -231,7 +231,7 @@ tedit: Edit a table.
   pattern consists of a sequence of ordinary characters, which match
   themselves, and meta-characters, which match a set of characters. A
   meta-character can be matched as if it were an ordinary character by
-  preceding it with the escape character, <tt>`\'</tt>. For example, the escape
+  preceding it with the escape character, <span style="font-family: monospace;">`\'</span>. For example, the escape
   character itself is indicated in a pattern by `\\'. The meta-characters
   which can be used in the target pattern are:
   <pre>
@@ -248,10 +248,10 @@ tedit: Edit a table.
   `[,;.!]'.  A range of characters contiguous in the underlying
   character set can be abbreviated by the range construct. For example,
   `[a-z]' matches any lower case character. The complement of a
-  character set is indicated by making <tt>`^'</tt> the first character in a
+  character set is indicated by making <span style="font-family: monospace;">`^'</span> the first character in a
   class. For example, `[^0-9]' matches any non-digit. Repetition of a
   character or character class is indicated by the following it with the
-  <tt>`*'</tt> meta-character. Thus, zero or more occurrences of a lower case
+  <span style="font-family: monospace;">`*'</span> meta-character. Thus, zero or more occurrences of a lower case
   character is indicated by `[a-z]*'. The tagged string meta-characters
   have no effect on the match, they only serve to identify portions of
   the matched string for the replacement pattern. The meta-characters
@@ -261,7 +261,7 @@ tedit: Edit a table.
   capitalize		\u	upper case		\U
   lower case		\L	end case conversion	\e \E
   </pre>
-  The ditto meta-character, <tt>`&amp;`</tt>, indicates that the entire portion of the
+  The ditto meta-character, <span style="font-family: monospace;">`&amp;`</span>, indicates that the entire portion of the
   string that was matched by the target pattern. The tag meta-character
   indicates that the n-th tagged string.  For example, `\1' indicates
   the first tagged string and `\2' the second. The remaining
@@ -317,7 +317,7 @@ tedit: Edit a table.
   </dd>
   </dl>
   <dl>
-  <dt><b>(columns = <tt>""</tt>) [string]</b></dt>
+  <dt><b>(columns = <span style="font-family: monospace;">""</span>) [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(columns = "") [string]' -->
   <dd>The names of the columns to be edited.
   A null or blank string means edit all columns.
@@ -325,14 +325,14 @@ tedit: Edit a table.
   column names or column patterns containing the usual pattern matching
   meta-characters.  The names or patterns are separated by commas or
   white space.  The list can be placed in a file and the name of the
-  file preceded by an <tt>"@"</tt> given in its place.
+  file preceded by an <span style="font-family: monospace;">"@"</span> given in its place.
   If the first character in the column template is a bang (!),
   all columns NOT named will be displayed.
   The 'tlcol' task (with the 'nlist' parameter set to 1)  may be used to generate 
   a list of
   column names so there is no question about spelling.  This list may be
   edited to rearrange or delete the names, and then the list
-  file is given preceded by an <tt>'@'</tt> sign, for example:
+  file is given preceded by an <span style="font-family: monospace;">'@'</span> sign, for example:
   <pre>
   tt&gt; tedit junk columns=@colnames.lis
   </pre>
@@ -356,7 +356,7 @@ tedit: Edit a table.
   <dt><b>(inplace = no) [boolean]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(inplace = no) [boolean]' -->
   <dd>Replace existing table?  If 'rdonly' is
-  set to <tt>"yes"</tt> the table is always edited in place.
+  set to <span style="font-family: monospace;">"yes"</span> the table is always edited in place.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -396,7 +396,7 @@ tedit: Edit a table.
   tread, tprint, tselect, stty
   </p>
   <p>
-  Type <tt>"help tables opt=sys"</tt> for a description of the 'tables' package.
+  Type <span style="font-family: monospace;">"help tables opt=sys"</span> for a description of the 'tables' package.
   </p>
   
   <!-- EndSection:    'SEE ALSO ' -->

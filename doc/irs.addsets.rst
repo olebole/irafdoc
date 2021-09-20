@@ -73,7 +73,7 @@ addsets: Add subsets of strings of spectra
   <h3>Description</h3>
   <!-- BeginSection: 'DESCRIPTION' -->
   <p>
-  Every <tt>"subset"</tt> group of spectra will be accumulated and the sum will be
+  Every <span style="font-family: monospace;">"subset"</span> group of spectra will be accumulated and the sum will be
   written as a new spectrum. For example, if the input string contains
   100 spectra, and subset=2, then 50 new spectra will be created. Each
   new spectrum will be the sum of the consecutive pairs in the original string.

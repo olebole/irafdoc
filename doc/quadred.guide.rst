@@ -17,7 +17,7 @@ guide: Introductory guide to using the CCDRED package
        This guide provides a brief description of the IRAF CCD reduction
   package <b>ccdred</b> and examples of reducing simple CCD data.  It is a
   generic guide in that it is not tied to any particular type of data.
-  There may be more specific guides (or <tt>"cookbooks"</tt>) for your data.
+  There may be more specific guides (or <span style="font-family: monospace;">"cookbooks"</span>) for your data.
   Detailed descriptions of the tasks and features of the package are
   provided in the help documentation for the package.
   </p>
@@ -75,13 +75,13 @@ guide: Introductory guide to using the CCDRED package
   image and ignore images which have been processed.  This feature,
   along with recognizing the image types and subsets, makes it possible to
   specify all the images to a task with a wildcard template, such as
-  <tt>"*.imh"</tt>, rather than indicating each image by name.  You will find this
+  <span style="font-family: monospace;">"*.imh"</span>, rather than indicating each image by name.  You will find this
   extremely important with large sets of observations.
   </p>
   <p>
        A fundamental aspect of the package is that the processing
   modifies the images.  In other words, the reduction operations are
-  performed directly on the image.  This <tt>"feature"</tt> further simplifies
+  performed directly on the image.  This <span style="font-family: monospace;">"feature"</span> further simplifies
   record keeping, frees the user from having to form unique output image
   names, and minimizes the amount of disk space required.  There
   are two safety features in this process.  First, the modifications do
@@ -89,7 +89,7 @@ guide: Introductory guide to using the CCDRED package
   allows you to abort the task without messing up the image data and
   protects data if the computer crashes.  The second feature is that
   there is a package parameter which may be set to make a backup of the
-  input data with a particular prefix such as <tt>"orig"</tt> or <tt>"imdir$"</tt>.  This
+  input data with a particular prefix such as <span style="font-family: monospace;">"orig"</span> or <span style="font-family: monospace;">"imdir$"</span>.  This
   backup feature may be used when there is sufficient disk space, when learning
   to use the package, or just to be cautious.
   </p>
@@ -150,7 +150,7 @@ guide: Introductory guide to using the CCDRED package
        The first command to use is <b>setinstrument</b>, which sets the package
   appropriately for the CCD images to be reduced.  The support personnel
   should tell you the instrument identification, but if not a list
-  of known instruments may be listed by using <tt>'?'</tt> for the instrument name.
+  of known instruments may be listed by using <span style="font-family: monospace;">'?'</span> for the instrument name.
   </p>
   <pre>
       cl&gt; setinstrument
@@ -202,7 +202,7 @@ guide: Introductory guide to using the CCDRED package
   specified by the parameter <i>fixfile</i>.  This information is used
   to replace the pixels by interpolating from the neighboring pixels.
   A standard file for your instrument may be set by <b>setinstrument</b>
-  or if the word <tt>"image"</tt> is given then the file is defined in the instrument
+  or if the word <span style="font-family: monospace;">"image"</span> is given then the file is defined in the instrument
   data file.  For more on the bad pixel file see <b>instruments</b>.
   </dd>
   </dl>
@@ -220,7 +220,7 @@ guide: Introductory guide to using the CCDRED package
   of parameters at the end of the parameter list which control the
   fitting.  The default overscan bias section and fitting parameters for
   your instrument should be set by <b>setinstrument</b>.  If the word
-  <tt>"image"</tt> is given the overscan bias section is defined in the image
+  <span style="font-family: monospace;">"image"</span> is given the overscan bias section is defined in the image
   header or the instrument translation file.  If an overscan section is
   not set you can use <b>implot</b> to determine the columns or rows for
   the bias region and define an overscan image section.  If you are
@@ -234,7 +234,7 @@ guide: Introductory guide to using the CCDRED package
   <dd>The image is trimmed to the image section given by the parameter
   <i>trimsec</i>.  A default trim section for your instrument should be
   set by <b>setinstrument</b>, however, you may override this default if
-  desired.  If the word <tt>"image"</tt> is given the data
+  desired.  If the word <span style="font-family: monospace;">"image"</span> is given the data
   image section is given in the image header or the instrument
   translation file.  As with the overscan image section it is
   straightforward to specify, but if you are unsure consult someone.
@@ -280,8 +280,8 @@ guide: Introductory guide to using the CCDRED package
   <dt><b><i>scancor</i> - Convert flat field image to scan correction?</b></dt>
   <!-- Sec='2. Getting Started' Level=0 Label='' Line='\fIscancor\fR - Convert flat field image to scan correction?' -->
   <dd>If the instrument is operated in a scan mode then a correction to the
-  flat field may be required.  There are two types of scan modes, <tt>"shortscan"</tt>
-  and <tt>"longscan"</tt>.  In longscan mode flat field images will be averaged
+  flat field may be required.  There are two types of scan modes, <span style="font-family: monospace;">"shortscan"</span>
+  and <span style="font-family: monospace;">"longscan"</span>.  In longscan mode flat field images will be averaged
   to one dimension and the readout axis must be specified.  Shortscan mode
   is a little more complicated.  The scan correction is used if the flat
   field images are not observed in scan mode.  The number of scan lines
@@ -362,7 +362,7 @@ guide: Introductory guide to using the CCDRED package
       ccd024.imh[544,512][short][object][R]:N4036 R 600s
   </pre>
   <p>
-  If no CCD image type is specified (by using the null string <tt>""</tt>)
+  If no CCD image type is specified (by using the null string <span style="font-family: monospace;">""</span>)
   then all image types are selected.  This may be
   necessary if your instrument data does not contain image type identifications.
   </p>
@@ -400,13 +400,13 @@ guide: Introductory guide to using the CCDRED package
   This output is printed when verbose mode is set.  The same information
   is recorded in the log file.  In this case the flat fields are combined
   by rejecting the maximum value at each point in the image (the
-  <tt>"maxreject"</tt> algorithm).  The images are scaled by the exposure times,
+  <span style="font-family: monospace;">"maxreject"</span> algorithm).  The images are scaled by the exposure times,
   which are all the same in this example.  The mode is not evaluated for
   exposure scaling and the relative weights are the same because the
   exposure times are the same.  The example only shows part of the
   output; <b>flatcombine</b> automatically groups the flat field images by
-  filter to produce the calibration images <tt>"FlatV"</tt>, <tt>"FlatB"</tt>, and
-  <tt>"FlatR"</tt>.
+  filter to produce the calibration images <span style="font-family: monospace;">"FlatV"</span>, <span style="font-family: monospace;">"FlatB"</span>, and
+  <span style="font-family: monospace;">"FlatR"</span>.
   </p>
   <!-- EndSection:   '3.1 Combining Calibration Images' -->
   <h3>3.2 calibrations and corrections</h3>
@@ -446,17 +446,17 @@ guide: Introductory guide to using the CCDRED package
   <p>
        The output shown is with verbose mode set.  It is the same as
   recorded in the log file.  It illustrates the principle of automatic
-  calibration image processing.  The first object image, <tt>"ccd003"</tt>, was
+  calibration image processing.  The first object image, <span style="font-family: monospace;">"ccd003"</span>, was
   being processed when the flat field image was required.  Since the
   image was taken with the V filter the appropriate flat field was
-  determined to be <tt>"FlatV"</tt>.  Since it had not been processed, the
-  processing of <tt>"ccd003"</tt> was interrupted to process <tt>"FlatV"</tt>.  The
+  determined to be <span style="font-family: monospace;">"FlatV"</span>.  Since it had not been processed, the
+  processing of <span style="font-family: monospace;">"ccd003"</span> was interrupted to process <span style="font-family: monospace;">"FlatV"</span>.  The
   processed calibration image may have been cached if there was enough
-  memory.  Once <tt>"FlatV"</tt> was processed (note that the flat field was not
+  memory.  Once <span style="font-family: monospace;">"FlatV"</span> was processed (note that the flat field was not
   flattened because the task knows this image is a flat field) the
-  processing of <tt>"ccd003"</tt> was completed.  The next image, <tt>"ccd004"</tt>, is
+  processing of <span style="font-family: monospace;">"ccd003"</span> was completed.  The next image, <span style="font-family: monospace;">"ccd004"</span>, is
   also a V filter image so the already processed, and possibly cached,
-  flat field <tt>"FlatV"</tt> is used again.  The first B band image is <tt>"ccd013"</tt>
+  flat field <span style="font-family: monospace;">"FlatV"</span> is used again.  The first B band image is <span style="font-family: monospace;">"ccd013"</span>
   and, as before, the B filter flat field calibration image is processed
   automatically.  The same automatic calibration processing and image
   caching occurs when using zero level and dark count calibration
@@ -496,7 +496,7 @@ guide: Introductory guide to using the CCDRED package
   of minor confusion for beginning users and that is dealing with calibration
   images.  First, there is no reason that calibration images
   may not be processed explicitly with <b>ccdproc</b>, just remember to set
-  the <i>ccdtype</i> to the calibration image type or to <tt>""</tt>.  When processing
+  the <i>ccdtype</i> to the calibration image type or to <span style="font-family: monospace;">""</span>.  When processing
   object images the calibration images to be used may be specified either
   with the task parameter for the particular calibration image or by
   including the calibration image in the list of input images.  Calibration
@@ -505,7 +505,7 @@ guide: Introductory guide to using the CCDRED package
   input list must have a valid CCD image type.  In case too many
   calibration images are specified, say because the calibration images
   combined to make the master calibration images were not deleted and
-  so are part of the image list <tt>"*.imh"</tt>, only the first one will be used.
+  so are part of the image list <span style="font-family: monospace;">"*.imh"</span>, only the first one will be used.
   Another point to know is that flat field, iillumination, and fringe images
   are subset (filter) dependent and so a calibration image for each filter
   must be specified.
@@ -547,7 +547,7 @@ guide: Introductory guide to using the CCDRED package
       cl&gt; ccdproc *.imh ccdtype=flat
   </p>
   <p>
-  where <tt>"*.imh"</tt> may be replaced with any list containing the flat fields.
+  where <span style="font-family: monospace;">"*.imh"</span> may be replaced with any list containing the flat fields.
   If zero level and dark count corrections are required these calibration
   images must be available at this time.
   </p>
@@ -595,8 +595,8 @@ guide: Introductory guide to using the CCDRED package
       cl&gt; mkskycor sky*.imh ""
   </pre>
   <p>
-  In the first example the sky image <tt>"sky004"</tt> is used to make the iillumination
-  correction image <tt>"Illum004"</tt>.  In the second example the sky images are
+  In the first example the sky image <span style="font-family: monospace;">"sky004"</span> is used to make the iillumination
+  correction image <span style="font-family: monospace;">"Illum004"</span>.  In the second example the sky images are
   converted to iillumination correction images by specifying no output image
   names.  Like <b>ccdproc</b> if the input images have not been processed they
   are first processed automatically.
@@ -694,7 +694,7 @@ guide: Introductory guide to using the CCDRED package
   the sky background is determined in exactly the same way as the iillumination
   pattern, in fact the same sky image may be used for both the sky
   iillumination and for the fringe correction.  The task works consistently
-  with the <tt>"mk"</tt> tasks in that the input images are processed first if needed
+  with the <span style="font-family: monospace;">"mk"</span> tasks in that the input images are processed first if needed
   and then the output correction image is produced with the specified name
   or replaces the input image if no output image is specified.
   As examples,
@@ -717,11 +717,11 @@ guide: Introductory guide to using the CCDRED package
   <p>
   The demonstration will then create some artificial CCD data and reduce
   them giving descriptive comments as it goes along.  This demonstration uses
-  the <tt>"playback"</tt> facility of the command language and is actually substituting
+  the <span style="font-family: monospace;">"playback"</span> facility of the command language and is actually substituting
   it's own commands for terminal input.  Initially you must type carriage return
-  or space after each comment ending with <tt>"..."</tt>.  If you wish to have the
-  demonstration run completely automatically at it's own speed then type <tt>'g'</tt>
-  a the <tt>"..."</tt> prompt.  Thereafter, it will simple pause long enough to give
+  or space after each comment ending with <span style="font-family: monospace;">"..."</span>.  If you wish to have the
+  demonstration run completely automatically at it's own speed then type <span style="font-family: monospace;">'g'</span>
+  a the <span style="font-family: monospace;">"..."</span> prompt.  Thereafter, it will simple pause long enough to give
   you a chance to read the comments.  When the demo is finished you will
   need to remove the files created.  However, feel free to examine the reduced
   images, the log file, etc.  <i>Note that the demonstration changes the
@@ -813,7 +813,7 @@ guide: Introductory guide to using the CCDRED package
   <p>
        In addition to the package documentation for <b>ccdred</b>,
   <b>longslit</b>, and <b>apextract</b> there may be specific guides for
-  certain instruments.  These specific guides, called <tt>"cookbooks"</tt>, give
+  certain instruments.  These specific guides, called <span style="font-family: monospace;">"cookbooks"</span>, give
   specific examples and parameter values for the CCD data.
   </p>
   

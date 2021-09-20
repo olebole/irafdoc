@@ -29,7 +29,7 @@ sgikern: Simple graphics interface (SGI) graphics kernel
   </dd>
   </dl>
   <dl>
-  <dt><b>device = <tt>"sgimc"</tt></b></dt>
+  <dt><b>device = <span style="font-family: monospace;">"sgimc"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "sgimc"' -->
   <dd>The name of the logical or physical graphics device for which SGI metacode
   is to be generated.
@@ -143,17 +143,17 @@ sgikern: Simple graphics interface (SGI) graphics kernel
   to keep the OS command to a reasonable length and to permit the use of host
   file templates to perform operate upon the full set of files (and to avoid
   having to choose between spaces and commas to delimit the filenames).
-  For example, if MF=8 and NF=yes, then <tt>"$F.[1-8]"</tt> will match the file set
-  on a UNIX host.  The template <tt>"$F.*"</tt> is less precise but would also work.
+  For example, if MF=8 and NF=yes, then <span style="font-family: monospace;">"$F.[1-8]"</span> will match the file set
+  on a UNIX host.  The template <span style="font-family: monospace;">"$F.*"</span> is less precise but would also work.
   </p>
   <p>
   The values of graphcap device capability fields may also be substituted
   symbolically when building up the dispose command.  If the sequence
   $(<i>CC</i>) is encountered in the dispose command template, the string
   value of the capability <i>CC</i> will be substituted.  For example, given
-  the sequence <tt>"-w $(xr)"</tt> and the graphcap capability entry <tt>":xr#1024:"</tt>,
-  the output sequence would be <tt>"-w 1024"</tt>.  This feature is particularly
-  useful when several high level device entries include (via <tt>"tc=device"</tt>)
+  the sequence <span style="font-family: monospace;">"-w $(xr)"</span> and the graphcap capability entry <span style="font-family: monospace;">":xr#1024:"</span>,
+  the output sequence would be <span style="font-family: monospace;">"-w 1024"</span>.  This feature is particularly
+  useful when several high level device entries include (via <span style="font-family: monospace;">"tc=device"</span>)
   a generic device entry.  The DD string in the generic entry may substitute
   the values of device parameters defined differently in the high level
   entries; this avoids the need to duplicate an almost identical DD string
@@ -182,7 +182,7 @@ sgikern: Simple graphics interface (SGI) graphics kernel
   line.  If fewer than 8 bits are used in each output byte more than XW physical
   bits of storage will be used, e.g., if NB=4, XW*2 bits of storage are required
   for a line of the plotting window.  The unused bits are set to zero.  The
-  translator can later <tt>"or"</tt> a mask into the zeroed bits, flip the data bits,
+  translator can later <span style="font-family: monospace;">"or"</span> a mask into the zeroed bits, flip the data bits,
   or perform any other bytewise operation using simple lookup table mapping
   techniques.
   </p>
@@ -198,14 +198,14 @@ sgikern: Simple graphics interface (SGI) graphics kernel
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. Convert the GIO/GKI metacode file <tt>"dev$mc"</tt> into an SGI format metacode file.
+  1. Convert the GIO/GKI metacode file <span style="font-family: monospace;">"dev$mc"</span> into an SGI format metacode file.
   </p>
   <p>
       cl&gt; sgikern dev$mc device=sgimc
   </p>
   <p>
-  2. The same GIO/GKI metacode file read in the previous example (<tt>"dev$mc"</tt>) can
-  be plotted on the SGI device <tt>"qms_sgi"</tt>.
+  2. The same GIO/GKI metacode file read in the previous example (<span style="font-family: monospace;">"dev$mc"</span>) can
+  be plotted on the SGI device <span style="font-family: monospace;">"qms_sgi"</span>.
   </p>
   <p>
       cl&gt; sgikern dev$mc device=qms_sgi
@@ -214,7 +214,7 @@ sgikern: Simple graphics interface (SGI) graphics kernel
   <h3>See also</h3>
   <!-- BeginSection: 'SEE ALSO' -->
   <p>
-  <tt>"The IRAF Simple Graphics Interface (SGI)"</tt>, August 1986
+  <span style="font-family: monospace;">"The IRAF Simple Graphics Interface (SGI)"</span>, August 1986
   <br>
   sgidecode, stdgraph, stdplot
   </p>

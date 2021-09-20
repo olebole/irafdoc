@@ -38,7 +38,7 @@ copy: Copy a file or files (use IMCOPY for imagefiles)
   <dl>
   <dt><b>verbose = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
-  <dd>If set to <tt>"yes"</tt>, a line of the type <tt>" from -&gt; to "</tt> is printed on the
+  <dd>If set to <span style="font-family: monospace;">"yes"</span>, a line of the type <span style="font-family: monospace;">" from -&gt; to "</span> is printed on the
   terminal for each file copied to a directory.  This parameter is not
   used when copying one file to another.
   </dd>
@@ -54,21 +54,21 @@ copy: Copy a file or files (use IMCOPY for imagefiles)
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. Copy all files in the current directory with extension <tt>".x"</tt> to the
-  directory <tt>"home$src"</tt>.  As each copy is made, the user is informed.
+  1. Copy all files in the current directory with extension <span style="font-family: monospace;">".x"</span> to the
+  directory <span style="font-family: monospace;">"home$src"</span>.  As each copy is made, the user is informed.
   </p>
   <p>
   	cl&gt; copy *.x home$src ver+
   </p>
   <p>
-  2. Make a copy <tt>"fred.BAK"</tt> of the file <tt>"fred"</tt>.
+  2. Make a copy <span style="font-family: monospace;">"fred.BAK"</span> of the file <span style="font-family: monospace;">"fred"</span>.
   </p>
   <p>
   	cl&gt; copy fred fred.BAK
   </p>
   <p>
-  3. Copy the <tt>"graphcap"</tt> file from the remote node <tt>"lyra"</tt> to the current node,
-  without changing the name of the file.  Note that <tt>"."</tt> is a synonym for the
+  3. Copy the <span style="font-family: monospace;">"graphcap"</span> file from the remote node <span style="font-family: monospace;">"lyra"</span> to the current node,
+  without changing the name of the file.  Note that <span style="font-family: monospace;">"."</span> is a synonym for the
   current directory.
   </p>
   <p>

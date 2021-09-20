@@ -41,7 +41,7 @@ package: Define a new package, or print the current package names
   declarations will add tasks to the task list for the new package.
   </p>
   <p>
-  The new package remains the <tt>"current package"</tt> until another <i>package</i>
+  The new package remains the <span style="font-family: monospace;">"current package"</span> until another <i>package</i>
   command is entered, or until the task in which the package command was
   entered is terminated.
   Normally <i>package</i> will be used at the beginning of a script to define

@@ -24,11 +24,11 @@ partab: Transfer an IRAF parameter to a table element.
   <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task changes the value of a table element to the value of the input
-  parameter 'value'.  If 'value' is set to <tt>"INDEF"</tt>, the table element will be
+  parameter 'value'.  If 'value' is set to <span style="font-family: monospace;">"INDEF"</span>, the table element will be
   set to undefined.  If the data type of the table element is different from
   that of the input parameter 'value', this task will perform 
   type conversion.  The strings
-  <tt>"yes"</tt>, <tt>"y"</tt>, <tt>"no"</tt>, <tt>"n"</tt>, <tt>"true"</tt>, <tt>"t"</tt>, <tt>"false"</tt>, and <tt>"f"</tt>, in either upper or
+  <span style="font-family: monospace;">"yes"</span>, <span style="font-family: monospace;">"y"</span>, <span style="font-family: monospace;">"no"</span>, <span style="font-family: monospace;">"n"</span>, <span style="font-family: monospace;">"true"</span>, <span style="font-family: monospace;">"t"</span>, <span style="font-family: monospace;">"false"</span>, and <span style="font-family: monospace;">"f"</span>, in either upper or
   lower case are interpreted as boolean values.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
@@ -63,7 +63,7 @@ partab: Transfer an IRAF parameter to a table element.
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Set the twelfth component (i.e., row 12 of column 'COMPNAME') 
-  in the file 'graph.tab' to <tt>"FILTER1"</tt>:
+  in the file 'graph.tab' to <span style="font-family: monospace;">"FILTER1"</span>:
   </p>
   <pre>
   tt&gt; partab FILTER1 graph.tab COMPNAME 12
@@ -71,7 +71,7 @@ partab: Transfer an IRAF parameter to a table element.
   <p>
   2. Set the first wavelength (i.e., row 1 of column 'WAVELENGTH') in 
   the file 'spectrum.tab' to the value contained in parameter
-  <tt>'x'</tt>:
+  <span style="font-family: monospace;">'x'</span>:
   </p>
   <pre>
   tt&gt; partab (x) spectrum.tab WAVELENGTH 1

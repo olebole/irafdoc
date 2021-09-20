@@ -43,16 +43,16 @@ objmasks: Detect objects in images and make masks
   </dd>
   </dl>
   <dl>
-  <dt><b>omtype = <tt>"numbers"</tt> (boolean|numbers|colors|all)</b></dt>
+  <dt><b>omtype = <span style="font-family: monospace;">"numbers"</span> (boolean|numbers|colors|all)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='omtype' Line='omtype = "numbers" (boolean|numbers|colors|all)' -->
   <dd>The type of encoding for the object mask values.  In all cases non-object pixels
   (that is background) have mask values of zero.  The choices for the mask
-  values are <tt>"boolean"</tt>, <tt>"numbers"</tt>, <tt>"colors"</tt>, and <tt>"all"</tt>.  These are described
+  values are <span style="font-family: monospace;">"boolean"</span>, <span style="font-family: monospace;">"numbers"</span>, <span style="font-family: monospace;">"colors"</span>, and <span style="font-family: monospace;">"all"</span>.  These are described
   in the <i>Output Data</i> section.
   </dd>
   </dl>
   <dl>
-  <dt><b>skys = <tt>""</tt>, sigmas = <tt>""</tt></b></dt>
+  <dt><b>skys = <span style="font-family: monospace;">""</span>, sigmas = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='skys' Line='skys = "", sigmas = ""' -->
   <dd>Optional lists of input or output sky and sigma maps.  Maps are either
   constant values or images which are interpolated to the size of the input
@@ -66,7 +66,7 @@ objmasks: Detect objects in images and make masks
   </dd>
   </dl>
   <dl>
-  <dt><b>masks = <tt>"!BPM"</tt></b></dt>
+  <dt><b>masks = <span style="font-family: monospace;">"!BPM"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='masks' Line='masks = "!BPM"' -->
   <dd>List of bad pixel masks for the input images.  Non-zero masks values are
   ignored in the object detection and are passed on to the output object
@@ -75,31 +75,31 @@ objmasks: Detect objects in images and make masks
   list matches the masks with the input image.  A mask is specified by a
   filename or by reference to a filename given by the value of a header
   keyword in the input image.  A header keyword reference is made with the
-  syntax <tt>"!&lt;keyword&gt;"</tt> where &lt;keyword&gt; is the desired keyword with case
+  syntax <span style="font-family: monospace;">"!&lt;keyword&gt;"</span> where &lt;keyword&gt; is the desired keyword with case
   ignored.  For multiextension files the input masks may be either a
   multiextension file with matching extension names or a directory of
   pixel list files with the extension names as filenames.
   </dd>
   </dl>
   <dl>
-  <dt><b>extnames = <tt>""</tt></b></dt>
+  <dt><b>extnames = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='extnames' Line='extnames = ""' -->
   <dd>Extensions to select from multiextension files.  A null string matches all
   extension names.  Otherwise the parameter is a comma separated list of
   patterns that match the entire extension name.  Thus, an explicit list of
-  extension names may be specified or the pattern matching characters <tt>'?'</tt> for
+  extension names may be specified or the pattern matching characters <span style="font-family: monospace;">'?'</span> for
   any character or '[]' for a set of characters may be used.  The set may
   include ranges in ascii order by using hyphens; i.e. 1-3 matches the
   characters 1, 2, and 3.
   </dd>
   </dl>
   <dl>
-  <dt><b>logfiles = <tt>"STDOUT"</tt></b></dt>
+  <dt><b>logfiles = <span style="font-family: monospace;">"STDOUT"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfiles' Line='logfiles = "STDOUT"' -->
   <dd>List of output log files.  If no list is given then no output log information
   will be produced.  If only one file is specified it applies to all input
   images otherwise the list of files must match the images list.  Note that
-  the special name <tt>"STDOUT"</tt> corresponds to terminal output.
+  the special name <span style="font-family: monospace;">"STDOUT"</span> corresponds to terminal output.
   </dd>
   </dl>
   <dl>
@@ -122,16 +122,16 @@ objmasks: Detect objects in images and make masks
   Or the size may be specified as the number of pixels across a block.
   The task will enforce a preset minimum number of pixels per block which may
   require using bigger blocks than specified.  The background determination
-  algorithm is described further in the <tt>"Background Determination"</tt> section.
+  algorithm is described further in the <span style="font-family: monospace;">"Background Determination"</span> section.
   </dd>
   </dl>
   <dl>
-  <dt><b>convolve = <tt>"block 3 3"</tt></b></dt>
+  <dt><b>convolve = <span style="font-family: monospace;">"block 3 3"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='convolve' Line='convolve = "block 3 3"' -->
   <dd>Convolution filter to be applied prior to threshold detection.  The
   convolution filter is defined by a set of weights in a 2D array.  These
   may be specified in files or with certain forms given by special strings.
-  The options are described in the <tt>"Convolution Filter"</tt> section.
+  The options are described in the <span style="font-family: monospace;">"Convolution Filter"</span> section.
   </dd>
   </dl>
   <dl>
@@ -139,9 +139,9 @@ objmasks: Detect objects in images and make masks
   <!-- Sec='PARAMETERS' Level=0 Label='hsigma' Line='hsigma = 3., lsigma = 10.' -->
   <dd>Object pixels are identified by sigma thresholds about the mean background
   based on the estimated background sigma at each point in the image.
-  The sigma factors are specified in terms of the <tt>"per pixel"</tt> sigma before
-  convolution.  The <i>hsigma</i> value is the <tt>"high"</tt> or above background
-  limit and the <i>lsigma</i> value is the <tt>"low"</tt> or below background limit.
+  The sigma factors are specified in terms of the <span style="font-family: monospace;">"per pixel"</span> sigma before
+  convolution.  The <i>hsigma</i> value is the <span style="font-family: monospace;">"high"</span> or above background
+  limit and the <i>lsigma</i> value is the <span style="font-family: monospace;">"low"</span> or below background limit.
   Typically detections are one-sided, such as detecting objects above
   the background, and so the thresholds need not be equal.
   </dd>
@@ -156,12 +156,12 @@ objmasks: Detect objects in images and make masks
   </dd>
   </dl>
   <dl>
-  <dt><b>neighbors = <tt>"8"</tt> (8|4)</b></dt>
+  <dt><b>neighbors = <span style="font-family: monospace;">"8"</span> (8|4)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='neighbors' Line='neighbors = "8" (8|4)' -->
   <dd>The threshold selected pixels are associated with other neighboring pixels to
   form an object.  The criterion for a neighbor being part of the
-  same object is defined by this parameter.  The choices are <tt>"8"</tt> for
-  pixels touching in any of the 8 directions or <tt>"4"</tt> to identify neighbors
+  same object is defined by this parameter.  The choices are <span style="font-family: monospace;">"8"</span> for
+  pixels touching in any of the 8 directions or <span style="font-family: monospace;">"4"</span> to identify neighbors
   as only horizontal or vertically adjacent.
   </dd>
   </dl>
@@ -218,7 +218,7 @@ objmasks: Detect objects in images and make masks
   </p>
   <p>
   Background means and sigmas (specified per image pixels) may be specified
-  by <tt>"maps"</tt>.  These may be constant numerical values or images.  The map
+  by <span style="font-family: monospace;">"maps"</span>.  These may be constant numerical values or images.  The map
   images will be linearly interpolated to the size of the input images.
   For multi-extension input data, constant map values apply to all extensions
   and maps are also multiextension files with map images having the same
@@ -235,12 +235,12 @@ objmasks: Detect objects in images and make masks
   </p>
   <p>
   The masks are in one of the supported mask formats.  As of IRAF V2.12 this
-  includes pixel list (.pl) files and FITS <tt>"type=mask"</tt> extensions.  When the
+  includes pixel list (.pl) files and FITS <span style="font-family: monospace;">"type=mask"</span> extensions.  When the
   input files are multiextension files, the selected extension names are
   appended to the specified mask filename to select masks with the same
-  extension name.  If a mask file of the form <tt>"name[ext]"</tt> is not found
+  extension name.  If a mask file of the form <span style="font-family: monospace;">"name[ext]"</span> is not found
   the task will treat the filename as a directory of pixel list files and
-  select the pixel list file with the extension name; i.e. <tt>"name/ext.pl"</tt>.
+  select the pixel list file with the extension name; i.e. <span style="font-family: monospace;">"name/ext.pl"</span>.
   </p>
   <p>
   2. Output Data
@@ -249,7 +249,7 @@ objmasks: Detect objects in images and make masks
   The output of this task are object masks, sky maps, sigma maps, and log
   information.  The output object masks default to mask type extensions.  If an
   extension name is not specified explicitly the default extension name
-  <tt>"pl"</tt> is created.  To select a pixel list output format an explicit <tt>".pl"</tt>
+  <span style="font-family: monospace;">"pl"</span> is created.  To select a pixel list output format an explicit <span style="font-family: monospace;">".pl"</span>
   extension must be used.
   </p>
   <p>
@@ -263,14 +263,14 @@ objmasks: Detect objects in images and make masks
   are:
   </p>
   <dl>
-  <dt><b><tt>"boolean"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"boolean"</span></b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='' Line='"boolean"' -->
   <dd>All object and bad pixels have a mask value of one; i.e. the output masks
   consists only of the values 0 and 1.
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"numbers"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"numbers"</span></b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='' Line='"numbers"' -->
   <dd>Input bad pixels values between 1 and 10 preserve their value and all
   other input mask values are mapped to 10.  The object mask pixels have
@@ -280,25 +280,25 @@ objmasks: Detect objects in images and make masks
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"colors"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"colors"</span></b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='' Line='"colors"' -->
   <dd>Input bad pixels are mapped to output values of one.  The object numbers
   are modulo 8 plus 2; i.e. values between 2 and 9.  The purpose of this
   numbering is to allow mapping to the nine standard display colors for an
-  interesting overlay with the <b>display</b> task and <tt>"ocolors='+203'"</tt>.
+  interesting overlay with the <b>display</b> task and <span style="font-family: monospace;">"ocolors='+203'"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"all"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"all"</span></b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='' Line='"all"' -->
-  <dd>This is the same as <tt>"numbers"</tt> except that bits 24 to 27 in the mask values
+  <dd>This is the same as <span style="font-family: monospace;">"numbers"</span> except that bits 24 to 27 in the mask values
   are used for various purposes.  In particular bit 24 is set for the boundary
   pixels.  This numbering will be used in the future by special tasks.
   </dd>
   </dl>
   <p>
   Output mean sky and sky sigma maps consist of the mean and sigma values
-  in blocks as described in the <tt>"Background Determination"</tt> section.
+  in blocks as described in the <span style="font-family: monospace;">"Background Determination"</span> section.
   Therefore, the size of the map images are smaller than the input data images.
   These maps need to be interpolated to the size of the input image
   to obtain the values used for particular pixels in the data images.
@@ -458,7 +458,7 @@ objmasks: Detect objects in images and make masks
   <p>
   The convolution detection filter is specified with the <i>convolve</i>
   parameter.  There is only one convolution that can be specified and it
-  applies to all input images in a list.  If a null string (<tt>""</tt>) is specified
+  applies to all input images in a list.  If a null string (<span style="font-family: monospace;">""</span>) is specified
   then no convolution is performed.  The task has been optimizations for this
   case to avoid treating this as a 1x1 convolution and to avoid extra memory
   allocations required when a convolution is done.
@@ -507,14 +507,14 @@ objmasks: Detect objects in images and make masks
   kernel sizes.  The implementation of the convolution has been optimized to
   recognize bilinear symmetries or lines which are scaled versions of other
   lines.  So if possible users should chose convolutions with such symmetries
-  to be most efficient.  The <tt>"block"</tt>, <tt>"bilinear"</tt>, and <tt>"gauss"</tt> special
+  to be most efficient.  The <span style="font-family: monospace;">"block"</span>, <span style="font-family: monospace;">"bilinear"</span>, and <span style="font-family: monospace;">"gauss"</span> special
   convolutions described below all have such symmetries.
   </p>
   <p>
   The <i>convolve</i> parameter is a string with one of the following forms.
   </p>
   <dl>
-  <dt><b><tt>""</tt>    </b></dt>
+  <dt><b><span style="font-family: monospace;">""</span>    </b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='' Line='""    ' -->
   <dd>There is no convolution or, equivalently, NX=1, NY=1.
   </dd>
@@ -531,7 +531,7 @@ objmasks: Detect objects in images and make masks
   <dt><b>block [NX] [NY]</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='block' Line='block [NX] [NY]' -->
   <dd>The weights are all the same and the convolution size is given by the
-  two numbers following the word <tt>"block"</tt>.  This is a moving block average
+  two numbers following the word <span style="font-family: monospace;">"block"</span>.  This is a moving block average
   filter.
   </dd>
   </dl>
@@ -539,7 +539,7 @@ objmasks: Detect objects in images and make masks
   <dt><b>bilinear [NX] [NY]</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='bilinear' Line='bilinear [NX] [NY]' -->
   <dd>The weights are the bilinear matrix product of triangular one dimensional
-  matrices of sizes given by the two numbers following the word <tt>"bilinear"</tt>.
+  matrices of sizes given by the two numbers following the word <span style="font-family: monospace;">"bilinear"</span>.
   The weights are described by the matrix product relation 
   <pre>
       [1 ... (NX+1)/2 ... 1] * Transpose{[1 ... (NY+2)/2 ... 1]}
@@ -623,14 +623,14 @@ objmasks: Detect objects in images and make masks
   </p>
   <p>
   When a non-object pixel neighbors two or more object pixels it is
-  assigned to the object with the greater <tt>"flux"</tt>.  The flux is the sum
+  assigned to the object with the greater <span style="font-family: monospace;">"flux"</span>.  The flux is the sum
   of the pixel value deviations from the background.
   </p>
   <p>
   The parameter <i>ngrow</i> selects the maximum number of growing iterations.
   The parameter <i>agrow</i> selects the maximum fractional increase in
   the number  of original detected object pixels.  The number of pixels
-  is called the <tt>"area"</tt>  of the object.  The growing of an object stops
+  is called the <span style="font-family: monospace;">"area"</span>  of the object.  The growing of an object stops
   when either maximum is exceedd at the end of a growing iteration.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
@@ -677,10 +677,10 @@ objmasks: Detect objects in images and make masks
   <p>
   2.  In the first example there was no input mask.  The next example
   creates a new object mask using the first object mask as an input
-  <tt>"bad pixel mask"</tt>.  While this is not the usual usage of the bad pixel
+  <span style="font-family: monospace;">"bad pixel mask"</span>.  While this is not the usual usage of the bad pixel
   mask it does illustrate an interesting option.  Note that the mask
   values in the input mask are mapped to an output value of 1 in the
-  <tt>"colors"</tt> output.  In this example the output is forced to be a pl
+  <span style="font-family: monospace;">"colors"</span> output.  In this example the output is forced to be a pl
   file by using the explicit extension.
   </p>
   <pre>

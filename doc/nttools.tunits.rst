@@ -50,8 +50,8 @@ tunits: Convert table column from one set of units to another
   </p>
   <p>
   Powers can also be specified by preceding the unit name with the
-  string <tt>"square"</tt>, <tt>"sq"</tt>, <tt>"cubic"</tt>, or <tt>"cu"</tt>. For example, <tt>"square meter"</tt>
-  is equivalent to <tt>"meter^2"</tt>.
+  string <span style="font-family: monospace;">"square"</span>, <span style="font-family: monospace;">"sq"</span>, <span style="font-family: monospace;">"cubic"</span>, or <span style="font-family: monospace;">"cu"</span>. For example, <span style="font-family: monospace;">"square meter"</span>
+  is equivalent to <span style="font-family: monospace;">"meter^2"</span>.
   </p>
   <p>
   The operators recognized are:
@@ -71,7 +71,7 @@ tunits: Convert table column from one set of units to another
   <p>
   Each set of units can have several synonymous names. These names are
   listed in the abbreviations table. Case is not significant in names
-  and regular plurals (made by adding an <tt>"s"</tt>) are converted to the
+  and regular plurals (made by adding an <span style="font-family: monospace;">"s"</span>) are converted to the
   singular. Names should contain only alphabetic characters.  Blanks,
   underscores and digits are not allowed.
   </p>
@@ -106,14 +106,14 @@ tunits: Convert table column from one set of units to another
   </dd>
   </dl>
   <dl>
-  <dt><b>(oldunits = <tt>" "</tt>) [string]</b></dt>
+  <dt><b>(oldunits = <span style="font-family: monospace;">" "</span>) [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(oldunits = " ") [string]' -->
   <dd>The units that the table column is currently in. If the value of this
   parameter is blank, the units will be read from the table.
   </dd>
   </dl>
   <dl>
-  <dt><b>(abrevtab = <tt>"ttools$tunits/abrev.tab"</tt>) [file]</b></dt>
+  <dt><b>(abrevtab = <span style="font-family: monospace;">"ttools$tunits/abrev.tab"</span>) [file]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(abrevtab = "ttools$tunits/abrev.tab") [file]' -->
   <dd>A table of alternate names for each unit. This table contains two
   columns. The first column is the name of the units and the second
@@ -123,7 +123,7 @@ tunits: Convert table column from one set of units to another
   abbreviation allows units to be converted to a standard form, which
   simplifies calculations. The standard abbreviation is used internally
   when computing the conversion factor. Case is not significant in names
-  and regular plurals (made by adding an <tt>"s"</tt>) are converted to the
+  and regular plurals (made by adding an <span style="font-family: monospace;">"s"</span>) are converted to the
   singular before looking them up in the table. Names should contain
   only alphabetic characters.  Blanks, underscores and digits are not
   allowed.
@@ -132,7 +132,7 @@ tunits: Convert table column from one set of units to another
   </dd>
   </dl>
   <dl>
-  <dt><b>(unittab = <tt>"ttools$tunits/units.tab"</tt>) [file]</b></dt>
+  <dt><b>(unittab = <span style="font-family: monospace;">"ttools$tunits/units.tab"</span>) [file]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(unittab = "ttools$tunits/units.tab") [file]' -->
   <dd>A table of conversion factors from one set of units into another.
   This table contains four columns. The first is the conversion factor,
@@ -140,11 +140,11 @@ tunits: Convert table column from one set of units to another
   convert from. The third column is the units the task tries to convert
   to. The fourth column is contains the boolean variable swap, explained
   a little later. 
-  The table is interpreted as <tt>"There are &lt;factor&gt; &lt;from&gt; in a &lt;to&gt;."</tt>
-  For example, <tt>"There are 100 centimeters in a meter."</tt>  The last column,
+  The table is interpreted as <span style="font-family: monospace;">"There are &lt;factor&gt; &lt;from&gt; in a &lt;to&gt;."</span>
+  For example, <span style="font-family: monospace;">"There are 100 centimeters in a meter."</span>  The last column,
   swap, does not change the sense of the sentence but does change the
-  direction that the conversion is applied, For example, <tt>"60 seconds in
-  a minute"</tt> is actually a conversion from minutes to seconds because
+  direction that the conversion is applied, For example, <span style="font-family: monospace;">"60 seconds in
+  a minute"</span> is actually a conversion from minutes to seconds because
   swap is yes. Unit conversions should set swap to yes when the desired
   conversion is not an exact value, but its inverse is. Only one
   conversion is allowed per unit, which simplifies the program logic

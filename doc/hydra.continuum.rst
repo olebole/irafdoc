@@ -39,10 +39,10 @@ continuum: Fit the continuum in spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>lines = <tt>"*"</tt>, bands = <tt>"1"</tt></b></dt>
+  <dt><b>lines = <span style="font-family: monospace;">"*"</span>, bands = <span style="font-family: monospace;">"1"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lines' Line='lines = "*", bands = "1"' -->
   <dd>A range specifications for the image lines and bands to be fit.  Unspecified
-  lines and bands will be copied from the original.  If the value is <tt>"*"</tt>, all of
+  lines and bands will be copied from the original.  If the value is <span style="font-family: monospace;">"*"</span>, all of
   the currently unprocessed lines or bands will be fit.  A range consists of
   a first line number and a last line number separated by a hyphen.  A
   single line number may also be a range and multiple ranges may be
@@ -50,11 +50,11 @@ continuum: Fit the continuum in spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>type = <tt>"ratio"</tt></b></dt>
+  <dt><b>type = <span style="font-family: monospace;">"ratio"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='type' Line='type = "ratio"' -->
-  <dd>Type of output spectra.  The choices are <tt>"fit"</tt> for the fitted function,
-  <tt>"ratio"</tt> for the ratio of the input spectra to the fit, <tt>"difference"</tt> for
-  the difference between the input spectra and the fit, and <tt>"data"</tt> for
+  <dd>Type of output spectra.  The choices are <span style="font-family: monospace;">"fit"</span> for the fitted function,
+  <span style="font-family: monospace;">"ratio"</span> for the ratio of the input spectra to the fit, <span style="font-family: monospace;">"difference"</span> for
+  the difference between the input spectra and the fit, and <span style="font-family: monospace;">"data"</span> for
   the data minus any rejected points replaced by the fit.
   </dd>
   </dl>
@@ -70,7 +70,7 @@ continuum: Fit the continuum in spectra
   <!-- Sec='PARAMETERS' Level=0 Label='wavescale' Line='wavescale = yes' -->
   <dd>Wavelength scale the X axis of the plot?  This option requires that the
   spectra be wavelength calibrated.  If <b>wavescale</b> is no, the plots
-  will be in <tt>"channel"</tt> (pixel) space.
+  will be in <span style="font-family: monospace;">"channel"</span> (pixel) space.
   </dd>
   </dl>
   <dl>
@@ -97,10 +97,10 @@ continuum: Fit the continuum in spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>logfiles = <tt>"logfile"</tt></b></dt>
+  <dt><b>logfiles = <span style="font-family: monospace;">"logfile"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfiles' Line='logfiles = "logfile"' -->
   <dd>List of log files to which to write the power series coefficients.  If
-  <b>logfiles</b> = NULL (<tt>""</tt>), the coefficients will not be calculated.
+  <b>logfiles</b> = NULL (<span style="font-family: monospace;">""</span>), the coefficients will not be calculated.
   </dd>
   </dl>
   <dl>
@@ -114,7 +114,7 @@ continuum: Fit the continuum in spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>sample = <tt>"*"</tt></b></dt>
+  <dt><b>sample = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"' -->
   <dd>The ranges of X values to be used in the continuum fits.  The units will vary
   depending on the setting of the <b>wavescale</b> and <b>logscale</b>
@@ -134,10 +134,10 @@ continuum: Fit the continuum in spectra
   <dt><b>function = spline3</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = spline3' -->
   <dd>Function to be fit to the spectra.  The functions are
-  <tt>"legendre"</tt> (legendre polynomial), <tt>"chebyshev"</tt> (chebyshev polynomial),
-  <tt>"spline1"</tt> (linear spline), and <tt>"spline3"</tt> (cubic spline).  The functions
+  <span style="font-family: monospace;">"legendre"</span> (legendre polynomial), <span style="font-family: monospace;">"chebyshev"</span> (chebyshev polynomial),
+  <span style="font-family: monospace;">"spline1"</span> (linear spline), and <span style="font-family: monospace;">"spline3"</span> (cubic spline).  The functions
   may be abbreviated.  The power series coefficients can only be
-  calculated if <b>function</b> is <tt>"legendre"</tt> or <tt>"chebyshev"</tt>.
+  calculated if <b>function</b> is <span style="font-family: monospace;">"legendre"</span> or <span style="font-family: monospace;">"chebyshev"</span>.
   </dd>
   </dl>
   <dl>
@@ -173,13 +173,13 @@ continuum: Fit the continuum in spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>Graphics output device for interactive graphics.
   </dd>
   </dl>
   <dl>
-  <dt><b>cursor = <tt>""</tt></b></dt>
+  <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Graphics cursor input.
   </dd>
@@ -192,8 +192,8 @@ continuum: Fit the continuum in spectra
   echelle, multispec, or onedspec format images and then divided into the
   spectrum to produce continuum normalized spectra.  The first two formats
   will normalize the spectra or orders (i.e. the lines) in each image.  In
-  this description the term <tt>"spectrum"</tt> will refer to a line (in whatever
-  band) of an image while <tt>"image"</tt> will refer to all spectra in an image.  The
+  this description the term <span style="font-family: monospace;">"spectrum"</span> will refer to a line (in whatever
+  band) of an image while <span style="font-family: monospace;">"image"</span> will refer to all spectra in an image.  The
   parameters of the fit may vary from spectrum to spectrum within images and
   between images.  The fitted function may be a legendre polynomial,
   chebyshev polynomial, linear spline, or cubic spline of a given order or
@@ -222,7 +222,7 @@ continuum: Fit the continuum in spectra
   the domain of the data (in pixels) if some of the spectra are not
   dispersion corrected.  The syntax of the sample specification is a comma
   separated, colon delimited list similar to the image section notation.
-  For example, the <b>sample</b>, <tt>"6550:6555,6570:6575"</tt> might be used to
+  For example, the <b>sample</b>, <span style="font-family: monospace;">"6550:6555,6570:6575"</span> might be used to
   fit the continuum near H-alpha.
   </p>
   <p>
@@ -246,7 +246,7 @@ continuum: Fit the continuum in spectra
   <p>
   A range specification is used to select the <i>lines</i> and <i>bands</i> to be
   fit.  These parameters may either be specified with the same syntax as the
-  <b>sample</b> parameter, or with the <tt>"hyphen"</tt> syntax used elsewhere in
+  <b>sample</b> parameter, or with the <span style="font-family: monospace;">"hyphen"</span> syntax used elsewhere in
   IRAF.  Note that a NULL range for <b>lines/bands</b> expands to <b>no</b>
   lines, not to all lines.  An asterisk (*) should be used to represent a
   range of all of the image lines/bands.  The fitting parameters (<i>sample,
@@ -254,7 +254,7 @@ continuum: Fit the continuum in spectra
   may be adjusted interactively if the parameter <i>interactive</i> is
   yes.  The fitting is performed with the <b>icfit</b> package.  The
   cursor mode commands for this package are described in a separate help
-  entry under <tt>"icfit"</tt>.  Separate copies of the fitting parameters are
+  entry under <span style="font-family: monospace;">"icfit"</span>.  Separate copies of the fitting parameters are
   maintained for each line so that interactive changes to the parameter
   defaults will be remembered from image to image.
   </p>
@@ -300,7 +300,7 @@ continuum: Fit the continuum in spectra
   parameters are low_rejection (for an absorption spectrum), the function
   type, and the order of the function; these fit parameters are
   originally set to the defaults in the <b>continuum</b> parameter file.  A
-  <tt>'?'</tt> will display a menu of cursor key options.  Exiting with <tt>'q'</tt> will
+  <span style="font-family: monospace;">'?'</span> will display a menu of cursor key options.  Exiting with <span style="font-family: monospace;">'q'</span> will
   update the output normalized order for the current image and proceed to
   the next order or image.
   </p>

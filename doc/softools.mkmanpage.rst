@@ -26,7 +26,7 @@ mkmanpage: Make a manual page
   <dt><b>module</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='module' Line='module' -->
   <dd>The name of the program to be documented, i.e., the name that will appear at
-  the top of the manual page, and the root name of the <tt>".hlp"</tt> file to be
+  the top of the manual page, and the root name of the <span style="font-family: monospace;">".hlp"</span> file to be
   created.
   </dd>
   </dl>
@@ -37,13 +37,13 @@ mkmanpage: Make a manual page
   </dd>
   </dl>
   <dl>
-  <dt><b>cltemplate = <tt>"doc$mancl.hlp"</tt></b></dt>
+  <dt><b>cltemplate = <span style="font-family: monospace;">"doc$mancl.hlp"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cltemplate' Line='cltemplate = "doc$mancl.hlp"' -->
   <dd>Filename of the template file for a CL manual page.
   </dd>
   </dl>
   <dl>
-  <dt><b>xtemplate = <tt>"doc$manx.hlp"</tt></b></dt>
+  <dt><b>xtemplate = <span style="font-family: monospace;">"doc$manx.hlp"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xtemplate' Line='xtemplate = "doc$manx.hlp"' -->
   <dd>Filename of the template file for a library procedure manual page.
   </dd>
@@ -56,20 +56,20 @@ mkmanpage: Make a manual page
   template, to be edited to create the manual page for the named help module
   or task.  Depending upon the type of manual page to be created, <i>mkmanpage</i>
   copies the template file to the current directory, creating a new file with
-  the name <tt>"module.hlp"</tt>, where <i>module</i> is the name entered on the
+  the name <span style="font-family: monospace;">"module.hlp"</span>, where <i>module</i> is the name entered on the
   command line.  The editor is called up to edit the file and the task exits.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. Make a new manual page for task <tt>"page"</tt>.
+  1. Make a new manual page for task <span style="font-family: monospace;">"page"</span>.
   </p>
   <p>
   	cl&gt; mkmanpage page
   </p>
   <p>
-  The task creates a file <tt>"page.hlp"</tt> in the current directory, and calls
+  The task creates a file <span style="font-family: monospace;">"page.hlp"</span> in the current directory, and calls
   up the editor to edit the new file.
   </p>
   <!-- EndSection:   'EXAMPLES' -->

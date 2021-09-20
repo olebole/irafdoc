@@ -29,7 +29,7 @@ selftest: Self test program to check DTOI transformation
   </dd>
   </dl>
   <dl>
-  <dt><b>device = <tt>"stdgraph"</tt> </b></dt>
+  <dt><b>device = <span style="font-family: monospace;">"stdgraph"</span> </b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdgraph" ' -->
   <dd>Plotting device for graphical output.
   </dd>

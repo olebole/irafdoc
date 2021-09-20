@@ -25,15 +25,15 @@ reblock: Copy a binary file, optionally reblocking
   <dl>
   <dt><b>infiles  </b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='infiles' Line='infiles  ' -->
-  <dd>The input file list or device name, e.g. <tt>"mta1600[2]"</tt> or <tt>"mta800"</tt>, <tt>"file1"</tt>,
-  <tt>"file1,file2"</tt>, or <tt>"@infiles"</tt>.
+  <dd>The input file list or device name, e.g. <span style="font-family: monospace;">"mta1600[2]"</span> or <span style="font-family: monospace;">"mta800"</span>, <span style="font-family: monospace;">"file1"</span>,
+  <span style="font-family: monospace;">"file1,file2"</span>, or <span style="font-family: monospace;">"@infiles"</span>.
   </dd>
   </dl>
   <dl>
   <dt><b>outfiles  </b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outfiles' Line='outfiles  ' -->
-  <dd>The list of output files or device name, e.g. <tt>"gemini!mtb"</tt>, <tt>"out1"</tt>,
-  <tt>"out1,out2"</tt>, or <tt>"@outfiles"</tt>.
+  <dd>The list of output files or device name, e.g. <span style="font-family: monospace;">"gemini!mtb"</span>, <span style="font-family: monospace;">"out1"</span>,
+  <span style="font-family: monospace;">"out1,out2"</span>, or <span style="font-family: monospace;">"@outfiles"</span>.
   If multiple file output to disk is requested,  and the specified number
   of output files is 1, the output file names will be generated
   by concatenating the tape file number (the input files are on tape) or
@@ -45,11 +45,11 @@ reblock: Copy a binary file, optionally reblocking
   <dt><b>file_list</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='file_list' Line='file_list' -->
   <dd>List of tape file numbers or ranges delimited by commas,
-  e.g. <tt>"1-3,5_8"</tt>.
+  e.g. <span style="font-family: monospace;">"1-3,5_8"</span>.
   File_list is requested only if the magtape input device is specified.
   Files will be read in ascending order regardless of the ordering of the list.
   Reading will terminate silently if EOT is reached, thus a list such as
-  <tt>"1-999"</tt> may be used to read all files on the tape.
+  <span style="font-family: monospace;">"1-999"</span> may be used to read all files on the tape.
   </dd>
   </dl>
   <dl>
@@ -57,7 +57,7 @@ reblock: Copy a binary file, optionally reblocking
   <!-- Sec='PARAMETERS' Level=0 Label='newtape' Line='newtape  ' -->
   <dd>If the output device is magtape, newtape specifies whether the tape is
   blank or contains data.
-  Newtape is requested only if no tape file number is specified, e.g. <tt>"mta1600"</tt>.
+  Newtape is requested only if no tape file number is specified, e.g. <span style="font-family: monospace;">"mta1600"</span>.
   </dd>
   </dl>
   <dl>
@@ -129,8 +129,8 @@ reblock: Copy a binary file, optionally reblocking
   <dt><b>offset = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='offset' Line='offset = 0' -->
   <dd>The number which added to the tape file number is appended to <i>outfiles</i>
-  to produce the output file name. For example if file_list = <tt>"1-3"</tt>, outfiles =
-  <tt>"out"</tt> and offset = 100, the three files out101, out102, out103 would
+  to produce the output file name. For example if file_list = <span style="font-family: monospace;">"1-3"</span>, outfiles =
+  <span style="font-family: monospace;">"out"</span> and offset = 100, the three files out101, out102, out103 would
   be produced rather than out001, out002 and out003.
   </dd>
   </dl>

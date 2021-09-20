@@ -115,19 +115,19 @@ cvl: Load image display (newer version of 'display')
   </dd>
   </dl>
   <dl>
-  <dt><b>ztrans = <tt>"linear"</tt></b></dt>
+  <dt><b>ztrans = <span style="font-family: monospace;">"linear"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ztrans' Line='ztrans = "linear"' -->
   <dd>Transformation of the image intensity levels to the display levels.  The
   choices are:
   <dl>
-  <dt><b><tt>"linear"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"linear"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"linear"' -->
   <dd>Map the minimum and maximum image intensities linearly to the minimum and
   maximum display levels.
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"log"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"log"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"log"' -->
   <dd>Map the minimum and maximum image intensities linearly to the range 1 to 1000,
   take the logarithm (base 10), and then map the logarithms to the display
@@ -135,17 +135,17 @@ cvl: Load image display (newer version of 'display')
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"none"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"none"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"none"' -->
   <dd>Apply no mapping of the image intensities (regardless of the values of
   <i>zscale, zrange, z1, and z2</i>).  For most image displays, values exceeding
   the maximum display value are truncated by masking the highest bits.
   This corresponds to applying a modulus operation to the intensity values
-  and produces <tt>"wrap-around"</tt> in the display levels.
+  and produces <span style="font-family: monospace;">"wrap-around"</span> in the display levels.
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"user"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"user"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"user"' -->
   <dd>User supplies a look up table of intensities and their corresponding
   greyscale values.  
@@ -154,7 +154,7 @@ cvl: Load image display (newer version of 'display')
   </dd>
   </dl>
   <dl>
-  <dt><b>lutfile = <tt>""</tt></b></dt>
+  <dt><b>lutfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lutfile' Line='lutfile = ""' -->
   <dd>Name of text file containing the look up table when <i>ztrans</i> = user.
   The table should contain two columns per line; column 1 contains the
@@ -166,7 +166,7 @@ cvl: Load image display (newer version of 'display')
   <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The specified image is loaded into the specified frame of the standard
-  image display device (<tt>"stdimage"</tt>).  For devices with more than one
+  image display device (<span style="font-family: monospace;">"stdimage"</span>).  For devices with more than one
   frame it is possible to load an image in a frame different than that
   displayed on the monitor.  An option allows the loaded frame to become
   the displayed frame.  The previous contents of the frame may be erased
@@ -215,15 +215,15 @@ cvl: Load image display (newer version of 'display')
   values.  There are two steps; mapping a range of image intensities to
   the full display range and selecting the mapping function or
   transformation.  The mapping transformation is set by the parameter
-  <i>ztrans</i>.  The most direct mapping is <tt>"none"</tt> which loads the image
+  <i>ztrans</i>.  The most direct mapping is <span style="font-family: monospace;">"none"</span> which loads the image
   pixel values directly without any transformation or range mapping.
   Most displays only use the lowest bits resulting in a wrap-around
   effect for images with a range exceeding the display range.  This is
   sometimes desirable because it produces a contoured image which is not
   saturated at the brightest or weakest points.  This transformation is
-  also the fastest.  Another transformation, <tt>"linear"</tt>, maps the selected
+  also the fastest.  Another transformation, <span style="font-family: monospace;">"linear"</span>, maps the selected
   image range linearly to the full display range.  The logarithmic
-  transformation, <tt>"log"</tt>, maps the image range linearly between 1 and 1000
+  transformation, <span style="font-family: monospace;">"log"</span>, maps the image range linearly between 1 and 1000
   and then maps the logarithm (base 10) linearly to the full display
   range.  In the latter transformations pixel values greater than
   selected maximum display intensity are set to the maximum display value

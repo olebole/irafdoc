@@ -103,15 +103,15 @@ tstat: Get mean, standard deviation, min, and max for a column.
   </dd>
   </dl>
   <dl>
-  <dt><b>(outtable = <tt>"STDOUT"</tt>) [string]</b></dt>
+  <dt><b>(outtable = <span style="font-family: monospace;">"STDOUT"</span>) [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(outtable = "STDOUT") [string]' -->
   <dd>Output table, STDOUT, or null.
-  If 'outtable' is null (<tt>""</tt>) then the results will only be written to cl
+  If 'outtable' is null (<span style="font-family: monospace;">""</span>) then the results will only be written to cl
   parameters (see 'nrows', 'mean', 'stddev', 'vmin', 'vmax').
-  If 'outtable' is <tt>"STDOUT"</tt> then the results will be written to
+  If 'outtable' is <span style="font-family: monospace;">"STDOUT"</span> then the results will be written to
   the standard output preceded by a header line (beginning with #)
   that gives the name of the table and the name of the column.
-  If 'outtable' is not <tt>"STDOUT"</tt> and is not null then it is interpreted as
+  If 'outtable' is not <span style="font-family: monospace;">"STDOUT"</span> and is not null then it is interpreted as
   a table name (just one name), and the statistics for the input tables
   will be written to separate rows of the output table.
   If the table already exists,
@@ -136,7 +136,7 @@ tstat: Get mean, standard deviation, min, and max for a column.
   <dt><b>(rows = -) [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(rows = -) [string]' -->
   <dd>Range of rows to use for statistics.
-  The default <tt>"-"</tt> means that all rows are used.
+  The default <span style="font-family: monospace;">"-"</span> means that all rows are used.
   See the help for RANGES in XTOOLS for a description of the syntax.
   </dd>
   </dl>
@@ -144,7 +144,7 @@ tstat: Get mean, standard deviation, min, and max for a column.
   <dt><b>(n_tab = table) [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(n_tab = table) [string]' -->
   <dd>Column name for name of input table.
-  This and other parameters that begin with <tt>"n_"</tt> are only used if the output values are
+  This and other parameters that begin with <span style="font-family: monospace;">"n_"</span> are only used if the output values are
   written to a table.
   </dd>
   </dl>
@@ -152,7 +152,7 @@ tstat: Get mean, standard deviation, min, and max for a column.
   <dt><b>(n_nam = column) [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(n_nam = column) [string]' -->
   <dd>Column name for name of input column.
-  This and other parameters that begin with <tt>"n_"</tt> are only used if the output values are
+  This and other parameters that begin with <span style="font-family: monospace;">"n_"</span> are only used if the output values are
   written to a table.
   </dd>
   </dl>
@@ -239,8 +239,8 @@ tstat: Get mean, standard deviation, min, and max for a column.
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1.  Get statistics on column <tt>"flux"</tt> in all tables, putting the output
-  (assuming outtable=<tt>"STDOUT"</tt>) in the ASCII file 'flux.lis':
+  1.  Get statistics on column <span style="font-family: monospace;">"flux"</span> in all tables, putting the output
+  (assuming outtable=<span style="font-family: monospace;">"STDOUT"</span>) in the ASCII file 'flux.lis':
   </p>
   <pre>
   
@@ -258,7 +258,7 @@ tstat: Get mean, standard deviation, min, and max for a column.
   Since the input is redirected, we don't specify the table name.
   Note also that in this case the input contains only one column,
   so we don't specify the column name either.
-  In this example, we get statistics on row 17 of <tt>"bs.fits"</tt>:
+  In this example, we get statistics on row 17 of <span style="font-family: monospace;">"bs.fits"</span>:
   </p>
   <pre>
   
@@ -269,14 +269,14 @@ tstat: Get mean, standard deviation, min, and max for a column.
   3.  When the input is redirected and has multiple columns,
   the command-line argument should be the column name to use,
   not the table name.
-  The table name in this case will internally be set to <tt>"STDIN"</tt>.
+  The table name in this case will internally be set to <span style="font-family: monospace;">"STDIN"</span>.
   </p>
   <pre>
   
       tt&gt; dir l+ | tstat c3
   </pre>
   <p>
-  4.  The statistics on column <tt>"flux"</tt> in 'hr465.tab' are put in parameters
+  4.  The statistics on column <span style="font-family: monospace;">"flux"</span> in 'hr465.tab' are put in parameters
   'tstat.nrows', 'tstat.mean', etc.,
   and are not written to STDOUT or to a table.
   We only include rows for which column V is no larger than 12.
@@ -294,7 +294,7 @@ tstat: Get mean, standard deviation, min, and max for a column.
       tt&gt; tstat hr465.tab flux outtable=hr465s.tab n_mean="mean_flux"
   </pre>
   <p>
-  6.  Get statistics on column <tt>"flux"</tt> in table 'hr465.tab', but only for
+  6.  Get statistics on column <span style="font-family: monospace;">"flux"</span> in table 'hr465.tab', but only for
   rows 17 through 116, row 271, and row 952:
   </p>
   <pre>
@@ -317,7 +317,7 @@ tstat: Get mean, standard deviation, min, and max for a column.
   thistogram, ranges
   </p>
   <p>
-  Type <tt>"help tables opt=sys"</tt> for a higher-level description of the 'tables' 
+  Type <span style="font-family: monospace;">"help tables opt=sys"</span> for a higher-level description of the 'tables' 
   package.
   </p>
   

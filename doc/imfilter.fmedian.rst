@@ -82,7 +82,7 @@ fmedian: Quantize and box median filter a list of 1D or 2D images
   </dd>
   </dl>
   <dl>
-  <dt><b>boundary = <tt>"nearest"</tt></b></dt>
+  <dt><b>boundary = <span style="font-family: monospace;">"nearest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"' -->
   <dd>The type of boundary extension. The options are:
   <dl>
@@ -163,8 +163,8 @@ fmedian: Quantize and box median filter a list of 1D or 2D images
   <!-- BeginSection: 'REFERENCES' -->
   <p>
   A description of the fast median algorithm used here can be found in
-  <tt>"Topics in Applied Physics: Two-Dimensional Digital Signal Processing II:
-  Transforms and Median Filters"</tt>, Volume 43, 1981, Springer-Verlag,
+  <span style="font-family: monospace;">"Topics in Applied Physics: Two-Dimensional Digital Signal Processing II:
+  Transforms and Median Filters"</span>, Volume 43, 1981, Springer-Verlag,
   edited by T.S. Huang, p 209.
   </p>
   <!-- EndSection:   'REFERENCES' -->

@@ -44,7 +44,7 @@ urlget: Get a (http) URL to a named file
   </dd>
   </dl>
   <dl>
-  <dt><b>extn = <tt>""</tt></b></dt>
+  <dt><b>extn = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='extn' Line='extn = ""' -->
   <dd>Optional filename extension to put on the cached filename.  This can be
   used to force files to be saved as a particular type in the cache.
@@ -57,7 +57,7 @@ urlget: Get a (http) URL to a named file
   </dd>
   </dl>
   <dl>
-  <dt><b>cache = <tt>"cache$"</tt></b></dt>
+  <dt><b>cache = <span style="font-family: monospace;">"cache$"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cache' Line='cache = "cache$"' -->
   <dd>Logical cache directory name.
   </dd>
@@ -69,7 +69,7 @@ urlget: Get a (http) URL to a named file
   The <i>URLGET</i> task is used to download a URL (HTTP protocol only) to a 
   local file named by the <i>fname</i> parameter.  If no <i>fname</i> is given, 
   a filename is constructed from the last part of the URL (i.e.
-  characters trailing any of the <tt>'?'</tt>, <tt>'/'</tt>, or <tt>'&amp;'</tt> delimiters).  Because 
+  characters trailing any of the <span style="font-family: monospace;">'?'</span>, <span style="font-family: monospace;">'/'</span>, or <span style="font-family: monospace;">'&amp;'</span> delimiters).  Because 
   the URL may not point to a static file, use of the <i>fname</i> parameter
   is recommended.
   </p>

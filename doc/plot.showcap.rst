@@ -43,7 +43,7 @@ showcap: Show and decode graphcap entries
   <pre>
   
   	cmd :  `set' device
-  	    |  <tt>`*'</tt> (to dump full graphcap entry)
+  	    |  <span style="font-family: monospace;">`*'</span> (to dump full graphcap entry)
   	    |  cc [arg1 [arg2 [arg3]]]
   	    ;
   	
@@ -55,7 +55,7 @@ showcap: Show and decode graphcap entries
   </pre>
   <p>
   The user must first use `set' to tell <b>showcap</b> which graphics device to
-  read from graphcap.  After a `set' or <tt>`*'</tt>, the full graphcap entry for the
+  read from graphcap.  After a `set' or <span style="font-family: monospace;">`*'</span>, the full graphcap entry for the
   named device will be printed.  To view an individual capability, type the
   two-character capability name.
   </p>
@@ -92,7 +92,7 @@ showcap: Show and decode graphcap entries
   		    encoding: ^[/0d^[b
   </pre>
   <p>
-  4. Set environment variable <tt>"graphcap"</tt> to your local test graphcap file, 
+  4. Set environment variable <span style="font-family: monospace;">"graphcap"</span> to your local test graphcap file, 
   set device to vt240 and examine the write-cursor (WC) command for
   x-coordinate 150, y-coordinate 350, and cursor 1.
   </p>
@@ -105,7 +105,7 @@ showcap: Show and decode graphcap entries
   		    encoding: P[150,350]
   </pre>
   <p>
-  5. Examine the scan-cursor function returned when the user types key <tt>`a'</tt>
+  5. Examine the scan-cursor function returned when the user types key <span style="font-family: monospace;">`a'</span>
   from coordinate x=150, y=350 after a read-cursor request.
   </p>
   <pre>

@@ -27,7 +27,7 @@ ccfind: Find catalog sources in an image
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>The list of input celestial coordinate files. Coordinates may be entered
-  by hand by setting input to <tt>"STDIN"</tt>. A STDIN coordinate list is terminated
+  by hand by setting input to <span style="font-family: monospace;">"STDIN"</span>. A STDIN coordinate list is terminated
   by typing &lt;EOF&gt; (usually &lt;ctrl/d&gt; or &lt;ctrl/z&gt;).
   </dd>
   </dl>
@@ -37,7 +37,7 @@ ccfind: Find catalog sources in an image
   <dd>The list of output matched coordinate files. The computed pixel values
   are appended to the input coordinate file line and written to output. The number
   of output files must equal the number of input files. Results may be
-  printed on the terminal by setting output to <tt>"STDOUT"</tt>.
+  printed on the terminal by setting output to <span style="font-family: monospace;">"STDOUT"</span>.
   </dd>
   </dl>
   <dl>
@@ -55,25 +55,25 @@ ccfind: Find catalog sources in an image
   </dd>
   </dl>
   <dl>
-  <dt><b>lngunits = <tt>""</tt>, latunits = <tt>""</tt></b></dt>
+  <dt><b>lngunits = <span style="font-family: monospace;">""</span>, latunits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngunits' Line='lngunits = "", latunits = ""' -->
   <dd>The units of the input ra / longitude and dec / latitude coordinates. The
-  options are <tt>"hours"</tt>, <tt>"degreees"</tt>, and <tt>"radians"</tt> for ra / longitude and
-  <tt>"degrees"</tt> and <tt>"radians"</tt> for dec / latitude. If lngunits and latunits are
+  options are <span style="font-family: monospace;">"hours"</span>, <span style="font-family: monospace;">"degreees"</span>, and <span style="font-family: monospace;">"radians"</span> for ra / longitude and
+  <span style="font-family: monospace;">"degrees"</span> and <span style="font-family: monospace;">"radians"</span> for dec / latitude. If lngunits and latunits are
   undefined they default to the preferred units for the coordinates
-  system specified by <i>insystem</i>, e.g. <tt>"hours"</tt> and <tt>"degrees"</tt> for
-  equatorial systems and <tt>"degrees"</tt> and <tt>"degrees"</tt> for ecliptic, galactic, and
+  system specified by <i>insystem</i>, e.g. <span style="font-family: monospace;">"hours"</span> and <span style="font-family: monospace;">"degrees"</span> for
+  equatorial systems and <span style="font-family: monospace;">"degrees"</span> and <span style="font-family: monospace;">"degrees"</span> for ecliptic, galactic, and
   supergalactic systems.
   </dd>
   </dl>
   <dl>
-  <dt><b>insystem = <tt>"j2000"</tt></b></dt>
+  <dt><b>insystem = <span style="font-family: monospace;">"j2000"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='insystem' Line='insystem = "j2000"' -->
   <dd>The input celestial coordinate system. The <i>insystem</i> parameter
   sets the preferred units for the input celestial coordinates, and
   tells CCFIND how to transform the input celestial coordinates 
   the input image celestial coordinate system. The systems of most
-  interest to users are <tt>"icrs"</tt>, <tt>"j2000"</tt>, and <tt>"b1950"</tt>.  The full set
+  interest to users are <span style="font-family: monospace;">"icrs"</span>, <span style="font-family: monospace;">"j2000"</span>, and <span style="font-family: monospace;">"b1950"</span>.  The full set
   of options are the following:
   <dl>
   <dt><b>equinox [epoch]</b></dt>
@@ -213,8 +213,8 @@ ccfind: Find catalog sources in an image
   <dt><b>usewcs = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='usewcs' Line='usewcs = no' -->
   <dd>Use image header information to compute the input image celestial coordinate
-  system ? If usewcs is <tt>"yes"</tt>, the image coordinate system is read from the
-  image header.  If usewcs is <tt>"no"</tt>, the input image celestial coordinates
+  system ? If usewcs is <span style="font-family: monospace;">"yes"</span>, the image coordinate system is read from the
+  image header.  If usewcs is <span style="font-family: monospace;">"no"</span>, the input image celestial coordinates
   system is defined by <i>xref</i>, <i>yref</i>, <i>xmag</i>, <i>ymag</i>,
   <i>xrotation</i>, <i>yrotation</i>, <i>lngref</i>, <i>latref</i>, 
   <i>lngrefunits</i>, <i>latrefunits</i>, <i>refsystem</i>, and <i>projection</i>
@@ -249,7 +249,7 @@ ccfind: Find catalog sources in an image
   </dd>
   </dl>
   <dl>
-  <dt><b>lngref = <tt>"INDEF"</tt>, latref = <tt>"INDEF"</tt></b></dt>
+  <dt><b>lngref = <span style="font-family: monospace;">"INDEF"</span>, latref = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngref' Line='lngref = "INDEF", latref = "INDEF"' -->
   <dd>The ra / longitude and dec / latitude of the reference point. Lngref and latref
   may be numbers, e.g 13:20:42.3 and -33:41:26, or keywords for the
@@ -259,33 +259,33 @@ ccfind: Find catalog sources in an image
   </dd>
   </dl>
   <dl>
-  <dt><b>lngrefunits = <tt>""</tt>, latrefunits = <tt>""</tt></b></dt>
+  <dt><b>lngrefunits = <span style="font-family: monospace;">""</span>, latrefunits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngrefunits' Line='lngrefunits = "", latrefunits = ""' -->
   <dd>The units of the reference point celestial  coordinates. The options
-  are <tt>"hours"</tt>, <tt>"degrees"</tt>, and <tt>"radians"</tt> for the ra / longitude coordinates,
-  and <tt>"degrees"</tt> and <tt>"radians"</tt> for the dec /latitude coordinates.
+  are <span style="font-family: monospace;">"hours"</span>, <span style="font-family: monospace;">"degrees"</span>, and <span style="font-family: monospace;">"radians"</span> for the ra / longitude coordinates,
+  and <span style="font-family: monospace;">"degrees"</span> and <span style="font-family: monospace;">"radians"</span> for the dec /latitude coordinates.
   If lngrefunits and latrefunits are undefined they default to the preferred
   units of the reference system.
   </dd>
   </dl>
   <dl>
-  <dt><b>refsystem = <tt>"INDEF"</tt></b></dt>
+  <dt><b>refsystem = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='refsystem' Line='refsystem = "INDEF"' -->
   <dd>The celestial coordinate system of the reference point. Refsystem may
   be any one of the options listed under the <i>insystem</i> parameter, e.g.
-  <tt>"b1950"</tt>, or an image header keyword containing the epoch of the observation
+  <span style="font-family: monospace;">"b1950"</span>, or an image header keyword containing the epoch of the observation
   in years, e.g. EPOCH for NOAO data.  If refsystem is undefined
   the celestial coordinate system of the reference point defaults to the
   celestial coordinate system of the input coordinates <i>insystem</i>.
   </dd>
   </dl>
   <dl>
-  <dt><b>projection = <tt>"tan"</tt></b></dt>
+  <dt><b>projection = <span style="font-family: monospace;">"tan"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='projection' Line='projection = "tan"' -->
   <dd>The sky projection geometry. The most commonly used projections in
-  astronomy are <tt>"tan"</tt>, <tt>"arc"</tt>, <tt>"sin"</tt>, and <tt>"lin"</tt>. Other supported projections
-  are <tt>"ait"</tt>, <tt>"car"</tt>, <tt>"csc"</tt>, <tt>"gls"</tt>, <tt>"mer"</tt>, <tt>"mol"</tt>, <tt>"par"</tt>, <tt>"pco"</tt>, <tt>"qsc"</tt>, <tt>"stg"</tt>,
-  <tt>"tsc"</tt>, and <tt>"zea"</tt>.
+  astronomy are <span style="font-family: monospace;">"tan"</span>, <span style="font-family: monospace;">"arc"</span>, <span style="font-family: monospace;">"sin"</span>, and <span style="font-family: monospace;">"lin"</span>. Other supported projections
+  are <span style="font-family: monospace;">"ait"</span>, <span style="font-family: monospace;">"car"</span>, <span style="font-family: monospace;">"csc"</span>, <span style="font-family: monospace;">"gls"</span>, <span style="font-family: monospace;">"mer"</span>, <span style="font-family: monospace;">"mol"</span>, <span style="font-family: monospace;">"par"</span>, <span style="font-family: monospace;">"pco"</span>, <span style="font-family: monospace;">"qsc"</span>, <span style="font-family: monospace;">"stg"</span>,
+  <span style="font-family: monospace;">"tsc"</span>, and <span style="font-family: monospace;">"zea"</span>.
   </dd>
   </dl>
   <dl>
@@ -381,11 +381,11 @@ ccfind: Find catalog sources in an image
   The <i>lngunits</i> and <i>latunits</i> parameters set the units of the input
   celestial coordinates. If undefined, lngunits and latunits assume sensible
   defaults for the input celestial coordinate system set by the <i>insystem</i>
-  parameter, e.g. <tt>"hours"</tt> and <tt>"degrees"</tt> for equatorial coordinates and <tt>"degrees"</tt>
-  and <tt>"degrees"</tt> for galactic coordinates.
+  parameter, e.g. <span style="font-family: monospace;">"hours"</span> and <span style="font-family: monospace;">"degrees"</span> for equatorial coordinates and <span style="font-family: monospace;">"degrees"</span>
+  and <span style="font-family: monospace;">"degrees"</span> for galactic coordinates.
   </p>
   <p>
-  If the <i>usewcs</i> parameter is <tt>"yes"</tt>, the image celestial coordinate
+  If the <i>usewcs</i> parameter is <span style="font-family: monospace;">"yes"</span>, the image celestial coordinate
   system is read from the image header keywords CRPIX, CRVAL, CD or CDELT/CROTA,
   RADECSYS, EQUINOX or EPOCH, and MJD-OBS or DATE-OBS, where the mathematical
   part of this transformation is shown below.
@@ -403,7 +403,7 @@ ccfind: Find catalog sources in an image
          lat = CRVAL2 + PROJ (xi, eta)
   </pre>
   <p>
-  If usewcs is <tt>"no"</tt>, then the image celestial coordinate system is computed
+  If usewcs is <span style="font-family: monospace;">"no"</span>, then the image celestial coordinate system is computed
   using the values of the <i>xref</i>, <i>yref</i>, <i>xmag</i>, <i>ymag</i>,
   <i>xrotation</i>, <i>yrotation</i>, <i>lngref</i>, <i>latref</i>,
   <i>lngrefunits</i>, <i>latrefunits</i>, <i>refsystem</i>, and <i>projection</i>
@@ -433,8 +433,8 @@ ccfind: Find catalog sources in an image
   the input celestial coordinates to the image celestial coordinate system
   using the value of the <i>insystem</i> parameter, and either the values of
   the image header keywords RADECSYS, EQUINOX / EPOCH, and MJD-OBS / DATE-OBS
-  (if <i>usewcs</i> = <tt>"yes"</tt>), or the value of the <i>refsystem</i> parameter (if
-  <i>usewcs</i> = <tt>"no"</tt>), and then transforms the image celestial coordinates
+  (if <i>usewcs</i> = <span style="font-family: monospace;">"yes"</span>), or the value of the <i>refsystem</i> parameter (if
+  <i>usewcs</i> = <span style="font-family: monospace;">"no"</span>), and then transforms the image celestial coordinates
   to pixel coordinates using the inverse of the transformation functions
   shown above.
   </p>
@@ -461,16 +461,16 @@ ccfind: Find catalog sources in an image
   input image are written to the output coordinate file. The computed
   output pixel coordinates are appended to the input image line using
   the format parameters <i>xformat</i> and <i>yformat</i> parameters,
-  whose default values are <tt>"%10.3f"</tt> and <tt>"%10.3f"</tt> respectively
+  whose default values are <span style="font-family: monospace;">"%10.3f"</span> and <span style="font-family: monospace;">"%10.3f"</span> respectively
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Formats</h3>
   <!-- BeginSection: 'FORMATS' -->
   <p>
-  A  format  specification has the form <tt>"%w.dCn"</tt>, where w is the field
+  A  format  specification has the form <span style="font-family: monospace;">"%w.dCn"</span>, where w is the field
   width, d is the number of decimal places or the number of digits  of
   precision,  C  is  the  format  code,  and  n is radix character for
-  format code <tt>"r"</tt> only.  The w and d fields are optional.  The  format
+  format code <span style="font-family: monospace;">"r"</span> only.  The w and d fields are optional.  The  format
   codes C are as follows:
      
   </p>

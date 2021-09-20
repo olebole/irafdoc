@@ -25,7 +25,7 @@ aslist: List the supported image surveys
   <dl>
   <dt><b>imsurveys</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='imsurveys' Line='imsurveys' -->
-  <dd>The names of the image surveys to be listed. If surveys = <tt>"*"</tt> then
+  <dd>The names of the image surveys to be listed. If surveys = <span style="font-family: monospace;">"*"</span> then
   all the image surveys in the image survey configuration file are listed.
   </dd>
   </dl>
@@ -37,11 +37,11 @@ aslist: List the supported image surveys
   </dd>
   </dl>
   <dl>
-  <dt><b>imdb = <tt>")_.imdb"</tt></b></dt>
+  <dt><b>imdb = <span style="font-family: monospace;">")_.imdb"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='imdb' Line='imdb = ")_.imdb"' -->
   <dd>The image survey configuration file. The value of imdb defaults to the value
   of the package parameter of the same name. The default image survey
-  configuration file is <tt>"astcat$lib/imdb.dat"</tt>.
+  configuration file is <span style="font-family: monospace;">"astcat$lib/imdb.dat"</span>.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -49,10 +49,10 @@ aslist: List the supported image surveys
   <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Aslist lists the supported image surveys specified by the
-  <i>imsurveys</i> parameter. If imsurveys = <tt>"*"</tt> then all the supported image
+  <i>imsurveys</i> parameter. If imsurveys = <span style="font-family: monospace;">"*"</span> then all the supported image
   surveys are listed, otherwise only the image survey names specified by the
   user are listed. Valid image survey names have the form imsurvey@site, e.g.
-  <tt>"dss1@cadc"</tt>.  If <i>verbose</i> = <tt>"yes"</tt>, then the image survey wcs and
+  <span style="font-family: monospace;">"dss1@cadc"</span>.  If <i>verbose</i> = <span style="font-family: monospace;">"yes"</span>, then the image survey wcs and
   keyword information is listed after the image survey name.
   </p>
   <p>
@@ -60,7 +60,7 @@ aslist: List the supported image surveys
   and keyword formats, are specified in the image survey configuration file
   <i>imdb</i>. By default the image survey configuration file names defaults to
   the value of the imdb package parameters. The default image survey
-  configuration file is <tt>"astcat$lib/imdb.dat"</tt>.  Users can add records
+  configuration file is <span style="font-family: monospace;">"astcat$lib/imdb.dat"</span>.  Users can add records
   to this file or create their own configuration file.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->

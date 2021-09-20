@@ -31,7 +31,7 @@ aptest: Run basic tests on the apphot package tasks
   </dd>
   </dl>
   <dl>
-  <dt><b>aplogfile = <tt>""</tt></b></dt>
+  <dt><b>aplogfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='aplogfile' Line='aplogfile = ""' -->
   <dd>The name of the output log file. By default all the text output is logged
   in a file called <i>"imname.log"</i>. If the log file already exists APTEST will
@@ -39,7 +39,7 @@ aptest: Run basic tests on the apphot package tasks
   </dd>
   </dl>
   <dl>
-  <dt><b>applotfile = <tt>""</tt></b></dt>
+  <dt><b>applotfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='applotfile' Line='applotfile = ""' -->
   <dd>The name of the output log file. By default all the plot output is logged in
   a file called <i>"imname.plot"</i>. If the plot file already exists APTEST will

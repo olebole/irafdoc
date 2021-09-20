@@ -35,16 +35,16 @@ imstack: Stack images into a single image of higher dimension
   </dd>
   </dl>
   <dl>
-  <dt><b>title = <tt>"*"</tt></b></dt>
+  <dt><b>title = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='title' Line='title = "*"' -->
-  <dd>Title of output image.  If <tt>"*"</tt> then the title defaults to that of
+  <dd>Title of output image.  If <span style="font-family: monospace;">"*"</span> then the title defaults to that of
   the first input image.
   </dd>
   </dl>
   <dl>
-  <dt><b>pixtype = <tt>"*"</tt></b></dt>
+  <dt><b>pixtype = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pixtype' Line='pixtype = "*"' -->
-  <dd>Pixel datatype of output image.  If <tt>"*"</tt> then the pixel datatype defaults to
+  <dd>Pixel datatype of output image.  If <span style="font-family: monospace;">"*"</span> then the pixel datatype defaults to
   that of the first input image.
   </dd>
   </dl>

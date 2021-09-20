@@ -35,7 +35,7 @@ imgets: Return the value of an image header parameter as a string
   </dd>
   </dl>
   <dl>
-  <dt><b>value = <tt>""</tt></b></dt>
+  <dt><b>value = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='value' Line='value = ""' -->
   <dd>The value of the parameter, returned as a string.
   </dd>
@@ -50,7 +50,7 @@ imgets: Return the value of an image header parameter as a string
   value as an integer or floating point value.  Both standard image header
   parameters and special application or instrument dependent parameters may be
   accessed.  If the parameter cannot be found a warning message is printed and
-  the value <tt>"0"</tt> is returned.  Parameter names are case sensitive.
+  the value <span style="font-family: monospace;">"0"</span> is returned.  Parameter names are case sensitive.
   </p>
   <p>
   The following standard image header parameters may be accessed with
@@ -74,8 +74,8 @@ imgets: Return the value of an image header parameter as a string
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. Fetch the instrument parameter <tt>"HA"</tt> (hour angle) from the image header of
-  the image <tt>"nite1.1001"</tt>, and compute and print the hour angle in degrees:
+  1. Fetch the instrument parameter <span style="font-family: monospace;">"HA"</span> (hour angle) from the image header of
+  the image <span style="font-family: monospace;">"nite1.1001"</span>, and compute and print the hour angle in degrees:
   </p>
   <pre>
   	cl&gt; imgets nite1.1001 HA

@@ -27,19 +27,19 @@ pseudocolor: Select pseudocolor enhancement
   <!-- Sec='PARAMETERS' Level=0 Label='enhancement' Line='enhancement' -->
   <dd>Type of pseudocolor enhancement.  The types are:
   <dl>
-  <dt><b><tt>"random"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"random"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"random"' -->
   <dd>A randomly chosen color is assigned to each display level.
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"linear"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"linear"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"linear"' -->
   <dd>The display levels are mapped into a spectrum.
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"8color"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"8color"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"8color"' -->
   <dd>Eight colors are chosen at random over the range of the display levels.
   </dd>

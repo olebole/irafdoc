@@ -43,7 +43,7 @@ tmatch: Find closest match between rows in two tables
   the output table. If these parameters are left blank, all columns will
   be copied to the output table. Columns will have the same name in the
   output table as in the input table, except that columns with the same
-  name in both input tables will have the suffix <tt>"_1"</tt> and <tt>"_2"</tt> added to
+  name in both input tables will have the suffix <span style="font-family: monospace;">"_1"</span> and <span style="font-family: monospace;">"_2"</span> added to
   indicate which table they were copied from.
   </p>
   <p>
@@ -112,9 +112,9 @@ tmatch: Find closest match between rows in two tables
   list of strings. Each string may either be a column name a pattern
   containing wildcard characters which matches several column names. This
   parameter will also accept the name of a list file (preceded by the
-  <tt>"@"</tt> character) containing column names to be matched.
+  <span style="font-family: monospace;">"@"</span> character) containing column names to be matched.
   If the first non-white character in the template
-  is the negation character (either <tt>"~"</tt> or <tt>"!"</tt>),
+  is the negation character (either <span style="font-family: monospace;">"~"</span> or <span style="font-family: monospace;">"!"</span>),
   all columns NOT appearing in the list will be matched.
   </dd>
   </dl>
@@ -136,7 +136,7 @@ tmatch: Find closest match between rows in two tables
   </dd>
   </dl>
   <dl>
-  <dt><b>(incol1 = <tt>" "</tt>) [string]</b></dt>
+  <dt><b>(incol1 = <span style="font-family: monospace;">" "</span>) [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(incol1 = " ") [string]' -->
   <dd>A column name template describing the columns to be copied from the
   first input table to the output table. If this parameter is left blank
@@ -145,7 +145,7 @@ tmatch: Find closest match between rows in two tables
   </dd>
   </dl>
   <dl>
-  <dt><b>(incol2 = <tt>" "</tt>) [string]</b></dt>
+  <dt><b>(incol2 = <span style="font-family: monospace;">" "</span>) [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(incol2 = " ") [string]' -->
   <dd>A column name template describing the columns to be copied from the
   second input table to the output table. If this parameter is left
@@ -154,7 +154,7 @@ tmatch: Find closest match between rows in two tables
   </dd>
   </dl>
   <dl>
-  <dt><b>(factor = <tt>" "</tt>) [string]</b></dt>
+  <dt><b>(factor = <span style="font-family: monospace;">" "</span>) [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(factor = " ") [string]' -->
   <dd>A comma or white space separated list of numeric factors multiplied by
   the individual column differences when computing the distance between
@@ -166,7 +166,7 @@ tmatch: Find closest match between rows in two tables
   </dd>
   </dl>
   <dl>
-  <dt><b>(diagfile = <tt>" "</tt>) [string]</b></dt>
+  <dt><b>(diagfile = <span style="font-family: monospace;">" "</span>) [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(diagfile = " ") [string]' -->
   <dd>The name of the diagnostic output file. If the name is left blank (the
   default) no diagnostic output is produced. Diagnostic output can be
@@ -178,7 +178,7 @@ tmatch: Find closest match between rows in two tables
   </dd>
   </dl>
   <dl>
-  <dt><b>(nmcol1 = <tt>" "</tt>) [string]</b></dt>
+  <dt><b>(nmcol1 = <span style="font-family: monospace;">" "</span>) [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(nmcol1 = " ") [string]' -->
   <dd>A column template describing the columns from the first table that are
   printed in the diagnostic output. The table and row number are always
@@ -187,7 +187,7 @@ tmatch: Find closest match between rows in two tables
   </dd>
   </dl>
   <dl>
-  <dt><b>(nmcol2 = <tt>" "</tt>) [string]</b></dt>
+  <dt><b>(nmcol2 = <span style="font-family: monospace;">" "</span>) [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(nmcol2 = " ") [string]' -->
   <dd>A column template describing the columns from the second table that are
   printed in the diagnostic output.

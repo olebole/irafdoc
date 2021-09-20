@@ -36,10 +36,10 @@ type: Type a text file on the standard output
   </dd>
   </dl>
   <dl>
-  <dt><b>device = <tt>"terminal"</tt></b></dt>
+  <dt><b>device = <span style="font-family: monospace;">"terminal"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "terminal"' -->
   <dd>The output device, defaulting to the user's terminal.  If the special device
-  <tt>"text"</tt> is named, any standout mode control characters embedded in the text
+  <span style="font-family: monospace;">"text"</span> is named, any standout mode control characters embedded in the text
   will cause the enclosed text to be output in upper case.
   </dd>
   </dl>
@@ -56,7 +56,7 @@ type: Type a text file on the standard output
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. Type all files in the current directory with the extension <tt>".x"</tt> on the
+  1. Type all files in the current directory with the extension <span style="font-family: monospace;">".x"</span> on the
   standard output.  Do not pause between files or pages (unlike <i>page</i>).
   </p>
   <p>

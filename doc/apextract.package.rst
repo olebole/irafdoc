@@ -34,10 +34,10 @@ package: Package parameters and general description of package
   </dd>
   </dl>
   <dl>
-  <dt><b>database = <tt>"database"</tt></b></dt>
+  <dt><b>database = <span style="font-family: monospace;">"database"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"' -->
   <dd>Database for storing aperture definitions.  Currently the database is
-  a subdirectory of text files with prefix <tt>"ap"</tt> followed by the entry name,
+  a subdirectory of text files with prefix <span style="font-family: monospace;">"ap"</span> followed by the entry name,
   usually the image name.
   </dd>
   </dl>
@@ -49,7 +49,7 @@ package: Package parameters and general description of package
   </dd>
   </dl>
   <dl>
-  <dt><b>logfile = <tt>""</tt></b></dt>
+  <dt><b>logfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = ""' -->
   <dd>Text logfile of operations performed.  If a file name is specified
   log and history information produced by all the tasks in the package
@@ -57,7 +57,7 @@ package: Package parameters and general description of package
   </dd>
   </dl>
   <dl>
-  <dt><b>plotfile = <tt>""</tt></b></dt>
+  <dt><b>plotfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='plotfile' Line='plotfile = ""' -->
   <dd>Binary plot metacode file of aperture locations, traces, rejected points,
   etc.  If a file name is given metacode plots are appended.  The contents
@@ -71,7 +71,7 @@ package: Package parameters and general description of package
   </dd>
   </dl>
   <dl>
-  <dt><b>version = <tt>"APEXTRACT V3.0: August 1990"</tt></b></dt>
+  <dt><b>version = <span style="font-family: monospace;">"APEXTRACT V3.0: August 1990"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='version' Line='version = "APEXTRACT V3.0: August 1990"' -->
   <dd>Version of the package.  This is the third major version of the package.
   </dd>
@@ -169,7 +169,7 @@ package: Package parameters and general description of package
   <dl>
   <dt><b>curve, axis</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='curve' Line='curve, axis' -->
-  <dd>An IRAF <tt>"curfit"</tt> function specifying a shift to be added to the center
+  <dd>An IRAF <span style="font-family: monospace;">"curfit"</span> function specifying a shift to be added to the center
   position along the spatial axis, given by the axis parameter which is
   the complement of the dispersion axis parameter <i>dispaxis</i>, as a
   function of the dispersion coordinate.  This trace function is one of
@@ -180,18 +180,18 @@ package: Package parameters and general description of package
   <dl>
   <dt><b>background</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='background' Line='background' -->
-  <dd>Background definition parameters.  For the <tt>"average"</tt> background subtraction
+  <dd>Background definition parameters.  For the <span style="font-family: monospace;">"average"</span> background subtraction
   option only the set of background sample regions (defined relative to
-  the aperture center) are used.  For the <tt>"fit"</tt> option the parameters
+  the aperture center) are used.  For the <span style="font-family: monospace;">"fit"</span> option the parameters
   are those used by the <b>icfit</b> package for fitting a function to
   the points in the background sample regions.
   </dd>
   </dl>
   <p>
   This information as well as the image (or database entry) name are stored
-  in a text file, with name given by the prefix <tt>"ap"</tt> followed by the entry
+  in a text file, with name given by the prefix <span style="font-family: monospace;">"ap"</span> followed by the entry
   name, in the database directory.  An example with the special entry  name
-  <tt>"last"</tt>, stored in the file <tt>"database$aplast"</tt>, is given below. The <tt>"begin"</tt>
+  <span style="font-family: monospace;">"last"</span>, stored in the file <span style="font-family: monospace;">"database$aplast"</span>, is given below. The <span style="font-family: monospace;">"begin"</span>
   line marks the beginning of an aperture definition.
   </p>
   <p style="text-align:center">Sample Aperture Database Entry
@@ -357,7 +357,7 @@ package: Package parameters and general description of package
   extracted spectra are output.
   </p>
   <p>
-  If the format parameter is <tt>"onedspec"</tt> the output extractions are one
+  If the format parameter is <span style="font-family: monospace;">"onedspec"</span> the output extractions are one
   dimensional images with names formed from an output rootname and an
   aperture number extension; i.e. root.0001 for aperture 1.  There will
   be as many output images as there are apertures for each input image,
@@ -366,9 +366,9 @@ package: Package parameters and general description of package
   format used by the <b>onedspec</b> package.
   </p>
   <p>
-  If the format parameter is <tt>"echelle"</tt> or <tt>"multispec"</tt> the output aperture
+  If the format parameter is <span style="font-family: monospace;">"echelle"</span> or <span style="font-family: monospace;">"multispec"</span> the output aperture
   extractions are put into a two dimensional image with a name formed from
-  the output rootname and the extension <tt>".ec"</tt> or <tt>".ms"</tt>.  Each line in
+  the output rootname and the extension <span style="font-family: monospace;">".ec"</span> or <span style="font-family: monospace;">".ms"</span>.  Each line in
   the output image corresponds to one aperture.  Thus in this format
   there is one output image for each input image.  These are the preferred
   output formats for reasons of compactness, ease of handling, and efficiency.
@@ -428,11 +428,11 @@ package: Package parameters and general description of package
   will be carried in CRVAL1 and CD1_1.
   </p>
   <p>
-  There is one other value for the format parameter, <tt>"strip"</tt>.  This produces
+  There is one other value for the format parameter, <span style="font-family: monospace;">"strip"</span>.  This produces
   two dimensional extractions rather than one dimensional extractions.
   Each aperture is output to a two dimensional image with a width set by the
   nearest integer which includes the aperture.  The output names are
-  generated in the same way as for <tt>"onedspec"</tt> format.  The aperture is
+  generated in the same way as for <span style="font-family: monospace;">"onedspec"</span> format.  The aperture is
   shifted by interpolation so that it is exactly aligned with the image
   columns.  If not variance weighting the actual image data is output
   with appropriate shifting while for variance weighting and/or cleaning

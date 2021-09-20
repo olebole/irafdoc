@@ -37,7 +37,7 @@ mkillumcor: Make flat field illumination correction images
   </dd>
   </dl>
   <dl>
-  <dt><b>ccdtype = <tt>"flat"</tt></b></dt>
+  <dt><b>ccdtype = <span style="font-family: monospace;">"flat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ccdtype' Line='ccdtype = "flat"' -->
   <dd>CCD image type to select from the input images.  If none is specified
   then all types are used.
@@ -90,7 +90,7 @@ mkillumcor: Make flat field illumination correction images
   <p>
   First, the input flat field images are automatically processed if
   needed.  Then, the large scale iillumination pattern of the images is
-  determined by heavily smoothing them using a moving <tt>"boxcar"</tt> average.
+  determined by heavily smoothing them using a moving <span style="font-family: monospace;">"boxcar"</span> average.
   The iillumination correction, the inverse of the iillumination pattern,
   is applied by <b>ccdproc</b> to CCD images to remove the iillumination
   pattern introduced by the flat field.  The combination of the flat
@@ -129,7 +129,7 @@ mkillumcor: Make flat field illumination correction images
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. The example below makes an iillumination correction image from the
-  flat field image, <tt>"flat017"</tt>.
+  flat field image, <span style="font-family: monospace;">"flat017"</span>.
   </p>
   <p>
       cl&gt; mkillumcor flat017 Illum

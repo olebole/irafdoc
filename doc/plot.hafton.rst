@@ -43,7 +43,7 @@ hafton: Generate half-tone plots of an image
   </dd>
   </dl>
   <dl>
-  <dt><b>mapping_function = <tt>"linear"</tt></b></dt>
+  <dt><b>mapping_function = <span style="font-family: monospace;">"linear"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='mapping_function' Line='mapping_function = "linear"' -->
   <dd>A string specifying the image intensity to half tone mapping function.
   The default is linear mapping between <b>z1</b> and <b>z2</b>.  For other
@@ -66,13 +66,13 @@ hafton: Generate half-tone plots of an image
   </dd>
   </dl>
   <dl>
-  <dt><b>device=<tt>"stdgraph"</tt></b></dt>
+  <dt><b>device=<span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device="stdgraph"' -->
   <dd>Output device for plot.
   </dd>
   </dl>
   <dl>
-  <dt><b>title = <tt>"imtitle"</tt></b></dt>
+  <dt><b>title = <span style="font-family: monospace;">"imtitle"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='title' Line='title = "imtitle"' -->
   <dd>The title to be centered above the plot.  By default, the title string from
   the image header is used.
@@ -165,7 +165,7 @@ hafton: Generate half-tone plots of an image
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. Image <tt>"crab.6563"</tt> is plotted in negative contrast, with linear mapping
+  1. Image <span style="font-family: monospace;">"crab.6563"</span> is plotted in negative contrast, with linear mapping
   between the minimum and maximum image pixel.
   </p>
   <p>

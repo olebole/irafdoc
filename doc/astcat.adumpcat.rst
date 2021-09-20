@@ -26,7 +26,7 @@ adumpcat: Catalog access debugging task
   <dt><b>catalog</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='catalog' Line='catalog' -->
   <dd>The name of the catalog to be queried. Catalog names have the form
-  catalog@site, e.g. <tt>"usno2@noao"</tt>. The catalog address and query format are
+  catalog@site, e.g. <span style="font-family: monospace;">"usno2@noao"</span>. The catalog address and query format are
   stored in a record called catalog in  the catalog configuration file.
   </dd>
   </dl>
@@ -63,11 +63,11 @@ adumpcat: Catalog access debugging task
   </dd>
   </dl>
   <dl>
-  <dt><b>catdb = <tt>")_.catdb"</tt></b></dt>
+  <dt><b>catdb = <span style="font-family: monospace;">")_.catdb"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='catdb' Line='catdb = ")_.catdb"' -->
   <dd>The catalog configuration file. The name of the catalog configuration file
   defaults to the value of the package parameter of the same name.  The
-  default configuration file is <tt>"astcat$lib/catdb.dat"</tt>.
+  default configuration file is <span style="font-family: monospace;">"astcat$lib/catdb.dat"</span>.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -91,7 +91,7 @@ adumpcat: Catalog access debugging task
   The catalog configuration file <i>catdb</i> contains a record for each
   supported <i>catalog</i>. This record contains the catalog address,
   the query format, and the output format. The default configuration file
-  is <tt>"astcat$lib/catdb.dat"</tt>.
+  is <span style="font-family: monospace;">"astcat$lib/catdb.dat"</span>.
   </p>
   <p>
   The output of adumpcat can be used to refine the catalog record in the

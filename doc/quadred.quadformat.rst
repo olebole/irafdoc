@@ -27,7 +27,7 @@ quadformat: Format for multi-amplifier CCD images
   Another way is to paste the regions into a single two-dimensional image.
   This, along with specific keywords to describe the locations of the
   regions, constitutes the <i>quadformat</i> format described here and used by the
-  QUADRED package.  The term <tt>"quad"</tt> originates from the possibility of using
+  QUADRED package.  The term <span style="font-family: monospace;">"quad"</span> originates from the possibility of using
   four amplifiers in quadrants but the format also includes any other
   number of amplifiers.
   </p>
@@ -53,7 +53,7 @@ quadformat: Format for multi-amplifier CCD images
   Generally the rectangular regions are of equal size in order to sequence
   the amplifiers simultaneously.  However, it is possible for the regions
   to be unequal in cases of subregion readouts with certain CCD controllers.
-  The figure below illustrates a <tt>"dual"</tt> and <tt>"quad"</tt> readout with equal
+  The figure below illustrates a <span style="font-family: monospace;">"dual"</span> and <span style="font-family: monospace;">"quad"</span> readout with equal
   size regions.
   </p>
   <pre>
@@ -90,9 +90,9 @@ quadformat: Format for multi-amplifier CCD images
   </p>
   <p>
   The amplifier labels are appended to various root names.  The important
-  ones define <tt>"section"</tt> keywords.  The values are image sections that
+  ones define <span style="font-family: monospace;">"section"</span> keywords.  The values are image sections that
   describe regions in an raster such as the image or the CCD.  The format
-  of a section follows the standard IRAF notation <tt>"[c1:c2,l1:l2]"</tt> where
+  of a section follows the standard IRAF notation <span style="font-family: monospace;">"[c1:c2,l1:l2]"</span> where
   c1 and c2 are inclusive column endpoints and l1 and l2 are inclusive
   line endpoints.
   </p>
@@ -125,7 +125,7 @@ quadformat: Format for multi-amplifier CCD images
   <dt><b>TSEC</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='TSEC' Line='TSEC' -->
   <dd>The second of the image containing the useful CCD data.  This defines
-  a <tt>"trimming"</tt> area and lies within the data section.  It may also be
+  a <span style="font-family: monospace;">"trimming"</span> area and lies within the data section.  It may also be
   the same as the data region.  During trimming the final image will only
   include the regions in the trim sections.  Note that it generally does
   not make sense to trim between amplifier regions but does make sense to
@@ -331,8 +331,8 @@ quadformat: Format for multi-amplifier CCD images
   INSTRUME= 'cfccd'              / cassegrain direct imager
   FILTER1 = 'dia'                / Filter in wheel one
   FNAME1  = 'diaphragm'          / Full name of filter in  wheel1
-  FILTER2 = <tt>'r'</tt>                  / Filter in wheel two
-  FNAME2  = <tt>'R'</tt>                  / Full name of filter in  wheel2
+  FILTER2 = <span style="font-family: monospace;">'r'</span>                  / Filter in wheel two
+  FNAME2  = <span style="font-family: monospace;">'R'</span>                  / Full name of filter in  wheel2
   FILTERS = 'dia r'              / Filter positions
   TELFOCUS=                    0 / Telescope focus
   XPIXSIZE=                0.432 / Pixel size in X (arcsec/pix)
@@ -409,8 +409,8 @@ quadformat: Format for multi-amplifier CCD images
   INSTRUME= 'cfccd'              / cassegrain direct imager
   FILTER1 = 'dia'                / Filter in wheel one
   FNAME1  = 'diaphragm'          / Full name of filter in  wheel1
-  FILTER2 = <tt>'r'</tt>                  / Filter in wheel two
-  FNAME2  = <tt>'R'</tt>                  / Full name of filter in  wheel2
+  FILTER2 = <span style="font-family: monospace;">'r'</span>                  / Filter in wheel two
+  FNAME2  = <span style="font-family: monospace;">'R'</span>                  / Full name of filter in  wheel2
   FILTERS = 'dia r'              / Filter positions
   TELFOCUS=                    0 / Telescope focus
   XPIXSIZE=                0.432 / Pixel size in X (arcsec/pix)

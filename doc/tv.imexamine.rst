@@ -31,11 +31,11 @@ imexamine: Examine images using image display, graphics, and text
   </dd>
   </dl>
   <dl>
-  <dt><b>output = <tt>""</tt></b></dt>
+  <dt><b>output = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
-  <dd>Rootname for output images created with the <tt>'t'</tt> key.  If no name is specified
+  <dd>Rootname for output images created with the <span style="font-family: monospace;">'t'</span> key.  If no name is specified
   then the name of the input image is used.  A three digit number is appended
-  to the rootname, such as <tt>".001"</tt>, starting with 1 until no image is found with
+  to the rootname, such as <span style="font-family: monospace;">".001"</span>, starting with 1 until no image is found with
   that name.  Thus, successive output images with the same rootname will be
   numbered sequentially.
   </dd>
@@ -43,7 +43,7 @@ imexamine: Examine images using image display, graphics, and text
   <dl>
   <dt><b>ncoutput = 101, nloutput = 101</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ncoutput' Line='ncoutput = 101, nloutput = 101' -->
-  <dd>Size of the output image created with the <tt>'t'</tt> key which is centered on the
+  <dd>Size of the output image created with the <span style="font-family: monospace;">'t'</span> key which is centered on the
   position of the cursor.
   </dd>
   </dl>
@@ -62,7 +62,7 @@ imexamine: Examine images using image display, graphics, and text
   </dd>
   </dl>
   <dl>
-  <dt><b>logfile = <tt>""</tt></b></dt>
+  <dt><b>logfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = ""' -->
   <dd>Logfile filename in which to record output of the commands producing text.
   If no filename is given then no logfile will be kept.
@@ -76,7 +76,7 @@ imexamine: Examine images using image display, graphics, and text
   </dd>
   </dl>
   <dl>
-  <dt><b>defkey = <tt>"a"</tt></b></dt>
+  <dt><b>defkey = <span style="font-family: monospace;">"a"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='defkey' Line='defkey = "a"' -->
   <dd>Default key for cursor x-y input list.  This key is applied to input
   cursor lists which do not have a cursor key specified.  It is used
@@ -110,7 +110,7 @@ imexamine: Examine images using image display, graphics, and text
   not exceed the number of frames provided by the display device.
   If the number of frames is set to 0 then the task will query the display
   device to determine how many frames are currently allocated.  New frames may
-  be allocated during program execution by displaying images with the <tt>'d'</tt> key.
+  be allocated during program execution by displaying images with the <span style="font-family: monospace;">'d'</span> key.
   </dd>
   </dl>
   <dl>
@@ -122,7 +122,7 @@ imexamine: Examine images using image display, graphics, and text
   </dd>
   </dl>
   <dl>
-  <dt><b>graphcur = <tt>""</tt></b></dt>
+  <dt><b>graphcur = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphcur' Line='graphcur = ""' -->
   <dd>Graphics cursor input.  If null the standard graphics cursor is used whenever
   graphics cursor input is requested.  A cursor file in the appropriate
@@ -130,18 +130,18 @@ imexamine: Examine images using image display, graphics, and text
   </dd>
   </dl>
   <dl>
-  <dt><b>imagecur = <tt>""</tt></b></dt>
+  <dt><b>imagecur = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='imagecur' Line='imagecur = ""' -->
   <dd>Image display cursor input.  If null the standard image display cursor is
   used whenever image cursor input is requested.  A cursor file in the
   appropriate format may be substituted by specifying the name of the file.
   Also the image cursor may be changed to query the graphics device or
-  the terminal by setting the environment parameter <tt>"stdimcur"</tt>
-  to <tt>"stdgraph"</tt> or <tt>"text"</tt> respectively.
+  the terminal by setting the environment parameter <span style="font-family: monospace;">"stdimcur"</span>
+  to <span style="font-family: monospace;">"stdgraph"</span> or <span style="font-family: monospace;">"text"</span> respectively.
   </dd>
   </dl>
   <dl>
-  <dt><b>wcs = <tt>"logical"</tt></b></dt>
+  <dt><b>wcs = <span style="font-family: monospace;">"logical"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcs' Line='wcs = "logical"' -->
   <dd>The world coordinate system (<i>wcs</i>) to be used for axis labeling when
   input is from images.
@@ -169,7 +169,7 @@ imexamine: Examine images using image display, graphics, and text
   <dl>
   <dt><b>world</b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='world' Line='world' -->
-  <dd>The <tt>"world"</tt> coordinate system is the <i>current default WCS</i>.
+  <dd>The <span style="font-family: monospace;">"world"</span> coordinate system is the <i>current default WCS</i>.
   The default world system is the system named by the environment variable
   <i>defwcs</i> if defined in the user environment and present in the reference
   image WCS description, else it is the first user WCS defined for the image
@@ -177,15 +177,15 @@ imexamine: Examine images using image display, graphics, and text
   </dd>
   </dl>
   <dl>
-  <dt><b>xformat = <tt>""</tt>, yformat = <tt>""</tt></b></dt>
+  <dt><b>xformat = <span style="font-family: monospace;">""</span>, yformat = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='xformat' Line='xformat = "", yformat = ""' -->
   <dd>The numerical format for the world coordinate labels in the line and column
-  plots and the format for printing world coordinates.  The values may be <tt>""</tt>
+  plots and the format for printing world coordinates.  The values may be <span style="font-family: monospace;">""</span>
   (an empty string), %f for decimal format, %h and %H for xx:xx:xx format, and
   %m and %M for xx:xx.x format.  The upper case %H and %M convert degrees
   to hours.  Images sometimes include recommended coordinate formats as
   WCS attributes.  These are used if the format specified by these parameters
-  is <tt>""</tt>.  Any other value will override the image attribute.
+  is <span style="font-family: monospace;">""</span>.  Any other value will override the image attribute.
   </dd>
   </dl>
   In addition to these three reserved WCS names, the name of any user WCS
@@ -194,14 +194,14 @@ imexamine: Examine images using image display, graphics, and text
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>Graphics output device.  Normally this is the standard graphics device
-  specified by the environment variable <tt>"stdgraph"</tt>.
+  specified by the environment variable <span style="font-family: monospace;">"stdgraph"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>display = <tt>"display(image='$1',frame=$2)"</tt></b></dt>
+  <dt><b>display = <span style="font-family: monospace;">"display(image='$1',frame=$2)"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='display' Line='display = "display(image='$1',frame=$2)"' -->
   <dd>Command template used to display an image.  The image to be displayed is
   substituted for argument $1 and the frame for argument $2.  Any display task
@@ -223,7 +223,7 @@ imexamine: Examine images using image display, graphics, and text
   The various graphs and the aperture sum command have parameters defined in
   additional parameter sets.  The parameter sets are hidden tasks with
   the first character being the cursor command graph key that uses the
-  parameters followed by <tt>"imexam"</tt>.  The parameter sets are:
+  parameters followed by <span style="font-family: monospace;">"imexam"</span>.  The parameter sets are:
   </p>
   <pre>
       cimexam    Parameters for column plots
@@ -286,7 +286,7 @@ imexamine: Examine images using image display, graphics, and text
   </dd>
   </dl>
   <dl>
-  <dt><b>boundary = <tt>"constant"</tt>		(v)</b></dt>
+  <dt><b>boundary = <span style="font-family: monospace;">"constant"</span>		(v)</b></dt>
   <!-- Sec='ADDITIONAL PARAMETERS' Level=0 Label='boundary' Line='boundary = "constant"		(v)' -->
   <dd>Boundary extension for vector plots in which the averaging width might
   go outside of the image.
@@ -346,10 +346,10 @@ imexamine: Examine images using image display, graphics, and text
   </dd>
   </dl>
   <dl>
-  <dt><b>fittype = <tt>"moffat"</tt>			(ar.)</b></dt>
+  <dt><b>fittype = <span style="font-family: monospace;">"moffat"</span>			(ar.)</b></dt>
   <!-- Sec='ADDITIONAL PARAMETERS' Level=0 Label='fittype' Line='fittype = "moffat"			(ar.)' -->
-  <dd>Profile type to fit the radial profile data?  The choices are <tt>"gaussian"</tt>
-  and <tt>"moffat"</tt>.
+  <dd>Profile type to fit the radial profile data?  The choices are <span style="font-family: monospace;">"gaussian"</span>
+  and <span style="font-family: monospace;">"moffat"</span>.
   </dd>
   </dl>
   <dl>
@@ -400,10 +400,10 @@ imexamine: Examine images using image display, graphics, and text
   </dd>
   </dl>
   <dl>
-  <dt><b>marker = <tt>"box"</tt>			(chjklrv.)</b></dt>
+  <dt><b>marker = <span style="font-family: monospace;">"box"</span>			(chjklrv.)</b></dt>
   <!-- Sec='ADDITIONAL PARAMETERS' Level=0 Label='marker' Line='marker = "box"			(chjklrv.)' -->
-  <dd>Marker to be drawn if <b>pointmode</b> = yes.  Markers are <tt>"point"</tt>, <tt>"box"</tt>, 
-  <tt>"cross"</tt>, <tt>"plus"</tt>, <tt>"circle"</tt>, <tt>"hebar"</tt>, <tt>"vebar"</tt>, <tt>"hline"</tt>, <tt>"vline"</tt> or <tt>"diamond"</tt>.
+  <dd>Marker to be drawn if <b>pointmode</b> = yes.  Markers are <span style="font-family: monospace;">"point"</span>, <span style="font-family: monospace;">"box"</span>, 
+  <span style="font-family: monospace;">"cross"</span>, <span style="font-family: monospace;">"plus"</span>, <span style="font-family: monospace;">"circle"</span>, <span style="font-family: monospace;">"hebar"</span>, <span style="font-family: monospace;">"vebar"</span>, <span style="font-family: monospace;">"hline"</span>, <span style="font-family: monospace;">"vline"</span> or <span style="font-family: monospace;">"diamond"</span>.
   </dd>
   </dl>
   <dl>
@@ -461,7 +461,7 @@ imexamine: Examine images using image display, graphics, and text
   <dl>
   <dt><b>round = no				(cehjklrv.)</b></dt>
   <!-- Sec='ADDITIONAL PARAMETERS' Level=0 Label='round' Line='round = no				(cehjklrv.)' -->
-  <dd>Extend the axes up to <tt>"nice"</tt> values?
+  <dd>Extend the axes up to <span style="font-family: monospace;">"nice"</span> values?
   </dd>
   </dl>
   <dl>
@@ -494,7 +494,7 @@ imexamine: Examine images using image display, graphics, and text
   </dd>
   </dl>
   <dl>
-  <dt><b>title = <tt>""</tt>				(cehjklrsv.)</b></dt>
+  <dt><b>title = <span style="font-family: monospace;">""</span>				(cehjklrsv.)</b></dt>
   <!-- Sec='ADDITIONAL PARAMETERS' Level=0 Label='title' Line='title = ""				(cehjklrsv.)' -->
   <dd>User title.  This is independent of the standard banner title.
   </dd>
@@ -516,7 +516,7 @@ imexamine: Examine images using image display, graphics, and text
   </dd>
   </dl>
   <dl>
-  <dt><b>wcs = <tt>"physical"</tt></b></dt>
+  <dt><b>wcs = <span style="font-family: monospace;">"physical"</span></b></dt>
   <!-- Sec='ADDITIONAL PARAMETERS' Level=0 Label='wcs' Line='wcs = "physical"' -->
   <dd>World coordinate system for axis labeling and coordinate readback.
   </dd>
@@ -539,7 +539,7 @@ imexamine: Examine images using image display, graphics, and text
   <dt><b>xlabel, ylabel			(cehjklrv.)</b></dt>
   <!-- Sec='ADDITIONAL PARAMETERS' Level=0 Label='xlabel' Line='xlabel, ylabel			(cehjklrv.)' -->
   <dd>Axis labels.  Each graph type has an appropriate default.  If the label
-  value is <tt>"wcslabel"</tt> then the coordinate label from the image WCS
+  value is <span style="font-family: monospace;">"wcslabel"</span> then the coordinate label from the image WCS
   will be used if defined.
   </dd>
   </dl>
@@ -593,14 +593,14 @@ imexamine: Examine images using image display, graphics, and text
   </p>
   <p>
   If <i>use_display</i> is yes the image display is used to examine images.
-  When no input list is specified images may be loaded with the <tt>'d'</tt> key,
-  frames selected with <tt>'n'</tt>, <tt>'p'</tt>, and <tt>":select"</tt>, and the scaled contents
+  When no input list is specified images may be loaded with the <span style="font-family: monospace;">'d'</span> key,
+  frames selected with <span style="font-family: monospace;">'n'</span>, <span style="font-family: monospace;">'p'</span>, and <span style="font-family: monospace;">":select"</span>, and the scaled contents
   of the display frame buffer examined if the image itself is not available.
   </p>
   <p>
-  When an input list is specified the <tt>'n'</tt>, <tt>'p'</tt>, and <tt>":select"</tt> allow
+  When an input list is specified the <span style="font-family: monospace;">'n'</span>, <span style="font-family: monospace;">'p'</span>, and <span style="font-family: monospace;">":select"</span> allow
   moving about the list and new images may be added to the end of the
-  list with <tt>'d'</tt>.  Images are automatically loaded as they are selected if
+  list with <span style="font-family: monospace;">'d'</span>.  Images are automatically loaded as they are selected if
   not currently loaded.  Two parameters control how the frames are
   loaded.  The <i>nframes</i> parameter determines which frames are
   available.  Within the available frames images may be loaded by cycling
@@ -614,7 +614,7 @@ imexamine: Examine images using image display, graphics, and text
   changed from the standard image display to text or file input.
   </p>
   <p>
-  The <tt>'d'</tt> command displays an image using the template CL command given
+  The <span style="font-family: monospace;">'d'</span> command displays an image using the template CL command given
   by parameter <i>display</i>.  Usually this is the standard
   IRAF <b>tv.display</b> command though in some circumstances other commands
   like <b>plot.contour</b> may be used.  This command may be used to
@@ -640,7 +640,7 @@ imexamine: Examine images using image display, graphics, and text
   saving or printing a graph, expanding and roaming, and printing cursor
   positions.  Second, it can give a better perspective on the data for
   cursor positions than the image cursor.  And lastly, it may be needed
-  when an image display is not available.  The commands <tt>'g'</tt> and <tt>'i'</tt>
+  when an image display is not available.  The commands <span style="font-family: monospace;">'g'</span> and <span style="font-family: monospace;">'i'</span>
   select between the graphics and image cursors.  Initially the image
   cursor is read.
   </p>
@@ -703,8 +703,8 @@ imexamine: Examine images using image display, graphics, and text
   There are some special features associated with cursor input in IRAF
   which might be useful in some circumstances.  The image display cursor
   can be reset to be a text cursor, graphics cursor, or image cursor by
-  setting the environment variable <tt>"stdimcur"</tt> to <tt>"text"</tt>, <tt>"stdgraph"</tt>,
-  or <tt>"stdimage"</tt> respectively.  Text cursor input consists of the x and
+  setting the environment variable <span style="font-family: monospace;">"stdimcur"</span> to <span style="font-family: monospace;">"text"</span>, <span style="font-family: monospace;">"stdgraph"</span>,
+  or <span style="font-family: monospace;">"stdimage"</span> respectively.  Text cursor input consists of the x and
   y coordinates, a frame number, and the key or colon command.  Another
   form of text input is to set the value of the cursor input parameter
   to a file containing cursor commands.  There are two special features
@@ -722,7 +722,7 @@ imexamine: Examine images using image display, graphics, and text
   a logfile.
   </p>
   <dl>
-  <dt><b>a, <tt>','</tt></b></dt>
+  <dt><b>a, <span style="font-family: monospace;">','</span></b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='a' Line='a, ','' -->
   <dd>Circular aperture photometry is performed at the position of the cursor.
   If the centering option is selected the cursor position is used as the
@@ -735,7 +735,7 @@ imexamine: Examine images using image display, graphics, and text
   using the new center.
   The radius of the photometry and fitting aperture is specified by the
   <i>radius</i> parameter and the <i>iteration</i> parameter.  Iteration of the
-  fitting radius and printing of the final radius is only done for the <tt>'a'</tt>
+  fitting radius and printing of the final radius is only done for the <span style="font-family: monospace;">'a'</span>
   key.  If the number of iterations is one then the radius is not adjusted.
   If it is greater than one then the direct FWHM (described) below is used to
   adjust the radius.  At each iteration the new radius is set to three times
@@ -770,8 +770,8 @@ imexamine: Examine images using image display, graphics, and text
   A nonlinear least squares profile of fixed center and zero background is
   fit to the radius and flux values of the background subtracted pixels to
   determine a peak intensity and FWHM.  The profile type is set by the
-  <i>fittype</i> parameter.  The choices are <tt>"gaussian"</tt> and <tt>"moffat"</tt>.  If the
-  profile type is <tt>"moffat"</tt> there is an additional parameter <tt>"beta"</tt>.  This
+  <i>fittype</i> parameter.  The choices are <span style="font-family: monospace;">"gaussian"</span> and <span style="font-family: monospace;">"moffat"</span>.  If the
+  profile type is <span style="font-family: monospace;">"moffat"</span> there is an additional parameter <span style="font-family: monospace;">"beta"</span>.  This
   value may be specified to fix it or given as INDEF to also be determined.
   The profile equations are:
   <pre>
@@ -793,7 +793,7 @@ imexamine: Examine images using image display, graphics, and text
   where rhalf is the radius at half-maximum.  This has the effect
   of reducing the contribution of the profile wings.
   The above fit is done to the individual pixel values with a radius measured
-  to the center of the pixel.  For the <tt>'a'</tt> key two additional measurements
+  to the center of the pixel.  For the <span style="font-family: monospace;">'a'</span> key two additional measurements
   are made on a azimuthally averaged radial profile with a finer sampling of
   the radial bins.  This uses the same algorithms for centering, background
   estimation, and FWHM measurement as in the task <b>psfmeasure</b>.  The
@@ -827,7 +827,7 @@ imexamine: Examine images using image display, graphics, and text
   This derivative is the azimuthally averaged radial profile with the radial
   bin sampling mentioned above.  The peak of this profile is found and the
   FWHM is twice the radius of the profile at half the peak value.  This
-  <tt>"direct FWHM"</tt> is part of the output and is also used for the iterative
+  <span style="font-family: monospace;">"direct FWHM"</span> is part of the output and is also used for the iterative
   adjustment of the fitting radius as noted above.
   <dl>
   <dt><b>a</b></dt>
@@ -848,7 +848,7 @@ imexamine: Examine images using image display, graphics, and text
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>','</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">','</span></b></dt>
   <!-- Sec='DESCRIPTION' Level=1 Label='' Line='','' -->
   <dd>The output consists of the image line and column, magnitude, flux, number
   of pixels within the aperture, mean background, r (moment FWHM), e, pa (in
@@ -897,7 +897,7 @@ imexamine: Examine images using image display, graphics, and text
   <dt><b>x, y</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='x' Line='x, y' -->
   <dd>The cursor x and y coordinates and the pixel value nearest this position
-  are printed.  The <tt>'y'</tt> key may be used define a relative origin.  If
+  are printed.  The <span style="font-family: monospace;">'y'</span> key may be used define a relative origin.  If
   an origin is defined (is not 0,0) then additional quantities are printed.
   These quantities are origin coordinates, the delta x and delta y distances,
   the radial distance, and the position angle (in degrees counterclockwise from
@@ -953,13 +953,13 @@ imexamine: Examine images using image display, graphics, and text
   </dd>
   </dl>
   <dl>
-  <dt><b>r, <tt>'.'</tt></b></dt>
+  <dt><b>r, <span style="font-family: monospace;">'.'</span></b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='r' Line='r, '.'' -->
-  <dd>A radial profile plot is made.  As with <tt>'a'</tt>/<tt>','</tt> there are options for centering
+  <dd>A radial profile plot is made.  As with <span style="font-family: monospace;">'a'</span>/<span style="font-family: monospace;">','</span> there are options for centering
   and background subtraction.  There are also graphics option to set the
   radius to be plotted (<i>rplot</i>) and to overplot the profile fit
   (<i>fitplot</i>).  The measurement algorithms are those described for the
-  <tt>'a'</tt>/<tt>','</tt> key and the output is the same except that there is no header line and
+  <span style="font-family: monospace;">'a'</span>/<span style="font-family: monospace;">','</span> key and the output is the same except that there is no header line and
   the object center is given in the graph title rather than on the graphics
   status line.  The aperture sum and graph options are specified by the
   parameters from the <b>rimexam</b> parameter set.
@@ -976,11 +976,11 @@ imexamine: Examine images using image display, graphics, and text
   <dl>
   <dt><b>u, v</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='u' Line='u, v' -->
-  <dd>A plot of a vector defined by two cursor positions is made.  The <tt>'u'</tt>
+  <dd>A plot of a vector defined by two cursor positions is made.  The <span style="font-family: monospace;">'u'</span>
   plot uses the first cursor position to define the center of the vector
   and the second position to define the endpoint.  The vector is extended
   an equal distance in the opposite direction and the graph x coordinates
-  are the radial distance from the center position.  The <tt>'v'</tt> plot
+  are the radial distance from the center position.  The <span style="font-family: monospace;">'v'</span> plot
   uses the two cursor positions as endpoints and the coordinates are
   the radial distance from the first cursor position.  The vector may
   be averaged over a specified number of parallel vectors.  The
@@ -1001,7 +1001,7 @@ imexamine: Examine images using image display, graphics, and text
   with appropriate image name.  By default this loads the image
   display using the <b>tv.display</b> task.  When using an input image
   list this operation also appends new images to the list for subsequent
-  <tt>'n'</tt> and <tt>'p'</tt> commands.
+  <span style="font-family: monospace;">'n'</span> and <span style="font-family: monospace;">'p'</span> commands.
   </dd>
   </dl>
   <dl>
@@ -1109,7 +1109,7 @@ imexamine: Examine images using image display, graphics, and text
   	:c&lt;column&gt; 	or	:l&lt;line&gt;
   </pre>
   <p>
-  with no space, e.g., <tt>":l64"</tt>.
+  with no space, e.g., <span style="font-family: monospace;">":l64"</span>.
   </p>
   <p>
   Every parameter except the input image list and the display command
@@ -1142,7 +1142,7 @@ imexamine: Examine images using image display, graphics, and text
   the graph will be redrawn.
   </p>
   <p>
-  The important colon commands <tt>'x'</tt> and <tt>'y'</tt> affect the x1, y1, x2, y2
+  The important colon commands <span style="font-family: monospace;">'x'</span> and <span style="font-family: monospace;">'y'</span> affect the x1, y1, x2, y2
   parameters in most of the graphs.  They are frequently used to override
   the automatic graph scaling.  If no arguments are given the window
   limits are set to INDEF resulting in plotting the full range of the
@@ -1207,7 +1207,7 @@ imexamine: Examine images using image display, graphics, and text
   features of the task.  Each graph type has it's own set of parameters.
   When a parameter applies to more than one graph the current graph is assumed.
   If the current graph is not applicable then a warning is given.  The
-  <tt>"eparam"</tt> and <tt>"unlearn"</tt> commands may be used to change many parameters and
+  <span style="font-family: monospace;">"eparam"</span> and <span style="font-family: monospace;">"unlearn"</span> commands may be used to change many parameters and
   without an argument the current graph parameters are modified while with
   the graph key as an argument the appropriate parameter set is modified.
   In the list below the graph key(s) to which a parameter applies are shown.
@@ -1354,27 +1354,27 @@ imexamine: Examine images using image display, graphics, and text
   <dl>
   <dt><b>IMEXAMINE V2.11.4</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='IMEXAMINE' Line='IMEXAMINE V2.11.4' -->
-  <dd>(<tt>'t'</tt>): A new cursor key to create an output image.
+  <dd>(<span style="font-family: monospace;">'t'</span>): A new cursor key to create an output image.
   </dd>
   </dl>
   <dl>
   <dt><b>IMEXAMINE V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='IMEXAMINE' Line='IMEXAMINE V2.11' -->
-  <dd>(<tt>'a'</tt> and <tt>'r'</tt>): The fit to the radial profile points now includes both a
+  <dd>(<span style="font-family: monospace;">'a'</span> and <span style="font-family: monospace;">'r'</span>): The fit to the radial profile points now includes both a
   Gaussian and a Moffat profile.  The Moffat profile exponent parameter,
   beta, may be fixed or left free to be fit.
-  (<tt>'a'</tt> and <tt>'r'</tt>): New estimates of the FWHM were added to the <tt>'a'</tt> and <tt>'r'</tt>
+  (<span style="font-family: monospace;">'a'</span> and <span style="font-family: monospace;">'r'</span>): New estimates of the FWHM were added to the <span style="font-family: monospace;">'a'</span> and <span style="font-family: monospace;">'r'</span>
   keys.  These include the Moffat profile fit noted above, a direct
   measurement of the FWHM from the radially binned profile, and a Gaussian or
   Moffat fit to the radial enclosed flux profile.  The output from these keys
   was modified to include the new information.
-  (<tt>'a'</tt> and <tt>'r'</tt>): The direct FWHM may be used to iteratively adjust the
+  (<span style="font-family: monospace;">'a'</span> and <span style="font-family: monospace;">'r'</span>): The direct FWHM may be used to iteratively adjust the
   fitting radius to lessen the dependence on the initial fitting
   radius value.
-  (<tt>','</tt> and <tt>'.'</tt>): New keys to do the Gaussian or Moffat fitting without
+  (<span style="font-family: monospace;">','</span> and <span style="font-family: monospace;">'.'</span>): New keys to do the Gaussian or Moffat fitting without
   iteration or the enclosed flux and direct measurements.  The output
   format is the same as the previous version.
-  (<tt>'k'</tt>): Added a kimexam parameter set.
+  (<span style="font-family: monospace;">'k'</span>): Added a kimexam parameter set.
   </dd>
   </dl>
   <!-- EndSection:   'REVISIONS' -->

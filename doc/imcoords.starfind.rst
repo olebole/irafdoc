@@ -32,10 +32,10 @@ starfind: Automatically detect stellar objects in a list of images
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>The list of output object files. The number of output files must equal the
-  number of input images. If output is <tt>"default"</tt>, or <tt>"dir$default"</tt>, or a
+  number of input images. If output is <span style="font-family: monospace;">"default"</span>, or <span style="font-family: monospace;">"dir$default"</span>, or a
   directory specification then a default name of the form
   dir$root.extension.version is constructed, where dir$ is the directory name,
-  root is the root image name, extension is <tt>"obj"</tt>, and version is the next
+  root is the root image name, extension is <span style="font-family: monospace;">"obj"</span>, and version is the next
   available version number.
   </dd>
   </dl>
@@ -102,11 +102,11 @@ starfind: Automatically detect stellar objects in a list of images
   </dd>
   </dl>
   <dl>
-  <dt><b>wcs = <tt>""</tt></b></dt>
+  <dt><b>wcs = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcs' Line='wcs = ""' -->
   <dd>The world coordinate system.  The options are:
   <dl>
-  <dt><b><tt>"     "</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"     "</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"     "' -->
   <dd>The world coordinate system is undefined. Only logical (pixel) coordinates
   are printed.
@@ -135,19 +135,19 @@ starfind: Automatically detect stellar objects in a list of images
   </dd>
   </dl>
   <dl>
-  <dt><b>wxformat = <tt>""</tt>, wyformat = <tt>""</tt></b></dt>
+  <dt><b>wxformat = <span style="font-family: monospace;">""</span>, wyformat = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wxformat' Line='wxformat = "", wyformat = ""' -->
   <dd>The output format for the x and y axis world coordinates. If wxformat and
   wyformat are undefined then: 1) the value of the wcs format attribute is
-  used if the output wcs is <tt>"world"</tt> and the attribute is defined, 2) <tt>"%9.3f"</tt>
-  is used if the output wcs is <tt>"logical"</tt> or <tt>"physical"</tt>, and <tt>"%11.8g"</tt> is used
-  if the output wcs is <tt>"world"</tt>. If the input image is a sky projection image and
-  the x and y axes are ra and dec respectively, then the formats <tt>"%12.2H"</tt> and
-  <tt>"%12.1h"</tt> will print the world coordinates in hours and degrees respectively.
+  used if the output wcs is <span style="font-family: monospace;">"world"</span> and the attribute is defined, 2) <span style="font-family: monospace;">"%9.3f"</span>
+  is used if the output wcs is <span style="font-family: monospace;">"logical"</span> or <span style="font-family: monospace;">"physical"</span>, and <span style="font-family: monospace;">"%11.8g"</span> is used
+  if the output wcs is <span style="font-family: monospace;">"world"</span>. If the input image is a sky projection image and
+  the x and y axes are ra and dec respectively, then the formats <span style="font-family: monospace;">"%12.2H"</span> and
+  <span style="font-family: monospace;">"%12.1h"</span> will print the world coordinates in hours and degrees respectively.
   </dd>
   </dl>
   <dl>
-  <dt><b>boundary = <tt>"nearest"</tt></b></dt>
+  <dt><b>boundary = <span style="font-family: monospace;">"nearest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"' -->
   <dd>The boundary extension type. The choices are:
   <dl>

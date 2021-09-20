@@ -23,9 +23,9 @@ centerpars: Edit the centering algorithm parameters
   <h3>Parameters</h3>
   <!-- BeginSection: 'PARAMETERS' -->
   <dl>
-  <dt><b>calgorithm = <tt>"none"</tt></b></dt>
+  <dt><b>calgorithm = <span style="font-family: monospace;">"none"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='calgorithm' Line='calgorithm = "none"' -->
-  <dd>The centering algorithm. The <tt>"gauss"</tt> and <tt>"ofilter"</tt> centering algorithms
+  <dd>The centering algorithm. The <span style="font-family: monospace;">"gauss"</span> and <span style="font-family: monospace;">"ofilter"</span> centering algorithms
   depend critically on the value of the fwhmpsf parameter in the DATAPARS task. 
   The centering options are:
   <dl>
@@ -114,7 +114,7 @@ centerpars: Edit the centering algorithm parameters
   <dt><b>clean = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='clean' Line='clean = no' -->
   <dd>Symmetry-clean the centering subraster before centering? DAOPHOT users should
-  leave clean set to <tt>"no"</tt>.
+  leave clean set to <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <dl>
@@ -162,7 +162,7 @@ centerpars: Edit the centering algorithm parameters
   cbox can be used for centering objects in images with different psfs.
   </p>
   <p>
-  If <i>clean</i> is <tt>"yes"</tt> the symmetry-clean algorithm is applied to the
+  If <i>clean</i> is <span style="font-family: monospace;">"yes"</span> the symmetry-clean algorithm is applied to the
   centering subraster prior to centering. The cleaning algorithm attempts
   to correct defects in the centering subraster by assuming that the image
   is radially symmetric and comparing pixels on opposite sides of the center
@@ -178,7 +178,7 @@ centerpars: Edit the centering algorithm parameters
   noise model assumed for the data. Pairs of pixels in the clipping region,
   r &gt; <i>rclip</i> / <i>scale</i> are tested in the same manner as those in
   the cleaning region. However the sigma employed is the sigma of the
-  sky background. DAOPHOT users should leave clean set to <tt>"no"</tt>.
+  sky background. DAOPHOT users should leave clean set to <span style="font-family: monospace;">"no"</span>.
   </p>
   <p>
   New centers are computed using the centering algorithm specified by
@@ -224,7 +224,7 @@ centerpars: Edit the centering algorithm parameters
   </p>
   <p>
   The default thresholding algorithm for all centering algorithms other
-  than <tt>"centroid"</tt> is no thresholding.
+  than <span style="font-family: monospace;">"centroid"</span> is no thresholding.
   </p>
   <p>
   If the computed shift in either coordinate &gt; <i>maxshift</i> / <i>scale</i>,

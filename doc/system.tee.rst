@@ -29,9 +29,9 @@ tee: Tee the standard output into a file
   </dd>
   </dl>
   <dl>
-  <dt><b>out_type = <tt>"text"</tt></b></dt>
+  <dt><b>out_type = <span style="font-family: monospace;">"text"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='out_type' Line='out_type = "text"' -->
-  <dd>The type of output file to be created, either <tt>"text"</tt> or <tt>"binary"</tt>.
+  <dd>The type of output file to be created, either <span style="font-family: monospace;">"text"</span> or <span style="font-family: monospace;">"binary"</span>.
   </dd>
   </dl>
   <dl>
@@ -51,9 +51,9 @@ tee: Tee the standard output into a file
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. The results of the <i>set</i> command are captured in the file <tt>"temp"</tt>,
-  and are also passed on to the <tt>"match"</tt> command.  The result is
-  a <tt>"temp"</tt> file of perhaps 100 lines, with the output to the screen
+  1. The results of the <i>set</i> command are captured in the file <span style="font-family: monospace;">"temp"</span>,
+  and are also passed on to the <span style="font-family: monospace;">"match"</span> command.  The result is
+  a <span style="font-family: monospace;">"temp"</span> file of perhaps 100 lines, with the output to the screen
   only around 5 lines.
   </p>
   <p>

@@ -61,7 +61,7 @@ radplt: Plot the radial profile of an object (noao.proto V2.9)
   <p>
   Given the approximate coordinates of the center of a star, (x_init, y_init),
   RADPLT will compute a more accurate center using the algorithms described in
-  the Kitt Peak publication <tt>"Stellar Magnitudes from Digital Images"</tt> under
+  the Kitt Peak publication <span style="font-family: monospace;">"Stellar Magnitudes from Digital Images"</span> under
   the Mountain Photometry Code section and then plot the intensity values
   in the profile extraction box as a function of distance from the center.
   This is effectively a radial profile.

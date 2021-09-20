@@ -26,7 +26,7 @@ sbands: Bandpass spectrophotometry of spectra
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>Input list of spectra to be measured.  These may be one dimensional
-  spectra in individual or <tt>"multispec"</tt> format or calibrated spatial spectra such
+  spectra in individual or <span style="font-family: monospace;">"multispec"</span> format or calibrated spatial spectra such
   as long slit or Fabry-Perot images.  The dispersion axis and summing
   parameters are specified by package parameters for the spatial spectra.
   </dd>
@@ -34,7 +34,7 @@ sbands: Bandpass spectrophotometry of spectra
   <dl>
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
-  <dd>Output file for the results.  This may be a filename or <tt>"STDOUT"</tt> to
+  <dd>Output file for the results.  This may be a filename or <span style="font-family: monospace;">"STDOUT"</span> to
   write to the terminal.
   </dd>
   </dl>
@@ -44,13 +44,13 @@ sbands: Bandpass spectrophotometry of spectra
   <dd>Bandpass file consisting of lines with one, two, or three bandpasses per
   line.  A bandpass is specified by an identification string (quoted if it is
   null or contains whitespace), the central wavelength, the width of the
-  bandpass in wavelength, and a filter filename with the special value <tt>"none"</tt>
+  bandpass in wavelength, and a filter filename with the special value <span style="font-family: monospace;">"none"</span>
   if there is no filter (a flat unit response).  This format is described
   further in the description section.
   </dd>
   </dl>
   <dl>
-  <dt><b>apertures = <tt>""</tt></b></dt>
+  <dt><b>apertures = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
   <dd>List of apertures to select from the input spectra.  For one dimensional
   spectra this is the aperture number and for spatial spectra it is
@@ -104,7 +104,7 @@ sbands: Bandpass spectrophotometry of spectra
   nothing else is appropriate.  The filter field is a filename for a text
   file containing the filter values.  A filter file consists of a wavelength
   ordered list of wavelength and relative response.  Extrapolation uses the
-  end point values and interpolation is linear.  The special name <tt>"none"</tt> is
+  end point values and interpolation is linear.  The special name <span style="font-family: monospace;">"none"</span> is
   used if there is no filter.  This is equivalent to unit response at all
   wavelengths.
   </p>
@@ -143,7 +143,7 @@ sbands: Bandpass spectrophotometry of spectra
   flag, and an equivalent width using the second band as the continuum.
   If there are three bandpasses then a continuum bandpass flux is computed
   as the interpolation between the bandpass centers to the center of the
-  first bandpass.  The special bandpass identification <tt>"cont"</tt> will
+  first bandpass.  The special bandpass identification <span style="font-family: monospace;">"cont"</span> will
   be reported.
   </p>
   <p>
@@ -160,7 +160,7 @@ sbands: Bandpass spectrophotometry of spectra
   </p>
   <p>
   The results of measuring each bandpass in each spectrum are written
-  to the specified output file.  This file may be given as <tt>"STDOUT"</tt> to
+  to the specified output file.  This file may be given as <span style="font-family: monospace;">"STDOUT"</span> to
   write the results to the terminal.  The output file contains lines
   with the spectrum name and aperture, the band identifications and
   fluxes or magnitudes, and the band index and equivalent width (if

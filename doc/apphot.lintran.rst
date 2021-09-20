@@ -108,7 +108,7 @@ lintran: Linearly transform a coordinate list
   </pre>
   <p>
   Comment lines and blank lines are passed on to the output unmodified
-  (a comment line is any line beginning with the character <tt>'#'</tt>).
+  (a comment line is any line beginning with the character <span style="font-family: monospace;">'#'</span>).
   If either x or y is indefinite
   and no rotation is being performed, the corresponding
   output coordinate will be indefinite.  If either input coordinate is indefinite
@@ -123,7 +123,7 @@ lintran: Linearly transform a coordinate list
   the coordinates of a star in frame1 to be the current origin 
   (e.g., [35.7, 389.2]); the new origin is then the coordinates of the same
   star in the second exposure ([36.9, 400.0]).  The shifted list is saved in
-  file <tt>"frame2"</tt>:
+  file <span style="font-family: monospace;">"frame2"</span>:
   </p>
   <p>
       cl&gt; lintran frame1 x1=35.7 y1=389.2 x2=36.9 y2=400.0 &gt; frame2

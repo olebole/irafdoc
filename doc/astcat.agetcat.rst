@@ -45,10 +45,10 @@ agetcat: Extract astrometry files from astrometric catalogs
   <dl>
   <dt><b>pars</b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='pars' Line='pars' -->
-  <dd>If regions is set to the reserved keyword <tt>"pars"</tt> then a single region
+  <dd>If regions is set to the reserved keyword <span style="font-family: monospace;">"pars"</span> then a single region
   definition is read from the <i>aregpars</i> parameter set. By default a region
-  ten arc minutes in size around coordinates ra = <tt>"00:00:00.0"</tt> and
-  dec = <tt>"+00:00:00"</tt> in the query coordinate system is extracted.
+  ten arc minutes in size around coordinates ra = <span style="font-family: monospace;">"00:00:00.0"</span> and
+  dec = <span style="font-family: monospace;">"+00:00:00"</span> in the query coordinate system is extracted.
   </dd>
   </dl>
   </dd>
@@ -59,23 +59,23 @@ agetcat: Extract astrometry files from astrometric catalogs
   <dd>The list of output astrometry files. The number of output files must be equal
   to the number regions in the regions list times the number of astrometry
   catalogs in the catalog list. By default the output files are assigned names of
-  the form <tt>"reg#[.cat#].cat.#"</tt> if the region definition source is <tt>"pars"</tt> or
-  a file e.g. <tt>"reg002.cat.1"</tt>, or <tt>"image[.cat#].cat.#"</tt> if the region
-  definition source is an image list, e.g. <tt>"image.cat.1"</tt>. The catalog number
+  the form <span style="font-family: monospace;">"reg#[.cat#].cat.#"</span> if the region definition source is <span style="font-family: monospace;">"pars"</span> or
+  a file e.g. <span style="font-family: monospace;">"reg002.cat.1"</span>, or <span style="font-family: monospace;">"image[.cat#].cat.#"</span> if the region
+  definition source is an image list, e.g. <span style="font-family: monospace;">"image.cat.1"</span>. The catalog number
   is only inserted if there is more than one catalog in the catalog list.
   </dd>
   </dl>
   <dl>
-  <dt><b>aregpars = <tt>""</tt></b></dt>
+  <dt><b>aregpars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='aregpars' Line='aregpars = ""' -->
   <dd>The region definition parameter set. The aregpars parameters define the
   extraction region center, region width, region center units, and the region
   center coordinate system. The region definition parameters are used if
-  <i>regions</i> = <tt>"pars"</tt>.
+  <i>regions</i> = <span style="font-family: monospace;">"pars"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>catalogs = <tt>")_.catalogs"</tt></b></dt>
+  <dt><b>catalogs = <span style="font-family: monospace;">")_.catalogs"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='catalogs' Line='catalogs = ")_.catalogs"' -->
   <dd>The list of input astrometry catalogs. By default the catalog name is set to the
   value of the package parameter catalogs. 
@@ -100,7 +100,7 @@ agetcat: Extract astrometry files from astrometric catalogs
   </dd>
   </dl>
   <dl>
-  <dt><b>afiltpars = <tt>""</tt></b></dt>
+  <dt><b>afiltpars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='afiltpars' Line='afiltpars = ""' -->
   <dd>The astrometry file filtering parameter set. These parameters permit the user
   to sort the output on a field or field expression, select or reject
@@ -123,11 +123,11 @@ agetcat: Extract astrometry files from astrometric catalogs
   </dd>
   </dl>
   <dl>
-  <dt><b>catdb = <tt>")_.catdb"</tt></b></dt>
+  <dt><b>catdb = <span style="font-family: monospace;">")_.catdb"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='catdb' Line='catdb = ")_.catdb"' -->
   <dd>The catalog configuration file. Catdb defaults to the value of the
   package parameter catdb. The default catalog configuration file is
-  <tt>"astcat$lib/catdb.dat"</tt>.
+  <span style="font-family: monospace;">"astcat$lib/catdb.dat"</span>.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -142,7 +142,7 @@ agetcat: Extract astrometry files from astrometric catalogs
   <p>
   A region definition consists of the coordinates of the field center,
   the field size, the units of the field center, and the coordinate system of
-  the field center. If <i>regions</i> = <tt>"pars"</tt> these quantities are read
+  the field center. If <i>regions</i> = <span style="font-family: monospace;">"pars"</span> these quantities are read
   from the <i>aregpars</i> parameters <i>rcra</i>, <i>rcdec</i>, <i>rcrawidth</i>,
   <i>rcdecwidth</i> <i>rcraunits</i>, <i>rcdecunits</i>., and <i>rcsystem</i>. 
   If <i>regions</i> is an image they are read from the FITS world coordinate
@@ -200,7 +200,7 @@ agetcat: Extract astrometry files from astrometric catalogs
   and format of the catalog coordinates by setting the <i>fosystem</i>,
   <i>foraunits</i>, <i>fodecunits</i>, <i>foraformat</i>, and <i>fodecformat</i>
   parameters. A more detailed description of the region filtering
-  parameters can be obtained by typing <tt>"help afiltpars"</tt>.
+  parameters can be obtained by typing <span style="font-family: monospace;">"help afiltpars"</span>.
   </p>
   <p>
   If <i>standard</i> = yes a header is written to the output astrometry file which
@@ -229,7 +229,7 @@ agetcat: Extract astrometry files from astrometric catalogs
   cl&gt; page reg001.cat.1
   </pre>
   <p>
-  2. Repeat the previous example but sort the output on the sort field <tt>"mag1"</tt>.
+  2. Repeat the previous example but sort the output on the sort field <span style="font-family: monospace;">"mag1"</span>.
   </p>
   <pre>
   cl&gt; agetcat pars default filter+ fsort=mag1

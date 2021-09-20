@@ -20,10 +20,10 @@ extras: Information about the extra information in 3D images
   When one dimensional spectra are extracted by the tasks in the
   <b>apextract</b> package the user may specify that additional
   extra associated information be extracted at the same time.  This
-  information is produced when the <i>extras</i> parameter is <tt>"yes"</tt>.
+  information is produced when the <i>extras</i> parameter is <span style="font-family: monospace;">"yes"</span>.
   </p>
   <p>
-  The associated information is recorded as additional <tt>"bands"</tt> (the IRAF term
+  The associated information is recorded as additional <span style="font-family: monospace;">"bands"</span> (the IRAF term
   for the third dimension of a three dimensional image) of the output
   extracted spectral image.  Extracted spectra are currently stored as IRAF
   images with dispersion information given in the image header.  The
@@ -41,7 +41,7 @@ extras: Information about the extra information in 3D images
   and one band the image will be one dimensional.  Note that the
   <i>format</i> parameter controls whether multiple apertures are
   written to separate images or to a single image.  Thus, if
-  the format is <tt>"onedspec"</tt> this means that the second dimension
+  the format is <span style="font-family: monospace;">"onedspec"</span> this means that the second dimension
   will always be of length one and, if the <i>extras</i> parameter
   is no, the output images will be one dimensional.
   </p>
@@ -71,7 +71,7 @@ extras: Information about the extra information in 3D images
   to document which extraction options were used.
   </p>
   <p>
-  For more information get help under the topic <tt>"apextract.package"</tt>.
+  For more information get help under the topic <span style="font-family: monospace;">"apextract.package"</span>.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>See also</h3>

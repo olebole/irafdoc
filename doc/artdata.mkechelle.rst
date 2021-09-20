@@ -59,13 +59,13 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>title = <tt>"Artificial Echelle Spectrum"</tt></b></dt>
+  <dt><b>title = <span style="font-family: monospace;">"Artificial Echelle Spectrum"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='title' Line='title = "Artificial Echelle Spectrum"' -->
   <dd>Image title to be given to the spectra.  Maximum of 79 characters.
   </dd>
   </dl>
   <dl>
-  <dt><b>header = <tt>"artdata$stdheader.dat"</tt></b></dt>
+  <dt><b>header = <span style="font-family: monospace;">"artdata$stdheader.dat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='header' Line='header = "artdata$stdheader.dat"' -->
   <dd>Image or header keyword data file.  If an image is given then the image
   header is copied.  If a file is given then the FITS format cards are
@@ -118,9 +118,9 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>profile = <tt>"gaussian"</tt> (extracted|gaussian|slit)</b></dt>
+  <dt><b>profile = <span style="font-family: monospace;">"gaussian"</span> (extracted|gaussian|slit)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='profile' Line='profile = "gaussian" (extracted|gaussian|slit)' -->
-  <dd>The order profile across the dispersion.  If the value is <tt>"extracted"</tt>
+  <dd>The order profile across the dispersion.  If the value is <span style="font-family: monospace;">"extracted"</span>
   then an extracted echelle format spectrum is produced.  Otherwise a
   two dimensional format with a gaussian or slit profile is produced.
   See <b>mk2dspec</b> for a discussion of the profile functions.
@@ -274,7 +274,7 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>lines = <tt>""</tt></b></dt>
+  <dt><b>lines = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lines' Line='lines = ""' -->
   <dd>List of spectral line files.  Spectral line files contain lines of rest
   wavelength, peak, and widths (see the DESCRIPTION section).
@@ -344,7 +344,7 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task creates or adds to artificial extracted (one dimensional
-  <tt>"echelle"</tt> format) or two dimensional echelle spectra.  The input spectrum
+  <span style="font-family: monospace;">"echelle"</span> format) or two dimensional echelle spectra.  The input spectrum
   (before modification by the spectrograph model) may be a combination of
   doppler shifted blackbody or constant continuum and emission and absorption
   gaussian profile spectral lines.  The lines may have randomly selected
@@ -486,8 +486,8 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   </p>
   <p>
   The primary reference for the model of the echelle grating (a
-  crossdisperser grating also obeys this model) used in this task is <tt>"Echelle
-  efficiencies: theory and experiment"</tt> by Schroeder and Hilliard in Applied
+  crossdisperser grating also obeys this model) used in this task is <span style="font-family: monospace;">"Echelle
+  efficiencies: theory and experiment"</span> by Schroeder and Hilliard in Applied
   Optics, Vol. 19, No. 16, 1980, p. 2833.  (The nomenclature below is similar
   to that paper except we use theta for alpha, their theta is theta - blaze,
   the reciprocal of the groove spacing which is the grooves per millimeter,
@@ -630,15 +630,15 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   <p>
   Once the spectrum has been separated into orders, modified by the
   grating blaze functions, and sampled into pixels in the dispersion
-  direction it may be output as an extracted <tt>"echelle"</tt> format spectrum.
-  This occurs when the spatial profile is specified as <tt>"extracted"</tt>.
+  direction it may be output as an extracted <span style="font-family: monospace;">"echelle"</span> format spectrum.
+  This occurs when the spatial profile is specified as <span style="font-family: monospace;">"extracted"</span>.
   The keywords added by the <b>apextract</b> package are included in
   the image header.  If the dispersion model is linear
   the keywords are the same as those produced by the dispersion
   correction task <b>ecdispcor</b>.
   </p>
   <p>
-  If the spatial profile is specified as <tt>"gaussian"</tt> or <tt>"slit"</tt> then the
+  If the spatial profile is specified as <span style="font-family: monospace;">"gaussian"</span> or <span style="font-family: monospace;">"slit"</span> then the
   orders are convolved by the profile function and the crossdispersion
   relation is used to determine where the order falls at each wavelength.
   The spatial profiles are defined by the formulas:
@@ -650,8 +650,8 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   <p>
   where x is the spatial coordinate, xc(w) is the order center at
   wavelength w, and width is the full width at half maximum specified by
-  the parameter of that name.  The <tt>"gaussian"</tt> profile
-  is the usual gaussian specified in terms of a FWHM.  The <tt>"slit"</tt>
+  the parameter of that name.  The <span style="font-family: monospace;">"gaussian"</span> profile
+  is the usual gaussian specified in terms of a FWHM.  The <span style="font-family: monospace;">"slit"</span>
   profile is one which is relatively flat and then rapidly drops
   to zero.  The profile is normalized to unit integral so that
   the total flux across the profile is given by the scaled

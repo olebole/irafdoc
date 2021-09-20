@@ -87,7 +87,7 @@ stty: Set/show terminal characteristics
   <dt><b>clear = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='clear' Line='clear = no' -->
   <dd>Clear the function(s) which follow on the command line, e.g.,
-  <tt>"clear ucasein ucaseout"</tt> is equivalent to <tt>"ucasein=no ucaseout=no"</tt>.
+  <span style="font-family: monospace;">"clear ucasein ucaseout"</span> is equivalent to <span style="font-family: monospace;">"ucasein=no ucaseout=no"</span>.
   </dd>
   </dl>
   <dl>
@@ -104,28 +104,28 @@ stty: Set/show terminal characteristics
   </dd>
   </dl>
   <dl>
-  <dt><b>login = <tt>"home$ttyin.log"</tt> [off]</b></dt>
+  <dt><b>login = <span style="font-family: monospace;">"home$ttyin.log"</span> [off]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='login' Line='login = "home$ttyin.log" [off]' -->
   <dd>Log all input from the terminal to the named text file.
   </dd>
   </dl>
   <dl>
-  <dt><b>logio = <tt>"home$ttyio.log"</tt> [off]</b></dt>
+  <dt><b>logio = <span style="font-family: monospace;">"home$ttyio.log"</span> [off]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logio' Line='logio = "home$ttyio.log" [off]' -->
   <dd>Log all terminal i/o to the named text file.  May not be used if either
   <i>login</i> or <i>logout</i> mode is in effect, and vice versa.
   </dd>
   </dl>
   <dl>
-  <dt><b>logout = <tt>"home$ttyout.log"</tt> [off]</b></dt>
+  <dt><b>logout = <span style="font-family: monospace;">"home$ttyout.log"</span> [off]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logout' Line='logout = "home$ttyout.log" [off]' -->
   <dd>Log all output to the terminal to the named text file.
   </dd>
   </dl>
   <dl>
-  <dt><b>playback = <tt>"home$ttyin.log"</tt> [off]</b></dt>
+  <dt><b>playback = <span style="font-family: monospace;">"home$ttyin.log"</span> [off]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='playback' Line='playback = "home$ttyin.log" [off]' -->
-  <dd>Divert terminal driver input to the named <tt>"stty login"</tt> style text file,
+  <dd>Divert terminal driver input to the named <span style="font-family: monospace;">"stty login"</span> style text file,
   i.e., take input from a file instead of from the terminal.  The effect is
   to exactly repeat a previous terminal session executed with <i>login</i>
   mode in effect, e.g., to test or demo software.
@@ -167,7 +167,7 @@ stty: Set/show terminal characteristics
   	cl&gt; stty vt100
   </p>
   <p>
-  would set the terminal type to <tt>"vt100"</tt>.  An error message will be printed
+  would set the terminal type to <span style="font-family: monospace;">"vt100"</span>.  An error message will be printed
   unless an entry for the named terminal is present in the <b>termcap</b> file;
   if the named terminal is a graphics terminal, there must also be an entry
   in the <b>graphcap</b> file.
@@ -195,7 +195,7 @@ stty: Set/show terminal characteristics
   will cause all upper case terminal input to be mapped to lower
   case (e.g., when working from an old monocase terminal).  In this mode,
   individual upper case characters may be input by preceding them with the
-  escape character ^, e.g., <tt>"^MAKEFILE"</tt> equates to <tt>"Makefile"</tt>.  The full set
+  escape character ^, e.g., <span style="font-family: monospace;">"^MAKEFILE"</span> equates to <span style="font-family: monospace;">"Makefile"</span>.  The full set
   of ^ escapes is summarized below.  The option <b>ucaseout</b> will cause all
   terminal output to be mapped to upper case.  Preceding either or both of
   these option keywords by <b>clear</b> causes the options to be cleared.
@@ -227,8 +227,8 @@ stty: Set/show terminal characteristics
   <p>
   The terminal driver options <b>logio</b>, <b>logout</b>, and <b>login</b>
   may be used to log, respectively, all terminal i/o, all output to the terminal,
-  or all input from the terminal.  The logfile names are <tt>"home$ttyin.log"</tt>,
-  <tt>"home$ttyout.log"</tt>, or <tt>"home$ttyio.log"</tt>, unless a different logfile name is
+  or all input from the terminal.  The logfile names are <span style="font-family: monospace;">"home$ttyin.log"</span>,
+  <span style="font-family: monospace;">"home$ttyout.log"</span>, or <span style="font-family: monospace;">"home$ttyio.log"</span>, unless a different logfile name is
   specified by the user.  All logfiles are standard textfiles containing only
   printable characters.
   </p>
@@ -289,7 +289,7 @@ stty: Set/show terminal characteristics
   Any whitespace (unescaped blanks, tabs, or newlines) appearing
   in the logfile is put there only to make the file more readable, and is not
   considered data.  Blocks of text may be enclosed in a logfile delimited by
-  escaped curly brackets, i.e., <tt>"\{ ... \}"</tt>.  This is used for the <b>playback</b>
+  escaped curly brackets, i.e., <span style="font-family: monospace;">"\{ ... \}"</span>.  This is used for the <b>playback</b>
   facility described in the next section.  
   </p>
   <!-- EndSection:   'Recording Terminal I/O' -->
@@ -337,9 +337,9 @@ stty: Set/show terminal characteristics
   recording session to clean up, e.g., deleting any temporary files created
   during the recording session.  If anything has changed which causes a command
   to abort during execution of a playback script, normal terminal input is
-  automatically restored, aborting the script.   Note that if the <tt>"stty playback"</tt>
+  automatically restored, aborting the script.   Note that if the <span style="font-family: monospace;">"stty playback"</span>
   command gets into the playback script for some reason, e.g., because the
-  <tt>"stty reset"</tt> (or <tt>"stty login=no"</tt> etc.) was omitted, then the script will
+  <span style="font-family: monospace;">"stty reset"</span> (or <span style="font-family: monospace;">"stty login=no"</span> etc.) was omitted, then the script will
   repeat indefinitely.  This may or may not be what was desired.
   </p>
   <p>
@@ -354,7 +354,7 @@ stty: Set/show terminal characteristics
   	cl&gt; stty play=filename delay=2000
   </p>
   <p>
-  would playback the file <tt>"filename"</tt>, with a delay of 2 seconds following echo
+  would playback the file <span style="font-family: monospace;">"filename"</span>, with a delay of 2 seconds following echo
   of each line of recorded input text.
   </p>
   <p>
@@ -366,8 +366,8 @@ stty: Set/show terminal characteristics
   </p>
   <pre>
   	space, return		continue execution
-  	<tt>'g'</tt>			go: turn verify mode off and continue
-  	<tt>'q'</tt>			quit: terminate playback mode
+  	<span style="font-family: monospace;">'g'</span>			go: turn verify mode off and continue
+  	<span style="font-family: monospace;">'q'</span>			quit: terminate playback mode
   </pre>
   <p>
   Verify mode is automatically disabled during raw mode input since the input
@@ -394,7 +394,7 @@ stty: Set/show terminal characteristics
   script using the following construct:
   </p>
   <p>
-  	<tt>"\{"</tt> [&lt;control_directives&gt;] [&lt;text&gt;] <tt>"\}"</tt>
+  	<span style="font-family: monospace;">"\{"</span> [&lt;control_directives&gt;] [&lt;text&gt;] <span style="font-family: monospace;">"\}"</span>
   </p>
   <p>
   where <b>control_directive</b> refers to one of the following:
@@ -413,7 +413,7 @@ stty: Set/show terminal characteristics
   </pre>
   <p>
   would cause the following to be output, followed after a 5 second delay by a 
-  listing of the current directory (the <tt>"&lt;&gt;"</tt> is not printed, but shows where
+  listing of the current directory (the <span style="font-family: monospace;">"&lt;&gt;"</span> is not printed, but shows where
   the cursor will be during the 5 second pause):
   </p>
   <pre>
@@ -421,9 +421,9 @@ stty: Set/show terminal characteristics
   	[list the current directory]&lt;&gt;
   </pre>
   <p>
-  Note that the newline following the <tt>"\{%5000"</tt> in the above example is textual
+  Note that the newline following the <span style="font-family: monospace;">"\{%5000"</span> in the above example is textual
   data, and will be output to the terminal along with whatever follows, up until
-  the closing brace, i.e., <tt>"\}"</tt>.  The amount of text to be output may be
+  the closing brace, i.e., <span style="font-family: monospace;">"\}"</span>.  The amount of text to be output may be
   arbitrarily large; there is a builtin limit (currently 4096 characters),
   but it is unlikely that this limit will ever be exceedd, since no more than
   one pageful of text should ever be output in a single call.
@@ -440,7 +440,7 @@ stty: Set/show terminal characteristics
   </p>
   <p>
   would permanently disable <i>verify</i> (unless a %V+ or %!V+ directive
-  follows later in the script) then output the text <tt>"..."</tt> followed by a 3
+  follows later in the script) then output the text <span style="font-family: monospace;">"..."</span> followed by a 3
   second delay.
   </p>
   <p>
@@ -494,7 +494,7 @@ stty: Set/show terminal characteristics
   <p>
   This six character sequence consists of the key value of the cursor read (K),
   followed by the [x,y] cursor coordinate encoded as four ascii characters
-  (<tt>"3)'*"</tt> in this case), followed by the <tt>"GIN mode terminator"</tt> character or
+  (<span style="font-family: monospace;">"3)'*"</span> in this case), followed by the <span style="font-family: monospace;">"GIN mode terminator"</span> character or
   characters, normally a single CR (\r).  Of course, if the terminal is not a
   Tektronix compatible terminal (e.g., DEC-Regis), the details will differ
   from this example.
@@ -553,7 +553,7 @@ stty: Set/show terminal characteristics
   <p>
   For example, insertion of the above sequence between any two cursor reads
   in a recorded interactive graphics session would cause the text
-  <tt>"This is a status line comment"</tt> to be written to the status line,
+  <span style="font-family: monospace;">"This is a status line comment"</span> to be written to the status line,
   with normal execution of the script occurring after a 5 second delay
   followed by erasure of the status line and exit from status line mode
   (due to the ctrl/u and rubout inserted as data after the colon cursor read).
@@ -589,13 +589,13 @@ stty: Set/show terminal characteristics
   	J3..8\r J3-,)\r J3+)9\r K3)'*\r J3((0\r l3&amp;';\r
   	:####\r
   	\{%5000
-  	[use key <tt>`o'</tt> to overplot]\}
+  	[use key <span style="font-family: monospace;">`o'</span> to overplot]\}
   	^U\177
   	o3&amp;';\r
   	K3&amp;';\r K3%*(\r K3#,3\r l3!.?\r
   	:####\r
   	\{%5000
-  	[key <tt>`X'</tt> expands the plot in x]\}
+  	[key <span style="font-family: monospace;">`X'</span> expands the plot in x]\}
   	^U\177
   	X3!.?\r
   	qXXXX\r
@@ -650,7 +650,7 @@ stty: Set/show terminal characteristics
   	cl&gt; stty logio
   </p>
   <p>
-  8. Record input from the terminal in the file <tt>"demo"</tt>.
+  8. Record input from the terminal in the file <span style="font-family: monospace;">"demo"</span>.
   	
   	cl&gt; stty login=demo
   </p>

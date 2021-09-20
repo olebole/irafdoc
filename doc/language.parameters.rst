@@ -91,7 +91,7 @@ parameters: Discussion of parameter attributes
   <dt><b>gcur, imcur</b></dt>
   <!-- Sec='DISCUSSION' Level=0 Label='gcur' Line='gcur, imcur' -->
   <dd>The cursor parameters have a character string value with a predefined cursor
-  value format.  When a cursor type parameter is read in <tt>"query"</tt> mode, the
+  value format.  When a cursor type parameter is read in <span style="font-family: monospace;">"query"</span> mode, the
   hardware cursor on the graphics terminal or image display is physically read.
   If the cursor parameter is list-structured, cursor input may also be taken
   from a list (text file).  For a more detailed discussion of cursor control
@@ -140,7 +140,7 @@ parameters: Discussion of parameter attributes
   </p>
   <p>
       The mode of a parameter determines two qualities: whether the parameter
-  is prompted for when it is accessed, and whether the parameter is <tt>"learned"</tt>,
+  is prompted for when it is accessed, and whether the parameter is <span style="font-family: monospace;">"learned"</span>,
   i.e. whether its value is saved between invocations of a task.
   </p>
   <p>
@@ -158,7 +158,7 @@ parameters: Discussion of parameter attributes
   this for the mode.  If the mode switch at all levels is automatic
   then the mode is set to hidden.  The mode switch at the task, package
   and CL levels is determined by the VALUE, not the mode, of the
-  parameter with the name <tt>"mode"</tt> associated with the task, package or CL.
+  parameter with the name <span style="font-family: monospace;">"mode"</span> associated with the task, package or CL.
   </p>
   <p>
   Query and automatic parameters are learned by default, while hidden parameters
@@ -210,7 +210,7 @@ parameters: Discussion of parameter attributes
   <dl>
   <dt><b>p_xtype</b></dt>
   <!-- Sec='DISCUSSION' Level=0 Label='p_xtype' Line='p_xtype' -->
-  <dd>This is the same as p_type except that the string is prefixed by <tt>"*"</tt>
+  <dd>This is the same as p_type except that the string is prefixed by <span style="font-family: monospace;">"*"</span>
   if the parameter is list directed.
   </dd>
   </dl>
@@ -292,10 +292,10 @@ parameters: Discussion of parameter attributes
   but there is an automatic looping feature which permits the
   appearance of array arithmetic.  Any executable statement
   in which an array is referenced but  in which the exact element of the array
-  is not defined (an <tt>"open"</tt> array reference)
+  is not defined (an <span style="font-family: monospace;">"open"</span> array reference)
   will cause the CL to implicitly execute that
   statement within a loop over all the elements of the array.  More
-  than one <tt>"open"</tt> array may appear in the expression but they
+  than one <span style="font-family: monospace;">"open"</span> array may appear in the expression but they
   agree on the limits of the loop.  For example,
   </p>
   <pre>
@@ -320,11 +320,11 @@ parameters: Discussion of parameter attributes
   <p>
   For an explicit reference, i.e. with task and package qualifiers,
   the parameter is known if the package in which the task is defined
-  is active.  For example, when starting the CL, the <tt>"lists"</tt> package
-  is not active, thus the parameters of the <tt>"sort"</tt> task may not
-  be referenced even in the form <tt>"lists.sort.param"</tt>.  However since
+  is active.  For example, when starting the CL, the <span style="font-family: monospace;">"lists"</span> package
+  is not active, thus the parameters of the <span style="font-family: monospace;">"sort"</span> task may not
+  be referenced even in the form <span style="font-family: monospace;">"lists.sort.param"</span>.  However since
   the system package is activated during login to the CL, the parameters
-  of <tt>"page"</tt> may be referenced by <tt>"page.param"</tt>.  In general a package
+  of <span style="font-family: monospace;">"page"</span> may be referenced by <span style="font-family: monospace;">"page.param"</span>.  In general a package
   qualifier is used only to remove ambiguity between tasks with the
   same name in two different packages.
   </p>
@@ -341,8 +341,8 @@ parameters: Discussion of parameter attributes
   are used the first time a task is run, or whenever the default values
   have been updated more recently than the user's copy of the parameters.
   The user's copy is created when a task terminates, and retains any
-  <tt>"learned"</tt> changes to the parameters.  It is created in a directory
-  pointed to by the IRAF logical <tt>"uparm"</tt> which is usually a sub-directory
+  <span style="font-family: monospace;">"learned"</span> changes to the parameters.  It is created in a directory
+  pointed to by the IRAF logical <span style="font-family: monospace;">"uparm"</span> which is usually a sub-directory
   of the default IRAF directory for the user.
   </p>
   <p>

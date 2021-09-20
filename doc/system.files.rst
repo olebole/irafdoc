@@ -29,7 +29,7 @@ files: Expand a file template into a list of files
   </dd>
   </dl>
   <dl>
-  <dt><b>sort = <tt>"yes"</tt></b></dt>
+  <dt><b>sort = <span style="font-family: monospace;">"yes"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sort' Line='sort = "yes"' -->
   <dd>Sort the file list.
   </dd>
@@ -41,7 +41,7 @@ files: Expand a file template into a list of files
   <i>Files</i> lists all files matching the given template.  The existence of
   the listed files is checked only if pattern matching is used, hence <i>files</i>
   may also be used to parse a comma delimited list of strings which are not
-  necessarily filenames.  <i>Files</i> performs the same function as <tt>"dir l+"</tt>
+  necessarily filenames.  <i>Files</i> performs the same function as <span style="font-family: monospace;">"dir l+"</span>
   but is simpler and more convenient to use when generating file lists.
   </p>
   <p>
@@ -53,15 +53,15 @@ files: Expand a file template into a list of files
   </p>
   <p>
   Pattern matching in a file template is provided by the usual pattern matching
-  meta-characters <tt>"*?[]"</tt>, documented in the CL User's Guide.  Pattern matching 
+  meta-characters <span style="font-family: monospace;">"*?[]"</span>, documented in the CL User's Guide.  Pattern matching 
   is used to select files from one or more directories.  In addition, the
   filename template notation provides two operators for generating new filenames
-  from the matched filenames.  These are the <b>concatenation</b> operator <tt>"//"</tt>,
-  and the <b>string substitution</b> operator <tt>"%chars%newchars%"</tt>.
+  from the matched filenames.  These are the <b>concatenation</b> operator <span style="font-family: monospace;">"//"</span>,
+  and the <b>string substitution</b> operator <span style="font-family: monospace;">"%chars%newchars%"</span>.
   The concatenation operator concatenates either a prefix to a filename,
   or a suffix to the root of a filename.  The string substitution operator
-  uses the <tt>"chars"</tt> to match filenames, and then replaces the <tt>"chars"</tt> by the
-  <tt>"newchars"</tt> to generate the final output filename.  Either string may be null
+  uses the <span style="font-family: monospace;">"chars"</span> to match filenames, and then replaces the <span style="font-family: monospace;">"chars"</span> by the
+  <span style="font-family: monospace;">"newchars"</span> to generate the final output filename.  Either string may be null
   length to insert into or delete characters from a filename.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
@@ -76,15 +76,15 @@ files: Expand a file template into a list of files
   </p>
   <p>
   2. Generate an unsorted single column list of files in logical directory
-  <tt>"lib$"</tt>.  Each entry in the output list is of the form <tt>"lib$..."</tt>.
+  <span style="font-family: monospace;">"lib$"</span>.  Each entry in the output list is of the form <span style="font-family: monospace;">"lib$..."</span>.
   </p>
   <p>
   	cl&gt; files lib$ sort-
   </p>
   <p>
   3. Generate a file list to be used to make a set of new files.  The new file
-  names will be the old file names with <tt>"_1"</tt> concatenated to the root, e.g.,
-  <tt>"root.x"</tt> would map to <tt>"root_1.x"</tt> and so on.
+  names will be the old file names with <span style="font-family: monospace;">"_1"</span> concatenated to the root, e.g.,
+  <span style="font-family: monospace;">"root.x"</span> would map to <span style="font-family: monospace;">"root_1.x"</span> and so on.
   </p>
   <p>
   	cl&gt; files root.*//_1
@@ -98,7 +98,7 @@ files: Expand a file template into a list of files
   </p>
   <p>
   5. Use string substitution to change the filename extension of a set of files
-  to <tt>".y"</tt>.
+  to <span style="font-family: monospace;">".y"</span>.
   </p>
   <p>
   	cl&gt; files root.%*%y%

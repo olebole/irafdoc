@@ -43,17 +43,17 @@ darksub: Scale and subtract a dark count image
   </dd>
   </dl>
   <dl>
-  <dt><b>exposure = <tt>""</tt></b></dt>
+  <dt><b>exposure = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='exposure' Line='exposure = ""' -->
   <dd>Header parameter name from which to obtain the exposure times.
   </dd>
   </dl>
   <dl>
-  <dt><b>pixtype = <tt>"1"</tt></b></dt>
+  <dt><b>pixtype = <span style="font-family: monospace;">"1"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pixtype' Line='pixtype = "1"' -->
-  <dd>The pixel datatype of the dark subtracted images.  The default (<tt>"1"</tt>)
+  <dd>The pixel datatype of the dark subtracted images.  The default (<span style="font-family: monospace;">"1"</span>)
   is the pixel datatype of the original image.  The other choices are
-  <tt>"short"</tt>, <tt>"integer"</tt>, <tt>"long"</tt>, <tt>"real"</tt>, and <tt>"double"</tt>.
+  <span style="font-family: monospace;">"short"</span>, <span style="font-family: monospace;">"integer"</span>, <span style="font-family: monospace;">"long"</span>, <span style="font-family: monospace;">"real"</span>, and <span style="font-family: monospace;">"double"</span>.
   </dd>
   </dl>
   <dl>
@@ -72,7 +72,7 @@ darksub: Scale and subtract a dark count image
   name.  The output images may have the same names as the input images.
   A temporary image is used for the scaled dark count image and the original
   image is not modified.  The pixel datatype of the output images is
-  specified by the parameter <i>pixtype</i>.  The default (<tt>"1"</tt>) uses the
+  specified by the parameter <i>pixtype</i>.  The default (<span style="font-family: monospace;">"1"</span>) uses the
   datatype of the input image.  A log of the operations performed may be
   printed on the standard output when the verbose options is specified.
   </p>

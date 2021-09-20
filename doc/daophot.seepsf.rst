@@ -46,8 +46,8 @@ seepsf: Compute an image from the point spread function
   with dimensions of N by N where N = 2 * nint (psfrad / scale)  + 1 with the
   same scale as the original image from which <i>psfimage</i> was derived.
   <i>Psfrad</i> is the PSF fitting radius stored in the <i>psfimage</i> image
-  header parameter <tt>"PSFRAD"</tt>. <i>Scale</i> is the image scale stored in the image
-  header parameter <tt>"SCALE"</tt>.
+  header parameter <span style="font-family: monospace;">"PSFRAD"</span>. <i>Scale</i> is the image scale stored in the image
+  header parameter <span style="font-family: monospace;">"SCALE"</span>.
   </dd>
   </dl>
   <dl>
@@ -71,7 +71,7 @@ seepsf: Compute an image from the point spread function
   <!-- Sec='PARAMETERS' Level=0 Label='magnitude' Line='magnitude = INDEF' -->
   <dd>The intensity scale of the output PSF. By default the intensity scale is set by
   the magnitude of the first star used by the PSF task to compute <i>psfimage</i>.
-  This parameter is stored in the keyword <tt>"PSFMAG"</tt> in <i>psfimage</i>.
+  This parameter is stored in the keyword <span style="font-family: monospace;">"PSFMAG"</span> in <i>psfimage</i>.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -91,20 +91,20 @@ seepsf: Compute an image from the point spread function
   greater or less than N then the output PSF is block-averaged or subsampled with
   respect to the original image. <i>Psfrad</i> is the value of the psf radius
   parameter in the task DAOPARS used to compute <i>psfimage</i> and is stored in
-  the <i>psfimage</i> header parameter <tt>"PSFRAD"</tt>.
+  the <i>psfimage</i> header parameter <span style="font-family: monospace;">"PSFRAD"</span>.
   </p>
   <p>
   If <i>psfimage</i> was computed with the variable PSF parameter <i>varorder</i>
   set to &gt; 0, then <i>image</i> is computed at a point (xpsf, ypsf) defined
   relative to the original image.  By default <i>image</i> is computed at the
-  centroid of the PSF defined by the <i>psfimage</i> header parameters <tt>"XPSF"</tt>
-  and <tt>"YPSF"</tt>.
+  centroid of the PSF defined by the <i>psfimage</i> header parameters <span style="font-family: monospace;">"XPSF"</span>
+  and <span style="font-family: monospace;">"YPSF"</span>.
   </p>
   <p>
   The intensity scale of <i>image</i> is determined by the value of <i>magnitude</i>
   relative to the magnitude of the PSF. By default the output PSF has the
   magnitude of the first PSF star stored in the <i>psfimage</i> header parameter
-  <tt>"PSFMAG"</tt>.
+  <span style="font-family: monospace;">"PSFMAG"</span>.
   </p>
   <p>
   SEEPSF is most commonly used for visualizing the PSF in image scale coordinates

@@ -39,7 +39,7 @@ ttranspose: Transpose or flip a table.
   In addition, if the columns contain arrays rather than scalars,
   all the array lengths must be the same.
   The data type and array size will be preserved in the output table,
-  but the column names of the output table will be <tt>"c1"</tt>, <tt>"c2"</tt>, <tt>"c3"</tt>, etc,
+  but the column names of the output table will be <span style="font-family: monospace;">"c1"</span>, <span style="font-family: monospace;">"c2"</span>, <span style="font-family: monospace;">"c3"</span>, etc,
   with default print format and null units.
   Actually, some mixing of data types is permitted.
   If some columns are type real and others are double precision,
@@ -57,8 +57,8 @@ ttranspose: Transpose or flip a table.
   If the table is only flipped but not transposed,
   the above restrictions on data type do not apply,
   and the column names, units and print formats will be preserved.
-  Note that an operation such as <tt>"tht"</tt>
-  (which happens to be equivalent to <tt>"v"</tt>)
+  Note that an operation such as <span style="font-family: monospace;">"tht"</span>
+  (which happens to be equivalent to <span style="font-family: monospace;">"v"</span>)
   does not actually transpose the table,
   so the data types of the columns need not all be the same.
   </p>
@@ -86,24 +86,24 @@ ttranspose: Transpose or flip a table.
   <dd>The list of output table names.
   There must be the same number of input and output names.
   If the output is to be written to the standard output, however,
-  you can use outtable = <tt>"STDOUT"</tt> even if there several input tables.
+  you can use outtable = <span style="font-family: monospace;">"STDOUT"</span> even if there several input tables.
   </dd>
   </dl>
   <dl>
-  <dt><b>action = <tt>"t"</tt> [string]</b></dt>
+  <dt><b>action = <span style="font-family: monospace;">"t"</span> [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='action' Line='action = "t" [string]' -->
-  <dd>This is a string made up of the letters <tt>"t"</tt>, <tt>"h"</tt>, and <tt>"v"</tt>
+  <dd>This is a string made up of the letters <span style="font-family: monospace;">"t"</span>, <span style="font-family: monospace;">"h"</span>, and <span style="font-family: monospace;">"v"</span>
   which specify the operations to perform on the tables.
-  <tt>"t"</tt> means transpose (input rows become output columns),
-  <tt>"h"</tt> means flip horizontally (reverse the order of the columns),
-  and <tt>"v"</tt> means flip vertically (reverse the order of the rows).
+  <span style="font-family: monospace;">"t"</span> means transpose (input rows become output columns),
+  <span style="font-family: monospace;">"h"</span> means flip horizontally (reverse the order of the columns),
+  and <span style="font-family: monospace;">"v"</span> means flip vertically (reverse the order of the rows).
   The operations are performed in the order given from left to right.
-  Any combination of <tt>"t"</tt>, <tt>"h"</tt>, and <tt>"v"</tt> may be used,
+  Any combination of <span style="font-family: monospace;">"t"</span>, <span style="font-family: monospace;">"h"</span>, and <span style="font-family: monospace;">"v"</span> may be used,
   in any order, and the letters may be repeated.
-  Operations such as <tt>"tt"</tt>, <tt>"hh"</tt> or <tt>"vv"</tt> are valid,
+  Operations such as <span style="font-family: monospace;">"tt"</span>, <span style="font-family: monospace;">"hh"</span> or <span style="font-family: monospace;">"vv"</span> are valid,
   and they result in a simple copy of input to output.
-  The symbols <tt>"/"</tt>, <tt>"-"</tt> and <tt>"|"</tt> are equivalent to
-  the letters <tt>"t"</tt>, <tt>"h"</tt> and <tt>"v"</tt> respectively.
+  The symbols <span style="font-family: monospace;">"/"</span>, <span style="font-family: monospace;">"-"</span> and <span style="font-family: monospace;">"|"</span> are equivalent to
+  the letters <span style="font-family: monospace;">"t"</span>, <span style="font-family: monospace;">"h"</span> and <span style="font-family: monospace;">"v"</span> respectively.
   </dd>
   </dl>
   <dl>
@@ -116,9 +116,9 @@ ttranspose: Transpose or flip a table.
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1.  The input is the text file <tt>"in"</tt>,
+  1.  The input is the text file <span style="font-family: monospace;">"in"</span>,
   and the output is to be displayed on the screen.
-  Each of the three operations (<tt>"t"</tt>, <tt>"h"</tt>, <tt>"v"</tt>)
+  Each of the three operations (<span style="font-family: monospace;">"t"</span>, <span style="font-family: monospace;">"h"</span>, <span style="font-family: monospace;">"v"</span>)
   and some combinations are illustrated.
   </p>
   <pre>
@@ -174,7 +174,7 @@ ttranspose: Transpose or flip a table.
   <h3>See also</h3>
   <!-- BeginSection: 'SEE ALSO' -->
   <p>
-  Type <tt>"help ttools opt=sys"</tt> for a description of the 'tables' package.
+  Type <span style="font-family: monospace;">"help ttools opt=sys"</span> for a description of the 'tables' package.
   </p>
   
   <!-- EndSection:    'SEE ALSO' -->

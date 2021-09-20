@@ -33,22 +33,22 @@ fitprofs: Fit gaussian profiles
   </dd>
   </dl>
   <dl>
-  <dt><b>lines = <tt>""</tt></b></dt>
+  <dt><b>lines = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lines' Line='lines = ""' -->
   <dd>List of lines, columns, or apertures to be selected from the input image
-  format.  The default empty list, <tt>""</tt>, selects all vectors in the images.
+  format.  The default empty list, <span style="font-family: monospace;">""</span>, selects all vectors in the images.
   The syntax is a list of comma separated numbers or ranges, where a range
   is a pair of hyphen separated numbers.
   </dd>
   </dl>
   <dl>
-  <dt><b>bands = <tt>""</tt></b></dt>
+  <dt><b>bands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='bands' Line='bands = ""' -->
-  <dd>List of bands for 3D images.  The empty list, <tt>""</tt>, selects all bands.
+  <dd>List of bands for 3D images.  The empty list, <span style="font-family: monospace;">""</span>, selects all bands.
   </dd>
   </dl>
   <dl>
-  <dt><b>dispaxis = <tt>")_.dispaxis"</tt>, nsum = <tt>")_.nsum"</tt></b></dt>
+  <dt><b>dispaxis = <span style="font-family: monospace;">")_.dispaxis"</span>, nsum = <span style="font-family: monospace;">")_.nsum"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dispaxis' Line='dispaxis = ")_.dispaxis", nsum = ")_.nsum"' -->
   <dd>Parameters for defining vectors in 2D and 3D images.  The
   dispersion axis is 1 for line vectors, 2 for column vectors, and 3 for band
@@ -61,7 +61,7 @@ fitprofs: Fit gaussian profiles
   The following are the fitting parameters.
   </p>
   <dl>
-  <dt><b>region = <tt>""</tt></b></dt>
+  <dt><b>region = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='region' Line='region = ""' -->
   <dd>Region of the input vectors to be fit specified as a pair of space
   separated numbers.  The coordinates are defined in terms of the linear
@@ -71,7 +71,7 @@ fitprofs: Fit gaussian profiles
   </dd>
   </dl>
   <dl>
-  <dt><b>positions = <tt>""</tt></b></dt>
+  <dt><b>positions = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='positions' Line='positions = ""' -->
   <dd>File of initial or fixed profile positions and (optional) peaks, profile
   types, and widths.  The
@@ -87,14 +87,14 @@ fitprofs: Fit gaussian profiles
   </dd>
   </dl>
   <dl>
-  <dt><b>background = <tt>""</tt></b></dt>
+  <dt><b>background = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='background' Line='background = ""' -->
   <dd>Background values defining the linear background.  If not specified the
   single pixel values nearest the fitting region endpoints are used.
   Otherwise two whitespace separated values are expected.  If a value is
   a number then that is the background at the lower or upper end of the
   fitting region (ordered in pixel space not wavelength).  The special
-  values <tt>"avg(w1,w2,z)"</tt> or <tt>"med(w1,w2,z)"</tt> (note that there can be no
+  values <span style="font-family: monospace;">"avg(w1,w2,z)"</span> or <span style="font-family: monospace;">"med(w1,w2,z)"</span> (note that there can be no
   whitespace) may be specified, where w1 and w2 are dispersion values, and z
   is a multiplier.  This will take the average or median of pixels within the
   specified range and multiply the result by the third argument.  The
@@ -103,10 +103,10 @@ fitprofs: Fit gaussian profiles
   </dd>
   </dl>
   <dl>
-  <dt><b>profile = <tt>"gaussian"</tt> (gaussian|lorentzian|voigt)</b></dt>
+  <dt><b>profile = <span style="font-family: monospace;">"gaussian"</span> (gaussian|lorentzian|voigt)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='profile' Line='profile = "gaussian" (gaussian|lorentzian|voigt)' -->
   <dd>Default profile type to be fit when a profile type is not specified in
-  the positions file.  The type are <tt>"gaussian"</tt>, <tt>"lorentzian"</tt>, or <tt>"voigt"</tt>.
+  the positions file.  The type are <span style="font-family: monospace;">"gaussian"</span>, <span style="font-family: monospace;">"lorentzian"</span>, or <span style="font-family: monospace;">"voigt"</span>.
   </dd>
   </dl>
   <dl>
@@ -120,26 +120,26 @@ fitprofs: Fit gaussian profiles
   <dl>
   <dt><b>fitbackground = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fitbackground' Line='fitbackground = yes' -->
-  <dd>Fit the background?  If <tt>"yes"</tt> a linear background across the fitting region
-  will be fit simultaneously with the profiles.  If <tt>"no"</tt> the background will
+  <dd>Fit the background?  If <span style="font-family: monospace;">"yes"</span> a linear background across the fitting region
+  will be fit simultaneously with the profiles.  If <span style="font-family: monospace;">"no"</span> the background will
   be fixed.
   </dd>
   </dl>
   <dl>
-  <dt><b>fitpositions = <tt>"all"</tt></b></dt>
+  <dt><b>fitpositions = <span style="font-family: monospace;">"all"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fitpositions' Line='fitpositions = "all"' -->
-  <dd>Position fitting option.  This may be <tt>"fixed"</tt> to fix all positions at their
-  initial values, <tt>"single"</tt> to fit a single shift to the positions while
-  keeping their separations fixed, or <tt>"all"</tt> to independently fit all the
+  <dd>Position fitting option.  This may be <span style="font-family: monospace;">"fixed"</span> to fix all positions at their
+  initial values, <span style="font-family: monospace;">"single"</span> to fit a single shift to the positions while
+  keeping their separations fixed, or <span style="font-family: monospace;">"all"</span> to independently fit all the
   positions.
   </dd>
   </dl>
   <dl>
-  <dt><b>fitgfwhm = <tt>"all"</tt>, fitlfwhm = <tt>"all"</tt></b></dt>
+  <dt><b>fitgfwhm = <span style="font-family: monospace;">"all"</span>, fitlfwhm = <span style="font-family: monospace;">"all"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fitgfwhm' Line='fitgfwhm = "all", fitlfwhm = "all"' -->
-  <dd>Profile width fitting options.  These may be <tt>"fixed"</tt> to fix all widths
-  at their initial values, <tt>"single"</tt> to fit a single scale factor to the initial
-  widths, or <tt>"all"</tt> to independently fit all the widths.
+  <dd>Profile width fitting options.  These may be <span style="font-family: monospace;">"fixed"</span> to fix all widths
+  at their initial values, <span style="font-family: monospace;">"single"</span> to fit a single scale factor to the initial
+  widths, or <span style="font-family: monospace;">"all"</span> to independently fit all the widths.
   </dd>
   </dl>
   <p>
@@ -163,7 +163,7 @@ fitprofs: Fit gaussian profiles
   <pre>
       sigma**2 = sigma0**2 + invgain * I
   </pre>
-  where I is the pixel value and <tt>"**2"</tt> means the square of the quantity.  If
+  where I is the pixel value and <span style="font-family: monospace;">"**2"</span> means the square of the quantity.  If
   either parameter is specified as INDEF or with a value less than zero then
   no sigma estimates are made and so no error estimates for the measured
   parameters is made.
@@ -173,14 +173,14 @@ fitprofs: Fit gaussian profiles
   The following parameters determine the output of the task.
   </p>
   <dl>
-  <dt><b>components = <tt>""</tt></b></dt>
+  <dt><b>components = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='components' Line='components = ""' -->
   <dd>All profiles defined by the position file are simultaneously fit but only
   a subset of the fitted profiles may be selected for output.  A profile
   or component is identified by the order number in the position file;
   i.e. the first entry in the position file is 1, the second is 2, etc.
   The components to be output are specified by a range list.  The empty
-  list, <tt>""</tt>, selects all profiles.
+  list, <span style="font-family: monospace;">""</span>, selects all profiles.
   </dd>
   </dl>
   <dl>
@@ -194,14 +194,14 @@ fitprofs: Fit gaussian profiles
   </dd>
   </dl>
   <dl>
-  <dt><b>logfile = <tt>"logfile"</tt></b></dt>
+  <dt><b>logfile = <span style="font-family: monospace;">"logfile"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "logfile"' -->
   <dd>Logfile for fitting results.  If not specified the results will not be
   logged.
   </dd>
   </dl>
   <dl>
-  <dt><b>plotfile = <tt>"plotfile"</tt></b></dt>
+  <dt><b>plotfile = <span style="font-family: monospace;">"plotfile"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='plotfile' Line='plotfile = "plotfile"' -->
   <dd>File to contain plot output.  The plots show the image vector with
   overplots of the total fit, the individual components, and the residuals.
@@ -210,18 +210,18 @@ fitprofs: Fit gaussian profiles
   </dd>
   </dl>
   <dl>
-  <dt><b>output = <tt>""</tt></b></dt>
+  <dt><b>output = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
   <dd>List of output images.  If not specified then no output images are created.
   If images are specified the list is matched with the input list.
   </dd>
   </dl>
   <dl>
-  <dt><b>option = <tt>"fit"</tt> (fit|difference)</b></dt>
+  <dt><b>option = <span style="font-family: monospace;">"fit"</span> (fit|difference)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='option' Line='option = "fit" (fit|difference)' -->
-  <dd>Image output option.  The choices are <tt>"fit"</tt> to output the fitted image
+  <dd>Image output option.  The choices are <span style="font-family: monospace;">"fit"</span> to output the fitted image
   vector which is the sum of the fitted profiles (without a background),
-  or <tt>"difference"</tt> to output the data with the profiles subtracted.
+  or <span style="font-family: monospace;">"difference"</span> to output the data with the profiles subtracted.
   </dd>
   </dl>
   <dl>
@@ -230,7 +230,7 @@ fitprofs: Fit gaussian profiles
   <dd>Clobber or modify any existing output images?  If clobbering is not
   enabled a warning is printed and any existing output images are not
   modified.  If clobbering is enabled then either new images are created
-  if merge is <tt>"no"</tt> or the new fits are merged with the existing images.
+  if merge is <span style="font-family: monospace;">"no"</span> or the new fits are merged with the existing images.
   Merging is meaningful when only a subset of the input is fit such
   as selected lines or apertures.
   </dd>
@@ -270,7 +270,7 @@ fitprofs: Fit gaussian profiles
   background.  Or values at the endpoints of the fitting region may be given
   explicitly in pixel space order (i.e. the first value is for the edge of
   the fitting region which has smaller pixel coordinate0 Values can also be
-  computed from the data using the functions <tt>"avg(w1,w2)"</tt> or <tt>"med(w1,w2)"</tt>
+  computed from the data using the functions <span style="font-family: monospace;">"avg(w1,w2)"</span> or <span style="font-family: monospace;">"med(w1,w2)"</span>
   where w1 and w2 are dispersion coordinates.  The pixels in the specified
   range are average or medianed and the dispersion point for the linear
   background is the average of the dispersion coordinates of the pixels.
@@ -354,7 +354,7 @@ fitprofs: Fit gaussian profiles
   Error estimates may be computed for the fitted parameters.
   This requires a model for the pixel sigmas.  Currently this
   model is based on a Poisson statistics model of the data.  The model
-  parameters are a constant Gaussian sigma and an <tt>"inverse gain"</tt> as specified
+  parameters are a constant Gaussian sigma and an <span style="font-family: monospace;">"inverse gain"</span> as specified
   by the parameters <i>sigma0</i> and <i>invgain</i>.  These parameters are
   used to compute the pixel value sigma from the following formula:
   </p>
@@ -362,7 +362,7 @@ fitprofs: Fit gaussian profiles
       sigma**2 = sigma0**2 + invgain * I
   </pre>
   <p>
-  where I is the pixel value and <tt>"**2"</tt> means the square of the quantity.
+  where I is the pixel value and <span style="font-family: monospace;">"**2"</span> means the square of the quantity.
   </p>
   <p>
   If either the constant sigma or the inverse gain are specified as INDEF or

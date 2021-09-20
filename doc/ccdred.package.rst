@@ -23,16 +23,16 @@ package: CCD image reduction package
   <h3>Parameters</h3>
   <!-- BeginSection: 'PARAMETERS' -->
   <dl>
-  <dt><b>pixeltype = <tt>"real real"</tt></b></dt>
+  <dt><b>pixeltype = <span style="font-family: monospace;">"real real"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pixeltype' Line='pixeltype = "real real"' -->
   <dd>Output pixel datatype and calculation datatype.  When images are processed
   or created the output pixel datatype is determined by this parameter if the
   specified datatype is of equal or higher precision otherwise the input
   image datatype is preserved.  For example if the output datatype is
-  specified as <tt>"input"</tt> then input images which are <tt>"short"</tt> or <tt>"ushort"</tt> will
+  specified as <span style="font-family: monospace;">"input"</span> then input images which are <span style="font-family: monospace;">"short"</span> or <span style="font-family: monospace;">"ushort"</span> will
   be output as integer but any real datatype input images will remain real.
-  The allowed types and order of precision are <tt>"short"</tt>, <tt>"ushort"</tt>, <tt>"int"</tt>,
-  <tt>"long"</tt>, <tt>"real"</tt>, or <tt>"double"</tt>, for short signed integer, short unsigned
+  The allowed types and order of precision are <span style="font-family: monospace;">"short"</span>, <span style="font-family: monospace;">"ushort"</span>, <span style="font-family: monospace;">"int"</span>,
+  <span style="font-family: monospace;">"long"</span>, <span style="font-family: monospace;">"real"</span>, or <span style="font-family: monospace;">"double"</span>, for short signed integer, short unsigned
   integer, integer, long integers, and real or double floating point.  Note
   that if short input images are processed into real images the disk space
   required will generally increase.  The calculation datatypes may only be
@@ -46,20 +46,20 @@ package: CCD image reduction package
   </dd>
   </dl>
   <dl>
-  <dt><b>logfile = <tt>"logfile"</tt></b></dt>
+  <dt><b>logfile = <span style="font-family: monospace;">"logfile"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "logfile"' -->
   <dd>Text log file.  If no filename is specified then no log file is kept.
   </dd>
   </dl>
   <dl>
-  <dt><b>plotfile = <tt>""</tt></b></dt>
+  <dt><b>plotfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='plotfile' Line='plotfile = ""' -->
   <dd>Log metacode plot file for the overscan bias vector fits.  If no filename
   is specified then no metacode plot file is kept.
   </dd>
   </dl>
   <dl>
-  <dt><b>backup = <tt>""</tt></b></dt>
+  <dt><b>backup = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='backup' Line='backup = ""' -->
   <dd>Backup prefix for backup images.  If no prefix is specified then no backup
   images are kept when processing.  If specified then the backup image
@@ -67,33 +67,33 @@ package: CCD image reduction package
   </dd>
   </dl>
   <dl>
-  <dt><b>instrument = <tt>""</tt></b></dt>
+  <dt><b>instrument = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='instrument' Line='instrument = ""' -->
   <dd>CCD instrument translation file.  This is usually set with
   <b>setinstrument</b>.
   </dd>
   </dl>
   <dl>
-  <dt><b>ssfile = <tt>"subsets"</tt></b></dt>
+  <dt><b>ssfile = <span style="font-family: monospace;">"subsets"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ssfile' Line='ssfile = "subsets"' -->
   <dd>Subset translation file used to define the subset identifier.  See
   <b>subsets</b> for more.
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>Interactive graphics output device when fitting the overscan bias vector.
   </dd>
   </dl>
   <dl>
-  <dt><b>cursor = <tt>""</tt></b></dt>
+  <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Graphics cursor input.  The default is the standard graphics cursor.
   </dd>
   </dl>
   <dl>
-  <dt><b>version = <tt>"June 1987"</tt></b></dt>
+  <dt><b>version = <span style="font-family: monospace;">"June 1987"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='version' Line='version = "June 1987"' -->
   <dd>Package version.
   </dd>
@@ -146,9 +146,9 @@ package: CCD image reduction package
   Because processing replaces the input image by the processed image it
   may be desired to save the original image.  This may be done by
   specifying a backup prefix with the parameter <i>backup</i>.  For
-  example, if the prefix is <tt>"orig"</tt> and the image is <tt>"ccd001"</tt>, the backup
-  image will be <tt>"origccd001"</tt>.  The prefix may be a directory but it must
-  end with <tt>'/'</tt> or <tt>'$'</tt> (for logical directories).
+  example, if the prefix is <span style="font-family: monospace;">"orig"</span> and the image is <span style="font-family: monospace;">"ccd001"</span>, the backup
+  image will be <span style="font-family: monospace;">"origccd001"</span>.  The prefix may be a directory but it must
+  end with <span style="font-family: monospace;">'/'</span> or <span style="font-family: monospace;">'$'</span> (for logical directories).
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>See also</h3>

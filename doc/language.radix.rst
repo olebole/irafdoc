@@ -66,7 +66,7 @@ radix: Encode a number in the specified radix
   3. Print the number in variable I in decimal, octal, and hex.
   </p>
   <p>
-  	cl&gt; print (i, radix(i,8), <tt>" "</tt>, radix(i,16))
+  	cl&gt; print (i, radix(i,8), <span style="font-family: monospace;">" "</span>, radix(i,16))
   </p>
   <!-- EndSection:   'EXAMPLES' -->
   <h3>Bugs</h3>

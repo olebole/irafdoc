@@ -39,7 +39,7 @@ access: Test if a file exists
   <h3>Description</h3>
   <!-- BeginSection: 'DESCRIPTION' -->
   <p>
-  <i>Access</i> is a boolean intrinsic function returning true (<tt>"yes"</tt>) if the
+  <i>Access</i> is a boolean intrinsic function returning true (<span style="font-family: monospace;">"yes"</span>) if the
   named file exists.  <i>Access</i> can only be called as a function in an
   expression, not as a task.
   </p>

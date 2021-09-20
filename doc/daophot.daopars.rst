@@ -23,7 +23,7 @@ daopars: Edit the daophot algorithms parameter set
   <h3>Parameters</h3>
   <!-- BeginSection: 'PARAMETERS' -->
   <dl>
-  <dt><b>function = <tt>"gauss"</tt></b></dt>
+  <dt><b>function = <span style="font-family: monospace;">"gauss"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "gauss"' -->
   <dd>The functional form of the analytic component of the PSF model computed by the
   DAOPHOT PSF task. The better this function matches the true PSF, especially in
@@ -86,9 +86,9 @@ daopars: Edit the daophot algorithms parameter set
   standard deviation for the model fit.
   </dd>
   </dl>
-  In general <tt>"gauss"</tt> is the best and most efficient choice for a well-sampled
-  ground-based image, <tt>"lorentz"</tt> is best for old ST images, and <tt>"moffat15"</tt> or
-  <tt>"moffat25"</tt> are best for under-sampled ground-based images. 
+  In general <span style="font-family: monospace;">"gauss"</span> is the best and most efficient choice for a well-sampled
+  ground-based image, <span style="font-family: monospace;">"lorentz"</span> is best for old ST images, and <span style="font-family: monospace;">"moffat15"</span> or
+  <span style="font-family: monospace;">"moffat25"</span> are best for under-sampled ground-based images. 
   </dd>
   </dl>
   <dl>
@@ -98,21 +98,21 @@ daopars: Edit the daophot algorithms parameter set
   Varorder sets the number of look-up tables containing the deviations of the
   true PSF from the analytic model PSF that are computed by the model.
   <dl>
-  <dt><b><tt>"-1"</tt>    </b></dt>
+  <dt><b><span style="font-family: monospace;">"-1"</span>    </b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"-1"    ' -->
   <dd>Only the analytic function specified by <i>function</i> is used to compute
   the PSF model. The PSF model is constant over the image.
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"0"</tt>   </b></dt>
+  <dt><b><span style="font-family: monospace;">"0"</span>   </b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"0"   ' -->
   <dd>The analytic function and one look-up table are used to compute the
   PSF model. The  PSF model is constant over the image.
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"1"</tt>    </b></dt>
+  <dt><b><span style="font-family: monospace;">"1"</span>    </b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"1"    ' -->
   <dd>The analytic function and three look-up tables are used to compute the PSF
   model. The PSF model is linearly variable over the image, with terms
@@ -120,7 +120,7 @@ daopars: Edit the daophot algorithms parameter set
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"2"</tt>    </b></dt>
+  <dt><b><span style="font-family: monospace;">"2"</span>    </b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"2"    ' -->
   <dd>The analytic function and six look-up tables are used to compute the
   PSF model. The PSF model is quadratically variable over the image, with terms
@@ -143,7 +143,7 @@ daopars: Edit the daophot algorithms parameter set
   <!-- Sec='PARAMETERS' Level=0 Label='saturated' Line='saturated = no' -->
   <dd>Use saturated stars to improve the signal-to-noise in the wings of the PSF
   model computed by the PSF task? This parameter should only be set to
-  <tt>"yes"</tt> where there are too few high signal-to-noise unsaturated stars
+  <span style="font-family: monospace;">"yes"</span> where there are too few high signal-to-noise unsaturated stars
   in the image to compute a reasonable model for the stellar profile wings.
   </dd>
   </dl>
@@ -190,8 +190,8 @@ daopars: Edit the daophot algorithms parameter set
   <dt><b>fitsky = no (peak, nstar, and allstar)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fitsky' Line='fitsky = no (peak, nstar, and allstar)' -->
   <dd>Compute new sky values for the stars in the input list (peak, nstar, allstar).
-  If fitsky = <tt>"no"</tt>, the PEAK, NSTAR, and ALLSTAR tasks compute a group sky value
-  by averaging the sky values of the stars in the group.  If fitsky = <tt>"yes"</tt>,
+  If fitsky = <span style="font-family: monospace;">"no"</span>, the PEAK, NSTAR, and ALLSTAR tasks compute a group sky value
+  by averaging the sky values of the stars in the group.  If fitsky = <span style="font-family: monospace;">"yes"</span>,
   PEAK and NSTAR fit the group sky simultaneously with the positions and
   magnitudes. If fitsky = yes the ALLSTAR task computes new sky values for each
   star every third iteration by subtracting off the best current fit for the star
@@ -203,9 +203,9 @@ daopars: Edit the daophot algorithms parameter set
   <dl>
   <dt><b>groupsky = yes (nstar and allstar)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='groupsky' Line='groupsky = yes (nstar and allstar)' -->
-  <dd>If groupsky is <tt>"yes"</tt>,  then the sky value for every pixel which contributes to
+  <dd>If groupsky is <span style="font-family: monospace;">"yes"</span>,  then the sky value for every pixel which contributes to
   the fit is identical and equal to the mean of the sky values of all the stars
-  in the group.  If <i>groupsky</i> is <tt>"no"</tt>,  then the sky value for every pixel
+  in the group.  If <i>groupsky</i> is <span style="font-family: monospace;">"no"</span>,  then the sky value for every pixel
   which contributes to the fit is equal to the mean of the sky values of all the
   stars in the group for which that pixel is within one fitting radius.
   </dd>

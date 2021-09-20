@@ -37,7 +37,7 @@ import: Convert some other format to an IRAF image
   </dd>
   </dl>
   <dl>
-  <dt><b>format = <tt>"sense"</tt></b></dt>
+  <dt><b>format = <span style="font-family: monospace;">"sense"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='format' Line='format = "sense"' -->
   <dd>The type of format to be processed. In default mode, i.e. <i>sense</i>,
   the format database is searched for a format identifier that evaluates 
@@ -52,14 +52,14 @@ import: Convert some other format to an IRAF image
   
   </p>
   <dl>
-  <dt><b>dims = <tt>""</tt></b></dt>
+  <dt><b>dims = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dims' Line='dims = ""' -->
   <dd>The input file dimension string.  This is a space or comma delimited string
-  containing the length of the file in each dimension, e.g. <tt>"512,512,3"</tt>.
+  containing the length of the file in each dimension, e.g. <span style="font-family: monospace;">"512,512,3"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>pixtype = <tt>""</tt></b></dt>
+  <dt><b>pixtype = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pixtype' Line='pixtype = ""' -->
   <dd>Input pixel type. This is a comma delimited string giving the type and size
   of each pixel, and an optional tag name to be used in the <i>outbands</i>
@@ -78,8 +78,8 @@ import: Convert some other format to an IRAF image
   
       nbytes = 1, 2, 4, or 8
   
-      tag is something like <tt>'r'</tt>,<tt>'g'</tt>,<tt>'b'</tt> (color triplets), <tt>'r'</tt>,
-  	<tt>'i'</tt> (complex data), etc.  If no tags are given one will 
+      tag is something like <span style="font-family: monospace;">'r'</span>,<span style="font-family: monospace;">'g'</span>,<span style="font-family: monospace;">'b'</span> (color triplets), <span style="font-family: monospace;">'r'</span>,
+  	<span style="font-family: monospace;">'i'</span> (complex data), etc.  If no tags are given one will 
   	automatically be assigned of the form 'b1', 'b2', etc.
   
   </pre>
@@ -94,19 +94,19 @@ import: Convert some other format to an IRAF image
   the input pixel are pixel-interleaved (i.e. each pixel in a band is stored
   together, as with RGB triplets) and this parameter is ignored. If 
   the <i>pixtype</i> is an atomic value and <i>interleave</i> is a positive 
-  number the image is line interleaved (e.g. a line of <tt>'R'</tt>, followed by a 
-  line of <tt>'G'</tt>, and so on).  If the <i>pixtype</i> is atomic and <i>interleave</i> 
+  number the image is line interleaved (e.g. a line of <span style="font-family: monospace;">'R'</span>, followed by a 
+  line of <span style="font-family: monospace;">'G'</span>, and so on).  If the <i>pixtype</i> is atomic and <i>interleave</i> 
   is zero, the no data interleaving is assumed and each band in the file 
   is stored sequentially.
   </dd>
   </dl>
   <dl>
-  <dt><b>bswap = <tt>"no"</tt></b></dt>
+  <dt><b>bswap = <span style="font-family: monospace;">"no"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='bswap' Line='bswap = "no"' -->
   <dd>Type of byte-swapping to perform.  By default no byte swapping is done, 
-  if <i>bswap</i> is <tt>"yes"</tt> then all input values are byte swapped, if <i>bswap</i>
-  is <tt>"i2"</tt> then only short integers are byte swapped, if <i>bswap</i> is <tt>"i4"</tt> then
-  only long integers are swapped.  A combination of <tt>"i2,i4"</tt> can be used to
+  if <i>bswap</i> is <span style="font-family: monospace;">"yes"</span> then all input values are byte swapped, if <i>bswap</i>
+  is <span style="font-family: monospace;">"i2"</span> then only short integers are byte swapped, if <i>bswap</i> is <span style="font-family: monospace;">"i4"</span> then
+  only long integers are swapped.  A combination of <span style="font-family: monospace;">"i2,i4"</span> can be used to
   swap only integer values, floating point numbers will not be swapped.
   </dd>
   </dl>
@@ -144,29 +144,29 @@ import: Convert some other format to an IRAF image
   
   </p>
   <dl>
-  <dt><b>output = <tt>"image"</tt></b></dt>
+  <dt><b>output = <span style="font-family: monospace;">"image"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = "image"' -->
-  <dd>Type of output to generate.  Possible values include <tt>"none"</tt> process the files
+  <dd>Type of output to generate.  Possible values include <span style="font-family: monospace;">"none"</span> process the files
   but not generate an output image (e.g. to check the parameter values for
-  correctness), <tt>"image"</tt> to generate an output image, <tt>"list"</tt> to generate a 
+  correctness), <span style="font-family: monospace;">"image"</span> to generate an output image, <span style="font-family: monospace;">"list"</span> to generate a 
   pixel listing of the file as would be produced by the <i>LISTPIX</i> task
   on the image if were converted (no image is created with this option), 
-  or <tt>"info"</tt> to print information about the file.  The <i>images</i> parameter
+  or <span style="font-family: monospace;">"info"</span> to print information about the file.  The <i>images</i> parameter
   is only used for <i>output</i>=image.
   </dd>
   </dl>
   <dl>
-  <dt><b>outtype = <tt>""</tt></b></dt>
+  <dt><b>outtype = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtype' Line='outtype = ""' -->
-  <dd>The data type of the output image.  May be one of <tt>'s'</tt> for a short image, <tt>'i'</tt>
-  for an integer image, <tt>'l'</tt> for a long image, <tt>'r'</tt> for a real image, and <tt>'d'</tt>
+  <dd>The data type of the output image.  May be one of <span style="font-family: monospace;">'s'</span> for a short image, <span style="font-family: monospace;">'i'</span>
+  for an integer image, <span style="font-family: monospace;">'l'</span> for a long image, <span style="font-family: monospace;">'r'</span> for a real image, and <span style="font-family: monospace;">'d'</span>
   for a double precision image.  If no <i>outtype</i> is specified then the
   datatype of the <i>outbands</i> expression is used.  This parameter is only 
-  used when <i>output</i> is set to <tt>"image"</tt>.
+  used when <i>output</i> is set to <span style="font-family: monospace;">"image"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>outbands = <tt>""</tt></b></dt>
+  <dt><b>outbands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outbands' Line='outbands = ""' -->
   <dd>Output image band expressions.  If no expressions are given then all of the
   input pixels will be converted.  The number of output bands may be more or
@@ -175,7 +175,7 @@ import: Convert some other format to an IRAF image
   </dd>
   </dl>
   <dl>
-  <dt><b>imheader = <tt>""</tt></b></dt>
+  <dt><b>imheader = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='imheader' Line='imheader = ""' -->
   <dd>Image or header keyword data file.  If an image is given then the image header
   is copied.  If a file is given then the FITS format cards are copied.
@@ -188,7 +188,7 @@ import: Convert some other format to an IRAF image
   </dd>
   </dl>
   <dl>
-  <dt><b>database = <tt>"imcnv$lib/images.dat"</tt></b></dt>
+  <dt><b>database = <span style="font-family: monospace;">"imcnv$lib/images.dat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database = "imcnv$lib/images.dat"' -->
   <dd>The format database. This may also be a list of files to be searched (e.g.
   so that user-defined databases may be included), which will be treated as 
@@ -219,7 +219,7 @@ import: Convert some other format to an IRAF image
   in a database of known formats (<i>format</i> set to the name of the entry).
   If the format of the image is not known a priori, the database can be
   searched and each record will be evaluated for an expression which
-  identifies the format (<i>format</i> set to <tt>"sense"</tt>).  The task will 
+  identifies the format (<i>format</i> set to <span style="font-family: monospace;">"sense"</span>).  The task will 
   output either an IRAF image, a list of pixel values
   in a manner similar to the <i>LISTPIX</i> task, or information about the
   file format if it is supported in the database. 
@@ -263,10 +263,10 @@ import: Convert some other format to an IRAF image
   <!-- BeginSection: 'Output Parameters' -->
   <p>
   	Once a format has been found, the task may output an IRAF image
-  by setting <i>output</i> to <tt>"image"</tt>, a list of the pixels in the file
-  can be written to STDOUT by setting <i>output</i> to <tt>"list"</tt>, or information
-  about the input file can be printed by setting <i>output</i> to <tt>"info"</tt>.
-  If <i>output</i> is set to <tt>"none"</tt> then no output will be generated, this 
+  by setting <i>output</i> to <span style="font-family: monospace;">"image"</span>, a list of the pixels in the file
+  can be written to STDOUT by setting <i>output</i> to <span style="font-family: monospace;">"list"</span>, or information
+  about the input file can be printed by setting <i>output</i> to <span style="font-family: monospace;">"info"</span>.
+  If <i>output</i> is set to <span style="font-family: monospace;">"none"</span> then no output will be generated, this 
   can be used to check for read errors on the input file to verify task
   parameters.  The datatype of the output image can be set by specifying 
   the <i>outtype</i> parameter.  
@@ -399,7 +399,7 @@ import: Convert some other format to an IRAF image
   <p>
   A database record begins with the format name at the beginning of a line.
   Whitespace at the beginning of a line is considered the continuation of a
-  previous line.  Comments may be inserted in the database using the normal <tt>'#'</tt>
+  previous line.  Comments may be inserted in the database using the normal <span style="font-family: monospace;">'#'</span>
   character, the remainder of the line is considered a comment.  Blank lines
   and comments are ignored, a record ends at the next line with a format name
   at the beginning of the line.  The task <i>database</i> parameter 
@@ -430,9 +430,9 @@ import: Convert some other format to an IRAF image
   </pre>
   <p>
   The 'image_id' string is an expression to be evaluated which, if true,
-  uniquely identifies the file format (such as a comparison to a <tt>"magic number"</tt>).
+  uniquely identifies the file format (such as a comparison to a <span style="font-family: monospace;">"magic number"</span>).
   The 'id_string' is a verbose name of the format.  
-  The 'error' keywords use the <tt>"? :"</tt> conditional syntax to
+  The 'error' keywords use the <span style="font-family: monospace;">"? :"</span> conditional syntax to
   define a boolean expression which, when true, returns an error message and is 
   used to indicate a condition in a format which isn't supported.  The remaining
   keywords have the same meaning as the task parameters.  Keywords not present 
@@ -684,8 +684,8 @@ import: Convert some other format to an IRAF image
   <p>
   	The 'bswap' database entry is similar to the task parameter,  it may
   be used to set byte swapping for the whole file, or for only certain data
-  types.  The value is a string parameter that may be <tt>"yes"</tt> to byteswap the
-  whole file, <tt>"no"</tt> to not swap anything, or a comma delimited string of types
+  types.  The value is a string parameter that may be <span style="font-family: monospace;">"yes"</span> to byteswap the
+  whole file, <span style="font-family: monospace;">"no"</span> to not swap anything, or a comma delimited string of types
   described below to enable swapping for only those values.
   </p>
   <pre>

@@ -79,10 +79,10 @@ bitcount: Accumulate the bit statistics for a list of images
   the bit being currently counted participate in that count.  The
   severity and precise nature of this problem depends on the exposure
   level of a particular test image.  <i>Leftzeroes</i> may be set to
-  <tt>"no"</tt> if there is some reason to restore this behavior.
+  <span style="font-family: monospace;">"no"</span> if there is some reason to restore this behavior.
   </p>
   <p>
-  The <i>verbose</i> parameter may be set to <tt>"no"</tt> in order to pass
+  The <i>verbose</i> parameter may be set to <span style="font-family: monospace;">"no"</span> in order to pass
   the raw bit counts on to some other task.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->

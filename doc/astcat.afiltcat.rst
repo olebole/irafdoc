@@ -42,15 +42,15 @@ afiltcat: Filter astrometry files derived from astrometric catalogs
   </dd>
   </dl>
   <dl>
-  <dt><b>acatpars = <tt>""</tt></b></dt>
+  <dt><b>acatpars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='acatpars' Line='acatpars = ""' -->
   <dd>The default input astrometry file format parameters. The acatpars parameters
   are used only if the input astrometry file does not have a header. Type
-  <tt>"help acatpars"</tt> for a detailed description of the acatpars parameters.
+  <span style="font-family: monospace;">"help acatpars"</span> for a detailed description of the acatpars parameters.
   </dd>
   </dl>
   <dl>
-  <dt><b>catalogs = <tt>"filename@noao"</tt></b></dt>
+  <dt><b>catalogs = <span style="font-family: monospace;">"filename@noao"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='catalogs' Line='catalogs = "filename@noao"' -->
   <dd>The dummy input catalog name. Afiltcat task users should leave this
   parameter at its default setting.
@@ -74,7 +74,7 @@ afiltcat: Filter astrometry files derived from astrometric catalogs
   </dd>
   </dl>
   <dl>
-  <dt><b>afiltpars = <tt>""</tt></b></dt>
+  <dt><b>afiltpars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='afiltpars' Line='afiltpars = ""' -->
   <dd>The astrometry file filtering parameter set. Afiltpars parameters permit the
   user to sort the output on a field or field expression, select or reject
@@ -97,11 +97,11 @@ afiltcat: Filter astrometry files derived from astrometric catalogs
   </dd>
   </dl>
   <dl>
-  <dt><b>catdb = <tt>")_.catdb"</tt></b></dt>
+  <dt><b>catdb = <span style="font-family: monospace;">")_.catdb"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='catdb' Line='catdb = ")_.catdb"' -->
   <dd>The catalog configuration file. Catdb defaults to the value of the
   package parameters catdb. The default catalog configuration file is
-  <tt>"astcat$lib/catdb.dat"</tt>.
+  <span style="font-family: monospace;">"astcat$lib/catdb.dat"</span>.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -125,8 +125,8 @@ afiltcat: Filter astrometry files derived from astrometric catalogs
    <i>era</i>, <i>edec</i>,
   <i>epmra</i>, <i>epmdec</i>, <i>epx</i>, <i>erv</i>, <i>emag</i>, <i>ecolor</i>,
   <i>exc</i>, <i>eyc</i>, <i>eimag</i>.  More detailed information on astrometry
-  files and the acatpars parameters can be found by typing <tt>"help files"</tt>
-  and <tt>"help acatpars"</tt>.
+  files and the acatpars parameters can be found by typing <span style="font-family: monospace;">"help files"</span>
+  and <span style="font-family: monospace;">"help acatpars"</span>.
   </p>
   <p>
   If <i>filter</i> = yes, the input astrometry file is filtered before being
@@ -140,7 +140,7 @@ afiltcat: Filter astrometry files derived from astrometric catalogs
   and format of the output coordinates by setting the <i>fosystem</i>,
   <i>foraunits</i>, <i>fodecunits</i>, <i>foraformat</i>, and <i>fodecformat</i>
   parameters. A more detailed description of the filtering
-  parameters can be obtained by typing <tt>"help afiltpars"</tt>.
+  parameters can be obtained by typing <span style="font-family: monospace;">"help afiltpars"</span>.
   </p>
   <p>
   If <i>standard</i> = yes a header is written to the output file which
@@ -174,7 +174,7 @@ afiltcat: Filter astrometry files derived from astrometric catalogs
   </pre>
   <p>
   3. Repeat example 2 but since the input astrometry file has 2 magnitude
-  columns output a new color field equal to <tt>"mag2 - mag1"</tt>.
+  columns output a new color field equal to <span style="font-family: monospace;">"mag2 - mag1"</span>.
   </p>
   <pre>
   cl&gt; afiltcat reg001.cat.1 reg001.cat.4 fsort=mag1 fexpr="mag1 &lt;= 16.0" \<br>

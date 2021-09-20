@@ -36,8 +36,8 @@ psort: Sort a list of apphot/daophot databases
   the APPHOT/DAOPHOT #K and #N keywords. If the input file is an STSDAS
   table database <i>field</i> may be any column name. <i>Field</i> may be
   of type integer or real, in which case a numeric sort is performed,
-  boolean, in which case the boolean constant <tt>"no"</tt> is assumed to have a
-  smaller value than <tt>"yes"</tt>, or character in which case an alphabetic sort
+  boolean, in which case the boolean constant <span style="font-family: monospace;">"no"</span> is assumed to have a
+  smaller value than <span style="font-family: monospace;">"yes"</span>, or character in which case an alphabetic sort
   is performed.
   </dd>
   </dl>
@@ -59,7 +59,7 @@ psort: Sort a list of apphot/daophot databases
   </p>
   <p>
   If <i>field</i> is a real or integer the sort is numeric, if boolean
-  the constant <tt>"no"</tt> is assumed to have a smaller value than <tt>"yes"</tt>, if
+  the constant <span style="font-family: monospace;">"no"</span> is assumed to have a smaller value than <span style="font-family: monospace;">"yes"</span>, if
   character the sort is alphabetic.
   </p>
   <p>

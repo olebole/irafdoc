@@ -28,33 +28,33 @@ daoedit: Review/edit algorithm parameters interactively
   <dd></dd>
   </dl>
   <dl>
-  <dt><b>icommands = <tt>""</tt></b></dt>
+  <dt><b>icommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""' -->
   <dd>The image display cursor or image cursor commands file.
   </dd>
   </dl>
   <dl>
-  <dt><b>gcommands = <tt>""</tt></b></dt>
+  <dt><b>gcommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""' -->
   <dd>The graphics cursor or graphics cursor commands file.
   </dd>
   </dl>
   <dl>
-  <dt><b>cache = <tt>")_.cache"</tt></b></dt>
+  <dt><b>cache = <span style="font-family: monospace;">")_.cache"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cache' Line='cache = ")_.cache"' -->
   <dd>Cache the image pixels in memory. Cache may be set to the value of the apphot
-  package parameter (the default), <tt>"yes"</tt>, or <tt>"no"</tt>. By default caching is
+  package parameter (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>. By default caching is
   disabled.
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>")_.graphics"</tt></b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">")_.graphics"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = ")_.graphics"' -->
   <dd>The standard graphics device.
   </dd>
   </dl>
   <dl>
-  <dt><b>display = <tt>")_.display"</tt></b></dt>
+  <dt><b>display = <span style="font-family: monospace;">")_.display"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='display' Line='display = ")_.display"' -->
   <dd>The standard display device.
   </dd>

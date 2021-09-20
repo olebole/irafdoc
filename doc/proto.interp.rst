@@ -33,7 +33,7 @@ interp: Interpolate for a value in a table of X,Y pairs
   <dt><b>curve_gen = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='curve_gen' Line='curve_gen = no' -->
   <dd>If set to no, x-values are read from the file(s) specified by the parameter
-  <tt>"input"</tt>. If set to yes, the parameters x1, x2, and dx are used to create
+  <span style="font-family: monospace;">"input"</span>. If set to yes, the parameters x1, x2, and dx are used to create
   a list of new x,y pairs interpolated at x1, x1+dx, ... x2.
   </dd>
   </dl>

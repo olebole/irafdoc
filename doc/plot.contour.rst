@@ -79,7 +79,7 @@ contour: Make a contour plot of an image
   </dd>
   </dl>
   <dl>
-  <dt><b>device = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>device = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdgraph"' -->
   <dd>Output device (<b>stdgraph</b>, <b>stdplot</b>, or the name of a physical
   device).
@@ -134,7 +134,7 @@ contour: Make a contour plot of an image
   </dd>
   </dl>
   <dl>
-  <dt><b>title = <tt>"imtitle"</tt></b></dt>
+  <dt><b>title = <span style="font-family: monospace;">"imtitle"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='title' Line='title = "imtitle"' -->
   <dd>A title to be centered above the plot.  The user can specify a title string;
   the default string is the image title.
@@ -182,10 +182,10 @@ contour: Make a contour plot of an image
   </p>
   <p>
   Contour plots may be overlaid on a displayed image by setting the output
-  <b>device</b> to <tt>"imd"</tt> for image display and the contouring parameters
-  <b>fill</b> and <b>perimeter</b> to <tt>"yes"</tt> and <tt>"no"</tt> respectively. By default
+  <b>device</b> to <span style="font-family: monospace;">"imd"</span> for image display and the contouring parameters
+  <b>fill</b> and <b>perimeter</b> to <span style="font-family: monospace;">"yes"</span> and <span style="font-family: monospace;">"no"</span> respectively. By default
   green contours will be drawn on the image display. Other choices for
-  <b>device</b> are <tt>"imdr"</tt>, <tt>"imb"</tt>, <tt>"imdy"</tt>, <tt>"imdw"</tt> and <tt>"imdg"</tt> for red, blue,
+  <b>device</b> are <span style="font-family: monospace;">"imdr"</span>, <span style="font-family: monospace;">"imb"</span>, <span style="font-family: monospace;">"imdy"</span>, <span style="font-family: monospace;">"imdw"</span> and <span style="font-family: monospace;">"imdg"</span> for red, blue,
   yellow, white and green output contours respectively.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
@@ -229,7 +229,7 @@ contour: Make a contour plot of an image
   <p>
   The time required for <i>contour</i> depends on the number of contours
   being drawn - that is, the size and smoothness of the intensity array.
-  A 512 square image of <tt>"average"</tt> smoothness, with x and y resolution equal to
+  A 512 square image of <span style="font-family: monospace;">"average"</span> smoothness, with x and y resolution equal to
   64, requires about 22 cpu seconds with block averaging.  Using subsampling
   rather than block averaging, <i>contour</i> takes 16 seconds.  A noisy
   picture will be plotted more quickly if block averaged rather than

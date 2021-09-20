@@ -65,7 +65,7 @@ rgbdither: Create an 8-bit RGB dithered image
   </dd>
   </dl>
   <dl>
-  <dt><b>pattern = <tt>"rgbgbrbrg"</tt></b></dt>
+  <dt><b>pattern = <span style="font-family: monospace;">"rgbgbrbrg"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pattern' Line='pattern = "rgbgbrbrg"' -->
   <dd>Dither pattern given as a list of characters specifying a 3x3 array
   with the column element incrementing fastest.  A character of r is

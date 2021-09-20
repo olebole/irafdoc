@@ -53,7 +53,7 @@ wcsreset: Reset the specified image wcs
   </dd>
   </dl>
   In addition to these two reserved world coordinate systems, the name of any
-  other defined world coordinate system, for example <tt>"multispec"</tt> may be given.
+  other defined world coordinate system, for example <span style="font-family: monospace;">"multispec"</span> may be given.
   In this case WCSRESET resets the named coordinate system to the logical
   coordinate system only if it is present in the image header.
   </dd>
@@ -70,7 +70,7 @@ wcsreset: Reset the specified image wcs
   <p>
   WCSRESET resets the coordinate system <i>wcs</i> in the images specified by
   <i>image</i> to the logical coordinate system, and prints messages about the
-  actions taken if <i>verbose</i> = <tt>"yes"</tt>. Since WCSRESET modifies the
+  actions taken if <i>verbose</i> = <span style="font-family: monospace;">"yes"</span>. Since WCSRESET modifies the
   image headers it should be used with caution.
   </p>
   <p>
@@ -105,7 +105,7 @@ wcsreset: Reset the specified image wcs
   <p>
   The world coordinate system is the default coordinate system for the
   image. The default world coordinate system is the one named by the
-  environment variable <tt>"defwcs"</tt> if defined in the user environment (initially
+  environment variable <span style="font-family: monospace;">"defwcs"</span> if defined in the user environment (initially
   it is undefined) and present in the image header; else it is the first
   world coordinate system
   defined for the image (the .imh and .hhh image format support only one wcs
@@ -116,7 +116,7 @@ wcsreset: Reset the specified image wcs
   </p>
   <p>
   If the user sets the parameter wcs to a specific system, for example
-  to <tt>"multispec"</tt>, only images with the coordinate system <tt>"multispec"</tt>
+  to <span style="font-family: monospace;">"multispec"</span>, only images with the coordinate system <span style="font-family: monospace;">"multispec"</span>
   will have their coordinate system reset.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
@@ -124,11 +124,11 @@ wcsreset: Reset the specified image wcs
   <!-- BeginSection: 'REFERENCES' -->
   <p>
   Detailed documentation for the IRAF world coordinate system interface MWCS
-  can be found in the file <tt>"iraf$sys/mwcs/MWCS.hlp"</tt>. This file can be
-  formatted and printed with the command <tt>"help iraf$sys/mwcs/MWCS.hlp fi+ |
-  lprint"</tt>.  Details of the FITS header world coordinate system interface can
-  be found in the document <tt>"World Coordinate Systems Representations Within the
-  FITS Format"</tt> by Hanisch and Wells, available from our anonymous ftp
+  can be found in the file <span style="font-family: monospace;">"iraf$sys/mwcs/MWCS.hlp"</span>. This file can be
+  formatted and printed with the command <span style="font-family: monospace;">"help iraf$sys/mwcs/MWCS.hlp fi+ |
+  lprint"</span>.  Details of the FITS header world coordinate system interface can
+  be found in the document <span style="font-family: monospace;">"World Coordinate Systems Representations Within the
+  FITS Format"</span> by Hanisch and Wells, available from our anonymous ftp
   archive.
   </p>
   <!-- EndSection:   'REFERENCES' -->
@@ -136,7 +136,7 @@ wcsreset: Reset the specified image wcs
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. The user runs implot on a section of the spectrum outspec with the
-  wcs parameter set to <tt>"physical"</tt>.
+  wcs parameter set to <span style="font-family: monospace;">"physical"</span>.
   </p>
   <pre>
   	implot outsec[30:50] wcs=physical
@@ -173,7 +173,7 @@ wcsreset: Reset the specified image wcs
   <p>
   The section [30:50] in outspec actually corresponds to the section [129:149]
   in inspec and it is this coordinate system that implot is plotting when
-  wcs = <tt>"physical"</tt>. The user decides has he/she does not want to know
+  wcs = <span style="font-family: monospace;">"physical"</span>. The user decides has he/she does not want to know
   about the pixel coordinate system of the original image and runs wcsreset
   to reset the physical coordinate system to the logical coordinate system.
   </p>
@@ -197,7 +197,7 @@ wcsreset: Reset the specified image wcs
   <p>
   It is identical to the header listed above except that the
   LTV1 keyword is not defined and is therefore 0. The user runs
-  implot with wcs = <tt>"physical"</tt> as before and sees a plot which extends
+  implot with wcs = <span style="font-family: monospace;">"physical"</span> as before and sees a plot which extends
   from 30 to 50 as expected.
   </p>
   <p>
@@ -230,7 +230,7 @@ wcsreset: Reset the specified image wcs
   	WAT2_001= 'wtype=tan axtype=dec
   </pre>
   <p>
-  The user runs implot on skypix wcs = <tt>"physical"</tt>
+  The user runs implot on skypix wcs = <span style="font-family: monospace;">"physical"</span>
   </p>
   <pre>
   	implot skypix wcs=physical
@@ -267,7 +267,7 @@ wcsreset: Reset the specified image wcs
   	WAT2_001= 'wtype=tan axtype=dec
   </pre>
   <p>
-  When the user runs implot with wcs = <tt>"physical"</tt> he/she sees a plot which
+  When the user runs implot with wcs = <span style="font-family: monospace;">"physical"</span> he/she sees a plot which
   extends from 1 to 256 as expected.
   </p>
   <p>
@@ -293,9 +293,9 @@ wcsreset: Reset the specified image wcs
   All coordinate information has been destroyed.
   </p>
   <p>
-  4. Initialize the world coordinate system <tt>"spec1"</tt>. If the default world
+  4. Initialize the world coordinate system <span style="font-family: monospace;">"spec1"</span>. If the default world
   coordinate
-  system <tt>"spec1"</tt> cannot be found in the image header a warning message
+  system <span style="font-family: monospace;">"spec1"</span> cannot be found in the image header a warning message
   will be issued and nothing will be changed.
   </p>
   <pre>

@@ -45,7 +45,7 @@ convolve: Convolve a list of 1 or 2-D images with a rectangular filter
   In string entry mode the elements are assumed to be in row order.
   In text file entry mode the <i>last</i> row of the
   kernel is the <i>first</i> row of the text file.
-  <i>Kernel</i> is requested if <i>bilinear</i> is <tt>"no"</tt>.
+  <i>Kernel</i> is requested if <i>bilinear</i> is <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <dl>
@@ -53,7 +53,7 @@ convolve: Convolve a list of 1 or 2-D images with a rectangular filter
   <!-- Sec='PARAMETERS' Level=0 Label='xkernel' Line='xkernel' -->
   <dd>A text file or string containing the 1D x dimension component of the bilinear
   convolution kernel. The kernel elements are separated by whitespace
-  or commas. <i>Xkernel</i> is requested if <i>bilinear</i> is <tt>"yes"</tt>.
+  or commas. <i>Xkernel</i> is requested if <i>bilinear</i> is <span style="font-family: monospace;">"yes"</span>.
   </dd>
   </dl>
   <dl>
@@ -61,7 +61,7 @@ convolve: Convolve a list of 1 or 2-D images with a rectangular filter
   <!-- Sec='PARAMETERS' Level=0 Label='ykernel' Line='ykernel' -->
   <dd>A text file or string containing the 1D y dimension component of the bilinear
   convolution kernel. The kernel elements are separated by whitespace
-  or commas. <i>Ykernel</i> is requested if <i>bilinear</i> is <tt>"yes"</tt>.
+  or commas. <i>Ykernel</i> is requested if <i>bilinear</i> is <span style="font-family: monospace;">"yes"</span>.
   </dd>
   </dl>
   <dl>
@@ -76,12 +76,12 @@ convolve: Convolve a list of 1 or 2-D images with a rectangular filter
   <dl>
   <dt><b>radsym = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='radsym' Line='radsym = no' -->
-  <dd>Is the convolution kernel radially symmetric? If radsym <tt>"yes"</tt>, a more efficient
+  <dd>Is the convolution kernel radially symmetric? If radsym <span style="font-family: monospace;">"yes"</span>, a more efficient
   convolution algorithm is used.
   </dd>
   </dl>
   <dl>
-  <dt><b>boundary = <tt>"nearest"</tt></b></dt>
+  <dt><b>boundary = <span style="font-family: monospace;">"nearest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"' -->
   <dd>The algorithm used to compute the values of the out of bounds pixels. The
   options are:
@@ -118,7 +118,7 @@ convolve: Convolve a list of 1 or 2-D images with a rectangular filter
   </dd>
   </dl>
   <dl>
-  <dt><b>row_delimiter = <tt>";"</tt></b></dt>
+  <dt><b>row_delimiter = <span style="font-family: monospace;">";"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='row_delimiter' Line='row_delimiter = ";"' -->
   <dd>The row delimiter character for multi-row kernels.
   </dd>
@@ -129,8 +129,8 @@ convolve: Convolve a list of 1 or 2-D images with a rectangular filter
   <p>
   CONVOLVE convolves the list of images specified by <i>input</i> with an
   arbitrary user supplied rectangular kernel <i>kernel</i> (if <i>bilinear</i>
-  is <tt>"no"</tt>) or two equivalent 1D kernels <i>xkernel</i> and <i>ykernel</i>
-  (if <i>bilinear</i> is <tt>"yes"</tt>) and places the convolved images in <i>output</i>. 
+  is <span style="font-family: monospace;">"no"</span>) or two equivalent 1D kernels <i>xkernel</i> and <i>ykernel</i>
+  (if <i>bilinear</i> is <span style="font-family: monospace;">"yes"</span>) and places the convolved images in <i>output</i>. 
   Out of bounds pixels are computed using the algorithm specified
   by <i>boundary</i>.
   </p>

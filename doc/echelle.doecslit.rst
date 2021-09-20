@@ -41,31 +41,31 @@ doecslit: Process Echelle slit spectra
   <dd>List of object images to be processed.  Previously processed spectra are
   ignored unless the <i>redo</i> flag is set or the <i>update</i> flag is set
   and dependent calibration data has changed.  If the images contain the
-  keyword IMAGETYP then only those with a value of <tt>"object"</tt> or <tt>"OBJECT"</tt>
-  are used and those with a value of <tt>"comp"</tt> or <tt>"COMPARISON"</tt> are added
+  keyword IMAGETYP then only those with a value of <span style="font-family: monospace;">"object"</span> or <span style="font-family: monospace;">"OBJECT"</span>
+  are used and those with a value of <span style="font-family: monospace;">"comp"</span> or <span style="font-family: monospace;">"COMPARISON"</span> are added
   to the list of arcs.  Extracted spectra are ignored.
   </dd>
   </dl>
   <dl>
-  <dt><b>apref = <tt>""</tt></b></dt>
+  <dt><b>apref = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apref' Line='apref = ""' -->
   <dd>Aperture reference spectrum.  This spectrum is used to define the basic
   extraction apertures and is typically a bright star spectrum.
   </dd>
   </dl>
   <dl>
-  <dt><b>arcs = <tt>""</tt> (at least one if dispersion correcting)</b></dt>
+  <dt><b>arcs = <span style="font-family: monospace;">""</span> (at least one if dispersion correcting)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='arcs' Line='arcs = "" (at least one if dispersion correcting)' -->
   <dd>List of arc calibration spectra.  These spectra are used to define
   the dispersion functions.  The first spectrum is used to mark lines
   and set the dispersion function interactively and dispersion functions
   for all other arc spectra are derived from it.  If the images contain
-  the keyword IMAGETYP then only those with a value of <tt>"comp"</tt> or
-  <tt>"COMPARISON"</tt> are used.  All others are ignored as are extracted spectra.
+  the keyword IMAGETYP then only those with a value of <span style="font-family: monospace;">"comp"</span> or
+  <span style="font-family: monospace;">"COMPARISON"</span> are used.  All others are ignored as are extracted spectra.
   </dd>
   </dl>
   <dl>
-  <dt><b>arctable = <tt>""</tt> (optional) (refspectra)</b></dt>
+  <dt><b>arctable = <span style="font-family: monospace;">""</span> (optional) (refspectra)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='arctable' Line='arctable = "" (optional) (refspectra)' -->
   <dd>Table defining which arc spectra are to be assigned to which object
   spectra (see <b>refspectra</b>).  If not specified an assignment based
@@ -74,7 +74,7 @@ doecslit: Process Echelle slit spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>standards = <tt>""</tt> (at least one if flux calibrating)</b></dt>
+  <dt><b>standards = <span style="font-family: monospace;">""</span> (at least one if flux calibrating)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='standards' Line='standards = "" (at least one if flux calibrating)' -->
   <dd>List of standard star spectra.  The standard stars must have entries in
   the calibration database (package parameter <i>echelle.caldir</i>).
@@ -165,18 +165,18 @@ doecslit: Process Echelle slit spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>background = <tt>"none"</tt> (apsum, apscatter)</b></dt>
+  <dt><b>background = <span style="font-family: monospace;">"none"</span> (apsum, apscatter)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='background' Line='background = "none" (apsum, apscatter)' -->
-  <dd>Type of background light subtraction.  The choices are <tt>"none"</tt> for no
-  background subtraction, <tt>"scattered"</tt> for a global scattered light
-  subtraction, <tt>"average"</tt> to average the background within background regions,
-  <tt>"median"</tt> to use the median in background regions, <tt>"minimum"</tt> to use the
-  minimum in background regions, or <tt>"fit"</tt> to fit across the dispersion using
+  <dd>Type of background light subtraction.  The choices are <span style="font-family: monospace;">"none"</span> for no
+  background subtraction, <span style="font-family: monospace;">"scattered"</span> for a global scattered light
+  subtraction, <span style="font-family: monospace;">"average"</span> to average the background within background regions,
+  <span style="font-family: monospace;">"median"</span> to use the median in background regions, <span style="font-family: monospace;">"minimum"</span> to use the
+  minimum in background regions, or <span style="font-family: monospace;">"fit"</span> to fit across the dispersion using
   the background within background regions.  The scattered light option fits
   and subtracts a smooth global background and modifies the input images.
   This is a slow operation and so is NOT performed in quicklook mode.  The
-  other background options are local to each aperture.  The <tt>"fit"</tt> option uses
-  additional fitting parameters from <b>sparams</b> and the <tt>"scattered"</tt> option
+  other background options are local to each aperture.  The <span style="font-family: monospace;">"fit"</span> option uses
+  additional fitting parameters from <b>sparams</b> and the <span style="font-family: monospace;">"scattered"</span> option
   uses parameters from <b>apscat1</b> and <b>apscat2</b>.
   </dd>
   </dl>
@@ -231,13 +231,13 @@ doecslit: Process Echelle slit spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>sparams = <tt>""</tt> (pset)</b></dt>
+  <dt><b>sparams = <span style="font-family: monospace;">""</span> (pset)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sparams' Line='sparams = "" (pset)' -->
   <dd>Name of parameter set containing additional processing parameters.  This
   parameter is only for indicating the link to the parameter set
   <b>sparams</b> and should not be given a value.  The parameter set may be
-  examined and modified in the usual ways (typically with <tt>"epar
-  sparams"</tt> or <tt>":e sparams"</tt> from the parameter editor).  The parameters are
+  examined and modified in the usual ways (typically with <span style="font-family: monospace;">"epar
+  sparams"</span> or <span style="font-family: monospace;">":e sparams"</span> from the parameter editor).  The parameters are
   described below.
   </dd>
   </dl>
@@ -283,11 +283,11 @@ doecslit: Process Echelle slit spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>t_function = <tt>"spline3"</tt>, t_order = 2 (aptrace)</b></dt>
+  <dt><b>t_function = <span style="font-family: monospace;">"spline3"</span>, t_order = 2 (aptrace)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='t_function' Line='t_function = "spline3", t_order = 2 (aptrace)' -->
   <dd>Default trace fitting function and order.  The fitting function types are
-  <tt>"chebyshev"</tt> polynomial, <tt>"legendre"</tt> polynomial, <tt>"spline1"</tt> linear spline, and
-  <tt>"spline3"</tt> cubic spline.  The order refers to the number of
+  <span style="font-family: monospace;">"chebyshev"</span> polynomial, <span style="font-family: monospace;">"legendre"</span> polynomial, <span style="font-family: monospace;">"spline1"</span> linear spline, and
+  <span style="font-family: monospace;">"spline3"</span> cubic spline.  The order refers to the number of
   terms in the polynomial functions or the number of spline pieces in the spline
   functions.
   </dd>
@@ -302,11 +302,11 @@ doecslit: Process Echelle slit spectra
   
   </p>
   <dl>
-  <dt><b>b_function = <tt>"legendre"</tt>, b_order = 1 (apsum)</b></dt>
+  <dt><b>b_function = <span style="font-family: monospace;">"legendre"</span>, b_order = 1 (apsum)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='b_function' Line='b_function = "legendre", b_order = 1 (apsum)' -->
   <dd>Default background fitting function and order.  The fitting function types are
-  <tt>"chebyshev"</tt> polynomial, <tt>"legendre"</tt> polynomial, <tt>"spline1"</tt> linear spline, and
-  <tt>"spline3"</tt> cubic spline.  The order refers to the number of
+  <span style="font-family: monospace;">"chebyshev"</span> polynomial, <span style="font-family: monospace;">"legendre"</span> polynomial, <span style="font-family: monospace;">"spline1"</span> linear spline, and
+  <span style="font-family: monospace;">"spline3"</span> cubic spline.  The order refers to the number of
   terms in the polynomial functions or the number of spline pieces in the spline
   functions.
   </dd>
@@ -346,7 +346,7 @@ doecslit: Process Echelle slit spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>apscat1 = <tt>""</tt>, apscat2 = <tt>""</tt> (apscatter)</b></dt>
+  <dt><b>apscat1 = <span style="font-family: monospace;">""</span>, apscat2 = <span style="font-family: monospace;">""</span> (apscatter)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apscat1' Line='apscat1 = "", apscat2 = "" (apscatter)' -->
   <dd>Parameter sets for the fitting functions across and along the dispersion.
   These parameters are those used by <b>icfit</b>.  These parameters are
@@ -357,20 +357,20 @@ doecslit: Process Echelle slit spectra
   
   </p>
   <dl>
-  <dt><b>weights = <tt>"none"</tt> (apsum) (none|variance)</b></dt>
+  <dt><b>weights = <span style="font-family: monospace;">"none"</span> (apsum) (none|variance)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='weights' Line='weights = "none" (apsum) (none|variance)' -->
   <dd>Type of extraction weighting.  Note that if the <i>clean</i> parameter is
-  set then the weights used are <tt>"variance"</tt> regardless of the weights
+  set then the weights used are <span style="font-family: monospace;">"variance"</span> regardless of the weights
   specified by this parameter.  The choices are:
   <dl>
-  <dt><b><tt>"none"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"none"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"none"' -->
   <dd>The pixels are summed without weights except for partial pixels at the
   ends.
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"variance"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"variance"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"variance"' -->
   <dd>The extraction is weighted by the variance based on the data values
   and a poisson/ccd model using the <i>gain</i> and <i>readnoise</i>
@@ -380,9 +380,9 @@ doecslit: Process Echelle slit spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>pfit = <tt>"fit1d"</tt> (apsum and approfile) (fit1d|fit2d)</b></dt>
+  <dt><b>pfit = <span style="font-family: monospace;">"fit1d"</span> (apsum and approfile) (fit1d|fit2d)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pfit' Line='pfit = "fit1d" (apsum and approfile) (fit1d|fit2d)' -->
-  <dd>Type of profile fitting algorithm to use.  The <tt>"fit1d"</tt> algorithm is
+  <dd>Type of profile fitting algorithm to use.  The <span style="font-family: monospace;">"fit1d"</span> algorithm is
   preferred except in cases of extreme tilt.
   </dd>
   </dl>
@@ -404,10 +404,10 @@ doecslit: Process Echelle slit spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>coordlist = <tt>"linelist$thar.dat"</tt> (ecidentify)</b></dt>
+  <dt><b>coordlist = <span style="font-family: monospace;">"linelist$thar.dat"</span> (ecidentify)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coordlist' Line='coordlist = "linelist$thar.dat" (ecidentify)' -->
   <dd>Arc line list consisting of an ordered list of wavelengths.
-  Some standard line lists are available in the directory <tt>"linelist$"</tt>.
+  Some standard line lists are available in the directory <span style="font-family: monospace;">"linelist$"</span>.
   </dd>
   </dl>
   <dl>
@@ -430,11 +430,11 @@ doecslit: Process Echelle slit spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>i_function = <tt>"legendre"</tt>, i_xorder = 3, i_yorder = 3 (ecidentify)</b></dt>
+  <dt><b>i_function = <span style="font-family: monospace;">"legendre"</span>, i_xorder = 3, i_yorder = 3 (ecidentify)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='i_function' Line='i_function = "legendre", i_xorder = 3, i_yorder = 3 (ecidentify)' -->
   <dd>The default function, function order for the pixel position dependence, and
   function order for the aperture number dependence to be fit to the arc
-  wavelengths.  The functions choices are <tt>"chebyshev"</tt> or <tt>"legendre"</tt>.
+  wavelengths.  The functions choices are <span style="font-family: monospace;">"chebyshev"</span> or <span style="font-family: monospace;">"legendre"</span>.
   </dd>
   </dl>
   <dl>
@@ -459,7 +459,7 @@ doecslit: Process Echelle slit spectra
   
   </p>
   <dl>
-  <dt><b>select = <tt>"interp"</tt> (refspectra)</b></dt>
+  <dt><b>select = <span style="font-family: monospace;">"interp"</span> (refspectra)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='select' Line='select = "interp" (refspectra)' -->
   <dd>Selection method for assigning wavelength calibration spectra.
   Note that an arc assignment table may be used to override the selection
@@ -518,7 +518,7 @@ doecslit: Process Echelle slit spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>sort = <tt>"jd"</tt> (setjd and refspectra)</b></dt>
+  <dt><b>sort = <span style="font-family: monospace;">"jd"</span> (setjd and refspectra)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sort' Line='sort = "jd" (setjd and refspectra)' -->
   <dd>Image header keyword to be used as the sorting parameter for selection
   based on order.  The header parameter must be numeric but otherwise may
@@ -526,13 +526,13 @@ doecslit: Process Echelle slit spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>group = <tt>"ljd"</tt> (setjd and refspectra)</b></dt>
+  <dt><b>group = <span style="font-family: monospace;">"ljd"</span> (setjd and refspectra)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='group' Line='group = "ljd" (setjd and refspectra)' -->
   <dd>Image header keyword to be used to group spectra.  For those selection
   methods which use the group parameter the reference and object
   spectra must have identical values for this keyword.  This can
   be anything but it must be constant within a group.  Common grouping
-  parameters are the date of observation <tt>"date-obs"</tt> (provided it does not
+  parameters are the date of observation <span style="font-family: monospace;">"date-obs"</span> (provided it does not
   change over a night) or the local Julian day number.
   </dd>
   </dl>
@@ -597,11 +597,11 @@ doecslit: Process Echelle slit spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>s_function = <tt>"spline3"</tt>, s_order = 1 (sensfunc)</b></dt>
+  <dt><b>s_function = <span style="font-family: monospace;">"spline3"</span>, s_order = 1 (sensfunc)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='s_function' Line='s_function = "spline3", s_order = 1 (sensfunc)' -->
   <dd>Function and order used to fit the sensitivity data.  The function types are
-  <tt>"chebyshev"</tt> polynomial, <tt>"legendre"</tt> polynomial, <tt>"spline3"</tt> cubic spline,
-  and <tt>"spline1"</tt> linear spline.
+  <span style="font-family: monospace;">"chebyshev"</span> polynomial, <span style="font-family: monospace;">"legendre"</span> polynomial, <span style="font-family: monospace;">"spline3"</span> cubic spline,
+  and <span style="font-family: monospace;">"spline1"</span> linear spline.
   Order of the sensitivity fitting function.  The value corresponds to the
   number of polynomial terms or the number of spline pieces.  The default
   values may be changed interactively.
@@ -628,7 +628,7 @@ doecslit: Process Echelle slit spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>extinction = <tt>"onedstds$kpnoextinct.dat"</tt> (standard, sensfunc, calibrate)</b></dt>
+  <dt><b>extinction = <span style="font-family: monospace;">"onedstds$kpnoextinct.dat"</span> (standard, sensfunc, calibrate)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='extinction' Line='extinction = "onedstds$kpnoextinct.dat" (standard, sensfunc, calibrate)' -->
   <dd>Extinction file for a site.  There are two extinction files in the
   NOAO standards library, onedstds$, for KPNO and CTIO.  These extinction
@@ -639,13 +639,13 @@ doecslit: Process Echelle slit spectra
   <dt><b>caldir (standard)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='caldir' Line='caldir (standard)' -->
   <dd>Standard star calibration directory.  A directory containing standard
-  star data files.  Note that the directory name must end with <tt>'/'</tt>.
+  star data files.  Note that the directory name must end with <span style="font-family: monospace;">'/'</span>.
   There are a number of standard star calibrations directories in the NOAO
   standards library, onedstds$.
   </dd>
   </dl>
   <dl>
-  <dt><b>observatory = <tt>"observatory"</tt> (observatory)</b></dt>
+  <dt><b>observatory = <span style="font-family: monospace;">"observatory"</span> (observatory)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory = "observatory" (observatory)' -->
   <dd>The default observatory to use for latitude dependent computations.
   If the OBSERVAT keyword in the image header it takes precedence over
@@ -653,7 +653,7 @@ doecslit: Process Echelle slit spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>interp = <tt>"poly5"</tt> (nearest|linear|poly3|poly5|spline3|sinc) (dispcor)</b></dt>
+  <dt><b>interp = <span style="font-family: monospace;">"poly5"</span> (nearest|linear|poly3|poly5|spline3|sinc) (dispcor)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interp' Line='interp = "poly5" (nearest|linear|poly3|poly5|spline3|sinc) (dispcor)' -->
   <dd>Spectrum interpolation type used when spectra are resampled.  The choices are:
   <pre>
@@ -667,7 +667,7 @@ doecslit: Process Echelle slit spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>database = <tt>"database"</tt></b></dt>
+  <dt><b>database = <span style="font-family: monospace;">"database"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"' -->
   <dd>Database name used by various tasks.  This is a directory which is created
   if necessary.
@@ -682,13 +682,13 @@ doecslit: Process Echelle slit spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>logfile = <tt>"logfile"</tt></b></dt>
+  <dt><b>logfile = <span style="font-family: monospace;">"logfile"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "logfile"' -->
   <dd>If specified detailed text log information is written to this file.
   </dd>
   </dl>
   <dl>
-  <dt><b>plotfile = <tt>""</tt></b></dt>
+  <dt><b>plotfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='plotfile' Line='plotfile = ""' -->
   <dd>If specified metacode plots are recorded in this file for later review.
   Since plot information can become large this should be used only if
@@ -702,7 +702,7 @@ doecslit: Process Echelle slit spectra
   The environment parameter <i>imtype</i> is used to determine the extension
   of the images to be processed and created.  This allows use with any
   supported image extension.  For STF images the extension has to be exact;
-  for example <tt>"d1h"</tt>.
+  for example <span style="font-family: monospace;">"d1h"</span>.
   </p>
   <!-- EndSection:   'ENVIRONMENT PARAMETERS' -->
   <h3>Description</h3>
@@ -763,7 +763,7 @@ doecslit: Process Echelle slit spectra
   star spectrum) to use in finding the orders and defining the
   aperture parameters, one or more arc images, and one or more standard
   star images.  If there are many object, arc, or standard star images
-  you might prepare <tt>"@ files"</tt>.  Set the detector and data
+  you might prepare <span style="font-family: monospace;">"@ files"</span>.  Set the detector and data
   specific parameters.  Select the processing options desired.
   Finally you might wish to review the <b>sparams</b> algorithm parameters
   though the defaults are probably adequate.
@@ -776,7 +776,7 @@ doecslit: Process Echelle slit spectra
   observations and the task will generally only do the setup steps
   once and only process new images.  Queries presented during the
   execution for various interactive operations may be answered with
-  <tt>"yes"</tt>, <tt>"no"</tt>, <tt>"YES"</tt>, or <tt>"NO"</tt>.  The lower case responses apply just
+  <span style="font-family: monospace;">"yes"</span>, <span style="font-family: monospace;">"no"</span>, <span style="font-family: monospace;">"YES"</span>, or <span style="font-family: monospace;">"NO"</span>.  The lower case responses apply just
   to that query while the upper case responses apply to all further
   such queries during the current execution and no further queries of that
   type will be made.
@@ -794,10 +794,10 @@ doecslit: Process Echelle slit spectra
   highly recommended.  Note that it is important that the aperture numbers be
   sequential with the orders and if any orders are skipped the aperture
   numbers should also skip.  It is also important to verify the background
-  regions with the <tt>'b'</tt> key.  Usually you want any changes made to the
-  background definitions to apply to all apertures so use the <tt>'a'</tt> key to
+  regions with the <span style="font-family: monospace;">'b'</span> key.  Usually you want any changes made to the
+  background definitions to apply to all apertures so use the <span style="font-family: monospace;">'a'</span> key to
   select all apertures before modifying the background parameters.  To exit
-  the background mode and then to exit the review mode use <tt>'q'</tt>.
+  the background mode and then to exit the review mode use <span style="font-family: monospace;">'q'</span>.
   </dd>
   </dl>
   <dl>
@@ -806,8 +806,8 @@ doecslit: Process Echelle slit spectra
   <dd>The order positions at a series of points along the dispersion are measured
   and a function is fit to these positions.  This may be done interactively
   to examine the traced positions and adjust the fitting parameters.  To exit
-  the interactive fitting type <tt>'q'</tt>.  Not all orders need be examined and the
-  <tt>"NO"</tt> response will quit the interactive fitting using the last defined
+  the interactive fitting type <span style="font-family: monospace;">'q'</span>.  Not all orders need be examined and the
+  <span style="font-family: monospace;">"NO"</span> response will quit the interactive fitting using the last defined
   fitting parameters on the remaining traces.
   </dd>
   </dl>
@@ -842,10 +842,10 @@ doecslit: Process Echelle slit spectra
   <!-- Sec='DESCRIPTION' Level=0 Label='' Line='[8]' -->
   <dd>If dispersion correction is selected the first arc in the arc list is
   extracted.  The dispersion function is defined using the task
-  <b>ecidentify</b>.  Identify a few arc lines in a few orders with <tt>'m'</tt> and
-  <tt>'o'</tt> and use the <tt>'l'</tt> line list identification command to automatically add
+  <b>ecidentify</b>.  Identify a few arc lines in a few orders with <span style="font-family: monospace;">'m'</span> and
+  <span style="font-family: monospace;">'o'</span> and use the <span style="font-family: monospace;">'l'</span> line list identification command to automatically add
   additional lines and fit the dispersion function.  Check the quality of the
-  dispersion function fit with <tt>'f'</tt>.  When satisfied exit with <tt>'q'</tt>.
+  dispersion function fit with <span style="font-family: monospace;">'f'</span>.  When satisfied exit with <span style="font-family: monospace;">'q'</span>.
   </dd>
   </dl>
   <dl>
@@ -879,7 +879,7 @@ doecslit: Process Echelle slit spectra
   <dt><b>[11]</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='' Line='[11]' -->
   <dd>The option to examine the final spectra with <b>splot</b> may be given.
-  To exit type <tt>'q'</tt>.  In quicklook mode the spectra are plotted
+  To exit type <span style="font-family: monospace;">'q'</span>.  In quicklook mode the spectra are plotted
   noninteractively with <b>specplot</b>.
   </dd>
   </dl>
@@ -887,7 +887,7 @@ doecslit: Process Echelle slit spectra
   <dt><b>[12]</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='' Line='[12]' -->
   <dd>The final spectra will have the same name as the original 2D images
-  with a <tt>".ec"</tt> extension added.
+  with a <span style="font-family: monospace;">".ec"</span> extension added.
   </dd>
   </dl>
   <p>
@@ -924,7 +924,7 @@ doecslit: Process Echelle slit spectra
   <p>
   The final reduced spectra are recorded in two or three dimensional IRAF
   images.  The images have the same name as the original images with an added
-  <tt>".ec"</tt> extension.  Each line in the reduced image is a one dimensional
+  <span style="font-family: monospace;">".ec"</span> extension.  Each line in the reduced image is a one dimensional
   spectrum with associated aperture, order, and wavelength
   information.  When the <i>extras</i> parameter is set the lines in the
   third dimension contain additional information (see
@@ -963,7 +963,7 @@ doecslit: Process Echelle slit spectra
   <p>
   The spectrum interpolation type is used whenever a spectrum needs to be
   resampled for linearization or performing operations between spectra
-  with different sampling.  The <tt>"sinc"</tt> interpolation may be of interest
+  with different sampling.  The <span style="font-family: monospace;">"sinc"</span> interpolation may be of interest
   as an alternative but see the cautions given in <b>onedspec.package</b>.
   </p>
   <p>
@@ -985,8 +985,8 @@ doecslit: Process Echelle slit spectra
   To allow wildcard image lists to be used safely and conveniently the
   image lists are checked to remove extracted images (the .ec images)
   and to automatically identify object and arc spectra.  Object and arc
-  images are identified by the keyword IMAGETYP with values of <tt>"object"</tt>,
-  <tt>"OBJECT"</tt>, <tt>"comp"</tt>, or <tt>"COMPARISON"</tt> (the current practice at NOAO).
+  images are identified by the keyword IMAGETYP with values of <span style="font-family: monospace;">"object"</span>,
+  <span style="font-family: monospace;">"OBJECT"</span>, <span style="font-family: monospace;">"comp"</span>, or <span style="font-family: monospace;">"COMPARISON"</span> (the current practice at NOAO).
   If arc images are found in the object list they are transferred to the
   arc list while if object images are found in the arc list they are ignored.
   All other image types, such as biases, darks, or flat fields, are
@@ -1004,7 +1004,7 @@ doecslit: Process Echelle slit spectra
   <p>
   The next set of parameters describe the noise characteristics and the
   general layout of the orders.  The read out noise and gain are used when
-  <tt>"cleaning"</tt> cosmic rays and when using variance or optimal weighting.  These
+  <span style="font-family: monospace;">"cleaning"</span> cosmic rays and when using variance or optimal weighting.  These
   parameters must be fairly accurate.  Note that these are the effective
   parameters and must be adjusted if previous processing has modified the
   pixel values; such as with an unnormalized flat field.
@@ -1056,7 +1056,7 @@ doecslit: Process Echelle slit spectra
   </p>
   <p>
   The <i>background</i> option selects a type of correction for background
-  or scattered light.  If the type is <tt>"scattered"</tt> a global scattered light
+  or scattered light.  If the type is <span style="font-family: monospace;">"scattered"</span> a global scattered light
   is fit to the data between the apertures  and subtracted from the images.
   <i>Note that the input images are modified by this operation</i>.
   This option is slow and is not allowed in quicklook
@@ -1102,7 +1102,7 @@ doecslit: Process Echelle slit spectra
   The batch processing option allows object spectra to be processed as a
   background or batch job.  This will occur only if the interactive
   <i>splot</i> option is not active; either not set, turned off during
-  processing with <tt>"NO"</tt>, or in quicklook mode.  In batch processing the
+  processing with <span style="font-family: monospace;">"NO"</span>, or in quicklook mode.  In batch processing the
   terminal output is suppressed.
   </p>
   <p>
@@ -1170,14 +1170,14 @@ doecslit: Process Echelle slit spectra
   starting at one width distance from the profile center and extending to two
   widths on both sides of the profile.  As an example, if the width parameter
   is 5 pixels the default aperture limits are +/- 2.5 pixels and the
-  background sample regions will be <tt>"-10:-5,5:10"</tt>.  If the <i>resize</i>
+  background sample regions will be <span style="font-family: monospace;">"-10:-5,5:10"</span>.  If the <i>resize</i>
   parameter is set the aperture limits are adjusted to a specified point on
   the spectrum profile (see <b>apresize</b>).
   </p>
   <p>
   A query is then given allowing the aperture definitions to be reviewed and
   modified.  Queries made by <b>doecslit</b> generally may be answered with either
-  lower case <tt>"yes"</tt> or <tt>"no"</tt> or with upper case <tt>"YES"</tt> or <tt>"NO"</tt>.  The upper
+  lower case <span style="font-family: monospace;">"yes"</span> or <span style="font-family: monospace;">"no"</span> or with upper case <span style="font-family: monospace;">"YES"</span> or <span style="font-family: monospace;">"NO"</span>.  The upper
   case responses apply to all further queries and so are used to eliminate
   further queries of that kind.
   </p>
@@ -1187,14 +1187,14 @@ doecslit: Process Echelle slit spectra
   numbers must be linearly related, with a slope of +/- 1, to the true order
   numbers though absolute order numbers need not be known.  The key point is
   that if an order is skipped the aperture numbers must also skip.  The
-  background regions are checked with the <tt>'b'</tt> key.  Typically one adjusts all
+  background regions are checked with the <span style="font-family: monospace;">'b'</span> key.  Typically one adjusts all
   the background regions at the same time by selecting all apertures with
-  the <tt>'a'</tt> key first.  To exit the background and aperture editing steps type
-  <tt>'q'</tt>.
+  the <span style="font-family: monospace;">'a'</span> key first.  To exit the background and aperture editing steps type
+  <span style="font-family: monospace;">'q'</span>.
   </p>
   <p>
   Next the positions of the orders at various points along the dispersion
-  are measured and <tt>"trace functions"</tt> are fit.  The user is asked whether
+  are measured and <span style="font-family: monospace;">"trace functions"</span> are fit.  The user is asked whether
   to fit each trace function interactively.  This is selected to adjust
   the fitting parameters such as function type and order.  When
   interactively fitting a query is given for each aperture.  After the
@@ -1280,7 +1280,7 @@ doecslit: Process Echelle slit spectra
   rejection of deviant points, and a choice of function types and orders.
   Note that it is important to use a method which rejects cosmic rays such as
   using either medians over all the background regions (<i>background</i> =
-  <tt>"median"</tt>) or median samples during fitting (<i>b_naverage</i> &lt; -1).  The
+  <span style="font-family: monospace;">"median"</span>) or median samples during fitting (<i>b_naverage</i> &lt; -1).  The
   background subtraction algorithm and options are described in greater
   detail in <b>apsum</b> and <b>apbackground</b>.
   </p>
@@ -1484,7 +1484,7 @@ doecslit: Process Echelle slit spectra
   <p>
   1.  The following example uses artificial data and may be executed
   at the terminal (with IRAF V2.10).  This is similar to the sequence
-  performed by the test procedure <tt>"demos doecslit"</tt>.
+  performed by the test procedure <span style="font-family: monospace;">"demos doecslit"</span>.
   </p>
   <pre>
   ec&gt; demos mkecslit
@@ -1497,22 +1497,22 @@ doecslit: Process Echelle slit spectra
   &gt;&gt;&gt; norders=3 extcor+ fluxcal+ resize+ splot+
   Set reference aperture for Bdemostd
   Edit apertures for Bdemostd?  (yes):
-  &lt;Check background with <tt>'b'</tt>, exit background and review with <tt>'q'</tt>&gt;
+  &lt;Check background with <span style="font-family: monospace;">'b'</span>, exit background and review with <span style="font-family: monospace;">'q'</span>&gt;
   Fit traced positions for Bdemostd interactively?  (yes):  
   Fit curve to aperture 1 of Bdemostd interactively  (yes):
-  &lt;Exit with <tt>'q'</tt>&gt;
+  &lt;Exit with <span style="font-family: monospace;">'q'</span>&gt;
   Fit curve to aperture 2 of Bdemostd interactively  (yes): N
   Edit apertures for Bdemoobj?  (yes):
-  &lt;Check background with <tt>'b'</tt>, exit background and review with <tt>'q'</tt>&gt;
+  &lt;Check background with <span style="font-family: monospace;">'b'</span>, exit background and review with <span style="font-family: monospace;">'q'</span>&gt;
   Fit traced positions for Bdemoobj interactively?  (yes): N
   Extract arc reference image Bdemoarc
   Determine dispersion solution for Bdemoarc
-  &lt;Type <tt>'m'</tt> at first strong line (pixel 156) and identify it as 4965&gt;
-  &lt;Type <tt>'k'</tt> to go to next order&gt;
+  &lt;Type <span style="font-family: monospace;">'m'</span> at first strong line (pixel 156) and identify it as 4965&gt;
+  &lt;Type <span style="font-family: monospace;">'k'</span> to go to next order&gt;
   &lt;Mark 52-&gt;5002, 74-&gt;5003.6, 155-&gt;5009.3&gt;
-  &lt;Type <tt>'k'</tt> to go to next order and mark 18-&gt;5044.7, 231-&gt;5059.8&gt;
-  &lt;Type <tt>'f'</tt> to see the fit residuals&gt;
-  &lt;Type <tt>'q'</tt> to quit fit and then <tt>'q'</tt> to exit&gt;
+  &lt;Type <span style="font-family: monospace;">'k'</span> to go to next order and mark 18-&gt;5044.7, 231-&gt;5059.8&gt;
+  &lt;Type <span style="font-family: monospace;">'f'</span> to see the fit residuals&gt;
+  &lt;Type <span style="font-family: monospace;">'q'</span> to quit fit and then <span style="font-family: monospace;">'q'</span> to exit&gt;
   Extract standard star spectrum Bdemostd
   Assign arc spectra for Bdemostd
   Extract and reidentify arc spectrum Bdemoarc
@@ -1524,14 +1524,14 @@ doecslit: Process Echelle slit spectra
   Bdemostd.ec.imh[1]: Artificial Echelle Spectrum
   Star name in calibration list: hz14
   Bdemostd.ec.imh[1]: Edit bandpasses? (no|yes|NO|YES|NO!|YES!) (no): y
-  &lt;Exit with <tt>'q'</tt>&gt;
+  &lt;Exit with <span style="font-family: monospace;">'q'</span>&gt;
   Bdemostd.ec.imh[2]: Artificial Echelle Spectrum
   Bdemostd.ec.imh[2]: Edit bandpasses? (no|yes|NO|YES|NO!|YES!) (y): N
   Bdemostd.ec.imh[3]: Artificial Echelle Spectrum
   Bdemostd.ec.imh[3]: Edit bandpasses? (no|yes|NO|YES|NO!|YES!) (N):
   Compute sensitivity function
   Fit aperture 1 interactively? (no|yes|NO|YES) (no|yes|NO|YES) (yes):
-  &lt;Exit with <tt>'q'</tt>&gt;
+  &lt;Exit with <span style="font-family: monospace;">'q'</span>&gt;
   Sensitivity function for aperture  1 --&gt; sens.0001
   Fit aperture 2 interactively? (no|yes|NO|YES) (no|yes|NO|YES) (yes): N
   Sensitivity function for aperture  2 --&gt; sens.0002
@@ -1540,7 +1540,7 @@ doecslit: Process Echelle slit spectra
   Standard stars:
   Splot spectrum? (no|yes|NO|YES) (yes):
   Image line/aperture to plot (0:) (1):
-  &lt;Exit with <tt>'q'</tt>&gt;
+  &lt;Exit with <span style="font-family: monospace;">'q'</span>&gt;
   Extract object spectrum Bdemoobj
   Assign arc spectra for Bdemoobj
   Extract and reidentify arc spectrum Bdemoarc
@@ -1553,7 +1553,7 @@ doecslit: Process Echelle slit spectra
   Bdemoobj.ec.imh:
   Splot spectrum? (no|yes|NO|YES) (yes):
   Image line/aperture to plot (0:) (1):
-  &lt;Exit with <tt>'q'</tt>&gt;
+  &lt;Exit with <span style="font-family: monospace;">'q'</span>&gt;
   </pre>
   <!-- EndSection:   'EXAMPLES' -->
   <h3>Revisions</h3>

@@ -41,9 +41,9 @@ imcctran: Transform image header from one celestial wcs to another
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='&lt;imagename&gt; [wcs]' -->
   <dd>The celestial coordinate system is the world coordinate system of the image
   &lt;imagename&gt; and the input or output pixel coordinates may be in the
-  <tt>"logical"</tt>, <tt>"tv"</tt>, <tt>"physical"</tt> or <tt>"world"</tt> coordinate systems. If wcs is not
-  specified <tt>"logical"</tt> is assumed, unless the input coordinates are read from the
-  image cursor, in which case <tt>"tv"</tt> is assumed. The image celestial coordinate
+  <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"tv"</span>, <span style="font-family: monospace;">"physical"</span> or <span style="font-family: monospace;">"world"</span> coordinate systems. If wcs is not
+  specified <span style="font-family: monospace;">"logical"</span> is assumed, unless the input coordinates are read from the
+  image cursor, in which case <span style="font-family: monospace;">"tv"</span> is assumed. The image celestial coordinate
   system must be one of the valid FITS celestial coordinate systems:
   equatorial (FK4, FK4-NO-E, FK5, or GAPPT), ecliptic, galactic, or
   supergalactic.
@@ -293,7 +293,7 @@ imcctran: Transform image header from one celestial wcs to another
   <p>
   If an error is encountered when decoding the input or output world coordinate
   systems, an error message is printed on the standard output (if <i>verbose</i>
-  is <tt>"yes"</tt>), and the input image left unmodified.
+  is <span style="font-family: monospace;">"yes"</span>), and the input image left unmodified.
   </p>
   <p>
   If the input projection is one of the zenithal projections TAN, SIN, STG,
@@ -375,7 +375,7 @@ imcctran: Transform image header from one celestial wcs to another
   <p>
   USERS NEED TO BE AWARE THAT THE IRAF IMAGE WORLD COORDINATE SYSTEM
   CURRENTLY (IRAF VERSIONS 2.10.4 PATCH 2 AND EARLIER) SUPPORTS ONLY THE
-  EQUATORIAL SYSTEM (CTYPE (ra axis) = <tt>"RA--XXXX"</tt> CTYPE (dec axis) = <tt>"DEC-XXXX"</tt>)
+  EQUATORIAL SYSTEM (CTYPE (ra axis) = <span style="font-family: monospace;">"RA--XXXX"</span> CTYPE (dec axis) = <span style="font-family: monospace;">"DEC-XXXX"</span>)
   WHERE XXXX IS THE PROJECTION TYPE, EVEN THOUGH THE IMCCTRAN TASK 
   SUPPORTS GALACTIC, ECLIPTIC, AND SUPERGALACTIC COORDINATES. IMCCTRAN will
   update the image correctly for non-equatorial systems, but IRAF will
@@ -394,16 +394,16 @@ imcctran: Transform image header from one celestial wcs to another
   Additional information on the IRAF world coordinate systems can be found in
   the help pages for the WCSEDIT and WCRESET tasks.
   Detailed documentation for the IRAF world coordinate system interface MWCS
-  can be found in the file <tt>"iraf$sys/mwcs/MWCS.hlp"</tt>. This file can be
-  formatted and printed with the command <tt>"help iraf$sys/mwcs/MWCS.hlp fi+ |
-  lprint"</tt>.
+  can be found in the file <span style="font-family: monospace;">"iraf$sys/mwcs/MWCS.hlp"</span>. This file can be
+  formatted and printed with the command <span style="font-family: monospace;">"help iraf$sys/mwcs/MWCS.hlp fi+ |
+  lprint"</span>.
   </p>
   <p>
   Details of the FITS header world coordinate system interface can
-  be found in the draft paper <tt>"World Coordinate Systems Representations Within the
-  FITS Format"</tt> by Hanisch and Wells, available from the iraf anonymous ftp
-  archive and the draft paper which supersedes it <tt>"Representations of Celestial
-  Coordinates in FITS"</tt> by Greisen and Calabretta available from the NRAO
+  be found in the draft paper <span style="font-family: monospace;">"World Coordinate Systems Representations Within the
+  FITS Format"</span> by Hanisch and Wells, available from the iraf anonymous ftp
+  archive and the draft paper which supersedes it <span style="font-family: monospace;">"Representations of Celestial
+  Coordinates in FITS"</span> by Greisen and Calabretta available from the NRAO
   anonymous ftp archives.
   </p>
   <p>
@@ -411,11 +411,11 @@ imcctran: Transform image header from one celestial wcs to another
   SLALIB library provided courtesy of Patrick Wallace. These routines
   are very well documented internally with extensive references provided
   where appropriate. Interested users are encouraged to examine the routines
-  for this information. Type <tt>"help slalib"</tt> to get a listing of the SLALIB
-  routines, <tt>"help slalib opt=sys"</tt> to get a concise summary of the library,
-  and <tt>"help &lt;routine&gt;"</tt> to get a description of each routine's calling sequence,
+  for this information. Type <span style="font-family: monospace;">"help slalib"</span> to get a listing of the SLALIB
+  routines, <span style="font-family: monospace;">"help slalib opt=sys"</span> to get a concise summary of the library,
+  and <span style="font-family: monospace;">"help &lt;routine&gt;"</span> to get a description of each routine's calling sequence,
   required input and output, etc. An overview of the library can be found in the
-  paper <tt>"SLALIB - A Library of Subprograms"</tt>, Starlink User Note 67.7
+  paper <span style="font-family: monospace;">"SLALIB - A Library of Subprograms"</span>, Starlink User Note 67.7
   by P.T. Wallace, available from the Starlink archives.
   </p>
   <!-- EndSection:   'REFERENCES' -->

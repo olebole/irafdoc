@@ -34,7 +34,7 @@ credit: Interactively edit cosmic rays using an image display
   </p>
   <p>
   For the purpose of editing cosmic rays the most useful editing option
-  is <tt>'b'</tt> to replace cosmic rays in a circular annulus using local sky
+  is <span style="font-family: monospace;">'b'</span> to replace cosmic rays in a circular annulus using local sky
   values.  This can be done interactively or using a list of positions
   along with the <i>default</i> parameter value.
   </p>
@@ -49,7 +49,7 @@ credit: Interactively edit cosmic rays using an image display
   </pre>
   <p>
   2.  To use a two column list of positions and remove the cosmic rays using
-  the <tt>'b'</tt> key algorithm.
+  the <span style="font-family: monospace;">'b'</span> key algorithm.
   </p>
   <pre>
       cl&gt; credit obj012 crobj012 cursor=crlist.dat display-

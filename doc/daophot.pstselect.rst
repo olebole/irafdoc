@@ -32,7 +32,7 @@ pstselect: Select candidate psf stars based on proximity
   <dt><b>photfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='photfile' Line='photfile' -->
   <dd>The list of input  photometry files. The number of photometry files must
-  be equal to the number of input images. If photfile is <tt>"default"</tt>, <tt>"dir$default"</tt>,
+  be equal to the number of input images. If photfile is <span style="font-family: monospace;">"default"</span>, <span style="font-family: monospace;">"dir$default"</span>,
   or a directory specification PSTSELECT searches for a file called 
   dir$image.mag.#  where # is the highest available version number for the file.
   Photfile is normally the output of the PHOT task but may also be the  output
@@ -44,8 +44,8 @@ pstselect: Select candidate psf stars based on proximity
   <dt><b>pstfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pstfile' Line='pstfile' -->
   <dd>The  list  of  output  psf star photometry files. There must be one output
-  psf star photometry file for every input image. If pstfile is <tt>"default"</tt>,
-  <tt>"dir$default"</tt>,  or a  directory  specification  then  PSTSELECT writes
+  psf star photometry file for every input image. If pstfile is <span style="font-family: monospace;">"default"</span>,
+  <span style="font-family: monospace;">"dir$default"</span>,  or a  directory  specification  then  PSTSELECT writes
   a file called dir$image.pst.# where # is the next  available  version  number.
   Pstfile  inherits its file type, it may be either an APPHOT/DAOPHOT
   text or STSDAS binary file, from photfile.
@@ -64,7 +64,7 @@ pstselect: Select candidate psf stars based on proximity
   </dd>
   </dl>
   <dl>
-  <dt><b>plotfile = <tt>""</tt></b></dt>
+  <dt><b>plotfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='plotfile' Line='plotfile = ""' -->
   <dd>The name of the output file containing mesh, contour, or profile plots of the
   selected PSF stars. If plotfile is undefined no plot file is created; otherwise
@@ -73,7 +73,7 @@ pstselect: Select candidate psf stars based on proximity
   </dd>
   </dl>
   <dl>
-  <dt><b>datapars = <tt>""</tt></b></dt>
+  <dt><b>datapars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='datapars' Line='datapars = ""' -->
   <dd>The name of the file containing the data dependent parameters. The parameter
   <i>scale</i> is located here. If <i>datapars</i> is undefined then the default
@@ -81,7 +81,7 @@ pstselect: Select candidate psf stars based on proximity
   </dd>
   </dl>
   <dl>
-  <dt><b>daopars = <tt>""</tt></b></dt>
+  <dt><b>daopars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='daopars' Line='daopars = ""' -->
   <dd>The name of the file containing the daophot fitting parameters. The parameters
   <i>psfrad</i> and <i>fitrad</i> are located here. If <i>daopars</i> is undefined
@@ -94,42 +94,42 @@ pstselect: Select candidate psf stars based on proximity
   <dd>Select the psf stars interactively ? If interactive = yes and icommands is
   undefined, PSTSELECT reads in the star list from <i>photfile</i>, sorts the
   stars by magnitude and waits for commands from the user. If interactive = no
-  and icommands=<tt>""</tt>, PSTSELECT selects candidate PSF stars from <i>photfile</i>
+  and icommands=<span style="font-family: monospace;">""</span>, PSTSELECT selects candidate PSF stars from <i>photfile</i>
   automatically. If icommands is not undefined then interactive is automatically
-  set to <tt>"no"</tt>, and commands are read from the image cursor command file.
+  set to <span style="font-family: monospace;">"no"</span>, and commands are read from the image cursor command file.
   </dd>
   </dl>
   <dl>
-  <dt><b>plottype = <tt>"mesh"</tt></b></dt>
+  <dt><b>plottype = <span style="font-family: monospace;">"mesh"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='plottype' Line='plottype = "mesh"' -->
   <dd>The default plot type displayed when a psf star is selected interactively.
-  The choices are <tt>"mesh"</tt>, <tt>"contour"</tt>, or <tt>"radial"</tt>.
+  The choices are <span style="font-family: monospace;">"mesh"</span>, <span style="font-family: monospace;">"contour"</span>, or <span style="font-family: monospace;">"radial"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>icommands = <tt>""</tt></b></dt>
+  <dt><b>icommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""' -->
   <dd>The image display cursor or image cursor command file.
   </dd>
   </dl>
   <dl>
-  <dt><b>gcommands = <tt>""</tt></b></dt>
+  <dt><b>gcommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""' -->
   <dd>The graphics cursor or graphics cursor command file.
   </dd>
   </dl>
   <dl>
-  <dt><b>wcsin = <tt>")_.wcsin"</tt>, wcsout = <tt>")_.wcsout"</tt></b></dt>
+  <dt><b>wcsin = <span style="font-family: monospace;">")_.wcsin"</span>, wcsout = <span style="font-family: monospace;">")_.wcsout"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcsin' Line='wcsin = ")_.wcsin", wcsout = ")_.wcsout"' -->
   <dd>The coordinate system of the input coordinates read from <i>photfile</i> and
   of the output coordinates written to <i>pstfile</i> respectively. The image
   header coordinate system is used to transform from the input coordinate
-  system to the <tt>"logical"</tt> pixel coordinate system used internally,
-  and from the internal <tt>"logical"</tt> pixel coordinate system to the output
-  coordinate system. The input coordinate system options are <tt>"logical"</tt>, <tt>"tv"</tt>,
-  <tt>"physical"</tt>, and <tt>"world"</tt>. The output coordinate system options are <tt>"logical"</tt>,
-  <tt>"tv"</tt>, and <tt>"physical"</tt>. The image cursor coordinate system is assumed to
-  be the <tt>"tv"</tt> system.
+  system to the <span style="font-family: monospace;">"logical"</span> pixel coordinate system used internally,
+  and from the internal <span style="font-family: monospace;">"logical"</span> pixel coordinate system to the output
+  coordinate system. The input coordinate system options are <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"tv"</span>,
+  <span style="font-family: monospace;">"physical"</span>, and <span style="font-family: monospace;">"world"</span>. The output coordinate system options are <span style="font-family: monospace;">"logical"</span>,
+  <span style="font-family: monospace;">"tv"</span>, and <span style="font-family: monospace;">"physical"</span>. The image cursor coordinate system is assumed to
+  be the <span style="font-family: monospace;">"tv"</span> system.
   <dl>
   <dt><b>logical</b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='logical' Line='logical' -->
@@ -183,56 +183,56 @@ pstselect: Select candidate psf stars based on proximity
   </dl>
   The wcsin and wcsout parameters default to the values of the package
   parameters of the same name. The default values of the package parameters
-  wcsin and wcsout are <tt>"logical"</tt> and <tt>"logical"</tt> respectively.
+  wcsin and wcsout are <span style="font-family: monospace;">"logical"</span> and <span style="font-family: monospace;">"logical"</span> respectively.
   </dd>
   </dl>
   <dl>
-  <dt><b>cache = <tt>")_.cache"</tt></b></dt>
+  <dt><b>cache = <span style="font-family: monospace;">")_.cache"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cache' Line='cache = ")_.cache"' -->
   <dd>Cache the image pixels in memory. Cache may be set to the value of the apphot
-  package parameter (the default), <tt>"yes"</tt>, or <tt>"no"</tt>. By default caching is
+  package parameter (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>. By default caching is
   disabled.
   </dd>
   </dl>
   <dl>
-  <dt><b>verify = <tt>")_.verify"</tt></b></dt>
+  <dt><b>verify = <span style="font-family: monospace;">")_.verify"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verify' Line='verify = ")_.verify"' -->
   <dd>Verify the critical PSTSELECT parameters ?
   Verify can be set to the DAOPHOT package parameter value (the default),
-  <tt>"yes"</tt>, or <tt>"no"</tt>.
+  <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>update = <tt>")_.update"</tt></b></dt>
+  <dt><b>update = <span style="font-family: monospace;">")_.update"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='update' Line='update = ")_.update"' -->
-  <dd>Update the algorithm parameters if verify is <tt>"yes"</tt>?
+  <dd>Update the algorithm parameters if verify is <span style="font-family: monospace;">"yes"</span>?
   Update can be set to the DAOPHOT package parameter value (the default),
-  <tt>"yes"</tt>, or <tt>"no"</tt>.
+  <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>verbose = <tt>")_.verbose"</tt></b></dt>
+  <dt><b>verbose = <span style="font-family: monospace;">")_.verbose"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = ")_.verbose"' -->
   <dd>Print messages about the progress of the task in non-interactive mode ?
   Verbose can be set to the DAOPHOT package parameter value (the default),
-  <tt>"yes"</tt>, or <tt>"no"</tt>.
+  <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <dl>
   <dt><b></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line=' ' -->
-  <dd>graphics = <tt>")_.graphics"</tt>
+  <dd>graphics = <span style="font-family: monospace;">")_.graphics"</span>
   The default graphics device.  Graphics can be set to the default
-  daophot package parameter value, <tt>"yes"</tt>, or <tt>"no"</tt>.
+  daophot package parameter value, <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>display = <tt>")_.display"</tt></b></dt>
+  <dt><b>display = <span style="font-family: monospace;">")_.display"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='display' Line='display = ")_.display"' -->
   <dd>The  default  image  display  device.  Display can be set to the DAOPHOT
-  package parameter value (the default), <tt>"yes"</tt>, or <tt>"no"</tt>. By default graphics
-  overlay is disabled.  Setting display to one of <tt>"imdr"</tt>, <tt>"imdg"</tt>, <tt>"imdb"</tt>, or
-  <tt>"imdy"</tt> enables graphics overlay with the IMD graphics kernel.
+  package parameter value (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>. By default graphics
+  overlay is disabled.  Setting display to one of <span style="font-family: monospace;">"imdr"</span>, <span style="font-family: monospace;">"imdg"</span>, <span style="font-family: monospace;">"imdb"</span>, or
+  <span style="font-family: monospace;">"imdy"</span> enables graphics overlay with the IMD graphics kernel.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -246,19 +246,19 @@ pstselect: Select candidate psf stars based on proximity
   </p>
   <p>
   The coordinates read from <i>photfile</i> are assumed to be in coordinate
-  system defined by <i>wcsin</i>. The options are <tt>"logical"</tt>, <tt>"tv"</tt>, <tt>"physical"</tt>,
-  and <tt>"world"</tt> and the transformation from the input coordinate system to
-  the internal <tt>"logical"</tt> system is defined by the image coordinate system.
-  The simplest default is the <tt>"logical"</tt> pixel system. Users working on with
+  system defined by <i>wcsin</i>. The options are <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"tv"</span>, <span style="font-family: monospace;">"physical"</span>,
+  and <span style="font-family: monospace;">"world"</span> and the transformation from the input coordinate system to
+  the internal <span style="font-family: monospace;">"logical"</span> system is defined by the image coordinate system.
+  The simplest default is the <span style="font-family: monospace;">"logical"</span> pixel system. Users working on with
   image sections but importing pixel coordinate lists generated from the parent
-  image must use the <tt>"tv"</tt> or <tt>"physical"</tt> input coordinate systems.
+  image must use the <span style="font-family: monospace;">"tv"</span> or <span style="font-family: monospace;">"physical"</span> input coordinate systems.
   </p>
   <p>
   The coordinates written to <i>pstfile</i> are in the coordinate system defined
-  by <i>wcsout</i>. The options are <tt>"logical"</tt>, <tt>"tv"</tt>, and <tt>"physical"</tt>. The simplest
-  default is the <tt>"logical"</tt> system. Users wishing to correlate the output
+  by <i>wcsout</i>. The options are <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"tv"</span>, and <span style="font-family: monospace;">"physical"</span>. The simplest
+  default is the <span style="font-family: monospace;">"logical"</span> system. Users wishing to correlate the output
   coordinates of objects measured in image sections or mosaic pieces with
-  coordinates in the parent image must use the <tt>"tv"</tt> or <tt>"physical"</tt> coordinate
+  coordinates in the parent image must use the <span style="font-family: monospace;">"tv"</span> or <span style="font-family: monospace;">"physical"</span> coordinate
   systems.
   </p>
   <p>
@@ -275,9 +275,9 @@ pstselect: Select candidate psf stars based on proximity
   <i>plottype</i>, of the selected stars may be saved in the file <i>plotfile</i>.
   </p>
   <p>
-  If <i>interactive</i> = <tt>"no"</tt>, PSTSELECT reads the star list in <i>photfile</i>,
+  If <i>interactive</i> = <span style="font-family: monospace;">"no"</span>, PSTSELECT reads the star list in <i>photfile</i>,
   selects the candidate psf stars as described above, and writes the results to
-  <i>pstfile</i> automatically. If interactive = <tt>"yes"</tt>, PSTSELECT reads
+  <i>pstfile</i> automatically. If interactive = <span style="font-family: monospace;">"yes"</span>, PSTSELECT reads
   the star list, selects the candidate psf stars and waits for further
   instruction from the user. At this point the user can step through the stars
   chosen by PSTSELECT, check their surface, contour, or radial profile plots
@@ -360,7 +360,7 @@ pstselect: Select candidate psf stars based on proximity
   <h3>Output</h3>
   <!-- BeginSection: 'OUTPUT' -->
   <p>
-  If <i>verbose</i> = <tt>"yes"</tt> a single line is written to the terminal for each
+  If <i>verbose</i> = <span style="font-family: monospace;">"yes"</span> a single line is written to the terminal for each
   star added to the candidate psf star list. Full output is written to the
   file <i>pstfile</i>. At the beginning of this file is a header listing the
   values of all the important parameters. For each star included in the candidate
@@ -379,7 +379,7 @@ pstselect: Select candidate psf stars based on proximity
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Select up to 10 psf stars from the PHOT task output non-interactively. 
-  Save surface plots of the selected stars in the file <tt>"psf.plots"</tt>.
+  Save surface plots of the selected stars in the file <span style="font-family: monospace;">"psf.plots"</span>.
   </p>
   <pre>
       da&gt; daofind dev$ypix default fwhmpsf=2.5 sigma=5.0 threshold=20.0

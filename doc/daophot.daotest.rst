@@ -31,7 +31,7 @@ daotest: Run basic tests on the daophot package tasks
   </dd>
   </dl>
   <dl>
-  <dt><b>daologfile = <tt>""</tt></b></dt>
+  <dt><b>daologfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='daologfile' Line='daologfile = ""' -->
   <dd>The name of the output log file. By default all the output image header
   listings and photometry file output is logged in a file
@@ -40,7 +40,7 @@ daotest: Run basic tests on the daophot package tasks
   </dd>
   </dl>
   <dl>
-  <dt><b>daoplotfile = <tt>""</tt></b></dt>
+  <dt><b>daoplotfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='daoplotfile' Line='daoplotfile = ""' -->
   <dd>The name of the output plot file. By default all the graphics output is
   logged in a file called <i>"imname.plot"</i>. If the plot file already exists

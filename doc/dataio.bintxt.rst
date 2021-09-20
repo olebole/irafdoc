@@ -25,7 +25,7 @@ bintxt: Convert a binary file to an IRAF text file
   <dl>
   <dt><b>binary_file</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='binary_file' Line='binary_file' -->
-  <dd>Input file name or template,  e.g. <tt>"file1"</tt> or <tt>"file*"</tt>.
+  <dd>Input file name or template,  e.g. <span style="font-family: monospace;">"file1"</span> or <span style="font-family: monospace;">"file*"</span>.
   </dd>
   </dl>
   <dl>

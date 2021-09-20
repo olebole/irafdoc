@@ -72,8 +72,8 @@ badpiximage: Create a bad pixel mask image from a bad pixel file
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. To make a bad pixel mask image from the bad pixel file <tt>"cryocambp.dat"</tt>
-  using the image <tt>"ccd005"</tt> as the template:
+  1. To make a bad pixel mask image from the bad pixel file <span style="font-family: monospace;">"cryocambp.dat"</span>
+  using the image <span style="font-family: monospace;">"ccd005"</span> as the template:
   </p>
   <p>
   	cl&gt; badpiximage cryocambp.dat ccd005 cryocambp

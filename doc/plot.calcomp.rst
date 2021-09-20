@@ -29,7 +29,7 @@ calcomp: Plot metacode on a Calcomp pen plotter
   </dd>
   </dl>
   <dl>
-  <dt><b>device = <tt>"calcomp"</tt></b></dt>
+  <dt><b>device = <span style="font-family: monospace;">"calcomp"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "calcomp"' -->
   <dd>Name of the destination plotter (as referenced in graphcap).
   </dd>
@@ -39,7 +39,7 @@ calcomp: Plot metacode on a Calcomp pen plotter
   <!-- Sec='PARAMETERS' Level=0 Label='generic' Line='generic = no' -->
   <dd>Ignore remaining kernel dependent parameters -- if yes, then none of the
   following parameters will be used; this is automatically the case, for
-  instance, when using <tt>":.snap calcomp"</tt> from cursor mode.
+  instance, when using <span style="font-family: monospace;">":.snap calcomp"</span> from cursor mode.
   </dd>
   </dl>
   <dl>
@@ -79,21 +79,21 @@ calcomp: Plot metacode on a Calcomp pen plotter
   </dd>
   </dl>
   <dl>
-  <dt><b>txquality = <tt>"normal"</tt></b></dt>
+  <dt><b>txquality = <span style="font-family: monospace;">"normal"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='txquality' Line='txquality = "normal"' -->
-  <dd>Text quality; <tt>"normal"</tt> means use the text quality specified in the metacode
-  file.  <tt>"Low"</tt> means override the metacode font with the Calcomp symbol font,
-  while <tt>"medium"</tt> and <tt>"high"</tt> use IRAF fonts.  There is little difference in speed
-  with the different fonts, except if the text is bold, in which case <tt>"high"</tt>
-  takes twice as long as <tt>"low"</tt> or <tt>"medium"</tt>.
+  <dd>Text quality; <span style="font-family: monospace;">"normal"</span> means use the text quality specified in the metacode
+  file.  <span style="font-family: monospace;">"Low"</span> means override the metacode font with the Calcomp symbol font,
+  while <span style="font-family: monospace;">"medium"</span> and <span style="font-family: monospace;">"high"</span> use IRAF fonts.  There is little difference in speed
+  with the different fonts, except if the text is bold, in which case <span style="font-family: monospace;">"high"</span>
+  takes twice as long as <span style="font-family: monospace;">"low"</span> or <span style="font-family: monospace;">"medium"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>lwtype = <tt>"ntracing"</tt></b></dt>
+  <dt><b>lwtype = <span style="font-family: monospace;">"ntracing"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lwtype' Line='lwtype = "ntracing"' -->
-  <dd>Type of line and text width implementation.  <tt>"Ntracing"</tt> causes the pen plotter
+  <dd>Type of line and text width implementation.  <span style="font-family: monospace;">"Ntracing"</span> causes the pen plotter
   to draw each line or character several times with slight offsets to simulate 
-  boldness.  <tt>"Penchange"</tt>, if implemented in the local Calcomp library, would
+  boldness.  <span style="font-family: monospace;">"Penchange"</span>, if implemented in the local Calcomp library, would
   cause the plotter to pause for an operator to change the pen when bold lines
   or text are requested.
   </dd>
@@ -141,8 +141,8 @@ calcomp: Plot metacode on a Calcomp pen plotter
   <dl>
   <dt><b>plwsep = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='plwsep' Line='plwsep = INDEF' -->
-  <dd>Parallel line width separation -- if bold lines are implemented with <tt>"lwtype
-  = ntracing"</tt>, this is the right-angle distance between adjacent traces.  If
+  <dd>Parallel line width separation -- if bold lines are implemented with <span style="font-family: monospace;">"lwtype
+  = ntracing"</span>, this is the right-angle distance between adjacent traces.  If
   INDEF, a local default is used from the device table dev$graphcap.
   </dd>
   </dl>
@@ -151,7 +151,7 @@ calcomp: Plot metacode on a Calcomp pen plotter
   <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Task <b>calcomp</b> is an IRAF graphics kernel.  It may be run standalone to
-  plot a GKI metacode file, or from cursor mode via <tt>":.snap calcomp"</tt>.
+  plot a GKI metacode file, or from cursor mode via <span style="font-family: monospace;">":.snap calcomp"</span>.
   </p>
   <p>
   <b>Calcomp</b> may be used to draw any IRAF plot on a Calcomp pen plotter.  It is
@@ -171,15 +171,15 @@ calcomp: Plot metacode on a Calcomp pen plotter
   <p>
   <b>Calcomp</b> also implements dashed and dotted lines and bold lines and text.
   Thus high-quality plots may be produced, at the expense of requiring more time.
-  If <tt>"lwtype=ntracing"</tt> and <tt>"lwover=no"</tt>, any bold text or lines in the metacode
+  If <span style="font-family: monospace;">"lwtype=ntracing"</span> and <span style="font-family: monospace;">"lwover=no"</span>, any bold text or lines in the metacode
   file, such as are produced for axes, tickmarks, titles and axis labels by many
-  IRAF plotting tasks, will appear bold on the Calcomp.  If txquality=<tt>"low"</tt> or
-  <tt>"medium"</tt>, and bold text is requested, each character will be drawn 5 times --
+  IRAF plotting tasks, will appear bold on the Calcomp.  If txquality=<span style="font-family: monospace;">"low"</span> or
+  <span style="font-family: monospace;">"medium"</span>, and bold text is requested, each character will be drawn 5 times --
   once in the center position and once to the right, top, left, and bottom of
-  the original position.  Each of the side positions is drawn <tt>"plwsep"</tt> inches
-  from the center.  If txquality=<tt>"high"</tt>, bold text is implemented with the same
+  the original position.  Each of the side positions is drawn <span style="font-family: monospace;">"plwsep"</span> inches
+  from the center.  If txquality=<span style="font-family: monospace;">"high"</span>, bold text is implemented with the same
   five tracings plus the four corners upper right, upper left, etc.  For most
-  applications txquality=<tt>"normal"</tt> or <tt>"medium"</tt> is adequate for nice-looking
+  applications txquality=<span style="font-family: monospace;">"normal"</span> or <span style="font-family: monospace;">"medium"</span> is adequate for nice-looking
   plots.
   </p>
   <p>
@@ -237,8 +237,8 @@ calcomp: Plot metacode on a Calcomp pen plotter
   Pen plotters vary considerably in their plotting rates.  At NOAO, plotting a
   metacode file from a 1024-pixel image generated by <b>longplot</b>, overriding
   bold lines and text, takes a couple of minutes.  The same plot with txquality
-  = <tt>"medium"</tt> can take over twice as long due to bold text, axes, and tick labels.
-  With txquality = <tt>"high"</tt>, it may take 4 or 5 times as long to plot.
+  = <span style="font-family: monospace;">"medium"</span> can take over twice as long due to bold text, axes, and tick labels.
+  With txquality = <span style="font-family: monospace;">"high"</span>, it may take 4 or 5 times as long to plot.
   </p>
   <p>
   Plots with dashed and dotted, or both, lines may take 2-5 times as long to 

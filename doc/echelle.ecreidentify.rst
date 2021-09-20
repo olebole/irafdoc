@@ -73,17 +73,17 @@ ecreidentify: Automatically identify features in spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>database = <tt>"database"</tt></b></dt>
+  <dt><b>database = <span style="font-family: monospace;">"database"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"' -->
   <dd>Database containing the feature data for the reference image and in
   which the features for the reidentified images are recorded.
   </dd>
   </dl>
   <dl>
-  <dt><b>logfiles = <tt>"STDOUT,logfile"</tt></b></dt>
+  <dt><b>logfiles = <span style="font-family: monospace;">"STDOUT,logfile"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfiles' Line='logfiles = "STDOUT,logfile"' -->
-  <dd>List of file in which to keep a processing log.  If a null file, <tt>""</tt>, is
-  given then no log is kept.  If the log file is <tt>"STDOUT"</tt> then the log is
+  <dd>List of file in which to keep a processing log.  If a null file, <span style="font-family: monospace;">""</span>, is
+  given then no log is kept.  If the log file is <span style="font-family: monospace;">"STDOUT"</span> then the log is
   written to the terminal.
   </dd>
   </dl>
@@ -104,7 +104,7 @@ ecreidentify: Automatically identify features in spectra
   number 1) which is then applied to each order by dividing by the order
   number.  If the shift is specified as INDEF then a shift is determined
   by finding the peaks in the input spectrum and correlating these peaks
-  against the feature in the reference spectrum.  This is the <tt>'x'</tt>
+  against the feature in the reference spectrum.  This is the <span style="font-family: monospace;">'x'</span>
   algorithm described in <b>ecidentify</b>.
   </p>
   <p>
@@ -116,10 +116,10 @@ ecreidentify: Automatically identify features in spectra
   (<i>cradius</i>) that feature is eliminated from the feature list.
   </p>
   <p>
-  If the parameter <i>refit</i> has the value <tt>"no"</tt> then the average shift
+  If the parameter <i>refit</i> has the value <span style="font-family: monospace;">"no"</span> then the average shift
   in the feature positions is recorded as a zero point wavelength offset
   for the fundamental order without changing the shape of the dispersion
-  function.  If the parameter has the value <tt>"yes"</tt> then the new feature
+  function.  If the parameter has the value <span style="font-family: monospace;">"yes"</span> then the new feature
   positions are used to refit the dispersion function (of the same function
   type and orders).  The order offset is also maintained.
   </p>

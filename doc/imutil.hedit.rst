@@ -41,7 +41,7 @@ hedit: Header editor
   <!-- Sec='PARAMETERS' Level=0 Label='value' Line='value' -->
   <dd>Either a string constant or a general expression (if the first character is
   a left parenthesis) to be evaluated to compute the new value of each field.
-  A single expression is used for all fields.  The special value <tt>"."</tt> causes the
+  A single expression is used for all fields.  The special value <span style="font-family: monospace;">"."</span> causes the
   value of each field to be printed rather than edited.
   </dd>
   </dl>
@@ -76,8 +76,8 @@ hedit: Header editor
   <dd>Interactively verify all operations which modify the image database.
   The editor will describe the operation to be performed, prompting with the
   new value of the parameter in the case of a field edit.  Type carriage
-  return or <tt>"yes"</tt> to complete the operation, or enter a new value explicitly
-  as a string.  Respond with <tt>"no"</tt> if you do not wish to change the value of
+  return or <span style="font-family: monospace;">"yes"</span> to complete the operation, or enter a new value explicitly
+  as a string.  Respond with <span style="font-family: monospace;">"no"</span> if you do not wish to change the value of
   the parameter.
   </dd>
   </dl>
@@ -105,13 +105,13 @@ hedit: Header editor
   </p>
   <p>
       The most basic functions of the image header editor are modification and
-  inspection of the fields of an image header.  Both the <tt>"standard"</tt> and
-  <tt>"user"</tt> fields may be edited in the same fashion, although not all standard
+  inspection of the fields of an image header.  Both the <span style="font-family: monospace;">"standard"</span> and
+  <span style="font-family: monospace;">"user"</span> fields may be edited in the same fashion, although not all standard
   fields are writable.  For example, to change the value of the standard field
-  <tt>"title"</tt> of the image <tt>"m74"</tt> to <tt>"sky flat"</tt> we would enter the following command.
+  <span style="font-family: monospace;">"title"</span> of the image <span style="font-family: monospace;">"m74"</span> to <span style="font-family: monospace;">"sky flat"</span> we would enter the following command.
   </p>
   <p>
-  	cl&gt; hedit m74 title <tt>"sky flat"</tt>
+  	cl&gt; hedit m74 title <span style="font-family: monospace;">"sky flat"</span>
   </p>
   <p>
   If <i>verify</i> mode is selected the editor will print the old value of the
@@ -124,20 +124,20 @@ hedit: Header editor
   </pre>
   <p>
   To accept the new value shown to the right of the arrow, type carriage
-  return or <tt>"yes"</tt> or <tt>"y"</tt> followed by carriage return.  To continue without
-  changing the value of the field in question enter <tt>"no"</tt> or <tt>"n"</tt> followed by
+  return or <span style="font-family: monospace;">"yes"</span> or <span style="font-family: monospace;">"y"</span> followed by carriage return.  To continue without
+  changing the value of the field in question enter <span style="font-family: monospace;">"no"</span> or <span style="font-family: monospace;">"n"</span> followed by
   carriage return.  To enter some other value merely type in the new value.
-  If the new value is one of the reserved strings, e.g., <tt>"yes"</tt> or <tt>"no"</tt>,
+  If the new value is one of the reserved strings, e.g., <span style="font-family: monospace;">"yes"</span> or <span style="font-family: monospace;">"no"</span>,
   enter it preceded by a backslash.  If verification is enabled you will
   also be asked if you want to update the header, once all header fields
   have been edited.  This is your last chance to change your mind before
   the header is modified on disk.  If you respond negatively the image header
   will not be updated, and editing will continue with the next image.
-  If the response is <tt>"q"</tt> the editor will exit entirely.
+  If the response is <span style="font-family: monospace;">"q"</span> the editor will exit entirely.
   </p>
   <p>
-  To conveniently print the value of the field <tt>"title"</tt> without modifying the
-  image header, we repeat the command with the special value <tt>"."</tt>.
+  To conveniently print the value of the field <span style="font-family: monospace;">"title"</span> without modifying the
+  image header, we repeat the command with the special value <span style="font-family: monospace;">"."</span>.
   </p>
   <p>
   	cl&gt; hedit m74 title .
@@ -219,7 +219,7 @@ hedit: Header editor
   	i_title		string		title string
   </pre>
   <p>
-  The standard header field names have an <tt>"i_"</tt> prefix to reduce the possibility
+  The standard header field names have an <span style="font-family: monospace;">"i_"</span> prefix to reduce the possibility
   of a name collision with a user field name, and to distinguish the two classes
   of parameters in templates.  The prefix may be omitted provided the simple
   name is unique.
@@ -229,7 +229,7 @@ hedit: Header editor
   </p>
   <p>
       The form of the field name list or template parameter <i>fields</i> is
-  equivalent to that of a filename template except that <tt>"@listfile"</tt> is not
+  equivalent to that of a filename template except that <span style="font-family: monospace;">"@listfile"</span> is not
   supported, and of course the template is expanded upon the field name list
   of an image, rather than upon a directory.  Abbreviations are not permitted
   in field names and case is not significant.  Case is ignored in this context
@@ -254,17 +254,17 @@ hedit: Header editor
   For example, the command
   </p>
   <p>
-  	cl&gt; hedit m74 title <tt>"title // ';ss'"</tt>
+  	cl&gt; hedit m74 title <span style="font-family: monospace;">"title // ';ss'"</span>
   </p>
   <p>
-  would change the title to the literal string constant <tt>"title // ';ss'"</tt>,
+  would change the title to the literal string constant <span style="font-family: monospace;">"title // ';ss'"</span>,
   whereas the command
   </p>
   <p>
-  	cl&gt; hedit m74 title <tt>"(title // ';ss')"</tt>
+  	cl&gt; hedit m74 title <span style="font-family: monospace;">"(title // ';ss')"</span>
   </p>
   <p>
-  would concatenate the string <tt>";ss"</tt> to the old title string.  We require
+  would concatenate the string <span style="font-family: monospace;">";ss"</span> to the old title string.  We require
   parenthesis for expression evaluation to avoid the need to doubly quote
   simple string constant values, which would be even more confusing for the
   user than using parenthesis.  For example, if expressions did not have to
@@ -272,7 +272,7 @@ hedit: Header editor
   to be entered as shown below.
   </p>
   <p>
-  	cl&gt; hedit m74 title '<tt>"sky flat"</tt>'	# invalid command
+  	cl&gt; hedit m74 title '<span style="font-family: monospace;">"sky flat"</span>'	# invalid command
   </p>
   <p>
   Expression evaluation for <i>hedit</i>, <i>hselect</i>, and similar tasks
@@ -286,7 +286,7 @@ hedit: Header editor
   </p>
   <p>
       The following operators are recognized in value expressions.  With the
-  exception of the operators <tt>"?"</tt>, <tt>"?="</tt>, and <tt>"@"</tt>, the operator set is equivalent
+  exception of the operators <span style="font-family: monospace;">"?"</span>, <span style="font-family: monospace;">"?="</span>, and <span style="font-family: monospace;">"@"</span>, the operator set is equivalent
   to that available in the CL and SPP languages.
   </p>
   <pre>
@@ -301,21 +301,21 @@ hedit: Header editor
   	@			reference a variable
   </pre>
   <p>
-  The operators <tt>"=="</tt>, <tt>"&amp;&amp;"</tt>, and <tt>"||"</tt> may be abbreviated as <tt>"="</tt>, <tt>"&amp;"</tt>, and <tt>"|"</tt>
+  The operators <span style="font-family: monospace;">"=="</span>, <span style="font-family: monospace;">"&amp;&amp;"</span>, and <span style="font-family: monospace;">"||"</span> may be abbreviated as <span style="font-family: monospace;">"="</span>, <span style="font-family: monospace;">"&amp;"</span>, and <span style="font-family: monospace;">"|"</span>
   if desired.  The ?= operator performs pattern matching upon strings.
   For example, the boolean expression shown below will be true whenever the
-  field <tt>"title"</tt> contains the substring <tt>"sky"</tt>.
+  field <span style="font-family: monospace;">"title"</span> contains the substring <span style="font-family: monospace;">"sky"</span>.
   </p>
   <p>
   	(title ?= '*sky*')
   </p>
   <p>
-  The conditional expression operator <tt>'?'</tt>, which is patterned after a similar
+  The conditional expression operator <span style="font-family: monospace;">'?'</span>, which is patterned after a similar
   operator in C, is used to make IF ELSE like decisions within an expression.
   The syntax is as follows:
   </p>
   <p>
-  	&lt;bool_expr&gt; <tt>'?'</tt> &lt;true_expr&gt; <tt>':'</tt> &lt;false_expr&gt; 
+  	&lt;bool_expr&gt; <span style="font-family: monospace;">'?'</span> &lt;true_expr&gt; <span style="font-family: monospace;">':'</span> &lt;false_expr&gt; 
   </p>
   <p>
   e.g., the expression
@@ -349,21 +349,21 @@ hedit: Header editor
   be given as a string constant.  For example, the value of the expression
   </p>
   <p>
-  	@<tt>"co-flag"</tt>
+  	@<span style="font-family: monospace;">"co-flag"</span>
   </p>
   <p>
-  is the value of the variable <tt>"co-flag"</tt>.  If the variable were referenced
-  directly by name the <tt>"-"</tt> would be interpreted as the subtraction operator,
-  causing an unknown variable reference (e.g., to <tt>"co"</tt>).
+  is the value of the variable <span style="font-family: monospace;">"co-flag"</span>.  If the variable were referenced
+  directly by name the <span style="font-family: monospace;">"-"</span> would be interpreted as the subtraction operator,
+  causing an unknown variable reference (e.g., to <span style="font-family: monospace;">"co"</span>).
   The operand following the @ may be any string valued expression.
-  The @ operator is right associative, hence the construct <tt>"@@param"</tt> is the
-  value of the parameter named by the value of the parameter <tt>"param"</tt>.
+  The @ operator is right associative, hence the construct <span style="font-family: monospace;">"@@param"</span> is the
+  value of the parameter named by the value of the parameter <span style="font-family: monospace;">"param"</span>.
   </p>
   <p>
   An expression may contain operands of datatypes bool, int, real, and string.
   Mixed mode expressions are permitted with automatic type coercion.  Most type
   coercions from boolean or string to other datatypes are illegal.  The boolean
-  constants <tt>"yes"</tt> and <tt>"no"</tt> are predefined and may be used within expressions.
+  constants <span style="font-family: monospace;">"yes"</span> and <span style="font-family: monospace;">"no"</span> are predefined and may be used within expressions.
   </p>
   <p>
   2.3.2 intrinsic functions
@@ -387,9 +387,9 @@ hedit: Header editor
   A function call may take either of the following forms:
   </p>
   <pre>
-  	&lt;identifier&gt; <tt>'('</tt> arglist <tt>')'</tt>
+  	&lt;identifier&gt; <span style="font-family: monospace;">'('</span> arglist <span style="font-family: monospace;">')'</span>
   or
-  	&lt;string_expr&gt; <tt>'('</tt> arglist <tt>')'</tt>
+  	&lt;string_expr&gt; <span style="font-family: monospace;">'('</span> arglist <span style="font-family: monospace;">')'</span>
   </pre>
   <p>
   The first form is the conventional form found in all programming languages.
@@ -414,21 +414,21 @@ hedit: Header editor
   <p>
   These builtin variables are especially useful for constructing context
   dependent expressions.  For example, the value of a field may be incremented
-  by 100 by assigning it the value <tt>"$ + 100"</tt>.
+  by 100 by assigning it the value <span style="font-family: monospace;">"$ + 100"</span>.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. Globally edit the database <tt>"n1"</tt>, setting the value of the string parameter
-  <tt>"obs"</tt> to <tt>"sky"</tt> if <tt>"s-flag"</tt> is 1, to <tt>"obj"</tt> otherwise.
+  1. Globally edit the database <span style="font-family: monospace;">"n1"</span>, setting the value of the string parameter
+  <span style="font-family: monospace;">"obs"</span> to <span style="font-family: monospace;">"sky"</span> if <span style="font-family: monospace;">"s-flag"</span> is 1, to <span style="font-family: monospace;">"obj"</span> otherwise.
   </p>
   <p>
-      cl&gt; hedit n1.* obs '(@<tt>"s-flag"</tt> == 1 ? <tt>"sky"</tt> : <tt>"obj"</tt>)'
+      cl&gt; hedit n1.* obs '(@<span style="font-family: monospace;">"s-flag"</span> == 1 ? <span style="font-family: monospace;">"sky"</span> : <span style="font-family: monospace;">"obj"</span>)'
   </p>
   <p>
   2. Globally edit the same database, replacing the value of the parameter
-  <tt>"variance"</tt> by the square root of the original value.
+  <span style="font-family: monospace;">"variance"</span> by the square root of the original value.
   </p>
   <p>
       cl&gt; hedit n1.* var '(sqrt(var))'

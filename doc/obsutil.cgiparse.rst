@@ -19,7 +19,7 @@ cgiparse: Parse STRING_QUERY environment variable into task parameters
   <p>
   CGIPARSE parses the STRING_QUERY environment varabile and sets parameters.
   The string format is a list of task.param=value pairs which includes the
-  standard QUERY string special characters <tt>'&amp;'</tt>, <tt>'+'</tt>, and <tt>'%'</tt>.  This is
+  standard QUERY string special characters <span style="font-family: monospace;">'&amp;'</span>, <span style="font-family: monospace;">'+'</span>, and <span style="font-family: monospace;">'%'</span>.  This is
   intended to parse a query from a CGI script.
   </p>
   <!-- EndSection:   'SYNOPSIS' -->
@@ -41,7 +41,7 @@ cgiparse: Parse STRING_QUERY environment variable into task parameters
   <p>
   CGIPARSE parses the STRING_QUERY environment varabile and sets parameters.
   The string format is a list of task.param=value pairs which includes the
-  standard QUERY string special characters <tt>'&amp;'</tt>, <tt>'+'</tt>, and <tt>'%'</tt>.  This is
+  standard QUERY string special characters <span style="font-family: monospace;">'&amp;'</span>, <span style="font-family: monospace;">'+'</span>, and <span style="font-family: monospace;">'%'</span>.  This is
   intended to parse a query from a CGI script.
   </p>
   <p>
@@ -57,7 +57,7 @@ cgiparse: Parse STRING_QUERY environment variable into task parameters
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  A CGI script calls a CL script with the STRING_QUERY string set.
-  The string has <tt>"imheader.longheader=yes"</tt>.  CGIPARSE is called and
+  The string has <span style="font-family: monospace;">"imheader.longheader=yes"</span>.  CGIPARSE is called and
   when it completes the parameter value is set.
   </p>
   <pre>
@@ -77,12 +77,12 @@ cgiparse: Parse STRING_QUERY environment variable into task parameters
               (mode = "ql")           
   </pre>
   <p>
-  Note that when running this in a <tt>"#!cl"</tt> script where the <tt>"login.cl"</tt> is
+  Note that when running this in a <span style="font-family: monospace;">"#!cl"</span> script where the <span style="font-family: monospace;">"login.cl"</span> is
   not used that you must be careful to have all tasks referenced by the
   query string defined.
   </p>
   <p>
-  2.  Below is a <tt>"#!cl"</tt> type script that uses CGIPARSE.  It is used for
+  2.  Below is a <span style="font-family: monospace;">"#!cl"</span> type script that uses CGIPARSE.  It is used for
   a spectral exposure time calculator based on OBSUTIL.SPTIME though many
   aspects are fairly generic for this type of application.
   </p>

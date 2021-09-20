@@ -39,7 +39,7 @@ tscopy: Copy row/column subsets of tables using selectors.
   <p>
   NOTE: Be careful when using a wildcard for the extension.
   If you have the files 'table.tab' and 'table.lis' in the current directory,
-  for example, then the command <tt>"tscopy tab* test/"</tt> would copy both files to the subdirectory
+  for example, then the command <span style="font-family: monospace;">"tscopy tab* test/"</span> would copy both files to the subdirectory
   'test'.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
@@ -55,7 +55,7 @@ tscopy: Copy row/column subsets of tables using selectors.
   <dt><b>outtable [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable [file name template]' -->
   <dd>Either a directory name or a list of output table names. The standard
-  value <tt>"STDOUT"</tt> generates ASCII output that can be redirected to a file.
+  value <span style="font-family: monospace;">"STDOUT"</span> generates ASCII output that can be redirected to a file.
   </dd>
   </dl>
   <dl>
@@ -88,8 +88,8 @@ tscopy: Copy row/column subsets of tables using selectors.
   </pre>
   <p>
   In the latter case the extension is given explicitly in case there
-  are other files beginning with <tt>"tab"</tt> that are not tables; there must
-  be exactly three tables beginning with <tt>"tab"</tt> because the output list
+  are other files beginning with <span style="font-family: monospace;">"tab"</span> that are not tables; there must
+  be exactly three tables beginning with <span style="font-family: monospace;">"tab"</span> because the output list
   has three names.
   </p>
   <p>
@@ -103,9 +103,9 @@ tscopy: Copy row/column subsets of tables using selectors.
         cl&gt; tscopy table*.tab osdirectory
   </pre>
   <p>
-  where <tt>"directory"</tt> is an IRAF environment variable for a directory name,
-  and <tt>"osdirectory"</tt> is an operating system directory name
-  (e.g., <tt>"/user/me/"</tt> in UNIX).
+  where <span style="font-family: monospace;">"directory"</span> is an IRAF environment variable for a directory name,
+  and <span style="font-family: monospace;">"osdirectory"</span> is an operating system directory name
+  (e.g., <span style="font-family: monospace;">"/user/me/"</span> in UNIX).
   </p>
   <p>
   5. To copy a subset of rows and columns:
@@ -114,9 +114,9 @@ tscopy: Copy row/column subsets of tables using selectors.
         cl&gt; tscopy "table.tab[c:wave,flux][r:wave=(4000:5000)]" tableout
   </pre>
   <p>
-  This command will copy only columns named <tt>"wave"</tt> and <tt>"flux"</tt> from the input
+  This command will copy only columns named <span style="font-family: monospace;">"wave"</span> and <span style="font-family: monospace;">"flux"</span> from the input
   table to the output. It will also select and copy only the rows in which
-  the <tt>"wave"</tt> value lies between 4000 and 5000.
+  the <span style="font-family: monospace;">"wave"</span> value lies between 4000 and 5000.
   </p>
   <!-- EndSection:   'EXAMPLES' -->
   <h3>Bugs</h3>

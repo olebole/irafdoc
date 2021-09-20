@@ -32,8 +32,8 @@ mkttydata: Build cache for termcap/graphcap device entries
   <dl>
   <dt><b>termcap_file</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='termcap_file' Line='termcap_file' -->
-  <dd>The name of the termcap or graphcap file be searched, e.g., <tt>"dev$termcap"</tt>,
-  or <tt>"dev$graphcap"</tt>.
+  <dd>The name of the termcap or graphcap file be searched, e.g., <span style="font-family: monospace;">"dev$termcap"</span>,
+  or <span style="font-family: monospace;">"dev$graphcap"</span>.
   </dd>
   </dl>
   <dl>
@@ -41,8 +41,8 @@ mkttydata: Build cache for termcap/graphcap device entries
   <!-- Sec='PARAMETERS' Level=0 Label='output_file' Line='output_file' -->
   <dd>The name of the output file to be written, an SPP include file containing
   a number of declarations and data initialization statements.
-  This should be <tt>"dev$cachet.dat"</tt> if the standard termcap is being compiled,
-  and <tt>"dev$cacheg.dat"</tt> if the standard graphcap is being compiled.
+  This should be <span style="font-family: monospace;">"dev$cachet.dat"</span> if the standard termcap is being compiled,
+  and <span style="font-family: monospace;">"dev$cacheg.dat"</span> if the standard graphcap is being compiled.
   </dd>
   </dl>
   <dl>
@@ -82,7 +82,7 @@ mkttydata: Build cache for termcap/graphcap device entries
   parameters to build the termcap and graphcap cache files.  Note that for
   caching to work the value of <i>termcap_file</i> must match that of
   the <i>termcap</i> or <i>graphcap</i> environment variable, hence do not
-  enter <tt>"graphcap"</tt> rather than <tt>"dev$graphcap"</tt>, just because you happen to
+  enter <span style="font-family: monospace;">"graphcap"</span> rather than <span style="font-family: monospace;">"dev$graphcap"</span>, just because you happen to
   be in the dev directory.
   </p>
   <pre>
@@ -100,7 +100,7 @@ mkttydata: Build cache for termcap/graphcap device entries
   upon the host system.  In particular, if the system support multiple
   architectures, each architecture must be restored and relinked separately.
   Note that systems configured for multiple architecture support are
-  shipped configured <tt>"generic"</tt>, and you must restore an architecture before
+  shipped configured <span style="font-family: monospace;">"generic"</span>, and you must restore an architecture before
   relinking or the entire IRAF system will be recompiled (which is time
   consuming, and inadvisable due to the possibility of system or compiler
   differences introducing bugs into IRAF).
@@ -122,9 +122,9 @@ mkttydata: Build cache for termcap/graphcap device entries
   entry.
   </p>
   <p>
-  For additional information on graphcap see the <tt>"GIO Design"</tt> document.
-  For additional information on termcap see the Berkeley UNIX <tt>"Programmer's
-  Guide: Reference Manual"</tt>, section 5.  IRAF uses a standard UNIX termcap.
+  For additional information on graphcap see the <span style="font-family: monospace;">"GIO Design"</span> document.
+  For additional information on termcap see the Berkeley UNIX <span style="font-family: monospace;">"Programmer's
+  Guide: Reference Manual"</span>, section 5.  IRAF uses a standard UNIX termcap.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Examples</h3>

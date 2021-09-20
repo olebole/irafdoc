@@ -42,11 +42,11 @@ mktemp: Make a temporary (unique) file name
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. Create a unique filename with the root <tt>"sav"</tt> in the logical
-  directory <tt>"tmp"</tt>.
+  1. Create a unique filename with the root <span style="font-family: monospace;">"sav"</span> in the logical
+  directory <span style="font-family: monospace;">"tmp"</span>.
   </p>
   <p>
-  	savefile = mktemp (<tt>"tmp$sav"</tt>)
+  	savefile = mktemp (<span style="font-family: monospace;">"tmp$sav"</span>)
   </p>
   <!-- EndSection:   'EXAMPLES' -->
   <h3>Bugs</h3>

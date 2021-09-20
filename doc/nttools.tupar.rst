@@ -41,16 +41,16 @@ tupar: Edit table header keywords.
   then the copy is deleted, so the original table will remain unchanged.
   </p>
   <p>
-  The prompt <tt>":"</tt> is used by the task when it is waiting for user input.
+  The prompt <span style="font-family: monospace;">":"</span> is used by the task when it is waiting for user input.
   At this prompt the user can enter any editor command.
-  The <tt>"e"</tt> command (or end of file, e.g. Control-Z) will exit the editor.
+  The <span style="font-family: monospace;">"e"</span> command (or end of file, e.g. Control-Z) will exit the editor.
   The following commands are available:  e, q, g, p, d, r, k, t, l.
   These commands are interpreted as exit, quit (without saving changes),
   get, put, delete, replace, change keyword name, type, and list respectively.
   Each of these commands is described in detail below:
   </p>
   <p>
-  The exit command, specified by <tt>"e"</tt> or end of file,
+  The exit command, specified by <span style="font-family: monospace;">"e"</span> or end of file,
   will close the file--saving all changes,
   and open the next file if more than one file was specified
   for the 'table' input parameter.
@@ -61,16 +61,16 @@ tupar: Edit table header keywords.
   unless 'inplace = yes'.
   If changes were made to the table header
   you will be prompted for confirmation
-  unless the command was given followed by <tt>"!"</tt>;
-  for example, <tt>"q!"</tt> or <tt>"quit!"</tt>.
+  unless the command was given followed by <span style="font-family: monospace;">"!"</span>;
+  for example, <span style="font-family: monospace;">"q!"</span> or <span style="font-family: monospace;">"quit!"</span>.
   </p>
   <p>
-  The type command, specified by <tt>"t"</tt>, and the list command,
-  specified by <tt>"l"</tt>,
+  The type command, specified by <span style="font-family: monospace;">"t"</span>, and the list command,
+  specified by <span style="font-family: monospace;">"l"</span>,
   both display header parameters---one header per line of output.
   The difference between the two commands is that list will show the parameter
   number and type will not.
-  Entering the command <tt>"t"</tt> or <tt>"l"</tt> will produce
+  Entering the command <span style="font-family: monospace;">"t"</span> or <span style="font-family: monospace;">"l"</span> will produce
   a listing of all header parameters.
   Optionally, an integer may follow
   the command indicating that only a particular parameter is to be displayed.
@@ -79,7 +79,7 @@ tupar: Edit table header keywords.
   an error message will be displayed.
   The output consists of the name of the header parameter,
   its data type (indicated by a single letter,
-  <tt>"r"</tt> for real, <tt>"b"</tt> for boolean, <tt>"i"</tt> for integer, or <tt>"d"</tt> for double),
+  <span style="font-family: monospace;">"r"</span> for real, <span style="font-family: monospace;">"b"</span> for boolean, <span style="font-family: monospace;">"i"</span> for integer, or <span style="font-family: monospace;">"d"</span> for double),
   and its current value.
   If the keyword has an associated comment,
   the comment will be displayed following the value.
@@ -92,18 +92,18 @@ tupar: Edit table header keywords.
   l 300 310
   </pre>
   <p>
-  The get command, indicated by <tt>"g"</tt>, will look for a specific keyword and
+  The get command, indicated by <span style="font-family: monospace;">"g"</span>, will look for a specific keyword and
   display its current value.
   Optionally, the data type can be specified
-  using the letter <tt>"r"</tt> for real, <tt>"i"</tt> for integer, <tt>"d"</tt> for double, or
-  <tt>"b"</tt> for boolean.
+  using the letter <span style="font-family: monospace;">"r"</span> for real, <span style="font-family: monospace;">"i"</span> for integer, <span style="font-family: monospace;">"d"</span> for double, or
+  <span style="font-family: monospace;">"b"</span> for boolean.
   If no data type is specified, then the type is assumed to be text.
   If the data type is specified,
-  the type immediately follows the <tt>"g"</tt> command;
-  for example, typing the command <tt>"gd X"</tt> will get the value 
-  contained in the header keyword <tt>"X"</tt> and display it as a double-precision
+  the type immediately follows the <span style="font-family: monospace;">"g"</span> command;
+  for example, typing the command <span style="font-family: monospace;">"gd X"</span> will get the value 
+  contained in the header keyword <span style="font-family: monospace;">"X"</span> and display it as a double-precision
   real value.
-  If <tt>"X"</tt> does not exist, no output will be produced.
+  If <span style="font-family: monospace;">"X"</span> does not exist, no output will be produced.
   If the keyword has an associated comment,
   the get command displays the comment following the value;
   a text string value will be enclosed in quotes
@@ -116,15 +116,15 @@ tupar: Edit table header keywords.
   gi numpts
   </pre>
   <p>
-  The put command, specified by <tt>"p"</tt>, will either replace the value of an
+  The put command, specified by <span style="font-family: monospace;">"p"</span>, will either replace the value of an
   existing parameter,
   or it will create a new parameter if the specified parameter is not found.
-  The <tt>"p"</tt> command is followed on the command line by a keyword
+  The <span style="font-family: monospace;">"p"</span> command is followed on the command line by a keyword
   name and the parameter value.
   A comment may optionally follow the value.
-  The <tt>"p"</tt> command itself should
-  be followed by a single letter type specifier, <tt>"i"</tt> for integer,
-  <tt>"r"</tt> for real, <tt>"d"</tt> for double, or <tt>"b"</tt> for boolean.
+  The <span style="font-family: monospace;">"p"</span> command itself should
+  be followed by a single letter type specifier, <span style="font-family: monospace;">"i"</span> for integer,
+  <span style="font-family: monospace;">"r"</span> for real, <span style="font-family: monospace;">"d"</span> for double, or <span style="font-family: monospace;">"b"</span> for boolean.
   If no type is specified, then the data type is assumed to be text.
   In order to specify a comment with a parameter of type text,
   the parameter value must be enclosed in quotes
@@ -142,19 +142,19 @@ tupar: Edit table header keywords.
   pt fittype "chebychev" type of fit that these coefficients represent
   </pre>
   <p>
-  The replace command, specified by <tt>"r"</tt>, works much like the put command
+  The replace command, specified by <span style="font-family: monospace;">"r"</span>, works much like the put command
   described above; however, it will prompt the user for confirmation before
   actually changing any values in the table.
   A parameter can be specified by name or by number.
-  The <tt>"r"</tt> command will not change a keyword name or a data type,
-  whereas the <tt>"p"</tt> command can.
+  The <span style="font-family: monospace;">"r"</span> command will not change a keyword name or a data type,
+  whereas the <span style="font-family: monospace;">"p"</span> command can.
   After the command is entered,
   the current value of the keyword is displayed and
   the editor waits for a new value to be entered by the user.
   Pressing the return key indicates that no change is to be made.
   Pressing the space bar will blank the current value.
   You will then be prompted for
-  confirmation unless the command was issued as <tt>"r!"</tt> or the input was
+  confirmation unless the command was issued as <span style="font-family: monospace;">"r!"</span> or the input was
   redirected from a file.
   The default action is given by the 'delete_default' parameter.
   </p>
@@ -163,7 +163,7 @@ tupar: Edit table header keywords.
   the names or numbers of the first and last parameters to be replaced.
   This can involve a lot of prompting for confirmation,
   especially if several tables are being edited with 'same=yes'.
-  In this context, <tt>"contiguous"</tt> means adjacent in the table header.
+  In this context, <span style="font-family: monospace;">"contiguous"</span> means adjacent in the table header.
   Thus, when replacing a range by name,
   it is not the parameters that fall alphabetically within the limits
   that will be replaced
@@ -188,12 +188,12 @@ tupar: Edit table header keywords.
   r 5 12
   </pre>
   <p>
-  The delete command, specified by <tt>"d"</tt>, will delete a header parameter by
+  The delete command, specified by <span style="font-family: monospace;">"d"</span>, will delete a header parameter by
   either name or number.
   The editor prompts for confirmation of delete,
   unless input is redirected from a file.
   The default action is given by the 'delete_default' parameter.
-  If you do not want to be prompted for confirmation, enter the command as <tt>"d!"</tt>.
+  If you do not want to be prompted for confirmation, enter the command as <span style="font-family: monospace;">"d!"</span>.
   If you want to delete a history or comment record other than the first,
   you can identify the parameter by number rather than name.
   </p>
@@ -215,9 +215,9 @@ tupar: Edit table header keywords.
   d 5 12
   </pre>
   <p>
-  The <tt>"k"</tt> command changes the name of a keyword
+  The <span style="font-family: monospace;">"k"</span> command changes the name of a keyword
   without changing the data type, value, or comment.
-  Give the current and new keyword names following the <tt>"k"</tt>.
+  Give the current and new keyword names following the <span style="font-family: monospace;">"k"</span>.
   Note that keywords are limited to eight characters.
   If the name of a COMMENT or HISTORY keyword is changed,
   only the first occurrence of that keyword will be changed.
@@ -241,7 +241,7 @@ tupar: Edit table header keywords.
   and changes are made to the copy until you exit.
   This can cause problems if there is not enough disk space for the copy;
   however, the 'inplace' parameter can
-  be set to <tt>"yes"</tt> so that the tables are opened in-place.
+  be set to <span style="font-family: monospace;">"yes"</span> so that the tables are opened in-place.
   </dd>
   </dl>
   <dl>
@@ -250,7 +250,7 @@ tupar: Edit table header keywords.
   <dd>Apply the same set of instructions to all tables?  
   This is only relevant when more than one table is being edited.
   If 'same = no', instructions are processed separately for each table,
-  with the <tt>"e"</tt> command used to end processing of a table and open
+  with the <span style="font-family: monospace;">"e"</span> command used to end processing of a table and open
   the next table.
   If 'same = yes', the same instruction set is applied to all tables.
   These instructions will be read from STDIN (which may be redirected)
@@ -258,13 +258,13 @@ tupar: Edit table header keywords.
   For each subsequent table the instructions will be read from the local buffer.
   Caution is advised when deleting or replacing parameters, especially by
   number; remember that prompting for confirmation is turned off if the
-  input is redirected or if the instruction is given as <tt>"d!"</tt> or <tt>"r!"</tt>.
+  input is redirected or if the instruction is given as <span style="font-family: monospace;">"d!"</span> or <span style="font-family: monospace;">"r!"</span>.
   If 'same = yes' and you quit (rather than exit) from editing the first table,
   the behavior of the task depends on whether changes were made before quitting.
   If changes were made then the task aborts immediately
   without opening the other tables in the input list.
   If no change was made then the other tables are processed.
-  The idea is to allow <tt>"g"</tt>, <tt>"t"</tt>, and <tt>"l"</tt> commands
+  The idea is to allow <span style="font-family: monospace;">"g"</span>, <span style="font-family: monospace;">"t"</span>, and <span style="font-family: monospace;">"l"</span> commands
   and still be able to quit rather than exit,
   since nothing was modified.
   If changes were made but you quit,
@@ -287,7 +287,7 @@ tupar: Edit table header keywords.
   If 'readonly = yes', then the
   table is opened with read only access.  This is useful for viewing the
   contents of the table while at the same time preventing changes from
-  being made to it.  (Only the <tt>"g"</tt>, <tt>"t"</tt>, and <tt>"l"</tt> commands are useful in
+  being made to it.  (Only the <span style="font-family: monospace;">"g"</span>, <span style="font-family: monospace;">"t"</span>, and <span style="font-family: monospace;">"l"</span> commands are useful in
   read only mode).
   </dd>
   </dl>
@@ -345,7 +345,7 @@ tupar: Edit table header keywords.
   2. This example illustrates the use of each of the commands when editing
   parameters in one table.  This kind of interactive use of the task
   would not be appropriate when operating on a list of tables unless
-  the 'same' parameter is set to <tt>"no"</tt>.
+  the 'same' parameter is set to <span style="font-family: monospace;">"no"</span>.
   </p>
   <pre>
   
@@ -421,7 +421,7 @@ tupar: Edit table header keywords.
   tprint, tdump, tedit
   </p>
   <p>
-  Type <tt>"help tables opt=sys"</tt> for a higher-level description of the 'tables' 
+  Type <span style="font-family: monospace;">"help tables opt=sys"</span> for a higher-level description of the 'tables' 
   package.
   </p>
   

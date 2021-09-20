@@ -101,21 +101,21 @@ texpand: Expand tables according to a set of rules.
   </p>
   <p>
   The above example shows some of the syntax of the rules file. The
-  target and action parts of a rule are separated by the symbol <tt>"=&gt;"</tt> and
+  target and action parts of a rule are separated by the symbol <span style="font-family: monospace;">"=&gt;"</span> and
   the entire rule is terminated by a semicolon. Unlike the above
   example, a rule need not be contained on a single line; it can be
   split among as many lines as desired, since the semicolon marks the
   end of the rule. The amount of white space used is also optional,
   symbols and identifiers may be run together or separated by blanks,
   tabs, and blank lines. Comments may be placed on any line; they begin
-  with the <tt>"#"</tt> character and run to the end of the line. The different
+  with the <span style="font-family: monospace;">"#"</span> character and run to the end of the line. The different
   conditions in the target part of a rule are separated by the symbol
-  <tt>"&amp;&amp;"</tt>. Each condition consists of a column name and a column value
+  <span style="font-family: monospace;">"&amp;&amp;"</span>. Each condition consists of a column name and a column value
   separated by an equals sign. The different results in the action part
-  of a rule are separated by the symbol <tt>"||"</tt>. Each result consists of a
+  of a rule are separated by the symbol <span style="font-family: monospace;">"||"</span>. Each result consists of a
   set of column names and values separated by equals signs. If there is
   more than one column name and value in the result, the different
-  name/value pairs are separated by <tt>"&amp;&amp;"</tt> symbols. An example of a rule
+  name/value pairs are separated by <span style="font-family: monospace;">"&amp;&amp;"</span> symbols. An example of a rule
   with all these syntax elements is:
   </p>
   <pre>
@@ -138,7 +138,7 @@ texpand: Expand tables according to a set of rules.
   This task can also be used to process more than one table by using file
   name templates for the 'input' and 'output' parameters instead of file names.
   Because processing each table takes a relatively long time, the
-  parameter 'verbose' can be set to <tt>"yes"</tt> so that the name of each table
+  parameter 'verbose' can be set to <span style="font-family: monospace;">"yes"</span> so that the name of each table
   will be displayed when it is processed.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
@@ -164,7 +164,7 @@ texpand: Expand tables according to a set of rules.
   </dd>
   </dl>
   <dl>
-  <dt><b>(debug = <tt>""</tt>) [file name]</b></dt>
+  <dt><b>(debug = <span style="font-family: monospace;">""</span>) [file name]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(debug = "") [file name]' -->
   <dd>The file containing the debugging output. If the file name is blank or null,
   no debugging output is produced. When creating a set of rules, the output

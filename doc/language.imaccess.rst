@@ -32,8 +32,8 @@ imaccess: Test if an image exists
   <h3>Description</h3>
   <!-- BeginSection: 'DESCRIPTION' -->
   <p>
-  <i>Imaccess</i> is a boolean intrinsic function returning true (<tt>"yes"</tt>) if the
-  named image exists.  The function will return false (<tt>"no"</tt>) if the image doesn't
+  <i>Imaccess</i> is a boolean intrinsic function returning true (<span style="font-family: monospace;">"yes"</span>) if the
+  named image exists.  The function will return false (<span style="font-family: monospace;">"no"</span>) if the image doesn't
   exist, or if no image extension is supplied and the image name is ambiguous.
   <i>Imaccess</i> can only be called as a function in an expression, not as a task.
   </p>
@@ -53,7 +53,7 @@ imaccess: Test if an image exists
   2. Tell if a image exists.
   </p>
   <p>
-  	cl&gt; = imaccess (<tt>"dev$pix"</tt>)
+  	cl&gt; = imaccess (<span style="font-family: monospace;">"dev$pix"</span>)
   </p>
   <!-- EndSection:   'EXAMPLES' -->
   <h3>Bugs</h3>

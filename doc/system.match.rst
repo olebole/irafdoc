@@ -39,14 +39,14 @@ match: Print all lines in a file that match a pattern
   <dl>
   <dt><b>meta-characters = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='meta' Line='meta-characters = yes' -->
-  <dd>Set to <tt>"no"</tt> to disable the pattern matching meta-characters, e.g., when
+  <dd>Set to <span style="font-family: monospace;">"no"</span> to disable the pattern matching meta-characters, e.g., when
   you want to explicitly match one of the meta-characters as a regular character.
   </dd>
   </dl>
   <dl>
   <dt><b>stop = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='stop' Line='stop = no' -->
-  <dd>If <i>stop</i> is enabled, lines with match the pattern are <tt>"stopped"</tt> (not
+  <dd>If <i>stop</i> is enabled, lines with match the pattern are <span style="font-family: monospace;">"stopped"</span> (not
   passed to the output), otherwise only those lines with match the pattern
   are output.
   </dd>
@@ -55,7 +55,7 @@ match: Print all lines in a file that match a pattern
   <dt><b>print_file_names = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='print_file_names' Line='print_file_names = yes' -->
   <dd>If more than one file is being searched, preface each printed line
-  with the <tt>"file_name: "</tt>.
+  with the <span style="font-family: monospace;">"file_name: "</span>.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -63,7 +63,7 @@ match: Print all lines in a file that match a pattern
   <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The listed files are searched for the given pattern, copying each line that
-  matches to the standard output.  If <tt>"stop"</tt> is set the action is reversed,
+  matches to the standard output.  If <span style="font-family: monospace;">"stop"</span> is set the action is reversed,
   i.e., all lines are passed on to the output except those which match the
   pattern.  If no files are named text is read from the standard input.
   The pattern matching meta-characters are described in the table below.
@@ -88,8 +88,8 @@ match: Print all lines in a file that match a pattern
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. From all the lines displayed by <tt>"set"</tt>, print only those that have
-  the string <tt>"tty"</tt> somewhere in them.
+  1. From all the lines displayed by <span style="font-family: monospace;">"set"</span>, print only those that have
+  the string <span style="font-family: monospace;">"tty"</span> somewhere in them.
   </p>
   <p>
   	cl&gt; set | match tty
@@ -101,17 +101,17 @@ match: Print all lines in a file that match a pattern
   	cl&gt; help * | match delete
   </p>
   <p>
-  3. Delete all the <tt>"red"</tt> objects from the list file <tt>"catalog"</tt>.
+  3. Delete all the <span style="font-family: monospace;">"red"</span> objects from the list file <span style="font-family: monospace;">"catalog"</span>.
   </p>
   <p>
   	cl&gt; match red catalog stop+ &gt; newcatalog
   </p>
   <p>
-  4. Type out the file <tt>"spool"</tt>, omitting all lines that end in a colon,
+  4. Type out the file <span style="font-family: monospace;">"spool"</span>, omitting all lines that end in a colon,
   and paginating the output.
   </p>
   <p>
-  	cl&gt; match <tt>":$"</tt> spool stop+ | page
+  	cl&gt; match <span style="font-family: monospace;">":$"</span> spool stop+ | page
   </p>
   <!-- EndSection:   'EXAMPLES' -->
   <h3>See also</h3>

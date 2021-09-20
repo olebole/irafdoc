@@ -21,9 +21,9 @@ apbackground: Background subtraction algorithms
   axis) from a set of regions and extrapolating and subtracting the
   background at each pixel extracted from the object profile.  The
   type of background used during extraction is specified by the parameter
-  <i>background</i>.  If the value <tt>"none"</tt> is used then no background is
+  <i>background</i>.  If the value <span style="font-family: monospace;">"none"</span> is used then no background is
   subtracted and any background parameters defined for an aperture are
-  ignored.  If the value is <tt>"average"</tt>, <tt>"median"</tt>, <tt>"minimum"</tt> or <tt>"fit"</tt> then a
+  ignored.  If the value is <span style="font-family: monospace;">"average"</span>, <span style="font-family: monospace;">"median"</span>, <span style="font-family: monospace;">"minimum"</span> or <span style="font-family: monospace;">"fit"</span> then a
   background is determined, including a variance estimate when using variance
   weighted extraction (see <i>apvariance</i>), and the subtracted background
   spectrum may be output if the <i>extras</i> parameter is set.
@@ -37,18 +37,18 @@ apbackground: Background subtraction algorithms
   complex sets may be used to avoid contaminated or missing parts
   of the slit.  The default ranges are defined by the parameter
   <i>b_sample</i>.  Often the ranges are better set graphically using a
-  cursor by invoking the <tt>'b'</tt> option of the aperture editor.
+  cursor by invoking the <span style="font-family: monospace;">'b'</span> option of the aperture editor.
   </p>
   <p>
-  If the background type is <tt>"average"</tt>, <tt>"median"</tt>, or <tt>"minimum"</tt> then pixels
+  If the background type is <span style="font-family: monospace;">"average"</span>, <span style="font-family: monospace;">"median"</span>, or <span style="font-family: monospace;">"minimum"</span> then pixels
   occupying these regions are averaged, medianed, or the minimum found to
   produce a single background level for all object pixels at each wavelength.  
-  Note that the <tt>"average"</tt> choice does not exclude any pixels which may
-  yield a background contaminated by cosmic rays.  The <tt>"median"</tt> or <tt>"minimum"</tt>
+  Note that the <span style="font-family: monospace;">"average"</span> choice does not exclude any pixels which may
+  yield a background contaminated by cosmic rays.  The <span style="font-family: monospace;">"median"</span> or <span style="font-family: monospace;">"minimum"</span>
   is recommended instead.
   </p>
   <p>
-  If the background type is <tt>"fit"</tt> then a function is fit to the pixels in the
+  If the background type is <span style="font-family: monospace;">"fit"</span> then a function is fit to the pixels in the
   background regions using the ICFIT options (see <b>icfit</b>).  The
   parameter <i>b_naverage</i> may be used to compute averages or medians of
   groups or all of the points within each sample region.  The fit is defined
@@ -60,7 +60,7 @@ apbackground: Background subtraction algorithms
   background for the object pixels.
   </p>
   <p>
-  Note that the background setting function, the <tt>'b'</tt> key in <b>apedit</b>,
+  Note that the background setting function, the <span style="font-family: monospace;">'b'</span> key in <b>apedit</b>,
   may be used to set the background regions for all the background options
   but it will always show the result of a fit regardless of the background
   type.

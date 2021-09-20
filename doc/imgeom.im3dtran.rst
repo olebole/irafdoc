@@ -96,7 +96,7 @@ im3dtran: Transpose a list of 3-D images
   The parameter <b>len_blk</b> controls how much memory is used during the
   transpose operation.  <b>len_blk</b> elements are used in each axis at a
   time, or a cube len_blk elements on a side.  If <b>len_blk</b> is too large,
-  the task will abort with an <tt>"out of memory"</tt> error.  If it is too small,
+  the task will abort with an <span style="font-family: monospace;">"out of memory"</span> error.  If it is too small,
   the task can take a very long time to run.  The maximum size of len_blk
   depends on how much memory is available at the time IM3DTRAN is run,
   and the size and datatype of the image to be transposed.

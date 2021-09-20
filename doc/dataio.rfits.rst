@@ -38,19 +38,19 @@ rfits: Convert FITS image data into a list of IRAF images
   <dd>The list of FITS extensions to be read from each disk file or from a single
   tape file, or the list of tape files AND FITS extensions to be read from
   an entire tape.  FITS extensions are numbered from 0 to n, tape files are
-  numbered from 1 to n. If file_list is <tt>""</tt>, only the 0th extension is read
+  numbered from 1 to n. If file_list is <span style="font-family: monospace;">""</span>, only the 0th extension is read
   from each disk file or from a single tape file, but all the files and
   extensions are read from an entire tape. Legal file lists are composed
   of a series of file numbers and / or file ranges separated by commas
   or whitespace.  For example the string
-  	<tt>"1-3,4-8"</tt>
+  	<span style="font-family: monospace;">"1-3,4-8"</span>
   will convert ALL the FITS extensions in files 1 through 8 on tape,
   but only FITS extensions 1 through 8 from a disk file or a single tape file.
   For the case of disk input, the same FITS extensions must be read from
   each input file.  For the case of tape input the FITS extensions to be
   read from each file must be specified separately. For example the following
   string
-  	<tt>"1-10[2-4],15-21[1-10]"</tt>
+  	<span style="font-family: monospace;">"1-10[2-4],15-21[1-10]"</span>
   tells rfits to convert extensions 2 through 4 in tape files 1 through 10
   and extensions 1 through 10 in tape files 15 through 21. Rfits will only
   convert extensions which contain image data. Other types of fits data
@@ -66,9 +66,9 @@ rfits: Convert FITS image data into a list of IRAF images
   must be specified for every input file. In the latter case iraf_file is
   a root output image name to which the input file sequence number or tape
   file number is appended if the number of input files &gt; 1. For example
-  reading files 1 and 3 from a FITS tape with a value of iraf_file of <tt>"data"</tt>
+  reading files 1 and 3 from a FITS tape with a value of iraf_file of <span style="font-family: monospace;">"data"</span>
   will produce the files data0001 and data0003, whereas reading the same
-  two files with a value of iraf_file of <tt>"data1,data2"</tt> will produce the files
+  two files with a value of iraf_file of <span style="font-family: monospace;">"data1,data2"</span> will produce the files
   data1 and data2. Extension numbers will be appended to the root output
   names if appropriate.
   </dd>
@@ -76,7 +76,7 @@ rfits: Convert FITS image data into a list of IRAF images
   <dl>
   <dt><b>make_image = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='make_image' Line='make_image = yes' -->
-  <dd>If make_images is <tt>"yes"</tt> convert the FITS image data to IRAF image data,
+  <dd>If make_images is <span style="font-family: monospace;">"yes"</span> convert the FITS image data to IRAF image data,
   otherwise simply print the header information using the long_header or
   short_header switches.
   </dd>
@@ -84,13 +84,13 @@ rfits: Convert FITS image data into a list of IRAF images
   <dl>
   <dt><b>long_header = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='long_header' Line='long_header = no' -->
-  <dd>If long_header is <tt>"yes"</tt> the full FITS header is printed on the standard output.
+  <dd>If long_header is <span style="font-family: monospace;">"yes"</span> the full FITS header is printed on the standard output.
   </dd>
   </dl>
   <dl>
   <dt><b>short_header = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='short_header' Line='short_header = yes' -->
-  <dd>If short_header is <tt>"yes"</tt> and long_header is <tt>"no"</tt>, only the output filename,
+  <dd>If short_header is <span style="font-family: monospace;">"yes"</span> and long_header is <span style="font-family: monospace;">"no"</span>, only the output filename,
   the title string, and the image dimensions are printed on the standard output.
   </dd>
   </dl>
@@ -117,7 +117,7 @@ rfits: Convert FITS image data into a list of IRAF images
   <dl>
   <dt><b>scale = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='scale' Line='scale = yes' -->
-  <dd>If scale is <tt>"no"</tt> then the data values are read directly from the FITS image
+  <dd>If scale is <span style="font-family: monospace;">"no"</span> then the data values are read directly from the FITS image
   without conversion.  Otherwise rfits scales the data before output using
   the values of bscale and bzero.
   </dd>
@@ -133,9 +133,9 @@ rfits: Convert FITS image data into a list of IRAF images
   <dt><b>offset = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='offset' Line='offset = 0' -->
   <dd>An integer parameter specifying the offset to the current tape file
-  number. For example if offset = 100, iraf_file = <tt>"fits"</tt> and file_list = <tt>"1-3"</tt>
-  then the output file names will be <tt>"fits0101"</tt>, <tt>"fits0102"</tt> and <tt>"fits0103"</tt>
-  respectively rather than <tt>"fits0001"</tt>, <tt>"fits0002"</tt> and <tt>"fits0003"</tt>.
+  number. For example if offset = 100, iraf_file = <span style="font-family: monospace;">"fits"</span> and file_list = <span style="font-family: monospace;">"1-3"</span>
+  then the output file names will be <span style="font-family: monospace;">"fits0101"</span>, <span style="font-family: monospace;">"fits0102"</span> and <span style="font-family: monospace;">"fits0103"</span>
+  respectively rather than <span style="font-family: monospace;">"fits0001"</span>, <span style="font-family: monospace;">"fits0002"</span> and <span style="font-family: monospace;">"fits0003"</span>.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -184,7 +184,7 @@ rfits: Convert FITS image data into a list of IRAF images
   files specified by fits* are written to images images0001, images0002, etc.
   In the second example the fits disk files listed one per line in the text
   file fitslist are written to the output images listed one per line in
-  the file imlist. Note that by using 0 or <tt>""</tt> for the file_list parameter
+  the file imlist. Note that by using 0 or <span style="font-family: monospace;">""</span> for the file_list parameter
   the user has told rfits to read only the primary fits data unit.
   </p>
   <pre>

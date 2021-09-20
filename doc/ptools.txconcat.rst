@@ -35,7 +35,7 @@ txconcat: Concatenate a list of apphot/daophot text databases
   </dd>
   </dl>
   <dl>
-  <dt><b>task = <tt>"TASK"</tt></b></dt>
+  <dt><b>task = <span style="font-family: monospace;">"TASK"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='task' Line='task = "TASK"' -->
   <dd>The name of the keywords whose value is the name of the task which wrote
   the database.

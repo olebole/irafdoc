@@ -52,21 +52,21 @@ do3fiber: Process KPNO coude three fiber spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>apref = <tt>""</tt></b></dt>
+  <dt><b>apref = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apref' Line='apref = ""' -->
   <dd>Aperture reference spectrum.  This spectrum is used to define the basic
   extraction apertures and is typically a flat field spectrum.
   </dd>
   </dl>
   <dl>
-  <dt><b>flat = <tt>""</tt> (optional)</b></dt>
+  <dt><b>flat = <span style="font-family: monospace;">""</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='flat' Line='flat = "" (optional)' -->
   <dd>Flat field spectrum.  If specified the one dimensional flat field spectra
   are extracted and used to make flat field corrections.
   </dd>
   </dl>
   <dl>
-  <dt><b>arcs = <tt>""</tt> (at least one if dispersion correcting)</b></dt>
+  <dt><b>arcs = <span style="font-family: monospace;">""</span> (at least one if dispersion correcting)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='arcs' Line='arcs = "" (at least one if dispersion correcting)' -->
   <dd>List of primary, all fiber arc spectra.  These spectra are used to define
   the dispersion functions for each fiber apart from a possible zero point
@@ -77,7 +77,7 @@ do3fiber: Process KPNO coude three fiber spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>arctable = <tt>""</tt> (optional) (refspectra)</b></dt>
+  <dt><b>arctable = <span style="font-family: monospace;">""</span> (optional) (refspectra)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='arctable' Line='arctable = "" (optional) (refspectra)' -->
   <dd>Table defining arc spectra to be assigned to object
   spectra (see <b>refspectra</b>).  If not specified an assignment based
@@ -85,7 +85,7 @@ do3fiber: Process KPNO coude three fiber spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>readnoise = <tt>"RDNOISE"</tt> (apsum)</b></dt>
+  <dt><b>readnoise = <span style="font-family: monospace;">"RDNOISE"</span> (apsum)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='readnoise' Line='readnoise = "RDNOISE" (apsum)' -->
   <dd>Read out noise in photons.  This parameter defines the minimum noise
   sigma.  It is defined in terms of photons (or electrons) and scales
@@ -94,7 +94,7 @@ do3fiber: Process KPNO coude three fiber spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>gain = <tt>"GAIN"</tt> (apsum)</b></dt>
+  <dt><b>gain = <span style="font-family: monospace;">"GAIN"</span> (apsum)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gain' Line='gain = "GAIN" (apsum)' -->
   <dd>Detector gain or conversion factor between photons/electrons and
   data values.  It is specified as the number of photons per data value.
@@ -142,7 +142,7 @@ do3fiber: Process KPNO coude three fiber spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>objaps = <tt>"2"</tt>, arcaps = <tt>"1,3"</tt></b></dt>
+  <dt><b>objaps = <span style="font-family: monospace;">"2"</span>, arcaps = <span style="font-family: monospace;">"1,3"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='objaps' Line='objaps = "2", arcaps = "1,3"' -->
   <dd>List of object and arc aperture numbers.  These are used to
   identify arc apertures for wavelength calibration and object apertures
@@ -236,11 +236,11 @@ do3fiber: Process KPNO coude three fiber spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>params = <tt>""</tt> (pset)</b></dt>
+  <dt><b>params = <span style="font-family: monospace;">""</span> (pset)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='params' Line='params = "" (pset)' -->
   <dd>Name of parameter set containing additional processing parameters.  The
   default is parameter set <b>params</b>.  The parameter set may be examined
-  and modified in the usual ways (typically with <tt>"epar params"</tt> or <tt>":e params"</tt>
+  and modified in the usual ways (typically with <span style="font-family: monospace;">"epar params"</span> or <span style="font-family: monospace;">":e params"</span>
   from the parameter editor).  Note that using a different parameter file
   is not allowed.  The parameters are described below.
   </dd>
@@ -253,17 +253,17 @@ do3fiber: Process KPNO coude three fiber spectra
   package.  This is also true of <b>do3fiber</b>.
   </p>
   <dl>
-  <dt><b>observatory = <tt>"observatory"</tt></b></dt>
+  <dt><b>observatory = <span style="font-family: monospace;">"observatory"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory = "observatory"' -->
   <dd>Observatory at which the spectra were obtained if not specified in the
   image header by the keyword OBSERVAT.  For NOAO data the image headers
-  identify the observatory as <tt>"kpno"</tt> or <tt>"ctio"</tt> so this parameter is not used.
+  identify the observatory as <span style="font-family: monospace;">"kpno"</span> or <span style="font-family: monospace;">"ctio"</span> so this parameter is not used.
   For data from other observatories this parameter may be used
   as describe in <b>observatory</b>.
   </dd>
   </dl>
   <dl>
-  <dt><b>interp = <tt>"poly5"</tt> (nearest|linear|poly3|poly5|spline3|sinc)</b></dt>
+  <dt><b>interp = <span style="font-family: monospace;">"poly5"</span> (nearest|linear|poly3|poly5|spline3|sinc)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interp' Line='interp = "poly5" (nearest|linear|poly3|poly5|spline3|sinc)' -->
   <dd>Spectrum interpolation type used when spectra are resampled.  The choices are:
   <pre>
@@ -286,7 +286,7 @@ do3fiber: Process KPNO coude three fiber spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>database = <tt>"database"</tt></b></dt>
+  <dt><b>database = <span style="font-family: monospace;">"database"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"' -->
   <dd>Database (directory) used for storing aperture and dispersion information.
   </dd>
@@ -298,7 +298,7 @@ do3fiber: Process KPNO coude three fiber spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>logfile = <tt>"logfile"</tt>, plotfile = <tt>""</tt></b></dt>
+  <dt><b>logfile = <span style="font-family: monospace;">"logfile"</span>, plotfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "logfile", plotfile = ""' -->
   <dd>Text and plot log files.  If a filename is not specified then no log is
   kept.  The plot file contains IRAF graphics metacode which may be examined
@@ -306,13 +306,13 @@ do3fiber: Process KPNO coude three fiber spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>records = <tt>""</tt></b></dt>
+  <dt><b>records = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='records' Line='records = ""' -->
   <dd>Dummy parameter to be ignored.
   </dd>
   </dl>
   <dl>
-  <dt><b>version = <tt>"KPNOCOUDE: ..."</tt></b></dt>
+  <dt><b>version = <span style="font-family: monospace;">"KPNOCOUDE: ..."</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='version' Line='version = "KPNOCOUDE: ..."' -->
   <dd>Version of the package.
   </dd>
@@ -379,11 +379,11 @@ do3fiber: Process KPNO coude three fiber spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>t_function = <tt>"spline3"</tt>, t_order = 2 (aptrace)</b></dt>
+  <dt><b>t_function = <span style="font-family: monospace;">"spline3"</span>, t_order = 2 (aptrace)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='t_function' Line='t_function = "spline3", t_order = 2 (aptrace)' -->
   <dd>Default trace fitting function and order.  The fitting function types are
-  <tt>"chebyshev"</tt> polynomial, <tt>"legendre"</tt> polynomial, <tt>"spline1"</tt> linear spline, and
-  <tt>"spline3"</tt> cubic spline.  The order refers to the number of
+  <span style="font-family: monospace;">"chebyshev"</span> polynomial, <span style="font-family: monospace;">"legendre"</span> polynomial, <span style="font-family: monospace;">"spline1"</span> linear spline, and
+  <span style="font-family: monospace;">"spline3"</span> cubic spline.  The order refers to the number of
   terms in the polynomial functions or the number of spline pieces in the spline
   functions.
   </dd>
@@ -405,18 +405,18 @@ do3fiber: Process KPNO coude three fiber spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>apscat1 = <tt>""</tt> (apscatter)</b></dt>
+  <dt><b>apscat1 = <span style="font-family: monospace;">""</span> (apscatter)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apscat1' Line='apscat1 = "" (apscatter)' -->
   <dd>Fitting parameters across the dispersion.  This references an additional
-  set of parameters for the ICFIT package.  The default is the <tt>"apscat1"</tt>
+  set of parameters for the ICFIT package.  The default is the <span style="font-family: monospace;">"apscat1"</span>
   parameter set.
   </dd>
   </dl>
   <dl>
-  <dt><b>apscat2 = <tt>""</tt> (apscatter)</b></dt>
+  <dt><b>apscat2 = <span style="font-family: monospace;">""</span> (apscatter)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apscat2' Line='apscat2 = "" (apscatter)' -->
   <dd>Fitting parameters along the dispersion.  This references an additional
-  set of parameters for the ICFIT package.  The default is the <tt>"apscat2"</tt>
+  set of parameters for the ICFIT package.  The default is the <span style="font-family: monospace;">"apscat2"</span>
   parameter set.
   </dd>
   </dl>
@@ -424,20 +424,20 @@ do3fiber: Process KPNO coude three fiber spectra
   
   </p>
   <dl>
-  <dt><b>weights = <tt>"none"</tt> (apsum)</b></dt>
+  <dt><b>weights = <span style="font-family: monospace;">"none"</span> (apsum)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='weights' Line='weights = "none" (apsum)' -->
   <dd>Type of extraction weighting.  Note that if the <i>clean</i> parameter is
-  set then the weights used are <tt>"variance"</tt> regardless of the weights
+  set then the weights used are <span style="font-family: monospace;">"variance"</span> regardless of the weights
   specified by this parameter.  The choices are:
   <dl>
-  <dt><b><tt>"none"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"none"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"none"' -->
   <dd>The pixels are summed without weights except for partial pixels at the
   ends.
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"variance"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"variance"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"variance"' -->
   <dd>The extraction is weighted by the variance based on the data values
   and a poisson/ccd model using the <i>gain</i> and <i>readnoise</i>
@@ -447,7 +447,7 @@ do3fiber: Process KPNO coude three fiber spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>pfit = <tt>"fit1d"</tt> (apsum) (fit1d|fit2d)</b></dt>
+  <dt><b>pfit = <span style="font-family: monospace;">"fit1d"</span> (apsum) (fit1d|fit2d)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pfit' Line='pfit = "fit1d" (apsum) (fit1d|fit2d)' -->
   <dd>Profile fitting algorithm for cleaning and variance weighted extractions.
   The default is generally appropriate for most data but users
@@ -480,11 +480,11 @@ do3fiber: Process KPNO coude three fiber spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>f_function = <tt>"spline3"</tt>, f_order = 20 (fit1d)</b></dt>
+  <dt><b>f_function = <span style="font-family: monospace;">"spline3"</span>, f_order = 20 (fit1d)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='f_function' Line='f_function = "spline3", f_order = 20 (fit1d)' -->
   <dd>Function and order used to fit the composite one dimensional flat field
-  spectrum.  The functions are <tt>"legendre"</tt>, <tt>"chebyshev"</tt>, <tt>"spline1"</tt>, and
-  <tt>"spline3"</tt>.  The spline functions are linear and cubic splines with the
+  spectrum.  The functions are <span style="font-family: monospace;">"legendre"</span>, <span style="font-family: monospace;">"chebyshev"</span>, <span style="font-family: monospace;">"spline1"</span>, and
+  <span style="font-family: monospace;">"spline3"</span>.  The spline functions are linear and cubic splines with the
   order specifying the number of pieces.
   </dd>
   </dl>
@@ -499,10 +499,10 @@ do3fiber: Process KPNO coude three fiber spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>coordlist = <tt>"linelists$idhenear.dat"</tt> (autoidentify/identify)</b></dt>
+  <dt><b>coordlist = <span style="font-family: monospace;">"linelists$idhenear.dat"</span> (autoidentify/identify)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coordlist' Line='coordlist = "linelists$idhenear.dat" (autoidentify/identify)' -->
   <dd>Arc line list consisting of an ordered list of wavelengths.
-  Some standard line lists are available in the directory <tt>"linelists$"</tt>.
+  Some standard line lists are available in the directory <span style="font-family: monospace;">"linelists$"</span>.
   </dd>
   </dl>
   <dl>
@@ -525,11 +525,11 @@ do3fiber: Process KPNO coude three fiber spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>i_function = <tt>"legendre"</tt>, i_order = 3 (autoidentify/identify)</b></dt>
+  <dt><b>i_function = <span style="font-family: monospace;">"legendre"</span>, i_order = 3 (autoidentify/identify)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='i_function' Line='i_function = "legendre", i_order = 3 (autoidentify/identify)' -->
   <dd>The default function and order to be fit to the arc wavelengths as a
-  function of the pixel coordinate.  The functions choices are <tt>"chebyshev"</tt>,
-  <tt>"legendre"</tt>, <tt>"spline1"</tt>, or <tt>"spline3"</tt>.
+  function of the pixel coordinate.  The functions choices are <span style="font-family: monospace;">"chebyshev"</span>,
+  <span style="font-family: monospace;">"legendre"</span>, <span style="font-family: monospace;">"spline1"</span>, or <span style="font-family: monospace;">"spline3"</span>.
   </dd>
   </dl>
   <dl>
@@ -563,7 +563,7 @@ do3fiber: Process KPNO coude three fiber spectra
   
   </p>
   <dl>
-  <dt><b>select = <tt>"interp"</tt> (refspectra)</b></dt>
+  <dt><b>select = <span style="font-family: monospace;">"interp"</span> (refspectra)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='select' Line='select = "interp" (refspectra)' -->
   <dd>Selection method for assigning wavelength calibration spectra.
   Note that an arc assignment table may be used to override the selection
@@ -622,11 +622,11 @@ do3fiber: Process KPNO coude three fiber spectra
   </dd>
   </dl>
   <dl>
-  <dt><b>sort = <tt>"jd"</tt>, group = <tt>"ljd"</tt> (refspectra)</b></dt>
+  <dt><b>sort = <span style="font-family: monospace;">"jd"</span>, group = <span style="font-family: monospace;">"ljd"</span> (refspectra)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sort' Line='sort = "jd", group = "ljd" (refspectra)' -->
   <dd>Image header keywords to be used as the sorting parameter for selection
   based on order and to group spectra.
-  A null string, <tt>""</tt>, or the word <tt>"none"</tt> may be use to disable the sorting
+  A null string, <span style="font-family: monospace;">""</span>, or the word <span style="font-family: monospace;">"none"</span> may be use to disable the sorting
   or grouping parameters.
   The sorting parameter
   must be numeric but otherwise may be anything.  The grouping parameter
@@ -686,7 +686,7 @@ do3fiber: Process KPNO coude three fiber spectra
   The environment parameter <i>imtype</i> is used to determine the extension
   of the images to be processed and created.  This allows use with any
   supported image extension.  For STF images the extension has to be exact;
-  for example <tt>"d1h"</tt>.
+  for example <span style="font-family: monospace;">"d1h"</span>.
   </p>
   <!-- EndSection:   'ENVIRONMENT PARAMETERS' -->
   <h3>Description</h3>
@@ -747,7 +747,7 @@ do3fiber: Process KPNO coude three fiber spectra
   <dd>Set the <b>do3fiber</b> parameters with <b>eparam</b>.  Specify the object
   images to be processed, the flat field image as the aperture reference and
   the flat field, and one or more arc images.  If there are many
-  object or arc spectra per setup you might want to prepare <tt>"@ files"</tt>.
+  object or arc spectra per setup you might want to prepare <span style="font-family: monospace;">"@ files"</span>.
   </dd>
   </dl>
   <dl>
@@ -757,7 +757,7 @@ do3fiber: Process KPNO coude three fiber spectra
   observations and the task will generally only do the setup steps
   once and only process new images.  Queries presented during the
   execution for various interactive operations may be answered with
-  <tt>"yes"</tt>, <tt>"no"</tt>, <tt>"YES"</tt>, or <tt>"NO"</tt>.  The lower case responses apply just
+  <span style="font-family: monospace;">"yes"</span>, <span style="font-family: monospace;">"no"</span>, <span style="font-family: monospace;">"YES"</span>, or <span style="font-family: monospace;">"NO"</span>.  The lower case responses apply just
   to that query while the upper case responses apply to all further
   such queries during the execution and no further queries of that
   type will be made.
@@ -777,9 +777,9 @@ do3fiber: Process KPNO coude three fiber spectra
   <!-- Sec='DESCRIPTION' Level=0 Label='' Line='[5]' -->
   <dd>A query is given allowing the apertures to be interactively reviewed.
   In this mode one may adjust the aperture widths as desired either
-  explicitly (:lower and :upper), with the cursor (<tt>'l'</tt> and <tt>'u'</tt>), at a
-  particular flux level (<tt>'y'</tt>), or with an automatic algorithm (<tt>'z'</tt>)
-  as described by <b>apresize</b>.  To exit type <tt>'q'</tt>.
+  explicitly (:lower and :upper), with the cursor (<span style="font-family: monospace;">'l'</span> and <span style="font-family: monospace;">'u'</span>), at a
+  particular flux level (<span style="font-family: monospace;">'y'</span>), or with an automatic algorithm (<span style="font-family: monospace;">'z'</span>)
+  as described by <b>apresize</b>.  To exit type <span style="font-family: monospace;">'q'</span>.
   </dd>
   </dl>
   <dl>
@@ -787,9 +787,9 @@ do3fiber: Process KPNO coude three fiber spectra
   <!-- Sec='DESCRIPTION' Level=0 Label='' Line='[6]' -->
   <dd>The fiber positions at a series of points along the dispersion are measured
   and a function is fit to these positions.  This may be done interactively to
-  adjust the fitting parameters.  Not all fibers need be examined and the <tt>"NO"</tt>
+  adjust the fitting parameters.  Not all fibers need be examined and the <span style="font-family: monospace;">"NO"</span>
   response will quit the interactive fitting.  To exit the interactive
-  fitting type <tt>'q'</tt>.
+  fitting type <span style="font-family: monospace;">'q'</span>.
   </dd>
   </dl>
   <dl>
@@ -802,13 +802,13 @@ do3fiber: Process KPNO coude three fiber spectra
   There are two queries for the interactive fitting.  A graph of the
   data between the defined reference apertures separated by a specified
   buffer distance is first shown.  The function order and type may be
-  adjusted.  After quiting with <tt>'q'</tt> the user has the option of changing
+  adjusted.  After quiting with <span style="font-family: monospace;">'q'</span> the user has the option of changing
   the buffer value and returning to the fitting, changing the image line
   or column to check if the fit parameters are satisfactory at other points,
   or to quit and accept the fit parameters.  After fitting all points
   across the dispersion another graph showing the scattered light from
   the individual fits is shown and the smoothing parameters along the
-  dispersion may be adjusted.  Upon quiting with <tt>'q'</tt> you have the option
+  dispersion may be adjusted.  Upon quiting with <span style="font-family: monospace;">'q'</span> you have the option
   of checking other cuts parallel to the dispersion or quiting and finishing
   the scattered light function smoothing and subtraction.
   If there is a throughput image then this is corrected for scattered light
@@ -820,7 +820,7 @@ do3fiber: Process KPNO coude three fiber spectra
   <!-- Sec='DESCRIPTION' Level=0 Label='' Line='[8]' -->
   <dd>If flat fielding is to be done the flat field spectra are extracted.  The
   average spectrum over all fibers is determined and a function is fit
-  interactively (exit with <tt>'q'</tt>).  This function is generally of sufficiently
+  interactively (exit with <span style="font-family: monospace;">'q'</span>).  This function is generally of sufficiently
   high order that the overall shape is well fit.  This function is then used
   to normalize the individual flat field spectra.
   The final response spectra are normalized to a unit
@@ -837,10 +837,10 @@ do3fiber: Process KPNO coude three fiber spectra
   identification.  Whether or not the automatic identification is
   successful you will be shown the result of the arc line identification.
   If the automatic identification is not successful identify a few arc
-  lines with <tt>'m'</tt> and use the <tt>'l'</tt> line list identification command to
+  lines with <span style="font-family: monospace;">'m'</span> and use the <span style="font-family: monospace;">'l'</span> line list identification command to
   automatically add additional lines and fit the dispersion function.  Check
-  the quality of the dispersion function fit with <tt>'f'</tt>.  When satisfied exit
-  with <tt>'q'</tt>.
+  the quality of the dispersion function fit with <span style="font-family: monospace;">'f'</span>.  When satisfied exit
+  with <span style="font-family: monospace;">'q'</span>.
   </dd>
   </dl>
   <dl>
@@ -880,19 +880,19 @@ do3fiber: Process KPNO coude three fiber spectra
   <dt><b>[13]</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='' Line='[13]' -->
   <dd>The option to examine the final spectra with <b>splot</b> may be given.
-  To exit type <tt>'q'</tt>.
+  To exit type <span style="font-family: monospace;">'q'</span>.
   </dd>
   </dl>
   <dl>
   <dt><b>[14]</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='' Line='[14]' -->
   <dd>If scattered light is subtracted from the input data a copy of the
-  original image is made by appending <tt>"noscat"</tt> to the image name.
+  original image is made by appending <span style="font-family: monospace;">"noscat"</span> to the image name.
   If the data are reprocessed with the <i>redo</i> flag the original
   image will be used again to allow modification of the scattered
   light parameters.
   The final spectra will have the same name as the original 2D images
-  with a <tt>".ms"</tt> extension added.
+  with a <span style="font-family: monospace;">".ms"</span> extension added.
   </dd>
   </dl>
   <p>
@@ -926,7 +926,7 @@ do3fiber: Process KPNO coude three fiber spectra
   <p>
   The final reduced spectra are recorded in one, two or three dimensional IRAF
   images.  The images have the same name as the original images with an added
-  <tt>".ms"</tt> extension.  Each line in the reduced image is a one dimensional
+  <span style="font-family: monospace;">".ms"</span> extension.  Each line in the reduced image is a one dimensional
   spectrum with associated aperture, wavelength, and identification
   information.  With a single object spectrum the image will be one dimensional
   and with multiple object spectra the image will be two dimensional.
@@ -945,7 +945,7 @@ do3fiber: Process KPNO coude three fiber spectra
   in the package.  Some of the parameters are not applicable to the
   <b>do3fiber</b> task.  The observatory parameter is only required for data
   without an OBSERVAT header parameter (currently included in NOAO data).
-  The spectrum interpolation type might be changed to <tt>"sinc"</tt> but with the
+  The spectrum interpolation type might be changed to <span style="font-family: monospace;">"sinc"</span> but with the
   cautions given in <b>onedspec.package</b>.  The dispersion axis parameter is
   only needed if a DISPAXIS image header parameter is not defined.  The other
   parameters define the standard I/O functions.  The verbose parameter
@@ -1020,7 +1020,7 @@ do3fiber: Process KPNO coude three fiber spectra
   The <i>edit</i> option allows you to be queried to review the apertures
   assigned to each object image.  If selected and the query answered
   affirmatively the apertures may be interactively shifted and resized.  The
-  query may also be answered with <tt>"NO"</tt> to turn off this option during
+  query may also be answered with <span style="font-family: monospace;">"NO"</span> to turn off this option during
   processing.  Note that the initial aperture definitions for the aperture
   reference image always allows editing.
   </p>
@@ -1039,8 +1039,8 @@ do3fiber: Process KPNO coude three fiber spectra
   scale.
   </p>
   <p>
-  The <i>splot</i> option allows a query (which may be answered with <tt>"YES"</tt>
-  or <tt>"NO"</tt> to eliminate the query) and then plotting of the final object
+  The <i>splot</i> option allows a query (which may be answered with <span style="font-family: monospace;">"YES"</span>
+  or <span style="font-family: monospace;">"NO"</span> to eliminate the query) and then plotting of the final object
   spectra if answered affirmatively.  The plotting is done with the
   task <b>splot</b>.
   </p>
@@ -1058,7 +1058,7 @@ do3fiber: Process KPNO coude three fiber spectra
   The <i>batch</i> processing option allows object spectra to be processed as
   a background or batch job.  This will only occur if the aperture editing
   and final spectrum plotting have been turned off, either with the task
-  option parameter or by answering <tt>"NO"</tt> to the queries.  The <i>listonly</i>
+  option parameter or by answering <span style="font-family: monospace;">"NO"</span> to the queries.  The <i>listonly</i>
   option prints a summary of the processing steps which will be performed on
   the input spectra without actually doing anything.  This is useful for
   verifying which spectra will be affected if the input list contains
@@ -1120,19 +1120,19 @@ do3fiber: Process KPNO coude three fiber spectra
   with the apertures marked and an interactive aperture editing mode is
   entered (see <b>apedit</b>).  The main thing to be concerned about is that
   the aperture numbers agree with the <i>objaps</i> and <i>arcaps</i>
-  definitions.  The aperture numbers may be changed with the <tt>'i'</tt> or <tt>'o'</tt>
+  definitions.  The aperture numbers may be changed with the <span style="font-family: monospace;">'i'</span> or <span style="font-family: monospace;">'o'</span>
   keys.  The apertures may also be resized from the default limits.
-  To exit the background and aperture editing steps type <tt>'q'</tt>.
+  To exit the background and aperture editing steps type <span style="font-family: monospace;">'q'</span>.
   </p>
   <p>
   Next the positions of the fiber profiles at various points along the
-  dispersion are measured and a <tt>"trace function"</tt> is fit.  The user is asked
+  dispersion are measured and a <span style="font-family: monospace;">"trace function"</span> is fit.  The user is asked
   whether to fit the trace function interactively.  This is selected to
   adjust the fitting parameters such as function type and order.  When
   interactively fitting a query is given for each aperture.  After the first
-  aperture one may skip reviewing the other traces by responding with <tt>"NO"</tt>.
+  aperture one may skip reviewing the other traces by responding with <span style="font-family: monospace;">"NO"</span>.
   Queries made by <b>do3fiber</b> generally may be answered with either lower
-  case <tt>"yes"</tt> or <tt>"no"</tt> or with upper case <tt>"YES"</tt> or <tt>"NO"</tt>.  The upper case
+  case <span style="font-family: monospace;">"yes"</span> or <span style="font-family: monospace;">"no"</span> or with upper case <span style="font-family: monospace;">"YES"</span> or <span style="font-family: monospace;">"NO"</span>.  The upper case
   responses apply to all further queries and so are used to eliminate further
   queries of that kind.
   </p>
@@ -1202,7 +1202,7 @@ do3fiber: Process KPNO coude three fiber spectra
   interactively with the <b>icfit</b> commands.  A query is first issued
   which allows skipping this interactive stage.  Note that the interactive
   fitting is only for defining the fitting functions and orders.  When
-  the graphical <b>icfit</b> fitting is exited (with <tt>'q'</tt>) there is a second prompt
+  the graphical <b>icfit</b> fitting is exited (with <span style="font-family: monospace;">'q'</span>) there is a second prompt
   allowing you to change the buffer distance (in the first cross-dispersion
   stage) from the apertures, change the line/column, or finally quit.
   </p>
@@ -1215,11 +1215,11 @@ do3fiber: Process KPNO coude three fiber spectra
   <p>
   The scattered light subtraction modifies the input 2D images.  To preserve
   the original data a copy of the original image is made with the same
-  root name and the word <tt>"noscat"</tt> appended.  The scattered light subtracted
-  images will have the header keyword <tt>"APSCATTE"</tt> which is how the task
+  root name and the word <span style="font-family: monospace;">"noscat"</span> appended.  The scattered light subtracted
+  images will have the header keyword <span style="font-family: monospace;">"APSCATTE"</span> which is how the task
   avoids repeating the scattered light subtraction during any reprocessing.
   However if the <i>redo</i> option is selected the scattered light subtraction
-  will also be redone by first restoring the <tt>"noscat"</tt> images to the original
+  will also be redone by first restoring the <span style="font-family: monospace;">"noscat"</span> images to the original
   input names.
   </p>
   <p>
@@ -1228,7 +1228,7 @@ do3fiber: Process KPNO coude three fiber spectra
   <p>
   Flat field corrections may be made during the basic CCD processing; i.e.
   direct division by the two dimensional flat field observation.  In that
-  case do not specify a flat field spectrum; use the null string <tt>""</tt>.  The
+  case do not specify a flat field spectrum; use the null string <span style="font-family: monospace;">""</span>.  The
   <b>do3fiber</b> task provides an alternative flat field response correction
   based on division of the extracted object spectra by the extracted flat field
   spectra.  A discussion of the theory and merits of flat fielding directly
@@ -1245,7 +1245,7 @@ do3fiber: Process KPNO coude three fiber spectra
   option is selected (the default) the extracted flat field spectra are
   averaged together and a smooth function is fit.  The default fitting
   function and order are given by the parameters <i>f_function</i> and
-  <i>f_order</i>.  If the parameter <i>f_interactive</i> is <tt>"yes"</tt> then the
+  <i>f_order</i>.  If the parameter <i>f_interactive</i> is <span style="font-family: monospace;">"yes"</span> then the
   fitting is done interactively using the <b>fit1d</b> task which uses the
   <b>icfit</b> interactive fitting commands.
   </p>
@@ -1390,7 +1390,7 @@ do3fiber: Process KPNO coude three fiber spectra
   <p>
   1.  The following example uses artificial data and may be executed
   at the terminal (with IRAF V2.10).  This is also the sequence performed
-  by the test procedure <tt>"demos do3fiber"</tt>.
+  by the test procedure <span style="font-family: monospace;">"demos do3fiber"</span>.
   </p>
   <pre>
   kp&gt; demos mkdo3fiber
@@ -1402,10 +1402,10 @@ do3fiber: Process KPNO coude three fiber spectra
   Set reference apertures for demoflat
   Resize apertures for demoflat?  (yes):
   Edit apertures for demoflat?  (yes):
-  &lt;Exit with <tt>'q'</tt>&gt;
+  &lt;Exit with <span style="font-family: monospace;">'q'</span>&gt;
   Fit traced positions for demoflat interactively?  (yes):
   Fit curve to aperture 1 of demoflat interactively  (yes):
-  &lt;Exit with <tt>'q'</tt>&gt;
+  &lt;Exit with <span style="font-family: monospace;">'q'</span>&gt;
   Fit curve to aperture 2 of demoflat interactively  (yes): N
   Create response function demoflatnorm.ms
   Extract flat field demoflat
@@ -1422,8 +1422,8 @@ do3fiber: Process KPNO coude three fiber spectra
   Determine dispersion solution for demoarc
   &lt;Reset default line list with ":coord linelists$idhenear.dat"&gt;
   &lt;A dispersion solution is found automatically.&gt;
-  &lt;Examine the fit with <tt>'f'</tt>&gt;
-  &lt;Exit fit with <tt>'q'</tt> and exit task with <tt>'q'</tt>&gt;
+  &lt;Examine the fit with <span style="font-family: monospace;">'f'</span>&gt;
+  &lt;Exit fit with <span style="font-family: monospace;">'q'</span> and exit task with <span style="font-family: monospace;">'q'</span>&gt;
   
   REIDENTIFY: NOAO/IRAF V2.10BETA valdes@puppis Fri 11:04:32 06-Mar-92
     Reference image = demoarc.ms, New image = demoarc.ms, Refit = yes
@@ -1432,7 +1432,7 @@ do3fiber: Process KPNO coude three fiber spectra
   Fit dispersion function interactively? (no|yes|NO|YES) (yes): n
   d...ms - Ap 3   30/30  29/30   -0.0154     -0.0928  -1.4E-5   0.303
   Fit dispersion function interactively? (no|yes|NO|YES) (no): y
-  &lt;Exit with <tt>'q'</tt>&gt;
+  &lt;Exit with <span style="font-family: monospace;">'q'</span>&gt;
   d...ms - Ap 3   30/30  29/30   -0.0154     -0.0928  -1.4E-5   0.303
   
   Dispersion correct demoarc
@@ -1455,7 +1455,7 @@ do3fiber: Process KPNO coude three fiber spectra
   d...ms: ap = 2, w1 = 5785.86, w2 = 7351.59, dw = 6.14, nw = 256
   demoobj.ms.imh:
   Splot spectrum? (no|yes|NO|YES) (yes):
-  &lt;Exit with <tt>'q'</tt>&gt;
+  &lt;Exit with <span style="font-family: monospace;">'q'</span>&gt;
   </pre>
   <!-- EndSection:   'EXAMPLES' -->
   <h3>Revisions</h3>
@@ -1470,7 +1470,7 @@ do3fiber: Process KPNO coude three fiber spectra
   <dl>
   <dt><b>DO3FIBER V2.10.3</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='DO3FIBER' Line='DO3FIBER V2.10.3' -->
-  <dd>The usual output WCS format is <tt>"equispec"</tt>.  The image format type to be
+  <dd>The usual output WCS format is <span style="font-family: monospace;">"equispec"</span>.  The image format type to be
   processed is selected with the <i>imtype</i> environment parameter.  The
   dispersion axis parameter is now a package parameter.  Images will only
   be processed if the have the CCDPROC keyword.  A <i>datamax</i> parameter

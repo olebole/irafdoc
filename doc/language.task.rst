@@ -30,7 +30,7 @@ task: Define a new task
   <dd>The names of the new logical tasks.  The task name should be prefixed by a $
   if the task has no parameter file.  An optional extension should be appended
   if either the standard input or output of the task is a binary stream, rather
-  than text.  For example, <tt>"$mytask.tb"</tt> denotes a task with no parameter file,
+  than text.  For example, <span style="font-family: monospace;">"$mytask.tb"</span> denotes a task with no parameter file,
   a text standard input, and a binary standard output.
   </dd>
   </dl>
@@ -38,8 +38,8 @@ task: Define a new task
   <dt><b>tfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='tfile' Line='tfile' -->
   <dd>The name of the file to be executed or interpreted to run the task.
-  The type of the task is determined by the file extension.  An <tt>".e"</tt> extension
-  indicates an executable task, while <tt>".cl"</tt> indicates a CL script task or
+  The type of the task is determined by the file extension.  An <span style="font-family: monospace;">".e"</span> extension
+  indicates an executable task, while <span style="font-family: monospace;">".cl"</span> indicates a CL script task or
   procedure.  The <i>tfile</i> string is prefixed by a $ to define a
   <i>foreign task</i> (see the discussion below).
   </dd>
@@ -49,8 +49,8 @@ task: Define a new task
   <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The <i>task</i> statement defines a new task to the CL, and is required before
-  the task can be run from the CL.  The new task is added to the <tt>"current
-  package"</tt>, i.e., the package that is listed when <tt>"?"</tt> is entered.  Any task
+  the task can be run from the CL.  The new task is added to the <span style="font-family: monospace;">"current
+  package"</span>, i.e., the package that is listed when <span style="font-family: monospace;">"?"</span> is entered.  Any task
   definitions made since the current package was entered will be discarded
   when the package is exited.
   </p>
@@ -58,7 +58,7 @@ task: Define a new task
   In addition to defining a new task, the <i>task</i> statement defines the
   type and attributes of the new task.  Three types of tasks can be defined:
   script (.cl), executable (.e), and foreign ($...).  A task is assumed to
-  have a parameter file (<tt>"taskname.par"</tt>, in the same directory as <i>tfile</i>),
+  have a parameter file (<span style="font-family: monospace;">"taskname.par"</span>, in the same directory as <i>tfile</i>),
   unless the taskname is explicitly prefixed by a $.  A suffix or extension
   may optionally be added to the task name to indicate whether the input and
   output streams are text or binary.  The default is text, meaning that if
@@ -83,7 +83,7 @@ task: Define a new task
   the CL.  The simplest form of the foreign task statement is the following:
   </p>
   <p>
-  	task [$]taskname = <tt>"$host_command_prefix"</tt>
+  	task [$]taskname = <span style="font-family: monospace;">"$host_command_prefix"</span>
   </p>
   <p>
   where <i>host_command_prefix</i> is the first part of the command string to be
@@ -148,7 +148,7 @@ task: Define a new task
   3. Define the four new tasks implot, graph, showcap, and gkiextract.
   All have parameter files except showcap.  The gkiextract task has a
   binary output stream.  All tasks are executable and are stored in the
-  executable file <tt>"plot$x_plot.e"</tt>.  Note the use of comma argument
+  executable file <span style="font-family: monospace;">"plot$x_plot.e"</span>.  Note the use of comma argument
   delimiters in this example; this is a compute mode example as would
   be found in a package script task.
   </p>
@@ -160,7 +160,7 @@ task: Define a new task
   </pre>
   <p>
   4. Make the listed UNIX programs available in the IRAF environment as
-  foreign tasks.  None of the tasks has a parameter file.  The <tt>"$foreign"</tt>
+  foreign tasks.  None of the tasks has a parameter file.  The <span style="font-family: monospace;">"$foreign"</span>
   declares the tasks as foreign, and indicates that the IRAF task name
   is the same as the host system task name.
   </p>

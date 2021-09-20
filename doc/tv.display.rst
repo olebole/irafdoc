@@ -35,32 +35,32 @@ display: Load an image or image section into the display
   </dd>
   </dl>
   <dl>
-  <dt><b>bpmask = <tt>"BPM"</tt></b></dt>
+  <dt><b>bpmask = <span style="font-family: monospace;">"BPM"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='bpmask' Line='bpmask = "BPM"' -->
   <dd>Bad pixel mask.  The bad pixel mask is used to exclude bad pixels from the
   automatic intensity mapping algorithm.  It may also be displayed as an
   overlay or to interpolate the input image as selected by the <i>bpdisplay</i>
   parameter.  The bad pixel mask is specified by a pixel list image
   (.pl extension) or an regular image.  Values greater than zero define the
-  bad pixels.  The special value <tt>"BPM"</tt> may be specified to select a pixel list
-  image defined in the image header under the keyword <tt>"BPM"</tt>.  If the
+  bad pixels.  The special value <span style="font-family: monospace;">"BPM"</span> may be specified to select a pixel list
+  image defined in the image header under the keyword <span style="font-family: monospace;">"BPM"</span>.  If the
   bad pixel mask cannot be found a warning is given and the bad pixel mask
   is not used in the display.
   </dd>
   </dl>
   <dl>
-  <dt><b>bpdisplay = <tt>"none"</tt> (none|overlay|interpolate)</b></dt>
+  <dt><b>bpdisplay = <span style="font-family: monospace;">"none"</span> (none|overlay|interpolate)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='bpdisplay' Line='bpdisplay = "none" (none|overlay|interpolate)' -->
-  <dd>Type of display for the bad pixel mask.  The options are <tt>"none"</tt> to not
-  display the mask, <tt>"overlay"</tt> to display as an overlay with the colors given
-  by the <i>bpcolors</i> parameter, or <tt>"interpolate"</tt> to linearly interpolate
+  <dd>Type of display for the bad pixel mask.  The options are <span style="font-family: monospace;">"none"</span> to not
+  display the mask, <span style="font-family: monospace;">"overlay"</span> to display as an overlay with the colors given
+  by the <i>bpcolors</i> parameter, or <span style="font-family: monospace;">"interpolate"</span> to linearly interpolate
   across the bad pixels in the displayed image.  Note that the bad is still
   used in the automatic intensity scaling regardless of the type of display
   for the bad pixel mask.
   </dd>
   </dl>
   <dl>
-  <dt><b>bpcolors = <tt>"red"</tt></b></dt>
+  <dt><b>bpcolors = <span style="font-family: monospace;">"red"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='bpcolors' Line='bpcolors = "red"' -->
   <dd>The mapping between bad pixel values and display colors or intensity values
   when the bad pixels are displayed as an overlay.  There are two forms,
@@ -69,7 +69,7 @@ display: Load an image or image section into the display
   </dd>
   </dl>
   <dl>
-  <dt><b>overlay = <tt>""</tt></b></dt>
+  <dt><b>overlay = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='overlay' Line='overlay = ""' -->
   <dd>Overlay mask to be displayed.  The overlay mask may be a pixel list image
   (.pl extension) or a regular image.  Overlay pixels are identified by
@@ -79,7 +79,7 @@ display: Load an image or image section into the display
   </dd>
   </dl>
   <dl>
-  <dt><b>ocolors = <tt>"green"</tt></b></dt>
+  <dt><b>ocolors = <span style="font-family: monospace;">"green"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ocolors' Line='ocolors = "green"' -->
   <dd>The mapping between bad pixel values and display colors or intensity values
   when the bad pixels are displayed as an overlay.  There are two forms,
@@ -144,7 +144,7 @@ display: Load an image or image section into the display
   </dd>
   </dl>
   <dl>
-  <dt><b>zmask = <tt>""</tt></b></dt>
+  <dt><b>zmask = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='zmask' Line='zmask = ""' -->
   <dd>Pixel mask selecting the sample pixels for the automatic or range intensity
   mapping algorithm.  The pixel mask may be a pixel list image (.pl
@@ -204,19 +204,19 @@ display: Load an image or image section into the display
   </dd>
   </dl>
   <dl>
-  <dt><b>ztrans = <tt>"linear"</tt></b></dt>
+  <dt><b>ztrans = <span style="font-family: monospace;">"linear"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ztrans' Line='ztrans = "linear"' -->
   <dd>Transformation of the image intensity levels to the display levels.  The
   choices are:
   <dl>
-  <dt><b><tt>"linear"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"linear"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"linear"' -->
   <dd>Map the minimum and maximum image intensities linearly to the minimum and
   maximum display levels.
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"log"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"log"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"log"' -->
   <dd>Map the minimum and maximum image intensities linearly to the range 1 to 1000,
   take the logarithm (base 10), and then map the logarithms to the display
@@ -224,17 +224,17 @@ display: Load an image or image section into the display
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"none"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"none"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"none"' -->
   <dd>Apply no mapping of the image intensities (regardless of the values of
   <i>zcale, zrange, z1, and z2</i>).  For most image displays, values exceeding
   the maximum display value are truncated by masking the highest bits.
   This corresponds to applying a modulus operation to the intensity values
-  and produces <tt>"wrap-around"</tt> in the display levels.
+  and produces <span style="font-family: monospace;">"wrap-around"</span> in the display levels.
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"user"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"user"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"user"' -->
   <dd>User supplies a look up table of intensities and their corresponding
   greyscale values.  
@@ -243,7 +243,7 @@ display: Load an image or image section into the display
   </dd>
   </dl>
   <dl>
-  <dt><b>lutfile = <tt>""</tt></b></dt>
+  <dt><b>lutfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lutfile' Line='lutfile = ""' -->
   <dd>Name of text file containing the look up table when <i>ztrans</i> = user.
   The table should contain two columns per line; column 1 contains the
@@ -255,7 +255,7 @@ display: Load an image or image section into the display
   <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The specified image and overlay mask are loaded into the specified frame of
-  the standard image display device (<tt>"stdimage"</tt>).  For devices with more than
+  the standard image display device (<span style="font-family: monospace;">"stdimage"</span>).  For devices with more than
   one frame it is possible to load an image in a frame different than that
   displayed on the monitor.  An option allows the loaded frame to become the
   displayed frame.  The previous contents of the frame may be erased (which
@@ -296,7 +296,7 @@ display: Load an image or image section into the display
   section).
   </p>
   <p>
-  Note that bad pixel masks in <tt>"pixel list"</tt> format are constrained to
+  Note that bad pixel masks in <span style="font-family: monospace;">"pixel list"</span> format are constrained to
   non-negative values.  When an image is used instead of a pixel list the
   image is internally converted to a pixel list.  Negative values are
   set to zero or good pixels and positive real values are truncated to
@@ -330,15 +330,15 @@ display: Load an image or image section into the display
   There are two steps; mapping a range of image intensities to
   the full display range and selecting the mapping function or
   transformation.  The mapping transformation is set by the parameter
-  <i>ztrans</i>.  The most direct mapping is <tt>"none"</tt> which loads the
+  <i>ztrans</i>.  The most direct mapping is <span style="font-family: monospace;">"none"</span> which loads the
   image pixel values directly without any transformation or range
   mapping.  Most displays only use the lowest bits resulting in a
   wrap-around effect for images with a range exceeding the display range.
   This is sometimes desirable because it produces a contoured image which
   is not saturated at the brightest or weakest points.
   This is the fastest method of loading the display.  Another
-  transformation, <tt>"linear"</tt>, maps the selected image range linearly to the full
-  display range.  The logarithmic transformation, <tt>"log"</tt>, maps the image range
+  transformation, <span style="font-family: monospace;">"linear"</span>, maps the selected image range linearly to the full
+  display range.  The logarithmic transformation, <span style="font-family: monospace;">"log"</span>, maps the image range
   linearly between 1 and 1000 and then maps the logarithm (base 10) linearly
   to the full display range.  In the latter transformations pixel values
   greater than selected maximum display intensity are set to the maximum
@@ -530,7 +530,7 @@ display: Load an image or image section into the display
   in incorrect colors.
   </p>
   <p>
-  The color values are unsigned integers (no <tt>'+'</tt> or <tt>'-'</tt>) or values to be added
+  The color values are unsigned integers (no <span style="font-family: monospace;">'+'</span> or <span style="font-family: monospace;">'-'</span>) or values to be added
   or subtracted are given as signed integers.  The first form provides the
   default intensity or color for all mask values.  Note that if no default
   color is specified the default will be white.  The other forms map a mask
@@ -541,8 +541,8 @@ display: Load an image or image section into the display
   The addition or subtraction from mask values provides a mechanism to have
   the bad pixel or overlay masks encode a variety of overlay colors.  Note
   that to display the mask values directly as colors one would use the color
-  value <tt>"+0"</tt>.  Subtraction may produce values less than zero which then
-  are not visible; i.e. equivalent to <tt>"transparent"</tt>.
+  value <span style="font-family: monospace;">"+0"</span>.  Subtraction may produce values less than zero which then
+  are not visible; i.e. equivalent to <span style="font-family: monospace;">"transparent"</span>.
   </p>
   <p>
   The following examples illustrate the features of the syntax.
@@ -571,12 +571,12 @@ display: Load an image or image section into the display
   are not shown regardless of the expression value.
   </p>
   <p>
-  There are currently two function extensions, <tt>"colors"</tt> and <tt>"acenum"</tt>.
+  There are currently two function extensions, <span style="font-family: monospace;">"colors"</span> and <span style="font-family: monospace;">"acenum"</span>.
   In both functions the first and only required argument, arg1, is an integer
-  value.  Typically this will <tt>'$'</tt> or a function based on <tt>'$'</tt>.
+  value.  Typically this will <span style="font-family: monospace;">'$'</span> or a function based on <span style="font-family: monospace;">'$'</span>.
   </p>
   <p>
-  The <tt>"colors"</tt> function maps input values with a modulus type behavior.  The
+  The <span style="font-family: monospace;">"colors"</span> function maps input values with a modulus type behavior.  The
   optional second argument, arg2, is a color value for mapping zero.  As noted
   above, if the input mask value is zero it will not be displayed.  However,
   functions applied to non-zero input mask values may return a value of zero
@@ -597,7 +597,7 @@ display: Load an image or image section into the display
   defined with different mask values.
   </p>
   <p>
-  The <tt>"acenum"</tt> function handles <b>ace</b> package object detection masks
+  The <span style="font-family: monospace;">"acenum"</span> function handles <b>ace</b> package object detection masks
   which include bit flags.  Each object in the mask has an object number
   with value greater than 10.  Values less than 10 are passed along during
   detection and generally identify detector or saturated bad pixels.
@@ -615,7 +615,7 @@ display: Load an image or image section into the display
       S -- pixel not assigned to an object during splitting
   </pre>
   <p>
-  The default of arg2 is <tt>"BDEG"</tt> which essentially returns all pixels
+  The default of arg2 is <span style="font-family: monospace;">"BDEG"</span> which essentially returns all pixels
   in an object.
   </p>
   <p>
@@ -627,7 +627,7 @@ display: Load an image or image section into the display
   <pre>
       (colors(acenum($)))
       (colors(acenum($),black))
-      (colors(acenum($,<tt>'E'</tt>),red,green)
+      (colors(acenum($,<span style="font-family: monospace;">'E'</span>),red,green)
   </pre>
   <p>
   Note that when filling and anti-aliasing the behavior of the overlay
@@ -688,8 +688,8 @@ display: Load an image or image section into the display
   <dt><b>DISPLAY V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='DISPLAY' Line='DISPLAY V2.11' -->
   <dd>The bad pixel mask, overlay mask, sample mask, and overlay colors
-  parameters and functionality have been added.  The <tt>"nsample_lines"</tt>
-  parameter is now an <tt>"nsample"</tt> parameter.
+  parameters and functionality have been added.  The <span style="font-family: monospace;">"nsample_lines"</span>
+  parameter is now an <span style="font-family: monospace;">"nsample"</span> parameter.
   Bugs in the coordinate system sent to the image display for cursor
   readback were fixed.
   </dd>
@@ -698,7 +698,7 @@ display: Load an image or image section into the display
   <h3>Bugs</h3>
   <!-- BeginSection: 'BUGS' -->
   <p>
-  The <tt>"repeat"</tt> option is not implemented.
+  The <span style="font-family: monospace;">"repeat"</span> option is not implemented.
   </p>
   <!-- EndSection:   'BUGS' -->
   <h3>See also</h3>

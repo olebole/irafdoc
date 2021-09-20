@@ -32,7 +32,7 @@ slist: List spectrum headers
   <dt><b>records</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='records' Line='records' -->
   <dd>The record string for the spectra to be listed. The records will be appended
-  to the root name to form image names of the type <tt>"root.xxxx"</tt>.
+  to the root name to form image names of the type <span style="font-family: monospace;">"root.xxxx"</span>.
   </dd>
   </dl>
   <dl>

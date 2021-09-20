@@ -33,7 +33,7 @@ imarith: Simple image arithmetic
   <dt><b>op    </b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='op' Line='op    ' -->
   <dd>Operator to be applied to the operands.  The allowed operators
-  are <tt>"+"</tt>, <tt>"-"</tt>, <tt>"*"</tt>, <tt>"/"</tt>, <tt>"min"</tt>, and <tt>"max"</tt>.
+  are <span style="font-family: monospace;">"+"</span>, <span style="font-family: monospace;">"-"</span>, <span style="font-family: monospace;">"*"</span>, <span style="font-family: monospace;">"/"</span>, <span style="font-family: monospace;">"min"</span>, and <span style="font-family: monospace;">"max"</span>.
   </dd>
   </dl>
   <dl>
@@ -43,9 +43,9 @@ imarith: Simple image arithmetic
   </dd>
   </dl>
   <dl>
-  <dt><b>title = <tt>""</tt></b></dt>
+  <dt><b>title = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='title' Line='title = ""' -->
-  <dd>Title for the resultant images.  If null (<tt>""</tt>) then the title is taken
+  <dd>Title for the resultant images.  If null (<span style="font-family: monospace;">""</span>) then the title is taken
   from operand1 if operand1 is an image or from operand2 otherwise.
   </dd>
   </dl>
@@ -57,37 +57,37 @@ imarith: Simple image arithmetic
   </dd>
   </dl>
   <dl>
-  <dt><b>hparams = <tt>""</tt></b></dt>
+  <dt><b>hparams = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='hparams' Line='hparams = ""' -->
   <dd>List of header parameters to be operated upon.  This is primarily
   used for adding exposure times when adding images.
   </dd>
   </dl>
   <dl>
-  <dt><b>pixtype = <tt>""</tt>, calctype = <tt>""</tt></b></dt>
+  <dt><b>pixtype = <span style="font-family: monospace;">""</span>, calctype = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pixtype' Line='pixtype = "", calctype = ""' -->
   <dd>Pixel datatype for the resultant image and the internal calculation datatype.
   The choices are given below.  They may be abbreviated to one character.
   <dl>
-  <dt><b><tt>""</tt>    </b></dt>
+  <dt><b><span style="font-family: monospace;">""</span>    </b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='""    ' -->
   <dd><i>Calctype</i> defaults to the highest precedence operand datatype.  If the
   highest precedence datatype is an integer type and the operation is
-  division then the calculation type will be <tt>"real"</tt>.  If the highest
-  precedence operand is type <tt>"ushort"</tt>, <i>calctype</i> will default to
-  <tt>"long"</tt>.  <i>Pixtype</i> defaults to <i>calctype</i>. Users who want type
-  <tt>"ushort"</tt> images on output will need to set <i>pixtype</i> to <tt>"ushort"</tt>
+  division then the calculation type will be <span style="font-family: monospace;">"real"</span>.  If the highest
+  precedence operand is type <span style="font-family: monospace;">"ushort"</span>, <i>calctype</i> will default to
+  <span style="font-family: monospace;">"long"</span>.  <i>Pixtype</i> defaults to <i>calctype</i>. Users who want type
+  <span style="font-family: monospace;">"ushort"</span> images on output will need to set <i>pixtype</i> to <span style="font-family: monospace;">"ushort"</span>
   explicitly.
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"1"</tt>, <tt>"2"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"1"</span>, <span style="font-family: monospace;">"2"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"1", "2"' -->
   <dd>The pixel datatype of the first or second operand.
   </dd>
   </dl>
   <dl>
-  <dt><b><tt>"short"</tt>, <tt>"ushort"</tt>, <tt>"integer"</tt>, <tt>"long"</tt>, <tt>"real"</tt>, <tt>"double"</tt></b></dt>
+  <dt><b><span style="font-family: monospace;">"short"</span>, <span style="font-family: monospace;">"ushort"</span>, <span style="font-family: monospace;">"integer"</span>, <span style="font-family: monospace;">"long"</span>, <span style="font-family: monospace;">"real"</span>, <span style="font-family: monospace;">"double"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"short", "ushort", "integer", "long", "real", "double"' -->
   <dd>Allowed IRAF pixel datatypes.
   </dd>

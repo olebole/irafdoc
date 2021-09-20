@@ -62,9 +62,9 @@ crgrow: Grow cosmic rays in cosmic ray masks
   <h3>Description</h3>
   <!-- BeginSection: 'DESCRIPTION' -->
   <p>
-  The cosmic ray pixels, identified by the <tt>"inval"</tt> parameter, in the input
+  The cosmic ray pixels, identified by the <span style="font-family: monospace;">"inval"</span> parameter, in the input
   mask are located and all unmasked (zero valued) pixels within the specified
-  grow radius are set to a value given by the <tt>"outval"</tt> parameter. The
+  grow radius are set to a value given by the <span style="font-family: monospace;">"outval"</span> parameter. The
   distance between pixels is measured as a cartisian logical pixel coordinate
   distance.
   </p>
@@ -72,7 +72,7 @@ crgrow: Grow cosmic rays in cosmic ray masks
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1.  A radius of 1 will grow cosmic rays in a <tt>"plus"</tt> pattern.
+  1.  A radius of 1 will grow cosmic rays in a <span style="font-family: monospace;">"plus"</span> pattern.
   </p>
   <pre>
       cl&gt; crgrow crmask1 crmask2 1

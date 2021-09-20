@@ -33,7 +33,7 @@ bswitch: Beam-switch strings of spectra to make obj-sky pairs
   <!-- Sec='PARAMETERS' Level=0 Label='records' Line='records' -->
   <dd>The range of spectra to be included in the beam-switch operation.
   Each range item will be appended to the root name to form an image
-  name. For example, if <tt>"input"</tt> is <tt>"nite1"</tt> and records is <tt>"1011-1018"</tt>,
+  name. For example, if <span style="font-family: monospace;">"input"</span> is <span style="font-family: monospace;">"nite1"</span> and records is <span style="font-family: monospace;">"1011-1018"</span>,
   then spectra nite1.1011, nite.1012 ... nite1.1018 will be included.
   </dd>
   </dl>
@@ -47,18 +47,18 @@ bswitch: Beam-switch strings of spectra to make obj-sky pairs
   <dl>
   <dt><b>start_rec = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='start_rec' Line='start_rec = 1' -->
-  <dd>Each new spectrum created has <tt>"output"</tt> as its root name and a trailing
+  <dd>Each new spectrum created has <span style="font-family: monospace;">"output"</span> as its root name and a trailing
   number appended. The number begins with start_rec and is incremented
-  for each new spectrum. For example, if <tt>"output"</tt> is given as <tt>"nite1b"</tt>
+  for each new spectrum. For example, if <span style="font-family: monospace;">"output"</span> is given as <span style="font-family: monospace;">"nite1b"</span>
   and start_rec is given as 1001, then new spectra will be created as
   nite1b.1001, nite1b.1002 ...
   </dd>
   </dl>
   <dl>
-  <dt><b>stats = <tt>"stats"</tt></b></dt>
+  <dt><b>stats = <span style="font-family: monospace;">"stats"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='stats' Line='stats = "stats"' -->
   <dd>A file by this name will have statistical data appended to it, or created
-  if necessary. If a null file name is given (<tt>""</tt>), no statistical output
+  if necessary. If a null file name is given (<span style="font-family: monospace;">""</span>), no statistical output
   is given. For each aperture, a listing of countrates for each
   observation is given relative to the observation with the highest rate.
   </dd>
@@ -66,7 +66,7 @@ bswitch: Beam-switch strings of spectra to make obj-sky pairs
   <dl>
   <dt><b>ids_mode = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ids_mode' Line='ids_mode = yes' -->
-  <dd>If the data are taken under the usual IIDS <tt>"beam-switch"</tt> mode, this
+  <dd>If the data are taken under the usual IIDS <span style="font-family: monospace;">"beam-switch"</span> mode, this
   parameter should be set to yes so that accumulations will be performed
   in pairs. But if the data are taken where there is no sky observation
   or different numbers of sky observations, ids_mode should be set to no.
@@ -121,19 +121,19 @@ bswitch: Beam-switch strings of spectra to make obj-sky pairs
   </dd>
   </dl>
   <dl>
-  <dt><b>observatory = <tt>"observatory"</tt></b></dt>
+  <dt><b>observatory = <span style="font-family: monospace;">"observatory"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory = "observatory"' -->
   <dd>Observatory at which the spectra were obtained if
   not specified in the image header by the keyword OBSERVAT.  The
   observatory may be one of the observatories in the observatory
-  database, <tt>"observatory"</tt> to select the observatory defined by the
-  environment variable <tt>"observatory"</tt> or the task <b>observatory</b>, or
-  <tt>"obspars"</tt> to select the current parameters set in the <b>observatory</b>
+  database, <span style="font-family: monospace;">"observatory"</span> to select the observatory defined by the
+  environment variable <span style="font-family: monospace;">"observatory"</span> or the task <b>observatory</b>, or
+  <span style="font-family: monospace;">"obspars"</span> to select the current parameters set in the <b>observatory</b>
   task.  See help for <b>observatory</b> for additional information.
   </dd>
   </dl>
   <dl>
-  <dt><b>extinction = <tt>")_.extinction"</tt></b></dt>
+  <dt><b>extinction = <span style="font-family: monospace;">")_.extinction"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='extinction' Line='extinction = ")_.extinction"' -->
   <dd>The the name of the file containing extinction values.
   Required if extinct=yes.
@@ -160,13 +160,13 @@ bswitch: Beam-switch strings of spectra to make obj-sky pairs
   of the operation.
   </p>
   <p>
-  If ids_mode is set to yes, then the usual IIDS/IRS <tt>"beam-switch"</tt>
+  If ids_mode is set to yes, then the usual IIDS/IRS <span style="font-family: monospace;">"beam-switch"</span>
   observing mode is assumed. This implies that an equal number of
   sky and object spectra are obtained through each aperture
   after 2N spectra have been accumulated, where N is the number
   of instrument apertures (2 for the IIDS/IRS). It is also assumed
   that the object and sky exposure times are equal for each aperture.
-  Note that the <tt>"nebular"</tt> mode (where all instrument apertures
+  Note that the <span style="font-family: monospace;">"nebular"</span> mode (where all instrument apertures
   point at an extended object simultaneously, and then all apertures
   point at sky simultaneously) is an acceptable form for
   beam-switched data in ids_mode.
@@ -219,7 +219,7 @@ bswitch: Beam-switch strings of spectra to make obj-sky pairs
   </p>
   <p>
   The headers may be listed with the IMHEADER task, setting
-  the parameter <tt>"long"</tt> = yes. The values for the parameters follow 
+  the parameter <span style="font-family: monospace;">"long"</span> = yes. The values for the parameters follow 
   the rules used for IIDS and IRS data.
   </p>
   <p>

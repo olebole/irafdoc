@@ -34,14 +34,14 @@ dparam: Dump a pset as a series of task.param=value assignments
   <p>
   <i>Dparam</i> lists one or more parameter sets.  Psets are specified either by
   the name of the task with which the pset is associated, or by filename (pset
-  files have the <tt>".par"</tt> extension).  If a file type pset is listed the extension
+  files have the <span style="font-family: monospace;">".par"</span> extension).  If a file type pset is listed the extension
   must be included, since it is the presence or absence of the filename
   extension which <b>dparam</b> uses to distinguish between task-psets and named
   (file) psets.
   </p>
   <p>
   Each parameter is listed on a single line with the following format.
-  The list of assignments is terminated by the string <tt>"# EOF"</tt> so that programs
+  The list of assignments is terminated by the string <span style="font-family: monospace;">"# EOF"</span> so that programs
   reading the list from a stream can easily distinguish the end of the variable
   length list of parameters.
   </p>
@@ -49,7 +49,7 @@ dparam: Dump a pset as a series of task.param=value assignments
   	task.param = value
   </p>
   <p>
-  Here <tt>"task.param"</tt> is the name of the parameter, and <tt>"value"</tt> is the current
+  Here <span style="font-family: monospace;">"task.param"</span> is the name of the parameter, and <span style="font-family: monospace;">"value"</span> is the current
   value of the parameter.  The assignment is skipped if the value is undefined.
   There is no way to distinguish between hidden parameters and query parameters.
   </p>
@@ -80,7 +80,7 @@ dparam: Dump a pset as a series of task.param=value assignments
   	# EOF
   </pre>
   <p>
-  2. List the contents of the file pset <tt>"delete.par"</tt>.  Named psets such as this
+  2. List the contents of the file pset <span style="font-family: monospace;">"delete.par"</span>.  Named psets such as this
   are most commonly produced using the <b>":w filename"</b> colon command in
   <b>eparam</b>, e.g., to prepare several different versions of the parameter
   set for a task.

@@ -34,7 +34,7 @@ mkphotcors: Prepare the photometric corrections files
   If <i>imsets</i> does not exist, MKPHOTCORS prompts the user for
   input and writes the results to a new image set file <i>imsets</i>.
   If <i>imsets</i> does exist, MKPHOTCORS reads the file and prints messages
-  about any errors or inconsistencies it finds in it. If <i>imsets</i> is <tt>""</tt>,
+  about any errors or inconsistencies it finds in it. If <i>imsets</i> is <span style="font-family: monospace;">""</span>,
   MKPHOTCORS prompts the user for input, but does not create a new <i>imsets</i>
   file.
   </dd>
@@ -61,7 +61,7 @@ mkphotcors: Prepare the photometric corrections files
   specified by <i>obscolumns</i>, and prints out messages about any
   errors and inconsistencies it finds.
   If <i>obsparams</i>
-  is <tt>""</tt>, the user is not prompted for input and no output file is created.
+  is <span style="font-family: monospace;">""</span>, the user is not prompted for input and no output file is created.
   </dd>
   </dl>
   <dl>
@@ -73,7 +73,7 @@ mkphotcors: Prepare the photometric corrections files
   and writes the results to the new shifts file <i>shifts</i>.
   If <i>shifts</i> already exists, MKPHOTCORS reads the file and prints out
   messages about any errors and inconsistencies it finds.
-  If <i>shifts</i> is <tt>""</tt>, the user is not prompted for input and no output
+  If <i>shifts</i> is <span style="font-family: monospace;">""</span>, the user is not prompted for input and no output
   file is created.
   </dd>
   </dl>
@@ -87,12 +87,12 @@ mkphotcors: Prepare the photometric corrections files
   and writes the results to the new aperture corrections file <i>apercors</i>.
   If <i>apercors</i> already exists, MKPHOTCORS reads the file and prints out
   messages about any errors and inconsistencies it finds.
-  If <i>apercors</i> is <tt>""</tt>, the user is not prompted for input and no output
+  If <i>apercors</i> is <span style="font-family: monospace;">""</span>, the user is not prompted for input and no output
   file is created.
   </dd>
   </dl>
   <dl>
-  <dt><b>obscolumns = <tt>"2 3 4 5"</tt></b></dt>
+  <dt><b>obscolumns = <span style="font-family: monospace;">"2 3 4 5"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='obscolumns' Line='obscolumns = "2 3 4 5"' -->
   <dd>The list of numbers separated by commas or whitespace specifying which 
   columns in <i>obsparams</i> contain the filter ids, exposure times,
@@ -100,7 +100,7 @@ mkphotcors: Prepare the photometric corrections files
   <i>Obscolumns</i> is only used if <i>obsparams</i> already exists on disk.
   The number 0 may be used as a place holder in the <i>obscolumns</i> string.
   For example to read in only the airmass values, <i>obscolumns</i> should be
-  set to <tt>"0 0 column"</tt> if the airmass values are in column.
+  set to <span style="font-family: monospace;">"0 0 column"</span> if the airmass values are in column.
   </dd>
   </dl>
   <dl>
@@ -132,8 +132,8 @@ mkphotcors: Prepare the photometric corrections files
   MKNOBSFILE or MKOBSFILE which
   observations are to be extracted from the photometry files.
   A complete observation consists of the observation name,
-  for example <tt>"M92"</tt>, followed by a list of images
-  taken through the filters <i>idfilters</i>, for example <tt>"m92u m92b m92v"</tt>. 
+  for example <span style="font-family: monospace;">"M92"</span>, followed by a list of images
+  taken through the filters <i>idfilters</i>, for example <span style="font-family: monospace;">"m92u m92b m92v"</span>. 
   Observations are listed in <i>imsets</i>, 1 observation per line, with the
   observation name in column 1, a colon in column 2, followed by, in filter
   order and separated by whitespace, the names of the images belonging
@@ -148,7 +148,7 @@ mkphotcors: Prepare the photometric corrections files
   by <i>idfilters</i>. If imsets does not exist, MKPHOTCORS prompts the user
   for input using <i>idfilters</i> to determine the number of images
   there should be in each observation, and writes the results to the new
-  image set file <i>imsets</i>. If <i>imsets</i> is <tt>""</tt>, MKPHOTCORS prompts
+  image set file <i>imsets</i>. If <i>imsets</i> is <span style="font-family: monospace;">""</span>, MKPHOTCORS prompts
   the user for input but does not save the results.
   </p>
   <p>
@@ -172,7 +172,7 @@ mkphotcors: Prepare the photometric corrections files
   listed in <i>imsets</i>. If <i>obsparams</i> does not exist, MKPHOTCORS
   prompts the user for input for each image in <i>imsets</i> and
   writes the results to a new observing parameters file <i>obsparams</i>.
-  If <i>obsparams</i> is <tt>""</tt>,  MKPHOTCORS does not prompt for input and no new
+  If <i>obsparams</i> is <span style="font-family: monospace;">""</span>,  MKPHOTCORS does not prompt for input and no new
   file is written.
   </p>
   <p>
@@ -199,7 +199,7 @@ mkphotcors: Prepare the photometric corrections files
   listed in <i>imsets</i>. If <i>shifts</i> does not exist, MKPHOTCORS
   prompts the user for input for each of the images in <i>imsets</i> and
   writes the results to a new shifts file <i>shifts</i>.
-  If <i>shifts</i> is <tt>""</tt>,  MKPHOTCORS does not prompt for input and no new
+  If <i>shifts</i> is <span style="font-family: monospace;">""</span>,  MKPHOTCORS does not prompt for input and no new
   file is written.
   </p>
   <p>
@@ -226,7 +226,7 @@ mkphotcors: Prepare the photometric corrections files
   listed in <i>imsets</i>. If <i>apercors</i> does not exist, MKPHOTCORS
   prompts the user for input for each of the images in <i>imsets</i> and
   writes the results to a aperture corrections file <i>apercors</i>.
-  If <i>apercors</i> is <tt>""</tt>,  MKPHOTCORS does not prompt for input and no new
+  If <i>apercors</i> is <span style="font-family: monospace;">""</span>,  MKPHOTCORS does not prompt for input and no new
   file is written.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
@@ -235,7 +235,7 @@ mkphotcors: Prepare the photometric corrections files
   <p>
   A sample image set file for a set of UBV 100 second, 600 seconds, and 
   1800 second exposure images of the globular cluster m92 is shown below.
-  The labels <tt>"M92S"</tt>, <tt>"M92M"</tt>, and <tt>"M92L"</tt> stand for the  100, 600, 1800 second
+  The labels <span style="font-family: monospace;">"M92S"</span>, <span style="font-family: monospace;">"M92M"</span>, and <span style="font-family: monospace;">"M92L"</span> stand for the  100, 600, 1800 second
   exposure observations sets respectively. The names which follow the labels are
   the names of the actual IRAF images comprising each data set. The image names
   must match those in the photometry files.
@@ -297,8 +297,8 @@ mkphotcors: Prepare the photometric corrections files
   <p>
   1. Type in the image set file and accompanying shifts and aperture corrections
   files  for a set of UBV observations of a crowded field in NGC4147. The filter
-  ids <tt>"1 2 3"</tt> stand
-  for <tt>"U B V"</tt>. The photometry programs picked up the correct values of
+  ids <span style="font-family: monospace;">"1 2 3"</span> stand
+  for <span style="font-family: monospace;">"U B V"</span>. The photometry programs picked up the correct values of
   the filter id, exposure time, and airmass from the image headers
   and wrote them to the photometry
   files so the observing parameters file is not required.
@@ -308,7 +308,7 @@ mkphotcors: Prepare the photometric corrections files
   </pre>
   <p>
   2. Type in the shifts and aperture corrections files for the already
-  existing image set file m17.imsets. In this case the filter set is <tt>"J H K"</tt>.
+  existing image set file m17.imsets. In this case the filter set is <span style="font-family: monospace;">"J H K"</span>.
   </p>
   <pre>
   	ph&gt; mkphotcors m17.imsets "J,H,K" "" m17.shifts m17.apcors

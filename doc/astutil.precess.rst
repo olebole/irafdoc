@@ -83,7 +83,7 @@ precess: Precess a list of astronomical coordinates
   </pre>
   <p>
   The following is equivalent, except that coordinate input is taken from
-  the file <tt>"coords"</tt>, rather than from the terminal:
+  the file <span style="font-family: monospace;">"coords"</span>, rather than from the terminal:
   </p>
   <pre>
   	cl&gt; precess coords 1950 1990			[input]

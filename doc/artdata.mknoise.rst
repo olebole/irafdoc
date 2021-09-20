@@ -23,7 +23,7 @@ mknoise: Make/add noise and cosmic rays to 1D/2D images
   </dd>
   </dl>
   <dl>
-  <dt><b>output = <tt>""</tt></b></dt>
+  <dt><b>output = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
   <dd>Output images when modifying input images.  If no output images are
   given then existing images in the input list are modified directly.
@@ -35,7 +35,7 @@ mknoise: Make/add noise and cosmic rays to 1D/2D images
   WHEN CREATING NEW IMAGES
   </p>
   <dl>
-  <dt><b>title = <tt>""</tt></b></dt>
+  <dt><b>title = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='title' Line='title = ""' -->
   <dd>Image title to be given to the images.  Maximum of 79 characters.
   </dd>
@@ -47,7 +47,7 @@ mknoise: Make/add noise and cosmic rays to 1D/2D images
   </dd>
   </dl>
   <dl>
-  <dt><b>header = <tt>"artdata$stdheader.dat"</tt></b></dt>
+  <dt><b>header = <span style="font-family: monospace;">"artdata$stdheader.dat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='header' Line='header = "artdata$stdheader.dat"' -->
   <dd>Image or header keyword data file.  If an image is given then the image header
   is copied.  If a file is given then the FITS format cards are copied.
@@ -91,7 +91,7 @@ mknoise: Make/add noise and cosmic rays to 1D/2D images
   <dl>
   <dt><b>seed = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='seed' Line='seed = 1' -->
-  <dd>Random number seed.  If a value of <tt>"INDEF"</tt> is given then the clock
+  <dd>Random number seed.  If a value of <span style="font-family: monospace;">"INDEF"</span> is given then the clock
   time (integer seconds since 1980) is used as the seed yielding
   different random numbers for each execution.
   </dd>
@@ -100,7 +100,7 @@ mknoise: Make/add noise and cosmic rays to 1D/2D images
   COSMIC RAYS
   </p>
   <dl>
-  <dt><b>cosrays = <tt>""</tt></b></dt>
+  <dt><b>cosrays = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cosrays' Line='cosrays = ""' -->
   <dd>List of cosmic ray files.  Cosmic ray files contain lines of cosmic ray
   coordinates and energy (see DESCRIPTION section).  If no
@@ -329,13 +329,13 @@ mknoise: Make/add noise and cosmic rays to 1D/2D images
   <dt><b>MKNOISE V2.11+</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='MKNOISE' Line='MKNOISE V2.11+' -->
   <dd>The random number seed can be set from the clock time by using the value
-  <tt>"INDEF"</tt> to yield different random numbers for each execution.
+  <span style="font-family: monospace;">"INDEF"</span> to yield different random numbers for each execution.
   </dd>
   </dl>
   <dl>
   <dt><b>MKNOISE V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='MKNOISE' Line='MKNOISE V2.11' -->
-  <dd>The default value of <tt>"ranbuf"</tt> was changed to zero.
+  <dd>The default value of <span style="font-family: monospace;">"ranbuf"</span> was changed to zero.
   </dd>
   </dl>
   <!-- EndSection:   'REVISIONS' -->

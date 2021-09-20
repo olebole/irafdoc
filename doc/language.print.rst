@@ -78,10 +78,10 @@ print: Print a line on the standard output
   string.  
   </p>
   <p>
-  A format specification has the form <tt>"%[W][.D]Cn"</tt>, where W is  the  field
+  A format specification has the form <span style="font-family: monospace;">"%[W][.D]Cn"</span>, where W is  the  field
   width,  D is the number of decimal places or the number of digits of
   precision, C is the format  code,  and  N  is  radix  character  for
-  format  code <tt>"r"</tt> only.  The W and D fields are optional.  The format
+  format  code <span style="font-family: monospace;">"r"</span> only.  The W and D fields are optional.  The format
   codes C are as follows:
   </p>
   <pre>
@@ -112,7 +112,7 @@ print: Print a line on the standard output
       absent, 0   use as much space as needed (D field sets precision)
   </pre>
   <p>
-  Escape sequences (e.g. <tt>"\n"</tt> for newline):
+  Escape sequences (e.g. <span style="font-family: monospace;">"\n"</span> for newline):
   </p>
   <pre>
                formfeed
@@ -135,20 +135,20 @@ print: Print a line on the standard output
   1. Print the name of the current terminal.
   </p>
   <p>
-  	cl&gt; print (<tt>"terminal = "</tt>, envget (<tt>"terminal"</tt>))
+  	cl&gt; print (<span style="font-family: monospace;">"terminal = "</span>, envget (<span style="font-family: monospace;">"terminal"</span>))
   </p>
   <p>
   2. Output a blank line on the standard output, e.g., in a script.
   </p>
   <p>
-  	print (<tt>""</tt>)
+  	print (<span style="font-family: monospace;">""</span>)
   </p>
   <p>
   3. Format a command and send it to the host system.  In this example,
-  <tt>"fname"</tt> is a string valued parameter.
+  <span style="font-family: monospace;">"fname"</span> is a string valued parameter.
   </p>
   <p>
-  	cl&gt; print (<tt>"!ls -l "</tt>, fname) | cl
+  	cl&gt; print (<span style="font-family: monospace;">"!ls -l "</span>, fname) | cl
   </p>
   <p>
   4. Write to a file.

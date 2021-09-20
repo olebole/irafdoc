@@ -30,21 +30,21 @@ pdm: Find periods in light curves by Phase Dispersion Minimization
   </dd>
   </dl>
   <dl>
-  <dt><b>metafile = <tt>"pdmmeta"</tt></b></dt>
+  <dt><b>metafile = <span style="font-family: monospace;">"pdmmeta"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='metafile' Line='metafile = "pdmmeta"' -->
   <dd>File in which to store metacode when running in batch mode.  All of the
   plots saved will be put here with formfeeds between them.
   </dd>
   </dl>
   <dl>
-  <dt><b>batchfile = <tt>"pdmbatch"</tt></b></dt>
+  <dt><b>batchfile = <span style="font-family: monospace;">"pdmbatch"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='batchfile' Line='batchfile = "pdmbatch"' -->
   <dd>File in which to store information about the period, amplitude, epoch
   and fit function when running in batch mode.
   </dd>
   </dl>
   <dl>
-  <dt><b>device = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>device = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdgraph"' -->
   <dd>The output device for interactive graphics.
   </dd>
@@ -124,7 +124,7 @@ pdm: Find periods in light curves by Phase Dispersion Minimization
   </dd>
   </dl>
   <dl>
-  <dt><b>cursor = <tt>"stdgcur"</tt></b></dt>
+  <dt><b>cursor = <span style="font-family: monospace;">"stdgcur"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = "stdgcur"' -->
   <dd>The source of graphics cursor input.
   </dd>
@@ -134,7 +134,7 @@ pdm: Find periods in light curves by Phase Dispersion Minimization
   <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Pdm applies a phase dispersion minimization algorithm (R. F. Stellingwerf,
-  <tt>"Period Determination by Phase Dispersion Minimization"</tt>, ApJ 224, 1978,
+  <span style="font-family: monospace;">"Period Determination by Phase Dispersion Minimization"</span>, ApJ 224, 1978,
   953) to lightcurve data to determine periodicities in the data.  It also
   calculates amplitude and epoch information.
   </p>
@@ -165,7 +165,7 @@ pdm: Find periods in light curves by Phase Dispersion Minimization
   just a (y) value per line.  If only one value per line is found the
   program will number x sequentially (1,2,3,4,...).  If a third value
   is included on each line it will be read as the error in that
-  measurement.   (The <tt>'e'</tt> key is used to toggle error bars on the phase
+  measurement.   (The <span style="font-family: monospace;">'e'</span> key is used to toggle error bars on the phase
   plot.)
   </p>
   <p>
@@ -192,7 +192,7 @@ pdm: Find periods in light curves by Phase Dispersion Minimization
   Note:
   The remembered period is for the last minimum found.  This
   minimum calculation is done whenever a new theta plot is graphed
-  and whenever the <tt>"m"</tt> key is used.
+  and whenever the <span style="font-family: monospace;">"m"</span> key is used.
   </p>
   <dl>
   <dt><b>? -- list options</b></dt>
@@ -474,7 +474,7 @@ pdm: Find periods in light curves by Phase Dispersion Minimization
   in vstar645.m, the command might be:
   </p>
   <p>
-  	cl&gt; pdm vstar645 inter=no meta=<tt>"vstar645.m"</tt>
+  	cl&gt; pdm vstar645 inter=no meta=<span style="font-family: monospace;">"vstar645.m"</span>
   </p>
   <!-- EndSection:   'EXAMPLES' -->
   <h3>Bugs</h3>

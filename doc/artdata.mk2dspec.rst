@@ -29,7 +29,7 @@ mk2dspec: Make/add artificial 2D spectra using 1D spectra templates
   </dd>
   </dl>
   <dl>
-  <dt><b>output = <tt>""</tt></b></dt>
+  <dt><b>output = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
   <dd>Output spectra when modifying input spectra.  If no output spectra are
   given then existing spectra in the input list are modified directly.
@@ -37,7 +37,7 @@ mk2dspec: Make/add artificial 2D spectra using 1D spectra templates
   </dd>
   </dl>
   <dl>
-  <dt><b>models = <tt>""</tt></b></dt>
+  <dt><b>models = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='models' Line='models = ""' -->
   <dd>List of model parameter files.  If the list of model files is shorter than the
   list of input images then the last model file is reused.  The model
@@ -58,7 +58,7 @@ mk2dspec: Make/add artificial 2D spectra using 1D spectra templates
   WHEN CREATING NEW SPECTRA
   </p>
   <dl>
-  <dt><b>title = <tt>""</tt></b></dt>
+  <dt><b>title = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='title' Line='title = ""' -->
   <dd>Image title to be given to the spectra.  Maximum of 79 characters.
   </dd>
@@ -70,7 +70,7 @@ mk2dspec: Make/add artificial 2D spectra using 1D spectra templates
   </dd>
   </dl>
   <dl>
-  <dt><b>header = <tt>"artdata$stdheader.dat"</tt></b></dt>
+  <dt><b>header = <span style="font-family: monospace;">"artdata$stdheader.dat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='header' Line='header = "artdata$stdheader.dat"' -->
   <dd>Image or header keyword data file.  If an image is given then the image header
   is copied.  If a file is given then the FITS format cards are copied.
@@ -132,15 +132,15 @@ mk2dspec: Make/add artificial 2D spectra using 1D spectra templates
   <dl>
   <dt><b>&lt;profile type&gt;</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='' Line='&lt;profile type&gt;' -->
-  <dd>The spatial profiles are identified by two keywords, <tt>"gaussian"</tt>
-  or <tt>"slit"</tt>.  The profiles are defined by the following formulae,
+  <dd>The spatial profiles are identified by two keywords, <span style="font-family: monospace;">"gaussian"</span>
+  or <span style="font-family: monospace;">"slit"</span>.  The profiles are defined by the following formulae,
   <pre>
       gaussian:   I(x) = exp (-ln(2) * (2*(x-xc)/fwhm)**2)
           slit:   I(x) = exp (-ln(2) * (2*(x-xc)/fwhm)**10)
   </pre>
   where x is the column coordinate, xc is the profile center, and
-  fwhm is the full width at half maximum.  The <tt>"gaussian"</tt> profile
-  is the usual gaussian specified in terms of a FWHM.  The <tt>"slit"</tt>
+  fwhm is the full width at half maximum.  The <span style="font-family: monospace;">"gaussian"</span> profile
+  is the usual gaussian specified in terms of a FWHM.  The <span style="font-family: monospace;">"slit"</span>
   profile is one which is relatively flat and then rapidly drops
   to zero.  The profile is normalized to unit integral so that
   the total flux across the profile is given by the scaled

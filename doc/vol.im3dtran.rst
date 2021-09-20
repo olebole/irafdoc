@@ -77,7 +77,7 @@ im3dtran: 3d image transpose (used for rotates as well)
   being the x axis (dim1), ordinate the y axis (dim2), and depth being the
   z axis (dim3), z increasing away from the viewer or into the datacube [this
   is a left-handed coordinate system].  One then wants to rotate the datacube
-  by 90 degrees clockwise about the y axis when viewed from +y (the <tt>"top"</tt>);
+  by 90 degrees clockwise about the y axis when viewed from +y (the <span style="font-family: monospace;">"top"</span>);
   this means the old z axis becomes the new x axis, and the old x axis becomes
   the new z axis, while new y remains old y.  In this case the axis that must
   be flipped prior to transposition is the <b>x axis</b>; see Example 1.
@@ -86,7 +86,7 @@ im3dtran: 3d image transpose (used for rotates as well)
   The parameter <b>len_blk</b> controls how much memory is used during the
   transpose operation.  <b>len_blk</b> elements are used in each axis at a
   time, or a cube len_blk elements on a side.  If <b>len_blk</b> is too large,
-  the task will abort with an <tt>"out of memory"</tt> error.  If it is too small,
+  the task will abort with an <span style="font-family: monospace;">"out of memory"</span> error.  If it is too small,
   the task can take a very long time to run.  The maximum size of len_blk
   depends on how much memory is available at the time IM3DTRAN is run,
   and the size and datatype of the image to be transposed.

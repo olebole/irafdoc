@@ -70,7 +70,7 @@ fitparams: Compute the parameters of the transformation equations
   </dd>
   </dl>
   <dl>
-  <dt><b>weighting = <tt>"uniform"</tt></b></dt>
+  <dt><b>weighting = <span style="font-family: monospace;">"uniform"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='weighting' Line='weighting = "uniform"' -->
   <dd>The following weighting schemes are supported.
   <dl>
@@ -91,7 +91,7 @@ fitparams: Compute the parameters of the transformation equations
   photometric index, and that the contribution of each catalog or observations
   variable to the total error is weighted by the number of times it occurs
   in the transformation equation.
-  If <i>addscatter</i> is <tt>"yes"</tt> then an additional <tt>"scatter"</tt> term is fit and
+  If <i>addscatter</i> is <span style="font-family: monospace;">"yes"</span> then an additional <span style="font-family: monospace;">"scatter"</span> term is fit and
   added to the weights.
   </dd>
   </dl>
@@ -101,7 +101,7 @@ fitparams: Compute the parameters of the transformation equations
   <dd>The weight equation (see the description of the configuration file below)
   is evaluated for each point and the weight for that point is set to that
   value.  If there is no weight equation the weights are all set to one.
-  If <i>addscatter</i> is <tt>"yes"</tt> then an additional <tt>"scatter"</tt> term is fit and
+  If <i>addscatter</i> is <span style="font-family: monospace;">"yes"</span> then an additional <span style="font-family: monospace;">"scatter"</span> term is fit and
   added to the weights.
   </dd>
   </dl>
@@ -112,11 +112,11 @@ fitparams: Compute the parameters of the transformation equations
   <!-- Sec='PARAMETERS' Level=0 Label='addscatter' Line='addscatter = yes' -->
   <dd>Add an additional scatter term to the weights if the average error in the fit
   is much greater than the average error in the measurements? <i>Addscatter</i>
-  has no effect if <i>weighting</i> is <tt>"uniform"</tt>. <i>Addscatter</i> is recommended
-  if <i>weighting</i> is <tt>"photometric"</tt> as the intrinsic error in the
+  has no effect if <i>weighting</i> is <span style="font-family: monospace;">"uniform"</span>. <i>Addscatter</i> is recommended
+  if <i>weighting</i> is <span style="font-family: monospace;">"photometric"</span> as the intrinsic error in the
   transformations is often much greater than the formal errors of
   measurement and the scatter term stabilizes the fit.
-  Users of the <i>weighting</i> equals <tt>"equations"</tt> option
+  Users of the <i>weighting</i> equals <span style="font-family: monospace;">"equations"</span> option
   may wish to turn off <i>addscatter</i>.
   </dd>
   </dl>
@@ -172,11 +172,11 @@ fitparams: Compute the parameters of the transformation equations
   </dd>
   </dl>
   <dl>
-  <dt><b>logfile = <tt>"STDOUT"</tt></b></dt>
+  <dt><b>logfile = <span style="font-family: monospace;">"STDOUT"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "STDOUT"' -->
   <dd>The name of the output text file to which selected detailed results of the
   fitting process are written.  By default logfile is the standard output.
-  If logfile is <tt>""</tt>, logging is turned off altogether. Otherwise new
+  If logfile is <span style="font-family: monospace;">""</span>, logging is turned off altogether. Otherwise new
   output is appended to logfile which can therefor become quite large.
   </dd>
   </dl>
@@ -204,25 +204,25 @@ fitparams: Compute the parameters of the transformation equations
   </dd>
   </dl>
   <dl>
-  <dt><b>catdir = <tt>")_.catdir"</tt></b></dt>
+  <dt><b>catdir = <span style="font-family: monospace;">")_.catdir"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='catdir' Line='catdir = ")_.catdir"' -->
   <dd>The directory containing the supported standard star catalogs.
   The default parameter value  redirects <i>catdir</i>
   to a package parameter of the same name. A list of standard
-  catalogs may be obtained by printing the file <tt>"photcal$catalogs/README"</tt>.
+  catalogs may be obtained by printing the file <span style="font-family: monospace;">"photcal$catalogs/README"</span>.
   Alternatively the user may create their own standard star catalogs 
   and standard star catalog directory.
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>The default graphics device. 
   This parameter is used only if <b>interactive=yes</b>.
   </dd>
   </dl>
   <dl>
-  <dt><b>cursor = <tt>""</tt></b></dt>
+  <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Graphics cursor input. When null the standard graphics cursor is used.
   Otherwise the specified cursor command file is used.
@@ -245,7 +245,7 @@ fitparams: Compute the parameters of the transformation equations
   of catalog files and loads the values of the catalog variables
   declared in <i>config</i> into memory.
   If no catalog section is declared in <i>config</i>, if the catalog section
-  is empty, or if catalogs is <tt>""</tt>, no catalog data is read
+  is empty, or if catalogs is <span style="font-family: monospace;">""</span>, no catalog data is read
   and all the required input data is assumed to be in <i>observations</i>.
   After the catalog data is read, FITPARAMS reads the observations files
   <i>observations</i>, matches the object ids of the observations with the
@@ -269,7 +269,7 @@ fitparams: Compute the parameters of the transformation equations
   (hh:mm:ss) are interpreted internally as real numbers. The constant
   INDEF can be used to represent data that is missing or undefined.
   Double precision and complex data are
-  not supported. Lines beginning with <tt>"#"</tt> are treated as comment lines.
+  not supported. Lines beginning with <span style="font-family: monospace;">"#"</span> are treated as comment lines.
   </p>
   <p>
   FITPARAMS solves the fit
@@ -508,7 +508,7 @@ fitparams: Compute the parameters of the transformation equations
   <dl>
   <dt><b>g</b></dt>
   <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='g' Line='g' -->
-  <dd>Redefine the graph keys <tt>"h-l"</tt> from their defaults. A prompt is issued for the
+  <dd>Redefine the graph keys <span style="font-family: monospace;">"h-l"</span> from their defaults. A prompt is issued for the
   graph key to be redefined. Another prompt is issued for the data to be
   plotted at which point the user must enter the x and y axis data to plot,
   delimited by a comma. The data types are the following (they can be
@@ -528,12 +528,12 @@ fitparams: Compute the parameters of the transformation equations
   The application program can define independent variable names and user plot 
   functions, aside from the standard options provided. If variable names are 
   supplied, the user can reference them by their names. Otherwise they can be 
-  always referenced by <tt>"var n"</tt>, where <tt>"n"</tt> is the variable number (the user has 
-  to know the variable order in this case). The <tt>":variables"</tt> command will
+  always referenced by <span style="font-family: monospace;">"var n"</span>, where <span style="font-family: monospace;">"n"</span> is the variable number (the user has 
+  to know the variable order in this case). The <span style="font-family: monospace;">":variables"</span> command will
   list the currently defined variables by name and number.
   The application program may
   define any number of plot equations aside from the defaults provided. In this 
-  case the user may reference them by <tt>"user n"</tt>, where <tt>"n"</tt> is the plot function 
+  case the user may reference them by <span style="font-family: monospace;">"user n"</span>, where <span style="font-family: monospace;">"n"</span> is the plot function 
   number (the user must know the equation order in this case). 
   </dd>
   </dl>
@@ -544,7 +544,7 @@ fitparams: Compute the parameters of the transformation equations
   the data which is graphed along each axis as defined above. The default graph
   keys,
   which may be redefined by the application program or interactively by using 
-  the <tt>'g'</tt> key, are the following.
+  the <span style="font-family: monospace;">'g'</span> key, are the following.
   <pre>
   
           h       function, fit
@@ -554,7 +554,7 @@ fitparams: Compute the parameters of the transformation equations
           l       user 1, user 2 (default)
   
   </pre>
-  The initial graph key, if not redefined by the application program is <tt>'h'</tt>.
+  The initial graph key, if not redefined by the application program is <span style="font-family: monospace;">'h'</span>.
   </dd>
   </dl>
   <dl>
@@ -595,9 +595,9 @@ fitparams: Compute the parameters of the transformation equations
   <dt><b>w [key]</b></dt>
   <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='w' Line='w [key]' -->
   <dd>Set the graph window or data range along each axis to be graphed.. This is a 
-  <b>gtools</b> option which prints the prompt <tt>"window:"</tt>. The available cursor
-  keystroke commands are printed with <tt>'?'</tt> and on-line help is available by
-  typing <tt>"help gtools"</tt>.
+  <b>gtools</b> option which prints the prompt <span style="font-family: monospace;">"window:"</span>. The available cursor
+  keystroke commands are printed with <span style="font-family: monospace;">'?'</span> and on-line help is available by
+  typing <span style="font-family: monospace;">"help gtools"</span>.
   </dd>
   </dl>
   <dl>
@@ -669,8 +669,8 @@ fitparams: Compute the parameters of the transformation equations
   <dl>
   <dt><b>:vshow [file]</b></dt>
   <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='' Line=':vshow [file]' -->
-  <dd>A verbose version of <tt>":show"</tt> which is equivalent to a <tt>":show"</tt> plus a <tt>":errors"</tt>
-  plus a <tt>":results"</tt>. The default output device is the terminal (STDOUT)
+  <dd>A verbose version of <span style="font-family: monospace;">":show"</span> which is equivalent to a <span style="font-family: monospace;">":show"</span> plus a <span style="font-family: monospace;">":errors"</span>
+  plus a <span style="font-family: monospace;">":results"</span>. The default output device is the terminal (STDOUT)
   and the screen is cleared before the information is output.
   If a file is specified then the information is appended to the named file.
   </dd>
@@ -785,28 +785,28 @@ fitparams: Compute the parameters of the transformation equations
   	    (the fit or right-hand side of the equation is plotted
   	    versus the function or left-hand side of the equation)
   
-  	... type <tt>'?'</tt> to show the available commands
+  	... type <span style="font-family: monospace;">'?'</span> to show the available commands
   
-  	... type <tt>'i'</tt> to plot the residuals versus the function (LHS of
+  	... type <span style="font-family: monospace;">'i'</span> to plot the residuals versus the function (LHS of
   	    the equation)
   
-  	... delete bad points with the <tt>'d'</tt> key and refit using the <tt>'f'</tt>
+  	... delete bad points with the <span style="font-family: monospace;">'d'</span> key and refit using the <span style="font-family: monospace;">'f'</span>
   	    key
   
   	... check for any dependencies of the residuals on the color
-  	    term by reprogramming the graph key <tt>'l'</tt> using the <tt>'g'</tt> key 
-  	    (type <tt>'g'</tt> to enter the reprogramming menu, <tt>'l'</tt> after the
-  	    prompt to reprogram the <tt>'l'</tt> key, and "UB, residuals" in
+  	    term by reprogramming the graph key <span style="font-family: monospace;">'l'</span> using the <span style="font-family: monospace;">'g'</span> key 
+  	    (type <span style="font-family: monospace;">'g'</span> to enter the reprogramming menu, <span style="font-family: monospace;">'l'</span> after the
+  	    prompt to reprogram the <span style="font-family: monospace;">'l'</span> key, and "UB, residuals" in
   	    response to the question of which axes to plot
   
-  	... list the plot windowing menu by typing <tt>'w'</tt> followed by <tt>'?'</tt>
+  	... list the plot windowing menu by typing <span style="font-family: monospace;">'w'</span> followed by <span style="font-family: monospace;">'?'</span>
   	    after the "window:" prompt
   
-  	... type <tt>'w'</tt> followed by <tt>'z'</tt> after the ":window" prompt to zoom
-  	    up on an interesting area in the plot, a <tt>'w'</tt> followed by <tt>'a'</tt>
+  	... type <span style="font-family: monospace;">'w'</span> followed by <span style="font-family: monospace;">'z'</span> after the ":window" prompt to zoom
+  	    up on an interesting area in the plot, a <span style="font-family: monospace;">'w'</span> followed by <span style="font-family: monospace;">'a'</span>
   	    will return to normal scaling
   
-  	... type <tt>'q'</tt> to quit the fit for this equation 
+  	... type <span style="font-family: monospace;">'q'</span> to quit the fit for this equation 
   
   	... answer "yes" to the question about saving the fit
   

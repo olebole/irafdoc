@@ -29,11 +29,11 @@ qstatistics: Calculate image statistics for multi-amplifier CCD images
   </dd>
   </dl>
   <dl>
-  <dt><b>window = <tt>"datasec"</tt> (datasec|trimsec|biassec)</b></dt>
+  <dt><b>window = <span style="font-family: monospace;">"datasec"</span> (datasec|trimsec|biassec)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='window' Line='window = "datasec" (datasec|trimsec|biassec)' -->
-  <dd>Type of section to output.  The choices are <tt>"datasec"</tt> for the amplifier
-  section which includes the bias if any is present, <tt>"trimsec"</tt> for the trim
-  section, and <tt>"biassec"</tt> for the bias section.
+  <dd>Type of section to output.  The choices are <span style="font-family: monospace;">"datasec"</span> for the amplifier
+  section which includes the bias if any is present, <span style="font-family: monospace;">"trimsec"</span> for the trim
+  section, and <span style="font-family: monospace;">"biassec"</span> for the bias section.
   </dd>
   </dl>
   <p>

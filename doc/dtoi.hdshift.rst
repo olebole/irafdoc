@@ -71,8 +71,8 @@ hdshift: Align related HD curves
   <p>
   hdfit, hdtoi
   <br>
-  <tt>"Averaging Photographic Characteristic Curves"</tt>, John Kormendy, from
-  <tt>"ESO Workshop on Two Dimensional Photometry"</tt>, Edited by P. Crane and
+  <span style="font-family: monospace;">"Averaging Photographic Characteristic Curves"</span>, John Kormendy, from
+  <span style="font-family: monospace;">"ESO Workshop on Two Dimensional Photometry"</span>, Edited by P. Crane and
   K.Kjar, p 69, (1980), an ESO Publication.
   </p>
   

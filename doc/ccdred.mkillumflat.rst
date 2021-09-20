@@ -37,7 +37,7 @@ mkillumflat: Make illumination corrected flat fields
   </dd>
   </dl>
   <dl>
-  <dt><b>ccdtype = <tt>"flat"</tt></b></dt>
+  <dt><b>ccdtype = <span style="font-family: monospace;">"flat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ccdtype' Line='ccdtype = "flat"' -->
   <dd>CCD image type to select from the input images.
   </dd>
@@ -91,7 +91,7 @@ mkillumflat: Make illumination corrected flat fields
   First, the input flat field images are processed as needed.  Then the
   large scale illumination pattern of the images is removed.  The
   illumination pattern is determined by heavily smoothing the image using
-  a moving <tt>"boxcar"</tt> average.  The output image is the ratio of the input
+  a moving <span style="font-family: monospace;">"boxcar"</span> average.  The output image is the ratio of the input
   image to the illumination pattern.  The illumination pattern is
   normalized by its mean to preserve the mean level of the input image.
   </p>

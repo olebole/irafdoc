@@ -29,24 +29,24 @@ hdfit: Fit a curve to density, log exposure values
   </dd>
   </dl>
   <dl>
-  <dt><b>function = <tt>"power"</tt></b></dt>
+  <dt><b>function = <span style="font-family: monospace;">"power"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "power"' -->
-  <dd>Type of curve to fit; chosen from <tt>"power"</tt>, <tt>"legendre"</tt>, <tt>"chebyshev"</tt>, 
-  <tt>"spline1"</tt> or <tt>"spline3"</tt>.  Abbreviations are permitted.
+  <dd>Type of curve to fit; chosen from <span style="font-family: monospace;">"power"</span>, <span style="font-family: monospace;">"legendre"</span>, <span style="font-family: monospace;">"chebyshev"</span>, 
+  <span style="font-family: monospace;">"spline1"</span> or <span style="font-family: monospace;">"spline3"</span>.  Abbreviations are permitted.
   </dd>
   </dl>
   <dl>
-  <dt><b>transform = <tt>"logopacitance"</tt></b></dt>
+  <dt><b>transform = <span style="font-family: monospace;">"logopacitance"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='transform' Line='transform = "logopacitance"' -->
   <dd>Transformation performed on the density prior to fitting.  Chosen from
-  <tt>"none"</tt>, <tt>"logopacitance"</tt>, <tt>"k50"</tt> or <tt>"k75"</tt>. 
+  <span style="font-family: monospace;">"none"</span>, <span style="font-family: monospace;">"logopacitance"</span>, <span style="font-family: monospace;">"k50"</span> or <span style="font-family: monospace;">"k75"</span>. 
   </dd>
   </dl>
   <dl>
-  <dt><b>weighting = <tt>"none"</tt></b></dt>
+  <dt><b>weighting = <span style="font-family: monospace;">"none"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='weighting' Line='weighting = "none"' -->
   <dd>Weights can be assigned to the independent variable for fitting a curve.
-  Choices are <tt>"none"</tt>, <tt>"user"</tt> and <tt>"calculated"</tt>.
+  Choices are <span style="font-family: monospace;">"none"</span>, <span style="font-family: monospace;">"user"</span> and <span style="font-family: monospace;">"calculated"</span>.
   </dd>
   </dl>
   <dl>
@@ -62,13 +62,13 @@ hdfit: Fit a curve to density, log exposure values
   </dd>
   </dl>
   <dl>
-  <dt><b>device = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>device = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdgraph"' -->
   <dd>Interactive graphics device.
   </dd>
   </dl>
   <dl>
-  <dt><b>cursor = <tt>"stdgcur"</tt></b></dt>
+  <dt><b>cursor = <span style="font-family: monospace;">"stdgcur"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = "stdgcur"' -->
   <dd>Source of cursor input.
   </dd>
@@ -87,10 +87,10 @@ hdfit: Fit a curve to density, log exposure values
   <p>
   Weights can be applied to the independent variable of the fit.
   Weights can be changed interactively, and are originally chosen from
-  <tt>"none"</tt>, <tt>"user"</tt> and <tt>"calculated"</tt>.  A weights value can
+  <span style="font-family: monospace;">"none"</span>, <span style="font-family: monospace;">"user"</span> and <span style="font-family: monospace;">"calculated"</span>.  A weights value can
   be calculated from the standard deviations, read from <b>database</b>,
   as weight = (normalized density) / sdev.  If user weights are to be
-  used, they are read from <b>database</b> record <tt>"weights"</tt> as <tt>"wts_vals"</tt>
+  used, they are read from <b>database</b> record <span style="font-family: monospace;">"weights"</span> as <span style="font-family: monospace;">"wts_vals"</span>
   entries.  
   </p>
   <p>

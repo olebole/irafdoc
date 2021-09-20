@@ -60,7 +60,7 @@ cctran: Transform coordinate lists using the ccmap plate solution
   </dd>
   </dl>
   <dl>
-  <dt><b>geometry = <tt>"geometric"</tt></b></dt>
+  <dt><b>geometry = <span style="font-family: monospace;">"geometric"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='geometry' Line='geometry = "geometric"' -->
   <dd>The type of geometric transformation. The geometry parameter is
   only requested if database is defined. The options are:
@@ -81,7 +81,7 @@ cctran: Transform coordinate lists using the ccmap plate solution
   <dl>
   <dt><b>forward = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='forward' Line='forward = yes' -->
-  <dd>Transform from pixel to celestial coordinates ? If forward is <tt>"no"</tt> then
+  <dd>Transform from pixel to celestial coordinates ? If forward is <span style="font-family: monospace;">"no"</span> then
   the plate solution is inverted and celestial coordinates are transformed
   to pixel coordinates.
   </dd>
@@ -130,40 +130,40 @@ cctran: Transform coordinate lists using the ccmap plate solution
   </dd>
   </dl>
   <dl>
-  <dt><b>lngunits = <tt>""</tt>, latunits = <tt>""</tt></b></dt>
+  <dt><b>lngunits = <span style="font-family: monospace;">""</span>, latunits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngunits' Line='lngunits = "", latunits = ""' -->
   <dd>The units of the input or output ra / longitude and dec / latitude coordinates.
-  The options are <tt>"hours"</tt>, <tt>"degrees"</tt>, <tt>"radians"</tt> for ra / longitude coordinates,
-  and <tt>"degrees"</tt> and <tt>"radians"</tt> for dec / latitude systems. If lngunits and
+  The options are <span style="font-family: monospace;">"hours"</span>, <span style="font-family: monospace;">"degrees"</span>, <span style="font-family: monospace;">"radians"</span> for ra / longitude coordinates,
+  and <span style="font-family: monospace;">"degrees"</span> and <span style="font-family: monospace;">"radians"</span> for dec / latitude systems. If lngunits and
   latunits are undefined they default to the values in the database records.
-  If database is undefined then lngunits and latunits default to <tt>"hours"</tt> and
-  <tt>"degrees"</tt> respectively.
+  If database is undefined then lngunits and latunits default to <span style="font-family: monospace;">"hours"</span> and
+  <span style="font-family: monospace;">"degrees"</span> respectively.
   </dd>
   </dl>
   <dl>
-  <dt><b>projection = <tt>"tan"</tt></b></dt>
+  <dt><b>projection = <span style="font-family: monospace;">"tan"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='projection' Line='projection = "tan"' -->
   <dd>The sky projection geometry. The most commonly used projections in
-  astronomy are <tt>"tan"</tt>, <tt>"arc"</tt>, <tt>"sin"</tt>, and <tt>"lin"</tt>. Other supported projections
-  are <tt>"ait"</tt>, <tt>"car"</tt>, <tt>"csc"</tt>, <tt>"gls"</tt>, <tt>"mer"</tt>, <tt>"mol"</tt>, <tt>"par"</tt>, <tt>"pco"</tt>, <tt>"qsc"</tt>, <tt>"stg"</tt>,
-  <tt>"tsc"</tt>, and <tt>"zea"</tt>.
+  astronomy are <span style="font-family: monospace;">"tan"</span>, <span style="font-family: monospace;">"arc"</span>, <span style="font-family: monospace;">"sin"</span>, and <span style="font-family: monospace;">"lin"</span>. Other supported projections
+  are <span style="font-family: monospace;">"ait"</span>, <span style="font-family: monospace;">"car"</span>, <span style="font-family: monospace;">"csc"</span>, <span style="font-family: monospace;">"gls"</span>, <span style="font-family: monospace;">"mer"</span>, <span style="font-family: monospace;">"mol"</span>, <span style="font-family: monospace;">"par"</span>, <span style="font-family: monospace;">"pco"</span>, <span style="font-family: monospace;">"qsc"</span>, <span style="font-family: monospace;">"stg"</span>,
+  <span style="font-family: monospace;">"tsc"</span>, and <span style="font-family: monospace;">"zea"</span>.
   </dd>
   </dl>
   <dl>
   <dt><b>xcolumn = 1, ycolumn = 2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xcolumn' Line='xcolumn = 1, ycolumn = 2' -->
   <dd>The columns in the input coordinate file containing the x and y coordinates
-  if the <i>forward</i> parameter is <tt>"yes"</tt>, the celestial ra / longitude and
-  dec / latitude if the forward parameter is <tt>"no"</tt>.
+  if the <i>forward</i> parameter is <span style="font-family: monospace;">"yes"</span>, the celestial ra / longitude and
+  dec / latitude if the forward parameter is <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>lngformat = <tt>""</tt>, latformat = <tt>""</tt></b></dt>
+  <dt><b>lngformat = <span style="font-family: monospace;">""</span>, latformat = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngformat' Line='lngformat = "", latformat = ""' -->
-  <dd>The format of the output coordinates. The defaults are <tt>"%10.3f"</tt> for 
-  output coordinates in pixels, <tt>"%12.2h"</tt> for coordinates in hours,
-  <tt>"%11.1h"</tt> for coordinates in degrees,
-  and <tt>"%13.7g"</tt> for coordinates in radians.
+  <dd>The format of the output coordinates. The defaults are <span style="font-family: monospace;">"%10.3f"</span> for 
+  output coordinates in pixels, <span style="font-family: monospace;">"%12.2h"</span> for coordinates in hours,
+  <span style="font-family: monospace;">"%11.1h"</span> for coordinates in degrees,
+  and <span style="font-family: monospace;">"%13.7g"</span> for coordinates in radians.
   </dd>
   </dl>
   <dl>
@@ -184,9 +184,9 @@ cctran: Transform coordinate lists using the ccmap plate solution
   files. The format of the output coordinates can be specified using the
   <i>lngformat</i> and <i>latformat</i> parameters. If the output formats
   are unspecified the coordinates are written  out with reasonable
-  default precisions, e.g. <tt>"%10.3f"</tt> for pixel coordinates, <tt>"%12.2h"</tt> and <tt>"11.1h"</tt>
+  default precisions, e.g. <span style="font-family: monospace;">"%10.3f"</span> for pixel coordinates, <span style="font-family: monospace;">"%12.2h"</span> and <span style="font-family: monospace;">"11.1h"</span>
   for coordinates in hours or degrees,
-  and <tt>"%13.7g"</tt> for coordinates in radians. All the remaining fields in the
+  and <span style="font-family: monospace;">"%13.7g"</span> for coordinates in radians. All the remaining fields in the
   input file are copied to the output file without modification. Blank lines
   and comment lines are also passed to the output file unaltered.
   </p>
@@ -197,10 +197,10 @@ cctran: Transform coordinate lists using the ccmap plate solution
   <i>xrotation</i>, <i>yrotation</i>, <i>lngref</i>, <i>latref</i>, 
   and <i>projection</i> parameters. If <i>Lngunits</i> and <i>latunits</i>
   are undefined they default to the values in the database or to
-  the quantities <tt>"hours"</tt> and <tt>"degrees"</tt> respectively.
+  the quantities <span style="font-family: monospace;">"hours"</span> and <span style="font-family: monospace;">"degrees"</span> respectively.
   If the <i>forward</i>
-  parameter is <tt>"yes"</tt>, the input coordinates are assumed to be pixel coordinates
-  and are transformed to celestial coordinates. If <i>forward</i> is <tt>"no"</tt>, then
+  parameter is <span style="font-family: monospace;">"yes"</span>, the input coordinates are assumed to be pixel coordinates
+  and are transformed to celestial coordinates. If <i>forward</i> is <span style="font-family: monospace;">"no"</span>, then
   the input coordinates are assumed to be celestial coordinates and are
   transformed to pixel coordinates.
   </p>
@@ -271,10 +271,10 @@ cctran: Transform coordinate lists using the ccmap plate solution
   <h3>Formats</h3>
   <!-- BeginSection: 'FORMATS' -->
   <p>
-  A  format  specification has the form <tt>"%w.dCn"</tt>, where w is the field
+  A  format  specification has the form <span style="font-family: monospace;">"%w.dCn"</span>, where w is the field
   width, d is the number of decimal places or the number of digits  of
   precision,  C  is  the  format  code,  and  n is radix character for
-  format code <tt>"r"</tt> only.  The w and d fields are optional.  The  format
+  format code <span style="font-family: monospace;">"r"</span> only.  The w and d fields are optional.  The  format
   codes C are as follows:
      
   </p>

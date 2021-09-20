@@ -59,13 +59,13 @@ specwcs: Discussion and description of the spectral image formats
   Many <b>onedspec</b> package tasks which are designed to operate on
   individual one dimensional spectra may operate on spatial spectra by
   summing a number of neighboring spectra across the dispersion axis.  This
-  eliminates the need to <tt>"extract"</tt> one dimensional spectra from the natural
+  eliminates the need to <span style="font-family: monospace;">"extract"</span> one dimensional spectra from the natural
   format of this type of data in order to use tasks oriented towards the
   display and analysis of one dimensional spectra.  The dispersion axis is
   either given in the image header by the keyword DISPAXIS or the package
   <i>dispaxis</i> parameter.  The summing factors across the
   dispersion are specified by the <i>nsum</i> package parameter.
-  See <tt>"help onedspec.package"</tt> for information on these parmaeters.
+  See <span style="font-family: monospace;">"help onedspec.package"</span> for information on these parmaeters.
   </p>
   <p>
   One dimensional spectra, whether from multispec spatial spectra, have
@@ -89,7 +89,7 @@ specwcs: Discussion and description of the spectral image formats
   <p>
   An important task to be aware of for manipulating spectra between image
   formats is <b>scopy</b>.  This task allows selecting spectra from multispec
-  images and grouping them in various ways and also <tt>"extracts"</tt> apertures from
+  images and grouping them in various ways and also <span style="font-family: monospace;">"extracts"</span> apertures from
   long slit and 3D spectra simply and without resort to the more general
   <b>apextract</b> package.
   </p>
@@ -117,7 +117,7 @@ specwcs: Discussion and description of the spectral image formats
   spectroscopy packages, for example the <b>plot</b>, <b>tv</b> and
   <b>images</b> packages, one may select the type of coordinate system to be
   used.  To make plots and get coordinates in dispersion units for spectra
-  with these tasks one selects the <tt>"world"</tt> system.  The spectral tasks always
+  with these tasks one selects the <span style="font-family: monospace;">"world"</span> system.  The spectral tasks always
   use world coordinates.
   </p>
   <p>
@@ -132,7 +132,7 @@ specwcs: Discussion and description of the spectral image formats
   IRAF tasks to modify.  However, if one wants modify them directly some
   tasks which may be used are <b>hedit</b>, <b>hfix</b>, <b>wcsedit</b>,
   <b>wcsreset</b>, <b>specshift</b>, <b>dopcor</b>, and <b>sapertures</b>.  The
-  first two are useful for the simple keywords, the two  <tt>"wcs"</tt> tasks are
+  first two are useful for the simple keywords, the two  <span style="font-family: monospace;">"wcs"</span> tasks are
   useful for the linear ndspec and equispec formats, the next two are for the
   common cases of shifting the coordinate zero point or applying a doppler
   correction, and the last one is the one to use for the more complex
@@ -240,7 +240,7 @@ specwcs: Discussion and description of the spectral image formats
   are assumed to be 1.  If only some of the keywords are present then any
   missing CDi_i keywords will take the value 0 which will cause IRAF tasks to
   fail with arithmetic or matrix inversion errors.  If the CTYPEi keyword is
-  missing it is assumed to be <tt>"LINEAR"</tt>.
+  missing it is assumed to be <span style="font-family: monospace;">"LINEAR"</span>.
   </p>
   <p>
   If the pixel sampling is logarithmic in the dispersion coordinate, as
@@ -256,17 +256,17 @@ specwcs: Discussion and description of the spectral image formats
   </p>
   <p>
   Other keywords which may be present are DISPAXIS for 2 and 3 dimensional
-  spatial spectra, and the WCS attributes <tt>"system"</tt>, <tt>"wtype"</tt>, <tt>"label"</tt>, and
-  <tt>"units"</tt>.  The system attribute will usually have the value <tt>"world"</tt> for
-  spatial spectra and <tt>"equispec"</tt> for equispec spectra.  The wtype attribute
-  will have the value <tt>"linear"</tt>.  Currently the label will be either <tt>"Pixel"</tt>
-  or <tt>"Wavelength"</tt> and the units will be <tt>"Angstroms"</tt> for dispersion corrected
+  spatial spectra, and the WCS attributes <span style="font-family: monospace;">"system"</span>, <span style="font-family: monospace;">"wtype"</span>, <span style="font-family: monospace;">"label"</span>, and
+  <span style="font-family: monospace;">"units"</span>.  The system attribute will usually have the value <span style="font-family: monospace;">"world"</span> for
+  spatial spectra and <span style="font-family: monospace;">"equispec"</span> for equispec spectra.  The wtype attribute
+  will have the value <span style="font-family: monospace;">"linear"</span>.  Currently the label will be either <span style="font-family: monospace;">"Pixel"</span>
+  or <span style="font-family: monospace;">"Wavelength"</span> and the units will be <span style="font-family: monospace;">"Angstroms"</span> for dispersion corrected
   spectra.  In the future there will be more generality in the units
   for dispersion calibrated spectra.
   </p>
   <p>
   Figure 1 shows the WCS keywords for a two dimensional long slit spectrum.
-  The coordinate system is defined to be a generic <tt>"world"</tt> system and the
+  The coordinate system is defined to be a generic <span style="font-family: monospace;">"world"</span> system and the
   wtype attributes and CTYPE keywords define the axes to be linear.  The
   other attributes define a label and unit for the second axis, which is the
   dispersion axis as indicated by the DISPAXIS keyword.  The LTM/LTV keywords
@@ -304,7 +304,7 @@ specwcs: Discussion and description of the spectral image formats
   Figure 2 shows the WCS keywords for a three dimensional image where each
   line is an independent spectrum or associated data but where all spectra
   have the same linear dispersion.  This type of coordinate system has the
-  system name <tt>"equispec"</tt>.  The ancillary information about each aperture is
+  system name <span style="font-family: monospace;">"equispec"</span>.  The ancillary information about each aperture is
   found in the APNUM keywords.  These give the aperture number, beam number,
   and extraction limits.  In this example the LTM/LTV keywords have their
   default values; i.e. the logical and physical coordinates are the same.
@@ -350,7 +350,7 @@ specwcs: Discussion and description of the spectral image formats
   <p>
   The multispec coordinate system is always two dimensional though there may
   be an independent third axis.  The two axes are coupled and they both have
-  axis type <tt>"multispec"</tt>.  When the image is one dimensional the physical line
+  axis type <span style="font-family: monospace;">"multispec"</span>.  When the image is one dimensional the physical line
   is given by the dimensional reduction keyword WAXMAP.  The second, line
   axis, has world coordinates of aperture number.  The aperture numbers are
   integer values and need not be in any particular order but do need to be

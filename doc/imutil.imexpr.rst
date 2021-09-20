@@ -26,10 +26,10 @@ imexpr: Evaluate a general image expression
   <dt><b>expr</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='expr' Line='expr' -->
   <dd>The expression to be evaluated.  This may be the actual expression, or the
-  string <tt>"@file"</tt> in which case the expression is taken from the named file.
+  string <span style="font-family: monospace;">"@file"</span> in which case the expression is taken from the named file.
   The input operands (i.e., numeric constants, images, or image header
   parameters) are referred to in the expression symbolically using the letters
-  <tt>"a"</tt> through <tt>"z"</tt>.
+  <span style="font-family: monospace;">"a"</span> through <span style="font-family: monospace;">"z"</span>.
   </dd>
   </dl>
   <dl>
@@ -45,56 +45,56 @@ imexpr: Evaluate a general image expression
   <dd>The input operands referenced by the expression.  The value of an operand
   may be an image name or section, a numeric constant, or a reference to an
   image header parameter of the form <i>operand.param</i>, where <i>operand</i>
-  is one of the other input operands <tt>"a"</tt> through <tt>"z"</tt>, corresponding to an input
-  image (for example, <tt>"a.itime"</tt> is the parameter <tt>"itime"</tt> from the image
-  assigned to operand <tt>"a"</tt>).  An example of an input image operand is
-  <tt>"a=dev$pix"</tt>.
+  is one of the other input operands <span style="font-family: monospace;">"a"</span> through <span style="font-family: monospace;">"z"</span>, corresponding to an input
+  image (for example, <span style="font-family: monospace;">"a.itime"</span> is the parameter <span style="font-family: monospace;">"itime"</span> from the image
+  assigned to operand <span style="font-family: monospace;">"a"</span>).  An example of an input image operand is
+  <span style="font-family: monospace;">"a=dev$pix"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>dims = <tt>"auto"</tt></b></dt>
+  <dt><b>dims = <span style="font-family: monospace;">"auto"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dims' Line='dims = "auto"' -->
   <dd>The dimensions of the output image.  If the special value <i>auto</i> is
   given the output image dimensions are computed based on the input operands
   and the expression being evaluated.  Otherwise the value is a list of axis
-  lengths, e.g., <tt>"512,512"</tt>.
+  lengths, e.g., <span style="font-family: monospace;">"512,512"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>intype = <tt>"int"</tt></b></dt>
+  <dt><b>intype = <span style="font-family: monospace;">"int"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='intype' Line='intype = "int"' -->
   <dd>The minimum datatype for an input image operand.  If the special value
   <i>auto</i> is given the operand type will be the same as the pixel type of
-  the image.  Otherwise one of the values <tt>"short"</tt>, <tt>"int"</tt>, <tt>"long"</tt>, <tt>"real"</tt>,
-  or <tt>"double"</tt> should be given.  The program will promote the type of the
+  the image.  Otherwise one of the values <span style="font-family: monospace;">"short"</span>, <span style="font-family: monospace;">"int"</span>, <span style="font-family: monospace;">"long"</span>, <span style="font-family: monospace;">"real"</span>,
+  or <span style="font-family: monospace;">"double"</span> should be given.  The program will promote the type of the
   input operand to the type specified if the actual type is less precise
   than the value of <i>intype</i>, otherwise the type of the input operand
-  is not changed.  For example, if <i>intype</i> is <tt>"int"</tt> (the default),
+  is not changed.  For example, if <i>intype</i> is <span style="font-family: monospace;">"int"</span> (the default),
   short integer input operands will be promoted to integer but int, long,
   real or double operands will be unaffected.  Setting <i>intype</i> to real
   will force the expression to be evaluated in floating point.
   </dd>
   </dl>
   <dl>
-  <dt><b>outtype = <tt>"auto"</tt></b></dt>
+  <dt><b>outtype = <span style="font-family: monospace;">"auto"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtype' Line='outtype = "auto"' -->
   <dd>The pixel type of the output image.  If set to the special value <i>auto</i>
   the output image will be the same type as the expression being evaluated.
   If set to <i>ref</i> the output image will have the same type as the
-  <tt>"reference"</tt> input image (see below), regardless of the expression type.
-  If an explicit type is specified such as <tt>"short"</tt>, <tt>"ushort"</tt>, <tt>"int"</tt>, <tt>"real"</tt>,
+  <span style="font-family: monospace;">"reference"</span> input image (see below), regardless of the expression type.
+  If an explicit type is specified such as <span style="font-family: monospace;">"short"</span>, <span style="font-family: monospace;">"ushort"</span>, <span style="font-family: monospace;">"int"</span>, <span style="font-family: monospace;">"real"</span>,
   an image of the indicated type will be created.
   </dd>
   </dl>
   <dl>
-  <dt><b>refim = <tt>"auto"</tt></b></dt>
+  <dt><b>refim = <span style="font-family: monospace;">"auto"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='refim' Line='refim = "auto"' -->
   <dd>The reference image to be used to pass the WCS and other image header
   attributes to the output image.  If set to <i>auto</i> the program will
   compute the best reference image, which is the first input image
   with the highest number of dimensions.  To force a particular input image
   to be the reference image the value should be set to the name of an input
-  operand (<tt>"a"</tt>, <tt>"b"</tt>, etc.).  The named operand must refer to an image.
+  operand (<span style="font-family: monospace;">"a"</span>, <span style="font-family: monospace;">"b"</span>, etc.).  The named operand must refer to an image.
   </dd>
   </dl>
   <dl>
@@ -106,16 +106,16 @@ imexpr: Evaluate a general image expression
   </dd>
   </dl>
   <dl>
-  <dt><b>btype = <tt>"nearest"</tt></b></dt>
+  <dt><b>btype = <span style="font-family: monospace;">"nearest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='btype' Line='btype = "nearest"' -->
-  <dd>The type of boundary extension, chosen from the list <tt>"constant"</tt>, <tt>"nearest"</tt>,
-  <tt>"reflect"</tt>, <tt>"wrap"</tt>, or <tt>"project"</tt>.
+  <dd>The type of boundary extension, chosen from the list <span style="font-family: monospace;">"constant"</span>, <span style="font-family: monospace;">"nearest"</span>,
+  <span style="font-family: monospace;">"reflect"</span>, <span style="font-family: monospace;">"wrap"</span>, or <span style="font-family: monospace;">"project"</span>.
   </dd>
   </dl>
   <dl>
   <dt><b>bpixval = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='bpixval' Line='bpixval = 0.' -->
-  <dd>The boundary pixel value if <i>btype</i>=<tt>"constant"</tt>.
+  <dd>The boundary pixel value if <i>btype</i>=<span style="font-family: monospace;">"constant"</span>.
   </dd>
   </dl>
   <dl>
@@ -138,7 +138,7 @@ imexpr: Evaluate a general image expression
   </dd>
   </dl>
   <dl>
-  <dt><b>exprdb = <tt>""</tt></b></dt>
+  <dt><b>exprdb = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='exprdb' Line='exprdb = ""' -->
   <dd>The file name of an optional expression database.  An expression database
   may be used to define symbolic constants or a library of custom function
@@ -174,7 +174,7 @@ imexpr: Evaluate a general image expression
   </p>
   <p>
   Input operands are represented symbolically in the input expression using
-  the symbols <tt>"a"</tt> through <tt>"z"</tt>, corresponding to <i>imexpr</i> task parameters.
+  the symbols <span style="font-family: monospace;">"a"</span> through <span style="font-family: monospace;">"z"</span>, corresponding to <i>imexpr</i> task parameters.
   Use of symbolic operands allows the same expression to be used with different
   data sets, simplifies the expression syntax, and allows a single input image
   to be used several places in the same expression.
@@ -200,32 +200,32 @@ imexpr: Evaluate a general image expression
   </pre>
   <p>
   would evaluate the expression shown, storing the result in the output image
-  <tt>"pix"</tt>.
+  <span style="font-family: monospace;">"pix"</span>.
   </p>
   <p>
   Operands may also be specified directly in the expression, with the
   exception of image operands.  For example,
   </p>
   <p>
-  	cl&gt; imexpr <tt>"a - a / a.itime"</tt>
+  	cl&gt; imexpr <span style="font-family: monospace;">"a - a / a.itime"</span>
   </p>
   <p>
   is equivalent to the earlier example.
   </p>
   <p>
-  If the input operand is not a simple identifier (a simple name like <tt>"itime"</tt>
-  containing only alphanumeric characters, underscore, <tt>"."</tt>, or <tt>"$"</tt>) then it
-  is necessary to quote the operand name and precede it with an <tt>"@"</tt>, e.g.,
+  If the input operand is not a simple identifier (a simple name like <span style="font-family: monospace;">"itime"</span>
+  containing only alphanumeric characters, underscore, <span style="font-family: monospace;">"."</span>, or <span style="font-family: monospace;">"$"</span>) then it
+  is necessary to quote the operand name and precede it with an <span style="font-family: monospace;">"@"</span>, e.g.,
   </p>
   <p>
-  	cl&gt; imexpr 'a - a / @<tt>"a.i-time"</tt>'
+  	cl&gt; imexpr 'a - a / @<span style="font-family: monospace;">"a.i-time"</span>'
   </p>
   <p>
   Finally, there is a special builtin type of operand used to represent the
   image pixel coordinates in an image expression.  These operands have the
-  special reserved names <tt>"I"</tt>, <tt>"J"</tt>, <tt>"K"</tt>, etc., up to the dimensions of the
+  special reserved names <span style="font-family: monospace;">"I"</span>, <span style="font-family: monospace;">"J"</span>, <span style="font-family: monospace;">"K"</span>, etc., up to the dimensions of the
   output image.  The names must be upper case to avoid confusion to with the
-  input operands <tt>"i"</tt>, <tt>"j"</tt>, <tt>"k"</tt> and so on.
+  input operands <span style="font-family: monospace;">"i"</span>, <span style="font-family: monospace;">"j"</span>, <span style="font-family: monospace;">"k"</span> and so on.
   </p>
   <pre>
   	I			X coordinate of pixel (column)
@@ -278,7 +278,7 @@ imexpr: Evaluate a general image expression
   	(a &lt; 0) ? 555 : b / a
   </p>
   <p>
-  has the constant value 555 if <tt>"a"</tt> is less than zero, and <tt>"b / a"</tt> otherwise.
+  has the constant value 555 if <span style="font-family: monospace;">"a"</span> is less than zero, and <span style="font-family: monospace;">"b / a"</span> otherwise.
   Conditional expressions are general expressions and may be nested or used
   anywhere an expression is permitted.
   </p>
@@ -288,8 +288,8 @@ imexpr: Evaluate a general image expression
   two input vectors.
   </p>
   <p>
-  The substring equals operator <tt>"?="</tt>, used for string comparisons,  is like 
-  <tt>"=="</tt> but checks for the presence of a substring, rather than exact equality
+  The substring equals operator <span style="font-family: monospace;">"?="</span>, used for string comparisons,  is like 
+  <span style="font-family: monospace;">"=="</span> but checks for the presence of a substring, rather than exact equality
   of the two strings.
   </p>
   <p>
@@ -433,7 +433,7 @@ imexpr: Evaluate a general image expression
   The complete syntax of a macro entry is as follows:
   </p>
   <p>
-  	&lt;symbol&gt;[<tt>'('</tt> arg-list <tt>')'</tt>][<tt>':'</tt>|<tt>'='</tt>]     replacement-text
+  	&lt;symbol&gt;[<span style="font-family: monospace;">'('</span> arg-list <span style="font-family: monospace;">')'</span>][<span style="font-family: monospace;">':'</span>|<span style="font-family: monospace;">'='</span>]     replacement-text
   </p>
   <p>
   The replacement text may appear on the same line as the macro name or may
@@ -450,24 +450,24 @@ imexpr: Evaluate a general image expression
   Although <i>imexpr</i> has no special support for pixel masks, it was
   designed to work with masks and it is important to realize how these can be
   used.  IRAF image i/o includes support for a special type of image, the
-  pixel mask or <tt>".pl"</tt> type image.  Pixel masks are used for things such as
+  pixel mask or <span style="font-family: monospace;">".pl"</span> type image.  Pixel masks are used for things such as
   region identification in images - any arbitrary region of an image can be
   assigned a constant value in a mask to mark the region.  Masks can then be
   used during image analysis to identify the subset of image pixels to be
-  used.  An image mask stored as a <tt>".pl"</tt> file is stored in compressed form and
+  used.  An image mask stored as a <span style="font-family: monospace;">".pl"</span> file is stored in compressed form and
   is typically only a few kilobytes in size.
   </p>
   <p>
   There are many ways to create masks, but in some cases <i>imexpr</i> itself
   can be used for this purpose.  For example, to create a boolean mask with
-  <i>imexpr</i> merely evaluate a boolean expression and specify a <tt>".pl"</tt> file
+  <i>imexpr</i> merely evaluate a boolean expression and specify a <span style="font-family: monospace;">".pl"</span> file
   as the output image.  For example,
   </p>
   <p>
-      cl&gt; imexpr <tt>"a &gt; 800"</tt> mask.pl
+      cl&gt; imexpr <span style="font-family: monospace;">"a &gt; 800"</span> mask.pl
   </p>
   <p>
-  will create a boolean mask <tt>"mask.pl"</tt> which identifies all the pixels in an
+  will create a boolean mask <span style="font-family: monospace;">"mask.pl"</span> which identifies all the pixels in an
   image with a value greater than 800.
   </p>
   <p>
@@ -475,7 +475,7 @@ imexpr: Evaluate a general image expression
   images to form a new image.
   </p>
   <p>
-      cl&gt; imexpr <tt>"c ? a : b"</tt>  c=mask.pl
+      cl&gt; imexpr <span style="font-family: monospace;">"c ? a : b"</span>  c=mask.pl
   </p>
   <p>
   This example will select pixels from either image A or B to form the output
@@ -495,33 +495,33 @@ imexpr: Evaluate a general image expression
   2. Create a new, empty image with all the pixels set to 0.
   </p>
   <p>
-      cl&gt; imexpr <tt>"repl(0,512)"</tt> pix dim=512,512
+      cl&gt; imexpr <span style="font-family: monospace;">"repl(0,512)"</span> pix dim=512,512
   </p>
   <p>
   3. Create a 1D image containing the sinc function.
   </p>
   <p>
-      cl&gt; imexpr <tt>"I == 10 ? 1.0 : sin(I-10.0)/(I-10)"</tt> sinc dim=20
+      cl&gt; imexpr <span style="font-family: monospace;">"I == 10 ? 1.0 : sin(I-10.0)/(I-10)"</span> sinc dim=20
   </p>
   <p>
   4. Create a new image containing a simple test pattern consisting of a 5
   element vector repeated 100 times across each image line.
   </p>
   <p>
-      cl&gt; imexpr <tt>"repl((9 // 3 // 3 // 11 // 11), 100)"</tt> patt dim=500,500
+      cl&gt; imexpr <span style="font-family: monospace;">"repl((9 // 3 // 3 // 11 // 11), 100)"</span> patt dim=500,500
   </p>
   <p>
   5. Subtract the median value from each line of an image.
   </p>
   <p>
-      cl&gt; imexpr <tt>"a - median(a)"</tt> medimage
+      cl&gt; imexpr <span style="font-family: monospace;">"a - median(a)"</span> medimage
   </p>
   <p>
   6. Compute the HIV (low value) projection of an image.  The result is a
   transposed 1D image.
   </p>
   <p>
-      cl&gt; imexpr <tt>"hiv(a)"</tt> hvector
+      cl&gt; imexpr <span style="font-family: monospace;">"hiv(a)"</span> hvector
   </p>
   <p>
   7. Swap the left and right halves of an image.

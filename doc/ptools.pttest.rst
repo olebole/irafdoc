@@ -31,7 +31,7 @@ pttest: Run basic tests on the ptoolsx package tasks
   </dd>
   </dl>
   <dl>
-  <dt><b>ptlogfile = <tt>""</tt></b></dt>
+  <dt><b>ptlogfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ptlogfile' Line='ptlogfile = ""' -->
   <dd>The name of the output log file. By default all the output is logged in a file
   called <i>rootname.log"</i>. If the log file already exists PTTEST will
@@ -39,7 +39,7 @@ pttest: Run basic tests on the ptoolsx package tasks
   </dd>
   </dl>
   <dl>
-  <dt><b>ptplotfile = <tt>""</tt></b></dt>
+  <dt><b>ptplotfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ptplotfile' Line='ptplotfile = ""' -->
   <dd>The name of the output plot file. By default all the graphics output is
   logged in a file called <i>rootname.plot"</i>. If the plot file already exists

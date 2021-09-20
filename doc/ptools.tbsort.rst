@@ -36,7 +36,7 @@ tbsort: Sort a list of apphot/daophot tables databases
   either column names, or column patterns containing the usual pattern matching
   meta-characters.  The names or patterns are separated by commas or white space.
   The list can be placed in a file and the name of the file preceeded by a
-  <tt>'@'</tt> can be given in place of the column template.
+  <span style="font-family: monospace;">'@'</span> can be given in place of the column template.
   </dd>
   </dl>
   <dl>

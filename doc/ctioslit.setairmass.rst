@@ -30,37 +30,37 @@ setairmass: Compute effective airmass and middle UT for an exposure
   </dd>
   </dl>
   <dl>
-  <dt><b>observatory = <tt>")_.observatory"</tt></b></dt>
+  <dt><b>observatory = <span style="font-family: monospace;">")_.observatory"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory = ")_.observatory"' -->
   <dd>Observatory for which airmasses are to be computed if the observatory is not
   specified in the image header by the keyword OBSERVAT. The default is a
   redirection to look in the parameters for the parent package for a value. The
   observatory may be one of the observatories in the observatory database,
-  <tt>"observatory"</tt> to select the observatory defined by the environment variable
-  <tt>"observatory"</tt> or the parameter <b>observatory.observatory</b>, or <tt>"obspars"</tt> to
+  <span style="font-family: monospace;">"observatory"</span> to select the observatory defined by the environment variable
+  <span style="font-family: monospace;">"observatory"</span> or the parameter <b>observatory.observatory</b>, or <span style="font-family: monospace;">"obspars"</span> to
   select the current parameters set in the <b>observatory</b> task. See help for
   <b>observatory</b> for additional information. If the input consists of images
   then the observatory is defined by the OBSERVAT keyword if present.
   </dd>
   </dl>
   <dl>
-  <dt><b>intype = <tt>"beginning"</tt></b></dt>
+  <dt><b>intype = <span style="font-family: monospace;">"beginning"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='intype' Line='intype = "beginning"' -->
   <dd>The time stamp of the observation as recorded at the telescope for the time
-  dependent header keywords.  The choices are the <tt>"beginning"</tt>, <tt>"middle"</tt> or <tt>"end"</tt>
+  dependent header keywords.  The choices are the <span style="font-family: monospace;">"beginning"</span>, <span style="font-family: monospace;">"middle"</span> or <span style="font-family: monospace;">"end"</span>
   of the observation.
   </dd>
   </dl>
   <dl>
-  <dt><b>outtype = <tt>"effective"</tt></b></dt>
+  <dt><b>outtype = <span style="font-family: monospace;">"effective"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtype' Line='outtype = "effective"' -->
-  <dd>The output time stamp desired for the airmass. The choices are the <tt>"effective"</tt>
-  airmass, or the airmass at the <tt>"beginning"</tt>, <tt>"middle"</tt> or <tt>"end"</tt> of the
+  <dd>The output time stamp desired for the airmass. The choices are the <span style="font-family: monospace;">"effective"</span>
+  airmass, or the airmass at the <span style="font-family: monospace;">"beginning"</span>, <span style="font-family: monospace;">"middle"</span> or <span style="font-family: monospace;">"end"</span> of the
   observation.
   </dd>
   </dl>
   <dl>
-  <dt><b>ra = <tt>"ra"</tt></b></dt>
+  <dt><b>ra = <span style="font-family: monospace;">"ra"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ra' Line='ra = "ra"' -->
   <dd>The name of the keyword that contains the right ascension. The right ascension
   is assumed to be in hours unless ra is one of the standard CRVALn keywords in
@@ -68,35 +68,35 @@ setairmass: Compute effective airmass and middle UT for an exposure
   </dd>
   </dl>
   <dl>
-  <dt><b>dec = <tt>"dec"</tt></b></dt>
+  <dt><b>dec = <span style="font-family: monospace;">"dec"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dec' Line='dec = "dec"' -->
   <dd>The name of the keyword that contains the declination in degrees.
   </dd>
   </dl>
   <dl>
-  <dt><b>equinox = <tt>"epoch"</tt></b></dt>
+  <dt><b>equinox = <span style="font-family: monospace;">"epoch"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='equinox' Line='equinox = "epoch"' -->
   <dd>The name of the keyword that contains the equinox of the right ascension and
   declination coordinates in years.
   </dd>
   </dl>
   <dl>
-  <dt><b>st = <tt>"st"</tt></b></dt>
+  <dt><b>st = <span style="font-family: monospace;">"st"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='st' Line='st = "st"' -->
   <dd>The name of the keyword containing the sidereal time in hours. 
   </dd>
   </dl>
   <dl>
-  <dt><b>ut = <tt>"ut"</tt></b></dt>
+  <dt><b>ut = <span style="font-family: monospace;">"ut"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ut' Line='ut = "ut"' -->
   <dd>The name of the keyword containing the ut time.  This keyword can either
   be in date plus time format or in hours.  Note that this allows setting
-  both the <tt>"date-obs"</tt> and <tt>"ut"</tt>.  If no time is found then
+  both the <span style="font-family: monospace;">"date-obs"</span> and <span style="font-family: monospace;">"ut"</span>.  If no time is found then
   a time of 0hrs is used.
   </dd>
   </dl>
   <dl>
-  <dt><b>date = <tt>"date-obs"</tt></b></dt>
+  <dt><b>date = <span style="font-family: monospace;">"date-obs"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='date' Line='date = "date-obs"' -->
   <dd>The name of the keyword that contains the UT date of the observation. The
   format should be `DD/MM/YY' (old FITS format), YYYY-MM-DD (new FITS format),
@@ -105,20 +105,20 @@ setairmass: Compute effective airmass and middle UT for an exposure
   </dd>
   </dl>
   <dl>
-  <dt><b>exposure = <tt>"exptime"</tt></b></dt>
+  <dt><b>exposure = <span style="font-family: monospace;">"exptime"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='exposure' Line='exposure = "exptime"' -->
   <dd>The name of the keyword that contains the exposure time (in seconds) of the
   image.
   </dd>
   </dl>
   <dl>
-  <dt><b>airmass = <tt>"airmass"</tt></b></dt>
+  <dt><b>airmass = <span style="font-family: monospace;">"airmass"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='airmass' Line='airmass = "airmass"' -->
   <dd>The name of the output keyword that will receive the computed airmass.
   </dd>
   </dl>
   <dl>
-  <dt><b>utmiddle = <tt>"utmiddle"</tt></b></dt>
+  <dt><b>utmiddle = <span style="font-family: monospace;">"utmiddle"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='utmiddle' Line='utmiddle = "utmiddle"' -->
   <dd>The name of the output keyword that will receive the universal time for
   the middle of the observation.  The format of the keyword will be the same
@@ -154,7 +154,7 @@ setairmass: Compute effective airmass and middle UT for an exposure
   <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   SETAIRMASS will calculate the effective airmass of an astronomical image, as
-  described below under <tt>"ALGORITHMS"</tt>.  The task requires the instantaneous
+  described below under <span style="font-family: monospace;">"ALGORITHMS"</span>.  The task requires the instantaneous
   zenith distance at the beginning, middle and end of the exposure. These are
   calculated using the right ascension, declination, and equinox as well as the
   sidereal time, exposure time, UT date, and observatory from the image header.
@@ -175,7 +175,7 @@ setairmass: Compute effective airmass and middle UT for an exposure
   in hours and any output middle universal time will be in the same format.
   </p>
   <p>
-  Before using this task, you will need to know the <tt>"time stamp"</tt> of the time
+  Before using this task, you will need to know the <span style="font-family: monospace;">"time stamp"</span> of the time
   varying header quantities (e.g. sidereal time).  Do the recorded values
   represent the beginning, the middle or the end of the exposure ? This should
   be set in the <b>intype</b> parameter.
@@ -200,8 +200,8 @@ setairmass: Compute effective airmass and middle UT for an exposure
   <h3>Algorithms</h3>
   <!-- BeginSection: 'ALGORITHMS' -->
   <p>
-  The mean airmass is calculated uses the formula described in <tt>"Some
-  Factors Affecting the Accuracy of Stellar Photometry with CCDs"</tt> by P.
+  The mean airmass is calculated uses the formula described in <span style="font-family: monospace;">"Some
+  Factors Affecting the Accuracy of Stellar Photometry with CCDs"</span> by P.
   Stetson, DAO preprint, September 1988.  This simple formula is:
   </p>
   <pre>
@@ -222,8 +222,8 @@ setairmass: Compute effective airmass and middle UT for an exposure
   	     x = scale * sin(elevation) = scale * cos(ZD)
   </pre>
   <p>
-  The atmospheric scaling parameter is <i>scale</i> (see <tt>"Astrophysical
-  Quantities"</tt> by Allen, 1973 p.125,133).
+  The atmospheric scaling parameter is <i>scale</i> (see <span style="font-family: monospace;">"Astrophysical
+  Quantities"</span> by Allen, 1973 p.125,133).
   </p>
   <!-- EndSection:   'ALGORITHMS' -->
   <h3>Keywords</h3>

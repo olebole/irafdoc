@@ -27,8 +27,8 @@ tcheck: Check STSDAS table element values.
   printing the rows, column names, and values of selected table
   elements.  The table elements selected are controlled by lines in the
   check file.  Table elements are printed by placing their names on a
-  line in the check file followed by the word <tt>"when"</tt> and a logical
-  expression. The values of all columns listed before the <tt>"when"</tt> will be
+  line in the check file followed by the word <span style="font-family: monospace;">"when"</span> and a logical
+  expression. The values of all columns listed before the <span style="font-family: monospace;">"when"</span> will be
   printed for each row for which the expression is true. For example,
   </p>
   <pre>
@@ -45,7 +45,7 @@ tcheck: Check STSDAS table element values.
   <p>
   An expression may contain table column names and string or numerical
   constants. The table column names may be in either lower or upper
-  case. If <tt>"when"</tt> is a column name, place it in upper case so its
+  case. If <span style="font-family: monospace;">"when"</span> is a column name, place it in upper case so its
   meaning will not be ambiguous. String constants may be surrounded by
   either single or double quotes. Numeric constants will be treated as
   real numbers if they contain a decimal point or integers if they do
@@ -144,11 +144,11 @@ tcheck: Check STSDAS table element values.
   </pre>
   <p>
   4. The value of one keyword may depend on the value of another. This can
-  be tested by combining the conditions with an <tt>"and"</tt>:
+  be tested by combining the conditions with an <span style="font-family: monospace;">"and"</span>:
   </p>
   <pre>
   aper_pos when aper_id == 'A-1' &amp;&amp; aper_pos != 'SINGLE'
-  polar_id when fgwa_id == 'CAM' &amp;&amp; polar_id != <tt>'C'</tt>
+  polar_id when fgwa_id == 'CAM' &amp;&amp; polar_id != <span style="font-family: monospace;">'C'</span>
   </pre>
   <!-- EndSection:   'EXAMPLES' -->
   <h3>Bugs</h3>
@@ -166,7 +166,7 @@ tcheck: Check STSDAS table element values.
   hcheck
   </p>
   <p>
-  Type <tt>"help tables opt=sys"</tt> for a description of the 'tables' package.
+  Type <span style="font-family: monospace;">"help tables opt=sys"</span> for a description of the 'tables' package.
   </p>
   
   <!-- EndSection:    'SEE ALSO' -->

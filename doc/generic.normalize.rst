@@ -36,7 +36,7 @@ normalize: Normalize images
   </dd>
   </dl>
   <dl>
-  <dt><b>sample_section = <tt>"[]"</tt></b></dt>
+  <dt><b>sample_section = <span style="font-family: monospace;">"[]"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sample_section' Line='sample_section = "[]"' -->
   <dd>Section of the image to be sampled in determining the image mean.
   </dd>
@@ -64,7 +64,7 @@ normalize: Normalize images
   is determined by sampling the image.  The normalization is then the mean
   of the pixels in the sample section with values in the range <i>lower</i>
   to <i>upper</i>.  The default sample section selects all pixels in the image.
-  The normalized images are of datatype <tt>"real"</tt> and replace the original images.
+  The normalized images are of datatype <span style="font-family: monospace;">"real"</span> and replace the original images.
   </p>
   <!-- EndSection:   'DESCRIPTION' -->
   <h3>Examples</h3>

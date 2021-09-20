@@ -74,7 +74,7 @@ mkcatalog: Type in a standard star catalog or observations file
   output catalog.
   Entry mode is terminated by typing &lt;EOF&gt; in response to a query for
   a new object id.  The user may verify each new
-  entry by setting the parameter <i>verify</i> to <tt>"yes"</tt>.
+  entry by setting the parameter <i>verify</i> to <span style="font-family: monospace;">"yes"</span>.
   </p>
   <p>
   Each new catalog created by MKCATALOG has an associated format
@@ -82,10 +82,10 @@ mkcatalog: Type in a standard star catalog or observations file
   the user. This file, referenced by its parent catalog name, can be
   used as input to the MKCONFIG task.
   The actual name of the format description file on disk is constructed by
-  prepending the catalog name <i>catalog</i> with the string <tt>"f"</tt> and
-  appending the string <tt>".dat"</tt>. For example if a new catalog 
-  called <tt>"UBVcat"</tt> is created by MKCATALOG, a format description
-  file called <tt>"fUBVcat.dat"</tt> will also be created. Any pre-existing format
+  prepending the catalog name <i>catalog</i> with the string <span style="font-family: monospace;">"f"</span> and
+  appending the string <span style="font-family: monospace;">".dat"</span>. For example if a new catalog 
+  called <span style="font-family: monospace;">"UBVcat"</span> is created by MKCATALOG, a format description
+  file called <span style="font-family: monospace;">"fUBVcat.dat"</span> will also be created. Any pre-existing format
   description file of that name, which does not have an associated catalog
   file, will be deleted.
   </p>
@@ -94,7 +94,7 @@ mkcatalog: Type in a standard star catalog or observations file
   MKCATALOG reads
   the number of columns, the column names, and column widths from the
   header of the catalog, and enters entry mode positioned at the end
-  of the file. If the parameter <i>review</i> = <tt>"yes"</tt>, then the user can
+  of the file. If the parameter <i>review</i> = <span style="font-family: monospace;">"yes"</span>, then the user can
   review and verify existing catalog entries before entering new ones.
   When entry mode is terminated MKCATALOG enters edit mode
   in the usual way. 
@@ -113,19 +113,19 @@ mkcatalog: Type in a standard star catalog or observations file
   files to match those in the standard star catalog.
   For example, the PHOTCAL APPHOT/DAOPHOT pre-processor tasks MKNOBSFILE
   and MKOBSFILE, produce observations files whose object ids
-  are of the form <tt>"field-#"</tt>, where <tt>"field"</tt> is the name
-  of the observed field and <tt>"#"</tt> is a sequence number, which is defined
+  are of the form <span style="font-family: monospace;">"field-#"</span>, where <span style="font-family: monospace;">"field"</span> is the name
+  of the observed field and <span style="font-family: monospace;">"#"</span> is a sequence number, which is defined
   only if there is more than one observed star in the field.
-  In this scheme the id of the  the fourth observed star in the field <tt>"M92"</tt>
-  is <tt>"M92-4"</tt>. If this star is actually the standard star <tt>"IX-10"</tt> in
+  In this scheme the id of the  the fourth observed star in the field <span style="font-family: monospace;">"M92"</span>
+  is <span style="font-family: monospace;">"M92-4"</span>. If this star is actually the standard star <span style="font-family: monospace;">"IX-10"</span> in
   <i>catalog</i>, the user must change the object id in the observations file
-  to <tt>"IX-10"</tt>. Alternatively the user can set up the naming
+  to <span style="font-family: monospace;">"IX-10"</span>. Alternatively the user can set up the naming
   convention in <i>catalog</i> itself, to match  the naming
   convention of MKNOBSFILE
-  or MKOBSFILE by assigning the standard stars names like <tt>"field-#"</tt> and
+  or MKOBSFILE by assigning the standard stars names like <span style="font-family: monospace;">"field-#"</span> and
   subsequently measuring the standard stars in the same order as they
-  appear in the catalog.  In this scheme star, <tt>"M92-4"</tt> in
-  the observations file would also be <tt>"M92-4"</tt> in the standard star 
+  appear in the catalog.  In this scheme star, <span style="font-family: monospace;">"M92-4"</span> in
+  the observations file would also be <span style="font-family: monospace;">"M92-4"</span> in the standard star 
   catalog, and no editing would be required. This technique is most useful
   for standard sequences in clusters.
   </p>
@@ -139,19 +139,19 @@ mkcatalog: Type in a standard star catalog or observations file
   Object id names must be composed of characters in the set [a-z,A-Z,0-9,+,-,_].
   Other characters may be included as part of the user id, but 
   will be ignored by the PHOTCAL id matching code. Object id names are
-  case insensitive. To the id matching code the name <tt>"BD+61_305"</tt> is the
-  same as <tt>"bd+61_305"</tt>.
+  case insensitive. To the id matching code the name <span style="font-family: monospace;">"BD+61_305"</span> is the
+  same as <span style="font-family: monospace;">"bd+61_305"</span>.
   </p>
   <p>
   Column names must be composed of characters in the set [a-z,A-Z,0-9]
   and the first character of the column name must be a letter of the alphabet.
   This means for example, that an individual column cannot be assigned the
-  name <tt>"B-V"</tt>, since <tt>"B-V"</tt> will be interpreted as an arithmetic expression not
+  name <span style="font-family: monospace;">"B-V"</span>, since <span style="font-family: monospace;">"B-V"</span> will be interpreted as an arithmetic expression not
   as a variable, by the PHOTCAL equation parsing routines.
-  <tt>"B-V"</tt> may be replaced with something like <tt>"BV"</tt> or <tt>"BMV"</tt>.
+  <span style="font-family: monospace;">"B-V"</span> may be replaced with something like <span style="font-family: monospace;">"BV"</span> or <span style="font-family: monospace;">"BMV"</span>.
   MKCATALOG will complain if the user tries to enter an illegal column name.
-  Column names are case sensitive. Column <tt>"BV"</tt> is not the same as 
-  column <tt>"bv"</tt>.
+  Column names are case sensitive. Column <span style="font-family: monospace;">"BV"</span> is not the same as 
+  column <span style="font-family: monospace;">"bv"</span>.
   </p>
   <p>
   Whitespace  is not permitted in either the object ids or in the column
@@ -169,7 +169,7 @@ mkcatalog: Type in a standard star catalog or observations file
   <p>
   1. Create a new standard star catalog containing the 3 photometric indices
   V, B-V, and U-B and their respective errors. Note that MKCATALOG supplies
-  default names of the form <tt>"error(name)"</tt> for the error columns where <tt>"name"</tt>
+  default names of the form <span style="font-family: monospace;">"error(name)"</span> for the error columns where <span style="font-family: monospace;">"name"</span>
   is the name of the previous column. Users are strongly urged to use the
   default names since they simplify the use of the statistical weighting
   scheme in the FITPARAMS task. If no error information is available

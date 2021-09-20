@@ -59,38 +59,38 @@ irmosaic: Mosaic an ordered list of images onto a grid
   </dd>
   </dl>
   <dl>
-  <dt><b>trim_section = <tt>"[*,*]"</tt></b></dt>
+  <dt><b>trim_section = <span style="font-family: monospace;">"[*,*]"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='trim_section' Line='trim_section = "[*,*]"' -->
   <dd>The section of the input images to be mosaiced into the output image.
   Section can be used to flip and/or trim the individual subrasters before adding
   them to the mosaic. For example if we want to flip each subraster around the
-  y axis before adding it to the mosaic, then <i>trim_section</i> = <tt>"[*,-*]"</tt>.
+  y axis before adding it to the mosaic, then <i>trim_section</i> = <span style="font-family: monospace;">"[*,-*]"</span>.
   </dd>
   </dl>
   <dl>
-  <dt><b>null_input = <tt>""</tt></b></dt>
+  <dt><b>null_input = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='null_input' Line='null_input = ""' -->
   <dd>The list of unobserved subrasters. For example if the subrasters 3 to 5 and
   10 of a sequence of observations were not observed then
-  <i>null_input</i> = <tt>"3-5,10"</tt>.
+  <i>null_input</i> = <span style="font-family: monospace;">"3-5,10"</span>.
   This parameter follows the ranges notation convention. The number of unobserved
   subrasters plus the number of images must equal <i>nxsub</i> *
   <i>nysub</i>.
   </dd>
   </dl>
   <dl>
-  <dt><b>corner = <tt>"ll"</tt></b></dt>
+  <dt><b>corner = <span style="font-family: monospace;">"ll"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='corner' Line='corner = "ll"' -->
   <dd>The starting position in the output image.
-  The four options are <tt>"ll"</tt> for lower left corner, <tt>"lr"</tt> for lower right corner,
-  <tt>"ul"</tt> for upper left corner and <tt>"ur"</tt> for upper right corner.
+  The four options are <span style="font-family: monospace;">"ll"</span> for lower left corner, <span style="font-family: monospace;">"lr"</span> for lower right corner,
+  <span style="font-family: monospace;">"ul"</span> for upper left corner and <span style="font-family: monospace;">"ur"</span> for upper right corner.
   </dd>
   </dl>
   <dl>
-  <dt><b>direction = <tt>"row"</tt></b></dt>
+  <dt><b>direction = <span style="font-family: monospace;">"row"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='direction' Line='direction = "row"' -->
   <dd>Add subrasters to the output image in row or column order. The options are
-  <tt>"row"</tt> for row order and <tt>"column"</tt> for column order.
+  <span style="font-family: monospace;">"row"</span> for row order and <span style="font-family: monospace;">"column"</span> for column order.
   </dd>
   </dl>
   <dl>
@@ -101,11 +101,11 @@ irmosaic: Mosaic an ordered list of images onto a grid
   </dd>
   </dl>
   <dl>
-  <dt><b>median_section = <tt>""</tt></b></dt>
+  <dt><b>median_section = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='median_section' Line='median_section = ""' -->
   <dd>The section of each input subraster for which the median is computed. If
   <i>median_section</i> is the null string then the medians are not computed.
-  If <i>median_section</i> is <tt>"[*,*]"</tt> the whole input subraster is used to
+  If <i>median_section</i> is <span style="font-family: monospace;">"[*,*]"</span> the whole input subraster is used to
   compute the median.
   </dd>
   </dl>
@@ -157,10 +157,10 @@ irmosaic: Mosaic an ordered list of images onto a grid
   </dd>
   </dl>
   <dl>
-  <dt><b>opixtype = <tt>"r"</tt></b></dt>
+  <dt><b>opixtype = <span style="font-family: monospace;">"r"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='opixtype' Line='opixtype = "r"' -->
-  <dd>The pixel type of the output image. The options are <tt>"s"</tt> (short integer),
-  <tt>"i"</tt> (integer), <tt>"l"</tt> (long integer), <tt>"r"</tt> (real) and <tt>"d"</tt> for double
+  <dd>The pixel type of the output image. The options are <span style="font-family: monospace;">"s"</span> (short integer),
+  <span style="font-family: monospace;">"i"</span> (integer), <span style="font-family: monospace;">"l"</span> (long integer), <span style="font-family: monospace;">"r"</span> (real) and <span style="font-family: monospace;">"d"</span> for double
   precision.
   </dd>
   </dl>

@@ -26,18 +26,18 @@ lcalib: List calibration file data
   <dt><b>option</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='option' Line='option' -->
   <dd>Chooses calibration data to be listed.  Option
-  may be: <tt>"bands"</tt> to list the bandpasses at each wavelength, <tt>"ext"</tt> to
-  list the extinction at each wavelength, <tt>"mags"</tt>, <tt>"fnu"</tt>, or <tt>"flam"</tt>
+  may be: <span style="font-family: monospace;">"bands"</span> to list the bandpasses at each wavelength, <span style="font-family: monospace;">"ext"</span> to
+  list the extinction at each wavelength, <span style="font-family: monospace;">"mags"</span>, <span style="font-family: monospace;">"fnu"</span>, or <span style="font-family: monospace;">"flam"</span>
   to list the magnitude, or flux of
   the star (selected by the star_name parameter) at each wavelength, or
-  <tt>"stars"</tt> to list the star names available in the calibration directory.
+  <span style="font-family: monospace;">"stars"</span> to list the star names available in the calibration directory.
   </dd>
   </dl>
   <dl>
   <dt><b>star_name</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='star_name' Line='star_name' -->
   <dd>Selects which star's magnitude list is chosen if the option parameter
-  is <tt>"mags"</tt>, <tt>"fnu"</tt>, <tt>"flam"</tt>, or <tt>"bands"</tt>.  Also if <tt>'?'</tt> a list of available
+  is <span style="font-family: monospace;">"mags"</span>, <span style="font-family: monospace;">"fnu"</span>, <span style="font-family: monospace;">"flam"</span>, or <span style="font-family: monospace;">"bands"</span>.  Also if <span style="font-family: monospace;">'?'</span> a list of available
   stars in the specified calibration directory is given.
   </dd>
   </dl>
@@ -51,7 +51,7 @@ lcalib: List calibration file data
   <dd>The magnitude of the observed star in the band given by the
   <i>magband</i> parameter.  If the magnitude is not in the same band as
   the blackbody calibration file then the magnitude may be converted to
-  the calibration band provided the <tt>"params.dat"</tt> file containing relative
+  the calibration band provided the <span style="font-family: monospace;">"params.dat"</span> file containing relative
   magnitudes between the two bands is in the calibration directory
   </dd>
   </dl>
@@ -67,9 +67,9 @@ lcalib: List calibration file data
   <dt><b>teff</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='teff' Line='teff' -->
   <dd>The effective temperature (deg K) or the spectral type of the star being
-  calibrated.  If a spectral type is specified a <tt>"params.dat"</tt> file must exist
+  calibrated.  If a spectral type is specified a <span style="font-family: monospace;">"params.dat"</span> file must exist
   in the calibration directory.  The spectral types are specified in the same
-  form as in the <tt>"params.dat"</tt> file.  For the standard blackbody calibration
+  form as in the <span style="font-family: monospace;">"params.dat"</span> file.  For the standard blackbody calibration
   directory the spectral types are specified as A0I, A0III, or A0V, where A
   can be any letter OBAFGKM, the single digit subclass is between 0 and 9,
   and the luminousity class is one of I, III, or V.  If no luminousity class
@@ -122,14 +122,14 @@ lcalib: List calibration file data
   The extinction is given in an extinction file consisting of lines with
   wavelength and extinction.  The wavelengths must be order in increasing
   wavelength and the wavelengths must be in Angstroms.  There are two
-  standard extinction files currently available, <tt>"onedstds$kpnoextinct.dat"</tt>,
-  and <tt>"onedstds$ctioextinct.dat"</tt>.
+  standard extinction files currently available, <span style="font-family: monospace;">"onedstds$kpnoextinct.dat"</span>,
+  and <span style="font-family: monospace;">"onedstds$ctioextinct.dat"</span>.
   </p>
   <p>
   The standard star data are in files in a calibration
   directory specified with the parameter <i>caldir</i>.  A standard star
   file is selected by taking the star name given, by the parameter
-  <i>star_name</i>, removing blanks, +'s and -'s, appending <tt>".dat"</tt>, and converting
+  <i>star_name</i>, removing blanks, +'s and -'s, appending <span style="font-family: monospace;">".dat"</span>, and converting
   to lower case.  This file name is appended to the specified calibration
   directory.  A calibration file consists of lines containing a wavelength,
   a stellar magnitude, and a bandpass full width.  The wavelengths are in
@@ -160,7 +160,7 @@ lcalib: List calibration file data
   <dl>
   <dt><b>LCALIB V2.10</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='LCALIB' Line='LCALIB V2.10' -->
-  <dd>This task has a more compact listing for the <tt>"stars"</tt> option and allows
+  <dd>This task has a more compact listing for the <span style="font-family: monospace;">"stars"</span> option and allows
   paging a list of stars when the star name query is not recognized.
   </dd>
   </dl>

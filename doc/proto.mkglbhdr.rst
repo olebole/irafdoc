@@ -35,7 +35,7 @@ mkglbhdr: Make global header from keywords in images and reference
   </dd>
   </dl>
   <dl>
-  <dt><b>reference = <tt>""</tt></b></dt>
+  <dt><b>reference = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='reference' Line='reference = ""' -->
   <dd>Optional reference image defining the allowed keywords, order, and
   blank cards.  If no reference image is specified the first image in
@@ -43,7 +43,7 @@ mkglbhdr: Make global header from keywords in images and reference
   </dd>
   </dl>
   <dl>
-  <dt><b>exclude = <tt>""</tt></b></dt>
+  <dt><b>exclude = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='exclude' Line='exclude = ""' -->
   <dd>List of keywords to be excluded from the global header even if present
   in the reference header and with common values in all the input images.
@@ -62,7 +62,7 @@ mkglbhdr: Make global header from keywords in images and reference
   set of <i>input</i> images.  Common means present in all headers and
   with identical card records (value, formatting, and comments).  The
   purpose of this thask is to allow appending the images using the FITS
-  <tt>"inherit"</tt> convention into a multi-extension file.
+  <span style="font-family: monospace;">"inherit"</span> convention into a multi-extension file.
   </p>
   <p>
   The set of keywords which are allowed to appear in the global header are
@@ -100,7 +100,7 @@ mkglbhdr: Make global header from keywords in images and reference
       cl&gt; imcopy image2 newimage[im2,append,inherit]
   </pre>
   <p>
-  To check the headers separately use the <tt>"noinherit"</tt> flag.
+  To check the headers separately use the <span style="font-family: monospace;">"noinherit"</span> flag.
   </p>
   <pre>
       cl&gt; imhead newimage[0] l+
@@ -117,7 +117,7 @@ mkglbhdr: Make global header from keywords in images and reference
   </pre>
   <p>
   It is important to understand how inheritance works when appending extensions.
-  The IRAF FITS <tt>"kernel"</tt> eliminates keywords from the extension header when
+  The IRAF FITS <span style="font-family: monospace;">"kernel"</span> eliminates keywords from the extension header when
   they have the same value as the global header.  If there are common
   keywords but with different values then they are both present and any
   task that read the union of the global and extension headers will see

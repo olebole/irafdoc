@@ -52,7 +52,7 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   </dd>
   </dl>
   <dl>
-  <dt><b>section = <tt>"middle line"</tt></b></dt>
+  <dt><b>section = <span style="font-family: monospace;">"middle line"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='section' Line='section = "middle line"' -->
   <dd>If the reference image is not one dimensional or given as a one dimensional
   image section then this parameter selects the master reference image
@@ -69,7 +69,7 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   where each field can be one of the strings separated by | except for #
   which is an integer number.  The field in [] is a second designator which
   is used with 3D data.  See the example section for <b>rvidlines</b> for
-  examples of this syntax.  Abbreviations are allowed though beware that <tt>'l'</tt>
+  examples of this syntax.  Abbreviations are allowed though beware that <span style="font-family: monospace;">'l'</span>
   is not a sufficient abbreviation.
   </dd>
   </dl>
@@ -106,7 +106,7 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   <i>step</i> parameter.  When <i>trace</i> is no the master reference line or
   column is used for each new reference vector.  When this parameter is yes
   then as the reidentifications step across the image the last reidentified
-  features are used as the reference.  This <tt>"tracing"</tt> is useful if there is a
+  features are used as the reference.  This <span style="font-family: monospace;">"tracing"</span> is useful if there is a
   coherent shift in the features such as with long slit spectra.  However,
   any features lost during the tracing will be lost for all subsequent lines
   or columns while not using tracing always starts with the initial set of
@@ -114,7 +114,7 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   </dd>
   </dl>
   <dl>
-  <dt><b>step = <tt>"10"</tt></b></dt>
+  <dt><b>step = <span style="font-family: monospace;">"10"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='step' Line='step = "10"' -->
   <dd>The step from the reference aperture, line, column, or band used for
   selecting and/or reidentifying additional lines, columns, or bands in a two
@@ -127,7 +127,7 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   </dd>
   </dl>
   <dl>
-  <dt><b>nsum = <tt>"10"</tt></b></dt>
+  <dt><b>nsum = <span style="font-family: monospace;">"10"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nsum' Line='nsum = "10"' -->
   <dd>Number of lines, columns, or bands across the designated vector axis to be
   summed when the image is a two or three dimensional spatial spectrum.
@@ -139,7 +139,7 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   </dd>
   </dl>
   <dl>
-  <dt><b>shift = <tt>"0"</tt></b></dt>
+  <dt><b>shift = <span style="font-family: monospace;">"0"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='shift' Line='shift = "0"' -->
   <dd>Shift in user coordinates to be added to the reference features before
   centering when stepping to other lines, columns, or bands in the reference
@@ -198,7 +198,7 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   </dd>
   </dl>
   <dl>
-  <dt><b>coordlist = <tt>""</tt></b></dt>
+  <dt><b>coordlist = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coordlist' Line='coordlist = ""' -->
   <dd>User coordinate list consisting of an ordered list of rest spectral line
   coordinates.
@@ -230,17 +230,17 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   The following parameters determine the input and output of the task.
   </p>
   <dl>
-  <dt><b>database = <tt>"database"</tt></b></dt>
+  <dt><b>database = <span style="font-family: monospace;">"database"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"' -->
   <dd>Database containing the feature data for the reference image and in which
   the features for the reidentified images are recorded.
   </dd>
   </dl>
   <dl>
-  <dt><b>logfiles = <tt>"logfile"</tt></b></dt>
+  <dt><b>logfiles = <span style="font-family: monospace;">"logfile"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfiles' Line='logfiles = "logfile"' -->
   <dd>List of file in which to record the velocity results and to keep a
-  processing log.  If a null file, <tt>""</tt>, is given then no log is kept.
+  processing log.  If a null file, <span style="font-family: monospace;">""</span>, is given then no log is kept.
   </dd>
   </dl>
   <dl>
@@ -250,7 +250,7 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   </dd>
   </dl>
   <dl>
-  <dt><b>keywpars = <tt>""</tt></b></dt>
+  <dt><b>keywpars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='keywpars' Line='keywpars = ""' -->
   <dd>The image header keyword translation table as described in 
   the <i>keywpars</i> named pset.  This defines the header keywords used
@@ -259,14 +259,14 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>Graphics device.  The default is the standard graphics device which is
   generally a graphics terminal.
   </dd>
   </dl>
   <dl>
-  <dt><b>cursor = <tt>""</tt></b></dt>
+  <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Cursor input file.  If a cursor file is not given then the standard graphics
   cursor is read.
@@ -278,7 +278,7 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   if possible.  This requires determining various parameters about the
   observation.  The latitude, longitude, and altitude of the observation
   are determined from the observatory database.  The observatory is
-  defined by either the OBSERVAT image header keyword or the <tt>"observatory"</tt>
+  defined by either the OBSERVAT image header keyword or the <span style="font-family: monospace;">"observatory"</span>
   package parameter in that order.  See the help for <b>observatory</b>
   for additional information.
   </p>
@@ -360,7 +360,7 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   are described in the help for <b>rvidlines</b>.  The algorithm used
   and whether the feature is emission or absorption is the same one used
   in the reference image.  The only caveat is that multiple gaussian
-  fitting provided by the interactive <tt>'b'</tt> key in <b>rvidlines</b> is
+  fitting provided by the interactive <span style="font-family: monospace;">'b'</span> key in <b>rvidlines</b> is
   not done by this task and those lines will be fit by gaussians
   independently.
   </p>
@@ -436,10 +436,10 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   simple text files.  The text files have names beginning with 'id' followed
   by the entry name, usually the name of the image.  The database text files
   consist of a number of records.  A record begins with a line starting with the
-  keyword <tt>"begin"</tt>.  The rest of the line is the record identifier.  Records
-  read and written by <b>rvreidlines</b> have <tt>"identify"</tt> as the first word of the
+  keyword <span style="font-family: monospace;">"begin"</span>.  The rest of the line is the record identifier.  Records
+  read and written by <b>rvreidlines</b> have <span style="font-family: monospace;">"identify"</span> as the first word of the
   identifier.  Following this is a name which may be specified following the
-  <tt>":read"</tt> or <tt>":write"</tt> commands.  If no name is specified then the image name
+  <span style="font-family: monospace;">":read"</span> or <span style="font-family: monospace;">":write"</span> commands.  If no name is specified then the image name
   is used.  For 1D spectra the database entry includes the aperture number
   and so to read a solution from a aperture different than the current image
   and aperture number must be specified.  For 2D/3D images the entry name
@@ -448,7 +448,7 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   the feature information and redshift (without heliocentric correction).
   </p>
   <p>
-  The database files have the name <tt>"identify"</tt> and the prefix <tt>"id"</tt> because
+  The database files have the name <span style="font-family: monospace;">"identify"</span> and the prefix <span style="font-family: monospace;">"id"</span> because
   these files may also be read by the <b>identify</b> task for changing
   the dispersion function based on the rest wavelengths.
   </p>

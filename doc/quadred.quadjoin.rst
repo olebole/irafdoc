@@ -31,7 +31,7 @@ quadjoin: Rejoin single amplifier images produced by quadsplit
   </dd>
   </dl>
   <dl>
-  <dt><b>output = <tt>""</tt></b></dt>
+  <dt><b>output = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
   <dd>Output image name.  If one is not given then the input root name is used.
   </dd>
@@ -46,8 +46,8 @@ quadjoin: Rejoin single amplifier images produced by quadsplit
   <h3>Description</h3>
   <!-- BeginSection: 'DESCRIPTION' -->
   <p>
-  Images in split <tt>"quadformat"</tt> (see help topic <b>quadformat</b> and
-  <b>quadsplit</b>) are rejoined into <tt>"quadformat"</tt>.  The input images
+  Images in split <span style="font-family: monospace;">"quadformat"</span> (see help topic <b>quadformat</b> and
+  <b>quadsplit</b>) are rejoined into <span style="font-family: monospace;">"quadformat"</span>.  The input images
   have a common root name and then an extension given by the amplifier
   labels in the AMPLIST keyword are added.  The output name may be specified
   or the input root name may be used.

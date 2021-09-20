@@ -23,33 +23,33 @@ package: Discussion and overview of package including sections on:
   <h3>Parameters</h3>
   <!-- BeginSection: 'PARAMETERS' -->
   <dl>
-  <dt><b>observatory = <tt>"observatory"</tt></b></dt>
+  <dt><b>observatory = <span style="font-family: monospace;">"observatory"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory = "observatory"' -->
   <dd>Observatory at which the spectra were obtained if not specified in the
   image header by the keyword OBSERVAT.  This parameter is used by several
   tasks in the package through parameter redirection so this parameter may be
   used to affect all these tasks at the same time.  The observatory may be
-  one of the observatories in the observatory database, <tt>"observatory"</tt> to
-  select the observatory defined by the environment variable <tt>"observatory"</tt> or
-  the parameter <b>observatory.observatory</b>, or <tt>"obspars"</tt> to select the
+  one of the observatories in the observatory database, <span style="font-family: monospace;">"observatory"</span> to
+  select the observatory defined by the environment variable <span style="font-family: monospace;">"observatory"</span> or
+  the parameter <b>observatory.observatory</b>, or <span style="font-family: monospace;">"obspars"</span> to select the
   current parameters set in the <b>observatory</b> task.  See help for
   <b>observatory</b> for additional information.
   </dd>
   </dl>
   <dl>
-  <dt><b>caldir = <tt>""</tt></b></dt>
+  <dt><b>caldir = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='caldir' Line='caldir = ""' -->
   <dd>Calibration directory containing standard star data.  This parameter
   is used by several tasks in the package through redirection.  A list of
   standard calibration directories may be obtained by listing the file
-  <tt>"onedstds$README"</tt>; for example:
+  <span style="font-family: monospace;">"onedstds$README"</span>; for example:
   	cl&gt; page onedstds$README
   The user may copy or create their own calibration files and specify
-  the directory.  The directory <tt>""</tt> refers to the current working directory.
+  the directory.  The directory <span style="font-family: monospace;">""</span> refers to the current working directory.
   </dd>
   </dl>
   <dl>
-  <dt><b>interp = <tt>"poly5"</tt> (nearest|linear|poly3|poly5|spline3|sinc)</b></dt>
+  <dt><b>interp = <span style="font-family: monospace;">"poly5"</span> (nearest|linear|poly3|poly5|spline3|sinc)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interp' Line='interp = "poly5" (nearest|linear|poly3|poly5|spline3|sinc)' -->
   <dd>Spectrum interpolation type used when spectra are resampled.  The choices are:
   <pre>
@@ -65,7 +65,7 @@ package: Discussion and overview of package including sections on:
   <p>
   The following parameters apply to two and three dimensional images
   such as long slit or Fabry-Perot spectra.  They allow selection of
-  a line or column as the spectrum <tt>"aperture"</tt> and summing of neighboring
+  a line or column as the spectrum <span style="font-family: monospace;">"aperture"</span> and summing of neighboring
   elements to form a one dimensional spectrum as the tasks in the
   ONEDSPEC package expect.
   </p>
@@ -80,7 +80,7 @@ package: Discussion and overview of package including sections on:
   </dd>
   </dl>
   <dl>
-  <dt><b>nsum = <tt>"1"</tt></b></dt>
+  <dt><b>nsum = <span style="font-family: monospace;">"1"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nsum' Line='nsum = "1"' -->
   <dd>The number of neighboring elements to sum.  This is a string parameter
   that can have one or two numbers.  For two dimensional images only
@@ -91,7 +91,7 @@ package: Discussion and overview of package including sections on:
   the two spatial axes.  The order is the lower dimensional spatial
   axis first.
   For an even value the elements summed are the central specified
-  <tt>"aperture"</tt>, nsum / 2 - 1 below, and nsum /2 above; i.e the
+  <span style="font-family: monospace;">"aperture"</span>, nsum / 2 - 1 below, and nsum /2 above; i.e the
   central value is closer to the lower element than the upper.
   For example, for nsum=4 and an aperture of 10 for a dispersion
   axis of 1 in a two dimensional image the spectrum used will be
@@ -99,14 +99,14 @@ package: Discussion and overview of package including sections on:
   </dd>
   </dl>
   <dl>
-  <dt><b>records = <tt>""</tt></b></dt>
+  <dt><b>records = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='records' Line='records = ""' -->
   <dd>This is a dummy parameter.  It is applicable only in the <b>imred.irs</b>
   and <b>imred.iids</b> packages.
   </dd>
   </dl>
   <dl>
-  <dt><b>version = <tt>"ONEDSPEC V3: November 1991"</tt></b></dt>
+  <dt><b>version = <span style="font-family: monospace;">"ONEDSPEC V3: November 1991"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='version' Line='version = "ONEDSPEC V3: November 1991"' -->
   <dd>Package version identification.
   </dd>
@@ -117,7 +117,7 @@ package: Discussion and overview of package including sections on:
   <p>
   The <b>onedspec</b> package contains generic tasks for the reduction,
   analysis, and display of one dimensional spectra.  The specifics of
-  individual tasks may be found in their IRAF <tt>"help"</tt> pages.  This document
+  individual tasks may be found in their IRAF <span style="font-family: monospace;">"help"</span> pages.  This document
   describes the general and common features of the tasks.
   </p>
   <p>
@@ -230,14 +230,14 @@ package: Discussion and overview of package including sections on:
   <p>
   The choice of interpolation type depends on the type of data, smooth
   verses strong, sharp, undersampled features, and the requirements of
-  the user.  The <tt>"nearest"</tt> and <tt>"linear"</tt> interpolation are somewhat
-  crude and simple but they avoid <tt>"ringing"</tt> near sharp features.  The
+  the user.  The <span style="font-family: monospace;">"nearest"</span> and <span style="font-family: monospace;">"linear"</span> interpolation are somewhat
+  crude and simple but they avoid <span style="font-family: monospace;">"ringing"</span> near sharp features.  The
   polynomial interpolations are smoother but have noticible ringing
   near sharp features.  They are, unlike the sinc function described
   below, localized.
   </p>
   <p>
-  In V2.10 a <tt>"sinc"</tt> interpolation option is available.  This function
+  In V2.10 a <span style="font-family: monospace;">"sinc"</span> interpolation option is available.  This function
   has advantages and disadvantages.  It is important to realize that
   there are disadvantages!  Sinc interpolation approximates applying a phase
   shift to the fourier transform of the spectrum.  Thus, repeated
@@ -272,17 +272,17 @@ package: Discussion and overview of package including sections on:
   </p>
   <p>
   The dispersion units capability of the plotting tasks allows specifying
-  the units with the <tt>"units"</tt> task parameter and interactively changing the
-  units with the <tt>":units"</tt> command.  In addition the <tt>'v'</tt> key allows plotting
+  the units with the <span style="font-family: monospace;">"units"</span> task parameter and interactively changing the
+  units with the <span style="font-family: monospace;">":units"</span> command.  In addition the <span style="font-family: monospace;">'v'</span> key allows plotting
   in velocity units with the zero point velocity defined by the cursor
   position.
   </p>
   <p>
   The units are specified by strings having a unit type from the list below
-  along with the possible preceding modifiers, <tt>"inverse"</tt>, to select the
-  inverse of the unit and <tt>"log"</tt> to select logarithmic units. For example <tt>"log
-  angstroms"</tt> to plot the logarithm of wavelength in Angstroms and <tt>"inv
-  microns"</tt> to plot inverse microns.  The various identifiers may be
+  along with the possible preceding modifiers, <span style="font-family: monospace;">"inverse"</span>, to select the
+  inverse of the unit and <span style="font-family: monospace;">"log"</span> to select logarithmic units. For example <span style="font-family: monospace;">"log
+  angstroms"</span> to plot the logarithm of wavelength in Angstroms and <span style="font-family: monospace;">"inv
+  microns"</span> to plot inverse microns.  The various identifiers may be
   abbreviated as words but the syntax is not sophisticated enough to
   recognized standard scientific abbreviations except as noted below.
   </p>

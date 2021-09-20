@@ -30,55 +30,55 @@ polymark: Create polygon lists for polyphot
   </dd>
   </dl>
   <dl>
-  <dt><b>coords = <tt>"default"</tt></b></dt>
+  <dt><b>coords = <span style="font-family: monospace;">"default"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coords' Line='coords = "default"' -->
   <dd>The input / output center positions file. The center positions for each
   polygonal aperture are read from or written to coords. There may more than one
   center position per polygon. Center positions are written to coords 1 center
   position per line. When the current polygon changes POLYMARK inserts a line
-  containing a single <tt>';'</tt> after the last center position. If coords is
-  <tt>"default"</tt>, <tt>"dir$default"</tt> or a directory specification then a center position
+  containing a single <span style="font-family: monospace;">';'</span> after the last center position. If coords is
+  <span style="font-family: monospace;">"default"</span>, <span style="font-family: monospace;">"dir$default"</span> or a directory specification then a center position
   file name of the form dir$root.extension.version is constructed, where dir is
-  the directory, root is the root image name, extension is <tt>"coo"</tt> and version is
+  the directory, root is the root image name, extension is <span style="font-family: monospace;">"coo"</span> and version is
   the next available version of the file. 
   </dd>
   </dl>
   <dl>
-  <dt><b>polygons = <tt>"default"</tt></b></dt>
+  <dt><b>polygons = <span style="font-family: monospace;">"default"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='polygons' Line='polygons = "default"' -->
   <dd>The name of the polygons file. The vertices of each polygon  are read from or
   written to the polygons file. The polygons file contains a list of the
-  polygon vertices. Each vertex list is terminated by a line containing a  <tt>';'</tt>
-  after the last vertex. If polygons is <tt>"default"</tt>, <tt>"dir$default"</tt> or a directory
+  polygon vertices. Each vertex list is terminated by a line containing a  <span style="font-family: monospace;">';'</span>
+  after the last vertex. If polygons is <span style="font-family: monospace;">"default"</span>, <span style="font-family: monospace;">"dir$default"</span> or a directory
   specification then an output name of the form dir$root.extension.version is
   constructed, where dir is the directory, root is the root image name, extension
-  is <tt>"ver"</tt> and the version is next available version of the file. The number of
+  is <span style="font-family: monospace;">"ver"</span> and the version is next available version of the file. The number of
   polygon files must be equal to the number of image files.
   </dd>
   </dl>
   <dl>
-  <dt><b>icommands = <tt>""</tt></b></dt>
+  <dt><b>icommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""' -->
   <dd>The image cursor or image cursor command file.
   </dd>
   </dl>
   <dl>
-  <dt><b>gcommands = <tt>""</tt></b></dt>
+  <dt><b>gcommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""' -->
   <dd>The graphics cursor or graphics cursor command file.
   </dd>
   </dl>
   <dl>
-  <dt><b>wcsin = <tt>")_.wcsin"</tt>, wcsout = <tt>")_.wcsout"</tt></b></dt>
+  <dt><b>wcsin = <span style="font-family: monospace;">")_.wcsin"</span>, wcsout = <span style="font-family: monospace;">")_.wcsout"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcsin' Line='wcsin = ")_.wcsin", wcsout = ")_.wcsout"' -->
   <dd>The coordinate system of the input coordinates read from or written
   to <i>coords</i> and <i>polygons</i>. The image header coordinate system is
-  used to transform from the input coordinate system to the <tt>"logical"</tt> pixel
-  coordinate system used internally, and from the internal <tt>"logical"</tt> pixel
+  used to transform from the input coordinate system to the <span style="font-family: monospace;">"logical"</span> pixel
+  coordinate system used internally, and from the internal <span style="font-family: monospace;">"logical"</span> pixel
   coordinate system to the output coordinate system. The input coordinate
-  system options are <tt>"logical"</tt>, <tt>"tv"</tt>, <tt>"physical"</tt>, and <tt>"world"</tt>. The output
-  coordinate system options are <tt>"logical"</tt>, <tt>"tv"</tt>, and <tt>"physical"</tt>. The image
-  cursor coordinate system is assumed to be the <tt>"tv"</tt> system.
+  system options are <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"tv"</span>, <span style="font-family: monospace;">"physical"</span>, and <span style="font-family: monospace;">"world"</span>. The output
+  coordinate system options are <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"tv"</span>, and <span style="font-family: monospace;">"physical"</span>. The image
+  cursor coordinate system is assumed to be the <span style="font-family: monospace;">"tv"</span> system.
   <dl>
   <dt><b>logical</b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='logical' Line='logical' -->
@@ -132,31 +132,31 @@ polymark: Create polygon lists for polyphot
   </dl>
   The wcsin and wcsout parameters default to the values of the package
   parameters of the same name. The default values of the package parameters
-  wcsin and wcsout are <tt>"logical"</tt> and <tt>"logical"</tt> respectively.
+  wcsin and wcsout are <span style="font-family: monospace;">"logical"</span> and <span style="font-family: monospace;">"logical"</span> respectively.
   </dd>
   </dl>
   <dl>
-  <dt><b>cache = <tt>")_.cache"</tt></b></dt>
+  <dt><b>cache = <span style="font-family: monospace;">")_.cache"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cache' Line='cache = ")_.cache"' -->
   <dd>Cache the image pixels in memory. Cache may be set to the value of the apphot
-  package parameter (the default), <tt>"yes"</tt>, or <tt>"no"</tt>. By default cacheing is 
+  package parameter (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>. By default cacheing is 
   disabled.
   </dd>
   </dl>
   <dl>
-  <dt><b>graphics = <tt>")_.graphics"</tt></b></dt>
+  <dt><b>graphics = <span style="font-family: monospace;">")_.graphics"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = ")_.graphics"' -->
   <dd>The standard graphics device.
   </dd>
   </dl>
   <dl>
-  <dt><b>display = <tt>")_.display"</tt></b></dt>
+  <dt><b>display = <span style="font-family: monospace;">")_.display"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='display' Line='display = ")_.display"' -->
   <dd>The default display device.  Display may be set to the apphot package
-  parameter value (the default), <tt>"yes"</tt>, or <tt>"no"</tt>.  By default graphics overlay is
-  disabled.  Setting display to one of <tt>"imdr"</tt>, <tt>"imdg"</tt>, <tt>"imdb"</tt>, or <tt>"imdy"</tt> enables
+  parameter value (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.  By default graphics overlay is
+  disabled.  Setting display to one of <span style="font-family: monospace;">"imdr"</span>, <span style="font-family: monospace;">"imdg"</span>, <span style="font-family: monospace;">"imdb"</span>, or <span style="font-family: monospace;">"imdy"</span> enables
   graphics overlay with the IMD graphics kernel.  Setting display to
-  <tt>"stdgraph"</tt> enables POLYMARK to work interactively from a contour plot.
+  <span style="font-family: monospace;">"stdgraph"</span> enables POLYMARK to work interactively from a contour plot.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -178,23 +178,23 @@ polymark: Create polygon lists for polyphot
   </p>
   <p>
   The coordinates read from <i>polygons</i> or  <i>coords</i> are assumed to be
-  in coordinate system defined by <i>wcsin</i>. The options are <tt>"logical"</tt>, <tt>"tv"</tt>,
-  <tt>"physical"</tt>, and <tt>"world"</tt> and the transformation from the input coordinate
-  system to the internal <tt>"logical"</tt> system is defined by the image coordinate
-  system.  The simplest default is the <tt>"logical"</tt> pixel system. Users working on
+  in coordinate system defined by <i>wcsin</i>. The options are <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"tv"</span>,
+  <span style="font-family: monospace;">"physical"</span>, and <span style="font-family: monospace;">"world"</span> and the transformation from the input coordinate
+  system to the internal <span style="font-family: monospace;">"logical"</span> system is defined by the image coordinate
+  system.  The simplest default is the <span style="font-family: monospace;">"logical"</span> pixel system. Users working on
   with image sections but importing pixel coordinate lists generated from the
-  parent image must use the <tt>"tv"</tt> or <tt>"physical"</tt> input coordinate systems.
+  parent image must use the <span style="font-family: monospace;">"tv"</span> or <span style="font-family: monospace;">"physical"</span> input coordinate systems.
   Users importing coordinate lists in world coordinates, e.g. ra and dec,
-  must use the <tt>"world"</tt> coordinate system and may need to convert their
+  must use the <span style="font-family: monospace;">"world"</span> coordinate system and may need to convert their
   equatorial coordinate units from hours and degrees to degrees and degrees first.
   </p>
   <p>
   The coordinates written to <i>polygons</i> or <i>coords</i> are in the coordinate
-  system defined by <i>wcsout</i>. The options are <tt>"logical"</tt>, <tt>"tv"</tt>, and
-  <tt>"physical"</tt>. The simplest default is the <tt>"logical"</tt> system. Users
+  system defined by <i>wcsout</i>. The options are <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"tv"</span>, and
+  <span style="font-family: monospace;">"physical"</span>. The simplest default is the <span style="font-family: monospace;">"logical"</span> system. Users
   wishing to correlate the output coordinates of objects measured in
   image sections or mosaic pieces with coordinates in the parent
-  image must use the <tt>"tv"</tt> or <tt>"physical"</tt> coordinate systems.
+  image must use the <span style="font-family: monospace;">"tv"</span> or <span style="font-family: monospace;">"physical"</span> coordinate systems.
   </p>
   <p>
   If <i>cache</i> is yes and the host machine physical memory and working set size
@@ -470,8 +470,8 @@ polymark: Create polygon lists for polyphot
   </p>
   <p>
   Commands which draw to the image display are disabled by default.  To enable
-  graphics overlay on the image display, set the display parameter to <tt>"imdr"</tt>,
-  <tt>"imdg"</tt>, <tt>"imdb"</tt>, or <tt>"imdy"</tt> to get red, green, blue or yellow overlays. It
+  graphics overlay on the image display, set the display parameter to <span style="font-family: monospace;">"imdr"</span>,
+  <span style="font-family: monospace;">"imdg"</span>, <span style="font-family: monospace;">"imdb"</span>, or <span style="font-family: monospace;">"imdy"</span> to get red, green, blue or yellow overlays. It
   may be necessary to run gflush and to redisplay the image to get the overlays
   position correctly.
   </p>

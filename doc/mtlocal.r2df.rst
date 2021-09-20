@@ -39,7 +39,7 @@ r2df: Convert a CTIO 2-d frutti image into an IRAF image
   string can consist of any sequence of file numbers separated by
   at least one of comma, or dash.
   A dash specifies a range of files.  For example the string
-  	<tt>"1,2,3-5,8-6"</tt>
+  	<span style="font-family: monospace;">"1,2,3-5,8-6"</span>
   will convert the files 1 through 8.
   </dd>
   </dl>
@@ -84,7 +84,7 @@ r2df: Convert a CTIO 2-d frutti image into an IRAF image
   </dd>
   </dl>
   <dl>
-  <dt><b>datatype = <tt>"s"</tt></b></dt>
+  <dt><b>datatype = <span style="font-family: monospace;">"s"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='datatype' Line='datatype = "s"' -->
   <dd>The IRAF image file may be of a different data type than 2D-Frutti image data.
   The data type may be specified as s for short, l for long, r for real, and
@@ -99,9 +99,9 @@ r2df: Convert a CTIO 2-d frutti image into an IRAF image
   <!-- Sec='PARAMETERS' Level=0 Label='offset' Line='offset = 0' -->
   <dd>Offset is an integer parameter specifying the offset to the tape file number
   appended to iraf_file.  For example if the user specifies offset = 100,
-  iraf_file = <tt>"r2d"</tt> and file_list = <tt>"1-3"</tt>, the output file names produced
-  will be <tt>"r2d101"</tt>, <tt>"r2d102"</tt> and <tt>"r2d103"</tt> respectively, instead of <tt>"r2d001"</tt>,
-  <tt>"r2d002"</tt> and <tt>"r2d003"</tt>.
+  iraf_file = <span style="font-family: monospace;">"r2d"</span> and file_list = <span style="font-family: monospace;">"1-3"</span>, the output file names produced
+  will be <span style="font-family: monospace;">"r2d101"</span>, <span style="font-family: monospace;">"r2d102"</span> and <span style="font-family: monospace;">"r2d103"</span> respectively, instead of <span style="font-family: monospace;">"r2d001"</span>,
+  <span style="font-family: monospace;">"r2d002"</span> and <span style="font-family: monospace;">"r2d003"</span>.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->

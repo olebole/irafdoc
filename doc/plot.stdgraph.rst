@@ -29,7 +29,7 @@ stdgraph: Plot metacode on the standard graphics device
   </dd>
   </dl>
   <dl>
-  <dt><b>device = <tt>"stdgraph"</tt></b></dt>
+  <dt><b>device = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdgraph"' -->
   <dd>The terminal type.
   </dd>
@@ -61,7 +61,7 @@ stdgraph: Plot metacode on the standard graphics device
   </dd>
   </dl>
   <dl>
-  <dt><b>txquality = <tt>"normal"</tt></b></dt>
+  <dt><b>txquality = <span style="font-family: monospace;">"normal"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='txquality' Line='txquality = "normal"' -->
   <dd>The character drawing quality.
   </dd>
@@ -100,19 +100,19 @@ stdgraph: Plot metacode on the standard graphics device
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
-  1. Extract the fourth frame from metacode file <tt>"plots.mc"</tt> and plot it.
+  1. Extract the fourth frame from metacode file <span style="font-family: monospace;">"plots.mc"</span> and plot it.
   </p>
   <p>
       cl&gt; gkiextract plots.mc 4 | stdgraph
   </p>
   <p>
-  2. Process file <tt>"one.mc"</tt> in debug mode.
+  2. Process file <span style="font-family: monospace;">"one.mc"</span> in debug mode.
   </p>
   <p>
       cl&gt; stdgraph oned.mc debug+
   </p>
   <p>
-  3. Plot file <tt>"oned.mc"</tt> with high quality text generation.
+  3. Plot file <span style="font-family: monospace;">"oned.mc"</span> with high quality text generation.
   </p>
   <p>
       cl&gt; stdgraph oned.mc txquality=high

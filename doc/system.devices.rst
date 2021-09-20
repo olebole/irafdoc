@@ -42,7 +42,7 @@ devices: Print information on the locally available devices
       device may be selected by defining PRINTER in the user environment.
   
       All the ``lw'' devices can be specified as shown above with a trailing 
-      <tt>`s'</tt> to indicate a finer linewidth will be used, intended for small, dense
+      <span style="font-family: monospace;">`s'</span> to indicate a finer linewidth will be used, intended for small, dense
       plots, e.g., lw1s.
   
       gemini!mta=mta6250,mta1600     HP 1/2" tapedrive, Rm 101

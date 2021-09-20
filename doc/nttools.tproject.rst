@@ -58,10 +58,10 @@ tproject: Create new table from selected columns in a table.
   A column template consists of a list
   of either column names or column name templates that include wildcard
   characters.  Column names (or templates) are separated by commas or white space.
-  This parameter will accept the name of a list file (preceded by the <tt>"@"</tt>
+  This parameter will accept the name of a list file (preceded by the <span style="font-family: monospace;">"@"</span>
   character) containing all of the column names to be selected.
   If the first non-white character in the column template
-  is the negation character (either <tt>"~"</tt> or <tt>"!"</tt>),
+  is the negation character (either <span style="font-family: monospace;">"~"</span> or <span style="font-family: monospace;">"!"</span>),
   the new table will contain those columns
   whose names DO NOT match rest of the column template.
   </dd>
@@ -70,7 +70,7 @@ tproject: Create new table from selected columns in a table.
   <dt><b>(uniq = no) [boolean]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(uniq = no) [boolean]' -->
   <dd>Eliminate duplicate rows from the output table?
-  If 'unique' is set to <tt>"yes"</tt>, only one of each set of duplicate rows is
+  If 'unique' is set to <span style="font-family: monospace;">"yes"</span>, only one of each set of duplicate rows is
   included in the output table.  All columns in the output table must be
   identical for the row to be removed.  String comparisons are case
   sensitive. Care should be used in setting this option for
@@ -88,7 +88,7 @@ tproject: Create new table from selected columns in a table.
   </pre>
   <p>
   2. Exclude the measurement error from a set of spectra.  Change the file name
-  extensions from <tt>".tab"</tt> to <tt>".tbl"</tt>:
+  extensions from <span style="font-family: monospace;">".tab"</span> to <span style="font-family: monospace;">".tbl"</span>:
   </p>
   <pre>
   tt&gt; tproject  *.tab  *.%tab%tbl%  "!error"

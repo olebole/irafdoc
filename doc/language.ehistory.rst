@@ -17,7 +17,7 @@ ehistory: Edit history file to re-execute commands
   <h3>Usage</h3>
   <!-- BeginSection: 'USAGE' -->
   <p>
-  ehistory (or just <tt>"e"</tt>)
+  ehistory (or just <span style="font-family: monospace;">"e"</span>)
   </p>
   <!-- EndSection:   'USAGE' -->
   <h3>Parameters</h3>
@@ -34,7 +34,7 @@ ehistory: Edit history file to re-execute commands
   Interrupt (e.g., &lt;ctrl/c&gt; may be used to escape from the editor at any time.
   The type of editor commands recognized is determined by the value of the
   CL environment variable <i>editor</i>, which may currently be set to
-  <tt>"edt"</tt>, <tt>"emacs"</tt>, or <tt>"vi"</tt>.
+  <span style="font-family: monospace;">"edt"</span>, <span style="font-family: monospace;">"emacs"</span>, or <span style="font-family: monospace;">"vi"</span>.
   </p>
   <p>
   After the <i>ehistory</i> command is entered, the previous command is
@@ -48,7 +48,7 @@ ehistory: Edit history file to re-execute commands
   key will execute the command currently being edited.
   </p>
   <p>
-  The CL parameter <tt>"ehinit"</tt> may be used to set the following options:
+  The CL parameter <span style="font-family: monospace;">"ehinit"</span> may be used to set the following options:
   </p>
   <dl>
   <dt><b>[no]standout</b></dt>
@@ -86,10 +86,10 @@ ehistory: Edit history file to re-execute commands
   1. Set no standout and verify modes. 
   </p>
   <p>
-  	cl&gt; ehinit = <tt>"nostandout verify"</tt>.
+  	cl&gt; ehinit = <span style="font-family: monospace;">"nostandout verify"</span>.
   </p>
   <p>
-  2. Recall the last <tt>"xc"</tt> command from the history list and edit it.
+  2. Recall the last <span style="font-family: monospace;">"xc"</span> command from the history list and edit it.
   If <i>verify</i> were not enabled the command would simply be repeated.
   </p>
   <p>

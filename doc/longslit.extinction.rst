@@ -36,7 +36,7 @@ extinction: Apply atmospheric extinction corrections to images (obsolete)
   </dd>
   </dl>
   <dl>
-  <dt><b>extinction = <tt>"onedstds$kpnoextinct.dat"</tt></b></dt>
+  <dt><b>extinction = <span style="font-family: monospace;">"onedstds$kpnoextinct.dat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='extinction' Line='extinction = "onedstds$kpnoextinct.dat"' -->
   <dd>Extinction file to be used.  The standard extinction files:
   <pre>
@@ -69,7 +69,7 @@ extinction: Apply atmospheric extinction corrections to images (obsolete)
   <p>
   The airmass is sought in the image header under the name AIRMASS.  If the
   airmass is not found then it is computed from the zenith distance (ZD in hours)
-  using the approximation formula from Allen's <tt>"Astrophysical Quantities"</tt>, 1973,
+  using the approximation formula from Allen's <span style="font-family: monospace;">"Astrophysical Quantities"</span>, 1973,
   page125 and page 133
   </p>
   <p>

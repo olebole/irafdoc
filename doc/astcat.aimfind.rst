@@ -36,7 +36,7 @@ aimfind: Select images containing catalog objects
   <dd>The list of output astrometry file names.  The number of output file names
   must be equal to the number of input images. Output files are only created
   if at least one catalog object is in the image. By default the output files
-  are assigned names of the form <tt>"image.cat.#"</tt>, e.g. <tt>"image.cat.1"</tt>. 
+  are assigned names of the form <span style="font-family: monospace;">"image.cat.#"</span>, e.g. <span style="font-family: monospace;">"image.cat.1"</span>. 
   </dd>
   </dl>
   <dl>
@@ -46,7 +46,7 @@ aimfind: Select images containing catalog objects
   </dd>
   </dl>
   <dl>
-  <dt><b>catalogs = <tt>")_.catalogs"</tt></b></dt>
+  <dt><b>catalogs = <span style="font-family: monospace;">")_.catalogs"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='catalogs' Line='catalogs = ")_.catalogs"' -->
   <dd>The input astrometry catalog. By default the catalog name is set to the
   value of the package parameter catalogs. 
@@ -71,7 +71,7 @@ aimfind: Select images containing catalog objects
   </dd>
   </dl>
   <dl>
-  <dt><b>afiltpars = <tt>""</tt></b></dt>
+  <dt><b>afiltpars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='afiltpars' Line='afiltpars = ""' -->
   <dd>The astrometry file filtering parameter set. These parameters permit the user
   to sort the output on a field or field expression, select or reject
@@ -102,11 +102,11 @@ aimfind: Select images containing catalog objects
   </dd>
   </dl>
   <dl>
-  <dt><b>catdb = <tt>")_.catdb"</tt></b></dt>
+  <dt><b>catdb = <span style="font-family: monospace;">")_.catdb"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='catdb' Line='catdb = ")_.catdb"' -->
   <dd>The catalog configuration file. Catdb defaults to the value of the
   package parameter catdb. The default catalog configuration file is
-  <tt>"astcat$lib/catdb.dat"</tt>.
+  <span style="font-family: monospace;">"astcat$lib/catdb.dat"</span>.
   </dd>
   </dl>
   <!-- EndSection:   'PARAMETERS' -->
@@ -137,10 +137,10 @@ aimfind: Select images containing catalog objects
   and format of the catalog coordinates by setting the <i>fosystem</i>,
   <i>foraunits</i>, <i>fodecunits</i>, <i>foraformat</i>, and <i>fodecformat</i>
   parameters. At present the names, data types, units, and format of the
-  predicted pixel coordinates computed by aimfind are fixed at <tt>"xp,yp"</tt>,
-  <tt>"d,d"</tt>, <tt>"pixels,pixels"</tt>, and <tt>"%10.3f,%10.3f"</tt> respectively. A more detailed
+  predicted pixel coordinates computed by aimfind are fixed at <span style="font-family: monospace;">"xp,yp"</span>,
+  <span style="font-family: monospace;">"d,d"</span>, <span style="font-family: monospace;">"pixels,pixels"</span>, and <span style="font-family: monospace;">"%10.3f,%10.3f"</span> respectively. A more detailed
   description of the region filtering parameters can be obtained by typing
-  <tt>"help afiltpars"</tt>.
+  <span style="font-family: monospace;">"help afiltpars"</span>.
   </p>
   <p>
   If <i>standard</i> = yes a header is written to the output astrometry file which

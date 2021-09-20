@@ -41,7 +41,7 @@ intro: A brief introduction to IRAF
   CL session, the <i>language</i> package, including all functions built directly
   into the CL, and the <i>system</i> package, which contains basic system
   utilities, are automatically invoked.  The user may configure their 
-  <tt>"login.cl"</tt> file to automatically invoke other packages.
+  <span style="font-family: monospace;">"login.cl"</span> file to automatically invoke other packages.
   </p>
   <p>
   Within the CL a task is invoked by entering its name, e.g.

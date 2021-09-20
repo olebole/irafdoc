@@ -35,15 +35,15 @@ tokens: Break a file up into a stream of tokens
   </dd>
   </dl>
   <dl>
-  <dt><b>begin_comment = <tt>"#"</tt></b></dt>
+  <dt><b>begin_comment = <span style="font-family: monospace;">"#"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='begin_comment' Line='begin_comment = "#"' -->
   <dd>The string marking the start of a comment
   </dd>
   </dl>
   <dl>
-  <dt><b>end_comment = <tt>"eol"</tt></b></dt>
+  <dt><b>end_comment = <span style="font-family: monospace;">"eol"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='end_comment' Line='end_comment = "eol"' -->
-  <dd>The string marking the end of a comment.  The value <b>end_comment</b> = <tt>"eol"</tt>
+  <dd>The string marking the end of a comment.  The value <b>end_comment</b> = <span style="font-family: monospace;">"eol"</span>
   means the end of a line terminates a comment.
   </dd>
   </dl>
@@ -69,8 +69,8 @@ tokens: Break a file up into a stream of tokens
   Comments are delimited by user specified strings.  Only strings which are also
   recognized by ctotok() as legal tokens may be used as comment delimiters.
   If newline marks the end of a comment, the end_comment string should be given
-  as <tt>"eol"</tt>.  Examples of acceptable comment conventions are (<tt>"#"</tt>, eol),
-  (<tt>"/*"</tt>, <tt>"*/"</tt>), (<tt>"{"</tt>, <tt>"}"</tt>), and (<tt>"!"</tt>, eol).  Fortran style comments (<tt>"^{c}"</tt>,eol)
+  as <span style="font-family: monospace;">"eol"</span>.  Examples of acceptable comment conventions are (<span style="font-family: monospace;">"#"</span>, eol),
+  (<span style="font-family: monospace;">"/*"</span>, <span style="font-family: monospace;">"*/"</span>), (<span style="font-family: monospace;">"{"</span>, <span style="font-family: monospace;">"}"</span>), and (<span style="font-family: monospace;">"!"</span>, eol).  Fortran style comments (<span style="font-family: monospace;">"^{c}"</span>,eol)
   can be stripped by filtering with match beforehand.
   </p>
   <p>

@@ -29,7 +29,7 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   </dd>
   </dl>
   <dl>
-  <dt><b>output = <tt>""</tt></b></dt>
+  <dt><b>output = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
   <dd>Output images when modifying input images.  If no output images are
   given then existing images in the input list are modified directly.
@@ -41,7 +41,7 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   WHEN CREATING NEW IMAGES
   </p>
   <dl>
-  <dt><b>title = <tt>""</tt></b></dt>
+  <dt><b>title = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='title' Line='title = ""' -->
   <dd>Image title to be given to the images.  Maximum of 79 characters.
   </dd>
@@ -53,7 +53,7 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   </dd>
   </dl>
   <dl>
-  <dt><b>header = <tt>"artdata$stdheader.dat"</tt></b></dt>
+  <dt><b>header = <span style="font-family: monospace;">"artdata$stdheader.dat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='header' Line='header = "artdata$stdheader.dat"' -->
   <dd>Image or header keyword data file.  If an image is given then the image header
   is copied.  If a file is given then the FITS format cards are copied.
@@ -76,7 +76,7 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   OBJECT PARAMETERS
   </p>
   <dl>
-  <dt><b>objects = <tt>""</tt></b></dt>
+  <dt><b>objects = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='objects' Line='objects = ""' -->
   <dd>List of object files.  The number of object files must match the number of
   input images.  The object files contain lines of object coordinates,
@@ -90,7 +90,7 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   </dd>
   </dl>
   <dl>
-  <dt><b>star = <tt>"moffat"</tt></b></dt>
+  <dt><b>star = <span style="font-family: monospace;">"moffat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='star' Line='star = "moffat"' -->
   <dd>Type of star and point spread function.  The choices are:
   <dl>
@@ -139,8 +139,8 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   <dl>
   <dt><b>radius = 1.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='radius' Line='radius = 1.' -->
-  <dd>Seeing radius/scale in pixels along the major axis.  For the <tt>"gaussian"</tt>
-  and <tt>"moffat"</tt> profiles this is the half-intensity radius of the major
+  <dd>Seeing radius/scale in pixels along the major axis.  For the <span style="font-family: monospace;">"gaussian"</span>
+  and <span style="font-family: monospace;">"moffat"</span> profiles this is the half-intensity radius of the major
   axis, for image templates this is the template radius along the x dimension,
   specifically one half the number of columns, and for arbitrary user profiles
   this is the radius to the last profile point.
@@ -222,7 +222,7 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   <dl>
   <dt><b>seed = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='seed' Line='seed = 1' -->
-  <dd>Random number seed.  If a value of <tt>"INDEF"</tt> is given then the clock
+  <dd>Random number seed.  If a value of <span style="font-family: monospace;">"INDEF"</span> is given then the clock
   time (integer seconds since 1980) is used as the seed yielding
   different random numbers for each execution.
   </dd>
@@ -399,8 +399,8 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   where R, dX, and dY are defined below, <i>radius</i> is the scale parameter
   and <i>beta</i> is the Moffat parameter specified by the user,
   nprofile is the number of profile points in the user profile, and nc and nl
-  are the image template column and line dimensions.  The Gaussian, <tt>"gaussian"</tt>,
-  and Moffat, <tt>"moffat"</tt>, profiles are used for stars and the point spread
+  are the image template column and line dimensions.  The Gaussian, <span style="font-family: monospace;">"gaussian"</span>,
+  and Moffat, <span style="font-family: monospace;">"moffat"</span>, profiles are used for stars and the point spread
   function, while the Sersic (sersic),  exponential disk (expdisk), and
   De Vaucouleurs (devauc) profiles are common models for spiral and elliptical
   galaxies.  The image templates are intended to model images with
@@ -685,7 +685,7 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   <dd>If a large number of identically shaped galaxies (size, axial ratio,
   and position angle) located at the same subpixel (the same x and y
   fractional part) but with varying magnitudes is desired then by
-  putting the word <tt>"yes"</tt> as the eighth field the model will be saved
+  putting the word <span style="font-family: monospace;">"yes"</span> as the eighth field the model will be saved
   the first time and reused subsequent times.  This speeds up the execution.
   There may certain algorithm testing situations where this might be useful. 
   </dd>
@@ -784,13 +784,13 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   <dt><b>MKOBJECTS V2.11+</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='MKOBJECTS' Line='MKOBJECTS V2.11+' -->
   <dd>The random number seed can be set from the clock time by using the value
-  <tt>"INDEF"</tt> to yield different random numbers for each execution.
+  <span style="font-family: monospace;">"INDEF"</span> to yield different random numbers for each execution.
   </dd>
   </dl>
   <dl>
   <dt><b>MKOBJECTS V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='MKOBJECTS' Line='MKOBJECTS V2.11' -->
-  <dd>The default value of <tt>"ranbuf"</tt> was changed to zero.
+  <dd>The default value of <span style="font-family: monospace;">"ranbuf"</span> was changed to zero.
   </dd>
   </dl>
   <!-- EndSection:   'REVISIONS' -->

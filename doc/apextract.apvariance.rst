@@ -15,11 +15,11 @@ apvariance: Extractions, variance weighting, cleaning, and noise model
   There are two types of aperture extraction (estimating the background
   subtracted flux across a fixed width aperture at each image line or
   column) in the APEXTRACT package.  One is a simple sum of pixel values
-  across an aperture.  It is selected by specifying <tt>"none"</tt> for the
+  across an aperture.  It is selected by specifying <span style="font-family: monospace;">"none"</span> for the
   <i>weights</i> parameter.  The second type weights each pixel in the sum
   by it's estimated variance based on a spectrum model and detector noise
   parameters.  This type of extraction is selected by specifying
-  <tt>"variance"</tt> for the weighting parameter.  These two extractions are
+  <span style="font-family: monospace;">"variance"</span> for the weighting parameter.  These two extractions are
   defined by the following equations.
   </p>
   <pre>
@@ -41,14 +41,14 @@ apvariance: Extractions, variance weighting, cleaning, and noise model
   weighted.
   </p>
   <p>
-  Variance weighting is often called <tt>"optimal"</tt> extraction since it
+  Variance weighting is often called <span style="font-family: monospace;">"optimal"</span> extraction since it
   produces the best unbiased signal-to-noise estimate of the flux in the
   two dimensional profile.  The theory and application of this type of
   weighting has been described in several papers.  The ones which were
   closely examined and used as a model for the algorithms in this
-  software are <tt>"An Optimal Extraction Algorithm for CCD Spectroscopy"</tt>,
-  PASP 98, 609, 1986, by Keith Horne and <tt>"The Extraction of Highly
-  Distorted Spectra"</tt>, PASP 100, 1032, 1989, by Tom Marsh.
+  software are <span style="font-family: monospace;">"An Optimal Extraction Algorithm for CCD Spectroscopy"</span>,
+  PASP 98, 609, 1986, by Keith Horne and <span style="font-family: monospace;">"The Extraction of Highly
+  Distorted Spectra"</span>, PASP 100, 1032, 1989, by Tom Marsh.
   </p>
   <p>
   The noise model for the image data used in the variance weighting,
@@ -163,7 +163,7 @@ apvariance: Extractions, variance weighting, cleaning, and noise model
   As a final step when computing a weighted/cleaned spectrum the total
   fluxes from the weighted spectrum and the simple unweighted spectrum
   (excluding any deviant and saturated pixels) are computed and a
-  <tt>"bias"</tt> factor of the ratio of the two fluxes is multiplied into
+  <span style="font-family: monospace;">"bias"</span> factor of the ratio of the two fluxes is multiplied into
   the weighted spectrum and the sigma estimate.  This makes the total
   fluxes the same.  The bias factor is recorded in the logfile
   if one is kept.  Also a check is made for unusual bias factors.

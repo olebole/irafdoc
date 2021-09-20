@@ -25,16 +25,16 @@ t2d: Fast tape to disk copy
   <dl>
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
-  <dd>Tape file or device name, e.g. <tt>"mta1600[1]"</tt> or <tt>"mta"</tt>
+  <dd>Tape file or device name, e.g. <span style="font-family: monospace;">"mta1600[1]"</span> or <span style="font-family: monospace;">"mta"</span>
   </dd>
   </dl>
   <dl>
   <dt><b>files</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='files' Line='files' -->
-  <dd>List of tape file numbers or ranges delimited by commas, e.g. <tt>"1-3,5-8"</tt>.
+  <dd>List of tape file numbers or ranges delimited by commas, e.g. <span style="font-family: monospace;">"1-3,5-8"</span>.
   `Files' is requested only if no file number is given in `input'.
   Files will be read in ascending order, regardless of the order of the list.
-  Reading will terminate if EOT is reached, thus a list such as <tt>"1-999"</tt>
+  Reading will terminate if EOT is reached, thus a list such as <span style="font-family: monospace;">"1-999"</span>
   may be used to read all the files on the tape.
   </dd>
   </dl>
@@ -84,7 +84,7 @@ t2d: Fast tape to disk copy
   <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. To read the second image from mta at 1600 bpi, store the image into
-  <tt>"image"</tt> and see verbose output the command would be:
+  <span style="font-family: monospace;">"image"</span> and see verbose output the command would be:
   </p>
   <pre>
   	cl&gt; t2d mta1600[2] image
@@ -99,7 +99,7 @@ t2d: Fast tape to disk copy
   </pre>
   <p>
   The program will prompt the user and ask for the list of files to be read
-  to which the response would be <tt>"1-999"</tt>.
+  to which the response would be <span style="font-family: monospace;">"1-999"</span>.
   </p>
   <!-- EndSection:   'EXAMPLES' -->
   <h3>See also</h3>

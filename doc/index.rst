@@ -3,14 +3,14 @@ IRAF task help
 
 .. toctree:: :maxdepth: 1
 
-   language
-   images
-   lists
-   plot
-   dataio
-   system
-   utilities
-   softools
-   noao
-   proto
-   obsolete
+   language/index
+   images/index
+   lists/index
+   plot/index
+   dataio/index
+   system/index
+   utilities/index
+   softools/index
+   noao/index
+   proto/index
+   obsolete/index

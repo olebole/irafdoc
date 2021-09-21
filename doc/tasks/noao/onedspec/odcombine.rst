@@ -605,10 +605,14 @@ odcombine: Combine spectra having different wavelength ranges (new)
   spectrum.
   </dd>
   </dl>
+  </dd>
+  </dl>
   <!-- EndSection:   'REVISIONS' -->
   <h3>See also</h3>
   <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   imcombine, scombine, scopy, sarith, lscombine
+  </p>
   
   <!-- EndSection:    'SEE ALSO' -->
   

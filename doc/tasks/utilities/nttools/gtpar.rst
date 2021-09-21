@@ -186,6 +186,8 @@ gtpar: Pset to specify graph parameters for 'gtedit' task.
   <dt><b>(fill = yes) [boolean]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(fill = yes) [boolean]' -->
   <dd>Fill the viewport rather than enforcing unity aspect ratio?
+  </dd>
+  </dl>
   <!-- EndSection:   'PARAMETERS' -->
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
@@ -195,9 +197,13 @@ gtpar: Pset to specify graph parameters for 'gtedit' task.
   <!-- EndSection:   'BUGS' -->
   <h3>See also</h3>
   <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   sgraph
+  </p>
+  <p>
   Type <span style="font-family: monospace;">"help tables opt=sys"</span> for a higher-level description of the 'tables' 
   package.
+  </p>
   
   <!-- EndSection:    'SEE ALSO' -->
   

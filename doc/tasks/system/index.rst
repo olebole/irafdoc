@@ -5,7 +5,6 @@ system: System utilities package
 
    allocate
    concatenate
-   chkupdate
    copy
    count
    deallocate
@@ -25,7 +24,6 @@ system: System utilities package
    mkscript
    movefiles
    netstatus
-   news
    page
    pathnames
    phelp

@@ -724,11 +724,14 @@ psfmeasure: Measure PSF sizes from stellar images
   
   The estimated average FWHM is 4.5722.  The variation in size is real
   in this artificial image having a radial variation in PSF.
+  </pre>
   <!-- EndSection:   'EXAMPLES' -->
   <h3>See also</h3>
   <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   imexamine, implot, pprofile, pradprof, radlist, radplt, radprof,
   specfocus, starfocus, splot
+  </p>
   
   <!-- EndSection:    'SEE ALSO' -->
   

@@ -138,12 +138,16 @@ gtedit: Graphically edit a table.
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(gtpar = "") [pset]' -->
   <dd>The name of the pset containing the parameters which describe the plot
   attributes.
+  </dd>
+  </dl>
   <!-- EndSection:   'PARAMETERS' -->
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Edit a table containing the output photometry from DAOPHOT. 
   Initially plot the magnitude (MAG) versus the error in the magnitude (MAGERR)
   to decide which points to delete.
+  </p>
   <pre>
        st&gt; gtedit m31.mag MAG MERR
   </pre>
@@ -153,7 +157,9 @@ gtedit: Graphically edit a table.
   <!-- EndSection:   'BUGS' -->
   <h3>References</h3>
   <!-- BeginSection: 'REFERENCES' -->
+  <p>
   This task was written by Dennis Crabtree.
+  </p>
   <!-- EndSection:   'REFERENCES' -->
   <h3>See also</h3>
   <!-- BeginSection: 'SEE ALSO' -->

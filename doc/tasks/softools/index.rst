@@ -6,8 +6,8 @@ softools: Software tools package
    generic
    hdbexamine
    lroff
+   mkapropos
    mkhelpdb
-   mkmanpage
    mkpkg
    mktags
    mkttydata

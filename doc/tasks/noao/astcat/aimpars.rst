@@ -159,7 +159,7 @@ aimpars: Default image data parameters
   <pre>
   cl&gt; epar aimpars
   cl&gt; agetim ... aimpars=aimhdr1.par ...
-  
+  </pre>
   <!-- EndSection:   'EXAMPLES' -->
   <h3>Time requirements</h3>
   <!-- BeginSection: 'TIME REQUIREMENTS' -->
@@ -169,7 +169,9 @@ aimpars: Default image data parameters
   <!-- EndSection:   'BUGS' -->
   <h3>See also</h3>
   <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   agetim
+  </p>
   
   <!-- EndSection:    'SEE ALSO' -->
   

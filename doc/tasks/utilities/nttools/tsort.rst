@@ -74,22 +74,27 @@ tsort: Sort a table.
   <dd>Are sorts on character columns to be case sensitive?  If 'casesens = yes',
   upper case letters will precede lower case letters.  If 'casesens = no',
   case is ignored by the sort operation.
-  <dl>
-  <dt><b></b></dt>
-  <!-- Sec='PARAMETERS' Level=1 Label='' Line=' ' -->
-  <dd><!-- EndSection:   'PARAMETERS' -->
+  </dd>
+  </dl>
+  <!-- EndSection:   'PARAMETERS' -->
   <h3>Examples</h3>
   <!-- BeginSection: 'EXAMPLES' -->
+  <p>
   1. Sort a table of star positions by right ascension and declination:
+  </p>
   <pre>
   tt&gt; tsort starcat.tab ra,dec
   </pre>
+  <p>
   2. Sort a phone list. Make the sort case insensitive:
+  </p>
   <pre>
   tt&gt; tsort phone.tab lname,fname case-
   </pre>
+  <p>
   3. Sort a star catalog so that all binary stars (i.e., a boolean column
   named 'binary') are first:
+  </p>
   <pre>
   tt&gt; tsort starcat.tab binary asc-
   </pre>
@@ -99,11 +104,15 @@ tsort: Sort a table.
   <!-- EndSection:   'BUGS' -->
   <h3>References</h3>
   <!-- BeginSection: 'REFERENCES' -->
+  <p>
   This task was written by Bernie Simon.
+  </p>
   <!-- EndSection:   'REFERENCES' -->
   <h3>See also</h3>
   <!-- BeginSection: 'SEE ALSO' -->
+  <p>
   tcopy
+  </p>
   
   <!-- EndSection:    'SEE ALSO' -->
   

@@ -942,9 +942,10 @@ starfocus: Determine direct focus variations from stellar images
   <!-- EndSection:   'EXAMPLES' -->
   <h3>See also</h3>
   <!-- BeginSection: 'SEE ALSO' -->
-  <pre>
+  <p>
   imexamine, implot, kpnofocus, pprofile, pradprof, psfmeasure, radlist,
   radplt, radprof, ranges, specfocus, splot
+  </p>
   
   <!-- EndSection:    'SEE ALSO' -->
   

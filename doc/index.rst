@@ -12,6 +12,7 @@ IRAF is maintained by the iraf-community_.
    spp
    clman
    std
+   std_gl
    unixsmg
    PyRAF tutorial <https://pyraf.readthedocs.io/>
 

@@ -2,14 +2,9 @@
 IRAF Standards and Conventions
 ==============================
 
-:Authors: - Elwood Downey
-	  - George Jacoby
-	  - Vesa Junkkarinen
-	  - Steve Ridgway
-	  - Paul Schmidtke
-	  - Charles Slaughter
-	  - Douglas Tody
-	  - Francisco Valdes
+:Authors: Elwood Downey, George Jacoby, Vesa Junkkarinen, Steve
+          Ridgway, Paul Schmidtke, Charles Slaughter, Douglas Tody,
+          Francisco Valdes
 :Date: August 1983
 :Abstract: Clearly defined and consistently applied standards and
  conventions are essential in reducing the "number of degrees of
@@ -971,11 +966,11 @@ experiment and develop the software at will.
 Tasks and Processes
 ~~~~~~~~~~~~~~~~~~~
 
-The **task** statement of the SPP language is used to group one or more
-compiled tasks (programs) together to form an executable process. As
-noted earlier (§3.1.1), the grouping together of programs to form a
-physical process is a detail which is irrelevant to the structure of the
-package.
+The **task** statement of the SPP language is used to group one or
+more compiled tasks (programs) together to form an executable
+process. As noted earlier (`Packages and Tasks`_), the grouping
+together of programs to form a physical process is a detail which is
+irrelevant to the structure of the package.
 
 The grouping of several programs together to form a single process can,
 however, result in significant savings in disk space by replacing a
@@ -1427,14 +1422,15 @@ keep it simple
 ~~~~~~~~~~~~~~
 
 Simple, modular programs, structured according to the guidelines in
-§3.1, are easy to understand and modify. Even the best programs are
-unlikely to be completely portable, because they will only have been
-tested and debugged on one or two systems by their author. Therefore the
-transportability of a program is significantly increased if it easy for
-someone who is unfamiliar with the code to quickly find and fix any
-machine dependencies. A package of **verification routines** are
-extremely useful when testing software on a new system, and ideally
-should be supplied with each package, along with sample output.
+`General Guidelines`_, are easy to understand and modify. Even the
+best programs are unlikely to be completely portable, because they
+will only have been tested and debugged on one or two systems by their
+author. Therefore the transportability of a program is significantly
+increased if it easy for someone who is unfamiliar with the code to
+quickly find and fix any machine dependencies. A package of
+**verification routines** are extremely useful when testing software
+on a new system, and ideally should be supplied with each package,
+along with sample output.
 
 
 use the standard interfaces
@@ -1448,14 +1444,15 @@ device independent program will automatically result.
 
 The surest way to produce a machine or device dependent program is to
 bypass an interface. This fact is fairly obvious, but it is not always
-easy to tell when an interface is being bypassed (see §3.3 for
-examples). Furthermore, by bypassing an interface, one may be able to
-provide some feature that would be difficult or impossible to provide
-using the standard interfaces. In some cases this may be justified
-(provided transportability is not a requirement), but often the feature
-is cosmetic, and does not significantly increase the functionality of
-the program. The correct procedure is to request that the interface
-causing the problem be extended or refined.
+easy to tell when an interface is being bypassed (see `Standard
+Interfaces`_ for examples). Furthermore, by bypassing an interface,
+one may be able to provide some feature that would be difficult or
+impossible to provide using the standard interfaces. In some cases
+this may be justified (provided transportability is not a
+requirement), but often the feature is cosmetic, and does not
+significantly increase the functionality of the program. The correct
+procedure is to request that the interface causing the problem be
+extended or refined.
 
 
 avoid machine dependent filenames
